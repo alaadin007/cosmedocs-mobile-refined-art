@@ -196,7 +196,7 @@ const SkinTagsRemoval = () => {
           {/* CTA Section - After third heading */}
           <div className="my-12 p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10">
             <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-4">Concerned About Your Skin Tags?</h3>
+              <p className="text-2xl font-semibold mb-4">Concerned About Your Skin Tags?</p>
               <p className="text-muted-foreground mb-6">
                 Our expert dermatologists can safely and effectively remove skin tags with minimal discomfort. Book a consultation to discuss your options.
               </p>
@@ -368,24 +368,24 @@ const SkinTagsRemoval = () => {
           <div className="my-16 grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Award className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">Qualified Dermatologists</h3>
+              <p className="font-semibold mb-2">Qualified Dermatologists</p>
               <p className="text-sm text-muted-foreground">GMC registered with extensive skin treatment expertise</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Users className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">Safe Procedures</h3>
+              <p className="font-semibold mb-2">Safe Procedures</p>
               <p className="text-sm text-muted-foreground">Sterile clinic environment with minimal risk</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Clock className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">Quick Treatment</h3>
+              <p className="font-semibold mb-2">Quick Treatment</p>
               <p className="text-sm text-muted-foreground">Fast procedures with minimal downtime</p>
             </div>
           </div>
 
           {/* Booking Calendar Section */}
           <div className="my-16 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-            <h2 className="text-3xl font-bold text-center mb-6">Book Your Skin Tag Removal Consultation</h2>
+            <p className="text-3xl font-bold text-center mb-6">Book Your Skin Tag Removal Consultation</p>
             <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
               Say goodbye to unwanted skin tags safely and effectively. Our dermatologists will assess your skin and recommend the best removal method for you.
             </p>
@@ -441,15 +441,15 @@ const SkinTagsRemoval = () => {
 
           {/* Related Posts */}
           <div className="my-16">
-            <h2 className="text-3xl font-bold mb-8">Related Articles</h2>
+            <p className="text-3xl font-bold mb-8">Related Articles</p>
             <div className="grid md:grid-cols-3 gap-6">
               <Link to="/treatments/mole-skin-tag-removal" className="group">
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors">
                       Mole & Skin Tag Removal Treatment
-                    </h3>
+                    </p>
                     <p className="text-sm text-muted-foreground">
                       Professional removal services for moles and skin tags.
                     </p>
@@ -460,9 +460,9 @@ const SkinTagsRemoval = () => {
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors">
                       How to Get Rid of Bruises Quickly
-                    </h3>
+                    </p>
                     <p className="text-sm text-muted-foreground">
                       Expert tips for faster healing after skin procedures.
                     </p>
@@ -473,9 +473,9 @@ const SkinTagsRemoval = () => {
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors">
                       Lip Wrinkles Treatment Guide
-                    </h3>
+                    </p>
                     <p className="text-sm text-muted-foreground">
                       Discover effective treatments for vertical lip lines.
                     </p>
