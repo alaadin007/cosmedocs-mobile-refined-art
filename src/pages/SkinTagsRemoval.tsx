@@ -97,11 +97,11 @@ const SkinTagsRemoval = () => {
         <section className="relative py-32 px-4 overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/70 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/50 to-secondary/40 z-10"></div>
             <img 
-              src="/placeholder.svg" 
+              src="https://www.cosmedocs.com/wp-content/uploads/2019/06/0.jpg" 
               alt="Skin tags removal treatment"
-              className="w-full h-full object-cover opacity-20"
+              className="w-full h-full object-cover"
             />
           </div>
           
@@ -222,34 +222,34 @@ const SkinTagsRemoval = () => {
               Two confirmed factors were identified in a study published in the Open Access Macedonian Journal of Medical Sciences:
             </p>
 
-            <h3>1. Advancing Age</h3>
+            <h3>Advancing Age</h3>
             <p>
               Skin tags are most common in persons in their 40s and 50s.
             </p>
 
-            <h3>2. Body Mass Index</h3>
+            <h3>Body Mass Index</h3>
             <p>
               Skin tags were linked to those with high BMIs. Maintaining a healthy weight is an excellent approach to guarantee that you're doing everything you can to avoid the growth of such flaps of skin.
             </p>
 
             <p>Other important factors include:</p>
 
-            <h3>3. Body Brushing or Friction</h3>
+            <h3>Body Brushing or Friction</h3>
             <p>
               Skin brushing against your own skin, such as that seen in skin creases, might be a factor.
             </p>
 
-            <h3>4. Diabetes</h3>
+            <h3>Diabetes</h3>
             <p>
               Insulin resistance is believed to play a role in the growth of skin tags.
             </p>
 
-            <h3>5. Human Papillomavirus</h3>
+            <h3>Human Papillomavirus</h3>
             <p>
               As per a research, a large percentage of persons with skin tags tested positive for the human papillomavirus HPV. This prompts the need for the removal of these fleshy outgrowths.
             </p>
 
-            <h3>6. Genetics</h3>
+            <h3>Genetics</h3>
             <p>
               It is very much possible that your annoying tags are a result of genetic link. Cosmexperts have seen many patients suffering from this skin condition that also runs in their families.
             </p>
