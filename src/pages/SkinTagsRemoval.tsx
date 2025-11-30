@@ -372,7 +372,7 @@ const SkinTagsRemoval = () => {
               Cosmexperts want their patients to love their skin and not just feel okay with it. If these fleshy skin flaps make you feel conscious and affect your confidence, step right into one of CosmeDoc&apos;s clinics throughout the UK. Let skin experts at Cosmedocs take care of your skin concerns safely and efficiently.
             </p>
 
-            <h3>How Do Our Experts Rescue You?</h3>
+            <h4 className="text-xl font-semibold mt-8 mb-4">How Do Our Experts Rescue You?</h4>
             <p>
               CosmeDocs can quickly, safely, and effectively help you with those pesky and irritating flaps of skin as they appear anywhere on your body. Skin tags become history with our surgical and non-surgical treatments offered at CosmeDocs.
             </p>
