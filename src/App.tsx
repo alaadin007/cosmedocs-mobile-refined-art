@@ -131,6 +131,7 @@ const Auth = lazy(() => import("./pages/Auth"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const HowToGetRidOfBruises = lazy(() => import("./pages/HowToGetRidOfBruises"));
 const ForeheadWrinklesMythsTips = lazy(() => import("./pages/ForeheadWrinklesMythsTips"));
+const LipWrinklesTreatments = lazy(() => import("./pages/LipWrinklesTreatments"));
 
 // Loading component
 const PageLoader = () => (
@@ -239,8 +240,9 @@ const App = () => {
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/blog/how-to-get-rid-of-bruises-quickly" element={<HowToGetRidOfBruises />} />
-          <Route path="/blog/forehead-wrinkles-myths-tips" element={<ForeheadWrinklesMythsTips />} />
+            <Route path="/blog/how-to-get-rid-of-bruises-quickly" element={<HowToGetRidOfBruises />} />
+            <Route path="/blog/forehead-wrinkles-myths-tips" element={<ForeheadWrinklesMythsTips />} />
+            <Route path="/blog/lip-wrinkles-treatments" element={<LipWrinklesTreatments />} />
                <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
                 <Route path="/journal" element={<BlogHome />} />
                <Route path="/8-point-facelift" element={<EightPointFacelift />} />
