@@ -149,16 +149,20 @@ const SkinTagsRemoval = () => {
             <p>
               These are very common in men and women, usually occurring in areas where your skin folds, creases, and rubs.
             </p>
-            <p>
-              According to the American Osteopathic College of Dermatology, Acrochordons, commonly known as skin tags, are normally skin-coloured growths, but some may be darker in colour, depending on your complexion.
-            </p>
+            
+            <blockquote className="border-l-4 border-primary/50 bg-primary/5 pl-6 py-4 my-8 rounded-r-lg">
+              <p className="text-base leading-relaxed mb-2">
+                According to the <strong>American Osteopathic College of Dermatology</strong>, Acrochordons, commonly known as skin tags, are normally skin-coloured growths, but some may be darker in colour, depending on your complexion.
+              </p>
+            </blockquote>
+
             <p>
               Skin tags do not necessarily feel itchy or cause pain. However, depending on the area where they develop, they might catch on clothing or jewellery and lead to irritation or even bleeding.
             </p>
 
             <h2>What Do Skin Tags Look Like?</h2>
             <p>
-              Everyone's skin is different and so is their lifestyle, genes. Hence, these outgrowths can also vary in shapes, size and even colour.
+              Everyone&apos;s skin is different and so is their lifestyle, genes. Hence, these outgrowths can also vary in shapes, size and even colour.
             </p>
             <p>
               If you are wondering what this unwanted skin condition looks like then you can easily spot them as flesh-coloured outgrowth of skin that can be as small as just 1 millimetre to as the size of a grape!
@@ -188,7 +192,7 @@ const SkinTagsRemoval = () => {
 
             <h3>Warts Are Caused By Human Papilloma Virus (HPV)</h3>
             <p>
-              Furthermore, warts are most commonly caused by a virus. They're also spreadable, like all viruses. Therefore, whenever you spot a wart, you can guess that you may have come into contact with another person who has a wart virus, either by shaking hands or sharing the same towel.
+              Furthermore, warts are most commonly caused by a virus. They&apos;re also spreadable, like all viruses. Therefore, whenever you spot a wart, you can guess that you may have come into contact with another person who has a wart virus, either by shaking hands or sharing the same towel.
             </p>
 
           </div>
@@ -218,9 +222,13 @@ const SkinTagsRemoval = () => {
             <p>
               Hence, skin tags may develop as a result of irritation or friction on the skin. Also, it has been found that these skin flaps may develop due to friction between surrounding skin patches or between clothes and skin in many scenarios.
             </p>
-            <p>
-              Two confirmed factors were identified in a study published in the Open Access Macedonian Journal of Medical Sciences:
-            </p>
+            
+            <div className="bg-secondary/20 border-l-4 border-secondary p-6 my-8 rounded-r-lg">
+              <p className="text-sm uppercase tracking-wide text-secondary font-semibold mb-2">Research Study</p>
+              <p className="text-base leading-relaxed">
+                Two confirmed factors were identified in a study published in the <strong>Open Access Macedonian Journal of Medical Sciences</strong>:
+              </p>
+            </div>
 
             <h3>Advancing Age</h3>
             <p>
@@ -229,10 +237,10 @@ const SkinTagsRemoval = () => {
 
             <h3>Body Mass Index</h3>
             <p>
-              Skin tags were linked to those with high BMIs. Maintaining a healthy weight is an excellent approach to guarantee that you're doing everything you can to avoid the growth of such flaps of skin.
+              Skin tags were linked to those with high BMIs. Maintaining a healthy weight is an excellent approach to guarantee that you&apos;re doing everything you can to avoid the growth of such flaps of skin.
             </p>
 
-            <p>Other important factors include:</p>
+            <p className="font-medium mt-8">Other important factors include:</p>
 
             <h3>Body Brushing or Friction</h3>
             <p>
@@ -256,7 +264,7 @@ const SkinTagsRemoval = () => {
 
             <h2>Are Skin Tags Dangerous?</h2>
             <p>
-              Absolutely not! Just because your flesh coloured flaps of skin look unpleasant to look at doesn't mean they are necessarily harmful too. These are basically benign and harmless. Although a nuisance for many people, they do not indicate that you might be developing skin cancer.
+              Absolutely not! Just because your flesh coloured flaps of skin look unpleasant to look at doesn&apos;t mean they are necessarily harmful too. These are basically benign and harmless. Although a nuisance for many people, they do not indicate that you might be developing skin cancer.
             </p>
             <p>
               If you are still unsure about these outgrowths, it is advised to seek consultation at a skin tag removal clinic such as CosmeDocs, to determine the type of your skin tag.
@@ -265,12 +273,12 @@ const SkinTagsRemoval = () => {
               Cosmexperts, however, do suggest having your skin checked by a dermatologist, who can carry out a biopsy to rule out the chances of skin cancer if you notice your skin tag getting bigger and hurts or bleeds. No need to worry because in such a case, you may be advised to opt for a skin tag removal treatment.
             </p>
 
-            <h3>Don't Ignore Your Skin Tags</h3>
+            <h3>Don&apos;t Ignore Your Skin Tags</h3>
             <p>
-              The occurrence of several skin tags has been linked to the development of diabetes in several studies. Moreover, this condition can also occur in people who have Crohn's disease, polycystic ovarian syndrome, or fatty liver disease.
+              The occurrence of several skin tags has been linked to the development of diabetes in several studies. Moreover, this condition can also occur in people who have Crohn&apos;s disease, polycystic ovarian syndrome, or fatty liver disease.
             </p>
             <p>
-              Hence, it will not be entirely wrong to say that it's similar to a key indicator of your health. This indicator has to be examined to ensure there aren't any other underlying health concerns to be informed about.
+              Hence, it will not be entirely wrong to say that it&apos;s similar to a key indicator of your health. This indicator has to be examined to ensure there aren&apos;t any other underlying health concerns to be informed about.
             </p>
 
             <h2>When To See A Doctor?</h2>
@@ -291,7 +299,7 @@ const SkinTagsRemoval = () => {
               Anything can happen to your skin, the largest organ of your body. Hence, it needs professional medical services and treatments, not at home but skin tag removal clinic.
             </p>
             <p>
-              Your fleshy, dangling tags result from collagen clumps and blood vessels trapped inside thicker skin layers. Therefore, skin experts at CosmeDocs don't think it's a great idea to cut them off yourself and create complications.
+              Your fleshy, dangling tags result from collagen clumps and blood vessels trapped inside thicker skin layers. Therefore, skin experts at CosmeDocs don&apos;t think it&apos;s a great idea to cut them off yourself and create complications.
             </p>
 
             <h3>2. A Doctor Avoids Infection Risk</h3>
@@ -307,7 +315,7 @@ const SkinTagsRemoval = () => {
               Why is this piece of information valuable? Well, it helps your dermatologist determine what may be causing difficult-to-stop bleeding and take the appropriate measures.
             </p>
             <p>
-              It's simple to puncture a blood artery or slice into a vein without realising it if you don't know what you're doing.
+              It&apos;s simple to puncture a blood artery or slice into a vein without realising it if you don&apos;t know what you&apos;re doing.
             </p>
 
             <h2>How To Remove Skin Tags With Medical Treatments?</h2>
@@ -317,6 +325,8 @@ const SkinTagsRemoval = () => {
             <p>
               Cosmexperts experts seek the services of the best skin tag removal clinic such as CosmeDocs to have your annoying skin outgrowths removed for good. Today, you can choose from a range of <Link to="/treatments/mole-skin-tag-removal" className="text-primary hover:underline">treatment options for skin tags</Link> to get quick relief from skin tag misery.
             </p>
+            
+            <p className="font-medium mt-8">Options include:</p>
 
             <h3>Cryotherapy</h3>
             <p>
@@ -359,11 +369,16 @@ const SkinTagsRemoval = () => {
 
             <h3>Ready To Say Goodbye To Your Skin Tags With Cosmedocs?</h3>
             <p>
-              Cosmexperts want their patients to love their skin and not just feel okay with it. If these fleshy skin flaps make you feel conscious and affect your confidence, step right into one of CosmeDoc's clinics throughout the UK. Let skin experts at Cosmedocs take care of your skin concerns safely and efficiently.
+              Cosmexperts want their patients to love their skin and not just feel okay with it. If these fleshy skin flaps make you feel conscious and affect your confidence, step right into one of CosmeDoc&apos;s clinics throughout the UK. Let skin experts at Cosmedocs take care of your skin concerns safely and efficiently.
+            </p>
+
+            <h3>How Do Our Experts Rescue You?</h3>
+            <p>
+              CosmeDocs can quickly, safely, and effectively help you with those pesky and irritating flaps of skin as they appear anywhere on your body. Skin tags become history with our surgical and non-surgical treatments offered at CosmeDocs.
             </p>
 
             <blockquote className="border-l-4 border-primary pl-4 italic my-8">
-              <p className="text-lg font-medium">Love The Skin You're In!</p>
+              <p className="text-lg font-medium">Love The Skin You&apos;re In!</p>
               <footer className="text-sm text-muted-foreground mt-2">— CosmeDocs ❤️</footer>
             </blockquote>
 
