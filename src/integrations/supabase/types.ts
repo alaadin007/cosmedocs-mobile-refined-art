@@ -871,6 +871,42 @@ export type Database = {
         }
         Relationships: []
       }
+      visitor_leads: {
+        Row: {
+          chat_history: Json
+          created_at: string
+          email: string
+          email_sent: boolean
+          email_sent_at: string | null
+          id: string
+          name: string
+          phone: string | null
+          skin_concerns: string | null
+        }
+        Insert: {
+          chat_history?: Json
+          created_at?: string
+          email: string
+          email_sent?: boolean
+          email_sent_at?: string | null
+          id?: string
+          name: string
+          phone?: string | null
+          skin_concerns?: string | null
+        }
+        Update: {
+          chat_history?: Json
+          created_at?: string
+          email?: string
+          email_sent?: boolean
+          email_sent_at?: string | null
+          id?: string
+          name?: string
+          phone?: string | null
+          skin_concerns?: string | null
+        }
+        Relationships: []
+      }
       website_content: {
         Row: {
           content: string | null
