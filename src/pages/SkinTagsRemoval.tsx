@@ -132,9 +132,9 @@ const SkinTagsRemoval = () => {
 
         {/* Main Content */}
         <section className="max-w-4xl mx-auto px-4 py-16">
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none prose-invert prose-headings:text-white prose-p:text-white prose-li:text-white prose-strong:text-white prose-blockquote:text-white">
             
-            <p className="lead text-xl text-muted-foreground mb-8">
+            <p className="lead text-xl text-white mb-8">
               Skin tags have been a source of embarrassment for many men and women around the world. The good news? It is now possible to get rid of them with no major pain, severe risks, and that too for good!
             </p>
 
@@ -200,8 +200,8 @@ const SkinTagsRemoval = () => {
           {/* CTA Section - After third heading */}
           <div className="my-12 p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10">
             <div className="text-center max-w-2xl mx-auto">
-              <p className="text-2xl font-semibold mb-4">Concerned About Your Skin Tags?</p>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-2xl font-semibold mb-4 text-white">Concerned About Your Skin Tags?</p>
+              <p className="text-white mb-6">
                 Our expert dermatologists can safely and effectively remove skin tags with minimal discomfort. Book a consultation to discuss your options.
               </p>
               <Button size="lg" className="gap-2" asChild>
@@ -213,7 +213,7 @@ const SkinTagsRemoval = () => {
             </div>
           </div>
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none prose-invert prose-headings:text-white prose-p:text-white prose-li:text-white prose-strong:text-white prose-blockquote:text-white">
             
             <h2>Top 6 Causes Of Skin Tags</h2>
             <p>
@@ -224,8 +224,8 @@ const SkinTagsRemoval = () => {
             </p>
             
             <div className="bg-secondary/20 border-l-4 border-secondary p-6 my-8 rounded-r-lg">
-              <p className="text-sm uppercase tracking-wide text-secondary font-semibold mb-2">Research Study</p>
-              <p className="text-base leading-relaxed">
+              <p className="text-sm uppercase tracking-wide text-white font-semibold mb-2">Research Study</p>
+              <p className="text-base leading-relaxed text-white">
                 Two confirmed factors were identified in a study published in the <strong>Open Access Macedonian Journal of Medical Sciences</strong>:
               </p>
             </div>
@@ -382,32 +382,32 @@ const SkinTagsRemoval = () => {
           <div className="my-16 grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Award className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <p className="font-semibold mb-2">Qualified Dermatologists</p>
-              <p className="text-sm text-muted-foreground">GMC registered with extensive skin treatment expertise</p>
+              <p className="font-semibold mb-2 text-white">Qualified Dermatologists</p>
+              <p className="text-sm text-white">GMC registered with extensive skin treatment expertise</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Users className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <p className="font-semibold mb-2">Safe Procedures</p>
-              <p className="text-sm text-muted-foreground">Sterile clinic environment with minimal risk</p>
+              <p className="font-semibold mb-2 text-white">Safe Procedures</p>
+              <p className="text-sm text-white">Sterile clinic environment with minimal risk</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Clock className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <p className="font-semibold mb-2">Quick Treatment</p>
-              <p className="text-sm text-muted-foreground">Fast procedures with minimal downtime</p>
+              <p className="font-semibold mb-2 text-white">Quick Treatment</p>
+              <p className="text-sm text-white">Fast procedures with minimal downtime</p>
             </div>
           </div>
 
           {/* Booking Calendar Section */}
           <div className="my-16 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-            <p className="text-3xl font-bold text-center mb-6">Book Your Skin Tag Removal Consultation</p>
-            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-3xl font-bold text-center mb-6 text-white">Book Your Skin Tag Removal Consultation</p>
+            <p className="text-center text-white mb-8 max-w-2xl mx-auto">
               Say goodbye to unwanted skin tags safely and effectively. Our dermatologists will assess your skin and recommend the best removal method for you.
             </p>
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="aspect-video flex items-center justify-center bg-muted rounded-lg">
                 <div className="text-center">
-                  <Calendar className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                  <p className="text-muted-foreground mb-4">Interactive booking calendar</p>
+                  <Calendar className="h-16 w-16 mx-auto mb-4 text-white" />
+                  <p className="text-white mb-4">Interactive booking calendar</p>
                   <Button size="lg" asChild>
                     <Link to="/contact">Book Appointment</Link>
                   </Button>
@@ -418,35 +418,35 @@ const SkinTagsRemoval = () => {
 
           {/* FAQ Section */}
           <div className="my-16">
-            <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-8 text-white">Frequently Asked Questions</h2>
             <div className="space-y-6">
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">What are skin tags?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">What are skin tags?</h3>
+                <p className="text-white">
                   Skin tags, medically known as acrochordons, are harmless flesh-coloured skin outgrowths that can vary in size, shape, and colour. They're very common in men and women, usually occurring in areas where skin folds, creases, and rubs together.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">Are skin tags dangerous?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">Are skin tags dangerous?</h3>
+                <p className="text-white">
                   Absolutely not! Skin tags are benign and harmless. Although they may look unpleasant, they do not indicate skin cancer. However, if a skin tag changes colour, becomes irritating, or grows larger, it's advisable to consult a dermatologist.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">What causes skin tags?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">What causes skin tags?</h3>
+                <p className="text-white">
                   Skin tags develop due to friction between skin folds or between clothes and skin. Key factors include advancing age (40s-50s), high BMI, diabetes, HPV, and genetics. Maintaining a healthy weight can help reduce the likelihood of developing skin tags.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">How are skin tags removed professionally?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">How are skin tags removed professionally?</h3>
+                <p className="text-white">
                   Professional skin tag removal methods include: Cryotherapy (freezing with liquid nitrogen), Electrocautery (cauterising with heat), and Excision (surgical removal with a scalpel). All procedures are performed by qualified dermatologists in clinical settings.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">Can I remove skin tags at home?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">Can I remove skin tags at home?</h3>
+                <p className="text-white">
                   It's not recommended to remove skin tags at home. DIY removal can lead to scarring, infection, excessive bleeding, and other complications. Professional removal at a clinic ensures safety, proper sterilisation, and minimal risk of complications.
                 </p>
               </div>
@@ -455,16 +455,16 @@ const SkinTagsRemoval = () => {
 
           {/* Related Posts */}
           <div className="my-16">
-            <p className="text-3xl font-bold mb-8">Related Articles</p>
+            <p className="text-3xl font-bold mb-8 text-white">Related Articles</p>
             <div className="grid md:grid-cols-3 gap-6">
               <Link to="/treatments/mole-skin-tag-removal" className="group">
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors text-white">
                       Mole & Skin Tag Removal Treatment
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white">
                       Professional removal services for moles and skin tags.
                     </p>
                   </div>
@@ -474,10 +474,10 @@ const SkinTagsRemoval = () => {
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors text-white">
                       How to Get Rid of Bruises Quickly
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white">
                       Expert tips for faster healing after skin procedures.
                     </p>
                   </div>
@@ -487,10 +487,10 @@ const SkinTagsRemoval = () => {
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <p className="font-semibold mb-2 group-hover:text-primary transition-colors text-white">
                       Lip Wrinkles Treatment Guide
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white">
                       Discover effective treatments for vertical lip lines.
                     </p>
                   </div>
