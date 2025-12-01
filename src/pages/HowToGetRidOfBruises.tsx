@@ -143,27 +143,38 @@ const HowToGetRidOfBruises = () => {
 
       <article className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
-          <div className="container mx-auto px-4">
+        <section className="relative py-32 md:py-40 lg:py-48 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/images/blog/bruises/hero-bruises.jpg"
+              alt="Medical guide to treating and healing bruises quickly"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50" />
+          </div>
+
+          {/* Content */}
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="inline-block mb-4 px-4 py-1.5 bg-primary/10 rounded-full">
-                  <span className="text-sm font-medium text-primary">Medical Guide</span>
+                <div className="inline-block mb-4 px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                  <span className="text-sm font-medium text-white">Medical Guide</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   How to Get Rid of Bruises Quickly
                 </h1>
                 
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">
                   Expert-approved methods to heal bruises faster with medical treatments, natural remedies, and prevention strategies
                 </p>
                 
-                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
                     <time dateTime={publishDate}>January 20, 2025</time>
@@ -179,24 +190,6 @@ const HowToGetRidOfBruises = () => {
                 </div>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Featured Image */}
-        <section className="container mx-auto px-4 -mt-8 mb-12">
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
-            >
-              <img
-                src="/images/blog/bruises/hero-bruises.jpg"
-                alt="Medical guide to treating and healing bruises quickly"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
           </div>
         </section>
 
