@@ -124,8 +124,8 @@ const LipWrinklesTreatments = () => {
         <section className="max-w-6xl mx-auto px-4 -mt-10">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="/placeholder.svg" 
-              alt="Lip wrinkles treatment before and after"
+              src="/images/blog/lip-wrinkles/hero-lip-wrinkles.jpg" 
+              alt="Lip wrinkles treatment - close up of lips"
               className="w-full h-[400px] object-cover"
             />
           </div>
@@ -141,6 +141,15 @@ const LipWrinklesTreatments = () => {
             </p>
 
             <h2>The Tale Of The Average Lips</h2>
+            
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/lips-aging.jpg" 
+                alt="How lips age with time illustration"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
+
             <h3>How Do Lips Age With Time?</h3>
             <p>
               Our lips are particularly vulnerable to showing signs of age. They have an especially thin outer layer, which gets even thinner with each passing year.
@@ -171,6 +180,14 @@ const LipWrinklesTreatments = () => {
               <li>People who use their mouth muscles frequently such as sipping from straws or drinking from bottles</li>
               <li>People who usually sleep on their sides by putting pressure on their face</li>
             </ul>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/vertical-lip-lines.jpg" 
+                alt="Vertical lip lines filler treatment before and after"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
 
           </div>
 
@@ -205,6 +222,14 @@ const LipWrinklesTreatments = () => {
               As if this was not enough, your continued bad habit, repetitive pursing of your lips, ageing can eventually deepen your lip lines. Thus, leaving you with a pinched and puckered look.
             </p>
 
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/lip-line-causes.jpg" 
+                alt="Common causes of lip lines illustration"
+                className="w-full max-w-2xl mx-auto rounded-lg"
+              />
+            </div>
+
             <h3>2. Your Lips Are Ageing with You</h3>
             <p>
               Your skin's collagen is what keeps it youthful and bouncy, but it is not your lifelong partner. According to Cosmexperts, your skin slows down its collagen production by as little as 1% after the age of 20.
@@ -220,6 +245,14 @@ const LipWrinklesTreatments = () => {
             <p>
               The sun's rays are powerful enough to not only deplete your skin's collagen and hyaluronic acid but also cause skin cancer. UVA rays, in particular, can damage the unprotected area and break down collagen, thus speeding up the ageing process.
             </p>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/sun-damaged-lip.jpg" 
+                alt="Sun rays damaging lips illustration"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
 
             <h3>4. Not Hydrated Enough</h3>
             <p>
@@ -237,6 +270,14 @@ const LipWrinklesTreatments = () => {
               Think of folding the corner of a piece of paper and then unfold it and smooth it out. You may still be able to see a crease left behind. The delicate skin around your lips acts in the same way over a period of time as it develops those vertical upper lip wrinkles.
             </p>
 
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/treatments-overview.jpg" 
+                alt="Overview of lip wrinkle treatments"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
+
             <h2>7 Top Treatments For Lip Lines And Lip Wrinkles</h2>
             <p>
               Lip lines are not desirable and are one of the early signs of ageing too. Moreover, they are caused by a number of factors such as smoking, sun damage, dehydration etc. But the good news is that there are multiple effective treatments to address the issue:
@@ -246,6 +287,15 @@ const LipWrinklesTreatments = () => {
             <p>
               Facial fillers are not only used to give luscious lips and high cheekbones, but also help to fill in fine lines and wrinkles around the mouth. This method significantly minimises the appearance of your unsightly upper lip wrinkles.
             </p>
+
+            <h4 className="text-xl font-semibold text-white text-center my-6">Lip Wrinkles Before and After</h4>
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/lip-correction-ba.jpg" 
+                alt="Lip correction before and after treatment"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
 
             <h3>2. Laser Resurfacing</h3>
             <p>
@@ -268,6 +318,14 @@ const LipWrinklesTreatments = () => {
               <Link to="/treatments/chemical-peel" className="text-primary hover:underline">Chemical peels</Link> are particularly well suited for upper lips, where it helps to remove the top layer of skin. The top layer of your skin may contain fine lines, light scarring or blemishes. Moreover, there are a variety of skin peels that vary in intensity as well as strength that a skin specialist must prescribe.
             </p>
 
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/peel-to-reveal-ba.png" 
+                alt="Peel to reveal before and after results"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
+
             <h3>5. Dermabrasion</h3>
             <p>
               Dermabrasion is also one of the most highly in-demand cosmetic procedures for skin renewal. Though it produces an effect similar to that of chemical peels by removing the top layer of skin, its process is quite different.
@@ -287,6 +345,14 @@ const LipWrinklesTreatments = () => {
               The procedure is quite simple and involves using a skin roller with tiny needles that penetrate your skin, creating 'micro wounds'. This ultimately triggers collagen and elastin production and improves the look of wrinkles and fine lines on your upper lips.
             </p>
 
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/microneedling-ba.jpg" 
+                alt="Microneedling before and after results"
+                className="w-full max-w-2xl mx-auto rounded-lg"
+              />
+            </div>
+
             <h3>7. Platelet-Rich Plasma</h3>
             <p>
               Platelet-rich plasma, also known as 'Plasma Facial' or '<Link to="/treatments/prp-treatment-london" className="text-primary hover:underline">Vampire Facial</Link>', is another collagen stimulating procedure. It is basically aimed at rejuvenating and repairing scarred and wrinkled areas of your face.
@@ -305,9 +371,27 @@ const LipWrinklesTreatments = () => {
             <p>
               Botox is indeed a go-to treatment for treating fine lines and wrinkles in aesthetic medicine. However, combining it with <Link to="/treatments/dermal-fillers" className="text-primary hover:underline">dermal fillers</Link> has shown to deliver optimal results. Therefore, many experts recommend the "Gold-Standard Approach", a fusion treatment of Botox and facial fillers.
             </p>
-            <p className="font-semibold">
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/facial-muscle.jpg" 
+                alt="Lip muscle illustration showing treatment areas"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
+
+            <p className="font-semibold text-center text-muted-foreground">
               Botox + Dermal Fillers – [Relaxes overused muscles causing wrinkles + Fills in the fine lines and areas with collagen loss]
             </p>
+
+            <h4 className="text-2xl font-bold text-white text-center my-8">Lip Wrinkles Treatment Before And After Transformations</h4>
+            <div className="my-8">
+              <img 
+                src="/images/blog/lip-wrinkles/smoker-line-ba.png" 
+                alt="Smoker line before and after treatment"
+                className="w-full max-w-3xl mx-auto rounded-lg"
+              />
+            </div>
 
             <h2>Is There A Way To Prevent Lip Wrinkles?</h2>
             <p>
