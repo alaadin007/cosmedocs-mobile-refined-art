@@ -192,7 +192,7 @@ const HowToGetRidOfBruises = () => {
               className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
             >
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=675&fit=crop"
+                src="/images/blog/bruises/hero-bruises.jpg"
                 alt="Medical guide to treating and healing bruises quickly"
                 className="w-full h-full object-cover"
               />
@@ -233,6 +233,14 @@ const HowToGetRidOfBruises = () => {
               <h3 className="text-2xl font-semibold text-foreground mb-4 mt-8">
                 The Colour Spectrum
               </h3>
+              
+              <div className="my-8 rounded-lg overflow-hidden">
+                <img
+                  src="/images/blog/bruises/color-spectrum.jpg"
+                  alt="Bruise healing colour spectrum showing progression from red to yellow"
+                  className="w-full h-auto"
+                />
+              </div>
               
               <div className="space-y-4 mb-8">
                 <div>
@@ -326,6 +334,15 @@ const HowToGetRidOfBruises = () => {
               </p>
 
               <h4 className="text-xl font-semibold text-foreground mb-3 mt-6">Sunshine</h4>
+              
+              <div className="my-6 rounded-lg overflow-hidden max-w-lg mx-auto">
+                <img
+                  src="/images/blog/bruises/sunshine.jpg"
+                  alt="Person enjoying sunshine outdoors for vitamin D and bruise healing"
+                  className="w-full h-auto"
+                />
+              </div>
+              
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 UV light for 15 minutes a day encourages the breakdown of bilirubin that causes the yellowing of a bruise. It accelerates the absorption of blood and makes the bruise easier to conceal with makeup.
               </p>
@@ -364,6 +381,14 @@ const HowToGetRidOfBruises = () => {
                 Diet and Natural Remedies
               </h2>
 
+              <div className="my-8 rounded-lg overflow-hidden max-w-2xl mx-auto">
+                <img
+                  src="/images/blog/bruises/diet-foods.jpg"
+                  alt="Healthy foods rich in vitamins and minerals for bruise healing"
+                  className="w-full h-auto"
+                />
+              </div>
+
               <h3 className="text-2xl font-semibold text-foreground mb-4 mt-8">Arnica Montana</h3>
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Arnica Montana is a well-known homeopathic remedy that gained popularity for its anti-inflammatory properties. We recommend it for bruising and post-operatory trauma, as one study found that the consumption of arnica helped reduce bruising after rhinoplasty. It comes in the forms of topical gel, cream, spray, or orally in the form of Arnica pills.
@@ -391,6 +416,14 @@ const HowToGetRidOfBruises = () => {
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Foods containing vitamin C encourage collagen synthesis and help maintain capillary walls and tissues. The consumption of foods rich in vitamin C can have an accelerating effect on skin healing. Besides consuming foods that have a high dose of vitamin C, such as citrus fruits, tomatoes, berries, it can also be applied topically, or as an oral supplement.
               </p>
+              
+              <div className="my-8 rounded-lg overflow-hidden max-w-2xl mx-auto">
+                <img
+                  src="/images/blog/bruises/vitamin-c-foods.jpg"
+                  alt="Vitamin C rich foods including citrus fruits, berries, and vegetables"
+                  className="w-full h-auto"
+                />
+              </div>
 
               <h3 className="text-2xl font-semibold text-foreground mb-4 mt-8">Zinc</h3>
               <p className="mb-6 text-muted-foreground leading-relaxed">
@@ -408,6 +441,15 @@ const HowToGetRidOfBruises = () => {
               </p>
 
               <h3 className="text-2xl font-semibold text-foreground mb-4 mt-8">Aloe Vera</h3>
+              
+              <div className="my-6 rounded-lg overflow-hidden">
+                <img
+                  src="/images/blog/bruises/aloe-vera.jpg"
+                  alt="Fresh aloe vera plant and gel for natural bruise treatment"
+                  className="w-full h-auto"
+                />
+              </div>
+              
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Aloe Vera gel has been extensively used in skincare and medical treatments alike, due to its soothing and pain-relieving effects on the skin. Ensure that you apply it topically and are using pure aloe vera gel with no additives.
               </p>
