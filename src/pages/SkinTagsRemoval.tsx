@@ -171,6 +171,14 @@ const SkinTagsRemoval = () => {
               Usually, these tags are identified by a stalk that connects it to the underlying skin. Moreover, very small skin tags may appear on your skin as raised patches or bumps.
             </p>
 
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/acrochordons.jpg" 
+                alt="Acrochordons - what skin tags look like"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
+
             <h2>Skin Tag vs Mole</h2>
             <p>
               Many people tend to get confused between a skin tag and a mole and Cosmexperts are here to help you understand the basic difference between them.
@@ -194,6 +202,14 @@ const SkinTagsRemoval = () => {
             <p>
               Furthermore, warts are most commonly caused by a virus. They&apos;re also spreadable, like all viruses. Therefore, whenever you spot a wart, you can guess that you may have come into contact with another person who has a wart virus, either by shaking hands or sharing the same towel.
             </p>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/comparison-table.jpg" 
+                alt="Comparison table: skin tags vs moles vs warts"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
 
           </div>
 
@@ -255,6 +271,14 @@ const SkinTagsRemoval = () => {
                 <strong>Genetics:</strong> It is very much possible that your annoying tags are a result of genetic link. Cosmexperts have seen many patients suffering from this skin condition that also runs in their families.
               </li>
             </ul>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/body-parts.jpg" 
+                alt="Common body parts where skin tags appear"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
 
             <h2>Are Skin Tags Dangerous?</h2>
             <p>
@@ -326,6 +350,15 @@ const SkinTagsRemoval = () => {
             <p>
               Liquid nitrogen is used to remove the skin tags in the method of cryotherapy. Both small and large skin tag may be cleared up with this procedure since it is quite safe and effective. This approach aims to cut off blood supply to your tags using short freezing and liquefying sessions.
             </p>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/cryotherapy.jpg" 
+                alt="Cryotherapy skin tag removal procedure"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
+
             <p>
               It is important to note that you may need to visit an eye specialist for a skin tag on eyelid. Cryotherapy skin tag removal procedure is only carried out in a clinic by a dermatologist. Therefore, we advise people to avoid skin tag freezing kit to avoid any unnecessary complications.
             </p>
@@ -334,6 +367,15 @@ const SkinTagsRemoval = () => {
             <p>
               Electrocautery is a method of eliminating annoying skin tags by cauterising your tag with numerous touches of the electrocautery device. Do not worry, your skin will be numbed before the procedure. Your skin tag, as a result, dries out and turns black, and it will either fall off right away or in one to two weeks.
             </p>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/electrocautery.jpg" 
+                alt="Electrocautery skin tag removal treatment"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
+
             <p>
               This minimally non-invasive procedure is hassle free, and the downtime depends on the location of your skin tag and your own healing ability.
             </p>
@@ -342,11 +384,33 @@ const SkinTagsRemoval = () => {
             <p>
               Surgical skin tag removal using a scalpel is another practical approach. It may be slightly invasive for many patients, but you can achieve desirable results if performed by a qualified professional.
             </p>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/surgical-removal.jpg" 
+                alt="Surgical skin tag removal with scalpel"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
+
             <p>
               The process involves numbing the affected area with a topical numbing cream. In the next step, your skin outgrowth will be removed entirely using a scalpel and special medical scissors. Hence, leaving your skin clear with a slightly white or pink scar that heals gradually.
             </p>
 
             <h2>Skin Tags Removal Before And After Transformations</h2>
+            
+            <div className="my-8 space-y-6">
+              <img 
+                src="/images/blog/skin-tags/before-after-1.jpg" 
+                alt="Skin tag removal before and after results - case 1"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+              <img 
+                src="/images/blog/skin-tags/before-after-2.jpg" 
+                alt="Skin tag removal before and after results - case 2"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
             <p>
               Real patient results demonstrate the effectiveness of professional skin tag removal. Our qualified dermatologists have successfully treated thousands of patients, helping them achieve clear, smooth skin without scarring.
             </p>
@@ -365,6 +429,14 @@ const SkinTagsRemoval = () => {
             <p>
               Cosmexperts want their patients to love their skin and not just feel okay with it. If these fleshy skin flaps make you feel conscious and affect your confidence, step right into one of CosmeDoc&apos;s clinics throughout the UK. Let skin experts at Cosmedocs take care of your skin concerns safely and efficiently.
             </p>
+
+            <div className="my-8">
+              <img 
+                src="/images/blog/skin-tags/cosmedocs-diagnosis.jpg" 
+                alt="Professional skin diagnosis at Cosmedocs clinic"
+                className="w-full max-w-4xl mx-auto rounded-lg"
+              />
+            </div>
 
             <h4 className="text-xl font-semibold mt-8 mb-4">How Do Our Experts Rescue You?</h4>
             <p>
