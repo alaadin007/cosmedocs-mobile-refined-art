@@ -142,61 +142,46 @@ const ForeheadWrinklesMythsTips = () => {
       </Helmet>
 
       <article className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="inline-block mb-4 px-4 py-1.5 bg-primary/10 rounded-full">
-                  <span className="text-sm font-medium text-primary">Anti-Ageing Guide</span>
-                </div>
-                
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                  Forehead Wrinkles: Top 9 Myths Busted and 8 Tips to Fight Them
-                </h1>
-                
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Discover the truth about forehead lines and learn proven strategies to reduce their appearance naturally
-                </p>
-                
-                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4" />
-                    <time dateTime={publishDate}>April 27, 2023</time>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4" />
-                    <span>12 min read</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <User className="h-4 w-4" />
-                    <span>By Dr. Ahmed Haq</span>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+        {/* Hero Section with Background Image */}
+        <section className="relative py-32 px-4 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50 z-10"></div>
+            <img 
+              src="/images/blog/forehead-wrinkles/hero-botox-forehead.jpg" 
+              alt="Botox treatment for forehead wrinkles - woman receiving aesthetic treatment"
+              className="w-full h-full object-cover"
+            />
           </div>
-        </section>
-
-        {/* Featured Image */}
-        <section className="container mx-auto px-4 -mt-8 mb-12">
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
-            >
-              <img
-                src="/images/blog/forehead-wrinkles/hero-botox-forehead.jpg"
-                alt="Botox treatment for forehead wrinkles - woman receiving aesthetic treatment"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+          
+          {/* Content */}
+          <div className="relative z-20 max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-4 px-4 py-1.5 bg-white/20 rounded-full backdrop-blur-sm">
+              <span className="text-sm font-medium text-white">Anti-Ageing Guide</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              Forehead Wrinkles: Top 9 Myths Busted and 8 Tips to Fight Them
+            </h1>
+            
+            <p className="text-xl text-white/95 mb-8 leading-relaxed drop-shadow">
+              Discover the truth about forehead lines and learn proven strategies to reduce their appearance naturally
+            </p>
+            
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/90">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <time dateTime={publishDate}>April 27, 2023</time>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                <span>12 min read</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                <span>By Dr. Ahmed Haq</span>
+              </div>
+            </div>
           </div>
         </section>
 
