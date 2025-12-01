@@ -94,20 +94,20 @@ const LipWrinklesTreatments = () => {
 
       <article className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <section className="relative py-20 px-4 bg-black">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-wrap justify-center gap-2 mb-6">
-              <span className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary">Injectable</span>
-              <span className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary">Skin</span>
-              <span className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary">Tips & Tricks</span>
+              <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Injectable</span>
+              <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Skin</span>
+              <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Tips & Tricks</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Lip Wrinkles Reveal Your Age & Much More - Here Is How To Fix Them
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               It is not right to blame your age for those lip wrinkles and lines. There are a variety of reasons behind your undesirable ageing lip creases and even more ways to address your issue. Here is how!
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <time dateTime={publishDate}>April 17, 2024</time>
@@ -133,7 +133,7 @@ const LipWrinklesTreatments = () => {
 
         {/* Main Content */}
         <section className="max-w-4xl mx-auto px-4 py-16">
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none prose-invert prose-headings:text-white prose-p:text-white prose-li:text-white prose-strong:text-white">
             
             <h2>Your Lips Are Your Identity!</h2>
             <p>
@@ -177,8 +177,8 @@ const LipWrinklesTreatments = () => {
           {/* CTA Section - After second heading */}
           <div className="my-12 p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10">
             <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-4">Ready to Address Your Lip Wrinkles?</h3>
-              <p className="text-muted-foreground mb-6">
+              <h3 className="text-2xl font-semibold mb-4 text-white">Ready to Address Your Lip Wrinkles?</h3>
+              <p className="text-white mb-6">
                 Our expert practitioners can help you achieve natural-looking, youthful results with personalised treatment plans.
               </p>
               <Button size="lg" className="gap-2" asChild>
@@ -190,7 +190,7 @@ const LipWrinklesTreatments = () => {
             </div>
           </div>
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none prose-invert prose-headings:text-white prose-p:text-white prose-li:text-white prose-strong:text-white">
             
             <h2>5 Most Common Lip Wrinkles Causes That You Didn't Know About</h2>
             <p>
@@ -374,32 +374,32 @@ const LipWrinklesTreatments = () => {
           <div className="my-16 grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Award className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">Expert Practitioners</h3>
-              <p className="text-sm text-muted-foreground">GMC registered doctors with extensive training</p>
+              <h3 className="font-semibold mb-2 text-white">Expert Practitioners</h3>
+              <p className="text-sm text-white">GMC registered doctors with extensive training</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Users className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">Proven Results</h3>
-              <p className="text-sm text-muted-foreground">Thousands of satisfied patients</p>
+              <h3 className="font-semibold mb-2 text-white">Proven Results</h3>
+              <p className="text-sm text-white">Thousands of satisfied patients</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border text-center">
               <Clock className="h-10 w-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">15+ Years Experience</h3>
-              <p className="text-sm text-muted-foreground">Leading aesthetic clinic since 2008</p>
+              <h3 className="font-semibold mb-2 text-white">15+ Years Experience</h3>
+              <p className="text-sm text-white">Leading aesthetic clinic since 2008</p>
             </div>
           </div>
 
           {/* Booking Calendar Section */}
           <div className="my-16 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-            <h2 className="text-3xl font-bold text-center mb-6">Book Your Consultation</h2>
-            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-6 text-white">Book Your Consultation</h2>
+            <p className="text-center text-white mb-8 max-w-2xl mx-auto">
               Take the first step towards youthful, wrinkle-free lips. Our expert team will create a personalised treatment plan tailored to your unique needs.
             </p>
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="aspect-video flex items-center justify-center bg-muted rounded-lg">
                 <div className="text-center">
-                  <Calendar className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                  <p className="text-muted-foreground mb-4">Interactive booking calendar</p>
+                  <Calendar className="h-16 w-16 mx-auto mb-4 text-white" />
+                  <p className="text-white mb-4">Interactive booking calendar</p>
                   <Button size="lg" asChild>
                     <Link to="/contact">Book Appointment</Link>
                   </Button>
@@ -410,35 +410,35 @@ const LipWrinklesTreatments = () => {
 
           {/* FAQ Section */}
           <div className="my-16">
-            <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-8 text-white">Frequently Asked Questions</h2>
             <div className="space-y-6">
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">What causes lip wrinkles?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">What causes lip wrinkles?</h3>
+                <p className="text-white">
                   Lip wrinkles are caused by multiple factors including smoking (hence 'smoker's lines'), natural ageing and collagen loss, sun damage without proper protection, dehydration, and repetitive facial movements like pursing lips or drinking from straws.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">Who is most likely to get vertical lip lines?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">Who is most likely to get vertical lip lines?</h3>
+                <p className="text-white">
                   Vertical lip lines are more common in individuals over 40, particularly women due to more delicate skin. Smokers, those who skip sunscreen, people who frequently use straws or bottles, and side sleepers who put pressure on their face are at higher risk.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">What are the best treatments for lip wrinkles?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">What are the best treatments for lip wrinkles?</h3>
+                <p className="text-white">
                   The most effective treatments include: dermal fillers to fill lines, laser resurfacing to stimulate collagen, Botox to relax muscles causing wrinkles, chemical peels, dermabrasion, microneedling, and PRP therapy. The 'gold-standard approach' combines Botox and dermal fillers for optimal results.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">How can I prevent lip wrinkles?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">How can I prevent lip wrinkles?</h3>
+                <p className="text-white">
                   Prevention strategies include: applying sunscreen to lips and surrounding skin daily, avoiding drinking from straws and bottles regularly, quitting smoking, using anti-ageing moisturisers with retinol and vitamin C, keeping the lip area well-hydrated, and minimising repetitive facial expressions.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-3">Do lip wrinkles only affect smokers?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">Do lip wrinkles only affect smokers?</h3>
+                <p className="text-white">
                   No, whilst lip wrinkles are often called 'smoker's lines' due to their association with smoking, they can affect anyone due to ageing, sun damage, dehydration, genetics, and repetitive mouth movements. Non-smokers commonly develop vertical lip lines as they age.
                 </p>
               </div>
@@ -447,16 +447,16 @@ const LipWrinklesTreatments = () => {
 
           {/* Related Posts */}
           <div className="my-16">
-            <h2 className="text-3xl font-bold mb-8">Related Articles</h2>
+            <h2 className="text-3xl font-bold mb-8 text-white">Related Articles</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Link to="/blog/how-to-get-rid-of-bruises-quickly" className="group">
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors text-white">
                       How to Get Rid of Bruises Quickly
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white">
                       Expert tips for faster bruise healing after aesthetic treatments.
                     </p>
                   </div>
@@ -466,10 +466,10 @@ const LipWrinklesTreatments = () => {
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors text-white">
                       Forehead Wrinkles: Myths & Tips
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white">
                       Debunking common myths about forehead lines and wrinkles.
                     </p>
                   </div>
@@ -479,10 +479,10 @@ const LipWrinklesTreatments = () => {
                 <div className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-muted"></div>
                   <div className="p-6">
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors text-white">
                       Dermal Fillers Treatment
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white">
                       Discover how dermal fillers can restore volume and smooth lines.
                     </p>
                   </div>
