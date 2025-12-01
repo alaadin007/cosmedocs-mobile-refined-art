@@ -97,7 +97,7 @@ const SkinTagsRemoval = () => {
         <section className="relative py-32 px-4 overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/50 to-secondary/40 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50 z-10"></div>
             <img 
               src="https://www.cosmedocs.com/wp-content/uploads/2019/06/0.jpg" 
               alt="Skin tags removal treatment"
