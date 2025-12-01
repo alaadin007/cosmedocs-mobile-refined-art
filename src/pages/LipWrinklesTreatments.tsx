@@ -93,21 +93,32 @@ const LipWrinklesTreatments = () => {
       </Helmet>
 
       <article className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 bg-black">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* Hero Section with Background Image */}
+        <section className="relative py-32 px-4 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50 z-10"></div>
+            <img 
+              src="/images/blog/lip-wrinkles/hero-lip-wrinkles.jpg" 
+              alt="Lip wrinkles treatment - close up of lips"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-20 max-w-4xl mx-auto text-center">
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Injectable</span>
               <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Skin</span>
               <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Tips & Tricks</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Lip Wrinkles Reveal Your Age & Much More - Here Is How To Fix Them
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow">
               It is not right to blame your age for those lip wrinkles and lines. There are a variety of reasons behind your undesirable ageing lip creases and even more ways to address your issue. Here is how!
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/80">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/90">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <time dateTime={publishDate}>April 17, 2024</time>
@@ -117,17 +128,6 @@ const LipWrinklesTreatments = () => {
               <span>•</span>
               <span>10 min read</span>
             </div>
-          </div>
-        </section>
-
-        {/* Featured Image */}
-        <section className="max-w-6xl mx-auto px-4 -mt-10">
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="/images/blog/lip-wrinkles/hero-lip-wrinkles.jpg" 
-              alt="Lip wrinkles treatment - close up of lips"
-              className="w-full h-[400px] object-cover"
-            />
           </div>
         </section>
 
