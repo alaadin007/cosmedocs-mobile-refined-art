@@ -190,7 +190,7 @@ const SkinTagsRemoval = () => {
               There is no hair coming out from either of these spots. Moreover, warts, like skin tags, are usually colourless. Warts are also typically deep and thick and might appear on your hands, your knees, or the soles of your feet.
             </p>
 
-            <h3>Warts Are Caused By Human Papilloma Virus (HPV)</h3>
+            <h2>Warts Are Caused By Human Papilloma Virus (HPV)</h2>
             <p>
               Furthermore, warts are most commonly caused by a virus. They&apos;re also spreadable, like all viruses. Therefore, whenever you spot a wart, you can guess that you may have come into contact with another person who has a wart virus, either by shaking hands or sharing the same towel.
             </p>
@@ -230,37 +230,31 @@ const SkinTagsRemoval = () => {
               </p>
             </div>
 
-            <h3>Advancing Age</h3>
-            <p>
-              Skin tags are most common in persons in their 40s and 50s.
-            </p>
-
-            <h3>Body Mass Index</h3>
-            <p>
-              Skin tags were linked to those with high BMIs. Maintaining a healthy weight is an excellent approach to guarantee that you&apos;re doing everything you can to avoid the growth of such flaps of skin.
-            </p>
+            <ul className="space-y-4 my-6">
+              <li>
+                <strong>Advancing Age:</strong> Skin tags are most common in persons in their 40s and 50s.
+              </li>
+              <li>
+                <strong>Body Mass Index:</strong> Skin tags were linked to those with high BMIs. Maintaining a healthy weight is an excellent approach to guarantee that you&apos;re doing everything you can to avoid the growth of such flaps of skin.
+              </li>
+            </ul>
 
             <p className="font-medium mt-8">Other important factors include:</p>
 
-            <h3>Body Brushing or Friction</h3>
-            <p>
-              Skin brushing against your own skin, such as that seen in skin creases, might be a factor.
-            </p>
-
-            <h3>Diabetes</h3>
-            <p>
-              Insulin resistance is believed to play a role in the growth of skin tags.
-            </p>
-
-            <h3>Human Papillomavirus</h3>
-            <p>
-              As per a research, a large percentage of persons with skin tags tested positive for the human papillomavirus HPV. This prompts the need for the removal of these fleshy outgrowths.
-            </p>
-
-            <h3>Genetics</h3>
-            <p>
-              It is very much possible that your annoying tags are a result of genetic link. Cosmexperts have seen many patients suffering from this skin condition that also runs in their families.
-            </p>
+            <ul className="space-y-4 my-6">
+              <li>
+                <strong>Body Brushing or Friction:</strong> Skin brushing against your own skin, such as that seen in skin creases, might be a factor.
+              </li>
+              <li>
+                <strong>Diabetes:</strong> Insulin resistance is believed to play a role in the growth of skin tags.
+              </li>
+              <li>
+                <strong>Human Papillomavirus:</strong> As per a research, a large percentage of persons with skin tags tested positive for the human papillomavirus HPV. This prompts the need for the removal of these fleshy outgrowths.
+              </li>
+              <li>
+                <strong>Genetics:</strong> It is very much possible that your annoying tags are a result of genetic link. Cosmexperts have seen many patients suffering from this skin condition that also runs in their families.
+              </li>
+            </ul>
 
             <h2>Are Skin Tags Dangerous?</h2>
             <p>
@@ -281,7 +275,7 @@ const SkinTagsRemoval = () => {
               Hence, it will not be entirely wrong to say that it&apos;s similar to a key indicator of your health. This indicator has to be examined to ensure there aren&apos;t any other underlying health concerns to be informed about.
             </p>
 
-            <h2>When To See A Doctor?</h2>
+            <h3>When To See A Doctor?</h3>
             <p>
               Normally, this condition does not pose any health risks, but they can be prickly at times, especially if they rub against clothes. The only time you should be visiting a doctor is if they changes colour, becomes very irritating, or grows larger.
             </p>
