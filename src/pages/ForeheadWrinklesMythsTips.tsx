@@ -192,8 +192,8 @@ const ForeheadWrinklesMythsTips = () => {
               className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
             >
               <img
-                src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&h=675&fit=crop"
-                alt="Woman examining forehead wrinkles in mirror - guide to treating forehead lines"
+                src="/images/blog/forehead-wrinkles/hero-botox-forehead.jpg"
+                alt="Botox treatment for forehead wrinkles - woman receiving aesthetic treatment"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -235,6 +235,14 @@ const ForeheadWrinklesMythsTips = () => {
               <h3 className="text-2xl font-semibold text-foreground mb-4 mt-8">
                 How Do You Know Your Skin Is Ageing?
               </h3>
+
+              <div className="my-8">
+                <img 
+                  src="/images/blog/forehead-wrinkles/skin-ageing.jpg" 
+                  alt="Diagram showing skin ageing areas on face"
+                  className="w-full max-w-3xl mx-auto rounded-lg"
+                />
+              </div>
               
               <ul className="list-disc pl-6 mb-6 text-muted-foreground space-y-2">
                 <li>Fine lines</li>
@@ -302,6 +310,13 @@ const ForeheadWrinklesMythsTips = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">1. You Don't Take Off Your Makeup Before Bed</h3>
                   <p className="text-muted-foreground">Too tired to take off your makeup? If you sleep with your makeup on, you may experience acne breakouts, dull skin, clogged pores and premature wrinkles.</p>
+                  <div className="my-6">
+                    <img 
+                      src="/images/blog/forehead-wrinkles/face-makeup.jpg" 
+                      alt="Woman removing face makeup before bed - proper skincare routine"
+                      className="w-full max-w-3xl mx-auto rounded-lg"
+                    />
+                  </div>
                 </div>
 
                 <div>
@@ -312,6 +327,13 @@ const ForeheadWrinklesMythsTips = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">3. Sugar - The Collagen Killer</h3>
                   <p className="text-muted-foreground">Sugar is a super dehydrator that is blamed for skin puffiness and inflammation. Too much sugar can affect the collagen levels of your skin.</p>
+                  <div className="my-6">
+                    <img 
+                      src="/images/blog/forehead-wrinkles/facial-aging.jpg" 
+                      alt="Facial aging effects from sugar consumption"
+                      className="w-full max-w-2xl mx-auto rounded-lg"
+                    />
+                  </div>
                 </div>
 
                 <div>
@@ -327,6 +349,13 @@ const ForeheadWrinklesMythsTips = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">6. Skipping Sunscreen</h3>
                   <p className="text-muted-foreground">If you skip sunscreen, you may start experiencing photo-ageing signs such as pigmentation, dull skin tone and fine lines and wrinkles.</p>
+                  <div className="my-6">
+                    <img 
+                      src="/images/blog/forehead-wrinkles/sunscreen.jpg" 
+                      alt="Sun protection - applying sunscreen for skin health"
+                      className="w-full max-w-2xl mx-auto rounded-lg"
+                    />
+                  </div>
                 </div>
 
                 <div>
@@ -337,11 +366,25 @@ const ForeheadWrinklesMythsTips = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">8. You Don't Take Enough Sleep</h3>
                   <p className="text-muted-foreground">Lack of sleep can make you look tired, fatigued with skin showing wrinkles and creases that are major signs of ageing.</p>
+                  <div className="my-6">
+                    <img 
+                      src="/images/blog/forehead-wrinkles/poor-sleep.jpg" 
+                      alt="Poor sleep effects on skin aging and wrinkles"
+                      className="w-full max-w-3xl mx-auto rounded-lg"
+                    />
+                  </div>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">9. Using Too Harsh Chemicals for Your Skin</h3>
                   <p className="text-muted-foreground">Cleansers that contain harsh cleansing and foaming agents can deprive your skin from moisture and make your lines and creases more visible.</p>
+                  <div className="my-6">
+                    <img 
+                      src="/images/blog/forehead-wrinkles/facial-product.jpg" 
+                      alt="Facial products and harsh chemicals effect on skin"
+                      className="w-full max-w-3xl mx-auto rounded-lg"
+                    />
+                  </div>
                 </div>
 
                 <div>
