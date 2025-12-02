@@ -23,7 +23,7 @@ const CosmetalkBlog = () => {
       date: "January 2025",
       slug: "/aesthetic-treatments-made-easy",
       featured: true,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+      image: "/images/blog/aesthetic-treatments-made-easy-hero.jpg",
       author: "By Dr. Ahmed Haq & AI Team"
     },
     {
