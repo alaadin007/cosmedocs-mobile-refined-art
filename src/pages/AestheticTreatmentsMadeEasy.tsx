@@ -489,6 +489,29 @@ export default function AestheticTreatmentsMadeEasy() {
                     🍎 "Your face is an apple — the secret's in the flesh, not the peel."
                   </p>
 
+                  {/* Apple Analogy Image with Labels */}
+                  <div className="relative max-w-md mx-auto my-8">
+                    <img 
+                      src="/images/apple-analogy.png" 
+                      alt="Apple cross-section showing skin and flesh analogy for facial ageing"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                    {/* Skin Label - pointing to red peel */}
+                    <div className="absolute top-1/3 -right-4 md:right-0 transform translate-x-1/2 flex items-center">
+                      <div className="w-8 md:w-12 h-px bg-gray-800"></div>
+                      <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-800 shadow-md whitespace-nowrap">
+                        Your Skin
+                      </span>
+                    </div>
+                    {/* Fat Label - pointing to yellow flesh */}
+                    <div className="absolute top-1/2 -left-4 md:left-0 transform -translate-x-1/2 flex items-center flex-row-reverse">
+                      <div className="w-8 md:w-12 h-px bg-gray-800"></div>
+                      <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-800 shadow-md whitespace-nowrap">
+                        Your Fat
+                      </span>
+                    </div>
+                  </div>
+
                   <p>
                     Picture an apple.
                     The skin is your face — two millimetres of truth.
