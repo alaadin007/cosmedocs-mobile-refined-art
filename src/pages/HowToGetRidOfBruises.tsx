@@ -74,13 +74,21 @@ const HowToGetRidOfBruises = () => {
     "@type": "BlogPosting",
     "headline": "How to Get Rid of Bruises Quickly: Expert Medical Guide",
     "description": "Discover expert-approved methods to heal bruises faster. Learn about medical treatments, natural remedies, and prevention strategies from aesthetic medicine specialists.",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop",
+    "image": "https://www.cosmedocs.co.uk/images/blog/bruises/hero-bruises.jpg",
     "datePublished": publishDate,
     "dateModified": lastModified,
+    "wordCount": 2500,
+    "articleSection": "Health & Wellness",
+    "keywords": ["bruise healing", "bruise treatment", "aesthetic bruising", "post-treatment care", "arnica", "vitamin K"],
     "author": {
-      "@type": "Organization",
-      "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk"
+      "@type": "Person",
+      "name": "Dr. Ahmed Haq",
+      "url": "https://www.cosmedocs.co.uk/about",
+      "jobTitle": "Medical Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Cosmedocs"
+      }
     },
     "publisher": {
       "@type": "Organization",
@@ -94,6 +102,49 @@ const HowToGetRidOfBruises = () => {
       "@type": "WebPage",
       "@id": "https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly"
     }
+  };
+
+  const medicalWebPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "How to Get Rid of Bruises Quickly: Expert Medical Guide",
+    "description": "Discover expert-approved methods to heal bruises faster. Learn about medical treatments, natural remedies, and prevention strategies.",
+    "url": "https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly",
+    "lastReviewed": lastModified,
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Dr. Ahmed Haq",
+      "jobTitle": "Medical Director"
+    },
+    "medicalAudience": {
+      "@type": "MedicalAudience",
+      "audienceType": "Patient"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.cosmedocs.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.cosmedocs.co.uk/cosmetalk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Get Rid of Bruises Quickly",
+        "item": "https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly"
+      }
+    ]
   };
 
   const relatedPosts = [
@@ -110,7 +161,7 @@ const HowToGetRidOfBruises = () => {
     {
       title: "Lazy Skin Syndrome: The Hidden Cost",
       slug: "/cosmetalk/lazy-skin-syndrome",
-      image: "/src/assets/dehydrated-fingers.jpg"
+      image: "/images/blog/dehydrated-fingers.jpg"
     }
   ];
 
@@ -126,18 +177,30 @@ const HowToGetRidOfBruises = () => {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop" />
+        <meta property="og:image" content="https://www.cosmedocs.co.uk/images/blog/bruises/hero-bruises.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop" />
+        <meta name="twitter:image" content="https://www.cosmedocs.co.uk/images/blog/bruises/hero-bruises.jpg" />
+        
+        <meta name="robots" content="index, follow" />
+        <meta name="article:published_time" content={publishDate} />
+        <meta name="article:modified_time" content={lastModified} />
+        <meta name="article:author" content="Dr. Ahmed Haq" />
+        <meta name="article:section" content="Health & Wellness" />
         
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(blogPostingSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(medicalWebPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 
@@ -188,6 +251,9 @@ const HowToGetRidOfBruises = () => {
                     <span>Edited by Dr. Ahmed Haq, Dr. Hena Haq</span>
                   </div>
                 </div>
+                <p className="text-xs text-white/60 mt-4">
+                  Last updated: <time dateTime={lastModified}>January 20, 2025</time>
+                </p>
               </motion.div>
             </div>
           </div>
