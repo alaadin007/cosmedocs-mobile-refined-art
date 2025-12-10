@@ -402,8 +402,8 @@ export default function FaceBotox() {
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Best Botox London | 3 Areas £350</p>
                   <p className="text-sm text-gray-300">
-                    Expert <strong>botox in Harley Street</strong> with transparent <strong>botox London prices</strong>. 
-                    Specialist <strong>baby botox London</strong> treatments at the <strong>best botox clinic London</strong>.
+                    Expert <strong>botox in Harley Street</strong> with transparent prices. 
+                    <strong>Baby Botox London</strong> treatments or strong dose to suit your preferences.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
