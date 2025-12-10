@@ -27,40 +27,47 @@ serve(async (req) => {
 
 COMPLETE PRICING GUIDE:
 
-Injectable Treatments (Natural results · Expert practitioners):
+CONSULTATION:
+- Injectable consultation: £50 (redeemable against any treatment)
 
-Anti-Wrinkle Injections (Botox):
-- 1 Area: £150
-- 2 Areas: £200  
-- 3 Areas: £250
-- Full Face (5 areas): £500
+BOTOX TREATMENTS (Female prices - Male supplement +£50 for 1-3 main areas):
+- 1 Area (forehead OR frown OR crow's feet): £175
+- 2 Areas (e.g., forehead + frown): £275
+- 3 Areas (forehead + frown + crow's feet): £350
+- Chin, Brow Lift, Gummy Smile, Bunny Lines: £50 each (add-on)
+- Lip Flip: £175
+- Nefertiti Face Lift: £300
+- Masseter (Jawline Slimming): £350
+- Full Face Natural Botox: £500
+- Migraines/Headaches: £450-£550
+- Trigger Point Botox: £350-£550
+- T-Zone Oily Skin Botox: £250 (reduces sebum production, controls shine)
+- Sweat-Tox (Underarms Advanced, Palms): £550
+- Sweat-Tox (Scalp): £600
 
-Dermal Fillers:
-- Lips (0.5ml): £200
-- Lips (1ml): £300
-- Cheeks (1ml): £350
-- Jawline (2ml): £500
-- Chin (1ml): £300
+DERMAL FILLERS:
+- Lip Filler 0.5ml (Natural): £300
+- Lip Filler 1.0ml (Bold & Plump): £350
+- Lip Filler 1.5ml: £400
+- Non Surgical Nose Job: £450
+- Tear Trough: £425
+- Cheek Volume: £350/ml
+- Jawline (High Def): £350/ml
+- Marionette Lines: £325/ml
+- Nasolabial Folds: £325/ml
+- Profhilo: £350
+- HAMA 1 (3 syringes): £1,250
+- HAMA 2 (4 syringes): £1,500
+- Fat Dissolve/Emsculpt: POC (non-invasive body contouring and fat reduction)
 
-Age-Reversal Packages:
-- 5 Years Younger (30-40s): £500
-- 10 Years Younger (40+): £1,000
+MEDICAL DERMATOLOGY (CosmeDerm):
+- Comprehensive skin health assessments
+- Medical-grade dermatological treatments
+- Advanced skin condition management
+- Clinical dermatology consultations
 
 MedSpa Membership (£25/month - 50% OFF all treatments):
-
-Laser Hair Removal (Regular → Member Price):
-- Upper Lip or Chin: £30 → £15
-- Full Face: £70 → £35
-- Underarms: £50 → £25
-- Hollywood: £80 → £40
-- Full Legs: £100 → £50
-
-Skin Rejuvenation (Regular → Member Price):
-- Exosomes: £300 → £150
-- Microneedling: £150 → £75
-- PRP Vampire Facial: £250 → £125
-- Signature HydraFacial: £135 → £67.50
-- Platinum HydraFacial: £200 → £100
+- Laser Hair Removal, Skin Rejuvenation, and more at 50% off
 
 Brand Values:
 - Scientifically refined injectables & skin therapies
@@ -70,10 +77,10 @@ Brand Values:
 - Bold · Natural · Always Your Way
 
 Contact Information:
-- Website: www.cosmedocs.co.uk
-- Phone: 020 7060 1960
-- Emergency: 0800 8600 178
-- WhatsApp: +44 7735 606447
+- Location: 10 Harley Street, London W1G 9PF
+- Phone: 0333 0551 503
+- Email: info@cosmedocs.com
+- WhatsApp: +447735606447
 - Free consultation available
 - Natural results guaranteed
 
