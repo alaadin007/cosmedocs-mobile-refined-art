@@ -133,7 +133,7 @@ const Index = () => {
                      >
                        <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                        <h3 className="text-lg font-semibold mb-2">
-                         Chat With Our A<span className="text-primary">i</span>esthetics Doctor
+                         Chat With Our <span className="text-primary">AI</span>esthetics Doctor
                        </h3>
                        <p className="text-sm text-gray-400">Ask anything about treatments</p>
                      </button>

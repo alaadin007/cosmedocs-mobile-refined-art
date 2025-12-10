@@ -224,26 +224,26 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800"
+            className="fixed bottom-4 right-4 w-96 h-[600px] bg-black rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-white/10"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white flex justify-between items-center">
+            <div className="bg-gradient-to-r from-black via-gray-900 to-black p-4 text-white flex justify-between items-center border-b border-white/10">
               <div>
-                <h3 className="font-bold text-lg">CosmeDocs AI Assistant</h3>
-                <p className="text-sm text-purple-100">Ask me anything about aesthetic treatments</p>
+                <h3 className="font-bold text-lg">CosmeDocs <span className="text-primary">AI</span> Assistant</h3>
+                <p className="text-sm text-gray-400">Ask me anything about aesthetic treatments</p>
               </div>
               <Button
                 onClick={() => setIsOpen(false)}
                 variant="ghost"
                 size="icon"
-                className="text-white hover:bg-white/20"
+                className="text-white hover:bg-white/10"
               >
                 <X className="h-5 w-5" />
               </Button>
             </div>
 
             {/* Messages */}
-            <ScrollArea className="flex-1 p-4">
+            <ScrollArea className="flex-1 p-4 bg-black">
               <div className="space-y-4">
                 {messages.map((message) => (
                   <motion.div
@@ -255,12 +255,12 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                     <div
                       className={`max-w-[80%] rounded-2xl p-3 ${
                         message.isUser
-                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                          : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
+                          ? 'bg-gradient-to-r from-primary to-amber-600 text-black'
+                          : 'bg-white/5 border border-white/10 text-gray-100'
                       }`}
                     >
-                      <p className="text-sm whitespace-pre-wrap">{message.text}</p>
-                      <span className={`text-xs mt-1 block ${message.isUser ? 'text-purple-100' : 'text-gray-500'}`}>
+                      <p className="text-sm whitespace-pre-wrap">{formatMessage(message.text)}</p>
+                      <span className={`text-xs mt-1 block ${message.isUser ? 'text-black/70' : 'text-gray-500'}`}>
                         {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </span>
                     </div>
@@ -268,11 +268,11 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 ))}
                 {isLoading && (
                   <div className="flex justify-start">
-                    <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl p-3">
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-3">
                       <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                        <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                        <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                        <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
                       </div>
                     </div>
                   </div>
@@ -281,20 +281,20 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
             </ScrollArea>
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-200 dark:border-gray-800">
+            <div className="p-4 border-t border-white/10 bg-black">
               <div className="flex gap-2">
                 <Input
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                   placeholder="Type your message..."
-                  className="flex-1"
+                  className="flex-1 bg-white/5 border-white/10 text-white placeholder:text-gray-500"
                   disabled={isLoading}
                 />
                 <Button
                   onClick={handleSendMessage}
                   disabled={isLoading || !inputMessage.trim()}
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                  className="bg-gradient-to-r from-primary to-amber-600 hover:from-amber-600 hover:to-primary text-black"
                 >
                   <Send className="h-4 w-4" />
                 </Button>
@@ -305,6 +305,17 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
       </AnimatePresence>
     </>
   );
+};
+
+// Helper function to clean markdown from AI responses
+const formatMessage = (text: string): string => {
+  // Remove markdown bold (**text** or __text__)
+  let formatted = text.replace(/\*\*(.*?)\*\*/g, '$1');
+  formatted = formatted.replace(/__(.*?)__/g, '$1');
+  // Remove markdown italic (*text* or _text_)
+  formatted = formatted.replace(/\*(.*?)\*/g, '$1');
+  formatted = formatted.replace(/_(.*?)_/g, '$1');
+  return formatted;
 };
 
 export default FloatingChatBot;
