@@ -7,13 +7,17 @@ import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
+import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
+import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
 
 interface LiquidGlassSearchProps {
   isOpen: boolean;
   onClose: () => void;
+  onOpenChatbot?: () => void;
 }
 
-export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearchProps) {
+export default function LiquidGlassSearch({ isOpen, onClose, onOpenChatbot }: LiquidGlassSearchProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -296,6 +300,47 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                     </Button>
                   </div>
                 </motion.div>
+              )}
+
+              {/* AI Quick Links */}
+              {!results && !isLoading && (
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                  {/* Free AI Assessment */}
+                  <a 
+                    href="https://ai.cosmedocs.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-xl p-4 transition-all duration-300 text-center"
+                  >
+                    <img src={aiAssessmentIcon} alt="AI Assessment" className="w-10 h-10 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="text-xs font-medium text-white mb-1">Free <span className="text-primary">AI</span> Assessment</h4>
+                    <p className="text-[10px] text-white/50">Face • Hair • Skin</p>
+                  </a>
+                  
+                  {/* Smart Aesthetics */}
+                  <Link 
+                    to="/aesthetic-treatments-made-easy"
+                    onClick={onClose}
+                    className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-xl p-4 transition-all duration-300 text-center"
+                  >
+                    <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-10 h-10 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="text-xs font-medium text-white mb-1">Smart Aesthetics</h4>
+                    <p className="text-[10px] text-white/50">Stop Wasting Money</p>
+                  </Link>
+                  
+                  {/* AI Doctor Chat */}
+                  <button 
+                    onClick={() => {
+                      onClose();
+                      onOpenChatbot?.();
+                    }}
+                    className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-xl p-4 transition-all duration-300 text-center"
+                  >
+                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-10 h-10 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="text-xs font-medium text-white mb-1"><span className="text-primary">AI</span>esthetics Doctor</h4>
+                    <p className="text-[10px] text-white/50">Ask anything</p>
+                  </button>
+                </div>
               )}
 
               {/* Quick suggestions */}

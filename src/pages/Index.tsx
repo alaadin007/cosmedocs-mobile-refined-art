@@ -15,7 +15,7 @@ import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
 import RaffleChatbot from "@/components/RaffleChatbot";
-import FloatingChatBot from "@/components/FloatingChatBot";
+
 import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
 import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
@@ -24,7 +24,6 @@ const Index = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
-  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const isMobile = useIsMobile();
   const seoData = generateSEOMetadata("Cosmedocs London | Aesthetic Medicine | Harley Street", "Harley Street aesthetic clinic by Dr. Ahmed Haq. Botox, fillers & skin treatments. Invisible art • Bold • Natural.", "/");
 
@@ -113,7 +112,7 @@ const Index = () => {
                    {/* AI Quick Links Grid */}
                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                      {/* Free AI Assessment */}
-                     <a href="/ai-assessment" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                     <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
                        <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                        <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
                        <p className="text-sm text-gray-400">Face • Hair • Skin Lesions</p>
@@ -128,7 +127,7 @@ const Index = () => {
                      
                      {/* AI Doctor Chat */}
                      <button 
-                       onClick={() => setIsChatbotOpen(true)}
+                       onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
                        className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
                      >
                        <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
@@ -768,8 +767,6 @@ const Index = () => {
         {/* Raffle Chatbot */}
         <RaffleChatbot />
         
-        {/* Floating AI Chatbot */}
-        <FloatingChatBot externalOpen={isChatbotOpen} onExternalOpenChange={setIsChatbotOpen} />
         
         {/* Initialize Knowledge Base */}
         <WebsiteKnowledgeInitializer />
