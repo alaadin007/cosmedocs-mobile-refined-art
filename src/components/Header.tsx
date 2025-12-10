@@ -8,6 +8,7 @@ import LiquidGlassSearch from "./LiquidGlassSearch";
 import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
 import AestheticAnalysisWizard from "./AestheticAnalysisWizard";
 import FloatingChatBot from "./FloatingChatBot";
+import TreatmentCategoryNav from "./TreatmentCategoryNav";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -119,7 +120,7 @@ export default function Header() {
         {/* Liquid glass background */}
         <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
         
-         <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           {/* Desktop Menu Button - Left */}
           <div className="hidden md:flex items-center gap-2">
             <Button
@@ -219,6 +220,11 @@ export default function Header() {
               </Button>
             </div>
           </div>
+        </div>
+        
+        {/* Treatment Category Navigation - Desktop only */}
+        <div className="hidden md:block">
+          <TreatmentCategoryNav />
         </div>
       </header>
 
