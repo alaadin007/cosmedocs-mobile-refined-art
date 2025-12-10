@@ -16,11 +16,15 @@ import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
 import RaffleChatbot from "@/components/RaffleChatbot";
 import FloatingChatBot from "@/components/FloatingChatBot";
+import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
+import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
+import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
 import WebsiteKnowledgeInitializer from "@/components/WebsiteKnowledgeInitializer";
 const Index = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const isMobile = useIsMobile();
   const seoData = generateSEOMetadata("Cosmedocs London | Aesthetic Medicine | Harley Street", "Harley Street aesthetic clinic by Dr. Ahmed Haq. Botox, fillers & skin treatments. Invisible art • Bold • Natural.", "/");
 
@@ -52,7 +56,7 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
             <AnimatedDots />
             <div className="page-container relative z-10">
-              <div className="max-w-3xl mx-auto text-center">
+              <div className="max-w-5xl mx-auto text-center">
                 <motion.div initial={{
                 opacity: 0,
                 y: 20
@@ -106,31 +110,33 @@ const Index = () => {
                 delay: 0.9,
                 duration: 0.6
               }}>
-                   <div className="space-y-4">
+                   {/* AI Quick Links Grid */}
+                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                     {/* Free AI Assessment */}
+                     <a href="/ai-assessment" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                       <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                       <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
+                       <p className="text-sm text-gray-400">Face • Hair • Skin Lesions</p>
+                     </a>
                      
+                     {/* Smart Aesthetics */}
+                     <a href="/aesthetic-treatments-made-easy" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                       <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                       <h3 className="text-lg font-semibold mb-2">Smart Aesthetics</h3>
+                       <p className="text-sm text-gray-400">Stop Wasting Money</p>
+                     </a>
                      
-                     {/* Aesthetics at a Glance Ebook Link */}
-                     <motion.div initial={{
-                    opacity: 0,
-                    y: 10
-                  }} animate={{
-                    opacity: 1,
-                    y: 0
-                  }} transition={{
-                    delay: 1.1,
-                    duration: 0.6
-                  }}>
-                       <a href="/aesthetics-at-glance" className="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 py-6 text-sm font-medium transition-all duration-300 inline-flex items-center justify-center">
-                         <BookOpen className="h-4 w-4 mr-2" />
-                         Understanding Skin
-                       </a>
-                        <p className="text-xs text-gray-400 mt-2">
-                          "Aesthetics at a Glance" • Complete skin guide • 
-                          <a href="/prescription-skincare" className="text-primary hover:text-primary/80 transition-colors ml-1">
-                            Prescription Medical Skincare
-                          </a>
-                        </p>
-                     </motion.div>
+                     {/* AI Doctor Chat */}
+                     <button 
+                       onClick={() => setIsChatbotOpen(true)}
+                       className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
+                     >
+                       <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                       <h3 className="text-lg font-semibold mb-2">
+                         Chat With Our A<span className="text-primary">i</span>esthetics Doctor
+                       </h3>
+                       <p className="text-sm text-gray-400">Ask anything about treatments</p>
+                     </button>
                    </div>
                  </motion.div>
               </div>
@@ -763,7 +769,7 @@ const Index = () => {
         <RaffleChatbot />
         
         {/* Floating AI Chatbot */}
-        <FloatingChatBot />
+        <FloatingChatBot externalOpen={isChatbotOpen} onExternalOpenChange={setIsChatbotOpen} />
         
         {/* Initialize Knowledge Base */}
         <WebsiteKnowledgeInitializer />
