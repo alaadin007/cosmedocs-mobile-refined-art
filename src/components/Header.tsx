@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -7,12 +7,21 @@ import { Link } from "react-router-dom";
 import LiquidGlassSearch from "./LiquidGlassSearch";
 import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
 import AestheticAnalysisWizard from "./AestheticAnalysisWizard";
+import FloatingChatBot from "./FloatingChatBot";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
+  
+  // Listen for custom event to open chatbot
+  useEffect(() => {
+    const handleOpenChatbot = () => setIsChatbotOpen(true);
+    window.addEventListener('open-chatbot', handleOpenChatbot);
+    return () => window.removeEventListener('open-chatbot', handleOpenChatbot);
+  }, []);
   
   const menuItems = [
     { name: "Home", path: "/" },
@@ -217,6 +226,13 @@ export default function Header() {
       <LiquidGlassSearch 
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
+        onOpenChatbot={() => setIsChatbotOpen(true)}
+      />
+
+      {/* Floating Chatbot */}
+      <FloatingChatBot 
+        externalOpen={isChatbotOpen}
+        onExternalOpenChange={setIsChatbotOpen}
       />
 
       {/* Contact Menu Modal */}
