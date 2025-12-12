@@ -1,14 +1,15 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
-import LiquidGlassSearch from "./LiquidGlassSearch";
-import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
-import AestheticAnalysisWizard from "./AestheticAnalysisWizard";
-import FloatingChatBot from "./FloatingChatBot";
-import TreatmentCategoryNav from "./TreatmentCategoryNav";
+
+// Lazy load heavy modal components
+const LiquidGlassSearch = lazy(() => import("./LiquidGlassSearch"));
+const LiquidGlassContactMenu = lazy(() => import("./LiquidGlassContactMenu"));
+const AestheticAnalysisWizard = lazy(() => import("./AestheticAnalysisWizard"));
+const FloatingChatBot = lazy(() => import("./FloatingChatBot"));
+const TreatmentCategoryNav = lazy(() => import("./TreatmentCategoryNav"));
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -223,36 +224,54 @@ export default function Header() {
         </div>
         
         {/* Treatment Category Navigation - Desktop only */}
-        <div className="hidden md:block">
-          <TreatmentCategoryNav />
-        </div>
+        <Suspense fallback={null}>
+          <div className="hidden md:block">
+            <TreatmentCategoryNav />
+          </div>
+        </Suspense>
       </header>
 
-      {/* Search Modal */}
-      <LiquidGlassSearch 
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        onOpenChatbot={() => setIsChatbotOpen(true)}
-      />
+      {/* Search Modal - only render when needed */}
+      {isSearchOpen && (
+        <Suspense fallback={null}>
+          <LiquidGlassSearch 
+            isOpen={isSearchOpen}
+            onClose={() => setIsSearchOpen(false)}
+            onOpenChatbot={() => setIsChatbotOpen(true)}
+          />
+        </Suspense>
+      )}
 
-      {/* Floating Chatbot */}
-      <FloatingChatBot 
-        externalOpen={isChatbotOpen}
-        onExternalOpenChange={setIsChatbotOpen}
-      />
+      {/* Floating Chatbot - only render when needed */}
+      {isChatbotOpen && (
+        <Suspense fallback={null}>
+          <FloatingChatBot 
+            externalOpen={isChatbotOpen}
+            onExternalOpenChange={setIsChatbotOpen}
+          />
+        </Suspense>
+      )}
 
-      {/* Contact Menu Modal */}
-      <LiquidGlassContactMenu
-        isOpen={isContactMenuOpen}
-        onClose={() => setIsContactMenuOpen(false)}
-        groups={menuGroups}
-      />
+      {/* Contact Menu Modal - only render when needed */}
+      {isContactMenuOpen && (
+        <Suspense fallback={null}>
+          <LiquidGlassContactMenu
+            isOpen={isContactMenuOpen}
+            onClose={() => setIsContactMenuOpen(false)}
+            groups={menuGroups}
+          />
+        </Suspense>
+      )}
 
-      {/* Aesthetic Analysis Modal */}
-      <AestheticAnalysisWizard
-        isOpen={isAnalysisOpen}
-        onClose={() => setIsAnalysisOpen(false)}
-      />
+      {/* Aesthetic Analysis Modal - only render when needed */}
+      {isAnalysisOpen && (
+        <Suspense fallback={null}>
+          <AestheticAnalysisWizard
+            isOpen={isAnalysisOpen}
+            onClose={() => setIsAnalysisOpen(false)}
+          />
+        </Suspense>
+      )}
     </>
   );
 }
