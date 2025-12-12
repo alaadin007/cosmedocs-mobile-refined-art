@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { ChevronLeft, ChevronRight, Sparkles, User, Heart, Eye, Zap, Send, Download, MessageCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles, User, Heart, Eye, Zap, Send, Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface AnalysisData {
@@ -187,70 +187,30 @@ const AestheticAnalysisWizard = ({ isOpen, onClose }: AestheticAnalysisWizardPro
     }
   };
 
-  // Clean markdown formatting from text
-  const cleanMarkdown = (text: string): string => {
-    return text
-      .replace(/\*\*/g, '') // Remove **
-      .replace(/\*/g, '')   // Remove *
-      .replace(/__/g, '')   // Remove __
-      .replace(/_/g, ' ')   // Replace _ with space
-      .replace(/#{1,6}\s?/g, '') // Remove # headers
-      .replace(/\n{3,}/g, '\n\n'); // Max 2 line breaks
-  };
-
-  // Format text with proper spacing for display
-  const formatForDisplay = (text: string): string => {
-    const cleaned = cleanMarkdown(text);
-    // Add extra spacing between sections
-    return cleaned
-      .replace(/(\d+\.)\s/g, '\n\n$1 ') // Add spacing before numbered items
-      .replace(/(Dr\. Ahmed Haq)/g, '\n\n$1') // Add spacing before signature
-      .replace(/(Book your consultation)/g, '\n\n$1') // Add spacing before booking
-      .replace(/(This analysis is generated)/g, '\n\n$1'); // Add spacing before disclaimer
-  };
-
-  // Create WhatsApp message with full recommendations
-  const shareToWhatsApp = () => {
-    const cleanedText = cleanMarkdown(analysisResult || '');
-    const message = `Hi! I completed my facial assessment at Cosmedocs.\n\n${cleanedText}`;
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/447735606447?text=${encodedMessage}`, '_blank');
-  };
-
   if (analysisResult) {
-    const displayText = formatForDisplay(analysisResult);
-    
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-primary" />
-              Your Personalised Aesthetic Analysis
+              Your Personalized Aesthetic Analysis
             </DialogTitle>
           </DialogHeader>
           
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg">
-              <div className="prose prose-sm max-w-none text-foreground">
-                <div className="whitespace-pre-wrap leading-relaxed text-base">{displayText}</div>
+              <div className="prose prose-sm max-w-none">
+                <div style={{ whiteSpace: 'pre-wrap' }}>{analysisResult}</div>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex gap-4">
               <Button onClick={resetWizard} variant="outline" className="flex-1">
                 Take Another Analysis
               </Button>
               <Button 
-                onClick={shareToWhatsApp}
-                className="flex-1 bg-green-600 hover:bg-green-700"
-              >
-                <MessageCircle className="h-4 w-4 mr-2" />
-                Share to Cosmedocs
-              </Button>
-              <Button 
                 onClick={() => window.print()} 
-                variant="outline"
                 className="flex-1"
               >
                 <Download className="h-4 w-4 mr-2" />
