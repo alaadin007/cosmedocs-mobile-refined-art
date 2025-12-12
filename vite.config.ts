@@ -46,9 +46,9 @@ export default defineConfig(({ mode }) => ({
           if (id.includes('@supabase')) {
             return 'supabase';
           }
-          // Helmet for SEO
+          // Helmet for SEO - keep with react-core to avoid initialization issues
           if (id.includes('react-helmet')) {
-            return 'helmet';
+            return 'react-core';
           }
           // Charts
           if (id.includes('recharts') || id.includes('d3')) {
@@ -72,6 +72,6 @@ export default defineConfig(({ mode }) => ({
     reportCompressedSize: false,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'react-helmet-async'],
   },
 }));
