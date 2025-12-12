@@ -89,61 +89,17 @@ const MarionnetteLines = () => {
     }
   ];
 
-  // Structured Data Schemas
+  // Structured Data Schemas - Single unified schema to avoid duplicates
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
+    "@type": "MedicalClinic",
+    "@id": "https://www.cosmedocs.co.uk/#organization",
     "name": "Cosmedocs",
     "url": "https://www.cosmedocs.co.uk",
     "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+    "image": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
     "description": "Expert aesthetic medicine clinic in London specialising in marionette lines treatment and liquid facelifts",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Harley Street",
-      "addressLocality": "London",
-      "postalCode": "W1G 9PF",
-      "addressCountry": "GB"
-    },
-    "telephone": "0333 0551 503",
-    "founder": {
-      "@type": "Person",
-      "name": "Dr. Ahmed Haq"
-    }
-  };
-
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Ahmed Haq",
-    "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
-    "medicalSpecialty": "Aesthetic Medicine",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Harley Street",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
-      "postalCode": "W1G 9PF",
-      "addressCountry": "GB"
-    },
-    "worksFor": {
-      "@type": "MedicalOrganization",
-      "name": "Cosmedocs",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "addressRegion": "Greater London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
-    }
-  };
-
-  const procedureSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
+    "priceRange": "££",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
@@ -157,16 +113,42 @@ const MarionnetteLines = () => {
       "latitude": 51.5074,
       "longitude": -0.1278
     },
+    "telephone": "+44 20 3733 3227",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "bestRating": "5",
+      "worstRating": "1",
       "ratingCount": "156"
     },
     "availableService": {
       "@type": "MedicalProcedure",
       "name": "Marionette Lines Filler Treatment",
       "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Ahmed Haq"
+    }
+  };
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "@id": "https://www.cosmedocs.co.uk/#physician-ahmed-haq",
+    "name": "Dr. Ahmed Haq",
+    "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
+    "medicalSpecialty": "Aesthetic Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "worksFor": {
+      "@id": "https://www.cosmedocs.co.uk/#organization"
     }
   };
 
@@ -309,9 +291,6 @@ const MarionnetteLines = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(physicianSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(procedureSchema)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
