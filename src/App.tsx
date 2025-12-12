@@ -9,6 +9,7 @@ import { useAutoSitemap } from "@/hooks/useAutoSitemap";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // Eager load critical pages only
 import Index from "./pages/Index";
@@ -156,185 +157,180 @@ const App = () => {
   useAutoSitemap();
   
   return (
-    <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <AuthProvider>
-              <ScrollToTop />
-              <Layout>
-                <Suspense fallback={<PageLoader />}>
-                <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/home2" element={<Home2 />} />
-              <Route path="/treatments" element={<Treatments />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/thank-you" element={<ThankYou />} />
-              <Route path="/lip-fillers" element={<LipFillers />} />
-              <Route path="/cupid-bow-lips" element={<CupidBowLips />} />
-              <Route path="/forehead-fillers" element={<ForeheadFillers />} />
-              <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
-              <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
-              <Route path="/membership" element={<Membership />} />
-              <Route path="/team/dr-ahmed-haq" element={<DrAhmedHaq />} />
-              <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
-              <Route path="/partners" element={<Partners />} />
-              <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
-              <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
-              <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
-              <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
-              <Route path="/pdo-threads" element={<ThreadFaceLift />} />
-              <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
-              <Route path="/masseter-botox" element={<MasseterBotox />} />
-              <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
-              <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
-              
-              {/* Dermal Filler Routes */}
-              <Route path="/dermal-fillers" element={<DermalFillers />} />
-              <Route path="/marionette-lines" element={<MarionnetteLines />} />
-              <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
-              
-              <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
-              
-              {/* Botox URL redirects */}
-              <Route path="/forehead-botox" element={<Navigate to="/forehead-lines-botox" replace />} />
-              <Route path="/frown-lines-botox" element={<Navigate to="/frown-line-botox" replace />} />
-              <Route path="/chin-dimpling-botox" element={<Navigate to="/chin-botox" replace />} />
-              <Route path="/nefertiti-botox-facelift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
-              <Route path="/nefertiti-lift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
-              
-              {/* Filler URL redirects */}
-              <Route path="/cheek-fillers" element={<Navigate to="/cheek-filler" replace />} />
-              <Route path="/jawline-fillers" element={<Navigate to="/jawline-filler" replace />} />
-              <Route path="/lip-filler" element={<Navigate to="/lip-fillers" replace />} />
-              <Route path="/marionette-lines-filler" element={<Navigate to="/marionette-lines" replace />} />
-              <Route path="/nose-filler" element={<Navigate to="/non-surgical-nose-job" replace />} />
-              <Route path="/tear-trough-fillers" element={<Navigate to="/tear-trough-filler" replace />} />
-              <Route path="/temple-fillers" element={<Navigate to="/temple-filler-london" replace />} />
-              
-              {/* Treatment URL redirects */}
-              <Route path="/fat-dissolving-injections" element={<Navigate to="/fat-dissolve" replace />} />
-              <Route path="/thread-lift" element={<Navigate to="/thread-face-lift" replace />} />
-              <Route path="/aesthetics-at-glance" element={<Navigate to="/aesthetics-at-a-glance" replace />} />
-              <Route path="/booking" element={<Navigate to="/contact" replace />} />
-              <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
-              <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
-              
-              <Route path="/botox-london" element={<FaceBotox />} />
-              <Route path="/botox-cost-london" element={<BotoxCostLondon />} />
-              <Route path="/botox-price-london" element={<Navigate to="/botox-cost-london" replace />} />
-              <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
-              <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
-              <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
-              <Route path="/aesthetic-maintenance-cost-blog" element={<AestheticMaintenanceCostBlog />} />
-              <Route path="/pdo-threads-blog" element={<ThreadFaceLift />} />
-              <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
-              <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
-              <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
-              <Route path="/inside-mind-aesthetic-doctor-blog" element={<InsideMindAestheticDoctorBlog />} />
-              <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
-               <Route path="/cosmetalk/smokers-lines-women" element={<SmokersLinesWomen />} />
-              <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
-               <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
-          <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
-          <Route path="/partnerships" element={<Partnerships />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/blog/how-to-get-rid-of-bruises-quickly" element={<HowToGetRidOfBruises />} />
-            <Route path="/blog/forehead-wrinkles-myths-tips" element={<ForeheadWrinklesMythsTips />} />
-            <Route path="/blog/lip-wrinkles-treatments" element={<LipWrinklesTreatments />} />
-            <Route path="/blog/skin-tags-and-skin-tag-removal" element={<SkinTagsRemoval />} />
-               <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
-                <Route path="/journal" element={<BlogHome />} />
-               <Route path="/8-point-facelift" element={<EightPointFacelift />} />
-               <Route path="/cosmetalk" element={<CosmetalkBlog />} />
-              <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
-              <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
-              <Route path="/treatments-summary-japanese" element={<TreatmentsSummaryJapanese />} />
-              <Route path="/birmingham" element={<BirminghamHome />} />
-              <Route path="/manchester" element={<ManchesterHome />} />
-              <Route path="/cardiff" element={<CardiffHome />} />
-               <Route path="/delhi" element={<DelhiLocation />} />
-               <Route path="/karachi" element={<KarachiLocation />} />
-               <Route path="/barbados" element={<BarbadosHome />} />
-              <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
-              <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
-              <Route path="/profhilo" element={<ProfhiloTreatment />} />
-              <Route path="/chin-botox" element={<ChinBotox />} />
-              <Route path="/frown-line-botox" element={<FrownLineBotox />} />
-              <Route path="/crows-feet-botox" element={<CrowsFeetBotox />} />
-              <Route path="/forehead-lines-botox" element={<ForeheadLinesBotox />} />
-              <Route path="/bunny-lines-botox" element={<BunnyLinesBotox />} />
-              <Route path="/nasal-flaring-botox" element={<NasalFlaringBotox />} />
-              <Route path="/oily-skin-botox" element={<OilySkinBotox />} />
-              <Route path="/lip-flip" element={<LipFlip />} />
-              <Route path="/migraine-botox" element={<MigraineBotox />} />
-              <Route path="/bruxism-botox" element={<BruxismBotox />} />
-               <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
-                 <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
-                 <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
-                 <Route path="/trap-botox" element={<TrapBotox />} />
-               <Route path="/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
-               <Route path="/aesthetic-treatments-made-easy" element={<AestheticTreatmentsMadeEasy />} />
-                <Route path="/hydrafacial-london" element={<HydraFacial />} />
-              <Route path="/prp-treatment" element={<PRPTreatment />} />
-              
-              
-              <Route path="/peel-to-reveal" element={<PeelToReveal />} />
-              <Route path="/chemical-peel" element={<ChemicalPeel />} />
-              <Route path="/prescription-skincare" element={<PrescriptionSkincare />} />
-              <Route path="/fat-dissolve" element={<FatDissolve />} />
-              <Route path="/cosmederm" element={<CosmeDerm />} />
-              <Route path="/tear-trough-filler" element={<TearTroughFiller />} />
-              <Route path="/cheek-filler" element={<CheekFiller />} />
-            <Route path="/chin-filler" element={<ChinFiller />} />
-            <Route path="/ear-lobe-rejuvenation" element={<EarLobeRejuvenation />} />
-               <Route path="/jawline-filler" element={<JawlineFiller />} />
-                <Route path="/microneedling" element={<Microneedling />} />
-                <Route path="/temple-filler-london" element={<TempleFiller />} />
-                <Route path="/neck-fillers" element={<NeckFillers />} />
-                <Route path="/neck" element={<NeckFillers />} />
-                <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
-                 <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
-                 <Route path="/dermatology" element={<Dermatology />} />
-              <Route path="/acne-treatment" element={<AcneTreatment />} />
-              <Route path="/mole-skin-tag-removal" element={<MoleSkinTagRemoval />} />
-               <Route path="/eczema-treatment" element={<EczemaTreatment />} />
-                <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
-                <Route path="/hyperpigmentation-treatment" element={<HyperpigmentationTreatment />} />
-                   <Route path="/aesthetic-training" element={<AestheticTraining />} />
-                    <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
-                <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
-                <Route path="/popupoffer" element={<PopupOffer />} />
-                <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
-                
-              {/* Blog redirects */}
-              <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
-              <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/cosmetalk/vitamin-c-ferulic-acid-benefits" replace />} />
-              <Route path="/blog/london-tweakments-natural-aesthetics" element={<LondonTweakmentsNaturalAesthetics />} />
-              
-              {/* Campaign Routes */}
-              <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
-              <Route path="/ads" element={<CampaignAds />} />
-              <Route path="/spin-to-win" element={<SpinToWin />} />
-              
-              <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
-              <Route path="/admin/video-upload" element={<VideoUpload />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            </Suspense>
-          </Layout>
-            </AuthProvider>
-          </BrowserRouter>
-        </TooltipProvider>
-      </HelmetProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <HelmetProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <AuthProvider>
+                <ScrollToTop />
+                <Layout>
+                  <Suspense fallback={<PageLoader />}>
+                    <Routes>
+                      <Route path="/" element={<Index />} />
+                      <Route path="/home" element={<Home />} />
+                      <Route path="/home2" element={<Home2 />} />
+                      <Route path="/treatments" element={<Treatments />} />
+                      <Route path="/team" element={<Team />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/contact" element={<Contact />} />
+                      <Route path="/testimonials" element={<Testimonials />} />
+                      <Route path="/thank-you" element={<ThankYou />} />
+                      <Route path="/lip-fillers" element={<LipFillers />} />
+                      <Route path="/cupid-bow-lips" element={<CupidBowLips />} />
+                      <Route path="/forehead-fillers" element={<ForeheadFillers />} />
+                      <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
+                      <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
+                      <Route path="/membership" element={<Membership />} />
+                      <Route path="/team/dr-ahmed-haq" element={<DrAhmedHaq />} />
+                      <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
+                      <Route path="/partners" element={<Partners />} />
+                      <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
+                      <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
+                      <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
+                      <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
+                      <Route path="/pdo-threads" element={<ThreadFaceLift />} />
+                      <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
+                      <Route path="/masseter-botox" element={<MasseterBotox />} />
+                      <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
+                      <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
+                      
+                      {/* Dermal Filler Routes */}
+                      <Route path="/dermal-fillers" element={<DermalFillers />} />
+                      <Route path="/marionette-lines" element={<MarionnetteLines />} />
+                      <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
+                      
+                      <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
+                      
+                      {/* Botox URL redirects */}
+                      <Route path="/forehead-botox" element={<Navigate to="/forehead-lines-botox" replace />} />
+                      <Route path="/frown-lines-botox" element={<Navigate to="/frown-line-botox" replace />} />
+                      <Route path="/chin-dimpling-botox" element={<Navigate to="/chin-botox" replace />} />
+                      <Route path="/nefertiti-botox-facelift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
+                      <Route path="/nefertiti-lift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
+                      
+                      {/* Filler URL redirects */}
+                      <Route path="/cheek-fillers" element={<Navigate to="/cheek-filler" replace />} />
+                      <Route path="/jawline-fillers" element={<Navigate to="/jawline-filler" replace />} />
+                      <Route path="/lip-filler" element={<Navigate to="/lip-fillers" replace />} />
+                      <Route path="/marionette-lines-filler" element={<Navigate to="/marionette-lines" replace />} />
+                      <Route path="/nose-filler" element={<Navigate to="/non-surgical-nose-job" replace />} />
+                      <Route path="/tear-trough-fillers" element={<Navigate to="/tear-trough-filler" replace />} />
+                      <Route path="/temple-fillers" element={<Navigate to="/temple-filler-london" replace />} />
+                      
+                      {/* Treatment URL redirects */}
+                      <Route path="/fat-dissolving-injections" element={<Navigate to="/fat-dissolve" replace />} />
+                      <Route path="/thread-lift" element={<Navigate to="/thread-face-lift" replace />} />
+                      <Route path="/aesthetics-at-glance" element={<Navigate to="/aesthetics-at-a-glance" replace />} />
+                      <Route path="/booking" element={<Navigate to="/contact" replace />} />
+                      <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
+                      <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
+                      
+                      <Route path="/botox-london" element={<FaceBotox />} />
+                      <Route path="/botox-cost-london" element={<BotoxCostLondon />} />
+                      <Route path="/botox-price-london" element={<Navigate to="/botox-cost-london" replace />} />
+                      <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
+                      <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
+                      <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
+                      <Route path="/aesthetic-maintenance-cost-blog" element={<AestheticMaintenanceCostBlog />} />
+                      <Route path="/pdo-threads-blog" element={<ThreadFaceLift />} />
+                      <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
+                      <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
+                      <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
+                      <Route path="/inside-mind-aesthetic-doctor-blog" element={<InsideMindAestheticDoctorBlog />} />
+                      <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
+                      <Route path="/cosmetalk/smokers-lines-women" element={<SmokersLinesWomen />} />
+                      <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
+                      <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
+                      <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
+                      <Route path="/partnerships" element={<Partnerships />} />
+                      <Route path="/auth" element={<Auth />} />
+                      <Route path="/dashboard" element={<Dashboard />} />
+                      <Route path="/blog/how-to-get-rid-of-bruises-quickly" element={<HowToGetRidOfBruises />} />
+                      <Route path="/blog/forehead-wrinkles-myths-tips" element={<ForeheadWrinklesMythsTips />} />
+                      <Route path="/blog/lip-wrinkles-treatments" element={<LipWrinklesTreatments />} />
+                      <Route path="/blog/skin-tags-and-skin-tag-removal" element={<SkinTagsRemoval />} />
+                      <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
+                      <Route path="/journal" element={<BlogHome />} />
+                      <Route path="/8-point-facelift" element={<EightPointFacelift />} />
+                      <Route path="/cosmetalk" element={<CosmetalkBlog />} />
+                      <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
+                      <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
+                      <Route path="/treatments-summary-japanese" element={<TreatmentsSummaryJapanese />} />
+                      <Route path="/birmingham" element={<BirminghamHome />} />
+                      <Route path="/manchester" element={<ManchesterHome />} />
+                      <Route path="/cardiff" element={<CardiffHome />} />
+                      <Route path="/delhi" element={<DelhiLocation />} />
+                      <Route path="/karachi" element={<KarachiLocation />} />
+                      <Route path="/barbados" element={<BarbadosHome />} />
+                      <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
+                      <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
+                      <Route path="/profhilo" element={<ProfhiloTreatment />} />
+                      <Route path="/chin-botox" element={<ChinBotox />} />
+                      <Route path="/frown-line-botox" element={<FrownLineBotox />} />
+                      <Route path="/crows-feet-botox" element={<CrowsFeetBotox />} />
+                      <Route path="/forehead-lines-botox" element={<ForeheadLinesBotox />} />
+                      <Route path="/bunny-lines-botox" element={<BunnyLinesBotox />} />
+                      <Route path="/nasal-flaring-botox" element={<NasalFlaringBotox />} />
+                      <Route path="/lip-flip" element={<LipFlip />} />
+                      <Route path="/migraine-botox" element={<MigraineBotox />} />
+                      <Route path="/bruxism-botox" element={<BruxismBotox />} />
+                      <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
+                      <Route path="/hydrafacial" element={<HydraFacial />} />
+                      <Route path="/hydrafacial-london" element={<HydraFacial />} />
+                      <Route path="/prp-treatment" element={<PRPTreatment />} />
+                      <Route path="/peel-to-reveal" element={<PeelToReveal />} />
+                      <Route path="/cheek-filler" element={<CheekFiller />} />
+                      <Route path="/chin-filler" element={<ChinFiller />} />
+                      <Route path="/ear-lobe-rejuvenation" element={<EarLobeRejuvenation />} />
+                      <Route path="/jawline-filler" element={<JawlineFiller />} />
+                      <Route path="/chemical-peel" element={<ChemicalPeel />} />
+                      <Route path="/prescription-skin-care" element={<PrescriptionSkincare />} />
+                      <Route path="/microneedling" element={<Microneedling />} />
+                      <Route path="/tear-trough-filler" element={<TearTroughFiller />} />
+                      <Route path="/trap-botox" element={<TrapBotox />} />
+                      <Route path="/admin/video-upload" element={<VideoUpload />} />
+                      <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
+                      <Route path="/temple-filler-london" element={<TempleFiller />} />
+                      <Route path="/neck-fillers" element={<NeckFillers />} />
+                      <Route path="/neck" element={<NeckFillers />} />
+                      <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
+                      <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
+                      <Route path="/dermatology" element={<Dermatology />} />
+                      <Route path="/aesthetic-training" element={<AestheticTraining />} />
+                      <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
+                      <Route path="/acne-treatment" element={<AcneTreatment />} />
+                      <Route path="/mole-removal" element={<MoleSkinTagRemoval />} />
+                      <Route path="/skin-tag-removal" element={<MoleSkinTagRemoval />} />
+                      <Route path="/eczema-treatment" element={<EczemaTreatment />} />
+                      <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
+                      <Route path="/hyperpigmentation-treatment" element={<HyperpigmentationTreatment />} />
+                      <Route path="/fat-dissolve" element={<FatDissolve />} />
+                      <Route path="/oily-skin-botox" element={<OilySkinBotox />} />
+                      <Route path="/cosmederm" element={<CosmeDerm />} />
+                      <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
+                      <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
+                      <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
+                      <Route path="/popup-offer" element={<PopupOffer />} />
+                      <Route path="/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
+                      <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
+                      <Route path="/aesthetic-treatments-made-easy" element={<AestheticTreatmentsMadeEasy />} />
+                      <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
+                      <Route path="/campaign-ads" element={<CampaignAds />} />
+                      <Route path="/london-tweakments-natural-aesthetics" element={<LondonTweakmentsNaturalAesthetics />} />
+                      <Route path="/spin-to-win" element={<SpinToWin />} />
+                      <Route path="*" element={<NotFound />} />
+                    </Routes>
+                  </Suspense>
+                </Layout>
+              </AuthProvider>
+            </BrowserRouter>
+          </TooltipProvider>
+        </HelmetProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 };
 
