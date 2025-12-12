@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense, memo } from "react";
-import { useAutoSitemap } from "@/hooks/useAutoSitemap";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
@@ -153,9 +152,6 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  // Auto-update sitemap when routes change
-  useAutoSitemap();
-  
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
