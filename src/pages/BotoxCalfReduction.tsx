@@ -72,35 +72,14 @@ const BotoxCalfReduction = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalClinic",
+            "@id": "https://www.cosmedocs.co.uk/#organization",
             "name": "Cosmedocs",
             "description": "Expert botox calf reduction treatments in London",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "availableService": {
-              "@type": "Service",
-              "name": "Botox Calf Reduction"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
             "url": "https://www.cosmedocs.co.uk",
+            "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+            "image": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+            "telephone": "+44 20 3733 3227",
+            "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -126,7 +105,7 @@ const BotoxCalfReduction = () => {
               "name": "Botox Calf Reduction Treatment",
               "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
               "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections"
-            },
+            }
           })}
         </script>
         <script type="application/ld+json">
