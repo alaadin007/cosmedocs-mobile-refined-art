@@ -1,25 +1,34 @@
-import React, { useState } from 'react';
+import { useState, lazy, Suspense, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from "framer-motion";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
-import PopularTreatments from "@/components/PopularTreatments";
-import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
-import RaffleChatbot from "@/components/RaffleChatbot";
 import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
 import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
-import WebsiteKnowledgeInitializer from "@/components/WebsiteKnowledgeInitializer";
+
+// Lazy load heavy components
+const PopularTreatments = lazy(() => import("@/components/PopularTreatments"));
+const BeforeAfterCarousel = lazy(() => import("@/components/BeforeAfterCarousel"));
+const AestheticAnalysisWizard = lazy(() => import("@/components/AestheticAnalysisWizard"));
+const RaffleChatbot = lazy(() => import("@/components/RaffleChatbot"));
+const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowledgeInitializer"));
+
+
+// Memoized section placeholder
+const SectionPlaceholder = memo(() => (
+  <div className="py-16 bg-background">
+    <div className="h-64 skeleton rounded-xl mx-auto max-w-6xl" />
+  </div>
+));
 
 const Index = () => {
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const seoData = generateSEOMetadata("Cosmedocs London | Aesthetic Medicine | Harley Street", "Harley Street aesthetic clinic by Dr. Ahmed Haq. Botox, fillers & skin treatments. Invisible art • Bold • Natural.", "/");
-
-  // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
-  return <>
+
+  return (
+    <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -34,109 +43,79 @@ const Index = () => {
       </Helmet>
 
       <TooltipProvider>
-        <div className="bg-black text-white">
+        <div className="bg-background text-foreground">
           <header>
-            {/* SEO optimized hidden heading for crawlers */}
             <h1 className="sr-only">Cosmedocs - Premium Aesthetic Medicine Treatments | Botox, Dermal Fillers in London Harley Street</h1>
           </header>
           
-          {/* Hero Section */}
+          {/* Hero Section - No framer-motion, CSS animations only */}
           <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
             <AnimatedDots />
             <div className="page-container relative z-10">
               <div className="max-w-5xl mx-auto text-center">
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6
-              }}>
+                <div className="animate-fade-in">
                   <div className="relative mb-6">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" id="hero-heading">
                       cosmedocs
                     </h2>
                   </div>
-                </motion.div>
+                </div>
                 
-                <motion.p className="text-lg md:text-xl italic mb-6" initial={{
-                opacity: 0
-              }} animate={{
-                opacity: 1
-              }} transition={{
-                delay: 0.5,
-                duration: 0.6
-              }}>
+                <p className="text-lg md:text-xl italic mb-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                   Our aesthetics is invisible art
-                </motion.p>
-                <motion.div className="mb-8 max-w-xl mx-auto" initial={{
-                opacity: 0
-              }} animate={{
-                opacity: 1
-              }} transition={{
-                delay: 0.7,
-                duration: 0.6
-              }}>
-                  <p className="text-gray-300 mb-4">art • science • a touch of magic</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                </p>
+                
+                <div className="mb-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                  <p className="text-muted-foreground mb-4">art • science • a touch of magic</p>
+                  <p className="text-muted-foreground/70 text-sm leading-relaxed">
                     All done with the finest needles imported,<br />
                     because every detail matters.
                   </p>
-                  <p className="text-gray-400 text-sm mt-6 leading-relaxed">
+                  <p className="text-muted-foreground/70 text-sm mt-6 leading-relaxed">
                     At CosmeDocs, aesthetics is more than treatment — it's a philosophy.<br />
                     Quiet, not loud. Subtle, not exaggerated.<br />
                     Transformations that whisper rather than shout.
                   </p>
-                </motion.div>
-                <motion.div initial={{
-                opacity: 0
-              }} animate={{
-                opacity: 1
-              }} transition={{
-                delay: 0.9,
-                duration: 0.6
-              }}>
-                   {/* AI Quick Links Grid */}
-                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                     {/* Free AI Assessment */}
-                     <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
-                       <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                       <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
-                       <p className="text-sm text-gray-400">Face • Hair • Skin Lesions</p>
-                     </a>
-                     
-                     {/* Smart Aesthetics */}
-                     <a href="/aesthetic-treatments-made-easy" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
-                       <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                       <h3 className="text-lg font-semibold mb-2">Smart Aesthetics</h3>
-                       <p className="text-sm text-gray-400">Stop Wasting Money</p>
-                     </a>
-                     
-                     {/* AI Doctor Chat */}
-                     <button 
-                       onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                       className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
-                     >
-                       <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                       <h3 className="text-lg font-semibold mb-2">
-                         Chat With Our <span className="text-primary">AI</span>esthetics Doctor
-                       </h3>
-                       <p className="text-sm text-gray-400">Ask anything about treatments</p>
-                     </button>
-                   </div>
-                 </motion.div>
+                </div>
+                
+                {/* AI Quick Links Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.7s' }}>
+                  <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                    <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
+                    <p className="text-sm text-muted-foreground">Face • Hair • Skin Lesions</p>
+                  </a>
+                  
+                  <a href="/aesthetic-treatments-made-easy" className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                    <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <h3 className="text-lg font-semibold mb-2">Smart Aesthetics</h3>
+                    <p className="text-sm text-muted-foreground">Stop Wasting Money</p>
+                  </a>
+                  
+                  <button 
+                    onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+                    className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
+                  >
+                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <h3 className="text-lg font-semibold mb-2">
+                      Chat With Our <span className="text-primary">AI</span>esthetics Doctor
+                    </h3>
+                    <p className="text-sm text-muted-foreground">Ask anything about treatments</p>
+                  </button>
+                </div>
               </div>
             </div>
           </section>
           
-          {/* Featured Treatments Section - Now using PopularTreatments component */}
-          <PopularTreatments />
+          {/* Lazy loaded sections */}
+          <Suspense fallback={<SectionPlaceholder />}>
+            <PopularTreatments />
+          </Suspense>
 
-          {/* Before & After Transformation Gallery */}
-          <BeforeAfterCarousel />
+          <Suspense fallback={<SectionPlaceholder />}>
+            <BeforeAfterCarousel />
+          </Suspense>
 
 
           {/* CTA Section */}
@@ -162,16 +141,21 @@ const Index = () => {
           </div>
         </div>
 
-        {/* AI Aesthetic Analysis Modal */}
-        <AestheticAnalysisWizard isOpen={isAnalysisOpen} onClose={() => setIsAnalysisOpen(false)} />
+        {/* Lazy loaded modals */}
+        <Suspense fallback={null}>
+          <AestheticAnalysisWizard isOpen={isAnalysisOpen} onClose={() => setIsAnalysisOpen(false)} />
+        </Suspense>
 
-        {/* Raffle Chatbot */}
-        <RaffleChatbot />
+        <Suspense fallback={null}>
+          <RaffleChatbot />
+        </Suspense>
         
-        
-        {/* Initialize Knowledge Base */}
-        <WebsiteKnowledgeInitializer />
+        <Suspense fallback={null}>
+          <WebsiteKnowledgeInitializer />
+        </Suspense>
       </TooltipProvider>
-    </>;
+    </>
+  );
 };
+
 export default Index;
