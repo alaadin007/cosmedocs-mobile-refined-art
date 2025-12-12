@@ -1,9 +1,8 @@
-
-import { ReactNode, useEffect, lazy, Suspense } from "react";
+import { ReactNode, useEffect, lazy, Suspense, memo } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "./Header";
 
-// Lazy load heavy components
+// Lazy load heavy components with preload hints
 const Footer = lazy(() => import("./Footer"));
 const FloatingChatBot = lazy(() => import("./FloatingChatBot"));
 
@@ -11,10 +10,25 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+// Memoize layout to prevent unnecessary re-renders
+const Layout = memo(function Layout({ children }: LayoutProps) {
   useEffect(() => {
-    // Set language attribute on html element
     document.documentElement.lang = "en-GB";
+    
+    // Preload footer after initial render
+    const timer = setTimeout(() => {
+      import("./Footer");
+    }, 100);
+    
+    // Preload chatbot after page settles
+    const chatTimer = setTimeout(() => {
+      import("./FloatingChatBot");
+    }, 2000);
+    
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(chatTimer);
+    };
   }, []);
   
   return (
@@ -27,7 +41,7 @@ export default function Layout({ children }: LayoutProps) {
       <div className="flex flex-col min-h-screen w-full">
         <Header />
         <main className="flex-grow pt-16">{children}</main>
-        <Suspense fallback={<div className="h-64 bg-black" />}>
+        <Suspense fallback={<div className="h-48 bg-background" aria-hidden="true" />}>
           <Footer />
         </Suspense>
         <Suspense fallback={null}>
@@ -36,4 +50,6 @@ export default function Layout({ children }: LayoutProps) {
       </div>
     </>
   );
-}
+});
+
+export default Layout;

@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, memo } from "react";
 import { useAutoSitemap } from "@/hooks/useAutoSitemap";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Layout from "./components/Layout";
@@ -96,7 +96,7 @@ const PlasticSurgeon = lazy(() => import("./pages/PlasticSurgeon"));
 const Dermatology = lazy(() => import("./pages/Dermatology"));
 const AestheticTraining = lazy(() => import("./pages/AestheticTraining"));
 const HairTransplantSurgeon = lazy(() => import("./pages/HairTransplantSurgeon"));
-const GoogleAnalytics = lazy(() => import("./components/GoogleAnalytics").then(m => ({ default: m.GoogleAnalytics })));
+// GoogleAnalytics now loaded via index.html for better performance
 const MoleSkinTagRemoval = lazy(() => import("./pages/MoleSkinTagRemoval"));
 const EczemaTreatment = lazy(() => import("./pages/EczemaTreatment"));
 const PsoriasisTreatment = lazy(() => import("./pages/PsoriasisTreatment"));
@@ -134,14 +134,22 @@ const ForeheadWrinklesMythsTips = lazy(() => import("./pages/ForeheadWrinklesMyt
 const LipWrinklesTreatments = lazy(() => import("./pages/LipWrinklesTreatments"));
 const SkinTagsRemoval = lazy(() => import("./pages/SkinTagsRemoval"));
 
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-pulse text-muted-foreground">Loading...</div>
+// Optimized loading component
+const PageLoader = memo(() => (
+  <div className="flex items-center justify-center min-h-[50vh]" aria-busy="true">
+    <div className="w-8 h-8 border-2 border-muted-foreground border-t-transparent rounded-full animate-spin" />
   </div>
-);
+));
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000, // 1 minute
+      gcTime: 5 * 60 * 1000, // 5 minutes (formerly cacheTime)
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const App = () => {
   // Auto-update sitemap when routes change
@@ -156,9 +164,6 @@ const App = () => {
           <BrowserRouter>
             <AuthProvider>
               <ScrollToTop />
-              <Suspense fallback={null}>
-                <GoogleAnalytics />
-              </Suspense>
               <Layout>
                 <Suspense fallback={<PageLoader />}>
                 <Routes>

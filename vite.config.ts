@@ -11,8 +11,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -22,33 +21,58 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Separate vendor chunks for better caching
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': [
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-tooltip',
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-collapsible'
-          ],
-          'motion': ['framer-motion'],
-          'query': ['@tanstack/react-query'],
-          'supabase': ['@supabase/supabase-js'],
-          'helmet': ['react-helmet-async'],
+        manualChunks: (id) => {
+          // Core React bundle - smallest possible
+          if (id.includes('react-dom') || id.includes('react/')) {
+            return 'react-core';
+          }
+          // Router separate
+          if (id.includes('react-router')) {
+            return 'router';
+          }
+          // Heavy animation library - defer
+          if (id.includes('framer-motion')) {
+            return 'motion';
+          }
+          // UI components bundle
+          if (id.includes('@radix-ui')) {
+            return 'ui';
+          }
+          // Data fetching
+          if (id.includes('@tanstack')) {
+            return 'query';
+          }
+          // Supabase
+          if (id.includes('@supabase')) {
+            return 'supabase';
+          }
+          // Helmet for SEO
+          if (id.includes('react-helmet')) {
+            return 'helmet';
+          }
+          // Charts
+          if (id.includes('recharts') || id.includes('d3')) {
+            return 'charts';
+          }
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     cssCodeSplit: true,
-    // Minification and optimization
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
       },
+      mangle: true,
     },
+    target: 'es2020',
+    reportCompressedSize: false,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['framer-motion'],
   },
 }));
