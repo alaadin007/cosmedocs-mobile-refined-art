@@ -330,7 +330,7 @@ const FatDissolve = () => {
               <h2 className="text-3xl font-bold mb-8 text-center text-white">What is EMSCULPT & Fat Dissolving Injections?</h2>
               <div className="text-gray-300 space-y-6">
                 <p className="text-lg">
-                  EMSCULPT is a revolutionary <a href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/body-contouring" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA approved device</a> that builds your muscles while burning your fat. Combined with advanced fat dissolving injections like Aqualyx and Lemon Bottle, we offer the most comprehensive fat reduction treatments in London. These are fat dissolving injections that work to permanently eliminate stubborn fat cells in targeted areas such as the chin, stomach, belly, face, and legs. This is the world&apos;s first and only technology which offers this without:
+                  EMSCULPT is a revolutionary FDA approved device that builds your muscles while burning your fat. Combined with advanced fat dissolving injections like Aqualyx and Lemon Bottle, we offer the most comprehensive fat reduction treatments in London. These are fat dissolving injections that work to permanently eliminate stubborn fat cells in targeted areas such as the chin, stomach, belly, face, and legs. This is the world&apos;s first and only technology which offers this without:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center space-x-3">
@@ -629,7 +629,7 @@ const FatDissolve = () => {
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">FDA Approved</h3>
-                <p className="text-gray-300">Clinically researched and <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/body-contouring/faq-20348166" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">tested body contouring technology</a> with proven safety record</p>
+                <p className="text-gray-300">Clinically researched and tested body contouring technology with proven safety record</p>
               </motion.div>
 
               <motion.div

@@ -570,7 +570,7 @@ const ForeheadLinesBotox = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Will botox remove forehead wrinkles? Botox in forehead works by relaxing the frontalis muscle causing forehead lines, resulting in a smoother, more refreshed appearance. It blocks <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">nerve signals</a> that cause muscle contractions, preventing the formation of horizontal lines whilst maintaining natural brow movement. Does botox get rid of forehead lines? Yes, botox effectively smooths both dynamic and static forehead wrinkles.
+                      Will botox remove forehead wrinkles? Botox in forehead works by relaxing the frontalis muscle causing forehead lines, resulting in a smoother, more refreshed appearance. It blocks nerve signals that cause muscle contractions, preventing the formation of horizontal lines whilst maintaining natural brow movement. Does botox get rid of forehead lines? Yes, botox effectively smooths both dynamic and static forehead wrinkles.
                     </p>
                   </CardContent>
                 </Card>
@@ -1228,7 +1228,7 @@ const ForeheadLinesBotox = () => {
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <h3>Expert Forehead Botox Treatment in London</h3>
-          <p>Cosmedocs offers professional botox forehead treatments targeting horizontal wrinkles across the forehead. Our experienced cosmetic doctors use advanced <a href="https://www.saveface.co.uk/treatments/botulinum-toxin" target="_blank" rel="noopener noreferrer">botulinum toxin injection techniques</a> to smooth forehead lines whilst preserving natural brow movement. Located in prestigious Harley Street, our clinic provides comprehensive forehead assessments and personalised treatment plans. Our botox the forehead before and after gallery showcases real patient transformations.</p>
+          <p>Cosmedocs offers professional botox forehead treatments targeting horizontal wrinkles across the forehead. Our experienced cosmetic doctors use advanced botulinum toxin injection techniques to smooth forehead lines whilst preserving natural brow movement. Located in prestigious Harley Street, our clinic provides comprehensive forehead assessments and personalised treatment plans. Our botox the forehead before and after gallery showcases real patient transformations.</p>
           
           <h4>Why Choose Cosmedocs for Botox Forehead Lines?</h4>
           <p>Our invisible art philosophy ensures natural-looking results that enhance your forehead without obvious signs of treatment. We specialise in precise frontalis muscle targeting using the latest injection techniques for optimal outcomes. Our doctors have extensive experience in forehead anatomy and aesthetic medicine, ensuring safe and effective treatments that maintain natural expressions. When patients ask does botox remove forehead wrinkles, we show them our extensive before after portfolio demonstrating proven results without the botox shiny forehead effect.</p>
