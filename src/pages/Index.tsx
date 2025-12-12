@@ -54,7 +54,7 @@ const Index = () => {
             <AnimatedDots />
             <div className="page-container relative z-10">
               <div className="max-w-5xl mx-auto text-center">
-                <div className="animate-fade-in">
+                <div>
                   <div className="relative mb-6">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" id="hero-heading">
                       cosmedocs
@@ -62,11 +62,11 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <p className="text-lg md:text-xl italic mb-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <p className="text-lg md:text-xl italic mb-6">
                   Our aesthetics is invisible art
                 </p>
                 
-                <div className="mb-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <div className="mb-8 max-w-xl mx-auto">
                   <p className="text-muted-foreground mb-4">art • science • a touch of magic</p>
                   <p className="text-muted-foreground/70 text-sm leading-relaxed">
                     All done with the finest needles imported,<br />
@@ -80,7 +80,7 @@ const Index = () => {
                 </div>
                 
                 {/* AI Quick Links Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.7s' }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                   <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
                     <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
                     <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
