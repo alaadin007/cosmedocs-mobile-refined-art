@@ -1,18 +1,17 @@
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "./Header";
-import Footer from "./Footer";
-import FloatingChatBot from "./FloatingChatBot";
+
+// Lazy load heavy components
+const Footer = lazy(() => import("./Footer"));
+const FloatingChatBot = lazy(() => import("./FloatingChatBot"));
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  console.log("Layout component rendering");
-  console.log("Current pathname:", window.location.pathname);
-  
   useEffect(() => {
     // Set language attribute on html element
     document.documentElement.lang = "en-GB";
@@ -28,8 +27,12 @@ export default function Layout({ children }: LayoutProps) {
       <div className="flex flex-col min-h-screen w-full">
         <Header />
         <main className="flex-grow pt-16">{children}</main>
-        <Footer />
-        <FloatingChatBot />
+        <Suspense fallback={<div className="h-64 bg-black" />}>
+          <Footer />
+        </Suspense>
+        <Suspense fallback={null}>
+          <FloatingChatBot />
+        </Suspense>
       </div>
     </>
   );

@@ -30,14 +30,25 @@ export default defineConfig(({ mode }) => ({
             '@radix-ui/react-dropdown-menu',
             '@radix-ui/react-tooltip',
             '@radix-ui/react-accordion',
-            '@radix-ui/react-tabs'
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-collapsible'
           ],
           'motion': ['framer-motion'],
           'query': ['@tanstack/react-query'],
+          'supabase': ['@supabase/supabase-js'],
+          'helmet': ['react-helmet-async'],
         },
       },
     },
     chunkSizeWarningLimit: 1000,
-    cssCodeSplit: true, // Split CSS per route
+    cssCodeSplit: true,
+    // Minification and optimization
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
 }));
