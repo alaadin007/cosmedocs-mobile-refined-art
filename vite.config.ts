@@ -72,7 +72,6 @@ export default defineConfig(({ mode }) => ({
     reportCompressedSize: false,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-    exclude: ['framer-motion'],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
   },
 }));
