@@ -21,10 +21,18 @@ export default function BotoxFAQs() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is Botox and how does it work?",
+        "name": "What is Botox?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Botox (botulinum toxin type A) is a purified protein that temporarily relaxes targeted facial muscles by blocking nerve signals. When injected into specific muscles, it prevents them from contracting, which smooths out dynamic wrinkles caused by repetitive facial expressions. The effects typically last 3-4 months."
+          "text": "Botox is the brand name for a purified form of botulinum toxin type A. In cosmetic medicine, it is used in very small, controlled doses to temporarily relax specific facial muscles. This helps soften fine lines and wrinkles caused by repeated facial expressions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Botox work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox works by blocking nerve signals to targeted muscles, preventing them from contracting fully. When the muscle relaxes, the overlying skin smooths out, reducing expression lines such as forehead creases, frown lines, and crow's feet."
         }
       },
       {
@@ -32,7 +40,7 @@ export default function BotoxFAQs() {
         "name": "Is Botox safe?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Botox is FDA-approved and has been used safely for over 30 years in both cosmetic and medical applications. When administered by a qualified medical professional, it has an excellent safety profile. Side effects are typically mild and temporary, such as minor bruising or swelling at injection sites."
+          "text": "Yes, when administered by a qualified medical professional. Botox has over 20 years of clinical use and a strong safety profile. It's one of the most studied aesthetic treatments worldwide."
         }
       },
       {
@@ -40,7 +48,7 @@ export default function BotoxFAQs() {
         "name": "How much does Botox cost in London?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At Cosmedocs Harley Street, Botox treatment starts from £175 per area. Three areas (forehead, frown lines, and crow's feet) are available for £350. Prices vary depending on the treatment area and amount of product required."
+          "text": "At Cosmedocs Harley Street, Botox treatment starts from £175 per area. Three areas (forehead, frown lines, and crow's feet) are available for £350."
         }
       },
       {
@@ -48,7 +56,7 @@ export default function BotoxFAQs() {
         "name": "How long does Botox last?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Botox results typically last 3-4 months, though this can vary between individuals. Factors affecting longevity include metabolism, muscle strength, lifestyle, and the area treated. Regular treatments may help extend the duration of results over time."
+          "text": "Results typically last 3-4 months, though this varies by individual and treatment area. Most patients repeat Botox every 3-4 months to maintain results."
         }
       },
       {
@@ -56,7 +64,39 @@ export default function BotoxFAQs() {
         "name": "Does Botox hurt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most patients describe Botox injections as a mild pinch or mosquito bite sensation. The needles used are very fine, and the procedure is quick. Topical numbing cream can be applied beforehand for those who are needle-sensitive."
+          "text": "Most patients describe Botox injections as a mild pinch or sting. Discomfort is minimal and short-lived. Numbing cream or ice can be used if needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas can Botox treat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common cosmetic treatment areas include forehead lines, frown lines, crow's feet, brow lift, bunny lines, lip flip and smoker's lines, chin dimpling, jawline and masseter muscles, and neck bands."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Botox the same as dermal fillers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Botox relaxes muscles to reduce wrinkles caused by movement, while dermal fillers add volume to areas that have lost fullness, such as the cheeks or lips. They are often used together as part of a comprehensive facial rejuvenation plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who can legally provide Botox in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox is prescription-only in the UK, meaning it must be prescribed by a qualified medical professional. For safety, it should also be administered by an experienced medical injector with appropriate training."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will Botox make my face look frozen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. When done correctly by a skilled practitioner, Botox looks natural and preserves facial expression. The 'frozen' look is usually due to over-treatment."
         }
       }
     ]
@@ -113,12 +153,24 @@ export default function BotoxFAQs() {
   // FAQ Categories with questions
   const faqCategories = [
     {
-      title: "General Botox Questions",
+      title: "Botox Basics",
       icon: HelpCircle,
       faqs: [
         {
-          question: "What is Botox and how does it work?",
-          answer: "Botox (botulinum toxin type A) is a purified protein that temporarily relaxes targeted facial muscles by blocking nerve signals. When injected into specific muscles, it prevents them from contracting, which smooths out dynamic wrinkles caused by repetitive facial expressions like frowning, squinting, or raising eyebrows. The effects typically last 3-4 months."
+          question: "What is Botox?",
+          answer: "Botox is the brand name for a purified form of botulinum toxin type A. In cosmetic medicine, it is used in very small, controlled doses to temporarily relax specific facial muscles. This helps soften fine lines and wrinkles caused by repeated facial expressions. When administered by a qualified medical professional, Botox is safe, well-researched, and widely used worldwide."
+        },
+        {
+          question: "How does Botox work?",
+          answer: "Botox works by blocking nerve signals to targeted muscles, preventing them from contracting fully. When the muscle relaxes, the overlying skin smooths out, reducing expression lines such as forehead creases, frown lines, and crow's feet. Botox remains localised to the treated area and does not affect the rest of the body."
+        },
+        {
+          question: "What types of wrinkles can Botox treat?",
+          answer: "Botox is most effective for dynamic wrinkles — lines caused by muscle movement, such as frown lines, forehead lines, and crow's feet. It is less effective for deep static wrinkles or sagging skin, which may require dermal fillers or skin resurfacing treatments."
+        },
+        {
+          question: "Is Botox the same as dermal fillers?",
+          answer: "No. Botox relaxes muscles to reduce wrinkles caused by movement, while dermal fillers add volume to areas that have lost fullness, such as the cheeks or lips. They work through entirely different mechanisms and are often used together as part of a comprehensive facial rejuvenation plan."
         },
         {
           question: "What is the difference between Botox, Dysport, and other brands?",
@@ -133,52 +185,30 @@ export default function BotoxFAQs() {
           answer: "There's no universal 'right age' to start Botox. Many patients begin in their late 20s to early 30s as a preventative measure, while others start when they notice static lines forming. The best approach is to consult with a qualified practitioner who can assess your individual needs and goals."
         },
         {
+          question: "Is Botox only for older people?",
+          answer: "No. Botox is used both to treat existing wrinkles and prevent new ones from forming, making it suitable for adults of various ages. Many younger patients use 'preventative Botox' to stop deep lines from developing in the first place."
+        },
+        {
           question: "Can men get Botox?",
           answer: "Absolutely. 'Brotox' has become increasingly popular, with men seeking natural-looking results to reduce frown lines, forehead creases, and crow's feet. Male faces often require slightly higher doses due to stronger muscle mass, and technique is adjusted to maintain masculine features."
         }
       ]
     },
     {
-      title: "Safety & Side Effects",
-      icon: Shield,
-      faqs: [
-        {
-          question: "Is Botox safe?",
-          answer: "Yes, Botox is FDA-approved and has been used safely for over 30 years in both cosmetic and medical applications. It's one of the most studied aesthetic treatments worldwide. When administered by a qualified medical professional using proper technique and dosing, it has an excellent safety profile."
-        },
-        {
-          question: "What are the common side effects of Botox?",
-          answer: "Common side effects are typically mild and temporary, including slight redness, swelling, or bruising at injection sites, minor headache, and temporary tenderness. These usually resolve within a few days. Rare side effects include eyelid drooping (ptosis) or asymmetry, which are temporary and can be minimised by choosing an experienced practitioner."
-        },
-        {
-          question: "Can Botox cause long-term damage?",
-          answer: "When administered correctly by qualified practitioners, Botox does not cause long-term damage. The effects are temporary and fully reversible. In fact, regular use may actually help prevent the formation of deeper static wrinkles over time. There's no cumulative toxicity with repeated treatments."
-        },
-        {
-          question: "What happens if I'm allergic to Botox?",
-          answer: "True allergies to Botox are extremely rare. If you have a known allergy to any botulinum toxin product or its ingredients (including human albumin), you should not receive treatment. During your consultation, disclose all allergies so your practitioner can assess suitability."
-        },
-        {
-          question: "Can Botox migrate to other parts of the body?",
-          answer: "When injected correctly, Botox stays localised to the treatment area. It works within a small radius of where it's injected. Following aftercare instructions (avoiding rubbing the area, staying upright) helps ensure the product remains in the intended location."
-        },
-        {
-          question: "Is Botox linked to cancer?",
-          answer: "No. There is no scientific evidence linking Botox to cancer. Botulinum toxin has been extensively studied for decades, and no association with cancer has been found. It does not affect DNA or cell division."
-        }
-      ]
-    },
-    {
-      title: "Treatment Areas",
+      title: "Cosmetic Uses of Botox",
       icon: Syringe,
       faqs: [
         {
-          question: "What areas can be treated with Botox?",
-          answer: "Common treatment areas include forehead lines (horizontal creases), frown lines (glabellar lines between eyebrows), crow's feet (lines around eyes), bunny lines (nose wrinkles), lip lines (smoker's lines), chin dimpling, masseter (jaw slimming), neck bands, and gummy smile. Advanced applications include brow lift, lip flip, and treating excessive sweating."
+          question: "What areas can Botox treat?",
+          answer: "Common cosmetic treatment areas include: forehead lines, frown lines (between the eyebrows), crow's feet, brow lift, bunny lines on the nose, lip flip and smoker's lines, chin dimpling, jawline and masseter muscles, and neck bands (Nefertiti lift)."
         },
         {
           question: "What are the '3 areas' commonly treated?",
           answer: "The three most popular areas are the forehead (horizontal lines), the glabella (frown lines between the brows), and crow's feet (lines around the outer eyes). These areas are often treated together for a harmonious, refreshed appearance and are frequently offered as a package deal."
+        },
+        {
+          question: "Are there advanced or lesser-known uses of Botox?",
+          answer: "Yes. Advanced techniques include brow lifting, gummy smile correction, jaw slimming (masseter), trapezius slimming for shoulder contouring, calf contouring, and micro-Botox for oil control and pore refinement. These are off-label uses and should only be performed by experienced injectors."
         },
         {
           question: "Can Botox lift my eyebrows?",
@@ -199,20 +229,46 @@ export default function BotoxFAQs() {
       ]
     },
     {
-      title: "The Treatment Process",
+      title: "Medical Uses of Botox",
+      icon: Shield,
+      faqs: [
+        {
+          question: "Is Botox used for medical conditions?",
+          answer: "Yes. Botox has long been used medically to treat conditions such as chronic migraines, excessive sweating (hyperhidrosis), muscle spasms and dystonia, TMJ and jaw clenching, certain pain conditions, and overactive bladder. These treatments are prescribed and administered by medical specialists."
+        },
+        {
+          question: "Can Botox treat chronic migraines?",
+          answer: "Yes, Botox is NICE-approved for chronic migraines (15+ headache days per month). It's injected into specific points around the head and neck every 12 weeks. Many patients experience significant reduction in migraine frequency and severity."
+        },
+        {
+          question: "Can Botox stop excessive sweating?",
+          answer: "Yes, Botox is highly effective for hyperhidrosis (excessive sweating). It blocks the nerve signals that trigger sweat glands, providing relief for 6-12 months per treatment. Common areas include underarms, palms, and feet."
+        },
+        {
+          question: "Can Botox help with teeth grinding or jaw pain?",
+          answer: "Yes, masseter Botox relaxes the jaw muscles, reducing grinding (bruxism) and associated jaw pain, headaches, and tooth wear. It also helps with TMJ dysfunction and tension in the jaw area."
+        },
+        {
+          question: "Can I get medical Botox on the NHS?",
+          answer: "Botox is available on the NHS for certain medical conditions including chronic migraines, severe hyperhidrosis, blepharospasm (eyelid spasms), and some forms of muscle spasticity. Cosmetic Botox is not covered by the NHS."
+        }
+      ]
+    },
+    {
+      title: "The Treatment Experience",
       icon: Clock,
       faqs: [
         {
-          question: "What happens during a Botox consultation?",
-          answer: "Your consultation includes a full facial assessment, discussion of your concerns and goals, medical history review, explanation of the treatment process, realistic expectation setting, and a personalised treatment plan. This is your opportunity to ask questions and ensure you feel comfortable proceeding."
-        },
-        {
-          question: "How long does a Botox treatment take?",
-          answer: "A typical Botox session takes 15-30 minutes, often called a 'lunchtime procedure'. The actual injections take only a few minutes; the rest of the time is spent on preparation, marking injection points, and post-treatment guidance."
+          question: "What happens during a Botox appointment?",
+          answer: "A Botox appointment typically takes 20–30 minutes. After consultation and facial assessment, small amounts of Botox are injected using a fine needle. The procedure is quick, requires no anaesthesia for most patients, and you can resume normal activities immediately afterward."
         },
         {
           question: "Does Botox hurt?",
-          answer: "Most patients describe Botox injections as a mild pinch or mosquito bite sensation. The needles used are extremely fine (similar to acupuncture needles), and discomfort is minimal. Topical numbing cream can be applied beforehand for those who are particularly needle-sensitive."
+          answer: "Most patients describe Botox injections as a mild pinch or sting. Discomfort is minimal and short-lived. Numbing cream or ice can be used if needed. The needles are extremely fine, similar to acupuncture needles."
+        },
+        {
+          question: "Is there downtime after Botox?",
+          answer: "No significant downtime is required. Mild redness or small bumps may appear briefly but usually resolve within hours. Most people return to work or social activities the same day."
         },
         {
           question: "How many injections will I need?",
@@ -229,92 +285,140 @@ export default function BotoxFAQs() {
       ]
     },
     {
-      title: "Results & Longevity",
+      title: "Aftercare & Results",
       icon: Star,
       faqs: [
         {
+          question: "What should I avoid after Botox?",
+          answer: "Key aftercare instructions: Do not rub or massage treated areas for 4 hours. Stay upright for 4 hours. Avoid strenuous exercise for 24 hours. Avoid alcohol on the day of treatment. Avoid hot environments (saunas, hot baths) for 24-48 hours."
+        },
+        {
           question: "When will I see results from Botox?",
-          answer: "Initial effects typically appear within 2-3 days, with full results visible at 10-14 days. Some patients notice changes as early as 24-48 hours. The gradual onset allows for natural-looking results that don't appear sudden or obvious."
+          answer: "Initial effects appear within 2–3 days, with full results visible at 7–14 days. Some patients notice changes as early as 24-48 hours. The gradual onset allows for natural-looking results."
         },
         {
           question: "How long does Botox last?",
-          answer: "Botox results typically last 3-4 months, though this varies between individuals. First-time patients may notice results wearing off sooner (2-3 months), while regular patients often experience longer-lasting effects (up to 4-6 months) as muscles become trained to relax."
+          answer: "Results typically last 3–4 months, though this varies by individual and treatment area. First-time patients may notice results wearing off sooner (2-3 months), while regular patients often experience longer-lasting effects."
+        },
+        {
+          question: "How often should Botox be repeated?",
+          answer: "Most patients repeat Botox every 3–4 months to maintain results. Over time, some may extend intervals between treatments as muscles become trained to relax."
         },
         {
           question: "Why does Botox last longer for some people?",
-          answer: "Longevity depends on individual factors including metabolism, muscle strength and activity, lifestyle (exercise, stress), the amount of product used, the area treated, and whether you're a new or regular patient. Those who exercise intensely or have faster metabolisms may metabolise Botox more quickly."
+          answer: "Longevity depends on individual factors including metabolism, muscle strength and activity, lifestyle (exercise, stress), the amount of product used, the area treated, and whether you're a new or regular patient."
         },
         {
           question: "What happens when Botox wears off?",
-          answer: "As Botox gradually wears off, muscle movement slowly returns to normal, and wrinkles reappear. Your face returns to its pre-treatment state; it does not worsen or look older than before. Regular maintenance treatments can prevent deep lines from forming."
-        },
-        {
-          question: "Will I look frozen or expressionless?",
-          answer: "Not when treated by a skilled practitioner using appropriate doses. Modern Botox technique aims for natural-looking results that preserve facial expression while softening wrinkles. The 'frozen' look comes from over-treatment and is easily avoided with proper technique."
-        },
-        {
-          question: "Can I still move my face after Botox?",
-          answer: "Yes. Quality Botox treatment softens movement rather than eliminating it entirely. You'll still be able to smile, frown, and show expression – the lines simply won't be as pronounced. This is the hallmark of expert treatment."
+          answer: "As Botox gradually wears off, muscle movement slowly returns to normal, and wrinkles reappear. Your face returns to its pre-treatment state; it does not worsen or look older than before."
         },
         {
           question: "What if I don't like my results?",
-          answer: "Botox is temporary, so any results you're unhappy with will naturally fade within 3-4 months. In some cases, adjustments can be made at a follow-up appointment (usually 2 weeks post-treatment) by adding small amounts to specific areas. This is why we recommend a review appointment."
+          answer: "Botox is temporary, so any results you're unhappy with will naturally fade within 3-4 months. In some cases, adjustments can be made at a follow-up appointment (usually 2 weeks post-treatment) by adding small amounts to specific areas."
         }
       ]
     },
     {
-      title: "Costs & Considerations",
+      title: "Safety & Side Effects",
+      icon: Shield,
+      faqs: [
+        {
+          question: "Is Botox safe?",
+          answer: "Yes, when administered by a qualified medical professional. Botox has over 20 years of clinical use and a strong safety profile. It's one of the most studied aesthetic treatments worldwide."
+        },
+        {
+          question: "What are the possible side effects?",
+          answer: "Common side effects are mild and temporary and may include minor bruising, redness or swelling, and headache or tightness. Rare side effects include eyelid drooping or asymmetry, which are temporary."
+        },
+        {
+          question: "Who should not get Botox?",
+          answer: "Botox is not recommended for: pregnant or breastfeeding individuals, those with certain neuromuscular disorders (such as myasthenia gravis), active skin infections at the injection site, or those with known allergies to botulinum toxin products."
+        },
+        {
+          question: "Can Botox cause long-term damage?",
+          answer: "When administered correctly by qualified practitioners, Botox does not cause long-term damage. The effects are temporary and fully reversible. There's no cumulative toxicity with repeated treatments."
+        },
+        {
+          question: "Can Botox migrate to other parts of the body?",
+          answer: "When injected correctly, Botox stays localised to the treatment area. Following aftercare instructions (avoiding rubbing the area, staying upright) helps ensure the product remains in the intended location."
+        },
+        {
+          question: "Can Botox interact with other medications?",
+          answer: "Yes, certain medications can interact with Botox, particularly aminoglycoside antibiotics, muscle relaxants, and some other medications. Always provide a complete medication list during consultation."
+        }
+      ]
+    },
+    {
+      title: "Choosing a Botox Provider",
+      icon: CheckCircle,
+      faqs: [
+        {
+          question: "Who can legally provide Botox in the UK?",
+          answer: "Botox is prescription-only in the UK, meaning it must be prescribed by a qualified medical professional (doctor, dentist, nurse prescriber, or pharmacist prescriber). For safety, it should also be administered by an experienced medical injector with appropriate training and insurance."
+        },
+        {
+          question: "How do I choose a reputable clinic?",
+          answer: "Look for: medical qualifications and registration (GMC, NMC, GDC), a clinical setting with proper hygiene standards, transparent pricing with no hidden costs, thorough consultation process, clear aftercare and follow-up support, and genuine Botox products from licensed suppliers."
+        },
+        {
+          question: "What questions should I ask my injector?",
+          answer: "Ask about their qualifications and training, how many Botox treatments they perform, which brand of product they use, what results you can realistically expect, potential risks and how they manage complications, and their aftercare policy."
+        },
+        {
+          question: "Why should I avoid very cheap Botox?",
+          answer: "Extremely cheap Botox should be approached with caution. It may indicate diluted products, non-authentic or grey market Botox, inexperienced practitioners, or inadequate clinical settings. Quality treatment from qualified professionals is an investment in your safety."
+        }
+      ]
+    },
+    {
+      title: "Botox Pricing",
       icon: CheckCircle,
       faqs: [
         {
           question: "How much does Botox cost in London?",
-          answer: "At Cosmedocs Harley Street, Botox treatment starts from £175 per area. Three areas (forehead, frown lines, and crow's feet) are available for £350. Prices vary depending on the treatment area, amount of product required, and practitioner expertise. Beware of extremely cheap offers, which may indicate inferior products or inexperienced providers."
+          answer: "At Cosmedocs Harley Street, Botox treatment starts from £175 per area. Three areas (forehead, frown lines, and crow's feet) are available for £350. Prices vary depending on areas treated, dosage, and clinic expertise."
         },
         {
-          question: "Is Botox worth the money?",
-          answer: "For many patients, the confidence boost and preventative benefits make Botox excellent value. Consider the cost per day (a £350 treatment lasting 4 months works out to under £3 per day) and the fact that maintenance treatments may reduce the need for more invasive procedures later."
+          question: "Is Botox worth it?",
+          answer: "Patient satisfaction rates are high. When performed correctly, Botox offers reliable, temporary wrinkle reduction with minimal downtime and a strong safety record. Consider the cost per day – a £350 treatment lasting 4 months works out to under £3 per day."
         },
         {
           question: "How can I make Botox last longer?",
-          answer: "To maximise your results: follow aftercare instructions carefully, protect skin from sun damage, maintain good skincare habits, stay hydrated, manage stress, avoid smoking, and consider using zinc supplements (some studies suggest this may extend efficacy). Regular maintenance treatments before full muscle movement returns may also help."
+          answer: "To maximise results: follow aftercare instructions carefully, protect skin from sun damage, maintain good skincare habits, stay hydrated, manage stress, avoid smoking, and consider regular maintenance treatments before full muscle movement returns."
         },
         {
-          question: "Can I get Botox on the NHS?",
-          answer: "Botox is available on the NHS for certain medical conditions including chronic migraines, severe hyperhidrosis (excessive sweating), blepharospasm (eyelid spasms), and some forms of muscle spasticity. Cosmetic Botox is not covered by the NHS."
-        },
-        {
-          question: "Should I choose based on price alone?",
-          answer: "No. The cheapest option is rarely the best for medical aesthetic treatments. Consider the practitioner's qualifications, experience, the quality of products used, clinic hygiene standards, and aftercare provided. A more experienced practitioner may actually use less product more effectively, providing better value."
+          question: "Are there any payment plans available?",
+          answer: "Many clinics offer payment plans or finance options for cosmetic treatments. Ask about available options during your consultation. At Cosmedocs, we can discuss flexible payment arrangements."
         }
       ]
     },
     {
-      title: "Before & After Care",
-      icon: Calendar,
+      title: "Botox Myths",
+      icon: HelpCircle,
       faqs: [
         {
-          question: "How should I prepare for Botox treatment?",
-          answer: "In the days before treatment: avoid blood-thinning medications if possible (aspirin, ibuprofen, fish oil), limit alcohol consumption, stay hydrated, and come with a clean face. Inform your practitioner of all medications and supplements you take. Arnica supplements may help reduce bruising if started a few days before."
+          question: "Will Botox make my face look frozen?",
+          answer: "No. When done correctly by a skilled practitioner, Botox looks natural and preserves facial expression. The 'frozen' look is usually due to over-treatment and is easily avoided with proper technique and appropriate dosing."
         },
         {
-          question: "What should I avoid after Botox?",
-          answer: "For 4-6 hours after treatment: avoid lying down or bending forward, touching or massaging treated areas, strenuous exercise, alcohol, and hot environments (saunas, hot baths). For 24-48 hours: continue to avoid intense exercise and excessive heat. These precautions help ensure optimal results."
+          question: "Will my wrinkles get worse if I stop Botox?",
+          answer: "No. Wrinkles gradually return to their original state once Botox wears off. Botox does not worsen ageing – in fact, regular treatments may help slow wrinkle progression by preventing repetitive muscle movement."
         },
         {
-          question: "Can I exercise after Botox?",
-          answer: "Wait at least 24 hours before vigorous exercise. Physical activity increases blood flow and body temperature, which could potentially cause the Botox to migrate or increase bruising. Light walking is fine immediately after treatment."
+          question: "Is Botox a poison?",
+          answer: "While botulinum toxin is derived from a bacterium, the purified, medical-grade Botox used in cosmetic treatments is entirely safe when administered correctly. The doses used are tiny fractions of what would cause any harm."
         },
         {
-          question: "Can I drink alcohol after Botox?",
-          answer: "It's best to avoid alcohol for 24 hours before and after treatment. Alcohol thins the blood, increasing the risk of bruising, and can cause dehydration and inflammation, potentially affecting results."
+          question: "Is Botox addictive?",
+          answer: "Botox is not physically addictive. There's no chemical dependency. Some people enjoy their results and choose to continue treatment, but this is a personal choice, not an addiction. You can stop at any time."
         },
         {
-          question: "Can I fly after Botox?",
-          answer: "Yes, flying after Botox is generally safe. However, some practitioners recommend waiting 24-48 hours due to cabin pressure changes and the difficulty of following aftercare instructions during travel. Plan treatments accordingly if you have upcoming flights."
+          question: "Can you become immune to Botox?",
+          answer: "True resistance to Botox is rare but can occur in a small percentage of patients who develop antibodies. Using the minimum effective dose and not over-treating can help prevent this. If resistance develops, alternative products may still be effective."
         },
         {
-          question: "When should I book my next appointment?",
-          answer: "Most patients return for maintenance treatment every 3-4 months. We recommend booking your follow-up before full muscle movement returns to maintain consistent results. Many patients find that with regular treatment, they can gradually extend the time between appointments."
+          question: "Does Botox make you look older when it wears off?",
+          answer: "No. When Botox wears off, you return to how you looked before treatment. There's no 'ageing acceleration'. By preventing deep static lines, regular Botox may actually help you age more gracefully."
         }
       ]
     },
@@ -328,53 +432,19 @@ export default function BotoxFAQs() {
         },
         {
           question: "Can I get Botox if I'm on blood thinners?",
-          answer: "You should inform your practitioner of all medications, including blood thinners. While Botox can often still be administered, there's an increased risk of bruising. Your practitioner may advise temporary cessation (with your doctor's approval) or take extra precautions during treatment."
+          answer: "You should inform your practitioner of all medications, including blood thinners. While Botox can often still be administered, there's an increased risk of bruising. Your practitioner may advise temporary cessation (with your doctor's approval) or take extra precautions."
         },
         {
           question: "Can I get Botox if I have a cold or infection?",
-          answer: "It's best to postpone treatment if you're unwell. Your immune system is already working hard to fight infection, and introducing Botox may not be ideal. Additionally, if you have an infection near the intended injection sites, treatment should definitely be delayed."
+          answer: "It's best to postpone treatment if you're unwell. Your immune system is already working hard, and if you have an infection near the intended injection sites, treatment should definitely be delayed."
         },
         {
-          question: "Can Botox interact with other medications?",
-          answer: "Yes, certain medications can interact with Botox, particularly aminoglycoside antibiotics, muscle relaxants, and some other medications. Always provide a complete medication list during consultation so your practitioner can assess safety."
-        },
-        {
-          question: "Is Botox suitable for darker skin tones?",
-          answer: "Yes, Botox is equally effective and safe for all skin tones. Unlike some treatments, Botox doesn't affect skin pigmentation. It works on the underlying muscles regardless of skin colour, making it an excellent option for patients of all ethnicities."
+          question: "Is Botox suitable for all skin types and tones?",
+          answer: "Yes, Botox is equally effective and safe for all skin tones. Unlike some treatments, Botox doesn't affect skin pigmentation. It works on the underlying muscles regardless of skin colour, making it suitable for patients of all ethnicities."
         },
         {
           question: "Can I get Botox if I've had it elsewhere before?",
           answer: "Yes, you can switch practitioners. Inform your new practitioner about your treatment history, including when you last had Botox, the areas treated, and any issues experienced. This helps them tailor your treatment appropriately."
-        }
-      ]
-    },
-    {
-      title: "Myths & Misconceptions",
-      icon: HelpCircle,
-      faqs: [
-        {
-          question: "Is Botox a poison?",
-          answer: "While botulinum toxin is derived from a bacterium, the purified, medical-grade Botox used in cosmetic treatments is entirely safe when administered correctly. The doses used are tiny fractions of what would cause any harm. It's been used safely in medicine for over 30 years."
-        },
-        {
-          question: "Will Botox make my wrinkles worse if I stop?",
-          answer: "No. If you stop Botox, your face will gradually return to its pre-treatment state as the product wears off. Your wrinkles won't become worse than they would have been without treatment. In fact, regular Botox may slow wrinkle progression by preventing repetitive muscle movement."
-        },
-        {
-          question: "Is Botox addictive?",
-          answer: "Botox is not physically addictive. There's no chemical dependency. Some people enjoy their results and choose to continue treatment, but this is a personal choice, not an addiction. You can stop treatment at any time without withdrawal effects."
-        },
-        {
-          question: "Does Botox make you look older when it wears off?",
-          answer: "No. When Botox wears off, you return to how you looked before treatment. There's no 'ageing acceleration'. In fact, by preventing the formation of deep static lines, regular Botox may help you age more gracefully."
-        },
-        {
-          question: "Can you become immune to Botox?",
-          answer: "True resistance to Botox is rare but can occur in a small percentage of patients who develop antibodies to the protein. Using the minimum effective dose and not over-treating can help prevent this. If resistance develops, alternative products like Dysport may still be effective."
-        },
-        {
-          question: "Is Baby Botox better than regular Botox?",
-          answer: "'Baby Botox' refers to using smaller doses for a more subtle effect, not a different product. It's ideal for those wanting to maintain natural movement or for first-time patients. Whether it's 'better' depends on your goals – some patients prefer more significant relaxation."
         }
       ]
     }
