@@ -522,10 +522,10 @@ export default function BotoxFAQs() {
                         value={`${categoryIndex}-${faqIndex}`}
                         className="bg-white dark:bg-card border border-border rounded-xl px-6 shadow-sm hover:shadow-md transition-shadow"
                       >
-                        <AccordionTrigger className="text-left font-semibold text-foreground hover:text-amber-700 dark:hover:text-amber-400 py-5">
+                        <AccordionTrigger className="text-left font-semibold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 py-5 [&>svg]:text-amber-600">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                        <AccordionContent className="text-zinc-600 dark:text-zinc-400 pb-5 leading-relaxed">
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>
