@@ -817,7 +817,7 @@ const TempleFiller = () => {
                         <li className="flex items-start gap-2">
                           <span className="text-teal-400 mt-1">•</span>
                           <div>
-                            <a href="/face-botox" className="text-purple-300 hover:text-purple-200 underline font-medium">
+                            <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline font-medium">
                               Face Lift with Botox
                             </a>
                             <p className="text-sm mt-1">Combine temple fillers with Botox for wrinkle reduction and comprehensive upper face rejuvenation</p>

@@ -388,7 +388,7 @@ export default function EightPointFacelift() {
       name: "Botox",
       description: "Smooth dynamic lines and wrinkles",
       price: "From £150",
-      link: "/botox"
+      link: "/botox-london"
     }
   ];
 

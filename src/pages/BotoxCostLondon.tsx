@@ -318,7 +318,7 @@ const BotoxCostLondon = () => {
               <h2 className="text-3xl font-bold mb-4 text-white">Botox Before & After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto mb-6">
                 See the natural, subtle results achieved with expert Botox treatments at Cosmedocs. Our specialist injectors deliver refreshed appearances without the frozen look.{' '}
-                <Link to="/botox" className="text-purple-300 hover:underline">
+                <Link to="/botox-london" className="text-purple-300 hover:underline">
                   Learn more about our Botox treatments
                 </Link>.
               </p>

@@ -754,7 +754,7 @@ const NasolabialFolds = () => {
                   Combining anti-wrinkle injections for dynamic lines with dermal fillers for static nasolabial folds 
                   provides comprehensive facial rejuvenation addressing both muscle movement and volume loss.
                 </p>
-                <Link to="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
                   Learn more <ArrowRight size={16} />
                 </Link>
               </motion.div>

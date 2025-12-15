@@ -25,7 +25,7 @@ const NonSurgicalPonytail = () => {
 
   const breadcrumbItems = [
     { label: "Treatments", path: "/treatments" },
-    { label: "Botox Treatments", path: "/face-botox" }
+    { label: "Botox Treatments", path: "/botox-london" }
   ];
 
   const beforeAfterImages = [
@@ -59,7 +59,7 @@ const NonSurgicalPonytail = () => {
     },
     {
       question: "Can a ponytail lift be combined with other treatments?",
-      answer: "Yes! The non-surgical ponytail lift already combines botox and dermal fillers, but can be enhanced with additional treatments like <Link to='/profhilo' className='text-purple-400 hover:text-purple-300 underline'>Profhilo</Link> for skin quality, <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>other botox areas</Link>, or additional <Link to='/dermal-fillers' className='text-purple-400 hover:text-purple-300 underline'>filler treatments</Link> in different facial zones. Our doctors create comprehensive treatment plans for optimal facial rejuvenation."
+      answer: "Yes! The non-surgical ponytail lift already combines botox and dermal fillers, but can be enhanced with additional treatments like <Link to='/profhilo' className='text-purple-400 hover:text-purple-300 underline'>Profhilo</Link> for skin quality, <Link to='/botox-london' className='text-purple-400 hover:text-purple-300 underline'>other botox areas</Link>, or additional <Link to='/dermal-fillers' className='text-purple-400 hover:text-purple-300 underline'>filler treatments</Link> in different facial zones. Our doctors create comprehensive treatment plans for optimal facial rejuvenation."
     },
     {
       question: "How many injection points are needed for a ponytail lift?",
@@ -194,7 +194,7 @@ const NonSurgicalPonytail = () => {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/face-botox"
+                "item": "https://www.cosmedocs.co.uk/botox-london"
               },
               {
                 "@type": "ListItem",
@@ -393,7 +393,7 @@ const NonSurgicalPonytail = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is a Non-Surgical Ponytail Lift also known as Mini Facelift London?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-6">
-                Cosmedocs has been providing advanced facial aesthetics for over a decade. The non-surgical ponytail lift, also known as the ponytail facelift, is an innovative treatment that mimics the natural lifting effect achieved when pulling your hair back into a tight ponytail. Using a strategic combination of <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox injections</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> at precise facial points, we relax muscles that pull the face downward whilst restoring volume and enhancing lift.
+                Cosmedocs has been providing advanced facial aesthetics for over a decade. The non-surgical ponytail lift, also known as the ponytail facelift, is an innovative treatment that mimics the natural lifting effect achieved when pulling your hair back into a tight ponytail. Using a strategic combination of <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">botox injections</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> at precise facial points, we relax muscles that pull the face downward whilst restoring volume and enhancing lift.
               </p>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Our invisible art approach provides natural facial contouring and lifting whilst maintaining completely natural expressions and movement. According to the <a href="https://baaps.org.uk/about/news/1891/cosmetic_surgery_trends_2024_facial_rejuvenation_surges_while_mens_procedures_decline/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">British Association of Aesthetic Plastic Surgeons</a>, facial rejuvenation procedures have seen significant growth, with non-surgical treatments becoming increasingly popular alternatives to traditional surgery. This treatment is ideal for those seeking facial rejuvenation without surgery or downtime.
@@ -527,7 +527,7 @@ const NonSurgicalPonytail = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation and facial assessment at Cosmedocs, your treatment begins. The doctor uses a very fine needle to inject a combination of <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botulinum toxin</Link> (to relax downward-pulling muscles) and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> (to restore volume and enhance lift) into precise points in strategic facial areas including:
+                      After a detailed consultation and facial assessment at Cosmedocs, your treatment begins. The doctor uses a very fine needle to inject a combination of <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">botulinum toxin</Link> (to relax downward-pulling muscles) and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> (to restore volume and enhance lift) into precise points in strategic facial areas including:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">

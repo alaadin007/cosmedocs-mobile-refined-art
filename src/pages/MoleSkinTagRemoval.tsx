@@ -1681,14 +1681,14 @@ const MoleSkinTagRemoval = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <Link to="/face-botox-areas">
+                <Link to="/botox-london">
                   <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
                     <CardHeader>
                       <CardTitle className="text-white">Facial Botox</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-300">
-                        Smooth lines and prevent wrinkles with expert <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">facial botox treatments</Link>. Natural, refreshed appearance.
+                        Smooth lines and prevent wrinkles with expert <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">facial botox treatments</Link>. Natural, refreshed appearance.
                       </p>
                     </CardContent>
                   </Card>

@@ -419,7 +419,7 @@ const TearTroughFiller = () => {
                       and minimize puffiness while addressing how to remove eye circles effectively. Similar to our <a href="/cheek-filler" className="text-purple-300 hover:underline">cheek filler treatments</a>, tear trough fillers use advanced injection techniques for natural results.
                     </p>
                     <p className="text-gray-300 mb-6">
-                      Our tear trough filler cost uk starts from £425. For comprehensive facial rejuvenation, many patients combine this with <a href="/lip-filler" className="text-purple-300 hover:underline">lip filler treatments</a> or <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle injections</a>.
+                      Our tear trough filler cost uk starts from £425. For comprehensive facial rejuvenation, many patients combine this with <a href="/lip-filler" className="text-purple-300 hover:underline">lip filler treatments</a> or <a href="/botox-london" className="text-purple-300 hover:underline">anti-wrinkle injections</a>.
                     </p>
                     
                     <div className="bg-purple-900/30 border-l-4 border-purple-500 p-4 rounded-r-lg">
