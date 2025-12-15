@@ -435,12 +435,20 @@
     <mobile:mobile/>
   </url>
 
-  <!-- Educational -->
+  <!-- Medical Services -->
   <url>
-    <loc>https://www.cosmedocs.co.uk/clinical-concepts-to-flawless-skin</loc>
+    <loc>https://www.cosmedocs.co.uk/private-gp-doctor</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/dermatology</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <mobile:mobile/>
   </url>
 
