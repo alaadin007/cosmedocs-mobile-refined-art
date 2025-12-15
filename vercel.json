@@ -1,13 +1,4 @@
 {
-  "redirects": [
-    { "source": "/advanced-upper-face-botox", "destination": "/botox-london", "permanent": true },
-    { "source": "/anti-wrinkle", "destination": "/botox-london", "permanent": true },
-    { "source": "/anti-wrinkle-injections", "destination": "/botox-london", "permanent": true },
-    { "source": "/botox", "destination": "/botox-london", "permanent": true },
-    { "source": "/brow-lift-botox", "destination": "/botox-london", "permanent": true },
-    { "source": "/face-botox", "destination": "/botox-london", "permanent": true },
-    { "source": "/face-botox-areas", "destination": "/botox-london", "permanent": true }
-  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
