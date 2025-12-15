@@ -2,70 +2,252 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
   
-  <!-- Main Pages -->
   <url>
     <loc>https://www.cosmedocs.co.uk/</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <mobile:mobile/>
   </url>
-  
+
   <url>
     <loc>https://www.cosmedocs.co.uk/treatments</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
   </url>
-  
-  <!-- Company Pages -->
+
   <url>
     <loc>https://www.cosmedocs.co.uk/about</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
-  
+
   <url>
     <loc>https://www.cosmedocs.co.uk/contact</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
-  
+
   <url>
-    <loc>https://www.cosmedocs.co.uk/partners</loc>
-    <lastmod>2025-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-  
-  <!-- Multilingual Treatment Summaries -->
-  <url>
-    <loc>https://www.cosmedocs.co.uk/treatments-summary-arabic</loc>
-    <lastmod>2025-07-07</lastmod>
+    <loc>https://www.cosmedocs.co.uk/team</loc>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
-  
+
   <url>
-    <loc>https://www.cosmedocs.co.uk/treatments-summary-chinese</loc>
-    <lastmod>2025-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <mobile:mobile/>
-  </url>
-  
-  <url>
-    <loc>https://www.cosmedocs.co.uk/medical-student-work-experience</loc>
-    <lastmod>2025-10-21</lastmod>
+    <loc>https://www.cosmedocs.co.uk/team/dr-ahmed-haq</loc>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/team/dr-hena-haq</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/testimonials</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/before-after-gallery</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/membership</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/partners</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/partnerships</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/fellowship-invitation</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/advanced-consultation</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/harley-street-consulting-rooms</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/plastic-surgeon</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/dermatology</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/aesthetic-training</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/hair-transplant-surgeon</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/private-gp-doctor</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/aesthetics-at-a-glance</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/aesthetic-intelligence</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/aesthetic-treatments-made-easy</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/medical-student-work-experience</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/treatments-summary-arabic</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/treatments-summary-chinese</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/treatments-summary-japanese</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/cosmederm</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/journal</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/cosmetalk</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/botox-faqs</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
 </urlset>
