@@ -893,7 +893,7 @@ const MasseterBotox = () => {
                 </Card>
               </Link>
 
-              <Link to="/face-botox">
+              <Link to="/botox-london">
                 <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors h-full">
                   <CardHeader>
                     <CardTitle>Face Botox</CardTitle>

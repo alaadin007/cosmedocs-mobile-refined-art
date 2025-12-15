@@ -54,7 +54,7 @@ function testRouteDetection() {
     '/forehead-fillers', '/ear-lobe-rejuvenation', '/temple-filler-london',
     '/neck-fillers', '/chin-filler', '/cheek-filler', '/jawline-filler',
     '/nefertiti-botox-face-jaw-lift',
-    '/dermal-fillers', '/face-botox'
+    '/dermal-fillers', '/botox-london'
   ];
   
   const criticalPages = [

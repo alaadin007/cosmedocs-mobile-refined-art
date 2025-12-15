@@ -677,7 +677,7 @@ const Microneedling = () => {
                     <p className="text-gray-300 leading-relaxed">
                       After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
                       sterile needle microneedling device is then set to the correct speed, needle lengths and depth for the 
-                      treatment area. How much is microneedling? Our facial micro needling starts from £250. For comprehensive facial rejuvenation, many patients combine microneedling with <a href="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle treatments</a>. How much is micro needling varies based on treatment areas and session packages.
+                      treatment area. How much is microneedling? Our facial micro needling starts from £250. For comprehensive facial rejuvenation, many patients combine microneedling with <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle treatments</a>. How much is micro needling varies based on treatment areas and session packages.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
                       With microneedling treatment, the depth is within the papillary dermal layer of the skin, where microneedling collagen 

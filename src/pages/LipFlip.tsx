@@ -185,7 +185,7 @@ const LipFlip = () => {
           <Breadcrumb 
             items={[
               { label: "Treatments", path: "/treatments" },
-              { label: "Botox Treatments", path: "/face-botox-areas" }
+              { label: "Botox Treatments", path: "/botox-london" }
             ]}
             currentPage="Lip Flip Botox"
           />
@@ -870,7 +870,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Extend your treatment beyond the lips with comprehensive <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">facial botox</Link> for complete rejuvenation. Address multiple areas including forehead, crow's feet, and bunny lines alongside your lip enhancement.
+                      Extend your treatment beyond the lips with comprehensive <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">facial botox</Link> for complete rejuvenation. Address multiple areas including forehead, crow's feet, and bunny lines alongside your lip enhancement.
                     </p>
                   </CardContent>
                 </Card>
@@ -942,7 +942,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Address fine lines and wrinkles around the mouth with comprehensive <Link to="/anti-wrinkle-injections" className="text-purple-400 hover:text-purple-300 underline">anti-wrinkle treatments</Link>. Perfect for treating smokers lines alongside your lip flip for complete perioral rejuvenation.
+                      Address fine lines and wrinkles around the mouth with comprehensive <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">anti-wrinkle treatments</Link>. Perfect for treating smokers lines alongside your lip flip for complete perioral rejuvenation.
                     </p>
                   </CardContent>
                 </Card>

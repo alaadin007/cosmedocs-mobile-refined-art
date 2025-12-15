@@ -440,7 +440,7 @@ const CosmetalkBlog = () => {
             <p className="text-gray-600 mb-8">Discover our comprehensive range of aesthetic treatments for all skill levels</p>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/botox" className="block group">
+              <Link to="/botox-london" className="block group">
                 <Card className="overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-64">
                     <img 

@@ -67,7 +67,7 @@ const Treatments = () => {
             { name: "3 Areas", price: "£350" },
             { name: "*Men supplement", price: "£50", note: "If Combined With Any 1,2,3 Main Areas" }
           ],
-          link: "/face-botox-areas"
+          link: "/botox-london"
         },
         {
           title: "Forehead Lines Botox",
@@ -92,7 +92,7 @@ const Treatments = () => {
         {
           title: "Brow Lift Botox",
           price: "£50",
-          link: "/brow-lift-botox"
+          link: "/botox-london"
         },
         {
           title: "Gummy Smile Botox",
@@ -127,7 +127,7 @@ const Treatments = () => {
           title: "Full Face Natural Botox",
           price: "£500",
           description: "Including all the above areas (3 areas plus the lower face)",
-          link: "/face-botox-areas"
+          link: "/botox-london"
         },
         {
           title: "Migraine Botox / Headaches",

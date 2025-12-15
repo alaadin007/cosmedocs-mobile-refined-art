@@ -25,7 +25,7 @@ const MigraineBotox = () => {
 
   const breadcrumbItems = [
     { label: "Treatments", path: "/treatments" },
-    { label: "Botox Treatments", path: "/face-botox" }
+    { label: "Botox Treatments", path: "/botox-london" }
   ];
 
   const beforeAfterImages = [
@@ -59,7 +59,7 @@ const MigraineBotox = () => {
     },
     {
       question: "Can migraine botox be combined with other treatments?",
-      answer: "Yes! Migraine botox can be combined with other headache prevention strategies and <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>cosmetic botox treatments</Link>. Our doctors coordinate comprehensive treatment plans for both therapeutic and aesthetic benefits."
+      answer: "Yes! Migraine botox can be combined with other headache prevention strategies and <Link to='/botox-london' className='text-purple-400 hover:text-purple-300 underline'>cosmetic botox treatments</Link>. Our doctors coordinate comprehensive treatment plans for both therapeutic and aesthetic benefits."
     },
     {
       question: "How many Botox shots are typically needed to treat chronic migraine headaches?",
@@ -193,7 +193,7 @@ const MigraineBotox = () => {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/face-botox"
+                "item": "https://www.cosmedocs.co.uk/botox-london"
               },
               {
                 "@type": "ListItem",
@@ -392,7 +392,7 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Migraine Botox? Can Botox Help Migraines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Cosmedocs has been providing botox and migraines treatment for over a decade. Although botox for headaches was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">Botox shots for migraines</Link> are administered at precise botox injection sites for migraine headaches. According to the{' '}
+                Cosmedocs has been providing botox and migraines treatment for over a decade. Although botox for headaches was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">Botox shots for migraines</Link> are administered at precise botox injection sites for migraine headaches. According to the{' '}
                 <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
                   NHS, botulinum toxin is a safe and established treatment
                 </a>{' '}

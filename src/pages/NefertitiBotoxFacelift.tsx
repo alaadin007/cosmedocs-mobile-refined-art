@@ -36,7 +36,7 @@ export default function NefertitiBotoxFacelift() {
   ];
 
   const relatedTreatments = [
-    { name: "Face Botox Areas", price: "£200-400", link: "/face-botox-areas" },
+    { name: "Face Botox Areas", price: "£200-400", link: "/botox-london" },
     { name: "Lower Face Botox", price: "£250-350", link: "/lower-face-botox" },
     { name: "Chin Botox", price: "£200-300", link: "/chin-botox" },
     { name: "Non-Surgical Facelift", price: "£800-1200", link: "/non-surgical-facelift" }
@@ -419,7 +419,7 @@ export default function NefertitiBotoxFacelift() {
                 <h2 className="text-3xl font-bold mb-6">What is Nefertiti Botox?</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    The Nefertiti <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> In Neck Lift, inspired by the Egyptian queen's iconic jawline and neck, is a non-invasive treatment for early jowls and a less defined jawline. This procedure employs Botox injections to ease muscles that contribute to facial sagging, enhancing jawline definition and neck smoothness.
+                    The Nefertiti <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> In Neck Lift, inspired by the Egyptian queen's iconic jawline and neck, is a non-invasive treatment for early jowls and a less defined jawline. This procedure employs Botox injections to ease muscles that contribute to facial sagging, enhancing jawline definition and neck smoothness.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
                     <a 

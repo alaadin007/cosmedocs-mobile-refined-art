@@ -668,7 +668,7 @@ const HyperpigmentationTreatment = () => {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Our Treatment Philosophy</h3>
                   <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                    At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — transformation that speaks without saying a word. Our comprehensive approach ensures natural-looking results that enhance your confidence whilst maintaining skin health. We also offer complementary treatments including <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle treatments</Link> and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for complete facial rejuvenation.
+                    At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — transformation that speaks without saying a word. Our comprehensive approach ensures natural-looking results that enhance your confidence whilst maintaining skin health. We also offer complementary treatments including <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle treatments</Link> and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for complete facial rejuvenation.
                   </p>
                 </CardContent>
               </Card>
