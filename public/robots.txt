@@ -3,10 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://cosmedocs.lovable.app/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+Sitemap: https://www.cosmedocs.co.uk/sitemap.xml
 
 # Allow all major search engines
 User-agent: Googlebot
