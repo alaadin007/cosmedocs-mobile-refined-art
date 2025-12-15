@@ -97,7 +97,7 @@ const MarionnetteLines = () => {
     "name": "Cosmedocs",
     "url": "https://www.cosmedocs.co.uk",
     "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-    "image": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+    "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
     "description": "Expert aesthetic medicine clinic in London specialising in marionette lines treatment and liquid facelifts",
     "priceRange": "££",
     "address": {
@@ -114,6 +114,26 @@ const MarionnetteLines = () => {
       "longitude": -0.1278
     },
     "telephone": "+44 20 3733 3227",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44 20 3733 3227",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "16:00"
+      }
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",

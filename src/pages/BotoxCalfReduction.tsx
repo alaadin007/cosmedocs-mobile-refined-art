@@ -77,7 +77,7 @@ const BotoxCalfReduction = () => {
             "description": "Expert botox calf reduction treatments in London",
             "url": "https://www.cosmedocs.co.uk",
             "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-            "image": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+            "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
             "telephone": "+44 20 3733 3227",
             "priceRange": "££",
             "address": {
@@ -93,6 +93,26 @@ const BotoxCalfReduction = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+44 20 3733 3227",
+              "contactType": "customer service",
+              "availableLanguage": ["English"]
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
