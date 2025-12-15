@@ -1,1 +1,11 @@
+# Botox URL redirects
+/advanced-upper-face-botox    /botox-london   301
+/anti-wrinkle                 /botox-london   301
+/anti-wrinkle-injections      /botox-london   301
+/botox                        /botox-london   301
+/brow-lift-botox              /botox-london   301
+/face-botox                   /botox-london   301
+/face-botox-areas             /botox-london   301
+
+# SPA fallback
 /*    /index.html   200
