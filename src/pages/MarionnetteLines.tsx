@@ -208,16 +208,7 @@ const MarionnetteLines = () => {
     "availability": "https://schema.org/InStock",
     "url": seoData.canonical,
     "seller": {
-      "@type": "MedicalOrganization",
-      "name": "Cosmedocs",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "addressRegion": "Greater London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
+      "@id": "https://www.cosmedocs.co.uk/#organization"
     }
   };
 
@@ -253,17 +244,7 @@ const MarionnetteLines = () => {
     "serviceType": "Marionette Lines Filler Treatment",
     "description": "Expert marionette lines treatment using premium hyaluronic acid dermal fillers. Non-surgical liquid facelift approach for facial rejuvenation in London.",
     "provider": {
-      "@type": "MedicalOrganization",
-      "name": "Cosmedocs",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "addressRegion": "Greater London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      },
-      "telephone": "0333 0551 503"
+      "@id": "https://www.cosmedocs.co.uk/#organization"
     },
     "areaServed": {
       "@type": "City",
@@ -274,7 +255,7 @@ const MarionnetteLines = () => {
       "serviceUrl": "https://www.cosmedocs.co.uk/marionette-lines",
       "servicePhone": {
         "@type": "ContactPoint",
-        "telephone": "0333 0551 503",
+        "telephone": "+44 20 3733 3227",
         "contactType": "Customer Service"
       }
     },

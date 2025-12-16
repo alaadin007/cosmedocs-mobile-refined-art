@@ -24,7 +24,7 @@ import oilySkinImage from "@/assets/oily-skin-botox-before-after.jpg";
 
 const OilySkinBotox = () => {
   const seoData = generateSEOMetadata(
-    "T-Zone Oily Skin Botox London | Oil Reduction Treatment | Sebum Control UK | Cosmedocs",
+    "T-Zone Oily Skin Botox London | Oil Control",
     "Professional T-zone oily skin Botox treatment in London. Reduce oil production & shine in forehead, nose & chin. 30% oil reduction. Expert consultation.",
     "/oily-skin-botox"
   );

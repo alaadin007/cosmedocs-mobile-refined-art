@@ -15,7 +15,7 @@ const TriggerPointBotox = () => {
   const bookingUrl = "https://med.as.me/harleystreet";
   
   const seoData = generateSEOMetadata(
-    "Trigger Point Botox for Head, Neck & Shoulder Pain - £450 | Muscular Pain Relief | Cosmedocs",
+    "Trigger Point Botox £450 | Pain Relief London",
     "Expert trigger point botox for chronic head, neck and shoulder pain of muscular origin. Relieve muscle tension, myofascial pain, and trigger points from £450 at Cosmedocs Harley Street London.",
     "/trigger-point-botox"
   );
