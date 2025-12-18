@@ -481,6 +481,7 @@ export default function BotoxFAQs() {
         <section className="relative py-16 md:py-24 bg-background overflow-hidden">
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
             <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl" />
             <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl" />
           </div>
@@ -500,14 +501,14 @@ export default function BotoxFAQs() {
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto mt-8"
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-amber-900/30 text-amber-300 rounded-full text-sm font-medium mb-6">
-                <HelpCircle className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-900/30 to-amber-900/30 text-amber-300 rounded-full text-sm font-medium mb-6 border border-purple-700/30">
+                <HelpCircle className="w-4 h-4 text-purple-400" />
                 Expert Guidance
               </span>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Botox FAQs: Your Complete Guide to{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">
                   Anti-Wrinkle Injections
                 </span>
               </h1>
