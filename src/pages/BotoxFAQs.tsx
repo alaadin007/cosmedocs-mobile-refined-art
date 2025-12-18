@@ -576,9 +576,12 @@ export default function BotoxFAQs() {
                   transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
                   className="mb-16 scroll-mt-32"
                 >
-                  <div className="flex items-center gap-3 mb-8">
-                    <div className="p-3 bg-gradient-to-br from-amber-900/30 to-amber-800/20 rounded-xl">
-                      <category.icon className="w-6 h-6 text-amber-400" />
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="flex items-center gap-2">
+                      <div className="w-1.5 h-12 rounded-full bg-gradient-to-b from-purple-500 to-purple-700" />
+                      <div className="p-3 bg-gradient-to-br from-purple-900/30 via-amber-900/30 to-amber-800/20 rounded-xl">
+                        <category.icon className="w-6 h-6 text-amber-400" />
+                      </div>
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                       {category.title}
