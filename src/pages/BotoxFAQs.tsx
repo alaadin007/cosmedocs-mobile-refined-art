@@ -478,11 +478,11 @@ export default function BotoxFAQs() {
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-amber-50 via-background to-amber-50/30 dark:from-background dark:via-background dark:to-amber-900/10 overflow-hidden">
+        <section className="relative py-16 md:py-24 bg-background overflow-hidden">
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 right-10 w-72 h-72 bg-amber-200/20 dark:bg-amber-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-100/30 dark:bg-amber-600/5 rounded-full blur-3xl" />
+            <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -500,14 +500,14 @@ export default function BotoxFAQs() {
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto mt-8"
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-full text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-amber-900/30 text-amber-300 rounded-full text-sm font-medium mb-6">
                 <HelpCircle className="w-4 h-4" />
                 Expert Guidance
               </span>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Botox FAQs: Your Complete Guide to{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 dark:from-amber-400 dark:to-amber-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">
                   Anti-Wrinkle Injections
                 </span>
               </h1>
@@ -532,7 +532,7 @@ export default function BotoxFAQs() {
                   asChild 
                   size="lg" 
                   variant="outline"
-                  className="border-amber-300 dark:border-amber-700 hover:bg-amber-50 dark:hover:bg-amber-900/20"
+                  className="border-amber-700 text-foreground hover:bg-amber-900/20"
                 >
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />
@@ -545,16 +545,16 @@ export default function BotoxFAQs() {
         </section>
 
         {/* Quick Navigation */}
-        <section className="py-8 bg-white dark:bg-muted/30 border-y border-border sticky top-0 z-40">
+        <section className="py-8 bg-muted/30 border-y border-border sticky top-0 z-40 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-3">
               {faqCategories.map((category, index) => (
                 <a
                   key={index}
                   href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-muted hover:bg-amber-100 dark:hover:bg-amber-900/30 rounded-full text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-card hover:bg-amber-900/30 rounded-full text-sm font-medium transition-colors text-foreground"
                 >
-                  <category.icon className="w-4 h-4 text-amber-600" />
+                  <category.icon className="w-4 h-4 text-amber-500" />
                   {category.title}
                 </a>
               ))}
@@ -577,8 +577,8 @@ export default function BotoxFAQs() {
                   className="mb-16 scroll-mt-32"
                 >
                   <div className="flex items-center gap-3 mb-8">
-                    <div className="p-3 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/30 dark:to-amber-800/20 rounded-xl">
-                      <category.icon className="w-6 h-6 text-amber-700 dark:text-amber-400" />
+                    <div className="p-3 bg-gradient-to-br from-amber-900/30 to-amber-800/20 rounded-xl">
+                      <category.icon className="w-6 h-6 text-amber-400" />
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                       {category.title}
@@ -590,12 +590,12 @@ export default function BotoxFAQs() {
                       <AccordionItem
                         key={faqIndex}
                         value={`${categoryIndex}-${faqIndex}`}
-                        className="bg-white dark:bg-card border border-border rounded-xl px-6 shadow-sm hover:shadow-md transition-shadow"
+                        className="bg-card border border-border rounded-xl px-6 hover:border-amber-700/50 transition-all"
                       >
-                        <AccordionTrigger className="text-left font-semibold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 py-5 [&>svg]:text-amber-600">
+                        <AccordionTrigger className="text-left font-semibold text-foreground hover:text-amber-400 py-5 [&>svg]:text-amber-500">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-zinc-600 dark:text-zinc-400 pb-5 leading-relaxed">
+                        <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>
@@ -663,7 +663,7 @@ export default function BotoxFAQs() {
         </section>
 
         {/* Related Links */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section className="py-16 md:py-20 bg-card/50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
@@ -682,18 +682,18 @@ export default function BotoxFAQs() {
                   <Link
                     key={index}
                     to={link.href}
-                    className="group p-4 bg-white dark:bg-card border border-border rounded-xl hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-md transition-all"
+                    className="group p-4 bg-card border border-border rounded-xl hover:border-amber-700 transition-all"
                   >
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="font-semibold text-foreground group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                        <h3 className="font-semibold text-foreground group-hover:text-amber-400 transition-colors">
                           {link.title}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {link.description}
                         </p>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-amber-600 group-hover:translate-x-1 transition-all" />
+                      <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
                     </div>
                   </Link>
                 ))}
