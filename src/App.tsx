@@ -134,6 +134,7 @@ const ForeheadWrinklesMythsTips = lazy(() => import("./pages/ForeheadWrinklesMyt
 const LipWrinklesTreatments = lazy(() => import("./pages/LipWrinklesTreatments"));
 const SkinTagsRemoval = lazy(() => import("./pages/SkinTagsRemoval"));
 const BotoxFAQs = lazy(() => import("./pages/BotoxFAQs"));
+const UltimateBotoxGuide = lazy(() => import("./pages/UltimateBotoxGuide"));
 
 // Optimized loading component
 const PageLoader = memo(() => (
@@ -227,6 +228,7 @@ const App = () => {
                       
                       <Route path="/botox-london" element={<FaceBotox />} />
                       <Route path="/botox-faqs" element={<BotoxFAQs />} />
+                      <Route path="/ultimate-botox-guide" element={<UltimateBotoxGuide />} />
                       <Route path="/botox-cost-london" element={<BotoxCostLondon />} />
                       <Route path="/botox-price-london" element={<Navigate to="/botox-cost-london" replace />} />
                       <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
