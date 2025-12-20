@@ -370,14 +370,18 @@ const BruxismBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">TMJ Botox & Bruxism Treatment</h2>
-              <div className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+              <div className="text-gray-300 max-w-3xl mx-auto text-lg mb-8 space-y-4">
                 <p>
-                  <strong>Botox for TMJ</strong> and <strong>bruxism botox</strong> works by gently relaxing the overactive jaw muscles responsible for <strong>teeth grinding</strong>, <strong>jaw clenching</strong>, and jaw tension. 
-                  According to the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893479/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">National Institutes of Health</a>, 
-                  bruxism affects approximately 8-31% of the general population and can lead to significant dental damage if left untreated.
-                  By reducing strain on the <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter</Link> and surrounding muscles, this <strong>teeth grinding treatment</strong> provides both functional relief and subtle aesthetic benefits. 
-                  Our expert <strong>botox for clenched jaw</strong> therapy targets <strong>bruxism teeth grinding symptoms</strong> while naturally slimming the jawline. 
-                  This proven <strong>bruxism treatment</strong> helps patients who <strong>grind teeth</strong> at night or experience <strong>symptoms of clenched jaw</strong> during the day.
+                  <strong>Botox for TMJ</strong> and <strong>bruxism botox</strong> works by gently relaxing the overactive jaw muscles. These muscles are responsible for <strong>teeth grinding</strong>, <strong>jaw clenching</strong>, and jaw tension.
+                </p>
+                <p>
+                  According to the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893479/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">National Institutes of Health</a>, bruxism affects approximately 8-31% of the general population. Left untreated, it can lead to significant dental damage.
+                </p>
+                <p>
+                  By reducing strain on the <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter</Link> and surrounding muscles, this <strong>teeth grinding treatment</strong> provides both functional relief and subtle aesthetic benefits.
+                </p>
+                <p>
+                  Our expert <strong>botox for clenched jaw</strong> therapy targets <strong>bruxism symptoms</strong> while naturally slimming the jawline. This proven treatment helps patients who grind teeth at night or experience jaw clenching during the day.
                 </p>
               </div>
             </motion.div>
@@ -395,16 +399,17 @@ const BruxismBotox = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-gray-300 text-lg leading-relaxed space-y-4">
-                    <p>
-                      <strong className="text-white">Bruxism Botox & Botox for Teeth Grinding:</strong> <strong>Botox to stop teeth grinding</strong> helps prevent teeth damage, reduces <strong>jaw teeth grinding</strong> frequency, and may create a softer, more refined <strong>bruxism jawline</strong>. 
-                      This effective <strong>treatment of teeth grinding</strong> addresses <strong>bruxism teeth</strong> wear and <strong>teeth clenching</strong> habits. Many patients combine this with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for comprehensive facial rejuvenation.
-                    </p>
+                    <div>
+                      <p className="mb-2"><strong className="text-white">Bruxism Botox & Botox for Teeth Grinding:</strong></p>
+                      <p>Botox helps prevent teeth damage and reduces jaw grinding frequency. It may also create a softer, more refined jawline.</p>
+                      <p className="mt-2">This effective treatment addresses teeth wear and clenching habits. Many patients combine this with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for comprehensive facial rejuvenation.</p>
+                    </div>
                     
-                    <p>
-                      <strong className="text-white">TMJ Botox & Botox for Jaw Pain:</strong> Relieves <strong>jaw pain</strong>, headaches, and stiffness linked to temporomandibular joint disorder. 
-                      Our <strong>botox jaw clenching</strong> treatment effectively manages <strong>clench jaw symptoms</strong> and <strong>clenching jaw</strong> tension. 
-                      Many patients searching "how I cured my bruxism" discover <strong>botox and teeth grinding</strong> treatment as an effective solution, often pairing it with <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin enhancement</Link> for balanced facial aesthetics.
-                    </p>
+                    <div>
+                      <p className="mb-2"><strong className="text-white">TMJ Botox & Botox for Jaw Pain:</strong></p>
+                      <p>Relieves jaw pain, headaches, and stiffness linked to temporomandibular joint disorder.</p>
+                      <p className="mt-2">Our botox treatment effectively manages jaw clenching symptoms and tension. Many patients pair it with <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin enhancement</Link> for balanced facial aesthetics.</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

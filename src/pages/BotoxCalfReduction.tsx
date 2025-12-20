@@ -347,27 +347,31 @@ const BotoxCalfReduction = () => {
               <h2 className="text-3xl font-bold mb-4 text-white">What is Botox Calf Reduction?</h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Botox calf reduction is a non-surgical cosmetic procedure that uses botulinum toxin injections to 
-                  temporarily weaken the gastrocnemius muscle in the calves. This creates a slimmer, more contoured 
-                  appearance to the lower legs without invasive surgery. Similar to other aesthetic treatments like <a href="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter botox</a> for facial contouring, this procedure targets specific muscles for refined results.
+                  Botox calf reduction is a non-surgical cosmetic procedure. It uses botulinum toxin injections to temporarily weaken the gastrocnemius muscle in the calves.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  This creates a slimmer, more contoured appearance to the lower legs. No invasive surgery is required. Similar to <a href="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter botox</a> for facial contouring, this procedure targets specific muscles for refined results.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The procedure works by strategically injecting Botox into specific points of the calf muscle, 
-                  causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
-                  resulting in visibly slimmer and more proportionate calves. Many patients combine this treatment with other body contouring procedures such as <a href="/fat-dissolving-injections" className="text-purple-300 hover:text-purple-200 underline">fat dissolving injections</a> for comprehensive leg refinement.
+                  The procedure works by strategically injecting Botox into specific points of the calf muscle. This causes controlled muscle relaxation.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Over time, the treated muscle gradually reduces in size. The result is visibly slimmer and more proportionate calves. Many patients combine this with <a href="/fat-dissolving-injections" className="text-purple-300 hover:text-purple-200 underline">fat dissolving injections</a> for comprehensive leg refinement.
                 </p>
                 
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
                   <h3 className="text-white text-xl font-semibold mb-4">Muscle Targeting</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    The gastrocnemius muscle is the primary target for calf reduction. This large, superficial muscle 
-                    forms the bulk of the calf and is responsible for the prominent appearance that some patients wish to reduce. The precision required is similar to that used in <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">facial contouring treatments</a>, ensuring natural-looking results.
+                    The gastrocnemius muscle is the primary target for calf reduction. This large, superficial muscle forms the bulk of the calf.
                   </p>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    Research published in aesthetic medicine journals supports the safety and efficacy of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6122154/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin injections</a> for aesthetic muscle reduction, demonstrating measurable improvements with an excellent safety profile when performed by qualified practitioners.
+                    It is responsible for the prominent appearance that some patients wish to reduce. The precision required is similar to <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">facial contouring treatments</a>, ensuring natural-looking results.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Research in aesthetic medicine journals supports the safety and efficacy of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6122154/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin injections</a> for aesthetic muscle reduction. Studies demonstrate measurable improvements with an excellent safety profile.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/37220391/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Studies show</a> that calf subcutaneous fat thickness plays a significant role in treatment outcomes, with optimal patient satisfaction achieved when BTX-A calf contouring is tailored to individual anatomy and tissue composition.
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/37220391/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Research shows</a> that calf subcutaneous fat thickness plays a significant role in treatment outcomes. Optimal patient satisfaction is achieved when BTX-A calf contouring is tailored to individual anatomy.
                   </p>
                 </div>
               </div>

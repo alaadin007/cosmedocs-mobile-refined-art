@@ -330,7 +330,13 @@ const FatDissolve = () => {
               <h2 className="text-3xl font-bold mb-8 text-center text-white">What is EMSCULPT & Fat Dissolving Injections?</h2>
               <div className="text-gray-300 space-y-6">
                 <p className="text-lg">
-                  EMSCULPT is a revolutionary FDA approved device that builds your muscles while burning your fat. Combined with advanced fat dissolving injections like Aqualyx and Lemon Bottle, we offer the most comprehensive fat reduction treatments in London. These are fat dissolving injections that work to permanently eliminate stubborn fat cells in targeted areas such as the chin, stomach, belly, face, and legs. This is the world&apos;s first and only technology which offers this without:
+                  EMSCULPT is a revolutionary FDA approved device that builds your muscles while burning your fat.
+                </p>
+                <p>
+                  Combined with advanced fat dissolving injections like Aqualyx and Lemon Bottle, we offer the most comprehensive fat reduction treatments in London.
+                </p>
+                <p>
+                  These injections permanently eliminate stubborn fat cells in targeted areas such as the chin, stomach, belly, face, and legs. This is the world's first and only technology which offers this without:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center space-x-3">
@@ -351,7 +357,10 @@ const FatDissolve = () => {
                   </div>
                 </div>
                 <p>
-                  This non-surgical fat burning treatment is pain-free and has no downtime. Our fat dissolving injections are safe and effective, with minimal side effects when administered by qualified practitioners. There are thirteen clinical research studies that back the results of EMSCULPT treatment. For those seeking targeted fat reduction, we also offer specialist <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> for facial contouring.
+                  This non-surgical fat burning treatment is pain-free and has no downtime. Our fat dissolving injections are safe and effective, with minimal side effects when administered by qualified practitioners.
+                </p>
+                <p>
+                  There are thirteen clinical research studies that back the results of EMSCULPT treatment. For targeted fat reduction, we also offer specialist <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> for facial contouring.
                 </p>
               </div>
             </motion.div>

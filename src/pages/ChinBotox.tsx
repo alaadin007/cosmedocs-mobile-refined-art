@@ -295,10 +295,14 @@ const ChinBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Dimpled Chin Botox?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Dimpled chin botox, also known as pebble chin botox, is a minimally invasive botox chin treatment that targets the mentalis muscle responsible for chin dimples, dimpling on chin, 
-                pebbled chin texture, and excessive chin protrusion. Our invisible art approach to botox for dimpled chin creates natural smoothness with stunning chin botox before and after results.
-              </p>
+              <div className="text-gray-300 max-w-3xl mx-auto text-lg space-y-4">
+                <p>
+                  Dimpled chin botox, also known as pebble chin botox, is a minimally invasive treatment. It targets the mentalis muscle responsible for chin dimples and pebbled chin texture.
+                </p>
+                <p>
+                  Our invisible art approach to botox for dimpled chin creates natural smoothness. Patients achieve stunning chin botox before and after results with this precise treatment.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
@@ -313,11 +317,14 @@ const ChinBotox = () => {
                   <CardTitle className="text-white text-2xl text-center">Understanding the Mentalis Muscle</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    The mentalis muscle is located in your chin and contracts when you speak, smile, or show emotion. 
-                    When overactive, it creates an uneven dimpled chin, chin dimples, or pebble chin texture that can age your appearance 
-                    and detract from your natural beauty. Botox in chin helps relax this muscle for smoother results.
-                  </p>
+                  <div className="text-gray-300 text-lg leading-relaxed text-center space-y-3">
+                    <p>
+                      The mentalis muscle is located in your chin. It contracts when you speak, smile, or show emotion.
+                    </p>
+                    <p>
+                      When overactive, it creates an uneven dimpled chin or pebble chin texture. This can age your appearance and detract from your natural beauty. Botox in chin helps relax this muscle for smoother results.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

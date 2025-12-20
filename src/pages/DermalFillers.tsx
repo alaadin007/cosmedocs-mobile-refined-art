@@ -325,10 +325,13 @@ const DermalFillerMakeover = () => {
                       What Happens as We Age
                     </h3>
                     <p className="text-gray-300 leading-relaxed mb-4">
-                      As a person ages, the body begins to lose collagen. Collagen is an important substance that exists in your skin, muscles, bones, and tissues. It's the structural protein that gives your skin its firmness, elasticity, and youthful appearance.
+325:                       As a person ages, the body begins to lose collagen. Collagen is an important substance that exists in your skin, muscles, bones, and tissues.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed mb-4">
+                      It's the structural protein that gives your skin its firmness, elasticity, and youthful appearance.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
-                      A decrease in the amount of collagen can cause skin laxity and loss of volume. The skin becomes thinner, loses its elasticity, and starts to sag. This natural ageing process affects everyone differently, but typically becomes more noticeable in our 30s and progresses with each passing decade.
+                      A decrease in collagen can cause skin laxity and loss of volume. The skin becomes thinner, loses elasticity, and starts to sag. This natural ageing process becomes more noticeable in our 30s and progresses with each decade.
                     </p>
                   </div>
 
