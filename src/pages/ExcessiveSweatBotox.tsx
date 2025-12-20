@@ -311,11 +311,17 @@ const ExcessiveSweatBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Excessive Sweating Botox?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Botox for excessive sweating (hyperhidrosis botox) is an FDA-approved treatment that uses botox shots for sweating to block nerve signals to sweat glands. 
-                Botox in armpits, botox in hands, and botox for facial sweating provide dramatic sweat reduction. Our therapeutic approach transforms lives with long-lasting results. 
-                Whether you need underarm botox, botox to prevent sweating on your face, or botox for perspiration in other areas, our expert practitioners deliver invisible art - transformation that speaks without saying a word.
-              </p>
+              <div className="text-gray-300 max-w-3xl mx-auto text-lg space-y-4">
+                <p>
+                  Botox for excessive sweating (hyperhidrosis botox) is an FDA-approved treatment. It uses botox shots to block nerve signals to sweat glands.
+                </p>
+                <p>
+                  Botox in armpits, hands, and for facial sweating provides dramatic sweat reduction. Our therapeutic approach transforms lives with long-lasting results.
+                </p>
+                <p>
+                  Whether you need underarm botox, botox to prevent sweating on your face, or treatment in other areas, our expert practitioners deliver invisible art — transformation that speaks without saying a word.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
@@ -330,12 +336,17 @@ const ExcessiveSweatBotox = () => {
                   <CardTitle className="text-white text-2xl text-center">Understanding Hyperhidrosis</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Hyperhidrosis is a <a href="https://www.nhs.uk/conditions/hyperhidrosis/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical condition causing excessive sweating</a> that significantly impacts daily life, confidence, and social interactions. 
-                    Botox for hyperhidrosis works by blocking the nerve signals that trigger sweat production. Botox injections for excessive sweating provide dramatic relief - 
-                    whether it's botox on underarms, botox under the arms, botox in underarms, or botox for sweating face. The cost of armpit botox and underarm botox cost 
-                    varies by area, with armpit botox being one of the most popular and effective treatments available.
-                  </p>
+                  <div className="text-gray-300 text-lg leading-relaxed text-center space-y-4">
+                    <p>
+                      Hyperhidrosis is a <a href="https://www.nhs.uk/conditions/hyperhidrosis/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical condition causing excessive sweating</a>. It significantly impacts daily life, confidence, and social interactions.
+                    </p>
+                    <p>
+                      Botox for hyperhidrosis works by blocking the nerve signals that trigger sweat production. Botox injections provide dramatic relief for underarms, hands, and face.
+                    </p>
+                    <p>
+                      The cost varies by area, with armpit botox being one of the most popular and effective treatments available.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

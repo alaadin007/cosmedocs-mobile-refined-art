@@ -506,16 +506,24 @@ const CupidBowLips = () => {
                 </p>
 
                 <p>
-                  Named after the Roman god of love, Cupid, whose bow shared a similar curved silhouette, 
-                  the cupid's bow consists of two symmetrical peaks (the highest points of the upper lip) 
-                  connected by a central dip. Understanding what is a cupid's bow and its cupid's bow meaning 
-                  is crucial for appreciating how this natural contour plays a vital role in facial harmony 
-                  and is considered a key feature of youthful, aesthetically pleasing lips. According to <a 
+                  Named after the Roman god of love, Cupid, whose bow shared a similar curved silhouette. The cupid's bow consists of two symmetrical peaks (the highest points of the upper lip) connected by a central dip.
+                </p>
+                
+                <p>
+                  Understanding what is a cupid's bow and its meaning is crucial for appreciating how this natural contour plays a vital role in facial harmony. It is considered a key feature of youthful, aesthetically pleasing lips.
+                </p>
+                
+                <p>
+                  According to <a 
                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5952987/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >research on ideal lip aesthetics</a>, well-defined cupid bows are associated with perceptions of beauty and youth. Studies from the <a 
+                  >research on ideal lip aesthetics</a>, well-defined cupid bows are associated with perceptions of beauty and youth.
+                </p>
+                
+                <p>
+                  Studies from the <a 
                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6345732/" 
                     target="_blank" 
                     rel="noopener noreferrer"
@@ -571,20 +579,24 @@ const CupidBowLips = () => {
               
               <div className="space-y-6 text-gray-300">
                 <p>
-                  Whilst a naturally pronounced, sharply defined cupid's bow with perfect symmetry is rare, 
-                  many individuals have asymmetrical cupid bow lips, one side more defined than the other, or a 
-                  completely flat upper lip border lacking the characteristic 'M' shape. This is where cupid's bow enhancement 
-                  becomes valuable for those seeking to define cupids bow features.
+                  Whilst a naturally pronounced, sharply defined cupid's bow with perfect symmetry is rare, many individuals have asymmetrical lips. One side may be more defined than the other, or there may be a completely flat upper lip border lacking the characteristic 'M' shape.
                 </p>
 
                 <p>
-                  Cupid's bow enhancement (also known as cupid's bow lip injections or lip injections cupid's bow) is a specialised 
-                  <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique that precisely defines, reshapes, or accentuates this area. Using premium hyaluronic acid fillers and expert injection techniques, we create symmetrical, well-defined cupid's bow lips that complement your natural facial proportions. According to <a 
+                  Cupid's bow enhancement (also known as lip injections) is a specialised <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique. It precisely defines, reshapes, or accentuates this area.
+                </p>
+                
+                <p>
+                  Using premium hyaluronic acid fillers and expert injection techniques, we create symmetrical, well-defined lips that complement your natural facial proportions.
+                </p>
+                
+                <p>
+                  According to <a 
                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11253074/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >clinical research on lip augmentation injection techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates.
+                  >clinical research on lip augmentation</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates.
                 </p>
               </div>
             </motion.div>

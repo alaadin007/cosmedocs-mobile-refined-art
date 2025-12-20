@@ -561,11 +561,14 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mt-12 max-w-4xl mx-auto"
             >
-              <p className="text-gray-300 text-lg">
-                Using premium hyaluronic acid dermal fillers, our expert practitioners create bespoke treatment 
-                plans that enhance your natural beauty whilst maintaining facial harmony. Results are immediate, 
-                natural-looking, and can last 15-18 months.
-              </p>
+              <div className="text-gray-300 text-lg space-y-3">
+                <p>
+                  Using premium hyaluronic acid dermal fillers, our expert practitioners create bespoke treatment plans. These enhance your natural beauty whilst maintaining facial harmony.
+                </p>
+                <p>
+                  Results are immediate and natural-looking. They can last 15-18 months.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -581,17 +584,25 @@ const CheekFiller = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">1ml & 2ml Cheek Filler Before And After</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                If it is the 'natural look' you are looking for then 1 ml of facial filler can help you achieve that. Similarly, below, 1ml cheek filler before and after clearly shows gradual and natural cheek augmentation. Research shows that{" "}
-                <a 
-                  href="https://pubmed.ncbi.nlm.nih.gov/23135650/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
-                >
-                  cheek augmentation significantly improves facial attractiveness perception
-                </a>. The filler amount depends on your facial structure and aesthetic goals.
-              </p>
+              <div className="text-gray-300 max-w-3xl mx-auto space-y-3">
+                <p>
+                  If it is the 'natural look' you are looking for, 1ml of facial filler can help you achieve that.
+                </p>
+                <p>
+                  Below, 1ml cheek filler before and after clearly shows gradual and natural cheek augmentation. Research shows that{" "}
+                  <a 
+                    href="https://pubmed.ncbi.nlm.nih.gov/23135650/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                  >
+                    cheek augmentation significantly improves facial attractiveness perception
+                  </a>.
+                </p>
+                <p>
+                  The filler amount depends on your facial structure and aesthetic goals.
+                </p>
+              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">

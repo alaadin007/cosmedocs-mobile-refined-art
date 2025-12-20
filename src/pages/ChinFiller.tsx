@@ -373,10 +373,14 @@ const ChinFiller = () => {
               className="text-center mb-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Chin Fillers Before and After London</h2>
-              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
-                Explore authentic 1ml chin filler before and after and 1 ml chin filler before and after results from our Harley Street clinic. 
-                Our expert dermal fillers chin treatments enhance projection and facial balance, including double chin filler, chin shadow filler, and chin crease filler corrections. View our chin filler before after gallery showcasing natural transformations.
-              </p>
+              <div className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto space-y-3">
+                <p>
+                  Explore authentic 1ml chin filler before and after results from our Harley Street clinic.
+                </p>
+                <p>
+                  Our expert treatments enhance projection and facial balance. We offer double chin filler, chin shadow filler, and chin crease filler corrections. View our gallery showcasing natural transformations.
+                </p>
+              </div>
             </motion.div>
 
             <Carousel className="w-full max-w-5xl mx-auto">
