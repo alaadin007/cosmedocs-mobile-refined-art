@@ -296,20 +296,31 @@ const UltimateBotoxGuide = () => {
               
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  Late at night, phone in hand, Google working overtime. You've typed "Botox London" 
-                  more times than you'd care to admit. That means you do your research. Smart.
+                  Right. So here you are. Late at night perhaps, phone in hand, Google working overtime. 
+                  You've typed "Botox London" into that search bar more times than you'd care to admit, 
+                  and you've ended up here. Good. That means you're the kind of person who does their 
+                  research before committing to anything. Smart. We like that.
+                </p>
+                
+                <p className="text-lg leading-relaxed text-muted-foreground mt-6">
+                  But here's the thing – and this might sting a little – the main thing holding you back 
+                  isn't the cost, the pain, or even the fear of looking like you've been surprised by 
+                  your electricity bill. No. It's your own head doing somersaults over something that 
+                  millions of people do every year without incident.
                 </p>
 
                 <img 
                   src={mindsetImage} 
-                  alt="Before and after: from late-night worrying to confident transformation"
+                  alt="The contrast between researching Botox and living your best life"
                   className="w-full rounded-2xl my-8 shadow-lg"
                 />
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  Your friends took the plunge. They look annoyingly good. Fresh. Rested. Like 
-                  they've been on holiday whilst you've been doom-scrolling. And yet, here you are, 
-                  still on the fence.
+                  You've watched your friends take the plunge. They look... well, annoyingly good, 
+                  don't they? Fresh. Rested. Like they've been on a two-week holiday in the Maldives 
+                  whilst you've been stress-eating biscuits and doom-scrolling through the news. 
+                  And yet, here you are, still on the fence. Still fighting that inexplicable urge 
+                  to remain au naturel, as if there's some moral victory in looking tired.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground mt-6">
@@ -336,21 +347,29 @@ const UltimateBotoxGuide = () => {
 
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  Botox is one of the most researched substances in cosmetic medicine. For cosmetic 
-                  approval, the safety bar is astronomically high. The fact it cleared those hurdles 
-                  should tell you something.
+                  Look, Botox isn't the Wild West of medicine. Far from it. It's actually one of the 
+                  most researched, tested, and regulated substances in cosmetic medicine. Want to know 
+                  why? Because before a drug can be approved for cosmetic use, it has to jump through 
+                  hoops that would make an Olympic gymnast weep.
                 </p>
 
                 <img 
                   src={safetyImage} 
-                  alt="Medical safety and trust shield with healthcare symbols"
+                  alt="Trust and precision in Botox treatment"
                   className="w-full rounded-2xl my-8 shadow-lg"
                 />
+
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  For medical use? High standards. For cosmetic use? Multiply that by a factor of 
+                  "absolutely ridiculous levels of scrutiny." Why? Because nobody <em>needs</em> cosmetic 
+                  treatments to survive, so the safety bar is set astronomically high. The fact that 
+                  Botox cleared those hurdles should tell you something.
+                </p>
               </div>
 
               <QuoteCallout>
-                There's probably no other medicine approved for purely cosmetic use that has been 
-                subjected to such rigorous safety testing.
+                There's probably no other drug – and yes, by drug I mean medicine – approved for 
+                purely cosmetic use that has been subjected to such rigorous safety testing.
               </QuoteCallout>
 
               <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -385,25 +404,40 @@ const UltimateBotoxGuide = () => {
 
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  You've got high street barbers and premium salons. Both give haircuts. 
-                  Same result? Of course not.
+                  Here's a little thought experiment for you. Think about haircuts. Stay with me here.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground mt-6">
+                  You've got your high street barbers – the ones with the spinning pole and a queue 
+                  of blokes getting their standard short-back-and-sides whilst watching football on 
+                  a tiny telly. Perfectly fine for what they do. Then you've got your premium salons 
+                  – the ones where they offer you prosecco, analyse your face shape, and treat your 
+                  hair like it's made of spun gold.
                 </p>
 
                 <img 
                   src={barberImage} 
-                  alt="Comparison between basic budget barbershop and luxury premium salon"
+                  alt="The difference between basic and premium service"
                   className="w-full rounded-2xl my-8 shadow-lg"
                 />
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
+                  Both can give you a haircut. But would you expect the same result? Of course not. 
+                  And a haircut, last time I checked, doesn't involve needles near your face.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground mt-6">
                   <strong className="text-foreground">
-                    Botox is no different. The practitioner, the technique, the attention to your 
-                    anatomy – that's where the magic happens.
+                    Botox is no different. The treatment might be called the same thing everywhere, 
+                    but the practitioner, the technique, the attention to your individual anatomy – 
+                    that's where the magic happens. Or doesn't.
                   </strong>
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-                  The bad cases? Usually from inexperienced practitioners. Know what you're getting into.
+                  The bad cases you've heard about? Nine times out of ten, they're the equivalent of 
+                  getting a complex balayage at a place that usually does £10 buzz cuts. Nothing 
+                  against buzz cuts, but know what you're getting into.
                 </p>
               </div>
             </motion.div>
@@ -634,7 +668,7 @@ const UltimateBotoxGuide = () => {
 
               <img 
                 src={zonesImage} 
-                alt="Facial diagram showing Botox treatment zones: Forehead, Frown Lines, Crow's Feet, Bunny Lines, Lip area, Chin, Jawline"
+                alt="Treatment zones for Botox"
                 className="w-full rounded-2xl my-8 shadow-lg"
               />
 
@@ -803,14 +837,21 @@ const UltimateBotoxGuide = () => {
 
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  You know the ones. "You don't need that," they say, while visibly not having 
-                  slept properly since 2019. It's resignation dressed up as wisdom.
+                  You know the ones. They cluck disapprovingly when you mention you're considering 
+                  aesthetic treatments. "You don't need that," they say, sipping their third glass 
+                  of wine while visibly not having slept properly since 2019.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground mt-6">
+                  Let me paint a picture. These are often the same people who've "accepted" ageing 
+                  in the way someone accepts that their gym membership has gone unused for eighteen 
+                  months. It's not a philosophical stance – it's resignation dressed up as wisdom.
                 </p>
               </div>
 
               <img 
                 src={communityImage} 
-                alt="Diverse group of happy confident people aged 35-55 looking refreshed and vibrant"
+                alt="Diverse confident people looking refreshed"
                 className="w-full rounded-2xl my-8 shadow-lg"
               />
 
