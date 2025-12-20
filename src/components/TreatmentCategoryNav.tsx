@@ -88,8 +88,8 @@ const categories: Category[] = [
     ]
   },
   {
-    id: "plasticsurgeon",
-    label: "Plastic Surgeon",
+    id: "plasticsurgery",
+    label: "Plastic Surgery",
     items: [
       { title: "Blepharoplasty", link: "/blepharoplasty" },
       { title: "Rhinoplasty", link: "/rhinoplasty" },
