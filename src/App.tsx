@@ -135,6 +135,10 @@ const LipWrinklesTreatments = lazy(() => import("./pages/LipWrinklesTreatments")
 const SkinTagsRemoval = lazy(() => import("./pages/SkinTagsRemoval"));
 const BotoxFAQs = lazy(() => import("./pages/BotoxFAQs"));
 const UltimateBotoxGuide = lazy(() => import("./pages/UltimateBotoxGuide"));
+const Blepharoplasty = lazy(() => import("./pages/Blepharoplasty"));
+const Rhinoplasty = lazy(() => import("./pages/Rhinoplasty"));
+const FaceliftSurgery = lazy(() => import("./pages/FaceliftSurgery"));
+const Liposuction = lazy(() => import("./pages/Liposuction"));
 
 // Optimized loading component
 const PageLoader = memo(() => (
@@ -298,6 +302,10 @@ const App = () => {
                       <Route path="/neck" element={<NeckFillers />} />
                       <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
                       <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
+                      <Route path="/blepharoplasty" element={<Blepharoplasty />} />
+                      <Route path="/rhinoplasty" element={<Rhinoplasty />} />
+                      <Route path="/facelift-surgery" element={<FaceliftSurgery />} />
+                      <Route path="/liposuction" element={<Liposuction />} />
                       <Route path="/dermatology" element={<Dermatology />} />
                       <Route path="/aesthetic-training" element={<AestheticTraining />} />
                       <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
