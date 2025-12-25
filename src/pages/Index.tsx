@@ -192,7 +192,7 @@ const Index = () => {
               <div className="max-w-5xl mx-auto text-center">
                 <div>
                   <div className="relative mb-6">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-glow to-white bg-clip-text text-transparent" id="hero-heading">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600" id="hero-heading">
                       cosmedocs
                     </h2>
                   </div>
