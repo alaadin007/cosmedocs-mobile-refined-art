@@ -127,6 +127,55 @@ const Index = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What treatments does Cosmedocs offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Cosmedocs offers a wide range of non-surgical aesthetic treatments including Botox injections, dermal fillers, lip fillers, anti-wrinkle treatments, skin rejuvenation, and advanced anti-ageing procedures. All treatments are performed by qualified medical professionals."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Cosmedocs located?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Cosmedocs is located at 8-10 Harley Street, London W1G 9PF. Our Harley Street clinic is easily accessible and offers a premium, private setting for all aesthetic consultations and treatments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I book a consultation at Cosmedocs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can book a consultation by calling us on 0333 0551 503, emailing info@cosmedocs.com, or using our online booking system. We offer both in-person consultations at our Harley Street clinic and virtual consultations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are Cosmedocs practitioners qualified doctors?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Cosmedocs is a doctor-led aesthetic clinic. All our practitioners are qualified medical professionals with extensive training in aesthetic medicine. Dr. Ahmed Haq leads our team with over 17 years of experience."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Cosmedocs approach to aesthetics?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our philosophy is 'invisible art' — we believe in subtle, natural-looking results that enhance your features without looking overdone. We focus on bold, natural transformations that are always tailored to your individual goals."
+                }
+              }
+            ]
+          })}
+        </script>
+        <html lang="en-GB" />
       </Helmet>
 
       <TooltipProvider>
