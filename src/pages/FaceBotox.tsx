@@ -23,8 +23,14 @@ import crowsFeetBA2 from "@/assets/before-after/crows-feet-botox-2.jpg";
 import crowsFeetBA3 from "@/assets/before-after/crows-feet-botox-3.jpeg";
 import frownLinesBA1 from "@/assets/frown-lines-before-after-1.jpg";
 import frownLinesBA2 from "@/assets/frown-lines-before-after-2.jpg";
+import frownLinesBA3 from "@/assets/frown-lines-before-after-3.jpg";
+import frownLinesBA4 from "@/assets/frown-lines-before-after-4.jpg";
 import foreheadBA from "@/assets/botox-forehead-before-after.jpeg";
 import foreheadResultsBA from "@/assets/forehead-botox-results.jpg";
+import bunnyLinesBA1 from "@/assets/bunny-lines-before-after-1.jpg";
+import bunnyLinesBA2 from "@/assets/bunny-lines-before-after-2.jpg";
+import gummySmileBA1 from "@/assets/gummy-smile-ba-1.jpeg";
+import gummySmileBA2 from "@/assets/gummy-smile-ba-2.jpeg";
 
 export default function FaceBotox() {
   const seoData = generateSEOMetadata(
@@ -164,19 +170,44 @@ export default function FaceBotox() {
       caption: "Forehead lines treated with natural movement maintained"
     },
     {
+      src: frownLinesBA3,
+      alt: "Frown lines Botox treatment before and after showing 11 lines smoothed",
+      caption: "Frown lines (glabellar) treated for a relaxed appearance"
+    },
+    {
       src: crowsFeetBA2,
       alt: "Complete upper face Botox results with crow's feet and forehead treatment",
       caption: "Upper face rejuvenation combining multiple treatment areas"
     },
     {
-      src: frownLinesBA2,
-      alt: "Harley Street Botox clinic before and after results on frown lines",
-      caption: "Professional frown line treatment at our Harley Street clinic"
+      src: bunnyLinesBA1,
+      alt: "Bunny lines Botox before and after showing nose wrinkle reduction",
+      caption: "Bunny lines treated for smooth nose bridge appearance"
+    },
+    {
+      src: frownLinesBA4,
+      alt: "Deep frown lines Botox results at Harley Street London clinic",
+      caption: "Professional frown line treatment at Harley Street"
+    },
+    {
+      src: gummySmileBA1,
+      alt: "Gummy smile Botox correction before and after treatment results",
+      caption: "Gummy smile correction for balanced smile aesthetics"
     },
     {
       src: foreheadResultsBA,
-      alt: "Combined Botox and dermal filler results for comprehensive facial rejuvenation",
-      caption: "Comprehensive approach to upper face anti-ageing treatment"
+      alt: "Combined Botox results for comprehensive facial rejuvenation",
+      caption: "Comprehensive upper face anti-ageing treatment"
+    },
+    {
+      src: bunnyLinesBA2,
+      alt: "Nose wrinkle Botox treatment before and after at London clinic",
+      caption: "Bunny lines smoothed with precise Botox placement"
+    },
+    {
+      src: gummySmileBA2,
+      alt: "Lip flip and gummy smile Botox treatment results London",
+      caption: "Subtle lip enhancement with gummy smile correction"
     }
   ];
 
