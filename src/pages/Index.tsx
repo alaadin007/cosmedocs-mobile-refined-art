@@ -253,6 +253,67 @@ const Index = () => {
             <BeforeAfterCarousel />
           </Suspense>
 
+          {/* FAQ Section */}
+          <section className="py-20 bg-background" aria-labelledby="faq-heading">
+            <div className="page-container">
+              <div className="max-w-4xl mx-auto">
+                <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-6">
+                  <details className="group bg-secondary rounded-xl p-6 cursor-pointer">
+                    <summary className="flex justify-between items-center font-semibold text-lg list-none">
+                      What treatments does Cosmedocs offer?
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Cosmedocs offers a wide range of non-surgical aesthetic treatments including Botox injections, dermal fillers, lip fillers, anti-wrinkle treatments, skin rejuvenation, and advanced anti-ageing procedures. All treatments are performed by qualified medical professionals.
+                    </p>
+                  </details>
+                  
+                  <details className="group bg-secondary rounded-xl p-6 cursor-pointer">
+                    <summary className="flex justify-between items-center font-semibold text-lg list-none">
+                      Where is Cosmedocs located?
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Cosmedocs is located at 8-10 Harley Street, London W1G 9PF. Our Harley Street clinic is easily accessible and offers a premium, private setting for all aesthetic consultations and treatments.
+                    </p>
+                  </details>
+                  
+                  <details className="group bg-secondary rounded-xl p-6 cursor-pointer">
+                    <summary className="flex justify-between items-center font-semibold text-lg list-none">
+                      How do I book a consultation at Cosmedocs?
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      You can book a consultation by calling us on 0333 0551 503, emailing info@cosmedocs.com, or using our online booking system. We offer both in-person consultations at our Harley Street clinic and virtual consultations.
+                    </p>
+                  </details>
+                  
+                  <details className="group bg-secondary rounded-xl p-6 cursor-pointer">
+                    <summary className="flex justify-between items-center font-semibold text-lg list-none">
+                      Are Cosmedocs practitioners qualified doctors?
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Yes, Cosmedocs is a doctor-led aesthetic clinic. All our practitioners are qualified medical professionals with extensive training in aesthetic medicine. Dr. Ahmed Haq leads our team with over 17 years of experience.
+                    </p>
+                  </details>
+                  
+                  <details className="group bg-secondary rounded-xl p-6 cursor-pointer">
+                    <summary className="flex justify-between items-center font-semibold text-lg list-none">
+                      What is the Cosmedocs approach to aesthetics?
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Our philosophy is 'invisible art' — we believe in subtle, natural-looking results that enhance your features without looking overdone. We focus on bold, natural transformations that are always tailored to your individual goals.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* CTA Section */}
           <section className="py-20 bg-[#111]" aria-labelledby="cta-heading">
