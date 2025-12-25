@@ -186,13 +186,13 @@ const Index = () => {
           
           {/* Hero Section - No framer-motion, CSS animations only */}
           <section className="relative min-h-screen flex items-center pt-32 md:pt-40" aria-labelledby="hero-heading">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-purple-muted/30 via-black/90 to-black"></div>
             <AnimatedDots />
             <div className="page-container relative z-10">
               <div className="max-w-5xl mx-auto text-center">
                 <div>
                   <div className="relative mb-6">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" id="hero-heading">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-glow to-white bg-clip-text text-transparent" id="hero-heading">
                       cosmedocs
                     </h2>
                   </div>
@@ -217,13 +217,13 @@ const Index = () => {
                 
                 {/* AI Quick Links Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                  <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
                     <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
                     <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
                     <p className="text-sm text-muted-foreground">Face • Hair • Skin Lesions</p>
                   </a>
                   
-                  <a href="/aesthetic-treatments-made-easy" className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center">
+                  <a href="/aesthetic-treatments-made-easy" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
                     <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
                     <h3 className="text-lg font-semibold mb-2">Smart Aesthetics</h3>
                     <p className="text-sm text-muted-foreground">Stop Wasting Money</p>
@@ -231,11 +231,11 @@ const Index = () => {
                   
                   <button 
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                    className="group bg-secondary hover:bg-accent border border-border hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
+                    className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
                   >
                     <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
                     <h3 className="text-lg font-semibold mb-2">
-                      Chat With Our <span className="text-primary">AI</span>esthetics Doctor
+                      Chat With Our <span className="text-purple">AI</span>esthetics Doctor
                     </h3>
                     <p className="text-sm text-muted-foreground">Ask anything about treatments</p>
                   </button>

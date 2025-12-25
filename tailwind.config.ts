@@ -65,6 +65,11 @@ export default {
 				link: {
 					DEFAULT: 'hsl(var(--link))',
 					hover: 'hsl(var(--link-hover))'
+				},
+				purple: {
+					DEFAULT: 'hsl(var(--purple))',
+					glow: 'hsl(var(--purple-glow))',
+					muted: 'hsl(var(--purple-muted))'
 				}
 			},
 			fontFamily: {
