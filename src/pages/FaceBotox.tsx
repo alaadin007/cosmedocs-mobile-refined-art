@@ -159,11 +159,6 @@ export default function FaceBotox() {
       caption: "Crow's feet reduction with natural expression preserved"
     },
     {
-      src: frownLinesBA1,
-      alt: "Frown lines Botox before and after treatment showing softened glabellar lines",
-      caption: "Frown lines (11 lines) smoothed for a relaxed appearance"
-    },
-    {
       src: foreheadBA,
       alt: "Forehead Botox before and after demonstrating reduced horizontal lines",
       caption: "Forehead lines treated with natural movement maintained"
