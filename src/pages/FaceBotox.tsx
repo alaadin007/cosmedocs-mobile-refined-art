@@ -222,8 +222,81 @@ export default function FaceBotox() {
           </div>
         </section>
 
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Botox Treatment at a Glance</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">10-20 minutes</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Last</h3>
+                <p className="text-gray-300">3-6 months typically</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">No downtime required</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Onset of Results</h3>
+                <p className="text-gray-300">3-5 days, full at 10-14 days</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Quick Navigation */}
-        <section className="py-8 bg-accent border-y border-gray-800">
+        <section className="py-8 bg-black border-y border-gray-800">
           <div className="page-container">
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <a href="#what-is-botox" className="text-gray-400 hover:text-purple-300 transition-colors">What is Botox?</a>
@@ -1066,6 +1139,102 @@ export default function FaceBotox() {
           </div>
         </section>
 
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 2 million treatments since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved products only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Stethoscope className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Doctor-Led</h3>
+                <p className="text-gray-300">All treatments by qualified doctors</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQs */}
         <section id="faqs" className="py-20 bg-accent">
           <div className="page-container">
@@ -1083,7 +1252,7 @@ export default function FaceBotox() {
                     <AccordionTrigger className="text-white hover:text-purple-300">What exactly is Botox?</AccordionTrigger>
                     <AccordionContent className="text-gray-300">
                       Botox is a brand name for botulinum toxin type A, a purified protein that temporarily 
-                      relaxes targeted muscles. It's been safely used for over 30 years in both medical 
+                      relaxes targeted muscles. It has been safely used for over 30 years in both medical 
                       and cosmetic applications.
                     </AccordionContent>
                   </AccordionItem>
@@ -1101,7 +1270,7 @@ export default function FaceBotox() {
                     <AccordionTrigger className="text-white hover:text-purple-300">Is Botox safe?</AccordionTrigger>
                     <AccordionContent className="text-gray-300">
                       When administered by qualified medical professionals, Botox has an excellent safety 
-                      record. It's approved by regulatory bodies worldwide and has been used clinically 
+                      record. It is approved by regulatory bodies worldwide and has been used clinically 
                       for over three decades. Side effects are typically mild and temporary.
                     </AccordionContent>
                   </AccordionItem>
@@ -1129,12 +1298,12 @@ export default function FaceBotox() {
                     <AccordionContent className="text-gray-300">
                       Botox is suitable for adults aged 18+ seeking to reduce or prevent facial lines. 
                       It works well for preventative treatment in your 20s-30s and corrective treatment 
-                      for established lines. It's not recommended during pregnancy or breastfeeding.
+                      for established lines. It is not recommended during pregnancy or breastfeeding.
                     </AccordionContent>
                   </AccordionItem>
                   
                   <AccordionItem value="difference" className="border-gray-700">
-                    <AccordionTrigger className="text-white hover:text-purple-300">What's the difference between Botox and fillers?</AccordionTrigger>
+                    <AccordionTrigger className="text-white hover:text-purple-300">What is the difference between Botox and fillers?</AccordionTrigger>
                     <AccordionContent className="text-gray-300">
                       Botox relaxes muscles to reduce dynamic wrinkles (lines with movement). Fillers 
                       add volume to restore lost fullness and soften static lines. They treat different 
