@@ -49,7 +49,7 @@ const Index = () => {
           </header>
           
           {/* Hero Section - No framer-motion, CSS animations only */}
-          <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
+          <section className="relative min-h-screen flex items-center pt-32 md:pt-40" aria-labelledby="hero-heading">
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
             <AnimatedDots />
             <div className="page-container relative z-10">
