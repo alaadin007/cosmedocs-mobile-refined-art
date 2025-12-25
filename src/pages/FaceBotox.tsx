@@ -963,45 +963,6 @@ export default function FaceBotox() {
                     </CardContent>
                   </Card>
                 </div>
-
-                {/* Why Cosmedocs */}
-                <div className="bg-gradient-to-r from-purple-900/30 to-gray-900/50 border border-purple-500/30 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">Why Patients Choose Cosmedocs</h3>
-                  <div className="grid md:grid-cols-3 gap-6 text-center">
-                    <div>
-                      <p className="text-3xl font-bold text-purple-300 mb-2">Since 2007</p>
-                      <p className="text-gray-400 text-sm">Harley Street presence</p>
-                    </div>
-                    <div>
-                      <p className="text-3xl font-bold text-purple-300 mb-2">1M+</p>
-                      <p className="text-gray-400 text-sm">Treatments performed</p>
-                    </div>
-                    <div>
-                      <p className="text-3xl font-bold text-purple-300 mb-2">4.9★</p>
-                      <p className="text-gray-400 text-sm">Patient rating</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-gray-700">
-                    <ul className="grid md:grid-cols-2 gap-3 text-sm text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-purple-400" />
-                        Doctor-led treatments
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-purple-400" />
-                        CQC registered clinic
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-purple-400" />
-                        Premium, licensed products
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-purple-400" />
-                        Comprehensive aftercare
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </div>
