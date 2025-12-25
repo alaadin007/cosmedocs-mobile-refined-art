@@ -272,6 +272,29 @@ export default function FaceBotox() {
           </div>
         </section>
 
+        {/* Quick Navigation */}
+        <section className="py-8 bg-black border-y border-gray-800">
+          <div className="page-container">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <a href="#before-after" className="text-gray-400 hover:text-purple-300 transition-colors">Before & After</a>
+              <span className="text-gray-600">•</span>
+              <a href="#what-is-botox" className="text-gray-400 hover:text-purple-300 transition-colors">What is Botox?</a>
+              <span className="text-gray-600">•</span>
+              <a href="#how-it-works" className="text-gray-400 hover:text-purple-300 transition-colors">How It Works</a>
+              <span className="text-gray-600">•</span>
+              <a href="#treatment-areas" className="text-gray-400 hover:text-purple-300 transition-colors">Treatment Areas</a>
+              <span className="text-gray-600">•</span>
+              <a href="#who-is-suitable" className="text-gray-400 hover:text-purple-300 transition-colors">Who Is Suitable?</a>
+              <span className="text-gray-600">•</span>
+              <a href="#results-timeline" className="text-gray-400 hover:text-purple-300 transition-colors">Results Timeline</a>
+              <span className="text-gray-600">•</span>
+              <a href="#choosing-clinic" className="text-gray-400 hover:text-purple-300 transition-colors">Choosing a Clinic</a>
+              <span className="text-gray-600">•</span>
+              <a href="#faqs" className="text-gray-400 hover:text-purple-300 transition-colors">FAQs</a>
+            </div>
+          </div>
+        </section>
+
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
           <div className="page-container">
@@ -345,20 +368,20 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section id="before-after" className="py-20 bg-black">
-          <div className="page-container">
+        {/* Before & After Carousel */}
+        <section id="before-after" className="w-full py-24 bg-gray-900/30">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Botox Before and After Results</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                View authentic Botox results from our London Harley Street clinic. Each transformation demonstrates 
-                our commitment to natural-looking enhancement — aesthetic medicine that speaks without saying a word.
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Real Patient <span className="text-purple-300">Transformations</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                View authentic Botox results from our London Harley Street clinic — aesthetic medicine that speaks without saying a word.
               </p>
             </motion.div>
 
@@ -367,29 +390,28 @@ export default function FaceBotox() {
                 {beforeAfterImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="p-2"
+                      className="relative group cursor-pointer p-2"
                     >
-                      <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-colors">
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full aspect-[4/5] object-cover"
-                          loading="lazy"
-                        />
-                        <div className="p-4">
-                          <p className="text-sm text-gray-300 text-center">{image.caption}</p>
-                        </div>
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
                       </div>
                     </motion.div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="hidden md:flex -left-12 bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
-              <CarouselNext className="hidden md:flex -right-12 bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
 
             <motion.div
@@ -405,29 +427,6 @@ export default function FaceBotox() {
                 </Button>
               </Link>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Quick Navigation */}
-        <section className="py-8 bg-black border-y border-gray-800">
-          <div className="page-container">
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="#before-after" className="text-gray-400 hover:text-purple-300 transition-colors">Before & After</a>
-              <span className="text-gray-600">•</span>
-              <a href="#what-is-botox" className="text-gray-400 hover:text-purple-300 transition-colors">What is Botox?</a>
-              <span className="text-gray-600">•</span>
-              <a href="#how-it-works" className="text-gray-400 hover:text-purple-300 transition-colors">How It Works</a>
-              <span className="text-gray-600">•</span>
-              <a href="#treatment-areas" className="text-gray-400 hover:text-purple-300 transition-colors">Treatment Areas</a>
-              <span className="text-gray-600">•</span>
-              <a href="#who-is-suitable" className="text-gray-400 hover:text-purple-300 transition-colors">Who Is Suitable?</a>
-              <span className="text-gray-600">•</span>
-              <a href="#results-timeline" className="text-gray-400 hover:text-purple-300 transition-colors">Results Timeline</a>
-              <span className="text-gray-600">•</span>
-              <a href="#choosing-clinic" className="text-gray-400 hover:text-purple-300 transition-colors">Choosing a Clinic</a>
-              <span className="text-gray-600">•</span>
-              <a href="#faqs" className="text-gray-400 hover:text-purple-300 transition-colors">FAQs</a>
-            </div>
           </div>
         </section>
 
