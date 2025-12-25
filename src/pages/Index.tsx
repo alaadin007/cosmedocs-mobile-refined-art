@@ -41,6 +41,92 @@ const Index = () => {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="keywords" content="Cosmedocs, Harley Street clinic, Doctor-led aesthetic clinic, cosmedics harley street, Cosmetic treatments London, Anti-ageing treatments London, Non-surgical aesthetic clinic, Aesthetic medicine experts" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://cosmedocs.com/#organization",
+            "name": "Cosmedocs",
+            "url": "https://cosmedocs.com",
+            "logo": "https://cosmedocs.com/logo.png",
+            "description": "Doctor-led aesthetic clinic on Harley Street offering cosmetic treatments, anti-ageing solutions and non-surgical procedures.",
+            "telephone": "+44 333 0551 503",
+            "email": "info@cosmedocs.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "8-10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+44 333 0551 503",
+              "contactType": "customer service",
+              "availableLanguage": ["English"]
+            },
+            "sameAs": [
+              "https://www.instagram.com/cosmedocs",
+              "https://www.facebook.com/cosmedocs"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            "@id": "https://cosmedocs.com/#clinic",
+            "name": "Cosmedocs - Harley Street Clinic",
+            "image": "https://cosmedocs.com/images/clinic-exterior.jpg",
+            "url": "https://cosmedocs.com",
+            "telephone": "+44 333 0551 503",
+            "priceRange": "££",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "8-10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5177,
+              "longitude": -0.1461
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "medicalSpecialty": "Cosmetic Medicine",
+            "availableService": [
+              {
+                "@type": "MedicalProcedure",
+                "name": "Botox Injections",
+                "procedureType": "NoninvasiveProcedure"
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Dermal Fillers",
+                "procedureType": "NoninvasiveProcedure"
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Anti-ageing Treatments",
+                "procedureType": "NoninvasiveProcedure"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <TooltipProvider>
@@ -137,7 +223,7 @@ const Index = () => {
           {/* Hidden SEO content for search engines */}
           <div className="sr-only">
             <p>
-              Cosmedocs is London's premier aesthetic medicine clinic located on prestigious Harley Street, offering advanced cosmetic treatments since 2007. Our expert practitioners specialize in Botox injections, dermal fillers, lip enhancement, non-surgical nose jobs, skin boosters, and comprehensive facial rejuvenation treatments. With over 1 million injections performed, we are recognized leaders in aesthetic medicine, providing natural-looking results through our invisible art philosophy. Our clinic offers consultation services, advanced anti-aging treatments, facial contouring, and personalized aesthetic solutions. We pride ourselves on subtle enhancement that speaks without saying a word, ensuring every client receives transformative results tailored to their individual needs. Our comprehensive approach addresses skin quality, wrinkle reduction, volume restoration, and facial harmonization using the latest techniques and premium products. Located at 10 Harley Street, London W1G 9PF, we serve clients seeking the highest standard of aesthetic medicine in the heart of London's medical district. Contact us at 0333 0551 503 or info@cosmedocs.com to begin your aesthetic journey with London's most trusted cosmetic medicine specialists.
+              Cosmedocs is a doctor-led aesthetic clinic located on prestigious Harley Street, London. As aesthetic medicine experts, we specialise in cosmetic treatments London clients trust for natural, refined results. Our non-surgical aesthetic clinic offers comprehensive anti-ageing treatments London patients seek, including Botox, dermal fillers, and advanced skin rejuvenation. Since 2007, our Harley Street clinic has performed over 1 million injections, establishing Cosmedocs as leaders in cosmetic medicine. We believe in invisible art — subtle enhancement that speaks without saying a word. Every treatment is tailored to achieve bold, natural results that are always your way. Located at 8-10 Harley Street, London W1G 9PF, contact us at 0333 0551 503 or info@cosmedocs.com.
             </p>
           </div>
         </div>
