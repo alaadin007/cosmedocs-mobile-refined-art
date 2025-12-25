@@ -152,7 +152,7 @@ export default function FaceBotox() {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="botox london, anti-wrinkle injections london, botulinum toxin, botox harley street, cosmetic botox, preventative botox, botox for men, facial rejuvenation london" />
+        <meta name="keywords" content="botox london, botox in london, london botox, botox london harley street, botox in harley street, baby botox london, botox clinic london, best botox london, best botox in london, botox cost london, how much does botox cost, botulinum toxin injections, botulinum toxin injection, botox injections, botox injection in london, anti-wrinkle injections london, cosmetic botox, preventative botox, botox for men, facial rejuvenation london" />
         <script type="application/ld+json">
           {JSON.stringify(medicalBusinessSchema)}
         </script>
