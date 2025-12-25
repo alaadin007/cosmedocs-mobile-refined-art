@@ -399,7 +399,7 @@ export default function FaceBotox() {
                       <img 
                         src={image.src} 
                         alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-80 object-contain bg-gray-800 rounded-lg group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
