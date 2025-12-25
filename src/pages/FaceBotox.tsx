@@ -5,10 +5,26 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, ArrowRight, Shield, Heart, Check, Activity, Syringe, GraduationCap, Brain, User, Sparkles, Building, Stethoscope, MessageCircle } from "lucide-react";
 import ClientReviews from '@/components/ClientReviews';
 import Breadcrumb from '@/components/Breadcrumb';
+
+// Before/After Images
+import crowsFeetBA1 from "@/assets/before-after/crows-feet-botox-1.png";
+import crowsFeetBA2 from "@/assets/before-after/crows-feet-botox-2.jpg";
+import crowsFeetBA3 from "@/assets/before-after/crows-feet-botox-3.jpeg";
+import frownLinesBA1 from "@/assets/frown-lines-before-after-1.jpg";
+import frownLinesBA2 from "@/assets/frown-lines-before-after-2.jpg";
+import foreheadBA from "@/assets/botox-forehead-before-after.jpeg";
+import foreheadResultsBA from "@/assets/forehead-botox-results.jpg";
 
 export default function FaceBotox() {
   const seoData = generateSEOMetadata(
@@ -132,6 +148,40 @@ export default function FaceBotox() {
       areas: ["Trap Tox (Shoulders)", "Hyperhidrosis", "Migraines"],
       link: "/trap-botox",
       description: "Therapeutic and body applications beyond cosmetic use."
+    }
+  ];
+
+  // Before and After Gallery Images
+  const beforeAfterImages = [
+    {
+      src: crowsFeetBA1,
+      alt: "Crow's feet Botox before and after showing smoothed eye wrinkles at Cosmedocs London",
+      caption: "Crow's feet reduction with natural expression preserved"
+    },
+    {
+      src: frownLinesBA1,
+      alt: "Frown lines Botox before and after treatment showing softened glabellar lines",
+      caption: "Frown lines (11 lines) smoothed for a relaxed appearance"
+    },
+    {
+      src: foreheadBA,
+      alt: "Forehead Botox before and after demonstrating reduced horizontal lines",
+      caption: "Forehead lines treated with natural movement maintained"
+    },
+    {
+      src: crowsFeetBA2,
+      alt: "Complete upper face Botox results with crow's feet and forehead treatment",
+      caption: "Upper face rejuvenation combining multiple treatment areas"
+    },
+    {
+      src: frownLinesBA2,
+      alt: "Harley Street Botox clinic before and after results on frown lines",
+      caption: "Professional frown line treatment at our Harley Street clinic"
+    },
+    {
+      src: foreheadResultsBA,
+      alt: "Combined Botox and dermal filler results for comprehensive facial rejuvenation",
+      caption: "Comprehensive approach to upper face anti-ageing treatment"
     }
   ];
 
@@ -295,10 +345,75 @@ export default function FaceBotox() {
           </div>
         </section>
 
+        {/* Before & After Gallery */}
+        <section id="before-after" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox Before and After Results</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                View authentic Botox results from our London Harley Street clinic. Each transformation demonstrates 
+                our commitment to natural-looking enhancement — aesthetic medicine that speaks without saying a word.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="p-2"
+                    >
+                      <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-colors">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full aspect-[4/5] object-cover"
+                          loading="lazy"
+                        />
+                        <div className="p-4">
+                          <p className="text-sm text-gray-300 text-center">{image.caption}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12 bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
+              <CarouselNext className="hidden md:flex -right-12 bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
+            </Carousel>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <Link to="/before-and-after-gallery">
+                <Button variant="outline" className="border-purple-500 text-purple-300 hover:bg-purple-500/10">
+                  View Full Gallery
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Quick Navigation */}
         <section className="py-8 bg-black border-y border-gray-800">
           <div className="page-container">
             <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <a href="#before-after" className="text-gray-400 hover:text-purple-300 transition-colors">Before & After</a>
+              <span className="text-gray-600">•</span>
               <a href="#what-is-botox" className="text-gray-400 hover:text-purple-300 transition-colors">What is Botox?</a>
               <span className="text-gray-600">•</span>
               <a href="#how-it-works" className="text-gray-400 hover:text-purple-300 transition-colors">How It Works</a>
