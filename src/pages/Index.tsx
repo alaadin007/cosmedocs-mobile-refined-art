@@ -40,6 +40,7 @@ const Index = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="Cosmedocs, Harley Street clinic, Doctor-led aesthetic clinic, cosmedics harley street, Cosmetic treatments London, Anti-ageing treatments London, Non-surgical aesthetic clinic, Aesthetic medicine experts" />
       </Helmet>
 
       <TooltipProvider>
