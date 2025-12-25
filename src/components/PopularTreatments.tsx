@@ -62,7 +62,7 @@ const PopularTreatments = memo(({
   return (
     <section className={`py-20 bg-background ${className}`} aria-labelledby="treatments-heading">
       <div className="page-container">
-        <h2 id="treatments-heading" className="text-3xl font-bold mb-12 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">{title}</span></h2>
+        <h2 id="treatments-heading" className="text-3xl md:text-4xl font-bold mb-12 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">{title}</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {treatmentsList.map((treatment, index) => (
             <div 

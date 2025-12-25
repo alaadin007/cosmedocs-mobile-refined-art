@@ -105,7 +105,7 @@ const BeforeAfterCarousel = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 id="before-after-heading" className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 id="before-after-heading" className="text-3xl md:text-4xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">Transformation Gallery</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">

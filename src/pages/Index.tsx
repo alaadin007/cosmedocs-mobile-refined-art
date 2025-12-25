@@ -319,7 +319,7 @@ const Index = () => {
           <section className="py-20 bg-[#111]" aria-labelledby="cta-heading">
             <div className="page-container">
               <div className="bg-accent rounded-2xl p-8 md:p-12 text-center">
-                <h2 id="cta-heading" className="text-2xl md:text-3xl font-bold mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">Ready to discover your refined aesthetic?</span></h2>
+                <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">Ready to discover your refined aesthetic?</span></h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                   Book a consultation with our expert practitioners and begin your journey toward subtle, controlled transformation.
                 </p>
