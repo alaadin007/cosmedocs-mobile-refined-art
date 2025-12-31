@@ -28,6 +28,13 @@ import safetyImage from "@/assets/botox-guide-safety.jpg";
 import barberImage from "@/assets/botox-guide-barber.jpg";
 import zonesImage from "@/assets/botox-guide-zones.jpg";
 import communityImage from "@/assets/botox-guide-community.jpg";
+// New meme-style graphics
+import mirrorMemeImage from "@/assets/botox-guide-mirror-meme.jpg";
+import onTheFenceImage from "@/assets/botox-guide-on-the-fence.jpg";
+import howItWorksImage from "@/assets/botox-guide-how-it-works.jpg";
+import scepticalFriendImage from "@/assets/botox-guide-sceptical-friend.jpg";
+import barberVsSalonImage from "@/assets/botox-guide-barber-vs-salon.jpg";
+import sideEffectsTimelineImage from "@/assets/botox-guide-side-effects-timeline.jpg";
 
 // Animation variants
 const fadeInUp = {
@@ -309,11 +316,17 @@ const UltimateBotoxGuide = () => {
                   millions of people do every year without incident.
                 </p>
 
-                <img 
-                  src={mindsetImage} 
-                  alt="The contrast between researching Botox and living your best life"
-                  className="w-full rounded-2xl my-8 shadow-lg"
-                />
+                {/* Meme: Mirror showing tired vs refreshed */}
+                <div className="relative my-8">
+                  <img 
+                    src={mirrorMemeImage} 
+                    alt="Cartoon of tired person looking at refreshed reflection - the Botox before and after dream"
+                    className="w-full rounded-2xl shadow-lg"
+                  />
+                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    The eternal mirror dilemma 🪞
+                  </div>
+                </div>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   You've watched your friends take the plunge. They look... well, annoyingly good, 
@@ -322,6 +335,24 @@ const UltimateBotoxGuide = () => {
                   And yet, here you are, still on the fence. Still fighting that inexplicable urge 
                   to remain au naturel, as if there's some moral victory in looking tired.
                 </p>
+
+                {/* Meme: On the fence illustration */}
+                <div className="relative my-8">
+                  <img 
+                    src={onTheFenceImage} 
+                    alt="Cartoon of person sitting on a fence between tired and refreshed paths"
+                    className="w-full rounded-2xl shadow-lg"
+                  />
+                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    Literally every first-timer ever 😅
+                  </div>
+                </div>
+
+                <img 
+                  src={mindsetImage} 
+                  alt="The contrast between researching Botox and living your best life"
+                  className="w-full rounded-2xl my-8 shadow-lg"
+                />
 
                 <p className="text-lg leading-relaxed text-muted-foreground mt-6">
                   <strong className="text-foreground">Let's reset that mindset, shall we?</strong>
@@ -420,6 +451,18 @@ const UltimateBotoxGuide = () => {
                   alt="The difference between basic and premium service"
                   className="w-full rounded-2xl my-8 shadow-lg"
                 />
+
+                {/* Meme: Barber vs Salon comparison */}
+                <div className="relative my-8">
+                  <img 
+                    src={barberVsSalonImage} 
+                    alt="Funny comparison of basic barber vs champagne salon experience"
+                    className="w-full rounded-2xl shadow-lg"
+                  />
+                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    Choose wisely, friend 💇‍♀️
+                  </div>
+                </div>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   Both can give you a haircut. But would you expect the same result? Of course not. 
@@ -605,6 +648,18 @@ const UltimateBotoxGuide = () => {
                   Every frown, every squint at your phone, every raised eyebrow at your colleague's 
                   questionable life choices – they all add up.
                 </p>
+
+                {/* Meme: How Botox works with cute molecule workers */}
+                <div className="relative my-8">
+                  <img 
+                    src={howItWorksImage} 
+                    alt="Cute cartoon of Botox molecules as tiny workers with hard hats relaxing muscle fibres"
+                    className="w-full rounded-2xl shadow-lg"
+                  />
+                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    Your new best friends at work 👷‍♂️
+                  </div>
+                </div>
 
                 <p className="text-lg leading-relaxed text-muted-foreground mt-6">
                   By relaxing these muscles, the skin above them smooths out. Not frozen. Not 
@@ -806,6 +861,18 @@ const UltimateBotoxGuide = () => {
                 </p>
               </div>
 
+              {/* Meme: Side effects timeline */}
+              <div className="relative my-8">
+                <img 
+                  src={sideEffectsTimelineImage} 
+                  alt="Comic showing side effects disappearing week by week ending with thumbs up"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                  It gets better, we promise! 👍
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-6 mt-8">
                 <FunFactCard title="Common (and Temporary)" icon={Clock}>
                   Minor bruising, slight headache, temporary asymmetry. All usually resolve within 
@@ -854,6 +921,18 @@ const UltimateBotoxGuide = () => {
                 alt="Diverse confident people looking refreshed"
                 className="w-full rounded-2xl my-8 shadow-lg"
               />
+
+              {/* Meme: Sceptical friend secretly googling */}
+              <div className="relative my-8">
+                <img 
+                  src={scepticalFriendImage} 
+                  alt="Cartoon of sceptical friend secretly researching Botox after seeing results"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                  We've all been there... 🤫
+                </div>
+              </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
