@@ -1,4 +1,50 @@
-# Old URL redirects to canonical pages (with trailing slash)
+# Force trailing slash redirects for all main pages
+# This ensures crawlers get 301 redirects to canonical URLs
+
+# Treatment pages
+/botox-london           /botox-london/          301
+/botox-faqs             /botox-faqs/            301
+/botox-cost-london      /botox-cost-london/     301
+/cheek-filler           /cheek-filler/          301
+/chin-botox             /chin-botox/            301
+/chin-dimpling-botox    /chin-botox/            301
+/contact                /contact/               301
+/dermal-fillers         /dermal-fillers/        301
+/forehead-filler        /forehead-filler/       301
+/jawline-filler         /jawline-filler/        301
+/lip-fillers            /lip-fillers/           301
+/marionette-lines       /marionette-lines/      301
+/microneedling          /microneedling/         301
+/non-surgical-nose-job  /non-surgical-nose-job/ 301
+/prp-treatment          /prp-treatment/         301
+/profhilo               /profhilo/              301
+/tear-trough-filler     /tear-trough-filler/    301
+/temple-filler-london   /temple-filler-london/  301
+/thread-face-lift       /thread-face-lift/      301
+/nasolabial-folds       /nasolabial-folds/      301
+/bunny-lines-botox      /bunny-lines-botox/     301
+/hyperhidrosis          /hyperhidrosis/         301
+/platysmal-bands        /platysmal-bands/       301
+/smoker-lines-botox     /smoker-lines-botox/    301
+/gummy-smile            /gummy-smile/           301
+/brow-lift              /brow-lift/             301
+/masseter-botox         /masseter-botox/        301
+/nefertiti-botox-face-jaw-lift /nefertiti-botox-face-jaw-lift/ 301
+/fat-dissolve           /fat-dissolve/          301
+/botox-calf-reduction   /botox-calf-reduction/  301
+/skin-boosters          /skin-boosters/         301
+/hyperpigmentation      /hyperpigmentation/     301
+/liquid-facelift        /liquid-facelift/       301
+/hand-rejuvenation      /hand-rejuvenation/     301
+
+# Core pages
+/treatments             /treatments/            301
+/about                  /about/                 301
+/results                /results/               301
+/ai-chat                /ai-chat/               301
+/blog                   /blog/                  301
+
+# Old URL redirects to canonical pages
 /advanced-upper-face-botox    /botox-london/   301
 /anti-wrinkle                 /botox-london/   301
 /anti-wrinkle-injections      /botox-london/   301
@@ -6,6 +52,9 @@
 /brow-lift-botox              /botox-london/   301
 /face-botox                   /botox-london/   301
 /face-botox-areas             /botox-london/   301
+/cheek-fillers                /cheek-filler/   301
+/jawline-fillers              /jawline-filler/ 301
+/lip-filler                   /lip-fillers/    301
 
-# SPA fallback - React handles trailing slash enforcement client-side
+# SPA fallback - React handles remaining routing
 /*    /index.html   200
