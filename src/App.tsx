@@ -213,6 +213,7 @@ const App = () => {
                       <Route path="/chin-dimpling-botox" element={<Navigate to="/chin-botox" replace />} />
                       <Route path="/nefertiti-botox-facelift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
                       <Route path="/nefertiti-lift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
+                      <Route path="/advanced-upper-face-botox" element={<Navigate to="/botox-london" replace />} />
                       
                       {/* Filler URL redirects */}
                       <Route path="/cheek-fillers" element={<Navigate to="/cheek-filler" replace />} />
