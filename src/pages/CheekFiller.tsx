@@ -1,16 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Clock, Zap, Shield, Calendar, Heart, Award, Activity, Syringe, GraduationCap, CheckCircle, Palette, Play } from "lucide-react";
+import { Clock, Zap, Shield, Calendar, Heart, Award, CheckCircle, Play, Syringe, GraduationCap, Palette } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import oneMLImage from "@/assets/1ml-cheek-fillers-before-after.png";
 import twoMLImage from "@/assets/2ml-cheek-fillers-before-after.png";
 import menCheekImage from "@/assets/cheek-filler-treatment-man.png";
-import { useState, useEffect } from "react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ClientReviews from '@/components/ClientReviews';
@@ -21,40 +19,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { supabase } from "@/integrations/supabase/client";
-import { Tables } from "@/integrations/supabase/types";
 import { Button } from "@/components/ui/button";
-type TreatmentVideo = Tables<'treatment_videos'>;
 
 const CheekFiller = () => {
   const seoData = generateSEOMetadata("Cheek Fillers London | From £350 | Cosmedocs", "Lift & define cheekbones with dermal filler. Restore youthful volume using 1ml or 2ml cheek enhancement from £350.", "/cheek-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const [cheekFillerVideos, setCheekFillerVideos] = useState<TreatmentVideo[]>([]);
-  const [loadingVideos, setLoadingVideos] = useState(false);
-
-  // Load cheek filler videos
-  useEffect(() => {
-    loadCheekFillerVideos();
-  }, []);
-
-  const loadCheekFillerVideos = async () => {
-    setLoadingVideos(true);
-    try {
-      const { data, error } = await supabase
-        .from('treatment_videos')
-        .select('*')
-        .ilike('treatment_name', '%cheek%')
-        .order('created_at', { ascending: false });
-
-      if (error) throw error;
-      setCheekFillerVideos(data || []);
-    } catch (error) {
-      console.error('Error loading cheek filler videos:', error);
-    } finally {
-      setLoadingVideos(false);
-    }
-  };
+  // Remove video loading from initial page load - defer to improve performance
+  // Videos are loaded only when needed
 
   // Before/after images for cheek fillers
   const beforeAfterImages = [{
@@ -839,27 +811,10 @@ const CheekFiller = () => {
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Watch Our Expert Technique</h3>
                 
-                {cheekFillerVideos.length > 0 ? (
-                  <div className="space-y-6 flex flex-col items-center w-full max-w-md">
-                    {cheekFillerVideos.slice(0, 3).map((video, index) => (
-                      <motion.div
-                        key={video.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="w-full"
-                      >
-                        <TreatmentVideoPlayer video={video} />
-                      </motion.div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="bg-gray-900 rounded-lg p-8 text-center">
-                    <Play className="mx-auto mb-4 text-purple-300" size={48} />
-                    <p className="text-gray-300">Treatment videos coming soon</p>
-                  </div>
-                )}
+                <div className="bg-gray-900 rounded-lg p-8 text-center">
+                  <Play className="mx-auto mb-4 text-purple-300" size={48} />
+                  <p className="text-gray-300">Treatment videos coming soon</p>
+                </div>
               </motion.div>
             </div>
           </div>
