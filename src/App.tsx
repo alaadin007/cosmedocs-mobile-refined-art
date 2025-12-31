@@ -141,6 +141,7 @@ const Rhinoplasty = lazy(() => import("./pages/Rhinoplasty"));
 const FaceliftSurgery = lazy(() => import("./pages/FaceliftSurgery"));
 const Liposuction = lazy(() => import("./pages/Liposuction"));
 const CO2LaserResurfacing = lazy(() => import("./pages/CO2LaserResurfacing"));
+const ScarReduction = lazy(() => import("./pages/ScarReduction"));
 
 // Optimized loading component
 const PageLoader = memo(() => (
@@ -311,6 +312,7 @@ const App = () => {
                       <Route path="/facelift-surgery" element={<FaceliftSurgery />} />
                       <Route path="/liposuction" element={<Liposuction />} />
                       <Route path="/co2-laser-resurfacing" element={<CO2LaserResurfacing />} />
+                      <Route path="/scar-reduction" element={<ScarReduction />} />
                       <Route path="/dermatology" element={<Dermatology />} />
                       <Route path="/aesthetic-training" element={<AestheticTraining />} />
                       <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
