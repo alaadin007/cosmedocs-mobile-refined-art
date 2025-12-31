@@ -73,7 +73,7 @@ const BotoxCalfReduction = () => {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "MedicalClinic",
+                "@type": "MedicalBusiness",
                 "@id": "https://www.cosmedocs.co.uk/#organization",
                 "name": "Cosmedocs",
                 "description": "Expert botox calf reduction treatments in London",
