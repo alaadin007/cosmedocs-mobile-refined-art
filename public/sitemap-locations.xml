@@ -3,7 +3,7 @@
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
   
   <url>
-    <loc>https://www.cosmedocs.co.uk/birmingham</loc>
+    <loc>https://www.cosmedocs.co.uk/birmingham/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -11,7 +11,7 @@
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/manchester</loc>
+    <loc>https://www.cosmedocs.co.uk/manchester/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -19,7 +19,7 @@
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/cardiff</loc>
+    <loc>https://www.cosmedocs.co.uk/cardiff/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -27,7 +27,7 @@
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/delhi</loc>
+    <loc>https://www.cosmedocs.co.uk/delhi/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -35,7 +35,7 @@
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/karachi</loc>
+    <loc>https://www.cosmedocs.co.uk/karachi/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -43,7 +43,7 @@
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/barbados</loc>
+    <loc>https://www.cosmedocs.co.uk/barbados/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
