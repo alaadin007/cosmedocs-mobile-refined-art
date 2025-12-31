@@ -21,6 +21,28 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# SEO Audit Tools
+User-agent: SemrushBot
+Allow: /
+
+User-agent: SemrushBot-SA
+Allow: /
+
+User-agent: SemrushBot-BA
+Allow: /
+
+User-agent: SemrushBot-SI
+Allow: /
+
+User-agent: SemrushBot-SWA
+Allow: /
+
+User-agent: SemrushBot-CT
+Allow: /
+
+User-agent: SemrushBot-BM
+Allow: /
+
 # Block sensitive areas if any
 Disallow: /admin/
 Disallow: /private/
