@@ -94,7 +94,7 @@ const MarionnetteLines = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MedicalClinic",
+        "@type": "MedicalBusiness",
         "@id": "https://www.cosmedocs.co.uk/#organization",
         "name": "Cosmedocs",
         "url": "https://www.cosmedocs.co.uk/",
