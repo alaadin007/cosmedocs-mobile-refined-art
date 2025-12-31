@@ -8,6 +8,7 @@ import { lazy, Suspense, memo } from "react";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
+import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 // Eager load critical pages only
@@ -169,6 +170,7 @@ const App = () => {
             <BrowserRouter>
               <AuthProvider>
                 <ScrollToTop />
+                <TrailingSlashRedirect />
                 <Layout>
                   <Suspense fallback={<PageLoader />}>
                     <Routes>

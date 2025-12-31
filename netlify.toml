@@ -2,12 +2,72 @@
   publish = "dist"
   command = "npm run build"
 
+# Force trailing slashes for SEO consistency
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+# Trailing slash enforcement - redirect non-trailing to trailing
+[[redirects]]
+  from = "/*"
+  to = "/:splat/"
+  status = 301
+  force = false
+  conditions = {Role = ["admin", "owner", "member", "guest"]}
+
+# Exclude assets and files from trailing slash redirect
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*.js"
+  to = "/:splat.js"
+  status = 200
+
+[[redirects]]
+  from = "/*.css"
+  to = "/:splat.css"
+  status = 200
+
+[[redirects]]
+  from = "/*.png"
+  to = "/:splat.png"
+  status = 200
+
+[[redirects]]
+  from = "/*.jpg"
+  to = "/:splat.jpg"
+  status = 200
+
+[[redirects]]
+  from = "/*.svg"
+  to = "/:splat.svg"
+  status = 200
+
+[[redirects]]
+  from = "/*.ico"
+  to = "/:splat.ico"
+  status = 200
+
+[[redirects]]
+  from = "/*.xml"
+  to = "/:splat.xml"
+  status = 200
+
+[[redirects]]
+  from = "/*.txt"
+  to = "/:splat.txt"
+  status = 200
+
+# SPA fallback - must come after trailing slash rules
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Enable Netlify prerendering for bots
 [build.processing]
   skip_processing = false
 
