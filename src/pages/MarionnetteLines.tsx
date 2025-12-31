@@ -89,88 +89,119 @@ const MarionnetteLines = () => {
     }
   ];
 
-  // Structured Data Schemas - Single unified schema to avoid duplicates
-  const organizationSchema = {
+  // Unified Structured Data Schema using @graph to avoid duplicates
+  const unifiedSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "@id": "https://www.cosmedocs.co.uk/#organization",
-    "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
-    "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-    "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
-    "description": "Expert aesthetic medicine clinic in London specialising in marionette lines treatment and liquid facelifts",
-    "priceRange": "££",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Harley Street",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
-      "postalCode": "W1G 9PF",
-      "addressCountry": "GB"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 51.5074,
-      "longitude": -0.1278
-    },
-    "telephone": "+44 20 3733 3227",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+44 20 3733 3227",
-      "contactType": "customer service",
-      "availableLanguage": ["English"]
-    },
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
+        "@type": "MedicalClinic",
+        "@id": "https://www.cosmedocs.co.uk/#organization",
+        "name": "Cosmedocs",
+        "url": "https://www.cosmedocs.co.uk/",
+        "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+        "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
+        "description": "Expert aesthetic medicine clinic in London specialising in marionette lines treatment and liquid facelifts",
+        "priceRange": "££",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Harley Street",
+          "addressLocality": "London",
+          "addressRegion": "Greater London",
+          "postalCode": "W1G 9PF",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5074,
+          "longitude": -0.1278
+        },
+        "telephone": "+44 20 3733 3227",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44 20 3733 3227",
+          "contactType": "customer service",
+          "availableLanguage": ["English"]
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "16:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "156",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "availableService": {
+          "@type": "MedicalProcedure",
+          "name": "Marionette Lines Filler Treatment",
+          "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation"
+        }
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "16:00"
+        "@type": "Physician",
+        "@id": "https://www.cosmedocs.co.uk/#physician-ahmed-haq",
+        "name": "Dr. Ahmed Haq",
+        "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
+        "medicalSpecialty": "Aesthetic Medicine",
+        "worksFor": {
+          "@id": "https://www.cosmedocs.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Marionette Lines Filler Treatment",
+        "description": "Expert marionette lines treatment using premium hyaluronic acid dermal fillers. Non-surgical liquid facelift approach for facial rejuvenation in London.",
+        "provider": {
+          "@id": "https://www.cosmedocs.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "London"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "325",
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.cosmedocs.co.uk/marionette-lines/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.cosmedocs.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Dermal Fillers",
+            "item": "https://www.cosmedocs.co.uk/dermal-fillers/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Marionette Lines Treatment",
+            "item": "https://www.cosmedocs.co.uk/marionette-lines/"
+          }
+        ]
       }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "156",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "156"
-    },
-    "availableService": {
-      "@type": "MedicalProcedure",
-      "name": "Marionette Lines Filler Treatment",
-      "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Dr. Ahmed Haq"
-    }
-  };
-
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "@id": "https://www.cosmedocs.co.uk/#physician-ahmed-haq",
-    "name": "Dr. Ahmed Haq",
-    "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
-    "medicalSpecialty": "Aesthetic Medicine",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Harley Street",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
-      "postalCode": "W1G 9PF",
-      "addressCountry": "GB"
-    },
-    "worksFor": {
-      "@id": "https://www.cosmedocs.co.uk/#organization"
-    }
+    ]
   };
 
   const faqSchema = {
@@ -184,90 +215,6 @@ const MarionnetteLines = () => {
         "text": faq.answer
       }
     }))
-  };
-
-  const imageGallerySchema = {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Marionette Lines Before and After Results",
-    "description": "Real patient results from marionette lines filler treatments at Cosmedocs",
-    "image": beforeAfterImages.map(img => ({
-      "@type": "ImageObject",
-      "url": `https://www.cosmedocs.co.uk${img.src}`,
-      "description": img.alt,
-      "caption": img.caption
-    }))
-  };
-
-  const offerSchema = {
-    "@context": "https://schema.org",
-    "@type": "Offer",
-    "name": "Marionette Lines Filler Treatment",
-    "description": "Professional marionette lines treatment with premium hyaluronic acid fillers",
-    "price": "325",
-    "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock",
-    "url": seoData.canonical,
-    "seller": {
-      "@id": "https://www.cosmedocs.co.uk/#organization"
-    }
-  };
-
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.cosmedocs.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Dermal Fillers",
-        "item": "https://www.cosmedocs.co.uk/dermal-fillers"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Marionette Lines Treatment",
-        "item": "https://www.cosmedocs.co.uk/marionette-lines"
-      }
-    ]
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Marionette Lines Filler Treatment",
-    "description": "Expert marionette lines treatment using premium hyaluronic acid dermal fillers. Non-surgical liquid facelift approach for facial rejuvenation in London.",
-    "provider": {
-      "@id": "https://www.cosmedocs.co.uk/#organization"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "London"
-    },
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "serviceUrl": "https://www.cosmedocs.co.uk/marionette-lines",
-      "servicePhone": {
-        "@type": "ContactPoint",
-        "telephone": "+44 20 3733 3227",
-        "contactType": "Customer Service"
-      }
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "325",
-      "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.cosmedocs.co.uk/marionette-lines"
-    },
-    "category": "Aesthetic Medicine"
   };
 
   return (
@@ -289,25 +236,10 @@ const MarionnetteLines = () => {
         <meta name="author" content="Dr. Ahmed Haq, Cosmedocs Medical Director" />
         <meta name="last-modified" content="2025-10-04" />
         <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(physicianSchema)}
+          {JSON.stringify(unifiedSchema)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(imageGallerySchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(offerSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
         </script>
       </Helmet>
 

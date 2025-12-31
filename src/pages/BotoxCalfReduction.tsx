@@ -71,81 +71,90 @@ const BotoxCalfReduction = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "@id": "https://www.cosmedocs.co.uk/#organization",
-            "name": "Cosmedocs",
-            "description": "Expert botox calf reduction treatments in London",
-            "url": "https://www.cosmedocs.co.uk",
-            "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-            "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
-            "telephone": "+44 20 3733 3227",
-            "priceRange": "££",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+44 20 3733 3227",
-              "contactType": "customer service",
-              "availableLanguage": ["English"]
-            },
-            "openingHoursSpecification": [
+            "@graph": [
               {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
+                "@type": "MedicalClinic",
+                "@id": "https://www.cosmedocs.co.uk/#organization",
+                "name": "Cosmedocs",
+                "description": "Expert botox calf reduction treatments in London",
+                "url": "https://www.cosmedocs.co.uk/",
+                "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+                "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
+                "telephone": "+44 20 3733 3227",
+                "priceRange": "££",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "addressRegion": "Greater London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 51.5074,
+                  "longitude": -0.1278
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+44 20 3733 3227",
+                  "contactType": "customer service",
+                  "availableLanguage": ["English"]
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "10:00",
+                    "closes": "16:00"
+                  }
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "89",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "availableService": {
+                  "@type": "MedicalProcedure",
+                  "name": "Botox Calf Reduction Treatment",
+                  "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
+                  "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections"
+                }
               },
               {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "16:00"
+                "@type": "Physician",
+                "name": "Dr. Ahmed Haq",
+                "medicalSpecialty": "Aesthetic Medicine",
+                "worksFor": {
+                  "@id": "https://www.cosmedocs.co.uk/#organization"
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.cosmedocs.co.uk/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Botox Calf Reduction",
+                    "item": "https://www.cosmedocs.co.uk/botox-calf-reduction/"
+                  }
+                ]
               }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "89",
-              "bestRating": "5",
-              "worstRating": "1",
-              "ratingCount": "89"
-            },
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Botox Calf Reduction Treatment",
-              "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
-              "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Physician",
-            "name": "Dr. Ahmed Haq",
-            "medicalSpecialty": "Aesthetic Medicine",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "worksFor": {
-              "@id": "https://www.cosmedocs.co.uk/#organization"
-            }
+            ]
           })}
         </script>
       </Helmet>
