@@ -30,15 +30,15 @@ const categories: Category[] = [
       { title: "Frown Lines Botox", link: "/frown-line-botox" },
       { title: "Crow's Feet Botox", link: "/crows-feet-botox" },
       { title: "Chin Botox", link: "/chin-botox" },
-      { title: "Brow Lift Botox", link: "/botox-london" },
       { title: "Gummy Smile Botox", link: "/gummy-smile-botox" },
       { title: "Bunny Lines Botox", link: "/bunny-lines-botox" },
       { title: "Lip Flip Botox", link: "/lip-flip" },
-      { title: "Nefertiti Lift", link: "/nefertiti-lift" },
+      { title: "Nefertiti Lift", link: "/nefertiti-botox-face-jaw-lift" },
       { title: "Migraine Botox", link: "/migraine-botox" },
       { title: "Bruxism Botox", link: "/bruxism-botox" },
       { title: "Masseter Botox", link: "/masseter-botox" },
-      { title: "Hyperhidrosis", link: "/hyperhidrosis-botox" },
+      { title: "Hyperhidrosis", link: "/excessive-sweat-botox" },
+      { title: "Trap Botox", link: "/trap-botox" },
     ]
   },
   {
@@ -46,14 +46,15 @@ const categories: Category[] = [
     label: "Dermal Fillers",
     items: [
       { title: "Lip Fillers", link: "/lip-fillers" },
-      { title: "Cheek Fillers", link: "/cheek-fillers-london" },
-      { title: "Jawline Filler", link: "/jawline-filler-london" },
-      { title: "Chin Filler", link: "/chin-filler-london" },
-      { title: "Under Eye Fillers", link: "/tear-trough-filler" },
-      { title: "Nasolabial Folds", link: "/nasolabial-folds-filler" },
+      { title: "Cheek Filler", link: "/cheek-filler" },
+      { title: "Jawline Filler", link: "/jawline-filler" },
+      { title: "Chin Filler", link: "/chin-filler" },
+      { title: "Under Eye Filler", link: "/tear-trough-filler" },
+      { title: "Nasolabial Folds", link: "/nasolabial-folds" },
+      { title: "Marionette Lines", link: "/marionette-lines" },
       { title: "Non-Surgical Rhinoplasty", link: "/non-surgical-nose-job" },
-      { title: "Temple Filler", link: "/temple-filler" },
-      { title: "Hand Rejuvenation", link: "/hand-rejuvenation" },
+      { title: "Temple Filler", link: "/temple-filler-london" },
+      { title: "Neck Fillers", link: "/neck-fillers" },
     ]
   },
   {
@@ -62,29 +63,29 @@ const categories: Category[] = [
     items: [
       { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
       { title: "8 Point Facelift", link: "/8-point-facelift" },
-      { title: "Liquid Facelift", link: "/liquid-facelift" },
+      { title: "PDO Threads", link: "/pdo-threads" },
     ]
   },
   {
     id: "skinBoosters",
     label: "Skin Boosters",
     items: [
-      { title: "Profhilo", link: "/profhilo-treatment" },
+      { title: "Profhilo", link: "/profhilo" },
       { title: "Polynucleotides", link: "/polynucleotide-treatment" },
-      { title: "Seventy Hyal", link: "/seventy-hyal" },
-      { title: "Sunekos", link: "/sunekos" },
-      { title: "Lemon Bottle", link: "/lemon-bottle" },
+      { title: "HydraFacial", link: "/hydrafacial" },
+      { title: "PRP Treatment", link: "/prp-treatment" },
+      { title: "Chemical Peel", link: "/chemical-peel" },
     ]
   },
   {
     id: "medspa",
     label: "Skin & Hair Medicine",
     items: [
-      { title: "PRP Treatment", link: "/prp-treatment" },
       { title: "Microneedling", link: "/microneedling" },
-      { title: "Chemical Peels", link: "/chemical-peels" },
-      { title: "Mesotherapy", link: "/mesotherapy" },
-      { title: "Hair Loss Treatment", link: "/hair-loss-treatment" },
+      { title: "Fat Dissolve", link: "/fat-dissolve" },
+      { title: "Hair Transplant", link: "/hair-transplant-surgeon" },
+      { title: "Prescription Skincare", link: "/prescription-skin-care" },
+      { title: "Scar Reduction", link: "/scar-reduction" },
     ]
   },
   {
@@ -94,16 +95,19 @@ const categories: Category[] = [
       { title: "Blepharoplasty", link: "/blepharoplasty" },
       { title: "Rhinoplasty", link: "/rhinoplasty" },
       { title: "Facelift Surgery", link: "/facelift-surgery" },
+      { title: "Liposuction", link: "/liposuction" },
+      { title: "CO2 Laser", link: "/co2-laser-resurfacing" },
     ]
   },
   {
     id: "dermatology",
     label: "Dermatology",
     items: [
-      { title: "Skin Lesion Removal", link: "/skin-lesion-removal" },
       { title: "Mole Removal", link: "/mole-removal" },
       { title: "Skin Tag Removal", link: "/skin-tag-removal" },
       { title: "Acne Treatment", link: "/acne-treatment" },
+      { title: "Eczema Treatment", link: "/eczema-treatment" },
+      { title: "Psoriasis Treatment", link: "/psoriasis-treatment" },
     ]
   }
 ];
