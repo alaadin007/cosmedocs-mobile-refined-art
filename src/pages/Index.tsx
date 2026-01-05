@@ -225,8 +225,8 @@ const Index = () => {
                   
                   <a href="/aesthetic-treatments-made-easy" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
                     <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
-                    <h3 className="text-lg font-semibold mb-2">Smart Aesthetics</h3>
-                    <p className="text-sm text-muted-foreground">Stop Wasting Money</p>
+                    <h3 className="text-lg font-semibold mb-2">Smart Aesthetics Series</h3>
+                    <p className="text-sm text-muted-foreground">Avoid aesthetic mistakes</p>
                   </a>
                   
                   <button 

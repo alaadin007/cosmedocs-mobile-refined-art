@@ -121,7 +121,7 @@ const ProductAnalysisDetail = lazy(() => import("./pages/ProductAnalysisDetail")
 const PopupOffer = lazy(() => import("./pages/PopupOffer"));
 const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
 const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWorkExperience"));
-const AestheticTreatmentsMadeEasy = lazy(() => import("./pages/AestheticTreatmentsMadeEasy"));
+const SmartAesthetics = lazy(() => import("./pages/SmartAesthetics"));
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
 const CampaignAds = lazy(() => import("./pages/CampaignAds"));
 const LondonTweakmentsNaturalAesthetics = lazy(() => import("./pages/LondonTweakmentsNaturalAesthetics"));
@@ -331,7 +331,7 @@ const App = () => {
                       <Route path="/popup-offer" element={<PopupOffer />} />
                       <Route path="/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
                       <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
-                      <Route path="/aesthetic-treatments-made-easy" element={<AestheticTreatmentsMadeEasy />} />
+                      <Route path="/aesthetic-treatments-made-easy" element={<SmartAesthetics />} />
                       <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
                       <Route path="/campaign-ads" element={<CampaignAds />} />
                       <Route path="/london-tweakments-natural-aesthetics" element={<LondonTweakmentsNaturalAesthetics />} />
