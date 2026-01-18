@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Calendar, Search } from "lucide-react";
 import { motion } from "framer-motion";
@@ -69,20 +69,45 @@ const navItems = [
 export default function Home2Header() {
   const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Switch to light theme after scrolling 100px
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50">
-        {/* Modern liquid glass effect - dark with subtle transparency */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/98 via-neutral-900/95 to-black/98 backdrop-blur-2xl" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/20 to-transparent" />
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        {/* Background - transitions between dark and light */}
+        <div className={`absolute inset-0 backdrop-blur-2xl transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-white/95' 
+            : 'bg-gradient-to-r from-black/98 via-neutral-900/95 to-black/98'
+        }`} />
+        <div className={`absolute inset-0 transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-gradient-to-b from-gray-50/50 to-transparent' 
+            : 'bg-gradient-to-b from-white/[0.02] to-transparent'
+        }`} />
+        <div className={`absolute bottom-0 left-0 right-0 h-px transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-gradient-to-r from-transparent via-gray-200 to-transparent' 
+            : 'bg-gradient-to-r from-transparent via-[#C9A050]/20 to-transparent'
+        }`} />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo - Bigger with animated subtitle */}
             <Link to="/home2" className="flex flex-col items-start">
-              <span className="text-2xl md:text-3xl font-bold tracking-tight text-white">
+              <span className={`text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
                 COSMEDOCS
               </span>
               <motion.span 
@@ -111,7 +136,11 @@ export default function Home2Header() {
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="ghost" 
-                    className="text-white/80 hover:text-white hover:bg-white/10 gap-1 font-medium"
+                    className={`gap-1 font-medium transition-colors duration-500 ${
+                      isScrolled 
+                        ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
+                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                    }`}
                   >
                     Treatments
                     <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isTreatmentsOpen ? 'rotate-180' : ''}`} />
@@ -155,7 +184,11 @@ export default function Home2Header() {
                 <Link 
                   key={item.link}
                   to={item.link}
-                  className="px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-500 ${
+                    isScrolled 
+                      ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
+                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -167,7 +200,11 @@ export default function Home2Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white/70 hover:text-white hover:bg-white/10"
+                className={`transition-colors duration-500 ${
+                  isScrolled 
+                    ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
                 onClick={() => setIsSearchOpen(true)}
               >
                 <Search className="h-5 w-5" />
@@ -187,7 +224,13 @@ export default function Home2Header() {
             <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="text-white/70 gap-1 shrink-0">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className={`gap-1 shrink-0 transition-colors duration-500 ${
+                      isScrolled ? 'text-gray-600' : 'text-white/70'
+                    }`}
+                  >
                     Treatments
                     <ChevronDown className="h-3 w-3" />
                   </Button>
@@ -220,7 +263,9 @@ export default function Home2Header() {
                 <Link 
                   key={item.link}
                   to={item.link}
-                  className="px-2.5 py-1.5 text-xs font-medium text-white/60 hover:text-white shrink-0"
+                  className={`px-2.5 py-1.5 text-xs font-medium shrink-0 transition-colors duration-500 ${
+                    isScrolled ? 'text-gray-500 hover:text-gray-900' : 'text-white/60 hover:text-white'
+                  }`}
                 >
                   {item.label}
                 </Link>
