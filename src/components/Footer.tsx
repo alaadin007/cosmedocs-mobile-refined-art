@@ -65,12 +65,9 @@ export default function Footer() {
 
         {/* Default Mode (Homepage, About, Contact, etc.) */}
         {mode === 'default' && (
-          <div className="space-y-6">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-2">COSMEDOCS</h3>
-              <p className="text-gray-400 text-sm">Cosmetic Doctors • Since 2007</p>
-            </div>
-            <TrustSignalsBlock />
+          <div className="text-center">
+            <h3 className="text-xl font-semibold mb-2">COSMEDOCS</h3>
+            <p className="text-gray-400 text-sm">Cosmetic Doctors • Since 2007</p>
           </div>
         )}
       </motion.div>
