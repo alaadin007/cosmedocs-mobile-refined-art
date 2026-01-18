@@ -106,7 +106,7 @@ const aiTools = [
     icon: aiAssessmentIcon,
     link: "https://ai.cosmedocs.com",
     external: true,
-    gradient: "from-amber-500/20 to-yellow-500/10"
+    gradient: "from-[#C9A050]/20 to-[#C9A050]/5"
   },
   {
     title: "Smart Aesthetics Series",
@@ -114,7 +114,7 @@ const aiTools = [
     icon: smartAestheticsIcon,
     link: "/aesthetic-treatments-made-easy",
     external: false,
-    gradient: "from-stone-500/20 to-gray-500/10"
+    gradient: "from-neutral-700/30 to-neutral-800/20"
   },
   {
     title: "Chat With Our AIesthetics Doctor",
@@ -122,7 +122,7 @@ const aiTools = [
     icon: aiDoctorChatIcon,
     link: null,
     action: "chatbot",
-    gradient: "from-yellow-500/20 to-amber-500/10"
+    gradient: "from-[#C9A050]/15 to-neutral-800/10"
   },
 ];
 
@@ -143,7 +143,7 @@ export default function Home2() {
   }, [emblaApi]);
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
       <Helmet>
         <title>CosmeDocs | Aesthetic Clinic Harley Street London | Botox & Fillers</title>
         <meta name="description" content="CosmeDocs - Award-winning aesthetic clinic on Harley Street, London. Expert Botox, dermal fillers, lip enhancement & skin treatments by GMC-registered doctors. Natural results since 2007." />
@@ -153,12 +153,12 @@ export default function Home2() {
       <Home2Header />
 
       <main>
-        {/* Hero Section - Fluid, Modern */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-          {/* Animated gradient orbs */}
+        {/* Hero Section - Dark with Gold accents */}
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-b from-black via-neutral-900 to-neutral-800">
+          {/* Subtle gradient orbs */}
           <div className="absolute inset-0 overflow-hidden">
             <motion.div 
-              className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-amber-100/60 to-yellow-50/30 blur-3xl"
+              className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#C9A050]/10 to-[#C9A050]/5 blur-3xl"
               animate={{ 
                 scale: [1, 1.1, 1],
                 x: [0, 20, 0],
@@ -167,7 +167,7 @@ export default function Home2() {
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div 
-              className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-stone-100/40 to-amber-50/20 blur-3xl"
+              className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-neutral-700/30 to-[#C9A050]/10 blur-3xl"
               animate={{ 
                 scale: [1, 1.15, 1],
                 x: [0, -10, 0],
@@ -184,19 +184,19 @@ export default function Home2() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/5 backdrop-blur-sm rounded-full text-sm text-gray-700 mb-6">
-                    <MapPin className="h-4 w-4 text-amber-600" />
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full text-sm text-white/70 mb-6 border border-white/10">
+                    <MapPin className="h-4 w-4 text-[#C9A050]" />
                     8-10 Harley Street, London W1G 9PF
                   </div>
                   
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-6 leading-[1.1] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-[1.1] tracking-tight">
                     The art of
-                    <span className="block font-semibold bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
+                    <span className="block font-semibold text-[#C9A050]">
                       invisible beauty
                     </span>
                   </h1>
                   
-                  <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-xl leading-relaxed font-light">
+                  <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl leading-relaxed font-light">
                     Aesthetic medicine that whispers rather than shouts. Transformations so natural, they're undetectable.
                   </p>
                 </motion.div>
@@ -209,7 +209,7 @@ export default function Home2() {
                 >
                   <Button
                     onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                    className="group bg-black hover:bg-gray-900 text-white rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-black/20"
+                    className="group bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20"
                   >
                     Book Consultation
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -217,30 +217,30 @@ export default function Home2() {
                   <Button
                     variant="ghost"
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                    className="text-gray-700 hover:text-black hover:bg-amber-50 rounded-full px-8 py-6 text-base font-medium"
+                    className="text-white/80 hover:text-white hover:bg-white/10 rounded-full px-8 py-6 text-base font-medium border border-white/20"
                   >
-                    <Sparkles className="mr-2 h-4 w-4 text-amber-600" />
+                    <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" />
                     Ask AI Doctor
                   </Button>
                 </motion.div>
 
-                {/* Trust indicators - minimal */}
+                {/* Trust indicators */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mt-16 flex flex-wrap gap-8 text-sm text-gray-400"
+                  className="mt-16 flex flex-wrap gap-8 text-sm text-white/50"
                 >
                   <span className="flex items-center gap-2">
-                    <Shield className="h-4 w-4 text-amber-600/70" />
+                    <Shield className="h-4 w-4 text-[#C9A050]/70" />
                     GMC Registered
                   </span>
                   <span className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-amber-600/70" />
+                    <Clock className="h-4 w-4 text-[#C9A050]/70" />
                     17+ Years
                   </span>
                   <span className="flex items-center gap-2">
-                    <Star className="h-4 w-4 text-amber-600/70 fill-amber-600/70" />
+                    <Star className="h-4 w-4 text-[#C9A050]/70 fill-[#C9A050]/70" />
                     4.9 Rating
                   </span>
                 </motion.div>
@@ -256,44 +256,44 @@ export default function Home2() {
                 <div className="relative aspect-square">
                   {/* Decorative circles */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-80 h-80 rounded-full border border-amber-200/50" />
+                    <div className="w-80 h-80 rounded-full border border-[#C9A050]/20" />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-64 h-64 rounded-full border border-amber-300/30" />
+                    <div className="w-64 h-64 rounded-full border border-[#C9A050]/15" />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-48 h-48 rounded-full bg-gradient-to-br from-amber-100 to-yellow-50" />
+                    <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#C9A050]/20 to-[#C9A050]/5" />
                   </div>
                   
                   {/* Floating cards */}
                   <motion.div 
-                    className="absolute top-8 right-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-white"
+                    className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10"
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center">
-                        <Star className="h-5 w-5 text-white fill-white" />
+                      <div className="w-10 h-10 rounded-full bg-[#C9A050] flex items-center justify-center">
+                        <Star className="h-5 w-5 text-black fill-black" />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-gray-900">Trusted Clinic</div>
-                        <div className="text-xs text-gray-500">Since 2007</div>
+                        <div className="text-sm font-semibold text-white">Trusted Clinic</div>
+                        <div className="text-xs text-white/60">Since 2007</div>
                       </div>
                     </div>
                   </motion.div>
 
                   <motion.div 
-                    className="absolute bottom-20 left-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-white"
+                    className="absolute bottom-20 left-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10"
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-                        <Award className="h-5 w-5 text-amber-500" />
+                      <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-[#C9A050]/30">
+                        <Award className="h-5 w-5 text-[#C9A050]" />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-gray-900">Award Winning</div>
-                        <div className="text-xs text-gray-500">Harley Street</div>
+                        <div className="text-sm font-semibold text-white">Award Winning</div>
+                        <div className="text-xs text-white/60">Harley Street</div>
                       </div>
                     </div>
                   </motion.div>
@@ -303,8 +303,8 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* AI Tools - Glassmorphism Cards */}
-        <section className="py-20 bg-gradient-to-b from-white to-stone-50/50">
+        {/* AI Tools - Dark Glassmorphism Cards */}
+        <section className="py-20 bg-neutral-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -312,11 +312,11 @@ export default function Home2() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 rounded-full text-sm text-amber-700 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#C9A050]/10 rounded-full text-sm text-[#C9A050] mb-4 border border-[#C9A050]/20">
                 <Zap className="h-4 w-4" />
                 AI-Powered
               </div>
-              <h2 className="text-3xl md:text-4xl font-light text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-light text-white">
                 Your aesthetic journey, <span className="font-semibold">enhanced by AI</span>
               </h2>
             </motion.div>
@@ -333,16 +333,16 @@ export default function Home2() {
                   {tool.action === "chatbot" ? (
                     <button
                       onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                      className={`w-full group relative overflow-hidden p-8 bg-gradient-to-br ${tool.gradient} backdrop-blur-sm border border-white/50 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:shadow-amber-100/50 hover:-translate-y-1`}
+                      className={`w-full group relative overflow-hidden p-8 bg-gradient-to-br ${tool.gradient} backdrop-blur-sm border border-white/10 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#C9A050]/10 hover:-translate-y-1`}
                     >
                       <div className="relative z-10">
-                        <div className="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="w-16 h-16 rounded-2xl bg-neutral-900/80 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg border border-white/10">
                           <img src={tool.icon} alt={tool.title} className="w-10 h-10" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                          Chat With Our <span className="text-amber-600">AI</span>esthetics Doctor
+                        <h3 className="text-lg font-semibold text-white mb-2">
+                          Chat With Our <span className="text-[#C9A050]">AI</span>esthetics Doctor
                         </h3>
-                        <p className="text-sm text-gray-500">{tool.subtitle}</p>
+                        <p className="text-sm text-white/60">{tool.subtitle}</p>
                       </div>
                     </button>
                   ) : tool.external ? (
@@ -350,27 +350,27 @@ export default function Home2() {
                       href={tool.link!}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`block group relative overflow-hidden p-8 bg-gradient-to-br ${tool.gradient} backdrop-blur-sm border border-white/50 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:shadow-amber-100/50 hover:-translate-y-1`}
+                      className={`block group relative overflow-hidden p-8 bg-gradient-to-br ${tool.gradient} backdrop-blur-sm border border-white/10 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#C9A050]/10 hover:-translate-y-1`}
                     >
                       <div className="relative z-10">
-                        <div className="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="w-16 h-16 rounded-2xl bg-neutral-900/80 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg border border-white/10">
                           <img src={tool.icon} alt={tool.title} className="w-10 h-10" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{tool.title}</h3>
-                        <p className="text-sm text-gray-500">{tool.subtitle}</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
+                        <p className="text-sm text-white/60">{tool.subtitle}</p>
                       </div>
                     </a>
                   ) : (
                     <Link
                       to={tool.link!}
-                      className={`block group relative overflow-hidden p-8 bg-gradient-to-br ${tool.gradient} backdrop-blur-sm border border-white/50 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:shadow-amber-100/50 hover:-translate-y-1`}
+                      className={`block group relative overflow-hidden p-8 bg-gradient-to-br ${tool.gradient} backdrop-blur-sm border border-white/10 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#C9A050]/10 hover:-translate-y-1`}
                     >
                       <div className="relative z-10">
-                        <div className="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="w-16 h-16 rounded-2xl bg-neutral-900/80 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg border border-white/10">
                           <img src={tool.icon} alt={tool.title} className="w-10 h-10" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{tool.title}</h3>
-                        <p className="text-sm text-gray-500">{tool.subtitle}</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
+                        <p className="text-sm text-white/60">{tool.subtitle}</p>
                       </div>
                     </Link>
                   )}
@@ -381,7 +381,7 @@ export default function Home2() {
         </section>
 
         {/* Google Reviews - Card Style */}
-        <section className="py-16 bg-gradient-to-b from-amber-50/30 to-white relative overflow-hidden">
+        <section className="py-16 bg-neutral-900 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div className="grid md:grid-cols-3 gap-6">
               {googleReviews.slice(0, 3).map((review, index) => (
@@ -391,39 +391,34 @@ export default function Home2() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 border-2 border-amber-100 shadow-sm hover:shadow-lg hover:border-amber-200 transition-all duration-300"
+                  className="bg-neutral-800 rounded-2xl p-6 border border-[#C9A050]/20 hover:border-[#C9A050]/40 transition-all duration-300"
                 >
-                  {/* Header with icon */}
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center">
-                      <Star className="h-5 w-5 text-amber-500 fill-amber-500" />
+                    <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center border border-[#C9A050]/30">
+                      <Star className="h-5 w-5 text-[#C9A050] fill-[#C9A050]" />
                     </div>
                     <div>
-                      <div className="text-gray-900 font-semibold text-sm">{review.name}</div>
-                      <div className="text-gray-500 text-xs">{review.treatment}</div>
+                      <div className="text-white font-semibold text-sm">{review.name}</div>
+                      <div className="text-white/50 text-xs">{review.treatment}</div>
                     </div>
                   </div>
-
-                  {/* Review points as bullet list */}
                   <ul className="space-y-2">
                     {review.points.map((point, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="w-2 h-2 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
+                        <span className="w-2 h-2 rounded-full bg-[#C9A050] mt-1.5 flex-shrink-0" />
+                        <span className="text-white/70 text-sm leading-relaxed">{point}</span>
                       </li>
                     ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
-
-            {/* See all link */}
             <div className="mt-8 text-center">
               <a 
                 href="https://www.google.com/search?q=COSMEDOCS+Reviews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-amber-600 transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-[#C9A050] transition-colors"
               >
                 <img 
                   src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
@@ -438,7 +433,7 @@ export default function Home2() {
         </section>
 
         {/* Treatments - Fluid Grid */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-neutral-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -447,14 +442,14 @@ export default function Home2() {
               className="flex items-end justify-between mb-16"
             >
               <div>
-                <p className="text-amber-600 text-sm font-medium mb-3 tracking-wide uppercase">Treatments</p>
-                <h2 className="text-3xl md:text-4xl font-light text-gray-900">
+                <p className="text-[#C9A050] text-sm font-medium mb-3 tracking-wide uppercase">Treatments</p>
+                <h2 className="text-3xl md:text-4xl font-light text-white">
                   Most <span className="font-semibold">popular</span>
                 </h2>
               </div>
               <Link 
                 to="/treatments" 
-                className="hidden md:flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-black transition-colors group"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-white/50 hover:text-white transition-colors group"
               >
                 View all
                 <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -472,25 +467,25 @@ export default function Home2() {
                 >
                   <Link
                     to={treatment.link}
-                    className="group block bg-stone-50/50 hover:bg-white rounded-2xl p-6 border border-transparent hover:border-amber-200 hover:shadow-xl hover:shadow-amber-50 transition-all duration-500"
+                    className="group block bg-neutral-900 hover:bg-neutral-900/80 rounded-2xl p-6 border border-white/10 hover:border-[#C9A050]/30 transition-all duration-500"
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-medium text-gray-900 group-hover:text-amber-700 transition-colors">
+                        <h3 className="text-xl font-medium text-white group-hover:text-[#C9A050] transition-colors">
                           {treatment.title}
                         </h3>
-                        <p className="text-sm text-amber-600/80">{treatment.subtitle}</p>
+                        <p className="text-sm text-[#C9A050]/70">{treatment.subtitle}</p>
                       </div>
                       {treatment.popular && (
-                        <span className="bg-black text-white text-xs font-medium px-3 py-1 rounded-full">
+                        <span className="bg-[#C9A050] text-black text-xs font-medium px-3 py-1 rounded-full">
                           Popular
                         </span>
                       )}
                     </div>
-                    <p className="text-gray-500 text-sm mb-6 leading-relaxed">{treatment.description}</p>
+                    <p className="text-white/60 text-sm mb-6 leading-relaxed">{treatment.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-gray-900">{treatment.price}</span>
-                      <ArrowRight className="h-4 w-4 text-gray-300 group-hover:text-amber-600 transition-all group-hover:translate-x-1" />
+                      <span className="font-semibold text-white">{treatment.price}</span>
+                      <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-[#C9A050] transition-all group-hover:translate-x-1" />
                     </div>
                   </Link>
                 </motion.div>
