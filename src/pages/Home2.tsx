@@ -280,8 +280,8 @@ export default function Home2() {
                         <Star className="h-5 w-5 text-white fill-white" />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-gray-900">500+ Reviews</div>
-                        <div className="text-xs text-gray-500">4.9 on Google</div>
+                        <div className="text-sm font-semibold text-gray-900">Trusted Clinic</div>
+                        <div className="text-xs text-gray-500">Since 2007</div>
                       </div>
                     </div>
                   </motion.div>
