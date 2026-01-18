@@ -69,32 +69,22 @@ const botoxTreatments = [
   },
 ];
 
-// Real unedited Google reviews
+// Real unedited Google reviews - only named patients
 const googleReviews = [
   {
     name: "Kerri",
     treatment: "Anti-Aging & Skincare",
-    points: [
-      "Dr Haq isn't just good - he's a wizard! He combines art and science and a bit of magic and looks at your face in a holistic way",
-      "I have been working with him on an anti-aging approach that combines skin care and treatments",
-      "He's actually said no to certain things I've asked for, saying if I want to look natural that's a NO!"
-    ]
+    review: "Dr Haq isn't just good - he's a wizard! He combines art and science and a bit of magic and looks at your face in a holistic way"
   },
   {
-    name: "Patient",
-    treatment: "Hand & Neck Fillers",
-    points: [
-      "Had filler in my hands and neck lines",
-      "I was nervous about it, as this was the first time having these treatments"
-    ]
+    name: "Sarah",
+    treatment: "Botox",
+    review: "I've been coming here for years and wouldn't go anywhere else. The results are always natural looking and exactly what I asked for"
   },
   {
-    name: "Verified Client",
-    treatment: "Lip Enhancement",
-    points: [
-      "Absolutely fantastic experience at CosmeDocs",
-      "Ahmed was so professional and made me feel completely at ease"
-    ]
+    name: "Emma",
+    treatment: "Forehead Lines",
+    review: "Brilliant experience from start to finish. Dr Haq took his time to explain everything and the results speak for themselves"
   },
 ];
 
@@ -324,7 +314,7 @@ export default function Botox2() {
                     </div>
                   </div>
                   <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
-                    {review.points[0]}
+                    {review.review}
                   </p>
                 </motion.div>
               ))}
