@@ -73,8 +73,10 @@ export default function Home2Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
-        {/* Dark glass background */}
-        <div className="absolute inset-0 bg-black/95 backdrop-blur-xl border-b border-white/10" />
+        {/* Modern liquid glass effect - dark with subtle transparency */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/98 via-neutral-900/95 to-black/98 backdrop-blur-2xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/20 to-transparent" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
