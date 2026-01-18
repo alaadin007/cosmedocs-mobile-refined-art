@@ -384,38 +384,10 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* Google Reviews - Compact Sprinkled Layout */}
-        <section className="py-16 bg-gradient-to-b from-stone-900 to-black relative overflow-hidden">
+        {/* Google Reviews - Card Style */}
+        <section className="py-16 bg-gradient-to-b from-amber-50/30 to-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-            {/* Header */}
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <img 
-                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-                  alt="Google" 
-                  className="h-5"
-                />
-                <div className="flex items-center gap-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-white text-lg font-medium">4.9</span>
-                </div>
-              </div>
-              <a 
-                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-amber-400/80 hover:text-amber-300 transition-colors"
-              >
-                See all on Google →
-              </a>
-            </div>
-
-            {/* Compact Reviews Grid */}
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-6">
               {googleReviews.slice(0, 3).map((review, index) => (
                 <motion.div
                   key={index}
@@ -423,34 +395,48 @@ export default function Home2() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/5 hover:border-amber-500/20 transition-all"
+                  className="bg-white rounded-2xl p-6 border-2 border-amber-100 shadow-sm hover:shadow-lg hover:border-amber-200 transition-all duration-300"
                 >
-                  {/* Compact Header */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center text-black font-semibold text-xs">
-                      {review.name.charAt(0)}
+                  {/* Header with icon */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center">
+                      <Star className="h-5 w-5 text-amber-500 fill-amber-500" />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-white text-sm font-medium truncate">{review.name}</div>
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-3 w-3 fill-amber-400 text-amber-400" />
-                        ))}
-                      </div>
+                    <div>
+                      <div className="text-gray-900 font-semibold text-sm">{review.name}</div>
+                      <div className="text-gray-500 text-xs">{review.treatment}</div>
                     </div>
                   </div>
 
-                  {/* Truncated Review */}
-                  <p className="text-white/70 text-xs leading-relaxed line-clamp-3">
-                    "{review.text.slice(0, 150)}..."
-                  </p>
-                  
-                  <div className="mt-3 pt-3 border-t border-white/5 flex items-center justify-between">
-                    <span className="text-amber-400/60 text-[10px]">{review.treatment}</span>
-                    <span className="text-white/30 text-[10px]">{review.date}</span>
-                  </div>
+                  {/* Review points as bullet list */}
+                  <ul className="space-y-2">
+                    {review.text.split('.').slice(0, 3).filter(s => s.trim().length > 10).map((sentence, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="w-2 h-2 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm leading-relaxed">{sentence.trim()}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
+            </div>
+
+            {/* See all link */}
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-amber-600 transition-colors"
+              >
+                <img 
+                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                  alt="Google" 
+                  className="h-4"
+                />
+                <span>See all reviews</span>
+                <ChevronRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>
