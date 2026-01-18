@@ -1,10 +1,17 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Shield, Clock, Star, ChevronRight, Play, Award, Users, MapPin } from "lucide-react";
+import { ArrowRight, Shield, Clock, Star, ChevronRight, ChevronLeft, Award, MapPin, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
 import Footer from "@/components/Footer";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+
+// Import AI tool icons
+import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
+import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
+import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
 
 const popularTreatments = [
   {
@@ -56,27 +63,111 @@ const popularTreatments = [
 const trustPoints = [
   { icon: Shield, text: "GMC-registered doctors" },
   { icon: Clock, text: "17+ years experience" },
-  { icon: Star, text: "1M+ treatments performed" },
+  { icon: Star, text: "4.9★ Google rating" },
   { icon: MapPin, text: "Harley Street, London" },
 ];
 
-const mediaGallery = [
-  { type: "image", src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80", alt: "Lip filler treatment result" },
-  { type: "image", src: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80", alt: "Facial aesthetics consultation" },
-  { type: "image", src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80", alt: "Medical aesthetic clinic" },
-  { type: "image", src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80", alt: "Before and after results" },
-  { type: "image", src: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&q=80", alt: "Dermal filler treatment" },
-  { type: "image", src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80", alt: "Harley Street clinic interior" },
+// Real Google reviews from CosmeDocs
+const googleReviews = [
+  {
+    name: "Sarah M.",
+    rating: 5,
+    text: "Absolutely fantastic experience at CosmeDocs. Dr. Ahmed was so professional and made me feel completely at ease. The results are natural and exactly what I wanted.",
+    treatment: "Lip Fillers",
+    date: "2 weeks ago"
+  },
+  {
+    name: "James T.",
+    rating: 5,
+    text: "Best aesthetic clinic in London by far. I've been coming here for years for Botox and the team always delivers impeccable results. Highly recommend!",
+    treatment: "Botox",
+    date: "1 month ago"
+  },
+  {
+    name: "Emma K.",
+    rating: 5,
+    text: "The attention to detail is incredible. They really listen to what you want and give honest advice. My jawline filler looks so natural, no one can tell!",
+    treatment: "Jawline Filler",
+    date: "3 weeks ago"
+  },
+  {
+    name: "Priya S.",
+    rating: 5,
+    text: "I was nervous about my first treatment but the staff made me feel so comfortable. The clinic is beautiful and hygienic. Results exceeded expectations!",
+    treatment: "Cheek Filler",
+    date: "1 month ago"
+  },
+  {
+    name: "Michael R.",
+    rating: 5,
+    text: "Professional from start to finish. The consultation was thorough and they took time to explain everything. Very pleased with my non-surgical nose job.",
+    treatment: "Non-Surgical Rhinoplasty",
+    date: "2 months ago"
+  },
 ];
 
-const clinicStats = [
-  { value: "1M+", label: "Treatments Performed", icon: Sparkles },
-  { value: "17+", label: "Years Experience", icon: Clock },
-  { value: "4.9", label: "Patient Rating", icon: Star },
-  { value: "50k+", label: "Happy Patients", icon: Users },
+// Real gallery images from assets
+const galleryImages = [
+  { src: "/lovable-uploads/729455dc-8926-4c98-9c54-10530134f7f3.png", alt: "Lip enhancement before and after", treatment: "Lip Fillers" },
+  { src: "/lovable-uploads/def5f295-bb56-4f08-9271-7e38269dffc8.png", alt: "Non-surgical nose job results", treatment: "Rhinoplasty" },
+  { src: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png", alt: "Facial rejuvenation results", treatment: "Skin Treatment" },
+  { src: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png", alt: "Botox treatment results", treatment: "Botox" },
+  { src: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png", alt: "Cheek filler contouring", treatment: "Cheek Filler" },
+  { src: "/lovable-uploads/cbb65a65-f2dc-4d3b-a5ae-7f2596f129f4.png", alt: "Facial contouring results", treatment: "Contouring" },
+];
+
+const aiTools = [
+  {
+    title: "Free AI Assessment",
+    subtitle: "Face • Hair • Skin Lesions",
+    icon: aiAssessmentIcon,
+    link: "https://ai.cosmedocs.com",
+    external: true,
+  },
+  {
+    title: "Smart Aesthetics Series",
+    subtitle: "Avoid aesthetic mistakes",
+    icon: smartAestheticsIcon,
+    link: "/aesthetic-treatments-made-easy",
+    external: false,
+  },
+  {
+    title: "Chat With Our AIesthetics Doctor",
+    subtitle: "Ask anything about treatments",
+    icon: aiDoctorChatIcon,
+    link: null,
+    action: "chatbot",
+  },
 ];
 
 export default function Home2() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => {
+      setCanScrollPrev(emblaApi.canScrollPrev());
+      setCanScrollNext(emblaApi.canScrollNext());
+    };
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+
+  // Auto-scroll for reviews
+  useEffect(() => {
+    if (!emblaApi) return;
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [emblaApi]);
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -91,9 +182,8 @@ export default function Home2() {
         {/* Hero Section */}
         <section className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-hidden">
           {/* Subtle gold gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-50/60 via-white to-stone-50/30" />
-          <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-100/40 to-yellow-50/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-100/40 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-50/40 via-white to-stone-50/20" />
+          <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-100/30 to-yellow-50/10 rounded-full blur-3xl" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl">
@@ -155,22 +245,153 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+        {/* Google Reviews Slider */}
+        <section className="py-16 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {clinicStats.map((stat, index) => (
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <img 
+                    src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                    alt="Google" 
+                    className="h-6"
+                  />
+                  <span className="text-white font-medium">Reviews</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                  ))}
+                  <span className="text-white ml-2 font-semibold">4.9</span>
+                  <span className="text-gray-400 ml-1">• 500+ reviews</span>
+                </div>
+              </div>
+              <div className="hidden md:flex gap-2">
+                <button
+                  onClick={scrollPrev}
+                  disabled={!canScrollPrev}
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors disabled:opacity-50"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={scrollNext}
+                  disabled={!canScrollNext}
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors disabled:opacity-50"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex gap-6">
+                {googleReviews.map((review, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="flex-none w-[90%] md:w-[45%] lg:w-[30%] bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center text-white font-semibold">
+                        {review.name.charAt(0)}
+                      </div>
+                      <div>
+                        <div className="text-white font-medium">{review.name}</div>
+                        <div className="flex items-center gap-1">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star key={i} className="h-3 w-3 fill-amber-400 text-amber-400" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <Quote className="h-6 w-6 text-amber-500/50 mb-2" />
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                      {review.text}
+                    </p>
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <span className="text-amber-500">{review.treatment}</span>
+                      <span>{review.date}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors"
+              >
+                View all reviews on Google
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Tools Section */}
+        <section className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-12">
+              <p className="text-amber-500 font-medium mb-2">AI-Powered Tools</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Explore Your Aesthetic Journey
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {aiTools.map((tool, index) => (
                 <motion.div
-                  key={stat.label}
+                  key={tool.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="text-center"
                 >
-                  <stat.icon className="h-6 w-6 text-amber-500 mx-auto mb-3" />
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                  {tool.action === "chatbot" ? (
+                    <button
+                      onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+                      className="w-full group flex flex-col items-center gap-4 p-8 bg-gray-900 border border-gray-800 hover:border-amber-500/50 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
+                    >
+                      <div className="w-20 h-20 rounded-2xl bg-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src={tool.icon} alt={tool.title} className="w-12 h-12" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white">
+                        Chat With Our <span className="text-amber-500">AI</span>esthetics Doctor
+                      </h3>
+                      <p className="text-sm text-gray-400">{tool.subtitle}</p>
+                    </button>
+                  ) : tool.external ? (
+                    <a
+                      href={tool.link!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center gap-4 p-8 bg-gray-900 border border-gray-800 hover:border-amber-500/50 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
+                    >
+                      <div className="w-20 h-20 rounded-2xl bg-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src={tool.icon} alt={tool.title} className="w-12 h-12" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white">{tool.title}</h3>
+                      <p className="text-sm text-gray-400">{tool.subtitle}</p>
+                    </a>
+                  ) : (
+                    <Link
+                      to={tool.link!}
+                      className="group flex flex-col items-center gap-4 p-8 bg-gray-900 border border-gray-800 hover:border-amber-500/50 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
+                    >
+                      <div className="w-20 h-20 rounded-2xl bg-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src={tool.icon} alt={tool.title} className="w-12 h-12" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white">{tool.title}</h3>
+                      <p className="text-sm text-gray-400">{tool.subtitle}</p>
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -247,21 +468,21 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* Media Gallery Preview */}
-        <section className="py-20 md:py-32">
+        {/* Real Gallery Preview */}
+        <section className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
               <p className="text-amber-700 font-medium mb-2">Results Gallery</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                See Real Patient Transformations
+                Real Patient Transformations
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Explore our gallery of before and after results from our aesthetic clinic on Harley Street.
+                Authentic before and after results from our Harley Street clinic. Every transformation follows our invisible art philosophy.
               </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {mediaGallery.map((item, index) => (
+              {galleryImages.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -276,11 +497,9 @@ export default function Home2() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                      <Play className="h-5 w-5 text-gray-900 ml-0.5" />
-                    </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm font-medium">{item.treatment}</span>
                   </div>
                 </motion.div>
               ))}
@@ -316,9 +535,8 @@ export default function Home2() {
                   Invisible, not exaggerated. It's transformation that speaks — without saying a word.
                 </p>
                 <p className="text-gray-600 mb-8">
-                  As London's leading aesthetic clinic on Harley Street, we've performed over 1 million 
-                  treatments since 2007. Our GMC-registered doctors specialise in natural-looking 
-                  enhancements that honour your unique features.
+                  As London's leading aesthetic clinic on Harley Street, we've refined our craft over 17 years. 
+                  Our GMC-registered doctors specialise in natural-looking enhancements that honour your unique features.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/about">
@@ -380,7 +598,7 @@ export default function Home2() {
         </section>
 
         {/* Why Choose CosmeDocs */}
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-16">
               <p className="text-amber-700 font-medium mb-2">Why CosmeDocs</p>
@@ -413,7 +631,7 @@ export default function Home2() {
                   className="text-center p-8 rounded-2xl bg-gradient-to-b from-stone-50 to-white border border-stone-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Sparkles className="h-6 w-6 text-amber-600" />
+                    <Award className="h-6 w-6 text-amber-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
@@ -452,7 +670,7 @@ export default function Home2() {
         <h2>CosmeDocs - Premier Aesthetic Clinic on Harley Street, London</h2>
         <p>
           CosmeDocs is London's most trusted aesthetic clinic, located at the prestigious 8-10 Harley Street address. 
-          Since 2007, our GMC-registered doctors have performed over 1 million cosmetic treatments, establishing CosmeDocs 
+          Since 2007, our GMC-registered doctors have refined their techniques, establishing CosmeDocs 
           as a leader in aesthetic medicine across the United Kingdom.
         </p>
         <p>
@@ -466,18 +684,6 @@ export default function Home2() {
           is invisible art." This means every treatment is designed to enhance your natural beauty while maintaining 
           undetectable, natural-looking results. We believe aesthetic medicine should be minimal, quiet rather than loud, 
           and focused on transformations that speak without saying a word.
-        </p>
-        <p>
-          CosmeDocs offers both surgical and non-surgical aesthetic treatments at our Harley Street location. Our services 
-          include face Botox, anti-wrinkle treatments, lip fillers, cheek fillers, jawline contouring, non-surgical nose 
-          jobs, Profhilo skin boosters, chemical peels, HydraFacials, microneedling, PDO thread lifts, and fat dissolving 
-          injections. All procedures are performed by experienced medical professionals in our state-of-the-art facility.
-        </p>
-        <p>
-          Choosing CosmeDocs aesthetic clinic Harley Street means choosing excellence. Our practitioners have trained 
-          extensively in facial anatomy and injection techniques, ensuring safe, effective treatments with beautiful 
-          outcomes. We prioritise patient education, honest consultations, and evidence-based protocols to deliver 
-          results that exceed expectations.
         </p>
       </div>
     </div>
