@@ -384,119 +384,73 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* Google Reviews - Full Reviews with Replies */}
-        <section className="py-24 bg-black relative overflow-hidden">
-          {/* Subtle gold glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-amber-500/10 to-transparent rounded-full blur-3xl" />
-          
+        {/* Google Reviews - Compact Sprinkled Layout */}
+        <section className="py-16 bg-gradient-to-b from-stone-900 to-black relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-            <div className="flex items-center justify-between mb-12">
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <img 
-                    src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-                    alt="Google" 
-                    className="h-7"
-                  />
-                  <span className="text-white/80 text-lg font-light">Reviews</span>
-                </div>
+            {/* Header */}
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <img 
+                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                  alt="Google" 
+                  className="h-5"
+                />
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="text-white text-2xl font-semibold ml-2">4.9</span>
-                  <span className="text-white/40 text-sm">• 500+ reviews</span>
+                  <span className="text-white text-lg font-medium">4.9</span>
                 </div>
               </div>
-              <div className="hidden md:flex gap-3">
-                <button
-                  onClick={scrollPrev}
-                  className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10 hover:border-white/20"
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={scrollNext}
-                  className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10 hover:border-white/20"
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-
-            <div className="overflow-hidden -mx-4 px-4" ref={emblaRef}>
-              <div className="flex gap-6">
-                {googleReviews.map((review, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex-none w-[90%] md:w-[60%] lg:w-[45%]"
-                  >
-                    <div className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-3xl p-8 border border-white/10 h-full">
-                      {/* Header */}
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center text-black font-bold text-lg">
-                          {review.name.charAt(0)}
-                        </div>
-                        <div>
-                          <div className="text-white font-medium text-lg">{review.name}</div>
-                          <div className="flex items-center gap-2 mt-1">
-                            <div className="flex">
-                              {[...Array(review.rating)].map((_, i) => (
-                                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                              ))}
-                            </div>
-                            <span className="text-white/30 text-sm">•</span>
-                            <span className="text-amber-400/80 text-sm">{review.treatment}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Full Review Text */}
-                      <div className="relative mb-6">
-                        <Quote className="absolute -top-2 -left-2 h-8 w-8 text-amber-500/20" />
-                        <p className="text-white/80 leading-relaxed pl-6">
-                          {review.text}
-                        </p>
-                      </div>
-
-                      {/* Business Reply if exists */}
-                      {review.businessReply && (
-                        <div className="bg-white/5 rounded-2xl p-5 border-l-2 border-amber-500/50">
-                          <div className="flex items-center gap-2 mb-2">
-                            <MessageCircle className="h-4 w-4 text-amber-500" />
-                            <span className="text-amber-400 text-sm font-medium">Response from CosmeDocs</span>
-                          </div>
-                          <p className="text-white/60 text-sm leading-relaxed">
-                            {review.businessReply}
-                          </p>
-                        </div>
-                      )}
-
-                      <div className="mt-6 pt-4 border-t border-white/5">
-                        <span className="text-white/30 text-sm">{review.date}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-10 text-center">
               <a 
                 href="https://www.google.com/search?q=COSMEDOCS+Reviews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors"
+                className="text-xs text-amber-400/80 hover:text-amber-300 transition-colors"
               >
-                View all reviews on Google
-                <ArrowRight className="h-4 w-4" />
+                See all on Google →
               </a>
+            </div>
+
+            {/* Compact Reviews Grid */}
+            <div className="grid md:grid-cols-3 gap-4">
+              {googleReviews.slice(0, 3).map((review, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/5 hover:border-amber-500/20 transition-all"
+                >
+                  {/* Compact Header */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center text-black font-semibold text-xs">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-white text-sm font-medium truncate">{review.name}</div>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-3 w-3 fill-amber-400 text-amber-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Truncated Review */}
+                  <p className="text-white/70 text-xs leading-relaxed line-clamp-3">
+                    "{review.text.slice(0, 150)}..."
+                  </p>
+                  
+                  <div className="mt-3 pt-3 border-t border-white/5 flex items-center justify-between">
+                    <span className="text-amber-400/60 text-[10px]">{review.treatment}</span>
+                    <span className="text-white/30 text-[10px]">{review.date}</span>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
