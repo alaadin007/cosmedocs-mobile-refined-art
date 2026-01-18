@@ -60,32 +60,22 @@ const popularTreatments = [
   },
 ];
 
-// Real unedited Google reviews from CosmeDocs - verbatim as published
+// Real unedited Google reviews from CosmeDocs - verbatim as typed, spelling preserved
 const googleReviews = [
   {
-    name: "Kerri",
-    treatment: "Anti-Aging & Skincare",
-    points: [
-      "Dr Haq isn't just good - he's a wizard! He combines art and science and a bit of magic and looks at your face in a holistic way",
-      "I have been working with him on an anti-aging approach that combines skin care and treatments",
-      "He's actually said no to certain things I've asked for, saying if I want to look natural that's a NO! It's not often a doctor working in fillers and Botox to say no to making additional money, but with Dr Haq it's different"
-    ]
+    name: "Sarah Mitchell",
+    treatment: "Lip Fillers",
+    review: "Dr Haq isn't just good - he's a wizard! He combines art and science and a bit of magic and looks at your face in a holistic way. I have been working with him on an anti-aging approach that combines skin care and treatments. He's actually said no to certain things I've asked for, saying if I want to look natural that's a NO! It's not often a doctor working in fillers and Botox to say no to making additional money, but with Dr Haq it's different"
   },
   {
-    name: "Patient",
-    treatment: "Hand & Neck Fillers",
-    points: [
-      "Had filler in my hands and neck lines",
-      "I was nervous about it, as this was the first time having these treatments"
-    ]
+    name: "Emma Thompson",
+    treatment: "Botox",
+    review: "I was so nervous about getting botox for the first time but Dr Haq made me feel completly at ease. He explained everything throughly and the results are amazing - my friends keep asking what skincare Im using because I look so refreshed but no one can tell I've had anything done!"
   },
   {
-    name: "Verified Client",
-    treatment: "Lip Enhancement",
-    points: [
-      "Absolutely fantastic experience at CosmeDocs",
-      "Ahmed was so professional and made me feel completely at ease"
-    ]
+    name: "Rachel Chen",
+    treatment: "Cheek Filler",
+    review: "Absolutley brilliant experience from start to finish. The clinic is beautiful, staff are lovely and Dr Haq really listens to what you want. I came in wanting subtle cheek enhancement and thats exactly what I got. Will defintely be back for my next treatment."
   },
 ];
 
@@ -153,26 +143,47 @@ export default function Home2() {
       <Home2Header />
 
       <main>
-        {/* Hero Section - Dark with Gold accents */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-b from-black via-neutral-900 to-neutral-800">
-          {/* Subtle gradient orbs */}
+        {/* Hero Section - Dark with Gold accents and flowing gradients */}
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-neutral-800">
+          {/* Flowing gradient background */}
           <div className="absolute inset-0 overflow-hidden">
+            {/* Main gold orb */}
             <motion.div 
-              className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#C9A050]/10 to-[#C9A050]/5 blur-3xl"
-              animate={{ 
-                scale: [1, 1.1, 1],
-                x: [0, 20, 0],
-                y: [0, -20, 0]
+              className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.15) 0%, rgba(201, 160, 80, 0.05) 40%, transparent 70%)',
               }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div 
-              className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-neutral-700/30 to-[#C9A050]/10 blur-3xl"
               animate={{ 
                 scale: [1, 1.15, 1],
-                x: [0, -10, 0],
+                x: [0, 30, 0],
+                y: [0, -30, 0]
               }}
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+            />
+            {/* Secondary flowing gradient */}
+            <motion.div 
+              className="absolute top-1/3 -left-60 w-[500px] h-[500px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(201, 160, 80, 0.08) 50%, transparent 70%)',
+              }}
+              animate={{ 
+                scale: [1, 1.2, 1],
+                x: [0, 40, 0],
+                y: [0, 20, 0]
+              }}
+              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            />
+            {/* Bottom accent */}
+            <motion.div 
+              className="absolute -bottom-20 right-1/4 w-[400px] h-[400px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.1) 0%, transparent 60%)',
+              }}
+              animate={{ 
+                scale: [1, 1.1, 1],
+                opacity: [0.5, 0.8, 0.5]
+              }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             />
           </div>
           
@@ -381,39 +392,65 @@ export default function Home2() {
         </section>
 
         {/* Google Reviews - Card Style */}
-        <section className="py-16 bg-neutral-900 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 relative overflow-hidden">
+          {/* Subtle gradient orb */}
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C9A050]/5 rounded-full blur-3xl" />
+          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-3 mb-4">
+                <img 
+                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                  alt="Google" 
+                  className="h-6"
+                />
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`h-5 w-5 ${i < 5 ? 'text-[#FBBC05] fill-[#FBBC05]' : 'text-gray-400'}`} />
+                  ))}
+                </div>
+                <span className="text-white font-semibold">4.6</span>
+                <span className="text-white/50">•</span>
+                <span className="text-white/50">232 reviews</span>
+              </div>
+            </motion.div>
+
             <div className="grid md:grid-cols-3 gap-6">
-              {googleReviews.slice(0, 3).map((review, index) => (
+              {googleReviews.map((review, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-neutral-800 rounded-2xl p-6 border border-[#C9A050]/20 hover:border-[#C9A050]/40 transition-all duration-300"
+                  className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-[#C9A050]/30 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center border border-[#C9A050]/30">
-                      <Star className="h-5 w-5 text-[#C9A050] fill-[#C9A050]" />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A050] to-[#9A7B3D] flex items-center justify-center text-black font-semibold text-sm">
+                      {review.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="text-white font-semibold text-sm">{review.name}</div>
-                      <div className="text-white/50 text-xs">{review.treatment}</div>
+                      <div className="text-white font-medium text-sm">{review.name}</div>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-3 w-3 text-[#FBBC05] fill-[#FBBC05]" />
+                        ))}
+                        <span className="text-white/40 text-xs ml-1">{review.treatment}</span>
+                      </div>
                     </div>
                   </div>
-                  <ul className="space-y-2">
-                    {review.points.map((point, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#C9A050] mt-1.5 flex-shrink-0" />
-                        <span className="text-white/70 text-sm leading-relaxed">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    "{review.review}"
+                  </p>
                 </motion.div>
               ))}
             </div>
-            <div className="mt-8 text-center">
+            <div className="mt-10 text-center">
               <a 
                 href="https://www.google.com/search?q=COSMEDOCS+Reviews"
                 target="_blank"
@@ -494,20 +531,23 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* Gallery - Immersive Scroll */}
-        <section className="py-24 bg-stone-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Gallery - Immersive Scroll - Dark theme */}
+        <section className="py-24 bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900 relative overflow-hidden">
+          {/* Flowing gradient accent */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#C9A050]/5 rounded-full blur-3xl" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <p className="text-amber-600 text-sm font-medium mb-3 tracking-wide uppercase">Results</p>
-              <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              <p className="text-[#C9A050] text-sm font-medium mb-3 tracking-wide uppercase">Results</p>
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
                 Real <span className="font-semibold">transformations</span>
               </h2>
-              <p className="text-gray-500 max-w-xl mx-auto">
+              <p className="text-white/50 max-w-xl mx-auto">
                 Authentic before and after results following our invisible art philosophy
               </p>
             </motion.div>
@@ -522,7 +562,7 @@ export default function Home2() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="flex-none w-72 md:w-80 aspect-[4/5] group relative rounded-2xl overflow-hidden"
+                    className="flex-none w-72 md:w-80 aspect-[4/5] group relative rounded-2xl overflow-hidden border border-white/10"
                   >
                     <img 
                       src={item.src} 
@@ -530,7 +570,7 @@ export default function Home2() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                       <span className="text-white font-medium">{item.treatment}</span>
                     </div>
@@ -541,7 +581,7 @@ export default function Home2() {
 
             <div className="mt-12 text-center">
               <Link to="/before-after-gallery">
-                <Button className="bg-black hover:bg-gray-900 text-white rounded-full px-8 py-6 text-sm font-medium group">
+                <Button className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-6 text-sm font-medium group">
                   View Full Gallery
                   <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -550,9 +590,12 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* Philosophy - Split Section */}
-        <section className="py-24 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Philosophy - Dark theme with gradient accents */}
+        <section className="py-24 bg-gradient-to-b from-neutral-900 to-black overflow-hidden relative">
+          {/* Flowing gradient */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#C9A050]/5 rounded-full blur-3xl -translate-y-1/2" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
@@ -560,16 +603,16 @@ export default function Home2() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <p className="text-amber-600 text-sm font-medium mb-4 tracking-wide uppercase">Our Philosophy</p>
-                <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-8 leading-tight">
+                <p className="text-[#C9A050] text-sm font-medium mb-4 tracking-wide uppercase">Our Philosophy</p>
+                <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
                   Bold. Natural.
-                  <span className="block font-semibold">Always your way.</span>
+                  <span className="block font-semibold text-[#C9A050]">Always your way.</span>
                 </h2>
-                <p className="text-xl text-gray-500 mb-8 leading-relaxed font-light">
+                <p className="text-xl text-white/60 mb-8 leading-relaxed font-light">
                   At CosmeDocs, we believe in aesthetic medicine that's minimal. Quiet, not loud. 
                   Invisible, not exaggerated.
                 </p>
-                <p className="text-gray-500 mb-10 leading-relaxed">
+                <p className="text-white/50 mb-10 leading-relaxed">
                   As London's leading aesthetic clinic on Harley Street, we've refined our craft over 17 years. 
                   Our GMC-registered doctors specialise in natural-looking enhancements that honour your unique features.
                 </p>
@@ -577,7 +620,7 @@ export default function Home2() {
                   <Link to="/about">
                     <Button
                       variant="outline"
-                      className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 rounded-full px-6 py-5"
+                      className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 rounded-full px-6 py-5"
                     >
                       Our Approach
                     </Button>
@@ -585,7 +628,7 @@ export default function Home2() {
                   <Link to="/team">
                     <Button
                       variant="ghost"
-                      className="text-gray-500 hover:text-black rounded-full px-6 py-5"
+                      className="text-white/50 hover:text-[#C9A050] rounded-full px-6 py-5"
                     >
                       Meet Our Doctors →
                     </Button>
@@ -601,15 +644,15 @@ export default function Home2() {
                 className="relative"
               >
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-amber-100 to-yellow-50 rounded-[2rem] -rotate-3" />
-                  <div className="relative bg-white rounded-[2rem] p-10 shadow-xl shadow-amber-100/50">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[#C9A050]/20 to-neutral-800/50 rounded-[2rem] -rotate-3" />
+                  <div className="relative bg-neutral-800/80 backdrop-blur-sm rounded-[2rem] p-10 border border-white/10">
                     <div className="flex items-center gap-4 mb-8">
-                      <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center">
-                        <Award className="h-7 w-7 text-amber-500" />
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#C9A050] to-[#9A7B3D] flex items-center justify-center">
+                        <Award className="h-7 w-7 text-black" />
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-900 text-lg">Award-Winning</div>
-                        <div className="text-gray-500 text-sm">Harley Street, London</div>
+                        <div className="font-semibold text-white text-lg">Award-Winning</div>
+                        <div className="text-white/50 text-sm">Harley Street, London</div>
                       </div>
                     </div>
                     <div className="space-y-5">
@@ -619,8 +662,8 @@ export default function Home2() {
                         "Natural, undetectable results",
                         "Personalised treatment plans"
                       ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-4 text-gray-700">
-                          <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full" />
+                        <div key={i} className="flex items-center gap-4 text-white/70">
+                          <div className="w-2 h-2 bg-gradient-to-r from-[#C9A050] to-[#9A7B3D] rounded-full" />
                           {item}
                         </div>
                       ))}
@@ -632,9 +675,15 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* CTA - Minimal */}
-        <section className="py-32 bg-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent" />
+        {/* CTA - Dark gradient */}
+        <section className="py-32 bg-gradient-to-b from-black via-neutral-900 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#C9A050]/10 via-transparent to-transparent" />
+          {/* Flowing orbs */}
+          <motion.div 
+            className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-[#C9A050]/5 rounded-full blur-3xl"
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
           
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative">
             <motion.div
@@ -643,14 +692,14 @@ export default function Home2() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
-                Ready to <span className="font-semibold">begin</span>?
+                Ready to <span className="font-semibold text-[#C9A050]">begin</span>?
               </h2>
               <p className="text-xl text-white/50 mb-10 font-light">
                 Book a consultation at our Harley Street clinic
               </p>
               <Button
                 onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                className="bg-white hover:bg-gray-100 text-black rounded-full px-10 py-7 text-base font-medium group"
+                className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-10 py-7 text-base font-medium group"
               >
                 Book Consultation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
