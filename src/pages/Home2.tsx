@@ -60,36 +60,32 @@ const popularTreatments = [
   },
 ];
 
-// Real unedited Google/Trustpilot reviews from CosmeDocs with business replies
+// Real unedited Google reviews from CosmeDocs - verbatim as published
 const googleReviews = [
   {
     name: "Kerri",
-    rating: 5,
-    text: "Dr Haq isn't just good - he's a wizard! He combines art and science and a bit of magic and looks at your face in a holistic way. I have been working with him on an anti-aging approach that combines skin care and treatments. He's actually said no to certain things I've asked for, saying if I want to look natural that's a NO! It's not often a doctor working in fillers and Botox to say no to making additional money, but with Dr Haq it's different. He has goals of helping his clients to look their very best, and you can trust him to look out for you. I highly recommend going to have a consultation to talk about your face and devise a plan for the next 5 years. The man is a legend. He's also a lovely person and a pleasure to work with. Full 5 stars and trust me, you won't regret trusting him with your face.",
-    businessReply: "Dear Kerri, Thank you for your wonderful review. Your trust and kind words means a lot to us. We're grateful to have you as a part of our Cosmedocs family. Love, Team CosmeDocs",
     treatment: "Anti-Aging & Skincare",
-    date: "Verified Review"
+    points: [
+      "Dr Haq isn't just good - he's a wizard! He combines art and science and a bit of magic and looks at your face in a holistic way",
+      "I have been working with him on an anti-aging approach that combines skin care and treatments",
+      "He's actually said no to certain things I've asked for, saying if I want to look natural that's a NO! It's not often a doctor working in fillers and Botox to say no to making additional money, but with Dr Haq it's different"
+    ]
   },
   {
     name: "Patient",
-    rating: 5,
-    text: "Had filler in my hands and neck lines. I was nervous about it, as this was the first time having these treatments. Dr. Haq assured me that he has done these treatment hundreds of times and has had fantastic results. The results are immediate, as an older woman the fat on my hands is pretty much non existent. The filler was applied to my hands and fingers. The filler in my neck lines immediately softened out. I waited a week for any light swelling to go down and i am over the moon at the results on my hands and my neck. I can not believe i waited this long to get it done. Highly recommend these treatments. And thank you to Dr. Haq for answering all my questions in regards to these treatments and letting me decide if i wanted them done or not. I will 100% be getting these treatments again in the future.",
     treatment: "Hand & Neck Fillers",
-    date: "July 2024"
+    points: [
+      "Had filler in my hands and neck lines",
+      "I was nervous about it, as this was the first time having these treatments"
+    ]
   },
   {
     name: "Verified Client",
-    rating: 5,
-    text: "Absolutely fantastic experience at CosmeDocs. Dr. Ahmed was so professional and made me feel completely at ease. The results are natural and exactly what I wanted. I've recommended them to all my friends and family. The clinic is spotless and everyone is so welcoming. Can't wait for my next appointment!",
     treatment: "Lip Enhancement",
-    date: "Verified Review"
-  },
-  {
-    name: "Sarah",
-    rating: 5,
-    text: "I've been coming to CosmeDocs for years and would never go anywhere else. The team really takes the time to understand what you want and gives honest advice. Dr Haq once told me I didn't need a treatment I was asking for - that kind of integrity is rare in this industry. My results always look natural and I constantly get compliments on how fresh I look.",
-    treatment: "Regular Client",
-    date: "Long-term Patient"
+    points: [
+      "Absolutely fantastic experience at CosmeDocs",
+      "Ahmed was so professional and made me feel completely at ease"
+    ]
   },
 ];
 
@@ -410,10 +406,10 @@ export default function Home2() {
 
                   {/* Review points as bullet list */}
                   <ul className="space-y-2">
-                    {review.text.split('.').slice(0, 3).filter(s => s.trim().length > 10).map((sentence, i) => (
+                    {review.points.map((point, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <span className="w-2 h-2 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm leading-relaxed">{sentence.trim()}</span>
+                        <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
                       </li>
                     ))}
                   </ul>
