@@ -17,6 +17,7 @@ import Index from "./pages/Index";
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
+const Botox2 = lazy(() => import("./pages/Botox2"));
 const Treatments = lazy(() => import("./pages/Treatments"));
 const Team = lazy(() => import("./pages/Team"));
 const About = lazy(() => import("./pages/About"));
@@ -173,10 +174,15 @@ const App = () => {
                 <ScrollToTop />
                 <TrailingSlashRedirect />
                 <Routes>
-                  {/* Home2 bypasses Layout for custom header/footer */}
+                  {/* Home2 and Botox2 bypass Layout for custom header/footer */}
                   <Route path="/home2" element={
                     <Suspense fallback={<PageLoader />}>
                       <Home2 />
+                    </Suspense>
+                  } />
+                  <Route path="/botox2" element={
+                    <Suspense fallback={<PageLoader />}>
+                      <Botox2 />
                     </Suspense>
                   } />
                   
