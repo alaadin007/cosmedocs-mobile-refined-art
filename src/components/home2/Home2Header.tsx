@@ -79,7 +79,7 @@ export default function Home2Header() {
             <span className="text-xl md:text-2xl font-bold tracking-tight text-gray-900">
               COSMEDOCS
             </span>
-            <span className="text-[10px] text-amber-600 -mt-1">
+            <span className="text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-yellow-600 -mt-1">
               Harley Street Since 2007
             </span>
           </Link>
@@ -123,7 +123,7 @@ export default function Home2Header() {
                 <DropdownMenuSeparator className="my-3" />
                 <Link 
                   to="/treatments" 
-                  className="block text-center text-sm font-medium text-amber-600 hover:text-amber-700 py-2"
+                  className="block text-center text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 py-2"
                 >
                   View All Treatments & Pricing →
                 </Link>
@@ -154,7 +154,7 @@ export default function Home2Header() {
             </Button>
             <Button
               onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-              className="bg-gray-900 hover:bg-gray-800 text-white rounded-full px-4 md:px-6 text-sm font-medium"
+              className="bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white rounded-full px-4 md:px-6 text-sm font-medium"
             >
               <Calendar className="h-4 w-4 md:mr-2" />
               <span className="hidden md:inline">Book</span>
