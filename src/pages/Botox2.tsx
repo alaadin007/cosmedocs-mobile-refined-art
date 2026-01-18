@@ -240,69 +240,149 @@ export default function Botox2() {
                     <Star className="h-4 w-4 text-amber-600/70 fill-amber-600/70" />
                     4.9 Rating
                   </span>
-                </motion.div>
-              </div>
-
-              {/* Right side - floating elements */}
-              <motion.div 
-                className="hidden lg:block relative"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                <div className="relative aspect-square">
-                  {/* Decorative circles */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-80 h-80 rounded-full border border-amber-200/50" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-64 h-64 rounded-full border border-amber-300/30" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-48 h-48 rounded-full bg-gradient-to-br from-amber-100 to-yellow-50" />
-                  </div>
-                  
-                  {/* Floating cards */}
-                  <motion.div 
-                    className="absolute top-8 right-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-white"
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center">
-                        <Syringe className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-gray-900">10-20 mins</div>
-                        <div className="text-xs text-gray-500">Treatment time</div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  <motion.div 
-                    className="absolute bottom-20 left-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-white"
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-                        <Calendar className="h-5 w-5 text-amber-500" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-gray-900">3-6 Months</div>
-                        <div className="text-xs text-gray-500">Results last</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
               </motion.div>
             </div>
+
+            {/* Right side - floating elements */}
+            <motion.div 
+              className="hidden lg:block relative"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              <div className="relative aspect-square">
+                {/* Decorative circles */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-80 h-80 rounded-full border border-amber-200/50" />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-64 h-64 rounded-full border border-amber-300/30" />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-amber-100 to-yellow-50" />
+                </div>
+                
+                {/* Floating cards */}
+                <motion.div 
+                  className="absolute top-8 right-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-white"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center">
+                      <Syringe className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">10-20 mins</div>
+                      <div className="text-xs text-gray-500">Treatment time</div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="absolute bottom-20 left-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-white"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
+                      <Calendar className="h-5 w-5 text-amber-500" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">3-6 Months</div>
+                      <div className="text-xs text-gray-500">Results last</div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
-        </section>
+
+          {/* Compact Reviews at bottom of hero */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="pb-16"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+              {googleReviews.map((review, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
+                  className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-amber-100/50 shadow-sm"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg bg-black flex items-center justify-center">
+                      <Star className="h-3.5 w-3.5 text-amber-500 fill-amber-500" />
+                    </div>
+                    <div>
+                      <div className="text-gray-900 font-medium text-xs">{review.name}</div>
+                      <div className="text-gray-400 text-[10px]">{review.treatment}</div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
+                    {review.points[0]}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+            <div className="mt-4 text-center">
+              <a 
+                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-amber-600 transition-colors"
+              >
+                <img 
+                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                  alt="Google" 
+                  className="h-3"
+                />
+                <span>4.6 average • 232 reviews</span>
+                <ChevronRight className="h-3 w-3" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
         {/* Treatment at a Glance */}
-        <section className="py-16 bg-stone-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <section className="py-16 bg-stone-50 relative overflow-hidden">
+          {/* Scattered background treatment words */}
+          <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+            {[
+              { text: "Anti Wrinkle", top: "8%", left: "5%", rotate: -12 },
+              { text: "Frown Lines", top: "15%", right: "8%", rotate: 8 },
+              { text: "Droopy Lip Corner", top: "35%", left: "2%", rotate: -5 },
+              { text: "Crow's Feet", top: "60%", right: "3%", rotate: 15 },
+              { text: "Forehead Lines", top: "75%", left: "8%", rotate: -8 },
+              { text: "Bunny Lines", top: "20%", left: "45%", rotate: 3 },
+              { text: "Gummy Smile", top: "80%", right: "15%", rotate: -10 },
+              { text: "Brow Lift", top: "45%", right: "12%", rotate: 6 },
+              { text: "Jaw Slimming", top: "50%", left: "10%", rotate: -15 },
+              { text: "Lip Flip", top: "25%", right: "25%", rotate: 12 },
+              { text: "Neck Lines", top: "70%", left: "35%", rotate: -3 },
+              { text: "11 Lines", top: "40%", left: "25%", rotate: 7 },
+            ].map((word, i) => (
+              <span
+                key={i}
+                className="absolute text-gray-200/40 font-light text-sm md:text-base whitespace-nowrap"
+                style={{
+                  top: word.top,
+                  left: word.left,
+                  right: word.right,
+                  transform: `rotate(${word.rotate}deg)`,
+                }}
+              >
+                {word.text}
+              </span>
+            ))}
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -418,57 +498,7 @@ export default function Botox2() {
           </div>
         </section>
 
-        {/* Google Reviews */}
-        <section className="py-16 bg-gradient-to-b from-amber-50/30 to-white relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-            <div className="grid md:grid-cols-3 gap-6">
-              {googleReviews.map((review, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 border-2 border-amber-100 shadow-sm hover:shadow-lg hover:border-amber-200 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center">
-                      <Star className="h-5 w-5 text-amber-500 fill-amber-500" />
-                    </div>
-                    <div>
-                      <div className="text-gray-900 font-semibold text-sm">{review.name}</div>
-                      <div className="text-gray-500 text-xs">{review.treatment}</div>
-                    </div>
-                  </div>
-                  <ul className="space-y-2">
-                    {review.points.map((point, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="w-2 h-2 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <a 
-                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-amber-600 transition-colors"
-              >
-                <img 
-                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-                  alt="Google" 
-                  className="h-4"
-                />
-                <span>See all reviews</span>
-                <ChevronRight className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* Google Reviews - Removed as they're now in hero */}
 
         {/* What is Botox */}
         <section className="py-24 bg-white">
