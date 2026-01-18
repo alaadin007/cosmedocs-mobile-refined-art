@@ -172,13 +172,22 @@ const App = () => {
               <AuthProvider>
                 <ScrollToTop />
                 <TrailingSlashRedirect />
-                <Layout>
-                  <Suspense fallback={<PageLoader />}>
-                    <Routes>
-                      <Route path="/" element={<Index />} />
-                      <Route path="/home" element={<Home />} />
-                      <Route path="/home2" element={<Home2 />} />
-                      <Route path="/treatments" element={<Treatments />} />
+                <Routes>
+                  {/* Home2 bypasses Layout for custom header/footer */}
+                  <Route path="/home2" element={
+                    <Suspense fallback={<PageLoader />}>
+                      <Home2 />
+                    </Suspense>
+                  } />
+                  
+                  {/* All other routes use Layout */}
+                  <Route path="*" element={
+                    <Layout>
+                      <Suspense fallback={<PageLoader />}>
+                        <Routes>
+                          <Route path="/" element={<Index />} />
+                          <Route path="/home" element={<Home />} />
+                          <Route path="/treatments" element={<Treatments />} />
                       <Route path="/team" element={<Team />} />
                       <Route path="/about" element={<About />} />
                       <Route path="/contact" element={<Contact />} />
@@ -336,10 +345,12 @@ const App = () => {
                       <Route path="/campaign-ads" element={<CampaignAds />} />
                       <Route path="/london-tweakments-natural-aesthetics" element={<LondonTweakmentsNaturalAesthetics />} />
                       <Route path="/spin-to-win" element={<SpinToWin />} />
-                      <Route path="*" element={<NotFound />} />
-                    </Routes>
-                  </Suspense>
-                </Layout>
+                          <Route path="*" element={<NotFound />} />
+                        </Routes>
+                      </Suspense>
+                    </Layout>
+                  } />
+                </Routes>
               </AuthProvider>
             </BrowserRouter>
           </TooltipProvider>
