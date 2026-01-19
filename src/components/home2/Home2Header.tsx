@@ -85,20 +85,15 @@ export default function Home2Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
         {/* Background - transitions between dark and light */}
-        <div className={`absolute inset-0 backdrop-blur-2xl transition-all duration-500 ${
-          isScrolled 
-            ? 'bg-white/95' 
-            : 'bg-gradient-to-r from-black/98 via-neutral-900/95 to-black/98'
-        }`} />
         <div className={`absolute inset-0 transition-all duration-500 ${
           isScrolled 
-            ? 'bg-gradient-to-b from-gray-50/50 to-transparent' 
-            : 'bg-gradient-to-b from-white/[0.02] to-transparent'
+            ? 'bg-white shadow-md' 
+            : 'bg-black'
         }`} />
         <div className={`absolute bottom-0 left-0 right-0 h-px transition-all duration-500 ${
           isScrolled 
             ? 'bg-gradient-to-r from-transparent via-gray-200 to-transparent' 
-            : 'bg-gradient-to-r from-transparent via-[#C9A050]/20 to-transparent'
+            : 'bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent'
         }`} />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
