@@ -359,7 +359,7 @@ export default function Botox2() {
             ].map((word, i) => (
               <span
                 key={i}
-                className="absolute text-gray-200/40 font-light text-sm md:text-base whitespace-nowrap"
+                className="absolute text-gray-400/50 font-light text-lg md:text-xl whitespace-nowrap"
                 style={{
                   top: word.top,
                   left: word.left,
