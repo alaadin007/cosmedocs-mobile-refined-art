@@ -9,8 +9,8 @@ import hotakiImage from "@/assets/dr-noor-hotaki.jpg";
 
 const DrNoorHotaki = () => {
   const seoData = generateSEOMetadata(
-    "Dr Noor Hotaki | Permanent Non-Surgical Facelift Pioneer | Cosmedocs",
-    "Dr Noor Hotaki is an internationally recognised aesthetic specialist and pioneer of the permanent non-surgical facelift. Over 1,000 successful procedures at Cosmedocs London.",
+    "Dr Hotaki | Permanent Non-Surgical Facelift Pioneer | Cosmedocs",
+    "Dr Hotaki is an internationally recognised aesthetic specialist and pioneer of the permanent non-surgical facelift. Over 1,000 successful procedures at Cosmedocs London.",
     "/team/dr-noor-hotaki"
   );
 
@@ -26,7 +26,7 @@ const DrNoorHotaki = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dr Noor Hotaki",
+    "name": "Dr Hotaki",
     "jobTitle": "Aesthetic Medicine Specialist",
     "description": "Pioneer of the Permanent Non-Surgical Facelift",
     "worksFor": {
@@ -117,7 +117,7 @@ const DrNoorHotaki = () => {
                 >
                   <div className="mb-6">
                     <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                      Dr. Noor Hotaki
+                      Dr. Hotaki
                     </h1>
                     <p className="text-xl text-yellow-400 mb-2">Aesthetic Medicine Specialist</p>
                     <p className="text-lg text-gray-300 mb-4">
@@ -137,7 +137,7 @@ const DrNoorHotaki = () => {
 
                   <p className="text-gray-300 mb-8 leading-relaxed">
                     <AutoLinkedText>
-                      Dr. Noor Hotaki is an internationally recognised aesthetic specialist and the creator of 
+                      Dr. Hotaki is an internationally recognised aesthetic specialist and the creator of 
                       the groundbreaking permanent non-surgical facelift. Renowned for his innovative techniques 
                       and natural-looking results, Dr. Hotaki has transformed modern aesthetics with procedures 
                       performed exclusively by him in the UK.
