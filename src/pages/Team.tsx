@@ -3,6 +3,13 @@ import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Star, Award, GraduationCap, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
@@ -127,71 +134,89 @@ const Team = () => {
         {/* Team Members Section */}
         <section className="py-16 bg-background">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {teamMembers.map((member, index) => (
-                  <motion.div
-                    key={member.name}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="h-full border-border hover:border-yellow-400/50 transition-all duration-300 hover:shadow-lg">
-                      <CardContent className="p-8">
-                        <div className="flex flex-col items-center text-center">
-                          {/* Doctor Photo */}
-                          <div className="relative mb-6">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-yellow-600/20 rounded-full rotate-3"></div>
-                            <img
-                              src={member.image}
-                              alt={`${member.name} - ${member.title} at Cosmedocs London`}
-                              className="relative w-48 h-48 rounded-full object-cover shadow-xl"
-                              loading="lazy"
-                              width="192"
-                              height="192"
-                            />
-                          </div>
+            <div className="max-w-6xl mx-auto relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-6">
+                  {teamMembers.map((member, index) => (
+                    <CarouselItem key={member.name} className="pl-6 basis-full lg:basis-1/2">
+                      <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="h-full"
+                      >
+                        <Card className="h-full border-border hover:border-yellow-400/50 transition-all duration-300 hover:shadow-lg">
+                          <CardContent className="p-8">
+                            <div className="flex flex-col items-center text-center">
+                              {/* Doctor Photo */}
+                              <div className="relative mb-6">
+                                <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-yellow-600/20 rounded-full rotate-3"></div>
+                                <img
+                                  src={member.image}
+                                  alt={`${member.name} - ${member.title} at Cosmedocs London`}
+                                  className="relative w-48 h-48 rounded-full object-cover shadow-xl"
+                                  loading="lazy"
+                                  width="192"
+                                  height="192"
+                                />
+                              </div>
 
-                          {/* Doctor Info */}
-                          <div className="mb-6">
-                            <h2 className="text-2xl font-bold mb-2">{member.name}</h2>
-                            <p className="text-lg text-yellow-600 mb-3">{member.title}</p>
-                            <div className="flex items-center justify-center gap-2 mb-4">
-                              <GraduationCap className="h-4 w-4 text-yellow-400" />
-                              <span className="text-sm text-muted-foreground">{member.education}</span>
+                              {/* Doctor Info */}
+                              <div className="mb-6">
+                                <h2 className="text-2xl font-bold mb-2">{member.name}</h2>
+                                <p className="text-lg text-yellow-600 mb-3">{member.title}</p>
+                                <div className="flex items-center justify-center gap-2 mb-4">
+                                  <GraduationCap className="h-4 w-4 text-yellow-400" />
+                                  <span className="text-sm text-muted-foreground">{member.education}</span>
+                                </div>
+                              </div>
+
+                              {/* Description */}
+                              <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+                                <AutoLinkedText>{member.description}</AutoLinkedText>
+                              </p>
+
+                              {/* Action Buttons */}
+                              <div className="flex flex-col sm:flex-row gap-4 w-full">
+                                <Link to={member.link} className="flex-1">
+                                  <Button variant="outline" className="w-full">
+                                    View Profile <ArrowRight className="ml-2 h-4 w-4" />
+                                  </Button>
+                                </Link>
+                                <a 
+                                  href={member.bookingUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex-1"
+                                >
+                                  <Button className="w-full bg-yellow-600 hover:bg-yellow-700">
+                                    Book Appointment
+                                  </Button>
+                                </a>
+                              </div>
                             </div>
-                          </div>
-
-                          {/* Description */}
-                          <p className="text-muted-foreground text-sm leading-relaxed mb-8">
-                            <AutoLinkedText>{member.description}</AutoLinkedText>
-                          </p>
-
-                          {/* Action Buttons */}
-                          <div className="flex flex-col sm:flex-row gap-4 w-full">
-                            <Link to={member.link} className="flex-1">
-                              <Button variant="outline" className="w-full">
-                                View Profile <ArrowRight className="ml-2 h-4 w-4" />
-                              </Button>
-                            </Link>
-                            <a 
-                              href={member.bookingUrl} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="flex-1"
-                            >
-                              <Button className="w-full bg-yellow-600 hover:bg-yellow-700">
-                                Book Appointment
-                              </Button>
-                            </a>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden lg:flex -left-12 bg-background border-yellow-400/50 hover:bg-yellow-400/10 hover:border-yellow-400" />
+                <CarouselNext className="hidden lg:flex -right-12 bg-background border-yellow-400/50 hover:bg-yellow-400/10 hover:border-yellow-400" />
+                
+                {/* Mobile navigation arrows */}
+                <div className="flex lg:hidden justify-center gap-4 mt-6">
+                  <CarouselPrevious className="relative inset-0 translate-x-0 translate-y-0 bg-background border-yellow-400/50 hover:bg-yellow-400/10 hover:border-yellow-400" />
+                  <CarouselNext className="relative inset-0 translate-x-0 translate-y-0 bg-background border-yellow-400/50 hover:bg-yellow-400/10 hover:border-yellow-400" />
+                </div>
+              </Carousel>
             </div>
           </div>
         </section>
