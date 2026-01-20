@@ -34,6 +34,7 @@ const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
 const LaertaBuzo = lazy(() => import("./pages/LaertaBuzo"));
 const DrHassanMirza = lazy(() => import("./pages/DrHassanMirza"));
+const BotoxParis = lazy(() => import("./pages/BotoxParis"));
 const Partners = lazy(() => import("./pages/Partners"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
@@ -185,6 +186,11 @@ const App = () => {
                   <Route path="/botox2" element={
                     <Suspense fallback={<PageLoader />}>
                       <Botox2 />
+                    </Suspense>
+                  } />
+                  <Route path="/botox-paris" element={
+                    <Suspense fallback={<PageLoader />}>
+                      <BotoxParis />
                     </Suspense>
                   } />
                   
