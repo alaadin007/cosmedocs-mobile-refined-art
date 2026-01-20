@@ -1,7 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Calendar, Search } from "lucide-react";
-import { motion } from "framer-motion";
+import { ChevronDown, Calendar, Search, X, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,13 +18,11 @@ const treatmentCategories = [
   {
     label: "Botox",
     items: [
-      { title: "Face Botox", link: "/botox-london" },
-      { title: "Forehead Lines", link: "/forehead-lines-botox" },
-      { title: "Frown Lines", link: "/frown-line-botox" },
-      { title: "Crow's Feet", link: "/crows-feet-botox" },
+      { title: "Face Botox", link: "/treatments/botox" },
       { title: "Lip Flip", link: "/lip-flip" },
       { title: "Masseter", link: "/masseter-botox" },
       { title: "Hyperhidrosis", link: "/excessive-sweat-botox" },
+      { title: "Trap Botox", link: "/trap-botox" },
     ]
   },
   {
@@ -33,27 +31,55 @@ const treatmentCategories = [
       { title: "Lip Fillers", link: "/lip-fillers" },
       { title: "Cheek Filler", link: "/cheek-filler" },
       { title: "Jawline Filler", link: "/jawline-filler" },
+      { title: "Chin Filler", link: "/chin-filler" },
       { title: "Under Eye", link: "/tear-trough-filler" },
       { title: "Nose Filler", link: "/non-surgical-nose-job" },
+      { title: "Temple Filler", link: "/temple-filler-london" },
     ]
   },
   {
-    label: "Skin",
+    label: "HA Makeover",
+    items: [
+      { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
+      { title: "8 Point Facelift", link: "/8-point-facelift" },
+      { title: "PDO Threads", link: "/pdo-threads" },
+    ]
+  },
+  {
+    label: "Skin Boosters",
     items: [
       { title: "Profhilo", link: "/profhilo" },
       { title: "Polynucleotides", link: "/polynucleotide-treatment" },
       { title: "HydraFacial", link: "/hydrafacial" },
+      { title: "PRP Treatment", link: "/prp-treatment" },
       { title: "Chemical Peel", link: "/chemical-peel" },
-      { title: "Microneedling", link: "/microneedling" },
     ]
   },
   {
-    label: "Advanced",
+    label: "Skin & Hair",
     items: [
-      { title: "PDO Threads", link: "/pdo-threads" },
-      { title: "8 Point Facelift", link: "/8-point-facelift" },
+      { title: "Microneedling", link: "/microneedling" },
       { title: "Fat Dissolve", link: "/fat-dissolve" },
       { title: "Hair Transplant", link: "/hair-transplant-surgeon" },
+      { title: "Scar Reduction", link: "/scar-reduction" },
+    ]
+  },
+  {
+    label: "Surgery",
+    items: [
+      { title: "Blepharoplasty", link: "/blepharoplasty" },
+      { title: "Rhinoplasty", link: "/rhinoplasty" },
+      { title: "Facelift Surgery", link: "/facelift-surgery" },
+      { title: "Liposuction", link: "/liposuction" },
+      { title: "CO2 Laser", link: "/co2-laser-resurfacing" },
+    ]
+  },
+  {
+    label: "Dermatology",
+    items: [
+      { title: "Mole Removal", link: "/mole-removal" },
+      { title: "Skin Tag Removal", link: "/skin-tag-removal" },
+      { title: "Acne Treatment", link: "/acne-treatment" },
     ]
   }
 ];
@@ -61,25 +87,37 @@ const treatmentCategories = [
 const navItems = [
   { label: "Pricing", link: "/treatments" },
   { label: "About", link: "/about" },
-  { label: "B/A Gallery", link: "/before-after-gallery" },
-  { label: "Cosmetalk", link: "/cosmetalk" },
+  { label: "Gallery", link: "/before-after-gallery" },
   { label: "Contact", link: "/contact" },
 ];
 
 export default function Home2Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Switch to light theme after scrolling 100px
       setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -125,7 +163,7 @@ export default function Home2Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1">
               {/* Treatments Mega Dropdown */}
               <DropdownMenu open={isTreatmentsOpen} onOpenChange={setIsTreatmentsOpen}>
                 <DropdownMenuTrigger asChild>
@@ -142,20 +180,20 @@ export default function Home2Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
-                  className="w-[600px] p-4 bg-black/95 backdrop-blur-xl border-white/10"
+                  className="w-[800px] p-6 bg-black/95 backdrop-blur-xl border-white/10"
                   align="start"
                 >
-                  <div className="grid grid-cols-4 gap-4">
+                  <div className="grid grid-cols-7 gap-4">
                     {treatmentCategories.map((category) => (
                       <div key={category.label}>
-                        <DropdownMenuLabel className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider mb-2">
+                        <DropdownMenuLabel className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider mb-2 px-0">
                           {category.label}
                         </DropdownMenuLabel>
                         {category.items.map((item) => (
-                          <DropdownMenuItem key={item.link} asChild>
+                          <DropdownMenuItem key={item.link} asChild className="px-0">
                             <Link 
                               to={item.link} 
-                              className="text-sm text-white/70 hover:text-white cursor-pointer py-1.5"
+                              className="text-sm text-white/70 hover:text-white cursor-pointer py-1.5 block"
                             >
                               {item.title}
                             </Link>
@@ -164,7 +202,7 @@ export default function Home2Header() {
                       </div>
                     ))}
                   </div>
-                  <DropdownMenuSeparator className="my-3 bg-white/10" />
+                  <DropdownMenuSeparator className="my-4 bg-white/10" />
                   <Link 
                     to="/treatments" 
                     className="block text-center text-sm font-medium text-[#C9A050] hover:text-[#D4AF61] py-2"
@@ -192,6 +230,21 @@ export default function Home2Header() {
 
             {/* Right Actions */}
             <div className="flex items-center gap-2">
+              {/* Mobile Menu Toggle */}
+              <Button
+                variant="ghost"
+                size="sm"
+                className={`lg:hidden transition-colors duration-500 ${
+                  isScrolled 
+                    ? 'text-gray-600 hover:text-gray-900' 
+                    : 'text-white/70 hover:text-white'
+                }`}
+                onClick={() => setIsMobileMenuOpen(true)}
+              >
+                Treatments
+                <ChevronDown className="h-4 w-4 ml-1" />
+              </Button>
+
               <Button
                 variant="ghost"
                 size="icon"
@@ -213,62 +266,110 @@ export default function Home2Header() {
               </Button>
             </div>
           </div>
-
-          {/* Mobile Navigation */}
-          <div className="md:hidden pb-3 -mt-1">
-            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className={`gap-1 shrink-0 transition-colors duration-500 ${
-                      isScrolled ? 'text-gray-600' : 'text-white/70'
-                    }`}
-                  >
-                    Treatments
-                    <ChevronDown className="h-3 w-3" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56 bg-black/95 backdrop-blur-xl border-white/10">
-                  {treatmentCategories.map((category) => (
-                    <div key={category.label}>
-                      <DropdownMenuLabel className="text-xs text-[#C9A050]">
-                        {category.label}
-                      </DropdownMenuLabel>
-                      {category.items.slice(0, 3).map((item) => (
-                        <DropdownMenuItem key={item.link} asChild>
-                          <Link to={item.link} className="text-sm text-white/70">
-                            {item.title}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </div>
-                  ))}
-                  <DropdownMenuSeparator className="bg-white/10" />
-                  <DropdownMenuItem asChild>
-                    <Link to="/treatments" className="text-[#C9A050] font-medium">
-                      All Treatments
-                    </Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              
-              {navItems.slice(0, 4).map((item) => (
-                <Link 
-                  key={item.link}
-                  to={item.link}
-                  className={`px-2.5 py-1.5 text-xs font-medium shrink-0 transition-colors duration-500 ${
-                    isScrolled ? 'text-gray-500 hover:text-gray-900' : 'text-white/60 hover:text-white'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
         </div>
       </header>
+
+      {/* Mobile Full-Screen Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[100] bg-black"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
+              <span className="text-2xl font-bold text-white">Treatments</span>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setExpandedCategory(null);
+                }}
+                className="text-white hover:bg-white/10"
+              >
+                <X className="h-6 w-6" />
+              </Button>
+            </div>
+
+            {/* Categories */}
+            <div className="overflow-y-auto h-[calc(100vh-80px)]">
+              {treatmentCategories.map((category, index) => (
+                <motion.div
+                  key={category.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <button
+                    onClick={() => setExpandedCategory(
+                      expandedCategory === category.label ? null : category.label
+                    )}
+                    className="w-full flex items-center justify-between px-6 py-5 border-b border-white/5 hover:bg-white/5 transition-colors"
+                  >
+                    <span className="text-xl font-medium text-white">{category.label}</span>
+                    <ChevronRight 
+                      className={`h-5 w-5 text-[#C9A050] transition-transform duration-200 ${
+                        expandedCategory === category.label ? 'rotate-90' : ''
+                      }`} 
+                    />
+                  </button>
+                  
+                  <AnimatePresence>
+                    {expandedCategory === category.label && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden bg-white/5"
+                      >
+                        {category.items.map((item) => (
+                          <Link
+                            key={item.link}
+                            to={item.link}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setExpandedCategory(null);
+                            }}
+                            className="block px-8 py-4 text-lg text-white/80 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5"
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+
+              {/* Footer Links */}
+              <div className="px-6 py-6 space-y-3 border-t border-white/10 mt-4">
+                <Link
+                  to="/treatments"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-3 text-lg font-medium text-[#C9A050]"
+                >
+                  View All Treatments & Pricing →
+                </Link>
+                {navItems.map((item) => (
+                  <Link
+                    key={item.link}
+                    to={item.link}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-2 text-lg text-white/60 hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* AI Search Modal */}
       <Suspense fallback={null}>
