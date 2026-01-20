@@ -180,35 +180,44 @@ export default function Home2Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
-                  className="w-[800px] p-6 bg-black/95 backdrop-blur-xl border-white/10"
-                  align="start"
+                  className="w-screen max-w-none p-0 bg-black/98 backdrop-blur-xl border-0 rounded-none shadow-2xl"
+                  align="center"
+                  sideOffset={0}
+                  style={{ left: '50%', transform: 'translateX(-50%)', marginLeft: 0, marginRight: 0 }}
                 >
-                  <div className="grid grid-cols-7 gap-4">
-                    {treatmentCategories.map((category) => (
-                      <div key={category.label}>
-                        <DropdownMenuLabel className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider mb-2 px-0">
-                          {category.label}
-                        </DropdownMenuLabel>
-                        {category.items.map((item) => (
-                          <DropdownMenuItem key={item.link} asChild className="px-0">
-                            <Link 
-                              to={item.link} 
-                              className="text-sm text-white/70 hover:text-white cursor-pointer py-1.5 block"
-                            >
-                              {item.title}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </div>
-                    ))}
+                  <div className="max-w-7xl mx-auto px-8 py-8">
+                    <div className="grid grid-cols-7 gap-8">
+                      {treatmentCategories.map((category) => (
+                        <div key={category.label} className="space-y-3">
+                          <DropdownMenuLabel className="text-sm font-semibold text-[#C9A050] uppercase tracking-wider px-0">
+                            {category.label}
+                          </DropdownMenuLabel>
+                          <div className="space-y-1">
+                            {category.items.map((item) => (
+                              <DropdownMenuItem key={item.link} asChild className="px-0 focus:bg-transparent">
+                                <Link 
+                                  to={item.link} 
+                                  className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
+                                >
+                                  {item.title}
+                                </Link>
+                              </DropdownMenuItem>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <DropdownMenuSeparator className="my-4 bg-white/10" />
-                  <Link 
-                    to="/treatments" 
-                    className="block text-center text-sm font-medium text-[#C9A050] hover:text-[#D4AF61] py-2"
-                  >
-                    View All Treatments & Pricing →
-                  </Link>
+                  <div className="border-t border-white/10">
+                    <div className="max-w-7xl mx-auto px-8 py-4">
+                      <Link 
+                        to="/treatments" 
+                        className="block text-center text-sm font-medium text-[#C9A050] hover:text-[#D4AF61] transition-colors"
+                      >
+                        View All Treatments & Pricing →
+                      </Link>
+                    </div>
+                  </div>
                 </DropdownMenuContent>
               </DropdownMenu>
 
