@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
-// All treatment categories consolidated into one mega dropdown
 const treatmentCategories = [
   {
     label: "Botox",
@@ -36,51 +35,25 @@ const treatmentCategories = [
       { title: "Jawline Filler", link: "/jawline-filler" },
       { title: "Under Eye", link: "/tear-trough-filler" },
       { title: "Nose Filler", link: "/non-surgical-nose-job" },
-      { title: "Chin Filler", link: "/chin-filler" },
     ]
   },
   {
-    label: "HA Makeover",
-    items: [
-      { title: "8 Point Facelift", link: "/8-point-facelift" },
-      { title: "PDO Threads", link: "/pdo-threads" },
-      { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
-    ]
-  },
-  {
-    label: "Skin Boosters",
+    label: "Skin",
     items: [
       { title: "Profhilo", link: "/profhilo" },
       { title: "Polynucleotides", link: "/polynucleotide-treatment" },
       { title: "HydraFacial", link: "/hydrafacial" },
       { title: "Chemical Peel", link: "/chemical-peel" },
-      { title: "PRP Treatment", link: "/prp-treatment" },
+      { title: "Microneedling", link: "/microneedling" },
     ]
   },
   {
-    label: "Skin & Hair",
+    label: "Advanced",
     items: [
-      { title: "Microneedling", link: "/microneedling" },
+      { title: "PDO Threads", link: "/pdo-threads" },
+      { title: "8 Point Facelift", link: "/8-point-facelift" },
       { title: "Fat Dissolve", link: "/fat-dissolve" },
       { title: "Hair Transplant", link: "/hair-transplant-surgeon" },
-      { title: "Scar Reduction", link: "/scar-reduction" },
-    ]
-  },
-  {
-    label: "Surgery",
-    items: [
-      { title: "Blepharoplasty", link: "/blepharoplasty" },
-      { title: "Rhinoplasty", link: "/rhinoplasty" },
-      { title: "Facelift Surgery", link: "/facelift-surgery" },
-      { title: "CO2 Laser", link: "/co2-laser-resurfacing" },
-    ]
-  },
-  {
-    label: "Dermatology",
-    items: [
-      { title: "Mole Removal", link: "/mole-removal" },
-      { title: "Acne Treatment", link: "/acne-treatment" },
-      { title: "Skin Tag Removal", link: "/skin-tag-removal" },
     ]
   }
 ];
@@ -169,11 +142,10 @@ export default function Home2Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
-                  className="w-[800px] p-5 bg-black/95 backdrop-blur-xl border-white/10"
-                  align="center"
-                  sideOffset={8}
+                  className="w-[600px] p-4 bg-black/95 backdrop-blur-xl border-white/10"
+                  align="start"
                 >
-                  <div className="grid grid-cols-7 gap-3">
+                  <div className="grid grid-cols-4 gap-4">
                     {treatmentCategories.map((category) => (
                       <div key={category.label}>
                         <DropdownMenuLabel className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider mb-2">
