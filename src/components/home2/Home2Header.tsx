@@ -180,10 +180,17 @@ export default function Home2Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
-                  className="w-screen max-w-none p-0 bg-black/98 backdrop-blur-xl border-0 rounded-none shadow-2xl fixed left-0 right-0"
+                  className="p-0 bg-black/98 backdrop-blur-xl border-0 rounded-none shadow-2xl"
                   align="start"
                   sideOffset={0}
-                  style={{ left: 0, right: 0, transform: 'none', marginLeft: 0, marginRight: 0 }}
+                  style={{ 
+                    position: 'fixed', 
+                    left: '0px', 
+                    right: '0px', 
+                    width: '100vw',
+                    transform: 'none',
+                    maxWidth: 'none'
+                  }}
                 >
                   <div className="max-w-7xl mx-auto px-8 py-8">
                     <div className="grid grid-cols-7 gap-8">
