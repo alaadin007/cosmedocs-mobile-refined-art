@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Award, GraduationCap, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
-
+import laertaImage from "@/assets/laerta-buzo.jpg";
+import hassanImage from "@/assets/dr-hassan-mirza.png";
 const Team = () => {
   const seoData = generateSEOMetadata(
     "Our Expert Team | Aesthetic Doctors | Cosmedocs London",
@@ -32,6 +33,24 @@ const Team = () => {
       link: "/team/dr-hena-haq",
       bookingUrl: "https://med.as.me/harleystreet",
       description: "An Aesthetic Doctor whose holistic approach to client treatments has made her popular amongst her clients. Her special interest lies in subtle tweakments and natural outcomes."
+    },
+    {
+      name: "Laerta Buzo",
+      title: "Aesthetic Practitioner",
+      image: laertaImage,
+      education: "9+ Years Experience in Non-Surgical Aesthetic Treatments",
+      link: "/team/laerta-buzo",
+      bookingUrl: "https://med.as.me/alert",
+      description: "An experienced Aesthetic Practitioner specialising in personalised treatment plans that combine injectables, skin boosters, laser and device-based treatments to achieve natural and balanced results."
+    },
+    {
+      name: "Dr Hassan A. Mirza",
+      title: "Consultant Dermatologist",
+      image: hassanImage,
+      education: "Royal College of Physicians • British Association of Dermatologists",
+      link: "/team/dr-hassan-mirza",
+      bookingUrl: "https://med.as.me/schedule/0cc7d92b/?categories[]=Dr.%20Hassan%20Dermatologist",
+      description: "A highly experienced Consultant Dermatologist currently working within the NHS, delivering evidence-based, patient-focused dermatological care for acne, eczema, psoriasis and skin conditions."
     }
   ];
 

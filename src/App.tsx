@@ -32,6 +32,8 @@ const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
 const Membership = lazy(() => import("./pages/Membership"));
 const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
+const LaertaBuzo = lazy(() => import("./pages/LaertaBuzo"));
+const DrHassanMirza = lazy(() => import("./pages/DrHassanMirza"));
 const Partners = lazy(() => import("./pages/Partners"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
@@ -207,6 +209,8 @@ const App = () => {
                       <Route path="/membership" element={<Membership />} />
                       <Route path="/team/dr-ahmed-haq" element={<DrAhmedHaq />} />
                       <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
+                      <Route path="/team/laerta-buzo" element={<LaertaBuzo />} />
+                      <Route path="/team/dr-hassan-mirza" element={<DrHassanMirza />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
                       <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
