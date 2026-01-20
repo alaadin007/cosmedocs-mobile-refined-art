@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, CheckCircle, Award, GraduationCap, Globe } from "lucide-react";
 import AutoLinkedText from "@/components/AutoLinkedText";
-import hotakiImage from "@/assets/dr-noor-hotaki.png";
+import hotakiImage from "@/assets/dr-noor-hotaki.jpg";
 
 const DrNoorHotaki = () => {
   const seoData = generateSEOMetadata(

@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
 import laertaImage from "@/assets/laerta-buzo.jpg";
 import hassanImage from "@/assets/dr-hassan-mirza.png";
-import hotakiImage from "@/assets/dr-noor-hotaki.png";
+import hotakiImage from "@/assets/dr-noor-hotaki.jpg";
 
 const Team = () => {
   const seoData = generateSEOMetadata(
