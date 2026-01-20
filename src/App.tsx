@@ -34,6 +34,7 @@ const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
 const LaertaBuzo = lazy(() => import("./pages/LaertaBuzo"));
 const DrHassanMirza = lazy(() => import("./pages/DrHassanMirza"));
+const DrNoorHotaki = lazy(() => import("./pages/DrNoorHotaki"));
 const BotoxParis = lazy(() => import("./pages/BotoxParis"));
 const Partners = lazy(() => import("./pages/Partners"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -217,6 +218,7 @@ const App = () => {
                       <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
                       <Route path="/team/laerta-buzo" element={<LaertaBuzo />} />
                       <Route path="/team/dr-hassan-mirza" element={<DrHassanMirza />} />
+                      <Route path="/team/dr-noor-hotaki" element={<DrNoorHotaki />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
                       <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
