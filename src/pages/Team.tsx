@@ -62,7 +62,7 @@ const Team = () => {
       description: "A highly experienced Consultant Dermatologist currently working within the NHS, delivering evidence-based, patient-focused dermatological care for acne, eczema, psoriasis and skin conditions."
     },
     {
-      name: "Dr Noor Hotaki",
+      name: "Dr Hotaki",
       title: "Aesthetic Medicine Specialist",
       image: hotakiImage,
       education: "Pioneer of the Permanent Non-Surgical Facelift",
