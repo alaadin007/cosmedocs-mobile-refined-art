@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
 import laertaImage from "@/assets/laerta-buzo.jpg";
 import hassanImage from "@/assets/dr-hassan-mirza.png";
+import hotakiImage from "@/assets/dr-noor-hotaki.png";
+
 const Team = () => {
   const seoData = generateSEOMetadata(
     "Our Expert Team | Aesthetic Doctors | Cosmedocs London",
@@ -58,6 +60,15 @@ const Team = () => {
       link: "/team/dr-hassan-mirza",
       bookingUrl: "https://med.as.me/schedule/0cc7d92b/?categories[]=Dr.%20Hassan%20Dermatologist",
       description: "A highly experienced Consultant Dermatologist currently working within the NHS, delivering evidence-based, patient-focused dermatological care for acne, eczema, psoriasis and skin conditions."
+    },
+    {
+      name: "Dr Noor Hotaki",
+      title: "Aesthetic Medicine Specialist",
+      image: hotakiImage,
+      education: "Pioneer of the Permanent Non-Surgical Facelift",
+      link: "/team/dr-noor-hotaki",
+      bookingUrl: "https://med.as.me/harleystreet",
+      description: "An internationally recognised aesthetic specialist and creator of the groundbreaking permanent non-surgical facelift, with over 1,000 successful procedures worldwide."
     }
   ];
 
