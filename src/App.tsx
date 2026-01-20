@@ -36,6 +36,8 @@ const LaertaBuzo = lazy(() => import("./pages/LaertaBuzo"));
 const DrHassanMirza = lazy(() => import("./pages/DrHassanMirza"));
 const DrNoorHotaki = lazy(() => import("./pages/DrNoorHotaki"));
 const BotoxParis = lazy(() => import("./pages/BotoxParis"));
+const BotoxBerlin = lazy(() => import("./pages/BotoxBerlin"));
+const BotoxDublin = lazy(() => import("./pages/BotoxDublin"));
 const Partners = lazy(() => import("./pages/Partners"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
