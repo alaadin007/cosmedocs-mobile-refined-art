@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
 const rotatingTaglines = [
-  "Harley Street Doctors",
+  "Harley Street Doctors • Since 2007",
   "Advanced Aesthetic Medicine",
   "Doctor-Led, Regulated Care"
 ];
