@@ -11,7 +11,7 @@ interface DetectedRoute {
 const ROUTE_REGISTRY = {
   pages: [
     '/', '/treatments', '/about', '/contact', '/partners', '/team', 
-    '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
+    '/before-after-gallery', '/before-after/', '/before-after/dermal-fillers/', '/membership', '/harley-street-consulting-rooms',
     '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
     '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/cosmetalk',
     '/plastic-surgeon', '/dermatology', '/cosmederm', '/aesthetic-training', '/hair-transplant-surgeon',
@@ -43,7 +43,7 @@ const ROUTE_REGISTRY = {
     '/fat-dissolve', '/oily-skin-botox',
     
     // Alternative/redirect routes
-    '/dermal-fillers', '/experimental-treatment'
+    '/dermal-fillers', '/treatments/dermal-fillers/', '/treatments/dermal-fillers/areas/', '/experimental-treatment'
   ],
   blog: [
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',

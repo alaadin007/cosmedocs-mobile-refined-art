@@ -29,6 +29,7 @@ const CupidBowLips = lazy(() => import("./pages/CupidBowLips"));
 const ForeheadFillers = lazy(() => import("./pages/ForeheadFillers"));
 const NonSurgicalNoseJob = lazy(() => import("./pages/NonSurgicalNoseJob"));
 const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
+const BeforeAfterDermalFillers = lazy(() => import("./pages/BeforeAfterDermalFillers"));
 const Membership = lazy(() => import("./pages/Membership"));
 const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
@@ -238,6 +239,12 @@ const App = () => {
                       <Route path="/dermal-fillers" element={<DermalFillers />} />
                       <Route path="/treatments/dermal-fillers/areas" element={<DermalFillerAreas />} />
                       <Route path="/treatments/dermal-fillers/areas/" element={<DermalFillerAreas />} />
+                      <Route path="/treatments/dermal-fillers/" element={<DermalFillers />} />
+                      
+                      {/* Before & After Routes */}
+                      <Route path="/before-after/dermal-fillers" element={<BeforeAfterDermalFillers />} />
+                      <Route path="/before-after/dermal-fillers/" element={<BeforeAfterDermalFillers />} />
+                      
                       <Route path="/marionette-lines" element={<MarionnetteLines />} />
                       <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
                       
