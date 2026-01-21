@@ -146,14 +146,17 @@ export default function Home2Header() {
                   ease: "easeOut"
                 }}
               >
-                <motion.span
-                  animate={{ opacity: [0.7, 1, 0.7] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  Harley Street Since 2007, 1M+ Injections
-                </motion.span>
+              Harley Street Doctors
+              <motion.span
+                className="inline-block mx-1"
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                •
               </motion.span>
-            </Link>
+              Advanced Aesthetic Medicine
+            </motion.span>
+          </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
