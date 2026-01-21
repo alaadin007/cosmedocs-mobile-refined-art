@@ -16,7 +16,9 @@ const rotatingTaglines = [
 const treatmentCategories = [
   {
     label: "Botox",
+    hubLink: "/treatments/botox/",
     items: [
+      { title: "Botox Overview", link: "/treatments/botox/", isOverview: true },
       { title: "Face Botox", link: "/treatments/botox" },
       { title: "Lip Flip", link: "/lip-flip" },
       { title: "Masseter", link: "/masseter-botox" },
@@ -30,7 +32,9 @@ const treatmentCategories = [
   },
   {
     label: "Dermal Fillers",
+    hubLink: "/treatments/dermal-fillers/",
     items: [
+      { title: "Dermal Fillers Overview", link: "/treatments/dermal-fillers/", isOverview: true },
       { title: "Lip Filler", link: "/lip-fillers" },
       { title: "Cheek Filler", link: "/cheek-filler" },
       { title: "Jawline Filler", link: "/jawline-filler" },
@@ -38,17 +42,19 @@ const treatmentCategories = [
       { title: "Under Eye", link: "/tear-trough-filler" },
       { title: "Nose Filler", link: "/non-surgical-nose-job" },
       { title: "Temple Filler", link: "/temple-filler-london" },
-      { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas", isSubHeader: true },
-      { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas#nasolabial" },
-      { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas#marionette" },
-      { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas#prejowl" },
-      { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas#perioral" },
-      { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas#volume" },
+      { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas/", isSubHeader: true },
+      { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas/#nasolabial" },
+      { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas/#marionette" },
+      { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas/#prejowl" },
+      { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas/#perioral" },
+      { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas/#volume" },
     ]
   },
   {
     label: "HA Makeover",
+    hubLink: "/treatments/ha-makeover/",
     items: [
+      { title: "HA Makeover Overview", link: "/treatments/ha-makeover/", isOverview: true },
       { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
       { title: "8 Point Facelift", link: "/8-point-facelift" },
       { title: "PDO Threads", link: "/pdo-threads" },
@@ -56,7 +62,9 @@ const treatmentCategories = [
   },
   {
     label: "Skin Boosters",
+    hubLink: "/treatments/skin-boosters/",
     items: [
+      { title: "Skin Boosters Overview", link: "/treatments/skin-boosters/", isOverview: true },
       { title: "Profhilo", link: "/profhilo" },
       { title: "Polynucleotides", link: "/polynucleotide-treatment" },
       { title: "HydraFacial", link: "/hydrafacial" },
@@ -66,7 +74,9 @@ const treatmentCategories = [
   },
   {
     label: "Skin & Hair",
+    hubLink: "/treatments/skin-hair/",
     items: [
+      { title: "Skin & Hair Overview", link: "/treatments/skin-hair/", isOverview: true },
       { title: "Microneedling", link: "/microneedling" },
       { title: "Fat Dissolve", link: "/fat-dissolve" },
       { title: "Hair Transplant", link: "/hair-transplant-surgeon" },
@@ -75,7 +85,9 @@ const treatmentCategories = [
   },
   {
     label: "Plastic Surgery",
+    hubLink: "/treatments/plastic-surgery/",
     items: [
+      { title: "Plastic Surgery Overview", link: "/treatments/plastic-surgery/", isOverview: true },
       { title: "Blepharoplasty", link: "/blepharoplasty" },
       { title: "Rhinoplasty", link: "/rhinoplasty" },
       { title: "Facelift Surgery", link: "/facelift-surgery" },
@@ -85,7 +97,9 @@ const treatmentCategories = [
   },
   {
     label: "Dermatology",
+    hubLink: "/treatments/dermatology/",
     items: [
+      { title: "Dermatology Overview", link: "/treatments/dermatology/", isOverview: true },
       { title: "Mole Removal", link: "/mole-removal" },
       { title: "Skin Tag Removal", link: "/skin-tag-removal" },
       { title: "Acne Treatment", link: "/acne-treatment" },
@@ -219,8 +233,17 @@ export default function Home2Header() {
                                 {category.label}
                               </span>
                               <div className="space-y-1">
-                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean }) => (
-                                  item.isSubHeader ? (
+                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean }) => (
+                                  item.isOverview ? (
+                                    <Link 
+                                      key={item.link}
+                                      to={item.link} 
+                                      onClick={() => setIsTreatmentsOpen(false)}
+                                      className="text-sm text-white hover:text-[#C9A050] cursor-pointer py-1.5 block transition-colors font-medium border-b border-white/10 mb-2 pb-2"
+                                    >
+                                      {item.title} →
+                                    </Link>
+                                  ) : item.isSubHeader ? (
                                     <Link 
                                       key={item.link}
                                       to={item.link} 
@@ -423,7 +446,7 @@ export default function Home2Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden bg-white/5"
                       >
-                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean }) => (
+                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean }) => (
                           <Link
                             key={item.link}
                             to={item.link}
@@ -432,12 +455,14 @@ export default function Home2Header() {
                               setExpandedCategory(null);
                             }}
                             className={`block px-6 py-4 transition-colors border-b border-white/5 min-h-[52px] flex items-center ${
-                              item.isSubHeader 
-                                ? 'text-base text-[#C9A050]/80 hover:text-[#C9A050] font-medium' 
-                                : 'text-base text-white/80 hover:text-white hover:bg-white/5'
+                              item.isOverview 
+                                ? 'text-base text-white hover:text-[#C9A050] font-medium bg-white/5' 
+                                : item.isSubHeader 
+                                  ? 'text-base text-[#C9A050]/80 hover:text-[#C9A050] font-medium' 
+                                  : 'text-base text-white/80 hover:text-white hover:bg-white/5'
                             }`}
                           >
-                            {item.title}{item.isSubHeader ? ' →' : ''}
+                            {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
                           </Link>
                         ))}
                       </motion.div>
