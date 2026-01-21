@@ -136,8 +136,8 @@ export default function Home2Header() {
               }`}>
                 COSMEDOCS
               </span>
-              <motion.span 
-                className="text-[10px] md:text-xs text-[#C9A050] tracking-wide -mt-0.5"
+              <motion.div 
+                className="flex flex-col -mt-0.5"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
@@ -146,16 +146,13 @@ export default function Home2Header() {
                   ease: "easeOut"
                 }}
               >
-              Harley Street Doctors
-              <motion.span
-                className="inline-block mx-1"
-                animate={{ opacity: [0.3, 1, 0.3] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              >
-                •
-              </motion.span>
-              Advanced Aesthetic Medicine
-            </motion.span>
+                <span className="text-[10px] md:text-xs text-[#C9A050]/90 tracking-[0.04em] font-light leading-tight">
+                  Harley Street Doctors
+                </span>
+                <span className="text-[9px] md:text-[11px] text-[#C9A050]/70 tracking-[0.06em] font-light leading-tight">
+                  Advanced Aesthetic Medicine
+                </span>
+              </motion.div>
           </Link>
 
             {/* Desktop Navigation */}
