@@ -180,12 +180,13 @@ const App = () => {
                 <ScrollToTop />
                 <TrailingSlashRedirect />
                 <Routes>
-                  {/* Home2 and Botox2 bypass Layout for custom header/footer */}
-                  <Route path="/home2" element={
+                  {/* Home2 is now the root - bypasses Layout for custom header/footer */}
+                  <Route path="/" element={
                     <Suspense fallback={<PageLoader />}>
                       <Home2 />
                     </Suspense>
                   } />
+                  <Route path="/home2" element={<Navigate to="/" replace />} />
                   <Route path="/botox2" element={
                     <Suspense fallback={<PageLoader />}>
                       <Botox2 />
@@ -197,12 +198,12 @@ const App = () => {
                     </Suspense>
                   } />
                   
-                  {/* All other routes use Layout */}
+                  {/* All other routes use Layout with Home2Header */}
                   <Route path="*" element={
                     <Layout>
                       <Suspense fallback={<PageLoader />}>
                         <Routes>
-                          <Route path="/" element={<Index />} />
+                          <Route path="/old-index" element={<Index />} />
                           <Route path="/home" element={<Home />} />
                           <Route path="/treatments" element={<Treatments />} />
                       <Route path="/team" element={<Team />} />

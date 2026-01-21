@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, lazy, Suspense, memo } from "react";
 import { Helmet } from "react-helmet-async";
-import Header from "./Header";
+import Home2Header from "./home2/Home2Header";
 
 // Lazy load heavy components with preload hints
 const Footer = lazy(() => import("./Footer"));
@@ -39,8 +39,8 @@ const Layout = memo(function Layout({ children }: LayoutProps) {
       </Helmet>
       
       <div className="flex flex-col min-h-screen w-full">
-        <Header />
-        <main className="flex-grow pt-16">{children}</main>
+        <Home2Header />
+        <main className="flex-grow pt-24 md:pt-32">{children}</main>
         <Suspense fallback={<div className="h-48 bg-background" aria-hidden="true" />}>
           <Footer />
         </Suspense>
