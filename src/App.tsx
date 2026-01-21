@@ -50,6 +50,7 @@ const TriggerPointBotox = lazy(() => import("./pages/TriggerPointBotox"));
 const AcneTreatment = lazy(() => import("./pages/AcneTreatment"));
 const MedicalAnalBleaching = lazy(() => import("./pages/MedicalAnalBleaching"));
 const DermalFillers = lazy(() => import("./pages/DermalFillers"));
+const DermalFillerAreas = lazy(() => import("./pages/DermalFillerAreas"));
 const NefertitiBotoxFacelift = lazy(() => import("./pages/NefertitiBotoxFacelift"));
 const FaceBotox = lazy(() => import("./pages/FaceBotox"));
 const AdvancedConsultation = lazy(() => import("./pages/AdvancedConsultation"));
@@ -235,6 +236,8 @@ const App = () => {
                       
                       {/* Dermal Filler Routes */}
                       <Route path="/dermal-fillers" element={<DermalFillers />} />
+                      <Route path="/treatments/dermal-fillers/areas" element={<DermalFillerAreas />} />
+                      <Route path="/treatments/dermal-fillers/areas/" element={<DermalFillerAreas />} />
                       <Route path="/marionette-lines" element={<MarionnetteLines />} />
                       <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
                       
