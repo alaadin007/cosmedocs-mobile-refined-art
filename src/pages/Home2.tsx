@@ -147,7 +147,7 @@ export default function Home2() {
             "name": "CosmeDocs",
             "url": "https://www.cosmedocs.com/",
             "logo": "https://www.cosmedocs.com/logo.png",
-            "image": "https://www.cosmedocs.com/clinic-harley-street.jpg",
+            "image": "https://www.cosmedocs.com/harley-street-clinic.jpg",
             "description": "Doctor-led aesthetic clinic on Harley Street, London, specialising in natural-looking cosmetic and medical aesthetic treatments.",
             "address": {
               "@type": "PostalAddress",
@@ -166,7 +166,7 @@ export default function Home2() {
             "medicalSpecialty": [
               "Aesthetic Medicine",
               "Dermatology",
-              "Cosmetic Surgery"
+              "Cosmetic Medicine"
             ],
             "founder": {
               "@type": "Person",
@@ -181,12 +181,7 @@ export default function Home2() {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "reviewCount": "230"
-            },
-            "sameAs": [
-              "https://www.google.com/maps/place/CosmeDocs",
-              "https://www.instagram.com/cosmedocs",
-              "https://www.facebook.com/cosmedocs"
-            ]
+            }
           })}
         </script>
         <script type="application/ld+json">
