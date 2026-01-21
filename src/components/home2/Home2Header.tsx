@@ -20,20 +20,23 @@ const treatmentCategories = [
       { title: "Face Botox", link: "/treatments/botox" },
       { title: "Lip Flip", link: "/lip-flip" },
       { title: "Masseter", link: "/masseter-botox" },
-      { title: "Hyperhidrosis", link: "/excessive-sweat-botox" },
       { title: "Trap Botox", link: "/trap-botox" },
+      { title: "Medical Botox", link: "/treatments/botox/medical", isSubHeader: true },
+      { title: "Hyperhidrosis", link: "/excessive-sweat-botox" },
+      { title: "Bruxism / TMJ", link: "/bruxism-botox" },
     ]
   },
   {
     label: "Dermal Fillers",
     items: [
-      { title: "Lip Fillers", link: "/lip-fillers" },
+      { title: "Lip Filler", link: "/lip-fillers" },
       { title: "Cheek Filler", link: "/cheek-filler" },
       { title: "Jawline Filler", link: "/jawline-filler" },
       { title: "Chin Filler", link: "/chin-filler" },
       { title: "Under Eye", link: "/tear-trough-filler" },
       { title: "Nose Filler", link: "/non-surgical-nose-job" },
       { title: "Temple Filler", link: "/temple-filler-london" },
+      { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas", isSubHeader: true },
     ]
   },
   {
@@ -64,7 +67,7 @@ const treatmentCategories = [
     ]
   },
   {
-    label: "Surgery",
+    label: "Plastic Surgery",
     items: [
       { title: "Blepharoplasty", link: "/blepharoplasty" },
       { title: "Rhinoplasty", link: "/rhinoplasty" },
@@ -209,15 +212,26 @@ export default function Home2Header() {
                                 {category.label}
                               </span>
                               <div className="space-y-1">
-                                {category.items.map((item) => (
-                                  <Link 
-                                    key={item.link}
-                                    to={item.link} 
-                                    onClick={() => setIsTreatmentsOpen(false)}
-                                    className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
-                                  >
-                                    {item.title}
-                                  </Link>
+                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean }) => (
+                                  item.isSubHeader ? (
+                                    <Link 
+                                      key={item.link}
+                                      to={item.link} 
+                                      onClick={() => setIsTreatmentsOpen(false)}
+                                      className="text-xs text-[#C9A050]/70 hover:text-[#C9A050] cursor-pointer pt-3 pb-1 block transition-colors font-medium tracking-wide"
+                                    >
+                                      {item.title} →
+                                    </Link>
+                                  ) : (
+                                    <Link 
+                                      key={item.link}
+                                      to={item.link} 
+                                      onClick={() => setIsTreatmentsOpen(false)}
+                                      className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
+                                    >
+                                      {item.title}
+                                    </Link>
+                                  )
                                 ))}
                               </div>
                             </div>
@@ -355,7 +369,7 @@ export default function Home2Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden bg-white/5"
                       >
-                        {category.items.map((item) => (
+                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean }) => (
                           <Link
                             key={item.link}
                             to={item.link}
@@ -363,9 +377,13 @@ export default function Home2Header() {
                               setIsMobileMenuOpen(false);
                               setExpandedCategory(null);
                             }}
-                            className="block px-8 py-4 text-lg text-white/80 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5"
+                            className={`block px-8 py-4 transition-colors border-b border-white/5 ${
+                              item.isSubHeader 
+                                ? 'text-base text-[#C9A050]/80 hover:text-[#C9A050] font-medium' 
+                                : 'text-lg text-white/80 hover:text-white hover:bg-white/5'
+                            }`}
                           >
-                            {item.title}
+                            {item.title}{item.isSubHeader ? ' →' : ''}
                           </Link>
                         ))}
                       </motion.div>
