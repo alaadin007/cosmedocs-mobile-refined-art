@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Clock, Star, ChevronRight, ChevronLeft, Award, MapPin, Quote, Sparkles, MessageCircle, Zap, HelpCircle } from "lucide-react";
+import { ArrowRight, Shield, Clock, Star, ChevronRight, ChevronLeft, Award, MapPin, Quote, Sparkles, MessageCircle, Zap, HelpCircle, ChevronDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -359,7 +359,7 @@ export default function Home2() {
                     <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#C9A050]/20 to-[#C9A050]/5" />
                   </div>
                   
-                  {/* Floating cards */}
+                {/* Floating cards */}
                   <motion.div 
                     className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10"
                     animate={{ y: [0, -10, 0] }}
@@ -376,20 +376,38 @@ export default function Home2() {
                     </div>
                   </motion.div>
 
+                  {/* Hero Review Teaser */}
                   <motion.div 
-                    className="absolute bottom-20 left-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10"
+                    className="absolute bottom-20 left-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10 max-w-[280px]"
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-[#C9A050]/30">
-                        <Award className="h-5 w-5 text-[#C9A050]" />
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#C9A050] to-[#9A7B3D] flex items-center justify-center text-black font-semibold text-xs">
+                        S
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-white">Award Winning</div>
-                        <div className="text-xs text-white/60">Harley Street</div>
+                        <div className="text-xs font-medium text-white">Sarah M.</div>
+                        <div className="flex items-center gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-2.5 w-2.5 text-[#FBBC05] fill-[#FBBC05]" />
+                          ))}
+                        </div>
                       </div>
                     </div>
+                    <p className="text-xs text-white/70 leading-relaxed line-clamp-2">
+                      "Dr Haq isn't just good - he's a wizard! He combines art and science..."
+                    </p>
+                    <button
+                      onClick={() => {
+                        const reviewsSection = document.getElementById('reviews-section');
+                        reviewsSection?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="flex items-center gap-1 text-[10px] text-[#C9A050] mt-2 hover:text-[#D4AF61] transition-colors"
+                    >
+                      <ChevronDown className="h-3 w-3 animate-bounce" />
+                      More real experiences
+                    </button>
                   </motion.div>
                 </div>
               </motion.div>
@@ -470,84 +488,6 @@ export default function Home2() {
                   )}
                 </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Google Reviews - Card Style */}
-        <section className="py-20 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 relative overflow-hidden">
-          {/* Subtle gradient orb */}
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C9A050]/5 rounded-full blur-3xl" />
-          
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="inline-flex items-center gap-3 mb-4">
-                <img 
-                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-                  alt="Google" 
-                  className="h-6"
-                />
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`h-5 w-5 ${i < 5 ? 'text-[#FBBC05] fill-[#FBBC05]' : 'text-gray-400'}`} />
-                  ))}
-                </div>
-                <span className="text-white font-semibold">4.6</span>
-                <span className="text-white/50">•</span>
-                <span className="text-white/50">232 reviews</span>
-              </div>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {googleReviews.map((review, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-[#C9A050]/30 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A050] to-[#9A7B3D] flex items-center justify-center text-black font-semibold text-sm">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="text-white font-medium text-sm">{review.name}</div>
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-3 w-3 text-[#FBBC05] fill-[#FBBC05]" />
-                        ))}
-                        <span className="text-white/40 text-xs ml-1">{review.treatment}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    "{review.review}"
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <a 
-                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-[#C9A050] transition-colors"
-              >
-                <img 
-                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-                  alt="Google" 
-                  className="h-4"
-                />
-                <span>See all reviews</span>
-                <ChevronRight className="h-4 w-4" />
-              </a>
             </div>
           </div>
         </section>
@@ -944,7 +884,77 @@ export default function Home2() {
           </div>
         </section>
 
-        {/* CTA - Dark gradient */}
+        {/* Reviews Section - Near Footer */}
+        <section id="reviews-section" className="py-16 bg-neutral-900 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <p className="text-sm text-[#C9A050] uppercase tracking-wider mb-2">232 Google Reviews</p>
+              <h2 className="text-2xl md:text-3xl font-light text-white">
+                Real experiences. <span className="font-semibold">Real outcomes.</span>
+              </h2>
+              <div className="flex items-center justify-center gap-1 mt-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 text-[#FBBC05] fill-[#FBBC05]" />
+                ))}
+                <span className="text-white/70 text-sm ml-2">4.6 average rating</span>
+              </div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              {googleReviews.map((review, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-neutral-800/30 backdrop-blur-sm rounded-xl p-5 border border-white/5"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#C9A050] to-[#9A7B3D] flex items-center justify-center text-black font-semibold text-xs">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="text-white font-medium text-sm">{review.name}</div>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-2.5 w-2.5 text-[#FBBC05] fill-[#FBBC05]" />
+                        ))}
+                        <span className="text-white/40 text-xs ml-1">{review.treatment}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    "{review.review}"
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+            
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.google.com/search?q=COSMEDOCS+Reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-[#C9A050] transition-colors"
+              >
+                <img 
+                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                  alt="Google" 
+                  className="h-4 opacity-70"
+                />
+                <span>See all reviews on Google</span>
+                <ChevronRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="py-32 bg-gradient-to-b from-black via-neutral-900 to-black relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#C9A050]/10 via-transparent to-transparent" />
           {/* Flowing orbs */}
