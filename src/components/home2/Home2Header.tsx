@@ -2,14 +2,7 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Calendar, Search, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-  DropdownMenuLabel,
-} from "@/components/ui/dropdown-menu";
+// Removed unused dropdown imports - using custom mega menu implementation
 import { Button } from "@/components/ui/button";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
@@ -164,69 +157,73 @@ export default function Home2Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
-              {/* Treatments Mega Dropdown */}
-              <DropdownMenu open={isTreatmentsOpen} onOpenChange={setIsTreatmentsOpen}>
-                <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    className={`gap-1 font-medium transition-colors duration-500 ${
-                      isScrolled 
-                        ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
-                        : 'text-white/80 hover:text-white hover:bg-white/10'
-                    }`}
-                  >
-                    Treatments
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isTreatmentsOpen ? 'rotate-180' : ''}`} />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent 
-                  className="p-0 bg-black/98 backdrop-blur-xl border-0 rounded-none shadow-2xl"
-                  align="start"
-                  sideOffset={0}
-                  style={{ 
-                    position: 'fixed', 
-                    left: '0px', 
-                    right: '0px', 
-                    width: '100vw',
-                    transform: 'none',
-                    maxWidth: 'none'
-                  }}
+              {/* Treatments Mega Dropdown - Custom Implementation */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsTreatmentsOpen(true)}
+                onMouseLeave={() => setIsTreatmentsOpen(false)}
+              >
+                <Button 
+                  variant="ghost" 
+                  className={`gap-1 font-medium transition-colors duration-500 ${
+                    isScrolled 
+                      ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`}
+                  onClick={() => setIsTreatmentsOpen(!isTreatmentsOpen)}
                 >
-                  <div className="max-w-7xl mx-auto px-8 py-8">
-                    <div className="grid grid-cols-7 gap-8">
-                      {treatmentCategories.map((category) => (
-                        <div key={category.label} className="space-y-3">
-                          <DropdownMenuLabel className="text-sm font-semibold text-[#C9A050] uppercase tracking-wider px-0">
-                            {category.label}
-                          </DropdownMenuLabel>
-                          <div className="space-y-1">
-                            {category.items.map((item) => (
-                              <DropdownMenuItem key={item.link} asChild className="px-0 focus:bg-transparent">
-                                <Link 
-                                  to={item.link} 
-                                  className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
-                                >
-                                  {item.title}
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
-                          </div>
+                  Treatments
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isTreatmentsOpen ? 'rotate-180' : ''}`} />
+                </Button>
+
+                {/* Full-width Mega Menu */}
+                <AnimatePresence>
+                  {isTreatmentsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="fixed left-0 right-0 top-16 md:top-20 w-screen bg-black/98 backdrop-blur-xl shadow-2xl z-50"
+                    >
+                      <div className="max-w-7xl mx-auto px-8 py-8">
+                        <div className="grid grid-cols-7 gap-6">
+                          {treatmentCategories.map((category) => (
+                            <div key={category.label} className="space-y-3">
+                              <span className="text-sm font-semibold text-[#C9A050] uppercase tracking-wider block">
+                                {category.label}
+                              </span>
+                              <div className="space-y-1">
+                                {category.items.map((item) => (
+                                  <Link 
+                                    key={item.link}
+                                    to={item.link} 
+                                    onClick={() => setIsTreatmentsOpen(false)}
+                                    className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
+                                  >
+                                    {item.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="border-t border-white/10">
-                    <div className="max-w-7xl mx-auto px-8 py-4">
-                      <Link 
-                        to="/treatments" 
-                        className="block text-center text-sm font-medium text-[#C9A050] hover:text-[#D4AF61] transition-colors"
-                      >
-                        View All Treatments & Pricing →
-                      </Link>
-                    </div>
-                  </div>
-                </DropdownMenuContent>
-              </DropdownMenu>
+                      </div>
+                      <div className="border-t border-white/10">
+                        <div className="max-w-7xl mx-auto px-8 py-4">
+                          <Link 
+                            to="/treatments" 
+                            onClick={() => setIsTreatmentsOpen(false)}
+                            className="block text-center text-sm font-medium text-[#C9A050] hover:text-[#D4AF61] transition-colors"
+                          >
+                            View All Treatments & Pricing →
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* Other Nav Items */}
               {navItems.map((item) => (
