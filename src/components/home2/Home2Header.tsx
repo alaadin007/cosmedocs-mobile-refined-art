@@ -24,6 +24,8 @@ const treatmentCategories = [
       { title: "Medical Botox", link: "/treatments/botox/medical", isSubHeader: true },
       { title: "Hyperhidrosis", link: "/excessive-sweat-botox" },
       { title: "Bruxism / TMJ", link: "/bruxism-botox" },
+      { title: "TMJ Dysfunction", link: "/tmj-botox" },
+      { title: "Chronic Migraine", link: "/migraine-botox" },
     ]
   },
   {
@@ -37,6 +39,11 @@ const treatmentCategories = [
       { title: "Nose Filler", link: "/non-surgical-nose-job" },
       { title: "Temple Filler", link: "/temple-filler-london" },
       { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas", isSubHeader: true },
+      { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas#nasolabial" },
+      { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas#marionette" },
+      { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas#prejowl" },
+      { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas#perioral" },
+      { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas#volume" },
     ]
   },
   {
