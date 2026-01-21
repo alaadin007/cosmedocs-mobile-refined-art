@@ -86,27 +86,27 @@ const Treatments = () => {
         },
         {
           title: "Chin Botox",
-          price: "£50",
+          price: "£175 / £50 add-on",
           link: "/chin-botox"
         },
         {
           title: "Brow Lift Botox",
-          price: "£50",
+          price: "£175 / £50 add-on",
           link: "/botox-london"
         },
         {
           title: "Gummy Smile Botox",
-          price: "£50",
+          price: "£175 / £50 add-on",
           link: "/gummy-smile-botox"
         },
         {
           title: "Bunny Lines Botox",
-          price: "£50",
+          price: "£175 / £50 add-on",
           link: "/bunny-lines-botox"
         },
         {
           title: "Nasal Flaring Botox",
-          price: "£50",
+          price: "£175 / £50 add-on",
           link: "/nasal-flaring-botox"
         },
         {
