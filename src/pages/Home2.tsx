@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Clock, Star, ChevronRight, ChevronLeft, Award, MapPin, Quote, Sparkles, MessageCircle, Zap } from "lucide-react";
+import { ArrowRight, Shield, Clock, Star, ChevronRight, ChevronLeft, Award, MapPin, Quote, Sparkles, MessageCircle, Zap, HelpCircle } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
@@ -135,9 +136,99 @@ export default function Home2() {
   return (
     <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
       <Helmet>
-        <title>CosmeDocs | Aesthetic Clinic Harley Street London | Botox & Fillers</title>
+        <title>CosmeDocs – Doctor-Led Aesthetic Clinic on Harley Street, London</title>
         <meta name="description" content="CosmeDocs - Award-winning aesthetic clinic on Harley Street, London. Expert Botox, dermal fillers, lip enhancement & skin treatments by GMC-registered doctors. Natural results since 2007." />
-        <meta name="keywords" content="cosmedocs, aesthetic clinic harley street, botox london, dermal fillers, lip fillers, harley street aesthetics" />
+        <meta name="keywords" content="cosmedocs, aesthetic clinic harley street, botox london, dermal fillers, lip fillers, harley street aesthetics, doctor led aesthetic clinic" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "@id": "https://www.cosmedocs.com/#medicalbusiness",
+            "name": "CosmeDocs",
+            "url": "https://www.cosmedocs.com/",
+            "logo": "https://www.cosmedocs.com/logo.png",
+            "image": "https://www.cosmedocs.com/clinic-harley-street.jpg",
+            "description": "Doctor-led aesthetic clinic on Harley Street, London, specialising in natural-looking cosmetic and medical aesthetic treatments.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "8–10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5176,
+              "longitude": -0.1473
+            },
+            "telephone": "+442037333227",
+            "priceRange": "£££",
+            "medicalSpecialty": [
+              "Aesthetic Medicine",
+              "Dermatology",
+              "Cosmetic Surgery"
+            ],
+            "founder": {
+              "@type": "Person",
+              "name": "Dr Ahmed Haq",
+              "jobTitle": "Medical Director",
+              "hasCredential": {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "GMC Registration"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "230"
+            },
+            "sameAs": [
+              "https://www.google.com/maps/place/CosmeDocs",
+              "https://www.instagram.com/cosmedocs",
+              "https://www.facebook.com/cosmedocs"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Are treatments at CosmeDocs performed by doctors?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. All treatments at CosmeDocs are delivered by GMC-registered medical doctors with advanced training in aesthetic medicine."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is CosmeDocs a regulated clinic?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. CosmeDocs operates under UK medical regulations and follows strict clinical governance protocols to ensure patient safety."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you focus on natural-looking results?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Our philosophy prioritises subtle, natural-looking enhancements that respect facial harmony and individuality."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is CosmeDocs located?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "CosmeDocs is located on Harley Street in London, an area internationally recognised for medical excellence."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Home2Header />
@@ -699,7 +790,7 @@ export default function Home2() {
                   whilst addressing specific concerns with surgical precision and artistic restraint.
                 </p>
                 <p className="text-white/50 mb-10 leading-relaxed">
-                  As London's leading aesthetic clinic on Harley Street, we've refined our craft over 17 years. 
+                  As London's leading aesthetic clinic, we've refined our craft over 17 years. 
                   Our GMC-registered doctors understand that avoiding "overdone" aesthetics requires more skill 
                   than achieving them. Minimalism in aesthetic medicine isn't about doing less — it's about 
                   doing exactly the right amount, in exactly the right places.
@@ -804,6 +895,64 @@ export default function Home2() {
           </div>
         </section>
 
+        {/* FAQ Section - SEO Safe, Non-Cannibalising */}
+        <section className="py-20 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#C9A050]/10 rounded-full text-sm text-[#C9A050] mb-6 border border-[#C9A050]/20">
+                <HelpCircle className="h-4 w-4" />
+                Common Questions
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-white">
+                Frequently Asked <span className="font-semibold text-[#C9A050]">Questions</span>
+              </h2>
+            </motion.div>
+
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl border border-white/10 px-6 data-[state=open]:border-[#C9A050]/30">
+                <AccordionTrigger className="text-white hover:text-[#C9A050] hover:no-underline py-5 text-left">
+                  Are treatments at CosmeDocs performed by doctors?
+                </AccordionTrigger>
+                <AccordionContent className="text-white/60 pb-5">
+                  Yes. All treatments at CosmeDocs are delivered by GMC-registered medical doctors with advanced training in aesthetic medicine. We are a doctor-led clinic, not an injector-led practice.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl border border-white/10 px-6 data-[state=open]:border-[#C9A050]/30">
+                <AccordionTrigger className="text-white hover:text-[#C9A050] hover:no-underline py-5 text-left">
+                  Is CosmeDocs a regulated clinic?
+                </AccordionTrigger>
+                <AccordionContent className="text-white/60 pb-5">
+                  Yes. CosmeDocs operates under UK medical regulations and follows strict clinical governance protocols. Patient safety, ethical practice, and evidence-based treatments are central to everything we do.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl border border-white/10 px-6 data-[state=open]:border-[#C9A050]/30">
+                <AccordionTrigger className="text-white hover:text-[#C9A050] hover:no-underline py-5 text-left">
+                  Do you focus on natural-looking results?
+                </AccordionTrigger>
+                <AccordionContent className="text-white/60 pb-5">
+                  Absolutely. Our philosophy is centred on subtle, undetectable enhancement. We prioritise facial harmony and long-term outcomes over trends or exaggerated results.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl border border-white/10 px-6 data-[state=open]:border-[#C9A050]/30">
+                <AccordionTrigger className="text-white hover:text-[#C9A050] hover:no-underline py-5 text-left">
+                  Where is CosmeDocs located?
+                </AccordionTrigger>
+                <AccordionContent className="text-white/60 pb-5">
+                  We are based on Harley Street, London (W1G) — a location internationally recognised for medical excellence.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+
         {/* CTA - Dark gradient */}
         <section className="py-32 bg-gradient-to-b from-black via-neutral-900 to-black relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#C9A050]/10 via-transparent to-transparent" />
@@ -820,11 +969,11 @@ export default function Home2() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+              <p className="text-4xl md:text-5xl font-light text-white mb-6">
                 Ready to <span className="font-semibold text-[#C9A050]">begin</span>?
-              </h2>
+              </p>
               <p className="text-xl text-white/50 mb-10 font-light">
-                Book a consultation at our Harley Street clinic
+                Book a consultation at our central London clinic
               </p>
               <Button
                 onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
