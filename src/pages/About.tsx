@@ -269,11 +269,10 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-light mb-6">
-                Begin Your Journey
+                Your Consultation <span className="text-[#C9A050]">Begins Here</span>
               </h2>
               <p className="text-white/60 mb-10 max-w-xl mx-auto">
-                Every transformation starts with a conversation. We're here to listen, 
-                understand, and guide you towards your aesthetic goals.
+                Considered care from Harley Street doctors
               </p>
               <a
                 href="/contact"

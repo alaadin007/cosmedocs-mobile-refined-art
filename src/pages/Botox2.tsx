@@ -791,10 +791,10 @@ export default function Botox2() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
-                Ready to <span className="font-semibold">begin</span>?
+                Your consultation <span className="font-semibold text-[#C9A050]">begins here</span>
               </h2>
               <p className="text-xl text-white/50 mb-10 font-light">
-                Book a consultation at our Harley Street clinic
+                Considered care from Harley Street doctors
               </p>
               <Button
                 onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}

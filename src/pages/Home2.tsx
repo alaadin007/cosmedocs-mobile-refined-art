@@ -971,10 +971,10 @@ export default function Home2() {
               viewport={{ once: true }}
             >
               <p className="text-4xl md:text-5xl font-light text-white mb-6">
-                Ready to <span className="font-semibold text-[#C9A050]">begin</span>?
+                Your consultation <span className="font-semibold text-[#C9A050]">begins here</span>
               </p>
               <p className="text-xl text-white/50 mb-10 font-light">
-                Book a consultation at our central London clinic
+                Considered care from Harley Street doctors
               </p>
               <Button
                 onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
