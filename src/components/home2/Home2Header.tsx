@@ -146,10 +146,10 @@ export default function Home2Header() {
         }`} />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-18 sm:h-20 md:h-20">
             {/* Logo - Bigger with animated subtitle */}
-            <Link to="/home2" className="flex flex-col items-start">
-              <span className={`text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
+            <Link to="/home2" className="flex flex-col items-start py-3">
+              <span className={`text-xl sm:text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 COSMEDOCS
@@ -165,7 +165,7 @@ export default function Home2Header() {
                       duration: 0.6, 
                       ease: "easeInOut"
                     }}
-                    className="block text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
+                    className="block text-[9px] sm:text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
                   >
                     {rotatingTaglines[taglineIndex]}
                   </motion.span>
@@ -271,26 +271,26 @@ export default function Home2Header() {
             </nav>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-2">
-              {/* Mobile Menu Toggle */}
+            <div className="flex items-center gap-1 sm:gap-2">
+              {/* Mobile Menu Toggle - Larger touch target */}
               <Button
                 variant="ghost"
-                size="sm"
-                className={`lg:hidden transition-colors duration-500 ${
+                className={`lg:hidden transition-colors duration-500 h-10 px-3 text-sm font-medium ${
                   isScrolled 
                     ? 'text-gray-600 hover:text-gray-900' 
-                    : 'text-white/70 hover:text-white'
+                    : 'text-white/80 hover:text-white'
                 }`}
                 onClick={() => setIsMobileMenuOpen(true)}
               >
-                Treatments
+                Menu
                 <ChevronDown className="h-4 w-4 ml-1" />
               </Button>
 
+              {/* Search - Larger touch target on mobile */}
               <Button
                 variant="ghost"
                 size="icon"
-                className={`transition-colors duration-500 ${
+                className={`h-10 w-10 transition-colors duration-500 ${
                   isScrolled 
                     ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
                     : 'text-white/70 hover:text-white hover:bg-white/10'
@@ -299,12 +299,28 @@ export default function Home2Header() {
               >
                 <Search className="h-5 w-5" />
               </Button>
+
+              {/* Future: Login button placeholder - currently hidden, enable when auth is ready */}
+              {/* <Button
+                variant="ghost"
+                size="icon"
+                className={`h-10 w-10 transition-colors duration-500 ${
+                  isScrolled 
+                    ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' 
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+                onClick={() => {}}
+              >
+                <User className="h-5 w-5" />
+              </Button> */}
+
+              {/* Book Button - Larger touch target on mobile */}
               <Button
                 onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-4 md:px-6 text-sm font-medium"
+                className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full h-10 px-4 md:px-6 text-sm font-medium"
               >
-                <Calendar className="h-4 w-4 md:mr-2" />
-                <span className="hidden md:inline">Book</span>
+                <Calendar className="h-4 w-4 sm:mr-2" />
+                <span className="hidden sm:inline">Book</span>
               </Button>
             </div>
           </div>
@@ -321,24 +337,55 @@ export default function Home2Header() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[100] bg-black"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-              <span className="text-2xl font-bold text-white">Treatments</span>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  setExpandedCategory(null);
-                }}
-                className="text-white hover:bg-white/10"
+            {/* Header - Larger with login placeholder */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+              <Link 
+                to="/" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-xl font-bold text-white"
               >
-                <X className="h-6 w-6" />
+                COSMEDOCS
+              </Link>
+              <div className="flex items-center gap-2">
+                {/* Future: Login button in mobile menu */}
+                {/* <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-11 w-11 text-white hover:bg-white/10"
+                  onClick={() => {}}
+                >
+                  <User className="h-5 w-5" />
+                </Button> */}
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setExpandedCategory(null);
+                  }}
+                  className="h-11 w-11 text-white hover:bg-white/10"
+                >
+                  <X className="h-6 w-6" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Quick Actions Bar */}
+            <div className="flex gap-3 px-5 py-4 border-b border-white/10">
+              <Button
+                onClick={() => {
+                  window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="flex-1 bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full h-12 text-base font-medium"
+              >
+                <Calendar className="h-5 w-5 mr-2" />
+                Book Appointment
               </Button>
             </div>
 
             {/* Categories */}
-            <div className="overflow-y-auto h-[calc(100vh-80px)]">
+            <div className="overflow-y-auto h-[calc(100vh-140px)]">
               {treatmentCategories.map((category, index) => (
                 <motion.div
                   key={category.label}
@@ -350,9 +397,9 @@ export default function Home2Header() {
                     onClick={() => setExpandedCategory(
                       expandedCategory === category.label ? null : category.label
                     )}
-                    className="w-full flex items-center justify-between px-6 py-5 border-b border-white/5 hover:bg-white/5 transition-colors"
+                    className="w-full flex items-center justify-between px-5 py-5 border-b border-white/5 hover:bg-white/5 transition-colors min-h-[60px]"
                   >
-                    <span className="text-xl font-medium text-white">{category.label}</span>
+                    <span className="text-lg font-medium text-white">{category.label}</span>
                     <ChevronRight 
                       className={`h-5 w-5 text-[#C9A050] transition-transform duration-200 ${
                         expandedCategory === category.label ? 'rotate-90' : ''
@@ -377,10 +424,10 @@ export default function Home2Header() {
                               setIsMobileMenuOpen(false);
                               setExpandedCategory(null);
                             }}
-                            className={`block px-8 py-4 transition-colors border-b border-white/5 ${
+                            className={`block px-6 py-4 transition-colors border-b border-white/5 min-h-[52px] flex items-center ${
                               item.isSubHeader 
                                 ? 'text-base text-[#C9A050]/80 hover:text-[#C9A050] font-medium' 
-                                : 'text-lg text-white/80 hover:text-white hover:bg-white/5'
+                                : 'text-base text-white/80 hover:text-white hover:bg-white/5'
                             }`}
                           >
                             {item.title}{item.isSubHeader ? ' →' : ''}
