@@ -1,312 +1,404 @@
-
-import { Button } from "@/components/ui/button";
+import { lazy, Suspense } from "react";
+import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
-import PopularTreatments from "@/components/PopularTreatments";
-import AnimatedDots from "@/components/AnimatedDots";
-import LiquidGlassFacialAssessment from "@/components/LiquidGlassFacialAssessment";
-import LiquidGlassAllTreatments from "@/components/LiquidGlassAllTreatments";
-import CosmeDocsAI from "@/components/CosmeDocs AI";
-import SkinAnalysisButton from "@/components/SkinAnalysisButton";
-import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
+import { ArrowRight, Star, Sparkles, Search, Brain } from "lucide-react";
+import Home2Header from "@/components/home2/Home2Header";
+import Footer from "@/components/Footer";
+
+// Lazy load heavy components
+const LiquidGlassFacialAssessment = lazy(() => import("@/components/LiquidGlassFacialAssessment"));
+const LiquidGlassAllTreatments = lazy(() => import("@/components/LiquidGlassAllTreatments"));
+const AestheticAnalysisWizard = lazy(() => import("@/components/AestheticAnalysisWizard"));
+
+const popularTreatments = [
+  {
+    title: "Anti-Wrinkle",
+    subtitle: "Facial Relaxation",
+    description: "Subtle smoothing of expression lines for a refreshed, natural appearance",
+    link: "/treatments/botox/",
+    popular: true,
+  },
+  {
+    title: "Lip Enhancement",
+    subtitle: "Dermal Fillers",
+    description: "Refined volume and definition that complements your natural features",
+    link: "/treatments/dermal-fillers/",
+    popular: true,
+  },
+  {
+    title: "Facial Contouring",
+    subtitle: "Cheeks & Jawline",
+    description: "Restore youthful structure and enhance facial harmony",
+    link: "/treatments/dermal-fillers/",
+  },
+  {
+    title: "Skin Quality",
+    subtitle: "Bio-Remodelling",
+    description: "Advanced treatments for radiant, hydrated, healthier-looking skin",
+    link: "/treatments/skin-boosters/",
+  },
+  {
+    title: "Under Eye",
+    subtitle: "Rejuvenation",
+    description: "Address tiredness and restore a well-rested appearance",
+    link: "/treatments/dermal-fillers/",
+  },
+  {
+    title: "Skin Rejuvenation",
+    subtitle: "Medical Aesthetics",
+    description: "Evidence-based solutions for texture, tone and overall skin health",
+    link: "/skin-treatments/",
+  },
+];
+
+const aiTools = [
+  { 
+    icon: Search, 
+    label: "AI Search", 
+    description: "Find your perfect treatment",
+    action: "search" 
+  },
+  { 
+    icon: Brain, 
+    label: "Facial Analysis", 
+    description: "AI-powered assessment",
+    action: "analysis" 
+  },
+  { 
+    icon: Sparkles, 
+    label: "All Treatments", 
+    description: "Explore our range",
+    action: "treatments" 
+  },
+];
 
 const Home = () => {
   const [isFacialAssessmentOpen, setIsFacialAssessmentOpen] = useState(false);
   const [isAllTreatmentsOpen, setIsAllTreatmentsOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
-  const isMobile = useIsMobile();
+
+  const handleAIAction = (action: string) => {
+    switch (action) {
+      case 'search':
+        window.dispatchEvent(new CustomEvent('open-search'));
+        break;
+      case 'analysis':
+        setIsAnalysisOpen(true);
+        break;
+      case 'treatments':
+        setIsAllTreatmentsOpen(true);
+        break;
+    }
+  };
 
   return (
-    <TooltipProvider>
-      <div className="bg-black text-white">
-        <header>
-          {/* SEO optimized hidden heading for crawlers */}
-          <h1 className="sr-only">Cosmedocs - Premium Aesthetic Medicine Treatments | Botox, Dermal Fillers in London Harley Street</h1>
-        </header>
-        
+    <>
+      <Helmet>
+        <title>Cosmedocs | Premium Aesthetic Medicine | Harley Street London</title>
+        <meta name="description" content="Doctor-led aesthetic medicine on Harley Street. Botox, dermal fillers, and skin treatments. Our invisible art philosophy delivers natural-looking results." />
+        <link rel="canonical" href="https://cosmedocs.com/" />
+        <meta property="og:title" content="Cosmedocs | Premium Aesthetic Medicine | Harley Street London" />
+        <meta property="og:description" content="Doctor-led aesthetic medicine on Harley Street. Our invisible art philosophy delivers natural-looking results." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <Home2Header />
+
+        {/* Flowing Gold Gradient Orbs */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute w-[800px] h-[800px] rounded-full opacity-20"
+            style={{
+              background: 'radial-gradient(circle, #C9A050 0%, transparent 70%)',
+              filter: 'blur(100px)',
+            }}
+            animate={{
+              x: ['-20%', '10%', '-20%'],
+              y: ['-10%', '20%', '-10%'],
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute right-0 bottom-0 w-[600px] h-[600px] rounded-full opacity-15"
+            style={{
+              background: 'radial-gradient(circle, #C9A050 0%, transparent 70%)',
+              filter: 'blur(120px)',
+            }}
+            animate={{
+              x: ['20%', '-10%', '20%'],
+              y: ['20%', '-10%', '20%'],
+            }}
+            transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
+
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
-          <AnimatedDots />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6
-              }}>
-                <div className="relative mb-6">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-400" id="hero-heading">
-                    cosmedocs
-                  </h2>
-                </div>
-              </motion.div>
-              
-              <motion.p className="text-lg md:text-xl italic mb-6" initial={{
-              opacity: 0
-            }} animate={{
-              opacity: 1
-            }} transition={{
-              delay: 0.5,
-              duration: 0.6
-            }}>
-                Our aesthetics are invisible art — where science refines beauty, and precision meets poetry.
-              </motion.p>
-              <motion.div className="mb-8 max-w-xl mx-auto" initial={{
-              opacity: 0
-            }} animate={{
-              opacity: 1
-            }} transition={{
-              delay: 0.7,
-              duration: 0.6
-            }}>
-                <p className="text-gray-300 mb-2">
-                  Every transformation is quiet, never loud.<br />
-                  Subtle, not staged.<br />
-                  We create beauty that whispers — not shouts.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Main Action Buttons Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="actions-heading">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <motion.h2 id="actions-heading" className="sr-only">Main Actions</motion.h2>
-              
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" initial={{
-              opacity: 0
-            }} whileInView={{
-              opacity: 1
-            }} transition={{
-              delay: 0.2,
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }}>
-                {/* All Treatments Button */}
-                <motion.button
-                  onClick={() => setIsAllTreatmentsOpen(true)}
-                  className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 hover:from-purple-600/30 hover:to-pink-600/30 border border-purple-500/30 rounded-3xl p-8 text-left transition-all duration-300 hover:scale-105"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-2xl font-bold mb-4">All Treatments</h3>
-                  <p className="text-gray-300 mb-4">
-                    Explore our comprehensive range of aesthetic treatments, from popular procedures to specialized services.
-                  </p>
-                  <div className="text-purple-400 font-medium">Browse All Treatments →</div>
-                </motion.button>
+        <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
+          <div className="max-w-5xl mx-auto text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <p className="text-[#C9A050] text-sm tracking-[0.3em] uppercase mb-6">
+                Harley Street, London
+              </p>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 tracking-tight">
+                <span className="text-[#C9A050]">cosmedocs</span>
+              </h1>
+              <p className="text-white/50 text-sm tracking-[0.2em] uppercase mb-8">
+                Our aesthetics is invisible art
+              </p>
+              <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-12">
+                Bold • Natural • Always Your Way
+              </p>
 
-                {/* CosmeDocs Facial Assessment Button */}
-                <motion.button
-                  onClick={() => setIsFacialAssessmentOpen(true)}
-                  className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-500/30 rounded-3xl p-8 text-left transition-all duration-300 hover:scale-105"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-2xl font-bold mb-4">CosmeDocs Facial Assessment</h3>
-                  <p className="text-gray-300 mb-4">
-                    Every transformation begins with understanding. Our systematic approach evaluates four key aging factors.
-                  </p>
-                  <div className="text-blue-400 font-medium">View Assessment Details →</div>
-                </motion.button>
-              </motion.div>
+              {/* AI Tools Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
+                {aiTools.map((tool, i) => (
+                  <motion.button
+                    key={i}
+                    onClick={() => handleAIAction(tool.action)}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
+                    className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C9A050]/50 rounded-2xl p-5 transition-all duration-300 hover:bg-white/10"
+                  >
+                    <tool.icon className="h-6 w-6 text-[#C9A050] mx-auto mb-3" />
+                    <p className="font-medium text-white mb-1">{tool.label}</p>
+                    <p className="text-xs text-white/50">{tool.description}</p>
+                  </motion.button>
+                ))}
+              </div>
 
-              {/* Book Consultation & Ebook Section */}
-              <motion.div 
-                className="mt-12 text-center space-y-4"
+              {/* CTA Buttons */}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <Button 
-                  asChild
-                  className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300"
+                <a
+                  href="tel:03330551503"
+                  className="bg-[#C9A050] hover:bg-[#B8913F] text-black px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
                 >
-                  <a 
-                    href="tel:03330551503"
-                    className="inline-block"
-                  >
-                    Book Consultation
-                  </a>
-                </Button>
-                
-                <div className="flex justify-center">
-                  <Button 
-                    asChild
-                    variant="outline"
-                    className="bg-transparent border-amber-500 text-amber-400 hover:bg-amber-500/10 px-6 py-3 rounded-full font-medium transition-all duration-300"
-                  >
-                    <Link 
-                      to="/aesthetics-at-a-glance"
-                      className="inline-block"
-                    >
-                      Flawless Skin Guide
-                    </Link>
-                  </Button>
-                </div>
-              </motion.div>
-
-              {/* AI Assistant & Skin Analysis Section */}
-              <motion.div 
-                className="mt-8 flex justify-center items-center gap-4"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <CosmeDocsAI />
-                <SkinAnalysisButton />
-              </motion.div>
-
-              {/* AI Facial Analysis Section */}
-              <motion.div 
-                className="mt-6 flex justify-center"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Button
-                  onClick={() => setIsAnalysisOpen(true)}
-                  className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+                  Book Consultation
+                </a>
+                <Link
+                  to="/about"
+                  className="border border-white/20 hover:border-[#C9A050]/50 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/5"
                 >
-                  AI Facial Analysis Now
-                </Button>
+                  About Us
+                </Link>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          >
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="w-6 h-10 border border-white/20 rounded-full flex items-start justify-center p-2"
+            >
+              <div className="w-1.5 h-1.5 bg-[#C9A050] rounded-full" />
+            </motion.div>
+          </motion.div>
         </section>
 
-        {/* Featured Treatments Section */}
-        <PopularTreatments />
-        
-        {/* View All Treatments Button */}
-        <section className="py-12 bg-gradient-to-b from-[#0A0A0A] to-black">
-          <div className="page-container">
-            <motion.div 
-              className="text-center"
+        {/* Popular Treatments Section */}
+        <section className="relative py-24 px-6">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-light mb-4">
+                Popular <span className="text-[#C9A050]">Treatments</span>
+              </h2>
+              <p className="text-white/60 max-w-xl mx-auto">
+                Explore our most requested aesthetic treatments, each designed to enhance your natural beauty.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {popularTreatments.map((treatment, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                >
+                  <Link
+                    to={treatment.link}
+                    className="group block bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C9A050]/30 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 h-full"
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <h3 className="text-xl font-medium text-white">{treatment.title}</h3>
+                      {treatment.popular && (
+                        <span className="bg-[#C9A050]/20 text-[#C9A050] text-xs px-2 py-0.5 rounded-full">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-[#C9A050] text-sm mb-3">{treatment.subtitle}</p>
+                    <p className="text-white/60 text-sm mb-6 leading-relaxed">{treatment.description}</p>
+                    <div className="flex items-center justify-end">
+                      <span className="text-sm text-white/50 group-hover:text-[#C9A050] transition-colors flex items-center gap-1">
+                        Learn more
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center mt-12"
             >
-              <Button
+              <button
                 onClick={() => setIsAllTreatmentsOpen(true)}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full font-medium text-lg transition-all duration-300 hover:scale-105"
+                className="border border-[#C9A050]/50 text-[#C9A050] hover:bg-[#C9A050]/10 px-8 py-4 rounded-full font-medium transition-all duration-300"
               >
                 View All Treatments
-              </Button>
+              </button>
             </motion.div>
           </div>
         </section>
 
-        {/* Harley Street Institute Section */}
-        <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black" aria-labelledby="institute-heading">
-          <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <motion.div 
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                {/* Content */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h2 id="institute-heading" className="text-3xl md:text-4xl font-bold mb-6">
-                    Founders & Trainers
-                  </h2>
-                  <h3 className="text-xl md:text-2xl text-blue-400 mb-6">
-                    Harley Street Institute
-                  </h3>
-                  <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                    As founders and principal trainers of the prestigious Harley Street Institute, 
-                    we combine our clinical expertise with educational excellence. Our commitment 
-                    to advancing aesthetic medicine extends beyond our practice to training the 
-                    next generation of aesthetic practitioners.
-                  </p>
-                  <Button 
-                    asChild
-                    className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
-                  >
-                    <a 
-                      href="https://www.harleystreetinstitute.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      Visit Harley Street Institute →
-                    </a>
-                  </Button>
-                </motion.div>
+        {/* Trust Section */}
+        <section className="relative py-20 px-6 bg-white/[0.02]">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="flex items-center justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-[#C9A050] text-[#C9A050]" />
+                ))}
+              </div>
+              <p className="text-2xl md:text-3xl font-light mb-4">
+                4.9 Average Rating
+              </p>
+              <p className="text-white/60 mb-8">
+                Based on 200+ verified Google reviews
+              </p>
 
-                {/* Image */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <img 
-                      src="/lovable-uploads/005944a9-e0d0-4c10-b612-02794768fc09.png"
-                      alt="Cosmedocs medical professionals with Harley Street Institute certificates"
-                      className="w-full h-auto object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                {[
+                  { value: '2007', label: 'Established' },
+                  { value: '1M+', label: 'Treatments' },
+                  { value: 'GMC', label: 'Registered' },
+                  { value: 'Harley St', label: 'Location' },
+                ].map((stat, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                    className="text-center"
+                  >
+                    <p className="text-3xl md:text-4xl font-light text-[#C9A050]">{stat.value}</p>
+                    <p className="text-white/50 text-sm mt-2">{stat.label}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Hidden SEO content for search engines */}
-        <div className="sr-only">
-          <p>
-            Cosmedocs is London's premier aesthetic medicine clinic located on prestigious Harley Street, offering advanced cosmetic treatments since 2007. Our expert practitioners specialize in Botox injections, dermal fillers, lip enhancement, non-surgical nose jobs, skin boosters, and comprehensive facial rejuvenation treatments. Having treated over 30,000 patients with more than 1 million injections performed, we are recognized leaders in aesthetic medicine, providing natural-looking results through our invisible art philosophy. Our clinic offers consultation services, advanced anti-aging treatments, facial contouring, and personalized aesthetic solutions. We pride ourselves on subtle enhancement that speaks without saying a word, ensuring every client receives transformative results tailored to their individual needs. Our comprehensive approach addresses skin quality, wrinkle reduction, volume restoration, and facial harmonization using the latest techniques and premium products. Located at 10 Harley Street, London W1G 9PF, we serve clients seeking the highest standard of aesthetic medicine in the heart of London's medical district. Contact us at 0333 0551 503 or info@cosmedocs.com to begin your aesthetic journey with London's most trusted cosmetic medicine specialists.
-          </p>
-        </div>
+        {/* Philosophy Teaser */}
+        <section className="relative py-24 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <blockquote className="text-2xl md:text-4xl font-light text-white/90 leading-relaxed mb-8">
+                "Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. 
+                Invisible, not exaggerated."
+              </blockquote>
+              <Link
+                to="/about"
+                className="text-[#C9A050] hover:text-[#B8913F] font-medium inline-flex items-center gap-2 transition-colors"
+              >
+                Discover Our Philosophy
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </motion.div>
+          </div>
+        </section>
 
-        {/* Liquid Glass Modals */}
-        <LiquidGlassFacialAssessment 
-          isOpen={isFacialAssessmentOpen}
-          onClose={() => setIsFacialAssessmentOpen(false)}
-        />
+        {/* CTA Section */}
+        <section className="relative py-24 px-6 bg-gradient-to-b from-transparent to-[#C9A050]/10">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-light mb-6">
+                Begin Your Journey
+              </h2>
+              <p className="text-white/60 mb-10 max-w-xl mx-auto">
+                Every transformation starts with a conversation. Book your consultation 
+                with our expert practitioners today.
+              </p>
+              <a
+                href="tel:03330551503"
+                className="inline-block bg-[#C9A050] hover:bg-[#B8913F] text-black px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
+              >
+                Book Consultation
+              </a>
+            </motion.div>
+          </div>
+        </section>
 
-        <LiquidGlassAllTreatments 
-          isOpen={isAllTreatmentsOpen}
-          onClose={() => setIsAllTreatmentsOpen(false)}
-        />
+        <Footer />
 
-        {/* AI Aesthetic Analysis Modal */}
-        <AestheticAnalysisWizard 
-          isOpen={isAnalysisOpen}
-          onClose={() => setIsAnalysisOpen(false)}
-        />
+        {/* Modals */}
+        <Suspense fallback={null}>
+          <LiquidGlassFacialAssessment 
+            isOpen={isFacialAssessmentOpen}
+            onClose={() => setIsFacialAssessmentOpen(false)}
+          />
+          <LiquidGlassAllTreatments 
+            isOpen={isAllTreatmentsOpen}
+            onClose={() => setIsAllTreatmentsOpen(false)}
+          />
+          <AestheticAnalysisWizard 
+            isOpen={isAnalysisOpen}
+            onClose={() => setIsAnalysisOpen(false)}
+          />
+        </Suspense>
       </div>
-    </TooltipProvider>
+    </>
   );
 };
 
