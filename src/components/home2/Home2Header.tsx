@@ -7,6 +7,12 @@ import { Button } from "@/components/ui/button";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
+const rotatingTaglines = [
+  "Harley Street Doctors",
+  "Advanced Aesthetic Medicine",
+  "Doctor-Led, Regulated Care"
+];
+
 const treatmentCategories = [
   {
     label: "Botox",
@@ -90,6 +96,15 @@ export default function Home2Header() {
   const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [taglineIndex, setTaglineIndex] = useState(0);
+
+  // Rotate taglines every 3.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTaglineIndex((prev) => (prev + 1) % rotatingTaglines.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -136,23 +151,23 @@ export default function Home2Header() {
               }`}>
                 COSMEDOCS
               </span>
-              <motion.div 
-                className="flex flex-col -mt-0.5"
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 0.3,
-                  ease: "easeOut"
-                }}
-              >
-                <span className="text-[10px] md:text-xs text-[#C9A050]/90 tracking-[0.04em] font-light leading-tight">
-                  Harley Street Doctors
-                </span>
-                <span className="text-[9px] md:text-[11px] text-[#C9A050]/70 tracking-[0.06em] font-light leading-tight">
-                  Advanced Aesthetic Medicine
-                </span>
-              </motion.div>
+              <div className="h-4 md:h-5 overflow-hidden -mt-0.5">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={taglineIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      ease: "easeInOut"
+                    }}
+                    className="block text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
+                  >
+                    {rotatingTaglines[taglineIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
           </Link>
 
             {/* Desktop Navigation */}
