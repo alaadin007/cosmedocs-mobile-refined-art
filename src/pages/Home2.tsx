@@ -207,8 +207,11 @@ export default function Home2() {
                     </span>
                   </h1>
                   
-                  <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl leading-relaxed font-light">
+                  <p className="text-lg md:text-xl text-white/60 mb-6 max-w-xl leading-relaxed font-light">
                     Aesthetic medicine that whispers rather than shouts. Transformations so natural, they're undetectable.
+                  </p>
+                  <p className="text-base text-white/50 mb-10 max-w-xl leading-relaxed font-light">
+                    At CosmeDocs, aesthetic medicine is practised with restraint, precision, and respect for individuality. From our Harley Street clinic, GMC-registered doctors deliver subtle, doctor-led treatments designed to refresh — never overwhelm. Since 2007, we've focused on natural results that look effortless, not obvious.
                   </p>
                 </motion.div>
 
@@ -590,6 +593,84 @@ export default function Home2() {
           </div>
         </section>
 
+        {/* Why Choose CosmeDocs - SEO Critical Section */}
+        <section className="py-24 bg-gradient-to-b from-neutral-800 to-neutral-900 overflow-hidden relative">
+          <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#C9A050]/5 rounded-full blur-3xl -translate-y-1/2" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl"
+            >
+              <p className="text-[#C9A050] text-sm font-medium mb-4 tracking-wide uppercase">Why CosmeDocs</p>
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-8">
+                Why Choose <span className="font-semibold text-[#C9A050]">CosmeDocs</span>?
+              </h2>
+              
+              <div className="space-y-6 text-white/70 leading-relaxed">
+                <p>
+                  At CosmeDocs, we operate as a doctor-led aesthetic clinic — not an injector-led one. The distinction matters. 
+                  Every consultation, every treatment plan, and every injection is performed by GMC-registered medical doctors 
+                  with advanced training in facial anatomy and aesthetic medicine. This isn't simply about credentials; it's about 
+                  understanding the science behind ageing, the art of facial harmony, and the responsibility that comes with 
+                  changing how someone looks.
+                </p>
+                
+                <p>
+                  We're also known for saying "no" when appropriate. If a treatment won't serve you — or worse, could compromise 
+                  your natural appearance — we'll tell you. This approach has earned us trust over nearly two decades because 
+                  patients know our recommendations are honest, not profit-driven. We believe in long-term aesthetic planning, 
+                  not quick fixes that leave you looking overdone.
+                </p>
+                
+                <p>
+                  Our philosophy centres on natural outcomes over trends. Whilst social media may celebrate exaggerated lips or 
+                  frozen foreheads, we champion subtle refinement — the kind that makes people wonder if you've had work done 
+                  rather than know it. It's aesthetic medicine designed for real life, not Instagram filters.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Treatments Designed Around You - Internal Linking Section */}
+        <section className="py-24 bg-neutral-900 overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#C9A050]/5 rounded-full blur-3xl" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl"
+            >
+              <p className="text-[#C9A050] text-sm font-medium mb-4 tracking-wide uppercase">Our Treatments</p>
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-8">
+                Treatments Designed <span className="font-semibold text-[#C9A050]">Around You</span>
+              </h2>
+              
+              <div className="space-y-6 text-white/70 leading-relaxed mb-10">
+                <p>
+                  Our comprehensive treatment menu spans facial aesthetics, skin quality, hair restoration, and medical aesthetics — 
+                  all delivered with a non-surgical focus that prioritises safety and natural results. Rather than offering a 
+                  one-size-fits-all solution, we create personalised treatment plans that evolve with you.
+                </p>
+                
+                <p>
+                  Whether you're considering <Link to="/botox-london" className="text-[#C9A050] hover:underline">anti-wrinkle injections</Link> to 
+                  soften expression lines, <Link to="/lip-fillers" className="text-[#C9A050] hover:underline">lip enhancement</Link> for 
+                  subtle volume, or <Link to="/dermal-fillers" className="text-[#C9A050] hover:underline">dermal fillers</Link> to restore 
+                  youthful contours, our doctors will guide you toward treatments that complement your unique facial structure. 
+                  For those seeking to improve skin texture and radiance, our <Link to="/skin-treatments" className="text-[#C9A050] hover:underline">skin rejuvenation treatments</Link> offer 
+                  results that speak for themselves.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Philosophy - Dark theme with gradient accents */}
         <section className="py-24 bg-gradient-to-b from-neutral-900 to-black overflow-hidden relative">
           {/* Flowing gradient */}
@@ -608,13 +689,20 @@ export default function Home2() {
                   Bold. Natural.
                   <span className="block font-semibold text-[#C9A050]">Always your way.</span>
                 </h2>
-                <p className="text-xl text-white/60 mb-8 leading-relaxed font-light">
+                <p className="text-xl text-white/60 mb-6 leading-relaxed font-light">
                   At CosmeDocs, we believe in aesthetic medicine that's minimal. Quiet, not loud. 
-                  Invisible, not exaggerated.
+                  Invisible, not exaggerated. It's transformation that speaks — without saying a word.
+                </p>
+                <p className="text-white/50 mb-6 leading-relaxed">
+                  Our approach centres on facial harmony and longevity over quick fixes. We don't chase trends that 
+                  leave patients looking dated in five years. Instead, we focus on preserving your natural beauty 
+                  whilst addressing specific concerns with surgical precision and artistic restraint.
                 </p>
                 <p className="text-white/50 mb-10 leading-relaxed">
                   As London's leading aesthetic clinic on Harley Street, we've refined our craft over 17 years. 
-                  Our GMC-registered doctors specialise in natural-looking enhancements that honour your unique features.
+                  Our GMC-registered doctors understand that avoiding "overdone" aesthetics requires more skill 
+                  than achieving them. Minimalism in aesthetic medicine isn't about doing less — it's about 
+                  doing exactly the right amount, in exactly the right places.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link to="/about">
@@ -672,6 +760,47 @@ export default function Home2() {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Trust & Regulation Section */}
+        <section className="py-20 bg-neutral-900 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#C9A050]/10 rounded-full text-sm text-[#C9A050] mb-6 border border-[#C9A050]/20">
+                <Shield className="h-4 w-4" />
+                Regulated Practice
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                Safe, <span className="font-semibold text-[#C9A050]">Regulated</span> Care
+              </h2>
+              <p className="text-white/60 leading-relaxed mb-8 max-w-3xl mx-auto">
+                All treatments at CosmeDocs are performed by GMC-registered medical doctors practising evidence-based medicine 
+                in accordance with UK healthcare regulations. We operate under strict clinical governance protocols, ensuring 
+                patient safety remains our priority. Our ethical practice means we only recommend treatments that genuinely 
+                benefit our patients — never pressuring or upselling. When you choose CosmeDocs, you're choosing a clinic 
+                that upholds the highest standards of medical professionalism and regulatory compliance.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-white/50">
+                <span className="flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-[#C9A050]/70" />
+                  GMC Registered Doctors
+                </span>
+                <span className="flex items-center gap-2">
+                  <Award className="h-4 w-4 text-[#C9A050]/70" />
+                  Evidence-Based Medicine
+                </span>
+                <span className="flex items-center gap-2">
+                  <Star className="h-4 w-4 text-[#C9A050]/70" />
+                  UK Regulated
+                </span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
