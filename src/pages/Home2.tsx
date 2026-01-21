@@ -16,48 +16,42 @@ import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
 
 const popularTreatments = [
   {
-    title: "Botox",
-    subtitle: "Anti-Wrinkle",
-    description: "Smooth forehead lines, frown lines & crow's feet",
-    price: "From £195",
-    link: "/botox-london",
+    title: "Anti-Wrinkle",
+    subtitle: "Facial Relaxation",
+    description: "Subtle smoothing of expression lines for a refreshed, natural appearance",
+    link: "/treatments/botox/",
     popular: true,
   },
   {
-    title: "Lip Fillers",
-    subtitle: "Enhancement",
-    description: "Natural-looking volume & definition",
-    price: "From £320",
-    link: "/lip-fillers",
+    title: "Lip Enhancement",
+    subtitle: "Dermal Fillers",
+    description: "Refined volume and definition that complements your natural features",
+    link: "/treatments/dermal-fillers/",
     popular: true,
   },
   {
-    title: "Cheek Filler",
-    subtitle: "Contouring",
-    description: "Restore volume & sculpt cheekbones",
-    price: "From £380",
-    link: "/cheek-filler",
+    title: "Facial Contouring",
+    subtitle: "Cheeks & Jawline",
+    description: "Restore youthful structure and enhance facial harmony",
+    link: "/treatments/dermal-fillers/",
   },
   {
-    title: "Jawline Filler",
-    subtitle: "Definition",
-    description: "Create a sharper, more defined jawline",
-    price: "From £450",
-    link: "/jawline-filler",
+    title: "Skin Quality",
+    subtitle: "Bio-Remodelling",
+    description: "Advanced treatments for radiant, hydrated, healthier-looking skin",
+    link: "/treatments/skin-boosters/",
   },
   {
-    title: "Profhilo",
-    subtitle: "Skin Quality",
-    description: "Bio-remodelling for radiant, hydrated skin",
-    price: "From £300",
-    link: "/profhilo",
+    title: "Under Eye",
+    subtitle: "Rejuvenation",
+    description: "Address tiredness and restore a well-rested appearance",
+    link: "/treatments/dermal-fillers/",
   },
   {
-    title: "Tear Trough",
-    subtitle: "Under Eye",
-    description: "Reduce dark circles & hollowing",
-    price: "From £450",
-    link: "/tear-trough-filler",
+    title: "Skin Rejuvenation",
+    subtitle: "Medical Aesthetics",
+    description: "Evidence-based solutions for texture, tone and overall skin health",
+    link: "/skin-treatments/",
   },
 ];
 
@@ -609,9 +603,11 @@ export default function Home2() {
                       )}
                     </div>
                     <p className="text-white/60 text-sm mb-6 leading-relaxed">{treatment.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="font-semibold text-white">{treatment.price}</span>
-                      <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-[#C9A050] transition-all group-hover:translate-x-1" />
+                    <div className="flex items-center justify-end">
+                      <span className="text-sm text-white/50 group-hover:text-[#C9A050] transition-colors flex items-center gap-1">
+                        Learn more
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
                     </div>
                   </Link>
                 </motion.div>
