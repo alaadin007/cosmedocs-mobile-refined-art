@@ -292,8 +292,13 @@ const Treatments = () => {
               link: "/lip-filler-dissolve"
             },
             {
-              title: "Non Surgical Nose Job",
+              title: "Non Surgical Nose Job (Filler)",
               price: "£450",
+              link: "/non-surgical-nose-job"
+            },
+            {
+              title: "Non Surgical Nose Job (PCL Threads)",
+              price: "£950",
               link: "/non-surgical-nose-job"
             },
             {

@@ -17,8 +17,8 @@ import {
 
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
-    "Non-Surgical Nose Job London | Nose Botox & Fillers | £450 | Harley Street",
-    "Reshape your nose without surgery. Liquid rhinoplasty corrects bumps, asymmetry & drooping tips. Nose job from £450.",
+    "Non-Surgical Nose Job London | Nose Botox & Fillers | From £450 | Harley Street",
+    "Reshape your nose without surgery. Dermal fillers £450 or PCL Threads £950 (lasts up to 3 years). Liquid rhinoplasty at Harley Street.",
     "/non-surgical-nose-job"
   );
 
@@ -85,7 +85,7 @@ const NonSurgicalNoseJob = () => {
   const leftColumnFaqs = [
     {
       question: "How much does a non-surgical nose job cost in London?",
-      answer: "At Cosmedocs, the cost for non surgical nose job starts from £450 for dermal filler treatments. Botox nose slimming treatments begin at £200. Our non surgical rhinoplasty cost includes your consultation, premium products, and aftercare. We're proud to offer competitive nose job london price without compromising on quality. The nose filler cost varies depending on the amount needed and your specific goals."
+      answer: "At Cosmedocs, we offer two non-surgical nose job options: Dermal Fillers at £450 (lasts 12-18 months) or PCL Threads at £950 (lasts up to 3 years). Botox nose slimming treatments begin at £200. Our non surgical rhinoplasty cost includes your consultation, premium products, and aftercare. We're proud to offer competitive nose job london price without compromising on quality."
     },
     {
       question: "What are the side effects of nose reshaping treatments?",
@@ -170,7 +170,7 @@ const NonSurgicalNoseJob = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "priceRange": "£450"
+            "priceRange": "£450-£950"
           })}
         </script>
 
@@ -893,11 +893,12 @@ const NonSurgicalNoseJob = () => {
                     <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
                   </div>
                   <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Liquid Nose Job & Dermal Fillers</CardTitle>
+                    <CardTitle className="text-white text-2xl">Dermal Fillers</CardTitle>
                     <div className="text-white text-4xl font-bold">£450</div>
+                    <p className="text-purple-200 text-sm">Lasts 12-18 months</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Complete nose reshaping without surgery using premium nose filler treatments</p>
+                    <p className="text-purple-100">Complete nose reshaping using premium hyaluronic acid fillers</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -926,25 +927,65 @@ const NonSurgicalNoseJob = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Nose Botox & Nasal Botox</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£200</div>
+                <Card className="bg-gradient-to-br from-amber-600 to-amber-700 border-amber-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-amber-600 px-4 py-1 rounded-full text-sm font-semibold">LONG-LASTING</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">PCL Threads</CardTitle>
+                    <div className="text-white text-4xl font-bold">£950</div>
+                    <p className="text-amber-200 text-sm">Lasts up to 3 years</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Nose slimming botox and nose tip lift botox treatments</p>
+                    <p className="text-amber-100">Long-lasting nose reshaping with collagen-stimulating PCL threads</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-amber-100 text-sm">Results last up to 3 years</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-amber-100 text-sm">Stimulates natural collagen</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-amber-100 text-sm">Lifts & defines nose structure</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-amber-100 text-sm">2-week follow-up included</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Nose Botox</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£200</div>
+                    <p className="text-gray-400 text-sm">Lasts 3-4 months</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Nose slimming & tip lift using Botox injections</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Nose slimming injection for wide noses</span>
+                        <span className="text-gray-300 text-sm">Nose slimming for wide noses</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Botox nose tip lift for drooping tips</span>
+                        <span className="text-gray-300 text-sm">Tip lift for drooping tips</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Nasal tip botox results last 3-4 months</span>
+                        <span className="text-gray-300 text-sm">Quick 15-minute treatment</span>
                       </div>
                     </div>
                   </CardContent>
