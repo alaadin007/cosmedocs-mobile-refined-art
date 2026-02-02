@@ -2,19 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Clock, Star, Award, Users, ArrowRight, Calendar, Syringe, Heart, Shield, MapPin } from 'lucide-react';
+import { CheckCircle, Clock, Star, Award, Users, ArrowRight, Calendar, Syringe, Heart, Shield, MapPin, Eye, Smile, Sparkles } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from 'react-router-dom';
 import ClientReviews from '@/components/ClientReviews';
 
+// Import banner image
+import fillerBanner from "@/assets/banners/filler-areas-hero.jpg";
+
 const DermalFillers = () => {
   const seoData = generateSEOMetadata(
     "Dermal Fillers London | Doctor-Led Treatment | Harley Street",
     "Expert dermal filler treatments by GMC-registered doctors on Harley Street. Natural-looking facial enhancement with premium hyaluronic acid. Book your consultation.",
-    "/dermal-fillers"
+    "/treatments/dermal-fillers/"
   );
 
   const beforeAfterImages = [
@@ -55,14 +57,80 @@ const DermalFillers = () => {
     }
   ];
 
+  // Treatment areas with expanded descriptions for hub structure
   const treatmentAreas = [
-    { title: "Lip Fillers", description: "Volume, shape, and definition", link: "/lip-fillers" },
-    { title: "Cheek Filler", description: "Restore mid-face volume", link: "/cheek-filler" },
-    { title: "Jawline Filler", description: "Definition and structure", link: "/jawline-filler" },
-    { title: "Chin Filler", description: "Balance and projection", link: "/chin-filler" },
-    { title: "Under Eye Filler", description: "Reduce hollowing", link: "/tear-trough-filler" },
-    { title: "Nose Filler", description: "Non-surgical reshaping", link: "/non-surgical-nose-job" },
-    { title: "Temple Filler", description: "Restore volume", link: "/temple-filler-london" }
+    { 
+      id: "lips",
+      title: "Lip Fillers", 
+      description: "Natural enhancement for volume, shape, and definition", 
+      link: "/lip-fillers",
+      icon: Smile,
+      details: "Our doctors use precise placement techniques to enhance lip volume, define the cupid's bow, improve symmetry, and create natural-looking results. Whether you're seeking subtle hydration or more noticeable enhancement, treatments are tailored to your facial proportions."
+    },
+    { 
+      id: "cheeks",
+      title: "Cheek Filler", 
+      description: "Restore mid-face volume and lift", 
+      link: "/cheek-filler",
+      icon: Sparkles,
+      details: "The cheeks are central to facial structure. Volume loss here can cause sagging in the lower face. By restoring support at the cheekbones, we can lift nasolabial folds, reduce shadowing, and create a more youthful contour."
+    },
+    { 
+      id: "jawline",
+      title: "Jawline Filler", 
+      description: "Definition and structural contour", 
+      link: "/jawline-filler",
+      icon: Shield,
+      details: "A well-defined jawline creates balance and structure. Filler can sharpen the jaw angle, reduce the appearance of jowls, and create smoother transitions from face to neck — all without surgery."
+    },
+    { 
+      id: "chin",
+      title: "Chin Filler", 
+      description: "Balance, projection, and facial harmony", 
+      link: "/chin-filler",
+      icon: Heart,
+      details: "The chin plays a crucial role in facial proportions. Whether addressing a recessed chin or creating better balance with the nose and jawline, chin filler can make a significant impact with minimal intervention."
+    },
+    { 
+      id: "tear-trough",
+      title: "Under Eye Filler", 
+      description: "Reduce hollowing and dark circles", 
+      link: "/tear-trough-filler",
+      icon: Eye,
+      details: "Tear trough filler addresses the hollow grooves beneath the eyes that can make you look tired. This delicate area requires expert technique — our doctors use cannulas to minimise bruising and achieve smooth, natural results."
+    },
+    { 
+      id: "nose",
+      title: "Non-Surgical Nose Job", 
+      description: "Reshape and refine without surgery", 
+      link: "/non-surgical-nose-job",
+      icon: Syringe,
+      details: "Dermal fillers can smooth bumps, lift the tip, improve symmetry, and create a more balanced profile — all without the downtime of surgical rhinoplasty. Results are immediate and can last 12-18 months."
+    },
+    { 
+      id: "temples",
+      title: "Temple Filler", 
+      description: "Restore volume to the upper face", 
+      link: "/temple-filler-london",
+      icon: Sparkles,
+      details: "Temple hollowing is one of the earliest signs of facial ageing. Restoring volume here can lift the brow, reduce a gaunt appearance, and create a more youthful overall shape to the face."
+    }
+  ];
+
+  // Hub navigation sections
+  const hubSections = [
+    {
+      title: "Facial Areas & Concerns",
+      description: "Understand how facial ageing affects different areas and which treatments may help",
+      link: "/treatments/dermal-fillers/areas/",
+      linkText: "Explore concerns →"
+    },
+    {
+      title: "Before & After Gallery",
+      description: "See real patient results from our Harley Street clinic",
+      link: "/before-after/dermal-fillers/",
+      linkText: "View gallery →"
+    }
   ];
 
   return (
@@ -81,46 +149,80 @@ const DermalFillers = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "CosmeDocs",
-            "description": "Doctor-led dermal filler treatments on Harley Street, London",
-            "url": "https://cosmedocs.co.uk/dermal-fillers",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "medicalSpecialty": "Aesthetic Medicine"
+            "@graph": [
+              {
+                "@type": "MedicalBusiness",
+                "name": "CosmeDocs",
+                "description": "Doctor-led dermal filler treatments on Harley Street, London",
+                "url": "https://cosmedocs.co.uk/treatments/dermal-fillers/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Aesthetic Medicine",
+                "priceRange": "£200-£950"
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://cosmedocs.co.uk/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Treatments",
+                    "item": "https://cosmedocs.co.uk/treatments/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Dermal Fillers",
+                    "item": "https://cosmedocs.co.uk/treatments/dermal-fillers/"
+                  }
+                ]
+              }
+            ]
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-24 md:py-32 overflow-hidden">
-          <div className="page-container relative z-10">
+        {/* Hero Section with Banner */}
+        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img 
+              src={fillerBanner} 
+              alt="Dermal filler treatment at CosmeDocs Harley Street"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+          </div>
+
+          <div className="page-container relative z-10 py-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl"
+              className="max-w-2xl"
             >
+              <p className="text-[#C9A050] text-sm uppercase tracking-wider mb-4">Treatment Hub</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                Dermal Fillers in London
+                Dermal Fillers
               </h1>
-              <p className="text-xl md:text-2xl text-[#C9A050] font-medium mb-6">
+              <p className="text-xl md:text-2xl text-gray-300 font-medium mb-6">
                 Doctor-led facial enhancement on Harley Street
               </p>
-              <div className="space-y-4 text-gray-300 text-lg leading-relaxed mb-8 max-w-3xl">
-                <p>
-                  At CosmeDocs, dermal fillers are used with restraint, precision, and a deep understanding of facial anatomy. From our Harley Street clinic, GMC-registered doctors deliver subtle, natural-looking enhancement designed to restore balance — not alter identity.
-                </p>
-                <p>
-                  Our approach to dermal fillers is grounded in medical expertise and aesthetic judgement. We focus on facial harmony, structural support, and long-term outcomes rather than isolated injections or short-term trends. The result is enhancement that looks effortless, refined, and unmistakably you.
-                </p>
-              </div>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+                Natural-looking restoration with premium hyaluronic acid. Our doctors assess your face as a whole, placing filler strategically to restore balance — not alter identity.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-[#C9A050] text-black hover:bg-[#B8924A] rounded-full px-8 py-6 text-lg font-semibold" asChild>
                   <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
@@ -130,7 +232,7 @@ const DermalFillers = () => {
                   className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg"
                   asChild
                 >
-                  <Link to="/treatments">View All Treatments</Link>
+                  <Link to="/treatments/">View All Treatments</Link>
                 </Button>
               </div>
             </motion.div>
@@ -169,6 +271,31 @@ const DermalFillers = () => {
                 <p className="text-sm font-medium text-white">Doctor-led</p>
                 <p className="text-xs text-gray-400">GMC-registered</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hub Navigation - Quick Links */}
+        <section className="py-8 bg-black/50 border-b border-white/10">
+          <div className="page-container">
+            <div className="flex flex-wrap justify-center gap-4">
+              {hubSections.map((section, index) => (
+                <Link 
+                  key={index}
+                  to={section.link}
+                  className="group px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors"
+                >
+                  <span className="text-gray-300 group-hover:text-[#C9A050] transition-colors text-sm font-medium">
+                    {section.linkText}
+                  </span>
+                </Link>
+              ))}
+              <a 
+                href="#treatment-areas"
+                className="px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors text-gray-300 hover:text-[#C9A050] text-sm font-medium"
+              >
+                Treatment areas ↓
+              </a>
             </div>
           </div>
         </section>
@@ -270,8 +397,87 @@ const DermalFillers = () => {
           </div>
         </section>
 
+        {/* Treatment Areas - Accordion Section */}
+        <section id="treatment-areas" className="py-20 bg-accent scroll-mt-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Dermal Filler Treatment Areas</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Each area of the face has unique anatomy and ageing patterns. Explore our treatment areas below.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {treatmentAreas.map((area, index) => (
+                  <AccordionItem 
+                    key={area.id} 
+                    value={area.id}
+                    className="bg-black/40 border border-white/10 rounded-xl overflow-hidden"
+                  >
+                    <AccordionTrigger className="px-6 py-5 hover:no-underline group">
+                      <div className="flex items-center gap-4 text-left">
+                        <div className="bg-[#C9A050]/20 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+                          <area.icon className="text-[#C9A050]" size={20} />
+                        </div>
+                        <div>
+                          <p className="text-white font-semibold text-lg group-hover:text-[#C9A050] transition-colors">{area.title}</p>
+                          <p className="text-gray-400 text-sm">{area.description}</p>
+                        </div>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <div className="pl-16">
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          {area.details}
+                        </p>
+                        <Link 
+                          to={area.link}
+                          className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] font-medium transition-colors group"
+                        >
+                          Learn more about {area.title.toLowerCase()}
+                          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
+                        </Link>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+
+            {/* Facial Concerns Link */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center"
+            >
+              <div className="bg-gradient-to-r from-[#C9A050]/10 to-transparent border border-[#C9A050]/20 rounded-xl p-8 max-w-2xl mx-auto">
+                <h3 className="text-xl font-semibold text-white mb-3">Understanding Facial Concerns</h3>
+                <p className="text-gray-400 mb-6">
+                  Learn about common concerns like nasolabial folds, marionette lines, and volume loss — and why treating the cause matters more than chasing individual lines.
+                </p>
+                <Link 
+                  to="/treatments/dermal-fillers/areas/"
+                  className="inline-flex items-center gap-2 bg-[#C9A050] text-black px-6 py-3 rounded-full font-medium hover:bg-[#B8924A] transition-colors"
+                >
+                  Explore areas & concerns
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Dermal Fillers vs Anti-Wrinkle */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-gray-900/30">
           <div className="page-container">
             <div className="max-w-4xl mx-auto">
               <motion.div
@@ -304,6 +510,12 @@ const DermalFillers = () => {
                         <li>• Prevent wrinkle formation</li>
                         <li>• Best for forehead, frown, crow's feet</li>
                       </ul>
+                      <Link 
+                        to="/treatments/botox/"
+                        className="inline-flex items-center gap-1 text-[#C9A050] text-sm mt-4 hover:underline"
+                      >
+                        Learn about Botox <ArrowRight size={14} />
+                      </Link>
                     </div>
                   </div>
                   
@@ -313,53 +525,6 @@ const DermalFillers = () => {
                 </div>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Areas & Facial Concerns - Hub Link Section */}
-        <section className="py-20 bg-gray-900/30">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto text-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Areas & Facial Concerns</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Facial ageing presents differently for everyone. Lines, folds, hollowing, and volume loss can appear across multiple areas — each interconnected. Our doctors assess the face as a whole to determine where support is needed most.
-              </p>
-              <Link 
-                to="/treatments/dermal-fillers/areas" 
-                className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] text-lg font-medium transition-colors group"
-              >
-                Explore common dermal filler areas & concerns
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-              </Link>
-            </motion.div>
-
-            {/* Quick Treatment Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="mt-16"
-            >
-              <p className="text-center text-gray-400 text-sm mb-8 uppercase tracking-wide">Individual Treatments</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                {treatmentAreas.map((area, index) => (
-                  <Link
-                    key={index}
-                    to={area.link}
-                    className="bg-black/40 border border-white/10 rounded-lg p-4 text-center hover:border-[#C9A050]/50 transition-colors group"
-                  >
-                    <p className="text-white font-medium text-sm group-hover:text-[#C9A050] transition-colors">{area.title}</p>
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -492,7 +657,7 @@ const DermalFillers = () => {
 
             <div className="text-center mt-8">
               <Link 
-                to="/before-after/dermal-fillers" 
+                to="/before-after/dermal-fillers/" 
                 className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] font-medium transition-colors group"
               >
                 View full gallery
@@ -527,7 +692,7 @@ const DermalFillers = () => {
                     <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
                   </Button>
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg" asChild>
-                    <Link to="/treatments">View Pricing</Link>
+                    <Link to="/treatments/">View Pricing</Link>
                   </Button>
                 </div>
               </motion.div>
@@ -598,7 +763,7 @@ const DermalFillers = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <p>Doctor-led dermal filler treatments at CosmeDocs Harley Street clinic London. GMC-registered doctors providing natural-looking facial rejuvenation with premium hyaluronic acid. Subtle enhancement respecting facial anatomy and individual expression. Full-face approach to dermal fillers for balanced, long-lasting outcomes. Aesthetic medicine by qualified medical professionals since 2007.</p>
+          <p>Doctor-led dermal filler treatments at CosmeDocs Harley Street clinic London. GMC-registered doctors providing natural-looking facial rejuvenation with premium hyaluronic acid. Subtle enhancement respecting facial anatomy and individual expression. Full-face approach to dermal fillers for balanced, long-lasting outcomes. Aesthetic medicine by qualified medical professionals since 2007. Lip filler, cheek filler, jawline filler, chin filler, tear trough filler, non-surgical nose job, and temple filler treatments available.</p>
         </div>
       </div>
     </>
