@@ -154,6 +154,10 @@ const FaceliftSurgery = lazy(() => import("./pages/FaceliftSurgery"));
 const Liposuction = lazy(() => import("./pages/Liposuction"));
 const CO2LaserResurfacing = lazy(() => import("./pages/CO2LaserResurfacing"));
 const ScarReduction = lazy(() => import("./pages/ScarReduction"));
+const ConcernsHub = lazy(() => import("./pages/ConcernsHub"));
+const MedicalHub = lazy(() => import("./pages/MedicalHub"));
+const MedicalBotoxHub = lazy(() => import("./pages/MedicalBotoxHub"));
+const Safety = lazy(() => import("./pages/Safety"));
 
 // Optimized loading component
 const PageLoader = memo(() => (
@@ -242,6 +246,14 @@ const App = () => {
                           <Route path="/popup-offer" element={<PopupOffer />} />
                           <Route path="/spin-to-win" element={<SpinToWin />} />
                           
+                          {/* Phase 4: Core Hub Pages */}
+                          <Route path="/concerns" element={<ConcernsHub />} />
+                          <Route path="/concerns/" element={<ConcernsHub />} />
+                          <Route path="/medical" element={<MedicalHub />} />
+                          <Route path="/medical/" element={<MedicalHub />} />
+                          <Route path="/safety" element={<Safety />} />
+                          <Route path="/safety/" element={<Safety />} />
+                          
                           {/* ============================================= */}
                           {/* TREATMENTS - New nested /treatments/ routes   */}
                           {/* ============================================= */}
@@ -285,6 +297,10 @@ const App = () => {
                           <Route path="/treatments/oily-skin-botox/" element={<OilySkinBotox />} />
                           <Route path="/treatments/trigger-point-botox" element={<TriggerPointBotox />} />
                           <Route path="/treatments/trigger-point-botox/" element={<TriggerPointBotox />} />
+                          
+                          {/* Medical Botox Sub-hub */}
+                          <Route path="/treatments/botox/medical" element={<MedicalBotoxHub />} />
+                          <Route path="/treatments/botox/medical/" element={<MedicalBotoxHub />} />
                           
                           {/* Dermal Fillers Hub & Sub-treatments */}
                           <Route path="/treatments/dermal-fillers" element={<DermalFillers />} />

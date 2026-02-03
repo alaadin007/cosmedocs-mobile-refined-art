@@ -495,7 +495,7 @@ const CosmetalkBlog = () => {
             <p className="text-gray-600 mb-8">Professional resources to complement your aesthetic treatments and help you achieve your beauty goals</p>
 
             <div className="space-y-4 max-w-4xl">
-              <Link to="/book-consultation" className="block">
+              <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="p-6 hover:shadow-lg transition-all border-2 border-orange-100 hover:border-orange-300 group">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
@@ -507,7 +507,7 @@ const CosmetalkBlog = () => {
                     </Button>
                   </div>
                 </Card>
-              </Link>
+              </a>
 
               <Card className="p-6 border-2 border-gray-100">
                 <div className="flex items-center justify-between">
