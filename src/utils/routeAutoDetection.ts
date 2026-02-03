@@ -10,12 +10,14 @@ interface DetectedRoute {
 // Enhanced route registry with ALL routes from App.tsx
 const ROUTE_REGISTRY = {
   pages: [
-    '/', '/treatments', '/about', '/contact', '/partners', '/team', 
-    '/before-after-gallery', '/before-after/', '/before-after/dermal-fillers/', '/membership', '/harley-street-consulting-rooms',
-    '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
-    '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/cosmetalk',
-    '/plastic-surgeon', '/dermatology', '/cosmederm', '/aesthetic-training', '/hair-transplant-surgeon',
-    '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq', '/admin/video-upload'
+    '/', '/treatments/', '/about/', '/contact/', '/partners/', '/our-team/', 
+    '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/',
+    '/membership/', '/harley-street-consulting-rooms/',
+    '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
+    '/thank-you/', '/fellowship-invitation/', '/8-point-facelift/', '/cosmetalk/',
+    '/aesthetic-training/', '/testimonials/', '/aesthetics-at-a-glance/',
+    '/home', '/home2', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-buzo/',
+    '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/', '/admin/video-upload'
   ],
   treatments: [
     // Core aesthetic treatments

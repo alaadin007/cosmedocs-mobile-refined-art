@@ -735,7 +735,7 @@ export default function Home2() {
                       Our Approach
                     </Button>
                   </Link>
-                  <Link to="/team">
+                  <Link to="/our-team/">
                     <Button
                       variant="ghost"
                       className="text-white/50 hover:text-[#C9A050] rounded-full px-6 py-5"

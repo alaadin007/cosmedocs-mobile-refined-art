@@ -730,7 +730,7 @@ export default function Botox2() {
                       Our Approach
                     </Button>
                   </Link>
-                  <Link to="/team">
+                  <Link to="/our-team/">
                     <Button
                       variant="ghost"
                       className="text-gray-500 hover:text-black rounded-full px-6 py-5"
