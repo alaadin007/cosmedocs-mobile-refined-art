@@ -1,15 +1,209 @@
-# Old URL redirects to canonical pages (with trailing slashes)
-/advanced-upper-face-botox    /botox-london/   301
-/anti-wrinkle                 /botox-london/   301
-/anti-wrinkle-injections      /botox-london/   301
-/botox                        /botox-london/   301
-/brow-lift-botox              /botox-london/   301
-/face-botox                   /botox-london/   301
-/face-botox-areas             /botox-london/   301
-/cheek-fillers                /cheek-filler/   301
-/jawline-fillers              /jawline-filler/ 301
-/lip-filler                   /lip-fillers/    301
-/chin-dimpling-botox          /chin-botox/     301
+# =====================================================
+# PHASE 1: Treatment URL Migration - 301 Redirects
+# Flat URLs redirect to new /treatments/ nested structure
+# =====================================================
 
+# ----- BOTOX TREATMENTS -----
+/botox-london                     /treatments/botox/                  301
+/botox-london/                    /treatments/botox/                  301
+/botox-cost-london                /treatments/botox-cost/             301
+/botox-cost-london/               /treatments/botox-cost/             301
+/botox-price-london               /treatments/botox-cost/             301
+/botox-price-london/              /treatments/botox-cost/             301
+/masseter-botox                   /treatments/masseter-botox/         301
+/masseter-botox/                  /treatments/masseter-botox/         301
+/lip-flip                         /treatments/lip-flip/               301
+/lip-flip/                        /treatments/lip-flip/               301
+/gummy-smile-botox                /treatments/gummy-smile-botox/      301
+/gummy-smile-botox/               /treatments/gummy-smile-botox/      301
+/chin-botox                       /treatments/chin-botox/             301
+/chin-botox/                      /treatments/chin-botox/             301
+/frown-line-botox                 /treatments/frown-line-botox/       301
+/frown-line-botox/                /treatments/frown-line-botox/       301
+/crows-feet-botox                 /treatments/crows-feet-botox/       301
+/crows-feet-botox/                /treatments/crows-feet-botox/       301
+/forehead-lines-botox             /treatments/forehead-lines-botox/   301
+/forehead-lines-botox/            /treatments/forehead-lines-botox/   301
+/bunny-lines-botox                /treatments/bunny-lines-botox/      301
+/bunny-lines-botox/               /treatments/bunny-lines-botox/      301
+/nasal-flaring-botox              /treatments/nasal-flaring-botox/    301
+/nasal-flaring-botox/             /treatments/nasal-flaring-botox/    301
+/nefertiti-botox-face-jaw-lift    /treatments/nefertiti-lift/         301
+/nefertiti-botox-face-jaw-lift/   /treatments/nefertiti-lift/         301
+/nefertiti-botox-facelift         /treatments/nefertiti-lift/         301
+/nefertiti-botox-facelift/        /treatments/nefertiti-lift/         301
+/nefertiti-lift                   /treatments/nefertiti-lift/         301
+/nefertiti-lift/                  /treatments/nefertiti-lift/         301
+/trap-botox                       /treatments/trap-botox/             301
+/trap-botox/                      /treatments/trap-botox/             301
+/botox-calf-reduction             /treatments/calf-slimming-botox/    301
+/botox-calf-reduction/            /treatments/calf-slimming-botox/    301
+/migraine-botox                   /treatments/migraine-botox/         301
+/migraine-botox/                  /treatments/migraine-botox/         301
+/bruxism-botox                    /treatments/bruxism-botox/          301
+/bruxism-botox/                   /treatments/bruxism-botox/          301
+/excessive-sweat-botox            /treatments/hyperhidrosis-botox/    301
+/excessive-sweat-botox/           /treatments/hyperhidrosis-botox/    301
+/oily-skin-botox                  /treatments/oily-skin-botox/        301
+/oily-skin-botox/                 /treatments/oily-skin-botox/        301
+/trigger-point-botox              /treatments/trigger-point-botox/    301
+/trigger-point-botox/             /treatments/trigger-point-botox/    301
+/forehead-botox                   /treatments/forehead-lines-botox/   301
+/forehead-botox/                  /treatments/forehead-lines-botox/   301
+/frown-lines-botox                /treatments/frown-line-botox/       301
+/frown-lines-botox/               /treatments/frown-line-botox/       301
+/chin-dimpling-botox              /treatments/chin-botox/             301
+/chin-dimpling-botox/             /treatments/chin-botox/             301
+/advanced-upper-face-botox        /treatments/botox/                  301
+/advanced-upper-face-botox/       /treatments/botox/                  301
+/anti-wrinkle                     /treatments/botox/                  301
+/anti-wrinkle/                    /treatments/botox/                  301
+/anti-wrinkle-injections          /treatments/botox/                  301
+/anti-wrinkle-injections/         /treatments/botox/                  301
+/botox                            /treatments/botox/                  301
+/botox/                           /treatments/botox/                  301
+/brow-lift-botox                  /treatments/botox/                  301
+/brow-lift-botox/                 /treatments/botox/                  301
+/face-botox                       /treatments/botox/                  301
+/face-botox/                      /treatments/botox/                  301
+/face-botox-areas                 /treatments/botox/                  301
+/face-botox-areas/                /treatments/botox/                  301
+
+# ----- DERMAL FILLER TREATMENTS -----
+/dermal-fillers                   /treatments/dermal-fillers/         301
+/dermal-fillers/                  /treatments/dermal-fillers/         301
+/lip-fillers                      /treatments/lip-fillers/            301
+/lip-fillers/                     /treatments/lip-fillers/            301
+/lip-filler                       /treatments/lip-fillers/            301
+/lip-filler/                      /treatments/lip-fillers/            301
+/cupid-bow-lips                   /treatments/cupid-bow-lips/         301
+/cupid-bow-lips/                  /treatments/cupid-bow-lips/         301
+/cheek-filler                     /treatments/cheek-filler/           301
+/cheek-filler/                    /treatments/cheek-filler/           301
+/cheek-fillers                    /treatments/cheek-filler/           301
+/cheek-fillers/                   /treatments/cheek-filler/           301
+/chin-filler                      /treatments/chin-filler/            301
+/chin-filler/                     /treatments/chin-filler/            301
+/jawline-filler                   /treatments/jawline-filler/         301
+/jawline-filler/                  /treatments/jawline-filler/         301
+/jawline-fillers                  /treatments/jawline-filler/         301
+/jawline-fillers/                 /treatments/jawline-filler/         301
+/non-surgical-nose-job            /treatments/nose-filler/            301
+/non-surgical-nose-job/           /treatments/nose-filler/            301
+/nose-filler                      /treatments/nose-filler/            301
+/nose-filler/                     /treatments/nose-filler/            301
+/tear-trough-filler               /treatments/tear-trough-filler/     301
+/tear-trough-filler/              /treatments/tear-trough-filler/     301
+/tear-trough-fillers              /treatments/tear-trough-filler/     301
+/tear-trough-fillers/             /treatments/tear-trough-filler/     301
+/temple-filler-london             /treatments/temple-filler/          301
+/temple-filler-london/            /treatments/temple-filler/          301
+/temple-fillers                   /treatments/temple-filler/          301
+/temple-fillers/                  /treatments/temple-filler/          301
+/forehead-fillers                 /treatments/forehead-filler/        301
+/forehead-fillers/                /treatments/forehead-filler/        301
+/neck-fillers                     /treatments/neck-filler/            301
+/neck-fillers/                    /treatments/neck-filler/            301
+/neck                             /treatments/neck-filler/            301
+/neck/                            /treatments/neck-filler/            301
+/marionette-lines                 /treatments/marionette-lines/       301
+/marionette-lines/                /treatments/marionette-lines/       301
+/marionette-lines-filler          /treatments/marionette-lines/       301
+/marionette-lines-filler/         /treatments/marionette-lines/       301
+/nasolabial-folds                 /treatments/nasolabial-folds/       301
+/nasolabial-folds/                /treatments/nasolabial-folds/       301
+/lip-filler-dissolve              /treatments/filler-dissolving/      301
+/lip-filler-dissolve/             /treatments/filler-dissolving/      301
+/ear-lobe-rejuvenation            /treatments/ear-lobe-rejuvenation/  301
+/ear-lobe-rejuvenation/           /treatments/ear-lobe-rejuvenation/  301
+
+# ----- SKIN REJUVENATION & ADVANCED TREATMENTS -----
+/profhilo                         /treatments/profhilo/               301
+/profhilo/                        /treatments/profhilo/               301
+/polynucleotide-treatment         /treatments/polynucleotides/        301
+/polynucleotide-treatment/        /treatments/polynucleotides/        301
+/prp-treatment                    /treatments/prp/                    301
+/prp-treatment/                   /treatments/prp/                    301
+/hydrafacial                      /treatments/hydrafacial/            301
+/hydrafacial/                     /treatments/hydrafacial/            301
+/hydrafacial-london               /treatments/hydrafacial/            301
+/hydrafacial-london/              /treatments/hydrafacial/            301
+/chemical-peel                    /treatments/chemical-peel/          301
+/chemical-peel/                   /treatments/chemical-peel/          301
+/microneedling                    /treatments/microneedling/          301
+/microneedling/                   /treatments/microneedling/          301
+/pdo-threads                      /treatments/pdo-threads/            301
+/pdo-threads/                     /treatments/pdo-threads/            301
+/thread-face-lift                 /treatments/pdo-threads/            301
+/thread-face-lift/                /treatments/pdo-threads/            301
+/thread-lift                      /treatments/pdo-threads/            301
+/thread-lift/                     /treatments/pdo-threads/            301
+/8-point-facelift                 /treatments/8-point-facelift/       301
+/8-point-facelift/                /treatments/8-point-facelift/       301
+/non-surgical-facelift            /treatments/non-surgical-facelift/  301
+/non-surgical-facelift/           /treatments/non-surgical-facelift/  301
+/non-surgical-ponytail            /treatments/non-surgical-ponytail/  301
+/non-surgical-ponytail/           /treatments/non-surgical-ponytail/  301
+/fat-dissolve                     /treatments/fat-dissolving/         301
+/fat-dissolve/                    /treatments/fat-dissolving/         301
+/fat-dissolving-injections        /treatments/fat-dissolving/         301
+/fat-dissolving-injections/       /treatments/fat-dissolving/         301
+/prescription-skin-care           /treatments/prescription-skincare/  301
+/prescription-skin-care/          /treatments/prescription-skincare/  301
+/peel-to-reveal                   /treatments/peel-to-reveal/         301
+/peel-to-reveal/                  /treatments/peel-to-reveal/         301
+
+# ----- PLASTIC SURGERY -----
+/plastic-surgeon                  /treatments/plastic-surgery/        301
+/plastic-surgeon/                 /treatments/plastic-surgery/        301
+/blepharoplasty                   /treatments/blepharoplasty/         301
+/blepharoplasty/                  /treatments/blepharoplasty/         301
+/rhinoplasty                      /treatments/rhinoplasty/            301
+/rhinoplasty/                     /treatments/rhinoplasty/            301
+/facelift-surgery                 /treatments/facelift-surgery/       301
+/facelift-surgery/                /treatments/facelift-surgery/       301
+/liposuction                      /treatments/liposuction/            301
+/liposuction/                     /treatments/liposuction/            301
+/co2-laser-resurfacing            /treatments/co2-laser/              301
+/co2-laser-resurfacing/           /treatments/co2-laser/              301
+/scar-reduction                   /treatments/scar-reduction/         301
+/scar-reduction/                  /treatments/scar-reduction/         301
+/hair-transplant-surgeon          /treatments/hair-transplant/        301
+/hair-transplant-surgeon/         /treatments/hair-transplant/        301
+
+# ----- MEDICAL DERMATOLOGY -----
+/dermatology                      /treatments/dermatology/            301
+/dermatology/                     /treatments/dermatology/            301
+/acne-treatment                   /treatments/acne/                   301
+/acne-treatment/                  /treatments/acne/                   301
+/mole-removal                     /treatments/mole-removal/           301
+/mole-removal/                    /treatments/mole-removal/           301
+/skin-tag-removal                 /treatments/mole-removal/           301
+/skin-tag-removal/                /treatments/mole-removal/           301
+/eczema-treatment                 /treatments/eczema/                 301
+/eczema-treatment/                /treatments/eczema/                 301
+/psoriasis-treatment              /treatments/psoriasis/              301
+/psoriasis-treatment/             /treatments/psoriasis/              301
+/hyperpigmentation-treatment      /treatments/hyperpigmentation/      301
+/hyperpigmentation-treatment/     /treatments/hyperpigmentation/      301
+/cosmederm                        /treatments/dermatology/            301
+/cosmederm/                       /treatments/dermatology/            301
+
+# ----- SPECIALISED TREATMENTS -----
+/medical-anal-bleaching           /treatments/intimate-bleaching/     301
+/medical-anal-bleaching/          /treatments/intimate-bleaching/     301
+/advanced-consultation            /treatments/advanced-consultation/  301
+/advanced-consultation/           /treatments/advanced-consultation/  301
+/clinical-concepts-to-flawless-skin /treatments/clinical-concepts/    301
+/clinical-concepts-to-flawless-skin/ /treatments/clinical-concepts/   301
+
+# ----- OTHER LEGACY REDIRECTS -----
+/aesthetics-at-glance             /aesthetics-at-a-glance/            301
+/booking                          /contact/                           301
+/price-list                       /treatments/                        301
+/skin-boosters                    /treatments/                        301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
+# =====================================================
 /*    /index.html   200

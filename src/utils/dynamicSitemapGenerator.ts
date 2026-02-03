@@ -16,86 +16,132 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Auto-detect ALL routes directly from App.tsx routing configuration
-// This ensures the sitemap is always in sync with actual application routes
-function extractAllRoutes(): { pages: string[], treatments: string[], blog: string[], locations: string[] } {
-  try {
-    // Import the auto-detection utility
-    const { autoDetectRoutes } = require('./routeAutoDetection');
-    const detectedRoutes = autoDetectRoutes();
-    
-    // Categorize routes automatically
-    const categorized = {
-      pages: [] as string[],
-      treatments: [] as string[],
-      blog: [] as string[],
-      locations: [] as string[]
-    };
-    
-    detectedRoutes.forEach(route => {
-      switch (route.category) {
-        case 'page':
-          categorized.pages.push(route.path);
-          break;
-        case 'treatment':
-          categorized.treatments.push(route.path);
-          break;
-        case 'blog':
-          categorized.blog.push(route.path);
-          break;
-        case 'location':
-          categorized.locations.push(route.path);
-          break;
-      }
-    });
-    
-    return categorized;
-  } catch (error) {
-    console.warn('Could not auto-detect routes from App.tsx, using fallback');
-    
-    // Fallback to manual route definitions
-    return {
-      pages: [
-        '/', '/treatments', '/about', '/contact', '/partners', '/partnerships', '/auth', '/dashboard',
-        '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
-        '/team', '/before-after-gallery', '/membership', '/harley-street-consulting-rooms'
-      ],
-      treatments: [
-        '/lip-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', '/pdo-threads',
-        '/dermal-fillers', '/polynucleotide-treatment', '/profhilo',
-        '/hydrafacial', '/prp-treatment', '/botox-london', '/nefertiti-botox-facelift', '/trigger-point-botox',
-        '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction', '/marionette-lines',
-        '/nasolabial-folds', '/lip-filler-dissolve', '/cheek-filler', '/chin-filler',
-        '/ear-lobe-rejuvenation', '/jawline-filler', '/temple-filler-london',
-        '/tear-trough-filler', '/neck-fillers', '/forehead-fillers', '/advanced-consultation',
-        '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', '/peel-to-reveal',
-        '/chemical-peel', '/prescription-skin-care', '/microneedling'
-      ],
-      blog: [
-        '/blog/non-surgical-nose-job-evolution', '/blog/pdo-threads-comprehensive-guide',
-        '/blog/aesthetic-maintenance-cost-guide', '/blog/chinese-london-aesthetics-guide',
-        '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
-        '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
-        '/cosmetalk', '/cosmetalk/vitamin-c-ferulic-acid-benefits', '/cosmetalk/smokers-lines-women',
-        '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/cosmetalk/orofacial-neck-pain-cycle',
-        '/blog/beauty-ethnic-neutrality', '/inside-mind-aesthetic-doctor-blog'
-      ],
-      locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados']
-    };
-  }
-}
+// Updated for Phase 1 migration - all treatments now under /treatments/
+const pageRoutes = [
+  '/', '/treatments', '/about', '/contact', '/partners', '/partnerships', '/auth', '/dashboard',
+  '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
+  '/team', '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
+  '/testimonials', '/aesthetics-at-a-glance'
+];
 
-// Get all routes automatically from App.tsx
-const allRoutes = extractAllRoutes();
-const { pages: pageRoutes, treatments: treatmentRoutes, blog: blogRoutes, locations: locationRoutes } = allRoutes;
+// New nested treatment routes
+const treatmentRoutes = [
+  // Botox Hub & Sub-treatments
+  '/treatments/botox',
+  '/treatments/botox-cost',
+  '/treatments/masseter-botox',
+  '/treatments/lip-flip',
+  '/treatments/gummy-smile-botox',
+  '/treatments/chin-botox',
+  '/treatments/frown-line-botox',
+  '/treatments/crows-feet-botox',
+  '/treatments/forehead-lines-botox',
+  '/treatments/bunny-lines-botox',
+  '/treatments/nasal-flaring-botox',
+  '/treatments/nefertiti-lift',
+  '/treatments/trap-botox',
+  '/treatments/calf-slimming-botox',
+  '/treatments/migraine-botox',
+  '/treatments/bruxism-botox',
+  '/treatments/hyperhidrosis-botox',
+  '/treatments/oily-skin-botox',
+  '/treatments/trigger-point-botox',
+  
+  // Dermal Fillers Hub & Sub-treatments
+  '/treatments/dermal-fillers',
+  '/treatments/lip-fillers',
+  '/treatments/cupid-bow-lips',
+  '/treatments/cheek-filler',
+  '/treatments/chin-filler',
+  '/treatments/jawline-filler',
+  '/treatments/nose-filler',
+  '/treatments/tear-trough-filler',
+  '/treatments/temple-filler',
+  '/treatments/forehead-filler',
+  '/treatments/neck-filler',
+  '/treatments/marionette-lines',
+  '/treatments/nasolabial-folds',
+  '/treatments/filler-dissolving',
+  '/treatments/ear-lobe-rejuvenation',
+  
+  // Skin Rejuvenation & Advanced
+  '/treatments/profhilo',
+  '/treatments/polynucleotides',
+  '/treatments/prp',
+  '/treatments/hydrafacial',
+  '/treatments/chemical-peel',
+  '/treatments/microneedling',
+  '/treatments/pdo-threads',
+  '/treatments/8-point-facelift',
+  '/treatments/non-surgical-facelift',
+  '/treatments/non-surgical-ponytail',
+  '/treatments/fat-dissolving',
+  '/treatments/prescription-skincare',
+  '/treatments/peel-to-reveal',
+  
+  // Plastic Surgery
+  '/treatments/plastic-surgery',
+  '/treatments/blepharoplasty',
+  '/treatments/rhinoplasty',
+  '/treatments/facelift-surgery',
+  '/treatments/liposuction',
+  '/treatments/co2-laser',
+  '/treatments/scar-reduction',
+  '/treatments/hair-transplant',
+  
+  // Medical Dermatology
+  '/treatments/dermatology',
+  '/treatments/acne',
+  '/treatments/mole-removal',
+  '/treatments/eczema',
+  '/treatments/psoriasis',
+  '/treatments/hyperpigmentation',
+  
+  // Specialised
+  '/treatments/intimate-bleaching',
+  '/treatments/advanced-consultation',
+  '/treatments/clinical-concepts'
+];
+
+const blogRoutes = [
+  '/blog/how-to-get-rid-of-bruises-quickly',
+  '/blog/forehead-wrinkles-myths-tips',
+  '/blog/lip-wrinkles-treatments',
+  '/blog/skin-tags-and-skin-tag-removal',
+  '/blog/beauty-ethnic-neutrality',
+  '/long-term-aesthetic-care-blog',
+  '/aesthetic-maintenance-cost-blog',
+  '/pdo-threads-blog',
+  '/non-surgical-nose-job-blog',
+  '/chinese-london-aesthetics-blog',
+  '/inside-mind-aesthetic-doctor-blog',
+  '/cosmetalk',
+  '/cosmetalk/vitamin-c-ferulic-acid-benefits',
+  '/cosmetalk/smokers-lines-women',
+  '/cosmetalk/flawless-skin',
+  '/cosmetalk/lazy-skin-syndrome',
+  '/cosmetalk/orofacial-neck-pain-cycle',
+  '/journal',
+  '/botox-faqs',
+  '/ultimate-botox-guide'
+];
+
+const locationRoutes = [
+  '/birmingham',
+  '/manchester',
+  '/cardiff',
+  '/delhi',
+  '/karachi',
+  '/barbados'
+];
 
 // Function to determine priority based on route importance
 function getPriority(route: string): number {
   if (route === '/') return 1.0;
-  if (['/treatments', '/lip-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', '/pdo-threads'].includes(route)) return 0.9;
+  if (['/treatments', '/treatments/botox', '/treatments/dermal-fillers', '/treatments/lip-fillers'].includes(route)) return 0.9;
   if (route === '/harley-street-consulting-rooms') return 0.8;
-  if (route.includes('botox') || route.includes('filler')) return 0.8;
-  if (route.includes('blog') || route.includes('treatment')) return 0.8;
+  if (route.includes('/treatments/')) return 0.8;
+  if (route.includes('blog') || route.includes('cosmetalk') || route.includes('journal')) return 0.7;
   if (locationRoutes.includes(route)) return 0.7;
   return 0.6;
 }
@@ -107,8 +153,10 @@ function getChangeFreq(route: string): 'weekly' | 'monthly' {
 }
 
 function createSitemapUrl(route: string): SitemapUrl {
+  // Ensure trailing slash for all URLs
+  const urlPath = route.endsWith('/') || route === '/' ? route : `${route}/`;
   return {
-    loc: `${baseUrl}${route}`,
+    loc: `${baseUrl}${urlPath}`,
     lastmod: currentDate,
     changefreq: getChangeFreq(route),
     priority: getPriority(route)
