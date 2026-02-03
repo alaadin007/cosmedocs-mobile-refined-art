@@ -6,73 +6,61 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Before/After Images
-import fillerBA1 from "@/assets/before-after/filler-ba-1.jpg";
-import fillerBA2 from "@/assets/before-after/filler-ba-2.jpg";
-
-// Gallery sections with anchors
+// Gallery sections with anchors for Botox treatments
 const gallerySections = [
   {
-    id: "lip-filler",
-    title: "Lip Filler",
-    description: "Natural lip enhancement results",
+    id: "forehead-lines",
+    title: "Forehead Lines",
+    description: "Horizontal forehead line smoothing",
     images: [
-      { src: fillerBA2, alt: "Lip filler before and after showing natural enhancement", caption: "Natural lip enhancement" }
+      { src: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png", alt: "Forehead Botox before and after showing smoothed horizontal lines", caption: "Forehead line treatment" }
     ]
   },
   {
-    id: "cheek-filler",
-    title: "Cheek Filler",
-    description: "Mid-face volume restoration",
+    id: "frown-lines",
+    title: "Frown Lines (Glabella)",
+    description: "Vertical lines between the eyebrows",
     images: [
-      { src: fillerBA1, alt: "Cheek filler before and after showing restored facial volume", caption: "Full-face rejuvenation including cheek enhancement" }
+      { src: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png", alt: "Frown line Botox before and after showing reduced glabella lines", caption: "Frown line relaxation" }
     ]
   },
   {
-    id: "jawline-filler",
-    title: "Jawline Filler",
-    description: "Jawline definition and contouring",
+    id: "crows-feet",
+    title: "Crow's Feet",
+    description: "Lines around the outer corners of eyes",
     images: []
   },
   {
-    id: "chin-filler",
-    title: "Chin Filler",
-    description: "Chin projection and lower face balance",
+    id: "bunny-lines",
+    title: "Bunny Lines",
+    description: "Lines on the bridge of the nose",
     images: []
   },
   {
-    id: "tear-trough",
-    title: "Tear Trough",
-    description: "Under-eye hollowing correction",
+    id: "gummy-smile",
+    title: "Gummy Smile",
+    description: "Reducing excessive gum show when smiling",
     images: []
   },
   {
-    id: "nose-filler",
-    title: "Non-Surgical Rhinoplasty",
-    description: "Nose reshaping without surgery",
+    id: "masseter",
+    title: "Masseter (Jawline Slimming)",
+    description: "Facial slimming and teeth grinding treatment",
     images: []
   },
   {
-    id: "temple-filler",
-    title: "Temple Filler",
-    description: "Upper face volume restoration",
+    id: "neck-bands",
+    title: "Neck Bands (Platysmal Bands)",
+    description: "Vertical neck bands and Nefertiti lift",
     images: []
-  },
-  {
-    id: "facial-lines",
-    title: "Facial Lines & Folds",
-    description: "Including nasolabial folds, marionette lines, pre-jowl sulcus, and perioral lines",
-    images: [
-      { src: fillerBA1, alt: "Before and after treatment for facial lines and folds showing softened nasolabial folds", caption: "Nasolabial folds and mid-face volume loss" }
-    ]
   }
 ];
 
-const BeforeAfterDermalFillers = () => {
+const BeforeAfterBotox = () => {
   const seoData = generateSEOMetadata(
-    "Dermal Filler Before & After Results | CosmeDocs Harley Street",
-    "View real dermal filler before and after results from our London clinic. Doctor-led treatments for lips, cheeks, jawline, and facial rejuvenation.",
-    "/before-after/dermal-fillers/"
+    "Botox Before & After Results | CosmeDocs Harley Street London",
+    "View real Botox before and after results from our London clinic. See forehead lines, frown lines, crow's feet, and jawline slimming transformations.",
+    "/before-after/botox/"
   );
 
   return (
@@ -80,10 +68,10 @@ const BeforeAfterDermalFillers = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/before-after/dermal-fillers/" />
+        <link rel="canonical" href="https://cosmedocs.co.uk/before-after/botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/before-after/dermal-fillers/" />
+        <meta property="og:url" content="https://cosmedocs.co.uk/before-after/botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
@@ -108,9 +96,9 @@ const BeforeAfterDermalFillers = () => {
               },
               {
                 "@type": "ImageGallery",
-                "name": "Dermal Filler Before & After Results",
-                "description": "Real patient transformations from CosmeDocs Harley Street clinic",
-                "url": "https://cosmedocs.co.uk/before-after/dermal-fillers/"
+                "name": "Botox Before & After Results",
+                "description": "Real patient Botox transformations from CosmeDocs Harley Street clinic",
+                "url": "https://cosmedocs.co.uk/before-after/botox/"
               }
             ]
           })}
@@ -134,10 +122,10 @@ const BeforeAfterDermalFillers = () => {
                 ← Back to Gallery
               </Link>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
-                Dermal Filler Before & After Results
+                Botox Before & After Results
               </h1>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Real patient transformations from our Harley Street clinic. Every result reflects our commitment to natural, doctor-led aesthetic medicine.
+                Real patient transformations showcasing the subtle, natural results of expert Botox treatment from our Harley Street clinic.
               </p>
             </motion.div>
           </div>
@@ -184,7 +172,7 @@ const BeforeAfterDermalFillers = () => {
         <section className="py-16">
           <div className="page-container">
             <div className="max-w-6xl mx-auto space-y-20">
-              {gallerySections.map((section, sectionIndex) => (
+              {gallerySections.map((section) => (
                 <motion.div
                   key={section.id}
                   id={section.id}
@@ -214,6 +202,7 @@ const BeforeAfterDermalFillers = () => {
                             src={image.src} 
                             alt={image.alt}
                             className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -245,22 +234,22 @@ const BeforeAfterDermalFillers = () => {
                 viewport={{ once: true }}
                 className="text-center mb-12"
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Learn More About Our Treatments</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Learn More About Botox</h2>
                 <p className="text-gray-400">
-                  Explore our dermal filler treatments and understand which approach may be right for you.
+                  Explore our Botox treatments and understand which areas may benefit you.
                 </p>
               </motion.div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
-                  to="/treatments/dermal-fillers/"
+                  to="/treatments/botox/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Dermal Fillers Overview
+                    Face Botox Overview
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Learn about our full-face approach to dermal filler treatment and our medical philosophy.
+                    Learn about our comprehensive approach to facial Botox treatment.
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
                     Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -268,29 +257,14 @@ const BeforeAfterDermalFillers = () => {
                 </Link>
 
                 <Link 
-                  to="/treatments/dermal-fillers/areas/"
+                  to="/treatments/masseter-botox/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Facial Areas & Concerns
+                    Masseter Botox
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Understand why facial changes occur and how they relate to overall facial structure.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-
-                <Link 
-                  to="/treatments/cheek-filler/"
-                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Cheek Filler
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Restore mid-face volume and support for natural facial rejuvenation.
+                    Facial slimming and teeth grinding treatment with Botox.
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
                     View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -298,17 +272,32 @@ const BeforeAfterDermalFillers = () => {
                 </Link>
 
                 <Link 
-                  to="/treatments/jawline-filler/"
+                  to="/treatments/frown-line-botox/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Jawline Filler
+                    Frown Line Botox
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Define and contour the jawline for improved lower face structure.
+                    Smooth vertical lines between the eyebrows (glabella lines).
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
                     View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+
+                <Link 
+                  to="/before-after/dermal-fillers/"
+                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
+                    Dermal Filler Results
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    View before & after results for lip, cheek, and jawline fillers.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
+                    View gallery <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
@@ -328,7 +317,7 @@ const BeforeAfterDermalFillers = () => {
               >
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Book Your Consultation</h2>
                 <p className="text-gray-300 text-lg mb-10 leading-relaxed">
-                  Every treatment begins with a comprehensive facial assessment. Our doctors will discuss your concerns and recommend an approach tailored to your facial structure.
+                  Every treatment begins with a comprehensive facial assessment. Our doctors will discuss your concerns and recommend an approach tailored to your unique features.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact">
@@ -336,9 +325,9 @@ const BeforeAfterDermalFillers = () => {
                       Book Consultation
                     </Button>
                   </Link>
-                  <Link to="/treatments">
+                  <Link to="/treatments/botox/">
                     <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 rounded-full text-lg w-full sm:w-auto">
-                      View All Treatments
+                      Learn About Botox
                     </Button>
                   </Link>
                 </div>
@@ -346,9 +335,21 @@ const BeforeAfterDermalFillers = () => {
             </div>
           </div>
         </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>Botox Before & After Gallery - Real Results</h2>
+          <p>View authentic Botox before and after photos from our Harley Street clinic. Our expert doctors have performed over 1 million injections since 2007, achieving natural-looking results for patients seeking wrinkle reduction.</p>
+          
+          <h3>Upper Face Botox Results</h3>
+          <p>Browse forehead line, frown line, and crow's feet Botox results. Our subtle approach ensures natural movement while significantly reducing the appearance of dynamic wrinkles.</p>
+          
+          <h3>Lower Face & Specialised Botox</h3>
+          <p>Explore masseter Botox for facial slimming, gummy smile correction, and Nefertiti lift results. Each treatment is tailored to complement your unique facial structure.</p>
+        </div>
       </div>
     </>
   );
 };
 
-export default BeforeAfterDermalFillers;
+export default BeforeAfterBotox;

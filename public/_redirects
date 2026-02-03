@@ -204,6 +204,46 @@
 /skin-boosters                    /treatments/                        301
 
 # =====================================================
+# PHASE 2: Before & After Gallery URL Migration
+# =====================================================
+
+# ----- BEFORE & AFTER GALLERIES -----
+/before-after-gallery             /before-after/                      301
+/before-after-gallery/            /before-after/                      301
+/gallery                          /before-after/                      301
+/gallery/                         /before-after/                      301
+/results                          /before-after/                      301
+/results/                         /before-after/                      301
+/transformations                  /before-after/                      301
+/transformations/                 /before-after/                      301
+
+# Botox gallery redirects
+/before-after-botox               /before-after/botox/                301
+/before-after-botox/              /before-after/botox/                301
+/botox-before-after               /before-after/botox/                301
+/botox-before-after/              /before-after/botox/                301
+/botox-results                    /before-after/botox/                301
+/botox-results/                   /before-after/botox/                301
+
+# Dermal filler gallery redirects
+/before-after-dermal-fillers      /before-after/dermal-fillers/       301
+/before-after-dermal-fillers/     /before-after/dermal-fillers/       301
+/dermal-filler-before-after       /before-after/dermal-fillers/       301
+/dermal-filler-before-after/      /before-after/dermal-fillers/       301
+/filler-results                   /before-after/dermal-fillers/       301
+/filler-results/                  /before-after/dermal-fillers/       301
+/lip-filler-before-after          /before-after/dermal-fillers/       301
+/lip-filler-before-after/         /before-after/dermal-fillers/       301
+
+# Skin rejuvenation gallery redirects
+/before-after-skin                /before-after/skin-rejuvenation/    301
+/before-after-skin/               /before-after/skin-rejuvenation/    301
+/skin-results                     /before-after/skin-rejuvenation/    301
+/skin-results/                    /before-after/skin-rejuvenation/    301
+/profhilo-before-after            /before-after/skin-rejuvenation/    301
+/profhilo-before-after/           /before-after/skin-rejuvenation/    301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200

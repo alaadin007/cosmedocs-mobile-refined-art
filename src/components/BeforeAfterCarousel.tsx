@@ -172,7 +172,7 @@ const BeforeAfterCarousel = () => {
               "Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. Invisible, not exaggerated."
             </p>
             <Link 
-              to="/before-after-gallery" 
+              to="/before-after/" 
               className="bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 rounded-full px-8 py-3 inline-flex items-center justify-center text-sm font-medium transition-all duration-300"
             >
               View More Results

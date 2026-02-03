@@ -49,7 +49,7 @@ export default function Header() {
         {
           icon: Camera,
           label: "B/A Gallery",
-          action: () => window.location.href = "/before-after-gallery"
+          action: () => window.location.href = "/before-after/"
         },
         {
           icon: MessageSquare,
