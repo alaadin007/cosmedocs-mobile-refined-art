@@ -1,123 +1,190 @@
 /**
  * Automatic treatment route detection system
- * This file maintains a registry of all treatment routes and provides utilities
- * to automatically include new treatment pages in sitemaps
+ * Updated for Phase 1 migration - all routes now under /treatments/
  */
 
-// Central registry of all treatment routes
-// This should be updated whenever a new treatment page is created
+// Central registry of all treatment routes (new nested structure)
 const TREATMENT_ROUTES = [
-  // Core aesthetic treatments
-  '/lip-fillers',
-  '/non-surgical-nose-job', 
-  '/non-surgical-facelift',
-  '/8-point-facelift',
-  '/pdo-threads',
-  '/dermal-fillers',
-  '/polynucleotide-treatment',
-  '/profhilo',
-  '/hydrafacial',
-  '/prp-treatment',
-  
   // Botox treatments
-  '/botox-london',
-  '/botox-cost-london',
-  '/nefertiti-botox-facelift',
-  '/trigger-point-botox',
-  '/gummy-smile-botox',
-  '/chin-botox',
-  '/trap-botox',
-  '/botox-calf-reduction',
-  '/frown-line-botox',
-  '/crows-feet-botox',
-  '/forehead-lines-botox',
-  '/bunny-lines-botox',
-  '/nasal-flaring-botox',
-  '/lip-flip',
-  '/migraine-botox',
-  '/bruxism-botox',
-  '/excessive-sweat-botox',
-  '/non-surgical-ponytail',
+  '/treatments/botox',
+  '/treatments/botox-cost',
+  '/treatments/masseter-botox',
+  '/treatments/lip-flip',
+  '/treatments/gummy-smile-botox',
+  '/treatments/chin-botox',
+  '/treatments/frown-line-botox',
+  '/treatments/crows-feet-botox',
+  '/treatments/forehead-lines-botox',
+  '/treatments/bunny-lines-botox',
+  '/treatments/nasal-flaring-botox',
+  '/treatments/nefertiti-lift',
+  '/treatments/trap-botox',
+  '/treatments/calf-slimming-botox',
+  '/treatments/migraine-botox',
+  '/treatments/bruxism-botox',
+  '/treatments/hyperhidrosis-botox',
+  '/treatments/oily-skin-botox',
+  '/treatments/trigger-point-botox',
   
-  // Filler treatments
-  '/marionette-lines',
-  '/nasolabial-folds',
-  '/lip-filler-dissolve',
-  '/cheek-filler',  // ✅ Added the missing Cheek Filler page
-  '/chin-filler',   // ✅ Added new Chin Filler page
-  '/cupid-bow-lips', // ✅ Added Cupid Bow Enhancement page
-  '/ear-lobe-rejuvenation', // ✅ Added new Ear Lobe Rejuvenation page
-  '/hair-transplant-surgeon', // ✅ Added Hair Transplant Surgeon page
-  '/eczema-treatment',
-  '/psoriasis-treatment',
-  '/fat-dissolve',
-  '/oily-skin-botox',
-  '/cosmederm',
-  '/mole-skin-tag-removal',
+  // Dermal Filler treatments
+  '/treatments/dermal-fillers',
+  '/treatments/lip-fillers',
+  '/treatments/cupid-bow-lips',
+  '/treatments/cheek-filler',
+  '/treatments/chin-filler',
+  '/treatments/jawline-filler',
+  '/treatments/nose-filler',
+  '/treatments/tear-trough-filler',
+  '/treatments/temple-filler',
+  '/treatments/forehead-filler',
+  '/treatments/neck-filler',
+  '/treatments/marionette-lines',
+  '/treatments/nasolabial-folds',
+  '/treatments/filler-dissolving',
+  '/treatments/ear-lobe-rejuvenation',
   
-  // Advanced/specialized treatments
-  '/advanced-consultation',
-  '/clinical-concepts-to-flawless-skin',
-  '/medical-anal-bleaching',
-  '/peel-to-reveal'
+  // Skin Rejuvenation & Advanced
+  '/treatments/profhilo',
+  '/treatments/polynucleotides',
+  '/treatments/prp',
+  '/treatments/hydrafacial',
+  '/treatments/chemical-peel',
+  '/treatments/microneedling',
+  '/treatments/pdo-threads',
+  '/treatments/8-point-facelift',
+  '/treatments/non-surgical-facelift',
+  '/treatments/non-surgical-ponytail',
+  '/treatments/fat-dissolving',
+  '/treatments/prescription-skincare',
+  '/treatments/peel-to-reveal',
+  
+  // Plastic Surgery
+  '/treatments/plastic-surgery',
+  '/treatments/blepharoplasty',
+  '/treatments/rhinoplasty',
+  '/treatments/facelift-surgery',
+  '/treatments/liposuction',
+  '/treatments/co2-laser',
+  '/treatments/scar-reduction',
+  '/treatments/hair-transplant',
+  
+  // Medical Dermatology
+  '/treatments/dermatology',
+  '/treatments/acne',
+  '/treatments/mole-removal',
+  '/treatments/eczema',
+  '/treatments/psoriasis',
+  '/treatments/hyperpigmentation',
+  
+  // Specialised
+  '/treatments/intimate-bleaching',
+  '/treatments/advanced-consultation',
+  '/treatments/clinical-concepts'
 ];
+
+// Legacy route mapping for backward compatibility
+const LEGACY_ROUTE_MAP: Record<string, string> = {
+  '/lip-fillers': '/treatments/lip-fillers',
+  '/non-surgical-nose-job': '/treatments/nose-filler',
+  '/non-surgical-facelift': '/treatments/non-surgical-facelift',
+  '/8-point-facelift': '/treatments/8-point-facelift',
+  '/pdo-threads': '/treatments/pdo-threads',
+  '/dermal-fillers': '/treatments/dermal-fillers',
+  '/polynucleotide-treatment': '/treatments/polynucleotides',
+  '/profhilo': '/treatments/profhilo',
+  '/hydrafacial': '/treatments/hydrafacial',
+  '/prp-treatment': '/treatments/prp',
+  '/botox-london': '/treatments/botox',
+  '/botox-cost-london': '/treatments/botox-cost',
+  '/nefertiti-botox-facelift': '/treatments/nefertiti-lift',
+  '/trigger-point-botox': '/treatments/trigger-point-botox',
+  '/gummy-smile-botox': '/treatments/gummy-smile-botox',
+  '/chin-botox': '/treatments/chin-botox',
+  '/trap-botox': '/treatments/trap-botox',
+  '/botox-calf-reduction': '/treatments/calf-slimming-botox',
+  '/frown-line-botox': '/treatments/frown-line-botox',
+  '/crows-feet-botox': '/treatments/crows-feet-botox',
+  '/forehead-lines-botox': '/treatments/forehead-lines-botox',
+  '/bunny-lines-botox': '/treatments/bunny-lines-botox',
+  '/nasal-flaring-botox': '/treatments/nasal-flaring-botox',
+  '/lip-flip': '/treatments/lip-flip',
+  '/migraine-botox': '/treatments/migraine-botox',
+  '/bruxism-botox': '/treatments/bruxism-botox',
+  '/excessive-sweat-botox': '/treatments/hyperhidrosis-botox',
+  '/non-surgical-ponytail': '/treatments/non-surgical-ponytail',
+  '/marionette-lines': '/treatments/marionette-lines',
+  '/nasolabial-folds': '/treatments/nasolabial-folds',
+  '/lip-filler-dissolve': '/treatments/filler-dissolving',
+  '/cheek-filler': '/treatments/cheek-filler',
+  '/chin-filler': '/treatments/chin-filler',
+  '/cupid-bow-lips': '/treatments/cupid-bow-lips',
+  '/ear-lobe-rejuvenation': '/treatments/ear-lobe-rejuvenation',
+  '/hair-transplant-surgeon': '/treatments/hair-transplant',
+  '/eczema-treatment': '/treatments/eczema',
+  '/psoriasis-treatment': '/treatments/psoriasis',
+  '/fat-dissolve': '/treatments/fat-dissolving',
+  '/oily-skin-botox': '/treatments/oily-skin-botox',
+  '/cosmederm': '/treatments/dermatology',
+  '/mole-skin-tag-removal': '/treatments/mole-removal',
+  '/advanced-consultation': '/treatments/advanced-consultation',
+  '/clinical-concepts-to-flawless-skin': '/treatments/clinical-concepts',
+  '/medical-anal-bleaching': '/treatments/intimate-bleaching'
+};
 
 /**
  * Get all treatment routes for sitemap generation
- * @returns Array of treatment route paths
  */
 export function getAllTreatmentRoutes(): string[] {
   return [...TREATMENT_ROUTES].sort();
 }
 
 /**
- * Add a new treatment route to the registry
- * This should be called whenever a new treatment page is created
- * @param route - The route path (e.g., '/new-treatment')
+ * Get legacy route to new route mapping
  */
-export function addTreatmentRoute(route: string): void {
-  const normalizedRoute = route.startsWith('/') ? route : `/${route}`;
-  
-  if (!TREATMENT_ROUTES.includes(normalizedRoute)) {
-    TREATMENT_ROUTES.push(normalizedRoute);
-    TREATMENT_ROUTES.sort();
-    
-    console.log(`✅ Added new treatment route to sitemap: ${normalizedRoute}`);
-  }
+export function getLegacyRouteMap(): Record<string, string> {
+  return { ...LEGACY_ROUTE_MAP };
+}
+
+/**
+ * Convert legacy route to new nested route
+ */
+export function convertLegacyRoute(legacyRoute: string): string | null {
+  const normalized = legacyRoute.startsWith('/') ? legacyRoute : `/${legacyRoute}`;
+  return LEGACY_ROUTE_MAP[normalized] || null;
 }
 
 /**
  * Check if a route is a treatment route
- * @param route - The route to check
- * @returns True if the route is a treatment route
  */
 export function isTreatmentRoute(route: string): boolean {
-  const normalizedRoute = route.startsWith('/') ? route : `/${route}`;
-  return TREATMENT_ROUTES.includes(normalizedRoute);
+  const normalized = route.startsWith('/') ? route : `/${route}`;
+  return TREATMENT_ROUTES.includes(normalized) || normalized.startsWith('/treatments/');
 }
 
 /**
  * Get treatment routes by category
- * @param category - The category to filter by
- * @returns Array of routes in the specified category
  */
-export function getTreatmentRoutesByCategory(category: 'botox' | 'filler' | 'aesthetic' | 'advanced'): string[] {
+export function getTreatmentRoutesByCategory(category: 'botox' | 'filler' | 'skin' | 'surgery' | 'dermatology'): string[] {
   switch (category) {
     case 'botox':
       return TREATMENT_ROUTES.filter(route => 
-        route.includes('botox') || route.includes('gummy-smile') || route.includes('chin-botox')
+        route.includes('botox') || route.includes('lip-flip') || route.includes('nefertiti') || route.includes('hyperhidrosis')
       );
     case 'filler':
       return TREATMENT_ROUTES.filter(route => 
-        route.includes('filler') || route.includes('marionette') || route.includes('nasolabial')
+        route.includes('filler') || route.includes('marionette') || route.includes('nasolabial') || route.includes('nose-filler')
       );
-    case 'aesthetic':
+    case 'skin':
       return TREATMENT_ROUTES.filter(route => 
-        ['lip-fillers', 'dermal-fillers', 'profhilo', 'prp', 'hydrafacial', 'polynucleotide'].some(term => route.includes(term))
+        ['profhilo', 'polynucleotides', 'prp', 'hydrafacial', 'chemical-peel', 'microneedling', 'pdo-threads', 'facelift', 'fat-dissolving', 'peel-to-reveal', 'skincare'].some(term => route.includes(term))
       );
-    case 'advanced':
+    case 'surgery':
       return TREATMENT_ROUTES.filter(route => 
-        route.includes('advanced') || route.includes('clinical') || route.includes('medical')
+        ['plastic-surgery', 'blepharoplasty', 'rhinoplasty', 'facelift-surgery', 'liposuction', 'co2-laser', 'scar-reduction', 'hair-transplant'].some(term => route.includes(term))
+      );
+    case 'dermatology':
+      return TREATMENT_ROUTES.filter(route => 
+        ['dermatology', 'acne', 'mole-removal', 'eczema', 'psoriasis', 'hyperpigmentation'].some(term => route.includes(term))
       );
     default:
       return [];
@@ -126,7 +193,8 @@ export function getTreatmentRoutesByCategory(category: 'botox' | 'filler' | 'aes
 
 export default {
   getAllTreatmentRoutes,
-  addTreatmentRoute,
+  getLegacyRouteMap,
+  convertLegacyRoute,
   isTreatmentRoute,
   getTreatmentRoutesByCategory
 };
