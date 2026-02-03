@@ -1082,11 +1082,11 @@ const UltimateBotoxGuide = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { title: "Botox FAQs", link: "/botox-faqs", desc: "Quick answers to common questions" },
-                { title: "Botox Pricing", link: "/botox-cost-london", desc: "Transparent costs explained" },
-                { title: "Our Team", link: "/team", desc: "Meet the doctors" },
-                { title: "Before & After", link: "/before-after-gallery", desc: "Real results, real people" },
-                { title: "Testimonials", link: "/testimonials", desc: "What our clients say" },
-                { title: "Book Now", link: "/contact", desc: "Ready to start?" },
+                { title: "Botox Pricing", link: "/treatments/botox-cost/", desc: "Transparent costs explained" },
+                { title: "Our Team", link: "/our-team/", desc: "Meet the doctors" },
+                { title: "Before & After", link: "/before-after/", desc: "Real results, real people" },
+                { title: "Testimonials", link: "/testimonials/", desc: "What our clients say" },
+                { title: "Book Now", link: "/contact/", desc: "Ready to start?" },
               ].map((item) => (
                 <motion.div key={item.title} variants={fadeInUp}>
                   <Link 

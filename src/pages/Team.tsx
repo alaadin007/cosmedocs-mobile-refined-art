@@ -21,7 +21,7 @@ const Team = () => {
   const seoData = generateSEOMetadata(
     "Our Expert Team | Aesthetic Doctors | Cosmedocs London",
     "Meet our team of expert aesthetic doctors at Cosmedocs. Dr. Ahmed Haq and Dr. Hena Haq bring extensive experience in cosmetic treatments and natural aesthetic enhancement.",
-    "/team"
+    "/our-team"
   );
 
   const teamMembers = [
@@ -30,7 +30,7 @@ const Team = () => {
       title: "Expert Cosmetic Physician",
       image: "/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png",
       education: "Royal College of Surgeons, Medical School Graduate",
-      link: "/team/dr-ahmed-haq",
+      link: "/our-team/dr-ahmed-haq",
       bookingUrl: "https://med.as.me/harleystreet",
       description: "An extensively experienced practitioner with expertise in complex facial contouring and advanced aesthetic treatments. Dr. Haq leads our in-house team and trains cosmetic physicians at the Harley Street Institute."
     },
@@ -39,7 +39,7 @@ const Team = () => {
       title: "Cosmetic Physician",
       image: "/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png",
       education: "Oxford Medical Training • London & Kent GP Training",
-      link: "/team/dr-hena-haq",
+      link: "/our-team/dr-hena-haq",
       bookingUrl: "https://med.as.me/harleystreet",
       description: "An Aesthetic Doctor whose holistic approach to client treatments has made her popular amongst her clients. Her special interest lies in subtle tweakments and natural outcomes."
     },
@@ -48,7 +48,7 @@ const Team = () => {
       title: "Aesthetic Practitioner",
       image: laertaImage,
       education: "9+ Years Experience in Non-Surgical Aesthetic Treatments",
-      link: "/team/laerta-buzo",
+      link: "/our-team/laerta-buzo",
       bookingUrl: "https://med.as.me/alert",
       description: "An experienced Aesthetic Practitioner specialising in personalised treatment plans that combine injectables, skin boosters, laser and device-based treatments to achieve natural and balanced results."
     },
@@ -57,7 +57,7 @@ const Team = () => {
       title: "Consultant Dermatologist",
       image: hassanImage,
       education: "Royal College of Physicians • British Association of Dermatologists",
-      link: "/team/dr-hassan-mirza",
+      link: "/our-team/dr-hassan-mirza",
       bookingUrl: "https://med.as.me/schedule/0cc7d92b/?categories[]=Dr.%20Hassan%20Dermatologist",
       description: "A highly experienced Consultant Dermatologist currently working within the NHS, delivering evidence-based, patient-focused dermatological care for acne, eczema, psoriasis and skin conditions."
     },
@@ -66,7 +66,7 @@ const Team = () => {
       title: "Aesthetic Medicine Specialist",
       image: hotakiImage,
       education: "Pioneer of the Permanent Non-Surgical Facelift",
-      link: "/team/dr-noor-hotaki",
+      link: "/our-team/dr-noor-hotaki",
       bookingUrl: "https://med.as.me/harleystreet",
       description: "An internationally recognised aesthetic specialist and creator of the groundbreaking permanent non-surgical facelift, with over 1,000 successful procedures worldwide."
     }
@@ -76,7 +76,7 @@ const Team = () => {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
     "name": "Cosmedocs Medical Team",
-    "url": "https://www.cosmedocs.com/team",
+    "url": "https://www.cosmedocs.com/our-team",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",

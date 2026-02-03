@@ -16,12 +16,15 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Updated for Phase 1 migration - all treatments now under /treatments/
+// Updated for Phase 3 migration - core pages with trailing slashes
 const pageRoutes = [
-  '/', '/treatments', '/about', '/contact', '/partners', '/partnerships', '/auth', '/dashboard',
-  '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
-  '/team', '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
-  '/testimonials', '/aesthetics-at-a-glance'
+  '/', '/treatments/', '/about/', '/contact/', '/partners/', '/partnerships/', '/auth/', '/dashboard/',
+  '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
+  '/our-team/', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-buzo/',
+  '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/',
+  '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/',
+  '/membership/', '/harley-street-consulting-rooms/',
+  '/testimonials/', '/aesthetics-at-a-glance/'
 ];
 
 // New nested treatment routes

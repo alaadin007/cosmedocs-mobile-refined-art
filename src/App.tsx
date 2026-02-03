@@ -211,18 +211,27 @@ const App = () => {
                           <Route path="/old-index" element={<Index />} />
                           <Route path="/home" element={<Home />} />
                           <Route path="/treatments" element={<Treatments />} />
-                          <Route path="/team" element={<Team />} />
+                          <Route path="/our-team" element={<Team />} />
+                          <Route path="/our-team/" element={<Team />} />
                           <Route path="/about" element={<About />} />
+                          <Route path="/about/" element={<About />} />
                           <Route path="/contact" element={<Contact />} />
+                          <Route path="/contact/" element={<Contact />} />
                           <Route path="/testimonials" element={<Testimonials />} />
+                          <Route path="/testimonials/" element={<Testimonials />} />
                           <Route path="/thank-you" element={<ThankYou />} />
                           <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
                           <Route path="/membership" element={<Membership />} />
-                          <Route path="/team/dr-ahmed-haq" element={<DrAhmedHaq />} />
-                          <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
-                          <Route path="/team/laerta-buzo" element={<LaertaBuzo />} />
-                          <Route path="/team/dr-hassan-mirza" element={<DrHassanMirza />} />
-                          <Route path="/team/dr-noor-hotaki" element={<DrNoorHotaki />} />
+                          <Route path="/our-team/dr-ahmed-haq" element={<DrAhmedHaq />} />
+                          <Route path="/our-team/dr-ahmed-haq/" element={<DrAhmedHaq />} />
+                          <Route path="/our-team/dr-hena-haq" element={<DrHenaHaq />} />
+                          <Route path="/our-team/dr-hena-haq/" element={<DrHenaHaq />} />
+                          <Route path="/our-team/laerta-buzo" element={<LaertaBuzo />} />
+                          <Route path="/our-team/laerta-buzo/" element={<LaertaBuzo />} />
+                          <Route path="/our-team/dr-hassan-mirza" element={<DrHassanMirza />} />
+                          <Route path="/our-team/dr-hassan-mirza/" element={<DrHassanMirza />} />
+                          <Route path="/our-team/dr-noor-hotaki" element={<DrNoorHotaki />} />
+                          <Route path="/our-team/dr-noor-hotaki/" element={<DrNoorHotaki />} />
                           <Route path="/partners" element={<Partners />} />
                           <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
                           <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
@@ -478,10 +487,16 @@ const App = () => {
                           <Route path="/advanced-consultation" element={<Navigate to="/treatments/advanced-consultation/" replace />} />
                           <Route path="/clinical-concepts-to-flawless-skin" element={<Navigate to="/treatments/clinical-concepts/" replace />} />
                           
-                          {/* Other legacy redirects */}
-                          <Route path="/cosmederm" element={<Navigate to="/treatments/dermatology/" replace />} />
-                          <Route path="/aesthetics-at-glance" element={<Navigate to="/aesthetics-at-a-glance" replace />} />
-                          <Route path="/booking" element={<Navigate to="/contact" replace />} />
+                          {/* Core pages legacy redirects */}
+                          <Route path="/team" element={<Navigate to="/our-team/" replace />} />
+                          <Route path="/team/" element={<Navigate to="/our-team/" replace />} />
+                          <Route path="/team/dr-ahmed-haq" element={<Navigate to="/our-team/dr-ahmed-haq/" replace />} />
+                          <Route path="/team/dr-hena-haq" element={<Navigate to="/our-team/dr-hena-haq/" replace />} />
+                          <Route path="/team/laerta-buzo" element={<Navigate to="/our-team/laerta-buzo/" replace />} />
+                          <Route path="/team/dr-hassan-mirza" element={<Navigate to="/our-team/dr-hassan-mirza/" replace />} />
+                          <Route path="/team/dr-noor-hotaki" element={<Navigate to="/our-team/dr-noor-hotaki/" replace />} />
+                          
+{/* ============================================= */}
                           <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
                           <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
                           <Route path="/botox-price-london" element={<Navigate to="/treatments/botox-cost/" replace />} />

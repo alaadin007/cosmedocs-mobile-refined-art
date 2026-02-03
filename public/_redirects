@@ -197,6 +197,24 @@
 /clinical-concepts-to-flawless-skin /treatments/clinical-concepts/    301
 /clinical-concepts-to-flawless-skin/ /treatments/clinical-concepts/   301
 
+# =====================================================
+# PHASE 3: Core Pages URL Migration
+# =====================================================
+
+# ----- TEAM PAGE MIGRATION -----
+/team                             /our-team/                          301
+/team/                            /our-team/                          301
+/team/dr-ahmed-haq                /our-team/dr-ahmed-haq/             301
+/team/dr-ahmed-haq/               /our-team/dr-ahmed-haq/             301
+/team/dr-hena-haq                 /our-team/dr-hena-haq/              301
+/team/dr-hena-haq/                /our-team/dr-hena-haq/              301
+/team/laerta-buzo                 /our-team/laerta-buzo/              301
+/team/laerta-buzo/                /our-team/laerta-buzo/              301
+/team/dr-hassan-mirza             /our-team/dr-hassan-mirza/          301
+/team/dr-hassan-mirza/            /our-team/dr-hassan-mirza/          301
+/team/dr-noor-hotaki              /our-team/dr-noor-hotaki/           301
+/team/dr-noor-hotaki/             /our-team/dr-noor-hotaki/           301
+
 # ----- OTHER LEGACY REDIRECTS -----
 /aesthetics-at-glance             /aesthetics-at-a-glance/            301
 /booking                          /contact/                           301
