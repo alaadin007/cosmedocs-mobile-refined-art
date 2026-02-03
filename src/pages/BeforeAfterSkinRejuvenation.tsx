@@ -6,73 +6,55 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Before/After Images
-import fillerBA1 from "@/assets/before-after/filler-ba-1.jpg";
-import fillerBA2 from "@/assets/before-after/filler-ba-2.jpg";
-
-// Gallery sections with anchors
+// Gallery sections with anchors for skin rejuvenation treatments
 const gallerySections = [
   {
-    id: "lip-filler",
-    title: "Lip Filler",
-    description: "Natural lip enhancement results",
+    id: "profhilo",
+    title: "Profhilo",
+    description: "Bio-remodelling for skin hydration and laxity",
     images: [
-      { src: fillerBA2, alt: "Lip filler before and after showing natural enhancement", caption: "Natural lip enhancement" }
+      { src: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png", alt: "Profhilo before and after showing improved skin hydration and texture", caption: "Improved skin quality and hydration" }
     ]
   },
   {
-    id: "cheek-filler",
-    title: "Cheek Filler",
-    description: "Mid-face volume restoration",
+    id: "polynucleotides",
+    title: "Polynucleotides",
+    description: "Regenerative skin treatment for deep rejuvenation",
+    images: []
+  },
+  {
+    id: "microneedling",
+    title: "Microneedling",
+    description: "Collagen induction therapy for texture and scarring",
     images: [
-      { src: fillerBA1, alt: "Cheek filler before and after showing restored facial volume", caption: "Full-face rejuvenation including cheek enhancement" }
+      { src: "/lovable-uploads/04ac4a20-e938-4966-8d5b-cdba7b58908f.png", alt: "Microneedling treatment progression showing skin improvement", caption: "Progressive skin improvement" }
     ]
   },
   {
-    id: "jawline-filler",
-    title: "Jawline Filler",
-    description: "Jawline definition and contouring",
+    id: "chemical-peel",
+    title: "Chemical Peels",
+    description: "Exfoliation for pigmentation, acne, and texture",
     images: []
   },
   {
-    id: "chin-filler",
-    title: "Chin Filler",
-    description: "Chin projection and lower face balance",
+    id: "prp",
+    title: "PRP (Platelet-Rich Plasma)",
+    description: "Your own growth factors for natural rejuvenation",
     images: []
   },
   {
-    id: "tear-trough",
-    title: "Tear Trough",
-    description: "Under-eye hollowing correction",
+    id: "hydrafacial",
+    title: "HydraFacial",
+    description: "Deep cleansing and hydration treatment",
     images: []
-  },
-  {
-    id: "nose-filler",
-    title: "Non-Surgical Rhinoplasty",
-    description: "Nose reshaping without surgery",
-    images: []
-  },
-  {
-    id: "temple-filler",
-    title: "Temple Filler",
-    description: "Upper face volume restoration",
-    images: []
-  },
-  {
-    id: "facial-lines",
-    title: "Facial Lines & Folds",
-    description: "Including nasolabial folds, marionette lines, pre-jowl sulcus, and perioral lines",
-    images: [
-      { src: fillerBA1, alt: "Before and after treatment for facial lines and folds showing softened nasolabial folds", caption: "Nasolabial folds and mid-face volume loss" }
-    ]
   }
 ];
 
-const BeforeAfterDermalFillers = () => {
+const BeforeAfterSkinRejuvenation = () => {
   const seoData = generateSEOMetadata(
-    "Dermal Filler Before & After Results | CosmeDocs Harley Street",
-    "View real dermal filler before and after results from our London clinic. Doctor-led treatments for lips, cheeks, jawline, and facial rejuvenation.",
-    "/before-after/dermal-fillers/"
+    "Skin Rejuvenation Before & After Results | CosmeDocs Harley Street",
+    "View real skin rejuvenation before and after results from our London clinic. See Profhilo, Polynucleotides, microneedling, and chemical peel transformations.",
+    "/before-after/skin-rejuvenation/"
   );
 
   return (
@@ -80,10 +62,10 @@ const BeforeAfterDermalFillers = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/before-after/dermal-fillers/" />
+        <link rel="canonical" href="https://cosmedocs.co.uk/before-after/skin-rejuvenation/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/before-after/dermal-fillers/" />
+        <meta property="og:url" content="https://cosmedocs.co.uk/before-after/skin-rejuvenation/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
@@ -108,9 +90,9 @@ const BeforeAfterDermalFillers = () => {
               },
               {
                 "@type": "ImageGallery",
-                "name": "Dermal Filler Before & After Results",
-                "description": "Real patient transformations from CosmeDocs Harley Street clinic",
-                "url": "https://cosmedocs.co.uk/before-after/dermal-fillers/"
+                "name": "Skin Rejuvenation Before & After Results",
+                "description": "Real patient skin rejuvenation transformations from CosmeDocs Harley Street clinic",
+                "url": "https://cosmedocs.co.uk/before-after/skin-rejuvenation/"
               }
             ]
           })}
@@ -134,10 +116,10 @@ const BeforeAfterDermalFillers = () => {
                 ← Back to Gallery
               </Link>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
-                Dermal Filler Before & After Results
+                Skin Rejuvenation Before & After Results
               </h1>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Real patient transformations from our Harley Street clinic. Every result reflects our commitment to natural, doctor-led aesthetic medicine.
+                Real patient transformations showcasing the power of advanced skin rejuvenation treatments from our Harley Street clinic.
               </p>
             </motion.div>
           </div>
@@ -184,7 +166,7 @@ const BeforeAfterDermalFillers = () => {
         <section className="py-16">
           <div className="page-container">
             <div className="max-w-6xl mx-auto space-y-20">
-              {gallerySections.map((section, sectionIndex) => (
+              {gallerySections.map((section) => (
                 <motion.div
                   key={section.id}
                   id={section.id}
@@ -214,6 +196,7 @@ const BeforeAfterDermalFillers = () => {
                             src={image.src} 
                             alt={image.alt}
                             className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -245,22 +228,22 @@ const BeforeAfterDermalFillers = () => {
                 viewport={{ once: true }}
                 className="text-center mb-12"
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Learn More About Our Treatments</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Learn More About Skin Rejuvenation</h2>
                 <p className="text-gray-400">
-                  Explore our dermal filler treatments and understand which approach may be right for you.
+                  Explore our skin rejuvenation treatments and understand which approach may benefit your skin.
                 </p>
               </motion.div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
-                  to="/treatments/dermal-fillers/"
+                  to="/treatments/profhilo/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Dermal Fillers Overview
+                    Profhilo Treatment
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Learn about our full-face approach to dermal filler treatment and our medical philosophy.
+                    Bio-remodelling treatment for deep skin hydration and improved laxity.
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
                     Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -268,29 +251,14 @@ const BeforeAfterDermalFillers = () => {
                 </Link>
 
                 <Link 
-                  to="/treatments/dermal-fillers/areas/"
+                  to="/treatments/polynucleotides/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Facial Areas & Concerns
+                    Polynucleotide Treatment
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Understand why facial changes occur and how they relate to overall facial structure.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-
-                <Link 
-                  to="/treatments/cheek-filler/"
-                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Cheek Filler
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Restore mid-face volume and support for natural facial rejuvenation.
+                    Regenerative treatment for deep skin rejuvenation and repair.
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
                     View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -298,17 +266,32 @@ const BeforeAfterDermalFillers = () => {
                 </Link>
 
                 <Link 
-                  to="/treatments/jawline-filler/"
+                  to="/treatments/microneedling/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Jawline Filler
+                    Microneedling
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Define and contour the jawline for improved lower face structure.
+                    Collagen induction therapy for improved texture and scarring.
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
                     View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+
+                <Link 
+                  to="/before-after/dermal-fillers/"
+                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
+                    Dermal Filler Results
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    View before & after results for lip, cheek, and jawline fillers.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
+                    View gallery <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
@@ -326,9 +309,9 @@ const BeforeAfterDermalFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Book Your Consultation</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Book Your Skin Consultation</h2>
                 <p className="text-gray-300 text-lg mb-10 leading-relaxed">
-                  Every treatment begins with a comprehensive facial assessment. Our doctors will discuss your concerns and recommend an approach tailored to your facial structure.
+                  Every treatment begins with a comprehensive skin assessment. Our doctors will analyse your skin concerns and recommend a tailored rejuvenation programme.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact">
@@ -346,9 +329,21 @@ const BeforeAfterDermalFillers = () => {
             </div>
           </div>
         </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>Skin Rejuvenation Before & After Gallery - Real Results</h2>
+          <p>View authentic skin rejuvenation before and after photos from our Harley Street clinic. Our expert doctors deliver transformative results using Profhilo, Polynucleotides, microneedling, chemical peels, and PRP treatments.</p>
+          
+          <h3>Bio-Remodelling Results</h3>
+          <p>Browse Profhilo and Polynucleotide treatment results showing improved skin hydration, texture, and laxity. These regenerative treatments stimulate your own collagen production for natural, lasting improvements.</p>
+          
+          <h3>Collagen Induction Therapy Results</h3>
+          <p>Explore microneedling and PRP before and after photos showing reduced scarring, improved texture, and overall skin rejuvenation. Each treatment programme is tailored to your specific skin concerns.</p>
+        </div>
       </div>
     </>
   );
 };
 
-export default BeforeAfterDermalFillers;
+export default BeforeAfterSkinRejuvenation;

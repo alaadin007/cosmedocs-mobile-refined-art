@@ -29,7 +29,10 @@ const CupidBowLips = lazy(() => import("./pages/CupidBowLips"));
 const ForeheadFillers = lazy(() => import("./pages/ForeheadFillers"));
 const NonSurgicalNoseJob = lazy(() => import("./pages/NonSurgicalNoseJob"));
 const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
+const BeforeAfterHub = lazy(() => import("./pages/BeforeAfterHub"));
+const BeforeAfterBotox = lazy(() => import("./pages/BeforeAfterBotox"));
 const BeforeAfterDermalFillers = lazy(() => import("./pages/BeforeAfterDermalFillers"));
+const BeforeAfterSkinRejuvenation = lazy(() => import("./pages/BeforeAfterSkinRejuvenation"));
 const Membership = lazy(() => import("./pages/Membership"));
 const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
@@ -483,9 +486,24 @@ const App = () => {
                           <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
                           <Route path="/botox-price-london" element={<Navigate to="/treatments/botox-cost/" replace />} />
                           
-                          {/* Before & After Routes */}
+{/* ============================================= */}
+                          {/* BEFORE & AFTER GALLERIES - New nested routes */}
+                          {/* ============================================= */}
+                          
+                          {/* Before & After Hub */}
+                          <Route path="/before-after" element={<BeforeAfterHub />} />
+                          <Route path="/before-after/" element={<BeforeAfterHub />} />
+                          
+                          {/* Category Galleries */}
+                          <Route path="/before-after/botox" element={<BeforeAfterBotox />} />
+                          <Route path="/before-after/botox/" element={<BeforeAfterBotox />} />
                           <Route path="/before-after/dermal-fillers" element={<BeforeAfterDermalFillers />} />
                           <Route path="/before-after/dermal-fillers/" element={<BeforeAfterDermalFillers />} />
+                          <Route path="/before-after/skin-rejuvenation" element={<BeforeAfterSkinRejuvenation />} />
+                          <Route path="/before-after/skin-rejuvenation/" element={<BeforeAfterSkinRejuvenation />} />
+                          
+                          {/* Legacy gallery URL redirect */}
+                          <Route path="/before-after-gallery" element={<Navigate to="/before-after/" replace />} />
                           
                           {/* Blog & Content Routes */}
                           <Route path="/botox-faqs" element={<BotoxFAQs />} />

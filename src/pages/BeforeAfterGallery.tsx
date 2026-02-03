@@ -26,7 +26,7 @@ const BeforeAfterGallery = () => {
   const seoData = generateSEOMetadata(
     "Before & After Gallery - Real Results | CosmeDocs",
     "Real patient transformations: botox, fillers & lip enhancement. Authentic before & after photos from Harley Street.",
-    "/before-after-gallery"
+    "/before-after/"
   );
 
   // Sample data - in real implementation, this would come from a CMS or API
