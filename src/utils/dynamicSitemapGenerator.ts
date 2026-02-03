@@ -16,7 +16,7 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Updated for Phase 3 migration - core pages with trailing slashes
+// Updated for Phase 4 migration - core pages with trailing slashes
 const pageRoutes = [
   '/', '/treatments/', '/about/', '/contact/', '/partners/', '/partnerships/', '/auth/', '/dashboard/',
   '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
@@ -24,7 +24,9 @@ const pageRoutes = [
   '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/',
   '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/',
   '/membership/', '/harley-street-consulting-rooms/',
-  '/testimonials/', '/aesthetics-at-a-glance/'
+  '/testimonials/', '/aesthetics-at-a-glance/',
+  // Phase 4 hub pages
+  '/concerns/', '/medical/', '/safety/'
 ];
 
 // New nested treatment routes
@@ -49,6 +51,7 @@ const treatmentRoutes = [
   '/treatments/hyperhidrosis-botox',
   '/treatments/oily-skin-botox',
   '/treatments/trigger-point-botox',
+  '/treatments/botox/medical',
   
   // Dermal Fillers Hub & Sub-treatments
   '/treatments/dermal-fillers',

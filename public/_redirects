@@ -262,6 +262,22 @@
 /profhilo-before-after/           /before-after/skin-rejuvenation/    301
 
 # =====================================================
+# PHASE 4: Core Hub Pages - 301 Redirects
+# =====================================================
+
+# Legacy concern/condition paths
+/skin-concerns                    /concerns/                          301
+/skin-concerns/                   /concerns/                          301
+/facial-concerns                  /concerns/                          301
+/facial-concerns/                 /concerns/                          301
+
+# Medical hub consolidation
+/medical-treatments               /medical/                           301
+/medical-treatments/              /medical/                           301
+/medical-botox                    /treatments/botox/medical/          301
+/medical-botox/                   /treatments/botox/medical/          301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
