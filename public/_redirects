@@ -218,6 +218,8 @@
 # ----- OTHER LEGACY REDIRECTS -----
 /aesthetics-at-glance             /aesthetics-at-a-glance/            301
 /booking                          /contact/                           301
+/book-consultation                /contact/                           301
+/book-consultation/               /contact/                           301
 /price-list                       /treatments/                        301
 /skin-boosters                    /treatments/                        301
 
