@@ -267,42 +267,47 @@ const App = () => {
                           {/* Botox Hub & Sub-treatments */}
                           <Route path="/treatments/botox" element={<FaceBotox />} />
                           <Route path="/treatments/botox/" element={<FaceBotox />} />
-                          <Route path="/treatments/botox-cost" element={<BotoxCostLondon />} />
-                          <Route path="/treatments/botox-cost/" element={<BotoxCostLondon />} />
+                          {/* Botox pages redirected to hub */}
+                          <Route path="/treatments/botox-cost" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/botox-cost/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/gummy-smile-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/gummy-smile-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/chin-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/chin-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/frown-line-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/frown-line-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/crows-feet-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/crows-feet-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/forehead-lines-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/forehead-lines-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/bunny-lines-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/bunny-lines-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/nasal-flaring-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/nasal-flaring-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/nefertiti-lift" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/nefertiti-lift/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/trap-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/trap-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/calf-slimming-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/calf-slimming-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/bruxism-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/bruxism-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/trigger-point-botox" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/trigger-point-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          
+                          {/* Botox standalone pages (kept active) */}
                           <Route path="/treatments/masseter-botox" element={<MasseterBotox />} />
                           <Route path="/treatments/masseter-botox/" element={<MasseterBotox />} />
                           <Route path="/treatments/lip-flip" element={<LipFlip />} />
                           <Route path="/treatments/lip-flip/" element={<LipFlip />} />
-                          <Route path="/treatments/gummy-smile-botox" element={<GummySmileBotox />} />
-                          <Route path="/treatments/gummy-smile-botox/" element={<GummySmileBotox />} />
-                          <Route path="/treatments/chin-botox" element={<ChinBotox />} />
-                          <Route path="/treatments/chin-botox/" element={<ChinBotox />} />
-                          <Route path="/treatments/frown-line-botox" element={<FrownLineBotox />} />
-                          <Route path="/treatments/frown-line-botox/" element={<FrownLineBotox />} />
-                          <Route path="/treatments/crows-feet-botox" element={<CrowsFeetBotox />} />
-                          <Route path="/treatments/crows-feet-botox/" element={<CrowsFeetBotox />} />
-                          <Route path="/treatments/forehead-lines-botox" element={<ForeheadLinesBotox />} />
-                          <Route path="/treatments/forehead-lines-botox/" element={<ForeheadLinesBotox />} />
-                          <Route path="/treatments/bunny-lines-botox" element={<BunnyLinesBotox />} />
-                          <Route path="/treatments/bunny-lines-botox/" element={<BunnyLinesBotox />} />
-                          <Route path="/treatments/nasal-flaring-botox" element={<NasalFlaringBotox />} />
-                          <Route path="/treatments/nasal-flaring-botox/" element={<NasalFlaringBotox />} />
-                          <Route path="/treatments/nefertiti-lift" element={<NefertitiBotoxFacelift />} />
-                          <Route path="/treatments/nefertiti-lift/" element={<NefertitiBotoxFacelift />} />
-                          <Route path="/treatments/trap-botox" element={<TrapBotox />} />
-                          <Route path="/treatments/trap-botox/" element={<TrapBotox />} />
-                          <Route path="/treatments/calf-slimming-botox" element={<BotoxCalfReduction />} />
-                          <Route path="/treatments/calf-slimming-botox/" element={<BotoxCalfReduction />} />
-                          <Route path="/treatments/migraine-botox" element={<MigraineBotox />} />
-                          <Route path="/treatments/migraine-botox/" element={<MigraineBotox />} />
-                          <Route path="/treatments/bruxism-botox" element={<BruxismBotox />} />
-                          <Route path="/treatments/bruxism-botox/" element={<BruxismBotox />} />
-                          <Route path="/treatments/hyperhidrosis-botox" element={<ExcessiveSweatBotox />} />
-                          <Route path="/treatments/hyperhidrosis-botox/" element={<ExcessiveSweatBotox />} />
                           <Route path="/treatments/oily-skin-botox" element={<OilySkinBotox />} />
                           <Route path="/treatments/oily-skin-botox/" element={<OilySkinBotox />} />
-                          <Route path="/treatments/trigger-point-botox" element={<TriggerPointBotox />} />
-                          <Route path="/treatments/trigger-point-botox/" element={<TriggerPointBotox />} />
+                          
+                          {/* Medical Botox standalone pages (kept active) */}
+                          <Route path="/treatments/migraine-botox" element={<MigraineBotox />} />
+                          <Route path="/treatments/migraine-botox/" element={<MigraineBotox />} />
+                          <Route path="/treatments/hyperhidrosis-botox" element={<ExcessiveSweatBotox />} />
+                          <Route path="/treatments/hyperhidrosis-botox/" element={<ExcessiveSweatBotox />} />
                           
                           {/* Medical Botox Sub-hub */}
                           <Route path="/treatments/botox/medical" element={<MedicalBotoxHub />} />
