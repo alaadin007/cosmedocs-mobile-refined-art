@@ -77,7 +77,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-sm text-white/50 hover:text-white transition-colors">
+                <Link to="/about/" className="text-sm text-white/50 hover:text-white transition-colors">
                   Our Philosophy
                 </Link>
               </li>
@@ -87,22 +87,37 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-white/50 hover:text-white transition-colors">
+                <Link to="/safety/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Safety & Standards
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact/" className="text-sm text-white/50 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Gallery Navigation */}
+          {/* Resources Navigation */}
           <div>
             <h4 className="text-sm font-medium text-white/70 uppercase tracking-wider mb-4">
-              Gallery
+              Resources
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/before-after-gallery" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Before & After Results
+                <Link to="/before-after/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Before & After
+                </Link>
+              </li>
+              <li>
+                <Link to="/concerns/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Skin Concerns
+                </Link>
+              </li>
+              <li>
+                <Link to="/medical/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Medical Services
                 </Link>
               </li>
             </ul>
