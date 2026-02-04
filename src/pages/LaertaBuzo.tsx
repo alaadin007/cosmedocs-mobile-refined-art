@@ -11,7 +11,7 @@ const LaertaBuzo = () => {
   const seoData = generateSEOMetadata(
     "Laerta Buzo | Aesthetic Practitioner | Cosmedocs",
     "Experienced Aesthetic Practitioner with over 9 years of experience in non-surgical aesthetic treatments and advanced skin therapies at Cosmedocs London.",
-    "/team/laerta-buzo"
+    "/our-team/laerta-aesthetician"
   );
 
   const treatments = [

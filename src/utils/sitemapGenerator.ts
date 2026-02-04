@@ -24,7 +24,7 @@ export const sitemapData: SitemapData = {
     { loc: `${baseUrl}/our-team/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
     { loc: `${baseUrl}/our-team/dr-ahmed-haq/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
     { loc: `${baseUrl}/our-team/dr-hena-haq/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/our-team/laerta-buzo/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
+    { loc: `${baseUrl}/our-team/laerta-aesthetician/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
     { loc: `${baseUrl}/our-team/dr-hassan-mirza/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
     { loc: `${baseUrl}/our-team/dr-noor-hotaki/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
     { loc: `${baseUrl}/testimonials/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.5 },

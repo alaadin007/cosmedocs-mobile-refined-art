@@ -48,7 +48,7 @@ const Team = () => {
       title: "Aesthetic Practitioner",
       image: laertaImage,
       education: "9+ Years Experience in Non-Surgical Aesthetic Treatments",
-      link: "/our-team/laerta-buzo",
+      link: "/our-team/laerta-aesthetician",
       bookingUrl: "https://med.as.me/alert",
       description: "An experienced Aesthetic Practitioner specialising in personalised treatment plans that combine injectables, skin boosters, laser and device-based treatments to achieve natural and balanced results."
     },
