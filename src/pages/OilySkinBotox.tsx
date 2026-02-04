@@ -26,7 +26,7 @@ const OilySkinBotox = () => {
   const seoData = generateSEOMetadata(
     "T-Zone Oily Skin Botox London | Oil Control",
     "Professional T-zone oily skin Botox treatment in London. Reduce oil production & shine in forehead, nose & chin. 30% oil reduction. Expert consultation.",
-    "/oily-skin-botox"
+    "/treatments/oily-skin-botox/"
   );
 
   const beforeAfterImages = [
@@ -209,6 +209,22 @@ const OilySkinBotox = () => {
                   <BreadcrumbLink href="/" className="flex items-center gap-1 text-gray-400 hover:text-purple-300">
                     <Home className="h-4 w-4" />
                     Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <ChevronRight className="h-4 w-4 text-gray-500" />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/treatments/" className="text-gray-400 hover:text-purple-300">
+                    Treatments
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <ChevronRight className="h-4 w-4 text-gray-500" />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/treatments/botox/" className="text-gray-400 hover:text-purple-300">
+                    Botox
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator>

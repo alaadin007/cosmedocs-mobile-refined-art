@@ -36,7 +36,7 @@ export default function FaceBotox() {
   const seoData = generateSEOMetadata(
     "Botox London | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
     "Complete guide to Botox in London. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
-    "/botox-london"
+    "/treatments/botox/"
   );
 
   const medicalBusinessSchema = {
@@ -134,25 +134,25 @@ export default function FaceBotox() {
     {
       title: "Upper Face",
       areas: ["Forehead Lines", "Frown Lines (Glabella)", "Crow's Feet", "Brow Lift"],
-      link: "/forehead-lines-botox",
+      link: "/treatments/forehead-lines-botox/",
       description: "The most common Botox treatment areas, addressing lines caused by facial expressions."
     },
     {
       title: "Mid & Lower Face",
       areas: ["Bunny Lines", "Lip Flip", "Gummy Smile", "Chin Dimpling"],
-      link: "/lower-face-botox",
+      link: "/treatments/lip-flip/",
       description: "Refined treatments for the nose, lips, and chin areas."
     },
     {
       title: "Jawline & Neck",
       areas: ["Masseter (Jaw Slimming)", "Nefertiti Lift", "Platysmal Bands"],
-      link: "/nefertiti-botox-face-jaw-lift",
+      link: "/treatments/masseter-botox/",
       description: "Contouring and lifting treatments for the lower face and neck."
     },
     {
       title: "Specialist Areas",
       areas: ["Trap Tox (Shoulders)", "Hyperhidrosis", "Migraines"],
-      link: "/trap-botox",
+      link: "/treatments/botox/medical/",
       description: "Therapeutic and body applications beyond cosmetic use."
     }
   ];
@@ -394,62 +394,26 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Before & After Carousel */}
-        <section id="before-after" className="w-full py-24 bg-gray-900/30">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Real Patient <span className="text-purple-300">Transformations</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                View authentic Botox results from our London Harley Street clinic — aesthetic medicine that speaks without saying a word.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-80 object-contain bg-gray-800 rounded-lg group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-
+        {/* Visual Proof Teaser - Links to dedicated B&A gallery */}
+        <section id="before-after" className="py-16 bg-gray-900/30">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mt-8"
+              className="text-center max-w-2xl mx-auto"
             >
-              <Link to="/before-and-after-gallery">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                See Real <span className="text-purple-300">Results</span>
+              </h2>
+              <p className="text-gray-300 mb-6">
+                View authentic patient transformations in our dedicated before and after gallery. 
+                Results vary by individual.
+              </p>
+              <Link to="/before-after/botox/">
                 <Button variant="outline" className="border-purple-500 text-purple-300 hover:bg-purple-500/10">
-                  View Full Gallery
+                  View Botox Before & After Gallery →
                 </Button>
               </Link>
             </motion.div>
@@ -637,13 +601,13 @@ export default function FaceBotox() {
             <div className="mt-12 bg-gray-900/30 border border-gray-800 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-white mb-4">Popular Treatment Pages</h3>
               <div className="flex flex-wrap gap-3">
-                <Link to="/forehead-lines-botox" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Forehead Lines</Link>
-                <Link to="/frown-line-botox" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Frown Lines</Link>
-                <Link to="/crows-feet-botox" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Crow's Feet</Link>
-                <Link to="/masseter-botox" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Jaw Slimming</Link>
-                <Link to="/lip-flip" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Lip Flip</Link>
-                <Link to="/gummy-smile-botox" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Gummy Smile</Link>
-                <Link to="/trap-botox" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Trap Tox</Link>
+                <Link to="/treatments/forehead-lines-botox/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Forehead Lines</Link>
+                <Link to="/treatments/frown-line-botox/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Frown Lines</Link>
+                <Link to="/treatments/crows-feet-botox/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Crow's Feet</Link>
+                <Link to="/treatments/masseter-botox/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Jaw Slimming</Link>
+                <Link to="/treatments/lip-flip/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Lip Flip</Link>
+                <Link to="/treatments/gummy-smile-botox/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Gummy Smile</Link>
+                <Link to="/treatments/trap-botox/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors">Trap Tox</Link>
               </div>
             </div>
           </div>
@@ -979,7 +943,7 @@ export default function FaceBotox() {
                 <h2 className="text-3xl font-bold mb-6 text-white">How Botox Fits Into Facial Rejuvenation</h2>
                 
                 <p className="text-gray-300 mb-8">
-                  Understanding the difference between Botox and <Link to="/dermal-fillers" className="text-purple-300 hover:underline">dermal fillers</Link> helps 
+                  Understanding the difference between Botox and <Link to="/treatments/dermal-fillers/" className="text-purple-300 hover:underline">dermal fillers</Link> helps 
                   you make informed decisions about your treatment plan.
                 </p>
 
@@ -1019,7 +983,7 @@ export default function FaceBotox() {
                 
                 <div className="mt-6">
                   <Link 
-                    to="/dermal-fillers" 
+                    to="/treatments/dermal-fillers/" 
                     className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-medium"
                   >
                     Learn about Dermal Fillers <ArrowRight className="w-4 h-4" />
@@ -1409,7 +1373,7 @@ export default function FaceBotox() {
                       Botox relaxes muscles to reduce dynamic wrinkles (lines with movement). Fillers 
                       add volume to restore lost fullness and soften static lines. They treat different 
                       concerns and are often used together for comprehensive results. Learn more on our{' '}
-                      <Link to="/dermal-fillers" className="text-purple-300 hover:underline">dermal fillers page</Link>.
+                       <Link to="/treatments/dermal-fillers/" className="text-purple-300 hover:underline">dermal fillers page</Link>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
