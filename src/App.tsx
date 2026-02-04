@@ -196,11 +196,7 @@ const App = () => {
                     </Suspense>
                   } />
                   <Route path="/home2" element={<Navigate to="/" replace />} />
-                  <Route path="/botox2" element={
-                    <Suspense fallback={<PageLoader />}>
-                      <Botox2 />
-                    </Suspense>
-                  } />
+                  <Route path="/botox2" element={<Navigate to="/treatments/botox/" replace />} />
                   <Route path="/botox-paris" element={
                     <Suspense fallback={<PageLoader />}>
                       <BotoxParis />
