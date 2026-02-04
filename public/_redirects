@@ -276,6 +276,8 @@
 /medical-treatments/              /medical/                           301
 /medical-botox                    /treatments/botox/medical/          301
 /medical-botox/                   /treatments/botox/medical/          301
+/medical-skincare                 /treatments/prescription-skincare/  301
+/medical-skincare/                /treatments/prescription-skincare/  301
 
 # =====================================================
 # SPA fallback - React handles remaining routing
