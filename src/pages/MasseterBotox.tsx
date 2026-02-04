@@ -58,7 +58,7 @@ const MasseterBotox = () => {
   const seoData = generateSEOMetadata(
     "Masseter Botox London | £350 | Cosmedocs",
     "Slim square jaw & treat bruxism with masseter botox. Reduce jaw muscle size & relieve teeth grinding from £350.",
-    "/masseter-botox"
+    "/treatments/masseter-botox/"
   );
 
   const beforeAfterImages = [
@@ -232,7 +232,8 @@ const MasseterBotox = () => {
         <div className="page-container">
           <Breadcrumb items={[
             { label: "Home", href: "/" },
-            { label: "Treatments", href: "/treatments" },
+            { label: "Treatments", href: "/treatments/" },
+            { label: "Botox", href: "/treatments/botox/" },
             { label: "Masseter Botox" }
           ]} />
         </div>

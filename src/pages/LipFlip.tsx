@@ -22,7 +22,7 @@ const LipFlip = () => {
   const seoData = generateSEOMetadata(
     "Lip Flip Botox London | Cosmedocs",
     "Lip flip botox for fuller upper lips without filler. Subtle enhancement using muscle relaxation. Natural results from £150.",
-    "/lip-flip"
+    "/treatments/lip-flip/"
   );
 
   const beforeAfterImages = [
@@ -184,8 +184,8 @@ const LipFlip = () => {
         <div className="page-container pt-20">
           <Breadcrumb 
             items={[
-              { label: "Treatments", path: "/treatments" },
-              { label: "Botox Treatments", path: "/botox-london" }
+              { label: "Treatments", path: "/treatments/" },
+              { label: "Botox Treatments", path: "/treatments/botox/" }
             ]}
             currentPage="Lip Flip Botox"
           />
