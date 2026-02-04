@@ -20,7 +20,7 @@ const currentDate = new Date().toISOString().split('T')[0];
 const pageRoutes = [
   '/', '/treatments/', '/about/', '/contact/', '/partners/', '/partnerships/', '/auth/', '/dashboard/',
   '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
-  '/our-team/', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-buzo/',
+  '/our-team/', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-aesthetician/',
   '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/',
   '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/',
   '/membership/', '/harley-street-consulting-rooms/',

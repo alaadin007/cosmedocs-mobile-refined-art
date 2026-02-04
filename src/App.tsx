@@ -230,8 +230,8 @@ const App = () => {
                           <Route path="/our-team/dr-ahmed-haq/" element={<DrAhmedHaq />} />
                           <Route path="/our-team/dr-hena-haq" element={<DrHenaHaq />} />
                           <Route path="/our-team/dr-hena-haq/" element={<DrHenaHaq />} />
-                          <Route path="/our-team/laerta-buzo" element={<LaertaBuzo />} />
-                          <Route path="/our-team/laerta-buzo/" element={<LaertaBuzo />} />
+                          <Route path="/our-team/laerta-aesthetician" element={<LaertaBuzo />} />
+                          <Route path="/our-team/laerta-aesthetician/" element={<LaertaBuzo />} />
                           <Route path="/our-team/dr-hassan-mirza" element={<DrHassanMirza />} />
                           <Route path="/our-team/dr-hassan-mirza/" element={<DrHassanMirza />} />
                           <Route path="/our-team/dr-noor-hotaki" element={<DrNoorHotaki />} />
@@ -518,7 +518,9 @@ const App = () => {
                           <Route path="/team/" element={<Navigate to="/our-team/" replace />} />
                           <Route path="/team/dr-ahmed-haq" element={<Navigate to="/our-team/dr-ahmed-haq/" replace />} />
                           <Route path="/team/dr-hena-haq" element={<Navigate to="/our-team/dr-hena-haq/" replace />} />
-                          <Route path="/team/laerta-buzo" element={<Navigate to="/our-team/laerta-buzo/" replace />} />
+                          <Route path="/team/laerta-buzo" element={<Navigate to="/our-team/laerta-aesthetician/" replace />} />
+                          <Route path="/our-team/laerta-buzo" element={<Navigate to="/our-team/laerta-aesthetician/" replace />} />
+                          <Route path="/our-team/laerta-buzo/" element={<Navigate to="/our-team/laerta-aesthetician/" replace />} />
                           <Route path="/team/dr-hassan-mirza" element={<Navigate to="/our-team/dr-hassan-mirza/" replace />} />
                           <Route path="/team/dr-noor-hotaki" element={<Navigate to="/our-team/dr-noor-hotaki/" replace />} />
                           
