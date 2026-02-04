@@ -246,9 +246,19 @@ const App = () => {
                           <Route path="/popup-offer" element={<PopupOffer />} />
                           <Route path="/spin-to-win" element={<SpinToWin />} />
                           
-                          {/* Phase 4: Core Hub Pages */}
+                          {/* Phase 4: Core Hub Pages - Concerns as Dermatology Hub */}
                           <Route path="/concerns" element={<ConcernsHub />} />
                           <Route path="/concerns/" element={<ConcernsHub />} />
+                          <Route path="/concerns/acne" element={<AcneTreatment />} />
+                          <Route path="/concerns/acne/" element={<AcneTreatment />} />
+                          <Route path="/concerns/eczema" element={<EczemaTreatment />} />
+                          <Route path="/concerns/eczema/" element={<EczemaTreatment />} />
+                          <Route path="/concerns/hyperpigmentation" element={<HyperpigmentationTreatment />} />
+                          <Route path="/concerns/hyperpigmentation/" element={<HyperpigmentationTreatment />} />
+                          <Route path="/concerns/anti-ageing" element={<NonSurgicalFacelift />} />
+                          <Route path="/concerns/anti-ageing/" element={<NonSurgicalFacelift />} />
+                          <Route path="/concerns/non-surgical-facelift" element={<NonSurgicalFacelift />} />
+                          <Route path="/concerns/non-surgical-facelift/" element={<NonSurgicalFacelift />} />
                           <Route path="/medical" element={<MedicalHub />} />
                           <Route path="/medical/" element={<MedicalHub />} />
                           <Route path="/safety" element={<Safety />} />
@@ -382,19 +392,19 @@ const App = () => {
                           <Route path="/treatments/hair-transplant" element={<HairTransplantSurgeon />} />
                           <Route path="/treatments/hair-transplant/" element={<HairTransplantSurgeon />} />
                           
-                          {/* Medical Dermatology */}
-                          <Route path="/treatments/dermatology" element={<Dermatology />} />
-                          <Route path="/treatments/dermatology/" element={<Dermatology />} />
-                          <Route path="/treatments/acne" element={<AcneTreatment />} />
-                          <Route path="/treatments/acne/" element={<AcneTreatment />} />
-                          <Route path="/treatments/mole-removal" element={<MoleSkinTagRemoval />} />
-                          <Route path="/treatments/mole-removal/" element={<MoleSkinTagRemoval />} />
-                          <Route path="/treatments/eczema" element={<EczemaTreatment />} />
-                          <Route path="/treatments/eczema/" element={<EczemaTreatment />} />
-                          <Route path="/treatments/psoriasis" element={<PsoriasisTreatment />} />
-                          <Route path="/treatments/psoriasis/" element={<PsoriasisTreatment />} />
-                          <Route path="/treatments/hyperpigmentation" element={<HyperpigmentationTreatment />} />
-                          <Route path="/treatments/hyperpigmentation/" element={<HyperpigmentationTreatment />} />
+                          {/* Medical Dermatology - Redirects to /concerns/ */}
+                          <Route path="/treatments/dermatology" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/treatments/dermatology/" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/treatments/acne" element={<Navigate to="/concerns/acne/" replace />} />
+                          <Route path="/treatments/acne/" element={<Navigate to="/concerns/acne/" replace />} />
+                          <Route path="/treatments/mole-removal" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/treatments/mole-removal/" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/treatments/eczema" element={<Navigate to="/concerns/eczema/" replace />} />
+                          <Route path="/treatments/eczema/" element={<Navigate to="/concerns/eczema/" replace />} />
+                          <Route path="/treatments/psoriasis" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/treatments/psoriasis/" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/treatments/hyperpigmentation" element={<Navigate to="/concerns/hyperpigmentation/" replace />} />
+                          <Route path="/treatments/hyperpigmentation/" element={<Navigate to="/concerns/hyperpigmentation/" replace />} />
                           
                           {/* Specialised Treatments */}
                           <Route path="/treatments/intimate-bleaching" element={<MedicalAnalBleaching />} />
@@ -489,14 +499,14 @@ const App = () => {
                           <Route path="/scar-reduction" element={<Navigate to="/treatments/scar-reduction/" replace />} />
                           <Route path="/hair-transplant-surgeon" element={<Navigate to="/treatments/hair-transplant/" replace />} />
                           
-                          {/* Medical dermatology legacy redirects */}
-                          <Route path="/dermatology" element={<Navigate to="/treatments/dermatology/" replace />} />
-                          <Route path="/acne-treatment" element={<Navigate to="/treatments/acne/" replace />} />
-                          <Route path="/mole-removal" element={<Navigate to="/treatments/mole-removal/" replace />} />
-                          <Route path="/skin-tag-removal" element={<Navigate to="/treatments/mole-removal/" replace />} />
-                          <Route path="/eczema-treatment" element={<Navigate to="/treatments/eczema/" replace />} />
-                          <Route path="/psoriasis-treatment" element={<Navigate to="/treatments/psoriasis/" replace />} />
-                          <Route path="/hyperpigmentation-treatment" element={<Navigate to="/treatments/hyperpigmentation/" replace />} />
+                          {/* Medical dermatology legacy redirects - Now to /concerns/ */}
+                          <Route path="/dermatology" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/acne-treatment" element={<Navigate to="/concerns/acne/" replace />} />
+                          <Route path="/mole-removal" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/skin-tag-removal" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/eczema-treatment" element={<Navigate to="/concerns/eczema/" replace />} />
+                          <Route path="/psoriasis-treatment" element={<Navigate to="/concerns/" replace />} />
+                          <Route path="/hyperpigmentation-treatment" element={<Navigate to="/concerns/hyperpigmentation/" replace />} />
                           
                           {/* Specialised treatment legacy redirects */}
                           <Route path="/medical-anal-bleaching" element={<Navigate to="/treatments/intimate-bleaching/" replace />} />

@@ -265,6 +265,34 @@
 # PHASE 4: Core Hub Pages - 301 Redirects
 # =====================================================
 
+# Dermatology section now under /concerns/
+/treatments/dermatology            /concerns/                          301
+/treatments/dermatology/           /concerns/                          301
+/treatments/acne                   /concerns/acne/                     301
+/treatments/acne/                  /concerns/acne/                     301
+/treatments/eczema                 /concerns/eczema/                   301
+/treatments/eczema/                /concerns/eczema/                   301
+/treatments/hyperpigmentation      /concerns/hyperpigmentation/        301
+/treatments/hyperpigmentation/     /concerns/hyperpigmentation/        301
+/treatments/psoriasis              /concerns/                          301
+/treatments/psoriasis/             /concerns/                          301
+/treatments/mole-removal           /concerns/                          301
+/treatments/mole-removal/          /concerns/                          301
+/dermatology                       /concerns/                          301
+/dermatology/                      /concerns/                          301
+/acne-treatment                    /concerns/acne/                     301
+/acne-treatment/                   /concerns/acne/                     301
+/eczema-treatment                  /concerns/eczema/                   301
+/eczema-treatment/                 /concerns/eczema/                   301
+/psoriasis-treatment               /concerns/                          301
+/psoriasis-treatment/              /concerns/                          301
+/hyperpigmentation-treatment       /concerns/hyperpigmentation/        301
+/hyperpigmentation-treatment/      /concerns/hyperpigmentation/        301
+/mole-removal                      /concerns/                          301
+/mole-removal/                     /concerns/                          301
+/skin-tag-removal                  /concerns/                          301
+/skin-tag-removal/                 /concerns/                          301
+
 # Legacy concern/condition paths
 /skin-concerns                    /concerns/                          301
 /skin-concerns/                   /concerns/                          301
