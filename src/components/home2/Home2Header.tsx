@@ -19,15 +19,14 @@ const treatmentCategories = [
     hubLink: "/treatments/botox/",
     items: [
       { title: "Botox Overview", link: "/treatments/botox/", isOverview: true },
-      { title: "Face Botox", link: "/treatments/botox" },
-      { title: "Lip Flip", link: "/lip-flip" },
-      { title: "Masseter", link: "/masseter-botox" },
-      { title: "Trap Botox", link: "/trap-botox" },
-      { title: "Medical Botox", link: "/treatments/botox/medical", isSubHeader: true },
-      { title: "Hyperhidrosis", link: "/excessive-sweat-botox" },
-      { title: "Bruxism / TMJ", link: "/bruxism-botox" },
-      { title: "TMJ Dysfunction", link: "/tmj-botox" },
-      { title: "Chronic Migraine", link: "/migraine-botox" },
+      { title: "Face Botox", link: "/treatments/botox/" },
+      { title: "Lip Flip", link: "/treatments/lip-flip/" },
+      { title: "Masseter", link: "/treatments/masseter-botox/" },
+      { title: "Trap Botox", link: "/treatments/trap-botox/" },
+      { title: "Medical Botox", link: "/treatments/botox/medical/", isSubHeader: true },
+      { title: "Hyperhidrosis", link: "/treatments/hyperhidrosis-botox/" },
+      { title: "Bruxism / TMJ", link: "/treatments/bruxism-botox/" },
+      { title: "Chronic Migraine", link: "/treatments/migraine-botox/" },
     ]
   },
   {
@@ -35,13 +34,13 @@ const treatmentCategories = [
     hubLink: "/treatments/dermal-fillers/",
     items: [
       { title: "Dermal Fillers Overview", link: "/treatments/dermal-fillers/", isOverview: true },
-      { title: "Lip Filler", link: "/lip-fillers" },
-      { title: "Cheek Filler", link: "/cheek-filler" },
-      { title: "Jawline Filler", link: "/jawline-filler" },
-      { title: "Chin Filler", link: "/chin-filler" },
-      { title: "Under Eye", link: "/tear-trough-filler" },
-      { title: "Nose Filler", link: "/non-surgical-nose-job" },
-      { title: "Temple Filler", link: "/temple-filler-london" },
+      { title: "Lip Filler", link: "/treatments/lip-fillers/" },
+      { title: "Cheek Filler", link: "/treatments/cheek-filler/" },
+      { title: "Jawline Filler", link: "/treatments/jawline-filler/" },
+      { title: "Chin Filler", link: "/treatments/chin-filler/" },
+      { title: "Under Eye", link: "/treatments/tear-trough-filler/" },
+      { title: "Nose Filler", link: "/treatments/nose-filler/" },
+      { title: "Temple Filler", link: "/treatments/temple-filler/" },
       { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas/", isSubHeader: true },
       { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas/#nasolabial" },
       { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas/#marionette" },
@@ -55,9 +54,9 @@ const treatmentCategories = [
     hubLink: "/treatments/ha-makeover/",
     items: [
       { title: "HA Makeover Overview", link: "/treatments/ha-makeover/", isOverview: true },
-      { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
-      { title: "8 Point Facelift", link: "/8-point-facelift" },
-      { title: "PDO Threads", link: "/pdo-threads" },
+      { title: "Full Face Rejuvenation", link: "/treatments/non-surgical-facelift/" },
+      { title: "8 Point Facelift", link: "/treatments/8-point-facelift/" },
+      { title: "PDO Threads", link: "/treatments/pdo-threads/" },
     ]
   },
   {
@@ -65,11 +64,11 @@ const treatmentCategories = [
     hubLink: "/treatments/skin-boosters/",
     items: [
       { title: "Skin Boosters Overview", link: "/treatments/skin-boosters/", isOverview: true },
-      { title: "Profhilo", link: "/profhilo" },
-      { title: "Polynucleotides", link: "/polynucleotide-treatment" },
-      { title: "HydraFacial", link: "/hydrafacial" },
-      { title: "PRP Treatment", link: "/prp-treatment" },
-      { title: "Chemical Peel", link: "/chemical-peel" },
+      { title: "Profhilo", link: "/treatments/profhilo/" },
+      { title: "Polynucleotides", link: "/treatments/polynucleotides/" },
+      { title: "HydraFacial", link: "/treatments/hydrafacial/" },
+      { title: "PRP Treatment", link: "/treatments/prp/" },
+      { title: "Chemical Peel", link: "/treatments/chemical-peel/" },
     ]
   },
   {
@@ -77,10 +76,10 @@ const treatmentCategories = [
     hubLink: "/treatments/skin-hair/",
     items: [
       { title: "Skin & Hair Overview", link: "/treatments/skin-hair/", isOverview: true },
-      { title: "Microneedling", link: "/microneedling" },
-      { title: "Fat Dissolve", link: "/fat-dissolve" },
-      { title: "Hair Transplant", link: "/hair-transplant-surgeon" },
-      { title: "Scar Reduction", link: "/scar-reduction" },
+      { title: "Microneedling", link: "/treatments/microneedling/" },
+      { title: "Fat Dissolving", link: "/treatments/fat-dissolving/" },
+      { title: "Hair Transplant", link: "/treatments/hair-transplant/" },
+      { title: "Scar Reduction", link: "/treatments/scar-reduction/" },
     ]
   },
   {
@@ -88,11 +87,11 @@ const treatmentCategories = [
     hubLink: "/treatments/plastic-surgery/",
     items: [
       { title: "Plastic Surgery Overview", link: "/treatments/plastic-surgery/", isOverview: true },
-      { title: "Blepharoplasty", link: "/blepharoplasty" },
-      { title: "Rhinoplasty", link: "/rhinoplasty" },
-      { title: "Facelift Surgery", link: "/facelift-surgery" },
-      { title: "Liposuction", link: "/liposuction" },
-      { title: "CO2 Laser", link: "/co2-laser-resurfacing" },
+      { title: "Blepharoplasty", link: "/treatments/blepharoplasty/" },
+      { title: "Rhinoplasty", link: "/treatments/rhinoplasty/" },
+      { title: "Facelift Surgery", link: "/treatments/facelift-surgery/" },
+      { title: "Liposuction", link: "/treatments/liposuction/" },
+      { title: "CO2 Laser", link: "/treatments/co2-laser/" },
     ]
   },
   {
@@ -100,18 +99,19 @@ const treatmentCategories = [
     hubLink: "/treatments/dermatology/",
     items: [
       { title: "Dermatology Overview", link: "/treatments/dermatology/", isOverview: true },
-      { title: "Mole Removal", link: "/mole-removal" },
-      { title: "Skin Tag Removal", link: "/skin-tag-removal" },
-      { title: "Acne Treatment", link: "/acne-treatment" },
+      { title: "Mole Removal", link: "/treatments/mole-removal/" },
+      { title: "Skin Tag Removal", link: "/treatments/skin-tag-removal/" },
+      { title: "Acne Treatment", link: "/treatments/acne/" },
     ]
   }
 ];
 
 const navItems = [
-  { label: "Pricing", link: "/treatments" },
-  { label: "About", link: "/about" },
+  { label: "Pricing", link: "/treatments/" },
+  { label: "Concerns", link: "/concerns/" },
+  { label: "About", link: "/about/" },
   { label: "Gallery", link: "/before-after/" },
-  { label: "Contact", link: "/contact" },
+  { label: "Contact", link: "/contact/" },
 ];
 
 export default function Home2Header() {
