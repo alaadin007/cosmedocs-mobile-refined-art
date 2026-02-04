@@ -17,7 +17,7 @@ import Index from "./pages/Index";
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
-const Botox2 = lazy(() => import("./pages/Botox2"));
+
 const Treatments = lazy(() => import("./pages/Treatments"));
 const Team = lazy(() => import("./pages/Team"));
 const About = lazy(() => import("./pages/About"));
