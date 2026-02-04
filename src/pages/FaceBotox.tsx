@@ -34,8 +34,8 @@ import gummySmileBA2 from "@/assets/gummy-smile-ba-2.jpeg";
 
 export default function FaceBotox() {
   const seoData = generateSEOMetadata(
-    "Botox London | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
-    "Complete guide to Botox in London. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
+    "Botox | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
+    "Complete guide to Botox. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
     "/treatments/botox/"
   );
 
@@ -244,7 +244,7 @@ export default function FaceBotox() {
             items={[
               { label: 'Treatments', path: '/treatments' }
             ]}
-            currentPage="Botox London"
+            currentPage="Botox"
           />
         </div>
 
@@ -258,7 +258,7 @@ export default function FaceBotox() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                  Botox London
+                  Botox
                 </h1>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Your comprehensive guide to anti-wrinkle treatment. Understanding Botox, its applications, 
