@@ -3,36 +3,19 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Clock, Star, Award, Users, ArrowRight, Calendar, Syringe, Heart, Shield, MapPin, Eye, Smile, Sparkles } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { CheckCircle, Clock, ArrowRight, Calendar, Syringe, Heart, Shield, MapPin, Eye, Smile, Sparkles, Award, Users } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from 'react-router-dom';
-import ClientReviews from '@/components/ClientReviews';
 
 // Import banner image
 import fillerBanner from "@/assets/banners/filler-areas-hero.jpg";
 
 const DermalFillers = () => {
   const seoData = generateSEOMetadata(
-    "Dermal Fillers London | Doctor-Led Treatment | Harley Street",
-    "Expert dermal filler treatments by GMC-registered doctors on Harley Street. Natural-looking facial enhancement with premium hyaluronic acid. Book your consultation.",
+    "Dermal Fillers | Doctor-Led Facial Enhancement | Cosmedocs Harley Street",
+    "Complete guide to dermal fillers. Understand hyaluronic acid treatments, treatment areas, who is suitable, and our full-face approach. Doctor-led care at Harley Street.",
     "/treatments/dermal-fillers/"
   );
-
-  const beforeAfterImages = [
-    {
-      src: "/lovable-uploads/64ee3f9e-7616-464d-962f-0a5ba656a82c.png",
-      alt: "Dermal filler treatment result - front view"
-    },
-    {
-      src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png",
-      alt: "Dermal filler treatment result - profile"
-    },
-    {
-      src: "/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png",
-      alt: "Dermal filler treatment result - facial contouring"
-    }
-  ];
 
   const faqItems = [
     {
@@ -57,79 +40,49 @@ const DermalFillers = () => {
     }
   ];
 
-  // Treatment areas with expanded descriptions for hub structure
+  // Treatment areas with brief 1-2 line descriptions (hub style)
   const treatmentAreas = [
     { 
       id: "lips",
       title: "Lip Fillers", 
-      description: "Natural enhancement for volume, shape, and definition", 
-      link: "/lip-fillers",
-      icon: Smile,
-      details: "Our doctors use precise placement techniques to enhance lip volume, define the cupid's bow, improve symmetry, and create natural-looking results. Whether you're seeking subtle hydration or more noticeable enhancement, treatments are tailored to your facial proportions."
-    },
-    { 
-      id: "cheeks",
-      title: "Cheek Filler", 
-      description: "Restore mid-face volume and lift", 
-      link: "/cheek-filler",
-      icon: Sparkles,
-      details: "The cheeks are central to facial structure. Volume loss here can cause sagging in the lower face. By restoring support at the cheekbones, we can lift nasolabial folds, reduce shadowing, and create a more youthful contour."
+      description: "Natural enhancement for volume, shape, and definition.",
+      link: "/treatments/lip-fillers/",
+      icon: Smile
     },
     { 
       id: "jawline",
       title: "Jawline Filler", 
-      description: "Definition and structural contour", 
-      link: "/jawline-filler",
-      icon: Shield,
-      details: "A well-defined jawline creates balance and structure. Filler can sharpen the jaw angle, reduce the appearance of jowls, and create smoother transitions from face to neck — all without surgery."
+      description: "Definition and structural contour for a balanced lower face.",
+      link: "/treatments/jawline-filler/",
+      icon: Shield
+    },
+    { 
+      id: "cheeks",
+      title: "Cheek Filler", 
+      description: "Restore mid-face volume to lift and rejuvenate.",
+      link: "/treatments/cheek-filler/",
+      icon: Sparkles
     },
     { 
       id: "chin",
       title: "Chin Filler", 
-      description: "Balance, projection, and facial harmony", 
-      link: "/chin-filler",
-      icon: Heart,
-      details: "The chin plays a crucial role in facial proportions. Whether addressing a recessed chin or creating better balance with the nose and jawline, chin filler can make a significant impact with minimal intervention."
+      description: "Improve projection and facial harmony.",
+      link: "/treatments/chin-filler/",
+      icon: Heart
     },
     { 
       id: "tear-trough",
-      title: "Under Eye Filler", 
-      description: "Reduce hollowing and dark circles", 
-      link: "/tear-trough-filler",
-      icon: Eye,
-      details: "Tear trough filler addresses the hollow grooves beneath the eyes that can make you look tired. This delicate area requires expert technique — our doctors use cannulas to minimise bruising and achieve smooth, natural results."
-    },
-    { 
-      id: "nose",
-      title: "Non-Surgical Nose Job", 
-      description: "Reshape and refine without surgery", 
-      link: "/non-surgical-nose-job",
-      icon: Syringe,
-      details: "Dermal fillers can smooth bumps, lift the tip, improve symmetry, and create a more balanced profile — all without the downtime of surgical rhinoplasty. Results are immediate and can last 12-18 months."
+      title: "Tear Trough Filler", 
+      description: "Reduce under-eye hollowing and dark circles.",
+      link: "/treatments/tear-trough-filler/",
+      icon: Eye
     },
     { 
       id: "temples",
       title: "Temple Filler", 
-      description: "Restore volume to the upper face", 
-      link: "/temple-filler-london",
-      icon: Sparkles,
-      details: "Temple hollowing is one of the earliest signs of facial ageing. Restoring volume here can lift the brow, reduce a gaunt appearance, and create a more youthful overall shape to the face."
-    }
-  ];
-
-  // Hub navigation sections
-  const hubSections = [
-    {
-      title: "Facial Areas & Concerns",
-      description: "Understand how facial ageing affects different areas and which treatments may help",
-      link: "/treatments/dermal-fillers/areas/",
-      linkText: "Explore concerns →"
-    },
-    {
-      title: "Before & After Gallery",
-      description: "See real patient results from our Harley Street clinic",
-      link: "/before-after/dermal-fillers/",
-      linkText: "View gallery →"
+      description: "Address upper face hollowing for a refreshed appearance.",
+      link: "/treatments/temple-filler/",
+      icon: Sparkles
     }
   ];
 
@@ -275,33 +228,40 @@ const DermalFillers = () => {
           </div>
         </section>
 
-        {/* Hub Navigation - Quick Links */}
+        {/* Quick Navigation */}
         <section className="py-8 bg-black/50 border-b border-white/10">
           <div className="page-container">
             <div className="flex flex-wrap justify-center gap-4">
-              {hubSections.map((section, index) => (
-                <Link 
-                  key={index}
-                  to={section.link}
-                  className="group px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors"
-                >
-                  <span className="text-gray-300 group-hover:text-[#C9A050] transition-colors text-sm font-medium">
-                    {section.linkText}
-                  </span>
-                </Link>
-              ))}
+              <a 
+                href="#what-are-fillers"
+                className="px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors text-gray-300 hover:text-[#C9A050] text-sm font-medium"
+              >
+                What are fillers?
+              </a>
               <a 
                 href="#treatment-areas"
                 className="px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors text-gray-300 hover:text-[#C9A050] text-sm font-medium"
               >
-                Treatment areas ↓
+                Treatment areas
+              </a>
+              <a 
+                href="#suitability"
+                className="px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors text-gray-300 hover:text-[#C9A050] text-sm font-medium"
+              >
+                Who is suitable?
+              </a>
+              <a 
+                href="#faqs"
+                className="px-6 py-3 bg-accent border border-white/10 rounded-full hover:border-[#C9A050]/50 transition-colors text-gray-300 hover:text-[#C9A050] text-sm font-medium"
+              >
+                FAQs
               </a>
             </div>
           </div>
         </section>
 
         {/* What Are Dermal Fillers */}
-        <section className="py-20 bg-accent">
+        <section id="what-are-fillers" className="py-20 bg-accent scroll-mt-20">
           <div className="page-container">
             <div className="max-w-4xl mx-auto">
               <motion.div
@@ -413,66 +373,33 @@ const DermalFillers = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {treatmentAreas.map((area, index) => (
-                  <AccordionItem 
-                    key={area.id} 
-                    value={area.id}
-                    className="bg-black/40 border border-white/10 rounded-xl overflow-hidden"
-                  >
-                    <AccordionTrigger className="px-6 py-5 hover:no-underline group">
-                      <div className="flex items-center gap-4 text-left">
-                        <div className="bg-[#C9A050]/20 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
-                          <area.icon className="text-[#C9A050]" size={20} />
-                        </div>
-                        <div>
-                          <p className="text-white font-semibold text-lg group-hover:text-[#C9A050] transition-colors">{area.title}</p>
-                          <p className="text-gray-400 text-sm">{area.description}</p>
-                        </div>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6">
-                      <div className="pl-16">
-                        <p className="text-gray-300 leading-relaxed mb-4">
-                          {area.details}
-                        </p>
-                        <Link 
-                          to={area.link}
-                          className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] font-medium transition-colors group"
-                        >
-                          Learn more about {area.title.toLowerCase()}
-                          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
-                        </Link>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-
-            {/* Facial Concerns Link */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center"
-            >
-              <div className="bg-gradient-to-r from-[#C9A050]/10 to-transparent border border-[#C9A050]/20 rounded-xl p-8 max-w-2xl mx-auto">
-                <h3 className="text-xl font-semibold text-white mb-3">Understanding Facial Concerns</h3>
-                <p className="text-gray-400 mb-6">
-                  Learn about common concerns like nasolabial folds, marionette lines, and volume loss — and why treating the cause matters more than chasing individual lines.
-                </p>
-                <Link 
-                  to="/treatments/dermal-fillers/areas/"
-                  className="inline-flex items-center gap-2 bg-[#C9A050] text-black px-6 py-3 rounded-full font-medium hover:bg-[#B8924A] transition-colors"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {treatmentAreas.map((area, index) => (
+                <motion.div
+                  key={area.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  Explore areas & concerns
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
-            </motion.div>
+                  <Link 
+                    to={area.link}
+                    className="block bg-black/40 border border-white/10 rounded-xl p-6 hover:border-[#C9A050]/50 transition-all group h-full"
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="bg-[#C9A050]/20 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+                        <area.icon className="text-[#C9A050]" size={20} />
+                      </div>
+                      <p className="text-white font-semibold text-lg group-hover:text-[#C9A050] transition-colors">{area.title}</p>
+                    </div>
+                    <p className="text-gray-400 text-sm mb-4">{area.description}</p>
+                    <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium group-hover:gap-2 transition-all">
+                      Learn more <ArrowRight size={14} />
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -615,55 +542,29 @@ const DermalFillers = () => {
           </div>
         </section>
 
-        {/* Before & After Teaser */}
-        <section className="py-20 bg-gray-900/30">
+        {/* Before & After Teaser - Hub Style (no carousel, just link) */}
+        <section className="py-16 bg-gray-900/30">
           <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center max-w-2xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Before & After Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Real patients, real results. See the subtle, natural outcomes our doctors achieve.
+              <h2 className="text-2xl font-bold text-white mb-4">
+                See Real <span className="text-[#C9A050]">Results</span>
+              </h2>
+              <p className="text-gray-300 mb-6">
+                View authentic patient transformations in our dedicated before and after gallery. 
+                Results vary by individual.
               </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-4xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg"
-                      />
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white/30 hover:bg-white/10" />
-              <CarouselNext className="text-white border-white/30 hover:bg-white/10" />
-            </Carousel>
-
-            <div className="text-center mt-8">
-              <Link 
-                to="/before-after/dermal-fillers/" 
-                className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] font-medium transition-colors group"
-              >
-                View full gallery
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+              <Link to="/before-after/dermal-fillers/">
+                <Button variant="outline" className="border-[#C9A050] text-[#C9A050] hover:bg-[#C9A050]/10">
+                  View Dermal Filler Before & After Gallery →
+                </Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -758,8 +659,7 @@ const DermalFillers = () => {
           </div>
         </section>
 
-        {/* Client Reviews */}
-        <ClientReviews />
+        {/* Hidden SEO Content */}
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
