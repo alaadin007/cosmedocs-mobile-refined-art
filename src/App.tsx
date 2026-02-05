@@ -316,36 +316,40 @@ const App = () => {
                           {/* Dermal Fillers Hub & Sub-treatments */}
                           <Route path="/treatments/dermal-fillers" element={<DermalFillers />} />
                           <Route path="/treatments/dermal-fillers/" element={<DermalFillers />} />
-                          <Route path="/treatments/dermal-fillers/areas" element={<DermalFillerAreas />} />
-                          <Route path="/treatments/dermal-fillers/areas/" element={<DermalFillerAreas />} />
+                          
+                          {/* Standalone Filler Pages */}
                           <Route path="/treatments/lip-fillers" element={<LipFillers />} />
                           <Route path="/treatments/lip-fillers/" element={<LipFillers />} />
-                          <Route path="/treatments/cupid-bow-lips" element={<CupidBowLips />} />
-                          <Route path="/treatments/cupid-bow-lips/" element={<CupidBowLips />} />
+                          <Route path="/treatments/jawline-filler" element={<JawlineFiller />} />
+                          <Route path="/treatments/jawline-filler/" element={<JawlineFiller />} />
                           <Route path="/treatments/cheek-filler" element={<CheekFiller />} />
                           <Route path="/treatments/cheek-filler/" element={<CheekFiller />} />
                           <Route path="/treatments/chin-filler" element={<ChinFiller />} />
                           <Route path="/treatments/chin-filler/" element={<ChinFiller />} />
-                          <Route path="/treatments/jawline-filler" element={<JawlineFiller />} />
-                          <Route path="/treatments/jawline-filler/" element={<JawlineFiller />} />
-                          <Route path="/treatments/nose-filler" element={<NonSurgicalNoseJob />} />
-                          <Route path="/treatments/nose-filler/" element={<NonSurgicalNoseJob />} />
                           <Route path="/treatments/tear-trough-filler" element={<TearTroughFiller />} />
                           <Route path="/treatments/tear-trough-filler/" element={<TearTroughFiller />} />
                           <Route path="/treatments/temple-filler" element={<TempleFiller />} />
                           <Route path="/treatments/temple-filler/" element={<TempleFiller />} />
-                          <Route path="/treatments/forehead-filler" element={<ForeheadFillers />} />
-                          <Route path="/treatments/forehead-filler/" element={<ForeheadFillers />} />
-                          <Route path="/treatments/neck-filler" element={<NeckFillers />} />
-                          <Route path="/treatments/neck-filler/" element={<NeckFillers />} />
-                          <Route path="/treatments/marionette-lines" element={<MarionnetteLines />} />
-                          <Route path="/treatments/marionette-lines/" element={<MarionnetteLines />} />
-                          <Route path="/treatments/nasolabial-folds" element={<NasolabialFolds />} />
-                          <Route path="/treatments/nasolabial-folds/" element={<NasolabialFolds />} />
-                          <Route path="/treatments/filler-dissolving" element={<LipFillerDissolve />} />
-                          <Route path="/treatments/filler-dissolving/" element={<LipFillerDissolve />} />
-                          <Route path="/treatments/ear-lobe-rejuvenation" element={<EarLobeRejuvenation />} />
-                          <Route path="/treatments/ear-lobe-rejuvenation/" element={<EarLobeRejuvenation />} />
+                          
+                          {/* Filler pages redirected to hub */}
+                          <Route path="/treatments/dermal-fillers/areas" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/dermal-fillers/areas/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/cupid-bow-lips" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/cupid-bow-lips/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/nose-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/nose-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/forehead-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/forehead-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/neck-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/neck-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/marionette-lines" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/marionette-lines/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/nasolabial-folds" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/nasolabial-folds/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/filler-dissolving" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/filler-dissolving/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/ear-lobe-rejuvenation" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/ear-lobe-rejuvenation/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           
                           {/* Skin Rejuvenation & Advanced Treatments */}
                           <Route path="/treatments/profhilo" element={<ProfhiloTreatment />} />
