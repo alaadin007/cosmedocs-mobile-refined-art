@@ -3,74 +3,81 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, MapPin, Calendar } from 'lucide-react';
+import { ArrowRight, Shield, MapPin, Camera, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Breadcrumb from '@/components/Breadcrumb';
 
-// Before/After Images
-import fillerBA1 from "@/assets/before-after/filler-ba-1.jpg";
-import fillerBA2 from "@/assets/before-after/filler-ba-2.jpg";
-
-// Gallery sections with anchors
-const gallerySections = [
+// Area cards with representative images and links
+const areaCards = [
   {
-    id: "lip-filler",
+    id: "lips",
     title: "Lip Filler",
-    description: "Natural lip enhancement results",
-    images: [
-      { src: fillerBA2, alt: "Lip filler before and after showing natural enhancement", caption: "Natural lip enhancement" }
-    ]
+    subtitle: "Natural enhancement & corrections",
+    image: "/images/before-after/dermal-fillers/lips/lip-filler-corners-ratio.jpg",
+    link: "/before-after/dermal-fillers/lips/",
+    imageCount: 9
   },
   {
-    id: "cheek-filler",
+    id: "cheeks",
     title: "Cheek Filler",
-    description: "Mid-face volume restoration",
-    images: [
-      { src: fillerBA1, alt: "Cheek filler before and after showing restored facial volume", caption: "Full-face rejuvenation including cheek enhancement" }
-    ]
+    subtitle: "Mid-face volume restoration",
+    image: "/images/before-after/dermal-fillers/full-face-filler-before-after.jpg",
+    link: "/before-after/dermal-fillers/cheeks/",
+    imageCount: 0
   },
   {
-    id: "jawline-filler",
+    id: "jawline",
     title: "Jawline Filler",
-    description: "Jawline definition and contouring",
-    images: []
+    subtitle: "Definition & contouring",
+    image: "/images/before-after/dermal-fillers/lips/full-face-filler-rejuvenation.jpg",
+    link: "/before-after/dermal-fillers/jawline/",
+    imageCount: 0
   },
   {
-    id: "chin-filler",
+    id: "chin",
     title: "Chin Filler",
-    description: "Chin projection and lower face balance",
-    images: []
+    subtitle: "Projection & lower face balance",
+    image: "/images/before-after/dermal-fillers/lips/full-face-rejuvenation.jpg",
+    link: "/before-after/dermal-fillers/chin/",
+    imageCount: 0
   },
   {
     id: "tear-trough",
     title: "Tear Trough",
-    description: "Under-eye hollowing correction",
-    images: []
+    subtitle: "Under-eye hollowing correction",
+    image: null,
+    link: "/before-after/dermal-fillers/tear-trough/",
+    imageCount: 0
   },
   {
-    id: "nose-filler",
+    id: "nose",
     title: "Non-Surgical Rhinoplasty",
-    description: "Nose reshaping without surgery",
-    images: []
+    subtitle: "Nose reshaping without surgery",
+    image: "/images/before-after/dermal-fillers/nose-filler-before-after.jpg",
+    link: "/before-after/dermal-fillers/nose/",
+    imageCount: 0
   },
   {
-    id: "temple-filler",
+    id: "temples",
     title: "Temple Filler",
-    description: "Upper face volume restoration",
-    images: []
-  },
-  {
-    id: "facial-lines",
-    title: "Facial Lines & Folds",
-    description: "Including nasolabial folds, marionette lines, pre-jowl sulcus, and perioral lines",
-    images: [
-      { src: fillerBA1, alt: "Before and after treatment for facial lines and folds showing softened nasolabial folds", caption: "Nasolabial folds and mid-face volume loss" }
-    ]
+    subtitle: "Upper face volume restoration",
+    image: null,
+    link: "/before-after/dermal-fillers/temples/",
+    imageCount: 0
   }
+];
+
+// Facial lines section — anchor only, no URL
+const facialLinesConcerns = [
+  "Nasolabial folds",
+  "Marionette lines",
+  "Pre-jowl sulcus",
+  "Perioral lines"
 ];
 
 const BeforeAfterDermalFillers = () => {
   const seoData = generateSEOMetadata(
-    "Dermal Filler Before & After Results | CosmeDocs Harley Street",
+    "Dermal Filler Before & After Results | CosmeDocs",
     "View real dermal filler before and after results from our London clinic. Doctor-led treatments for lips, cheeks, jawline, and facial rejuvenation.",
     "/before-after/dermal-fillers/"
   );
@@ -86,8 +93,6 @@ const BeforeAfterDermalFillers = () => {
         <meta property="og:url" content="https://cosmedocs.co.uk/before-after/dermal-fillers/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -118,227 +123,252 @@ const BeforeAfterDermalFillers = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+        {/* Hero */}
+        <section className="relative pt-0 pb-16 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+          {/* Subtle gradient orbs */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#C9A050]/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#C9A050]/3 rounded-full blur-3xl" />
+          </div>
+
           <div className="page-container relative z-10">
+            <Breadcrumb
+              items={[{ label: 'Before & After', path: '/before-after/' }]}
+              currentPage="Dermal Fillers"
+            />
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center"
+              className="max-w-4xl mx-auto text-center mt-8"
             >
-              <Link 
-                to="/before-after/" 
-                className="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm mb-6 transition-colors"
-              >
-                ← Back to Gallery
-              </Link>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
-                Dermal Filler Before & After Results
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                Dermal Filler{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A050] to-amber-400">
+                  Before & After
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Real patient transformations from our Harley Street clinic. Every result reflects our commitment to natural, doctor-led aesthetic medicine.
+                Real patient transformations from our Harley Street clinic. Every result reflects our 
+                commitment to natural, doctor-led aesthetic medicine.
               </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#C9A050] to-transparent mx-auto mt-8" />
             </motion.div>
           </div>
         </section>
 
-        {/* Trust Indicators */}
-        <section className="py-6 border-y border-white/10 bg-black/50">
+        {/* Trust Bar */}
+        <section className="py-5 border-y border-white/10 bg-black/50">
           <div className="page-container">
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-3">
                 <Shield className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Real Patient Results</span>
+                <span className="text-sm text-gray-400">Real Unedited Photos</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[#C9A050]" />
                 <span className="text-sm text-gray-400">Harley Street, London</span>
               </div>
               <div className="flex items-center gap-3">
-                <Calendar className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Consistent Lighting & Angles</span>
+                <Star className="w-5 h-5 text-[#C9A050]" />
+                <span className="text-sm text-gray-400">Doctor-Led Results</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Quick Navigation */}
-        <section className="py-8 bg-accent/50 sticky top-0 z-40 backdrop-blur-sm border-b border-white/10">
+        {/* Area Cards Grid */}
+        <section className="py-20">
           <div className="page-container">
-            <div className="flex flex-wrap gap-3 justify-center">
-              {gallerySections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className="px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
-                >
-                  {section.title}
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-14"
+            >
+              <p className="text-2xl md:text-3xl font-bold text-white mb-3">Browse by Treatment Area</p>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Select an area to view detailed before and after galleries for each dermal filler treatment.
+              </p>
+            </motion.div>
 
-        {/* Gallery Sections */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-6xl mx-auto space-y-20">
-              {gallerySections.map((section, sectionIndex) => (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {areaCards.map((card, index) => (
                 <motion.div
-                  key={section.id}
-                  id={section.id}
+                  key={card.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
                   viewport={{ once: true }}
-                  className="scroll-mt-32"
                 >
-                  <div className="mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{section.title}</h2>
-                    <p className="text-gray-400">{section.description}</p>
-                  </div>
+                  <Link
+                    to={card.link}
+                    className="group block bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-[#C9A050]/40 hover:bg-white/[0.06] transition-all duration-300"
+                  >
+                    {/* Image */}
+                    <div className="aspect-[4/3] overflow-hidden bg-gray-900/50 relative">
+                      {card.image ? (
+                        <img
+                          src={card.image}
+                          alt={`${card.title} before and after results`}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <Camera className="w-10 h-10 text-gray-700" />
+                        </div>
+                      )}
+                      {/* Hover overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      {card.imageCount > 0 && (
+                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white text-xs px-2.5 py-1 rounded-full">
+                          {card.imageCount} photos
+                        </div>
+                      )}
+                      
+                      {card.imageCount === 0 && card.image && (
+                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-gray-400 text-xs px-2.5 py-1 rounded-full">
+                          Coming soon
+                        </div>
+                      )}
+                    </div>
 
-                  {section.images.length > 0 ? (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {section.images.map((image, imageIndex) => (
-                        <motion.div
-                          key={imageIndex}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.5, delay: imageIndex * 0.1 }}
-                          viewport={{ once: true }}
-                          className="group relative overflow-hidden rounded-xl bg-gray-900"
-                        >
-                          <img 
-                            src={image.src} 
-                            alt={image.alt}
-                            className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-white text-sm">{image.caption}</p>
-                          </div>
-                        </motion.div>
-                      ))}
+                    {/* Content */}
+                    <div className="p-5">
+                      <p className="text-lg font-semibold text-white group-hover:text-[#C9A050] transition-colors mb-1">
+                        {card.title}
+                      </p>
+                      <p className="text-sm text-gray-500 mb-3">{card.subtitle}</p>
+                      <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        View gallery <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      </span>
                     </div>
-                  ) : (
-                    <div className="bg-gray-900/30 border border-white/10 rounded-xl p-12 text-center">
-                      <p className="text-gray-500">Gallery images coming soon</p>
-                      <p className="text-gray-600 text-sm mt-2">Contact us to see examples during your consultation</p>
-                    </div>
-                  )}
+                  </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Internal Links Section */}
+        {/* Facial Lines & Folds — Anchor section, not a URL */}
+        <section id="facial-lines" className="py-16 bg-accent/30 scroll-mt-20">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mb-10"
+              >
+                <p className="text-2xl md:text-3xl font-bold text-white mb-3">Facial Lines & Folds</p>
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                  Results for nasolabial folds, marionette lines, pre-jowl sulcus, and perioral lines — 
+                  grouped here as these concerns are addressed within our full-face treatment approach.
+                </p>
+              </motion.div>
+
+              <div className="flex flex-wrap gap-3 justify-center mb-10">
+                {facialLinesConcerns.map((concern) => (
+                  <span
+                    key={concern}
+                    className="px-4 py-2 text-sm text-gray-300 bg-white/5 border border-white/10 rounded-full"
+                  >
+                    {concern}
+                  </span>
+                ))}
+              </div>
+
+              <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-10 text-center">
+                <Camera className="w-8 h-8 text-gray-700 mx-auto mb-4" />
+                <p className="text-gray-500 mb-2">Gallery images coming soon</p>
+                <p className="text-gray-600 text-sm">
+                  Contact us to see examples during your consultation
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Disclaimer */}
+        <section className="py-8 border-t border-white/10">
+          <div className="page-container">
+            <p className="text-center text-gray-500 text-xs max-w-3xl mx-auto leading-relaxed">
+              Individual results may vary. All images show real patients treated at CosmeDocs. 
+              Photos are unretouched and taken under consistent clinical conditions. 
+              A consultation is required before any treatment.
+            </p>
+          </div>
+        </section>
+
+        {/* Internal Links */}
         <section className="py-16 bg-accent">
           <div className="page-container">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
+                className="text-center mb-10"
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Learn More About Our Treatments</h2>
-                <p className="text-gray-400">
-                  Explore our dermal filler treatments and understand which approach may be right for you.
-                </p>
+                <p className="text-2xl font-bold text-white mb-3">Learn More</p>
               </motion.div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <Link 
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link
                   to="/treatments/dermal-fillers/"
-                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
+                  className="group flex items-center justify-between p-5 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Dermal Fillers Overview
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Learn about our full-face approach to dermal filler treatment and our medical philosophy.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div>
+                    <p className="font-semibold text-white group-hover:text-[#C9A050] transition-colors">Dermal Fillers Overview</p>
+                    <p className="text-sm text-gray-500 mt-1">Our philosophy, approach, and safety</p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </Link>
 
-                <Link 
+                <Link
                   to="/treatments/dermal-fillers/areas/"
-                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
+                  className="group flex items-center justify-between p-5 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Facial Areas & Concerns
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Understand why facial changes occur and how they relate to overall facial structure.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-
-                <Link 
-                  to="/treatments/cheek-filler/"
-                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Cheek Filler
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Restore mid-face volume and support for natural facial rejuvenation.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-
-                <Link 
-                  to="/treatments/jawline-filler/"
-                  className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Jawline Filler
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Define and contour the jawline for improved lower face structure.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div>
+                    <p className="font-semibold text-white group-hover:text-[#C9A050] transition-colors">Facial Areas & Concerns</p>
+                    <p className="text-sm text-gray-500 mt-1">Understanding facial changes and structure</p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        {/* CTA */}
+        <section className="py-16 bg-gradient-to-b from-black to-gray-900">
           <div className="page-container">
             <div className="max-w-3xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Book Your Consultation</h2>
-                <p className="text-gray-300 text-lg mb-10 leading-relaxed">
-                  Every treatment begins with a comprehensive facial assessment. Our doctors will discuss your concerns and recommend an approach tailored to your facial structure.
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                  Every treatment begins with a comprehensive facial assessment. Our doctors will 
+                  discuss your concerns and recommend an approach tailored to your facial structure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact">
-                    <Button className="bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-6 rounded-full text-lg w-full sm:w-auto">
+                    <Button className="bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base w-full sm:w-auto">
                       Book Consultation
                     </Button>
                   </Link>
-                  <Link to="/treatments">
-                    <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 rounded-full text-lg w-full sm:w-auto">
-                      View All Treatments
+                  <Link to="/before-after/">
+                    <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                      Back to Gallery
                     </Button>
                   </Link>
                 </div>
@@ -346,6 +376,28 @@ const BeforeAfterDermalFillers = () => {
             </div>
           </div>
         </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>Dermal Filler Before and After Gallery</h2>
+          <p>
+            Browse authentic dermal filler before and after results from CosmeDocs Harley Street clinic. 
+            Our visual proof hub covers lip filler, cheek filler, jawline filler, chin filler, tear trough, 
+            non-surgical rhinoplasty, temple filler, and facial lines including nasolabial folds, 
+            marionette lines, pre-jowl sulcus, and perioral lines.
+          </p>
+          <h3>Doctor-Led Dermal Filler Results London</h3>
+          <p>
+            Every dermal filler treatment at CosmeDocs is performed by qualified doctors using a full-face 
+            assessment approach. Our before and after gallery demonstrates the natural, balanced results 
+            achievable through expert injection technique and anatomical understanding.
+          </p>
+          <p>
+            Our aesthetics is invisible art — bold, natural, always your way. CosmeDocs has performed 
+            over one million treatments since 2007, establishing a reputation for subtle, refined 
+            aesthetic medicine on Harley Street, London.
+          </p>
+        </div>
       </div>
     </>
   );
