@@ -49,35 +49,22 @@ const LipFillersSidebar = () => {
         </div>
       </motion.div>
 
-      {/* Before & After Teaser */}
+      {/* Before & After Link */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.35 }}
         className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5"
       >
-        <p className="text-sm font-medium text-white/70 mb-3">Before & After</p>
-        <div className="grid grid-cols-3 gap-2 mb-3">
-          {[
-            "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
-            "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png",
-            "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png",
-          ].map((src) => (
-            <div key={src} className="rounded-lg overflow-hidden border border-white/[0.06]">
-              <img
-                src={src}
-                alt="Lip filler before and after result"
-                loading="lazy"
-                className="w-full h-auto block"
-              />
-            </div>
-          ))}
-        </div>
+        <p className="text-sm font-medium text-white/70 mb-3">Before & After Results</p>
+        <p className="text-xs text-white/40 leading-relaxed mb-3">
+          View real patient before and after results demonstrating natural lip enhancement and volume restoration.
+        </p>
         <Link
           to="/before-after/dermal-fillers/lips/"
-          className="inline-flex items-center gap-2 text-xs text-[#C9A050] hover:underline"
+          className="inline-flex items-center gap-2 text-xs text-[#C9A050] hover:underline font-medium"
         >
-          View full gallery
+          View before & after gallery
           <ArrowRight className="w-3 h-3" />
         </Link>
       </motion.div>

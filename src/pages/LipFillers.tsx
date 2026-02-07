@@ -441,7 +441,31 @@ const LipFillers = () => {
                 </motion.div>
               </section>
 
-              {/* Am I Suitable */}
+              {/* Lip Filler Before & After Results */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Lip Filler <span className="text-[#C9A050] font-light">Before & After Results</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Below are real examples of lip filler treatments performed by our doctors at our Harley 
+                    Street clinic. Results vary depending on lip anatomy, technique, and desired enhancement 
+                    — with a focus on balance, proportion, and natural movement.
+                  </p>
+                  <Link
+                    to="/before-after/dermal-fillers/lips/"
+                    className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#D4AF6A] text-sm font-medium transition-colors"
+                  >
+                    View real lip filler before & after results
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <p className="text-white/30 text-xs font-light mt-2 italic">
+                    All images show real patients treated by our doctors. Individual results vary.
+                  </p>
+                </motion.div>
+              </section>
+
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
