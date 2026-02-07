@@ -1,80 +1,55 @@
+import React from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Heart } from "lucide-react";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
-import lipFlipImage1 from "@/assets/before-after/lip-flip-1.jpg";
-import lipFlipImage2 from "@/assets/before-after/lip-flip-2.jpg";
-import lipFlipImage3 from "@/assets/before-after/lip-flip-3.jpg";
+import ExpandableSection from "@/components/ui/expandable-section";
+import LipFlipSidebar from "@/components/lip-flip/LipFlipSidebar";
+import lipIllustration from "@/assets/lip-profile-illustration.png";
 
 const LipFlip = () => {
   const seoData = generateSEOMetadata(
-    "Lip Flip Botox London | Cosmedocs",
-    "Lip flip botox for fuller upper lips without filler. Subtle enhancement using muscle relaxation. Natural results from £150.",
+    "Lip Flip Botox London | Harley Street Doctors",
+    "Doctor-led lip flip botox for subtle upper lip enhancement without filler. Natural results using precise muscle relaxation at our Harley Street clinic.",
     "/treatments/lip-flip/"
   );
-
-  const beforeAfterImages = [
-    { 
-      src: lipFlipImage1, 
-      alt: "Botox lip flip injection points diagram", 
-      caption: "Lip Flip Injection Points - Strategic placement for natural upper lip enhancement and muscle relaxation." 
-    },
-    { 
-      src: lipFlipImage2, 
-      alt: "Lip flip botox before and after treatment", 
-      caption: "Natural Lip Enhancement - Subtle lip flip results showing fuller appearance without added volume." 
-    },
-    { 
-      src: lipFlipImage3, 
-      alt: "Non-invasive lip enhancement before and after", 
-      caption: "Bold • Natural • Always Your Way - Non-invasive lip enhancement with natural-looking definition." 
-    }
-  ];
 
   const faqs = [
     {
       question: "What is a lip flip and how does it work?",
-      answer: "What's a lip flip? A lip flip uses botox injections in the upper lip to relax the orbicularis oris muscle. This muscle relaxation technique allows more of the pink lip tissue to show, creating the illusion of fuller lips without adding volume through dermal fillers. The botox lip flip procedure targets specific injection points along the top lip border."
+      answer: "A lip flip uses a small amount of botulinum toxin injected into the orbicularis oris muscle along the upper lip border. This relaxes the muscle, allowing the lip to gently roll outward and reveal more of the pink lip tissue — creating the appearance of a fuller upper lip without adding volume."
     },
     {
-      question: "How long does a lip flip take to work and how long does it last?",
-      answer: "How long does lip flip take to work? Lip flip results begin appearing within 3-7 days, with full effects visible by day 10-14. Lip flip results day by day show gradual improvement. How long does a lip flip last? Results typically last 2-3 months due to constant lip movement, which is slightly shorter than other botox treatments."
+      question: "How long does a lip flip take to work?",
+      answer: "Results begin appearing within 3–7 days, with full effects visible by day 10–14. The gradual onset ensures a natural-looking enhancement."
     },
     {
-      question: "What are the lip flip injection sites and points?",
-      answer: "Lip flip injection points are strategically placed along the upper lip border, targeting the orbicularis oris muscle. The lip flip injection sites typically include 2-4 points across the top lip, where to inject botox for lip flip depends on your specific lip anatomy. Our expert doctors precisely determine the optimal injection sites for natural results."
+      question: "How long does a lip flip last?",
+      answer: "Results typically last 2–3 months. Because the lips are a high-movement area, the effect wears off slightly faster than Botox in other facial areas. Regular maintenance appointments can sustain results."
     },
     {
-      question: "Can I see lip flip before and after results?",
-      answer: "Yes! We have extensive lip flip before and after galleries showing natural enhancement results. Our botox lip flip before and after images demonstrate subtle yet effective outcomes. Lip flip before and after UK results showcase the natural-looking enhancement achievable with this procedure. Each lip flip before after comparison highlights the improved lip appearance."
+      question: "What's the difference between a lip flip and lip filler?",
+      answer: "A lip flip uses Botox to relax muscles and reveal more of your existing lip tissue — no volume is added. Lip fillers use hyaluronic acid to physically add volume and shape. They serve different purposes and can be combined for comprehensive enhancement."
     },
     {
-      question: "What's the difference between lip flip and lip filler?",
-      answer: "A lip flip uses botox on lips to relax muscles and reveal more of your existing lip, whilst lip fillers add hyaluronic acid volume. Lip flip and filler before and after comparisons show different enhancement styles. Lip fillers botox combinations can provide comprehensive results. Botox and lip fillers serve different purposes - flips for muscle relaxation, fillers for volume."
+      question: "Is a lip flip painful?",
+      answer: "Most patients describe it as a very mild pinch. The procedure uses a fine needle with only a few injection points along the upper lip border. Topical anaesthetic can be applied if preferred."
     },
     {
-      question: "What is lip flip aftercare?",
-      answer: "Lip flip after care involves avoiding straws, excessive lip movement, and lying down for 4 hours post-treatment. Apply ice if needed for mild swelling. The lip flip procedure recovery is minimal with immediate return to activities. Avoid makeup on the treatment area for 24 hours and follow all aftercare instructions provided."
+      question: "Can a lip flip help with smoker's lines?",
+      answer: "Yes. By relaxing the orbicularis oris muscle, a lip flip can soften the appearance of vertical lip lines (perioral lines) that form around the mouth. It's often combined with other treatments for optimal results."
     },
     {
-      question: "How much is a lip flip and what's the price?",
-      answer: "How much is a lip flip? Lip flip cost at Cosmedocs is £175. The lip flip price includes expert consultation, treatment, and aftercare guidance. We offer transparent pricing with package discounts available when combining treatments. The lip flip botox cost is significantly lower than lip filler treatments."
+      question: "How much does a lip flip cost?",
+      answer: "A lip flip at CosmeDocs is £175. This includes consultation, treatment, and aftercare guidance. Pricing is available on our pricing page."
     },
     {
-      question: "Can lip flip help with smokers lines and lip curl?",
-      answer: "Yes! Lip flip for smokers lines can reduce perioral wrinkles by relaxing the muscles causing lip curl and vertical lip lines. Botox for lip lines and botox for lipstick lines work together with the flip technique. The treatment smooths botox on lip lines whilst enhancing the upper lip appearance."
+      question: "What is the aftercare for a lip flip?",
+      answer: "Avoid straws, excessive lip movement, and lying flat for 4 hours post-treatment. Apply ice if needed for mild swelling. Avoid makeup on the treatment area for 24 hours. Full aftercare instructions are provided at your appointment."
     }
   ];
 
@@ -83,971 +58,585 @@ const LipFlip = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/lip-flip/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/lip-flip/" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="lip flip, lip flip botox, botox lip flip, what is a lip flip, lip flip before and after, lip flip injection points, lip flip cost, how long does lip flip last, botox lips, lip flip London, botox upper lip, lip flip before after, natural lip flip" />
-        
-        {/* MedicalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "description": "Expert lip flip botox treatments in London",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "priceRange": "££",
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Lip Flip Botox Treatment"
-            }
-          })}
-        </script>
-
-        {/* MedicalProcedure Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            "name": "Lip Flip Botox Treatment",
-            "description": "Non-invasive lip enhancement using botulinum toxin to relax upper lip muscles for a fuller appearance",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Upper Lip",
-            "preparation": "Consultation with cosmetic doctor, avoid blood thinners 24 hours before treatment",
-            "followup": "Results visible in 3-7 days, follow-up assessment available",
-            "howPerformed": "Botulinum toxin injected into orbicularis oris muscle at strategic points along upper lip border"
-          })}
-        </script>
-
-        {/* FAQPage Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
+            "@graph": [
+              {
+                "@type": "MedicalBusiness",
+                "name": "CosmeDocs",
+                "description": "Doctor-led aesthetic medicine clinic on Harley Street",
+                "url": "https://cosmedocs.co.uk/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Aesthetic Medicine"
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Lip Flip Botox Treatment",
+                "description": "Non-invasive lip enhancement using botulinum toxin to relax upper lip muscles, revealing more lip tissue for a subtly fuller appearance without added volume.",
+                "url": "https://cosmedocs.co.uk/treatments/lip-flip/",
+                "procedureType": "NoninvasiveProcedure",
+                "bodyLocation": "Upper Lip",
+                "followup": "Results visible in 3–7 days, lasting 2–3 months. Follow-up assessment available.",
+                "howPerformed": "Botulinum toxin injected into the orbicularis oris muscle at strategic points along the upper lip border."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
               }
-            }))
-          })}
-        </script>
-
-        {/* Offer Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Offer",
-            "name": "Lip Flip Botox Treatment",
-            "description": "Professional lip flip botox treatment in London",
-            "price": "175",
-            "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock",
-            "url": seoData.canonical,
-            "seller": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
-            }
+            ]
           })}
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Breadcrumb */}
-        <div className="page-container pt-20">
-          <Breadcrumb 
-            items={[
-              { label: "Treatments", path: "/treatments/" },
-              { label: "Botox Treatments", path: "/treatments/botox/" }
-            ]}
-            currentPage="Lip Flip Botox"
-          />
-        </div>
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* ═══════════════════════════════════════════
+            HERO — Minimal, text-light
+        ═══════════════════════════════════════════ */}
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          {/* Subtle gold accent line */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
 
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden min-h-[80vh] flex items-center">
-          <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-left"
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Lip Flip Botox</span>
-                  <span className="block text-sm mt-4">Invisible art - enhanced lips that speak without words</span>
-                </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Upper Lip Enhancement</p>
-                  <p className="text-sm text-gray-300">10-15 minutes • 2-3 months duration</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank', 'noopener,noreferrer')}
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => {
-                      const pricingSection = document.getElementById('pricing-section');
-                      if (pricingSection) {
-                        pricingSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    View Price List
-                  </Button>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
+          {/* Flowing background orb */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Lip Flip Botox Treatment</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">10-15 minutes</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">2-3 months</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Immediate return to activities</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical if required</p>
-              </motion.div>
-            </div>
+              className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)',
+              }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
-        </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Lip Flip Before and After Results</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                View our botox lip flip before and after gallery showcasing real lip flip results from our London clinic. Our lip flip before and after UK images demonstrate significant improvements in upper lip enhancement, achieving natural, fuller-looking lips. Each botox lips before after transformation highlights the precision of our injection technique and natural lip flip results.
-              </p>
-            </motion.div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb
+              items={[
+                { label: 'Treatments', path: '/treatments/' },
+                { label: 'Botox Treatments', path: '/treatments/botox/' }
+              ]}
+              currentPage="Lip Flip Botox"
+            />
 
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        loading="lazy"
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-          </div>
-        </section>
+            <div className="flex items-center justify-between pt-12 pb-4">
+              {/* Left: Text */}
+              <div className="max-w-2xl">
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                    Lip Flip{" "}
+                    <span className="text-[#C9A050] font-light">Botox</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                    Subtle upper lip enhancement using precise muscle relaxation — revealing more of your natural lip without adding volume.
+                  </p>
+                </motion.div>
 
-        {/* What is Lip Flip */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is a Lip Flip?</h2>
-              <div className="text-gray-300 max-w-4xl mx-auto text-lg space-y-4">
-                <p>
-                  What is lip flip treatment? A lip flip botox procedure is a non-invasive lip enhancement technique involving precise botox injections in lips. The lip flipping botox treatment uses a small amount of <a href="https://pubmed.ncbi.nlm.nih.gov/35622575/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin</a> injected into the upper lip muscles, specifically targeting the orbicularis oris muscle.
-                </p>
-                <p>
-                  How does a lip flip work? Unlike <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">lip fillers</Link>, the botox upper lip treatment relaxes muscles, causing the top lip to subtly roll outward. This reveals more of the pink lip tissue, creating fuller-looking lips without adding volume. The flip lip botox technique is ideal for those seeking subtle enhancement.
-                </p>
-                <p>
-                  Moreover, this botox lip enhancement procedure accentuates the Cupid's bow and reduces lip curl. The natural lip flip results look incredibly stunning for anyone seeking a noticeable improvement to their upper lip filler appearance. The lip flip procedure cost is significantly less than traditional dermal fillers whilst providing elegant, natural results.
-                </p>
+                {/* Minimal trust row */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Doctor-Led
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    10–15 Min
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Since 2007
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Harley Street
+                  </span>
+                </motion.div>
               </div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Botox Lip Flip Injection Points */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Lip Flip Injection Points & Sites</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Right: Lip illustration with animation */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
+                className="hidden lg:block flex-shrink-0 w-[260px] h-[300px] relative"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               >
-                <img 
-                  src={lipFlipImage1} 
-                  alt="Lip flip injection points diagram showing precise botox injection sites"
-                  loading="lazy"
-                  className="mx-auto rounded-lg shadow-lg max-w-md w-full"
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.1) 0%, transparent 60%)',
+                  }}
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 />
-                <p className="text-sm text-gray-300 mt-4 italic">
-                  Lip flip injection sites diagram - where to inject botox for lip flip targeting the orbicularis oris muscle. Strategic lip flip injection points ensure natural results.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">The Lip Flip Procedure</CardTitle>
-                  </CardHeader>
-                   <CardContent>
-                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                       The lip flip with botox uses strategic botox injections lips placed along specific lip flip injection sites. Our expert doctors target precise injection points on the upper lip border, creating controlled muscle relaxation for optimal natural lip flip enhancement. This botox for lip enhancement technique ensures symmetrical, beautiful results.
-                     </p>
-                     
-                     <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/30">
-                       <h4 className="text-purple-300 font-semibold mb-4">Key Treatment Benefits:</h4>
-                       <div className="grid md:grid-cols-2 gap-3">
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Upper lip muscle relaxation</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Reveals more pink lip tissue</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">No needles near lip tissue</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Maintains natural lip mobility</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Reversible treatment effects</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Minimal risk of complications</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Perfect for first-time patients</span>
-                         </div>
-                         <div className="flex items-center space-x-3">
-                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                           <span className="text-gray-300">Can combine with lip fillers</span>
-                         </div>
-                       </div>
-                     </div>
-                  </CardContent>
-                </Card>
+                <motion.img
+                  src={lipIllustration}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_30px_rgba(201,160,80,0.15)]"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                />
               </motion.div>
             </div>
           </div>
+
+          {/* Bottom fade line */}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
         </section>
 
-        {/* Lip Flip vs Lip Filler Comparison */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Lip Flip vs Lip Filler: What's the Difference?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the key differences between botox lip flip and lip fillers. Compare lip flip and filler before and after results, botox and lip fillers techniques, and lips botox versus traditional filler treatments to choose the best lip enhancement for your aesthetic goals.
-              </p>
-            </motion.div>
-            
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-              {/* Lip Flip Botox */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl flex items-center">
-                      <Syringe className="mr-3 text-purple-400" size={24} />
-                      Lip Flip Botox
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-gray-300">
-                      The lipflip (also called lip.flip or lio flip) is a non-invasive botox in lips technique that relaxes the top lip muscle. Botox in the upper lip reveals more tissue without adding volume, making it perfect for natural lip enhancement.
-                    </p>
-                    
-                    <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/30">
-                      <ul className="text-gray-300 space-y-3">
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Botox of lips relaxes muscles</li>
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> No volume added - pure muscle relaxation</li>
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Quick 10-minute lip flick procedure</li>
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> How long do lip flips last? 2-3 months</li>
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Lip flip price: £175</li>
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Subtle, natural enhancement</li>
-                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Immediate return to normal activities</li>
-                      </ul>
+        {/* ═══════════════════════════════════════════
+            TWO-COLUMN LAYOUT — Content + Sidebar
+        ═══════════════════════════════════════════ */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            {/* LEFT — Main Content */}
+            <div className="space-y-14">
+
+              {/* What Is a Lip Flip */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Is a <span className="text-[#C9A050] font-light">Lip Flip?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        A lip flip uses a small amount of botulinum toxin injected into the upper lip muscle to gently relax it.
+                        This allows the lip to roll subtly outward, revealing more of the pink lip tissue and creating the
+                        appearance of a fuller upper lip — without adding any volume.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Unlike <Link to="/treatments/dermal-fillers/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">lip fillers</Link>,
+                        which physically augment the lip with hyaluronic acid, the lip flip works purely through muscle relaxation.
+                        The orbicularis oris muscle — which circles the mouth and causes the lip to curl inward — is gently
+                        relaxed at precise points along the upper lip border.
+                      </p>
+                      <p>
+                        The result is a subtle, natural enhancement that accentuates the Cupid's bow and reveals more of
+                        your existing lip shape. It's ideal for patients who want a noticeable but understated improvement,
+                        or who wish to try lip enhancement before committing to filler.
+                      </p>
+                      <p>
+                        Our doctors assess each patient's lip anatomy, muscle strength, and aesthetic goals to determine
+                        the optimal placement and dosage — typically 4–6 units of botulinum toxin.
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              {/* Lip Filler */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-pink-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl flex items-center">
-                      <Heart className="mr-3 text-pink-400" size={24} />
-                      Lip Filler
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-gray-300">
-                      Hyaluronic acid-based dermal fillers that add volume and shape to lips for dramatic or subtle enhancement results. Lip fillers physically augment lip size whilst maintaining natural lip movement and expression.
-                    </p>
-                    
-                    <div className="bg-pink-900/20 rounded-lg p-6 border border-pink-500/30">
-                      <ul className="text-gray-300 space-y-3">
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Adds hyaluronic acid volume</li>
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Increases lip size and shape</li>
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> 30-45 minute treatment</li>
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Results last 6-12 months</li>
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Cost: £350-£550</li>
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Dramatic or subtle options</li>
-                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> 24-48 hours minor swelling</li>
-                      </ul>
+              {/* How It Works */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How the Procedure <span className="text-[#C9A050] font-light">Works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        The procedure takes just 10–15 minutes. Using a fine needle, small doses of botulinum toxin are
+                        placed at 2–4 strategic injection points along the upper lip border.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        During your consultation, your doctor will assess your lip anatomy and discuss your goals.
+                        The injection sites are carefully selected to target the orbicularis oris muscle whilst
+                        maintaining natural lip mobility and expression.
+                      </p>
+                      <p>
+                        The treatment is well-tolerated by most patients, with only a mild pinch sensation. Topical
+                        anaesthetic can be applied if preferred. You can return to normal activities immediately — there
+                        is no downtime.
+                      </p>
+                      <p>
+                        Results develop gradually over 3–7 days, with the full effect visible by day 10–14. This gradual
+                        onset ensures a natural-looking enhancement rather than an abrupt change.
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center"
-            >
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Many patients achieve optimal results by combining both treatments - botox and lips fillers work beautifully together. Our expert practitioners can recommend the best approach for your specific aesthetic goals during consultation, whether it's a simple lipflip or a comprehensive lip enhancement package.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Units Information */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">How Many Botox Units Are Needed for Lip Flip?</h2>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl text-center">Botox Units for Lip Flip Treatment</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-8 pb-8">
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <div className="text-center">
-                        <h4 className="text-purple-300 font-semibold mb-4 text-lg">Typical Dosage</h4>
-                        <p className="text-gray-300 text-lg mb-4">4-6 units of Botox</p>
-                        <p className="text-gray-300 text-sm">
-                          The exact amount depends on your lip anatomy, muscle strength, and desired enhancement level.
-                        </p>
+              {/* Lip Flip vs Lip Filler */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Lip Flip vs <span className="text-[#C9A050] font-light">Lip Filler</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        A lip flip relaxes muscle to reveal more lip tissue. Lip filler adds physical volume with
+                        hyaluronic acid. They serve different purposes and can be combined for comprehensive enhancement.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-5 mt-2">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-[#C9A050] mb-3">Lip Flip (Botox)</p>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Relaxes muscles — no volume added</li>
+                          <li>• 10-minute procedure</li>
+                          <li>• Results last 2–3 months</li>
+                          <li>• £175</li>
+                          <li>• Subtle, natural enhancement</li>
+                          <li>• Ideal first step for lip enhancement</li>
+                        </ul>
                       </div>
-                      <div className="text-center">
-                        <h4 className="text-purple-300 font-semibold mb-4 text-lg">Treatment Areas</h4>
-                        <ul className="text-gray-300 text-sm space-y-2">
-                          <li>• Upper lip border (2-3 injection points)</li>
-                          <li>• Orbicularis oris muscle targeting</li>
-                          <li>• Minimal units for natural results</li>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-white/60 mb-3">Lip Filler (HA)</p>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Adds hyaluronic acid volume</li>
+                          <li>• 30–45 minute procedure</li>
+                          <li>• Results last 6–12 months</li>
+                          <li>• From £300</li>
+                          <li>• Subtle to dramatic options</li>
+                          <li>• Shapes and defines lip contour</li>
                         </ul>
                       </div>
                     </div>
-                    <p className="text-gray-300 text-center mt-6 italic">
-                      Our expert doctors will determine the precise number of units needed during your consultation for optimal, natural-looking results.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                    <div className="mt-4 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl">
+                      <p className="text-white/40 text-xs leading-relaxed font-light">
+                        <strong className="text-[#C9A050]/80">Combined approach:</strong> Many patients achieve optimal
+                        results by combining both — the lip flip for upper lip muscle relaxation alongside filler for
+                        volume and definition. Your doctor will advise the best approach during consultation.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Am I Suitable */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">May Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Thin upper lip that curls inward when smiling</li>
+                        <li>• Desire for subtle, natural enhancement</li>
+                        <li>• First-time lip enhancement patients</li>
+                        <li>• Smoker's lines around the mouth</li>
+                        <li>• Wanting to "test" lip enhancement before filler</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <AlertTriangle className="w-5 h-5 text-white/40" />
+                        <p className="text-sm font-medium text-white">May Not Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Expecting dramatic volume increase</li>
+                        <li>• Active cold sores or lip infections</li>
+                        <li>• Pregnancy or breastfeeding</li>
+                        <li>• Allergy to botulinum toxin</li>
+                        <li>• Neuromuscular disorders</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* What to Expect */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What to <span className="text-[#C9A050] font-light">Expect</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Results appear gradually over 3–7 days, with full effect by day 10–14. The enhancement lasts
+                        2–3 months before a maintenance appointment is needed.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Because the lips are a high-movement area, Botox tends to metabolise faster here than in other
+                        facial areas such as the forehead. Most patients schedule maintenance every 2–3 months for
+                        consistent results.
+                      </p>
+                      <p>
+                        Side effects are generally minimal and temporary. You may experience mild swelling, slight
+                        numbness (resolving within hours), or brief difficulty with precise lip movements such as
+                        drinking through a straw. Asymmetry is rare and easily corrected.
+                      </p>
+                      <p>
+                        Your doctor will discuss realistic expectations during consultation, ensuring the treatment
+                        aligns with your aesthetic goals.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Aftercare */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        No downtime required. You can return to normal activities immediately after treatment.
+                        A few simple precautions help ensure optimal results.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Avoid straws and excessive lip pursing for 24 hours
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Do not lie flat for 4 hours post-treatment
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Avoid makeup on the injection area for 24 hours
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Apply ice if mild swelling occurs
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Contact us if you experience any unusual symptoms
+                      </li>
+                    </ul>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Why CosmeDocs */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ul className="space-y-3">
+                    {[
+                      "Doctor-led — all treatments by GMC-registered doctors",
+                      "Harley Street, London — established 2007",
+                      "Over 1 million treatments performed",
+                      "Conservative philosophy — safety and subtlety first",
+                      "Personalised treatment plans for every patient",
+                      "Our aesthetics is invisible art"
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </section>
+
+              {/* FAQs */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, index) => (
+                      <AccordionItem
+                        key={index}
+                        value={`item-${index}`}
+                        className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5"
+                      >
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
+
+            {/* RIGHT — Sticky Sidebar */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-24">
+                <LipFlipSidebar />
+              </div>
+            </aside>
           </div>
-        </section>
+        </div>
 
-        {/* What to Expect */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">What to Expect from Botox for Lip Flip</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your flip lip treatment, we begin the botox top lip procedure. The doctor uses very fine needles for botox injections lips, targeting specific lip flip injection sites around the upper lip. Research shows <a href="https://pubmed.ncbi.nlm.nih.gov/33170825/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botox is highly effective for lip augmentation</a>. How does a lip flip work during the procedure?
-                    </p>
-                    <ul className="space-y-3 text-gray-300 mb-6">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Botox in top lip border muscles</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Orbicularis oris muscle targeting</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Lip curl prevention areas for smoother appearance</span>
-                      </li>
-                    </ul>
-                    <p className="text-purple-300 font-medium">
-                      Following the botox on lips treatment, you may continue normal daily activities immediately. Results develop gradually, with lip flip results day by day becoming more visible.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Botox for lip flip is considered safe with minimal side effects for most people. The lip flio (lip flop) procedure is well-tolerated and follows <a href="https://www.asds.net/skin-experts/skin-treatments/neuromodulators" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">professional guidelines for neuromodulator treatments</a>. However, your botox treatment may have some slight temporary effects:
-                    </p>
-                    <ul className="space-y-3 text-gray-300">
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Mild swelling around the top lip area</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Temporary numbness (resolves within hours)</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Brief difficulty with precise lip movements</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Slight asymmetry (rare, easily corrected)</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Lip Flip Botox Pricing</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent pricing for professional lip flip treatments in London's premier cosmetic clinic.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Lip Flip</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£175</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Upper lip enhancement</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">4-6 units of Botox</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Expert consultation</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Lip Enhancement Package</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£350</div>
-                    <div className="text-sm text-purple-400">Most Popular</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lip flip botox</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">1ml lip filler</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Complete enhancement</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Full Face Package</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£399</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Upper face areas</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lip flip included</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Comprehensive treatment</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Combined Treatments Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Enhance Your Lip Flip Results</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Combine your lip flip botox with complementary treatments for comprehensive facial enhancement and optimal aesthetic results.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Dermal Fillers</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Combine your lip flip with botox with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> for enhanced volume. Lip flip and filler before and after results show beautiful, comprehensive enhancement. Perfect for those wanting both muscle relaxation and volume.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Facial Botox Areas</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Extend your treatment beyond the lips with comprehensive <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">facial botox</Link> for complete rejuvenation. Address multiple areas including forehead, crow's feet, and bunny lines alongside your lip enhancement.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Gummy Smile Treatment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Address excessive gum visibility with <Link to="/gummy-smile-botox" className="text-purple-400 hover:text-purple-300 underline">gummy smile botox</Link>. Perfect complement to lip flip for a balanced, confident smile. Non-invasive treatment for comprehensive smile enhancement.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Chin Dimpling Treatment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Smooth chin dimpling with <Link to="/chin-dimpling-botox" className="text-purple-400 hover:text-purple-300 underline">chin botox treatment</Link>. Create a harmonious lower face appearance when combined with lip flip enhancement for balanced facial aesthetics.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Skin Boosters</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Enhance overall skin quality with <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin booster treatments</Link>. Improve hydration and texture around the lip area for radiant, youthful-looking skin that complements your lip enhancement.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Anti-Wrinkle Treatments</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Address fine lines and wrinkles around the mouth with comprehensive <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">anti-wrinkle treatments</Link>. Perfect for treating smokers lines alongside your lip flip for complete perioral rejuvenation.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about lip flip botox treatments answered by our expert doctors, based on <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11815597/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">published research on lip flip procedures</a>.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-3xl mx-auto"
-            >
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 rounded-lg px-6">
-                    <AccordionTrigger className="text-white hover:text-purple-300 text-left">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20">
-          <div className="page-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Ready for Enhanced, Natural Lips?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how lip flip botox 
-                can enhance your natural beauty with subtle, sophisticated results.
+        {/* ═══════════════════════════════════════════
+            FULL-WIDTH CTA
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white">
+                Considering a <span className="text-[#C9A050]">Lip Flip?</span>
+              </h2>
+              <p className="text-white/60 mb-8 font-light">
+                A consultation with our doctors will help you understand whether a lip flip, lip filler,
+                or a combined approach is right for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank', 'noopener,noreferrer')}
-                >
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                    Book Consultation
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    Speak to a Doctor
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
+        </section>
+
+        {/* Mobile Sidebar */}
+        <section className="lg:hidden py-12 px-4 bg-black">
+          <LipFlipSidebar />
         </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h3>Expert Lip Flip Botox Treatment in London</h3>
-          <p>Cosmedocs offers professional lip flip botox treatments for natural upper lip enhancement at our London lip flip clinic. Our experienced cosmetic doctors use advanced botox lip injections techniques to create fuller-looking lips without adding volume. Located in prestigious Harley Street, our clinic provides comprehensive lip assessments and personalized lip flip procedure treatment plans. What is a lip flip before and after like? Our gallery showcases stunning natural results from our lip flip London treatments.</p>
-          
-          <h4>Why Choose Cosmedocs for Your Lip Flip?</h4>
-          <p>Whst is a lip flip at Cosmedocs? Our invisible art philosophy ensures natural-looking lip flip results that enhance your lip area without obvious signs of treatment. We specialize in precise lip flip injection sites targeting using the latest botox for top lip techniques. Understanding where to inject botox for lip flip is crucial - our doctors have extensive experience in perioral anatomy and aesthetic medicine, ensuring safe and effective lip treatments. We're known for creating the most natural lip flip before and after UK transformations.</p>
-          
-          <h4>Understanding How a Lip Flip Works</h4>
-          <p>How does a lip flip work? Lip flip treatments use botox injections in lips to relax the orbicularis oris muscles that cause the upper lip to curl inward during smiling and speaking. This flip lip botox technique allows more of the pink lip tissue to be visible, creating the appearance of fuller lips without adding volume through dermal fillers. The result is a subtle, natural-looking enhancement. Many wonder "what does a lip flip do?" - it reveals more of your natural lip without adding filler volume, creating an elegant pout.</p>
-          
-          <h4>Lip Flip Before After Results and Timeline</h4>
-          <p>How long does a lip flip take to work? Our botox lip flip before and after timeline shows results beginning at 3-7 days post-treatment. Lip flip results day by day demonstrate gradual improvement, with full effects visible by days 10-14. How long for lip flip to work varies slightly by individual. How long does a lip flip last? Results typically last 2-3 months. How long does lip flip last depends on your metabolism and muscle activity. Our extensive lipflip before and after gallery showcases real patient results from our lip flip procedure.</p>
-          
-          <h5>Lip Flip Injection Points and Procedure Details</h5>
-          <p>Understanding lip flip injection points is essential for optimal results. The lip flip injection sites are strategically placed along the top lip border, targeting specific points on the orbicularis oris muscle. Where to inject botox for lip flip depends on individual anatomy - our experts customize each treatment. The botox in the upper lip procedure uses 4-6 units of botulinum toxin. Botox in top lip areas creates natural muscle relaxation. Our doctors excel at precise botox of lips application for beautiful, symmetrical outcomes.</p>
-          
-          <h5>Lip Flip Cost and Pricing Information</h5>
-          <p>How much is a lip flip at Cosmedocs? Our lip flip cost is £175, making it an affordable lip enhancement option. The lip flip price includes consultation, treatment, and aftercare. Compared to traditional upper lip filler treatments, the lip flip botox cost offers excellent value. We provide transparent pricing with no hidden fees for our lip.flip treatments.</p>
-          
-          <h5>Combining Lip Flip with Other Treatments</h5>
-          <p>Lip flip and filler before and after combinations show comprehensive enhancement. Botox and lip fillers work beautifully together - the flip lip technique complements filler volume. Lip fillers botox combinations address both muscle relaxation and volume enhancement. Many clients choose botox and lips filler packages for optimal results. The lip flip with botox can also address concerns like lip flip for smokers lines, reducing perioral wrinkles. Botox for lip lines and botox for lip enhancement work synergistically.</p>
-          
-          <h5>Natural Lip Flip Results in London</h5>
-          <p>Our natural lip flip approach ensures subtle, sophisticated enhancement. The lipflip procedure creates what's known as the "invisible art" of aesthetic medicine - lips botox that looks completely natural. Whether you call it a lip flio, lip flop, or lio flip, the technique remains the same: precise botox on lips for elegant results. Our flip lip botox before after gallery demonstrates the beautiful, natural outcomes achievable with expert technique. Discover why we're London's premier destination for botox top lip treatments and natural lip enhancement.</p>
-          
-          <h4>Lip Flip Aftercare and Recovery</h4>
-          <p>Lip flip after care is straightforward with minimal restrictions. Our comprehensive aftercare guidance ensures optimal lip flip results. The lip flip procedure requires avoiding straws, excessive lip movement, and lying down for 4 hours post-treatment. Following proper lip flip aftercare protocols ensures the best possible outcome and longevity of your botox lip enhancement treatment.</p>
+          <h2>Lip Flip Botox London — Expert Upper Lip Enhancement at Harley Street</h2>
+          <p>
+            CosmeDocs offers doctor-led lip flip botox treatments for natural upper lip enhancement at our Harley
+            Street clinic in London. The lip flip procedure uses precise botulinum toxin injections into the
+            orbicularis oris muscle to relax the upper lip, revealing more pink lip tissue for a subtly fuller
+            appearance without adding volume. Our GMC-registered doctors have been performing lip enhancement
+            treatments since 2007.
+          </p>
+          <h3>What Is a Lip Flip and How Does It Work?</h3>
+          <p>
+            A lip flip uses botox injections in the upper lip to relax the orbicularis oris muscle. This muscle
+            relaxation technique allows more of the pink lip tissue to show, creating the illusion of fuller lips
+            without adding volume through dermal fillers. The botox lip flip procedure targets specific injection
+            points along the top lip border. Lip flip results begin appearing within 3-7 days, with full effects
+            visible by day 10-14. Results typically last 2-3 months.
+          </p>
+          <h3>Lip Flip vs Lip Filler Comparison</h3>
+          <p>
+            A lip flip uses botox on lips to relax muscles and reveal more of your existing lip, whilst lip fillers
+            add hyaluronic acid volume. Lip flip and filler combinations can provide comprehensive results. The lip
+            flip cost is £175 at CosmeDocs. Many patients achieve optimal results by combining both treatments for
+            complete lip enhancement. Our aesthetics is invisible art — bold, natural, always your way.
+          </p>
+          <h3>Lip Flip Aftercare and Recovery</h3>
+          <p>
+            Lip flip aftercare involves avoiding straws, excessive lip movement, and lying down for 4 hours
+            post-treatment. Apply ice if needed for mild swelling. The lip flip procedure recovery is minimal with
+            immediate return to activities. Avoid makeup on the treatment area for 24 hours and follow all aftercare
+            instructions provided.
+          </p>
+          <h4>Lip Flip Injection Points and Sites</h4>
+          <p>
+            Lip flip injection points are strategically placed along the upper lip border, targeting the orbicularis
+            oris muscle. The lip flip injection sites typically include 2-4 points across the top lip, where to
+            inject botox for lip flip depends on your specific lip anatomy. Our expert doctors precisely determine
+            the optimal injection sites for natural results. The typical dosage is 4-6 units of botulinum toxin.
+          </p>
+          <h4>Can Lip Flip Help with Smoker's Lines?</h4>
+          <p>
+            Yes, lip flip for smokers lines can reduce perioral wrinkles by relaxing the muscles causing lip curl
+            and vertical lip lines. Botox for lip lines works together with the flip technique to smooth vertical
+            lines whilst enhancing the upper lip appearance. This is particularly effective when combined with other
+            perioral rejuvenation treatments.
+          </p>
         </div>
       </div>
     </>
