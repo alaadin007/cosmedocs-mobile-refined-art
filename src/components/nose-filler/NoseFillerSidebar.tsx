@@ -36,9 +36,9 @@ const NoseFillerSidebar = () => {
         </h3>
         <div className="space-y-4">
           <GlanceStat icon={<Clock className="w-4 h-4" />} label="Duration" value="15–30 minutes" />
-          <GlanceStat icon={<Calendar className="w-4 h-4" />} label="Results last" value="9–18 months" />
+          <GlanceStat icon={<Calendar className="w-4 h-4" />} label="Results last" value="Up to 2–3 years" />
           <GlanceStat icon={<Activity className="w-4 h-4" />} label="Recovery" value="Minimal downtime" />
-          <GlanceStat icon={<Syringe className="w-4 h-4" />} label="Product" value="Hyaluronic acid" />
+          <GlanceStat icon={<Syringe className="w-4 h-4" />} label="Products" value="HA filler & PCL threads" />
         </div>
       </motion.div>
 
