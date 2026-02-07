@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Award, Calendar, MapPin, CheckCircle, Star, ArrowRight, Shield, Heart, Check, Activity, Syringe, GraduationCap, Stethoscope, MessageCircle, Sparkles, Building, Users, Phone } from "lucide-react";
+import { Clock, Award, Calendar, MapPin, CheckCircle, Star, ArrowRight, Shield, Heart, Check, Activity, Syringe, GraduationCap, Stethoscope, MessageCircle, Sparkles, Building, Users, Phone, Play, ExternalLink } from "lucide-react";
 import Breadcrumb from '@/components/Breadcrumb';
 import BotoxSidebar from '@/components/botox/BotoxSidebar';
+import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
 
 export default function FaceBotox() {
   const seoData = generateSEOMetadata(
@@ -607,24 +608,25 @@ export default function FaceBotox() {
                     </p>
                   </div>
 
-                  {/* Embedded Video — Crow's Feet Filler Technique (Instagram Reel) */}
-                  <div className="rounded-xl overflow-hidden border border-white/10 mb-6">
-                    <div className="flex justify-center bg-black/30">
-                      <iframe
-                        src="https://www.instagram.com/reel/DBrvvuQOESh/embed"
-                        className="w-full max-w-[400px] border-0"
-                        style={{ minHeight: '480px' }}
-                        allowFullScreen
-                        loading="lazy"
-                        title="Crow's feet dermal filler technique by Cosmedocs — superficial hyaluronic acid placement"
-                      />
+                  {/* Video Thumbnail — Opens Instagram Reel in new tab */}
+                  <a
+                    href="https://www.instagram.com/reel/DBrvvuQOESh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 p-3 mb-6 transition-all duration-300 hover:border-[#C9A050]/30"
+                  >
+                    <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                      <img src={crowsFeetThumb} alt="Crow's feet filler technique" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
+                        <Play className="w-6 h-6 text-white fill-white/80" />
+                      </div>
                     </div>
-                    <div className="p-4 bg-white/5">
-                      <p className="text-white/50 text-xs">
-                        Watch how we use micro-millilitres of hyaluronic acid to fill crow's feet lines superficially — treating them like fine scars rather than overfilling for a lumpy result.
-                      </p>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-white text-sm font-medium mb-1 group-hover:text-[#C9A050] transition-colors">Crow's Feet Filler Technique</p>
+                      <p className="text-white/50 text-xs leading-relaxed">Watch micro-millilitres of hyaluronic acid placed superficially to fill lines — like treating fine scars, not overfilling.</p>
                     </div>
-                  </div>
+                    <ExternalLink className="w-4 h-4 text-white/30 group-hover:text-[#C9A050] flex-shrink-0 transition-colors" />
+                  </a>
 
                   <div className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-xl p-6 mb-6">
                     <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">The Benefits</p>
