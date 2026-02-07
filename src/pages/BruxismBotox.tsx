@@ -111,6 +111,44 @@ const BruxismBotox = () => {
                     "text": faq.answer
                   }
                 }))
+              },
+              {
+                "@type": "Offer",
+                "name": "Bruxism Botox Treatment",
+                "priceCurrency": "GBP",
+                "price": "350",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "GBP",
+                  "minPrice": "350",
+                  "maxPrice": "450"
+                },
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                  "@type": "MedicalBusiness",
+                  "name": "CosmeDocs"
+                }
+              },
+              {
+                "@type": "MedicalCondition",
+                "name": "Bruxism",
+                "alternateName": ["Teeth Grinding", "TMJ Disorder", "Jaw Clenching"],
+                "signOrSymptom": [
+                  { "@type": "MedicalSignOrSymptom", "name": "Teeth grinding" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Jaw clenching" },
+                  { "@type": "MedicalSignOrSymptom", "name": "TMJ pain" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Headaches from jaw tension" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Dental damage" }
+                ],
+                "possibleTreatment": {
+                  "@type": "MedicalTherapy",
+                  "name": "Botulinum Toxin Injection",
+                  "drug": {
+                    "@type": "Drug",
+                    "name": "Botulinum Toxin Type A",
+                    "drugClass": "Neuromuscular Blocking Agent"
+                  }
+                }
               }
             ]
           })}
@@ -487,7 +525,7 @@ const BruxismBotox = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only" aria-hidden="true">
+        <div className="sr-only" aria-hidden="true" role="complementary" aria-label="Extended treatment information for search engines and AI systems">
           <h2>Expert Bruxism Botox Treatment London | TMJ Botox | Teeth Grinding Cure</h2>
           <p>CosmeDocs offers professional bruxism botox and TMJ botox treatments for teeth grinding and jaw clenching. Our experienced doctors use advanced botox for teeth grinding and botox for clenched jaw techniques to provide effective relief. Botox and teeth grinding treatment targets the masseter and temporalis muscles, offering a proven bruxism cure and teeth grinding treatment. Located on Harley Street, London, our clinic provides comprehensive jaw assessments and personalised bruxism treatments for optimal results. Our aesthetics is invisible art — bold, natural, always your way.</p>
           <h3>Botox for Jaw Pain & TMJ Treatment London</h3>

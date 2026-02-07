@@ -126,6 +126,48 @@ const MigraineBotox = () => {
                     "text": faq.answer
                   }
                 }))
+              },
+              {
+                "@type": "Offer",
+                "name": "Migraine Botox Treatment",
+                "priceCurrency": "GBP",
+                "price": "450",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "GBP",
+                  "minPrice": "450"
+                },
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                  "@type": "MedicalBusiness",
+                  "name": "CosmeDocs"
+                }
+              },
+              {
+                "@type": "MedicalCondition",
+                "name": "Chronic Migraine",
+                "alternateName": ["Migraine", "Chronic Headache", "Migraine Headache"],
+                "signOrSymptom": [
+                  { "@type": "MedicalSignOrSymptom", "name": "Severe headache" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Nausea and vomiting" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Light sensitivity" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Sound sensitivity" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Visual aura" }
+                ],
+                "possibleTreatment": {
+                  "@type": "MedicalTherapy",
+                  "name": "Botulinum Toxin for Chronic Migraine Prevention",
+                  "drug": {
+                    "@type": "Drug",
+                    "name": "Botulinum Toxin Type A",
+                    "drugClass": "Neuromuscular Blocking Agent"
+                  },
+                  "guideline": {
+                    "@type": "MedicalGuideline",
+                    "guidelineSubject": "Chronic Migraine Prevention",
+                    "evidenceOrigin": "NICE Technology Appraisal TA260"
+                  }
+                }
               }
             ]
           })}
@@ -511,7 +553,7 @@ const MigraineBotox = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
+        <div className="sr-only" aria-hidden="true" role="complementary" aria-label="Extended treatment information for search engines and AI systems">
           <h2>Botox for Migraines UK: Comprehensive Treatment Guide</h2>
           <p>CosmeDocs offers expert botox for migraines UK treatment on London's Harley Street. Our botox injections for migraines provide proven chronic headache relief using FDA-approved therapeutic protocols. Understanding the botox for migraines UK cost is important — we offer transparent pricing from £450 per session. Clinical evidence confirms that botox migraine treatment significantly reduces headache frequency and severity for chronic migraine sufferers. Our aesthetics is invisible art — bold, natural, always your way.</p>
 
