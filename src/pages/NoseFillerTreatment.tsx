@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, AlertTriangle, Heart, Syringe, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle, AlertTriangle, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
 import NoseFillerSidebar from '@/components/nose-filler/NoseFillerSidebar';
+import ExpandableSection from '@/components/ui/expandable-section';
 
 const NoseFillerTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -140,7 +141,7 @@ const NoseFillerTreatment = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             {/* LEFT — Main Content */}
-            <div className="space-y-16">
+            <div className="space-y-14">
               {/* What Can It Improve */}
               <section>
                 <motion.div
@@ -149,49 +150,54 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    What Can a Non-Surgical Nose Job <span className="text-[#C9A050]">Improve?</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Can It <span className="text-[#C9A050] font-light">Improve?</span>
                   </h2>
-                  <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
-                    Non-surgical rhinoplasty is a refinement procedure. It works by adding small volumes of filler
-                    to specific areas of the nose to improve shape, symmetry, and proportion. The goal is always
-                    to work with your existing anatomy — enhancing what is already there rather than attempting to
-                    fundamentally alter nasal structure.
-                  </p>
-                  <p className="text-white/45 text-sm leading-relaxed font-light mb-8">
-                    Facial anatomy varies significantly between individuals, and treatment planning is always
-                    personalised rather than formulaic. Our doctors assess each nose in the context of the whole
-                    face — considering bridge height, tip projection, skin thickness, and overall facial harmony
-                    before recommending an approach.
-                  </p>
-                  <ul className="space-y-3">
-                    {[
-                      "Camouflaging small humps or bumps along the nasal bridge",
-                      "Smoothing nasal irregularities and contour asymmetries",
-                      "Refining nasal tip support and definition",
-                      "Improving bridge smoothness and straightness",
-                      "Enhancing overall nasal definition and profile balance",
-                      "Improving side-profile symmetry and facial harmony",
-                      "Correcting minor post-surgical asymmetry in selected cases",
-                      "Addressing sidewall depressions and minor contour irregularities"
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
-                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-8 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl space-y-3">
-                    <p className="text-white/40 text-xs leading-relaxed font-light">
-                      <strong className="text-[#C9A050]/80">Important:</strong> A non-surgical nose job does not make the
-                      nose physically smaller — it improves shape, balance, and proportions. It does not replace surgical
-                      rhinoplasty and works best for refinement rather than major structural change.
-                    </p>
-                    <p className="text-white/40 text-xs leading-relaxed font-light">
-                      During your consultation, our doctors will explain what is realistically achievable, set clear
-                      expectations, and advise honestly if a surgical approach would be more appropriate for your goals.
-                    </p>
-                  </div>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Non-surgical rhinoplasty refines shape, symmetry, and proportion by adding small volumes of filler
+                        to specific areas. The goal is to enhance your existing anatomy — not fundamentally alter it.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Facial anatomy varies significantly between individuals, and treatment planning is always
+                        personalised rather than formulaic. Our doctors assess each nose in the context of the whole
+                        face — considering bridge height, tip projection, skin thickness, and overall facial harmony.
+                      </p>
+                      <ul className="space-y-3">
+                        {[
+                          "Camouflaging small humps or bumps along the nasal bridge",
+                          "Smoothing nasal irregularities and contour asymmetries",
+                          "Refining nasal tip support and definition",
+                          "Improving bridge smoothness and straightness",
+                          "Enhancing overall nasal definition and profile balance",
+                          "Improving side-profile symmetry and facial harmony",
+                          "Correcting minor post-surgical asymmetry in selected cases",
+                          "Addressing sidewall depressions and minor contour irregularities"
+                        ].map((item) => (
+                          <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                            <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-6 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl space-y-3">
+                        <p className="text-white/40 text-xs leading-relaxed font-light">
+                          <strong className="text-[#C9A050]/80">Important:</strong> A non-surgical nose job does not make the
+                          nose physically smaller — it improves shape, balance, and proportions. It does not replace surgical
+                          rhinoplasty and works best for refinement rather than major structural change.
+                        </p>
+                        <p className="text-white/40 text-xs leading-relaxed font-light">
+                          During your consultation, our doctors will explain what is realistically achievable, set clear
+                          expectations, and advise honestly if a surgical approach would be more appropriate for your goals.
+                        </p>
+                      </div>
+                    </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
@@ -203,41 +209,43 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    How Nose Filler <span className="text-[#C9A050]">Treatment Works</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How Nose Filler <span className="text-[#C9A050] font-light">Works</span>
                   </h2>
-                  <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                    <p>
-                      The treatment uses hyaluronic acid dermal fillers — a biocompatible, naturally occurring substance — to
-                      reshape and contour the nose. Our doctors place small, precisely measured volumes of filler at strategic
-                      points along the nasal bridge, tip, or sidewalls to achieve the desired correction.
-                    </p>
-                    <p>
-                      Each injection is carefully planned based on your individual anatomy. The filler provides structural
-                      support, smoothing irregularities and creating refined contours. Results are visible immediately, though
-                      the final outcome settles over the following days as any minor swelling subsides.
-                    </p>
-                    <p>
-                      Our doctors select either needle, cannula, or a combination of both depending on the area being treated
-                      and your anatomy. A one-point injection technique may be appropriate for some patients, whilst others
-                      require a multi-point approach. The procedure is reversible — hyaluronic acid filler can be dissolved
-                      if necessary.
-                    </p>
-                    <p>
-                      Advanced knowledge of facial vascular anatomy is essential for safe nose filler treatment. This is a
-                      high-risk area that should only be treated by experienced, medically qualified practitioners.
-                    </p>
-                    <p>
-                      The treatment itself is relatively quick — typically completed within 15 to 30 minutes. Local comfort
-                      measures are used to minimise any discomfort, and our doctors assess the result in real time throughout
-                      the procedure, making controlled, incremental adjustments rather than committing to a single correction
-                      in one step.
-                    </p>
-                  </div>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Hyaluronic acid filler is placed at strategic points along the bridge, tip, or sidewalls.
+                        Results are visible immediately. The procedure takes 15–30 minutes and is reversible.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Each injection is carefully planned based on your individual anatomy. The filler provides structural
+                        support, smoothing irregularities and creating refined contours. The final outcome settles over the
+                        following days as any minor swelling subsides.
+                      </p>
+                      <p>
+                        Our doctors select either needle, cannula, or a combination of both depending on the area being treated
+                        and your anatomy. A one-point injection technique may be appropriate for some patients, whilst others
+                        require a multi-point approach.
+                      </p>
+                      <p>
+                        Advanced knowledge of facial vascular anatomy is essential for safe nose filler treatment. This is a
+                        high-risk area that should only be treated by experienced, medically qualified practitioners.
+                      </p>
+                      <p>
+                        Our doctors assess the result in real time throughout the procedure, making controlled, incremental
+                        adjustments rather than committing to a single correction in one step.
+                      </p>
+                    </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
-              {/* PCL Threads for Nose Reshaping */}
+              {/* PCL Threads */}
               <section>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -245,53 +253,50 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    Nose Threads for <span className="text-[#C9A050]">Tip Lifting & Straightening</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Nose Threads for <span className="text-[#C9A050] font-light">Tip Lifting</span>
                   </h2>
-                  <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                    <p>
-                      PCL (polycaprolactone) threads offer an alternative or complementary approach to dermal fillers for
-                      non-surgical nose reshaping. Threads are particularly effective for lifting a drooping nasal tip and
-                      straightening the nasal bridge — areas where structural support is the primary goal rather than volume
-                      addition.
-                    </p>
-                    <p>
-                      The threads are inserted beneath the skin along the nasal bridge or tip, providing a scaffold that
-                      lifts and supports the tissue. Over time, the threads stimulate collagen production around the
-                      insertion site, contributing to longer-lasting structural improvement. Results from PCL nose threads
-                      can last up to 3 years — significantly longer than dermal fillers alone.
-                    </p>
-                    <p>
-                      In many cases, our doctors may recommend a combined approach — using threads for structural lifting
-                      and support, with dermal filler for fine contour refinement and smoothing. This dual-modality technique
-                      can achieve results that neither method could accomplish alone, offering both immediate contouring and
-                      long-term structural improvement.
-                    </p>
-                    <p>
-                      As with all nose reshaping at CosmeDocs, thread treatments are performed exclusively by our
-                      GMC-registered doctors using an anatomy-led approach. During your consultation, your doctor will assess
-                      whether fillers, threads, or a combination is most appropriate for your anatomy and goals.
-                    </p>
-                  </div>
-                  <div className="mt-6 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl">
-                    <p className="text-white/40 text-xs leading-relaxed font-light">
-                      <strong className="text-[#C9A050]/80">Threads vs fillers:</strong> Threads excel at tip lifting and
-                      bridge straightening with results lasting up to 3 years. Fillers are better suited for smoothing bumps,
-                      filling depressions, and fine contour work, typically lasting 12–18 months. Your doctor will recommend
-                      the most appropriate modality — or combination — during consultation.
-                    </p>
-                  </div>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        PCL threads lift a drooping nasal tip and straighten the bridge with structural support
+                        lasting up to 3 years — significantly longer than filler alone.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        The threads are inserted beneath the skin, providing a scaffold that lifts and supports tissue.
+                        Over time, they stimulate collagen production for longer-lasting structural improvement.
+                      </p>
+                      <p>
+                        Our doctors may recommend a combined approach — threads for structural lifting with dermal filler
+                        for fine contour refinement. This dual-modality technique can achieve results that neither method
+                        could accomplish alone.
+                      </p>
+                      <p>
+                        During your consultation, your doctor will assess whether fillers, threads, or a combination is
+                        most appropriate for your anatomy and goals.
+                      </p>
+                    </div>
+                    <div className="mt-4 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl">
+                      <p className="text-white/40 text-xs leading-relaxed font-light">
+                        <strong className="text-[#C9A050]/80">Threads vs fillers:</strong> Threads excel at tip lifting and
+                        bridge straightening (up to 3 years). Fillers suit smoothing bumps and fine contour work (12–18 months).
+                      </p>
+                    </div>
+                  </ExpandableSection>
                   <p className="mt-4 text-white/35 text-xs leading-relaxed font-light">
-                    Pricing for non-surgical nose reshaping is available on our{' '}
+                    Pricing available on our{' '}
                     <Link to="/pricing/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
                       pricing page
-                    </Link>{' '}
-                    following consultation.
+                    </Link>.
                   </p>
                 </motion.div>
               </section>
 
-              {/* Video Section */}
+              {/* Video */}
               <section>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -299,13 +304,12 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
-                    Watch: Non-Surgical Nose Job{" "}
-                    <span className="text-[#C9A050]">Explained by Our Doctors</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Watch: <span className="text-[#C9A050] font-light">Explained</span>
                   </h2>
-                  <p className="text-white/45 text-sm leading-relaxed font-light mb-8">
-                    In this short video, our doctors explain how non-surgical nose reshaping works, who
-                    it's suitable for, and how we prioritise safety and natural results.
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Our doctors explain how non-surgical nose reshaping works, who it's suitable for, and how we prioritise safety.
                   </p>
                   <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/[0.08]">
                     <iframe
@@ -330,36 +334,36 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    Safety, Anatomy &{" "}
-                    <span className="text-[#C9A050]">Medical Expertise</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Safety & <span className="text-[#C9A050] font-light">Expertise</span>
                   </h2>
-                  <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                    <p>
-                      The nose is a high-risk vascular area. The internal and external nasal arteries supply blood to
-                      critical structures, and filler placed incorrectly can cause serious complications including
-                      vascular occlusion. This is why non-surgical nose reshaping should only be performed by
-                      experienced, medically qualified doctors with advanced anatomical knowledge.
-                    </p>
-                    <p>
-                      CosmeDocs was established on Harley Street in 2007 and has built long-term clinical experience in
-                      non-surgical nose reshaping. Dr Ahmed Haq, Founder and Medical Director, has contributed to technique
-                      development in aesthetic medicine and is an active educator in the field. Dr Hena, as senior treating
-                      doctor, brings the same anatomy-led, conservative approach to every consultation and procedure.
-                    </p>
-                    <p>
-                      At CosmeDocs, nose filler is exclusively performed by our GMC-registered doctors. Their approach is
-                      conservative by design: small volumes, precise placement, and an understanding that less is more. They
-                      choose between needle and cannula based on what each patient's anatomy requires, not a one-size-fits-all
-                      protocol. Real-time assessment during treatment allows for controlled, incremental correction.
-                    </p>
-                    <p>
-                      Our conservative dosing philosophy means we would rather under-treat and review than over-correct.
-                      We also say "no" when a non-surgical approach is not appropriate — recommending surgical consultation
-                      when the desired outcome exceeds what filler can safely achieve. Safety takes priority over volume,
-                      and every treatment decision is guided by anatomy rather than patient demand alone.
-                    </p>
-                  </div>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        The nose is a high-risk vascular area. At CosmeDocs, nose reshaping is exclusively performed by
+                        GMC-registered doctors with advanced anatomical knowledge — established on Harley Street since 2007.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Dr Ahmed Haq, Founder and Medical Director, has contributed to technique development in aesthetic
+                        medicine and is an active educator in the field. Dr Hena brings the same anatomy-led, conservative
+                        approach to every consultation and procedure.
+                      </p>
+                      <p>
+                        Their approach is conservative by design: small volumes, precise placement, and an understanding
+                        that less is more. They choose between needle and cannula based on what each patient's anatomy
+                        requires, not a one-size-fits-all protocol.
+                      </p>
+                      <p>
+                        We would rather under-treat and review than over-correct. We also say "no" when a non-surgical
+                        approach is not appropriate — recommending surgical consultation when the desired outcome exceeds
+                        what filler can safely achieve.
+                      </p>
+                    </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
@@ -371,45 +375,38 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    Who Is Suitable{" "}
-                    <span className="text-[#C9A050]">(And Who Is Not)</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
                   </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="grid md:grid-cols-2 gap-5">
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
                       <div className="flex items-center gap-2 mb-4">
                         <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                        <p className="text-base font-medium text-white">May Be Suitable</p>
+                        <p className="text-sm font-medium text-white">May Be Suitable</p>
                       </div>
-                      <ul className="space-y-2 text-white/45 text-sm font-light">
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Mild to moderate contour irregularities</li>
-                        <li>• Patients seeking subtle refinement, not size reduction</li>
-                        <li>• Those preferring a non-surgical approach</li>
+                        <li>• Subtle refinement, not size reduction</li>
                         <li>• Dorsal hump or bridge asymmetry</li>
-                        <li>• Post-surgical asymmetry correction (selected cases)</li>
-                        <li>• Patients wanting to "test" a change before committing to surgery</li>
+                        <li>• Post-surgical correction (selected cases)</li>
+                        <li>• "Testing" a change before surgery</li>
                       </ul>
                     </div>
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
                       <div className="flex items-center gap-2 mb-4">
                         <AlertTriangle className="w-5 h-5 text-white/40" />
-                        <p className="text-base font-medium text-white">May Not Be Suitable</p>
+                        <p className="text-sm font-medium text-white">May Not Be Suitable</p>
                       </div>
-                      <ul className="space-y-2 text-white/45 text-sm font-light">
-                        <li>• Significant nasal obstruction or breathing difficulty</li>
-                        <li>• Large structural deformities requiring surgical correction</li>
-                        <li>• Unrealistic expectations about size reduction</li>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Nasal obstruction or breathing difficulty</li>
+                        <li>• Large structural deformities</li>
+                        <li>• Unrealistic size-reduction expectations</li>
                         <li>• Certain vascular risk profiles</li>
-                        <li>• Previous complications from nose filler</li>
-                        <li>• Cases where surgical rhinoplasty would be more appropriate</li>
+                        <li>• Previous nose filler complications</li>
                       </ul>
                     </div>
                   </div>
-                  <p className="mt-6 text-white/35 text-xs leading-relaxed font-light">
-                    Suitability is always determined by your treating doctor during consultation. Our approach is
-                    cautious and doctor-led — we would rather recommend an alternative than proceed with a treatment
-                    that may not meet your expectations.
-                  </p>
                 </motion.div>
               </section>
 
@@ -423,17 +420,16 @@ const NoseFillerTreatment = () => {
                   className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7"
                 >
                   <h2 className="text-xl font-light text-white mb-3">
-                    Non-Surgical Nose Job{" "}
-                    <span className="text-[#C9A050]">Before & After Results</span>
+                    Before & After <span className="text-[#C9A050]">Results</span>
                   </h2>
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
-                    All images show real patients treated by our doctors at our Harley Street clinic.
+                    Real patients treated by our doctors at Harley Street.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/nose/"
                     className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] text-sm font-medium transition-colors"
                   >
-                    View real non-surgical nose job before & after results
+                    View before & after gallery
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -447,25 +443,30 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    How Long Do <span className="text-[#C9A050]">Results Last?</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How Long Do <span className="text-[#C9A050] font-light">Results Last?</span>
                   </h2>
-                  <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                    <p>
-                      Longevity depends on the modality used. Dermal filler results typically last 12–18 months, whilst
-                      PCL thread results can last up to 3 years. A combined approach — threads for structure, filler for
-                      contouring — can offer long-lasting results of 2–3 years overall.
-                    </p>
-                    <p>
-                      The nose is a relatively low-movement area, which means both filler and threads tend to last longer
-                      here than in more dynamic facial areas such as the lips. Many patients find that with repeat treatments,
-                      results can be maintained with progressively smaller volumes.
-                    </p>
-                    <p>
-                      Our doctors will advise on the most appropriate modality — fillers, threads, or both — and the
-                      recommended review schedule during your consultation.
-                    </p>
-                  </div>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Dermal fillers last 12–18 months. PCL threads last up to 3 years. A combined approach can offer
+                        2–3 years of improvement overall.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        The nose is a relatively low-movement area, so both filler and threads tend to last longer
+                        here than in more dynamic areas such as the lips. Many patients find results can be maintained
+                        with progressively smaller volumes over time.
+                      </p>
+                      <p>
+                        Our doctors will advise on the most appropriate modality — fillers, threads, or both — and the
+                        recommended review schedule during your consultation.
+                      </p>
+                    </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
@@ -477,23 +478,26 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    Aftercare & <span className="text-[#C9A050]">Recovery</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
                   </h2>
-                  <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                    <p>
-                      Downtime following a non-surgical nose job is minimal. Most patients return to normal activities
-                      immediately. You may experience mild swelling, tenderness, or slight redness at the injection sites,
-                      which typically resolves within 24–48 hours.
-                    </p>
-                    <ul className="space-y-2 pl-1">
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Minimal downtime. Most patients return to normal activities immediately. Mild swelling typically
+                        resolves within 24–48 hours.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
                       <li className="flex items-start gap-3">
                         <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
                         Avoid touching, pressing, or massaging the nose for 48 hours
                       </li>
                       <li className="flex items-start gap-3">
                         <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
-                        Do not wear glasses or sunglasses resting on the bridge for 2 weeks
+                        No glasses resting on the bridge for 2 weeks
                       </li>
                       <li className="flex items-start gap-3">
                         <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
@@ -501,14 +505,14 @@ const NoseFillerTreatment = () => {
                       </li>
                       <li className="flex items-start gap-3">
                         <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
-                        Expect mild swelling to settle within a few days
+                        Mild swelling settles within a few days
                       </li>
                       <li className="flex items-start gap-3">
                         <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
-                        Contact our clinic if you experience unusual pain, blanching, or vision changes
+                        Contact us if you experience unusual pain, blanching, or vision changes
                       </li>
                     </ul>
-                  </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
@@ -520,19 +524,18 @@ const NoseFillerTreatment = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-                    Why Choose CosmeDocs for{" "}
-                    <span className="text-[#C9A050]">Nose Fillers?</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
                   </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ul className="space-y-3">
                     {[
-                      "Doctor-led clinic — all treatments performed by GMC-registered doctors",
+                      "Doctor-led — all treatments by GMC-registered doctors",
                       "Harley Street, London — established 2007",
-                      "Over 1 million treatments performed across all services",
-                      "Conservative philosophy — we prioritise safety and subtlety",
-                      "Ethical practice — we say \"no\" when appropriate",
+                      "Over 1 million treatments performed",
+                      "Conservative philosophy — safety and subtlety first",
                       "Specialists in Asian and ethnic nose reshaping since 2010",
-                      "Our aesthetics is invisible art — bold, natural, always your way"
+                      "Our aesthetics is invisible art"
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
                         <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
