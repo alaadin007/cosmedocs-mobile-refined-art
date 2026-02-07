@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Star, Clock, Calendar, Syringe, Activity, ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
+import masseterBa1 from "@/assets/before-after/masseter-ba-2.jpg";
+import masseterBa2 from "@/assets/before-after/masseter-ba-3.jpg";
+import masseterBa3 from "@/assets/before-after/masseter-ba-4.jpg";
 
 const MasseterSidebar = () => {
   return (
@@ -59,9 +62,9 @@ const MasseterSidebar = () => {
         <p className="text-sm text-white/70 mb-3 font-medium">Real Patient Results</p>
         <div className="grid grid-cols-3 gap-2 mb-3">
           {[
-            { src: "/lovable-uploads/387f8164-1ea6-491f-8553-3effea5fd956.png", alt: "Masseter botox jaw slimming result" },
-            { src: "/lovable-uploads/8f820207-ab70-4e87-8092-eb39e3eda82d.png", alt: "Masseter botox before and after" },
-            { src: "/lovable-uploads/0f53b9e7-85da-4c39-98c4-b5e3d8023764.png", alt: "Jawline slimming botox result" },
+            { src: masseterBa1, alt: "Masseter Botox before and after side and front profile" },
+            { src: masseterBa2, alt: "Jawline slimming before and after split view" },
+            { src: masseterBa3, alt: "Facial slimming results over time" },
           ].map((img) => (
             <div key={img.src} className="rounded-lg overflow-hidden border border-white/[0.06]">
               <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
