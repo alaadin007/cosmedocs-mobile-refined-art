@@ -54,7 +54,7 @@ const areaCards = [
     subtitle: "Nose reshaping without surgery",
     image: "/images/before-after/dermal-fillers/nose-filler-before-after.jpg",
     link: "/before-after/dermal-fillers/nose/",
-    imageCount: 0
+    imageCount: 6
   },
   {
     id: "temples",
