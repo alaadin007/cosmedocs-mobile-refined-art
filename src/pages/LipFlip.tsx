@@ -137,9 +137,34 @@ const LipFlip = () => {
               currentPage="Lip Flip Botox"
             />
 
-            <div className="flex items-center justify-between pt-12 pb-4">
+            <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
+              {/* Mobile: Lip illustration above text */}
+              <motion.div
+                className="lg:hidden w-[180px] h-[180px] relative mx-auto"
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.12) 0%, transparent 60%)',
+                  }}
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.img
+                  src={lipIllustration}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(201,160,80,0.15)]"
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </motion.div>
+
               {/* Left: Text */}
-              <div className="max-w-2xl">
+              <div className="max-w-2xl text-center lg:text-left">
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -149,7 +174,7 @@ const LipFlip = () => {
                     Lip Flip{" "}
                     <span className="text-[#C9A050] font-light">Botox</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
                     Subtle upper lip enhancement using precise muscle relaxation — revealing more of your natural lip without adding volume.
                   </p>
                 </motion.div>
@@ -159,7 +184,7 @@ const LipFlip = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
+                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
                 >
                   <span className="flex items-center gap-1.5">
                     <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
@@ -180,9 +205,9 @@ const LipFlip = () => {
                 </motion.div>
               </div>
 
-              {/* Right: Lip illustration with animation */}
+              {/* Right: Lip illustration — desktop */}
               <motion.div
-                className="hidden lg:block flex-shrink-0 w-[260px] h-[300px] relative"
+                className="hidden lg:block flex-shrink-0 w-[280px] h-[320px] relative"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
