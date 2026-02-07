@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
+import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
@@ -133,31 +134,84 @@ const MasseterBotox = () => {
               currentPage="Masseter Botox"
             />
 
-            <div className="pt-12 pb-4 max-w-3xl">
+            <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
+              {/* Mobile: Jaw illustration above text */}
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="lg:hidden w-[180px] h-[180px] relative mx-auto"
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
               >
-                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
-                  Masseter{" "}
-                  <span className="text-[#C9A050] font-light">Botox</span>
-                </h1>
-                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
-                  Jaw slimming and bruxism relief through precise muscle reduction — dual cosmetic and medical benefits in one treatment.
-                </p>
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.12) 0%, transparent 60%)',
+                  }}
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.img
+                  src={jawIllustration}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(201,160,80,0.15)]"
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                />
               </motion.div>
 
+              {/* Left: Text */}
+              <div className="max-w-2xl text-center lg:text-left">
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                    Masseter{" "}
+                    <span className="text-[#C9A050] font-light">Botox</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
+                    Jaw slimming and bruxism relief through precise muscle reduction — dual cosmetic and medical benefits in one treatment.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
+                >
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />15–20 Min</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Since 2007</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £350</span>
+                </motion.div>
+              </div>
+
+              {/* Right: Jaw illustration — desktop */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
+                className="hidden lg:block flex-shrink-0 w-[280px] h-[320px] relative"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               >
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />15–20 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Since 2007</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £350</span>
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.1) 0%, transparent 60%)',
+                  }}
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.img
+                  src={jawIllustration}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_30px_rgba(201,160,80,0.15)]"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                />
               </motion.div>
             </div>
           </div>
