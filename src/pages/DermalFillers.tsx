@@ -599,13 +599,40 @@ export default function DermalFillers() {
               <section>
                 <SectionHeading>Before & After</SectionHeading>
                 <p className="text-white/60 mb-6">
-                  View authentic patient transformations in our dedicated gallery. Results vary by individual — these images represent real outcomes under our care.
+                  Real patient results from our Harley Street clinic. Outcomes vary by individual — these images represent authentic transformations under our care.
+                </p>
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {[
+                    { src: "/images/before-after/dermal-fillers/full-face-filler-before-after.jpg", alt: "Full-face dermal filler before and after showing cheek and jawline restoration" },
+                    { src: "/images/before-after/dermal-fillers/lip-filler-before-after.jpg", alt: "Lip filler before and after showing natural volume enhancement" },
+                    { src: "/images/before-after/dermal-fillers/lip-filler-progression.jpg", alt: "Lip filler progression showing before, 1ml, and 2ml results" },
+                    { src: "/images/before-after/dermal-fillers/nose-filler-before-after.jpg", alt: "Non-surgical nose job before and after showing bridge refinement" },
+                  ].map((img, i) => (
+                    <motion.div
+                      key={i}
+                      className="aspect-square rounded-lg overflow-hidden bg-white/5"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.1 }}
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                <p className="text-xs text-white/40 mb-4 italic">
+                  Individual results may vary. Images are unretouched and show real patient outcomes.
                 </p>
                 <Link
                   to="/before-after/dermal-fillers/"
-                  className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium"
+                  className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#C9A050]/10 border border-white/10 hover:border-[#C9A050]/30 rounded-full px-5 py-2.5 text-[#C9A050] text-sm font-medium transition-all"
                 >
-                  View Dermal Filler Before & After Gallery <ArrowRight className="w-4 h-4" />
+                  View Full Before & After Gallery <ArrowRight className="w-4 h-4" />
                 </Link>
               </section>
 
