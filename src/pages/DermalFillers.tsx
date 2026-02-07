@@ -572,6 +572,41 @@ export default function DermalFillers() {
                 </div>
               </section>
 
+              {/* Filler Migration Myth */}
+              <section>
+                <SectionHeading>The Filler Migration Myth</SectionHeading>
+                <p className="text-white/70 text-lg mb-4">
+                  "Filler migration" is one of the most commonly repeated concerns in aesthetics — but it's largely a misconception.
+                </p>
+                <p className="text-white/60 mb-6">
+                  Hyaluronic acid filler, when placed correctly by an experienced practitioner, integrates with the surrounding tissue and stays precisely where it's injected. It does not "wander" through the face.
+                </p>
+                <p className="text-white/60 mb-6">
+                  What's often labelled as migration is typically the result of poor injection technique — filler placed too superficially, in excessive volumes, or in the wrong tissue plane. When product is deposited incorrectly, it can spread beyond the intended area, creating an unnatural appearance that gets blamed on the filler itself rather than the method of placement.
+                </p>
+
+                {/* Dr. Quote */}
+                <div className="bg-white/5 border-l-2 border-[#C9A050] rounded-r-xl p-6 mb-6">
+                  <blockquote className="text-white/80 text-base italic leading-relaxed mb-4">
+                    "Migration is a technique problem, not a product problem. When filler is placed at the correct depth, in the right tissue plane, with appropriate volumes — it simply doesn't migrate. What patients see on social media and attribute to migration is almost always the result of poor placement or overfilling. With proper anatomical knowledge and restraint, this concern is entirely avoidable."
+                  </blockquote>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[#C9A050] flex items-center justify-center text-black text-sm font-bold">AH</div>
+                    <div>
+                      <p className="text-white font-medium text-sm">Dr. Ahmed Haq</p>
+                      <p className="text-white/50 text-xs">Medical Director, CosmeDocs</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-white/60 mb-4">
+                  At CosmeDocs, every injection is guided by deep anatomical understanding. Our doctors use precise cannula and needle techniques, selecting the correct product viscosity and depth for each area — ensuring filler stays exactly where it's intended.
+                </p>
+                <p className="text-white/50 text-sm">
+                  This is why choosing a qualified, experienced doctor-led clinic matters. Technique is the single greatest factor in achieving safe, natural, long-lasting results.
+                </p>
+              </section>
+
               {/* Preparation & Aftercare */}
               <section>
                 <SectionHeading>Preparation & Aftercare</SectionHeading>
