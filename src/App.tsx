@@ -132,6 +132,7 @@ const AestheticIntelligence = lazy(() => import("./pages/AestheticIntelligence")
 const ProductAnalysisDetail = lazy(() => import("./pages/ProductAnalysisDetail"));
 const PopupOffer = lazy(() => import("./pages/PopupOffer"));
 const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
+const SkinRejuvenationHub = lazy(() => import("./pages/SkinRejuvenationHub"));
 const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWorkExperience"));
 const SmartAesthetics = lazy(() => import("./pages/SmartAesthetics"));
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
@@ -351,33 +352,43 @@ const App = () => {
                           <Route path="/treatments/ear-lobe-rejuvenation" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/ear-lobe-rejuvenation/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           
-                          {/* Skin Rejuvenation & Advanced Treatments */}
+                          {/* Skin Rejuvenation Hub */}
+                          <Route path="/treatments/skin-rejuvenation" element={<SkinRejuvenationHub />} />
+                          <Route path="/treatments/skin-rejuvenation/" element={<SkinRejuvenationHub />} />
+                          
+                          {/* Skin Rejuvenation Standalone Pages */}
                           <Route path="/treatments/profhilo" element={<ProfhiloTreatment />} />
                           <Route path="/treatments/profhilo/" element={<ProfhiloTreatment />} />
                           <Route path="/treatments/polynucleotides" element={<PolynucleotideTreatment />} />
                           <Route path="/treatments/polynucleotides/" element={<PolynucleotideTreatment />} />
-                          <Route path="/treatments/prp" element={<PRPTreatment />} />
-                          <Route path="/treatments/prp/" element={<PRPTreatment />} />
-                          <Route path="/treatments/hydrafacial" element={<HydraFacial />} />
-                          <Route path="/treatments/hydrafacial/" element={<HydraFacial />} />
-                          <Route path="/treatments/chemical-peel" element={<ChemicalPeel />} />
-                          <Route path="/treatments/chemical-peel/" element={<ChemicalPeel />} />
+                          <Route path="/treatments/prp-vampire-facial" element={<PRPTreatment />} />
+                          <Route path="/treatments/prp-vampire-facial/" element={<PRPTreatment />} />
+                          <Route path="/treatments/prp" element={<Navigate to="/treatments/prp-vampire-facial/" replace />} />
+                          <Route path="/treatments/prp/" element={<Navigate to="/treatments/prp-vampire-facial/" replace />} />
                           <Route path="/treatments/microneedling" element={<Microneedling />} />
                           <Route path="/treatments/microneedling/" element={<Microneedling />} />
+                          <Route path="/treatments/chemical-peels" element={<ChemicalPeel />} />
+                          <Route path="/treatments/chemical-peels/" element={<ChemicalPeel />} />
+                          <Route path="/treatments/chemical-peel" element={<Navigate to="/treatments/chemical-peels/" replace />} />
+                          <Route path="/treatments/chemical-peel/" element={<Navigate to="/treatments/chemical-peels/" replace />} />
+                          <Route path="/treatments/hydrafacial" element={<HydraFacial />} />
+                          <Route path="/treatments/hydrafacial/" element={<HydraFacial />} />
                           <Route path="/treatments/pdo-threads" element={<ThreadFaceLift />} />
                           <Route path="/treatments/pdo-threads/" element={<ThreadFaceLift />} />
-                          <Route path="/treatments/8-point-facelift" element={<EightPointFacelift />} />
-                          <Route path="/treatments/8-point-facelift/" element={<EightPointFacelift />} />
-                          <Route path="/treatments/non-surgical-facelift" element={<NonSurgicalFacelift />} />
-                          <Route path="/treatments/non-surgical-facelift/" element={<NonSurgicalFacelift />} />
-                          <Route path="/treatments/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
-                          <Route path="/treatments/non-surgical-ponytail/" element={<NonSurgicalPonytail />} />
                           <Route path="/treatments/fat-dissolving" element={<FatDissolve />} />
                           <Route path="/treatments/fat-dissolving/" element={<FatDissolve />} />
-                          <Route path="/treatments/prescription-skincare" element={<PrescriptionSkincare />} />
-                          <Route path="/treatments/prescription-skincare/" element={<PrescriptionSkincare />} />
-                          <Route path="/treatments/peel-to-reveal" element={<PeelToReveal />} />
-                          <Route path="/treatments/peel-to-reveal/" element={<PeelToReveal />} />
+                          
+                          {/* Skin Rejuvenation - Redirects to hub */}
+                          <Route path="/treatments/8-point-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/8-point-facelift/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/non-surgical-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/non-surgical-facelift/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/non-surgical-ponytail/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/prescription-skincare" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/prescription-skincare/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/peel-to-reveal" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/peel-to-reveal/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           
                           {/* Plastic Surgery */}
                           <Route path="/treatments/plastic-surgery" element={<PlasticSurgeon />} />
@@ -478,21 +489,21 @@ const App = () => {
                           {/* Skin & Advanced treatment legacy redirects */}
                           <Route path="/profhilo" element={<Navigate to="/treatments/profhilo/" replace />} />
                           <Route path="/polynucleotide-treatment" element={<Navigate to="/treatments/polynucleotides/" replace />} />
-                          <Route path="/prp-treatment" element={<Navigate to="/treatments/prp/" replace />} />
+                          <Route path="/prp-treatment" element={<Navigate to="/treatments/prp-vampire-facial/" replace />} />
                           <Route path="/hydrafacial" element={<Navigate to="/treatments/hydrafacial/" replace />} />
                           <Route path="/hydrafacial-london" element={<Navigate to="/treatments/hydrafacial/" replace />} />
-                          <Route path="/chemical-peel" element={<Navigate to="/treatments/chemical-peel/" replace />} />
+                          <Route path="/chemical-peel" element={<Navigate to="/treatments/chemical-peels/" replace />} />
                           <Route path="/microneedling" element={<Navigate to="/treatments/microneedling/" replace />} />
                           <Route path="/pdo-threads" element={<Navigate to="/treatments/pdo-threads/" replace />} />
                           <Route path="/thread-face-lift" element={<Navigate to="/treatments/pdo-threads/" replace />} />
                           <Route path="/thread-lift" element={<Navigate to="/treatments/pdo-threads/" replace />} />
-                          <Route path="/8-point-facelift" element={<Navigate to="/treatments/8-point-facelift/" replace />} />
-                          <Route path="/non-surgical-facelift" element={<Navigate to="/treatments/non-surgical-facelift/" replace />} />
-                          <Route path="/non-surgical-ponytail" element={<Navigate to="/treatments/non-surgical-ponytail/" replace />} />
+                          <Route path="/8-point-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/non-surgical-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/fat-dissolve" element={<Navigate to="/treatments/fat-dissolving/" replace />} />
                           <Route path="/fat-dissolving-injections" element={<Navigate to="/treatments/fat-dissolving/" replace />} />
-                          <Route path="/prescription-skin-care" element={<Navigate to="/treatments/prescription-skincare/" replace />} />
-                          <Route path="/peel-to-reveal" element={<Navigate to="/treatments/peel-to-reveal/" replace />} />
+                          <Route path="/prescription-skin-care" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/peel-to-reveal" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           
                           {/* Plastic surgery legacy redirects */}
                           <Route path="/plastic-surgeon" element={<Navigate to="/treatments/plastic-surgery/" replace />} />
@@ -531,7 +542,9 @@ const App = () => {
                           
 {/* ============================================= */}
                           <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
-                          <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
+                          <Route path="/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/treatments/skin-boosters/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/botox-price-london" element={<Navigate to="/treatments/botox-cost/" replace />} />
                           
 {/* ============================================= */}
