@@ -588,6 +588,86 @@ export default function FaceBotox() {
                 </Link>
               </section>
 
+              {/* Beyond Botox — Synergistic Treatment */}
+              <section>
+                <SectionHeading>Beyond Botox: Treating Lines That Won't Rest</SectionHeading>
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-white/70 text-lg mb-6">
+                    We don't just stop at Botox. Over the last 15 years, we've developed synergistic treatment methods that go further — turning static lines (those visible at rest) back into dynamic ones that only appear with movement.
+                  </p>
+
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
+                    <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">The Problem</p>
+                    <p className="text-white/60 mb-4">
+                      Deep lines that have been etched into the skin over years don't fully disappear with Botox alone. Botox relaxes the muscle, so lines improve — but at rest, those creases remain visible. They've become scars in the skin itself.
+                    </p>
+                    <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">Our Approach</p>
+                    <p className="text-white/60">
+                      By combining Botox with targeted treatments like <strong className="text-white/80">Polynucleotides</strong>, <strong className="text-white/80">dermal fillers</strong>, and <strong className="text-white/80">skin boosters</strong>, we treat the line itself — not just the muscle causing it. Think of deep lines like scars or dental cavities: they need to be <em>filled</em>, not overfilled. We use hyaluronic acid in micro-millilitres, placed very superficially, to restore the skin's surface without creating bulk or lumpiness.
+                    </p>
+                  </div>
+
+                  {/* Embedded Video — Crow's Feet Filler Technique */}
+                  <div className="rounded-xl overflow-hidden border border-white/10 mb-6">
+                    <div className="aspect-video bg-black/50 flex items-center justify-center">
+                      <div className="text-center p-8">
+                        <Syringe className="h-10 w-10 text-[#C9A050]/50 mx-auto mb-3" />
+                        <p className="text-white/50 text-sm mb-1">Crow's Feet Dermal Filler Technique</p>
+                        <p className="text-white/30 text-xs">Video coming soon — superficial filler placement for static lines</p>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-white/5">
+                      <p className="text-white/50 text-xs">
+                        Watch how we use micro-millilitres of hyaluronic acid to fill crow's feet lines superficially — treating them like fine scars rather than overfilling for a lumpy result.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-xl p-6 mb-6">
+                    <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">The Benefits</p>
+                    <ul className="space-y-3 text-white/60">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/80">Lower Botox doses</strong> — you don't need aggressive dosing when the lines are being treated from multiple angles</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/80">Natural results</strong> — less Botox means more natural movement whilst still achieving smooth skin at rest</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/80">Improved skin quality</strong> — polynucleotides and skin boosters regenerate the skin itself, not just mask the problem</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/80">Cost-effective long term</strong> — less frequent Botox sessions, better results at rest, and healthier skin overall</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p className="text-white/60 mb-4">
+                    This synergistic approach is something we've refined over 15 years and thousands of patients. Every face is different — which is why we discuss your specific combination plan during consultation.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://med.as.me/harleystreet"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-6 py-3 text-sm font-medium transition-all duration-300"
+                    >
+                      Book a Consultation <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <button
+                      onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+                      className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:bg-white/10 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300"
+                    >
+                      <Sparkles className="w-4 h-4 text-[#C9A050]" /> Ask Our AI
+                    </button>
+                  </div>
+                </div>
+              </section>
+
               {/* Why Choose Cosmedocs */}
               <section>
                 <SectionHeading>Why Choose Cosmedocs?</SectionHeading>
