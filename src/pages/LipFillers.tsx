@@ -1,106 +1,66 @@
-
+import React from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { Link } from "react-router-dom";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
-import ClientReviews from '@/components/ClientReviews';
+import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
+import LipFillersSidebar from "@/components/lip-fillers/LipFillersSidebar";
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
-    "Lip Filler London | From £300 | Cosmedocs",
-    "Plump, natural lip augmentation from £300. Expert lip filler injections for fuller, defined lips. 1ml treatments available.",
-    "/lip-fillers"
+    "Lip Fillers London | Natural Lip Augmentation | Harley Street Doctors",
+    "Doctor-led lip filler injections from £300. Natural-looking lip augmentation using premium hyaluronic acid at our Harley Street clinic. 0.5ml & 1ml options.",
+    "/treatments/lip-fillers/"
   );
-
-  const beforeAfterImages = [
-    { 
-      src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", 
-      alt: "Before and after 0.5ml lip filler London showing natural lip augmentation progression over 3 years", 
-      caption: "Before and after 0.5ml lip filler - natural enhancement that grows with confidence" 
-    },
-    { 
-      src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", 
-      alt: "Before and after 1ml lip filler showing defined lip peaks and enhanced lip shape London", 
-      caption: "Before and after 1ml lip filler - perfect definition with enhanced peaks and improved ratio" 
-    },
-    { 
-      src: "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png", 
-      alt: "Before and after 0.5ml lip filler natural looking lip enhancement London treatment", 
-      caption: "Before and after 0.5ml lip filler - subtle volume maintaining perfect facial harmony" 
-    },
-    { 
-      src: "/lovable-uploads/94868651-44b6-4cfb-b3a4-8d3629c1358b.png", 
-      alt: "Before and after 1ml lip filler progression showing immediate results and healed after 5 weeks", 
-      caption: "Before and after 1ml lip filler timeline - immediate results and beautiful healed outcome" 
-    },
-    { 
-      src: "/lovable-uploads/a91d9151-e465-4ba8-82e8-f59fee576396.png", 
-      alt: "Before and after 1ml lip filler progressive enhancement from natural to bold results London", 
-      caption: "Before and after 1ml lip filler progression - from natural to bold enhancement" 
-    },
-    { 
-      src: "/lovable-uploads/155a5ab6-6a67-4fe4-a246-f77856aba78d.png", 
-      alt: "Before and after 0.5ml lip filler vs 1ml comparison showing different enhancement levels London", 
-      caption: "Before and after 0.5ml vs 1ml lip filler - see how different volumes transform your smile" 
-    }
-  ];
 
   const faqs = [
     {
-      question: "How long does it take lip filler to dissolve naturally?",
-      answer: "Lip filler injection duration varies - typically lasting 6-12 months before naturally dissolving. Premium hyaluronic acid treatments used for lip enhancement at Cosmedocs provide long-lasting results that gradually fade while maintaining shape and hydration."
+      question: "How long do lip fillers last?",
+      answer: "Lip filler results typically last 6–12 months depending on the product used, your metabolism, and the volume injected. 0.5ml treatments tend to last 6–9 months, whilst 1ml treatments can last up to 12 months. Premium hyaluronic acid fillers used at CosmeDocs provide long-lasting results that gradually and naturally dissolve."
     },
     {
-      question: "How much lip filler pain should I expect?",
-      answer: "Lip filler pain is minimal - we use topical anaesthetic and premium lip augmentation filler containing lidocaine. Most clients describe lip injection pain as mild pressure rather than discomfort. Our expert technique ensures maximum comfort throughout the procedure."
+      question: "How much do lip fillers cost in London?",
+      answer: "At CosmeDocs, lip fillers start from £300 for 0.5ml and £350 for 1ml. This includes consultation, premium hyaluronic acid filler, and aftercare support. The consultation fee (£50) is deducted if you proceed on the same day."
     },
     {
-      question: "How much filler do I need for my lips?",
-      answer: "The amount varies based on your natural lip size and desired outcome. Typically, 0.5-1ml is used for subtle enhancement, while 1-2ml creates more dramatic results. Our doctors will assess and recommend the optimal amount during consultation."
+      question: "Do lip fillers hurt?",
+      answer: "Discomfort is minimal. We apply topical anaesthetic before treatment and use premium fillers containing lidocaine for additional comfort. Most patients describe the sensation as mild pressure rather than pain. The procedure takes 30–45 minutes including consultation."
     },
     {
-      question: "What are the lip filler swelling stages and how to reduce lip injection swelling?",
-      answer: "Lip filler swelling stages: immediate swelling peaks at 24-48 hours, then gradually reduces. How to reduce lip injection swelling: apply ice packs, avoid strenuous exercise for 24 hours, sleep elevated, and stay hydrated. Most clients return to normal activities immediately."
+      question: "What is the difference between 0.5ml and 1ml lip filler?",
+      answer: "0.5ml provides subtle, natural enhancement — ideal for thin lips and first-time treatments. 1ml creates more visible fullness and defined shape. Your doctor will assess your lip anatomy and recommend the optimal volume during consultation."
+    },
+    {
+      question: "What are the lip filler swelling stages?",
+      answer: "Swelling peaks at 24–48 hours, then gradually reduces over 1–2 weeks. Apply ice packs, avoid strenuous exercise for 24 hours, sleep elevated, and stay hydrated. Final results are visible after 2 weeks once swelling fully subsides."
     },
     {
       question: "Can lip fillers look natural?",
-      answer: "Absolutely. Our lip enhancement London philosophy ensures natural-looking results using premium hyaluronic acid treatments. We enhance your natural lip shape and proportions rather than creating an artificial appearance with careful volume and hydration techniques."
+      answer: "Absolutely. Our invisible art philosophy ensures natural-looking results. We enhance your existing lip shape and proportions rather than creating an artificial appearance. Doctor-led assessment ensures your enhancement suits your facial harmony."
     },
     {
       question: "What are the risks of lip fillers?",
-      answer: "When performed by qualified medical professionals using premium products, risks are minimal. Possible side effects include temporary swelling, bruising, or asymmetry. Our doctors have extensive experience minimizing complications."
-    },
-    {
-      question: "How much is lip filler in London?",
-      answer: "Our lip fillers are competitively priced with transparent costs detailed in our pricing section. Our lip augmentation filler pricing includes premium quality products from Swiss, French, and USA manufacturers for natural looking lip enhancement."
-    },
-    {
-      question: "What's the difference between before and after 0.5ml lip filler vs 1ml?",
-      answer: "Before and after 0.5ml lip filler shows subtle, natural enhancement perfect for first-time treatments. Before and after 1ml lip filler demonstrates more visible enhancement for bolder results. 0.5ml lasts 6-9 months while 1ml typically lasts 9-12 months."
+      answer: "When performed by qualified doctors using premium products, risks are minimal. Possible temporary side effects include swelling, bruising, tenderness, or mild asymmetry. Serious complications are extremely rare with experienced practitioners."
     },
     {
       question: "Which lip filler volume should I choose?",
-      answer: "For thin lips with dense elastin, we recommend starting with 0.5ml. For medium to large lips or those wanting more noticeable change, 1ml is ideal. Our doctors will assess your lips and recommend the optimal volume during consultation."
+      answer: "For thin lips with dense elastin, we recommend starting with 0.5ml. For medium to large lips or those wanting more noticeable change, 1ml is ideal. Your doctor will assess your lip anatomy during consultation and recommend the optimal volume."
     },
     {
-      question: "When will I see final results?",
-      answer: "Initial results are visible immediately, but final results appear after 2 weeks once swelling subsides. The filler continues to integrate naturally with your tissues over this period for optimal results."
+      question: "When will I see final lip filler results?",
+      answer: "Initial results are visible immediately, but final results appear after 2 weeks once swelling subsides. The filler continues to integrate with your tissues over this period for optimal, natural-looking results."
     },
     {
-      question: "Can I see before and after 0.5ml and 1ml lip filler examples?",
-      answer: "Yes! Our gallery showcases authentic before and after 0.5ml lip filler and before and after 1ml lip filler results from real patients at our London clinic. Each image demonstrates the natural, beautiful enhancement achievable with expert technique."
+      question: "Can lip fillers be dissolved?",
+      answer: "Yes. Hyaluronic acid lip fillers can be safely dissolved using hyaluronidase if you're unhappy with results or wish to return to your natural lip shape. This is one advantage of HA-based fillers over permanent alternatives."
+    },
+    {
+      question: "What's the difference between a lip flip and lip filler?",
+      answer: "A lip flip uses Botox to relax muscles and reveal more lip tissue — no volume is added. Lip fillers physically add volume using hyaluronic acid. They serve different purposes and can be combined. See our lip flip page for more details."
     }
   ];
 
@@ -109,821 +69,544 @@ const LipFillers = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/lip-fillers/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/lip-fillers/" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="lip fillers London, lip augmentation London, lip filler UK London, lip injections London, lip enhancement London, 1ml lip filler, 0.5ml lip filler, before and after 0.5ml lip filler, before and after 1ml lip filler, natural looking lip enhancement, lip fillers cost, how much is lip filler, dermal fillers, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "priceRange": "££",
-            "openingHoursSpecification": [
+            "@graph": [
               {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
+                "@type": "MedicalBusiness",
+                "name": "CosmeDocs",
+                "description": "Doctor-led aesthetic medicine clinic on Harley Street, London. Established 2007.",
+                "url": "https://cosmedocs.co.uk/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Aesthetic Medicine",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "243"
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ]
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Lip Filler Treatment",
+                "alternateName": "Lip Augmentation",
+                "description": "Doctor-led lip augmentation using premium hyaluronic acid dermal fillers to enhance lip volume, shape, and definition with natural-looking results.",
+                "url": "https://cosmedocs.co.uk/treatments/lip-fillers/",
+                "procedureType": "NoninvasiveProcedure",
+                "bodyLocation": "Lips",
+                "followup": "Results visible immediately, final outcome at 2 weeks. Lasts 6–12 months.",
+                "howPerformed": "Premium hyaluronic acid filler injected into strategic points of the lips using fine needles or cannula, with topical anaesthetic and lidocaine for comfort."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              },
+              {
+                "@type": "Offer",
+                "name": "Lip Filler Treatment",
+                "priceCurrency": "GBP",
+                "price": "300",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "GBP",
+                  "minPrice": "300",
+                  "maxPrice": "350"
+                },
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                  "@type": "MedicalBusiness",
+                  "name": "CosmeDocs"
+                }
               }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "243"
-            },
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Lip Filler Treatment",
-              "description": "Expert lip augmentation and lip filler treatments in London UK with natural-looking results"
-            }
+            ]
           })}
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Hero Section - Updated to match LipFillerDissolve design */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-left"
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Advanced Lip Filler London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
-                </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Skilled Lip Enhancement</p>
-                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more authentic looking lip enhancement transformations</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    View Price List
-                  </Button>
-                </div>
-              </motion.div>
-              
-              <div className="hidden lg:block"></div>
-            </div>
+      <div className="min-h-screen bg-black overflow-x-hidden">
+        {/* ═══════════════════════════════════════════
+            HERO — Dark luxury
+        ═══════════════════════════════════════════ */}
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.04) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
-        </section>
 
-        {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Lip Filler Treatment</h2>
-            </motion.div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb
+              items={[
+                { label: 'Treatments', path: '/treatments/' },
+                { label: 'Dermal Fillers', path: '/treatments/dermal-fillers/' }
+              ]}
+              currentPage="Lip Fillers"
+            />
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">30-45 minutes including consultation</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Minimal downtime, return to work same day</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Before and After 0.5ml & 1ml Lip Fillers in London</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic before and after 0.5ml lip filler and before and after 1ml lip filler results from our London clinic. 
-                Our injectable hyaluronic acid treatments add volume, shape and hydration for subtle enhancement tailored to your features.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-
-          </div>
-        </section>
-
-        
-        {/* Lip Filler Volume Comparison */}
-        <section className="py-20 bg-accent text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">0.5ml vs 1ml Lip Filler - Choose Your Enhancement</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Select the perfect volume for your lip goals. Our lip injection specialists in London help achieve 
-                ideal enhancement with premium filler tailored to your lip size and desired outcome.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">0.5ml Subtle Lip Enhancement</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      Perfect for thin lips and first-time treatments. This volume provides gentle fullness 
-                      and moisture without significant swelling or dramatic change.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Ideal for thin lips with dense elastin</p>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Subtle appearance with minimal swelling</p>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Results last 6-9 months</p>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Perfect starting point for lip enhancement journey</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">1ml Bold Lip Augmentation</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      For medium to normal lips seeking noticeable lip enhancement London results. This volume provides visible fullness 
-                      and dramatic improvement in lip shape and contour using premium <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline transition-colors">dermal fillers</Link>.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Visibly enhances medium lips, enlarges smaller lips</p>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">More apparent results with defined shape</p>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Results last 9-12 months</p>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300">Perfect for those wanting noticeable transformation</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Lip Filler Pricing London</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for premium lip enhancement treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-purple-500 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">0.5ml Lip Filler</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£300</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Perfect for subtle enhancement and first-time treatments</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">1ml Lip Filler</CardTitle>
-                    <div className="text-white text-4xl font-bold">£350</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Ideal for noticeable enhancement and dramatic results</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">2-week follow-up</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
-              </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                Book Your Consultation
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Lip Filler Areas of Treatment */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Comprehensive Lip Enhancement Areas</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Our advanced lip filler treatments target multiple areas around the lips and perioral region for complete enhancement. 
-                Using new hyaluronic acid dermal fillers, we deliver natural-looking results backed by clinical evidence from{" "}
-                <a 
-                  href="https://pubmed.ncbi.nlm.nih.gov/40979310/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
-                >
-                  prospective safety studies
-                </a>
-                {" "}that confirm the efficacy and safety of modern lip enhancement techniques.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { area: "Vermilion Border", description: "Define and enhance the natural lip line for better shape and definition" },
-                { area: "Cupid's Bow", description: "Enhance the central curves of the upper lip for a more defined appearance" },
-                { area: "Upper & Lower Lips", description: "Add volume to the fleshy part of both lips for natural fullness" },
-                { area: "Oral Commissures", description: "Treat the corners of the mouth to prevent downward turning" },
-                { area: "Marionette Lines", description: <span>Address <Link to="/marionette-lines-filler" className="text-purple-400 hover:text-purple-300 underline transition-colors">puppet lines</Link> that extend downward from the mouth corners</span> },
-                { area: "Philtrum Ridges", description: "Enhance the natural ridges between nose and upper lip for better definition" }
-              ].map((item, index) => (
+            <div className="pt-12 pb-4">
+              <div className="max-w-2xl text-center lg:text-left">
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
-                    <CardHeader>
-                      <CardTitle className="text-white text-lg">{item.area}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{item.description}</p>
-                    </CardContent>
-                  </Card>
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
+                    Lip Fillers{" "}
+                    <span className="text-[#C9A050] font-light">London</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
+                    Doctor-led lip augmentation using premium hyaluronic acid — natural volume, refined shape, and subtle definition tailored to your features.
+                  </p>
                 </motion.div>
-              ))}
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Doctor-Led
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    From £300
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Since 2007
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Harley Street
+                  </span>
+                </motion.div>
+              </div>
             </div>
           </div>
+
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
 
-        {/* Swelling and Recovery Information */}
-        <section className="py-20">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">0.5ml Lip Filler Swelling Stages</h2>
-                <p className="text-gray-300 mb-6">
-                  Understanding the recovery timeline helps you plan your treatment effectively. Schedule your 
-                  lip enhancement well before important events as swelling can be unpredictable.
-                </p>
-                <div className="space-y-4">
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">First 24-48 Hours</h4>
-                    <p className="text-gray-300">Initial swelling begins, lips may feel tender and appear larger than final result</p>
-                  </div>
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">48-72 Hours</h4>
-                    <p className="text-gray-300">Peak swelling period, lips reach maximum size before beginning to settle</p>
-                  </div>
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">1-2 Weeks</h4>
-                    <p className="text-gray-300">Gradual reduction in swelling, true results begin to show as lips settle naturally</p>
-                  </div>
-                </div>
-              </motion.div>
+        {/* ═══════════════════════════════════════════
+            TWO-COLUMN LAYOUT
+        ═══════════════════════════════════════════ */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            <div className="space-y-14">
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Lip Filler Aftercare Guide</h2>
-                <p className="text-gray-300 mb-6">
-                  Proper aftercare ensures optimal healing and the best possible results from your 
-                  lip filler treatment at our London clinic.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">First 24 Hours</h4>
-                      <p className="text-gray-300">Avoid touching lips, applying makeup, or consuming hot drinks</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Ice Application</h4>
-                      <p className="text-gray-300">Apply ice packs carefully to reduce swelling and discomfort</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Daily Massage</h4>
-                      <p className="text-gray-300">Massage lips firmly for 7-14 days to prevent lumps and ensure smooth results</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Activity Restrictions</h4>
-                      <p className="text-gray-300">Avoid strenuous exercise for 24-48 hours to minimize swelling</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* Expert Advice Video Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Lip Filler Treatment Advice & Videos</h2>
-                <p className="text-gray-300 mb-6">
-                  Dr. Haq offers expert advice on{" "}
-                  <span className="text-purple-300 font-semibold">lip fillers</span>, based on the training provided through our{" "}
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
+              {/* What Are Lip Fillers */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    What Are <span className="text-[#C9A050] font-light">Lip Fillers?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Lip fillers are injectable treatments using hyaluronic acid (HA) to add volume, shape, and definition to the lips. As a naturally occurring substance in the body, HA integrates seamlessly with lip tissue — delivering results that look and feel natural.
+                      </p>
+                    }
                   >
-                    Harley Street Institute
-                  </a>
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Expert technique demonstrations</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Treatment planning insights</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Safety protocols and aftercare</p>
-                  </div>
-                </div>
-              </motion.div>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Unlike surgical lip augmentation, injectable fillers are minimally invasive with no general anaesthesia required. The treatment takes 30–45 minutes and results are visible immediately, with final outcomes settling after approximately two weeks.
+                      </p>
+                      <p>
+                        At CosmeDocs, we use only premium FDA-approved hyaluronic acid fillers from leading manufacturers including Juvederm, Restylane, and Teoxane. Each product is selected based on your specific lip anatomy and aesthetic goals.
+                      </p>
+                      <p>
+                        According to{" "}
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/40979310/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">prospective safety studies</a>,
+                        modern hyaluronic acid lip fillers demonstrate excellent efficacy and safety profiles when administered by qualified practitioners.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                  {/* Expert Advice Video */}
-                  <video 
-                    controls 
-                    className="w-full aspect-video object-cover"
-                    poster="/lovable-uploads/09951dc6-93ca-42a0-80e6-127bcc865484.png"
+              {/* How It Works */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    How the Treatment <span className="text-[#C9A050] font-light">Works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Your doctor begins with a detailed facial assessment, discussing your goals and recommending the optimal volume and product. Topical anaesthetic is applied before precise injections are placed at strategic points across the lips.
+                      </p>
+                    }
                   >
-                    <source 
-                      src="https://mrrdrtbarxaacmlzvgne.supabase.co/storage/v1/object/public/treatment-videos/1755264601226_oah7twobb4l.mp4" 
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Using fine needles or micro-cannula, hyaluronic acid is carefully deposited into multiple lip zones — the vermilion border, Cupid's bow, lip body, and philtrum ridges. Each area receives a tailored amount to create harmonious enhancement.
+                      </p>
+                      <p>
+                        The filler contains lidocaine for additional comfort during treatment. Your doctor sculpts the lip shape in real-time, allowing you to provide input throughout the process. Results are immediate, though mild swelling may temporarily exaggerate the final outcome.
+                      </p>
+                      <p>
+                        Hyaluronic acid attracts and binds water molecules, which means the filler continues to hydrate and integrate with your lip tissue over the following days — creating a soft, natural feel.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
+              {/* 0.5ml vs 1ml */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    0.5ml vs 1ml <span className="text-[#C9A050] font-light">Lip Filler</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Choosing the right volume depends on your natural lip anatomy and desired outcome. Both options deliver beautiful, natural results — the difference is in the degree of enhancement.
+                      </p>
+                    }
                   >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
+                    <div className="grid md:grid-cols-2 gap-5 mt-2">
+                      <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-[#C9A050] mb-3">0.5ml — Subtle Enhancement</p>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Ideal for thin lips and first-timers</li>
+                          <li>• Gentle fullness with minimal swelling</li>
+                          <li>• Results last 6–9 months</li>
+                          <li>• £300</li>
+                          <li>• Perfect starting point</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-white/60 mb-3">1ml — Bold Enhancement</p>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Visible enhancement for medium–large lips</li>
+                          <li>• Defined shape and contour</li>
+                          <li>• Results last 9–12 months</li>
+                          <li>• £350</li>
+                          <li>• Noticeable transformation</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-4 p-5 bg-white/[0.03] border border-white/[0.06] rounded-xl">
+                      <p className="text-white/40 text-xs leading-relaxed font-light">
+                        <strong className="text-[#C9A050]/80">Doctor's note:</strong> Thin lips with dense elastin respond best to gradual volume increases starting with 0.5ml. Your doctor will assess your tissue quality and recommend the safest, most effective approach for your unique anatomy.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
-              </motion.div>
+              {/* Treatment Areas */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Lip Enhancement <span className="text-[#C9A050] font-light">Areas</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {[
+                      "Vermilion border", "Cupid's bow", "Upper & lower lip body",
+                      "Oral commissures", "Philtrum ridges", "Lip symmetry correction"
+                    ].map((area) => (
+                      <div key={area} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 text-center">
+                        <p className="text-white/55 text-xs font-light">{area}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
+              {/* Swelling & Recovery */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Swelling Stages & <span className="text-[#C9A050] font-light">Recovery</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Swelling is normal and peaks at 24–48 hours. Your lips will appear larger than the final result during this period. Most patients return to normal activities immediately.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-3 text-white/45 text-sm leading-relaxed font-light">
+                      {[
+                        { stage: "First 24–48 hours", detail: "Initial swelling begins. Lips may feel tender and appear larger than the final result." },
+                        { stage: "48–72 hours", detail: "Peak swelling period. Lips reach maximum size before beginning to settle naturally." },
+                        { stage: "1–2 weeks", detail: "Gradual reduction. True results emerge as the filler integrates with your lip tissue." },
+                      ].map((item) => (
+                        <div key={item.stage} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4">
+                          <p className="text-white/60 text-xs font-medium mb-1">{item.stage}</p>
+                          <p className="text-xs">{item.detail}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
+              {/* Am I Suitable */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white/80">May Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Thin or naturally flat lips</li>
+                        <li>• Asymmetric lip shape</li>
+                        <li>• Age-related lip volume loss</li>
+                        <li>• Desire for defined lip borders</li>
+                        <li>• Over 18 years of age</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <AlertTriangle className="w-5 h-5 text-white/30" />
+                        <p className="text-sm font-medium text-white/80">May Not Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Active cold sores or lip infections</li>
+                        <li>• Pregnancy or breastfeeding</li>
+                        <li>• Allergy to hyaluronic acid</li>
+                        <li>• Blood clotting disorders</li>
+                        <li>• Unrealistic expectations</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Lip Filler vs Lip Flip */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Lip Filler vs <span className="text-[#C9A050] font-light">Lip Flip</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Lip fillers add physical volume with hyaluronic acid, whilst a{" "}
+                        <Link to="/treatments/lip-flip/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">lip flip</Link>{" "}
+                        uses Botox to relax muscles and reveal more lip tissue. They serve different purposes and can be combined.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-5 mt-2">
+                      <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-[#C9A050] mb-3">Lip Filler (HA)</p>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Adds hyaluronic acid volume</li>
+                          <li>• 30–45 minute procedure</li>
+                          <li>• Results last 6–12 months</li>
+                          <li>• From £300</li>
+                          <li>• Shapes and defines contour</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-white/60 mb-3">Lip Flip (Botox)</p>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Relaxes muscles — no volume added</li>
+                          <li>• 10-minute procedure</li>
+                          <li>• Results last 2–3 months</li>
+                          <li>• £175</li>
+                          <li>• Subtle, natural enhancement</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-4 p-5 bg-white/[0.03] border border-white/[0.06] rounded-xl">
+                      <p className="text-white/40 text-xs leading-relaxed font-light">
+                        <strong className="text-[#C9A050]/80">Combined approach:</strong> Many patients achieve optimal results by combining both —{" "}
+                        <Link to="/treatments/lip-flip/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">lip flip</Link>{" "}
+                        for upper lip muscle relaxation alongside filler for volume and definition.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Aftercare */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Minimal downtime required. Most patients return to normal activities the same day. A few simple precautions ensure optimal healing and the best possible results.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid touching or applying makeup to lips for 24 hours</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Apply ice packs carefully to reduce swelling</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Massage lips firmly for 7–14 days to prevent lumps</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid strenuous exercise and hot drinks for 24 hours</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Sleep elevated to minimise overnight swelling</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Contact us if you experience any unusual symptoms</li>
+                    </ul>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Why CosmeDocs */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ul className="space-y-3">
+                    {[
+                      "Doctor-led — all treatments by GMC-registered doctors",
+                      "Harley Street Institute trainers — established 2007",
+                      "Over 1 million treatments performed",
+                      "Premium FDA-approved fillers exclusively",
+                      "Personalised treatment plans for every patient",
+                      "Our aesthetics is invisible art"
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </section>
+
+              {/* FAQs */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, index) => (
+                      <AccordionItem key={index} value={`item-${index}`} className="bg-white/[0.03] border border-white/[0.06] rounded-xl px-5">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
+
+            {/* Sidebar */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-24"><LipFillersSidebar /></div>
+            </aside>
           </div>
-        </section>
+        </div>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about lip filler treatments at our London clinic.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
-                      <span className="text-white font-medium">{faq.question}</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20">
-          <div className="page-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Ready for Beautiful, Natural Lips?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how lip fillers 
-                can enhance your natural beauty with subtle, sophisticated results.
+        {/* CTA */}
+        <section className="py-20 px-6 bg-gradient-to-b from-black to-black/95">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white/85">
+                Ready for Natural, <span className="text-[#C9A050]">Beautiful Lips?</span>
+              </h2>
+              <p className="text-white/50 mb-8 font-light">
+                A consultation with our doctors will assess your lip anatomy and create a personalised enhancement plan — subtle or bold, always natural.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-white font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                    Book Consultation
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="ghost" className="border border-white/15 text-white/60 hover:text-white hover:bg-white/5 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    Speak to a Doctor
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Client Reviews */}
-        <ClientReviews />
+        {/* Mobile Sidebar */}
+        <section className="lg:hidden py-12 px-4 bg-black/95">
+          <LipFillersSidebar />
+        </section>
 
-        {/* Hidden SEO content for search engines */}
-        <div className="sr-only">
-          <h3>Comprehensive Lip Filler Information London</h3>
-          <p>
-            Cosmedocs Harley Street clinic offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialize in 0.5ml lip filler natural enhancement and 1ml lip filler bold enhancement procedures. Located at 10 Harley Street, we provide safe, effective lip injections with minimal downtime and natural-looking results. Our lip filler treatments are competitively priced with transparent rates available in our pricing section. 0.5ml lip filler provides subtle enhancement perfect for thin lips and first-time treatments, lasting 6-9 months. 1ml lip filler offers visible enhancement for medium to large lips, lasting 9-12 months. Our lip filler treatments target vermilion border, cupid's bow, upper and lower lips, oral commissures, marionette lines, and philtrum ridges for comprehensive enhancement.
-          </p>
-          <p>
-            We use only FDA-approved products including Juvederm, Restylane, and other premium brands from Swiss, French, and USA manufacturers. Our comprehensive lip enhancement services include lip volume increase, lip shape correction, lip symmetry adjustment, and lip border definition. Thin lips have different elasticity and collagen levels with dense elastin, making gradual volume increase with 0.5ml the safest approach. Medium and large lips can accommodate 1ml to 2ml for more dramatic transformations. Understanding lip filler volumes is crucial as fillers are supplied in 1ml syringes (roughly a fifth of a teaspoon), though effective volume is higher as hyaluronic acid attracts water.
-          </p>
-          <p>
-            Our experienced practitioners have performed over one million aesthetic injections since 2007, making us one of London's most trusted cosmetic clinics. Lip filler procedures typically take 10-25 minutes with immediate results. Recovery involves 1-2 weeks full healing with swelling peaking at 48-72 hours then gradually subsiding. Proper aftercare includes avoiding touching lips for 24 hours, applying ice packs, daily massage for 7-14 days, and avoiding strenuous exercise. We provide detailed aftercare instructions and follow-up appointments to ensure optimal healing and satisfaction. Our 'invisible art' philosophy ensures natural-looking lip enhancement that complements your facial features. Book your lip filler consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer flexible payment options for all lip enhancement treatments.
-          </p>
+        {/* Hidden SEO Content */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>Lip Fillers London | Expert Lip Augmentation Harley Street</h2>
+          <p>CosmeDocs offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialise in natural-looking lip augmentation at our Harley Street clinic. We offer 0.5ml lip filler for subtle enhancement (£300) and 1ml lip filler for bold enhancement (£350), both using FDA-approved products from leading manufacturers including Juvederm, Restylane, and Teoxane. Our aesthetics is invisible art — bold, natural, always your way.</p>
+
+          <h3>Before and After 0.5ml Lip Filler vs 1ml Lip Filler</h3>
+          <p>Understanding the difference between before and after 0.5ml lip filler and before and after 1ml lip filler is essential for choosing your treatment. 0.5ml lip filler provides subtle enhancement ideal for thin lips with dense elastin, lasting 6–9 months. 1ml lip filler creates more visible enhancement with defined shape, lasting 9–12 months. Our gallery showcases authentic before and after lip filler results from real patients demonstrating the natural, beautiful enhancement achievable with expert technique.</p>
+
+          <h3>Lip Filler Swelling Stages and Recovery</h3>
+          <p>Understanding lip filler swelling stages helps you plan your treatment effectively. Initial swelling peaks at 24–48 hours, then gradually reduces over 1–2 weeks. How to reduce lip injection swelling: apply ice packs carefully, avoid strenuous exercise for 24 hours, sleep elevated, and stay hydrated. Most patients return to normal activities immediately after their lip filler treatment.</p>
+
+          <h3>Lip Filler Cost London | How Much Are Lip Fillers?</h3>
+          <p>Lip filler cost at CosmeDocs starts from £300 for 0.5ml and £350 for 1ml. How much is lip filler in London varies between clinics — at CosmeDocs, our transparent pricing includes premium hyaluronic acid filler, consultation, and aftercare support. The consultation fee (£50) is deducted from your treatment cost if you proceed on the same day. We use only premium FDA-approved dermal fillers from Swiss, French, and USA manufacturers for the safest, most natural-looking results.</p>
+
+          <h3>Comprehensive Lip Enhancement Areas</h3>
+          <p>Our advanced lip filler treatments target multiple areas: vermilion border definition, Cupid's bow enhancement, upper and lower lip body volume, oral commissure treatment, philtrum ridge definition, and lip symmetry correction. Each treatment area receives precise attention from our GMC-registered doctors who have performed over one million aesthetic injections since 2007.</p>
+
+          <h3>Lip Filler Aftercare and Lip Filler Pain</h3>
+          <p>Lip filler pain is minimal with topical anaesthetic and lidocaine-containing filler. Lip filler aftercare includes avoiding touching lips for 24 hours, applying ice packs, daily massage for 7–14 days, and avoiding strenuous exercise. Our comprehensive aftercare guide ensures optimal healing and the best possible results from your lip augmentation treatment. How long lip fillers take to dissolve naturally depends on your metabolism — typically 6–12 months for premium hyaluronic acid products.</p>
+
+          <h3>Natural Looking Lip Enhancement London</h3>
+          <p>Our invisible art philosophy ensures natural-looking lip enhancement that complements your facial features. Doctor-led lip filler treatment at our Harley Street clinic uses expert technique for subtle, sophisticated results. Whether you choose 0.5ml for a gentle enhancement or 1ml for more visible transformation, your lips will look naturally beautiful. We also offer lip flip Botox treatment which can be combined with fillers for comprehensive lip enhancement. Book your lip filler consultation today at our Harley Street clinic.</p>
         </div>
       </div>
     </>
