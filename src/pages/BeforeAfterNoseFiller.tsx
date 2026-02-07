@@ -259,6 +259,43 @@ const BeforeAfterNoseFiller = () => {
           </div>
         </section>
 
+        {/* Happy Client Video */}
+        <section className="py-12 bg-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="flex flex-col sm:flex-row items-start gap-6"
+              >
+                <div className="w-full sm:w-48 flex-shrink-0">
+                  <div className="relative rounded-xl overflow-hidden border border-white/[0.08] aspect-[9/16] sm:aspect-[9/14]">
+                    <video
+                      className="w-full h-full object-cover"
+                      src="/images/before-after/dermal-fillers/nose/happy-client-nose-filler.mov"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    />
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <p className="text-sm text-white/50 font-light leading-relaxed italic">
+                    "Happy client moments after her non-surgical nose reshaping — the reaction says it all."
+                  </p>
+                  <p className="text-xs text-white/25 mt-2 font-light">
+                    Real patient, unscripted reaction. Filmed at CosmeDocs Harley Street.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Disclaimer */}
         <section className="py-8 border-t border-white/[0.06] bg-neutral-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
