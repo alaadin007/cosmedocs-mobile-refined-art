@@ -7,24 +7,13 @@ import { ArrowRight, Shield, MapPin, Calendar, Syringe, Globe } from 'lucide-rea
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
 
-// Gallery organised so B&A pairs sit in the same row on a 3-col grid
+// Gallery organised for visual symmetry:
+// 1. Square composites with noses pointing LEFT (profile) grouped together
+// 2. Special-view composites (frontal, underside, triple progression)
+// 3. Non-square individual portrait photos at bottom
 const galleryRows: { images: { src: string; alt: string; caption: string | React.ReactNode }[] }[] = [
-  // Row 1 — three standalone composites
-  {
-    images: [
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
-        alt: "Non-surgical nose job before and after showing dorsal hump camouflage in female patient",
-        caption: "Dorsal hump camouflage — precise filler placement creates a straighter nasal bridge profile without surgery."
-      },
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-male-profile.jpg",
-        alt: "Male non-surgical rhinoplasty before and after showing profile refinement",
-        caption: "Male profile refinement — smoothing the nasal bridge contour whilst maintaining a natural, masculine appearance."
-      },
-    ]
-  },
-  // Row 2 — New images: post-surgical fix, dorsal bump, tip transformation
+  // === SQUARE COMPOSITES — LEFT-FACING PROFILES ===
+  // Row 1
   {
     images: [
       {
@@ -56,62 +45,7 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
       },
     ]
   },
-  // Row 3 — Asian B&A pair + contour correction
-  {
-    images: [
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-before.jpg",
-        alt: "Asian nose reshaping before treatment showing flat nasal bridge profile",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">Before:</strong> Asian nose reshaping — seeking improved bridge definition and profile balance.
-          </span>
-        )
-      },
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-after.jpg",
-        alt: "Asian nose reshaping after non-surgical rhinoplasty showing enhanced bridge and profile",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">After:</strong> Enhanced nasal bridge height and refined contour — subtle, natural improvement.
-          </span>
-        )
-      },
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-contour-dent-correction.png",
-        alt: "Nose contour dent correction before and after using dermal filler",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">Contour dent correction:</strong> Filler used to smooth a visible dent and restore even nasal contour from the front.
-          </span>
-        )
-      },
-    ]
-  },
-  // Row 4 — B&A composite + Large nose B&A pair
-  {
-    images: [
-      {
-        src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-before.jpg",
-        alt: "Large nose with prominent dorsal bump before non-surgical rhinoplasty treatment",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">Before:</strong> Prominent dorsal bump. Patient preferred a non-surgical approach — reluctant for surgery but unhappy with the bump and overall contour.
-          </span>
-        )
-      },
-      {
-        src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-after.jpg",
-        alt: "After non-surgical rhinoplasty showing smoothed dorsal bump and improved nasal contour",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">After:</strong> Dorsal bump smoothed, nose contour more balanced. Improved proportions create the appearance of a more refined, smaller nose. A 15-year-old case.
-          </span>
-        )
-      },
-    ]
-  },
-  // Row 5 — Post-surgical rhino fix, bridge smoothing, profile harmony
+  // Row 2
   {
     images: [
       {
@@ -135,18 +69,9 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
       },
     ]
   },
-  // Row 6 — 5-min progression, ethnic bridge, dorsal correction
+  // Row 3
   {
     images: [
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-5min-10min-progression.png",
-        alt: "Non-surgical nose job progression showing before, 5 minutes and 10 minutes after treatment",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">Real-time progression:</strong> Before → 5 minutes → 10 minutes. Showing how the result develops during the treatment session.
-          </span>
-        )
-      },
       {
         src: "/images/before-after/dermal-fillers/nose/nose-filler-ethnic-bridge-refinement.png",
         alt: "Ethnic nose bridge refinement before and after non-surgical rhinoplasty",
@@ -161,20 +86,96 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
           </span>
         )
       },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-female-bridge-contour.png",
+        alt: "Female nasal bridge contouring before and after non-surgical nose job",
+        caption: "Female bridge contouring — smoothing the dorsal line and improving overall nasal definition in profile."
+      },
     ]
   },
-  // Row 7 — Male underside correction, female bridge contour
+  // === SPECIAL VIEWS — frontal, underside, progression ===
+  // Row 4
   {
     images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-5min-10min-progression.png",
+        alt: "Non-surgical nose job progression showing before, 5 minutes and 10 minutes after treatment",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Real-time progression:</strong> Before → 5 minutes → 10 minutes. Showing how the result develops during the treatment session.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-contour-dent-correction.png",
+        alt: "Nose contour dent correction before and after using dermal filler",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Contour dent correction:</strong> Filler used to smooth a visible dent and restore even nasal contour from the front.
+          </span>
+        )
+      },
       {
         src: "/images/before-after/dermal-fillers/nose/nose-filler-male-underside-correction.png",
         alt: "Male nose underside correction before and after showing improved contour from below",
         caption: "Male underside correction — refining the nasal contour from an inferior view, addressing irregularities visible from below."
       },
+    ]
+  },
+  // === NON-SQUARE INDIVIDUAL PORTRAITS ===
+  // Row 5 — Asian B&A pair + male profile
+  {
+    images: [
       {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-female-bridge-contour.png",
-        alt: "Female nasal bridge contouring before and after non-surgical nose job",
-        caption: "Female bridge contouring — smoothing the dorsal line and improving overall nasal definition in profile."
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-before.jpg",
+        alt: "Asian nose reshaping before treatment showing flat nasal bridge profile",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Before:</strong> Asian nose reshaping — seeking improved bridge definition and profile balance.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-after.jpg",
+        alt: "Asian nose reshaping after non-surgical rhinoplasty showing enhanced bridge and profile",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">After:</strong> Enhanced nasal bridge height and refined contour — subtle, natural improvement.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-male-profile.jpg",
+        alt: "Male non-surgical rhinoplasty before and after showing profile refinement",
+        caption: "Male profile refinement — smoothing the nasal bridge contour whilst maintaining a natural, masculine appearance."
+      },
+    ]
+  },
+  // Row 6 — Large dorsal bump B&A pair + dorsal hump female
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-before.jpg",
+        alt: "Large nose with prominent dorsal bump before non-surgical rhinoplasty treatment",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Before:</strong> Prominent dorsal bump. Patient preferred a non-surgical approach — reluctant for surgery but unhappy with the bump and overall contour.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-after.jpg",
+        alt: "After non-surgical rhinoplasty showing smoothed dorsal bump and improved nasal contour",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">After:</strong> Dorsal bump smoothed, nose contour more balanced. Improved proportions create the appearance of a more refined, smaller nose. A 15-year-old case.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
+        alt: "Non-surgical nose job before and after showing dorsal hump camouflage in female patient",
+        caption: "Dorsal hump camouflage — precise filler placement creates a straighter nasal bridge profile without surgery."
       },
     ]
   },
