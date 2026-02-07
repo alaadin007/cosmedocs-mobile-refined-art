@@ -161,21 +161,45 @@ export default function FaceBotox() {
                 </motion.div>
               </div>
 
-              {/* Right — Concentric gold circles + floating elements */}
+              {/* Right — Wrinkle wave lines + floating elements */}
               <motion.div className="hidden lg:block relative" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }}>
                 <div className="relative aspect-square">
-                  {/* Concentric circles — matching reference */}
+                  {/* Wrinkle wave SVG lines */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[420px] h-[420px] rounded-full border border-[#C9A050]/10" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[340px] h-[340px] rounded-full border border-[#C9A050]/15" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[260px] h-[260px] rounded-full border border-[#C9A050]/20" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[180px] h-[180px] rounded-full bg-gradient-to-br from-[#C9A050]/15 to-[#C9A050]/5" />
+                    <svg viewBox="0 0 500 500" className="w-[460px] h-[460px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {/* Wave lines radiating from centre — mimicking forehead wrinkles */}
+                      {[
+                        { d: "M50 250 Q125 210, 200 250 T350 250 T500 250", opacity: 0.08, delay: 0 },
+                        { d: "M30 210 Q130 165, 220 210 T370 210 T490 210", opacity: 0.1, delay: 0.5 },
+                        { d: "M30 290 Q130 335, 220 290 T370 290 T490 290", opacity: 0.1, delay: 1 },
+                        { d: "M40 170 Q140 120, 230 170 T380 170 T480 170", opacity: 0.12, delay: 1.5 },
+                        { d: "M40 330 Q140 380, 230 330 T380 330 T480 330", opacity: 0.12, delay: 2 },
+                        { d: "M60 130 Q160 80, 250 130 T400 130 T500 130", opacity: 0.07, delay: 2.5 },
+                        { d: "M60 370 Q160 420, 250 370 T400 370 T500 370", opacity: 0.07, delay: 3 },
+                        { d: "M80 95 Q180 50, 260 95 T420 95 T520 95", opacity: 0.05, delay: 3.5 },
+                        { d: "M80 405 Q180 450, 260 405 T420 405 T520 405", opacity: 0.05, delay: 4 },
+                      ].map((wave, i) => (
+                        <motion.path
+                          key={i}
+                          d={wave.d}
+                          stroke="#C9A050"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          opacity={wave.opacity}
+                          initial={{ pathLength: 0, opacity: 0 }}
+                          animate={{ pathLength: 1, opacity: wave.opacity }}
+                          transition={{ duration: 2, delay: wave.delay * 0.3, ease: "easeOut" }}
+                        />
+                      ))}
+                      {/* Subtle centre glow */}
+                      <circle cx="250" cy="250" r="60" fill="url(#centreGlow)" />
+                      <defs>
+                        <radialGradient id="centreGlow" cx="0.5" cy="0.5" r="0.5">
+                          <stop offset="0%" stopColor="#C9A050" stopOpacity="0.15" />
+                          <stop offset="100%" stopColor="#C9A050" stopOpacity="0" />
+                        </radialGradient>
+                      </defs>
+                    </svg>
                   </div>
 
                   {/* Floating "Trusted Clinic" badge */}
