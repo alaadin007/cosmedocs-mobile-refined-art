@@ -8,8 +8,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Award, Calendar, MapPin, CheckCircle, Star, ArrowRight, Shield, Heart, Check, Activity, Syringe, GraduationCap, Stethoscope, MessageCircle, Sparkles, Building, Users, Phone } from "lucide-react";
 import Breadcrumb from '@/components/Breadcrumb';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 import BotoxSidebar from '@/components/botox/BotoxSidebar';
 
 export default function FaceBotox() {
@@ -89,35 +87,36 @@ export default function FaceBotox() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
-        <Home2Header />
+      <div className="bg-black overflow-x-hidden">
+        {/* Breadcrumbs — Standard position under header */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox" />
+        </div>
 
         {/* ═══════════════════════════════════════════
             HERO — Two-column, homepage style
         ═══════════════════════════════════════════ */}
-        <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-neutral-800">
+        <section className="relative flex items-center overflow-hidden pb-16 pt-4">
           {/* Flowing gradient orbs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.15) 0%, rgba(201,160,80,0.05) 40%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.12) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
               animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -30, 0] }}
               transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
               className="absolute top-1/3 -left-60 w-[500px] h-[500px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(201,160,80,0.08) 50%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
               animate={{ scale: [1, 1.2, 1], x: [0, 40, 0] }}
               transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             />
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-20 w-full">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left — Content */}
               <div>
-                <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox" />
-
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full text-sm text-white/70 mb-6 border border-white/10">
                     <MapPin className="h-4 w-4 text-[#C9A050]" />
@@ -161,16 +160,26 @@ export default function FaceBotox() {
                 </motion.div>
               </div>
 
-              {/* Right — Decorative + floating elements (desktop) */}
+              {/* Right — Concentric gold circles + floating elements */}
               <motion.div className="hidden lg:block relative" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }}>
                 <div className="relative aspect-square">
-                  <div className="absolute inset-0 flex items-center justify-center"><div className="w-80 h-80 rounded-full border border-[#C9A050]/20" /></div>
-                  <div className="absolute inset-0 flex items-center justify-center"><div className="w-64 h-64 rounded-full border border-[#C9A050]/15" /></div>
-                  <div className="absolute inset-0 flex items-center justify-center"><div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#C9A050]/20 to-[#C9A050]/5" /></div>
+                  {/* Concentric circles — matching reference */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-[420px] h-[420px] rounded-full border border-[#C9A050]/10" />
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-[340px] h-[340px] rounded-full border border-[#C9A050]/15" />
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-[260px] h-[260px] rounded-full border border-[#C9A050]/20" />
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-[180px] h-[180px] rounded-full bg-gradient-to-br from-[#C9A050]/15 to-[#C9A050]/5" />
+                  </div>
 
-                  {/* Floating badge */}
+                  {/* Floating "Trusted Clinic" badge */}
                   <motion.div
-                    className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10"
+                    className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10"
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   >
@@ -183,9 +192,9 @@ export default function FaceBotox() {
                     </div>
                   </motion.div>
 
-                  {/* Review teaser */}
+                  {/* Review teaser card */}
                   <motion.div
-                    className="absolute bottom-20 left-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10 max-w-[280px]"
+                    className="absolute bottom-16 -left-4 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-5 shadow-xl shadow-black/30 border border-white/10 max-w-[300px]"
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   >
@@ -647,8 +656,6 @@ export default function FaceBotox() {
             lifestyles. Our aesthetics is invisible art. Bold, natural, always your way.
           </p>
         </div>
-
-        <Footer />
       </div>
     </>
   );

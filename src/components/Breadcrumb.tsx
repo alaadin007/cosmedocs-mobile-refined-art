@@ -56,12 +56,12 @@ const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
           <li className="flex items-center gap-2">
             <Link 
               to="/" 
-              className="text-gray-400 hover:text-purple-300 transition-colors flex items-center gap-1"
+              className="text-white/50 hover:text-[#C9A050] transition-colors flex items-center gap-1"
             >
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
-            <ChevronRight className="w-4 h-4 text-gray-600" />
+            <ChevronRight className="w-4 h-4 text-white/30" />
           </li>
           
           {breadcrumbItems.map((item, index) => {
@@ -70,18 +70,18 @@ const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
               <li key={itemPath} className="flex items-center gap-2">
                 <Link 
                   to={itemPath}
-                  className="text-gray-400 hover:text-purple-300 transition-colors"
+                  className="text-white/50 hover:text-[#C9A050] transition-colors"
                 >
                   {item.label}
                 </Link>
-                <ChevronRight className="w-4 h-4 text-gray-600" />
+                <ChevronRight className="w-4 h-4 text-white/30" />
               </li>
             );
           })}
           
           {finalPage && (
             <li>
-              <span className="text-purple-300 font-medium" aria-current="page">
+              <span className="text-[#C9A050] font-medium" aria-current="page">
                 {finalPage}
               </span>
             </li>
