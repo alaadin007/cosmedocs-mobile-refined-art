@@ -1,13 +1,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, X, Loader2, Sparkles, Camera, Brain, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Send, X, Loader2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
-import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
-import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
 
 interface LiquidGlassSearchProps {
   isOpen: boolean;
@@ -108,8 +104,8 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative w-full max-w-lg mx-4 sm:mx-auto flex flex-col bg-neutral-900 border border-white/10 rounded-2xl sm:rounded-2xl overflow-hidden shadow-2xl shadow-black/50"
-            style={{ maxHeight: 'min(85vh, 640px)' }}
+            className="relative w-full max-w-md mx-4 sm:mx-auto flex flex-col bg-neutral-900 border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-black/50"
+            style={{ maxHeight: 'min(90vh, 720px)', minHeight: '480px' }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -134,48 +130,18 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
             {/* Messages Area */}
             <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4" style={{ minHeight: '200px' }}>
               {!hasMessages && (
-                <div className="space-y-5">
+                <div className="flex flex-col items-center justify-center h-full py-8 space-y-6">
                   {/* Welcome */}
-                  <div className="bg-white/5 rounded-2xl rounded-tl-sm p-4 max-w-[85%]">
-                    <p className="text-sm text-white/80 leading-relaxed">
-                      Hello! I'm your AI aesthetics consultant. Ask me anything about treatments, prices, booking, or skincare.
+                  <div className="text-center px-4">
+                    <p className="text-base text-white/70 leading-relaxed">
+                      Hello! I'm your AI aesthetics consultant. Ask me anything about treatments, prices, or booking.
                     </p>
                   </div>
 
-                  {/* Quick AI Tools — small icons */}
-                  <div className="flex gap-2">
-                    <a
-                      href="https://ai.cosmedocs.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-colors"
-                    >
-                      <img src={aiAssessmentIcon} alt="" className="w-6 h-6" />
-                      <span className="text-[11px] text-white/60">AI Assessment</span>
-                    </a>
-                    <Link
-                      to="/aesthetic-treatments-made-easy"
-                      onClick={onClose}
-                      className="flex items-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-colors"
-                    >
-                      <img src={smartAestheticsIcon} alt="" className="w-6 h-6" />
-                      <span className="text-[11px] text-white/60">Smart Guide</span>
-                    </Link>
-                    <a
-                      href="https://med.as.me/harleystreet"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-colors"
-                    >
-                      <img src={aiDoctorChatIcon} alt="" className="w-6 h-6" />
-                      <span className="text-[11px] text-white/60">Book Now</span>
-                    </a>
-                  </div>
-
                   {/* Suggestions */}
-                  <div>
-                    <p className="text-[11px] text-white/30 uppercase tracking-wider mb-2">Try asking</p>
-                    <div className="flex flex-wrap gap-2">
+                  <div className="w-full">
+                    <p className="text-[11px] text-white/30 uppercase tracking-wider mb-3 text-center">Try asking</p>
+                    <div className="flex flex-wrap justify-center gap-2">
                       {[
                         "How much is Botox?",
                         "Lip filler options",
@@ -186,7 +152,6 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                           key={s}
                           onClick={() => {
                             setQuery(s);
-                            // Small delay so state updates before send
                           }}
                           className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white/60 hover:text-white/80 text-xs rounded-full border border-white/10 transition-colors"
                         >
