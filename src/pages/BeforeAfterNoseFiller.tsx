@@ -345,7 +345,8 @@ const BeforeAfterNoseFiller = () => {
                     <span className="font-semibold text-[#C9A050]">Before & After</span>
                   </h1>
                   <p className="text-base md:text-lg text-white/50 leading-relaxed font-light">
-                    Real nose reshaping results using hyaluronic acid filler. Profile refinement, dorsal hump
+                    Real nose reshaping results with threads and/or dermal fillers — long-lasting results
+                    of 2–3 years depending on modality. Profile refinement, dorsal hump
                     camouflage, and contour correction — without surgery.
                   </p>
                 </motion.div>
