@@ -6,72 +6,83 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar, Syringe, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
-import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 
-const galleryImages = [
+// Gallery organised so B&A pairs sit in the same row on a 3-col grid
+const galleryRows: { images: { src: string; alt: string; caption: string | React.ReactNode }[] }[] = [
+  // Row 1 — three standalone composites
   {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
-    alt: "Non-surgical nose job before and after showing dorsal hump camouflage in female patient",
-    caption: "Dorsal hump camouflage — precise filler placement creates a straighter nasal bridge profile without surgery."
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
+        alt: "Non-surgical nose job before and after showing dorsal hump camouflage in female patient",
+        caption: "Dorsal hump camouflage — precise filler placement creates a straighter nasal bridge profile without surgery."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-male-profile.jpg",
+        alt: "Male non-surgical rhinoplasty before and after showing profile refinement",
+        caption: "Male profile refinement — smoothing the nasal bridge contour whilst maintaining a natural, masculine appearance."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-early-case-2010.jpg",
+        alt: "Non-surgical nose reshaping before and immediately after treatment from 2010",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">One of our earliest cases (c. 2010):</strong> Before and immediately after. Over 17 years of experience.
+          </span>
+        )
+      },
+    ]
   },
+  // Row 2 — Asian B&A pair + standalone
   {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-male-profile.jpg",
-    alt: "Male non-surgical rhinoplasty before and after showing profile refinement",
-    caption: "Male profile refinement — smoothing the nasal bridge contour whilst maintaining a natural, masculine appearance."
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-before.jpg",
+        alt: "Asian nose reshaping before treatment showing flat nasal bridge profile",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Before:</strong> Asian nose reshaping — seeking improved bridge definition and profile balance.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-after.jpg",
+        alt: "Asian nose reshaping after non-surgical rhinoplasty showing enhanced bridge and profile",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">After:</strong> Enhanced nasal bridge height and refined contour — subtle, natural improvement.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-before-after.jpg",
+        alt: "Non-surgical nose job before and after showing bridge refinement and tip support",
+        caption: "Bridge refinement and subtle tip support — a smoother profile with carefully placed hyaluronic acid filler."
+      },
+    ]
   },
+  // Row 3 — Large nose B&A pair
   {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-before.jpg",
-    alt: "Asian nose reshaping before treatment showing flat nasal bridge profile",
-    caption: (
-      <span>
-        <strong className="text-[#C9A050]">Before:</strong> Asian nose reshaping — patient seeking improved bridge definition and profile balance whilst respecting natural ethnic features.
-      </span>
-    )
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-after.jpg",
-    alt: "Asian nose reshaping after non-surgical rhinoplasty showing enhanced bridge and profile",
-    caption: (
-      <span>
-        <strong className="text-[#C9A050]">After:</strong> Enhanced nasal bridge height and refined contour — subtle, natural improvement that complements the patient's facial harmony.
-      </span>
-    )
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-early-case-2010.jpg",
-    alt: "Non-surgical nose reshaping before and immediately after treatment from 2010",
-    caption: (
-      <span>
-        <strong className="text-[#C9A050]">One of our earliest cases (c. 2010):</strong> Before and immediately after non-surgical nose reshaping.
-        We were amongst the first UK clinics to offer this treatment — over 17 years of experience in nose filler.
-      </span>
-    )
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-before.jpg",
-    alt: "Large nose with prominent dorsal bump before non-surgical rhinoplasty treatment",
-    caption: (
-      <span>
-        <strong className="text-[#C9A050]">Before:</strong> Prominent dorsal bump on a larger nose.
-        Patient preferred a non-surgical approach — reluctant for surgery but unhappy with the bump and overall contour.
-      </span>
-    )
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-after.jpg",
-    alt: "After non-surgical rhinoplasty showing smoothed dorsal bump and improved nasal contour",
-    caption: (
-      <span>
-        <strong className="text-[#C9A050]">After:</strong> Dorsal bump smoothed, overall nose contour more balanced.
-        The nose remains its natural size, but improved proportions create the appearance of a more refined, smaller nose.
-        A 15-year-old case demonstrating long-term expertise.
-      </span>
-    )
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-before-after.jpg",
-    alt: "Non-surgical nose job before and after showing bridge refinement and tip support",
-    caption: "Bridge refinement and subtle tip support — achieving a smoother profile with carefully placed hyaluronic acid filler."
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-before.jpg",
+        alt: "Large nose with prominent dorsal bump before non-surgical rhinoplasty treatment",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Before:</strong> Prominent dorsal bump. Patient preferred a non-surgical approach — reluctant for surgery but unhappy with the bump and overall contour.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-after.jpg",
+        alt: "After non-surgical rhinoplasty showing smoothed dorsal bump and improved nasal contour",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">After:</strong> Dorsal bump smoothed, nose contour more balanced. Improved proportions create the appearance of a more refined, smaller nose. A 15-year-old case.
+          </span>
+        )
+      },
+    ]
   },
 ];
 
@@ -197,8 +208,42 @@ const BeforeAfterNoseFiller = () => {
         {/* Gallery */}
         <section className="relative py-16 bg-gradient-to-b from-neutral-800/50 to-neutral-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="max-w-5xl mx-auto">
-              <BeforeAfterGrid images={galleryImages} initialDisplay={4} loadMoreIncrement={4} />
+            <div className="max-w-6xl mx-auto space-y-6">
+              {galleryRows.map((row, rowIndex) => (
+                <div
+                  key={rowIndex}
+                  className={`grid gap-5 ${
+                    row.images.length === 3
+                      ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+                      : row.images.length === 2
+                      ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl'
+                      : 'grid-cols-1 max-w-2xl'
+                  }`}
+                >
+                  {row.images.map((image, imgIndex) => (
+                    <motion.div
+                      key={imgIndex}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: imgIndex * 0.1 }}
+                      viewport={{ once: true }}
+                      className="group relative rounded-xl overflow-hidden"
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        className="w-full h-auto block rounded-xl group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-14 pb-4 px-4 rounded-b-xl">
+                        <p className="text-white/70 text-xs sm:text-sm leading-relaxed font-light">
+                          {image.caption}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </section>
