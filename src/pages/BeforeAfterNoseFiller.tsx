@@ -10,11 +10,6 @@ import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 
 const galleryImages = [
   {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-procedure-injection.jpg",
-    alt: "Non-surgical nose job procedure showing precise filler injection technique by doctor",
-    caption: "Precision injection technique — our doctors use fine needles and cannulae for controlled, safe placement during non-surgical nose reshaping."
-  },
-  {
     src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
     alt: "Non-surgical nose job before and after showing dorsal hump camouflage in female patient",
     caption: "Dorsal hump camouflage — precise filler placement creates a straighter nasal bridge profile without surgery."
