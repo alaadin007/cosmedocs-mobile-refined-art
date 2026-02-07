@@ -227,19 +227,25 @@ export default function FaceBotox() {
                       <Syringe className="w-4 h-4 text-[#C9A050]" />
                       <span className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider">Invisible Needle</span>
                     </div>
-                    {/* Needle vs Hair SVG diagram */}
-                    <svg viewBox="0 0 220 60" className="w-full mb-3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Needle line — 33G is 0.20mm */}
-                      <line x1="10" y1="18" x2="145" y2="18" stroke="#C9A050" strokeWidth="1.2" strokeLinecap="round" />
-                      <polygon points="145,14.5 158,18 145,21.5" fill="#C9A050" />
-                      <text x="10" y="12" fill="white" fillOpacity="0.5" fontSize="8" fontFamily="sans-serif">33G Needle</text>
-                      <text x="163" y="21" fill="white" fillOpacity="0.4" fontSize="7" fontFamily="sans-serif">0.20mm</text>
-                      {/* Hair line */}
-                      <line x1="10" y1="42" x2="55" y2="42" stroke="white" strokeWidth="0.6" strokeOpacity="0.4" strokeLinecap="round" />
-                      <text x="10" y="55" fill="white" fillOpacity="0.3" fontSize="8" fontFamily="sans-serif">Human Hair</text>
-                      <text x="60" y="45" fill="white" fillOpacity="0.3" fontSize="7" fontFamily="sans-serif">0.07mm</text>
-                      {/* Scale bracket */}
-                      <line x1="10" y1="28" x2="10" y2="38" stroke="white" strokeWidth="0.5" strokeOpacity="0.2" />
+                    {/* Needle vs Hair — diameter cross-section comparison */}
+                    <svg viewBox="0 0 220 80" className="w-full mb-3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {/* Needle cross-section circle — 33G = 0.20mm, scaled up */}
+                      <circle cx="45" cy="38" r="20" stroke="#C9A050" strokeWidth="1.5" fill="#C9A050" fillOpacity="0.1" />
+                      <text x="45" y="42" fill="#C9A050" fontSize="8" fontFamily="sans-serif" textAnchor="middle" fontWeight="bold">0.20mm</text>
+                      <text x="45" y="10" fill="white" fillOpacity="0.6" fontSize="8" fontFamily="sans-serif" textAnchor="middle">33G Needle</text>
+                      <line x1="45" y1="14" x2="45" y2="17" stroke="white" strokeWidth="0.5" strokeOpacity="0.3" />
+
+                      {/* Hair cross-section circle — 0.07mm */}
+                      <circle cx="130" cy="38" r="7" stroke="white" strokeWidth="0.8" strokeOpacity="0.4" fill="white" fillOpacity="0.05" />
+                      <text x="130" y="41" fill="white" fillOpacity="0.5" fontSize="6" fontFamily="sans-serif" textAnchor="middle">0.07</text>
+                      <text x="130" y="10" fill="white" fillOpacity="0.4" fontSize="8" fontFamily="sans-serif" textAnchor="middle">Human Hair</text>
+                      <line x1="130" y1="14" x2="130" y2="30" stroke="white" strokeWidth="0.5" strokeOpacity="0.2" />
+
+                      {/* "vs" label */}
+                      <text x="88" y="42" fill="white" fillOpacity="0.2" fontSize="9" fontFamily="sans-serif" textAnchor="middle">vs</text>
+
+                      {/* Diameter label */}
+                      <text x="110" y="75" fill="white" fillOpacity="0.2" fontSize="7" fontFamily="sans-serif" textAnchor="middle">Cross-section diameter</text>
                     </svg>
                     <p className="text-[10px] text-white/40 leading-relaxed">The tiniest needle in the industry — literally invisible. Only ~3× thicker than a human hair.</p>
                   </motion.div>
