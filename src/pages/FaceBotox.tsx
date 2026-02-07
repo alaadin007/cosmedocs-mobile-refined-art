@@ -229,19 +229,19 @@ export default function FaceBotox() {
                     </div>
                     {/* Needle vs Hair SVG diagram */}
                     <svg viewBox="0 0 220 60" className="w-full mb-3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Needle line */}
-                      <line x1="10" y1="18" x2="160" y2="18" stroke="#C9A050" strokeWidth="1.5" strokeLinecap="round" />
-                      <polygon points="160,14 175,18 160,22" fill="#C9A050" />
-                      <text x="10" y="12" fill="white" fillOpacity="0.5" fontSize="8" fontFamily="sans-serif">32G Needle</text>
-                      <text x="180" y="21" fill="white" fillOpacity="0.4" fontSize="7" fontFamily="sans-serif">0.23mm</text>
+                      {/* Needle line — 33G is 0.20mm */}
+                      <line x1="10" y1="18" x2="145" y2="18" stroke="#C9A050" strokeWidth="1.2" strokeLinecap="round" />
+                      <polygon points="145,14.5 158,18 145,21.5" fill="#C9A050" />
+                      <text x="10" y="12" fill="white" fillOpacity="0.5" fontSize="8" fontFamily="sans-serif">33G Needle</text>
+                      <text x="163" y="21" fill="white" fillOpacity="0.4" fontSize="7" fontFamily="sans-serif">0.20mm</text>
                       {/* Hair line */}
-                      <line x1="10" y1="42" x2="65" y2="42" stroke="white" strokeWidth="0.8" strokeOpacity="0.4" strokeLinecap="round" />
+                      <line x1="10" y1="42" x2="55" y2="42" stroke="white" strokeWidth="0.6" strokeOpacity="0.4" strokeLinecap="round" />
                       <text x="10" y="55" fill="white" fillOpacity="0.3" fontSize="8" fontFamily="sans-serif">Human Hair</text>
-                      <text x="70" y="45" fill="white" fillOpacity="0.3" fontSize="7" fontFamily="sans-serif">0.07mm</text>
+                      <text x="60" y="45" fill="white" fillOpacity="0.3" fontSize="7" fontFamily="sans-serif">0.07mm</text>
                       {/* Scale bracket */}
                       <line x1="10" y1="28" x2="10" y2="38" stroke="white" strokeWidth="0.5" strokeOpacity="0.2" />
                     </svg>
-                    <p className="text-[10px] text-white/40 leading-relaxed">The tiniest needle in the industry — literally invisible. Only 3× thicker than a human hair.</p>
+                    <p className="text-[10px] text-white/40 leading-relaxed">The tiniest needle in the industry — literally invisible. Only ~3× thicker than a human hair.</p>
                   </motion.div>
 
                   {/* Review teaser card */}
