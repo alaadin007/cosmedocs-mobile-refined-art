@@ -407,11 +407,12 @@ const CheekFiller = () => {
                   viewport={{ once: true }}
                 >
                   <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Cheek Filler <span className="text-[#C9A050] font-light">Before & After</span>
+                    Cheek Filler <span className="text-[#C9A050] font-light">Before & After Results</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
-                    All images show real patients treated by our doctors at our Harley Street clinic.
+                    All before and after images show real patients treated by our doctors at our Harley Street clinic. 
+                    Results vary depending on facial anatomy, treatment approach, and volume used.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/cheeks/"
