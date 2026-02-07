@@ -297,8 +297,8 @@ const App = () => {
                           <Route path="/treatments/trap-botox/" element={<TrapBotox />} />
                           <Route path="/treatments/calf-slimming-botox" element={<Navigate to="/treatments/botox/" replace />} />
                           <Route path="/treatments/calf-slimming-botox/" element={<Navigate to="/treatments/botox/" replace />} />
-                          <Route path="/treatments/bruxism-botox" element={<Navigate to="/treatments/botox/" replace />} />
-                          <Route path="/treatments/bruxism-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/bruxism-botox" element={<BruxismBotox />} />
+                          <Route path="/treatments/bruxism-botox/" element={<BruxismBotox />} />
                           <Route path="/treatments/trigger-point-botox" element={<Navigate to="/treatments/botox/" replace />} />
                           <Route path="/treatments/trigger-point-botox/" element={<Navigate to="/treatments/botox/" replace />} />
                           

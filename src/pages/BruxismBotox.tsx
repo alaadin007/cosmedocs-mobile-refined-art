@@ -117,19 +117,25 @@ const BruxismBotox = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#FAFAF8] overflow-x-hidden">
+      <div className="min-h-screen bg-black overflow-x-hidden">
         {/* ═══════════════════════════════════════════
-            HERO — Light, minimal
+            HERO — Dark, luxury
         ═══════════════════════════════════════════ */}
-        <section className="relative overflow-hidden bg-white pt-0 pb-20">
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/20 to-transparent" />
 
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.04) 0%, transparent 60%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.04) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
 
@@ -149,11 +155,11 @@ const BruxismBotox = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-black/85 leading-[1.1] tracking-tight mb-6">
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
                     Bruxism{" "}
                     <span className="text-[#C9A050] font-light">& TMJ Botox</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-black/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
                     Therapeutic botulinum toxin to relieve teeth grinding, jaw clenching, and TMJ pain — with the added benefit of jawline refinement.
                   </p>
                 </motion.div>
@@ -162,7 +168,7 @@ const BruxismBotox = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-black/25 tracking-wide uppercase"
+                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
                 >
                   <span className="flex items-center gap-1.5">
                     <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
@@ -185,7 +191,7 @@ const BruxismBotox = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black/[0.04] to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
 
         {/* ═══════════════════════════════════════════
@@ -198,18 +204,18 @@ const BruxismBotox = () => {
               {/* What Is Bruxism */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     What Is <span className="text-[#C9A050] font-light">Bruxism?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Bruxism is a condition characterised by involuntary teeth grinding and jaw clenching — often occurring during sleep. It affects approximately 8–31% of the population and can lead to significant dental damage, jaw pain, and headaches.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
                         Botox for bruxism works by gently relaxing the overactive masseter and temporalis muscles responsible for grinding and clenching. According to{" "}
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893479/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">research published by the National Institutes of Health</a>,
@@ -228,18 +234,18 @@ const BruxismBotox = () => {
               {/* How It Works */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     How the Treatment <span className="text-[#C9A050] font-light">Works</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Botulinum toxin is injected into the masseter muscles — and in some cases the temporalis — to reduce their involuntary contractions. The 10–15 minute procedure uses fine needles with minimal discomfort.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
                         The masseter is the largest and most powerful muscle of mastication. When overactive, it drives clenching and grinding that damages teeth and causes TMJ pain. Botox temporarily weakens this muscle, breaking the cycle of tension.
                       </p>
@@ -259,26 +265,26 @@ const BruxismBotox = () => {
               {/* What Causes Bruxism */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     What Causes <span className="text-[#C9A050] font-light">Bruxism?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Bruxism can be triggered by stress, misaligned teeth, lifestyle habits, or certain medications. Understanding the underlying cause helps guide effective treatment.
                       </p>
                     }
                   >
-                    <div className="space-y-3 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-3 text-white/45 text-sm leading-relaxed font-light">
                       {[
                         { title: "Stress & Anxiety", desc: "Major contributors leading to involuntary jaw clenching and grinding, especially during sleep." },
                         { title: "Misaligned Teeth", desc: "Can disrupt normal jaw alignment and function, increasing grinding frequency." },
                         { title: "Lifestyle Habits", desc: "Smoking, heavy alcohol consumption, and excessive caffeine intake are known risk factors." },
                         { title: "Medications", desc: "Certain antidepressants and other medications can predispose individuals to bruxism." },
                       ].map((item) => (
-                        <div key={item.title} className="bg-black/[0.02] border border-black/[0.06] rounded-xl p-4">
-                          <p className="text-black/60 text-xs font-medium mb-1">{item.title}</p>
+                        <div key={item.title} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4">
+                          <p className="text-white/60 text-xs font-medium mb-1">{item.title}</p>
                           <p className="text-xs">{item.desc}</p>
                         </div>
                       ))}
@@ -290,7 +296,7 @@ const BruxismBotox = () => {
               {/* What It Helps With */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     TMJ Botox <span className="text-[#C9A050] font-light">Helps With</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -300,8 +306,8 @@ const BruxismBotox = () => {
                       "Neck pain", "Chipped teeth & sensitivity", "Jaw stiffness",
                       "Sleep disturbance", "Shoulder tension", "Chewed tissue"
                     ].map((item) => (
-                      <div key={item} className="bg-black/[0.02] border border-black/[0.06] rounded-xl p-3 text-center">
-                        <p className="text-black/55 text-xs font-light">{item}</p>
+                      <div key={item} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 text-center">
+                        <p className="text-white/55 text-xs font-light">{item}</p>
                       </div>
                     ))}
                   </div>
@@ -311,17 +317,17 @@ const BruxismBotox = () => {
               {/* Am I Suitable */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Am I <span className="text-[#C9A050] font-light">Suitable?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="grid md:grid-cols-2 gap-5">
-                    <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-6">
+                    <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                       <div className="flex items-center gap-2 mb-4">
                         <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                        <p className="text-sm font-medium text-black/80">May Be Suitable</p>
+                        <p className="text-sm font-medium text-white/80">May Be Suitable</p>
                       </div>
-                      <ul className="space-y-2 text-black/45 text-xs font-light">
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Teeth grinding (awake or during sleep)</li>
                         <li>• Jaw clenching causing pain or headaches</li>
                         <li>• TMJ disorder symptoms</li>
@@ -329,12 +335,12 @@ const BruxismBotox = () => {
                         <li>• Dental damage from grinding</li>
                       </ul>
                     </div>
-                    <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-6">
+                    <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <AlertTriangle className="w-5 h-5 text-black/30" />
-                        <p className="text-sm font-medium text-black/80">May Not Be Suitable</p>
+                        <AlertTriangle className="w-5 h-5 text-white/30" />
+                        <p className="text-sm font-medium text-white/80">May Not Be Suitable</p>
                       </div>
-                      <ul className="space-y-2 text-black/45 text-xs font-light">
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Pregnancy or breastfeeding</li>
                         <li>• Neuromuscular disorders</li>
                         <li>• Allergy to botulinum toxin</li>
@@ -349,18 +355,18 @@ const BruxismBotox = () => {
               {/* What to Expect */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     What to <span className="text-[#C9A050] font-light">Expect</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Grinding reduction begins within 1–2 weeks, with maximum therapeutic benefits at 4–6 weeks. Jawline slimming becomes noticeable after 6–8 weeks as the masseter muscles reduce in size.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
                         Results typically last 4–6 months. Regular maintenance treatments prevent the return of grinding symptoms and progressive muscle reduction may extend intervals between appointments over time.
                       </p>
@@ -375,18 +381,18 @@ const BruxismBotox = () => {
               {/* Aftercare */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         No downtime required. Avoid excessive chewing (gum, tough foods) for 24 hours and refrain from rubbing the treated area.
                       </p>
                     }
                   >
-                    <ul className="space-y-3 text-black/45 text-sm font-light">
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
                       <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid chewing gum for 24 hours post-treatment</li>
                       <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Do not rub or massage the jaw area</li>
                       <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid strenuous exercise for 24 hours</li>
@@ -400,7 +406,7 @@ const BruxismBotox = () => {
               {/* Why CosmeDocs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -413,7 +419,7 @@ const BruxismBotox = () => {
                       "Personalised treatment plans for every patient",
                       "Our aesthetics is invisible art"
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-black/50 font-light">
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
                         <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
                         {item}
                       </li>
@@ -425,15 +431,15 @@ const BruxismBotox = () => {
               {/* FAQs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <Accordion type="single" collapsible className="space-y-3">
                     {faqs.map((faq, index) => (
-                      <AccordionItem key={index} value={`item-${index}`} className="bg-black/[0.02] border border-black/[0.06] rounded-xl px-5">
-                        <AccordionTrigger className="text-black/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
-                        <AccordionContent className="text-black/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
+                      <AccordionItem key={index} value={`item-${index}`} className="bg-white/[0.03] border border-white/[0.06] rounded-xl px-5">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
                       </AccordionItem>
                     ))}
                   </Accordion>
@@ -449,13 +455,13 @@ const BruxismBotox = () => {
         </div>
 
         {/* CTA */}
-        <section className="py-20 px-6 bg-gradient-to-b from-[#FAFAF8] to-white">
+        <section className="py-20 px-6 bg-gradient-to-b from-black to-black/95">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-light mb-4 text-black/85">
+              <h2 className="text-3xl font-light mb-4 text-white/85">
                 Ready to Relieve <span className="text-[#C9A050]">Jaw Tension?</span>
               </h2>
-              <p className="text-black/50 mb-8 font-light">
+              <p className="text-white/50 mb-8 font-light">
                 A consultation with our doctors will assess your jaw function and create a personalised treatment plan for lasting relief.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -466,7 +472,7 @@ const BruxismBotox = () => {
                   </Button>
                 </a>
                 <Link to="/contact">
-                  <Button variant="ghost" className="border border-black/15 text-black/60 hover:text-black hover:bg-black/5 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                  <Button variant="ghost" className="border border-white/15 text-white/60 hover:text-white hover:bg-white/5 px-8 py-5 rounded-full text-base w-full sm:w-auto">
                     Speak to a Doctor
                   </Button>
                 </Link>
@@ -476,7 +482,7 @@ const BruxismBotox = () => {
         </section>
 
         {/* Mobile Sidebar */}
-        <section className="lg:hidden py-12 px-4 bg-white">
+        <section className="lg:hidden py-12 px-4 bg-black/95">
           <BruxismSidebar />
         </section>
 
