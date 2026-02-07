@@ -47,12 +47,12 @@ const NoseFillerTreatment = () => {
               {
                 "@type": "MedicalProcedure",
                 "name": "Non-Surgical Nose Job (Liquid Rhinoplasty)",
-                "description": "Non-surgical nose reshaping using hyaluronic acid dermal fillers for profile refinement, dorsal hump camouflage, and contour correction.",
+                "description": "Non-surgical nose reshaping using dermal fillers and/or PCL threads for profile refinement, tip lifting, dorsal hump camouflage, and contour correction.",
                 "url": "https://cosmedocs.co.uk/treatments/dermal-fillers/nose/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Nose",
-                "followup": "Results typically last 9–18 months depending on filler type and metabolism.",
-                "howPerformed": "Strategic placement of hyaluronic acid filler using needle, cannula, or both for precise contouring."
+                "followup": "Results can last 2–3 years depending on modality. Dermal fillers: 12–18 months. PCL threads: up to 3 years.",
+                "howPerformed": "Strategic placement of hyaluronic acid filler and/or PCL threads using needle, cannula, or both for precise contouring and structural support."
               }
             ]
           })}
@@ -103,12 +103,12 @@ const NoseFillerTreatment = () => {
                   <span className="font-semibold text-[#C9A050]">(Liquid Rhinoplasty)</span>
                 </h1>
                 <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl font-light">
-                  A non-surgical nose job — also known as liquid rhinoplasty — uses precisely placed hyaluronic acid
-                  dermal filler to reshape and refine the nose without surgery. Performed by our experienced doctors
-                  at our Harley Street clinic, the treatment addresses concerns such as dorsal humps, asymmetry, and
-                  profile irregularities. Results are immediate, subtle, and natural — reflecting our philosophy that
-                  the best aesthetic work is invisible. Dr Ahmed Haq and Dr Hena bring an anatomy-led approach,
-                  prioritising safety and conservative outcomes in every case.
+                  A non-surgical nose job uses dermal fillers and/or PCL threads to reshape and refine the nose
+                  without surgery. Dermal fillers smooth contours and camouflage bumps, whilst threads can lift and
+                  straighten the nasal tip for longer-lasting structural support. Performed by our experienced doctors
+                  at our Harley Street clinic, results can last 2–3 years depending on modality — reflecting our
+                  philosophy that the best aesthetic work is invisible. Dr Ahmed Haq and Dr Hena bring an anatomy-led
+                  approach, prioritising safety and conservative outcomes in every case.
                 </p>
               </motion.div>
 
@@ -196,7 +196,7 @@ const NoseFillerTreatment = () => {
                 </motion.div>
               </section>
 
-              {/* How It Works */}
+              {/* How It Works — Dermal Fillers */}
               <section>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -234,14 +234,61 @@ const NoseFillerTreatment = () => {
                       the procedure, making controlled, incremental adjustments rather than committing to a single correction
                       in one step.
                     </p>
-                    <p className="text-white/35 text-xs mt-2">
-                      Pricing for non-surgical nose reshaping is available on our{' '}
-                      <Link to="/pricing/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
-                        pricing page
-                      </Link>{' '}
-                      following consultation.
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* PCL Threads for Nose Reshaping */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                    Nose Threads for <span className="text-[#C9A050]">Tip Lifting & Straightening</span>
+                  </h2>
+                  <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                    <p>
+                      PCL (polycaprolactone) threads offer an alternative or complementary approach to dermal fillers for
+                      non-surgical nose reshaping. Threads are particularly effective for lifting a drooping nasal tip and
+                      straightening the nasal bridge — areas where structural support is the primary goal rather than volume
+                      addition.
+                    </p>
+                    <p>
+                      The threads are inserted beneath the skin along the nasal bridge or tip, providing a scaffold that
+                      lifts and supports the tissue. Over time, the threads stimulate collagen production around the
+                      insertion site, contributing to longer-lasting structural improvement. Results from PCL nose threads
+                      can last up to 3 years — significantly longer than dermal fillers alone.
+                    </p>
+                    <p>
+                      In many cases, our doctors may recommend a combined approach — using threads for structural lifting
+                      and support, with dermal filler for fine contour refinement and smoothing. This dual-modality technique
+                      can achieve results that neither method could accomplish alone, offering both immediate contouring and
+                      long-term structural improvement.
+                    </p>
+                    <p>
+                      As with all nose reshaping at CosmeDocs, thread treatments are performed exclusively by our
+                      GMC-registered doctors using an anatomy-led approach. During your consultation, your doctor will assess
+                      whether fillers, threads, or a combination is most appropriate for your anatomy and goals.
                     </p>
                   </div>
+                  <div className="mt-6 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl">
+                    <p className="text-white/40 text-xs leading-relaxed font-light">
+                      <strong className="text-[#C9A050]/80">Threads vs fillers:</strong> Threads excel at tip lifting and
+                      bridge straightening with results lasting up to 3 years. Fillers are better suited for smoothing bumps,
+                      filling depressions, and fine contour work, typically lasting 12–18 months. Your doctor will recommend
+                      the most appropriate modality — or combination — during consultation.
+                    </p>
+                  </div>
+                  <p className="mt-4 text-white/35 text-xs leading-relaxed font-light">
+                    Pricing for non-surgical nose reshaping is available on our{' '}
+                    <Link to="/pricing/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
+                      pricing page
+                    </Link>{' '}
+                    following consultation.
+                  </p>
                 </motion.div>
               </section>
 
@@ -406,18 +453,18 @@ const NoseFillerTreatment = () => {
                   </h2>
                   <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                     <p>
-                      Results from a non-surgical nose job typically last between 9 and 18 months. The duration depends
-                      on several factors, including the type of filler used, your individual metabolism, and the depth
-                      and location of injection.
+                      Longevity depends on the modality used. Dermal filler results typically last 12–18 months, whilst
+                      PCL thread results can last up to 3 years. A combined approach — threads for structure, filler for
+                      contouring — can offer long-lasting results of 2–3 years overall.
                     </p>
                     <p>
-                      The nose is a relatively low-movement area, which means filler tends to last longer here than in
-                      more dynamic facial areas such as the lips. Many patients find that with repeat treatments, the
-                      results can be maintained with progressively smaller volumes of filler.
+                      The nose is a relatively low-movement area, which means both filler and threads tend to last longer
+                      here than in more dynamic facial areas such as the lips. Many patients find that with repeat treatments,
+                      results can be maintained with progressively smaller volumes.
                     </p>
                     <p>
-                      Our doctors will advise on the most appropriate filler type and review schedule during your
-                      consultation.
+                      Our doctors will advise on the most appropriate modality — fillers, threads, or both — and the
+                      recommended review schedule during your consultation.
                     </p>
                   </div>
                 </motion.div>
@@ -546,26 +593,29 @@ const NoseFillerTreatment = () => {
         <div className="sr-only">
           <h2>Non-Surgical Nose Job London — Liquid Rhinoplasty at Harley Street</h2>
           <p>
-            CosmeDocs offers doctor-led non-surgical nose reshaping using hyaluronic acid dermal fillers at
+            CosmeDocs offers doctor-led non-surgical nose reshaping using dermal fillers and/or PCL threads at
             our Harley Street clinic in London. Also known as liquid rhinoplasty, this treatment can camouflage
-            dorsal humps, smooth nasal irregularities, lift a drooping tip, and improve profile symmetry without
-            surgery. Our GMC-registered doctors — Dr Ahmed Haq and Dr Hena — have been performing non-surgical
-            nose jobs since 2007, with specialist expertise in Asian and ethnic nose reshaping since 2010.
+            dorsal humps, smooth nasal irregularities, lift a drooping tip, straighten the nasal bridge, and
+            improve profile symmetry without surgery. Our GMC-registered doctors — Dr Ahmed Haq and Dr Hena —
+            have been performing non-surgical nose jobs since 2007, with specialist expertise in Asian and ethnic
+            nose reshaping since 2010.
           </p>
-          <h3>Nose Filler Treatment at CosmeDocs Harley Street</h3>
+          <h3>Nose Filler and Thread Treatment at CosmeDocs Harley Street</h3>
           <p>
             Our doctors use needle, cannula, or a combination of both techniques for optimal nose filler results.
-            The one-point nose job technique may be appropriate for selected patients. We take a conservative approach
-            to nose reshaping — using small volumes of filler for structural support and controlled contouring.
-            Results typically last 9 to 18 months. A non-surgical nose job does not make the nose smaller; it improves
-            shape, balance, and proportions. Our aesthetics is invisible art — bold, natural, always your way.
+            PCL threads offer an alternative or complementary approach for nose tip lifting and bridge straightening,
+            providing structural support that can last up to 3 years. The one-point nose job technique may be
+            appropriate for selected patients. We take a conservative approach to nose reshaping — using small volumes
+            of filler and precisely placed threads for structural support and controlled contouring. Dermal filler
+            results typically last 12 to 18 months, whilst thread results can last up to 3 years. A combined approach
+            can offer results lasting 2–3 years. Our aesthetics is invisible art — bold, natural, always your way.
           </p>
           <h3>Non-Surgical Rhinoplasty Safety and Expertise</h3>
           <p>
             The nose is a high-risk vascular area requiring advanced anatomical knowledge. At CosmeDocs, nose filler
-            is exclusively performed by experienced, GMC-registered doctors. We prioritise safety with conservative
-            dosing and say no when a non-surgical approach is not appropriate. We have performed over 1 million
-            treatments across all services since our establishment on Harley Street.
+            and thread treatments are exclusively performed by experienced, GMC-registered doctors. We prioritise
+            safety with conservative dosing and say no when a non-surgical approach is not appropriate. We have
+            performed over 1 million treatments across all services since our establishment on Harley Street.
           </p>
         </div>
       </div>
