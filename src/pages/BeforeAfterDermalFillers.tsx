@@ -3,11 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, MapPin, Camera, Star } from 'lucide-react';
+import { ArrowRight, Shield, MapPin, Camera, Star, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
 
-// Area cards with representative images and links
 const areaCards = [
   {
     id: "lips",
@@ -67,7 +66,6 @@ const areaCards = [
   }
 ];
 
-// Facial lines section — anchor only, no URL
 const facialLinesConcerns = [
   "Nasolabial folds",
   "Marionette lines",
@@ -122,130 +120,148 @@ const BeforeAfterDermalFillers = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Hero */}
-        <section className="relative pt-0 pb-16 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
-          {/* Subtle gradient orbs */}
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* Compact Hero — matches Home2 aesthetic */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-neutral-800 pt-0 pb-16">
+          {/* Flowing gradient orbs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#C9A050]/5 rounded-full blur-3xl" />
-            <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#C9A050]/3 rounded-full blur-3xl" />
+            <motion.div
+              className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.12) 0%, rgba(201, 160, 80, 0.04) 40%, transparent 70%)',
+              }}
+              animate={{ scale: [1, 1.15, 1], x: [0, 20, 0], y: [0, -20, 0] }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(201, 160, 80, 0.06) 50%, transparent 70%)',
+              }}
+              animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
+              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            />
           </div>
 
-          <div className="page-container relative z-10">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
               items={[{ label: 'Before & After', path: '/before-after/' }]}
               currentPage="Dermal Fillers"
             />
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center mt-8"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                Dermal Filler{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A050] to-amber-400">
-                  Before & After
-                </span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Real patient transformations from our Harley Street clinic. Every result reflects our 
-                commitment to natural, doctor-led aesthetic medicine.
-              </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#C9A050] to-transparent mx-auto mt-8" />
-            </motion.div>
-          </div>
-        </section>
+            <div className="max-w-3xl pt-6 pb-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+              >
+                <h1 className="text-4xl md:text-5xl font-light text-white mb-5 leading-tight tracking-tight">
+                  Dermal Filler{" "}
+                  <span className="font-semibold text-[#C9A050]">Before & After</span>
+                </h1>
+                <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl font-light">
+                  Real patient transformations from our Harley Street clinic. Every result reflects our
+                  commitment to natural, doctor-led aesthetic medicine.
+                </p>
+              </motion.div>
 
-        {/* Trust Bar */}
-        <section className="py-5 border-y border-white/10 bg-black/50">
-          <div className="page-container">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-              <div className="flex items-center gap-3">
-                <Shield className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Real Unedited Photos</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Harley Street, London</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Doctor-Led Results</span>
-              </div>
+              {/* Trust indicators — same style as Home2 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="mt-8 flex flex-wrap gap-8 text-sm text-white/40"
+              >
+                <span className="flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-[#C9A050]/70" />
+                  Real Unedited Photos
+                </span>
+                <span className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-[#C9A050]/70" />
+                  Harley Street, London
+                </span>
+                <span className="flex items-center gap-2">
+                  <Star className="h-4 w-4 text-[#C9A050]/70 fill-[#C9A050]/70" />
+                  Doctor-Led Results
+                </span>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Area Cards Grid */}
-        <section className="py-20">
-          <div className="page-container">
+        <section className="relative py-20 bg-gradient-to-b from-neutral-800/50 to-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-14"
+              className="mb-12"
             >
-              <p className="text-2xl md:text-3xl font-bold text-white mb-3">Browse by Treatment Area</p>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Select an area to view detailed before and after galleries for each dermal filler treatment.
+              <p className="text-2xl md:text-3xl font-light text-white mb-2">
+                Browse by <span className="font-semibold text-[#C9A050]">Treatment Area</span>
+              </p>
+              <p className="text-white/40 max-w-xl font-light">
+                Select an area to view detailed before and after galleries.
               </p>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {areaCards.map((card, index) => (
                 <motion.div
                   key={card.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  transition={{ duration: 0.5, delay: index * 0.07 }}
                   viewport={{ once: true }}
                 >
                   <Link
                     to={card.link}
-                    className="group block bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-[#C9A050]/40 hover:bg-white/[0.06] transition-all duration-300"
+                    className="group block relative bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9A050]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#C9A050]/5"
                   >
                     {/* Image */}
-                    <div className="aspect-[4/3] overflow-hidden bg-gray-900/50 relative">
+                    <div className="aspect-[4/3] overflow-hidden bg-neutral-800/50 relative">
                       {card.image ? (
                         <img
                           src={card.image}
                           alt={`${card.title} before and after results`}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           loading="lazy"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
-                          <Camera className="w-10 h-10 text-gray-700" />
+                          <Camera className="w-8 h-8 text-white/20" />
                         </div>
                       )}
-                      {/* Hover overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
                       {card.imageCount > 0 && (
-                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white text-xs px-2.5 py-1 rounded-full">
+                        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white/80 text-xs px-2.5 py-1 rounded-full border border-white/10">
                           {card.imageCount} photos
                         </div>
                       )}
-                      
+
                       {card.imageCount === 0 && card.image && (
-                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-gray-400 text-xs px-2.5 py-1 rounded-full">
+                        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white/40 text-xs px-2.5 py-1 rounded-full border border-white/10">
                           Coming soon
                         </div>
                       )}
+
+                      {/* Bottom content overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <p className="text-lg font-semibold text-white group-hover:text-[#C9A050] transition-colors duration-300">
+                          {card.title}
+                        </p>
+                        <p className="text-sm text-white/50 mt-0.5">{card.subtitle}</p>
+                      </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-5">
-                      <p className="text-lg font-semibold text-white group-hover:text-[#C9A050] transition-colors mb-1">
-                        {card.title}
-                      </p>
-                      <p className="text-sm text-gray-500 mb-3">{card.subtitle}</p>
-                      <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View gallery <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                      </span>
+                    {/* Hover arrow bar */}
+                    <div className="px-5 py-3 flex items-center justify-between border-t border-white/[0.06]">
+                      <span className="text-xs text-white/30 font-light">View gallery</span>
+                      <ChevronRight className="w-4 h-4 text-white/20 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                   </Link>
                 </motion.div>
@@ -254,92 +270,118 @@ const BeforeAfterDermalFillers = () => {
           </div>
         </section>
 
-        {/* Facial Lines & Folds — Anchor section, not a URL */}
-        <section id="facial-lines" className="py-16 bg-accent/30 scroll-mt-20">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
+        {/* Facial Lines & Folds — Anchor section */}
+        <section id="facial-lines" className="relative py-20 scroll-mt-20 bg-neutral-900">
+          {/* Subtle orb */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute bottom-0 right-0 w-[350px] h-[350px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)',
+              }}
+              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-center mb-10"
+                className="mb-8"
               >
-                <p className="text-2xl md:text-3xl font-bold text-white mb-3">Facial Lines & Folds</p>
-                <p className="text-gray-400 max-w-2xl mx-auto">
-                  Results for nasolabial folds, marionette lines, pre-jowl sulcus, and perioral lines — 
+                <p className="text-2xl md:text-3xl font-light text-white mb-2">
+                  Facial Lines <span className="font-semibold text-[#C9A050]">& Folds</span>
+                </p>
+                <p className="text-white/40 font-light leading-relaxed">
+                  Results for nasolabial folds, marionette lines, pre-jowl sulcus, and perioral lines —
                   grouped here as these concerns are addressed within our full-face treatment approach.
                 </p>
               </motion.div>
 
-              <div className="flex flex-wrap gap-3 justify-center mb-10">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap gap-2 mb-10"
+              >
                 {facialLinesConcerns.map((concern) => (
                   <span
                     key={concern}
-                    className="px-4 py-2 text-sm text-gray-300 bg-white/5 border border-white/10 rounded-full"
+                    className="px-4 py-2 text-sm text-white/50 bg-white/[0.04] border border-white/[0.08] rounded-full"
                   >
                     {concern}
                   </span>
                 ))}
-              </div>
+              </motion.div>
 
-              <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-10 text-center">
-                <Camera className="w-8 h-8 text-gray-700 mx-auto mb-4" />
-                <p className="text-gray-500 mb-2">Gallery images coming soon</p>
-                <p className="text-gray-600 text-sm">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-10 text-center"
+              >
+                <Camera className="w-7 h-7 text-white/15 mx-auto mb-4" />
+                <p className="text-white/40 mb-1 font-light">Gallery images coming soon</p>
+                <p className="text-white/25 text-sm font-light">
                   Contact us to see examples during your consultation
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Disclaimer */}
-        <section className="py-8 border-t border-white/10">
-          <div className="page-container">
-            <p className="text-center text-gray-500 text-xs max-w-3xl mx-auto leading-relaxed">
-              Individual results may vary. All images show real patients treated at CosmeDocs. 
-              Photos are unretouched and taken under consistent clinical conditions. 
+        <section className="py-8 border-t border-white/[0.06] bg-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <p className="text-center text-white/25 text-xs max-w-3xl mx-auto leading-relaxed font-light">
+              Individual results may vary. All images show real patients treated at CosmeDocs.
+              Photos are unretouched and taken under consistent clinical conditions.
               A consultation is required before any treatment.
             </p>
           </div>
         </section>
 
         {/* Internal Links */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
+        <section className="py-16 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-center mb-10"
+                className="mb-8"
               >
-                <p className="text-2xl font-bold text-white mb-3">Learn More</p>
+                <p className="text-xl font-light text-white">Learn More</p>
               </motion.div>
 
               <div className="grid md:grid-cols-2 gap-4">
                 <Link
                   to="/treatments/dermal-fillers/"
-                  className="group flex items-center justify-between p-5 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
+                  className="group flex items-center justify-between p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
                 >
                   <div>
-                    <p className="font-semibold text-white group-hover:text-[#C9A050] transition-colors">Dermal Fillers Overview</p>
-                    <p className="text-sm text-gray-500 mt-1">Our philosophy, approach, and safety</p>
+                    <p className="font-medium text-white group-hover:text-[#C9A050] transition-colors">Dermal Fillers Overview</p>
+                    <p className="text-sm text-white/30 mt-1 font-light">Our philosophy, approach, and safety</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </Link>
 
                 <Link
                   to="/treatments/dermal-fillers/areas/"
-                  className="group flex items-center justify-between p-5 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
+                  className="group flex items-center justify-between p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
                 >
                   <div>
-                    <p className="font-semibold text-white group-hover:text-[#C9A050] transition-colors">Facial Areas & Concerns</p>
-                    <p className="text-sm text-gray-500 mt-1">Understanding facial changes and structure</p>
+                    <p className="font-medium text-white group-hover:text-[#C9A050] transition-colors">Facial Areas & Concerns</p>
+                    <p className="text-sm text-white/30 mt-1 font-light">Understanding facial changes and structure</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </Link>
               </div>
             </div>
@@ -347,27 +389,28 @@ const BeforeAfterDermalFillers = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-b from-black to-gray-900">
-          <div className="page-container">
-            <div className="max-w-3xl mx-auto text-center">
+        <section className="py-16 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-2xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                  Every treatment begins with a comprehensive facial assessment. Our doctors will 
+                <p className="text-white/50 text-base mb-8 leading-relaxed font-light">
+                  Every treatment begins with a comprehensive facial assessment. Our doctors will
                   discuss your concerns and recommend an approach tailored to your facial structure.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/contact">
-                    <Button className="bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
                       Book Consultation
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
                   <Link to="/before-after/">
-                    <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
                       Back to Gallery
                     </Button>
                   </Link>
@@ -381,20 +424,20 @@ const BeforeAfterDermalFillers = () => {
         <div className="sr-only">
           <h2>Dermal Filler Before and After Gallery</h2>
           <p>
-            Browse authentic dermal filler before and after results from CosmeDocs Harley Street clinic. 
-            Our visual proof hub covers lip filler, cheek filler, jawline filler, chin filler, tear trough, 
-            non-surgical rhinoplasty, temple filler, and facial lines including nasolabial folds, 
+            Browse authentic dermal filler before and after results from CosmeDocs Harley Street clinic.
+            Our visual proof hub covers lip filler, cheek filler, jawline filler, chin filler, tear trough,
+            non-surgical rhinoplasty, temple filler, and facial lines including nasolabial folds,
             marionette lines, pre-jowl sulcus, and perioral lines.
           </p>
           <h3>Doctor-Led Dermal Filler Results London</h3>
           <p>
-            Every dermal filler treatment at CosmeDocs is performed by qualified doctors using a full-face 
-            assessment approach. Our before and after gallery demonstrates the natural, balanced results 
+            Every dermal filler treatment at CosmeDocs is performed by qualified doctors using a full-face
+            assessment approach. Our before and after gallery demonstrates the natural, balanced results
             achievable through expert injection technique and anatomical understanding.
           </p>
           <p>
-            Our aesthetics is invisible art — bold, natural, always your way. CosmeDocs has performed 
-            over one million treatments since 2007, establishing a reputation for subtle, refined 
+            Our aesthetics is invisible art — bold, natural, always your way. CosmeDocs has performed
+            over one million treatments since 2007, establishing a reputation for subtle, refined
             aesthetic medicine on Harley Street, London.
           </p>
         </div>
