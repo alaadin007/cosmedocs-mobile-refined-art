@@ -445,13 +445,24 @@ const LipFillers = () => {
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    Lip Filler <span className="text-[#C9A050] font-light">Before & After Results</span>
+                    Real Results: <span className="text-[#C9A050] font-light">Lip Filler Before & After</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
-                    Below are real examples of lip filler treatments performed by our doctors at our Harley 
+                    Below is an example of lip filler treatment performed by our doctors at our Harley 
                     Street clinic. Results vary depending on lip anatomy, technique, and desired enhancement 
                     — with a focus on balance, proportion, and natural movement.
+                  </p>
+                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                    <img
+                      src="/images/before-after/dermal-fillers/lips/lip-filler-natural-enhancement.jpg"
+                      alt="Before and after lip filler showing natural volume enhancement"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  <p className="text-white/30 text-xs font-light italic mb-6">
+                    All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/lips/"
@@ -460,8 +471,8 @@ const LipFillers = () => {
                     View real lip filler before & after results
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <p className="text-white/30 text-xs font-light mt-2 italic">
-                    All images show real patients treated by our doctors. Individual results vary.
+                  <p className="text-white/30 text-xs font-light mt-2">
+                    Includes subtle enhancement, corrections, and complication management cases.
                   </p>
                 </motion.div>
               </section>
