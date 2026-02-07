@@ -59,7 +59,9 @@ const CosmeDocsAI = () => {
   - Lip Filler 0.5ml (Natural): £300
   - Lip Filler 1.0ml (Bold & Plump): £350
   - Lip Filler 1.5ml: £400
-  - Non Surgical Nose Job: £450
+  - Non Surgical Nose Job (Dermal Filler): £450 (results last 12–18 months)
+  - Non Surgical Nose Job (PCL Threads): £950 (results can last up to 3 years — ideal for tip lifting & bridge straightening)
+  - Non Surgical Nose Job (Combined Filler + Threads): Results can last 2–3 years depending on modality
   - Nose Filler Maintenance: £400
   - Forehead Filler (Bumps & Dips): £400
   - Temples Hollowing: £350/ml
