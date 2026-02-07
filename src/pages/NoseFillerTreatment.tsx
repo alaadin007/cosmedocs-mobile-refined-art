@@ -137,22 +137,28 @@ const NoseFillerTreatment = () => {
                 <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
                   What Can a Non-Surgical Nose Job <span className="text-[#C9A050]">Improve?</span>
                 </h2>
-                <p className="text-white/45 text-sm leading-relaxed font-light mb-8">
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
                   Non-surgical rhinoplasty is a refinement procedure. It works by adding small volumes of filler
-                  to specific areas of the nose to improve shape, symmetry, and proportion. It does not reduce
-                  the physical size of the nose — instead, it creates the visual impression of a more balanced,
-                  harmonious profile.
+                  to specific areas of the nose to improve shape, symmetry, and proportion. The goal is always
+                  to work with your existing anatomy — enhancing what is already there rather than attempting to
+                  fundamentally alter nasal structure.
+                </p>
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-8">
+                  Facial anatomy varies significantly between individuals, and treatment planning is always
+                  personalised rather than formulaic. Our doctors assess each nose in the context of the whole
+                  face — considering bridge height, tip projection, skin thickness, and overall facial harmony
+                  before recommending an approach.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Camouflaging a dorsal hump",
-                    "Smoothing nasal irregularities and contour",
-                    "Lifting a drooping nasal tip",
-                    "Improving side-profile symmetry",
-                    "Correcting minor post-surgical asymmetry",
-                    "Creating the appearance of a straighter bridge",
-                    "Refining nasal contour and definition",
-                    "Improving sidewall depressions"
+                    "Camouflaging small humps or bumps along the nasal bridge",
+                    "Smoothing nasal irregularities and contour asymmetries",
+                    "Refining nasal tip support and definition",
+                    "Improving bridge smoothness and straightness",
+                    "Enhancing overall nasal definition and profile balance",
+                    "Improving side-profile symmetry and facial harmony",
+                    "Correcting minor post-surgical asymmetry in selected cases",
+                    "Addressing sidewall depressions and minor contour irregularities"
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
                       <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
@@ -160,11 +166,15 @@ const NoseFillerTreatment = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl">
+                <div className="mt-8 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl space-y-3">
                   <p className="text-white/40 text-xs leading-relaxed font-light">
                     <strong className="text-[#C9A050]/80">Important:</strong> A non-surgical nose job does not make the
-                    nose physically smaller — it improves shape, balance, and proportions. During your consultation,
-                    our doctors will explain what is achievable and set realistic expectations.
+                    nose physically smaller — it improves shape, balance, and proportions. It does not replace surgical
+                    rhinoplasty and works best for refinement rather than major structural change.
+                  </p>
+                  <p className="text-white/40 text-xs leading-relaxed font-light">
+                    During your consultation, our doctors will explain what is realistically achievable, set clear
+                    expectations, and advise honestly if a surgical approach would be more appropriate for your goals.
                   </p>
                 </div>
               </motion.div>
@@ -205,6 +215,19 @@ const NoseFillerTreatment = () => {
                   <p>
                     Advanced knowledge of facial vascular anatomy is essential for safe nose filler treatment. This is a
                     high-risk area that should only be treated by experienced, medically qualified practitioners.
+                  </p>
+                  <p>
+                    The treatment itself is relatively quick — typically completed within 15 to 30 minutes. Local comfort
+                    measures are used to minimise any discomfort, and our doctors assess the result in real time throughout
+                    the procedure, making controlled, incremental adjustments rather than committing to a single correction
+                    in one step.
+                  </p>
+                  <p className="text-white/35 text-xs mt-2">
+                    Pricing for non-surgical nose reshaping is available on our{' '}
+                    <Link to="/pricing/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
+                      pricing page
+                    </Link>{' '}
+                    following consultation.
                   </p>
                 </div>
               </motion.div>
@@ -269,15 +292,22 @@ const NoseFillerTreatment = () => {
                     experienced, medically qualified doctors with advanced anatomical knowledge.
                   </p>
                   <p>
-                    At CosmeDocs, nose filler is exclusively performed by our GMC-registered doctors — Dr Ahmed Haq
-                    and Dr Hena — who have been treating this area since 2007. Their approach is conservative by design:
-                    small volumes, precise placement, and an understanding that less is more. They choose between needle
-                    and cannula based on what each patient's anatomy requires, not a one-size-fits-all protocol.
+                    CosmeDocs was established on Harley Street in 2007 and has built long-term clinical experience in
+                    non-surgical nose reshaping. Dr Ahmed Haq, Founder and Medical Director, has contributed to technique
+                    development in aesthetic medicine and is an active educator in the field. Dr Hena, as senior treating
+                    doctor, brings the same anatomy-led, conservative approach to every consultation and procedure.
+                  </p>
+                  <p>
+                    At CosmeDocs, nose filler is exclusively performed by our GMC-registered doctors. Their approach is
+                    conservative by design: small volumes, precise placement, and an understanding that less is more. They
+                    choose between needle and cannula based on what each patient's anatomy requires, not a one-size-fits-all
+                    protocol. Real-time assessment during treatment allows for controlled, incremental correction.
                   </p>
                   <p>
                     Our conservative dosing philosophy means we would rather under-treat and review than over-correct.
                     We also say "no" when a non-surgical approach is not appropriate — recommending surgical consultation
-                    when the desired outcome exceeds what filler can safely achieve.
+                    when the desired outcome exceeds what filler can safely achieve. Safety takes priority over volume,
+                    and every treatment decision is guided by anatomy rather than patient demand alone.
                   </p>
                 </div>
               </motion.div>
@@ -307,10 +337,11 @@ const NoseFillerTreatment = () => {
                     </div>
                     <ul className="space-y-2 text-white/45 text-sm font-light">
                       <li>• Mild to moderate contour irregularities</li>
-                      <li>• Patients seeking refinement, not size reduction</li>
+                      <li>• Patients seeking subtle refinement, not size reduction</li>
                       <li>• Those preferring a non-surgical approach</li>
                       <li>• Dorsal hump or bridge asymmetry</li>
-                      <li>• Patients wanting to "test" a change before surgery</li>
+                      <li>• Post-surgical asymmetry correction (selected cases)</li>
+                      <li>• Patients wanting to "test" a change before committing to surgery</li>
                     </ul>
                   </div>
                   <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7">
@@ -320,13 +351,19 @@ const NoseFillerTreatment = () => {
                     </div>
                     <ul className="space-y-2 text-white/45 text-sm font-light">
                       <li>• Significant nasal obstruction or breathing difficulty</li>
+                      <li>• Large structural deformities requiring surgical correction</li>
                       <li>• Unrealistic expectations about size reduction</li>
-                      <li>• Certain vascular risk factors</li>
+                      <li>• Certain vascular risk profiles</li>
                       <li>• Previous complications from nose filler</li>
-                      <li>• Cases requiring structural reduction (surgical referral)</li>
+                      <li>• Cases where surgical rhinoplasty would be more appropriate</li>
                     </ul>
                   </div>
                 </div>
+                <p className="mt-6 text-white/35 text-xs leading-relaxed font-light">
+                  Suitability is always determined by your treating doctor during consultation. Our approach is
+                  cautious and doctor-led — we would rather recommend an alternative than proceed with a treatment
+                  that may not meet your expectations.
+                </p>
               </motion.div>
             </div>
           </div>
