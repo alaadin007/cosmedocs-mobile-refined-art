@@ -607,14 +607,17 @@ export default function FaceBotox() {
                     </p>
                   </div>
 
-                  {/* Embedded Video — Crow's Feet Filler Technique */}
+                  {/* Embedded Video — Crow's Feet Filler Technique (Instagram Reel) */}
                   <div className="rounded-xl overflow-hidden border border-white/10 mb-6">
-                    <div className="aspect-video bg-black/50 flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <Syringe className="h-10 w-10 text-[#C9A050]/50 mx-auto mb-3" />
-                        <p className="text-white/50 text-sm mb-1">Crow's Feet Dermal Filler Technique</p>
-                        <p className="text-white/30 text-xs">Video coming soon — superficial filler placement for static lines</p>
-                      </div>
+                    <div className="flex justify-center bg-black/30">
+                      <iframe
+                        src="https://www.instagram.com/reel/DBrvvuQOESh/embed"
+                        className="w-full max-w-[400px] border-0"
+                        style={{ minHeight: '480px' }}
+                        allowFullScreen
+                        loading="lazy"
+                        title="Crow's feet dermal filler technique by Cosmedocs — superficial hyaluronic acid placement"
+                      />
                     </div>
                     <div className="p-4 bg-white/5">
                       <p className="text-white/50 text-xs">
