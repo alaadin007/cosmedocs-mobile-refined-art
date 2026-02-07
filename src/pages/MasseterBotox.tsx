@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
+import masseterBaPreview from "@/assets/before-after/masseter-ba-2.jpg";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
@@ -396,7 +397,43 @@ const MasseterBotox = () => {
                 </motion.div>
               </section>
 
-              {/* Aftercare */}
+              {/* Real Results Preview */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Real Results: <span className="text-[#C9A050] font-light">Jaw Slimming with Masseter Botox</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Below is an example of masseter muscle reduction following doctor-led Botox treatment. 
+                    Results develop gradually as the overactive jaw muscle relaxes and reduces in size over 
+                    several weeks, leading to a softer, more balanced lower face.
+                  </p>
+                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                    <img
+                      src={masseterBaPreview}
+                      alt="Before and after masseter Botox showing reduced jaw muscle bulk"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  <p className="text-white/30 text-xs font-light italic mb-6">
+                    Images show real patients treated by our doctors at our Harley Street clinic. Individual results 
+                    vary depending on muscle strength, anatomy, and dosage.
+                  </p>
+                  <Link
+                    to="/before-after/botox/masseter/"
+                    className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#D4AF6A] text-sm font-medium transition-colors"
+                  >
+                    View full masseter Botox before & after gallery
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <p className="text-white/30 text-xs font-light mt-2">
+                    Includes mild to severe jaw muscle hypertrophy cases.
+                  </p>
+                </motion.div>
+              </section>
+
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">

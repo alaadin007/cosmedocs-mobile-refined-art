@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
+import cheekBaPreview from "@/assets/1ml-cheek-fillers-before-after.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const CheekFiller = () => {
@@ -398,7 +399,7 @@ const CheekFiller = () => {
                 </motion.div>
               </section>
 
-              {/* Before & After Link */}
+              {/* Real Results Preview */}
               <section>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -407,12 +408,25 @@ const CheekFiller = () => {
                   viewport={{ once: true }}
                 >
                   <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Cheek Filler <span className="text-[#C9A050] font-light">Before & After Results</span>
+                    Real Results: <span className="text-[#C9A050] font-light">Cheek Filler Before & After</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
-                    All before and after images show real patients treated by our doctors at our Harley Street clinic. 
-                    Results vary depending on facial anatomy, treatment approach, and volume used.
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Below is an example of cheek filler used to restore mid-face volume and improve facial 
+                    support. Strategic placement enhances contour and lift while maintaining natural 
+                    proportions and facial harmony.
+                  </p>
+                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                    <img
+                      src={cheekBaPreview}
+                      alt="Before and after cheek filler showing mid-face volume restoration"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  <p className="text-white/30 text-xs font-light italic mb-6">
+                    All images show real patients treated by our doctors at our Harley Street clinic. Results 
+                    vary depending on facial structure and treatment plan.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/cheeks/"
@@ -421,6 +435,9 @@ const CheekFiller = () => {
                     View real cheek filler before & after results
                     <ArrowRight className="w-4 h-4" />
                   </Link>
+                  <p className="text-white/30 text-xs font-light mt-2">
+                    Includes subtle volume restoration and structural support cases.
+                  </p>
                 </motion.div>
               </section>
 
