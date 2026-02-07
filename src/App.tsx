@@ -28,6 +28,7 @@ const LipFillers = lazy(() => import("./pages/LipFillers"));
 const CupidBowLips = lazy(() => import("./pages/CupidBowLips"));
 const ForeheadFillers = lazy(() => import("./pages/ForeheadFillers"));
 const NonSurgicalNoseJob = lazy(() => import("./pages/NonSurgicalNoseJob"));
+const NoseFillerTreatment = lazy(() => import("./pages/NoseFillerTreatment"));
 const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
 const BeforeAfterHub = lazy(() => import("./pages/BeforeAfterHub"));
 const BeforeAfterBotox = lazy(() => import("./pages/BeforeAfterBotox"));
@@ -337,13 +338,17 @@ const App = () => {
                           <Route path="/treatments/temple-filler" element={<TempleFiller />} />
                           <Route path="/treatments/temple-filler/" element={<TempleFiller />} />
                           
+                          {/* Nose Filler Treatment Page */}
+                          <Route path="/treatments/dermal-fillers/nose" element={<NoseFillerTreatment />} />
+                          <Route path="/treatments/dermal-fillers/nose/" element={<NoseFillerTreatment />} />
+                          
                           {/* Filler pages redirected to hub */}
                           <Route path="/treatments/dermal-fillers/areas" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/dermal-fillers/areas/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/cupid-bow-lips" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/cupid-bow-lips/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
-                          <Route path="/treatments/nose-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
-                          <Route path="/treatments/nose-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
+                          <Route path="/treatments/nose-filler" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
+                          <Route path="/treatments/nose-filler/" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
                           <Route path="/treatments/forehead-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/forehead-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/neck-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
@@ -484,8 +489,8 @@ const App = () => {
                           <Route path="/chin-filler" element={<Navigate to="/treatments/chin-filler/" replace />} />
                           <Route path="/jawline-filler" element={<Navigate to="/treatments/jawline-filler/" replace />} />
                           <Route path="/jawline-fillers" element={<Navigate to="/treatments/jawline-filler/" replace />} />
-                          <Route path="/non-surgical-nose-job" element={<Navigate to="/treatments/nose-filler/" replace />} />
-                          <Route path="/nose-filler" element={<Navigate to="/treatments/nose-filler/" replace />} />
+                          <Route path="/non-surgical-nose-job" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
+                          <Route path="/nose-filler" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
                           <Route path="/tear-trough-filler" element={<Navigate to="/treatments/tear-trough-filler/" replace />} />
                           <Route path="/tear-trough-fillers" element={<Navigate to="/treatments/tear-trough-filler/" replace />} />
                           <Route path="/temple-filler-london" element={<Navigate to="/treatments/temple-filler/" replace />} />

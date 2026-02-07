@@ -1,0 +1,547 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { generateSEOMetadata } from '@/utils/seo';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Shield, Clock, Syringe, CheckCircle, AlertTriangle, Heart, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Breadcrumb from '@/components/Breadcrumb';
+
+const NoseFillerTreatment = () => {
+  const seoData = generateSEOMetadata(
+    "Non-Surgical Nose Job (Liquid Rhinoplasty) | Harley Street Doctors",
+    "Doctor-led non-surgical nose reshaping using dermal fillers. Subtle, safe liquid rhinoplasty at our Harley Street clinic.",
+    "/treatments/dermal-fillers/nose/"
+  );
+
+  return (
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/dermal-fillers/nose/" />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/dermal-fillers/nose/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MedicalBusiness",
+                "name": "CosmeDocs",
+                "description": "Doctor-led aesthetic medicine clinic on Harley Street",
+                "url": "https://cosmedocs.co.uk/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Aesthetic Medicine"
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Non-Surgical Nose Job (Liquid Rhinoplasty)",
+                "description": "Non-surgical nose reshaping using hyaluronic acid dermal fillers for profile refinement, dorsal hump camouflage, and contour correction.",
+                "url": "https://cosmedocs.co.uk/treatments/dermal-fillers/nose/",
+                "procedureType": "NoninvasiveProcedure",
+                "bodyLocation": "Nose",
+                "followup": "Results typically last 9–18 months depending on filler type and metabolism.",
+                "howPerformed": "Strategic placement of hyaluronic acid filler using needle, cannula, or both for precise contouring."
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* Compact Hero */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-neutral-800 pt-0 pb-14">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.12) 0%, rgba(201, 160, 80, 0.04) 40%, transparent 70%)',
+              }}
+              animate={{ scale: [1, 1.15, 1], x: [0, 20, 0], y: [0, -20, 0] }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb
+              items={[
+                { label: 'Treatments', path: '/treatments/' },
+                { label: 'Dermal Fillers', path: '/treatments/dermal-fillers/' }
+              ]}
+              currentPage="Non-Surgical Nose Job"
+            />
+
+            <div className="max-w-3xl pt-6 pb-2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+              >
+                <h1 className="text-4xl md:text-5xl font-light text-white mb-5 leading-tight tracking-tight">
+                  Non-Surgical Nose Job{" "}
+                  <span className="font-semibold text-[#C9A050]">(Liquid Rhinoplasty)</span>
+                </h1>
+                <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl font-light">
+                  A non-surgical nose job — also known as liquid rhinoplasty — uses precisely placed hyaluronic acid
+                  dermal filler to reshape and refine the nose without surgery. Performed by our experienced doctors
+                  at our Harley Street clinic, the treatment addresses concerns such as dorsal humps, asymmetry, and
+                  profile irregularities. Results are immediate, subtle, and natural — reflecting our philosophy that
+                  the best aesthetic work is invisible. Dr Ahmed Haq and Dr Hena bring an anatomy-led approach,
+                  prioritising safety and conservative outcomes in every case.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="mt-8 flex flex-wrap gap-8 text-sm text-white/40"
+              >
+                <span className="flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-[#C9A050]/70" />
+                  Doctor-Led
+                </span>
+                <span className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-[#C9A050]/70" />
+                  15–30 Minutes
+                </span>
+                <span className="flex items-center gap-2">
+                  <Activity className="h-4 w-4 text-[#C9A050]/70" />
+                  Since 2007
+                </span>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* What Can It Improve */}
+        <section className="py-16 bg-gradient-to-b from-neutral-800/50 to-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  What Can a Non-Surgical Nose Job <span className="text-[#C9A050]">Improve?</span>
+                </h2>
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-8">
+                  Non-surgical rhinoplasty is a refinement procedure. It works by adding small volumes of filler
+                  to specific areas of the nose to improve shape, symmetry, and proportion. It does not reduce
+                  the physical size of the nose — instead, it creates the visual impression of a more balanced,
+                  harmonious profile.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Camouflaging a dorsal hump",
+                    "Smoothing nasal irregularities and contour",
+                    "Lifting a drooping nasal tip",
+                    "Improving side-profile symmetry",
+                    "Correcting minor post-surgical asymmetry",
+                    "Creating the appearance of a straighter bridge",
+                    "Refining nasal contour and definition",
+                    "Improving sidewall depressions"
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8 p-5 bg-white/[0.03] border border-white/[0.08] rounded-xl">
+                  <p className="text-white/40 text-xs leading-relaxed font-light">
+                    <strong className="text-[#C9A050]/80">Important:</strong> A non-surgical nose job does not make the
+                    nose physically smaller — it improves shape, balance, and proportions. During your consultation,
+                    our doctors will explain what is achievable and set realistic expectations.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-16 bg-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  How Nose Filler <span className="text-[#C9A050]">Treatment Works</span>
+                </h2>
+                <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                  <p>
+                    The treatment uses hyaluronic acid dermal fillers — a biocompatible, naturally occurring substance — to
+                    reshape and contour the nose. Our doctors place small, precisely measured volumes of filler at strategic
+                    points along the nasal bridge, tip, or sidewalls to achieve the desired correction.
+                  </p>
+                  <p>
+                    Each injection is carefully planned based on your individual anatomy. The filler provides structural
+                    support, smoothing irregularities and creating refined contours. Results are visible immediately, though
+                    the final outcome settles over the following days as any minor swelling subsides.
+                  </p>
+                  <p>
+                    Our doctors select either needle, cannula, or a combination of both depending on the area being treated
+                    and your anatomy. A one-point injection technique may be appropriate for some patients, whilst others
+                    require a multi-point approach. The procedure is reversible — hyaluronic acid filler can be dissolved
+                    if necessary.
+                  </p>
+                  <p>
+                    Advanced knowledge of facial vascular anatomy is essential for safe nose filler treatment. This is a
+                    high-risk area that should only be treated by experienced, medically qualified practitioners.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="py-16 bg-gradient-to-b from-neutral-900 to-neutral-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+                  Watch: Non-Surgical Nose Job{" "}
+                  <span className="text-[#C9A050]">Explained by Our Doctors</span>
+                </h2>
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-8">
+                  In this short video, our doctors explain how non-surgical nose reshaping works, who
+                  it's suitable for, and how we prioritise safety and natural results.
+                </p>
+                <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/[0.08]">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/_yO12RM4-34?si=XwoIhfA0QWPhzI2h"
+                    title="Non-Surgical Nose Job Explained by CosmeDocs Doctors"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Safety & Expertise */}
+        <section className="py-16 bg-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  Safety, Anatomy &{" "}
+                  <span className="text-[#C9A050]">Medical Expertise</span>
+                </h2>
+                <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                  <p>
+                    The nose is a high-risk vascular area. The internal and external nasal arteries supply blood to
+                    critical structures, and filler placed incorrectly can cause serious complications including
+                    vascular occlusion. This is why non-surgical nose reshaping should only be performed by
+                    experienced, medically qualified doctors with advanced anatomical knowledge.
+                  </p>
+                  <p>
+                    At CosmeDocs, nose filler is exclusively performed by our GMC-registered doctors — Dr Ahmed Haq
+                    and Dr Hena — who have been treating this area since 2007. Their approach is conservative by design:
+                    small volumes, precise placement, and an understanding that less is more. They choose between needle
+                    and cannula based on what each patient's anatomy requires, not a one-size-fits-all protocol.
+                  </p>
+                  <p>
+                    Our conservative dosing philosophy means we would rather under-treat and review than over-correct.
+                    We also say "no" when a non-surgical approach is not appropriate — recommending surgical consultation
+                    when the desired outcome exceeds what filler can safely achieve.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who Is Suitable */}
+        <section className="py-16 bg-gradient-to-b from-neutral-900 to-neutral-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  Who Is Suitable{" "}
+                  <span className="text-[#C9A050]">(And Who Is Not)</span>
+                </h2>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7">
+                    <div className="flex items-center gap-2 mb-4">
+                      <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                      <p className="text-base font-medium text-white">May Be Suitable</p>
+                    </div>
+                    <ul className="space-y-2 text-white/45 text-sm font-light">
+                      <li>• Mild to moderate contour irregularities</li>
+                      <li>• Patients seeking refinement, not size reduction</li>
+                      <li>• Those preferring a non-surgical approach</li>
+                      <li>• Dorsal hump or bridge asymmetry</li>
+                      <li>• Patients wanting to "test" a change before surgery</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7">
+                    <div className="flex items-center gap-2 mb-4">
+                      <AlertTriangle className="w-5 h-5 text-white/40" />
+                      <p className="text-base font-medium text-white">May Not Be Suitable</p>
+                    </div>
+                    <ul className="space-y-2 text-white/45 text-sm font-light">
+                      <li>• Significant nasal obstruction or breathing difficulty</li>
+                      <li>• Unrealistic expectations about size reduction</li>
+                      <li>• Certain vascular risk factors</li>
+                      <li>• Previous complications from nose filler</li>
+                      <li>• Cases requiring structural reduction (surgical referral)</li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Link */}
+        <section className="py-12 bg-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7"
+              >
+                <h2 className="text-xl font-light text-white mb-3">
+                  Non-Surgical Nose Job{" "}
+                  <span className="text-[#C9A050]">Before & After Results</span>
+                </h2>
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
+                  All images show real patients treated by our doctors at our Harley Street clinic.
+                </p>
+                <Link
+                  to="/before-after/dermal-fillers/nose/"
+                  className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] text-sm font-medium transition-colors"
+                >
+                  View real non-surgical nose job before & after results
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Long Results Last */}
+        <section className="py-16 bg-gradient-to-b from-neutral-900 to-neutral-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  How Long Do <span className="text-[#C9A050]">Results Last?</span>
+                </h2>
+                <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                  <p>
+                    Results from a non-surgical nose job typically last between 9 and 18 months. The duration depends
+                    on several factors, including the type of filler used, your individual metabolism, and the depth
+                    and location of injection.
+                  </p>
+                  <p>
+                    The nose is a relatively low-movement area, which means filler tends to last longer here than in
+                    more dynamic facial areas such as the lips. Many patients find that with repeat treatments, the
+                    results can be maintained with progressively smaller volumes of filler.
+                  </p>
+                  <p>
+                    Our doctors will advise on the most appropriate filler type and review schedule during your
+                    consultation.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Aftercare */}
+        <section className="py-16 bg-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  Aftercare & <span className="text-[#C9A050]">Recovery</span>
+                </h2>
+                <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                  <p>
+                    Downtime following a non-surgical nose job is minimal. Most patients return to normal activities
+                    immediately. You may experience mild swelling, tenderness, or slight redness at the injection sites,
+                    which typically resolves within 24–48 hours.
+                  </p>
+                  <ul className="space-y-2 pl-1">
+                    <li className="flex items-start gap-3">
+                      <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      Avoid touching, pressing, or massaging the nose for 48 hours
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      Do not wear glasses or sunglasses resting on the bridge for 2 weeks
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      Avoid strenuous exercise for 24–48 hours
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      Expect mild swelling to settle within a few days
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      Contact our clinic if you experience unusual pain, blanching, or vision changes
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why CosmeDocs */}
+        <section className="py-16 bg-gradient-to-b from-neutral-900 to-neutral-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+                  Why Choose CosmeDocs for{" "}
+                  <span className="text-[#C9A050]">Nose Fillers?</span>
+                </h2>
+                <ul className="space-y-3">
+                  {[
+                    "Doctor-led clinic — all treatments performed by GMC-registered doctors",
+                    "Harley Street, London — established 2007",
+                    "Over 1 million treatments performed across all services",
+                    "Conservative philosophy — we prioritise safety and subtlety",
+                    "Ethical practice — we say \"no\" when appropriate",
+                    "Specialists in Asian and ethnic nose reshaping since 2010",
+                    "Our aesthetics is invisible art — bold, natural, always your way"
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-14 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-2xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-xl font-light text-white mb-2">
+                  Considering a Non-Surgical Nose Job?
+                </p>
+                <p className="text-white/45 text-sm mb-6 leading-relaxed font-light">
+                  A consultation with our doctors will help you understand what improvements are achievable
+                  and whether this treatment is right for you.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link to="/contact">
+                    <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                      Book Consultation
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                      Speak to a Doctor
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>Non-Surgical Nose Job London — Liquid Rhinoplasty at Harley Street</h2>
+          <p>
+            CosmeDocs offers doctor-led non-surgical nose reshaping using hyaluronic acid dermal fillers at
+            our Harley Street clinic in London. Also known as liquid rhinoplasty, this treatment can camouflage
+            dorsal humps, smooth nasal irregularities, lift a drooping tip, and improve profile symmetry without
+            surgery. Our GMC-registered doctors — Dr Ahmed Haq and Dr Hena — have been performing non-surgical
+            nose jobs since 2007, with specialist expertise in Asian and ethnic nose reshaping since 2010.
+          </p>
+          <h3>Nose Filler Treatment at CosmeDocs Harley Street</h3>
+          <p>
+            Our doctors use needle, cannula, or a combination of both techniques for optimal nose filler results.
+            The one-point nose job technique may be appropriate for selected patients. We take a conservative approach
+            to nose reshaping — using small volumes of filler for structural support and controlled contouring.
+            Results typically last 9 to 18 months. A non-surgical nose job does not make the nose smaller; it improves
+            shape, balance, and proportions. Our aesthetics is invisible art — bold, natural, always your way.
+          </p>
+          <h3>Non-Surgical Rhinoplasty Safety and Expertise</h3>
+          <p>
+            The nose is a high-risk vascular area requiring advanced anatomical knowledge. At CosmeDocs, nose filler
+            is exclusively performed by experienced, GMC-registered doctors. We prioritise safety with conservative
+            dosing and say no when a non-surgical approach is not appropriate. We have performed over 1 million
+            treatments across all services since our establishment on Harley Street.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default NoseFillerTreatment;
