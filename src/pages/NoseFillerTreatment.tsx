@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Syringe, CheckCircle, AlertTriangle, Heart, Activity } from 'lucide-react';
+import { ArrowRight, CheckCircle, AlertTriangle, Heart, Syringe, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
 import NoseFillerSidebar from '@/components/nose-filler/NoseFillerSidebar';
@@ -61,25 +61,21 @@ const NoseFillerTreatment = () => {
 
       <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
         {/* ═══════════════════════════════════════════
-            HERO — Full Width
+            HERO — Minimal, text-light
         ═══════════════════════════════════════════ */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-neutral-800 pt-0 pb-14">
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          {/* Subtle gold accent line */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+          
+          {/* Flowing background orb — restrained */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
-              className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full"
+              className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
               style={{
-                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.12) 0%, rgba(201, 160, 80, 0.04) 40%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)',
               }}
-              animate={{ scale: [1, 1.15, 1], x: [0, 20, 0], y: [0, -20, 0] }}
-              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full"
-              style={{
-                background: 'radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(201, 160, 80, 0.06) 50%, transparent 70%)',
-              }}
-              animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
-              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
 
@@ -92,47 +88,50 @@ const NoseFillerTreatment = () => {
               currentPage="Non-Surgical Nose Job"
             />
 
-            <div className="max-w-3xl pt-6 pb-2">
+            <div className="max-w-3xl pt-12 pb-4">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <h1 className="text-4xl md:text-5xl font-light text-white mb-5 leading-tight tracking-tight">
-                  Non-Surgical Nose Job{" "}
-                  <span className="font-semibold text-[#C9A050]">(Liquid Rhinoplasty)</span>
+                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                  Non-Surgical{" "}
+                  <span className="text-[#C9A050] font-light">Nose Job</span>
                 </h1>
-                <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl font-light">
-                  A non-surgical nose job uses dermal fillers and/or PCL threads to reshape and refine the nose
-                  without surgery. Dermal fillers smooth contours and camouflage bumps, whilst threads can lift and
-                  straighten the nasal tip for longer-lasting structural support. Performed by our experienced doctors
-                  at our Harley Street clinic, results can last 2–3 years depending on modality — reflecting our
-                  philosophy that the best aesthetic work is invisible. Dr Ahmed Haq and Dr Hena bring an anatomy-led
-                  approach, prioritising safety and conservative outcomes in every case.
+                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                  Dermal fillers and PCL threads to reshape, refine, and lift — without surgery. Results lasting 2–3 years.
                 </p>
               </motion.div>
 
+              {/* Minimal trust row */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="mt-8 flex flex-wrap gap-8 text-sm text-white/40"
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="mt-10 flex items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
               >
-                <span className="flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-[#C9A050]/70" />
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
                   Doctor-Led
                 </span>
-                <span className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-[#C9A050]/70" />
-                  15–30 Minutes
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                  15–30 Min
                 </span>
-                <span className="flex items-center gap-2">
-                  <Activity className="h-4 w-4 text-[#C9A050]/70" />
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
                   Since 2007
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                  Harley Street
                 </span>
               </motion.div>
             </div>
           </div>
+
+          {/* Bottom fade line */}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
         </section>
 
         {/* ═══════════════════════════════════════════
