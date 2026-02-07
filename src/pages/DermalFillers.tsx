@@ -87,15 +87,10 @@ export default function DermalFillers() {
       </Helmet>
 
       <div className="bg-black overflow-x-hidden">
-        {/* Breadcrumbs */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Dermal Fillers" />
-        </div>
-
         {/* ═══════════════════════════════════════════
             HERO — Two-column, matching Botox style
         ═══════════════════════════════════════════ */}
-        <section className="relative flex items-center overflow-hidden pb-16 pt-4">
+        <section className="relative flex items-center overflow-hidden pb-16 pt-0">
           {/* Flowing gradient orbs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -113,6 +108,11 @@ export default function DermalFillers() {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full">
+            {/* Breadcrumbs */}
+            <div className="mb-6">
+              <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Dermal Fillers" />
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left — Content */}
               <div>
