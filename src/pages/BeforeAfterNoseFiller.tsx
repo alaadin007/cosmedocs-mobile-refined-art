@@ -93,8 +93,80 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
       },
     ]
   },
-  // === SPECIAL VIEWS — frontal, underside, progression ===
-  // Row 4
+  // Row 4 — Tip lifting series (left-facing profiles)
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-tip-lift-arrows.png",
+        alt: "Non-surgical nose tip lifting before and after with directional arrows showing improvement",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Tip lifting:</strong> Precise filler placement to lift a drooping nasal tip and refine the overall profile line.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-tip-lift-subtle.png",
+        alt: "Subtle nose tip lift before and after non-surgical rhinoplasty",
+        caption: "Subtle tip lift — gentle elevation of the nasal tip creating a more refined, upturned profile."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-bridge-tip-refinement.png",
+        alt: "Nose bridge and tip refinement before and after showing improved profile",
+        caption: "Bridge and tip refinement — smoothing the dorsal line whilst simultaneously improving tip projection and definition."
+      },
+    ]
+  },
+  // Row 5 — More profile composites (left-facing)
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-ethnic-tip-contour.png",
+        alt: "Ethnic nose tip contouring before and after non-surgical rhinoplasty",
+        caption: "Ethnic tip contouring — refining nasal tip definition whilst respecting the patient's natural features and anatomy."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-tip-lift-closeup.png",
+        alt: "Close-up nose tip lift before and after showing refined nasal tip",
+        caption: "Tip lift close-up — immediate improvement in nasal tip position and overall profile balance."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-profile-silhouette.png",
+        alt: "Nose profile silhouette before and after non-surgical rhinoplasty",
+        caption: "Profile silhouette — a cleaner, straighter nasal contour achieved with carefully placed hyaluronic acid filler."
+      },
+    ]
+  },
+  // Row 6 — Dorsal smoothing, hump reduction, frontal correction
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-smoothing-profile.png",
+        alt: "Dorsal smoothing profile before and after nose filler treatment",
+        caption: "Dorsal smoothing — creating a sleeker profile line by addressing small bumps and irregularities along the nasal bridge."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-hump-reduction-side.png",
+        alt: "Nasal hump reduction before and after using dermal filler side view",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Hump camouflage:</strong> Strategic filler placement above and below the bump to create the appearance of a straighter bridge.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-frontal-contour-correction.png",
+        alt: "Frontal nose contour correction before and after non-surgical rhinoplasty",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Frontal correction:</strong> Addressing visible asymmetry and contour irregularities from the front — a subtle but meaningful improvement.
+          </span>
+        )
+      },
+    ]
+  },
+  // === SPECIAL VIEWS — progression, dent correction, underside ===
+  // Row 7
   {
     images: [
       {
@@ -123,7 +195,7 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
     ]
   },
   // === NON-SQUARE INDIVIDUAL PORTRAITS ===
-  // Row 5 — Asian B&A pair + male profile
+  // Row 8 — Asian B&A pair + male profile
   {
     images: [
       {
@@ -151,7 +223,7 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
       },
     ]
   },
-  // Row 6 — Large dorsal bump B&A pair + dorsal hump female
+  // Row 9 — Large dorsal bump B&A pair + dorsal hump female
   {
     images: [
       {
