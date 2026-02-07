@@ -125,6 +125,73 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
       },
     ]
   },
+  // Row 5 — Post-surgical rhino fix, bridge smoothing, profile harmony
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-post-surgical-rhino-fix.png",
+        alt: "Post-surgical rhinoplasty complication corrected with dermal filler before and after",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Post-surgical rhinoplasty fix:</strong> Filler used to correct complications and irregularities following previous surgical rhinoplasty.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-bridge-smoothing.png",
+        alt: "Nasal bridge smoothing before and after non-surgical nose job",
+        caption: "Bridge smoothing — refining the nasal bridge contour for a straighter, more balanced profile."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-profile-harmony.png",
+        alt: "Profile harmony improvement before and after nose filler treatment",
+        caption: "Profile harmony — subtle dorsal refinement creating a smoother, more feminine side profile."
+      },
+    ]
+  },
+  // Row 6 — 5-min progression, ethnic bridge, dorsal correction
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-5min-10min-progression.png",
+        alt: "Non-surgical nose job progression showing before, 5 minutes and 10 minutes after treatment",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Real-time progression:</strong> Before → 5 minutes → 10 minutes. Showing how the result develops during the treatment session.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-ethnic-bridge-refinement.png",
+        alt: "Ethnic nose bridge refinement before and after non-surgical rhinoplasty",
+        caption: "Ethnic bridge refinement — improving nasal bridge definition whilst respecting individual anatomy and features."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-correction.png",
+        alt: "Dorsal correction with nose filler before and after showing smoother profile",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Dorsal correction:</strong> Targeted filler placement to smooth a dorsal bump and refine the bridge contour.
+          </span>
+        )
+      },
+    ]
+  },
+  // Row 7 — Male underside correction, female bridge contour
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-male-underside-correction.png",
+        alt: "Male nose underside correction before and after showing improved contour from below",
+        caption: "Male underside correction — refining the nasal contour from an inferior view, addressing irregularities visible from below."
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-female-bridge-contour.png",
+        alt: "Female nasal bridge contouring before and after non-surgical nose job",
+        caption: "Female bridge contouring — smoothing the dorsal line and improving overall nasal definition in profile."
+      },
+    ]
+  },
 ];
 
 const BeforeAfterNoseFiller = () => {
