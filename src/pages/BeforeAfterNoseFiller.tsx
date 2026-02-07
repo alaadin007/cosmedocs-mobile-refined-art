@@ -33,7 +33,39 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
       },
     ]
   },
-  // Row 2 — Asian B&A pair + standalone
+  // Row 2 — New images: post-surgical fix, dorsal bump, tip transformation
+  {
+    images: [
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-post-surgical-fix.png",
+        alt: "Post-surgical rhinoplasty correction using dermal filler before and after",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Post-surgical rhinoplasty fix:</strong> Dermal filler used to correct irregularities following previous surgical rhinoplasty.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-double-dip-dorsal-bump.png",
+        alt: "Double dip dorsal bump correction with nose filler before and after",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Double dip dorsal bump:</strong> Filler placed to smooth a complex dorsal irregularity and create a straighter bridge line.
+          </span>
+        )
+      },
+      {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-tip-transformation.png",
+        alt: "Nose tip transformation before and after non-surgical rhinoplasty",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Tip transformation:</strong> Profile refinement with subtle tip support and bridge contouring for improved nasal harmony.
+          </span>
+        )
+      },
+    ]
+  },
+  // Row 3 — Asian B&A pair + contour correction
   {
     images: [
       {
@@ -55,15 +87,24 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
         )
       },
       {
+        src: "/images/before-after/dermal-fillers/nose/nose-filler-contour-dent-correction.png",
+        alt: "Nose contour dent correction before and after using dermal filler",
+        caption: (
+          <span>
+            <strong className="text-[#C9A050]">Contour dent correction:</strong> Filler used to smooth a visible dent and restore even nasal contour from the front.
+          </span>
+        )
+      },
+    ]
+  },
+  // Row 4 — B&A composite + Large nose B&A pair
+  {
+    images: [
+      {
         src: "/images/before-after/dermal-fillers/nose/nose-filler-before-after.jpg",
         alt: "Non-surgical nose job before and after showing bridge refinement and tip support",
         caption: "Bridge refinement and subtle tip support — a smoother profile with carefully placed hyaluronic acid filler."
       },
-    ]
-  },
-  // Row 3 — Large nose B&A pair
-  {
-    images: [
       {
         src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-before.jpg",
         alt: "Large nose with prominent dorsal bump before non-surgical rhinoplasty treatment",
