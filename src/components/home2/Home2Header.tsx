@@ -130,6 +130,13 @@ export default function Home2Header() {
     return () => clearInterval(interval);
   }, []);
 
+  // Listen for open-chatbot events (from "Ask AI Doctor" buttons across the site)
+  useEffect(() => {
+    const handleOpenChatbot = () => setIsSearchOpen(true);
+    window.addEventListener('open-chatbot', handleOpenChatbot);
+    return () => window.removeEventListener('open-chatbot', handleOpenChatbot);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
