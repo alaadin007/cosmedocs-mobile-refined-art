@@ -32,6 +32,7 @@ const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
 const BeforeAfterHub = lazy(() => import("./pages/BeforeAfterHub"));
 const BeforeAfterBotox = lazy(() => import("./pages/BeforeAfterBotox"));
 const BeforeAfterDermalFillers = lazy(() => import("./pages/BeforeAfterDermalFillers"));
+const BeforeAfterLipFiller = lazy(() => import("./pages/BeforeAfterLipFiller"));
 const BeforeAfterSkinRejuvenation = lazy(() => import("./pages/BeforeAfterSkinRejuvenation"));
 const Membership = lazy(() => import("./pages/Membership"));
 const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
@@ -571,6 +572,11 @@ const App = () => {
                           <Route path="/before-after/botox/" element={<BeforeAfterBotox />} />
                           <Route path="/before-after/dermal-fillers" element={<BeforeAfterDermalFillers />} />
                           <Route path="/before-after/dermal-fillers/" element={<BeforeAfterDermalFillers />} />
+                          
+                          {/* Dermal Filler Sub-Galleries */}
+                          <Route path="/before-after/dermal-fillers/lips" element={<BeforeAfterLipFiller />} />
+                          <Route path="/before-after/dermal-fillers/lips/" element={<BeforeAfterLipFiller />} />
+                          
                           <Route path="/before-after/skin-rejuvenation" element={<BeforeAfterSkinRejuvenation />} />
                           <Route path="/before-after/skin-rejuvenation/" element={<BeforeAfterSkinRejuvenation />} />
                           
