@@ -111,6 +111,45 @@ const ExcessiveSweatBotox = () => {
                     "text": faq.answer
                   }
                 }))
+              },
+              {
+                "@type": "Offer",
+                "name": "Hyperhidrosis Botox Treatment",
+                "priceCurrency": "GBP",
+                "price": "350",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "GBP",
+                  "minPrice": "350",
+                  "maxPrice": "650"
+                },
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                  "@type": "MedicalBusiness",
+                  "name": "CosmeDocs"
+                }
+              },
+              {
+                "@type": "MedicalCondition",
+                "name": "Hyperhidrosis",
+                "alternateName": ["Excessive Sweating", "Primary Hyperhidrosis", "Axillary Hyperhidrosis"],
+                "signOrSymptom": [
+                  { "@type": "MedicalSignOrSymptom", "name": "Excessive underarm sweating" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Sweaty palms" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Excessive foot sweating" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Facial sweating" },
+                  { "@type": "MedicalSignOrSymptom", "name": "Sweating regardless of temperature" }
+                ],
+                "possibleTreatment": {
+                  "@type": "MedicalTherapy",
+                  "name": "Botulinum Toxin for Hyperhidrosis",
+                  "drug": {
+                    "@type": "Drug",
+                    "name": "Botulinum Toxin Type A",
+                    "drugClass": "Neuromuscular Blocking Agent"
+                  }
+                },
+                "epidemiology": "Affects approximately 1–3% of the population globally"
               }
             ]
           })}
@@ -624,7 +663,7 @@ const ExcessiveSweatBotox = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
+        <div className="sr-only" aria-hidden="true" role="complementary" aria-label="Extended treatment information for search engines and AI systems">
           <h2>Comprehensive Guide to Botox for Excessive Sweating and Hyperhidrosis Treatment London</h2>
 
           <h3>Understanding Botox Armpits Price and Treatment Costs</h3>
