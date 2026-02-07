@@ -1,61 +1,54 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Award, GraduationCap, CheckCircle, Palette, Heart, Clock, Calendar, Activity, Syringe } from 'lucide-react';
-import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
-import { generateSEOMetadata } from '@/utils/seo';
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
+import TrapBotoxSidebar from "@/components/trap-botox/TrapBotoxSidebar";
 
 const TrapBotox = () => {
   const seoData = generateSEOMetadata(
-    "Trap Botox London | Shoulder Slimming & Neck Contouring",
-    "Slim bulky trapezius muscles with botox. Create elegant, slender shoulders & refined neck contours. Trap reduction.",
-    "/trap-botox"
+    "Trap Botox London | Shoulder Slimming | Harley St",
+    "Doctor-led trap botox (TrapTox) for shoulder slimming, neck elongation & chronic tension relief. Also known as Barbie Botox. From £350 at Harley Street.",
+    "/treatments/trap-botox/"
   );
-
-  const beforeAfterImages = [
-    { src: "/lovable-uploads/trap-botox-1.png", alt: "Trap botox before and after", caption: "Dramatic shoulder slimming after trap botox treatment" },
-    { src: "/lovable-uploads/trap-botox-2.png", alt: "Trapezius muscle contouring", caption: "Enhanced neck line and reduced shoulder bulk" },
-    { src: "/lovable-uploads/trap-botox-3.png", alt: "Trap botox progression", caption: "Progressive muscle relaxation over 2-4 weeks" },
-    { src: "/lovable-uploads/trap-botox-4.png", alt: "Trap botox results", caption: "Elegant shoulder profile and improved posture" },
-    { src: "/lovable-uploads/trap-botox-5.png", alt: "Neck contouring with trap botox", caption: "Refined neck contour and shoulder definition" },
-    { src: "/lovable-uploads/trap-botox-6.png", alt: "Shoulder slimming treatment", caption: "Natural-looking shoulder slimming results" }
-  ];
 
   const faqs = [
     {
-      question: "What is trap botox?",
-      answer: "Trap botox involves injecting botulinum toxin into the trapezius muscles to reduce their size and create a more elegant, slender shoulder profile. It's particularly popular for those who want to reduce shoulder bulk and achieve a more feminine silhouette."
+      question: "What is trap botox and how does it work?",
+      answer: "Trap botox — also called TrapTox or Barbie Botox — involves injecting botulinum toxin into the trapezius muscles to reduce their bulk. This slims the shoulders, elongates the neck, and relieves chronic tension, creating a more elegant upper-body silhouette."
     },
     {
-      question: "How does trap botox work?",
-      answer: "Botox temporarily relaxes the trapezius muscles, causing them to atrophy slightly over time. This creates a slimming effect on the shoulders and can improve the overall neck and shoulder contour."
+      question: "How long does trap botox last?",
+      answer: "Results typically last 4–6 months. With regular treatments, the trapezius muscles may become progressively smaller, potentially extending duration between sessions over time."
+    },
+    {
+      question: "When will I see trap botox results?",
+      answer: "Initial effects may be noticed within 1–2 weeks. Full shoulder slimming and muscle reduction becomes visible at 4–6 weeks as the muscle gradually relaxes and atrophies."
     },
     {
       question: "Is trap botox painful?",
-      answer: "The treatment involves multiple small injections into the trapezius muscles. Most patients experience mild discomfort, similar to other botox treatments. We use very fine needles to minimize any pain."
+      answer: "The treatment involves multiple small injections using fine needles. Most patients experience mild discomfort similar to standard botox. No anaesthetic is usually required, though numbing cream can be applied."
     },
     {
-      question: "How long do results last?",
-      answer: "Results typically last 4-6 months. With regular treatments, the muscles may become smaller over time, potentially extending the duration of results."
+      question: "What is the difference between trap botox and full Barbie Botox?",
+      answer: "Standard trap botox targets the upper trapezius muscles for shoulder slimming. Full Barbie Botox is a more comprehensive treatment using higher doses across the entire trapezius muscle for maximum shoulder reduction and neck elongation."
     },
     {
-      question: "When will I see results?",
-      answer: "Initial effects may be noticed within 1-2 weeks, with full results visible after 4-6 weeks as the muscles gradually relax and reduce in size."
-    },
-    {
-      question: "Are there any side effects?",
-      answer: "Possible side effects include temporary weakness in the treated area, mild bruising, or headache. Our experienced practitioners minimize risks through precise injection techniques."
+      question: "Can trap botox help with neck and shoulder pain?",
+      answer: "Yes. Trap botox is highly effective for chronic shoulder tension, 'tech neck', stress-related muscle tightness, and tension headaches originating from the trapezius. Many patients seek treatment for pain relief alongside cosmetic slimming."
     },
     {
       question: "How much does trap botox cost?",
-      answer: "The cost starts from £350. Final pricing depends on the amount of botox needed and your individual treatment plan."
+      answer: "Trap botox at CosmeDocs starts from £350 for standard treatment. Full Barbie Botox (comprehensive shoulder reduction) is £450. All prices include consultation and aftercare."
     },
     {
       question: "Who is a good candidate for trap botox?",
-      answer: "Ideal candidates have well-developed trapezius muscles and desire a more slender shoulder profile. We assess each patient individually during consultation to determine suitability."
+      answer: "Ideal candidates have well-developed or bulky trapezius muscles and desire slimmer shoulders, a longer-looking neck, or relief from chronic tension. Your doctor will assess muscle size and discuss realistic expectations during consultation."
     }
   ];
 
@@ -64,757 +57,458 @@ const TrapBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/trap-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/trap-botox/" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="trap botox London, shoulder slimming, trapezius botox, neck contouring, shoulder reduction, cosmetic treatment" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "openingHoursSpecification": [
+            "@graph": [
               {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
+                "@type": "MedicalBusiness",
+                "name": "CosmeDocs",
+                "description": "Doctor-led aesthetic medicine clinic on Harley Street",
+                "url": "https://cosmedocs.co.uk/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Aesthetic Medicine",
+                "openingHoursSpecification": [
+                  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+                  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00" }
+                ]
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Trap Botox (TrapTox / Barbie Botox)",
+                "alternateName": ["Trapezius Botox", "TrapTox", "Barbie Botox", "Shoulder Slimming Botox"],
+                "description": "Botulinum toxin injection into the trapezius muscles for shoulder slimming, neck elongation, and chronic tension relief.",
+                "url": "https://cosmedocs.co.uk/treatments/trap-botox/",
+                "procedureType": "NoninvasiveProcedure",
+                "bodyLocation": "Trapezius Muscles (Shoulders/Neck)",
+                "followup": "Results visible in 1–2 weeks, full effect at 4–6 weeks, lasting 4–6 months.",
+                "howPerformed": "Botulinum toxin injected at multiple strategic points within the trapezius muscles to reduce bulk and relieve tension."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                }))
               }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "120"
-            },
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Trap Botox Treatment",
-              "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
-              "description": "Expert trap botox for shoulder slimming and neck contouring in London"
-            },
-            "priceRange": "££"
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
+            ]
           })}
         </script>
       </Helmet>
 
-      <main className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* ═══════════════════════════════════════════
+            HERO
+        ═══════════════════════════════════════════ */}
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute -top-60 left-[-10%] w-[600px] h-[600px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb
+              items={[
+                { label: 'Treatments', path: '/treatments/' },
+                { label: 'Botox Treatments', path: '/treatments/botox/' }
+              ]}
+              currentPage="Trap Botox"
+            />
+
+            <div className="pt-12 pb-4 max-w-3xl">
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-left"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Trap Botox</span>
-                  <span className="block text-sm mt-4">Invisible art - elegant shoulder slimming & neck contouring</span>
+                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                  Trap{" "}
+                  <span className="text-[#C9A050] font-light">Botox</span>
                 </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Refined Shoulder Contouring</p>
-                  <p className="text-sm text-gray-300">#trapbotox - See our before & after gallery for real patient results</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                  Shoulder slimming and neck elongation through targeted trapezius muscle reduction — elegance refined, tension released.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
+              >
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />15–20 Min</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Also: TrapTox</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £350</span>
+              </motion.div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            TWO-COLUMN LAYOUT
+        ═══════════════════════════════════════════ */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            {/* LEFT — Main Content */}
+            <div className="space-y-14">
+
+              {/* What Is Trap Botox */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Is <span className="text-[#C9A050] font-light">Trap Botox?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Trap botox — also known as TrapTox or Barbie Botox — involves injecting botulinum toxin into the trapezius muscles. These large, diamond-shaped muscles extend from the base of your neck across your shoulders and upper back. When overdeveloped or chronically tense, they create a bulky, 'hunched' appearance.
+                      </p>
+                    }
                   >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    View Price List
-                  </Button>
-                </div>
-              </motion.div>
-              
-              <div className="hidden lg:block"></div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Trap Botox Treatment</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">15-20 minutes including consultation</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">4-6 months with gradual muscle reduction</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">No downtime, immediate return to activities</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Not required, well-tolerated treatment</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-
-
-        {/* What is Trapezius Botox */}
-        <section className="py-20 bg-gray-900/30">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">What is Trapezius Botox?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="space-y-6">
-                <p className="text-gray-300 leading-relaxed">
-                  Trapezius Botox, also known as Trap Botox or Trap Tox, is an injectable treatment that uses <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">botox for traps</a> to relax the trapezius muscles. When these trap muscles become overworked and tense, it can lead to pain in trapezius muscle, trapezius pain, and postural issues in the neck, shoulders, and upper back.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Botox in trap muscles aims to alleviate this muscle tension by temporarily relaxing the trapezius muscle, creating a more elegant shoulder profile and improved posture. Many patients search for "trap botox before and after" results to see the dramatic transformation this <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatment</a> can achieve. Clinical research published in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12091602/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Plastic and Reconstructive Surgery</a> has demonstrated the efficacy and safety of botulinum toxin for trapezius muscle reduction.
-                </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <img 
-                  src="/src/assets/trapezius-muscle-treatment.png" 
-                  alt="Trapezius muscle anatomy diagram showing injection points"
-                  className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                  loading="lazy"
-                  width="400"
-                  height="400"
-                />
-                <p className="text-gray-400 text-sm mt-4">Trapezius muscle anatomy and injection points</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* What is Trapezius Muscle */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">What Is the Trapezius Muscle?</h2>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <p className="text-gray-300 leading-relaxed text-lg">
-                  Understanding what are traps and where the trapezius is located is essential for this treatment. The trapezius muscle is a large, diamond-shaped muscle that extends from the back of your head and neck down to your shoulders, playing a crucial role in defining your upper body's structure. Many patients ask "what are trapezius muscles" and "where are trapezius muscles located" before considering treatment.
-                </p>
-                
-                <p className="text-gray-300 leading-relaxed">
-                  When the trapezius muscle experiences hypertrophy (growing bigger and more developed), it can lead to a hurt trapezius, sore trapezius muscle, and trapezius muscle pain. Trapezius muscle trigger points and muscle knot trapezius can cause significant discomfort. Various factors contribute to m trapezius pain and these trigger points, including:
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                  {[
-                    { title: "Muscle Overuse", description: "Frequent muscle movement and repetitive strain" },
-                    { title: "Injury", description: "Direct trauma or strain to the trapezius muscle" },
-                    { title: "Improper Posture", description: "Poor ergonomics leading to muscle tension" },
-                    { title: "Stress", description: "Mental stress manifesting as physical muscle tension" }
-                  ].map((factor, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="bg-black/50 rounded-lg p-6"
-                    >
-                      <h4 className="text-purple-300 font-semibold mb-2">{factor.title}</h4>
-                      <p className="text-gray-300">{factor.description}</p>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <p className="text-gray-300 leading-relaxed mt-6">
-                  However, Trap Botox injections can address all of these issues effectively.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* How Does Botox Work */}
-        <section className="py-20 bg-gray-900/30">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">How Does Botox Work For Trapezius Muscle?</h2>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <p className="text-gray-300 leading-relaxed text-lg">
-                  By receiving botox in traps, the nerve signals that cause these muscles to become overworked from constant movement can be blocked. Trapezius muscle botox and traps muscle botox work by temporarily paralysing the targeted areas. This trap muscle botox treatment helps address trapezius muscle hurts and provides relief from chronic trapezius pain. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9293110/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">study published by the National Institutes of Health</a> confirms the effectiveness of botulinum toxin for correcting trapezius muscle hypertrophy. Additionally, this temporary muscle relaxation helps:
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-white font-medium">Alleviate stiffness and pain</span>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        By relaxing the overactive trapezius fibres, trap botox produces a dual benefit: aesthetic shoulder slimming with an elongated, graceful neckline, and therapeutic relief from chronic neck and shoulder tension.
+                      </p>
+                      <p>
+                        The treatment has surged in popularity for its ability to address 'tech neck' — the strain caused by prolonged desk work, phone use, and screen time that leads to chronically tight, enlarged trapezius muscles.
+                      </p>
+                      <p>
+                        Research published in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12091602/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Plastic and Reconstructive Surgery</a> has demonstrated the efficacy and safety of botulinum toxin for trapezius muscle reduction.
+                      </p>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-white font-medium">Leading to improved posture</span>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-white font-medium">Creates longer neck appearance</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-white font-medium">Smoother shoulders and upper back</span>
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-gray-300 leading-relaxed mt-6">
-                  Hence, the absence of tension in the traps also creates the appearance of a longer neck and smoother 
-                  shoulders and upper back.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Benefits of Trap Botox Procedure</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Here are the key benefits of Trap Botox injections that make it a popular choice for aesthetic enhancement
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Relieves Muscle Tension and Pain",
-                  description: "Effectively reduces trapezius muscle tension, alleviating chronic pain and discomfort"
-                },
-                {
-                  title: "Improves Posture and Alignment",
-                  description: "Helps correct forward head posture and rounded shoulders for better spinal alignment"
-                },
-                {
-                  title: "Creates Longer, Smoother Neck",
-                  description: "Elongates the neck appearance and creates smoother shoulder lines for elegant silhouette"
-                },
-                {
-                  title: "Relief from Headaches/Migraines",
-                  description: "Reduces tension-related headaches caused by overactive trapezius muscles"
-                },
-                {
-                  title: "Quick, Convenient Treatment",
-                  description: "15-20 minute procedure with no downtime required for busy lifestyles"
-                },
-                {
-                  title: "Long-Lasting Results",
-                  description: "Effects typically last 4-6 months with progressive muscle reduction over time"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
-                    <CardHeader>
-                      <CardTitle className="text-white text-lg">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{benefit.description}</p>
-                    </CardContent>
-                  </Card>
+                  </ExpandableSection>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </section>
 
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 2 million treatments completed</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
+              {/* How It Works */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How the Procedure <span className="text-[#C9A050] font-light">Works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        The treatment takes 15–20 minutes. Your doctor maps the trapezius muscles and administers botulinum toxin at multiple strategic points across the upper fibres. The toxin blocks nerve signals, causing the muscle to gradually relax and reduce in size.
+                      </p>
+                    }
                   >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved Botox only</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Trap Botox Pricing London</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for professional trap botox treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-purple-500 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Trapezius Botox</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£350</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Standard trap botox treatment for shoulder slimming</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium botox product</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
-                      </div>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        During consultation, your doctor assesses your muscle bulk, tension patterns, and aesthetic goals. Standard trap botox targets the upper trapezius; full Barbie Botox covers a wider area for maximum shoulder reduction.
+                      </p>
+                      <p>
+                        Fine needles deliver precise doses at each injection site. No anaesthesia is typically needed, though topical numbing cream can be applied. You can return to normal activities immediately.
+                      </p>
+                      <p>
+                        Results develop gradually: initial relaxation within 1–2 weeks, visible slimming at 3–4 weeks, and peak effect at 4–6 weeks as the muscle adapts.
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+              {/* Benefits */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Benefits of <span className="text-[#C9A050] font-light">Trap Botox</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">Aesthetic Benefits</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Slims bulky or muscular shoulders</li>
+                        <li>• Elongates the neckline</li>
+                        <li>• Creates a more elegant, graceful profile</li>
+                        <li>• Refines the neck-to-shoulder contour</li>
+                        <li>• Improves posture appearance</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <Heart className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">Therapeutic Benefits</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Relieves chronic shoulder and neck tension</li>
+                        <li>• Reduces tension headaches</li>
+                        <li>• Alleviates 'tech neck' strain</li>
+                        <li>• Improves range of motion</li>
+                        <li>• Helps with stress-related muscle tightness</li>
+                      </ul>
+                    </div>
                   </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Full Barbie Botox</CardTitle>
-                    <div className="text-white text-4xl font-bold">£650</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Comprehensive shoulder reduction treatment</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Maximum units for best results</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">4-week follow-up</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Expert assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">30-minute consultation</span>
+              {/* Am I Suitable */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">May Be Suitable</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment planning</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">No obligation</span>
-                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Bulky or overdeveloped shoulder muscles</li>
+                        <li>• Chronic neck and shoulder tension</li>
+                        <li>• 'Tech neck' from prolonged desk work</li>
+                        <li>• Desire for slimmer, more feminine shoulders</li>
+                        <li>• Tension headaches from muscle strain</li>
+                      </ul>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <AlertTriangle className="w-5 h-5 text-white/40" />
+                        <p className="text-sm font-medium text-white">May Not Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Shoulder width caused by bone structure</li>
+                        <li>• Active infection at injection site</li>
+                        <li>• Pregnancy or breastfeeding</li>
+                        <li>• Allergy to botulinum toxin</li>
+                        <li>• Neuromuscular disorders (e.g. myasthenia gravis)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Results */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Results & <span className="text-[#C9A050] font-light">Expectations</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Shoulder slimming results become visible at 3–4 weeks, with peak effect at 4–6 weeks. Results typically last 4–6 months. Many patients find their muscles become progressively smaller with regular treatments.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Tension relief is often noticed within the first 1–2 weeks as the muscle begins to relax. The cosmetic slimming effect follows as the muscle gradually atrophies from reduced activity.
+                      </p>
+                      <p>
+                        The transformation is particularly noticeable in clothing — off-shoulder tops, sleeveless dresses, and formal wear sit more elegantly on the frame. Posture often improves as muscle tension releases.
+                      </p>
+                      <p>
+                        With consistent treatment (2–3 sessions per year), many patients find the trapezius muscle adapts and remains slimmer between sessions, potentially extending the interval between appointments.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Aftercare */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        No downtime required. You can return to work and daily activities immediately. Avoid heavy upper-body exercise for 24–48 hours.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid heavy weightlifting for 48 hours post-treatment</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Do not massage or apply pressure to the treated area</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Stay upright for 4 hours after treatment</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Apply ice if mild bruising or swelling occurs</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Gentle neck stretches may be resumed after 48 hours</li>
+                    </ul>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Trap Botox vs Full Barbie Botox */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Trap Botox vs <span className="text-[#C9A050] font-light">Full Barbie Botox</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <p className="text-sm font-medium text-[#C9A050] mb-3">Standard Trap Botox — £350</p>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Targets upper trapezius fibres</li>
+                        <li>• Moderate shoulder slimming</li>
+                        <li>• Effective tension relief</li>
+                        <li>• Ideal for first-time patients</li>
+                        <li>• Subtle, natural reduction</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <p className="text-sm font-medium text-white/60 mb-3">Full Barbie Botox — £450</p>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Comprehensive trapezius coverage</li>
+                        <li>• Maximum shoulder reduction</li>
+                        <li>• Enhanced neck elongation</li>
+                        <li>• Higher dose for greater effect</li>
+                        <li>• Dramatic, visible transformation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Why CosmeDocs */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ul className="space-y-3">
+                    {[
+                      "Doctor-led — all treatments by GMC-registered doctors",
+                      "Harley Street, London — established 2007",
+                      "Over 1 million treatments performed",
+                      "Precise dosing based on individual muscle assessment",
+                      "Conservative approach — natural-looking results",
+                      "Our aesthetics is invisible art"
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </section>
+
+              {/* FAQs */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, index) => (
+                      <AccordionItem
+                        key={index}
+                        value={`item-${index}`}
+                        className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5"
+                      >
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold" asChild>
-                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
-              </Button>
-            </motion.div>
+            {/* RIGHT — Sticky Sidebar */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-24">
+                <TrapBotoxSidebar />
+              </div>
+            </aside>
           </div>
-        </section>
+        </div>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about trap botox treatments at our London clinic.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
-                      <span className="text-white font-medium">{faq.question}</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20">
-          <div className="page-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Silhouette?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how trap botox 
-                can create elegant shoulder contours and enhance your confidence.
+        {/* ═══════════════════════════════════════════
+            FULL-WIDTH CTA
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white">
+                Ready for Slimmer <span className="text-[#C9A050]">Shoulders?</span>
+              </h2>
+              <p className="text-white/60 mb-8 font-light">
+                A consultation with our doctors will assess your trapezius muscles and recommend the ideal treatment — standard trap botox or full Barbie Botox.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                    Book Consultation
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    Speak to a Doctor
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Hidden SEO content for search engines */}
-        <div className="sr-only">
-          <h2>Comprehensive Guide to Trap Botox and Trapezius Muscle Treatment in London</h2>
-          <p>
-            Cosmedocs Harley Street clinic offers expert trap botox treatments in London for shoulder slimming and neck contouring. Our experienced cosmetic doctors specialise in trapezius muscle botox and botox for traps to create elegant shoulder profiles and refined silhouettes. Understanding what are traps and where the trapezius is located is essential for anyone considering this transformative treatment.
-          </p>
-          <h3>Understanding the Trapezius Muscle and Common Issues</h3>
-          <p>
-            The trapezius muscle is a large, diamond-shaped muscle extending from your neck to your shoulders and down your upper back. Many patients ask "what are trapezius muscles" and "where are trapezius muscles located" before treatment. When you experience pain in trapezius muscle, trapezius pain, or m trapezius pain, it can significantly impact your daily life. A hurt trapezius or sore trapezius muscle often results from poor posture, stress, or repetitive movements. Trapezius muscle trigger points and muscle knot trapezius are common complaints that botox in trap muscles can effectively address.
-          </p>
-          <h3>Trap Botox Before and After: What to Expect</h3>
-          <p>
-            Searching for "trap botox before and after" or "trapezius botox before and after" results? Our gallery showcases dramatic transformations from traps muscle botox treatments. Botox in traps works by temporarily relaxing the trapezius muscle, reducing bulk and creating a more elegant shoulder line. This trap muscle botox procedure, also known as trap tox or trapezius botox, has become increasingly popular for its ability to address both aesthetic concerns and trapezius muscle hurts.
-          </p>
-          <h3>Treatment Process and Benefits</h3>
-          <p>
-            Our trap botox procedure involves precise botox injections in the trapezius muscles using ultra-fine needles. The treatment typically takes 15-20 minutes and addresses issues like trapezius muscle pain, poor posture, and shoulder bulk. Patients seeking botox traps treatment appreciate the dual benefits of pain relief and aesthetic enhancement. Results from trapezius muscle botox typically appear within 1-2 weeks, with full effects visible after 4-6 weeks.
-          </p>
-          <h3>Why Choose Cosmedocs for Trap Botox in London</h3>
-          <p>
-            Located at 10 Harley Street, we provide personalised treatment plans with precise injection techniques for trap botox. Our experienced practitioners understand where the trapezius is located and how to effectively target trapezius muscle trigger points. Whether you're experiencing a sore trapezius muscle or seeking aesthetic refinement, our trap muscle botox treatments deliver natural-looking results. We offer competitive pricing starting from £350, with comprehensive consultations to assess your individual needs.
-          </p>
-          <p>
-            Book your trap botox consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer flexible payment options for all shoulder slimming treatments including trapezius botox and trap tox procedures. Our aesthetics is invisible art - bold, natural, always your way. Experience the transformation that botox for traps can provide, addressing both cosmetic concerns and trapezius pain with expert care and precision.
-          </p>
-        </div>
+        {/* Mobile Sidebar */}
+        <section className="lg:hidden py-12 px-4 bg-black">
+          <TrapBotoxSidebar />
+        </section>
 
-        {/* Hidden SEO Content - Crawler accessible but visually hidden */}
-        <div className="sr-only" aria-hidden="true">
-          <h2>Comprehensive Guide to Trapezius Botox Treatment in London</h2>
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>Trap Botox London — Expert Shoulder Slimming & TrapTox at Harley Street</h2>
           <p>
-            Trapezius botox, commonly known as trap botox or trap tox, has emerged as one of the most sought-after aesthetic treatments for shoulder slimming and neck contouring in London. This innovative procedure uses botulinum toxin injections strategically placed in the trapezius muscles to achieve a more refined and elegant shoulder profile. Many patients wonder what are traps and where the trapezius is located before undergoing this transformative treatment. The trapezius muscle is a large, diamond-shaped muscle that extends from the base of your skull down through your neck and across your shoulders to the middle of your back, playing a crucial role in shoulder movement and posture.
+            CosmeDocs offers doctor-led trap botox treatments for shoulder slimming and chronic tension relief at our Harley Street clinic. Trap botox, also known as TrapTox, Barbie Botox, or trapezius botox, uses precise botulinum toxin injections to reduce the trapezius muscle bulk. This creates slimmer shoulders, an elongated neckline, and relieves chronic shoulder and neck tension. Our GMC-registered doctors have performed over 1 million treatments since 2007.
           </p>
-          <h3>Understanding Trapezius Muscle Anatomy and Function</h3>
+          <h3>What Is Trap Botox and How Does It Work?</h3>
           <p>
-            When considering trap muscle botox, it is essential to understand the anatomy and function of the trapezius muscle. The trapezius muscle consists of three distinct parts: the upper trapezius (which elevates the shoulders), the middle trapezius (which retracts the shoulder blades), and the lower trapezius (which depresses the shoulder blades). Patients experiencing pain in trapezius muscle, trapezius pain, or m trapezius pain often have overdeveloped or chronically tense upper trapezius muscles. A hurt trapezius or sore trapezius muscle can result from various factors including poor posture, stress-related tension, repetitive movements, heavy lifting, or prolonged computer use. Trapezius muscle trigger points and muscle knot trapezius are common manifestations of this muscle tension, causing discomfort and affecting quality of life.
+            Trap botox involves injecting botulinum toxin into the trapezius muscles — the large muscles extending from the neck across the shoulders and upper back. Botox in traps blocks nerve signals causing overactivity, leading to gradual muscle relaxation and reduction. Trap botox before and after results show dramatic shoulder slimming and neck elongation within 4–6 weeks. Trapezius botox is effective for both aesthetic enhancement and therapeutic pain relief.
           </p>
-          <h3>Trap Botox Treatment Process and Technique</h3>
+          <h3>Trap Botox vs Barbie Botox</h3>
           <p>
-            Botox in trap muscles involves a precise injection technique targeting specific points within the trapezius muscle to achieve optimal results. During the trap botox procedure, our experienced practitioners carefully assess the muscle bulk and tension patterns to determine the ideal injection sites and dosage. The treatment typically uses between 40-100 units of botulinum toxin per side, depending on muscle size and desired outcome. Botox in traps works by temporarily blocking nerve signals to the muscle fibres, causing controlled muscle relaxation and subsequent reduction in muscle bulk over time. This botox traps technique not only addresses aesthetic concerns but can also provide relief from trapezius muscle pain and trapezius muscle trigger points.
+            Standard trap botox targets the upper trapezius fibres for moderate shoulder slimming from £350. Full Barbie Botox provides comprehensive shoulder reduction at £450, using higher doses across the entire trapezius for maximum effect. Both treatments include consultation, premium products, and aftercare. Your doctor will recommend the optimal approach during your assessment.
           </p>
-          <h3>Before and After Results: What Patients Can Expect</h3>
+          <h3>Trap Botox for Shoulder and Neck Tension</h3>
           <p>
-            Patients searching for trap botox before and after images or trapezius botox before and after results want to understand the realistic outcomes of this treatment. Following botox for traps injections, initial muscle relaxation begins within 3-5 days, with visible slimming effects becoming apparent at 2-4 weeks. The full aesthetic transformation from traps muscle botox is typically evident at 6-8 weeks as the muscle gradually reduces in size. Results from trap muscle botox can last between 4-6 months, with some patients experiencing longer-lasting effects with regular maintenance treatments. The trapezius muscle botox procedure creates a more elongated neck appearance, reduces shoulder bulk, improves posture, and can alleviate chronic tension headaches associated with trapezius muscle hurts.
-          </p>
-          <h3>Safety, Side Effects, and Aftercare</h3>
-          <p>
-            While trap tox is generally considered safe when performed by qualified practitioners, patients should be aware of potential side effects and proper aftercare. Temporary side effects may include mild bruising at injection sites, slight muscle weakness, headache, or neck stiffness. It is crucial to avoid lying down for 4 hours post-treatment, refrain from strenuous exercise for 24 hours, and avoid massaging the treated area. Patients with a sore trapezius muscle may experience temporary relief or slight discomfort as the muscle adjusts to the treatment. At Cosmedocs, we provide comprehensive aftercare instructions and follow-up support to ensure optimal results and patient satisfaction with your trapezius botox treatment.
+            Trap botox is highly effective for chronic shoulder tension, tech neck, stress-related muscle tightness, and trapezius muscle pain. Botox in trap muscles relieves tension headaches and improves posture by relaxing chronically contracted fibres. Many patients combine trap botox with migraine botox for comprehensive upper-body tension management. Our aesthetics is invisible art — bold, natural, always your way.
           </p>
         </div>
-      </main>
+      </div>
     </>
   );
 };
