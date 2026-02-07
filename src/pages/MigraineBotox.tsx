@@ -132,19 +132,25 @@ const MigraineBotox = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#FAFAF8] overflow-x-hidden">
+      <div className="min-h-screen bg-black overflow-x-hidden">
         {/* ═══════════════════════════════════════════
-            HERO — Light, minimal
+            HERO — Dark, luxury
         ═══════════════════════════════════════════ */}
-        <section className="relative overflow-hidden bg-white pt-0 pb-20">
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/20 to-transparent" />
 
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.04) 0%, transparent 60%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.04) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
 
@@ -164,11 +170,11 @@ const MigraineBotox = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-black/85 leading-[1.1] tracking-tight mb-6">
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
                     Migraine{" "}
                     <span className="text-[#C9A050] font-light">Botox</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-black/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
                     FDA-approved botulinum toxin treatment for chronic migraine prevention — blocking pain signals before they begin.
                   </p>
                 </motion.div>
@@ -177,7 +183,7 @@ const MigraineBotox = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-black/25 tracking-wide uppercase"
+                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
                 >
                   <span className="flex items-center gap-1.5">
                     <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
@@ -200,7 +206,7 @@ const MigraineBotox = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black/[0.04] to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
 
         {/* ═══════════════════════════════════════════
@@ -213,18 +219,18 @@ const MigraineBotox = () => {
               {/* What Is Migraine Botox */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     What Is <span className="text-[#C9A050] font-light">Migraine Botox?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Migraine botox is an FDA-approved treatment that blocks nerve signals responsible for pain transmission. By injecting botulinum toxin into specific head and neck muscles, it prevents the activation of migraine triggers — reducing both frequency and severity.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
                         Migraines are complex neurological events — not ordinary headaches. They're characterised by intense, debilitating pain often accompanied by nausea, vomiting, and sensitivity to light and sound. Chronic migraine sufferers experience 15 or more headache days per month.
                       </p>
@@ -246,18 +252,18 @@ const MigraineBotox = () => {
               {/* How It Works */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     How the Treatment <span className="text-[#C9A050] font-light">Works</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Botulinum toxin is injected at strategic trigger points across the forehead, temples, back of the head, neck, and shoulders. The medication enters nerve endings and blocks the release of neurotransmitters that carry pain signals to the brain.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
                         After a detailed consultation, your doctor identifies your specific headache pattern and selects from up to 31 possible injection sites. The clinician's experience is crucial in determining which trigger points to include — optimising both dose and cost.
                       </p>
@@ -275,19 +281,19 @@ const MigraineBotox = () => {
               {/* Migraine Triggers */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Common <span className="text-[#C9A050] font-light">Migraine Triggers</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <p className="text-black/45 text-sm leading-relaxed font-light mb-4">
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
                     Understanding what triggers your migraines is crucial for effective management. Research from{" "}
                     <a href="https://migrainetrust.org/live-with-migraine/treatments/botox/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">The Migraine Trust</a>{" "}
                     highlights several common factors:
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {["Fatigue", "Stress & bright sunlight", "Changes in sleep patterns", "Hormonal changes", "Strong odours", "Diet & alcohol", "Oral contraceptives"].map((trigger) => (
-                      <div key={trigger} className="bg-black/[0.02] border border-black/[0.06] rounded-xl p-3 text-center">
-                        <p className="text-black/55 text-xs font-light">{trigger}</p>
+                      <div key={trigger} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 text-center">
+                        <p className="text-white/55 text-xs font-light">{trigger}</p>
                       </div>
                     ))}
                   </div>
@@ -297,32 +303,32 @@ const MigraineBotox = () => {
               {/* Types of Migraines */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Types of <span className="text-[#C9A050] font-light">Migraines</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
                       <div className="grid md:grid-cols-2 gap-4">
-                        <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-5">
+                        <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5">
                           <p className="text-sm font-medium text-[#C9A050] mb-2">Aura Migraine</p>
-                          <p className="text-black/45 text-xs font-light">Sensory and visual problems including difficulty speaking, seeing black spots/zigzags, and tingling numbness. Aura lasts 10–30 minutes.</p>
+                          <p className="text-white/45 text-xs font-light">Sensory and visual problems including difficulty speaking, seeing black spots/zigzags, and tingling numbness. Aura lasts 10–30 minutes.</p>
                         </div>
-                        <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-5">
+                        <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5">
                           <p className="text-sm font-medium text-[#C9A050] mb-2">Common Migraine</p>
-                          <p className="text-black/45 text-xs font-light">Pulsating pain on one side with sensitivity to light and sound, nausea, and pain worsening with activity.</p>
+                          <p className="text-white/45 text-xs font-light">Pulsating pain on one side with sensitivity to light and sound, nausea, and pain worsening with activity.</p>
                         </div>
                       </div>
                     }
                   >
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
-                      <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-5">
+                      <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5">
                         <p className="text-sm font-medium text-[#C9A050] mb-2">Chronic Migraine</p>
-                        <p className="text-black/45 text-xs font-light">Headache for more than 15 days per month over several weeks. Intensity and symptoms may vary but usually follow a pattern.</p>
+                        <p className="text-white/45 text-xs font-light">Headache for more than 15 days per month over several weeks. Intensity and symptoms may vary but usually follow a pattern.</p>
                       </div>
-                      <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-5">
+                      <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5">
                         <p className="text-sm font-medium text-[#C9A050] mb-2">Cluster Headaches</p>
-                        <p className="text-black/45 text-xs font-light">Excruciating burning and pounding pain on the sides of the head, above the eyes, and behind the ears.</p>
+                        <p className="text-white/45 text-xs font-light">Excruciating burning and pounding pain on the sides of the head, above the eyes, and behind the ears.</p>
                       </div>
                     </div>
                   </ExpandableSection>
@@ -332,17 +338,17 @@ const MigraineBotox = () => {
               {/* Am I Suitable */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Am I <span className="text-[#C9A050] font-light">Suitable?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="grid md:grid-cols-2 gap-5">
-                    <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-6">
+                    <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                       <div className="flex items-center gap-2 mb-4">
                         <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                        <p className="text-sm font-medium text-black/80">May Be Suitable</p>
+                        <p className="text-sm font-medium text-white/80">May Be Suitable</p>
                       </div>
-                      <ul className="space-y-2 text-black/45 text-xs font-light">
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Chronic migraines (15+ headache days/month)</li>
                         <li>• Other preventive treatments haven't worked</li>
                         <li>• Migraines significantly impact daily life</li>
@@ -350,12 +356,12 @@ const MigraineBotox = () => {
                         <li>• Tension-type headaches with migraine features</li>
                       </ul>
                     </div>
-                    <div className="bg-black/[0.02] border border-black/[0.06] rounded-2xl p-6">
+                    <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <AlertTriangle className="w-5 h-5 text-black/30" />
-                        <p className="text-sm font-medium text-black/80">May Not Be Suitable</p>
+                        <AlertTriangle className="w-5 h-5 text-white/30" />
+                        <p className="text-sm font-medium text-white/80">May Not Be Suitable</p>
                       </div>
-                      <ul className="space-y-2 text-black/45 text-xs font-light">
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Fewer than 14 headache days per month</li>
                         <li>• Pregnancy or breastfeeding</li>
                         <li>• Neuromuscular disorders</li>
@@ -370,18 +376,18 @@ const MigraineBotox = () => {
               {/* What to Expect */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     What to <span className="text-[#C9A050] font-light">Expect</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         Migraine relief typically begins within 2–4 weeks, with maximum benefits at 12 weeks. Treatments are repeated every 12 weeks for sustained prevention.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-black/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
                         Side effects are generally mild and temporary. You may experience bruising, redness, or mild tenderness at injection sites for 24–48 hours. Some patients report temporary fatigue or slight muscle weakness near treatment areas.
                       </p>
@@ -399,18 +405,18 @@ const MigraineBotox = () => {
               {/* Aftercare */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-black/45 text-sm leading-relaxed font-light">
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
                         No downtime required. You can return to normal activities immediately after treatment. A few simple precautions help ensure optimal results.
                       </p>
                     }
                   >
-                    <ul className="space-y-3 text-black/45 text-sm font-light">
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
                       <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid lying flat for 4 hours post-treatment</li>
                       <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Do not rub or massage the injection sites</li>
                       <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid strenuous exercise for 24 hours</li>
@@ -424,7 +430,7 @@ const MigraineBotox = () => {
               {/* Why CosmeDocs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -437,7 +443,7 @@ const MigraineBotox = () => {
                       "NICE-recommended treatment protocols",
                       "Our aesthetics is invisible art"
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-black/50 font-light">
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
                         <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
                         {item}
                       </li>
@@ -449,15 +455,15 @@ const MigraineBotox = () => {
               {/* FAQs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-black/85 mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
                     Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <Accordion type="single" collapsible className="space-y-3">
                     {faqs.map((faq, index) => (
-                      <AccordionItem key={index} value={`item-${index}`} className="bg-black/[0.02] border border-black/[0.06] rounded-xl px-5">
-                        <AccordionTrigger className="text-black/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
-                        <AccordionContent className="text-black/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
+                      <AccordionItem key={index} value={`item-${index}`} className="bg-white/[0.03] border border-white/[0.06] rounded-xl px-5">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
                       </AccordionItem>
                     ))}
                   </Accordion>
@@ -473,13 +479,13 @@ const MigraineBotox = () => {
         </div>
 
         {/* CTA */}
-        <section className="py-20 px-6 bg-gradient-to-b from-[#FAFAF8] to-white">
+        <section className="py-20 px-6 bg-gradient-to-b from-black to-black/95">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-light mb-4 text-black/85">
+              <h2 className="text-3xl font-light mb-4 text-white/85">
                 Ready to Find <span className="text-[#C9A050]">Migraine Relief?</span>
               </h2>
-              <p className="text-black/50 mb-8 font-light">
+              <p className="text-white/50 mb-8 font-light">
                 A consultation with our doctors will assess your migraine pattern and create a personalised treatment plan for lasting prevention.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -490,7 +496,7 @@ const MigraineBotox = () => {
                   </Button>
                 </a>
                 <Link to="/contact">
-                  <Button variant="ghost" className="border border-black/15 text-black/60 hover:text-black hover:bg-black/5 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                  <Button variant="ghost" className="border border-white/15 text-white/60 hover:text-white hover:bg-white/5 px-8 py-5 rounded-full text-base w-full sm:w-auto">
                     Speak to a Doctor
                   </Button>
                 </Link>
@@ -500,7 +506,7 @@ const MigraineBotox = () => {
         </section>
 
         {/* Mobile Sidebar */}
-        <section className="lg:hidden py-12 px-4 bg-white">
+        <section className="lg:hidden py-12 px-4 bg-black/95">
           <MigraineSidebar />
         </section>
 
