@@ -22,15 +22,6 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
         alt: "Male non-surgical rhinoplasty before and after showing profile refinement",
         caption: "Male profile refinement — smoothing the nasal bridge contour whilst maintaining a natural, masculine appearance."
       },
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-early-case-2010.jpg",
-        alt: "Non-surgical nose reshaping before and immediately after treatment from 2010",
-        caption: (
-          <span>
-            <strong className="text-[#C9A050]">One of our earliest cases (c. 2010):</strong> Before and immediately after. Over 17 years of experience.
-          </span>
-        )
-      },
     ]
   },
   // Row 2 — New images: post-surgical fix, dorsal bump, tip transformation
@@ -100,11 +91,6 @@ const galleryRows: { images: { src: string; alt: string; caption: string | React
   // Row 4 — B&A composite + Large nose B&A pair
   {
     images: [
-      {
-        src: "/images/before-after/dermal-fillers/nose/nose-filler-before-after.jpg",
-        alt: "Non-surgical nose job before and after showing bridge refinement and tip support",
-        caption: "Bridge refinement and subtle tip support — a smoother profile with carefully placed hyaluronic acid filler."
-      },
       {
         src: "/images/before-after/dermal-fillers/nose/large-nose-dorsal-bump-before.jpg",
         alt: "Large nose with prominent dorsal bump before non-surgical rhinoplasty treatment",
@@ -273,41 +259,65 @@ const BeforeAfterNoseFiller = () => {
               currentPage="Non-Surgical Rhinoplasty"
             />
 
-            <div className="max-w-3xl pt-6 pb-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-              >
-                <h1 className="text-4xl md:text-5xl font-light text-white mb-5 leading-tight tracking-tight">
-                  Non-Surgical Nose Job{" "}
-                  <span className="font-semibold text-[#C9A050]">Before & After</span>
-                </h1>
-                <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl font-light">
-                  Real nose reshaping results using hyaluronic acid filler. Profile refinement, dorsal hump
-                  camouflage, and contour correction — without surgery.
-                </p>
-              </motion.div>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start pt-6 pb-2">
+              {/* Left: Text */}
+              <div className="flex-1 max-w-2xl">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                >
+                  <h1 className="text-4xl md:text-5xl font-light text-white mb-5 leading-tight tracking-tight">
+                    Non-Surgical Nose Job{" "}
+                    <span className="font-semibold text-[#C9A050]">Before & After</span>
+                  </h1>
+                  <p className="text-base md:text-lg text-white/50 leading-relaxed font-light">
+                    Real nose reshaping results using hyaluronic acid filler. Profile refinement, dorsal hump
+                    camouflage, and contour correction — without surgery.
+                  </p>
+                </motion.div>
 
-              {/* Trust indicators */}
+                {/* Trust indicators */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="mt-8 flex flex-wrap gap-8 text-sm text-white/40"
+                >
+                  <span className="flex items-center gap-2">
+                    <Shield className="h-4 w-4 text-[#C9A050]/70" />
+                    Unretouched Photos
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-[#C9A050]/70" />
+                    Harley Street, London
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4 text-[#C9A050]/70" />
+                    Performing Since 2010
+                  </span>
+                </motion.div>
+              </div>
+
+              {/* Right: Hero B&A Image */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="mt-8 flex flex-wrap gap-8 text-sm text-white/40"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="w-full lg:w-[400px] flex-shrink-0"
               >
-                <span className="flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-[#C9A050]/70" />
-                  Unretouched Photos
-                </span>
-                <span className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-[#C9A050]/70" />
-                  Harley Street, London
-                </span>
-                <span className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4 text-[#C9A050]/70" />
-                  Performing Since 2010
-                </span>
+                <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/40">
+                  <img
+                    src="/images/before-after/dermal-fillers/nose/nose-filler-early-case-2010.jpg"
+                    alt="Non-surgical nose reshaping before and immediately after treatment from 2010"
+                    className="w-full h-auto block"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-14 pb-4 px-4">
+                    <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-light">
+                      <strong className="text-[#C9A050]">One of our earliest cases (c. 2010):</strong> Before and immediately after. Over 17 years of experience.
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
