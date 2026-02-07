@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
+import lipIllustration from "@/assets/lip-profile-illustration.png";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
@@ -181,7 +182,33 @@ const LipFillers = () => {
               currentPage="Lip Fillers"
             />
 
-            <div className="pt-12 pb-4">
+            <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
+              {/* Mobile: Lip illustration above text */}
+              <motion.div
+                className="lg:hidden w-[180px] h-[180px] relative mx-auto"
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.12) 0%, transparent 60%)',
+                  }}
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.img
+                  src={lipIllustration}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(201,160,80,0.15)]"
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </motion.div>
+
+              {/* Left: Text */}
               <div className="max-w-2xl text-center lg:text-left">
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}
@@ -221,6 +248,31 @@ const LipFillers = () => {
                   </span>
                 </motion.div>
               </div>
+
+              {/* Right: Lip illustration — desktop */}
+              <motion.div
+                className="hidden lg:block flex-shrink-0 w-[280px] h-[320px] relative"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+              >
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.1) 0%, transparent 60%)',
+                  }}
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.img
+                  src={lipIllustration}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_30px_rgba(201,160,80,0.15)]"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </motion.div>
             </div>
           </div>
 
