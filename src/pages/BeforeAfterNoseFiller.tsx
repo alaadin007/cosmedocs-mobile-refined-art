@@ -10,6 +10,11 @@ import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 
 const galleryImages = [
   {
+    src: "/images/before-after/dermal-fillers/nose/nose-filler-procedure-injection.jpg",
+    alt: "Non-surgical nose job procedure showing precise filler injection technique by doctor",
+    caption: "Precision injection technique — our doctors use fine needles and cannulae for controlled, safe placement during non-surgical nose reshaping."
+  },
+  {
     src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
     alt: "Non-surgical nose job before and after showing dorsal hump camouflage in female patient",
     caption: "Dorsal hump camouflage — precise filler placement creates a straighter nasal bridge profile without surgery."
@@ -20,12 +25,30 @@ const galleryImages = [
     caption: "Male profile refinement — smoothing the nasal bridge contour whilst maintaining a natural, masculine appearance."
   },
   {
+    src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-before.jpg",
+    alt: "Asian nose reshaping before treatment showing flat nasal bridge profile",
+    caption: (
+      <span>
+        <strong className="text-[#C9A050]">Before:</strong> Asian nose reshaping — patient seeking improved bridge definition and profile balance whilst respecting natural ethnic features.
+      </span>
+    )
+  },
+  {
+    src: "/images/before-after/dermal-fillers/nose/nose-filler-asian-after.jpg",
+    alt: "Asian nose reshaping after non-surgical rhinoplasty showing enhanced bridge and profile",
+    caption: (
+      <span>
+        <strong className="text-[#C9A050]">After:</strong> Enhanced nasal bridge height and refined contour — subtle, natural improvement that complements the patient's facial harmony.
+      </span>
+    )
+  },
+  {
     src: "/images/before-after/dermal-fillers/nose/nose-filler-early-case-2010.jpg",
     alt: "Non-surgical nose reshaping before and immediately after treatment from 2010",
     caption: (
       <span>
         <strong className="text-[#C9A050]">One of our earliest cases (c. 2010):</strong> Before and immediately after non-surgical nose reshaping.
-        We were amongst the first UK clinics to offer this treatment — over 15 years of experience in nose filler.
+        We were amongst the first UK clinics to offer this treatment — over 17 years of experience in nose filler.
       </span>
     )
   },
@@ -51,7 +74,7 @@ const galleryImages = [
     )
   },
   {
-    src: "/images/before-after/dermal-fillers/nose-filler-before-after.jpg",
+    src: "/images/before-after/dermal-fillers/nose/nose-filler-before-after.jpg",
     alt: "Non-surgical nose job before and after showing bridge refinement and tip support",
     caption: "Bridge refinement and subtle tip support — achieving a smoother profile with carefully placed hyaluronic acid filler."
   },
