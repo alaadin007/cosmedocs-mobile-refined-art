@@ -133,6 +133,9 @@ const ProductAnalysisDetail = lazy(() => import("./pages/ProductAnalysisDetail")
 const PopupOffer = lazy(() => import("./pages/PopupOffer"));
 const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
 const SkinRejuvenationHub = lazy(() => import("./pages/SkinRejuvenationHub"));
+const LaserTreatmentsHub = lazy(() => import("./pages/LaserTreatmentsHub"));
+const LaserHairRemoval = lazy(() => import("./pages/LaserHairRemoval"));
+const PicoLaser = lazy(() => import("./pages/PicoLaser"));
 const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWorkExperience"));
 const SmartAesthetics = lazy(() => import("./pages/SmartAesthetics"));
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
@@ -390,6 +393,16 @@ const App = () => {
                           <Route path="/treatments/peel-to-reveal" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/peel-to-reveal/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           
+                          {/* Laser Treatments */}
+                          <Route path="/treatments/laser-treatments" element={<LaserTreatmentsHub />} />
+                          <Route path="/treatments/laser-treatments/" element={<LaserTreatmentsHub />} />
+                          <Route path="/treatments/co2-laser" element={<CO2LaserResurfacing />} />
+                          <Route path="/treatments/co2-laser/" element={<CO2LaserResurfacing />} />
+                          <Route path="/treatments/laser-hair-removal" element={<LaserHairRemoval />} />
+                          <Route path="/treatments/laser-hair-removal/" element={<LaserHairRemoval />} />
+                          <Route path="/treatments/pico-laser" element={<PicoLaser />} />
+                          <Route path="/treatments/pico-laser/" element={<PicoLaser />} />
+
                           {/* Plastic Surgery */}
                           <Route path="/treatments/plastic-surgery" element={<PlasticSurgeon />} />
                           <Route path="/treatments/plastic-surgery/" element={<PlasticSurgeon />} />
@@ -401,8 +414,6 @@ const App = () => {
                           <Route path="/treatments/facelift-surgery/" element={<FaceliftSurgery />} />
                           <Route path="/treatments/liposuction" element={<Liposuction />} />
                           <Route path="/treatments/liposuction/" element={<Liposuction />} />
-                          <Route path="/treatments/co2-laser" element={<CO2LaserResurfacing />} />
-                          <Route path="/treatments/co2-laser/" element={<CO2LaserResurfacing />} />
                           <Route path="/treatments/scar-reduction" element={<ScarReduction />} />
                           <Route path="/treatments/scar-reduction/" element={<ScarReduction />} />
                           <Route path="/treatments/hair-transplant" element={<HairTransplantSurgeon />} />
