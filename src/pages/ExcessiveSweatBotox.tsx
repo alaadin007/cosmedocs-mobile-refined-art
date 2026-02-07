@@ -1,36 +1,21 @@
+import React from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart, Home, ChevronRight } from "lucide-react";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
+import HyperhidrosisSidebar from "@/components/hyperhidrosis/HyperhidrosisSidebar";
 
 const ExcessiveSweatBotox = () => {
   const seoData = generateSEOMetadata(
-    "Excessive Sweating Botox London | Cosmedocs",
-    "Stop hyperhidrosis with botox for underarms, hands & feet. Life-changing sweat reduction lasts 6-9 months from £500.",
-    "/excessive-sweat-botox"
+    "Hyperhidrosis Botox London | Harley Street Doctors",
+    "Doctor-led botox for excessive sweating (hyperhidrosis) in underarms, hands & feet. FDA-approved treatment lasting 6–12 months at our Harley Street clinic.",
+    "/treatments/hyperhidrosis-botox/"
   );
-
-  const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Excessive sweating botox treatment results", caption: "Excessive Sweating Botox Treatment: Significant reduction in sweat production and improved confidence. Expert therapeutic intervention - transformation that speaks without saying a word." }
-  ];
 
   const faqs = [
     {
@@ -38,28 +23,28 @@ const ExcessiveSweatBotox = () => {
       answer: "Botox blocks nerve signals to sweat glands, dramatically reducing sweat production. It's FDA-approved for severe underarm sweating (hyperhidrosis) and can also treat palms, feet, and other areas for life-changing results."
     },
     {
-      question: "How long do excessive sweating botox results last?",
-      answer: "Excessive sweating botox results typically last 6-12 months for underarms, and 4-6 months for hands and feet. Many patients experience dramatic reduction in sweating, significantly improving their quality of life and confidence."
+      question: "How long do hyperhidrosis botox results last?",
+      answer: "Results typically last 6–12 months for underarms, and 4–6 months for hands and feet. Many patients experience dramatic reduction in sweating, significantly improving their quality of life and confidence."
     },
     {
-      question: "Is excessive sweating botox painful?",
-      answer: "Treatment involves multiple small injections which can be uncomfortable, especially for hands and feet. We use topical anesthetic and ice to minimize discomfort during the 20-30 minute procedure."
+      question: "Is hyperhidrosis botox painful?",
+      answer: "Treatment involves multiple small injections which can be uncomfortable, especially for hands and feet. We use topical anaesthetic and ice to minimise discomfort during the 20–30 minute procedure."
     },
     {
-      question: "What can I expect after excessive sweating botox treatment?",
-      answer: "You may experience mild soreness at injection sites for 24-48 hours. Sweat reduction begins within 1-2 weeks, with maximum dryness achieved by 4 weeks. Normal activities can be resumed immediately."
+      question: "What can I expect after treatment?",
+      answer: "You may experience mild soreness at injection sites for 24–48 hours. Sweat reduction begins within 1–2 weeks, with maximum dryness achieved by 4 weeks. Normal activities can be resumed immediately."
     },
     {
-      question: "Am I a good candidate for excessive sweating botox?",
+      question: "Am I a good candidate for hyperhidrosis botox?",
       answer: "Ideal candidates have severe sweating that significantly impacts daily life and hasn't responded to antiperspirants. A consultation will assess your condition and determine if this therapeutic treatment is suitable."
     },
     {
-      question: "How much does excessive sweating botox cost?",
-      answer: "Excessive sweating botox at Cosmedocs costs £450-650 depending on the area treated. Underarms require fewer units than hands or feet. This therapeutic investment can be life-changing for severe hyperhidrosis sufferers."
+      question: "How much does hyperhidrosis botox cost?",
+      answer: "Treatment at CosmeDocs ranges from £350 to £650 depending on the area treated. Underarms are £550, palms £550, feet £650, and forehead £350. This includes consultation and follow-up care."
     },
     {
-      question: "Can excessive sweating botox be combined with other treatments?",
-      answer: "Yes! Excessive sweating botox can be combined with cosmetic botox treatments for comprehensive care. Our doctors create personalized treatment plans addressing both therapeutic and aesthetic concerns simultaneously."
+      question: "Can hyperhidrosis botox be combined with other treatments?",
+      answer: "Yes. Hyperhidrosis botox can be combined with cosmetic botox treatments for comprehensive care. Our doctors create personalised treatment plans addressing both therapeutic and aesthetic concerns simultaneously."
     }
   ];
 
@@ -68,1071 +53,646 @@ const ExcessiveSweatBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/hyperhidrosis-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/hyperhidrosis-botox/" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="botox armpits price, botox in armpits, botox underarms, botox under armpits cost, botox cost for armpit, botox in hands, underarm botox, botox armpits, botox in underarms cost, botox and facial sweating, botox on underarms, botox and excessive sweating, botox for sweating face, botox to armpits, shots for sweating, botox for hyperhidrosis, botox for perspiration, botox under the arms, botox to prevent sweating, cost of armpit botox, armpit botox, botox on face for sweating, underarm botox pros and cons, botox for armpit sweat, underarm botox cost, botox shots for sweating, botox for sweating cost uk, botox in face for sweating, botox under armpits, botox for excessive sweating, botox for sweating, hyperhidrosis botox" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "priceRange": "££",
-            "openingHoursSpecification": [
+            "@graph": [
               {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
+                "@type": "MedicalBusiness",
+                "name": "CosmeDocs",
+                "description": "Doctor-led aesthetic and therapeutic medicine clinic on Harley Street",
+                "url": "https://cosmedocs.co.uk/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Therapeutic Medicine",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "189"
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ]
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Hyperhidrosis Botox Treatment",
+                "alternateName": "Excessive Sweating Botox Treatment",
+                "description": "FDA-approved botulinum toxin treatment that blocks nerve signals to sweat glands, dramatically reducing excessive perspiration in underarms, palms, feet, and facial areas.",
+                "url": "https://cosmedocs.co.uk/treatments/hyperhidrosis-botox/",
+                "procedureType": "NoninvasiveProcedure",
+                "bodyLocation": "Underarms, Palms, Feet, Face",
+                "followup": "Results begin within 1–2 weeks, lasting 6–12 months. Follow-up assessment available.",
+                "howPerformed": "Botulinum toxin injected into multiple points across the affected area using ultra-fine needles, blocking acetylcholine release at the nerve-sweat gland junction."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
               }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "189"
-            },
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Excessive Sweating Botox Treatment",
-              "alternateName": "Hyperhidrosis Botox Treatment",
-              "description": "Professional botox treatment for excessive sweating (hyperhidrosis) in underarms, hands, feet, and face. FDA-approved procedure that blocks nerve signals to sweat glands"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Offer",
-            "name": "Excessive Sweating Botox Treatment",
-            "description": "Professional hyperhidrosis treatment with botox",
-            "price": "550",
-            "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock",
-            "url": seoData.canonical,
-            "seller": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
-            }
+            ]
           })}
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Breadcrumb Navigation */}
-        <section className="py-4 bg-accent border-b border-purple-500/20">
-          <div className="page-container">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/" className="flex items-center gap-1 text-gray-400 hover:text-purple-300">
-                    <Home className="h-4 w-4" />
-                    Home
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator>
-                  <ChevronRight className="h-4 w-4 text-gray-500" />
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-purple-300">Excessive Sweating Botox</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </section>
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* ═══════════════════════════════════════════
+            HERO — Minimal, text-light
+        ═══════════════════════════════════════════ */}
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          {/* Subtle gold accent line */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
 
-        {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-left"
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Excessive Sweating Botox</span>
-                  <span className="block text-xl md:text-2xl mt-4 text-gray-300">Professional Hyperhidrosis Treatment in London</span>
-                  <span className="block text-sm mt-2 font-normal">Invisible art - confidence that speaks without words</span>
-                </h1>
-                <div className="mb-8 space-y-3">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Botox for Underarms, Hands, Face & Feet</p>
-                  <p className="text-lg text-gray-200">FDA-approved botox treatment that blocks sweat glands for dramatic, life-changing results</p>
-                  <p className="text-sm text-gray-300">20-30 minutes • Results last 6-12 months • Prices from £350</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => {
-                      const pricingSection = document.getElementById('pricing-section');
-                      if (pricingSection) {
-                        pricingSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    View Price List
-                  </Button>
-                </div>
-              </motion.div>
-              
-              <div className="hidden lg:block"></div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
+          {/* Flowing background orb */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Excessive Sweating Botox Treatment</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">20-30 minutes including consultation</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">6-12 months for underarms</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Immediate return to activities</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical anaesthetic applied</p>
-              </motion.div>
-            </div>
+              className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)',
+              }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
-        </section>
 
-        {/* What is Excessive Sweating Botox */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is Excessive Sweating Botox?</h2>
-              <div className="text-gray-300 max-w-3xl mx-auto text-lg space-y-4">
-                <p>
-                  Botox for excessive sweating (hyperhidrosis botox) is an FDA-approved treatment. It uses botox shots to block nerve signals to sweat glands.
-                </p>
-                <p>
-                  Botox in armpits, hands, and for facial sweating provides dramatic sweat reduction. Our therapeutic approach transforms lives with long-lasting results.
-                </p>
-                <p>
-                  Whether you need underarm botox, botox to prevent sweating on your face, or treatment in other areas, our expert practitioners deliver invisible art — transformation that speaks without saying a word.
-                </p>
-              </div>
-            </motion.div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb
+              items={[
+                { label: 'Treatments', path: '/treatments/' },
+                { label: 'Medical Botox', path: '/treatments/botox/medical/' }
+              ]}
+              currentPage="Hyperhidrosis Botox"
+            />
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding Hyperhidrosis</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-gray-300 text-lg leading-relaxed text-center space-y-4">
-                    <p>
-                      Hyperhidrosis is a <a href="https://www.nhs.uk/conditions/hyperhidrosis/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical condition causing excessive sweating</a>. It significantly impacts daily life, confidence, and social interactions.
-                    </p>
-                    <p>
-                      Botox for hyperhidrosis works by blocking the nerve signals that trigger sweat production. Botox injections provide dramatic relief for underarms, hands, and face.
-                    </p>
-                    <p>
-                      The cost varies by area, with armpit botox being one of the most popular and effective treatments available.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-          </div>
-        </section>
-
-        {/* Combined: Causes & Benefits */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* What Causes Excessive Sweating */}
-              <div>
-                <h2 className="text-3xl font-bold mb-6 text-white">What Causes Excessive Sweating?</h2>
-                
-                <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
-                  <CardContent className="p-6">
-                    <p className="text-gray-300 mb-6">
-                      Hyperhidrosis occurs when sweat glands work overtime for no apparent reason.
-                    </p>
-
-                    <ul className="space-y-4">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Genetics</h3>
-                          <p className="text-gray-300 text-sm">Family history plays a significant role in primary hyperhidrosis.</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Emotional Stress</h3>
-                          <p className="text-gray-300 text-sm">Anxiety and stress can trigger increased sweating.</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Hormonal Changes</h3>
-                          <p className="text-gray-300 text-sm">Pregnancy, menopause, and thyroid disorders can cause excessive sweating.</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Medical Conditions</h3>
-                          <p className="text-gray-300 text-sm">Certain medications and medical conditions can trigger hyperhidrosis.</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Benefits of Botox for Excessive Sweating */}
-              <div>
-                <h2 className="text-3xl font-bold mb-6 text-white">Benefits of Botox Treatment</h2>
-                
-                <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
-                  <CardContent className="p-6">
-                    <p className="text-gray-300 mb-6">
-                      Botox to armpits and other areas provides life-changing benefits for those suffering from hyperhidrosis. Here are the key underarm botox pros and cons, 
-                      with botox shots for sweating offering minimal risks and maximum confidence-boosting results.
-                    </p>
-
-                    <ul className="space-y-4">
-                      <li className="flex items-start space-x-3">
-                        <Check className="text-purple-400 mt-1" size={16} />
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Minimal Pain</h3>
-                          <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort.</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex items-start space-x-3">
-                        <Check className="text-purple-400 mt-1" size={16} />
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Long-Lasting</h3>
-                          <p className="text-gray-300 text-sm"><a href="https://www.aad.org/public/diseases/a-z/hyperhidrosis-treatment" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Results last 6-12 months</a> for underarms, 4-6 months for hands and feet.</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex items-start space-x-3">
-                        <Check className="text-purple-400 mt-1" size={16} />
-                        <div>
-                          <h3 className="text-white font-medium mb-1">Boosts Confidence</h3>
-                          <p className="text-gray-300 text-sm">No more worry about sweat stains or odour in social situations.</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex items-start space-x-3">
-                        <Check className="text-purple-400 mt-1" size={16} />
-                        <div>
-                          <h3 className="text-white font-medium mb-1">FDA Approved</h3>
-                          <p className="text-gray-300 text-sm">Clinically proven to reduce excessive sweating by up to 87%.</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Assessment and Preparation */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Assessing Excessive Sweating</h2>
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Hyperhidrosis Disease Severity Scale (HDSS)</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      HDSS is a point scale (sweat test) that sets specific benchmarks to rate the seriousness of a patient's condition. 
-                      It evaluates how much excessive sweating interferes with daily activities. Similar precision is used in our <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox London treatments</a>.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Severity assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Daily impact evaluation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Treatment planning</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">How to Prepare for Treatment</h2>
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardContent className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
-                          <span className="text-purple-600 font-bold text-sm">1</span>
-                        </div>
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Shave Treatment Area</h4>
-                          <p className="text-gray-300 text-sm">For underarm treatment, shave 2-3 days before your appointment to ensure optimal injection placement.</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
-                          <span className="text-purple-600 font-bold text-sm">2</span>
-                        </div>
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Wear Suitable Clothing</h4>
-                          <p className="text-gray-300 text-sm">Choose loose-fitting or sleeveless top for easy access to treatment areas.</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
-                          <span className="text-purple-600 font-bold text-sm">3</span>
-                        </div>
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Consultation Required</h4>
-                          <p className="text-gray-300 text-sm">Professional assessment to determine suitability and treatment plan.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Possible Hyperhidrosis Treatment Areas */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Possible Hyperhidrosis Treatment Areas</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                CosmeDocs is one of the first skin clinics in London to use Botox to treat hyperhidrosis.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
-              {[
-                { 
-                  title: "Facial Areas", 
-                  icon: Palette,
-                  description: "Forehead and facial sweating treatment"
-                },
-                { 
-                  title: "Armpit / Underarms", 
-                  icon: Activity,
-                  description: "Most common treatment area for hyperhidrosis"
-                },
-                { 
-                  title: "Palms", 
-                  icon: Heart,
-                  description: "Palmar hyperhidrosis treatment for hands"
-                },
-                { 
-                  title: "Feet", 
-                  icon: CheckCircle,
-                  description: "Plantar hyperhidrosis treatment for feet"
-                }
-              ].map((area, index) => (
+            <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
+              {/* Left: Text */}
+              <div className="max-w-2xl text-center lg:text-left">
                 <motion.div
-                  key={index}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                    Hyperhidrosis{" "}
+                    <span className="text-[#C9A050] font-light">Botox</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
+                    FDA-approved botulinum toxin treatment for excessive sweating — blocking nerve signals to sweat glands for life-changing relief.
+                  </p>
+                </motion.div>
+
+                {/* Minimal trust row */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Doctor-Led
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    20–30 Min
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    FDA-Approved
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    Harley Street
+                  </span>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom fade line */}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            TWO-COLUMN LAYOUT — Content + Sidebar
+        ═══════════════════════════════════════════ */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            {/* LEFT — Main Content */}
+            <div className="space-y-14">
+
+              {/* What Is Hyperhidrosis */}
+              <section>
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="text-center"
                 >
-                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                    <CardContent className="p-6">
-                      <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <area.icon className="text-purple-600" size={24} />
-                      </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{area.title}</h3>
-                      <p className="text-gray-300 text-sm">{area.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mb-8"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardContent className="p-8">
-                  <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                    Moreover, a <a href="https://pubmed.ncbi.nlm.nih.gov/21418398/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical study suggests the usage of high doses</a> to relax sweat glands has long-lasting results. 
-                    This approach allows anti-sweat injections to treat excessive sweating quite effectively. For comprehensive facial rejuvenation, we also offer <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo treatments</a> alongside our therapeutic botox services.
-                  </p>
-                  <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4 border border-purple-500/20">
-                    <p className="text-purple-200 font-medium">
-                      CosmeDocs is also a member of the International Hyperhidrosis Society.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* YouTube Video */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="max-w-4xl mx-auto">
-                <h3 className="text-3xl font-bold text-white mb-6">Watch: Hyperhidrosis Treatment Process</h3>
-                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/iyxFwdP15v4" 
-                    title="Hyperhidrosis Treatment with Botox"
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                    className="rounded-2xl"
-                  ></iframe>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Doses Of Botox in Armpit */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Doses Of Botox in Armpit</h2>
-                <div className="space-y-6">
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    The dosage of botox in armpits depends on the size of the underarm area. When getting botox under armpits, we aim to inject a concentrated dose per square centimetre, 
-                    covering the entire hairy patch area of the underarm. Similar to how we approach <a href="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter botox treatments</a>, 
-                    the botox armpits price reflects the number of units needed for optimal coverage and results.
-                  </p>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Studies have revealed that a higher dose for botox underarms is safe, effective, and long-lasting. Botox on face for sweating and botox in face for sweating 
-                    require different dosages than botox under armpits cost calculations. We aim to reduce excess sweating by more than 50-75% with our precision injection techniques.
-                  </p>
-                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Award className="text-purple-400" size={24} />
-                        <h3 className="text-white font-semibold">Treatment Effectiveness</h3>
-                      </div>
-                      <p className="text-gray-300">
-                        Higher doses provide safe, effective, and long-lasting results for excessive sweating reduction.
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Is <span className="text-[#C9A050] font-light">Hyperhidrosis?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Hyperhidrosis is a medical condition causing excessive sweating beyond what the body needs
+                        to regulate temperature. It significantly impacts daily life, confidence, and social interactions — 
+                        and conventional antiperspirants often provide insufficient relief.
                       </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
-                  <img 
-                    src="/images/botox-armpit-injections.png" 
-                    alt="Botox in armpit injections showing treatment area" 
-                    width="600"
-                    height="400"
-                    loading="lazy"
-                    className="w-full h-64 object-contain rounded-lg mb-6 bg-white/5"
-                  />
-                  <div className="text-center">
-                    <h3 className="text-white font-semibold mb-2">Professional Injection Technique</h3>
-                    <p className="text-gray-300 text-sm">
-                      Precise injection pattern covering the entire underarm area for optimal sweat reduction results.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Armpit Sweat, Face & Body Treatment Prices</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent botox for sweating cost UK pricing at CosmeDocs. Our botox cost for armpit treatments and botox in underarms cost includes expert consultation and follow-up care. 
-                All underarm botox cost and botox under armpits cost figures are clearly displayed below for your peace of mind.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Armpits (Underarms)</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£550</div>
-                    <div className="text-sm text-purple-400">Most Popular</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Both underarms treated</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lasts 4-6 months</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Expert consultation</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Palms</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£550</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Both hands treated</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lasts 4-6 months</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Multiple injections</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Feet</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£650</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Both feet treated</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Top surface sweating</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Effective results</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Forehead</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£350</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Facial sweating</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Quick treatment</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Minimal discomfort</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            {/* Additional Treatment Areas */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mt-12"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Additional Treatment Areas</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div className="space-y-2">
-                      <div className="text-purple-300 font-semibold">Scalp</div>
-                      <div className="text-white text-lg">£600</div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-purple-300 font-semibold">Nose</div>
-                      <div className="text-white text-lg">£200</div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-purple-300 font-semibold">Cheeks</div>
-                      <div className="text-white text-lg">£200</div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-purple-300 font-semibold">Other Areas</div>
-                      <div className="text-white text-lg">On Consultation</div>
-                      <div className="text-gray-300 text-xs mt-2">For anti-wrinkle options, <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">explore our treatments</a></div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
+                    }
                   >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        The condition affects approximately 1–3% of the population and can manifest as primary
+                        (idiopathic) or secondary hyperhidrosis. Primary hyperhidrosis typically begins in
+                        adolescence and affects specific areas — most commonly the underarms, palms, feet, and face.
+                      </p>
+                      <p>
+                        Botulinum toxin treatment for hyperhidrosis has been FDA-approved since 2004. It works by
+                        blocking the release of acetylcholine at the junction between nerve fibres and sweat glands,
+                        temporarily reducing sweat production in the treated area by up to 87%.
+                      </p>
+                      <p>
+                        At CosmeDocs, we are members of the{" "}
+                        <a href="https://www.sweathelp.org/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
+                          International Hyperhidrosis Society
+                        </a>{" "}
+                        and have been performing this therapeutic treatment since 2007.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved botox products only</p>
-              </motion.div>
+              {/* How It Works */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How the Treatment <span className="text-[#C9A050] font-light">Works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Multiple micro-injections of botulinum toxin are administered across the affected area using
+                        ultra-fine needles. The neurotoxin blocks nerve signals that trigger sweat gland stimulation,
+                        dramatically reducing perspiration within 1–2 weeks.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        During your consultation, your doctor will assess your condition using the Hyperhidrosis
+                        Disease Severity Scale (HDSS) — a clinical benchmark that evaluates how much excessive
+                        sweating interferes with daily activities.
+                      </p>
+                      <p>
+                        Injections are strategically placed in a grid pattern to ensure comprehensive coverage.
+                        Underarms typically require 15–20 injections per side, whilst hands may need 40–50
+                        injections per palm. Topical anaesthetic is applied to minimise discomfort.
+                      </p>
+                      <p>
+                        A{" "}
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/21418398/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
+                          medical study suggests
+                        </a>{" "}
+                        that higher doses of botulinum toxin to relax sweat glands produce longer-lasting results,
+                        allowing the treatment to address excessive sweating more effectively.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
+              {/* Treatment Areas */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Treatment <span className="text-[#C9A050] font-light">Areas</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    {[
+                      {
+                        title: "Underarms",
+                        desc: "Most common area. Both underarms treated with precise injection grid. Results typically last 6–12 months.",
+                        price: "£550"
+                      },
+                      {
+                        title: "Palms",
+                        desc: "Palmar hyperhidrosis treatment for sweaty hands that affect professional and social interactions.",
+                        price: "£550"
+                      },
+                      {
+                        title: "Feet",
+                        desc: "Plantar hyperhidrosis treatment targeting excessive foot sweating and related discomfort.",
+                        price: "£650"
+                      },
+                      {
+                        title: "Facial Areas",
+                        desc: "Forehead, upper lip, and scalp sweating treated with smaller, more precise doses.",
+                        price: "From £200"
+                      }
+                    ].map((area) => (
+                      <div key={area.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="flex items-center justify-between mb-3">
+                          <p className="text-sm font-medium text-[#C9A050]">{area.title}</p>
+                          <span className="text-xs text-white/40">{area.price}</span>
+                        </div>
+                        <p className="text-white/45 text-xs font-light leading-relaxed">{area.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
+              {/* What Causes Excessive Sweating */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Causes <span className="text-[#C9A050] font-light">Excessive Sweating?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Hyperhidrosis occurs when sweat glands work overtime beyond what is needed for temperature
+                        regulation. It can be genetic, stress-related, hormonal, or linked to underlying medical conditions.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-3 text-white/45 text-sm leading-relaxed font-light">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4">
+                        <p className="text-white/60 text-xs font-medium mb-1">Genetics</p>
+                        <p className="text-xs">Family history plays a significant role in primary hyperhidrosis. The condition often runs in families and typically begins in adolescence.</p>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4">
+                        <p className="text-white/60 text-xs font-medium mb-1">Emotional Stress</p>
+                        <p className="text-xs">Anxiety and emotional stress can trigger or worsen excessive sweating, creating a cycle that further impacts confidence.</p>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4">
+                        <p className="text-white/60 text-xs font-medium mb-1">Hormonal Changes</p>
+                        <p className="text-xs">Pregnancy, menopause, and thyroid disorders can cause or exacerbate excessive sweating.</p>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4">
+                        <p className="text-white/60 text-xs font-medium mb-1">Medical Conditions</p>
+                        <p className="text-xs">Certain medications, infections, and systemic conditions can trigger secondary hyperhidrosis.</p>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Am I Suitable */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">May Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Severe sweating impacting daily life</li>
+                        <li>• Antiperspirants provide insufficient relief</li>
+                        <li>• Sweating occurs regardless of temperature</li>
+                        <li>• Social or professional confidence affected</li>
+                        <li>• Over 18 years of age</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <AlertTriangle className="w-5 h-5 text-white/40" />
+                        <p className="text-sm font-medium text-white">May Not Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Pregnancy or breastfeeding</li>
+                        <li>• Neuromuscular disorders (e.g. myasthenia gravis)</li>
+                        <li>• Allergy to botulinum toxin</li>
+                        <li>• Active infection at the treatment site</li>
+                        <li>• Untreated secondary hyperhidrosis causes</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* What to Expect */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What to <span className="text-[#C9A050] font-light">Expect</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Sweat reduction begins within 1–2 weeks, with maximum dryness achieved by 4 weeks.
+                        Underarm results typically last 6–12 months; hands and feet 4–6 months.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Clinical studies published by the{" "}
+                        <a href="https://www.sweathelp.org/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">
+                          International Hyperhidrosis Society
+                        </a>{" "}
+                        demonstrate consistent efficacy rates of 82–87% sweat reduction. Many patients
+                        find that with repeated treatments, the duration of effectiveness may increase slightly.
+                      </p>
+                      <p>
+                        You may experience mild soreness at injection sites for 24–48 hours. Side effects
+                        are generally minimal and temporary. There is no downtime — you can return to
+                        normal activities immediately after treatment.
+                      </p>
+                      <p>
+                        Your doctor will discuss realistic expectations during consultation, including the HDSS
+                        assessment and personalised dosage planning based on the severity of your condition.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Preparation & Aftercare */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Preparation & <span className="text-[#C9A050] font-light">Aftercare</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Minimal preparation is required. For underarm treatment, shave 2–3 days before
+                        your appointment. Wear loose-fitting clothing for easy access to treatment areas.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light">
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Shave the treatment area 2–3 days before your appointment
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Avoid antiperspirants on the treatment day
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Wear breathable, loose-fitting clothing
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Avoid strenuous exercise for 24 hours after treatment
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        No hot baths or saunas for 48 hours post-treatment
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        Use clinical-strength antiperspirants between treatments for ongoing management
+                      </li>
+                    </ul>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Why CosmeDocs */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ul className="space-y-3">
+                    {[
+                      "Doctor-led — all treatments by GMC-registered doctors",
+                      "International Hyperhidrosis Society members",
+                      "Harley Street Institute trainers — established 2007",
+                      "Over 1 million treatments performed",
+                      "FDA-approved products exclusively",
+                      "Our aesthetics is invisible art"
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </section>
+
+              {/* FAQs */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, index) => (
+                      <AccordionItem
+                        key={index}
+                        value={`item-${index}`}
+                        className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5"
+                      >
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
+
+            {/* RIGHT — Sticky Sidebar */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-24">
+                <HyperhidrosisSidebar />
+              </div>
+            </aside>
           </div>
-        </section>
+        </div>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about excessive sweating botox treatment answered by our expert practitioners. For more facial enhancement options, visit our <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin filler page</a>.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border border-purple-500/30 rounded-lg px-6 bg-gradient-to-br from-purple-900/30 to-pink-900/30">
-                    <AccordionTrigger className="text-white hover:text-purple-300 text-left">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20">
-          <div className="page-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Ready to Stop Excessive Sweating?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how excessive sweating botox 
-                can transform your confidence with life-changing results.
+        {/* ═══════════════════════════════════════════
+            FULL-WIDTH CTA
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white">
+                Ready to Stop <span className="text-[#C9A050]">Excessive Sweating?</span>
+              </h2>
+              <p className="text-white/60 mb-8 font-light">
+                A consultation with our doctors will assess your condition using the HDSS clinical scale
+                and create a personalised treatment plan for lasting relief.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                >
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                    Book Consultation
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    Speak to a Doctor
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Hidden SEO Content - Crawler-Optimised Information */}
-        <section className="sr-only" aria-hidden="true">
-          <div className="page-container">
-            <h2>Comprehensive Guide to Botox for Excessive Sweating and Hyperhidrosis Treatment</h2>
-            
-            <h3>Understanding Botox Armpits Price and Treatment Costs</h3>
-            <p>
-              When considering botox for excessive sweating, understanding the botox armpits price is essential for planning your treatment. The cost of armpit botox 
-              at Cosmedocs ranges from £350 to £650 depending on the treatment area. Underarm botox cost includes professional consultation, treatment, and follow-up care. 
-              Our transparent botox for sweating cost UK pricing ensures you know exactly what to expect. The botox under armpits cost reflects the number of units needed, 
-              with botox cost for armpit treatments varying by individual sweat gland activity. Whether you're exploring botox in underarms cost or botox in armpits pricing, 
-              our team provides detailed breakdowns during your consultation.
-            </p>
-
-            <h3>Botox in Armpits, Underarms, and Under Arms Treatment</h3>
-            <p>
-              Botox in armpits is the most popular hyperhidrosis treatment we offer. Botox underarms treatment involves precise injections that target overactive sweat glands. 
-              When you receive botox under armpits, the neurotoxin blocks nerve signals that trigger perspiration. Botox on underarms provides dramatic results within 1-2 weeks. 
-              Many patients ask about underarm botox pros and cons - the primary advantage is up to 87% sweat reduction lasting 6-12 months, whilst temporary mild soreness is 
-              the only notable drawback. Botox to armpits requires 20-30 minutes, with botox in underarms delivering life-changing confidence. Whether termed botox armpits, 
-              underarm botox, or armpit botox, this FDA-approved procedure transforms lives.
-            </p>
-
-            <h3>Botox for Facial Sweating and Face Treatment</h3>
-            <p>
-              Botox and facial sweating treatment addresses a particularly distressing form of hyperhidrosis. Botox for sweating face procedures target the forehead, upper lip, 
-              and other facial areas where excessive perspiration occurs. Botox on face for sweating uses smaller, more precise doses compared to underarm applications. 
-              Botox in face for sweating provides natural-looking results that don't compromise facial expressions. Our specialists understand that facial sweating can be 
-              socially debilitating, which is why we combine <a href="/profhilo" className="text-purple-300">advanced aesthetic techniques</a> with therapeutic botox for 
-              comprehensive facial rejuvenation when desired.
-            </p>
-
-            <h3>Botox in Hands and Palmar Hyperhidrosis</h3>
-            <p>
-              Botox in hands treats palmar hyperhidrosis, a condition causing excessively sweaty palms that affects professional and social interactions. Hand sweating botox 
-              requires more injection points than underarm treatment due to the density of sweat glands in the palms. According to research from the 
-              <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6282699/" target="_blank" rel="noopener noreferrer" className="text-purple-300"> National Institutes of Health</a>, 
-              botox effectively reduces palmar sweating by up to 90%. Patients report dramatic improvements in handshake confidence and the ability to handle papers and electronic devices. 
-              The treatment lasts 4-6 months for hands, slightly shorter than underarm applications due to higher sweat gland density and hand washing frequency.
-            </p>
-
-            <h3>Botox for Hyperhidrosis - Medical Background and Efficacy</h3>
-            <p>
-              Botox for hyperhidrosis has been FDA-approved since 2004 for severe primary axillary hyperhidrosis. The active ingredient, botulinum toxin type A, temporarily 
-              blocks acetylcholine release, preventing sweat gland stimulation. Clinical studies published by the 
-              <a href="https://www.sweathelp.org/" target="_blank" rel="noopener noreferrer" className="text-purple-300"> International Hyperhidrosis Society</a> demonstrate 
-              consistent efficacy rates of 82-87% sweat reduction. Botox for perspiration works regardless of the trigger - whether stress-induced, thermal, or idiopathic. 
-              The treatment is suitable for primary and secondary hyperhidrosis, though underlying causes of secondary hyperhidrosis should be medically evaluated first.
-            </p>
-
-            <h3>Shots for Sweating - Treatment Process and What to Expect</h3>
-            <p>
-              Shots for sweating involve multiple micro-injections administered across the affected area using ultra-fine needles. Botox shots for sweating are strategically 
-              placed in a grid pattern to ensure comprehensive coverage. Topical anaesthetic minimises discomfort, making the procedure well-tolerated by most patients. 
-              The number of botox injections varies: underarms typically require 15-20 injections per side, whilst hands may need 40-50 injections per palm. According to 
-              <a href="https://www.asps.org/graft/botulinum-toxin-for-treatment-of-hyperhidrosis/" target="_blank" rel="noopener noreferrer" className="text-purple-300"> 
-              American Society of Plastic Surgeons guidelines</a>, proper injection technique and dosage are critical for optimal results and safety.
-            </p>
-
-            <h3>Botox to Prevent Sweating - Long-Term Management</h3>
-            <p>
-              Using botox to prevent sweating requires maintenance treatments every 6-12 months to sustain results. Many patients find that with repeated treatments, 
-              the duration of effectiveness may increase slightly. Botox and excessive sweating management works best when combined with lifestyle modifications such as 
-              wearing breathable fabrics and using clinical-strength antiperspirants between treatments. Some patients benefit from combining their hyperhidrosis treatment 
-              with other <a href="/lip-fillers" className="text-purple-300">aesthetic procedures</a> during their Harley Street visits, maximising convenience and results.
-            </p>
-
-            <h3>Why Choose Cosmedocs for Your Excessive Sweating Treatment</h3>
-            <p>
-              At Cosmedocs, located at 37 Harley Street, we've performed over 1 million injections since 2007. Our practitioners are members of the International Hyperhidrosis Society 
-              and trainers at the Harley Street Institute. We use only FDA-approved botox products and follow strict safety protocols. Our 'invisible art' philosophy ensures 
-              natural results that boost confidence without drawing attention. We understand that hyperhidrosis significantly impacts quality of life, which is why we offer 
-              comprehensive consultations to assess your condition using the Hyperhidrosis Disease Severity Scale (HDSS) and create personalised treatment plans. Our aftercare 
-              includes follow-up appointments and guidance on maximising treatment longevity. Whether you need therapeutic botox for sweating or other concerns, our team delivers expert care with compassion and precision.
-            </p>
-          </div>
+        {/* Mobile Sidebar */}
+        <section className="lg:hidden py-12 px-4 bg-black">
+          <HyperhidrosisSidebar />
         </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>Comprehensive Guide to Botox for Excessive Sweating and Hyperhidrosis Treatment London</h2>
+
+          <h3>Understanding Botox Armpits Price and Treatment Costs</h3>
+          <p>
+            When considering botox for excessive sweating, understanding the botox armpits price is essential for planning your treatment. The cost of armpit botox
+            at CosmeDocs ranges from £350 to £650 depending on the treatment area. Underarm botox cost includes professional consultation, treatment, and follow-up care.
+            Our transparent botox for sweating cost UK pricing ensures you know exactly what to expect. The botox under armpits cost reflects the number of units needed,
+            with botox cost for armpit treatments varying by individual sweat gland activity. Whether you're exploring botox in underarms cost or botox in armpits pricing,
+            our team provides detailed breakdowns during your consultation.
+          </p>
+
+          <h3>Botox in Armpits, Underarms, and Under Arms Treatment</h3>
+          <p>
+            Botox in armpits is the most popular hyperhidrosis treatment we offer. Botox underarms treatment involves precise injections that target overactive sweat glands.
+            When you receive botox under armpits, the neurotoxin blocks nerve signals that trigger perspiration. Botox on underarms provides dramatic results within 1–2 weeks.
+            Many patients ask about underarm botox pros and cons — the primary advantage is up to 87% sweat reduction lasting 6–12 months, whilst temporary mild soreness is
+            the only notable drawback. Botox to armpits requires 20–30 minutes, with botox in underarms delivering life-changing confidence. Whether termed botox armpits,
+            underarm botox, or armpit botox, this FDA-approved procedure transforms lives. Our aesthetics is invisible art — bold, natural, always your way.
+          </p>
+
+          <h3>Botox for Facial Sweating and Face Treatment</h3>
+          <p>
+            Botox and facial sweating treatment addresses a particularly distressing form of hyperhidrosis. Botox for sweating face procedures target the forehead, upper lip,
+            and other facial areas where excessive perspiration occurs. Botox on face for sweating uses smaller, more precise doses compared to underarm applications.
+            Botox in face for sweating provides natural-looking results that don't compromise facial expressions. Our specialists understand that facial sweating can be
+            socially debilitating, which is why we offer comprehensive therapeutic botox for complete relief.
+          </p>
+
+          <h3>Botox in Hands and Palmar Hyperhidrosis</h3>
+          <p>
+            Botox in hands treats palmar hyperhidrosis, a condition causing excessively sweaty palms that affects professional and social interactions. Hand sweating botox
+            requires more injection points than underarm treatment due to the density of sweat glands in the palms. Research from the National Institutes of Health shows
+            botox effectively reduces palmar sweating by up to 90%. Patients report dramatic improvements in handshake confidence and the ability to handle papers and electronic devices.
+            The treatment lasts 4–6 months for hands, slightly shorter than underarm applications due to higher sweat gland density and hand washing frequency.
+          </p>
+
+          <h3>Botox for Hyperhidrosis — Medical Background and Efficacy</h3>
+          <p>
+            Botox for hyperhidrosis has been FDA-approved since 2004 for severe primary axillary hyperhidrosis. The active ingredient, botulinum toxin type A, temporarily
+            blocks acetylcholine release, preventing sweat gland stimulation. Clinical studies published by the International Hyperhidrosis Society demonstrate
+            consistent efficacy rates of 82–87% sweat reduction. Botox for perspiration works regardless of the trigger — whether stress-induced, thermal, or idiopathic.
+            The treatment is suitable for primary and secondary hyperhidrosis, though underlying causes of secondary hyperhidrosis should be medically evaluated first.
+          </p>
+
+          <h3>Shots for Sweating — Treatment Process and What to Expect</h3>
+          <p>
+            Shots for sweating involve multiple micro-injections administered across the affected area using ultra-fine needles. Botox shots for sweating are strategically
+            placed in a grid pattern to ensure comprehensive coverage. Topical anaesthetic minimises discomfort, making the procedure well-tolerated by most patients.
+            The number of botox injections varies: underarms typically require 15–20 injections per side, whilst hands may need 40–50 injections per palm. Proper injection
+            technique and dosage are critical for optimal results and safety.
+          </p>
+
+          <h3>Botox to Prevent Sweating — Long-Term Management</h3>
+          <p>
+            Using botox to prevent sweating requires maintenance treatments every 6–12 months to sustain results. Many patients find that with repeated treatments,
+            the duration of effectiveness may increase slightly. Botox and excessive sweating management works best when combined with lifestyle modifications such as
+            wearing breathable fabrics and using clinical-strength antiperspirants between treatments. CosmeDocs provides comprehensive aftercare and follow-up
+            appointments to maximise treatment longevity.
+          </p>
+
+          <h3>Why Choose CosmeDocs for Your Excessive Sweating Treatment</h3>
+          <p>
+            At CosmeDocs, located on Harley Street, we've performed over 1 million injections since 2007. Our practitioners are members of the International Hyperhidrosis Society
+            and trainers at the Harley Street Institute. We use only FDA-approved botox products and follow strict safety protocols. Our invisible art philosophy ensures
+            natural results that boost confidence without drawing attention. We understand that hyperhidrosis significantly impacts quality of life, which is why we offer
+            comprehensive consultations to assess your condition using the Hyperhidrosis Disease Severity Scale (HDSS) and create personalised treatment plans. Bold, natural, always your way.
+          </p>
+        </div>
       </div>
     </>
   );
