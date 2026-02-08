@@ -11,6 +11,8 @@ import tearTroughAnatomy from '@/assets/blog-tear-trough-anatomy.png';
 import baRedensity from '@/assets/blog-tear-trough-ba-redensity.png';
 import baCloseup from '@/assets/blog-tear-trough-ba-closeup.png';
 import polynucleotide from '@/assets/blog-tear-trough-polynucleotide.png';
+import blogCoverTearTrough from '@/assets/blog-cover-tear-trough.jpg';
+import memeSoufflePatience from '@/assets/meme-souffle-patience.jpg';
 
 const TearTroughFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
@@ -124,17 +126,24 @@ const TearTroughFillerResultsExplained = () => {
 
       <div className="min-h-screen bg-black text-white">
         
-
-        {/* Hero */}
-        <section className="pt-28 pb-16 px-4 border-b border-white/[0.06]">
-          <div className="max-w-4xl mx-auto">
+        {/* Hero with Cover Image */}
+        <section className="relative pt-28 pb-16 border-b border-white/[0.06] overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={blogCoverTearTrough}
+              alt="Close-up of beautiful eyes with dramatic chiaroscuro lighting"
+              className="w-full h-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
               <span className="text-[#C9A050] text-xs font-medium tracking-wider uppercase">
-                Aesthetic Education
+                Results Explained
               </span>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight mt-4 mb-6 leading-[1.15]">
                 Tear Trough Filler Results Explained:
@@ -166,7 +175,7 @@ const TearTroughFillerResultsExplained = () => {
             <article className="max-w-3xl">
               <div className="space-y-16">
 
-                {/* Opening */}
+                {/* Opening — sharpened voice */}
                 <motion.section {...fadeIn}>
                   <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed mb-8">
                     Tear trough filler exists because faces age in inconvenient ways. Bone resorbs, 
@@ -176,9 +185,12 @@ const TearTroughFillerResultsExplained = () => {
                     shadowing and making you look more rested — not "done."
                   </p>
                   <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed">
-                    But here's the part Instagram skips: it doesn't fix eye bags, tighten loose skin, or 
-                    magically erase pigmentation. And if the anatomy isn't right, filler won't save the day. 
-                    That's why tear troughs are less about injecting and more about knowing when not to.
+                    But here's the part Instagram conveniently crops out: it doesn't fix eye bags, 
+                    tighten loose skin, or magically erase pigmentation. And if the anatomy isn't right, 
+                    filler won't save the day — it'll make it worse. That's why tear troughs are less 
+                    about injecting and more about knowing when <em>not</em> to. The best tear trough 
+                    consultations end with "no." Most patients don't want to hear that. The good ones 
+                    are grateful for it later.
                   </p>
                 </motion.section>
 
@@ -299,6 +311,18 @@ const TearTroughFillerResultsExplained = () => {
                       </p>
                     </div>
                   </div>
+                  {/* Meme — Soufflé Patience */}
+                  <figure className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mt-8">
+                    <img
+                      src={memeSoufflePatience}
+                      alt="A perfectly risen soufflé next to a collapsed one"
+                      className="w-full h-auto block"
+                      loading="lazy"
+                    />
+                    <figcaption className="px-5 py-3 border-t border-white/[0.06] text-white/40 text-xs leading-relaxed font-light italic">
+                      Judging tear trough results at 48 hours vs waiting 14 days. Patience isn't optional — it's clinical protocol.
+                    </figcaption>
+                  </figure>
                 </motion.section>
 
                 {/* Interpreting Results */}

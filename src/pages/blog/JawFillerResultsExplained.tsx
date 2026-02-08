@@ -12,6 +12,8 @@ import oneMlResult from '@/assets/blog-jaw-filler-1ml-result.png';
 import frontalBa from '@/assets/blog-jaw-filler-frontal-ba.png';
 import volumeScale from '@/assets/blog-jaw-filler-volume-scale.png';
 import chinAngle from '@/assets/blog-jaw-filler-chin-angle.png';
+import blogCoverJawFiller from '@/assets/blog-cover-jaw-filler.jpg';
+import memeArchitectVsPainter from '@/assets/meme-architect-vs-painter.jpg';
 
 const JawFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
@@ -125,17 +127,24 @@ const JawFillerResultsExplained = () => {
 
       <div className="min-h-screen bg-black text-white">
         
-
-        {/* Hero */}
-        <section className="pt-28 pb-16 px-4 border-b border-white/[0.06]">
-          <div className="max-w-4xl mx-auto">
+        {/* Hero with Cover Image */}
+        <section className="relative pt-28 pb-16 border-b border-white/[0.06] overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={blogCoverJawFiller}
+              alt="Dramatic side profile highlighting a defined jawline with golden rim lighting"
+              className="w-full h-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
               <span className="text-[#C9A050] text-xs font-medium tracking-wider uppercase">
-                Aesthetic Education
+                Results Explained
               </span>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight mt-4 mb-6 leading-[1.15]">
                 Jaw Filler Results Explained:
@@ -176,19 +185,22 @@ const JawFillerResultsExplained = () => {
                     The jawline isn't a line. It's a meeting point — where the mandible, masseter muscle, 
                     subcutaneous fat, and skin all converge to create what people loosely call "definition." 
                     How defined that looks depends on bone density, fat distribution, skin thickness, 
-                    and genetics. Not Instagram filters.
+                    and genetics. Not Instagram filters. Not contouring tutorials. Not the lighting 
+                    in your bathroom mirror at 7am.
                   </p>
                   <p className="text-white/60 font-light leading-relaxed mb-6">
                     As you age, bone resorbs. Fat descends. Skin loosens. The angle between 
                     jaw and neck softens, jowls form, and the sharp line you had at twenty-two 
                     starts to round out. This is not a flaw. It's physics, collagen depletion, 
-                    and gravity doing their job on schedule.
+                    and gravity doing their job on schedule. Nobody escapes it. Some people just 
+                    notice it sooner.
                   </p>
                   <p className="text-white/60 font-light leading-relaxed">
                     Filler can restore some of what's lost. It can add projection to a recessive 
                     jaw angle. It can sharpen a jawline that's been softened by volume shift. 
                     But it cannot rebuild bone, tighten skin, or turn a round face into a square one. 
-                    If anyone tells you otherwise, they're selling something you don't need.
+                    If anyone tells you otherwise, they're selling something you don't need. 
+                    And they're probably quite good at it.
                   </p>
                 </motion.section>
 
@@ -271,6 +283,21 @@ const JawFillerResultsExplained = () => {
                       Feminine jawline contouring. Subtle definition added along the mandibular 
                       border — taper preserved, width controlled. No heaviness, no distortion. 
                       Unedited clinical photograph.
+                    </figcaption>
+                  </figure>
+                </motion.section>
+
+                {/* Meme — Architect vs Painter */}
+                <motion.section {...fadeIn}>
+                  <figure className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                    <img
+                      src={memeArchitectVsPainter}
+                      alt="An architect studying blueprints next to someone spray painting a wall"
+                      className="w-full h-auto block"
+                      loading="lazy"
+                    />
+                    <figcaption className="px-5 py-3 border-t border-white/[0.06] text-white/40 text-xs leading-relaxed font-light italic">
+                      Structural augmentation vs cosmetic outlining. One reads the blueprint. The other just starts spraying.
                     </figcaption>
                   </figure>
                 </motion.section>

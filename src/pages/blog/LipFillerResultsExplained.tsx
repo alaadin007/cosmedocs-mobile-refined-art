@@ -9,6 +9,8 @@ import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
 import lipFillerBaSubtle from '@/assets/blog-lip-filler-ba-subtle.png';
 import lipFillerShapeComparison from '@/assets/blog-lip-filler-shape-comparison.png';
 import lipFillerBaNatural from '@/assets/blog-lip-filler-ba-natural.png';
+import blogCoverLipFiller from '@/assets/blog-cover-lip-filler.jpg';
+import memeOverstuffedCushion from '@/assets/meme-overstuffed-cushion.jpg';
 
 const LipFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
@@ -153,17 +155,24 @@ const LipFillerResultsExplained = () => {
 
       <div className="min-h-screen bg-black text-white">
         
-
-        {/* Hero */}
-        <section className="pt-28 pb-16 px-4 border-b border-white/[0.06]">
-          <div className="max-w-4xl mx-auto">
+        {/* Hero with Cover Image */}
+        <section className="relative pt-28 pb-16 border-b border-white/[0.06] overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={blogCoverLipFiller}
+              alt="Close-up of naturally proportioned lips in dramatic golden lighting"
+              className="w-full h-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
               <span className="text-[#C9A050] text-xs font-medium tracking-wider uppercase">
-                Aesthetic Education
+                Results Explained
               </span>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight mt-4 mb-6 leading-[1.15]">
                 Lip Filler Results Explained:
@@ -195,7 +204,7 @@ const LipFillerResultsExplained = () => {
             <article className="max-w-3xl">
               <div className="space-y-16">
 
-                {/* Opening */}
+                {/* Opening — House MD voice */}
                 <motion.section {...fadeIn}>
                   <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed mb-8">
                     Lip filler has a reputation problem. Not because the treatment doesn't work — 
@@ -205,12 +214,13 @@ const LipFillerResultsExplained = () => {
                     favours regret.
                   </p>
                   <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed">
-                    The truth is, well-placed lip filler is one of the most effective soft-tissue 
-                    treatments in aesthetic medicine. It can restore hydration, improve border 
-                    definition, correct asymmetry, and give tired-looking lips a quiet vitality — 
-                    all without changing who you look like. But that requires understanding the 
-                    difference between shape and size, between proportion and volume. Most 
-                    overfilled lips happen when that distinction is ignored.
+                    Here's the uncomfortable truth most clinics skip: lip filler is one of the 
+                    easiest treatments to get wrong and one of the hardest to get right. It can 
+                    restore hydration, improve border definition, correct asymmetry, and give 
+                    tired-looking lips a quiet vitality — all without changing who you look like. 
+                    But that requires understanding the difference between shape and size, between 
+                    proportion and volume. Most overfilled lips happen when that distinction is 
+                    ignored. Or worse — when it was never understood in the first place.
                   </p>
                 </motion.section>
 
@@ -220,22 +230,39 @@ const LipFillerResultsExplained = () => {
                     Why Lips Are Easy to Overfill
                   </h2>
                   <p className="text-white/60 text-lg font-light leading-relaxed mb-6">
-                    Unlike the chin or jawline — where filler sits against bone — lip filler goes 
-                    into soft tissue. There's no rigid scaffold. The lip is essentially a muscular 
-                    curtain covered in mucosa, and it responds to filler the way a cushion responds 
-                    to stuffing: it expands in every direction, not just the one you intended.
+                    Unlike the chin or jawline — where filler sits against bone like a sensible 
+                    adult — lip filler goes into soft tissue. There's no rigid scaffold. The lip is 
+                    essentially a muscular curtain covered in mucosa, and it responds to filler the 
+                    way a cushion responds to stuffing: it expands in every direction, not just the 
+                    one you intended.
                   </p>
+
+                  {/* Meme — Overstuffed Cushion */}
+                  <figure className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-6">
+                    <img
+                      src={memeOverstuffedCushion}
+                      alt="A perfectly filled cushion next to an overstuffed one"
+                      className="w-full h-auto block"
+                      loading="lazy"
+                    />
+                    <figcaption className="px-5 py-3 border-t border-white/[0.06] text-white/40 text-xs leading-relaxed font-light italic">
+                      When someone says "just a little more" — and the cushion quietly loses its shape.
+                    </figcaption>
+                  </figure>
+
                   <p className="text-white/60 text-lg font-light leading-relaxed mb-6">
                     Then there's swelling. Lips swell disproportionately to the amount injected. 
                     A patient who receives 0.5ml may look like they've had twice that for the first 
                     48 hours. This is normal, temporary, and entirely misleading — which is why 
-                    judging lip filler before day 14 is like reviewing a soufflé before it's set.
+                    judging lip filler before day 14 is like reviewing a soufflé before it's set. 
+                    Patience isn't optional. It's clinical protocol.
                   </p>
                   <p className="text-white/60 text-lg font-light leading-relaxed">
                     The practical consequence: subtlety matters more here than almost anywhere else 
                     on the face. A millilitre too much in the chin is forgiven by bone structure. A 
                     millilitre too much in the lip is visible from across the room. The margin for 
-                    error isn't small — it's microscopic.
+                    error isn't small — it's microscopic. And yet, somehow, "just a bit more" 
+                    remains the most popular request in aesthetic medicine. Funny, that.
                   </p>
                 </motion.section>
 
