@@ -23,6 +23,7 @@ const treatmentCategories = [
       { title: "Lip Flip", link: "/treatments/lip-flip/" },
       { title: "Masseter", link: "/treatments/masseter-botox/" },
       { title: "Trap Botox", link: "/treatments/trap-botox/" },
+      { title: "Calf Reduction", link: "/treatments/calf-slimming-botox/" },
       { title: "Medical Botox", link: "/treatments/botox/medical/", isSubHeader: true },
       { title: "Hyperhidrosis", link: "/treatments/hyperhidrosis-botox/" },
       { title: "Bruxism / TMJ", link: "/treatments/bruxism-botox/" },
