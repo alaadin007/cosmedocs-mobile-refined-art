@@ -322,11 +322,22 @@ export default function HAMakeover() {
                   All images show real patients treated by our doctors at our Harley Street clinic. 
                   Individual results vary depending on facial anatomy, ageing patterns, and treatment plan.
                 </p>
+                <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-6">
+                  <img
+                    src="/images/treatments/ha-makeover/ha-makeover-ba-preview.jpg"
+                    alt="Before and after HA Makeover showing full-face rejuvenation with anatomical planning"
+                    loading="lazy"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <p className="text-xs text-white/30 italic mb-4">
+                  Images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on facial anatomy, ageing patterns, and treatment plan.
+                </p>
                 <Link
                   to="/before-after/ha-makeover/"
                   className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#d4af5a] transition-colors text-sm tracking-wide"
                 >
-                  View real HA Makeover before &amp; after results
+                  View full HA Makeover before &amp; after gallery
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
