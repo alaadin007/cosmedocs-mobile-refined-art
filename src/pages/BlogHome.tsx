@@ -4,6 +4,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Home2Header from "@/components/home2/Home2Header";
+import BlogHeroSlider from "@/components/blog/BlogHeroSlider";
 import Footer from "@/components/Footer";
 
 interface ArticleLink {
@@ -199,25 +200,8 @@ const BlogHome = () => {
       <div className="min-h-screen bg-black text-white">
         <Home2Header />
 
-        {/* Masthead */}
-        <section className="border-b border-white/[0.06] pt-28 pb-6 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-5xl font-extralight tracking-tight mb-2">
-                Cosme<span className="text-[#C9A050] font-light">Docs</span>{" "}
-                Blog
-              </h1>
-              <p className="text-white/30 text-sm font-light tracking-wide">
-                Skin Science • Treatment Insights • Clinical Research • Patient
-                Education
-              </p>
-            </motion.div>
-          </div>
-        </section>
+        {/* Hero Slider */}
+        <BlogHeroSlider />
 
         {/* ═══════════════════════════════════════════
             TOP — Featured + Headlines + Sidebar
