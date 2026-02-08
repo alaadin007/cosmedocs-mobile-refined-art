@@ -108,6 +108,7 @@ const PrescriptionSkincare = lazy(() => import("./pages/PrescriptionSkincare"));
 const Microneedling = lazy(() => import("./pages/Microneedling"));
 const TearTroughFiller = lazy(() => import("./pages/TearTroughFiller"));
 const TrapBotox = lazy(() => import("./pages/TrapBotox"));
+const CalfSlimmingBotox = lazy(() => import("./pages/CalfSlimmingBotox"));
 const VideoUpload = lazy(() => import("./pages/VideoUpload"));
 const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
 const TempleFiller = lazy(() => import("./pages/TempleFiller"));
@@ -304,8 +305,8 @@ const App = () => {
                           <Route path="/treatments/nefertiti-lift/" element={<Navigate to="/treatments/botox/" replace />} />
                           <Route path="/treatments/trap-botox" element={<TrapBotox />} />
                           <Route path="/treatments/trap-botox/" element={<TrapBotox />} />
-                          <Route path="/treatments/calf-slimming-botox" element={<Navigate to="/treatments/botox/" replace />} />
-                          <Route path="/treatments/calf-slimming-botox/" element={<Navigate to="/treatments/botox/" replace />} />
+                          <Route path="/treatments/calf-slimming-botox" element={<CalfSlimmingBotox />} />
+                          <Route path="/treatments/calf-slimming-botox/" element={<CalfSlimmingBotox />} />
                           <Route path="/treatments/bruxism-botox" element={<BruxismBotox />} />
                           <Route path="/treatments/bruxism-botox/" element={<BruxismBotox />} />
                           <Route path="/treatments/trigger-point-botox" element={<Navigate to="/treatments/botox/" replace />} />
