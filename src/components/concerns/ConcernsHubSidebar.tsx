@@ -81,7 +81,7 @@ const ConcernsHubSidebar = () => {
         <div className="space-y-2">
           {[
             { label: "Acne & Breakouts", path: "/concerns/acne/" },
-            { label: "Hyperpigmentation", path: "/concerns/hyperpigmentation/" },
+            { label: "Pigmentation & Melasma", path: "/concerns/pigmentation-melasma/" },
             { label: "Eczema & Dermatitis", path: "/concerns/eczema/" },
             { label: "Anti-Ageing", path: "/concerns/anti-ageing/" },
             { label: "Non-Surgical Facelift", path: "/concerns/non-surgical-facelift/" },

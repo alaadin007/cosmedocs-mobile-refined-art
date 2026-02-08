@@ -272,8 +272,10 @@ const App = () => {
                           <Route path="/concerns/acne/" element={<AcneTreatment />} />
                           <Route path="/concerns/eczema" element={<EczemaTreatment />} />
                           <Route path="/concerns/eczema/" element={<EczemaTreatment />} />
-                          <Route path="/concerns/hyperpigmentation" element={<HyperpigmentationTreatment />} />
-                          <Route path="/concerns/hyperpigmentation/" element={<HyperpigmentationTreatment />} />
+                          <Route path="/concerns/pigmentation-melasma" element={<HyperpigmentationTreatment />} />
+                          <Route path="/concerns/pigmentation-melasma/" element={<HyperpigmentationTreatment />} />
+                          <Route path="/concerns/hyperpigmentation" element={<Navigate to="/concerns/pigmentation-melasma/" replace />} />
+                          <Route path="/concerns/hyperpigmentation/" element={<Navigate to="/concerns/pigmentation-melasma/" replace />} />
                           <Route path="/concerns/anti-ageing" element={<NonSurgicalFacelift />} />
                           <Route path="/concerns/anti-ageing/" element={<NonSurgicalFacelift />} />
                           <Route path="/concerns/non-surgical-facelift" element={<NonSurgicalFacelift />} />
@@ -463,8 +465,8 @@ const App = () => {
                           <Route path="/treatments/eczema/" element={<Navigate to="/concerns/eczema/" replace />} />
                           <Route path="/treatments/psoriasis" element={<Navigate to="/concerns/" replace />} />
                           <Route path="/treatments/psoriasis/" element={<Navigate to="/concerns/" replace />} />
-                          <Route path="/treatments/hyperpigmentation" element={<Navigate to="/concerns/hyperpigmentation/" replace />} />
-                          <Route path="/treatments/hyperpigmentation/" element={<Navigate to="/concerns/hyperpigmentation/" replace />} />
+                          <Route path="/treatments/hyperpigmentation" element={<Navigate to="/concerns/pigmentation-melasma/" replace />} />
+                          <Route path="/treatments/hyperpigmentation/" element={<Navigate to="/concerns/pigmentation-melasma/" replace />} />
                           
                           {/* Specialised Treatments */}
                           <Route path="/treatments/intimate-bleaching" element={<MedicalAnalBleaching />} />
@@ -566,7 +568,7 @@ const App = () => {
                           <Route path="/skin-tag-removal" element={<Navigate to="/concerns/" replace />} />
                           <Route path="/eczema-treatment" element={<Navigate to="/concerns/eczema/" replace />} />
                           <Route path="/psoriasis-treatment" element={<Navigate to="/concerns/" replace />} />
-                          <Route path="/hyperpigmentation-treatment" element={<Navigate to="/concerns/hyperpigmentation/" replace />} />
+                          <Route path="/hyperpigmentation-treatment" element={<Navigate to="/concerns/pigmentation-melasma/" replace />} />
                           
                           {/* Specialised treatment legacy redirects */}
                           <Route path="/medical-anal-bleaching" element={<Navigate to="/treatments/intimate-bleaching/" replace />} />
