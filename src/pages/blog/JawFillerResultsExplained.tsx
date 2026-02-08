@@ -14,11 +14,11 @@ import frontalBa from '@/assets/blog-jaw-filler-frontal-ba.png';
 import volumeScale from '@/assets/blog-jaw-filler-volume-scale.png';
 import chinAngle from '@/assets/blog-jaw-filler-chin-angle.png';
 
-const JawFillerBeforeAndAfterBlog = () => {
+const JawFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
-    "Jaw Filler Before & After: Structure, Contour & What Good Results Look Like | CosmeDocs",
-    "Masculine vs feminine jawlines, structure vs contour, and why most overfilled jaws happen. An honest before-and-after guide from Harley Street — not a highlight reel.",
-    "/blog/jaw-filler-before-and-after"
+    "Jaw Filler Results Explained | Masculine vs Feminine Jawlines",
+    "A clinical guide to jaw filler results, explaining structure vs contour, masculine and feminine goals, and why overfilling happens.",
+    "/blog/jaw-filler-results-explained"
   );
 
   const structuredData = {
@@ -26,8 +26,8 @@ const JawFillerBeforeAndAfterBlog = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/jaw-filler-before-and-after/#article",
-        "headline": "Jaw Filler Before & After: Structure, Contour & What Good Results Look Like",
+        "@id": "https://www.cosmedocs.co.uk/blog/jaw-filler-results-explained/#article",
+        "headline": "Jaw Filler Results Explained: Structure, Contour & Natural Outcomes",
         "description": seoData.description,
         "author": {
           "@type": "Person",
@@ -59,9 +59,9 @@ const JawFillerBeforeAndAfterBlog = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/jaw-filler-before-and-after/"
+          "@id": "https://www.cosmedocs.co.uk/blog/jaw-filler-results-explained/"
         },
-        "keywords": "jaw filler before and after, jawline filler results, masculine jaw filler, feminine jawline filler, overfilled jaw, jawline contouring, jaw filler London",
+        "keywords": "jaw filler results explained, jawline filler outcomes, masculine jaw filler, feminine jawline filler, overfilled jaw, structure vs contour, jaw filler suitability",
         "articleSection": "Aesthetic Education",
         "wordCount": 1500,
         "inLanguage": "en-GB"
@@ -110,7 +110,7 @@ const JawFillerBeforeAndAfterBlog = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="jaw filler before and after, jawline filler results, masculine jaw filler, feminine jawline filler, overfilled jaw filler, jawline contouring, Harley Street" />
+        <meta name="keywords" content="jaw filler results explained, jawline filler outcomes, masculine jaw filler, feminine jawline filler, overfilled jaw, structure vs contour, jaw filler suitability" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
@@ -139,18 +139,17 @@ const JawFillerBeforeAndAfterBlog = () => {
                 Aesthetic Education
               </span>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight mt-4 mb-6 leading-[1.15]">
-                Jaw Filler Before &amp; After:
+                Jaw Filler Results Explained:
                 <br />
                 <span className="text-[#C9A050] font-light">
                   Structure, Contour{" "}
                 </span>
-                <span className="text-white/60">&amp; What Restraint Looks Like</span>
+                <span className="text-white/60">&amp; Natural Outcomes</span>
               </h1>
               <p className="text-white/40 text-lg font-light leading-relaxed max-w-3xl">
-                Instagram has turned the jawline into a canvas. Unfortunately, 
-                most people are painting by numbers. Here's what jaw filler actually does, 
-                why masculine and feminine goals are fundamentally different, 
-                and what happens when nobody exercises restraint.
+                Why masculine and feminine jawlines require fundamentally different approaches, 
+                what separates structural augmentation from cosmetic outlining, 
+                and why most overfilled jaws happen incrementally — not intentionally.
               </p>
               <div className="flex items-center gap-6 mt-8 text-white/30 text-sm font-light">
                 <span>Dr Ahmed Haq</span>
@@ -335,10 +334,10 @@ const JawFillerBeforeAndAfterBlog = () => {
                   </p>
                 </motion.section>
 
-                {/* 4 — Before & After: What Good Looks Like */}
+                {/* 4 — Interpreting Results */}
                 <motion.section {...fadeIn}>
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
-                    Before &amp; After: What Restraint Actually Looks Like
+                    Interpreting Jaw Filler Results: What Natural Outcomes Look Like
                   </h2>
                   <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
                     Good jaw filler results are the ones that make people think you've 
@@ -538,7 +537,23 @@ const JawFillerBeforeAndAfterBlog = () => {
                   </p>
                 </motion.section>
 
-                {/* 8 — Link to Treatment Page */}
+                {/* B&A Hub Link */}
+                <motion.section {...fadeIn}>
+                  <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 mb-8">
+                    <p className="text-white/40 text-xs uppercase tracking-wider mb-3">Visual Evidence</p>
+                    <p className="text-white/50 text-sm leading-relaxed">
+                      For a comprehensive collection of clinical photographs, visit our{" "}
+                      <Link
+                        to="/before-after/dermal-fillers/jawline/"
+                        className="text-[#C9A050] hover:underline"
+                      >
+                        jaw filler before and after results
+                      </Link>.
+                    </p>
+                  </div>
+                </motion.section>
+
+                {/* Link to Treatment Page */}
                 <motion.section {...fadeIn}>
                   <div className="border-t border-white/[0.06] pt-10">
                     <p className="text-white/50 font-light leading-relaxed">
@@ -557,19 +572,17 @@ const JawFillerBeforeAndAfterBlog = () => {
                 {/* Hidden SEO Content */}
                 <div className="sr-only" aria-hidden="true">
                   <p>
-                    Jaw filler before and after results demonstrate the importance of anatomical 
-                    assessment in achieving natural jawline definition. Masculine jaw filler 
-                    treatment focuses on width, angularity, and structural projection at the 
-                    gonial angle, whilst feminine jawline filler prioritises contour refinement, 
-                    taper, and proportion with the mid-face. Overfilled jawlines typically 
-                    result from superficial placement, trend-driven treatment plans, or inadequate 
-                    assessment of skin laxity and bone structure. CosmeDocs on Harley Street 
-                    specialises in structural jawline augmentation using premium hyaluronic acid 
-                    fillers, with results typically lasting 12 to 18 months. The clinic's approach 
-                    prioritises deep periosteal placement for genuine definition rather than 
-                    cosmetic outlining. Before and after jawline filler photographs show realistic 
-                    outcomes achieved through restraint, anatomical knowledge, and product selection 
-                    tailored to individual facial proportions.
+                    Jaw filler results explained by CosmeDocs Harley Street. This educational 
+                    article explores why jawline filler outcomes vary, the difference between 
+                    structural augmentation and cosmetic outlining, masculine vs feminine jawline 
+                    goals, and who is not suitable for jaw filler treatment. Overfilled jawlines 
+                    typically result from superficial placement, trend-driven treatment plans, or 
+                    inadequate assessment of skin laxity and bone structure. CosmeDocs on Harley 
+                    Street specialises in structural jawline augmentation using premium hyaluronic 
+                    acid fillers, with results typically lasting 12 to 18 months. The clinic's 
+                    approach prioritises deep periosteal placement for genuine definition rather 
+                    than cosmetic outlining. All treatments are performed by GMC-registered doctors 
+                    at 10 Harley Street, London W1G 9PF.
                   </p>
                 </div>
 
@@ -610,4 +623,4 @@ const JawFillerBeforeAndAfterBlog = () => {
   );
 };
 
-export default JawFillerBeforeAndAfterBlog;
+export default JawFillerResultsExplained;
