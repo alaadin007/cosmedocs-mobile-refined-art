@@ -44,9 +44,9 @@ const areaCards = [
     id: "tear-trough",
     title: "Tear Trough",
     subtitle: "Under-eye hollowing correction",
-    image: null,
+    image: "/images/before-after/dermal-fillers/tear-trough-preview.jpg",
     link: "/before-after/dermal-fillers/tear-trough/",
-    imageCount: 0
+    imageCount: 7
   },
   {
     id: "nose",
