@@ -393,8 +393,8 @@ const ChinFiller = () => {
                   </p>
                   <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
                     <img
-                      src="/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png"
-                      alt="Before and after chin filler showing profile enhancement and improved chin projection"
+                      src="/images/before-after/dermal-fillers/chin/chin-filler-result-3.jpg"
+                      alt="Before and after chin filler showing profile harmonisation and improved chin shape"
                       loading="lazy"
                       className="w-full h-auto block"
                     />

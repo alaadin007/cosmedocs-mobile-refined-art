@@ -36,9 +36,9 @@ const areaCards = [
     id: "chin",
     title: "Chin Filler",
     subtitle: "Projection & lower face balance",
-    image: "/images/before-after/dermal-fillers/lips/full-face-rejuvenation.jpg",
+    image: "/images/before-after/dermal-fillers/chin/chin-filler-result-6.jpg",
     link: "/before-after/dermal-fillers/chin/",
-    imageCount: 0
+    imageCount: 7
   },
   {
     id: "tear-trough",
