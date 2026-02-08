@@ -18,7 +18,8 @@ import Index from "./pages/Index";
 const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
 
-const Treatments = lazy(() => import("./pages/Treatments"));
+const Prices = lazy(() => import("./pages/Prices"));
+const TreatmentsHub = lazy(() => import("./pages/TreatmentsHub"));
 const Team = lazy(() => import("./pages/Team"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -227,7 +228,9 @@ const App = () => {
                         <Routes>
                           <Route path="/old-index" element={<Index />} />
                           <Route path="/home" element={<Home />} />
-                          <Route path="/treatments" element={<Treatments />} />
+                          <Route path="/treatments" element={<TreatmentsHub />} />
+                          <Route path="/prices" element={<Prices />} />
+                          <Route path="/prices/" element={<Prices />} />
                           <Route path="/our-team" element={<Team />} />
                           <Route path="/our-team/" element={<Team />} />
                           <Route path="/about" element={<About />} />
@@ -573,7 +576,7 @@ const App = () => {
                           <Route path="/team/dr-noor-hotaki" element={<Navigate to="/our-team/dr-noor-hotaki/" replace />} />
                           
 {/* ============================================= */}
-                          <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
+                          <Route path="/price-list" element={<Navigate to="/prices/" replace />} />
                           <Route path="/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/skin-boosters/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />

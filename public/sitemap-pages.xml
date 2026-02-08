@@ -19,6 +19,14 @@
   </url>
 
   <url>
+    <loc>https://www.cosmedocs.co.uk/prices/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
     <loc>https://www.cosmedocs.co.uk/about/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>

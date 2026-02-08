@@ -51,7 +51,7 @@ const PricingWidget = ({
       {/* Footer */}
       <div className="px-5 py-3 border-t border-white/10 bg-white/[0.02]">
         <Link
-          to="/treatments/"
+          to="/prices/"
           className="text-xs text-white/40 hover:text-[#C9A050] transition-colors"
         >
           View full price list →

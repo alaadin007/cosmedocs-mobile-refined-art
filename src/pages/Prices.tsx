@@ -9,11 +9,11 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Link, useLocation } from "react-router-dom";
 import { generateSEOMetadata } from '@/utils/seo';
 
-const Treatments = () => {
+const Prices = () => {
   const seoData = generateSEOMetadata(
-    "Aesthetic Treatments & Price List London | Cosmedocs",
-    "Comprehensive aesthetic treatments including Botox, dermal fillers, skin boosters & medical skincare. Expert practitioners on Harley Street since 2007.",
-    "/treatments"
+    "Price List | Aesthetic Treatments London | Cosmedocs",
+    "Complete price guide for Botox, dermal fillers, skin boosters, dermatology & plastic surgery. Harley Street clinic, London. Transparent pricing since 2007.",
+    "/prices"
   );
   
   const [activeTab, setActiveTab] = useState("botox");
@@ -623,7 +623,7 @@ const Treatments = () => {
       <div className="bg-black text-white py-24">
       <div className="page-container">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Our Treatments & Prices</h1>
+          <h1 className="text-4xl font-bold mb-4">Our Price Guide</h1>
           <p className="text-gray-400 max-w-3xl mx-auto">
             As highly experienced injectors in London since 2007, we specialize in carefully administering high doses of botox 
             safely providing longevity. We have developed many new techniques with dermal fillers over the last decade 
@@ -1240,4 +1240,4 @@ const Treatments = () => {
   );
 };
 
-export default Treatments;
+export default Prices;
