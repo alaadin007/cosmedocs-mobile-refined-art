@@ -600,49 +600,35 @@ export default function FaceBotox() {
                 </div>
               </section>
 
-              {/* Before & After — Case Study Teaser */}
+              {/* Real Patient Results */}
               <section>
-                <SectionHeading>Before & After</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  A complex forehead case demonstrating precision micro-dosing. This patient presented with asymmetric frontalis contraction and uneven brow positioning — challenges that require careful dose calculation relative to muscle size and strength.
-                </p>
-                <div className="grid grid-cols-3 gap-3 mb-4">
-                  <div className="relative rounded-xl overflow-hidden border border-white/10">
+                <SectionHeading>Botox Before & After (Real Patients)</SectionHeading>
+                <div className="grid grid-cols-2 gap-4 mb-5">
+                  <div className="rounded-xl overflow-hidden border border-white/10">
                     <img
-                      src="/images/before-after/botox-forehead-before.jpeg"
-                      alt="Forehead wrinkles before Botox treatment showing asymmetric frontalis contraction"
-                      className="w-full aspect-[4/3] object-cover object-top"
+                      src="/images/before-after/botox/frown-lines-before-after-preview.jpg"
+                      alt="Frown lines before and after Botox treatment"
+                      className="w-full aspect-[4/3] object-cover"
                       loading="lazy"
                     />
-                    <span className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full">Before</span>
                   </div>
-                  <div className="relative rounded-xl overflow-hidden border border-white/10">
+                  <div className="rounded-xl overflow-hidden border border-white/10">
                     <img
-                      src="/images/before-after/botox-forehead-topup.jpeg"
-                      alt="Forehead one week after initial Botox injection before micro top-up adjustment"
-                      className="w-full aspect-[4/3] object-cover object-top"
+                      src="/images/before-after/botox/forehead-lines-before-after-preview.jpg"
+                      alt="Forehead lines before and after Botox treatment"
+                      className="w-full aspect-[4/3] object-cover"
                       loading="lazy"
                     />
-                    <span className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full">After 1 Week</span>
-                  </div>
-                  <div className="relative rounded-xl overflow-hidden border border-white/10">
-                    <img
-                      src="/images/before-after/botox-forehead-after.jpeg"
-                      alt="Final result after Botox micro top-up showing smooth forehead with natural expression"
-                      className="w-full aspect-[4/3] object-cover object-top"
-                      loading="lazy"
-                    />
-                    <span className="absolute bottom-2 left-2 bg-black/70 text-[#C9A050] text-xs px-2 py-1 rounded-full">Final Result</span>
                   </div>
                 </div>
-                <p className="text-white/40 text-xs mb-4">
-                  After the initial treatment, a micro top-up was performed at one week to fine-tune symmetry. This level of precision — predicting underlying muscle size and strength to calibrate dose-to-muscle ratio — develops through years of practice and thousands of patients. Individual results may vary.
+                <p className="text-white/40 text-xs mb-5">
+                  All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial anatomy and treatment plan.
                 </p>
                 <Link
                   to="/before-after/botox/"
                   className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium"
                 >
-                  View full Botox before &amp; after results <ArrowRight className="w-4 h-4" />
+                  View full Botox before &amp; after gallery → <ArrowRight className="w-4 h-4" />
                 </Link>
               </section>
 

@@ -69,25 +69,6 @@ const BotoxSidebar = () => {
         </Link>
       </motion.div>
 
-      {/* Before & After Link */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5"
-      >
-        <p className="text-sm text-white/70 mb-3 font-medium">Before & After Results</p>
-        <p className="text-xs text-white/40 leading-relaxed mb-3">
-          View real patient before and after results demonstrating wrinkle reduction, forehead smoothing, and crow's feet correction.
-        </p>
-        <Link
-          to="/before-after/botox/"
-          className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium"
-        >
-          View before & after gallery
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </motion.div>
 
       {/* Medical Botox Link */}
       <motion.div
