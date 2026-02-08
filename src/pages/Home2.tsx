@@ -102,7 +102,7 @@ const aiTools = [
     gradient: "from-neutral-700/30 to-neutral-800/20"
   },
   {
-    title: "Chat With Our AIesthetics Doctor",
+    title: "Aesthetic Intelligence",
     subtitle: "Ask anything about treatments",
     icon: aiDoctorChatIcon,
     link: null,
