@@ -136,7 +136,7 @@ const HowToGetRidOfBruises = () => {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.cosmedocs.co.uk/cosmetalk"
+        "item": "https://www.cosmedocs.co.uk/blog/"
       },
       {
         "@type": "ListItem",
@@ -160,7 +160,7 @@ const HowToGetRidOfBruises = () => {
     },
     {
       title: "Lazy Skin Syndrome: The Hidden Cost",
-      slug: "/cosmetalk/lazy-skin-syndrome",
+      slug: "/blog/lazy-skin-syndrome",
       image: "/images/blog/dehydrated-fingers.jpg"
     }
   ];

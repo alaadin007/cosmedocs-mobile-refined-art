@@ -51,7 +51,7 @@ const VitaminCSerumBenefitsBlog = () => {
     "dateModified": "2025-01-17",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.com/cosmetalk/vitamin-c-ferulic-acid-benefits"
+      "@id": "https://www.cosmedocs.co.uk/blog/vitamin-c-ferulic-acid-benefits/"
     }
   };
 
@@ -298,7 +298,7 @@ const VitaminCSerumBenefitsBlog = () => {
                     <h4 className="text-white font-semibold mb-2">Lazy Skin Syndrome</h4>
                     <p className="text-gray-400 text-sm mb-4">Discover how moisturisers may be creating skin dependency and how to fix it.</p>
                     <Button asChild variant="outline" size="sm">
-                      <Link to="/cosmetalk/lazy-skin-syndrome">Read More</Link>
+                      <Link to="/blog/lazy-skin-syndrome">Read More</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -313,7 +313,7 @@ const VitaminCSerumBenefitsBlog = () => {
                     <h4 className="text-white font-semibold mb-2">How to Achieve Flawless Skin</h4>
                     <p className="text-gray-400 text-sm mb-4">Discover the 9-step dermatologist-approved plan to transform your skin naturally.</p>
                     <Button asChild variant="outline" size="sm">
-                      <Link to="/cosmetalk/flawless-skin">Read More</Link>
+                      <Link to="/blog/flawless-skin">Read More</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -328,7 +328,7 @@ const VitaminCSerumBenefitsBlog = () => {
                     <h4 className="text-white font-semibold mb-2">Why Women Get Smokers Lines</h4>
                     <p className="text-gray-400 text-sm mb-4">Understanding perioral lines and effective treatment options for women.</p>
                     <Button asChild variant="outline" size="sm">
-                      <Link to="/cosmetalk/smokers-lines-women">Read More</Link>
+                      <Link to="/blog/smokers-lines-women">Read More</Link>
                     </Button>
                   </div>
                 </CardContent>

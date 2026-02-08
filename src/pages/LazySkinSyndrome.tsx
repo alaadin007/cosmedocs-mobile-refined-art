@@ -30,8 +30,8 @@ const LazySkinSyndrome = () => {
         <meta property="og:title" content="Lazy Skin Syndrome: Why Moisturisers May Be Hurting You" />
         <meta property="og:description" content="Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://cosmedocs.co.uk/cosmetalk/lazy-skin-syndrome" />
-        <link rel="canonical" href="https://cosmedocs.co.uk/cosmetalk/lazy-skin-syndrome" />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -70,7 +70,7 @@ const LazySkinSyndrome = () => {
             "description": "Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://cosmedocs.co.uk/cosmetalk/lazy-skin-syndrome"
+              "@id": "https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/"
             }
           })}
         </script>
@@ -80,9 +80,9 @@ const LazySkinSyndrome = () => {
       <header className="bg-gradient-to-r from-orange-900 via-red-800 to-pink-900">
         <section className="py-8 border-b border-gray-800">
           <div className="container mx-auto px-4">
-            <Link to="/cosmetalk" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
+            <Link to="/blog/" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to CosmedTalk
+              Back to CosmeTalk
             </Link>
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <div className="flex items-center">
@@ -365,7 +365,7 @@ const LazySkinSyndrome = () => {
                   <h4 className="text-white font-semibold mb-2">How to Achieve Flawless Skin</h4>
                   <p className="text-gray-400 text-sm mb-4">Discover the 9-step dermatologist-approved plan to transform your skin naturally.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/flawless-skin">Read More</Link>
+                    <Link to="/blog/flawless-skin">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -380,7 +380,7 @@ const LazySkinSyndrome = () => {
                   <h4 className="text-white font-semibold mb-2">Why Women Get Smokers Lines</h4>
                   <p className="text-gray-400 text-sm mb-4">Understanding perioral lines and effective treatment options for women.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/smokers-lines-women">Read More</Link>
+                    <Link to="/blog/smokers-lines-women">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -395,7 +395,7 @@ const LazySkinSyndrome = () => {
                   <h4 className="text-white font-semibold mb-2">Vitamin C & Ferulic Acid Benefits</h4>
                   <p className="text-gray-400 text-sm mb-4">The science behind vitamin C serums and their anti-aging properties.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/vitamin-c-ferulic-acid-benefits">Read More</Link>
+                    <Link to="/blog/vitamin-c-ferulic-acid-benefits">Read More</Link>
                   </Button>
                 </div>
               </CardContent>

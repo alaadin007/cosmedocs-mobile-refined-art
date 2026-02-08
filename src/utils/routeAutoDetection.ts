@@ -14,7 +14,7 @@ const ROUTE_REGISTRY = {
     '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/',
     '/membership/', '/harley-street-consulting-rooms/',
     '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
-    '/thank-you/', '/fellowship-invitation/', '/8-point-facelift/', '/cosmetalk/',
+    '/thank-you/', '/fellowship-invitation/', '/8-point-facelift/', '/blog/',
     '/aesthetic-training/', '/testimonials/', '/aesthetics-at-a-glance/',
     '/home', '/home2', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-aesthetician/',
     '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/', '/admin/video-upload'
@@ -50,8 +50,8 @@ const ROUTE_REGISTRY = {
   blog: [
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
     '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
-    '/cosmetalk/vitamin-c-ferulic-acid-benefits', '/cosmetalk/smokers-lines-women',
-    '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
+    '/blog/vitamin-c-ferulic-acid-benefits', '/blog/smokers-lines-women',
+    '/blog/flawless-skin', '/blog/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
     '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
   ],
   locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados']

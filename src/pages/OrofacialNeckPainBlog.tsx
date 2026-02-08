@@ -9,7 +9,7 @@ const OrofacialNeckPainBlog = () => {
   const seoData = generateSEOMetadata(
     "Breaking the Cycle: Orofacial & Neck Pain Relief | Cosmetalk",
     "Understand the complex relationship between jaw clenching, TMJ disorder, headaches, neck pain & shoulder knots. Discover treatment options including Botox, physio & trigger point therapy.",
-    "/cosmetalk/orofacial-neck-pain-cycle"
+    "/blog/orofacial-neck-pain-cycle"
   );
 
   const structuredData = {
@@ -34,7 +34,7 @@ const OrofacialNeckPainBlog = () => {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/cosmetalk/orofacial-neck-pain-cycle"
+      "@id": "https://www.cosmedocs.co.uk/blog/orofacial-neck-pain-cycle/"
     },
     "about": {
       "@type": "MedicalCondition",
@@ -63,9 +63,9 @@ const OrofacialNeckPainBlog = () => {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="page-container max-w-4xl mx-auto">
-          <Link to="/cosmetalk" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-8 transition-colors">
+          <Link to="/blog/" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-8 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Cosmetalk
+            Back to CosmeTalk
           </Link>
 
           <motion.div

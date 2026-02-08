@@ -104,12 +104,12 @@ const ForeheadWrinklesMythsTips = () => {
     },
     {
       title: "How to Achieve Flawless Skin",
-      slug: "/cosmetalk/flawless-skin",
+      slug: "/blog/flawless-skin",
       image: "/lovable-uploads/5dced835-f996-4de3-9630-369db5c43e9b.png"
     },
     {
       title: "Lazy Skin Syndrome: The Hidden Cost",
-      slug: "/cosmetalk/lazy-skin-syndrome",
+      slug: "/blog/lazy-skin-syndrome",
       image: "/src/assets/dehydrated-fingers.jpg"
     }
   ];

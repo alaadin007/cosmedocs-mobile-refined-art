@@ -11,7 +11,7 @@ const CosmetalkBlog = () => {
   const seoData = generateSEOMetadata(
     "Cosmetalk | Aesthetic Medicine Insights | Cosmedocs",
     "Latest aesthetic medicine insights, skincare trends & expert treatment advice. Professional guidance from Cosmedocs.",
-    "/cosmetalk"
+    "/blog"
   );
 
   const blogPosts = [
@@ -32,7 +32,7 @@ const CosmetalkBlog = () => {
       category: "Medical Insight",
       readTime: "8 min read",
       date: "January 26, 2025",
-      slug: "/cosmetalk/orofacial-neck-pain-cycle",
+      slug: "/blog/orofacial-neck-pain-cycle",
       featured: false,
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80",
       author: "By Cosmedocs Medical Team"
@@ -87,7 +87,7 @@ const CosmetalkBlog = () => {
       category: "Skincare Science",
       readTime: "9 min read",
       date: "January 20, 2024",
-      slug: "/cosmetalk/lazy-skin-syndrome",
+      slug: "/blog/lazy-skin-syndrome",
       featured: false,
       image: "/src/assets/dehydrated-fingers.jpg",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
@@ -98,7 +98,7 @@ const CosmetalkBlog = () => {
       category: "Skincare Science", 
       readTime: "12 min read",
       date: "January 18, 2024",
-      slug: "/cosmetalk/flawless-skin",
+      slug: "/blog/flawless-skin",
       featured: false,
       image: "/lovable-uploads/5dced835-f996-4de3-9630-369db5c43e9b.png",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
@@ -109,7 +109,7 @@ const CosmetalkBlog = () => {
       category: "Facial Aging",
       readTime: "7 min read", 
       date: "January 15, 2024",
-      slug: "/cosmetalk/smokers-lines-women",
+      slug: "/blog/smokers-lines-women",
       featured: false,
       image: "/lovable-uploads/b71c8892-0875-4d89-ba82-33c9ac45e35f.png",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
@@ -120,7 +120,7 @@ const CosmetalkBlog = () => {
       category: "Skincare Science",
       readTime: "8 min read",
       date: "January 17, 2025",
-      slug: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
+      slug: "/blog/vitamin-c-ferulic-acid-benefits",
       featured: false,
       image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=400&fit=crop",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
@@ -204,7 +204,7 @@ const CosmetalkBlog = () => {
     "@type": "Blog",
     "name": "Cosmetalk - Cosmedocs Blog",
     "description": "Expert insights on aesthetic medicine, skincare, and non-surgical treatments",
-    "url": "https://www.cosmedocs.com/cosmetalk",
+    "url": "https://www.cosmedocs.co.uk/blog/",
     "publisher": {
       "@type": "Organization",
       "name": "Cosmedocs",

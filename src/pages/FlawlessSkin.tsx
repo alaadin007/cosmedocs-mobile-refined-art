@@ -30,8 +30,8 @@ const FlawlessSkin = () => {
         <meta property="og:title" content="How to Get Flawless Skin Naturally: Anti-Ageing Aesthetic Dermatology Tips" />
         <meta property="og:description" content="Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://cosmedocs.co.uk/cosmetalk/flawless-skin" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/cosmetalk/flawless-skin" />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/flawless-skin/" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/flawless-skin/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -70,7 +70,7 @@ const FlawlessSkin = () => {
             "description": "Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://cosmedocs.co.uk/cosmetalk/flawless-skin"
+              "@id": "https://www.cosmedocs.co.uk/blog/flawless-skin/"
             }
           })}
         </script>
@@ -80,9 +80,9 @@ const FlawlessSkin = () => {
       <header className="bg-gradient-to-r from-purple-900 via-purple-800 to-pink-900">
         <section className="py-8 border-b border-gray-800">
           <div className="container mx-auto px-4">
-            <Link to="/cosmetalk" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
+            <Link to="/blog/" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to CosmedTalk
+              Back to CosmeTalk
             </Link>
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <div className="flex items-center">
@@ -521,7 +521,7 @@ const FlawlessSkin = () => {
                   <h4 className="text-white font-semibold mb-2">Lazy Skin Syndrome</h4>
                   <p className="text-gray-400 text-sm mb-4">Discover how moisturisers may be creating skin dependency and how to fix it.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/lazy-skin-syndrome">Read More</Link>
+                    <Link to="/blog/lazy-skin-syndrome">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -536,7 +536,7 @@ const FlawlessSkin = () => {
                   <h4 className="text-white font-semibold mb-2">Why Women Get Smokers Lines</h4>
                   <p className="text-gray-400 text-sm mb-4">Understanding perioral lines and effective treatment options for women.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/smokers-lines-women">Read More</Link>
+                    <Link to="/blog/smokers-lines-women">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -551,7 +551,7 @@ const FlawlessSkin = () => {
                   <h4 className="text-white font-semibold mb-2">Vitamin C & Ferulic Acid Benefits</h4>
                   <p className="text-gray-400 text-sm mb-4">The science behind vitamin C serums and their anti-aging properties.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/vitamin-c-ferulic-acid-benefits">Read More</Link>
+                    <Link to="/blog/vitamin-c-ferulic-acid-benefits">Read More</Link>
                   </Button>
                 </div>
               </CardContent>

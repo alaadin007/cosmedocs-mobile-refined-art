@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
   { title: "Treatments", url: "/treatments", icon: Sparkles },
-  { title: "Cosmetalk", url: "/cosmetalk", icon: MessageSquare },
+  { title: "CosmeTalk", url: "/blog", icon: MessageSquare },
   { title: "About Us", url: "/about", icon: Users },
   { title: "Contact", url: "/contact", icon: Phone },
 ];
