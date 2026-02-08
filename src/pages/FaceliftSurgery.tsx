@@ -118,8 +118,8 @@ export default function FaceliftSurgery() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-purple-500/30">
-                    <Link to="/8-point-facelift">
-                      8-Point Facelift
+                    <Link to="/treatments/ha-makeover">
+                      HA Makeover
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-purple-500/30">

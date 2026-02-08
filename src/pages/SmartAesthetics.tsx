@@ -123,7 +123,7 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
     { title: "Lip Filler", link: "/lip-fillers" },
   ],
   "forties-lift": [
-    { title: "8 Point Facelift", link: "/8-point-facelift" },
+    { title: "HA Makeover", link: "/treatments/ha-makeover" },
     { title: "PDO Threads", link: "/pdo-threads" },
     { title: "Profhilo", link: "/profhilo" },
   ],

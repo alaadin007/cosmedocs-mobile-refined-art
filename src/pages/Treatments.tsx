@@ -220,10 +220,10 @@ const Treatments = () => {
           isSubcategory: true,
           subitems: [
             {
-              title: "8 Point Facelift",
+              title: "HA Makeover",
               price: "From £800",
-              description: "Comprehensive non-surgical facelift targeting 8 key facial points",
-              link: "/8-point-facelift"
+              description: "Bespoke full-face dermal filler rejuvenation using multi-point structural support",
+              link: "/treatments/ha-makeover"
             },
             {
               title: "Non-Surgical Facelift",
