@@ -222,7 +222,7 @@
 /booking                          /contact/                           301
 /book-consultation                /contact/                           301
 /book-consultation/               /contact/                           301
-/price-list                       /treatments/                        301
+/price-list                       /prices/                            301
 /skin-boosters                    /treatments/                        301
 
 # =====================================================
