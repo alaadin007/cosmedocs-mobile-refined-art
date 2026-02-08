@@ -7,6 +7,7 @@ import { CheckCircle, Clock, ArrowRight, Calendar, Syringe, Heart, Shield, MapPi
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
+import ExpandableSection from "@/components/ui/expandable-section";
 import DermalFillersSidebar from '@/components/dermal-fillers/DermalFillersSidebar';
 
 export default function DermalFillers() {
@@ -277,422 +278,529 @@ export default function DermalFillers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid lg:grid-cols-[1fr_380px] gap-12">
             {/* LEFT — Educational Content */}
-            <div className="space-y-16">
-              {/* Quick Nav */}
-              <nav className="flex flex-wrap gap-3 text-sm">
-                {["What Are Fillers?", "How They Work", "Treatment Areas", "Full-Face Approach", "Who Is Suitable?", "Results", "Choosing a Clinic", "FAQs"].map((label) => (
-                  <a key={label} href={`#${label.toLowerCase().replace(/[^a-z]+/g, '-')}`} className="text-white/40 hover:text-[#C9A050] transition-colors">
-                    {label}
-                  </a>
-                ))}
-              </nav>
+            <div className="space-y-14">
 
               {/* What Are Dermal Fillers */}
               <section id="what-are-fillers-">
-                <SectionHeading>What Are Dermal Fillers?</SectionHeading>
-                <div className="prose prose-invert max-w-none">
-                  <p className="text-white/70 text-lg mb-6">
-                    Dermal fillers are injectable treatments most commonly made from hyaluronic acid — a substance naturally found in the skin that helps retain hydration, volume, and elasticity.
-                  </p>
-                  <p className="text-white/60 mb-6">
-                    As we age, the face loses structural support — bone recedes, fat pads shift, and skin becomes thinner. Dermal fillers work by restoring this lost volume, lifting sagging tissues, and softening lines — without surgery.
-                  </p>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
-                    <h3 className="text-lg font-semibold text-white mb-4">What Fillers Can Address</h3>
-                    <ul className="space-y-3 text-white/60">
-                      {["Restore age-related volume loss in cheeks, temples, and lips", "Improve facial proportions and symmetry", "Support sagging tissues and lift jowls", "Soften static lines and nasolabial folds", "Enhance natural contours — jawline, chin, lips"].map((fact) => (
-                        <li key={fact} className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" /><span>{fact}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                  <p className="text-white/60">
-                    At CosmeDocs, dermal fillers are never used to "fill lines blindly." They are placed strategically to support the face as a whole, respecting individual anatomy and natural expression.
-                  </p>
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Are <span className="text-[#C9A050] font-light">Dermal Fillers?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Dermal fillers are injectable treatments most commonly made from hyaluronic acid — a substance naturally found in the skin that helps retain hydration, volume, and elasticity. As we age, the face loses structural support — bone recedes, fat pads shift, and skin becomes thinner. Dermal fillers work by restoring this lost volume, lifting sagging tissues, and softening lines — without surgery.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-xs font-medium text-white/60 mb-4">What Fillers Can Address</p>
+                        <ul className="space-y-2">
+                          {["Restore age-related volume loss in cheeks, temples, and lips", "Improve facial proportions and symmetry", "Support sagging tissues and lift jowls", "Soften static lines and nasolabial folds", "Enhance natural contours — jawline, chin, lips"].map((fact) => (
+                            <li key={fact} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" /><span>{fact}</span></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <p>
+                        At CosmeDocs, dermal fillers are never used to "fill lines blindly." They are placed strategically to support the face as a whole, respecting individual anatomy and natural expression.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* How They Work */}
               <section id="how-they-work">
-                <SectionHeading>How Dermal Fillers Work</SectionHeading>
-                <div className="grid md:grid-cols-3 gap-4 mb-8">
-                  {[
-                    { step: "1", title: "Assessment", desc: "Your doctor analyses facial anatomy, bone structure, and volume loss patterns to create a bespoke treatment plan." },
-                    { step: "2", title: "Injection", desc: "Hyaluronic acid gel is precisely placed using cannulae or fine needles at specific depths to restore or enhance volume." },
-                    { step: "3", title: "Integration", desc: "The filler integrates with surrounding tissue, drawing moisture and providing natural-looking support and structure." },
-                  ].map((s) => (
-                    <div key={s.step} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
-                      <div className="bg-[#C9A050]/20 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
-                        <span className="text-xl font-bold text-[#C9A050]">{s.step}</span>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How Dermal Fillers <span className="text-[#C9A050] font-light">Work</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="grid md:grid-cols-3 gap-4">
+                        {[
+                          { step: "1", title: "Assessment", desc: "Your doctor analyses facial anatomy, bone structure, and volume loss patterns to create a bespoke treatment plan." },
+                          { step: "2", title: "Injection", desc: "Hyaluronic acid gel is precisely placed using cannulae or fine needles at specific depths to restore or enhance volume." },
+                          { step: "3", title: "Integration", desc: "The filler integrates with surrounding tissue, drawing moisture and providing natural-looking support and structure." },
+                        ].map((s) => (
+                          <div key={s.step} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 text-center">
+                            <div className="bg-[#C9A050]/15 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-3">
+                              <span className="text-sm font-medium text-[#C9A050]">{s.step}</span>
+                            </div>
+                            <p className="text-sm font-medium text-white/70 mb-1">{s.title}</p>
+                            <p className="text-white/40 text-xs font-light">{s.desc}</p>
+                          </div>
+                        ))}
                       </div>
-                      <h3 className="text-base font-semibold text-white mb-2">{s.title}</h3>
-                      <p className="text-white/50 text-sm">{s.desc}</p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Unlike Botox which relaxes muscles, dermal fillers physically add volume beneath the skin's surface. The hyaluronic acid in fillers is biocompatible — meaning it works with your body, not against it.
+                      </p>
+                      <p>
+                        Premium fillers come in different viscosities — thicker gels for structural support (jawline, chin), medium gels for volume (cheeks), and softer gels for delicate areas (lips, tear troughs). Choosing the right product for each area is crucial for natural results.
+                      </p>
                     </div>
-                  ))}
-                </div>
-                <p className="text-white/60 mb-4">
-                  Unlike Botox which relaxes muscles, dermal fillers physically add volume beneath the skin's surface. The hyaluronic acid in fillers is biocompatible — meaning it works with your body, not against it.
-                </p>
-                <p className="text-white/60">
-                  Premium fillers come in different viscosities — thicker gels for structural support (jawline, chin), medium gels for volume (cheeks), and softer gels for delicate areas (lips, tear troughs). Choosing the right product for each area is crucial for natural results.
-                </p>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Treatment Areas */}
               <section id="treatment-areas">
-                <SectionHeading>Dermal Filler Treatment Areas</SectionHeading>
-                <p className="text-white/60 mb-8">
-                  Each area of the face has unique anatomy, ageing patterns, and requirements. Our doctors tailor product choice, placement depth, and volume to each individual area.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {treatmentAreaCards.map((card) => (
-                    <div key={card.title} className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-[#C9A050]/30 transition-colors">
-                      <h3 className="text-base font-semibold text-white mb-2">{card.title}</h3>
-                      <p className="text-white/50 text-sm mb-3">{card.description}</p>
-                      <ul className="space-y-1.5">
-                        {card.areas.map((area) => (
-                          <li key={area} className="flex items-center gap-2 text-sm text-white/60">
-                            <Check className="w-3.5 h-3.5 text-[#C9A050]" /> {area}
-                          </li>
-                        ))}
-                      </ul>
-                      {card.link && (
-                        <Link to={card.link} className="inline-flex items-center gap-1 text-[#C9A050] text-sm mt-3 hover:underline font-medium">
-                          Learn more <ArrowRight className="w-3.5 h-3.5" />
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    { label: "Lip Fillers", to: "/treatments/lip-fillers/" },
-                    { label: "Jawline Filler", to: "/treatments/jawline-filler/" },
-                    { label: "Cheek Filler", to: "/treatments/cheek-filler/" },
-                    { label: "Chin Filler", to: "/treatments/chin-filler/" },
-                    { label: "Tear Trough", to: "/treatments/tear-trough-filler/" },
-                    { label: "Temple Filler", to: "/treatments/temple-filler/" },
-                  ].map((link) => (
-                    <Link key={link.label} to={link.to} className="px-4 py-2 bg-white/5 hover:bg-[#C9A050]/10 border border-white/10 hover:border-[#C9A050]/30 rounded-full text-sm text-white/60 hover:text-[#C9A050] transition-all">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Treatment <span className="text-[#C9A050] font-light">Areas</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Each area of the face has unique anatomy, ageing patterns, and requirements. Our doctors tailor product choice, placement depth, and volume to each individual area.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    {treatmentAreaCards.map((card) => (
+                      <div key={card.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                        <p className="text-sm font-medium text-white/70 mb-2">{card.title}</p>
+                        <p className="text-white/35 text-xs font-light mb-3">{card.description}</p>
+                        <ul className="space-y-1.5">
+                          {card.areas.map((area) => (
+                            <li key={area} className="flex items-center gap-2 text-xs text-white/45 font-light">
+                              <Check className="w-3 h-3 text-[#C9A050]/60" /> {area}
+                            </li>
+                          ))}
+                        </ul>
+                        {card.link && (
+                          <Link to={card.link} className="inline-flex items-center gap-1 text-[#C9A050]/70 text-xs mt-3 hover:text-[#C9A050] font-light transition-colors">
+                            Learn more <ArrowRight className="w-3 h-3" />
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { label: "Lip Fillers", to: "/treatments/lip-fillers/" },
+                      { label: "Jawline Filler", to: "/treatments/jawline-filler/" },
+                      { label: "Cheek Filler", to: "/treatments/cheek-filler/" },
+                      { label: "Chin Filler", to: "/treatments/chin-filler/" },
+                      { label: "Tear Trough", to: "/treatments/tear-trough-filler/" },
+                      { label: "Temple Filler", to: "/treatments/temple-filler/" },
+                    ].map((link) => (
+                      <Link key={link.label} to={link.to} className="px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full text-xs text-white/45 hover:text-[#C9A050] hover:border-[#C9A050]/30 transition-all font-light">
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
               </section>
 
               {/* Full-Face Approach */}
               <section id="full-face-approach">
-                <SectionHeading>A Full-Face Approach to Dermal Fillers</SectionHeading>
-                <p className="text-white/70 text-lg mb-6">
-                  Facial ageing does not occur in isolation. Lines, folds, and hollowing are often the result of structural changes elsewhere in the face.
-                </p>
-                <p className="text-white/60 mb-6">
-                  That's why our doctors adopt a full-face approach. Rather than treating a single line or area in isolation, we assess how different regions interact — and how restoring support in one area can naturally improve another.
-                </p>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
-                  <p className="text-white font-medium mb-4">This approach:</p>
-                  <ul className="space-y-3 text-white/60">
-                    {["Reduces the risk of overfilling any single area", "Produces more natural, balanced results", "Preserves facial movement and expression", "Delivers longer-lasting outcomes with less product"].map((item) => (
-                      <li key={item} className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" /><span>{item}</span></li>
-                    ))}
-                  </ul>
-                </div>
-                <p className="text-[#C9A050] font-medium italic">
-                  Our goal is not obvious correction — it's subtle restoration.
-                </p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    A Full-Face <span className="text-[#C9A050] font-light">Approach</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Facial ageing does not occur in isolation. Lines, folds, and hollowing are often the result of structural changes elsewhere in the face. That's why our doctors adopt a full-face approach — assessing how different regions interact, and how restoring support in one area can naturally improve another.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-xs font-medium text-white/60 mb-4">This approach:</p>
+                        <ul className="space-y-2">
+                          {["Reduces the risk of overfilling any single area", "Produces more natural, balanced results", "Preserves facial movement and expression", "Delivers longer-lasting outcomes with less product"].map((item) => (
+                            <li key={item} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" /><span>{item}</span></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <p className="text-[#C9A050]/60 italic font-light">
+                        Our goal is not obvious correction — it's subtle restoration.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Who Is Suitable */}
               <section id="who-is-suitable-">
-                <SectionHeading>Who Is Suitable for Dermal Fillers?</SectionHeading>
-                <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-[#C9A050]/20 rounded-full p-2"><Sparkles className="w-5 h-5 text-[#C9A050]" /></div>
-                      <h3 className="text-lg font-semibold text-white">Enhancement</h3>
-                    </div>
-                    <p className="text-white/60 text-sm mb-3">For those seeking to enhance facial features — lip volume, cheek definition, jawline contouring — regardless of age.</p>
-                    <p className="text-xs text-white/40"><strong className="text-[#C9A050]">Best for:</strong> Those wanting to improve specific features naturally.</p>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-[#C9A050]/20 rounded-full p-2"><Activity className="w-5 h-5 text-[#C9A050]" /></div>
-                      <h3 className="text-lg font-semibold text-white">Restoration</h3>
-                    </div>
-                    <p className="text-white/60 text-sm mb-3">For age-related volume loss — hollow cheeks, deep nasolabial folds, thinning lips, temple hollowing. Restoring what time has taken.</p>
-                    <p className="text-xs text-white/40"><strong className="text-[#C9A050]">Best for:</strong> Those noticing volume loss and wanting a refreshed appearance.</p>
-                  </div>
-                </div>
-
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">Age Considerations</h3>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {[
-                      { age: "20s-30s", text: "Enhancement-focused. Lip definition, chin projection, or subtle cheek contour. Light volumes, natural results." },
-                      { age: "40s-50s", text: "Volume restoration begins. Mid-face support, nasolabial folds, jawline definition. Often combined with Botox." },
-                      { age: "60s+", text: "Comprehensive restoration. Multiple areas benefit from structural support. Part of a wider rejuvenation approach." },
-                    ].map((a) => (
-                      <div key={a.age}>
-                        <p className="text-[#C9A050] font-semibold mb-2">{a.age}</p>
-                        <p className="text-white/50 text-sm">{a.text}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Who Is <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Sparkles className="w-4 h-4 text-[#C9A050]/60" />
+                            <p className="text-sm font-medium text-white/70">Enhancement</p>
+                          </div>
+                          <p className="text-white/45 text-xs leading-relaxed font-light">For those seeking to enhance facial features — lip volume, cheek definition, jawline contouring — regardless of age.</p>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Activity className="w-4 h-4 text-[#C9A050]/60" />
+                            <p className="text-sm font-medium text-white/70">Restoration</p>
+                          </div>
+                          <p className="text-white/45 text-xs leading-relaxed font-light">For age-related volume loss — hollow cheeks, deep nasolabial folds, thinning lips, temple hollowing. Restoring what time has taken.</p>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    }
+                  >
+                    <div className="space-y-5 text-white/45 text-sm leading-relaxed font-light">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-xs font-medium text-white/60 mb-4">Age Considerations</p>
+                        <div className="grid md:grid-cols-3 gap-5">
+                          {[
+                            { age: "20s–30s", text: "Enhancement-focused. Lip definition, chin projection, or subtle cheek contour. Light volumes, natural results." },
+                            { age: "40s–50s", text: "Volume restoration begins. Mid-face support, nasolabial folds, jawline definition. Often combined with Botox." },
+                            { age: "60s+", text: "Comprehensive restoration. Multiple areas benefit from structural support. Part of a wider rejuvenation approach." },
+                          ].map((a) => (
+                            <div key={a.age}>
+                              <p className="text-[#C9A050]/70 font-medium text-xs mb-1">{a.age}</p>
+                              <p className="text-white/40 text-xs font-light">{a.text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Results Timeline */}
               <section id="results">
-                <SectionHeading>Results Timeline & Longevity</SectionHeading>
-                <div className="space-y-5 mb-8">
-                  {[
-                    { icon: <Syringe className="w-5 h-5 text-[#C9A050]" />, title: "Day 1: Immediate", desc: "Visible improvement straight away. Some swelling is normal and expected — this settles within 48-72 hours." },
-                    { icon: <Activity className="w-5 h-5 text-[#C9A050]" />, title: "Weeks 2-4: Settled", desc: "Swelling fully resolved. The filler has integrated with tissue and hydrated. This is when you see the true result." },
-                    { icon: <Calendar className="w-5 h-5 text-[#C9A050]" />, title: "Months 12-18: Duration", desc: "Results typically last 12-18 months depending on the area, product used, and individual metabolism." },
-                  ].map((t) => (
-                    <div key={t.title} className="flex items-start gap-4">
-                      <div className="bg-[#C9A050]/20 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">{t.icon}</div>
-                      <div>
-                        <h3 className="text-base font-semibold text-white mb-1">{t.title}</h3>
-                        <p className="text-white/50 text-sm">{t.desc}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Results <span className="text-[#C9A050] font-light">Timeline</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="space-y-4">
+                        {[
+                          { title: "Day 1: Immediate", desc: "Visible improvement straight away. Some swelling is normal and expected — this settles within 48–72 hours." },
+                          { title: "Weeks 2–4: Settled", desc: "Swelling fully resolved. The filler has integrated with tissue and hydrated. This is when you see the true result." },
+                          { title: "Months 12–18: Duration", desc: "Results typically last 12–18 months depending on the area, product used, and individual metabolism." },
+                        ].map((t) => (
+                          <div key={t.title} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#C9A050]/50 mt-2 flex-shrink-0" />
+                            <div>
+                              <p className="text-xs font-medium text-white/60 mb-0.5">{t.title}</p>
+                              <p className="text-white/40 text-xs font-light">{t.desc}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    }
+                  >
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <p className="text-xs font-medium text-white/60 mb-3">Duration by Area</p>
+                      <div className="grid md:grid-cols-2 gap-3 text-xs text-white/40 font-light">
+                        {[
+                          { label: "Lips", desc: "6–12 months (high movement area)" },
+                          { label: "Cheeks", desc: "12–18 months" },
+                          { label: "Jawline & chin", desc: "12–18 months" },
+                          { label: "Tear troughs", desc: "12–18 months (low movement)" },
+                        ].map((f) => (
+                          <div key={f.label} className="flex items-start gap-2">
+                            <Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" />
+                            <span><strong className="text-white/55">{f.label}:</strong> {f.desc}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                  <h3 className="text-sm font-semibold text-white mb-3">Duration by Area</h3>
-                  <div className="grid md:grid-cols-2 gap-3 text-sm text-white/50">
-                    {[
-                      { label: "Lips", desc: "6-12 months (high movement area)" },
-                      { label: "Cheeks", desc: "12-18 months" },
-                      { label: "Jawline & chin", desc: "12-18 months" },
-                      { label: "Tear troughs", desc: "12-18 months (low movement)" },
-                    ].map((f) => (
-                      <div key={f.label} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-[#C9A050] mt-0.5" />
-                        <span><strong className="text-white/70">{f.label}:</strong> {f.desc}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Fillers vs Botox */}
               <section>
-                <SectionHeading>How Fillers Fit Into Facial Rejuvenation</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  Understanding the difference between dermal fillers and <Link to="/treatments/botox/" className="text-[#C9A050] hover:underline">Botox</Link> helps you make informed decisions about your treatment plan.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-lg font-semibold text-white mb-2">Dermal Fillers</h3>
-                    <p className="text-[#C9A050] text-sm mb-3">Adds volume → Restores lost fullness</p>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Lines present at rest (static lines)</li>
-                      <li>• Cheeks, lips, jawline, nasolabial folds</li>
-                      <li>• Volume restoration & contouring</li>
-                      <li>• Results last 6-18 months</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-lg font-semibold text-white mb-2">Botox</h3>
-                    <p className="text-[#C9A050] text-sm mb-3">Relaxes muscles → Reduces dynamic wrinkles</p>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Lines that appear with expression</li>
-                      <li>• Forehead, frown lines, crow's feet</li>
-                      <li>• Preventative treatment</li>
-                      <li>• Results last 3-6 months</li>
-                    </ul>
-                  </div>
-                </div>
-                <p className="text-white/60 mb-4">
-                  Many patients benefit from a combined approach. Botox addresses dynamic lines whilst fillers restore lost volume — together, they create comprehensive facial rejuvenation.
-                </p>
-                <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium">
-                  Learn about Botox <ArrowRight className="w-4 h-4" />
-                </Link>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How Fillers Fit Into <span className="text-[#C9A050] font-light">Facial Rejuvenation</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Understanding the difference between dermal fillers and <Link to="/treatments/botox/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Botox</Link> helps you make informed decisions about your treatment plan.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <p className="text-sm font-medium text-[#C9A050]/80 mb-3">Dermal Fillers</p>
+                          <p className="text-[#C9A050]/50 text-xs mb-3 font-light">Adds volume → Restores lost fullness</p>
+                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                            <li>• Lines present at rest (static lines)</li>
+                            <li>• Cheeks, lips, jawline, nasolabial folds</li>
+                            <li>• Volume restoration & contouring</li>
+                            <li>• Results last 6–18 months</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <p className="text-sm font-medium text-white/60 mb-3">Botox</p>
+                          <p className="text-white/35 text-xs mb-3 font-light">Relaxes muscles → Reduces dynamic wrinkles</p>
+                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                            <li>• Lines that appear with expression</li>
+                            <li>• Forehead, frown lines, crow's feet</li>
+                            <li>• Preventative treatment</li>
+                            <li>• Results last 3–6 months</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Many patients benefit from a combined approach. Botox addresses dynamic lines whilst fillers restore lost volume — together, they create comprehensive facial rejuvenation.
+                      </p>
+                      <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors">
+                        Learn about Botox <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Choosing a Clinic */}
               <section id="choosing-a-clinic">
-                <SectionHeading>Choosing a Filler Clinic</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  Dermal fillers require deep understanding of facial anatomy. The difference between natural results and overfilled outcomes comes down to practitioner skill.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    { icon: <Stethoscope className="w-5 h-5 text-[#C9A050]" />, title: "Doctor-Led Care", desc: "Ensure treatments are performed by qualified medical professionals with comprehensive training in facial anatomy and injection techniques." },
-                    { icon: <Building className="w-5 h-5 text-[#C9A050]" />, title: "Clinic Credentials", desc: "Look for CQC registration, professional memberships, and an established reputation for natural results." },
-                    { icon: <Users className="w-5 h-5 text-[#C9A050]" />, title: "Full-Face Assessment", desc: "A good practitioner assesses the whole face, not just the area you point to. Context matters for natural outcomes." },
-                    { icon: <Star className="w-5 h-5 text-[#C9A050]" />, title: "Reviews & Results", desc: "Check verified reviews and before/after galleries. Look for natural, subtle results — not overfilled faces." },
-                  ].map((c) => (
-                    <div key={c.title} className="bg-white/5 border border-white/10 rounded-xl p-5">
-                      <div className="flex items-center gap-3 mb-3">{c.icon}<h3 className="text-base font-semibold text-white">{c.title}</h3></div>
-                      <p className="text-white/50 text-sm">{c.desc}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Choosing a <span className="text-[#C9A050] font-light">Clinic</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Dermal fillers require deep understanding of facial anatomy. The difference between natural results and overfilled outcomes comes down to practitioner skill.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {[
+                        { icon: <Stethoscope className="w-4 h-4 text-[#C9A050]/60" />, title: "Doctor-Led Care", desc: "Ensure treatments are performed by qualified medical professionals with comprehensive training in facial anatomy and injection techniques." },
+                        { icon: <Building className="w-4 h-4 text-[#C9A050]/60" />, title: "Clinic Credentials", desc: "Look for CQC registration, professional memberships, and an established reputation for natural results." },
+                        { icon: <Users className="w-4 h-4 text-[#C9A050]/60" />, title: "Consultation Process", desc: "A thorough consultation should assess your concerns, explain options, and set realistic expectations." },
+                        { icon: <Star className="w-4 h-4 text-[#C9A050]/60" />, title: "Reviews & Results", desc: "Check verified reviews and before/after galleries. Consistent positive feedback indicates reliable practitioners." },
+                      ].map((c) => (
+                        <div key={c.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-2">{c.icon}<p className="text-xs font-medium text-white/60">{c.title}</p></div>
+                          <p className="text-white/40 text-xs font-light">{c.desc}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Safety */}
               <section>
-                <SectionHeading>Safety, Risks & Your Consultation</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  Hyaluronic acid fillers have an excellent safety profile. They are biocompatible, temporary, and — importantly — fully reversible using an enzyme called hyaluronidase.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2"><Shield className="w-4 h-4 text-[#C9A050]" /> Safety Profile</h3>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• FDA and CE approved products</li>
-                      <li>• Biocompatible — works with your body</li>
-                      <li>• Fully reversible with hyaluronidase</li>
-                      <li>• Temporary — naturally absorbed over time</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2"><Heart className="w-4 h-4 text-[#C9A050]" /> During Your Consultation</h3>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Full facial assessment and medical history</li>
-                      <li>• Discussion of concerns and goals</li>
-                      <li>• Honest advice — we say no when appropriate</li>
-                      <li>• Realistic expectations set</li>
-                      <li>• Informed consent obtained</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5">
-                  <h3 className="text-sm font-semibold text-white mb-2">Contraindications</h3>
-                  <p className="text-white/40 text-sm mb-2">Dermal fillers may not be suitable if you:</p>
-                  <ul className="grid md:grid-cols-2 gap-1.5 text-white/50 text-sm">
-                    <li>• Are pregnant or breastfeeding</li>
-                    <li>• Have active skin infection at the site</li>
-                    <li>• Have certain autoimmune conditions</li>
-                    <li>• Have a history of severe allergies</li>
-                  </ul>
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Safety & <span className="text-[#C9A050] font-light">Your Consultation</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Hyaluronic acid fillers have an excellent safety profile. They are biocompatible, temporary, and — importantly — fully reversible using an enzyme called hyaluronidase.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-3"><Shield className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-white/60">Safety Profile</p></div>
+                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                            <li>• FDA and CE approved products</li>
+                            <li>• Biocompatible — works with your body</li>
+                            <li>• Fully reversible with hyaluronidase</li>
+                            <li>• Temporary — naturally absorbed over time</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-3"><Heart className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-white/60">During Your Consultation</p></div>
+                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                            <li>• Full facial assessment and medical history</li>
+                            <li>• Discussion of concerns and goals</li>
+                            <li>• Honest advice — we say no when appropriate</li>
+                            <li>• Realistic expectations set</li>
+                            <li>• Informed consent obtained</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <p className="text-xs font-medium text-white/60 mb-2">Contraindications</p>
+                        <p className="text-white/35 text-xs font-light mb-2">Dermal fillers may not be suitable if you:</p>
+                        <ul className="grid md:grid-cols-2 gap-1.5 text-white/40 text-xs font-light">
+                          <li>• Are pregnant or breastfeeding</li>
+                          <li>• Have active skin infection at the site</li>
+                          <li>• Have certain autoimmune conditions</li>
+                          <li>• Have a history of severe allergies</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Filler Migration Myth */}
               <section>
-                <SectionHeading>The Filler Migration Myth</SectionHeading>
-                <p className="text-white/70 text-lg mb-4">
-                  "Filler migration" is one of the most commonly repeated concerns in aesthetics — but it's largely a misconception.
-                </p>
-                <p className="text-white/60 mb-6">
-                  Hyaluronic acid filler, when placed correctly by an experienced practitioner, integrates with the surrounding tissue and stays precisely where it's injected. It does not "wander" through the face.
-                </p>
-                <p className="text-white/60 mb-6">
-                  What's often labelled as migration is typically the result of poor injection technique — filler placed too superficially, in excessive volumes, or in the wrong tissue plane. When product is deposited incorrectly, it can spread beyond the intended area, creating an unnatural appearance that gets blamed on the filler itself rather than the method of placement.
-                </p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    The Filler Migration <span className="text-[#C9A050] font-light">Myth</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        "Filler migration" is one of the most commonly repeated concerns in aesthetics — but it's largely a misconception. Hyaluronic acid filler, when placed correctly by an experienced practitioner, integrates with the surrounding tissue and stays precisely where it's injected.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-5 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        What's often labelled as migration is typically the result of poor injection technique — filler placed too superficially, in excessive volumes, or in the wrong tissue plane. When product is deposited incorrectly, it can spread beyond the intended area, creating an unnatural appearance that gets blamed on the filler itself rather than the method of placement.
+                      </p>
 
-                {/* Dr. Quote */}
-                <div className="bg-white/5 border-l-2 border-[#C9A050] rounded-r-xl p-6 mb-6">
-                  <blockquote className="text-white/80 text-base italic leading-relaxed mb-4">
-                    "Migration is a technique problem, not a product problem. When filler is placed at the correct depth, in the right tissue plane, with appropriate volumes — it simply doesn't migrate. What patients see on social media and attribute to migration is almost always the result of poor placement or overfilling. With proper anatomical knowledge and restraint, this concern is entirely avoidable."
-                  </blockquote>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#C9A050] flex items-center justify-center text-black text-sm font-bold">AH</div>
-                    <div>
-                      <p className="text-white font-medium text-sm">Dr. Ahmed Haq</p>
-                      <p className="text-white/50 text-xs">Medical Director, CosmeDocs</p>
+                      {/* Dr. Quote */}
+                      <div className="bg-white/[0.03] border-l-2 border-[#C9A050] rounded-r-xl p-6">
+                        <blockquote className="text-white/60 text-xs italic leading-relaxed mb-4">
+                          "Migration is a technique problem, not a product problem. When filler is placed at the correct depth, in the right tissue plane, with appropriate volumes — it simply doesn't migrate. What patients see on social media and attribute to migration is almost always the result of poor placement or overfilling. With proper anatomical knowledge and restraint, this concern is entirely avoidable."
+                        </blockquote>
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-[#C9A050] flex items-center justify-center text-black text-xs font-bold">AH</div>
+                          <div>
+                            <p className="text-white/70 font-medium text-xs">Dr. Ahmed Haq</p>
+                            <p className="text-white/40 text-[10px]">Medical Director, CosmeDocs</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p>
+                        At CosmeDocs, every injection is guided by deep anatomical understanding. Our doctors use precise cannula and needle techniques, selecting the correct product viscosity and depth for each area — ensuring filler stays exactly where it's intended.
+                      </p>
+                      <p className="text-white/35 text-xs">
+                        This is why choosing a qualified, experienced doctor-led clinic matters. Technique is the single greatest factor in achieving safe, natural, long-lasting results.
+                      </p>
                     </div>
-                  </div>
-                </div>
-
-                <p className="text-white/60 mb-4">
-                  At CosmeDocs, every injection is guided by deep anatomical understanding. Our doctors use precise cannula and needle techniques, selecting the correct product viscosity and depth for each area — ensuring filler stays exactly where it's intended.
-                </p>
-                <p className="text-white/50 text-sm">
-                  This is why choosing a qualified, experienced doctor-led clinic matters. Technique is the single greatest factor in achieving safe, natural, long-lasting results.
-                </p>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Preparation & Aftercare */}
               <section>
-                <SectionHeading>Preparation & Aftercare</SectionHeading>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3">Before Treatment</h3>
-                    <ul className="space-y-2 text-white/50 text-sm">
-                      {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24-48 hours before", "Inform practitioner of all medications", "Avoid dental work 2 weeks before/after"].map((t) => (
-                        <li key={t} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C9A050] mt-0.5" /><span>{t}</span></li>
-                      ))}
-                    </ul>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Preparation & <span className="text-[#C9A050] font-light">Aftercare</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                      <p className="text-xs font-medium text-white/60 mb-3">Before Treatment</p>
+                      <ul className="space-y-2 text-white/40 text-xs font-light">
+                        {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Inform practitioner of all medications", "Avoid dental work 2 weeks before/after"].map((t) => (
+                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                      <p className="text-xs font-medium text-white/60 mb-3">After Treatment</p>
+                      <ul className="space-y-2 text-white/40 text-xs font-light">
+                        {["Avoid touching or pressing treated areas for 6 hours", "Skip intense exercise for 24–48 hours", "Avoid saunas, steam rooms, and extreme heat", "Sleep slightly elevated the first night"].map((t) => (
+                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3">After Treatment</h3>
-                    <ul className="space-y-2 text-white/50 text-sm">
-                      {["Avoid touching or pressing treated areas for 6 hours", "Skip intense exercise for 24-48 hours", "Avoid saunas, steam rooms, and extreme heat", "Sleep slightly elevated the first night"].map((t) => (
-                        <li key={t} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C9A050] mt-0.5" /><span>{t}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                </motion.div>
               </section>
 
               {/* Dermal Filler Before & After Results */}
               <section>
-                <SectionHeading>Dermal Filler Before & After Results</SectionHeading>
-                <div className="mb-5">
-                  <div className="rounded-xl overflow-hidden border border-white/10">
-                    <img
-                      src="/images/before-after/dermal-fillers/full-face-filler-before-after-preview.jpg"
-                      alt="Full-face dermal filler before and after showing facial rejuvenation"
-                      className="w-full aspect-[16/9] object-cover object-top"
-                      loading="lazy"
-                    />
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Dermal Filler Before & After <span className="text-[#C9A050] font-light">Results</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="mb-5">
+                    <div className="rounded-xl overflow-hidden border border-white/[0.08]">
+                      <img
+                        src="/images/before-after/dermal-fillers/full-face-filler-before-after-preview.jpg"
+                        alt="Full-face dermal filler before and after showing facial rejuvenation"
+                        className="w-full aspect-[16/9] object-cover object-top"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                </div>
-                <p className="text-white/40 text-xs mb-5">
-                  All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial anatomy and treatment plan.
-                </p>
-                <Link
-                  to="/before-after/dermal-fillers/"
-                  className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium"
-                >
-                  View full dermal filler before &amp; after gallery → <ArrowRight className="w-4 h-4" />
-                </Link>
+                  <p className="text-white/35 text-xs mb-5 font-light">
+                    All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial anatomy and treatment plan.
+                  </p>
+                  <Link
+                    to="/before-after/dermal-fillers/"
+                    className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors"
+                  >
+                    View full dermal filler before &amp; after gallery → <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </motion.div>
               </section>
 
               {/* Why Choose Cosmedocs */}
               <section>
-                <SectionHeading>Why Choose Cosmedocs?</SectionHeading>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {[
-                    { icon: <Award className="w-5 h-5" />, title: "Experience", desc: "2M+ treatments since 2007" },
-                    { icon: <GraduationCap className="w-5 h-5" />, title: "Training", desc: "HSI trainers" },
-                    { icon: <Shield className="w-5 h-5" />, title: "Quality", desc: "Premium HA products" },
-                    { icon: <Sparkles className="w-5 h-5" />, title: "Philosophy", desc: "Invisible art" },
-                    { icon: <Stethoscope className="w-5 h-5" />, title: "Doctor-Led", desc: "Qualified doctors" },
-                  ].map((w) => (
-                    <div key={w.title} className="text-center">
-                      <div className="bg-[#C9A050]/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 text-[#C9A050]">{w.icon}</div>
-                      <h3 className="text-sm font-semibold text-white mb-1">{w.title}</h3>
-                      <p className="text-white/50 text-xs">{w.desc}</p>
-                    </div>
-                  ))}
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why Choose <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {[
+                      { icon: <Award className="w-4 h-4" />, title: "Experience", desc: "2M+ treatments since 2007" },
+                      { icon: <GraduationCap className="w-4 h-4" />, title: "Training", desc: "HSI trainers" },
+                      { icon: <Shield className="w-4 h-4" />, title: "Quality", desc: "Premium HA products" },
+                      { icon: <Sparkles className="w-4 h-4" />, title: "Philosophy", desc: "Invisible art" },
+                      { icon: <Stethoscope className="w-4 h-4" />, title: "Doctor-Led", desc: "Qualified doctors" },
+                    ].map((w) => (
+                      <div key={w.title} className="text-center">
+                        <div className="bg-[#C9A050]/10 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2 text-[#C9A050]/60">{w.icon}</div>
+                        <p className="text-xs font-medium text-white/60 mb-0.5">{w.title}</p>
+                        <p className="text-white/35 text-[10px] font-light">{w.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
               </section>
 
               {/* FAQs */}
               <section id="faqs">
-                <SectionHeading>Frequently Asked Questions</SectionHeading>
-                <Accordion type="single" collapsible className="w-full">
-                  {[
-                    { v: "safe", q: "Are dermal fillers safe?", a: "Yes, when administered by qualified medical professionals. At CosmeDocs, all treatments are performed by GMC-registered doctors using FDA-approved, premium hyaluronic acid fillers. These are biocompatible and can be dissolved with hyaluronidase if needed." },
-                    { v: "suitable", q: "Who is suitable for dermal filler treatment?", a: "Most healthy adults over 18 are suitable candidates. During your consultation, our doctors assess your medical history, skin condition, facial anatomy, and aesthetic goals to determine suitability." },
-                    { v: "last", q: "How long do dermal fillers last?", a: "Results typically last 12-18 months depending on the treatment area, product used, and individual metabolism. Lip fillers tend to last 6-12 months, while cheek and jawline fillers can last up to 18 months." },
-                    { v: "pain", q: "Do dermal fillers hurt?", a: "Most patients describe the sensation as mild discomfort rather than pain. We use topical numbing cream and most fillers contain lidocaine for comfort. Treatment is well-tolerated." },
-                    { v: "natural", q: "Will fillers look natural?", a: "With an experienced practitioner, absolutely. The 'overfilled' look comes from poor technique or excessive volume. Our approach prioritises subtle, balanced results that enhance rather than alter your appearance." },
-                    { v: "combine", q: "Can dermal fillers be combined with Botox?", a: "Yes, many patients benefit from combining both. Fillers restore volume and structure whilst Botox addresses dynamic expression lines. Your doctor will advise on the best approach during consultation." },
-                    { v: "reverse", q: "Can dermal fillers be reversed?", a: "Yes, hyaluronic acid fillers can be dissolved using an enzyme called hyaluronidase. This provides an important safety measure and allows adjustments if needed." },
-                  ].map((faq) => (
-                    <AccordionItem key={faq.v} value={faq.v} className="border-white/10">
-                      <AccordionTrigger className="text-white hover:text-[#C9A050] text-left">{faq.q}</AccordionTrigger>
-                      <AccordionContent className="text-white/60">{faq.a}</AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="w-full">
+                    {[
+                      { v: "safe", q: "Are dermal fillers safe?", a: "Yes, when administered by qualified medical professionals. At CosmeDocs, all treatments are performed by GMC-registered doctors using FDA-approved, premium hyaluronic acid fillers. These are biocompatible and can be dissolved with hyaluronidase if needed." },
+                      { v: "suitable", q: "Who is suitable for dermal filler treatment?", a: "Most healthy adults over 18 are suitable candidates. During your consultation, our doctors assess your medical history, skin condition, facial anatomy, and aesthetic goals to determine suitability." },
+                      { v: "last", q: "How long do dermal fillers last?", a: "Results typically last 12–18 months depending on the treatment area, product used, and individual metabolism. Lip fillers tend to last 6–12 months, while cheek and jawline fillers can last up to 18 months." },
+                      { v: "pain", q: "Do dermal fillers hurt?", a: "Most patients describe the sensation as mild discomfort rather than pain. We use topical numbing cream and most fillers contain lidocaine for comfort. Treatment is well-tolerated." },
+                      { v: "natural", q: "Will fillers look natural?", a: "With an experienced practitioner, absolutely. The 'overfilled' look comes from poor technique or excessive volume. Our approach prioritises subtle, balanced results that enhance rather than alter your appearance." },
+                      { v: "combine", q: "Can dermal fillers be combined with Botox?", a: "Yes, many patients benefit from combining both. Fillers restore volume and structure whilst Botox addresses dynamic expression lines. Your doctor will advise on the best approach during consultation." },
+                      { v: "reverse", q: "Can dermal fillers be reversed?", a: "Yes, hyaluronic acid fillers can be dissolved using an enzyme called hyaluronidase. This provides an important safety measure and allows adjustments if needed." },
+                    ].map((faq) => (
+                      <AccordionItem key={faq.v} value={faq.v} className="border-white/[0.08]">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light">{faq.q}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-xs font-light">{faq.a}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
               </section>
             </div>
 
@@ -766,11 +874,5 @@ export default function DermalFillers() {
   );
 }
 
-/* ─── Shared sub-component ─── */
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-      {children}
-    </h2>
-  );
-}
+
+
