@@ -644,11 +644,8 @@ const App = () => {
                           <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
                           <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
                           <Route path="/inside-mind-aesthetic-doctor-blog" element={<InsideMindAestheticDoctorBlog />} />
-                          <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
-                          <Route path="/blog/smokers-lines-women" element={<SmokersLinesWomen />} />
-                          <Route path="/blog/flawless-skin" element={<FlawlessSkin />} />
-                          <Route path="/blog/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
-                          <Route path="/blog/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
+                          
+                          {/* ===== ONLY 4 BLOGS PERMITTED ===== */}
                           <Route path="/blog/tear-trough-filler-results-explained" element={<TearTroughFillerResultsExplained />} />
                           <Route path="/blog/tear-trough-filler-results-explained/" element={<TearTroughFillerResultsExplained />} />
                           <Route path="/blog/jaw-filler-results-explained" element={<JawFillerResultsExplained />} />
@@ -658,17 +655,12 @@ const App = () => {
                           <Route path="/blog/lip-filler-results-explained" element={<LipFillerResultsExplained />} />
                           <Route path="/blog/lip-filler-results-explained/" element={<LipFillerResultsExplained />} />
 
+                          {/* Blog hub — lists only the 4 permitted blogs */}
                           <Route path="/journal" element={<BlogHome />} />
                           <Route path="/blog" element={<BlogHome />} />
+                          <Route path="/blog/" element={<BlogHome />} />
                           
-                          {/* Legacy /cosmetalk redirects to /blog */}
-                          <Route path="/cosmetalk" element={<Navigate to="/blog/" replace />} />
-                          <Route path="/cosmetalk/" element={<Navigate to="/blog/" replace />} />
-                          <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/blog/vitamin-c-ferulic-acid-benefits/" replace />} />
-                          <Route path="/cosmetalk/smokers-lines-women" element={<Navigate to="/blog/smokers-lines-women/" replace />} />
-                          <Route path="/cosmetalk/flawless-skin" element={<Navigate to="/blog/flawless-skin/" replace />} />
-                          <Route path="/cosmetalk/lazy-skin-syndrome" element={<Navigate to="/blog/lazy-skin-syndrome/" replace />} />
-                          <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<Navigate to="/blog/orofacial-neck-pain-cycle/" replace />} />
+                          {/* All legacy /blog/* and /cosmetalk/* handled by Netlify _redirects */}
                           
                           {/* Location Routes */}
                           <Route path="/birmingham" element={<BirminghamHome />} />
