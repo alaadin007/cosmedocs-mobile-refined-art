@@ -1,996 +1,204 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { generateSEOMetadata } from "@/utils/seo";
-import { useState } from "react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import BeforeAfterGrid from "@/components/BeforeAfterGrid";
-import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
-import { useVideoManagement } from "@/hooks/useVideoManagement";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
+import PRPSidebar from "@/components/skin-rejuvenation/PRPSidebar";
+
 const PRPTreatment = () => {
-  const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Cosmedocs", "Expert PRP treatments Harley Street. Vampire facial, hair restoration & skin rejuvenation using natural healing. Book consultation today.", "/prp-treatment");
-  const bookingUrl = "https://med.as.me/harleystreet";
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const {
-    videos
-  } = useVideoManagement("PRP");
-  const treatmentSpecs = [{
-    icon: Clock,
-    title: "Procedure Time",
-    value: "30 minutes"
-  }, {
-    icon: Shield,
-    title: "Anaesthetic",
-    value: "Local numbing"
-  }, {
-    icon: Calendar,
-    title: "Results",
-    value: "2-6 weeks"
-  }, {
-    icon: Heart,
-    title: "Recovery",
-    value: "24-48 hours"
-  }, {
-    icon: Users,
-    title: "Back to Work",
-    value: "Immediately"
-  }, {
-    icon: Star,
-    title: "Duration",
-    value: "18 months"
-  }];
-  const benefits = ["Promoting new cell growth", "Addressing mild collagen and volume loss", "Enhancing skin complexion", "Minimising fine lines and wrinkles", "Reducing crow's feet and dark under-eye circles", "Helping with initial signs of ageing", "Alleviating rosacea condition", "Stimulating hair follicles for hair density", "Treating acne scarring and skin imperfections", "Enhancing skin tone and texture", "Firming and toning skin naturally"];
-  const treatmentTypes = [{
-    title: "PRP Facial (Vampire Facial)",
-    description: "Uses your body's natural healing abilities to restore facial youthfulness and luminosity",
-    benefits: ["Increased skin thickness from collagen production", "Enhanced skin colour", "Improved texture and firmness", "Reduced wrinkles", "Increased skin elasticity", "Improved nasolabial folds"]
-  }, {
-    title: "PRP Hair Treatment",
-    description: "Stimulates hair follicles and promotes development of new blood vessels for hair growth",
-    benefits: ["Treats thinning hair", "Combats hair loss", "Promotes new hair growth", "Results visible within 3 weeks", "Full potential reached in 3 months", "Results last around 18 months"]
-  }, {
-    title: "PRP Intimate Area Rejuvenation",
-    description: "Non-surgical O-Shot procedure for women's intimate wellness",
-    benefits: ["Addresses loss of desire", "Treats sexual dysfunction", "Reduces vaginal dryness", "Helps with painful intimacy", "Treats stress incontinence", "Restores confidence"]
-  }];
-  const faqs = [{
-    question: "What is PRP treatment and how does it work?",
-    answer: "PRP (Platelet-Rich Plasma) treatment uses your own blood platelets to stimulate healing and regeneration. Blood is drawn from your arm, processed in a centrifuge to concentrate the platelets, then injected into treatment areas to promote natural healing and tissue regeneration."
-  }, {
-    question: "How safe is PRP treatment?",
-    answer: "PRP treatment has an excellent safety profile since it uses your own blood components, reducing the risk of allergic reactions. You may experience mild soreness and bruising at injection sites, which is normal. We recommend staying well-hydrated and having a light meal before treatment."
-  }, {
-    question: "How many PRP sessions do I need?",
-    answer: "Most patients require 3 sessions for optimal results. For facial treatments, sessions are spaced 4-6 weeks apart. Hair treatments typically need 3 sessions with 4-8 week intervals. Maintenance treatments may be needed every 6-12 months."
-  }, {
-    question: "Is PRP treatment painful?",
-    answer: "PRP treatment is designed to be comfortable. We apply numbing agents to treatment areas to minimize discomfort. While you may feel slight discomfort in sensitive areas, it's generally well-tolerated and much less painful than surgical alternatives."
-  }, {
-    question: "How long do PRP results last?",
-    answer: "Results typically become visible within a few weeks and continue improving for 2-6 months. Effects can last around 18 months for skin treatments and similar duration for hair treatments. Regular maintenance sessions help sustain results."
-  }, {
-    question: "Can PRP be combined with other treatments?",
-    answer: "Yes, PRP works excellently in combination with microneedling, dermal fillers, and chemical peels. These combinations can enhance effectiveness and provide more comprehensive results. Our experts will create a personalized treatment plan during consultation."
-  }, {
-    question: "Who is a good candidate for PRP treatment?",
-    answer: "Most people are suitable candidates for PRP treatment. It's ideal for those seeking non-invasive rejuvenation to address skin laxity, acne scars, fine lines, wrinkles, dark spots, uneven skin tone, hair loss, or intimate wellness concerns."
-  }, {
-    question: "What should I expect during PRP treatment?",
-    answer: "The process involves: 1) Drawing a small amount of blood from your arm, 2) Processing it in a centrifuge to separate platelet-rich plasma, 3) Injecting the PRP into target areas using ultra-fine needles. The entire procedure takes about 30 minutes."
-  }];
-  return <>
+  const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Cosmedocs Harley Street", "Doctor-led PRP treatments for skin rejuvenation, hair restoration, and natural healing. Vampire facial using your own growth factors on Harley Street.", "/treatments/prp-vampire-facial/");
+
+  const faqs = [
+    { question: "What is PRP treatment and how does it work?", answer: "PRP (Platelet-Rich Plasma) uses your own blood platelets to stimulate healing and regeneration. Blood is drawn, processed in a centrifuge to concentrate platelets, then injected into treatment areas to promote natural healing and tissue regeneration." },
+    { question: "How safe is PRP treatment?", answer: "PRP has an excellent safety profile since it uses your own blood components, reducing the risk of allergic reactions. You may experience mild soreness and bruising at injection sites, which is normal." },
+    { question: "How many sessions do I need?", answer: "Most patients require 3 sessions for optimal results. Facial treatments are spaced 4–6 weeks apart. Hair treatments typically need 3 sessions with 4–8 week intervals. Maintenance may be needed every 6–12 months." },
+    { question: "Is PRP treatment painful?", answer: "PRP treatment is designed to be comfortable. We apply numbing agents to minimise discomfort. While you may feel slight discomfort in sensitive areas, it's generally well-tolerated." },
+    { question: "How long do results last?", answer: "Results typically become visible within a few weeks and continue improving for 2–6 months. Effects can last around 18 months for skin treatments. Regular maintenance sessions help sustain results." },
+    { question: "Can PRP help with hair loss?", answer: "Yes, PRP is highly effective for hair restoration. It stimulates dormant hair follicles, promotes new blood vessel growth, and encourages natural hair growth. Results are typically visible within 3 weeks with full potential reached in 3 months." },
+  ];
+
+  const treatmentTypes = [
+    { title: "PRP Facial (Vampire Facial)", desc: "Uses your body's natural healing abilities to restore facial youthfulness, increase skin thickness, improve texture and reduce wrinkles." },
+    { title: "PRP Hair Treatment", desc: "Stimulates hair follicles and promotes development of new blood vessels for natural hair growth. Effective for thinning hair and early hair loss." },
+    { title: "PRP Intimate Rejuvenation", desc: "Non-surgical O-Shot procedure for women's intimate wellness, addressing sensitivity and comfort concerns." },
+  ];
+
+  return (
+    <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/prp-vampire-facial/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:image" content={seoData.image} />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content={seoData.image} />
-        
-        {/* Local SEO */}
-        <meta name="geo.region" content="GB-LND" />
-        <meta name="geo.placename" content="London" />
-        <meta name="geo.position" content="51.5074;-0.1278" />
-        <meta name="ICBM" content="51.5074, -0.1278" />
-        
-        {/* Structured Data - MedicalBusiness */}
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/prp-vampire-facial/" />
+        <meta property="og:type" content="website" />
         <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "MedicalClinic",
-          "name": "Cosmedocs - PRP Treatment",
-          "url": "https://cosmedocs.com/prp-treatment",
-          "telephone": "+44 20 3733 3227",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Harley Street",
-            "addressLocality": "London",
-            "addressRegion": "Greater London",
-            "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
-          },
-          "priceRange": "££",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "245"
-          },
-          "availableService": {
-            "@type": "MedicalProcedure",
-            "name": "PRP Treatment",
-            "description": "Platelet-rich plasma therapy for natural skin rejuvenation and hair restoration"
-          }
-        })}
-        </script>
-
-        {/* Structured Data - FAQ Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        })}
-        </script>
-
-        {/* Structured Data - Breadcrumb */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.cosmedocs.co.uk"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Treatments",
-              "item": "https://www.cosmedocs.co.uk/treatments"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "PRP Treatment",
-              "item": "https://www.cosmedocs.co.uk/prp-treatment"
-            }
-          ]
-        })}
+          {JSON.stringify({ "@context": "https://schema.org", "@graph": [
+            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.co.uk/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" } },
+            { "@type": "MedicalProcedure", "name": "PRP Treatment (Vampire Facial)", "description": "Platelet-Rich Plasma therapy using your own blood for skin rejuvenation and hair restoration.", "url": "https://www.cosmedocs.co.uk/treatments/prp-vampire-facial/", "procedureType": "NoninvasiveProcedure" },
+            { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
+          ] })}
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-left"
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">PRP Treatment</span>
-                  <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }} animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }} />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb items={[{ label: 'Treatments', path: '/treatments/' }, { label: 'Skin Rejuvenation', path: '/treatments/skin-rejuvenation/' }]} currentPage="PRP Treatment" />
+            <div className="pt-12 pb-4 max-w-2xl">
+              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                  PRP <span className="text-[#C9A050] font-light">Vampire Facial</span>
                 </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Natural Regeneration</p>
-                  <p className="text-sm text-gray-300">#cosmeprp - Check out our IG for hundreds more natural, subtle transformations</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                    onClick={() => window.open(bookingUrl, "_blank")}
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    View Pricing
-                  </Button>
-                </div>
+                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                  Harness your body's own growth factors for natural skin rejuvenation and hair restoration — using concentrated platelet-rich plasma.
+                </p>
               </motion.div>
-              
-              <div className="hidden lg:block"></div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">PRP Treatment</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
-                <p className="text-gray-300">30 minutes</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">18 months</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">24-48 hours</p>
-              </motion.div>
-
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Sessions Needed</h3>
-                <p className="text-gray-300">3 sessions</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Back to Work</h3>
-                <p className="text-gray-300">Immediately</p>
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />45–60 Min</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Your Own Blood</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
         </section>
 
-
-        {/* PRGF / PRP Treatment Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">PRGF / PRP Treatment</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing. Our <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> and <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo therapy</a> complement PRP beautifully for comprehensive facial rejuvenation.
-              </p>
-            </motion.div>
-
-            {/* Central Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto mt-16"
-            >
-              <Card className="bg-gray-900/50 border-purple-500 border-2">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-white text-2xl">PRGF / PRP: Help Your Body Heal Itself</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-300 leading-relaxed mb-8">
-                    PRGF represents revolutionary regenerative medicine that harnesses your body's natural healing mechanisms 
-                    through carefully sourced platelet-rich plasma. <a 
-                      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5822906/" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow"
-                      className="text-purple-300 hover:text-purple-200 underline"
-                    >Research from the National Institutes of Health</a> confirms PRP's effectiveness in tissue regeneration and wound healing. This advanced treatment delivers comprehensive tissue restoration by accelerating regeneration across multiple areas including tendons, muscles, 
-                    skin, cartilage, and promoting hair growth. For enhanced results, many patients combine PRP with <a href="/polynucleotide-treatment" className="text-purple-300 hover:text-purple-200 underline">polynucleotide treatments</a> or <a href="/hydrafacial-london" className="text-purple-300 hover:text-purple-200 underline">HydraFacial</a>.
-                  </p>
-                  
-                  <p className="text-gray-300 leading-relaxed">
-                    Simply put, PRGF is the most effective way for your body to heal itself naturally - 
-                    a procedure commonly adopted by celebrities to heal scars and reverse the signs of ageing. Explore our full range of <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatments</a> to discover complementary options.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Treatment Types */}
-        <section className="bg-[#0A0A0A] py-[75px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
-                Treatment Options
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive range of Platelet-Rich Plasma treatments harnesses your body's natural healing power to deliver exceptional results. Whether you're considering <a href="/non-surgical-facelift" className="text-purple-300 hover:text-purple-200 underline">non-surgical facelift options</a> or <a href="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline">PDO thread treatments</a>, PRP offers a natural alternative.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-              {treatmentTypes.map((type, index) => <motion.div key={type.title} initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: index * 0.2
-            }} viewport={{
-              once: true
-            }}>
-                <Card className="bg-gradient-to-b from-purple-900/20 to-gray-900/50 border-purple-500/30 text-white h-full hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
-                  <CardHeader className="border-b border-purple-500/20">
-                    <CardTitle className="text-xl md:text-2xl font-semibold text-white">{type.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6 pt-6">
-                    <p className="text-gray-300 leading-relaxed">{type.description}</p>
-                    <div className="space-y-3">
-                      {type.benefits.map((benefit, idx) => <div key={idx} className="flex items-start space-x-3">
-                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                            <span className="text-white/70 text-sm">{benefit}</span>
-                          </div>)}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>)}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-accent text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-                PRP Benefits
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Comprehensive rejuvenation using your body's natural healing properties for transformative results. <a 
-                  href="https://academic.oup.com/asj/article/36/9/1045/2589046" 
-                  target="_blank" 
-                  rel="noopener noreferrer nofollow"
-                  className="text-purple-300 hover:text-purple-200 underline"
-                >Clinical studies in aesthetic surgery</a> demonstrate significant improvements in skin quality, texture, and overall appearance.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-white" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            <div className="space-y-14">
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">What Is <span className="text-[#C9A050] font-light">PRP?</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection preview={<p className="text-white/45 text-sm leading-relaxed font-light">PRP (Platelet-Rich Plasma) therapy uses a concentrated preparation of your own blood platelets to stimulate natural healing and regeneration. Your blood is drawn, processed, and the growth-factor-rich plasma is re-injected into treatment areas.</p>}>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>Platelets contain powerful growth factors that promote new cell growth, collagen production, and tissue repair. When concentrated and injected, they accelerate your body's natural healing response.</p>
+                      <p>Research from the National Institutes of Health confirms PRP's effectiveness in tissue regeneration. This treatment delivers comprehensive restoration by accelerating regeneration across skin, hair follicles, and connective tissue.</p>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-white">{benefit}</p>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Treatment <span className="text-[#C9A050] font-light">Types</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="space-y-3">
+                    {treatmentTypes.map(t => (
+                      <div key={t.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-[#C9A050] mb-2">{t.title}</p>
+                        <p className="text-white/45 text-xs font-light leading-relaxed">{t.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </section>
+
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">How the Procedure <span className="text-[#C9A050] font-light">Works</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {[
+                      { step: "01", title: "Blood Draw", desc: "A small sample of blood is drawn from your arm, similar to a routine blood test." },
+                      { step: "02", title: "Processing", desc: "Blood is placed in a centrifuge to separate and concentrate the platelet-rich plasma." },
+                      { step: "03", title: "Treatment", desc: "Concentrated PRP is injected or applied to the treatment area using microneedling." },
+                    ].map(s => (
+                      <div key={s.step} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5 text-center">
+                        <span className="text-[#C9A050] font-light text-lg block mb-2">{s.step}</span>
+                        <p className="text-sm font-medium text-white mb-1">{s.title}</p>
+                        <p className="text-white/45 text-xs font-light">{s.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </section>
+
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Am I <span className="text-[#C9A050] font-light">Suitable?</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4"><CheckCircle className="w-5 h-5 text-[#C9A050]" /><p className="text-sm font-medium text-white">May Be Suitable</p></div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Fine lines and early signs of ageing</li><li>• Dull skin needing rejuvenation</li><li>• Hair thinning or early hair loss</li><li>• Acne scarring and skin imperfections</li><li>• Dark under-eye circles</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4"><AlertTriangle className="w-5 h-5 text-white/40" /><p className="text-sm font-medium text-white">May Not Be Suitable</p></div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Blood disorders or clotting conditions</li><li>• Active skin infections</li><li>• Pregnancy or breastfeeding</li><li>• Anticoagulant medication</li><li>• Cancer or immunosuppression</li>
+                      </ul>
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              </section>
+
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Why <span className="text-[#C9A050] font-light">CosmeDocs?</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ul className="space-y-3">
+                    {["Doctor-led — all treatments by GMC-registered doctors", "Harley Street, London — established 2007", "Over 1 million treatments performed", "100% natural — uses your own blood", "Our aesthetics is invisible art"].map(item => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light"><CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />{item}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </section>
+
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Frequently Asked <span className="text-[#C9A050] font-light">Questions</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, i) => (
+                      <AccordionItem key={i} value={`item-${i}`} className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
+            <aside className="hidden lg:block"><div className="sticky top-24"><PRPSidebar /></div></aside>
           </div>
-        </section>
+        </div>
 
-        {/* Aftercare & Results Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding your post-treatment care routine and results timeline ensures optimal outcomes. Our protocols are backed by clinical evidence, with the <a 
-                  href="https://www.baaps.org.uk" 
-                  target="_blank" 
-                  rel="noopener noreferrer nofollow"
-                  className="text-purple-300 hover:text-purple-200 underline"
-                >British Association of Aesthetic Plastic Surgeons</a> recognising PRP as an evidence-based regenerative treatment for aesthetic enhancement.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Aftercare Column */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl md:text-2xl font-semibold flex items-center space-x-3">
-                      <Shield className="h-6 w-6 text-purple-400" />
-                      <span>Post-Treatment Care</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      Proper aftercare ensures optimal results and minimizes any potential side effects from your PRP treatment.
-                    </p>
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                         <div>
-                           <h4 className="text-white font-medium mb-1">First 24 Hours</h4>
-                           <p className="text-gray-300 text-sm">Avoid touching the treated area, apply ice packs if needed, stay well-hydrated, and follow our post-treatment skincare recommendations</p>
-                         </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">First Week</h4>
-                           <p className="text-gray-300 text-sm">Avoid strenuous exercise, saunas, and direct sun exposure. Use gentle skincare products</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">Ongoing Care</h4>
-                           <p className="text-gray-300 text-sm">Maintain a good skincare routine, use SPF protection, and follow our specialist recommendations</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">What to Expect</h4>
-                           <p className="text-gray-300 text-sm">Mild soreness and bruising are normal and will subside within 2-3 days</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Results & Timeline Column */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl font-semibold flex items-center space-x-3">
-                      <Calendar className="h-6 w-6 text-purple-400" />
-                      <span>Results & Timeline</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                     <p className="text-gray-300">
-                       Understanding when you'll see results and planning your treatment journey for optimal outcomes.
-                     </p>
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">Initial Results</h4>
-                           <p className="text-gray-300 text-sm">Visible improvements appear within 2-6 weeks as your body begins natural regeneration</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">Peak Results</h4>
-                           <p className="text-gray-300 text-sm">Optimal results typically develop over 3-6 months as collagen production increases</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">Results Duration</h4>
-                           <p className="text-gray-300 text-sm">Effects last approximately 18 months for skin treatments, similar for hair restoration</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">Next Session</h4>
-                           <p className="text-gray-300 text-sm">Follow-up treatments recommended every 4-6 weeks for 3 sessions, then maintenance every 6-12 months</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                           <h4 className="text-white font-medium mb-1">Long-term Benefits</h4>
-                           <p className="text-gray-300 text-sm">Regular maintenance sessions help sustain results and continue natural regeneration processes</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* PRP in Action */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Text Column */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">PRP in Action</h2>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Watch our experts perform PRP treatments and see the precise process that delivers exceptional results.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Blood Collection</h4>
-                      <p className="text-gray-300">A small amount of blood is drawn from your arm, similar to a routine blood test</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Centrifuge Processing</h4>
-                      <p className="text-gray-300">The blood is processed in a specialized centrifuge to separate and concentrate the platelets</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Platelet Extraction</h4>
-                      <p className="text-gray-300">The platelet-rich plasma is carefully extracted, containing concentrated growth factors</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Precise Injection</h4>
-                      <p className="text-gray-300">Using ultra-fine needles, the PRP is injected into targeted areas for optimal results</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 italic">
-                  "The entire process takes about 30 minutes and harnesses your body's natural healing mechanisms for transformative results."
-                </p>
-              </motion.div>
-
-              {/* Image Column */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                {videos && videos.length > 0 ? (
-                  <TreatmentVideoPlayer 
-                    video={videos[0]} 
-                    treatmentName="PRP Treatment" 
-                    showControls={true} 
-                    className="rounded-2xl overflow-hidden border border-white/20 shadow-2xl" 
-                  />
-                ) : (
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
-                    <p className="text-white/70">PRP Treatment Process</p>
-                  </div>
-                )}
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-black" id="pricing-section">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">PRP Treatment Investment</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive PRP treatments provide natural healing and rejuvenation using your body's own platelets. 
-                All treatments include consultation, procedure, and aftercare support from our expert medical team.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-purple-500 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">PRP Facial</CardTitle>
-                    <div className="text-purple-300 text-lg font-bold">Price on consultation</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Natural skin rejuvenation and anti-aging</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Professional application</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare guidance</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">PRP Hair Treatment</CardTitle>
-                    <div className="text-white text-lg font-bold">Price on consultation</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Hair restoration and density improvement</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Scalp analysis</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Multi-point injection</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Follow-up sessions</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Progress monitoring</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-lg font-bold">£50</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Comprehensive assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
-              </p>
-              <Button 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
-                onClick={() => window.open(bookingUrl, "_blank")}
-              >
-                Book Your Consultation
-              </Button>
+        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white">Considering <span className="text-[#C9A050]">PRP?</span></h2>
+              <p className="text-white/60 mb-8 font-light">A consultation will help determine whether PRP therapy is right for your goals.</p>
+              <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base">Book Consultation <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></Button>
+              </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
+        <section className="lg:hidden py-12 px-4 bg-black"><PRPSidebar /></section>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Your own blood - completely natural and safe</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Everything you need to know about PRP treatment and what to expect during your journey.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <AccordionItem value={`item-${index}`} className="border-gray-700">
-                      <AccordionTrigger className="text-white hover:text-purple-300 text-left">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-gray-300">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </motion.div>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20">
-          <div className="page-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for Natural Rejuvenation?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert doctors and discover how PRP can harness your body's natural healing power for transformative results. Explore our <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">full range of treatments</a> or visit our <a href="/contact" className="text-purple-300 hover:text-purple-200 underline">Harley Street clinic</a>.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-                  onClick={() => window.open(bookingUrl, "_blank")}
-                >
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        <div className="sr-only">
+          <h2>PRP Treatment London — Vampire Facial & Hair Restoration at Harley Street</h2>
+          <p>CosmeDocs offers doctor-led PRP treatments for skin rejuvenation and hair restoration at our Harley Street clinic. PRP therapy uses your own concentrated blood platelets to stimulate natural healing. Our aesthetics is invisible art — bold, natural, always your way.</p>
+        </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default PRPTreatment;
