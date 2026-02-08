@@ -3,89 +3,49 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, MapPin, Camera, Award, Star, ChevronRight } from 'lucide-react';
+import { ArrowRight, Shield, MapPin, Award, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Breadcrumb from '@/components/Breadcrumb';
+import Home2Header from '@/components/home2/Home2Header';
+import Footer from '@/components/Footer';
 
-const areaCards = [
+const galleryImages = [
   {
-    id: "forehead-lines",
-    title: "Forehead Lines",
-    description: "Smoothing horizontal forehead lines for a refreshed, natural appearance.",
-    image: "/images/before-after/botox/forehead-lines-before-after-preview.jpg",
-    link: "#forehead-lines",
-    imageCount: 1,
-    treatments: ["Horizontal Lines", "Frontalis Muscle"]
+    src: "/images/before-after/botox/botox-wrinkle-result-1.jpg",
+    alt: "Botox before and after showing natural softening of facial tension",
+    caption: "Natural softening of facial tension following Botox treatment.",
   },
   {
-    id: "frown-lines",
-    title: "Frown Lines",
-    description: "Softening glabella wrinkles between the brows for a calmer, more relaxed look.",
-    image: "/images/before-after/botox/frown-lines-before-after-preview.jpg",
-    link: "#frown-lines",
-    imageCount: 1,
-    treatments: ["Glabella Lines", "11 Lines"]
+    src: "/images/before-after/botox/botox-wrinkle-result-2.jpg",
+    alt: "Before and after Botox demonstrating subtle reduction in muscle activity",
+    caption: "Subtle reduction in muscle activity while preserving natural expression.",
   },
   {
-    id: "crows-feet",
-    title: "Crow's Feet",
-    description: "Reducing fine lines around the outer eye corners whilst maintaining natural expression.",
-    image: null,
-    link: "#crows-feet",
-    imageCount: 0,
-    treatments: ["Lateral Canthal Lines", "Eye Area"]
+    src: "/images/before-after/botox/botox-wrinkle-result-3.jpg",
+    alt: "Botox before and after result showing smoother, more relaxed appearance",
+    caption: "Smoother, more relaxed appearance achieved through targeted Botox treatment.",
   },
   {
-    id: "masseter",
-    title: "Masseter (Jawline Slimming)",
-    description: "Facial slimming and bruxism treatment through targeted masseter muscle reduction.",
-    image: null,
-    link: "/before-after/botox/masseter/",
-    imageCount: 0,
-    treatments: ["Jaw Slimming", "Bruxism", "TMJ"]
+    src: "/images/before-after/botox/botox-wrinkle-result-4.jpg",
+    alt: "Before and after Botox showing natural wrinkle reduction",
+    caption: "Natural wrinkle reduction whilst maintaining full range of expression.",
   },
   {
-    id: "lip-flip",
-    title: "Lip Flip",
-    description: "Subtle upper lip enhancement using precise Botox placement along the lip border.",
-    image: null,
-    link: "/before-after/botox/lip-flip/",
-    imageCount: 0,
-    treatments: ["Upper Lip", "Subtle Enhancement"]
+    src: "/images/before-after/botox/botox-wrinkle-result-5.jpg",
+    alt: "Botox treatment result demonstrating refreshed, natural-looking outcome",
+    caption: "A refreshed, natural-looking outcome — invisible art at work.",
   },
   {
-    id: "gummy-smile",
-    title: "Gummy Smile",
-    description: "Reducing excessive gum show when smiling for a more balanced, confident smile.",
-    image: null,
-    link: "#gummy-smile",
-    imageCount: 0,
-    treatments: ["Gum Show Reduction", "Smile Correction"]
-  },
-  {
-    id: "bunny-lines",
-    title: "Bunny Lines",
-    description: "Smoothing diagonal lines on the bridge of the nose that appear when scrunching.",
-    image: null,
-    link: "#bunny-lines",
-    imageCount: 0,
-    treatments: ["Nose Bridge Lines", "Nasalis Muscle"]
-  },
-  {
-    id: "neck-bands",
-    title: "Neck Bands",
-    description: "Treating platysmal bands and achieving a Nefertiti lift for a smoother neck profile.",
-    image: null,
-    link: "#neck-bands",
-    imageCount: 0,
-    treatments: ["Platysmal Bands", "Nefertiti Lift"]
+    src: "/images/before-after/botox/botox-wrinkle-result-6.jpg",
+    alt: "Before and after Botox showing softened facial tension",
+    caption: "Softened facial tension following doctor-led Botox treatment.",
   },
 ];
 
 const BeforeAfterBotox = () => {
   const seoData = generateSEOMetadata(
-    "Botox Before & After Results | Harley Street Clinic",
-    "Real patient before and after results showing wrinkle reduction, forehead smoothing, and crow's feet correction with Botox. Doctor-led treatment on Harley Street.",
+    "Botox Before & After Results | Harley Street",
+    "Real patient before and after results showing natural wrinkle reduction with Botox. Doctor-led treatment at our Harley Street clinic, London.",
     "/before-after/botox/"
   );
 
@@ -130,14 +90,14 @@ const BeforeAfterBotox = () => {
                 "@type": "ImageGallery",
                 "@id": "https://www.cosmedocs.co.uk/before-after/botox/#gallery",
                 "name": "Botox Before and After Results",
-                "description": "Real patient before and after photographs demonstrating wrinkle reduction, forehead smoothing, and facial rejuvenation achieved through Botox treatment at CosmeDocs Harley Street.",
+                "description": "Real patient before and after photographs demonstrating natural wrinkle reduction achieved through expert Botox treatment at CosmeDocs Harley Street.",
                 "url": "https://www.cosmedocs.co.uk/before-after/botox/"
               },
               {
                 "@type": "WebPage",
                 "@id": "https://www.cosmedocs.co.uk/before-after/botox/#page",
-                "name": "Botox Before & After Results | Harley Street Clinic",
-                "description": "Real patient before and after results showing wrinkle reduction, forehead smoothing, and crow's feet correction with Botox. Doctor-led treatment on Harley Street.",
+                "name": "Botox Before & After Results | Harley Street",
+                "description": seoData.description,
                 "url": "https://www.cosmedocs.co.uk/before-after/botox/",
                 "breadcrumb": {
                   "@type": "BreadcrumbList",
@@ -153,10 +113,40 @@ const BeforeAfterBotox = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <Home2Header />
+
+        {/* Flowing Gold Gradient Orbs — matches Home style */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute w-[800px] h-[800px] rounded-full opacity-20"
+            style={{
+              background: 'radial-gradient(circle, #C9A050 0%, transparent 70%)',
+              filter: 'blur(100px)',
+            }}
+            animate={{
+              x: ['-20%', '10%', '-20%'],
+              y: ['-10%', '20%', '-10%'],
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute right-0 bottom-0 w-[600px] h-[600px] rounded-full opacity-15"
+            style={{
+              background: 'radial-gradient(circle, #C9A050 0%, transparent 70%)',
+              filter: 'blur(120px)',
+            }}
+            animate={{
+              x: ['20%', '-10%', '20%'],
+              y: ['20%', '-10%', '20%'],
+            }}
+            transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
+
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
-          <div className="page-container relative z-10">
+        <section className="relative pt-28 pb-16 px-6">
+          <div className="max-w-5xl mx-auto relative z-10">
             <Breadcrumb
               items={[{ label: 'Before & After', path: '/before-after/' }]}
               currentPage="Botox"
@@ -166,158 +156,147 @@ const BeforeAfterBotox = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center pt-4"
+              className="pt-4"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
                 Botox{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A050] to-amber-400">
-                  Before & After
+                  Before & After Results
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-                Real patient results from our Harley Street clinic. Each outcome demonstrates
-                the subtle, natural wrinkle reduction achievable through expert, doctor-led
-                Botox treatment tailored to individual facial anatomy.
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-3xl mb-8">
+                Real patient outcomes from our Harley Street clinic. Botox targets specific
+                facial muscles to soften tension and reduce dynamic lines — whilst preserving
+                natural expression. Every treatment is doctor-led, tailored to individual
+                anatomy, with results that speak without saying a word.
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#C9A050] to-transparent mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#C9A050] to-transparent"></div>
             </motion.div>
           </div>
         </section>
 
         {/* Trust Indicators */}
-        <section className="py-6 border-y border-white/10 bg-black/50">
-          <div className="page-container">
+        <section className="py-5 border-y border-white/10 bg-white/[0.02] relative z-10">
+          <div className="max-w-5xl mx-auto px-6">
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-3">
                 <Shield className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Real Unedited Photos</span>
+                <span className="text-sm text-white/40">Real Unedited Photos</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Harley Street, London</span>
+                <span className="text-sm text-white/40">Harley Street, London</span>
               </div>
               <div className="flex items-center gap-3">
                 <Award className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">1M+ Treatments Since 2007</span>
+                <span className="text-sm text-white/40">1M+ Treatments Since 2007</span>
               </div>
               <div className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Doctor-Led Clinic</span>
+                <span className="text-sm text-white/40">Doctor-Led Clinic</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Treatment Area Cards */}
-        <section className="py-16 bg-accent/30">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Browse by Treatment Area</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Explore our Botox galleries organised by treatment area to see results relevant to your concerns.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {areaCards.map((card, index) => (
+        {/* Main Gallery — General Botox Results */}
+        <section className="py-16 relative z-10">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="columns-1 md:columns-2 gap-6 space-y-6">
+              {galleryImages.map((image, index) => (
                 <motion.div
-                  key={card.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.07 }}
+                  transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
                   viewport={{ once: true }}
+                  className="break-inside-avoid"
                 >
-                  <Link
-                    to={card.link}
-                    className="group block bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-[#C9A050]/30 transition-all duration-300"
-                  >
-                    <div className="overflow-hidden bg-gray-900">
-                      {card.image ? (
-                        <img
-                          src={card.image}
-                          alt={`${card.title} before and after results`}
-                          className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center relative">
-                          <Camera className="w-8 h-8 text-white/15" />
-                          {card.imageCount === 0 && (
-                            <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white/40 text-xs px-2.5 py-1 rounded-full border border-white/10">
-                              Coming soon
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[#C9A050] transition-colors flex items-center gap-2">
-                        <Camera className="w-5 h-5" />
-                        {card.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                        {card.description}
+                  <div className="group relative rounded-xl overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      className="w-full h-auto block rounded-xl group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-16 pb-5 px-5 rounded-b-xl">
+                      <p className="text-white/70 text-sm leading-relaxed font-light">
+                        {image.caption}
                       </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {card.treatments.map((treatment) => (
-                          <span
-                            key={treatment}
-                            className="text-xs px-2 py-1 bg-white/5 text-gray-300 rounded-full"
-                          >
-                            {treatment}
-                          </span>
-                        ))}
-                      </div>
-                      <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                        View Gallery <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </span>
                     </div>
-                  </Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Internal Links */}
-        <section className="py-16 bg-gradient-to-b from-black to-gray-900">
-          <div className="page-container">
-            <div className="max-w-3xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="mb-8"
-              >
-                <h2 className="text-xl font-bold text-white">Learn More</h2>
-              </motion.div>
+        {/* Featured Case Study — Masseter Botox */}
+        <section className="py-16 relative z-10 border-t border-white/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                Masseter Botox{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A050] to-amber-400">
+                  Before & After
+                </span>
+              </h2>
+              <p className="text-white/60 text-lg leading-relaxed max-w-2xl mb-8">
+                For patients seeking facial slimming or relief from jaw tension, masseter
+                Botox can reduce muscle bulk and rebalance the lower face.
+              </p>
 
+              <div className="max-w-xl">
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="/images/before-after/botox/masseter-botox-result.jpg"
+                    alt="Masseter Botox before and after showing jawline slimming and facial rebalancing"
+                    loading="lazy"
+                    className="w-full h-auto block rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <Link
+                to="/before-after/botox/masseter/"
+                className="inline-flex items-center gap-2 mt-8 text-[#C9A050] hover:text-amber-400 transition-colors text-lg font-medium"
+              >
+                View full masseter Botox before & after gallery
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Internal Links */}
+        <section className="py-16 relative z-10 border-t border-white/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="max-w-3xl">
+              <h2 className="text-xl font-bold text-white mb-6">Learn More</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <Link
                   to="/treatments/botox/"
-                  className="group flex items-center justify-between p-5 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
+                  className="group flex items-center justify-between p-5 bg-white/[0.03] border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
                 >
                   <div>
                     <p className="font-medium text-white group-hover:text-[#C9A050] transition-colors">Botox Overview</p>
-                    <p className="text-sm text-gray-500 mt-1">Our philosophy, approach, and safety</p>
+                    <p className="text-sm text-white/40 mt-1">Our philosophy, approach, and safety</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </Link>
 
                 <Link
                   to="/treatments/botox/medical/"
-                  className="group flex items-center justify-between p-5 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
+                  className="group flex items-center justify-between p-5 bg-white/[0.03] border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
                 >
                   <div>
                     <p className="font-medium text-white group-hover:text-[#C9A050] transition-colors">Medical Botox</p>
-                    <p className="text-sm text-gray-500 mt-1">Migraine, bruxism, and hyperhidrosis</p>
+                    <p className="text-sm text-white/40 mt-1">Migraine, bruxism, and hyperhidrosis</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </Link>
@@ -327,8 +306,8 @@ const BeforeAfterBotox = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-          <div className="page-container">
+        <section className="py-20 relative z-10 border-t border-white/10">
+          <div className="max-w-5xl mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -336,10 +315,10 @@ const BeforeAfterBotox = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready for Your Transformation?
                 </h2>
-                <p className="text-gray-300 text-lg mb-10 leading-relaxed">
+                <p className="text-white/60 text-lg mb-10 leading-relaxed">
                   Every treatment begins with a comprehensive facial assessment. Our doctors will
                   discuss your concerns and recommend an approach tailored to your facial structure.
                 </p>
@@ -361,12 +340,11 @@ const BeforeAfterBotox = () => {
         </section>
 
         {/* Disclaimer */}
-        <section className="py-8 border-t border-white/10 bg-black">
-          <div className="page-container">
-            <p className="text-center text-gray-600 text-xs max-w-3xl mx-auto leading-relaxed">
-              Individual results may vary. All images show real patients treated at CosmeDocs.
-              Photos are unretouched and taken under consistent clinical conditions.
-              A consultation is required before any treatment.
+        <section className="py-8 border-t border-white/10 relative z-10">
+          <div className="max-w-5xl mx-auto px-6">
+            <p className="text-center text-white/30 text-xs max-w-3xl mx-auto leading-relaxed">
+              All images show real patients treated by our doctors at our Harley Street clinic.
+              Individual results vary depending on anatomy and treatment plan.
             </p>
           </div>
         </section>
@@ -376,15 +354,17 @@ const BeforeAfterBotox = () => {
           <h2>Botox Before & After Results Gallery</h2>
           <p>
             Botox before and after results gallery from CosmeDocs Harley Street clinic. These
-            real patient photographs demonstrate wrinkle reduction, forehead line smoothing,
-            frown line correction, crow's feet treatment, and facial slimming achieved through
-            expert Botox treatment. Botox (botulinum toxin) works by temporarily relaxing
-            targeted facial muscles, reducing the appearance of dynamic wrinkles whilst
+            real patient photographs demonstrate natural wrinkle reduction and facial softening
+            achieved through expert Botox treatment. Botox (botulinum toxin) works by temporarily
+            relaxing targeted facial muscles, reducing the appearance of dynamic wrinkles whilst
             preserving natural facial expression. CosmeDocs has performed over one million
             aesthetic procedures since 2007, with all treatments administered by GMC-registered
-            doctors at 10 Harley Street, London W1G 9PF.
+            doctors at 10 Harley Street, London W1G 9PF. Our aesthetics is invisible art —
+            bold, natural, always your way.
           </p>
         </div>
+
+        <Footer />
       </div>
     </>
   );
