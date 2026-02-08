@@ -128,21 +128,11 @@ export const sitemapData: SitemapData = {
     { loc: `${baseUrl}/clinical-concepts-to-flawless-skin`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 }
   ],
   blog: [
-    { loc: `${baseUrl}/non-surgical-nose-job-blog`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/aesthetic-maintenance-cost-blog`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/chinese-london-aesthetics-blog`, lastmod: currentDate, changefreq: 'monthly', priority: 0.8 },
-    { loc: `${baseUrl}/long-term-aesthetic-care-blog`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/inside-mind-aesthetic-doctor-blog`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/vitamin-c-ferulic-acid-benefits`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/smokers-lines-women`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/flawless-skin`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/lazy-skin-syndrome`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/orofacial-neck-pain-cycle`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/how-to-get-rid-of-bruises-quickly`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/forehead-wrinkles-myths-tips`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/lip-wrinkles-treatments`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/skin-tags-and-skin-tag-removal`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/blog/beauty-ethnic-neutrality`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 }
+    { loc: `${baseUrl}/blog/`, lastmod: currentDate, changefreq: 'weekly', priority: 0.7 },
+    { loc: `${baseUrl}/blog/tear-trough-filler-results-explained/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
+    { loc: `${baseUrl}/blog/jaw-filler-results-explained/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
+    { loc: `${baseUrl}/blog/chin-filler-results-explained/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
+    { loc: `${baseUrl}/blog/lip-filler-results-explained/`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 }
   ],
   locations: [
     { loc: `${baseUrl}/birmingham`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },

@@ -388,6 +388,13 @@
 /blog/how-to-get-rid-of-bruises              /treatments/                                    301
 /blog/how-to-get-rid-of-bruises/             /treatments/                                    301
 
+# --- WILDCARD: Any remaining /blog/* URL → /treatments/ ---
+# Must be AFTER specific blog redirects above.
+# The 4 approved blogs (/blog/tear-trough-filler-results-explained/, etc.)
+# are served by React Router via the SPA fallback below.
+# Everything else gets caught here.
+/blog/*                                       /treatments/                                    301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
