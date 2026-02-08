@@ -322,30 +322,30 @@
 /medical-skincare/                /treatments/prescription-skincare/  301
 
 # =====================================================
-# PHASE 5: Blog URL Migration - /cosmetalk → /blog
+# PHASE 5: Blog URL Migration — STRICT 4-BLOG RULE
+# Only 4 blogs exist. Everything else redirects away.
 # =====================================================
-/cosmetalk                        /blog/                              301
-/cosmetalk/                       /blog/                              301
-/cosmetalk/vitamin-c-ferulic-acid-benefits    /blog/vitamin-c-ferulic-acid-benefits/   301
-/cosmetalk/vitamin-c-ferulic-acid-benefits/   /blog/vitamin-c-ferulic-acid-benefits/   301
-/cosmetalk/smokers-lines-women    /blog/smokers-lines-women/          301
-/cosmetalk/smokers-lines-women/   /blog/smokers-lines-women/          301
-/cosmetalk/flawless-skin          /blog/flawless-skin/                301
-/cosmetalk/flawless-skin/         /blog/flawless-skin/                301
-/cosmetalk/lazy-skin-syndrome     /blog/lazy-skin-syndrome/           301
-/cosmetalk/lazy-skin-syndrome/    /blog/lazy-skin-syndrome/           301
-/cosmetalk/orofacial-neck-pain-cycle    /blog/orofacial-neck-pain-cycle/    301
-/cosmetalk/orofacial-neck-pain-cycle/   /blog/orofacial-neck-pain-cycle/    301
 
-# Blog URL repositioning — B&A → Results Explained
+# --- Cosmetalk legacy → /treatments/ (no individual blogs exist) ---
+/cosmetalk                        /treatments/                        301
+/cosmetalk/                       /treatments/                        301
+/cosmetalk/*                      /treatments/                        301
+
+# --- Semrush-confirmed: Tear Trough blog redirect ---
 /blog/tear-trough-filler-before-and-after     /blog/tear-trough-filler-results-explained/   301
 /blog/tear-trough-filler-before-and-after/    /blog/tear-trough-filler-results-explained/   301
+
+# --- Semrush-confirmed: Jaw Filler blog redirect ---
 /blog/jaw-filler-before-and-after             /blog/jaw-filler-results-explained/            301
 /blog/jaw-filler-before-and-after/            /blog/jaw-filler-results-explained/            301
+
+# --- Semrush-confirmed: Chin Filler blog redirect ---
 /blog/chin-filler-before-and-after            /blog/chin-filler-results-explained/            301
 /blog/chin-filler-before-and-after/           /blog/chin-filler-results-explained/            301
 /blog/chin-filler                             /blog/chin-filler-results-explained/            301
 /blog/chin-filler/                            /blog/chin-filler-results-explained/            301
+
+# --- Live-site-confirmed: Lip Filler blog redirects ---
 /blog/natural-lip-fillers                     /blog/lip-filler-results-explained/             301
 /blog/natural-lip-fillers/                    /blog/lip-filler-results-explained/             301
 /blog/lip-filler-before-and-after             /blog/lip-filler-results-explained/             301
@@ -356,6 +356,37 @@
 /blog/lip-filler/                             /blog/lip-filler-results-explained/             301
 /blog/lip-augmentation-before-and-after       /blog/lip-filler-results-explained/             301
 /blog/lip-augmentation-before-and-after/      /blog/lip-filler-results-explained/             301
+
+# --- Semrush-confirmed: Filler Complications → Treatment page ---
+/blog/filler-gone-wrong                       /treatments/dermal-fillers/                     301
+/blog/filler-gone-wrong/                      /treatments/dermal-fillers/                     301
+
+# --- CATCH-ALL: Any other /blog/* URL → /treatments/ ---
+# (Must be AFTER the four permitted blog URLs above)
+# The four allowed blogs are handled by React Router, not redirects.
+# Any legacy /blog/anything-else/ gets caught here.
+/blog/vitamin-c-ferulic-acid-benefits         /treatments/                                    301
+/blog/vitamin-c-ferulic-acid-benefits/        /treatments/                                    301
+/blog/smokers-lines-women                     /treatments/                                    301
+/blog/smokers-lines-women/                    /treatments/                                    301
+/blog/flawless-skin                           /treatments/                                    301
+/blog/flawless-skin/                          /treatments/                                    301
+/blog/lazy-skin-syndrome                      /treatments/                                    301
+/blog/lazy-skin-syndrome/                     /treatments/                                    301
+/blog/orofacial-neck-pain-cycle               /treatments/                                    301
+/blog/orofacial-neck-pain-cycle/              /treatments/                                    301
+/blog/beauty-ethnic-neutrality                /treatments/                                    301
+/blog/beauty-ethnic-neutrality/               /treatments/                                    301
+/blog/trust-in-medical-aesthetics             /treatments/                                    301
+/blog/trust-in-medical-aesthetics/            /treatments/                                    301
+/blog/forehead-wrinkles-myths-tips            /treatments/                                    301
+/blog/forehead-wrinkles-myths-tips/           /treatments/                                    301
+/blog/lip-wrinkles-treatments                 /treatments/                                    301
+/blog/lip-wrinkles-treatments/                /treatments/                                    301
+/blog/cosmedocs-vs-similarly-named-clinics    /treatments/                                    301
+/blog/cosmedocs-vs-similarly-named-clinics/   /treatments/                                    301
+/blog/how-to-get-rid-of-bruises              /treatments/                                    301
+/blog/how-to-get-rid-of-bruises/             /treatments/                                    301
 
 # =====================================================
 # SPA fallback - React handles remaining routing
