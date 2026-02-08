@@ -5,33 +5,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import ClientReviews from '@/components/ClientReviews';
+import { ArrowRight } from "lucide-react";
 import jawlineFiller1ml from "@/assets/jawline-filler-1ml-before-after.png";
-import jawlineFiller1mlTransformation from "@/assets/jawline-filler-1ml-transformation.jpg";
 import jawlineFiller2ml from "@/assets/jawline-filler-2ml-before-after.png";
-import howJawFillerWorks from "@/assets/how-jaw-filler-works-illustration.jpg";
-import jawlineGallery1 from "@/assets/jawline-gallery-1.jpg";
 import jawlineGallery2 from "@/assets/jawline-gallery-2.jpg";
-import jawlineGallery3 from "@/assets/jawline-gallery-3.png";
-import jawlineGallery4 from "@/assets/jawline-gallery-4.jpg";
-import jawlineGallery5 from "@/assets/jawline-gallery-5.jpg";
-import jawlineGallery6 from "@/assets/jawline-gallery-6.jpg";
-import jawlineGallery7 from "@/assets/jawline-gallery-7.png";
-import jawlineGallery8 from "@/assets/jawline-gallery-8.png";
-import jawlineGallery9 from "@/assets/jawline-gallery-9.png";
-import jawlineGallery10 from "@/assets/jawline-gallery-10.png";
-import jawlineGallery11 from "@/assets/jawline-gallery-11.png";
-import jawlineGallery12 from "@/assets/jawline-gallery-12.jpg";
 
 const JawlineFiller = () => {
   const seoData = generateSEOMetadata(
@@ -42,74 +22,6 @@ const JawlineFiller = () => {
 
   const bookingUrl = "https://med.as.me/harleystreet";
 
-  // Before/after images for the viewer - Real jawline filler results from #cosmejaw gallery
-  const beforeAfterImages = [
-    {
-      src: jawlineFiller1mlTransformation,
-      alt: "Jawline filler 1ml before after profile view Harley Street London Cosmedocs treatment results subtle enhancement",
-      caption: "Subtle 1ml jawline enhancement achieving natural profile improvement"
-    },
-    {
-      src: jawlineGallery1,
-      alt: "Comparison image of jawline and chin before and after filler treatments London Harley Street Cosmedocs",
-      caption: "Jawline and chin enhancements with fillers - comprehensive lower face transformation"
-    },
-    {
-      src: jawlineGallery2,
-      alt: "Lower face rejuvenation featuring chin, lips, and jawline fillers London Cosmedocs results",
-      caption: "Lower face rejuvenation: chin, lips, and jawline fillers for complete facial harmony"
-    },
-    {
-      src: jawlineGallery3,
-      alt: "Jawline filler before and after London Harley Street jaw enhancement with fillers",
-      caption: "Jaw enhancement with jawline filler - natural definition and improved contours"
-    },
-    {
-      src: jawlineGallery4,
-      alt: "Before and after photo showcasing filler enhancements in the jawline, lips, chin and tear trough London",
-      caption: "Full face makeover: tear trough, lips, chin and jaw filler transformation"
-    },
-    {
-      src: jawlineGallery5,
-      alt: "Jawline and chin fillers before and after London Cosmedocs lower face enhancement dermal fillers",
-      caption: "Jawline and chin fillers transformation - lower face enhancement using dermal fillers"
-    },
-    {
-      src: jawlineGallery6,
-      alt: "Jawline filler before and after 1ml jaw line filler per side London Harley Street",
-      caption: "1ml jawline filler per side - precise enhancement for natural definition"
-    },
-    {
-      src: jawlineGallery7,
-      alt: "Jawline filler with chin enhancement before and after London Cosmedocs combined treatment",
-      caption: "Jawline filler with chin enhancement - combined treatment for optimal facial balance"
-    },
-    {
-      src: jawlineGallery8,
-      alt: "Jawline and chin fillers before and after transformation London Harley Street Cosmedocs",
-      caption: "Jawline & chin fillers transformation - expert technique for natural results"
-    },
-    {
-      src: jawlineGallery9,
-      alt: "Before and after of jaw filler London jawline enhancement with fillers Cosmedocs",
-      caption: "Jawline enhancement with fillers - dramatic improvement in facial structure"
-    },
-    {
-      src: jawlineGallery10,
-      alt: "Jawline filler before and after London Harley Street jawline refinement with fillers",
-      caption: "Jawline refinement with fillers - subtle yet impactful enhancement"
-    },
-    {
-      src: jawlineGallery11,
-      alt: "Before and after photos showcasing the enhancement of the lower facial profile with jawline and chin fillers London",
-      caption: "Improved jawline with fillers - enhanced lower facial profile and definition"
-    },
-    {
-      src: jawlineGallery12,
-      alt: "A dramatic before and after showcase of jawline and chin angle enhancement with fillers London Cosmedocs",
-      caption: "Jawline reimagined: enhanced angles and definition with expert filler placement"
-    }
-  ];
 
   const leftColumnFaqs = [
     {
@@ -489,51 +401,47 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
+        {/* Real Results: Single B&A Preview */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Jawline Filler Before and After</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Jaw dropping transformations showcase how our patients transformed their confidence with expert jawline sculpting treatments. 
-                Each journey is unique, with personalized approaches that enhance natural features and create beautiful, lasting results.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                  Real Results: <span className="text-[#C9A050] font-light">Jawline Filler Before & After</span>
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                  Below is an example of jawline filler used to restore lower face definition and enhance jaw contour. 
+                  Strategic placement creates a sharper, more sculpted jawline while maintaining natural facial balance and proportion.
+                </p>
+                <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                  <img
+                    src={jawlineGallery2}
+                    alt="Before and after jawline filler showing lower face rejuvenation and enhanced jaw contour"
+                    loading="lazy"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <p className="text-white/30 text-xs font-light italic mb-6">
+                  All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on facial structure and treatment plan.
+                </p>
+                <Link
+                  to="/before-after/dermal-fillers/jawline/"
+                  className="inline-flex items-center gap-2 text-[#C9A050] text-sm font-medium hover:underline"
+                >
+                  View real jawline filler before & after results
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <p className="text-white/30 text-xs font-light mt-2">
+                  Includes subtle definition, jowl correction, and comprehensive jawline sculpting cases.
+                </p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
