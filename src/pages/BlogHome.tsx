@@ -2,21 +2,12 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
-import { ArrowRight, Syringe, Sparkles, Brain, Heart, Leaf, Eye, Scissors, BookOpen } from "lucide-react";
+import { ArrowRight, Syringe, Sparkles, Eye } from "lucide-react";
 import BlogHeroSlider from "@/components/blog/BlogHeroSlider";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 
 // Import botox guide hero for featured article thumbnail
 import botoxGuideHero from "@/assets/botox-guide-hero.jpg";
-
-interface ArticleLink {
-  title: string;
-  category: string;
-  path: string;
-  excerpt?: string;
-  icon?: string;
-  image?: string;
-}
 
 const BlogHome = () => {
   const seoData = generateSEOMetadata(
@@ -31,11 +22,11 @@ const BlogHome = () => {
     excerpt:
       "Everything you need to know about Botox — what it does, how it works, what to expect, and how to choose the right practitioner. Written by Harley Street doctors with 17+ years of experience.",
     category: "EDUCATION",
-    path: "/ultimate-botox-guide",
+    path: "/ultimate-botox-guide/",
     image: botoxGuideHero,
   };
 
-  const headlineArticles: ArticleLink[] = [
+  const resultsExplainedArticles = [
     {
       title: "Lip Filler Results Explained: Shape, Proportion & Natural Outcomes",
       category: "RESULTS EXPLAINED",
@@ -62,135 +53,13 @@ const BlogHome = () => {
     },
   ];
 
-  const skinScienceArticles: CategoryData = {
-    featured: {
-      title: "Beauty as Ethnic Neutrality: Aesthetic Harmony Beyond Race",
-      excerpt:
-        "Universal beauty transcends ethnicity. How facial harmony, balance and symmetry define aesthetic excellence across all races.",
-      category: "SKIN SCIENCE",
-      path: "/blog/beauty-ethnic-neutrality",
-      image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png",
-    },
-    headlines: [
-      {
-        title: "Smoker's Lines in Women: Prevention & Treatment Options",
-        path: "/blog/smokers-lines-women",
-        icon: "scissors",
-      },
-      {
-        title: "Vitamin C & Ferulic Acid Benefits for Skin Health",
-        path: "/blog/vitamin-c-ferulic-acid-benefits",
-        icon: "leaf",
-      },
-      {
-        title: "Lazy Skin Syndrome: Breaking Moisturiser Dependency",
-        path: "/blog/lazy-skin-syndrome",
-        icon: "eye",
-      },
-      {
-        title: "How to Get Rid of Bruises Quickly After Treatment",
-        path: "/blog/how-to-get-rid-of-bruises-quickly",
-        icon: "heart",
-      },
-    ],
-    secondary: {
-      title: "Skin Tags: What They Are & How to Remove Them Safely",
-      excerpt:
-        "Professional guidance on identifying and safely removing skin tags with clinical methods.",
-      category: "DERMATOLOGY",
-      path: "/blog/skin-tags-and-skin-tag-removal",
-    },
-  };
-
-  const treatmentArticles: CategoryData = {
-    featured: {
-      title: "Non-Surgical Nose Job: The Complete Patient Guide",
-      excerpt:
-        "Everything you need to know about reshaping your nose without surgery — from dermal filler to PCL threads.",
-      category: "TREATMENT GUIDE",
-      path: "/non-surgical-nose-job-blog",
-      image: "/images/blog-hero-syringe.jpeg",
-    },
-    headlines: [
-      {
-        title: "Lip Filler Results Explained: Shape, Proportion & Natural Outcomes",
-        path: "/blog/lip-filler-results-explained/",
-        icon: "sparkles",
-      },
-      {
-        title: "Tear Trough Filler Results Explained: What Improvement Really Looks Like",
-        path: "/blog/tear-trough-filler-results-explained/",
-        icon: "eye",
-      },
-      {
-        title: "Jaw Filler Results Explained: Structure, Contour & Natural Outcomes",
-        path: "/blog/jaw-filler-results-explained/",
-        icon: "syringe",
-      },
-      {
-        title: "Chin Filler Results Explained: Balance, Projection & Natural Profiles",
-        path: "/blog/chin-filler-results-explained/",
-        icon: "syringe",
-      },
-    ],
-    secondary: {
-      title: "PDO Thread Face Lift: What You Need to Know",
-      excerpt:
-        "An evidence-based guide to thread lifts — what they do, what they don't, and who they're actually for.",
-      category: "TREATMENT GUIDE",
-      path: "/pdo-threads-blog",
-    },
-  };
-
-  const clinicalArticles: CategoryData = {
-    featured: {
-      title: "Inside the Mind of an Aesthetic Doctor",
-      excerpt:
-        "What really drives clinical decision-making in aesthetic medicine? A candid look at the art behind the science.",
-      category: "CLINICAL INSIGHT",
-      path: "/inside-mind-aesthetic-doctor-blog",
-      image: "/images/blog-hero-doctor.jpeg",
-    },
-    headlines: [
-      {
-        title: "Trust in Medical Aesthetics: The Rule for Medical Brands",
-        path: "/blog/trust-in-medical-aesthetics",
-        icon: "heart",
-      },
-      {
-        title: "Orofacial & Neck Pain: Breaking the Tension Cycle",
-        path: "/blog/orofacial-neck-pain-cycle",
-        icon: "brain",
-      },
-      {
-        title: "Aesthetic Maintenance Costs: An Honest Breakdown",
-        path: "/aesthetic-maintenance-cost-blog",
-        icon: "book",
-      },
-      {
-        title: "Beauty & Ethnic Neutrality in Aesthetic Medicine",
-        path: "/blog/beauty-ethnic-neutrality",
-        icon: "sparkles",
-      },
-    ],
-    secondary: {
-      title: "How to Book the Correct CosmeDocs Clinic",
-      excerpt:
-        "Patients sometimes tell us they've booked the wrong clinic by mistake. Here's how to ensure you're booking the original CosmeDocs on Harley Street.",
-      category: "PATIENT GUIDANCE",
-      path: "/blog/cosmedocs-vs-similarly-named-clinics",
-    },
-  };
-
-  // Sidebar quick links now live in BlogSidebar component
-
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: "CosmeDocs Blog — Aesthetic Medicine Insights",
     description:
       "Expert articles on aesthetic medicine, skin science, and patient education from Harley Street doctors.",
-    url: "https://cosmedocs.co.uk/blog",
+    url: "https://cosmedocs.co.uk/blog/",
     publisher: {
       "@type": "MedicalBusiness",
       name: "CosmeDocs",
@@ -203,10 +72,10 @@ const BlogHome = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/blog" />
+        <link rel="canonical" href="https://cosmedocs.co.uk/blog/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/blog" />
+        <meta property="og:url" content="https://cosmedocs.co.uk/blog/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -214,17 +83,13 @@ const BlogHome = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        
-
         {/* Hero Slider */}
         <BlogHeroSlider />
 
-        {/* ═══════════════════════════════════════════
-            TOP — Featured + Headlines + Sidebar
-        ═══════════════════════════════════════════ */}
+        {/* Featured + Results Explained + Sidebar */}
         <section className="max-w-7xl mx-auto px-4 py-10">
           <div className="grid lg:grid-cols-[1fr_300px_240px] gap-8">
-            {/* Featured Article */}
+            {/* Featured Article — Ultimate Botox Guide */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -253,14 +118,14 @@ const BlogHome = () => {
               </Link>
             </motion.div>
 
-            {/* Headline Links */}
+            {/* 4 Results Explained Articles */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
               className="space-y-0"
             >
-              {headlineArticles.map((article, i) => (
+              {resultsExplainedArticles.map((article, i) => (
                 <Link
                   key={i}
                   to={article.path}
@@ -286,36 +151,7 @@ const BlogHome = () => {
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            CATEGORY SECTION: Skin Science
-        ═══════════════════════════════════════════ */}
-        <CategorySection
-          title="Skin Science"
-          data={skinScienceArticles}
-          delay={0}
-        />
-
-        {/* ═══════════════════════════════════════════
-            CATEGORY SECTION: Treatment Insights
-        ═══════════════════════════════════════════ */}
-        <CategorySection
-          title="Treatment Insights"
-          data={treatmentArticles}
-          delay={0.1}
-        />
-
-        {/* ═══════════════════════════════════════════
-            CATEGORY SECTION: Clinical & Research
-        ═══════════════════════════════════════════ */}
-        <CategorySection
-          title="Clinical & Research"
-          data={clinicalArticles}
-          delay={0.2}
-        />
-
-        {/* ═══════════════════════════════════════════
-            CTA
-        ═══════════════════════════════════════════ */}
+        {/* CTA */}
         <section className="py-16 px-4 border-t border-white/[0.06]">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -365,8 +201,6 @@ const BlogHome = () => {
             your way.
           </p>
         </div>
-
-        
       </div>
     </>
   );
@@ -374,143 +208,14 @@ const BlogHome = () => {
 
 /* ─────────────────────────────────────────────
    ICON HELPER
-   Maps icon name strings to Lucide components
    ───────────────────────────────────────────── */
 const ArticleIcon = ({ name, className }: { name?: string; className?: string }) => {
   switch (name) {
     case "syringe": return <Syringe className={className} />;
     case "sparkles": return <Sparkles className={className} />;
-    case "brain": return <Brain className={className} />;
-    case "heart": return <Heart className={className} />;
-    case "leaf": return <Leaf className={className} />;
     case "eye": return <Eye className={className} />;
-    case "scissors": return <Scissors className={className} />;
-    case "book": return <BookOpen className={className} />;
     default: return <ArrowRight className={className} />;
   }
 };
-
-/* ─────────────────────────────────────────────
-   CATEGORY SECTION COMPONENT
-   Reusable magazine-style category block
-   ───────────────────────────────────────────── */
-interface CategoryData {
-  featured: {
-    title: string;
-    excerpt: string;
-    category: string;
-    path: string;
-    image?: string;
-  };
-  headlines: { title: string; path: string; icon?: string }[];
-  secondary: {
-    title: string;
-    excerpt: string;
-    category: string;
-    path: string;
-  };
-}
-
-const CategorySection = ({
-  title,
-  data,
-  delay = 0,
-}: {
-  title: string;
-  data: CategoryData;
-  delay?: number;
-}) => (
-  <section className="border-t border-white/[0.06]">
-    <div className="max-w-7xl mx-auto px-4 py-10">
-      {/* Category Header */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4, delay }}
-        className="flex items-center gap-3 mb-8"
-      >
-        <h2 className="text-xl font-light text-white/80">{title}</h2>
-        <ArrowRight className="w-4 h-4 text-white/30" />
-      </motion.div>
-
-      <div className="grid lg:grid-cols-[1fr_280px_1fr] gap-8">
-        {/* Featured (left) — with optional cover image */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay }}
-        >
-          <Link to={data.featured.path} className="group block">
-            {data.featured.image && (
-              <div className="rounded-lg overflow-hidden border border-white/[0.08] mb-4">
-                <img
-                  src={data.featured.image}
-                  alt={data.featured.title}
-                  className="w-full object-contain group-hover:scale-[1.03] transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            )}
-            <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
-              {data.featured.category}
-            </span>
-            <h3 className="text-xl md:text-2xl font-light mt-2 mb-3 group-hover:text-[#C9A050]/80 transition-colors leading-tight">
-              {data.featured.title}
-            </h3>
-            <p className="text-white/35 text-sm font-light leading-relaxed">
-              {data.featured.excerpt}
-            </p>
-          </Link>
-        </motion.div>
-
-        {/* Headlines (middle) — with icons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: delay + 0.1 }}
-          className="space-y-0"
-        >
-          {data.headlines.map((article, i) => (
-            <Link
-              key={i}
-              to={article.path}
-              className="flex items-start gap-3 py-3 border-b border-white/[0.06] last:border-0 group"
-            >
-              <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#C9A050]/10 flex items-center justify-center">
-                <ArticleIcon name={article.icon} className="w-2.5 h-2.5 text-[#C9A050]/50" />
-              </span>
-              <h4 className="text-sm font-medium text-white/70 leading-snug group-hover:text-[#C9A050] transition-colors">
-                {article.title}
-              </h4>
-            </Link>
-          ))}
-        </motion.div>
-
-        {/* Secondary (right) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: delay + 0.2 }}
-        >
-          <Link to={data.secondary.path} className="group block">
-            <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
-              {data.secondary.category}
-            </span>
-            <h3 className="text-xl font-light mt-2 mb-3 group-hover:text-[#C9A050]/80 transition-colors leading-tight">
-              {data.secondary.title}
-            </h3>
-            <p className="text-white/35 text-sm font-light leading-relaxed">
-              {data.secondary.excerpt}
-            </p>
-          </Link>
-        </motion.div>
-      </div>
-    </div>
-  </section>
-);
 
 export default BlogHome;

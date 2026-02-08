@@ -48,11 +48,11 @@ const ROUTE_REGISTRY = {
     '/dermal-fillers', '/treatments/dermal-fillers/', '/treatments/dermal-fillers/areas/', '/experimental-treatment'
   ],
   blog: [
-    '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
-    '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
-    '/blog/vitamin-c-ferulic-acid-benefits', '/blog/smokers-lines-women',
-    '/blog/flawless-skin', '/blog/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
-    '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
+    '/blog/',
+    '/blog/tear-trough-filler-results-explained/',
+    '/blog/jaw-filler-results-explained/',
+    '/blog/chin-filler-results-explained/',
+    '/blog/lip-filler-results-explained/'
   ],
   locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados']
 };
@@ -77,12 +77,9 @@ export function parseAppRoutes(): DetectedRoute[] {
   
   // Now add routes that are actually in App.tsx but missing from registry
   const actualAppRoutes = [
-    // Pages missing from registry
-    '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq',
-    '/experimental-treatment', '/admin/video-upload',
-    
-    // Blog redirects (still valid routes)
-    '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
+    // Root-level educational pages (NOT blogs)
+    '/ultimate-botox-guide/', '/aesthetic-training/', '/aesthetics-at-a-glance/',
+    '/aesthetic-intelligence/', '/aesthetic-treatments-made-easy/',
   ];
   
   actualAppRoutes.forEach(path => {
