@@ -1,25 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Star, Clock, Calendar, Syringe, Activity, ArrowRight, Sparkles } from "lucide-react";
-
-const sidebarImages = [
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-post-surgical-fix.png",
-    alt: "Post-surgical rhinoplasty correction with dermal filler",
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-double-dip-dorsal-bump.png",
-    alt: "Double dip dorsal bump correction with nose filler",
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-dorsal-hump-female.jpg",
-    alt: "Dorsal hump camouflage before and after",
-  },
-  {
-    src: "/images/before-after/dermal-fillers/nose/nose-filler-contour-dent-correction.png",
-    alt: "Nose contour dent correction with filler",
-  },
-];
+import { Star, Clock, Calendar, Syringe, Activity, ArrowRight } from "lucide-react";
 
 const NoseFillerSidebar = () => {
   return (
@@ -42,32 +23,22 @@ const NoseFillerSidebar = () => {
         </div>
       </motion.div>
 
-      {/* Before & After Teaser Grid */}
+      {/* Before & After Results — Text-only link */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5"
       >
-        <Sparkles className="w-5 h-5 text-[#C9A050] mb-2" />
-        <p className="text-sm text-white/70 mb-3 font-medium">Real Patient Results</p>
-        <div className="grid grid-cols-2 gap-2 mb-3">
-          {sidebarImages.map((img) => (
-            <div key={img.src} className="rounded-lg overflow-hidden border border-white/[0.06]">
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="w-full h-auto block"
-              />
-            </div>
-          ))}
-        </div>
+        <p className="text-sm text-white/70 mb-3 font-medium">Before & After Results</p>
+        <p className="text-xs text-white/40 leading-relaxed mb-3">
+          View real patient before and after results demonstrating dorsal hump camouflage, bridge refinement, and tip lifting.
+        </p>
         <Link
           to="/before-after/dermal-fillers/nose/"
           className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium"
         >
-          View full gallery
+          View before & after gallery
           <ArrowRight className="w-4 h-4" />
         </Link>
       </motion.div>
