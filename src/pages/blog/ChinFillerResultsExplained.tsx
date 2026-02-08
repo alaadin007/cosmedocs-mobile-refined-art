@@ -6,6 +6,8 @@ import { generateSEOMetadata } from '@/utils/seo';
 import Home2Header from '@/components/home2/Home2Header';
 import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
+import chinFillerHero from '@/assets/blog-chin-filler-hero.jpg';
+import chinAugmentationDiagram from '@/assets/blog-chin-augmentation-diagram.png';
 
 const ChinFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
@@ -151,9 +153,18 @@ const ChinFillerResultsExplained = () => {
       <div className="min-h-screen bg-black text-white">
         <Home2Header />
 
-        {/* Hero */}
-        <section className="pt-28 pb-16 px-4 border-b border-white/[0.06]">
-          <div className="max-w-4xl mx-auto">
+        {/* Hero with Cover Image */}
+        <section className="relative pt-28 pb-16 border-b border-white/[0.06] overflow-hidden">
+          {/* Hero background image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={chinFillerHero}
+              alt="Cinematic profile silhouette highlighting chin and jawline contour"
+              className="w-full h-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -227,13 +238,28 @@ const ChinFillerResultsExplained = () => {
                     None of these are real problems — they're proportional illusions created by one 
                     structure sitting a few millimetres behind where it should.
                   </p>
-                  <p className="text-white/60 text-lg font-light leading-relaxed">
+                  <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
                     This is why small changes matter. The chin doesn't need a lot of filler. It needs 
                     the <em>right amount</em> in the <em>right plane</em>. Most chins respond to 
                     0.5–1.5ml placed periostally — directly on bone. The effect isn't dramatic. It's 
                     architectural: everything else starts to look more balanced because the foundation 
                     was corrected.
                   </p>
+
+                  {/* Chin Augmentation Diagram */}
+                  <figure className="rounded-xl overflow-hidden border border-white/[0.06] bg-white/[0.02] mb-4">
+                    <img
+                      src={chinAugmentationDiagram}
+                      alt="Chin augmentation diagram showing the placement and projection of chin filler in a facial profile view"
+                      className="w-full h-auto block mx-auto max-w-lg py-4"
+                      loading="lazy"
+                    />
+                    <figcaption className="px-5 py-3 border-t border-white/[0.06] text-white/40 text-xs leading-relaxed font-light">
+                      Anatomical illustration showing chin augmentation placement. The filler is deposited 
+                      periostally along the mentalis region to improve forward projection and profile balance 
+                      — not to create width or lateral extension.
+                    </figcaption>
+                  </figure>
                 </motion.section>
 
                 {/* 2 — Profile Balance vs Projection */}
