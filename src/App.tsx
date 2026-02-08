@@ -158,6 +158,7 @@ const ForeheadWrinklesMythsTips = lazy(() => import("./pages/ForeheadWrinklesMyt
 const LipWrinklesTreatments = lazy(() => import("./pages/LipWrinklesTreatments"));
 const SkinTagsRemoval = lazy(() => import("./pages/SkinTagsRemoval"));
 const MedicalBrandTrustBlog = lazy(() => import("./pages/blog/MedicalBrandTrustBlog"));
+const ClinicNameConfusion = lazy(() => import("./pages/blog/ClinicNameConfusion"));
 const BotoxFAQs = lazy(() => import("./pages/BotoxFAQs"));
 const UltimateBotoxGuide = lazy(() => import("./pages/UltimateBotoxGuide"));
 const Blepharoplasty = lazy(() => import("./pages/Blepharoplasty"));
@@ -624,6 +625,7 @@ const App = () => {
                           <Route path="/blog/skin-tags-and-skin-tag-removal" element={<SkinTagsRemoval />} />
                           <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
                           <Route path="/blog/trust-in-medical-aesthetics" element={<MedicalBrandTrustBlog />} />
+                          <Route path="/blog/cosmedocs-vs-similarly-named-clinics" element={<ClinicNameConfusion />} />
                           <Route path="/journal" element={<BlogHome />} />
                           <Route path="/blog" element={<BlogHome />} />
                           <Route path="/cosmetalk" element={<CosmetalkBlog />} />
