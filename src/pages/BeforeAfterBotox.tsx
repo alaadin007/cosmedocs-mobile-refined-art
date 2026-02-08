@@ -45,6 +45,11 @@ const galleryImages = [
     alt: "Gummy smile correction before and after Botox treatment",
     caption: "Balanced smile following targeted Botox for gummy smile correction.",
   },
+  {
+    src: "/images/before-after/botox/botox-gummy-smile-result-2.jpg",
+    alt: "Gummy smile before and after Botox showing reduced gum visibility",
+    caption: "Reduced gum show for a more confident, balanced smile.",
+  },
 ];
 
 const BeforeAfterBotox = () => {
