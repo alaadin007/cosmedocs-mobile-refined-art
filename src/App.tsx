@@ -623,6 +623,7 @@ const App = () => {
                           <Route path="/blog/skin-tags-and-skin-tag-removal" element={<SkinTagsRemoval />} />
                           <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
                           <Route path="/journal" element={<BlogHome />} />
+                          <Route path="/blog" element={<BlogHome />} />
                           <Route path="/cosmetalk" element={<CosmetalkBlog />} />
                           
                           {/* Location Routes */}
