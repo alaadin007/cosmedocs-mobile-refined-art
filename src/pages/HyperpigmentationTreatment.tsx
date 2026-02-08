@@ -21,7 +21,7 @@ const HyperpigmentationTreatment = () => {
   const seoData = generateSEOMetadata(
     "Hyperpigmentation Treatment London | Cosmedocs",
     "Eliminate dark spots, melasma & uneven skin tone. IPL laser, chemical peels & prescription treatments for pigmentation.",
-    "/hyperpigmentation-treatment"
+    "/concerns/pigmentation-melasma/"
   );
 
   const beforeAfterImages = [

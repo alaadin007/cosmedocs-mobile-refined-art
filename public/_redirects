@@ -184,8 +184,8 @@
 /eczema-treatment/                /treatments/eczema/                 301
 /psoriasis-treatment              /treatments/psoriasis/              301
 /psoriasis-treatment/             /treatments/psoriasis/              301
-/hyperpigmentation-treatment      /treatments/hyperpigmentation/      301
-/hyperpigmentation-treatment/     /treatments/hyperpigmentation/      301
+/hyperpigmentation-treatment      /concerns/pigmentation-melasma/     301
+/hyperpigmentation-treatment/     /concerns/pigmentation-melasma/     301
 /cosmederm                        /treatments/dermatology/            301
 /cosmederm/                       /treatments/dermatology/            301
 
@@ -278,8 +278,8 @@
 /treatments/acne/                  /concerns/acne/                     301
 /treatments/eczema                 /concerns/eczema/                   301
 /treatments/eczema/                /concerns/eczema/                   301
-/treatments/hyperpigmentation      /concerns/hyperpigmentation/        301
-/treatments/hyperpigmentation/     /concerns/hyperpigmentation/        301
+/treatments/hyperpigmentation      /concerns/pigmentation-melasma/     301
+/treatments/hyperpigmentation/     /concerns/pigmentation-melasma/     301
 /treatments/psoriasis              /concerns/                          301
 /treatments/psoriasis/             /concerns/                          301
 /treatments/mole-removal           /concerns/                          301
@@ -292,8 +292,8 @@
 /eczema-treatment/                 /concerns/eczema/                   301
 /psoriasis-treatment               /concerns/                          301
 /psoriasis-treatment/              /concerns/                          301
-/hyperpigmentation-treatment       /concerns/hyperpigmentation/        301
-/hyperpigmentation-treatment/      /concerns/hyperpigmentation/        301
+/hyperpigmentation-treatment       /concerns/pigmentation-melasma/     301
+/hyperpigmentation-treatment/      /concerns/pigmentation-melasma/     301
 /mole-removal                      /concerns/                          301
 /mole-removal/                     /concerns/                          301
 /skin-tag-removal                  /concerns/                          301
@@ -304,6 +304,8 @@
 /skin-concerns/                   /concerns/                          301
 /facial-concerns                  /concerns/                          301
 /facial-concerns/                 /concerns/                          301
+/concerns/hyperpigmentation       /concerns/pigmentation-melasma/     301
+/concerns/hyperpigmentation/      /concerns/pigmentation-melasma/     301
 
 # Medical hub consolidation
 /medical-treatments               /medical/                           301
