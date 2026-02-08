@@ -3,10 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
 import { ArrowRight, Syringe, Sparkles, Brain, Heart, Leaf, Eye, Scissors, BookOpen } from "lucide-react";
-import Home2Header from "@/components/home2/Home2Header";
 import BlogHeroSlider from "@/components/blog/BlogHeroSlider";
 import BlogSidebar from "@/components/blog/BlogSidebar";
-import Footer from "@/components/Footer";
 
 // Import botox guide hero for featured article thumbnail
 import botoxGuideHero from "@/assets/botox-guide-hero.jpg";
@@ -216,7 +214,7 @@ const BlogHome = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        <Home2Header />
+        
 
         {/* Hero Slider */}
         <BlogHeroSlider />
@@ -368,7 +366,7 @@ const BlogHome = () => {
           </p>
         </div>
 
-        <Footer />
+        
       </div>
     </>
   );

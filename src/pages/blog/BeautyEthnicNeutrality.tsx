@@ -2,9 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Card, CardContent } from "@/components/ui/card";
-import Home2Header from "@/components/home2/Home2Header";
 import BlogSidebar from "@/components/blog/BlogSidebar";
-import Footer from "@/components/Footer";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -86,7 +84,7 @@ const BeautyEthnicNeutrality = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        <Home2Header />
+        
 
         {/* Hero */}
         <header className="relative pt-28 pb-12 px-6 overflow-hidden">
@@ -370,7 +368,7 @@ const BeautyEthnicNeutrality = () => {
           </p>
         </div>
 
-        <Footer />
+        
       </div>
     </>
   );

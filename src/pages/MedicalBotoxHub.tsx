@@ -2,8 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 
 const MedicalBotoxHub = () => {
   const seoData = generateSEOMetadata(
@@ -60,7 +58,7 @@ const MedicalBotoxHub = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <Home2Header />
+        
 
         {/* Hero Section */}
         <section className="relative pt-32 pb-16 px-6">
@@ -249,7 +247,7 @@ const MedicalBotoxHub = () => {
           </div>
         </section>
 
-        <Footer />
+        
       </div>
     </>
   );

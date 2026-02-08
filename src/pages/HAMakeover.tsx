@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar, Users, CheckCircle, Heart, Gem } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 
 export default function HAMakeover() {
   const seoData = generateSEOMetadata(
@@ -68,7 +66,7 @@ export default function HAMakeover() {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      <Home2Header />
+      
 
       <div className="bg-black text-white">
         {/* Hero */}
@@ -458,7 +456,7 @@ export default function HAMakeover() {
         </div>
       </div>
 
-      <Footer />
+      
     </>
   );
 }

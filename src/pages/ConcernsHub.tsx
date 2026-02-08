@@ -10,8 +10,6 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import ConcernsHubSidebar from '@/components/concerns/ConcernsHubSidebar';
 import ConcernCard from '@/components/concerns/ConcernCard';
 import { concernsData } from '@/data/concernsData';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 
 const ConcernsHub = () => {
   const seoData = generateSEOMetadata(
@@ -449,7 +447,7 @@ const ConcernsHub = () => {
           </p>
         </div>
 
-        <Footer />
+        
       </div>
     </>
   );

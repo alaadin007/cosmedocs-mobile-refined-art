@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Sparkles, Search, Brain } from "lucide-react";
-import Home2Header from "@/components/home2/Home2Header";
 import QuickAccessTreatments from "@/components/home/QuickAccessTreatments";
-import Footer from "@/components/Footer";
 
 // Lazy load heavy components
 const LiquidGlassFacialAssessment = lazy(() => import("@/components/LiquidGlassFacialAssessment"));
@@ -66,7 +64,7 @@ const Home = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <Home2Header />
+        
 
         {/* Flowing Gold Gradient Orbs */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -274,7 +272,7 @@ const Home = () => {
           </div>
         </section>
 
-        <Footer />
+        
 
         {/* Modals */}
         <Suspense fallback={null}>

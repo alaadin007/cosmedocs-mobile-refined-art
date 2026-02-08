@@ -14,8 +14,6 @@ import {
   Award,
   ChevronDown,
 } from "lucide-react";
-import Home2Header from "@/components/home2/Home2Header";
-import Footer from "@/components/Footer";
 
 // Images — text-free editorial photography
 import heroImage from "@/assets/botox-guide-hero.jpg";
@@ -177,7 +175,7 @@ const UltimateBotoxGuide = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        <Home2Header />
+        
 
         {/* ═══════ HERO ═══════ */}
         <header className="relative pt-28 pb-16 md:pb-24 px-6 overflow-hidden">
@@ -908,7 +906,7 @@ const UltimateBotoxGuide = () => {
           </p>
         </div>
 
-        <Footer />
+        
       </div>
     </>
   );

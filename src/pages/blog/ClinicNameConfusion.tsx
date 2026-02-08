@@ -2,9 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
-import Home2Header from "@/components/home2/Home2Header";
 import BlogSidebar from "@/components/blog/BlogSidebar";
-import Footer from "@/components/Footer";
 import harleyStreetImg from "@/assets/blog-clinic-harley-street.jpg";
 import phoneSearchImg from "@/assets/blog-clinic-phone-search.jpg";
 import receptionImg from "@/assets/blog-clinic-reception.jpg";
@@ -101,7 +99,7 @@ const ClinicNameConfusion = () => {
         </script>
       </Helmet>
 
-      <Home2Header />
+      
 
       <main className="min-h-screen bg-black text-white">
         {/* Hero */}
@@ -398,7 +396,7 @@ const ClinicNameConfusion = () => {
         </section>
       </main>
 
-      <Footer />
+      
     </>
   );
 };
