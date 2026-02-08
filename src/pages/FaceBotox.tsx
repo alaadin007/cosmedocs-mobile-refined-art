@@ -3,11 +3,11 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Award, Calendar, MapPin, CheckCircle, Star, ArrowRight, Shield, Heart, Check, Activity, Syringe, GraduationCap, Stethoscope, MessageCircle, Sparkles, Building, Users, Phone, Play, ExternalLink } from "lucide-react";
 import Breadcrumb from '@/components/Breadcrumb';
+import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxSidebar from '@/components/botox/BotoxSidebar';
 import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
 
@@ -278,488 +278,588 @@ export default function FaceBotox() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid lg:grid-cols-[1fr_380px] gap-12">
             {/* LEFT — Educational Content */}
-            <div className="space-y-16">
-              {/* Quick Nav */}
-              <nav className="flex flex-wrap gap-3 text-sm">
-                {["What is Botox?", "How It Works", "Treatment Areas", "Who Is Suitable?", "Results", "Choosing a Clinic", "FAQs"].map((label) => (
-                  <a key={label} href={`#${label.toLowerCase().replace(/[^a-z]+/g, '-')}`} className="text-white/40 hover:text-[#C9A050] transition-colors">
-                    {label}
-                  </a>
-                ))}
-              </nav>
+            <div className="space-y-14">
 
               {/* What is Botox */}
-              <section id="what-is-botox-">
-                <SectionHeading>What is Botox?</SectionHeading>
-                <div className="prose prose-invert max-w-none">
-                  <p className="text-white/70 text-lg mb-6">
-                    Botox is the brand name for botulinum toxin type A, a purified protein derived from
-                    the bacterium <em>Clostridium botulinum</em>. When injected in controlled, tiny doses,
-                    it temporarily relaxes targeted muscles by blocking nerve signals.
-                  </p>
-                  <p className="text-white/60 mb-6">
-                    Originally developed for medical conditions like muscle spasms and crossed eyes,
-                    Botox gained <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/103000s5316s5319s5323s5326s5331lbl.pdf" target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">FDA approval</a> for
-                    cosmetic use in 2002. Today, it's the world's most popular non-surgical aesthetic treatment.
-                  </p>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
-                    <h3 className="text-lg font-semibold text-white mb-4">Key Facts</h3>
-                    <ul className="space-y-3 text-white/60">
-                      {["Over 30 years of clinical use with an excellent safety record", "Approved by the FDA, MHRA, and regulatory bodies worldwide", "Treatment takes 10-20 minutes with no downtime", "Effects are temporary and fully reversible"].map((fact) => (
-                        <li key={fact} className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" /><span>{fact}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                  <p className="text-white/60">
-                    The term "Botox" is often used generically, but several brands exist including
-                    Azzalure, Bocouture, and Dysport. At Cosmedocs, we use premium, licensed products
-                    to ensure consistent, predictable results.
-                  </p>
-                </div>
+              <section id="what-is-botox">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Is <span className="text-[#C9A050] font-light">Botox?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Botox is the brand name for botulinum toxin type A, a purified protein derived from
+                        the bacterium <em>Clostridium botulinum</em>. When injected in controlled, tiny doses,
+                        it temporarily relaxes targeted muscles by blocking nerve signals — smoothing dynamic
+                        wrinkles whilst preserving natural expression.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Originally developed for medical conditions like muscle spasms and crossed eyes,
+                        Botox gained <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/103000s5316s5319s5323s5326s5331lbl.pdf" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">FDA approval</a> for
+                        cosmetic use in 2002. Today, it's the world's most popular non-surgical aesthetic treatment.
+                      </p>
+                      <ul className="space-y-2">
+                        {["Over 30 years of clinical use with an excellent safety record", "Approved by the FDA, MHRA, and regulatory bodies worldwide", "Treatment takes 10–20 minutes with no downtime", "Effects are temporary and fully reversible"].map((fact) => (
+                          <li key={fact} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" /><span>{fact}</span></li>
+                        ))}
+                      </ul>
+                      <p>
+                        The term "Botox" is often used generically, but several brands exist including
+                        Azzalure, Bocouture, and Dysport. At CosmeDocs, we use premium, licensed products
+                        to ensure consistent, predictable results.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* How It Works */}
               <section id="how-it-works">
-                <SectionHeading>How Botox Works</SectionHeading>
-                <div className="grid md:grid-cols-3 gap-4 mb-8">
-                  {[
-                    { step: "1", title: "Injection", desc: "Small amounts are precisely injected into targeted muscles using ultra-fine needles." },
-                    { step: "2", title: "Nerve Block", desc: "Botox blocks the release of acetylcholine, preventing nerve signals from reaching muscles." },
-                    { step: "3", title: "Muscle Relaxation", desc: "Targeted muscles relax, smoothing overlying skin and reducing wrinkle appearance." },
-                  ].map((s) => (
-                    <div key={s.step} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
-                      <div className="bg-[#C9A050]/20 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
-                        <span className="text-xl font-bold text-[#C9A050]">{s.step}</span>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How Botox <span className="text-[#C9A050] font-light">Works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="space-y-4">
+                        <div className="grid md:grid-cols-3 gap-4">
+                          {[
+                            { step: "1", title: "Injection", desc: "Small amounts are precisely injected into targeted muscles using ultra-fine needles." },
+                            { step: "2", title: "Nerve Block", desc: "Botox blocks the release of acetylcholine, preventing nerve signals from reaching muscles." },
+                            { step: "3", title: "Relaxation", desc: "Targeted muscles relax, smoothing overlying skin and reducing wrinkle appearance." },
+                          ].map((s) => (
+                            <div key={s.step} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 text-center">
+                              <div className="bg-[#C9A050]/15 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-3">
+                                <span className="text-sm font-medium text-[#C9A050]">{s.step}</span>
+                              </div>
+                              <p className="text-sm font-medium text-white/70 mb-1">{s.title}</p>
+                              <p className="text-white/40 text-xs font-light">{s.desc}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <h3 className="text-base font-semibold text-white mb-2">{s.title}</h3>
-                      <p className="text-white/50 text-sm">{s.desc}</p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Dynamic wrinkles form from repeated muscle contractions over years — think of the
+                        lines that appear when you frown or squint. By temporarily relaxing these muscles,
+                        Botox softens existing lines and prevents new ones from forming.
+                      </p>
+                      <p>
+                        The key to natural results lies in precise dosing and placement. A skilled practitioner
+                        relaxes the muscles causing wrinkles whilst preserving natural facial expression.
+                      </p>
                     </div>
-                  ))}
-                </div>
-                <p className="text-white/60 mb-4">
-                  Dynamic wrinkles form from repeated muscle contractions over years — think of the
-                  lines that appear when you frown or squint. By temporarily relaxing these muscles,
-                  Botox softens existing lines and prevents new ones from forming.
-                </p>
-                <p className="text-white/60">
-                  The key to natural results lies in precise dosing and placement. A skilled practitioner
-                  relaxes the muscles causing wrinkles whilst preserving natural facial expression.
-                </p>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Treatment Areas */}
               <section id="treatment-areas">
-                <SectionHeading>Botox Treatment Areas</SectionHeading>
-                <p className="text-white/60 mb-8">
-                  Botox can address various areas of the face and body. Each area requires different techniques and dosing for optimal results.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {treatmentAreaCards.map((card) => (
-                    <div key={card.title} className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-[#C9A050]/30 transition-colors">
-                      <h3 className="text-base font-semibold text-white mb-2">{card.title}</h3>
-                      <p className="text-white/50 text-sm mb-3">{card.description}</p>
-                      <ul className="space-y-1.5">
-                        {card.areas.map((area) => (
-                          <li key={area} className="flex items-center gap-2 text-sm text-white/60">
-                            <Check className="w-3.5 h-3.5 text-[#C9A050]" /> {area}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    { label: "Jaw Slimming", to: "/treatments/masseter-botox/" },
-                    { label: "Lip Flip", to: "/treatments/lip-flip/" },
-                    { label: "Oily Skin Botox", to: "/treatments/oily-skin-botox/" },
-                  ].map((link) => (
-                    <Link key={link.label} to={link.to} className="px-4 py-2 bg-white/5 hover:bg-[#C9A050]/10 border border-white/10 hover:border-[#C9A050]/30 rounded-full text-sm text-white/60 hover:text-[#C9A050] transition-all">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
-              {/* Who is Suitable */}
-              <section id="who-is-suitable-">
-                <SectionHeading>Who is Suitable for Botox?</SectionHeading>
-                <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-[#C9A050]/20 rounded-full p-2"><Sparkles className="w-5 h-5 text-[#C9A050]" /></div>
-                      <h3 className="text-lg font-semibold text-white">Preventative Botox</h3>
-                    </div>
-                    <p className="text-white/60 text-sm mb-3">For those in their mid-20s to early 30s with minimal lines. Prevents wrinkles from forming by stopping repetitive muscle movements before they create permanent creases.</p>
-                    <p className="text-xs text-white/40"><strong className="text-[#C9A050]">Best for:</strong> Those noticing early dynamic lines with facial expressions.</p>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-[#C9A050]/20 rounded-full p-2"><Activity className="w-5 h-5 text-[#C9A050]" /></div>
-                      <h3 className="text-lg font-semibold text-white">Corrective Botox</h3>
-                    </div>
-                    <p className="text-white/60 text-sm mb-3">For established lines and wrinkles at rest. Softens existing creases and prevents them from deepening further. May be combined with other treatments.</p>
-                    <p className="text-xs text-white/40"><strong className="text-[#C9A050]">Best for:</strong> Those with visible lines at rest seeking to refresh their appearance.</p>
-                  </div>
-                </div>
-
-                {/* Age ranges */}
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">Age Considerations</h3>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {[
-                      { age: "20s-30s", text: "Preventative treatment. Low doses to slow early dynamic lines. Focus on preserving natural expression." },
-                      { age: "40s-50s", text: "Corrective treatment. Moderate doses to soften established lines. Often combined with fillers for volume." },
-                      { age: "60s+", text: "Part of comprehensive rejuvenation. Works alongside other treatments to refresh appearance naturally." },
-                    ].map((a) => (
-                      <div key={a.age}>
-                        <p className="text-[#C9A050] font-semibold mb-2">{a.age}</p>
-                        <p className="text-white/50 text-sm">{a.text}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Treatment <span className="text-[#C9A050] font-light">Areas</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Botox can address various areas of the face and body. Each area requires different techniques and dosing for optimal results.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    {treatmentAreaCards.map((card) => (
+                      <div key={card.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                        <p className="text-sm font-medium text-white/70 mb-2">{card.title}</p>
+                        <p className="text-white/35 text-xs font-light mb-3">{card.description}</p>
+                        <ul className="space-y-1.5">
+                          {card.areas.map((area) => (
+                            <li key={area} className="flex items-center gap-2 text-xs text-white/45 font-light">
+                              <Check className="w-3 h-3 text-[#C9A050]/60" /> {area}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     ))}
                   </div>
-                </div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { label: "Jaw Slimming", to: "/treatments/masseter-botox/" },
+                      { label: "Lip Flip", to: "/treatments/lip-flip/" },
+                      { label: "Oily Skin Botox", to: "/treatments/oily-skin-botox/" },
+                    ].map((link) => (
+                      <Link key={link.label} to={link.to} className="px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full text-xs text-white/45 hover:text-[#C9A050] hover:border-[#C9A050]/30 transition-all font-light">
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Who is Suitable */}
+              <section id="who-is-suitable">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Who Is <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Sparkles className="w-4 h-4 text-[#C9A050]/60" />
+                            <p className="text-sm font-medium text-white/70">Preventative Botox</p>
+                          </div>
+                          <p className="text-white/45 text-xs leading-relaxed font-light">For those in their mid-20s to early 30s with minimal lines. Prevents wrinkles from forming by stopping repetitive muscle movements before they create permanent creases.</p>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Activity className="w-4 h-4 text-[#C9A050]/60" />
+                            <p className="text-sm font-medium text-white/70">Corrective Botox</p>
+                          </div>
+                          <p className="text-white/45 text-xs leading-relaxed font-light">For established lines and wrinkles at rest. Softens existing creases and prevents them from deepening further. May be combined with other treatments.</p>
+                        </div>
+                      </div>
+                    }
+                  >
+                    <div className="space-y-5 text-white/45 text-sm leading-relaxed font-light">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-xs font-medium text-white/60 mb-4">Age Considerations</p>
+                        <div className="grid md:grid-cols-3 gap-5">
+                          {[
+                            { age: "20s–30s", text: "Preventative treatment. Low doses to slow early dynamic lines. Focus on preserving natural expression." },
+                            { age: "40s–50s", text: "Corrective treatment. Moderate doses to soften established lines. Often combined with fillers for volume." },
+                            { age: "60s+", text: "Part of comprehensive rejuvenation. Works alongside other treatments to refresh appearance naturally." },
+                          ].map((a) => (
+                            <div key={a.age}>
+                              <p className="text-[#C9A050]/70 font-medium text-xs mb-1">{a.age}</p>
+                              <p className="text-white/40 text-xs font-light">{a.text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Botox for Men */}
               <section>
-                <SectionHeading>Botox for Men</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  Male Botox treatments have seen significant growth. Men typically seek treatment to maintain a
-                  competitive professional appearance whilst looking refreshed, not "done."
-                </p>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {[
-                      { title: "Higher Dosage Required", desc: "Men typically have larger, stronger facial muscles requiring 25-40% more product for equivalent results." },
-                      { title: "Masculine Aesthetics", desc: "Treatment is tailored to preserve masculine features — strong brows, defined forehead — whilst reducing lines." },
-                      { title: "Different Goals", desc: "Most men want to look less tired or stressed, not younger. Subtle treatment achieves this naturally." },
-                      { title: "Discreet Results", desc: "The goal is undetectable improvement — colleagues notice you look better, not that you've had treatment." },
-                    ].map((item) => (
-                      <div key={item.title}>
-                        <p className="text-[#C9A050] font-medium mb-1 text-sm">{item.title}</p>
-                        <p className="text-white/50 text-sm">{item.desc}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Botox for <span className="text-[#C9A050] font-light">Men</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Male Botox treatments have seen significant growth. Men typically seek treatment to maintain a
+                        competitive professional appearance whilst looking refreshed, not "done."
+                      </p>
+                    }
+                  >
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="grid md:grid-cols-2 gap-5">
+                        {[
+                          { title: "Higher Dosage Required", desc: "Men typically have larger, stronger facial muscles requiring 25–40% more product for equivalent results." },
+                          { title: "Masculine Aesthetics", desc: "Treatment is tailored to preserve masculine features — strong brows, defined forehead — whilst reducing lines." },
+                          { title: "Different Goals", desc: "Most men want to look less tired or stressed, not younger. Subtle treatment achieves this naturally." },
+                          { title: "Discreet Results", desc: "The goal is undetectable improvement — colleagues notice you look better, not that you've had treatment." },
+                        ].map((item) => (
+                          <div key={item.title}>
+                            <p className="text-[#C9A050]/70 font-medium text-xs mb-1">{item.title}</p>
+                            <p className="text-white/40 text-xs font-light">{item.desc}</p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Results Timeline */}
               <section id="results">
-                <SectionHeading>Results Timeline & Longevity</SectionHeading>
-                <div className="space-y-5 mb-8">
-                  {[
-                    { icon: <Clock className="w-5 h-5 text-[#C9A050]" />, title: "Days 1-3: Onset", desc: "Initial effects begin. You may notice subtle changes in muscle movement. Some patients experience mild redness at injection sites." },
-                    { icon: <Activity className="w-5 h-5 text-[#C9A050]" />, title: "Days 7-14: Peak Effect", desc: "Full results become visible. Lines are smoothed and treated muscles are relaxed. Optimal time for a follow-up assessment." },
-                    { icon: <Calendar className="w-5 h-5 text-[#C9A050]" />, title: "Months 3-6: Duration", desc: "Results typically last 3-6 months. Duration varies by individual metabolism, treatment area, and lifestyle factors." },
-                  ].map((t) => (
-                    <div key={t.title} className="flex items-start gap-4">
-                      <div className="bg-[#C9A050]/20 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">{t.icon}</div>
-                      <div>
-                        <h3 className="text-base font-semibold text-white mb-1">{t.title}</h3>
-                        <p className="text-white/50 text-sm">{t.desc}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Results <span className="text-[#C9A050] font-light">Timeline</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="space-y-4">
+                        {[
+                          { title: "Days 1–3: Onset", desc: "Initial effects begin. You may notice subtle changes in muscle movement." },
+                          { title: "Days 7–14: Peak Effect", desc: "Full results become visible. Lines are smoothed and treated muscles are relaxed." },
+                          { title: "Months 3–6: Duration", desc: "Results typically last 3–6 months. Duration varies by metabolism, area, and lifestyle." },
+                        ].map((t) => (
+                          <div key={t.title} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#C9A050]/50 mt-2 flex-shrink-0" />
+                            <div>
+                              <p className="text-xs font-medium text-white/60 mb-0.5">{t.title}</p>
+                              <p className="text-white/40 text-xs font-light">{t.desc}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    }
+                  >
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <p className="text-xs font-medium text-white/60 mb-3">Factors Affecting Duration</p>
+                      <div className="grid md:grid-cols-2 gap-3 text-xs text-white/40 font-light">
+                        {[
+                          { label: "Metabolism", desc: "Faster metabolism may reduce longevity" },
+                          { label: "Treatment area", desc: "High-movement areas may wear faster" },
+                          { label: "Dosage", desc: "Higher doses may last longer" },
+                          { label: "Consistency", desc: "Regular treatments often extend duration" },
+                        ].map((f) => (
+                          <div key={f.label} className="flex items-start gap-2">
+                            <Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" />
+                            <span><strong className="text-white/55">{f.label}:</strong> {f.desc}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                  <h3 className="text-sm font-semibold text-white mb-3">Factors Affecting Duration</h3>
-                  <div className="grid md:grid-cols-2 gap-3 text-sm text-white/50">
-                    {[
-                      { label: "Metabolism", desc: "Faster metabolism may reduce longevity" },
-                      { label: "Treatment area", desc: "High-movement areas may wear faster" },
-                      { label: "Dosage", desc: "Higher doses may last longer" },
-                      { label: "Consistency", desc: "Regular treatments often extend duration" },
-                    ].map((f) => (
-                      <div key={f.label} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-[#C9A050] mt-0.5" />
-                        <span><strong className="text-white/70">{f.label}:</strong> {f.desc}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Botox vs Fillers */}
               <section>
-                <SectionHeading>How Botox Fits Into Facial Rejuvenation</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  Understanding the difference between Botox and <Link to="/treatments/dermal-fillers/" className="text-[#C9A050] hover:underline">dermal fillers</Link> helps
-                  you make informed decisions about your treatment plan.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-lg font-semibold text-white mb-2">Botox</h3>
-                    <p className="text-[#C9A050] text-sm mb-3">Relaxes muscles → Reduces dynamic wrinkles</p>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Lines that appear with expression</li>
-                      <li>• Forehead, frown lines, crow's feet</li>
-                      <li>• Preventative treatment</li>
-                      <li>• Results last 3-6 months</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-lg font-semibold text-white mb-2">Dermal Fillers</h3>
-                    <p className="text-[#C9A050] text-sm mb-3">Adds volume → Restores lost fullness</p>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Lines present at rest</li>
-                      <li>• Cheeks, lips, nasolabial folds</li>
-                      <li>• Volume restoration</li>
-                      <li>• Results last 6-18 months</li>
-                    </ul>
-                  </div>
-                </div>
-                <Link to="/treatments/dermal-fillers/" className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium">
-                  Learn about Dermal Fillers <ArrowRight className="w-4 h-4" />
-                </Link>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How Botox Fits Into <span className="text-[#C9A050] font-light">Facial Rejuvenation</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Understanding the difference between Botox and <Link to="/treatments/dermal-fillers/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">dermal fillers</Link> helps
+                        you make informed decisions about your treatment plan.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-4 mt-2">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-[#C9A050]/80 mb-3">Botox</p>
+                        <p className="text-[#C9A050]/50 text-xs mb-3 font-light">Relaxes muscles → Reduces dynamic wrinkles</p>
+                        <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                          <li>• Lines that appear with expression</li>
+                          <li>• Forehead, frown lines, crow's feet</li>
+                          <li>• Preventative treatment</li>
+                          <li>• Results last 3–6 months</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-sm font-medium text-white/60 mb-3">Dermal Fillers</p>
+                        <p className="text-white/35 text-xs mb-3 font-light">Adds volume → Restores lost fullness</p>
+                        <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                          <li>• Lines present at rest</li>
+                          <li>• Cheeks, lips, nasolabial folds</li>
+                          <li>• Volume restoration</li>
+                          <li>• Results last 6–18 months</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <Link to="/treatments/dermal-fillers/" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light">
+                        Learn about Dermal Fillers <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Choosing a Clinic */}
               <section id="choosing-a-clinic">
-                <SectionHeading>Choosing a Botox Clinic</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  With countless clinics offering Botox, knowing what to look for ensures you receive safe, effective treatment.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    { icon: <Stethoscope className="w-5 h-5 text-[#C9A050]" />, title: "Doctor-Led Care", desc: "Ensure treatments are performed or supervised by qualified medical professionals with comprehensive training in facial anatomy." },
-                    { icon: <Building className="w-5 h-5 text-[#C9A050]" />, title: "Clinic Credentials", desc: "Look for CQC registration, professional memberships, and established reputation." },
-                    { icon: <Users className="w-5 h-5 text-[#C9A050]" />, title: "Consultation Process", desc: "A thorough consultation should assess your concerns, explain options, and set realistic expectations." },
-                    { icon: <Star className="w-5 h-5 text-[#C9A050]" />, title: "Reviews & Results", desc: "Check verified reviews and before/after galleries. Consistent positive feedback indicates reliable practitioners." },
-                  ].map((c) => (
-                    <div key={c.title} className="bg-white/5 border border-white/10 rounded-xl p-5">
-                      <div className="flex items-center gap-3 mb-3">{c.icon}<h3 className="text-base font-semibold text-white">{c.title}</h3></div>
-                      <p className="text-white/50 text-sm">{c.desc}</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Choosing a <span className="text-[#C9A050] font-light">Clinic</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        With countless clinics offering Botox, knowing what to look for ensures you receive safe, effective treatment from qualified practitioners.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {[
+                        { icon: <Stethoscope className="w-4 h-4 text-[#C9A050]/60" />, title: "Doctor-Led Care", desc: "Ensure treatments are performed or supervised by qualified medical professionals with comprehensive training in facial anatomy." },
+                        { icon: <Building className="w-4 h-4 text-[#C9A050]/60" />, title: "Clinic Credentials", desc: "Look for CQC registration, professional memberships, and established reputation." },
+                        { icon: <Users className="w-4 h-4 text-[#C9A050]/60" />, title: "Consultation Process", desc: "A thorough consultation should assess your concerns, explain options, and set realistic expectations." },
+                        { icon: <Star className="w-4 h-4 text-[#C9A050]/60" />, title: "Reviews & Results", desc: "Check verified reviews and before/after galleries. Consistent positive feedback indicates reliable practitioners." },
+                      ].map((c) => (
+                        <div key={c.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-2">{c.icon}<p className="text-xs font-medium text-white/60">{c.title}</p></div>
+                          <p className="text-white/40 text-xs font-light">{c.desc}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
-              {/* Safety */}
+              {/* Safety & Regulation */}
               <section>
-                <SectionHeading>Safety, Regulation & Your Consultation</SectionHeading>
-                <p className="text-white/60 mb-6">
-                  Botox has an excellent safety profile when administered by trained medical professionals.
-                  It's approved by the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/103000s5316s5319s5323s5326s5331lbl.pdf" target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">FDA</a>,
-                  MHRA, and regulatory bodies worldwide, with over 30 years of clinical use.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2"><Shield className="w-4 h-4 text-[#C9A050]" /> UK Regulations</h3>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Botox is a prescription-only medicine (POM)</li>
-                      <li>• Must be prescribed by a doctor, nurse prescriber, or dentist</li>
-                      <li>• Face-to-face consultation required</li>
-                      <li>• Clinics must be CQC registered</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2"><Heart className="w-4 h-4 text-[#C9A050]" /> During Your Consultation</h3>
-                    <ul className="space-y-1.5 text-white/50 text-sm">
-                      <li>• Full medical history review</li>
-                      <li>• Discussion of concerns and goals</li>
-                      <li>• Explanation of treatment options</li>
-                      <li>• Realistic expectations set</li>
-                      <li>• Informed consent obtained</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5">
-                  <h3 className="text-sm font-semibold text-white mb-2">Contraindications</h3>
-                  <p className="text-white/40 text-sm mb-2">Botox is not suitable if you:</p>
-                  <ul className="grid md:grid-cols-2 gap-1.5 text-white/50 text-sm">
-                    <li>• Are pregnant or breastfeeding</li>
-                    <li>• Have a neuromuscular disorder</li>
-                    <li>• Have infection at the injection site</li>
-                    <li>• Are allergic to botulinum toxin</li>
-                  </ul>
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Safety & <span className="text-[#C9A050] font-light">Regulation</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Botox has an excellent safety profile when administered by trained medical professionals.
+                        It's approved by the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/103000s5316s5319s5323s5326s5331lbl.pdf" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">FDA</a>,
+                        MHRA, and regulatory bodies worldwide, with over 30 years of clinical use.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-3"><Shield className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-white/60">UK Regulations</p></div>
+                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                            <li>• Botox is a prescription-only medicine (POM)</li>
+                            <li>• Must be prescribed by a doctor, nurse prescriber, or dentist</li>
+                            <li>• Face-to-face consultation required</li>
+                            <li>• Clinics must be CQC registered</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-3"><Heart className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-white/60">During Your Consultation</p></div>
+                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                            <li>• Full medical history review</li>
+                            <li>• Discussion of concerns and goals</li>
+                            <li>• Explanation of treatment options</li>
+                            <li>• Realistic expectations set</li>
+                            <li>• Informed consent obtained</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <p className="text-xs font-medium text-white/60 mb-2">Contraindications</p>
+                        <p className="text-white/35 text-xs font-light mb-2">Botox is not suitable if you:</p>
+                        <ul className="grid md:grid-cols-2 gap-1.5 text-white/40 text-xs font-light">
+                          <li>• Are pregnant or breastfeeding</li>
+                          <li>• Have a neuromuscular disorder</li>
+                          <li>• Have infection at the injection site</li>
+                          <li>• Are allergic to botulinum toxin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Preparation & Aftercare */}
               <section>
-                <SectionHeading>Preparation & Aftercare</SectionHeading>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3">Before Treatment</h3>
-                    <ul className="space-y-2 text-white/50 text-sm">
-                      {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24-48 hours before", "Arrive with clean, makeup-free skin", "Inform practitioner of all medications"].map((t) => (
-                        <li key={t} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C9A050] mt-0.5" /><span>{t}</span></li>
-                      ))}
-                    </ul>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Preparation & <span className="text-[#C9A050] font-light">Aftercare</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                      <p className="text-xs font-medium text-white/60 mb-3">Before Treatment</p>
+                      <ul className="space-y-2 text-white/40 text-xs font-light">
+                        {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Arrive with clean, makeup-free skin", "Inform practitioner of all medications"].map((t) => (
+                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                      <p className="text-xs font-medium text-white/60 mb-3">After Treatment</p>
+                      <ul className="space-y-2 text-white/40 text-xs font-light">
+                        {["Stay upright for 4 hours post-treatment", "Avoid touching or rubbing treated areas", "Skip exercise, saunas, and alcohol for 24 hours", "Avoid facials and massages for 2 weeks"].map((t) => (
+                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                    <h3 className="text-sm font-semibold text-white mb-3">After Treatment</h3>
-                    <ul className="space-y-2 text-white/50 text-sm">
-                      {["Stay upright for 4 hours post-treatment", "Avoid touching or rubbing treated areas", "Skip exercise, saunas, and alcohol for 24 hours", "Avoid facials and massages for 2 weeks"].map((t) => (
-                        <li key={t} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C9A050] mt-0.5" /><span>{t}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                </motion.div>
               </section>
 
               {/* Real Patient Results */}
               <section>
-                <SectionHeading>Botox Before & After (Real Patients)</SectionHeading>
-                <div className="grid grid-cols-2 gap-4 mb-5">
-                  <div className="rounded-xl overflow-hidden border border-white/10">
-                    <img
-                      src="/images/before-after/botox/frown-lines-before-after-preview.jpg"
-                      alt="Frown lines before and after Botox treatment"
-                      className="w-full aspect-[4/3] object-cover"
-                      loading="lazy"
-                    />
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Real Patient <span className="text-[#C9A050] font-light">Results</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid grid-cols-2 gap-4 mb-5">
+                    <div className="rounded-xl overflow-hidden border border-white/[0.08]">
+                      <img
+                        src="/images/before-after/botox/frown-lines-before-after-preview.jpg"
+                        alt="Frown lines before and after Botox treatment"
+                        className="w-full aspect-[4/3] object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="rounded-xl overflow-hidden border border-white/[0.08]">
+                      <img
+                        src="/images/before-after/botox/forehead-lines-before-after-preview.jpg"
+                        alt="Forehead lines before and after Botox treatment"
+                        className="w-full aspect-[4/3] object-cover"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                  <div className="rounded-xl overflow-hidden border border-white/10">
-                    <img
-                      src="/images/before-after/botox/forehead-lines-before-after-preview.jpg"
-                      alt="Forehead lines before and after Botox treatment"
-                      className="w-full aspect-[4/3] object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <p className="text-white/40 text-xs mb-5">
-                  All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial anatomy and treatment plan.
-                </p>
-                <Link
-                  to="/before-after/botox/"
-                  className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium"
-                >
-                  View full Botox before &amp; after gallery → <ArrowRight className="w-4 h-4" />
-                </Link>
+                  <p className="text-white/35 text-xs mb-5 font-light">
+                    All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial anatomy and treatment plan.
+                  </p>
+                  <Link
+                    to="/before-after/botox/"
+                    className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors"
+                  >
+                    View full Botox before &amp; after gallery → <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </motion.div>
               </section>
 
               {/* Beyond Botox — Synergistic Treatment */}
               <section>
-                <SectionHeading>Beyond Botox: Treating Lines That Won't Rest</SectionHeading>
-                <div className="prose prose-invert max-w-none">
-                  <p className="text-white/70 text-lg mb-6">
-                    We don't just stop at Botox. Over the last 15 years, we've developed synergistic treatment methods that go further — turning static lines (those visible at rest) back into dynamic ones that only appear with movement.
-                  </p>
-
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-6">
-                    <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">The Problem</p>
-                    <p className="text-white/60 mb-4">
-                      Deep lines that have been etched into the skin over years don't fully disappear with Botox alone. Botox relaxes the muscle, so lines improve — but at rest, those creases remain visible. They've become scars in the skin itself.
-                    </p>
-                    <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">Our Approach</p>
-                    <p className="text-white/60">
-                      By combining Botox with targeted treatments like <strong className="text-white/80">Polynucleotides</strong>, <strong className="text-white/80">dermal fillers</strong>, and <strong className="text-white/80">skin boosters</strong>, we treat the line itself — not just the muscle causing it. Think of deep lines like scars or dental cavities: they need to be <em>filled</em>, not overfilled. We use hyaluronic acid in micro-millilitres, placed very superficially, to restore the skin's surface without creating bulk or lumpiness.
-                    </p>
-                  </div>
-
-                  {/* Video Thumbnail — Opens Instagram Reel in new tab */}
-                  <a
-                    href="https://www.instagram.com/reel/DBrvvuQOESh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 p-3 mb-6 transition-all duration-300 hover:border-[#C9A050]/30"
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Beyond Botox: <span className="text-[#C9A050] font-light">Lines That Won't Rest</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        We don't just stop at Botox. Over the last 15 years, we've developed synergistic treatment methods that go further — turning static lines (those visible at rest) back into dynamic ones that only appear with movement.
+                      </p>
+                    }
                   >
-                    <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={crowsFeetThumb} alt="Crow's feet filler technique" className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-                        <Play className="w-6 h-6 text-white fill-white/80" />
+                    <div className="space-y-5 text-white/45 text-sm leading-relaxed font-light">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <p className="text-[#C9A050]/60 font-medium text-xs uppercase tracking-wider mb-3">The Problem</p>
+                        <p className="text-white/40 text-xs font-light mb-4">
+                          Deep lines that have been etched into the skin over years don't fully disappear with Botox alone. Botox relaxes the muscle, so lines improve — but at rest, those creases remain visible. They've become scars in the skin itself.
+                        </p>
+                        <p className="text-[#C9A050]/60 font-medium text-xs uppercase tracking-wider mb-3">Our Approach</p>
+                        <p className="text-white/40 text-xs font-light">
+                          By combining Botox with targeted treatments like <strong className="text-white/55">Polynucleotides</strong>, <strong className="text-white/55">dermal fillers</strong>, and <strong className="text-white/55">skin boosters</strong>, we treat the line itself — not just the muscle causing it.
+                        </p>
+                      </div>
+
+                      {/* Video Thumbnail */}
+                      <a
+                        href="https://www.instagram.com/reel/DBrvvuQOESh/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-4 rounded-xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] p-3 transition-all duration-300 hover:border-[#C9A050]/30"
+                      >
+                        <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                          <img src={crowsFeetThumb} alt="Crow's feet filler technique" className="w-full h-full object-cover" />
+                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
+                            <Play className="w-5 h-5 text-white fill-white/80" />
+                          </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-white/60 text-xs font-medium mb-0.5 group-hover:text-[#C9A050] transition-colors">Crow's Feet Filler Technique</p>
+                          <p className="text-white/35 text-[10px] leading-relaxed font-light">Watch micro-millilitres of hyaluronic acid placed superficially to fill lines.</p>
+                        </div>
+                        <ExternalLink className="w-3 h-3 text-white/20 group-hover:text-[#C9A050] flex-shrink-0 transition-colors" />
+                      </a>
+
+                      <div className="bg-[#C9A050]/5 border border-[#C9A050]/20 rounded-xl p-5">
+                        <ul className="space-y-2">
+                          {[
+                            { bold: "Lower Botox doses", desc: "— you don't need aggressive dosing when lines are treated from multiple angles" },
+                            { bold: "Natural results", desc: "— less Botox means more natural movement whilst achieving smooth skin at rest" },
+                            { bold: "Improved skin quality", desc: "— polynucleotides and skin boosters regenerate the skin itself" },
+                            { bold: "Cost-effective long term", desc: "— less frequent sessions, better results, healthier skin overall" },
+                          ].map((item) => (
+                            <li key={item.bold} className="flex items-start gap-2 text-xs text-white/40 font-light">
+                              <CheckCircle className="w-3 h-3 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                              <span><strong className="text-white/55">{item.bold}</strong> {item.desc}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <a
+                          href="https://med.as.me/harleystreet"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-5 py-2.5 text-xs font-medium transition-all duration-300"
+                        >
+                          Book a Consultation <ArrowRight className="w-3 h-3" />
+                        </a>
+                        <button
+                          onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+                          className="inline-flex items-center gap-2 border border-white/[0.15] text-white/60 hover:text-white hover:bg-white/[0.05] rounded-full px-5 py-2.5 text-xs font-light transition-all duration-300"
+                        >
+                          <Sparkles className="w-3 h-3 text-[#C9A050]/60" /> Ask Our AI
+                        </button>
                       </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-white text-sm font-medium mb-1 group-hover:text-[#C9A050] transition-colors">Crow's Feet Filler Technique</p>
-                      <p className="text-white/50 text-xs leading-relaxed">Watch micro-millilitres of hyaluronic acid placed superficially to fill lines — like treating fine scars, not overfilling.</p>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-white/30 group-hover:text-[#C9A050] flex-shrink-0 transition-colors" />
-                  </a>
-
-                  <div className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-xl p-6 mb-6">
-                    <p className="text-[#C9A050] font-semibold text-sm uppercase tracking-wider mb-3">The Benefits</p>
-                    <ul className="space-y-3 text-white/60">
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
-                        <span><strong className="text-white/80">Lower Botox doses</strong> — you don't need aggressive dosing when the lines are being treated from multiple angles</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
-                        <span><strong className="text-white/80">Natural results</strong> — less Botox means more natural movement whilst still achieving smooth skin at rest</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
-                        <span><strong className="text-white/80">Improved skin quality</strong> — polynucleotides and skin boosters regenerate the skin itself, not just mask the problem</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#C9A050] mt-0.5 flex-shrink-0" />
-                        <span><strong className="text-white/80">Cost-effective long term</strong> — less frequent Botox sessions, better results at rest, and healthier skin overall</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <p className="text-white/60 mb-4">
-                    This synergistic approach is something we've refined over 15 years and thousands of patients. Every face is different — which is why we discuss your specific combination plan during consultation.
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a
-                      href="https://med.as.me/harleystreet"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-6 py-3 text-sm font-medium transition-all duration-300"
-                    >
-                      Book a Consultation <ArrowRight className="w-4 h-4" />
-                    </a>
-                    <button
-                      onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                      className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:bg-white/10 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300"
-                    >
-                      <Sparkles className="w-4 h-4 text-[#C9A050]" /> Ask Our AI
-                    </button>
-                  </div>
-                </div>
+                  </ExpandableSection>
+                </motion.div>
               </section>
 
               {/* Why Choose Cosmedocs */}
               <section>
-                <SectionHeading>Why Choose Cosmedocs?</SectionHeading>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {[
-                    { icon: <Award className="w-5 h-5" />, title: "Experience", desc: "2M+ treatments since 2007" },
-                    { icon: <GraduationCap className="w-5 h-5" />, title: "Training", desc: "HSI trainers" },
-                    { icon: <Shield className="w-5 h-5" />, title: "Quality", desc: "FDA-approved products" },
-                    { icon: <Sparkles className="w-5 h-5" />, title: "Philosophy", desc: "Invisible art" },
-                    { icon: <Stethoscope className="w-5 h-5" />, title: "Doctor-Led", desc: "Qualified doctors" },
-                  ].map((w) => (
-                    <div key={w.title} className="text-center">
-                      <div className="bg-[#C9A050]/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 text-[#C9A050]">{w.icon}</div>
-                      <h3 className="text-sm font-semibold text-white mb-1">{w.title}</h3>
-                      <p className="text-white/50 text-xs">{w.desc}</p>
-                    </div>
-                  ))}
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why Choose <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {[
+                      { icon: <Award className="w-4 h-4" />, title: "Experience", desc: "2M+ treatments since 2007" },
+                      { icon: <GraduationCap className="w-4 h-4" />, title: "Training", desc: "HSI trainers" },
+                      { icon: <Shield className="w-4 h-4" />, title: "Quality", desc: "FDA-approved products" },
+                      { icon: <Sparkles className="w-4 h-4" />, title: "Philosophy", desc: "Invisible art" },
+                      { icon: <Stethoscope className="w-4 h-4" />, title: "Doctor-Led", desc: "Qualified doctors" },
+                    ].map((w) => (
+                      <div key={w.title} className="text-center">
+                        <div className="bg-[#C9A050]/10 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2 text-[#C9A050]/60">{w.icon}</div>
+                        <p className="text-xs font-medium text-white/60 mb-0.5">{w.title}</p>
+                        <p className="text-white/35 text-[10px] font-light">{w.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
               </section>
 
               {/* FAQs */}
               <section id="faqs">
-                <SectionHeading>Frequently Asked Questions</SectionHeading>
-                <Accordion type="single" collapsible className="w-full">
-                  {[
-                    { v: "what-is", q: "What exactly is Botox?", a: "Botox is a brand name for botulinum toxin type A, a purified protein that temporarily relaxes targeted muscles. It has been safely used for over 30 years in both medical and cosmetic applications." },
-                    { v: "pain", q: "Does Botox hurt?", a: "Most patients describe Botox injections as a minor pinch. We use ultra-fine needles and can apply numbing cream if desired. The procedure is quick, typically completed in 10-20 minutes." },
-                    { v: "safe", q: "Is Botox safe?", a: "When administered by qualified medical professionals, Botox has an excellent safety record. It is approved by regulatory bodies worldwide and has been used clinically for over three decades." },
-                    { v: "results", q: "When will I see results?", a: "Initial effects typically appear within 3-5 days, with full results visible at 10-14 days. Results generally last 3-6 months, depending on individual factors." },
-                    { v: "natural", q: "Will I look frozen or unnatural?", a: "Not with skilled practitioners. The goal is to relax muscles enough to reduce wrinkles whilst maintaining natural facial expression. The 'frozen' look comes from over-treatment, which we avoid." },
-                    { v: "suitable", q: "Who is Botox suitable for?", a: "Botox is suitable for adults aged 18+ seeking to reduce or prevent facial lines. It works well for preventative treatment in your 20s-30s and corrective treatment for established lines." },
-                    { v: "difference", q: "What is the difference between Botox and fillers?", a: "Botox relaxes muscles to reduce dynamic wrinkles (lines with movement). Fillers add volume to restore lost fullness and soften static lines. They treat different concerns and are often used together." },
-                  ].map((faq) => (
-                    <AccordionItem key={faq.v} value={faq.v} className="border-white/10">
-                      <AccordionTrigger className="text-white hover:text-[#C9A050] text-left">{faq.q}</AccordionTrigger>
-                      <AccordionContent className="text-white/60">{faq.a}</AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-                <div className="mt-6 text-center">
-                  <Link to="/botox-faqs" className="inline-flex items-center gap-2 text-[#C9A050] hover:underline text-sm font-medium">
-                    View all Botox FAQs <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="w-full">
+                    {[
+                      { v: "what-is", q: "What exactly is Botox?", a: "Botox is a brand name for botulinum toxin type A, a purified protein that temporarily relaxes targeted muscles. It has been safely used for over 30 years in both medical and cosmetic applications." },
+                      { v: "pain", q: "Does Botox hurt?", a: "Most patients describe Botox injections as a minor pinch. We use ultra-fine needles and can apply numbing cream if desired. The procedure is quick, typically completed in 10–20 minutes." },
+                      { v: "safe", q: "Is Botox safe?", a: "When administered by qualified medical professionals, Botox has an excellent safety record. It is approved by regulatory bodies worldwide and has been used clinically for over three decades." },
+                      { v: "results", q: "When will I see results?", a: "Initial effects typically appear within 3–5 days, with full results visible at 10–14 days. Results generally last 3–6 months, depending on individual factors." },
+                      { v: "natural", q: "Will I look frozen or unnatural?", a: "Not with skilled practitioners. The goal is to relax muscles enough to reduce wrinkles whilst maintaining natural facial expression. The 'frozen' look comes from over-treatment, which we avoid." },
+                      { v: "suitable", q: "Who is Botox suitable for?", a: "Botox is suitable for adults aged 18+ seeking to reduce or prevent facial lines. It works well for preventative treatment in your 20s–30s and corrective treatment for established lines." },
+                      { v: "difference", q: "What is the difference between Botox and fillers?", a: "Botox relaxes muscles to reduce dynamic wrinkles (lines with movement). Fillers add volume to restore lost fullness and soften static lines. They treat different concerns and are often used together." },
+                    ].map((faq) => (
+                      <AccordionItem key={faq.v} value={faq.v} className="border-white/[0.08]">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light">{faq.q}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-xs font-light">{faq.a}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                  <div className="mt-6 text-center">
+                    <Link to="/botox-faqs" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors">
+                      View all Botox FAQs <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </motion.div>
               </section>
             </div>
 
@@ -835,11 +935,4 @@ export default function FaceBotox() {
   );
 }
 
-/* ─── Shared sub-component ─── */
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-      {children}
-    </h2>
-  );
-}
+
