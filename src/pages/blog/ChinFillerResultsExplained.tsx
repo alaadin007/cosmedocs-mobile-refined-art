@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import chinFillerHero from '@/assets/blog-chin-filler-hero.jpg';
 import chinAugmentationDiagram from '@/assets/blog-chin-augmentation-diagram.png';
@@ -152,7 +150,6 @@ const ChinFillerResultsExplained = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        <Home2Header />
 
         {/* Hero with Cover Image */}
         <section className="relative pt-28 pb-16 border-b border-white/[0.06] overflow-hidden">
@@ -637,7 +634,6 @@ const ChinFillerResultsExplained = () => {
           </div>
         </div>
 
-        <Footer />
       </div>
     </>
   );
