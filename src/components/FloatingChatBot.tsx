@@ -229,8 +229,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
             {/* Header */}
             <div className="bg-gradient-to-r from-black via-gray-900 to-black p-4 text-white flex justify-between items-center border-b border-white/10">
               <div>
-                <h3 className="font-bold text-lg">CosmeDocs <span className="text-primary">AI</span> Assistant</h3>
-                <p className="text-sm text-gray-400">Ask me anything about aesthetic treatments</p>
+                <h3 className="font-bold text-lg">Aesthetic <span className="text-primary">Intelligence</span></h3>
+                <p className="text-sm text-gray-400">Cosmedocs • Harley Street</p>
               </div>
               <Button
                 onClick={() => setIsOpen(false)}

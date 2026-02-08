@@ -115,7 +115,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                   <Sparkles className="w-4 h-4 text-black" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">AIesthetics Doctor</p>
+                  <p className="text-sm font-semibold text-white">Aesthetic Intelligence</p>
                   <p className="text-[11px] text-white/40">Cosmedocs • Harley Street</p>
                 </div>
               </div>

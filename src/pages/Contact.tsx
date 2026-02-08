@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Helmet } from 'react-helmet-async';
 import { z } from "zod";
 import { motion } from "framer-motion";
+import { lazy, Suspense } from "react";
 import {
   MessageSquare,
   Phone,
@@ -21,6 +22,8 @@ import {
   Send,
 } from "lucide-react";
 import { generateSEOMetadata } from '@/utils/seo';
+
+const InlineAIChat = lazy(() => import("@/components/InlineAIChat"));
 
 // Input validation schema
 const contactFormSchema = z.object({
@@ -507,6 +510,38 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
+        </section>
+
+        {/* ── AI Aesthetic Intelligence Section ── */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="text-center mb-8">
+              <p className="text-[#C9A050] text-xs font-semibold tracking-[0.25em] uppercase mb-3">
+                Instant Answers
+              </p>
+              <p className="text-2xl sm:text-3xl font-extralight text-white mb-3">
+                Aesthetic Intelligence
+              </p>
+              <p className="text-sm text-white/50 font-extralight max-w-lg mx-auto">
+                Get instant answers about treatments, pricing, and booking. Our AI assistant is trained on 
+                our full treatment portfolio and can help you find exactly what you need.
+              </p>
+            </div>
+            <div className="max-w-2xl mx-auto">
+              <Suspense fallback={
+                <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl h-[520px] flex items-center justify-center">
+                  <div className="w-8 h-8 border-2 border-[#C9A050]/30 border-t-[#C9A050] rounded-full animate-spin" />
+                </div>
+              }>
+                <InlineAIChat />
+              </Suspense>
+            </div>
+          </motion.div>
         </section>
 
         {/* ── Hidden SEO content ── */}
