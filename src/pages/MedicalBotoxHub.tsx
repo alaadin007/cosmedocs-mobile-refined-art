@@ -9,7 +9,7 @@ const MedicalBotoxHub = () => {
   const seoData = generateSEOMetadata(
     "Medical Botox Treatments | Hyperhidrosis, Bruxism, Migraine | Cosmedocs",
     "Clinical botulinum toxin treatments for medical conditions including excessive sweating, jaw clenching, TMJ, and chronic migraine. GMC-registered doctors, Harley Street.",
-    "/treatments/botox/medical/"
+    "/medical/"
   );
 
   const conditions = [
@@ -21,7 +21,7 @@ const MedicalBotoxHub = () => {
       areas: ["Underarms (axillae)", "Palms (palmar)", "Feet (plantar)", "Forehead"],
       mechanism: "Botulinum toxin blocks the release of acetylcholine at the junction between nerve fibres and sweat glands, temporarily reducing sweat production in the treated area.",
       duration: "Results typically last 4-9 months, varying by individual and treatment area.",
-      path: "/treatments/hyperhidrosis-botox/"
+      path: "/medical/botox-for-hyperhidrosis/"
     },
     {
       id: "bruxism",
@@ -41,7 +41,7 @@ const MedicalBotoxHub = () => {
       areas: ["Frontalis", "Corrugator", "Procerus", "Occipitalis", "Temporalis", "Trapezius", "Cervical paraspinal"],
       mechanism: "The exact mechanism for migraine prevention isn't fully understood, but it's believed to block pain signals and reduce muscle tension that can trigger migraines.",
       duration: "Treatment involves injections at 31-39 sites every 12 weeks. Benefits may take 2-3 treatment cycles to become fully apparent.",
-      path: "/treatments/trigger-point-botox/"
+      path: "/medical/botox-for-migraines/"
     }
   ];
 

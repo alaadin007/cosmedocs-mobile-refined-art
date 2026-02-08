@@ -2,8 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 import { Stethoscope, ShieldCheck, FileText, UserCheck } from 'lucide-react';
 
 const MedicalHub = () => {
@@ -18,7 +16,7 @@ const MedicalHub = () => {
       title: "Hyperhidrosis Treatment",
       subtitle: "Excessive Sweating",
       description: "Botulinum toxin injections can effectively reduce excessive sweating in the underarms, palms, and feet. This medical treatment blocks the nerve signals that trigger sweat glands, providing relief for several months.",
-      path: "/treatments/hyperhidrosis-botox/",
+      path: "/medical/botox-for-hyperhidrosis/",
       clinical: true
     },
     {
@@ -32,7 +30,7 @@ const MedicalHub = () => {
       title: "Chronic Migraine",
       subtitle: "Preventive Treatment",
       description: "For patients experiencing 15 or more headache days per month, botulinum toxin is a licensed preventive treatment. Multiple injection sites around the head and neck can reduce migraine frequency and severity.",
-      path: "/treatments/trigger-point-botox/",
+      path: "/medical/botox-for-migraines/",
       clinical: true
     },
     {
@@ -82,7 +80,6 @@ const MedicalHub = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <Home2Header />
 
         {/* Subtle gradient background */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -244,7 +241,6 @@ const MedicalHub = () => {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );

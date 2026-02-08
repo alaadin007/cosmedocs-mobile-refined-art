@@ -81,7 +81,7 @@ const treatmentCategories: TreatmentCategory[] = [
     title: "Medical Botox",
     subtitle: "Therapeutic applications",
     description: "Evidence-based botulinum toxin treatments for medical conditions including chronic migraines, hyperhidrosis, bruxism, and trigger-point pain.",
-    link: "/treatments/botox/medical/",
+    link: "/medical/",
     items: [
       "Migraine & Headache Relief",
       "Excessive Sweating (Hyperhidrosis)",

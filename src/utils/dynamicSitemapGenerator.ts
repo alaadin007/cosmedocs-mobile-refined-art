@@ -52,6 +52,8 @@ const treatmentRoutes = [
   '/treatments/oily-skin-botox',
   '/treatments/trigger-point-botox',
   '/treatments/botox/medical',
+  '/medical/botox-for-migraines',
+  '/medical/botox-for-hyperhidrosis',
   
   // Dermal Fillers Hub & Sub-treatments
   '/treatments/dermal-fillers',
