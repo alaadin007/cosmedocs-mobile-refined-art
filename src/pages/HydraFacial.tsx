@@ -1,1112 +1,196 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Droplets, Star, Clock, Users, Calendar, Shield, Activity, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
-import { generateSEOMetadata } from "@/utils/seo";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
-import { useVideoManagement } from "@/hooks/useVideoManagement";
-import { useState } from "react";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
+import HydraFacialSidebar from "@/components/skin-rejuvenation/HydraFacialSidebar";
 
 const HydraFacial = () => {
-  const {
-    videos,
-    getVideosByTreatment
-  } = useVideoManagement();
-  const [selectedVideo, setSelectedVideo] = useState<any>(null);
-  const seoData = generateSEOMetadata("HydraFacial London | £175 | Cosmedocs", "Deep cleanse, exfoliate & hydrate with HydraFacial. Vortex technology for instant glowing skin. Treatments from £175.", "/hydrafacial-london");
+  const seoData = generateSEOMetadata("HydraFacial London | Cosmedocs Harley Street", "Deep cleanse, exfoliate & hydrate with HydraFacial. Vortex technology for instantly glowing skin. Doctor-led treatments on Harley Street.", "/treatments/hydrafacial/");
 
-  // Get HydraFacial specific videos
-  const hydraFacialVideos = getVideosByTreatment('HydraFacial');
-  const bookingUrl = "https://med.as.me/harleystreet";
+  const beforeAfterImages = [
+    { src: "/lovable-uploads/38a0f044-da28-413f-afa4-d9f7955797f5.png", alt: "HydraFacial before and after skin texture improvement" },
+    { src: "/lovable-uploads/5a0b4122-4a4e-4dfd-90aa-7af725983356.png", alt: "HydraFacial pigmentation treatment before and after" },
+    { src: "/lovable-uploads/9f5e369e-f3ac-4643-9470-bb1642025063.png", alt: "HydraFacial skin hydration before and after" },
+    { src: "/lovable-uploads/59aa52ad-4a4d-417e-8d44-3d9252fd6180.png", alt: "HydraFacial complexion enhancement before and after" },
+  ];
 
-  // Before/after images for HydraFacial
-  const beforeAfterImages = [{
-    src: "/lovable-uploads/38a0f044-da28-413f-afa4-d9f7955797f5.png",
-    alt: "HydraFacial before and after London Cosmedocs skin texture improvement",
-    caption: "Remarkable skin texture improvement and radiance achieved with HydraFacial vortex technology"
-  }, {
-    src: "/lovable-uploads/5a0b4122-4a4e-4dfd-90aa-7af725983356.png",
-    alt: "HydraFacial pigmentation treatment before after London Harley Street Cosmedocs",
-    caption: "Visible reduction in pigmentation and improved skin clarity with enhanced brightness"
-  }, {
-    src: "/lovable-uploads/9f5e369e-f3ac-4643-9470-bb1642025063.png",
-    alt: "HydraFacial skin hydration before after London Cosmedocs glowing results",
-    caption: "Deep hydration and skin rejuvenation showing improved texture and natural glow"
-  }, {
-    src: "/lovable-uploads/59aa52ad-4a4d-417e-8d44-3d9252fd6180.png",
-    alt: "HydraFacial complexion enhancement before after London Harley Street treatment",
-    caption: "Overall complexion enhancement with improved skin tone and radiant appearance"
-  }];
+  const treatmentSteps = [
+    { step: "01", title: "Detoxification", desc: "Gentle lymphatic drainage to remove toxins and reduce puffiness for firmer, more toned skin." },
+    { step: "02", title: "Deep Cleanse", desc: "Vortex cleansing and exfoliation removes dead skin cells while AHAs and BHAs unclog pores." },
+    { step: "03", title: "Extract + Hydrate", desc: "Powerful blend of salicylic and glycolic acid removes impurities while boosting collagen production." },
+    { step: "04", title: "Boost + Infuse", desc: "Vortex-Fusion technology delivers antioxidants, peptides, and hyaluronic acid deep into skin." },
+    { step: "05", title: "Restore + Rejuvenate", desc: "LED light therapy fights bacteria and boosts collagen for a luminous, flawless glow." },
+  ];
 
-  const treatmentSteps = [{
-    step: "01",
-    title: "Detoxification",
-    description: "Gentle lymphatic drainage to remove toxins and reduce puffiness for firmer, more toned skin."
-  }, {
-    step: "02",
-    title: "Deep Cleanse",
-    description: "Vortex cleansing and exfoliation removes dead skin cells while AHAs and BHAs unclog pores."
-  }, {
-    step: "03",
-    title: "Extract + Hydrate",
-    description: "Powerful blend of salicylic and glycolic acid removes impurities while boosting collagen production."
-  }, {
-    step: "04",
-    title: "Boost + Infuse",
-    description: "Vortex-Fusion technology delivers antioxidants, peptides, and hyaluronic acid deep into skin."
-  }, {
-    step: "05",
-    title: "Restore + Rejuvenate",
-    description: "LED light therapy fights bacteria and boosts collagen for a luminous, flawless glow."
-  }];
-
-  const benefits = [{
-    title: "Refines & Reduces Pore Size",
-    description: "Enlarged and blocked pores filled with sebum, dead skin cells, and impurities are instantly purified and shrunk using the vortex-powered machine's powerful suction tip wand."
-  }, {
-    title: "Evens Out and Brightens Skin Tone",
-    description: "Infuses skin with antioxidants and brightening agents to correct dark spots, dull skin condition, and discoloration. The skin instantly glows with a radiant and more even tone."
-  }, {
-    title: "HydraFacial Degreases Oily Skin",
-    description: "Through vortex cleansing, exfoliation, and extraction, oily skin looks less shiny and achieves a healthy glow by removing excess sebum that leads to clogged pores and blemishes."
-  }, {
-    title: "Plumps Up Thirsty, Dry Skin & Lips",
-    description: "Applies skin boosters, hyaluronic acid, and vortex technology to restore moisture balance. Many clients notice their dry skin improved after the first session."
-  }, {
-    title: "Ideal For Acne & Acne Scars",
-    description: "The intense buffing action makes this an effective acne treatment. It's also very effective for acne scars as it promotes your skin's healing system."
-  }, {
-    title: "Soothes Sensitive Skin Signs",
-    description: "Skin conditions as complex as rosacea can be easily improved. Symptoms like facial redness, enlarged pores, and bumps are directly targeted with this gentle, zero-downtime treatment."
-  }, {
-    title: "Tailored To Every Skin Needs",
-    description: "Skin boosters, antioxidant serums, and specific acids like glycolic for dry skin and salicylic for oily skin target various issues including wrinkles, dryness, and acne."
-  }];
-
-  const faqs = [{
-    question: "How much does HydraFacial cost in London?",
-    answer: "At Cosmedocs Harley Street, HydraFacial treatments start from £175 for a single session. We offer courses of 3 sessions at £150 each, or 6 sessions at £125 each for optimal results."
-  }, {
-    question: "How effective is HydraFacial for acne?",
-    answer: "HydraFacial is highly effective for acne-prone skin. It deeply cleanses to remove dead skin cells, impurities, and excess sebum while unclogging pores and soothing inflamed skin to prevent future breakouts."
-  }, {
-    question: "Are there any side effects of HydraFacial?",
-    answer: "HydraFacial is widely regarded as safe with minimal side effects. Some may experience mild skin peeling, slight redness for sensitive skin, or temporary sensitivity, all of which fade quickly."
-  }, {
-    question: "How many treatments are needed to see results?",
-    answer: "Clients notice instant glow and hydration after their first session. For optimal long-term skin health, we recommend monthly HydraFacial treatments at our London clinic."
-  }, {
-    question: "Who is the ideal candidate for HydraFacial?",
-    answer: "HydraFacial is suitable for all skin types and anyone 18+ with fine lines, excess sebum, skin discoloration, rough texture, or dull complexion. Those using Accutane or with severe scarring may not be suitable."
-  }, {
-    question: "How to care for skin after HydraFacial?",
-    answer: "Limit sun exposure for 72 hours, use daily SPF 30+, avoid harsh treatments for 2 weeks, pause strong topicals for 48 hours, and incorporate hyaluronic serum for 30 days."
-  }, {
-    question: "Can HydraFacial be combined with other treatments?",
-    answer: "Yes, at Cosmedocs we combine HydraFacial with Dermaplaning for enhanced results. Dermaplaning removes dead skin cells, while HydraFacial deeply cleanses, exfoliates, and moisturizes."
-  }, {
-    question: "Is HydraFacial suitable for men?",
-    answer: "Absolutely! HydraFacial is popular among men for addressing dryness, shaving irritation, congested skin, rough texture, acne, and fine lines. We recommend monthly sessions for lasting results."
-  }];
+  const faqs = [
+    { question: "What is a HydraFacial?", answer: "HydraFacial is a multi-step facial treatment that uses patented Vortex-Fusion technology to cleanse, extract, and hydrate skin simultaneously. It combines cleansing, exfoliation, extraction, hydration, and antioxidant protection in one treatment." },
+    { question: "How long does a HydraFacial take?", answer: "A standard HydraFacial takes 30–45 minutes. Our Platinum HydraFacial, which includes additional boosters and LED therapy, takes approximately 60 minutes." },
+    { question: "Is there any downtime?", answer: "No downtime at all. You can apply makeup and return to normal activities immediately. Many patients have a HydraFacial during their lunch break." },
+    { question: "How often should I have a HydraFacial?", answer: "We recommend monthly HydraFacials for optimal skin maintenance. However, frequency can be adjusted based on your skin concerns and goals." },
+    { question: "Is HydraFacial suitable for all skin types?", answer: "Yes, HydraFacial is suitable for all skin types, including sensitive skin. The treatment is customisable, so serums and intensity can be adjusted to your specific needs." },
+    { question: "What's the difference between Signature and Platinum?", answer: "The Signature HydraFacial includes the core 5-step process. The Platinum adds targeted boosters for specific concerns (e.g., brightening, anti-ageing), plus LED light therapy for enhanced results." },
+  ];
 
   return (
     <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/hydrafacial/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:image" content={seoData.image} />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content={seoData.image} />
-        
-        {/* Local SEO */}
-        <meta name="geo.region" content="GB-LND" />
-        <meta name="geo.placename" content="London" />
-        <meta name="geo.position" content="51.5074;-0.1278" />
-        <meta name="ICBM" content="51.5074, -0.1278" />
-        
-        {/* Structured Data */}
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/hydrafacial/" />
+        <meta property="og:type" content="website" />
         <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "MedicalClinic",
-          "name": "Cosmedocs - HydraFacial London",
-          "description": "Premium HydraFacial treatments in London's Harley Street using advanced vortex technology",
-          "url": "https://cosmedocs.com/hydrafacial-london",
-          "telephone": "+44 20 3733 3227",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Harley Street",
-            "addressLocality": "London",
-            "addressRegion": "Greater London",
-            "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
-          },
-          "priceRange": "£175"
-        })}
+          {JSON.stringify({ "@context": "https://schema.org", "@graph": [
+            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.co.uk/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" } },
+            { "@type": "MedicalProcedure", "name": "HydraFacial Treatment", "description": "Multi-step facial using Vortex-Fusion technology for deep cleansing, exfoliation, and hydration.", "url": "https://www.cosmedocs.co.uk/treatments/hydrafacial/", "procedureType": "NoninvasiveProcedure" },
+            { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
+          ] })}
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-left"
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Premium HydraFacial London</span>
-                  <span className="block text-sm mt-4">Invisible art - glowing transformation that speaks without words</span>
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }} animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }} />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb items={[{ label: 'Treatments', path: '/treatments/' }, { label: 'Skin Rejuvenation', path: '/treatments/skin-rejuvenation/' }]} currentPage="HydraFacial" />
+            <div className="pt-12 pb-4 max-w-2xl">
+              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                  Hydra<span className="text-[#C9A050] font-light">Facial</span>
                 </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Advanced Vortex Technology</p>
-                  <p className="text-sm text-gray-300">Deep cleansing, exfoliation & hydration for all skin types</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    View Price List
-                  </Button>
-                </div>
+                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                  Multi-step deep cleansing, exfoliation, and hydration — for immediately visible radiance with zero downtime.
+                </p>
               </motion.div>
-              
-              <div className="hidden lg:block"></div>
-            </div>
-          </div>
-        </section>
-
-        {/* Summary of Treatment */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">HydraFacial Treatment Summary</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-300" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">45-60 minutes including consultation</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-300" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">Visible for 5-7 days; optimal with treatments every 4-6 weeks</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-300" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Zero downtime, immediate results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Droplets className="text-purple-300" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Technology</h3>
-                <p className="text-gray-300">Patented vortex technology</p>
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />No Downtime</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />30–45 Min</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />All Skin Types</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">HydraFacial Before & After Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See real results from our HydraFacial treatments at Cosmedocs London. 
-                Advanced vortex technology delivers immediate improvement in skin texture, hydration, and radiance.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-
-          </div>
-        </section>
-
-        {/* What is HydraFacial & Who Is HydraFacial For */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl font-bold mb-8 text-center text-white">What is HydraFacial?</h2>
-              
-              <div className="space-y-6 text-gray-300 text-lg mb-12">
-                <p>
-                  HydraFacial is a revolutionary facial treatment that combines cleansing, exfoliation, extraction, 
-                  hydration, and antioxidant protection in one comprehensive session. Using patented vortex technology, 
-                  this non-invasive treatment delivers immediate results with no downtime.
-                </p>
-                <p>
-                  The treatment uses a unique spiral design HydroPeel tip that creates a vortex effect to easily 
-                  dislodge and remove impurities while simultaneously delivering hydrating skin solutions.
-                </p>
-              </div>
-
-              {/* Skin Types Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-purple-600/10 backdrop-blur-sm border-2 border-purple-400/40 rounded-xl p-8"
-              >
-                <h3 className="text-3xl font-bold text-purple-300 mb-6 text-center">Skin Types</h3>
-                <p className="text-gray-300 text-center mb-8 text-lg">
-                  HydraFacial is suitable for virtually everyone and addresses multiple skin concerns across all skin types
-                </p>
-                
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Oily Skin</h4>
-                  </div>
-                  
-                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Dry Skin</h4>
-                  </div>
-                  
-                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Sensitive Skin</h4>
-                  </div>
-                  
-                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Acne-Prone</h4>
-                  </div>
-                  
-                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Aging Skin</h4>
-                  </div>
-
-                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Combination</h4>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* HydraFacial Benefits - Award-Winning Vortex Technology */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mb-6">
-                <Award className="text-white" size={32} />
-              </div>
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Award-Winning Vortex Technology
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                HydraFacial uses patented Vortex-Fusion technology with a spiral design that creates a fluid vortex effect, 
-                easily dislodging and removing impurities while infusing skin with hydrating solutions and serums.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:from-purple-600/20 hover:to-blue-600/20 hover:border-purple-300/30 transition-all duration-300 text-center"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <CheckCircle className="text-white" size={24} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white group-hover:text-purple-200 transition-colors duration-300">{benefit.title}</h3>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            <div className="space-y-14">
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">What Is a <span className="text-[#C9A050] font-light">HydraFacial?</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection preview={<p className="text-white/45 text-sm leading-relaxed font-light">HydraFacial is a medical-grade facial treatment that uses patented Vortex-Fusion technology to deeply cleanse, extract impurities, and infuse skin with intensive serums — all in a single session with zero downtime.</p>}>
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>Unlike traditional facials, the HydraFacial uses a unique spiral design tip that creates a vortex effect, dislodging and removing impurities whilst simultaneously delivering hydrating serums deep into the skin.</p>
+                      <p>The treatment is fully customisable. Boosters can be added to target specific concerns including fine lines, hyperpigmentation, oily skin, or dehydration — making it suitable for virtually every skin type and concern.</p>
+                    </div>
+                  </ExpandableSection>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </section>
 
-        {/* HydraFacial Steps */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-4 text-white">The HydraFacial Process</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 5-step HydraFacial treatment delivers comprehensive skin rejuvenation
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              {treatmentSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white text-lg font-bold">{step.step}</span>
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">The 5-Step <span className="text-[#C9A050] font-light">Process</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="space-y-3">
+                    {treatmentSteps.map(s => (
+                      <div key={s.step} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5 flex items-start gap-4">
+                        <span className="text-[#C9A050] font-light text-lg min-w-[28px]">{s.step}</span>
+                        <div>
+                          <p className="text-sm font-medium text-white mb-1">{s.title}</p>
+                          <p className="text-white/45 text-xs font-light leading-relaxed">{s.desc}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm">{step.description}</p>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </section>
 
-        {/* HydraFacial Specialised Boosters */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-4 text-white">Specialised Treatment Boosters</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your HydraFacial with targeted boosters designed for specific skin concerns
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <div className="flex items-start gap-3">
-                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
-                        <Heart className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-xl mb-2">Growth Factor Booster</CardTitle>
-                        <p className="text-purple-200 text-sm font-medium">Anti-Ageing & Regeneration</p>
-                      </div>
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Am I <span className="text-[#C9A050] font-light">Suitable?</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4"><CheckCircle className="w-5 h-5 text-[#C9A050]" /><p className="text-sm font-medium text-white">Ideal For</p></div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Dull, congested skin</li><li>• Enlarged or blocked pores</li><li>• Uneven skin tone or pigmentation</li><li>• Fine lines and dehydration</li><li>• Pre-event glow</li>
+                      </ul>
                     </div>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">
-                    <p className="mb-3">
-                      Designed to boost collagen and elastin production, helping to diminish the appearance of fine lines 
-                      whilst capturing and removing toxins and irritants.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Reduces visible signs of ageing</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Enhances skin firmness and elasticity</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Detoxifies and protects skin barrier</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <div className="flex items-start gap-3">
-                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
-                        <Droplets className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-xl mb-2">Clarifying Booster</CardTitle>
-                        <p className="text-purple-200 text-sm font-medium">Acne & Blemish Control</p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">
-                    <p className="mb-3">
-                      Perfect for acne-prone skin, this booster cleanses, reduces excess oil, purifies pores, 
-                      and improves the appearance of acne whilst brightening and smoothing the skin.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Controls excess sebum production</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Reduces breakouts and inflammation</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Refines pores and evens skin tone</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <div className="flex items-start gap-3">
-                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
-                        <Star className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-xl mb-2">Brightening Complex</CardTitle>
-                        <p className="text-purple-200 text-sm font-medium">Pigmentation & Even Tone</p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">
-                    <p className="mb-3">
-                      A skin-brightening complex that reduces the appearance of brown spots, evens skin tone, 
-                      prevents new pigmentation formation, and restores hydration.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Fades dark spots and hyperpigmentation</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Creates luminous, even complexion</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Prevents future discolouration</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <div className="flex items-start gap-3">
-                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
-                        <Palette className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-xl mb-2">Calming Complex</CardTitle>
-                        <p className="text-purple-200 text-sm font-medium">Redness & Sensitivity Relief</p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">
-                    <p className="mb-3">
-                      Specifically formulated to relieve visible signs of red, sensitised skin, this booster 
-                      supports healthy skin barrier function and detoxifies the skin.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Reduces facial redness and inflammation</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Strengthens skin barrier protection</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <span>Ideal for rosacea-prone skin</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-10"
-            >
-              <p className="text-gray-300 mb-6">
-                During your consultation, our aesthetic practitioners will recommend the optimal booster 
-                combination tailored to your unique skin concerns and desired outcomes.
-              </p>
-              <Button 
-                size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8"
-                onClick={() => window.open(bookingUrl, '_blank')}
-              >
-                Book Consultation
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* HydraFacial Aftercare & Results Timeline */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Aftercare */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">HydraFacial Aftercare</h2>
-                <p className="text-gray-300 mb-6">
-                  Follow these simple guidelines to maintain and maximize your HydraFacial results:
-                </p>
-
-                <div className="space-y-4">
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">First 24 Hours</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Avoid direct sun exposure</li>
-                      <li>• Skip makeup if possible</li>
-                      <li>• Use gentle, fragrance-free products</li>
-                      <li>• Avoid touching your face</li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">First Week</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Apply SPF 30+ daily</li>
-                      <li>• Avoid harsh exfoliants</li>
-                      <li>• Stay hydrated</li>
-                      <li>• Use recommended skincare products</li>
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Results Timeline */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Results Timeline</h2>
-                <p className="text-gray-300 mb-6">
-                  Experience immediate glow that lasts up to 7 days. Optimal, long-lasting results achieved with regular treatments every 4-6 weeks.
-                </p>
-
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">0</span>
-                    </div>
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
-                      <h3 className="text-lg font-semibold text-white mb-1">Immediate Results</h3>
-                      <p className="text-gray-300 text-sm">Instant glow, improved hydration, and smoother skin texture</p>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4"><AlertTriangle className="w-5 h-5 text-white/40" /><p className="text-sm font-medium text-white">Caution</p></div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Active rosacea flare-ups</li><li>• Sunburn or compromised skin barrier</li><li>• Active cold sores</li><li>• Recent chemical peel (within 2 weeks)</li>
+                      </ul>
                     </div>
                   </div>
+                </motion.div>
+              </section>
 
-                  <div className="flex items-center gap-4">
-                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">7</span>
-                    </div>
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
-                      <h3 className="text-lg font-semibold text-white mb-1">One Week</h3>
-                      <p className="text-gray-300 text-sm">Enhanced skin clarity and reduced pore appearance</p>
-                    </div>
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Before & <span className="text-[#C9A050] font-light">After</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid grid-cols-2 gap-3">
+                    {beforeAfterImages.map((img, i) => (
+                      <div key={i} className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900"><img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" /></div>
+                    ))}
                   </div>
+                  <p className="text-xs text-white/30 italic mt-3">Individual results vary. Images show real patients treated at our Harley Street clinic.</p>
+                </motion.div>
+              </section>
 
-                  <div className="flex items-center gap-4">
-                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">30</span>
-                    </div>
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
-                      <h3 className="text-lg font-semibold text-white mb-1">Next Session Due</h3>
-                      <p className="text-gray-300 text-sm">Optimal time for maintenance treatment</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-purple-600/30 to-purple-800/30 border-2 border-purple-400/50 rounded-lg p-5 mt-6">
-                    <div className="flex items-start gap-3">
-                      <Calendar className="w-6 h-6 text-purple-300 flex-shrink-0 mt-1" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Recommended Treatment Plan</h3>
-                        <p className="text-gray-300 text-sm mb-2">
-                          For optimal, long-lasting results, we recommend a treatment every 4-6 weeks. 
-                          Regular sessions help maintain your skin's radiance, hydration, and overall health.
-                        </p>
-                        <p className="text-purple-200 text-sm font-medium">
-                          Book a course to save up to £150
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Frequently Asked <span className="text-[#C9A050] font-light">Questions</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, i) => (
+                      <AccordionItem key={i} value={`item-${i}`} className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5">
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">{faq.answer}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
+            <aside className="hidden lg:block"><div className="sticky top-24"><HydraFacialSidebar /></div></aside>
           </div>
-        </section>
+        </div>
 
-        {/* Combination Treatments */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-8">Combination Treatments</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your HydraFacial results with complementary treatments for comprehensive skin rejuvenation
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4">HydraFacial + Dermaplaning</h3>
-                <p className="text-gray-300 mb-4">
-                  Dermaplaning removes dead skin cells and vellus hair, allowing deeper penetration of HydraFacial serums.
-                </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Smoother skin texture</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Better product absorption</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Instant glow and radiance</li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4">HydraFacial + Chemical Peels</h3>
-                <p className="text-gray-300 mb-4">
-                  Combine gentle chemical peels with HydraFacial for enhanced exfoliation and renewal.
-                </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Deeper exfoliation</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Improved skin renewal</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced brightening effects</li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4">HydraFacial + Microneedling</h3>
-                <p className="text-gray-300 mb-4">
-                  Microneedling enhances HydraFacial benefits by creating channels for deeper serum penetration.
-                </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Collagen stimulation</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Improved texture</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced serum absorption</li>
-                </ul>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-4 text-white">HydraFacial Pricing</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for premium HydraFacial treatments in London
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Single Session</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-purple-300">£175</div>
-                    <p className="text-gray-300">Perfect for trying HydraFacial</p>
-                    <Button 
-                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
-                      onClick={() => window.open(bookingUrl, '_blank')}
-                    >
-                      Book Now
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/10 backdrop-blur-sm border-purple-300 hover:bg-white/15 transition-all duration-300 text-center h-full relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">3 Sessions</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-purple-300">£450</div>
-                    <p className="text-gray-300">Save £75 with our package</p>
-                    <p className="text-sm text-gray-400">£150 per session</p>
-                    <Button 
-                      className="w-full bg-purple-600 text-white hover:bg-purple-700 rounded-full"
-                      onClick={() => window.open(bookingUrl, '_blank')}
-                    >
-                      Book Package
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">6 Sessions</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-purple-300">£750</div>
-                    <p className="text-gray-300">Best value package</p>
-                    <p className="text-sm text-gray-400">£125 per session</p>
-                    <Button 
-                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
-                      onClick={() => window.open(bookingUrl, '_blank')}
-                    >
-                      Book Package
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved technology and serums</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">"Invisible art" for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about HydraFacial treatments at our London clinic.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-white/5 rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/10 rounded-lg">
-                      <span className="text-white font-medium">{faq.question}</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20 bg-accent">
-          <div className="page-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Ready for Glowing, Hydrated Skin?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how HydraFacial 
-                can transform your skin with our revolutionary vortex technology.
-              </p>
+        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white">Ready for Your <span className="text-[#C9A050]">Glow?</span></h2>
+              <p className="text-white/60 mb-8 font-light">Book a HydraFacial and experience the difference immediately.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-                  onClick={() => window.open(bookingUrl, '_blank')}
-                >
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base w-full sm:w-auto">Book Consultation <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></Button>
+                </a>
               </div>
             </motion.div>
           </div>
         </section>
+
+        <section className="lg:hidden py-12 px-4 bg-black"><HydraFacialSidebar /></section>
+
+        <div className="sr-only">
+          <h2>HydraFacial London — Expert Vortex Facial Treatment at Harley Street</h2>
+          <p>CosmeDocs offers HydraFacial treatments at our Harley Street clinic in London. HydraFacial uses patented Vortex-Fusion technology for deep cleansing, exfoliation, extraction, and hydration in one treatment. Suitable for all skin types with zero downtime. Our aesthetics is invisible art — bold, natural, always your way.</p>
+        </div>
       </div>
     </>
   );
