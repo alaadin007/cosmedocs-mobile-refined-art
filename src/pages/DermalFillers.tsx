@@ -735,7 +735,7 @@ export default function DermalFillers() {
                       <img
                         src="/images/before-after/dermal-fillers/full-face-filler-before-after-preview.jpg"
                         alt="Full-face dermal filler before and after showing facial rejuvenation"
-                        className="w-full aspect-[16/9] object-cover object-top"
+                        className="w-full h-auto object-contain"
                         loading="lazy"
                       />
                     </div>
