@@ -2,16 +2,21 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Syringe, Sparkles, Brain, Heart, Leaf, Eye, Scissors, BookOpen } from "lucide-react";
 import Home2Header from "@/components/home2/Home2Header";
 import BlogHeroSlider from "@/components/blog/BlogHeroSlider";
 import Footer from "@/components/Footer";
+
+// Import botox guide hero for featured article thumbnail
+import botoxGuideHero from "@/assets/botox-guide-hero.jpg";
 
 interface ArticleLink {
   title: string;
   category: string;
   path: string;
   excerpt?: string;
+  icon?: string;
+  image?: string;
 }
 
 const BlogHome = () => {
@@ -22,62 +27,71 @@ const BlogHome = () => {
   );
 
   const featuredArticle = {
-    title: "In Layers, Not Lines. In Planes, Not Pages.",
-    subtitle: "The CosmeDocs way of teaching aesthetics.",
+    title: "The Ultimate Botox Guide: From Science to Results",
+    subtitle: "The definitive, evidence-based guide to botulinum toxin treatments.",
     excerpt:
-      "At CosmeDocs, we believe aesthetic medicine must be learned not through dissection, but through depth. Our canvas is alive. We sculpt, not cut. We restore, not remove.",
-    category: "AESTHETIC PHILOSOPHY",
-    path: "/blog/beauty-ethnic-neutrality",
-    image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png",
+      "Everything you need to know about Botox — what it does, how it works, what to expect, and how to choose the right practitioner. Written by Harley Street doctors with 17+ years of experience.",
+    category: "EDUCATION",
+    path: "/ultimate-botox-guide",
+    image: botoxGuideHero,
   };
 
   const headlineArticles: ArticleLink[] = [
     {
+      title: "In Layers, Not Lines. In Planes, Not Pages.",
+      category: "AESTHETIC PHILOSOPHY",
+      path: "/blog/beauty-ethnic-neutrality",
+      icon: "sparkles",
+    },
+    {
       title: "Vitamin C & Ferulic Acid: The Science Behind Radiant Skin",
       category: "SKIN SCIENCE",
       path: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
-    },
-    {
-      title: "Lazy Skin Syndrome: The Hidden Cost of Moisturiser Dependency",
-      category: "COSMETALK",
-      path: "/cosmetalk/lazy-skin-syndrome",
+      icon: "leaf",
     },
     {
       title: "Inside the Mind of an Aesthetic Doctor",
       category: "CLINICAL",
       path: "/inside-mind-aesthetic-doctor-blog",
+      icon: "brain",
     },
     {
-      title: "Aesthetic Maintenance: Understanding Long-Term Costs",
-      category: "PATIENT GUIDE",
-      path: "/aesthetic-maintenance-cost-blog",
+      title: "Trust in Medical Aesthetics: The Rule for Medical Brands",
+      category: "INSIGHT",
+      path: "/blog/trust-in-medical-aesthetics",
+      icon: "heart",
     },
   ];
 
-  const skinScienceArticles = {
+  const skinScienceArticles: CategoryData = {
     featured: {
       title: "How to Get Flawless Skin: Clinical Dermatology Tips",
       excerpt:
         "Evidence-based skincare strategies combining professional treatments with daily routines for lasting results.",
       category: "SKIN SCIENCE",
       path: "/cosmetalk/flawless-skin",
+      image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png",
     },
     headlines: [
       {
         title: "Smoker's Lines in Women: Prevention & Treatment Options",
         path: "/cosmetalk/smokers-lines-women",
+        icon: "scissors",
       },
       {
         title: "Vitamin C & Ferulic Acid Benefits for Skin Health",
         path: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
+        icon: "leaf",
       },
       {
         title: "Lazy Skin Syndrome: Breaking Moisturiser Dependency",
         path: "/cosmetalk/lazy-skin-syndrome",
+        icon: "eye",
       },
       {
         title: "How to Get Rid of Bruises Quickly After Treatment",
         path: "/blog/how-to-get-rid-of-bruises-quickly",
+        icon: "heart",
       },
     ],
     secondary: {
@@ -89,65 +103,75 @@ const BlogHome = () => {
     },
   };
 
-  const treatmentArticles = {
+  const treatmentArticles: CategoryData = {
     featured: {
       title: "Non-Surgical Nose Job: The Complete Patient Guide",
       excerpt:
         "Everything you need to know about reshaping your nose without surgery — from dermal filler to PCL threads.",
       category: "TREATMENT GUIDE",
       path: "/non-surgical-nose-job-blog",
+      image: "/images/blog-hero-syringe.jpeg",
     },
     headlines: [
       {
         title: "PDO Thread Face Lift: What You Need to Know",
         path: "/pdo-threads-blog",
+        icon: "syringe",
       },
       {
         title: "Lip Wrinkles: Causes, Myths & Treatment Options",
         path: "/blog/lip-wrinkles-treatments",
+        icon: "sparkles",
       },
       {
         title: "Long-Term Aesthetic Care: Planning Your Journey",
         path: "/long-term-aesthetic-care-blog",
+        icon: "book",
       },
       {
         title: "Forehead Wrinkles: Myths, Tips & What Actually Works",
         path: "/blog/forehead-wrinkles-myths-tips",
+        icon: "eye",
       },
     ],
     secondary: {
-      title: "The Ultimate Botox Guide: From Science to Results",
+      title: "Lazy Skin Syndrome: The Hidden Cost of Moisturiser Dependency",
       excerpt:
-        "A comprehensive, evidence-based guide to botulinum toxin treatments — what it does, how it works, and what to expect.",
-      category: "EDUCATION",
-      path: "/ultimate-botox-guide",
+        "Why over-moisturising could be weakening your skin barrier — and what to do instead.",
+      category: "COSMETALK",
+      path: "/cosmetalk/lazy-skin-syndrome",
     },
   };
 
-  const clinicalArticles = {
+  const clinicalArticles: CategoryData = {
     featured: {
       title: "Inside the Mind of an Aesthetic Doctor",
       excerpt:
         "What really drives clinical decision-making in aesthetic medicine? A candid look at the art behind the science.",
       category: "CLINICAL INSIGHT",
       path: "/inside-mind-aesthetic-doctor-blog",
+      image: "/images/blog-hero-doctor.jpeg",
     },
     headlines: [
       {
         title: "Trust in Medical Aesthetics: The Rule for Medical Brands",
         path: "/blog/trust-in-medical-aesthetics",
+        icon: "heart",
       },
       {
         title: "Orofacial & Neck Pain: Breaking the Tension Cycle",
         path: "/cosmetalk/orofacial-neck-pain-cycle",
+        icon: "brain",
       },
       {
         title: "Aesthetic Maintenance Costs: An Honest Breakdown",
         path: "/aesthetic-maintenance-cost-blog",
+        icon: "book",
       },
       {
         title: "Beauty & Ethnic Neutrality in Aesthetic Medicine",
         path: "/blog/beauty-ethnic-neutrality",
+        icon: "sparkles",
       },
     ],
     secondary: {
@@ -248,14 +272,19 @@ const BlogHome = () => {
                 <Link
                   key={i}
                   to={article.path}
-                  className="block py-4 border-b border-white/[0.06] last:border-0 group"
+                  className="flex items-start gap-3 py-4 border-b border-white/[0.06] last:border-0 group"
                 >
-                  <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
-                    {article.category}
+                  <span className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#C9A050]/10 flex items-center justify-center">
+                    <ArticleIcon name={article.icon} className="w-3 h-3 text-[#C9A050]/60" />
                   </span>
-                  <h3 className="text-sm font-medium text-white/80 mt-1 leading-snug group-hover:text-[#C9A050] transition-colors">
-                    {article.title}
-                  </h3>
+                  <div>
+                    <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
+                      {article.category}
+                    </span>
+                    <h3 className="text-sm font-medium text-white/80 mt-1 leading-snug group-hover:text-[#C9A050] transition-colors">
+                      {article.title}
+                    </h3>
+                  </div>
                 </Link>
               ))}
             </motion.div>
@@ -390,6 +419,24 @@ const BlogHome = () => {
 };
 
 /* ─────────────────────────────────────────────
+   ICON HELPER
+   Maps icon name strings to Lucide components
+   ───────────────────────────────────────────── */
+const ArticleIcon = ({ name, className }: { name?: string; className?: string }) => {
+  switch (name) {
+    case "syringe": return <Syringe className={className} />;
+    case "sparkles": return <Sparkles className={className} />;
+    case "brain": return <Brain className={className} />;
+    case "heart": return <Heart className={className} />;
+    case "leaf": return <Leaf className={className} />;
+    case "eye": return <Eye className={className} />;
+    case "scissors": return <Scissors className={className} />;
+    case "book": return <BookOpen className={className} />;
+    default: return <ArrowRight className={className} />;
+  }
+};
+
+/* ─────────────────────────────────────────────
    CATEGORY SECTION COMPONENT
    Reusable magazine-style category block
    ───────────────────────────────────────────── */
@@ -399,8 +446,9 @@ interface CategoryData {
     excerpt: string;
     category: string;
     path: string;
+    image?: string;
   };
-  headlines: { title: string; path: string }[];
+  headlines: { title: string; path: string; icon?: string }[];
   secondary: {
     title: string;
     excerpt: string;
@@ -433,7 +481,7 @@ const CategorySection = ({
       </motion.div>
 
       <div className="grid lg:grid-cols-[1fr_280px_1fr] gap-8">
-        {/* Featured (left) */}
+        {/* Featured (left) — with optional cover image */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -441,6 +489,16 @@ const CategorySection = ({
           transition={{ duration: 0.5, delay }}
         >
           <Link to={data.featured.path} className="group block">
+            {data.featured.image && (
+              <div className="rounded-lg overflow-hidden border border-white/[0.08] mb-4">
+                <img
+                  src={data.featured.image}
+                  alt={data.featured.title}
+                  className="w-full aspect-[16/10] object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            )}
             <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
               {data.featured.category}
             </span>
@@ -453,7 +511,7 @@ const CategorySection = ({
           </Link>
         </motion.div>
 
-        {/* Headlines (middle) */}
+        {/* Headlines (middle) — with icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -465,8 +523,11 @@ const CategorySection = ({
             <Link
               key={i}
               to={article.path}
-              className="block py-3 border-b border-white/[0.06] last:border-0 group"
+              className="flex items-start gap-3 py-3 border-b border-white/[0.06] last:border-0 group"
             >
+              <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#C9A050]/10 flex items-center justify-center">
+                <ArticleIcon name={article.icon} className="w-2.5 h-2.5 text-[#C9A050]/50" />
+              </span>
               <h4 className="text-sm font-medium text-white/70 leading-snug group-hover:text-[#C9A050] transition-colors">
                 {article.title}
               </h4>
