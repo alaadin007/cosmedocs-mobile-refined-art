@@ -40,6 +40,11 @@ const galleryImages = [
     alt: "Before and after Botox showing softened facial tension",
     caption: "Softened facial tension following doctor-led Botox treatment.",
   },
+  {
+    src: "/images/before-after/botox/botox-gummy-smile-result.jpg",
+    alt: "Gummy smile correction before and after Botox treatment",
+    caption: "Balanced smile following targeted Botox for gummy smile correction.",
+  },
 ];
 
 const BeforeAfterBotox = () => {
