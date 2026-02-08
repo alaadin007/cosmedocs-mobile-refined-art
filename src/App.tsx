@@ -169,6 +169,8 @@ const CO2LaserResurfacing = lazy(() => import("./pages/CO2LaserResurfacing"));
 const ScarReduction = lazy(() => import("./pages/ScarReduction"));
 const ConcernsHub = lazy(() => import("./pages/ConcernsHub"));
 const MedicalHub = lazy(() => import("./pages/MedicalHub"));
+const HAMakeover = lazy(() => import("./pages/HAMakeover"));
+const BeforeAfterHAMakeover = lazy(() => import("./pages/BeforeAfterHAMakeover"));
 const MedicalBotoxHub = lazy(() => import("./pages/MedicalBotoxHub"));
 const Safety = lazy(() => import("./pages/Safety"));
 
@@ -394,9 +396,13 @@ const App = () => {
                           <Route path="/treatments/fat-dissolving" element={<FatDissolve />} />
                           <Route path="/treatments/fat-dissolving/" element={<FatDissolve />} />
                           
-                          {/* Skin Rejuvenation - Redirects to hub */}
-                          <Route path="/treatments/8-point-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
-                          <Route path="/treatments/8-point-facelift/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          {/* HA Makeover */}
+                          <Route path="/treatments/ha-makeover" element={<HAMakeover />} />
+                          <Route path="/treatments/ha-makeover/" element={<HAMakeover />} />
+                          
+                          {/* 8-Point Facelift → HA Makeover redirect */}
+                          <Route path="/treatments/8-point-facelift" element={<Navigate to="/treatments/ha-makeover/" replace />} />
+                          <Route path="/treatments/8-point-facelift/" element={<Navigate to="/treatments/ha-makeover/" replace />} />
                           <Route path="/treatments/non-surgical-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/non-surgical-facelift/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
@@ -521,7 +527,7 @@ const App = () => {
                           <Route path="/pdo-threads" element={<Navigate to="/treatments/pdo-threads/" replace />} />
                           <Route path="/thread-face-lift" element={<Navigate to="/treatments/pdo-threads/" replace />} />
                           <Route path="/thread-lift" element={<Navigate to="/treatments/pdo-threads/" replace />} />
-                          <Route path="/8-point-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
+                          <Route path="/8-point-facelift" element={<Navigate to="/treatments/ha-makeover/" replace />} />
                           <Route path="/non-surgical-facelift" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/fat-dissolve" element={<Navigate to="/treatments/fat-dissolving/" replace />} />
@@ -603,6 +609,8 @@ const App = () => {
                           
                           <Route path="/before-after/skin-rejuvenation" element={<BeforeAfterSkinRejuvenation />} />
                           <Route path="/before-after/skin-rejuvenation/" element={<BeforeAfterSkinRejuvenation />} />
+                          <Route path="/before-after/ha-makeover" element={<BeforeAfterHAMakeover />} />
+                          <Route path="/before-after/ha-makeover/" element={<BeforeAfterHAMakeover />} />
                           
                           {/* Blog & Content Routes */}
                           <Route path="/botox-faqs" element={<BotoxFAQs />} />

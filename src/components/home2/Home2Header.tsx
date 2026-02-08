@@ -55,7 +55,6 @@ const treatmentCategories = [
     items: [
       { title: "HA Makeover Overview", link: "/treatments/ha-makeover/", isOverview: true },
       { title: "Full Face Rejuvenation", link: "/treatments/non-surgical-facelift/" },
-      { title: "8 Point Facelift", link: "/treatments/8-point-facelift/" },
       { title: "PDO Threads", link: "/treatments/pdo-threads/" },
     ]
   },

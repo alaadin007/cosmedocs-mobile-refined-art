@@ -61,8 +61,8 @@ const categories: Category[] = [
     id: "hyaluronic",
     label: "HA Makeover",
     items: [
+      { title: "HA Makeover Overview", link: "/treatments/ha-makeover" },
       { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
-      { title: "8 Point Facelift", link: "/8-point-facelift" },
       { title: "PDO Threads", link: "/pdo-threads" },
     ]
   },

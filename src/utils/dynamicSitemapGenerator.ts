@@ -22,7 +22,7 @@ const pageRoutes = [
   '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
   '/our-team/', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-aesthetician/',
   '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/',
-  '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/',
+  '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/', '/before-after/ha-makeover/',
   '/membership/', '/harley-street-consulting-rooms/',
   '/testimonials/', '/aesthetics-at-a-glance/',
   // Phase 4 hub pages
@@ -78,7 +78,7 @@ const treatmentRoutes = [
   '/treatments/chemical-peel',
   '/treatments/microneedling',
   '/treatments/pdo-threads',
-  '/treatments/8-point-facelift',
+  '/treatments/ha-makeover',
   '/treatments/non-surgical-facelift',
   '/treatments/non-surgical-ponytail',
   '/treatments/fat-dissolving',
