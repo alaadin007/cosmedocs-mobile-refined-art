@@ -860,7 +860,7 @@ export default function DermalFillers() {
           <p>
             Dermal fillers London at CosmeDocs Harley Street. Doctor-led hyaluronic acid filler treatments for lips,
             cheeks, jawline, chin, tear trough, and temples. GMC-registered doctors providing natural-looking facial
-            rejuvenation since 2007 with over 2 million procedures performed. Our full-face approach ensures balanced,
+            rejuvenation since 2007 with over 1 million injections performed. Our full-face approach ensures balanced,
             subtle results that enhance your appearance without altering your identity. Premium hyaluronic acid products
             including Juvederm and Restylane range. Treatments include lip fillers, cheek fillers, jawline filler,
             chin filler, tear trough filler, temple filler, non-surgical nose job, nasolabial fold treatment, and
