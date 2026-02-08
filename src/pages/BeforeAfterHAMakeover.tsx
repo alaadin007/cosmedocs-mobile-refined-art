@@ -53,6 +53,11 @@ const galleryImages = [
     src: "/images/before-after/ha-makeover/ha-makeover-male-rejuvenation.jpg",
     alt: "Before and after HA Makeover showing male full-face rejuvenation",
     caption: "Male full-face rejuvenation — restoring structure and reducing visible signs of ageing."
+  },
+  {
+    src: "/images/before-after/ha-makeover/ha-makeover-one-year-progression.jpg",
+    alt: "Before and after HA Makeover showing full-face rejuvenation progression over one year",
+    caption: "Full-face rejuvenation progression over one year — demonstrating long-term structural improvement."
   }
 ];
 
