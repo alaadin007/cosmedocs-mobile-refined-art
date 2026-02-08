@@ -40,6 +40,7 @@ const BeforeAfterBotoxMasseter = lazy(() => import("./pages/BeforeAfterBotoxMass
 const BeforeAfterCheekFiller = lazy(() => import("./pages/BeforeAfterCheekFiller"));
 const BeforeAfterJawlineFiller = lazy(() => import("./pages/BeforeAfterJawlineFiller"));
 const BeforeAfterTearTroughFiller = lazy(() => import("./pages/BeforeAfterTearTroughFiller"));
+const BeforeAfterChinFiller = lazy(() => import("./pages/BeforeAfterChinFiller"));
 const Membership = lazy(() => import("./pages/Membership"));
 const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
@@ -602,6 +603,8 @@ const App = () => {
                           <Route path="/before-after/dermal-fillers/jawline/" element={<BeforeAfterJawlineFiller />} />
                           <Route path="/before-after/dermal-fillers/tear-trough" element={<BeforeAfterTearTroughFiller />} />
                           <Route path="/before-after/dermal-fillers/tear-trough/" element={<BeforeAfterTearTroughFiller />} />
+                          <Route path="/before-after/dermal-fillers/chin" element={<BeforeAfterChinFiller />} />
+                          <Route path="/before-after/dermal-fillers/chin/" element={<BeforeAfterChinFiller />} />
                           
                           {/* Botox Sub-Galleries */}
                           <Route path="/before-after/botox/masseter" element={<BeforeAfterBotoxMasseter />} />
