@@ -47,7 +47,7 @@ const BlogHome = () => {
     {
       title: "Vitamin C & Ferulic Acid: The Science Behind Radiant Skin",
       category: "SKIN SCIENCE",
-      path: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
+      path: "/blog/vitamin-c-ferulic-acid-benefits",
       icon: "leaf",
     },
     {
@@ -76,17 +76,17 @@ const BlogHome = () => {
     headlines: [
       {
         title: "Smoker's Lines in Women: Prevention & Treatment Options",
-        path: "/cosmetalk/smokers-lines-women",
+        path: "/blog/smokers-lines-women",
         icon: "scissors",
       },
       {
         title: "Vitamin C & Ferulic Acid Benefits for Skin Health",
-        path: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
+        path: "/blog/vitamin-c-ferulic-acid-benefits",
         icon: "leaf",
       },
       {
         title: "Lazy Skin Syndrome: Breaking Moisturiser Dependency",
-        path: "/cosmetalk/lazy-skin-syndrome",
+        path: "/blog/lazy-skin-syndrome",
         icon: "eye",
       },
       {
@@ -140,7 +140,7 @@ const BlogHome = () => {
       excerpt:
         "Why over-moisturising could be weakening your skin barrier — and what to do instead.",
       category: "COSMETALK",
-      path: "/cosmetalk/lazy-skin-syndrome",
+      path: "/blog/lazy-skin-syndrome",
     },
   };
 
@@ -161,7 +161,7 @@ const BlogHome = () => {
       },
       {
         title: "Orofacial & Neck Pain: Breaking the Tension Cycle",
-        path: "/cosmetalk/orofacial-neck-pain-cycle",
+        path: "/blog/orofacial-neck-pain-cycle",
         icon: "brain",
       },
       {

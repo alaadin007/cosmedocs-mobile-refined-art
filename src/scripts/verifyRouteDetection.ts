@@ -14,7 +14,7 @@ function verifyRouteDetection() {
     '/', '/home', '/home2', '/treatments', '/team', '/about', '/contact', '/partners', 
     '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
     '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
-    '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/cosmetalk',
+    '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/blog',
     '/plastic-surgeon', '/dermatology', '/aesthetic-training', '/hair-transplant-surgeon',
     '/team/dr-ahmed-haq', '/team/dr-hena-haq', '/experimental-treatment', '/admin/video-upload',
     
@@ -33,8 +33,8 @@ function verifyRouteDetection() {
     // Blog
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
     '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
-    '/cosmetalk/vitamin-c-ferulic-acid-benefits', '/cosmetalk/smokers-lines-women',
-    '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
+    '/blog/vitamin-c-ferulic-acid-benefits', '/blog/smokers-lines-women',
+    '/blog/flawless-skin', '/blog/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
     '/blog', '/blog/vitamin-c-ferulic-acid-benefits',
     
     // Locations

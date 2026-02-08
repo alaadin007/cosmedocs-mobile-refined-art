@@ -22,7 +22,7 @@ const ChineseLondonAestheticsBlog = () => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content="伦敦中国人医美指南 | 瘦脸针下颌缩小术 | 亚洲鼻型微整形" />
         <meta property="og:description" content="专为在伦敦的中国留学生和华人提供专业医美服务。瘦脸针下颌缩小、亚洲鼻型微整形、下巴塑形。" />
-        <meta property="og:url" content="https://www.cosmedocs.com/cosmetalk/chinese-london-aesthetics-guide" />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/chinese-london-aesthetics-guide/" />
         <meta property="og:site_name" content="Cosmedocs" />
         
         {/* Structured data for Chinese content */}
@@ -63,7 +63,7 @@ const ChineseLondonAestheticsBlog = () => {
             },
             "datePublished": "2025-06-06",
             "dateModified": "2025-06-06",
-            "mainEntityOfPage": "https://www.cosmedocs.com/cosmetalk/chinese-london-aesthetics-guide",
+            "mainEntityOfPage": "https://www.cosmedocs.co.uk/blog/chinese-london-aesthetics-guide/",
             "inLanguage": "zh-CN"
           })}
         </script>

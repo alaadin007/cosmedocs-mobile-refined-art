@@ -28,7 +28,7 @@ export default function Header() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Treatments", path: "/treatments" },
-    { name: "Cosmetalk", path: "/cosmetalk" },
+    { name: "CosmeTalk", path: "/blog" },
     { name: "About Us", path: "/about" },
     { name: "Partners", path: "/partners" },
     { name: "Contact", path: "/contact" },
@@ -54,7 +54,7 @@ export default function Header() {
         {
           icon: MessageSquare,
           label: "CosmeTalk",
-          action: () => window.location.href = "/cosmetalk"
+          action: () => window.location.href = "/blog"
         },
         {
           icon: Users,

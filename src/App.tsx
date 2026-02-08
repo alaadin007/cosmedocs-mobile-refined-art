@@ -626,21 +626,23 @@ const App = () => {
                           <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
                           <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
                           <Route path="/inside-mind-aesthetic-doctor-blog" element={<InsideMindAestheticDoctorBlog />} />
-                          <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
-                          <Route path="/cosmetalk/smokers-lines-women" element={<SmokersLinesWomen />} />
-                          <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
-                          <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
-                          <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
-                          <Route path="/blog/how-to-get-rid-of-bruises-quickly" element={<HowToGetRidOfBruises />} />
-                          <Route path="/blog/forehead-wrinkles-myths-tips" element={<ForeheadWrinklesMythsTips />} />
-                          <Route path="/blog/lip-wrinkles-treatments" element={<LipWrinklesTreatments />} />
-                          <Route path="/blog/skin-tags-and-skin-tag-removal" element={<SkinTagsRemoval />} />
-                          <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
-                          <Route path="/blog/trust-in-medical-aesthetics" element={<MedicalBrandTrustBlog />} />
-                          <Route path="/blog/cosmedocs-vs-similarly-named-clinics" element={<ClinicNameConfusion />} />
+                          <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
+                          <Route path="/blog/smokers-lines-women" element={<SmokersLinesWomen />} />
+                          <Route path="/blog/flawless-skin" element={<FlawlessSkin />} />
+                          <Route path="/blog/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
+                          <Route path="/blog/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
+                          
                           <Route path="/journal" element={<BlogHome />} />
                           <Route path="/blog" element={<BlogHome />} />
-                          <Route path="/cosmetalk" element={<CosmetalkBlog />} />
+                          
+                          {/* Legacy /cosmetalk redirects to /blog */}
+                          <Route path="/cosmetalk" element={<Navigate to="/blog/" replace />} />
+                          <Route path="/cosmetalk/" element={<Navigate to="/blog/" replace />} />
+                          <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/blog/vitamin-c-ferulic-acid-benefits/" replace />} />
+                          <Route path="/cosmetalk/smokers-lines-women" element={<Navigate to="/blog/smokers-lines-women/" replace />} />
+                          <Route path="/cosmetalk/flawless-skin" element={<Navigate to="/blog/flawless-skin/" replace />} />
+                          <Route path="/cosmetalk/lazy-skin-syndrome" element={<Navigate to="/blog/lazy-skin-syndrome/" replace />} />
+                          <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<Navigate to="/blog/orofacial-neck-pain-cycle/" replace />} />
                           
                           {/* Location Routes */}
                           <Route path="/birmingham" element={<BirminghamHome />} />

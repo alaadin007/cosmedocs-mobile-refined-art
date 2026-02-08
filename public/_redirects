@@ -312,6 +312,22 @@
 /medical-skincare/                /treatments/prescription-skincare/  301
 
 # =====================================================
+# PHASE 5: Blog URL Migration - /cosmetalk → /blog
+# =====================================================
+/cosmetalk                        /blog/                              301
+/cosmetalk/                       /blog/                              301
+/cosmetalk/vitamin-c-ferulic-acid-benefits    /blog/vitamin-c-ferulic-acid-benefits/   301
+/cosmetalk/vitamin-c-ferulic-acid-benefits/   /blog/vitamin-c-ferulic-acid-benefits/   301
+/cosmetalk/smokers-lines-women    /blog/smokers-lines-women/          301
+/cosmetalk/smokers-lines-women/   /blog/smokers-lines-women/          301
+/cosmetalk/flawless-skin          /blog/flawless-skin/                301
+/cosmetalk/flawless-skin/         /blog/flawless-skin/                301
+/cosmetalk/lazy-skin-syndrome     /blog/lazy-skin-syndrome/           301
+/cosmetalk/lazy-skin-syndrome/    /blog/lazy-skin-syndrome/           301
+/cosmetalk/orofacial-neck-pain-cycle    /blog/orofacial-neck-pain-cycle/    301
+/cosmetalk/orofacial-neck-pain-cycle/   /blog/orofacial-neck-pain-cycle/    301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200

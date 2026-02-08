@@ -11,7 +11,7 @@ const SmokersLinesWomen = () => {
       <Helmet>
         <title>Why Women Get Smokers Lines (Even Without Smoking) | CosmedTalk</title>
         <meta name="description" content="Why 99% of smoker's lines patients are women. Lip anatomy, speech patterns & lifestyle factors causing perioral wrinkles." />
-        <link rel="canonical" href="https://cosmedocs.co.uk/cosmetalk/smokers-lines-women" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/smokers-lines-women/" />
         <meta property="og:title" content="Why Women Get Smokers Lines (Even Without Smoking) | CosmedTalk" />
         <meta property="og:description" content="Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines." />
         <meta property="og:type" content="article" />
@@ -54,7 +54,7 @@ const SmokersLinesWomen = () => {
             "description": "Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://cosmedocs.co.uk/cosmetalk/smokers-lines-women"
+              "@id": "https://www.cosmedocs.co.uk/blog/smokers-lines-women/"
             }
           })}
         </script>
@@ -65,9 +65,9 @@ const SmokersLinesWomen = () => {
         {/* Header */}
         <section className="py-8 border-b border-gray-800">
           <div className="container mx-auto px-4">
-            <Link to="/cosmetalk" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
+            <Link to="/blog/" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to CosmedTalk
+              Back to CosmeTalk
             </Link>
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <div className="flex items-center">
@@ -351,7 +351,7 @@ const SmokersLinesWomen = () => {
                   <h4 className="text-white font-semibold mb-2">Lazy Skin Syndrome</h4>
                   <p className="text-gray-400 text-sm mb-4">Discover how moisturisers may be creating skin dependency and how to fix it.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/lazy-skin-syndrome">Read More</Link>
+                    <Link to="/blog/lazy-skin-syndrome">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -366,7 +366,7 @@ const SmokersLinesWomen = () => {
                   <h4 className="text-white font-semibold mb-2">How to Achieve Flawless Skin</h4>
                   <p className="text-gray-400 text-sm mb-4">Discover the 9-step dermatologist-approved plan to transform your skin naturally.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/flawless-skin">Read More</Link>
+                    <Link to="/blog/flawless-skin">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -381,7 +381,7 @@ const SmokersLinesWomen = () => {
                   <h4 className="text-white font-semibold mb-2">Vitamin C & Ferulic Acid Benefits</h4>
                   <p className="text-gray-400 text-sm mb-4">The science behind vitamin C serums and their anti-aging properties.</p>
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/cosmetalk/vitamin-c-ferulic-acid-benefits">Read More</Link>
+                    <Link to="/blog/vitamin-c-ferulic-acid-benefits">Read More</Link>
                   </Button>
                 </div>
               </CardContent>
