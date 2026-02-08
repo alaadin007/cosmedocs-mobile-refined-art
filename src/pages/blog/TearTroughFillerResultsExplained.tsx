@@ -6,6 +6,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import Home2Header from '@/components/home2/Home2Header';
 import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
+import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
 
 import treatedVsUntreated from '@/assets/blog-tear-trough-treated-vs-untreated.png';
 import tearTroughAnatomy from '@/assets/blog-tear-trough-anatomy.png';
@@ -563,20 +564,11 @@ const TearTroughFillerResultsExplained = () => {
                   </div>
                 </motion.section>
 
-                {/* Author */}
-                <motion.section {...fadeIn}>
-                  <div className="border-t border-white/[0.06] pt-8">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center text-[#C9A050] text-sm font-medium">
-                        AH
-                      </div>
-                      <div>
-                        <p className="text-white/80 text-sm font-medium">Dr Ahmed Haq</p>
-                        <p className="text-white/40 text-xs">Medical Director, CosmeDocs · GMC Registered</p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.section>
+                {/* Author E-E-A-T */}
+                <BlogAuthorEEAT 
+                  doctor="ahmed" 
+                  articleContext="Dr Haq's conservative approach to tear trough treatment reflects over a decade of managing patient expectations in this high-sensitivity area. This article addresses the clinical realities he discusses in every tear trough consultation — including when filler is not the answer."
+                />
 
               </div>
             </article>

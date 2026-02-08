@@ -6,6 +6,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import Home2Header from '@/components/home2/Home2Header';
 import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
+import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
 
 import lipFillerBaSubtle from '@/assets/blog-lip-filler-ba-subtle.png';
 import lipFillerShapeComparison from '@/assets/blog-lip-filler-shape-comparison.png';
@@ -646,24 +647,11 @@ const LipFillerResultsExplained = () => {
                   </p>
                 </div>
 
-                {/* Author Attribution */}
-                <motion.section {...fadeIn}>
-                  <div className="flex items-center gap-4 bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                    <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center text-[#C9A050] font-medium">
-                      HH
-                    </div>
-                    <div>
-                      <p className="text-white/80 font-medium text-sm">Dr Hena Haq</p>
-                      <p className="text-white/40 text-xs font-light">
-                        Aesthetic Practitioner & Training Fellow — CosmeDocs, 10 Harley Street, London
-                      </p>
-                      <p className="text-white/30 text-xs font-light mt-1">
-                        Specialising in natural lip augmentation and facial harmonisation. 
-                        Extensive GP background with a holistic approach to aesthetic medicine.
-                      </p>
-                    </div>
-                  </div>
-                </motion.section>
+                {/* Author E-E-A-T */}
+                <BlogAuthorEEAT 
+                  doctor="hena" 
+                  articleContext="Dr Hena's approach to lip augmentation reflects her holistic GP training — assessing the full face, not just the lips. This article captures her philosophy: that natural outcomes begin with honest conversations about proportion, not volume."
+                />
 
               </div>
             </article>

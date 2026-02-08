@@ -6,6 +6,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import Home2Header from '@/components/home2/Home2Header';
 import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
+import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
 
 import beautification from '@/assets/blog-jaw-filler-beautification.png';
 import feminineContour from '@/assets/blog-jaw-filler-feminine-contour.png';
@@ -586,24 +587,11 @@ const JawFillerResultsExplained = () => {
                   </p>
                 </div>
 
-                {/* Author Attribution */}
-                <motion.section {...fadeIn}>
-                  <div className="flex items-center gap-4 bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                    <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center text-[#C9A050] font-medium">
-                      AH
-                    </div>
-                    <div>
-                      <p className="text-white/80 font-medium text-sm">Dr Ahmed Haq</p>
-                      <p className="text-white/40 text-xs font-light">
-                        Medical Director — CosmeDocs, 10 Harley Street, London
-                      </p>
-                      <p className="text-white/30 text-xs font-light mt-1">
-                        Over 17 years' experience in aesthetic medicine. 
-                        Specialising in facial contouring and structural filler placement.
-                      </p>
-                    </div>
-                  </div>
-                </motion.section>
+                {/* Author E-E-A-T */}
+                <BlogAuthorEEAT 
+                  doctor="ahmed" 
+                  articleContext="Dr Haq specialises in structural jawline augmentation and non-surgical jaw reduction. This article draws on his experience differentiating genuine skeletal enhancement from superficial contouring — and why the distinction determines long-term patient satisfaction."
+                />
 
               </div>
             </article>
