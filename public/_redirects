@@ -38,12 +38,12 @@
 /trap-botox/                      /treatments/trap-botox/             301
 /botox-calf-reduction             /treatments/calf-slimming-botox/    301
 /botox-calf-reduction/            /treatments/calf-slimming-botox/    301
-/migraine-botox                   /treatments/migraine-botox/         301
-/migraine-botox/                  /treatments/migraine-botox/         301
+/migraine-botox                   /medical/botox-for-migraines/       301
+/migraine-botox/                  /medical/botox-for-migraines/       301
 /bruxism-botox                    /treatments/bruxism-botox/          301
 /bruxism-botox/                   /treatments/bruxism-botox/          301
-/excessive-sweat-botox            /treatments/hyperhidrosis-botox/    301
-/excessive-sweat-botox/           /treatments/hyperhidrosis-botox/    301
+/excessive-sweat-botox            /medical/botox-for-hyperhidrosis/   301
+/excessive-sweat-botox/           /medical/botox-for-hyperhidrosis/   301
 /oily-skin-botox                  /treatments/oily-skin-botox/        301
 /oily-skin-botox/                 /treatments/oily-skin-botox/        301
 /trigger-point-botox              /treatments/trigger-point-botox/    301
@@ -308,8 +308,14 @@
 # Medical hub consolidation
 /medical-treatments               /medical/                           301
 /medical-treatments/              /medical/                           301
-/medical-botox                    /treatments/botox/medical/          301
-/medical-botox/                   /treatments/botox/medical/          301
+/medical-botox                    /medical/                           301
+/medical-botox/                   /medical/                           301
+/treatments/botox/medical         /medical/                           301
+/treatments/botox/medical/        /medical/                           301
+/treatments/migraine-botox        /medical/botox-for-migraines/       301
+/treatments/migraine-botox/       /medical/botox-for-migraines/       301
+/treatments/hyperhidrosis-botox   /medical/botox-for-hyperhidrosis/   301
+/treatments/hyperhidrosis-botox/  /medical/botox-for-hyperhidrosis/   301
 /medical-skincare                 /treatments/prescription-skincare/  301
 /medical-skincare/                /treatments/prescription-skincare/  301
 
