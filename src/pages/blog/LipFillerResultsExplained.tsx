@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
 
@@ -154,7 +152,7 @@ const LipFillerResultsExplained = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        <Home2Header />
+        
 
         {/* Hero */}
         <section className="pt-28 pb-16 px-4 border-b border-white/[0.06]">
@@ -665,7 +663,7 @@ const LipFillerResultsExplained = () => {
           </div>
         </div>
 
-        <Footer />
+        
       </div>
     </>
   );

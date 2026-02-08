@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, MapPin, Award, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Breadcrumb from '@/components/Breadcrumb';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 
 const galleryImages = [
   {
@@ -124,7 +122,7 @@ const BeforeAfterBotox = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <Home2Header />
+        
 
         {/* Flowing Gold Gradient Orbs — matches Home style */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -376,7 +374,7 @@ const BeforeAfterBotox = () => {
           </p>
         </div>
 
-        <Footer />
+        
       </div>
     </>
   );

@@ -1,8 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from '@/utils/seo';
-import Home2Header from '@/components/home2/Home2Header';
-import Footer from '@/components/Footer';
 
 const About = () => {
   const seoData = generateSEOMetadata(
@@ -28,7 +26,7 @@ const About = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <Home2Header />
+        
 
         {/* Flowing Gold Gradient Orbs */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -284,7 +282,7 @@ const About = () => {
           </div>
         </section>
 
-        <Footer />
+        
       </div>
     </>
   );
