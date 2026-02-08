@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import TearTroughFillerSidebar from "@/components/tear-trough/TearTroughFillerSidebar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import tearTroughPreview from "@/assets/tear-trough-gallery-2.jpeg";
 
 const TearTroughFiller = () => {
   const faqs = [
@@ -359,8 +360,8 @@ const TearTroughFiller = () => {
                   </p>
                   <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
                     <img
-                      src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png"
-                      alt="Before and after tear trough filler showing under-eye volume restoration and dark circle reduction"
+                      src={tearTroughPreview}
+                      alt="Before and after tear trough filler showing 2017 to 2018 transformation with reduced under-eye hollows"
                       loading="lazy"
                       className="w-full h-auto block"
                     />
