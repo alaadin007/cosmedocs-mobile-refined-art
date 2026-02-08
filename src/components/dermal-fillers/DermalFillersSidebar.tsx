@@ -69,23 +69,7 @@ const DermalFillersSidebar = () => {
         </Link>
       </motion.div>
 
-      {/* Before & After Teaser */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center"
-      >
-        <Sparkles className="w-5 h-5 text-[#C9A050] mx-auto mb-2" />
-        <p className="text-sm text-white/70 mb-3">See authentic patient results</p>
-        <Link
-          to="/before-after/dermal-fillers/"
-          className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium"
-        >
-          View Before & After Gallery
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </motion.div>
+
 
       {/* HA Makeover Link */}
       <motion.div
