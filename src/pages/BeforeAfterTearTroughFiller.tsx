@@ -168,15 +168,17 @@ const BeforeAfterTearTroughFiller = () => {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <div className="relative rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading={index < 2 ? "eager" : "lazy"}
-                      className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-16 pb-4 px-5">
-                      <figcaption className="text-white/60 text-sm leading-relaxed font-light">
+                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                    <div className="overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading={index < 2 ? "eager" : "lazy"}
+                        className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                      />
+                    </div>
+                    <div className="px-5 py-3 border-t border-white/[0.06]">
+                      <figcaption className="text-white/40 text-xs leading-relaxed font-light">
                         {image.caption}
                       </figcaption>
                     </div>
