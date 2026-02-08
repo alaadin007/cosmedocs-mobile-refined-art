@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Star, Clock, Calendar, Syringe, Activity, ArrowRight, Sparkles } from "lucide-react";
-import lipFlipImage1 from "@/assets/before-after/lip-flip-1.jpg";
-import lipFlipImage2 from "@/assets/before-after/lip-flip-2.jpg";
-import lipFlipImage3 from "@/assets/before-after/lip-flip-3.jpg";
-
-const sidebarImages = [
-  {
-    src: lipFlipImage1,
-    alt: "Lip flip injection points diagram showing botox placement",
-  },
-  {
-    src: lipFlipImage2,
-    alt: "Lip flip before and after natural enhancement",
-  },
-  {
-    src: lipFlipImage3,
-    alt: "Non-invasive lip enhancement results",
-  },
-];
+import { Star, Clock, Calendar, Syringe, Activity, ArrowRight } from "lucide-react";
 
 const LipFlipSidebar = () => {
   return (
@@ -41,32 +23,22 @@ const LipFlipSidebar = () => {
         </div>
       </motion.div>
 
-      {/* Before & After Teaser Grid */}
+      {/* Before & After Link */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5"
       >
-        <Sparkles className="w-5 h-5 text-[#C9A050] mb-2" />
-        <p className="text-sm text-white/70 mb-3 font-medium">Real Patient Results</p>
-        <div className="grid grid-cols-3 gap-2 mb-3">
-          {sidebarImages.map((img) => (
-            <div key={img.src} className="rounded-lg overflow-hidden border border-white/[0.06]">
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="w-full h-auto block"
-              />
-            </div>
-          ))}
-        </div>
+        <p className="text-sm text-white/70 mb-3 font-medium">Before & After Results</p>
+        <p className="text-xs text-white/40 leading-relaxed mb-3">
+          View real patient before and after results demonstrating subtle upper lip enhancement and natural lip flip results.
+        </p>
         <Link
           to="/before-after/botox/lip-flip/"
           className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium"
         >
-          View full gallery
+          View before & after gallery
           <ArrowRight className="w-4 h-4" />
         </Link>
       </motion.div>
