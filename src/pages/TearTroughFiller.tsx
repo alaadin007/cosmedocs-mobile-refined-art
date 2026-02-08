@@ -1,49 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import ImageZoomModal from "@/components/ImageZoomModal";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, ShieldCheck, RefreshCw, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, ShieldCheck, RefreshCw, AlertTriangle, ArrowRight } from "lucide-react";
 
 const TearTroughFiller = () => {
-  const [zoomedImage, setZoomedImage] = useState<{
-    src: string;
-    alt: string;
-    title: string;
-  } | null>(null);
-
-  const handleImageClick = (src: string, alt: string, title: string) => {
-    setZoomedImage({ src, alt, title });
-  };
-
-  const closeZoom = () => {
-    setZoomedImage(null);
-  };
   const seoData = generateSEOMetadata(
     "Tear Trough Filler London | Under Eye | Cosmedocs",
     "Eliminate dark circles & under-eye hollows. Tear trough filler for brighter, youthful eyes. Expert results from £400.",
     "/tear-trough-filler"
   );
-
-  const beforeAfterImages = [
-    { src: "/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png", alt: "Tear trough filler before and after transformation", caption: "Dramatic improvement in under eye hollowness and dark circles" },
-    { src: "/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png", alt: "Under eye filler results showing brighter eyes", caption: "Restored volume and reduced shadows under the eyes" },
-    { src: "/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png", alt: "Dark circles treatment with tear trough fillers", caption: "Comparison showing treated vs untreated under eye area" },
-    { src: "/lovable-uploads/4843c9ce-f56d-4ee5-b3a0-6b7486d88d5c.png", alt: "Eye bag improvement with dermal fillers", caption: "Smoother under eye area with reduced puffiness" },
-    { src: "/lovable-uploads/fc2c9a14-126c-4030-93b3-d5b5bd99feff.png", alt: "Tear trough rejuvenation results", caption: "Natural-looking under eye enhancement and brightening" },
-    { src: "/lovable-uploads/ec372a42-0e65-42ff-a9d2-1d4f92c7b7e3.png", alt: "Complete under eye makeover", caption: "Side profile showing tear trough improvement" }
-  ];
 
   const faqs = [
     {
@@ -333,53 +303,48 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
+        {/* Real Results: Single B&A Preview */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Before and After</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Discover authentic tear trough filler before after results from our London clinic. 
-                Our expert eye bag fillers and dermal fillers for under eye bags restore volume, brighten under eyes, 
-                and reduce dark circles for natural-looking rejuvenation without lumpy filler under eye issues.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        loading="lazy"
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                  Real Results: <span className="text-[#C9A050] font-light">Tear Trough Filler Before & After</span>
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                  Below is an example of tear trough filler used to restore under-eye volume and reduce dark circles. 
+                  Precise, conservative placement creates a brighter, more refreshed appearance while maintaining 
+                  natural facial proportions.
+                </p>
+                <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                  <img
+                    src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png"
+                    alt="Before and after tear trough filler showing under-eye volume restoration and dark circle reduction"
+                    loading="lazy"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <p className="text-white/30 text-xs font-light italic mb-6">
+                  All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on anatomy, skin quality, and degree of volume loss.
+                </p>
+                <Link
+                  to="/before-after/dermal-fillers/tear-trough/"
+                  className="inline-flex items-center gap-2 text-[#C9A050] text-sm font-medium hover:underline"
+                >
+                  View real tear trough filler before & after results
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <p className="text-white/30 text-xs font-light mt-2">
+                  Includes dark circle correction, volume restoration, and under-eye brightening cases.
+                </p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -685,14 +650,7 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div 
-                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => handleImageClick(
-                    "/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png",
-                    "Tear trough treatment before and after comparison",
-                    "Tear Troughs Treatment Results"
-                  )}
-                >
+                <div className="rounded-lg overflow-hidden mb-4">
                   <img 
                     src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
                     alt="Tear trough treatment before and after comparison"
@@ -710,14 +668,7 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div 
-                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => handleImageClick(
-                    "/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png",
-                    "Dark circles before and after treatment",
-                    "Dark Circles Treatment Results"
-                  )}
-                >
+                <div className="rounded-lg overflow-hidden mb-4">
                   <img 
                     src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
                     alt="Dark circles before and after treatment"
@@ -735,14 +686,7 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div 
-                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => handleImageClick(
-                    "/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png",
-                    "Eye bags treatment before and after",
-                    "Eye Bags Treatment Results"
-                  )}
-                >
+                <div className="rounded-lg overflow-hidden mb-4">
                   <img 
                     src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
                     alt="Eye bags treatment before and after"
@@ -1461,13 +1405,6 @@ const TearTroughFiller = () => {
           </p>
         </div>
 
-        <ImageZoomModal
-          isOpen={zoomedImage !== null}
-          onClose={closeZoom}
-          imageSrc={zoomedImage?.src || ""}
-          imageAlt={zoomedImage?.alt || ""}
-          title={zoomedImage?.title || ""}
-        />
       </div>
     </>
   );

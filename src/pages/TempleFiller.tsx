@@ -15,47 +15,6 @@ const TempleFiller = () => {
     "/lovable-uploads/3bbc1c04-e87d-4253-811d-e71dfa550186.png"
   );
 
-  const beforeAfterImages = {
-    before: [
-      {
-        src: "/lovable-uploads/6ed7822c-5e7e-4482-a672-0c24c0861794.png",
-        alt: "Temple volume loss before dermal filler treatment - side profile view showing hollowed temple area",
-        caption: "Before Treatment: Visible temple volume loss creating a sunken, aged appearance"
-      },
-      {
-        src: "/lovable-uploads/19872114-4efb-4e4a-b4be-bfbf424fbe20.png", 
-        alt: "Temple hollowing before treatment - frontal view showing bilateral temple depression",
-        caption: "Before Treatment: Frontal view highlighting bilateral temple depression and volume loss"
-      },
-      {
-        src: "/lovable-uploads/d84c901e-c124-44be-961a-345eb5133271.png",
-        alt: "Temple area before filler injection showing natural aging process and volume depletion",
-        caption: "Before Treatment: Close-up view of temple area showing natural aging and volume depletion"
-      }
-    ],
-    during: {
-      src: "/lovable-uploads/3b70fd8c-c9b5-4e7c-bc2e-3b7d12779116.png",
-      alt: "Professional temple filler injection procedure being performed by qualified aesthetic practitioner",
-      caption: "During Treatment: Precision temple filler injection using advanced techniques and premium dermal fillers"
-    },
-    after: [
-      {
-        src: "/lovable-uploads/987195e3-5c3c-4605-9160-0f4c4f8631de.png",
-        alt: "Temple filler results immediately after treatment showing restored volume and improved facial harmony",
-        caption: "After Treatment: Immediate results showing restored temple volume and improved facial balance"
-      },
-      {
-        src: "/lovable-uploads/2549c031-c4e5-4be1-a708-694953067baf.png",
-        alt: "Temple filler before and after comparison - side profile showing dramatic volume restoration",
-        caption: "After Treatment: Side profile view demonstrating significant temple volume restoration and youthful contours"
-      },
-      {
-        src: "/lovable-uploads/48325025-1ed1-494c-9fb0-ecbb3e5d3195.png",
-        alt: "Final temple filler results showing natural-looking enhancement and facial rejuvenation",
-        caption: "After Treatment: Final results showcasing natural-looking temple enhancement and overall facial rejuvenation"
-      }
-    ]
-  };
 
   return (
     <>
@@ -340,157 +299,48 @@ const TempleFiller = () => {
           </div>
         </section>
 
-        {/* Temple Filler Before & After */}
-        <section className="py-20 bg-secondary/10">
+        {/* Real Results: Single B&A Preview */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            {/* Temple Filler Before & After Heading */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">Temple Filler Before & After</h2>
-              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Witness the complete transformation process from initial consultation through to final results.
-              </p>
-            </div>
-            
-            <div className="grid lg:grid-cols-3 gap-12">
-              {/* Before Treatment */}
+            <div className="max-w-3xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-card rounded-xl overflow-hidden shadow-xl">
-                  <div className="p-6 border-b border-border">
-                    <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Activity className="text-red-600" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2">Before Treatment</h3>
-                    <p className="text-muted-foreground text-sm">Initial assessment showing volume loss</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 gap-4 p-6">
-                    {beforeAfterImages.before.map((image, index) => (
-                      <div key={index} className="group">
-                        <div className="aspect-[4/3] overflow-hidden rounded-lg mb-3">
-                          <img 
-                            src={image.src} 
-                            alt={image.alt}
-                            className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                            loading="lazy"
-                          />
-                        </div>
-                        <p className="text-xs text-muted-foreground leading-relaxed">{image.caption}</p>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="p-4 bg-red-50/50">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">Volume Loss</span>
-                      <span className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">Temple Hollowing</span>
-                    </div>
-                  </div>
+                <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                  Real Results: <span className="text-[#C9A050] font-light">Temple Filler Before & After</span>
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                  Below is an example of temple filler used to restore volume loss and improve facial contour. 
+                  Strategic placement replenishes hollowed temples, creating a more youthful, balanced appearance 
+                  while maintaining natural facial proportions.
+                </p>
+                <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                  <img
+                    src="/lovable-uploads/2549c031-c4e5-4be1-a708-694953067baf.png"
+                    alt="Before and after temple filler showing restored volume and improved facial contour"
+                    loading="lazy"
+                    className="w-full h-auto block"
+                  />
                 </div>
-              </motion.div>
-
-              {/* During Treatment */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-card rounded-xl overflow-hidden shadow-xl">
-                  <div className="p-6 border-b border-border">
-                    <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Syringe className="text-blue-600" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2">During Treatment</h3>
-                    <p className="text-muted-foreground text-sm">Professional precision injection process</p>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
-                      <img 
-                        src={beforeAfterImages.during.src}
-                        alt={beforeAfterImages.during.alt}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {beforeAfterImages.during.caption}
-                    </p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="text-blue-600 mr-2" size={16} />
-                        <span>Topical anaesthetic applied</span>
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="text-blue-600 mr-2" size={16} />
-                        <span>Premium hyaluronic acid filler</span>
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="text-blue-600 mr-2" size={16} />
-                        <span>Multi-point precision technique</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="p-4 bg-blue-50/50">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Expert Injection</span>
-                      <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Medical Grade</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* After Treatment */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-card rounded-xl overflow-hidden shadow-xl">
-                  <div className="p-6 border-b border-border">
-                    <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Star className="text-green-600" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2">After Treatment</h3>
-                    <p className="text-muted-foreground text-sm">Transformed results with natural enhancement</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 gap-4 p-6">
-                    {beforeAfterImages.after.map((image, index) => (
-                      <div key={index} className="group">
-                        <div className="aspect-[4/3] overflow-hidden rounded-lg mb-3">
-                          <img 
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                            loading="lazy"
-                          />
-                        </div>
-                        <p className="text-xs text-muted-foreground leading-relaxed">{image.caption}</p>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="p-4 bg-green-50/50">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Volume Restored</span>
-                      <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Natural Results</span>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-white/30 text-xs font-light italic mb-6">
+                  All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on facial structure and degree of volume loss.
+                </p>
+                <a
+                  href="/before-after/dermal-fillers/temple/"
+                  className="inline-flex items-center gap-2 text-[#C9A050] text-sm font-medium hover:underline"
+                >
+                  View real temple filler before & after results
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <p className="text-white/30 text-xs font-light mt-2">
+                  Includes mild to severe temple hollowing restoration cases.
+                </p>
               </motion.div>
             </div>
-
           </div>
         </section>
 
@@ -1436,35 +1286,14 @@ const TempleFiller = () => {
             alternative that delivers natural-looking results aligned with our philosophy of invisible art in aesthetic medicine.
           </p>
           
-          {/* Additional SEO metadata for images */}
-          <div itemScope itemType="https://schema.org/ImageGallery">
-            <h3 itemProp="name">Temple Filler Before During After Image Gallery</h3>
-            <p itemProp="description">Comprehensive visual documentation of temple filler treatment process showing before, during treatment, and after results</p>
-            
-            {/* Before images metadata */}
-            {beforeAfterImages.before.map((image, index) => (
-              <div key={index} itemScope itemType="https://schema.org/ImageObject">
-                <img src={image.src} alt={image.alt} itemProp="contentUrl" className="hidden" />
-                <span itemProp="caption">{image.caption}</span>
-                <span itemProp="description">Temple filler before treatment documentation showing volume loss and aging concerns</span>
-              </div>
-            ))}
-            
-            {/* During treatment metadata */}
+          {/* SEO Image Schema */}
+          <div itemScope itemType="https://schema.org/ImageGallery" className="hidden">
+            <h3 itemProp="name">Temple Filler Before & After Results</h3>
+            <p itemProp="description">Real temple filler results showing volume restoration performed at our Harley Street clinic</p>
             <div itemScope itemType="https://schema.org/ImageObject">
-              <img src={beforeAfterImages.during.src} alt={beforeAfterImages.during.alt} itemProp="contentUrl" className="hidden" />
-              <span itemProp="caption">{beforeAfterImages.during.caption}</span>
-              <span itemProp="description">Professional temple filler injection procedure documentation</span>
+              <img src="/lovable-uploads/2549c031-c4e5-4be1-a708-694953067baf.png" alt="Temple filler before and after showing volume restoration" itemProp="contentUrl" className="hidden" />
+              <span itemProp="caption">Temple filler before and after — side profile showing dramatic volume restoration and improved facial contours</span>
             </div>
-            
-            {/* After images metadata */}
-            {beforeAfterImages.after.map((image, index) => (
-              <div key={index} itemScope itemType="https://schema.org/ImageObject">
-                <img src={image.src} alt={image.alt} itemProp="contentUrl" className="hidden" />
-                <span itemProp="caption">{image.caption}</span>
-                <span itemProp="description">Temple filler after treatment results showing volume restoration and facial enhancement</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>

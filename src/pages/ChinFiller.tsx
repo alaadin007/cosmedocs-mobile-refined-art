@@ -1,47 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play, Syringe, Clock, Heart, Shield, CalendarDays, Activity, GraduationCap, CheckCircle, Palette } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play, Syringe, Clock, Heart, Shield, CalendarDays, Activity, GraduationCap, CheckCircle, Palette, ArrowRight } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 import ClientReviews from '@/components/ClientReviews';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Link } from "react-router-dom";
 const ChinFiller = () => {
   const seoData = generateSEOMetadata("Chin Filler London | From £350 | Cosmedocs", "Enhance weak chins & correct double chin shadows. 1ml chin filler creates balanced facial profile from £350.", "/chin-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
   
-  const beforeAfterImages = [
-    {
-      src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
-      alt: "Chin filler before and after profile balancing natural results Cosmedocs",
-      caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
-    },
-    {
-      src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
-      alt: "Chin augmentation before after London jawline definition facial enhancement",
-      caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
-    },
-    {
-      src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
-      alt: "Chin filler profile enhancement side view transformation Harley Street",
-      caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
-    },
-    {
-      src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
-      alt: "Liquid mentoplasty before after chin enhancement non surgical results",
-      caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
-    }
-  ];
 
   const leftColumnFaqs = [{
     question: "What is chin injection filler cost in London?",
@@ -362,56 +332,47 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery - Carousel Style */}
+        {/* Real Results: Single B&A Preview */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Chin Fillers Before and After London</h2>
-              <div className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto space-y-3">
-                <p>
-                  Explore authentic 1ml chin filler before and after results from our Harley Street clinic.
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                  Real Results: <span className="text-[#C9A050] font-light">Chin Filler Before & After</span>
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                  Below is an example of chin filler used to enhance profile balance and improve chin projection. 
+                  Strategic placement creates a more defined lower face while maintaining natural facial harmony and proportion.
                 </p>
-                <p>
-                  Our expert treatments enhance projection and facial balance. We offer double chin filler, chin shadow filler, and chin crease filler corrections. View our gallery showcasing natural transformations.
+                <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                  <img
+                    src="/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png"
+                    alt="Before and after chin filler showing profile enhancement and improved chin projection"
+                    loading="lazy"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <p className="text-white/30 text-xs font-light italic mb-6">
+                  All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on facial structure and treatment plan.
                 </p>
-              </div>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        loading="lazy"
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-
+                <Link
+                  to="/before-after/dermal-fillers/chin/"
+                  className="inline-flex items-center gap-2 text-[#C9A050] text-sm font-medium hover:underline"
+                >
+                  View real chin filler before & after results
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <p className="text-white/30 text-xs font-light mt-2">
+                  Includes profile balancing, double chin correction, and jawline harmonisation cases.
+                </p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
