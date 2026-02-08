@@ -16,42 +16,77 @@ const galleryImages = [
   {
     src: jawlineGallery1,
     alt: "Before and after jawline filler showing enhanced lower face definition",
-    caption: "Enhanced jawline definition through strategic filler placement. Natural contouring preserving facial balance and proportion.",
+    caption: "Enhanced jawline definition through strategic filler placement.",
   },
   {
     src: jawlineFiller1ml,
     alt: "Before and after 1ml jawline filler showing subtle enhancement",
-    caption: "Subtle jawline enhancement with 1ml dermal filler. Ideal for first-time patients seeking natural definition without dramatic change.",
+    caption: "Subtle jawline enhancement with 1ml dermal filler.",
   },
   {
     src: jawlineGallery2,
     alt: "Before and after jawline filler demonstrating jaw contour improvement",
-    caption: "Improved jaw contour and lower face structure. Tailored treatment addressing volume loss and early jowl formation.",
+    caption: "Improved jaw contour and lower face structure.",
   },
   {
     src: jawlineFiller2ml,
     alt: "Before and after 2ml jawline filler showing defined sculpting",
-    caption: "Defined jawline sculpting with 2ml dermal filler. Stronger jaw angles and visible structural enhancement for a more contoured profile.",
+    caption: "Defined jawline sculpting with 2ml dermal filler.",
   },
   {
     src: jawlineGallery3,
     alt: "Before and after jawline filler showing masculine jaw enhancement",
-    caption: "Masculine jaw enhancement creating sharper angles and improved facial structure. Precision placement along the mandibular border.",
+    caption: "Masculine jaw enhancement creating sharper angles.",
   },
   {
     src: jawlineGallery4,
     alt: "Before and after jawline filler showing jowl correction",
-    caption: "Jowl correction and jawline restoration addressing age-related volume loss. Natural-looking lift to the lower face.",
+    caption: "Jowl correction and jawline restoration.",
   },
   {
     src: jawlineGallery5,
     alt: "Before and after jawline contouring with dermal filler",
-    caption: "Comprehensive jawline contouring demonstrating balanced volume placement. Refined lower face proportions and improved chin-to-jaw transition.",
+    caption: "Comprehensive jawline contouring with balanced volume placement.",
   },
   {
     src: jawlineGallery6,
     alt: "Before and after jawline filler showing facial slimming effect",
-    caption: "Jawline definition creating a naturally slimmer, more sculpted facial appearance through strategic filler placement along the jaw border.",
+    caption: "Jawline definition creating a naturally more sculpted appearance.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-1.jpg",
+    alt: "Before and after jawline filler showing improved lower face contour and definition",
+    caption: "Improved lower face contour and jawline sharpness.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-2.jpg",
+    alt: "Before and after jawline filler demonstrating enhanced jaw angle and profile",
+    caption: "Enhanced jaw angle and profile definition.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-3.jpg",
+    alt: "Before and after jawline filler showing profile improvement and mandibular contouring",
+    caption: "Profile improvement through mandibular contouring.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-4.jpg",
+    alt: "Before and after jawline filler showing sharper jaw angles",
+    caption: "Sharper jaw angles achieved through precise filler placement.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-5.jpg",
+    alt: "Before and after jawline filler showing masculine jawline sculpting",
+    caption: "Masculine jawline sculpting with natural-looking definition.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-6.jpg",
+    alt: "Before and after jawline filler demonstrating lower face refinement",
+    caption: "Lower face refinement and improved jaw border definition.",
+  },
+  {
+    src: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-7.jpg",
+    alt: "Before and after jawline filler showing facial contouring and jawline enhancement",
+    caption: "Facial contouring and jawline enhancement for a balanced profile.",
   },
 ];
 
@@ -174,15 +209,17 @@ const BeforeAfterJawlineFiller = () => {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <div className="relative rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading={index < 2 ? "eager" : "lazy"}
-                      className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-16 pb-4 px-5">
-                      <figcaption className="text-white/60 text-sm leading-relaxed font-light">
+                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                    <div className="overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading={index < 2 ? "eager" : "lazy"}
+                        className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                      />
+                    </div>
+                    <div className="px-5 py-3 border-t border-white/[0.06]">
+                      <figcaption className="text-white/40 text-xs leading-relaxed font-light">
                         {image.caption}
                       </figcaption>
                     </div>

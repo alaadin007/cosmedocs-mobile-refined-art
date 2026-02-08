@@ -28,9 +28,9 @@ const areaCards = [
     id: "jawline",
     title: "Jawline Filler",
     subtitle: "Definition & contouring",
-    image: "/images/before-after/dermal-fillers/lips/full-face-filler-rejuvenation.jpg",
+    image: "/images/before-after/dermal-fillers/jawline/jawline-filler-new-1.jpg",
     link: "/before-after/dermal-fillers/jawline/",
-    imageCount: 0
+    imageCount: 15
   },
   {
     id: "chin",
