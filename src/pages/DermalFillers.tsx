@@ -761,7 +761,7 @@ export default function DermalFillers() {
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {[
-                      { icon: <Award className="w-4 h-4" />, title: "Experience", desc: "2M+ treatments since 2007" },
+                      { icon: <Award className="w-4 h-4" />, title: "Experience", desc: "1M+ injections since 2007" },
                       { icon: <GraduationCap className="w-4 h-4" />, title: "Training", desc: "HSI trainers" },
                       { icon: <Shield className="w-4 h-4" />, title: "Quality", desc: "Premium HA products" },
                       { icon: <Sparkles className="w-4 h-4" />, title: "Philosophy", desc: "Invisible art" },
