@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
-import masseterBaPreview from "@/assets/before-after/masseter-ba-2.jpg";
+const masseterBaPreview = "/images/treatments/masseter/masseter-ba-replacement.jpg";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
