@@ -440,28 +440,44 @@ const NoseFillerTreatment = () => {
                 </motion.div>
               </section>
 
-              {/* Before & After Link */}
+              {/* Real Results: Single B&A Preview */}
               <section>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7"
                 >
-                  <h2 className="text-xl font-light text-white mb-3">
-                    Before & After <span className="text-[#C9A050]">Results</span>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Real Results: <span className="text-[#C9A050] font-light">Nose Filler Before & After</span>
                   </h2>
-                  <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
-                    Real patients treated by our doctors at Harley Street.
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Below is an example of non-surgical nose reshaping performed by our doctors at our Harley Street clinic. 
+                    Results vary depending on nasal anatomy, skin thickness, and desired refinement — with a focus on 
+                    natural contour and facial harmony.
+                  </p>
+                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                    <img
+                      src="/images/before-after/dermal-fillers/nose-filler-before-after.jpg"
+                      alt="Before and after non-surgical nose job showing bridge refinement and profile improvement"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  <p className="text-white/30 text-xs font-light italic mb-6">
+                    All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on nasal anatomy and treatment plan.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/nose/"
-                    className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8924A] text-sm font-medium transition-colors"
+                    className="inline-flex items-center gap-2 text-[#C9A050] text-sm font-medium hover:underline"
                   >
-                    View before & after gallery
+                    View real nose filler before & after results
                     <ArrowRight className="w-4 h-4" />
                   </Link>
+                  <p className="text-white/30 text-xs font-light mt-2">
+                    Includes dorsal hump camouflage, tip lifting, bridge refinement, and ethnic nose reshaping cases.
+                  </p>
                 </motion.div>
               </section>
 
