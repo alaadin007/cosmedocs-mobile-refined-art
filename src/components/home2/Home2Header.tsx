@@ -109,8 +109,9 @@ const treatmentCategories = [
 const navItems = [
   { label: "Pricing", link: "/treatments/" },
   { label: "Concerns", link: "/concerns/" },
-  { label: "About", link: "/about/" },
   { label: "Gallery", link: "/before-after/" },
+  { label: "Blog", link: "/blog/" },
+  { label: "About", link: "/about/" },
   { label: "Contact", link: "/contact/" },
 ];
 
