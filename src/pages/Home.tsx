@@ -5,53 +5,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Sparkles, Search, Brain } from "lucide-react";
 import Home2Header from "@/components/home2/Home2Header";
+import QuickAccessTreatments from "@/components/home/QuickAccessTreatments";
 import Footer from "@/components/Footer";
 
 // Lazy load heavy components
 const LiquidGlassFacialAssessment = lazy(() => import("@/components/LiquidGlassFacialAssessment"));
 const LiquidGlassAllTreatments = lazy(() => import("@/components/LiquidGlassAllTreatments"));
 const AestheticAnalysisWizard = lazy(() => import("@/components/AestheticAnalysisWizard"));
-
-const popularTreatments = [
-  {
-    title: "Anti-Wrinkle",
-    subtitle: "Facial Relaxation",
-    description: "Subtle smoothing of expression lines for a refreshed, natural appearance",
-    link: "/treatments/botox/",
-    popular: true,
-  },
-  {
-    title: "Lip Enhancement",
-    subtitle: "Dermal Fillers",
-    description: "Refined volume and definition that complements your natural features",
-    link: "/treatments/dermal-fillers/",
-    popular: true,
-  },
-  {
-    title: "Facial Contouring",
-    subtitle: "Cheeks & Jawline",
-    description: "Restore youthful structure and enhance facial harmony",
-    link: "/treatments/dermal-fillers/",
-  },
-  {
-    title: "Skin Quality",
-    subtitle: "Bio-Remodelling",
-    description: "Advanced treatments for radiant, hydrated, healthier-looking skin",
-    link: "/treatments/skin-boosters/",
-  },
-  {
-    title: "Under Eye",
-    subtitle: "Rejuvenation",
-    description: "Address tiredness and restore a well-rested appearance",
-    link: "/treatments/dermal-fillers/",
-  },
-  {
-    title: "Skin Rejuvenation",
-    subtitle: "Medical Aesthetics",
-    description: "Evidence-based solutions for texture, tone and overall skin health",
-    link: "/skin-treatments/",
-  },
-];
 
 const aiTools = [
   { 
@@ -215,74 +175,8 @@ const Home = () => {
           </motion.div>
         </section>
 
-        {/* Popular Treatments Section */}
-        <section className="relative py-24 px-6">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-light mb-4">
-                Popular <span className="text-[#C9A050]">Treatments</span>
-              </h2>
-              <p className="text-white/60 max-w-xl mx-auto">
-                Explore our most requested aesthetic treatments, each designed to enhance your natural beauty.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {popularTreatments.map((treatment, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                >
-                  <Link
-                    to={treatment.link}
-                    className="group block bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C9A050]/30 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 h-full"
-                  >
-                    <div className="flex items-center gap-2 mb-4">
-                      <h3 className="text-xl font-medium text-white">{treatment.title}</h3>
-                      {treatment.popular && (
-                        <span className="bg-[#C9A050]/20 text-[#C9A050] text-xs px-2 py-0.5 rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-[#C9A050] text-sm mb-3">{treatment.subtitle}</p>
-                    <p className="text-white/60 text-sm mb-6 leading-relaxed">{treatment.description}</p>
-                    <div className="flex items-center justify-end">
-                      <span className="text-sm text-white/50 group-hover:text-[#C9A050] transition-colors flex items-center gap-1">
-                        Learn more
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center mt-12"
-            >
-              <button
-                onClick={() => setIsAllTreatmentsOpen(true)}
-                className="border border-[#C9A050]/50 text-[#C9A050] hover:bg-[#C9A050]/10 px-8 py-4 rounded-full font-medium transition-all duration-300"
-              >
-                View All Treatments
-              </button>
-            </motion.div>
-          </div>
-        </section>
+        {/* Quick Access Treatments */}
+        <QuickAccessTreatments />
 
         {/* Trust Section */}
         <section className="relative py-20 px-6 bg-white/[0.02]">
