@@ -21,6 +21,8 @@ import gummySmileBA1 from '@/assets/gummy-smile-ba-1.jpeg';
 import gummySmileBA2 from '@/assets/gummy-smile-ba-2.jpeg';
 import gummySmileBA3 from '@/assets/gummy-smile-ba-3.jpeg';
 
+const gummySmileBAReal = "/images/before-after/botox/gummy-smile-before-after.jpg";
+
 const GummySmileBotox = () => {
   const [zoomImage, setZoomImage] = useState<{ src: string; alt: string; title: string } | null>(null);
   
@@ -31,6 +33,11 @@ const GummySmileBotox = () => {
   );
 
   const beforeAfterImages = [
+    { 
+      src: gummySmileBAReal, 
+      alt: "Gummy smile botox before and after showing reduced gum display", 
+      caption: "Reduced excessive gum display with precise Botox placement — balanced, natural smile." 
+    },
     { 
       src: gummySmileBA1, 
       alt: "Gummy smile botox before and after - lip fillers with gummy smile improvement", 
@@ -286,7 +293,7 @@ const GummySmileBotox = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
