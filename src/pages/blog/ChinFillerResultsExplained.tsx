@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import chinFillerHero from '@/assets/blog-chin-filler-hero.jpg';
 import chinAugmentationDiagram from '@/assets/blog-chin-augmentation-diagram.png';
+import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
 
 const ChinFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
@@ -618,24 +619,11 @@ const ChinFillerResultsExplained = () => {
                   </p>
                 </div>
 
-                {/* Author Attribution */}
-                <motion.section {...fadeIn}>
-                  <div className="flex items-center gap-4 bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                    <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center text-[#C9A050] font-medium">
-                      AH
-                    </div>
-                    <div>
-                      <p className="text-white/80 font-medium text-sm">Dr Ahmed Haq</p>
-                      <p className="text-white/40 text-xs font-light">
-                        Medical Director — CosmeDocs, 10 Harley Street, London
-                      </p>
-                      <p className="text-white/30 text-xs font-light mt-1">
-                        Over 17 years' experience in aesthetic medicine. 
-                        Specialising in facial contouring and profile harmonisation.
-                      </p>
-                    </div>
-                  </div>
-                </motion.section>
+                {/* Author E-E-A-T */}
+                <BlogAuthorEEAT 
+                  doctor="ahmed" 
+                  articleContext="This article reflects Dr Haq's clinical approach to chin augmentation — treating profile balance as an architectural correction, not a volume exercise. His experience managing over-projection cases informs the restraint-first philosophy outlined above."
+                />
 
               </div>
             </article>
