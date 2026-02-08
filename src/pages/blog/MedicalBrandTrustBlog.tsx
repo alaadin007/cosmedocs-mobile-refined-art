@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
 import Home2Header from '@/components/home2/Home2Header';
 import Footer from '@/components/Footer';
+import BlogSidebar from '@/components/blog/BlogSidebar';
 
 const MedicalBrandTrustBlog = () => {
   const seoData = generateSEOMetadata(
@@ -152,8 +153,10 @@ const MedicalBrandTrustBlog = () => {
           </div>
         </section>
 
-        {/* Main Content */}
-        <article className="max-w-4xl mx-auto px-4 py-16">
+        {/* Main Content + Sidebar */}
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="grid lg:grid-cols-[1fr_240px] gap-10">
+        <article className="max-w-3xl">
           <div className="space-y-16">
 
             {/* Opening */}
@@ -571,6 +574,11 @@ const MedicalBrandTrustBlog = () => {
 
           </div>
         </article>
+
+            {/* Sidebar */}
+            <BlogSidebar />
+          </div>
+        </div>
 
         {/* Hidden SEO Content */}
         <div
