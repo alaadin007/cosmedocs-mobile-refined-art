@@ -39,28 +39,28 @@ const BlogHome = () => {
 
   const headlineArticles: ArticleLink[] = [
     {
-      title: "In Layers, Not Lines. In Planes, Not Pages.",
-      category: "AESTHETIC PHILOSOPHY",
-      path: "/blog/beauty-ethnic-neutrality",
+      title: "Lip Filler Results Explained: Shape, Proportion & Natural Outcomes",
+      category: "RESULTS EXPLAINED",
+      path: "/blog/lip-filler-results-explained/",
       icon: "sparkles",
     },
     {
-      title: "Vitamin C & Ferulic Acid: The Science Behind Radiant Skin",
-      category: "SKIN SCIENCE",
-      path: "/blog/vitamin-c-ferulic-acid-benefits",
-      icon: "leaf",
+      title: "Tear Trough Filler Results Explained: What Improvement Really Looks Like",
+      category: "RESULTS EXPLAINED",
+      path: "/blog/tear-trough-filler-results-explained/",
+      icon: "eye",
     },
     {
-      title: "Inside the Mind of an Aesthetic Doctor",
-      category: "CLINICAL",
-      path: "/inside-mind-aesthetic-doctor-blog",
-      icon: "brain",
+      title: "Jaw Filler Results Explained: Structure, Contour & Natural Outcomes",
+      category: "RESULTS EXPLAINED",
+      path: "/blog/jaw-filler-results-explained/",
+      icon: "syringe",
     },
     {
-      title: "Trust in Medical Aesthetics: The Rule for Medical Brands",
-      category: "INSIGHT",
-      path: "/blog/trust-in-medical-aesthetics",
-      icon: "heart",
+      title: "Chin Filler Results Explained: Balance, Projection & Natural Profiles",
+      category: "RESULTS EXPLAINED",
+      path: "/blog/chin-filler-results-explained/",
+      icon: "syringe",
     },
   ];
 
@@ -115,32 +115,32 @@ const BlogHome = () => {
     },
     headlines: [
       {
-        title: "PDO Thread Face Lift: What You Need to Know",
-        path: "/pdo-threads-blog",
-        icon: "syringe",
-      },
-      {
-        title: "Lip Wrinkles: Causes, Myths & Treatment Options",
-        path: "/blog/lip-wrinkles-treatments",
+        title: "Lip Filler Results Explained: Shape, Proportion & Natural Outcomes",
+        path: "/blog/lip-filler-results-explained/",
         icon: "sparkles",
       },
       {
-        title: "Long-Term Aesthetic Care: Planning Your Journey",
-        path: "/long-term-aesthetic-care-blog",
-        icon: "book",
+        title: "Tear Trough Filler Results Explained: What Improvement Really Looks Like",
+        path: "/blog/tear-trough-filler-results-explained/",
+        icon: "eye",
       },
       {
-        title: "Forehead Wrinkles: Myths, Tips & What Actually Works",
-        path: "/blog/forehead-wrinkles-myths-tips",
-        icon: "eye",
+        title: "Jaw Filler Results Explained: Structure, Contour & Natural Outcomes",
+        path: "/blog/jaw-filler-results-explained/",
+        icon: "syringe",
+      },
+      {
+        title: "Chin Filler Results Explained: Balance, Projection & Natural Profiles",
+        path: "/blog/chin-filler-results-explained/",
+        icon: "syringe",
       },
     ],
     secondary: {
-      title: "Lazy Skin Syndrome: The Hidden Cost of Moisturiser Dependency",
+      title: "PDO Thread Face Lift: What You Need to Know",
       excerpt:
-        "Why over-moisturising could be weakening your skin barrier — and what to do instead.",
-      category: "COSMETALK",
-      path: "/blog/lazy-skin-syndrome",
+        "An evidence-based guide to thread lifts — what they do, what they don't, and who they're actually for.",
+      category: "TREATMENT GUIDE",
+      path: "/pdo-threads-blog",
     },
   };
 
