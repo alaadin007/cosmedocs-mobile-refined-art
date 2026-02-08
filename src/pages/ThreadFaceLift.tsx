@@ -1,1313 +1,618 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Clock, User, CheckCircle, Star, Calendar, Shield, Award, MapPin, GraduationCap, Activity, Syringe, Home, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
-import PopularTreatments from '@/components/PopularTreatments';
-import { generateSEOMetadata } from '@/utils/seo';
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
+import PDOThreadsSidebar from "@/components/pdo-threads/PDOThreadsSidebar";
 import threadLiftImage1 from '@/assets/thread-lift-before-after-1.jpg';
 import pdoThreadsImage from '@/assets/pdo-threads-before-after.jpg';
 import threadLiftImage2 from '@/assets/thread-lift-before-after-2.png';
 import pdoThreadLiftImage from '@/assets/pdo-thread-lift-before-after.jpg';
 
-const seoData = generateSEOMetadata(
-  "PDO Thread Face Lift London | Thread Lift Before and After - CosmeDocs",
-  "Instant facelift with PDO threads. Lift sagging skin, restore contours & stimulate collagen. Results last 2-3 years.",
-  "/thread-face-lift"
-);
-
-const medicalBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "Cosmedocs",
-  "description": "Expert PDO thread face lift and facial threading treatments in London - Harley Street aesthetic clinic",
-  "url": "https://www.cosmedocs.co.uk/thread-face-lift",
-  "telephone": "+44 20 3733 3227",
-  "email": "info@cosmedocs.com",
-  "priceRange": "£££",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "10 Harley Street",
-    "addressLocality": "London",
-    "addressRegion": "Greater London",
-    "postalCode": "W1G 9PF",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 51.5074,
-    "longitude": -0.1278
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "ratingCount": "124"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "10:00",
-      "closes": "16:00"
-    }
-  ],
-  "sameAs": [
-    "https://www.instagram.com/cosmedocs/",
-    "https://www.facebook.com/cosmedocs/"
-  ]
-};
-
-const medicalProcedureSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "Cosmedocs",
-  "url": "https://www.cosmedocs.co.uk",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "10 Harley Street",
-    "addressLocality": "London",
-    "addressRegion": "Greater London",
-    "postalCode": "W1G 9PF",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 51.5074,
-    "longitude": -0.1278
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "ratingCount": "124"
-  },
-  "availableService": {
-    "@type": "MedicalProcedure",
-    "name": "PDO Thread Face Lift",
-    "description": "Non-surgical thread lift treatment using PDO threads for facial rejuvenation",
-    "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
-    "followup": "Follow-up assessment after 2 weeks"
-  },
-  "priceRange": "£££"
-};
-
-const offerSchema = {
-  "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "PDO Thread Face Lift Treatment",
-  "description": "Professional thread face lift treatment for facial rejuvenation",
-  "priceCurrency": "GBP",
-  "price": "850",
-  "priceValidUntil": "2025-12-31",
-  "availability": "https://schema.org/InStock",
-  "url": "https://www.cosmedocs.co.uk/thread-face-lift",
-  "seller": {
-    "@type": "MedicalClinic",
-    "name": "Cosmedocs",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Harley Street",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
-      "postalCode": "W1G 9PF",
-      "addressCountry": "GB"
-    }
-  }
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.cosmedocs.co.uk"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Treatments",
-      "item": "https://www.cosmedocs.co.uk/treatments"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "PDO Thread Face Lift",
-      "item": "https://www.cosmedocs.co.uk/thread-face-lift"
-    }
-  ]
-};
-
-const treatmentDetails = [
-  { icon: Clock, label: "Procedure Time", value: "25-45 mins" },
-  { icon: User, label: "Anaesthetic", value: "Local" },
-  { icon: Calendar, label: "Results Duration", value: "2-3 Years" },
-  { icon: CheckCircle, label: "Back To Work", value: "0-2 Days" },
-  { icon: Shield, label: "Full Recovery", value: "One week" },
-  { icon: Award, label: "Risk Level", value: "Minimal" }
-];
-
 const beforeAfterImages = [
   {
     src: threadLiftImage1,
-    alt: "Thread face lift before and after image 2 weeks later - combination PDO thread lift",
-    caption: "Combination PDO Thread lift before and after combined with skin treatment"
+    alt: "PDO thread lift before and after — combination treatment with skin rejuvenation",
   },
   {
-    src: pdoThreadsImage, 
-    alt: "PDO Thread Lift Before and After Image Performed In London",
-    caption: "PDO Thread Face Lift Transformation in London"
+    src: pdoThreadsImage,
+    alt: "PDO thread face lift transformation performed in London",
+  },
+  {
+    src: "/images/treatments/pdo-threads/pdo-threads-ba-new.jpg",
+    alt: "PDO thread lift before and after showing natural facial lifting and tightening",
   },
   {
     src: threadLiftImage2,
-    alt: "PDO thread lift before and after procedure final results",
-    caption: "PDO Thread Lift: Before and After Comparison - Final results in a few weeks once swelling settles"
+    alt: "PDO thread lift before and after — final results once swelling settles",
   },
   {
     src: pdoThreadLiftImage,
-    alt: "PDO thread lift before after natural facial rejuvenation",
-    caption: "Natural lifting and tightening results with PDO threads"
-  }
-];
-
-const faqData = [
-  {
-    question: "How long do thread lifts before and after results last?",
-    answer: "Thread lift before and after results typically last 2-3 years. The PDO threads gradually dissolve over 12-18 months, but the collagen stimulation continues to provide lifting effects for up to 3 years. You'll see continued improvement even after 3 months thread lift healing."
+    alt: "Natural lifting and tightening results with PDO cog threads",
   },
-  {
-    question: "Is PDO threading painful for facial thread lift?",
-    answer: "The facial threading procedure is performed under local anaesthetic, so discomfort is minimal. You may experience mild soreness for a few days after treatment, which can be managed with over-the-counter pain relief."
-  },
-  {
-    question: "How soon can I see thread face lift before after results?",
-    answer: "Thread face lift before after results are visible immediately after treatment, with continued improvement over 2-3 months as collagen production increases and swelling subsides. Many clients see dramatic changes even 2 weeks after thread lift."
-  },
-  {
-    question: "What is the recovery time for PDO threads before after treatment?",
-    answer: "Most patients return to work within 0-2 days after their threading face lift. Full recovery takes about one week, during which you should avoid strenuous exercise and facial massage to optimize PDO threads before after results."
-  },
-  {
-    question: "Are there any side effects from face threads treatment?",
-    answer: "Common side effects from threads face treatment include mild swelling, bruising, and tenderness at insertion points. Serious complications are rare when thread lifting is performed by qualified practitioners."
-  },
-  {
-    question: "Who is a good candidate for facial threads facelift?",
-    answer: "Ideal candidates for facial threads facelift are those with mild to moderate skin laxity, typically aged 30-60, who want facial rejuvenation without surgery. A consultation will determine your suitability for face threading before and after treatment."
-  },
-  {
-    question: "What's the difference between mono threads before and after vs lifting threads?",
-    answer: "Mono threads before and after results focus on skin texture and tightening, while lifting threads provide more dramatic face lift threading results. Both contribute to natural facial thread lift outcomes when used appropriately."
-  },
-  {
-    question: "Can I see before and after PDO thread lift eyes results?",
-    answer: "Yes, before and after PDO thread lift eyes treatments show excellent results for reducing under-eye sagging and lifting the brow area. Eye area thread lifting provides subtle yet effective rejuvenation."
-  }
-];
-
-const benefits = [
-  "Non-surgical alternative to facelift surgery",
-  "Immediate visible lifting results",
-  "Stimulates natural collagen production",
-  "Minimal downtime and recovery",
-  "Long-lasting results (2-3 years)",
-  "Enhanced facial contours and definition"
 ];
 
 export function ThreadFaceLift() {
+  const seoData = generateSEOMetadata(
+    "PDO Thread Lift London | Non-Surgical Face Lift | Harley St",
+    "Doctor-led PDO thread lift for non-surgical facial lifting and tightening. Cog threads, mono threads, and combination treatments at our Harley Street clinic. Results last up to 2 years.",
+    "/treatments/pdo-threads/"
+  );
+
+  const faqs = [
+    {
+      question: "What are PDO threads and how do they work?",
+      answer: "PDO (polydioxanone) threads are medical-grade dissolvable sutures inserted beneath the skin. They physically lift sagging tissue and stimulate your body's natural collagen production. The threads dissolve over 6–9 months, but the collagen remodelling continues for up to 2–3 years."
+    },
+    {
+      question: "What is the difference between mono threads and cog threads?",
+      answer: "Mono threads are smooth threads that stimulate collagen and improve skin texture and tightness. Cog threads have barbs or hooks that grip the tissue and provide an immediate mechanical lift. Most thread lift treatments use cog threads for lifting areas like the jawline and mid-face, and mono threads for skin quality improvement."
+    },
+    {
+      question: "How long do PDO thread lift results last?",
+      answer: "The threads dissolve over 6–9 months, but the collagen stimulation they trigger provides lasting structural improvement for 12–24 months. Some patients see continued benefit for up to 3 years. Results vary depending on age, skin quality, and the type of threads used."
+    },
+    {
+      question: "Is a PDO thread lift painful?",
+      answer: "The procedure is performed under local anaesthetic, so discomfort is minimal during treatment. You may experience mild soreness, tightness, or tenderness for a few days afterwards, which is manageable with over-the-counter pain relief."
+    },
+    {
+      question: "What is the recovery time for a thread lift?",
+      answer: "Most patients return to work within 1–3 days. Full recovery takes about one week. During this time, you should avoid strenuous exercise, facial massage, and sleeping on your face. Mild swelling and bruising are common but resolve within 5–7 days."
+    },
+    {
+      question: "Who is a good candidate for PDO threads?",
+      answer: "Ideal candidates are aged 30–65 with mild to moderate skin laxity who want facial lifting without surgery. PDO threads work best for patients with early signs of sagging around the jawline, mid-face, or neck. A consultation will determine your suitability."
+    },
+    {
+      question: "Can PDO threads be combined with other treatments?",
+      answer: "Yes. PDO threads are often combined with dermal fillers for volume restoration, Profhilo for skin quality, or Botox for dynamic lines. This combination approach — sometimes called an HA Makeover — provides comprehensive facial rejuvenation."
+    },
+    {
+      question: "How much does a PDO thread lift cost?",
+      answer: "Mono threads start from £350, cog threads from £850, and a full thread lift from £1,500. The exact cost depends on the number and type of threads required, which is determined during consultation."
+    }
+  ];
+
   return (
-    <article className="bg-black text-white">
-      {/* Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="bg-accent border-b border-gray-800">
-        <div className="page-container py-4">
-          <ol className="flex items-center space-x-2 text-sm">
-            <li>
-              <Link to="/" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
-                <Home size={16} />
-                Home
-              </Link>
-            </li>
-            <ChevronRight size={16} className="text-gray-600" />
-            <li>
-              <Link to="/treatments" className="text-gray-400 hover:text-white transition-colors">
-                Treatments
-              </Link>
-            </li>
-            <ChevronRight size={16} className="text-gray-600" />
-            <li>
-              <span className="text-white font-medium">PDO Thread Face Lift</span>
-            </li>
-          </ol>
-        </div>
-      </nav>
+    <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="pdo threads before and after, face thread lift, pdo threading, thread face lift cost, thread face lift, pdo threads lift before and after, face threading lift, thread lifts, thread lift london, facial threading, pdo thread lift london, thread facelift, collagen threads before and after, facial threading lift, before and after pdo thread lift eyes, mono threads before and after, thread face lift before after, thread lift cost uk, pdo threads before after, thread lifting, cheek lift with threads, threads face, thread lifts before and after, facial thread lift, pdo mono threads before and after, face lift by threading, pdo thread before and after, face threads before and after, thread face lift price, facial threads facelift, thread lift, face threads, face lift using threads, thread lift cost, face lift threading cost, thread lift before after, threads for face, pdo lifting threads, thread face lift before and after, pdo threads london, thread lift before and after, threads face lift, face threading before and after, facial threads, threadlift, threads in face, pdo thread lift before and after, face lift threading, threading face lift, before and after thread face lift" />
-        <meta name="author" content="Cosmedocs Medical Team" />
-        <meta name="publish-date" content="2024-01-15" />
-        <meta name="last-modified" content="2025-10-02" />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/pdo-threads/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:image" content={seoData.image} />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/pdo-threads/" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content={seoData.image} />
-        
-        <script type="application/ld+json">
-          {JSON.stringify(medicalBusinessSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(medicalProcedureSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(offerSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
+            "@graph": [
+              {
+                "@type": "MedicalBusiness",
+                "@id": "https://www.cosmedocs.co.uk/#organization",
+                "name": "CosmeDocs",
+                "description": "Doctor-led aesthetic medicine clinic on Harley Street",
+                "url": "https://www.cosmedocs.co.uk/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                },
+                "medicalSpecialty": "Aesthetic Medicine",
+                "openingHoursSpecification": [
+                  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+                  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00" }
+                ]
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "PDO Thread Lift",
+                "alternateName": ["Thread Face Lift", "PDO Threading", "Non-Surgical Face Lift", "Cog Thread Lift"],
+                "description": "Non-surgical facial lifting using dissolvable PDO threads that physically lift sagging tissue and stimulate collagen production for lasting rejuvenation.",
+                "url": "https://www.cosmedocs.co.uk/treatments/pdo-threads/",
+                "procedureType": "NoninvasiveProcedure",
+                "bodyLocation": "Face, Jawline, Mid-face, Neck",
+                "followup": "Results visible immediately, improving over 2–3 months. Threads dissolve over 6–9 months with collagen remodelling lasting 12–24 months.",
+                "howPerformed": "Medical-grade PDO threads inserted beneath the skin using fine needles or cannulae under local anaesthetic. Cog threads provide mechanical lift; mono threads stimulate collagen.",
+                "provider": { "@id": "https://www.cosmedocs.co.uk/#organization" }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                }))
               }
-            }))
+            ]
           })}
         </script>
       </Helmet>
 
-      {/* Hero Section - Matching LipFillers style */}
-      <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-        <div className="page-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* ═══════════════════════════════════════════
+            HERO
+        ═══════════════════════════════════════════ */}
+        <section className="relative overflow-hidden bg-black pt-0 pb-20">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-left"
-            >
-             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-               PDO Thread
-               <span className="block text-purple-300">Face Lift London</span>
-             </h1>
-            <p className="text-lg text-white mb-8">
-              Non-surgical face thread lift with premium PDO threading for natural facial rejuvenation
-            </p>
-            <p className="text-lg mb-2">
-              <span className="text-purple-300 font-semibold">Invisible Art</span>
-            </p>
-            <p className="text-white mb-8">
-              Transformation that speaks without saying a word
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold"
-              >
-                Book Consultation
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  const pricingSection = document.getElementById('pricing-section');
-                  if (pricingSection) {
-                    pricingSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-4 text-lg font-semibold"
-              >
-                View Price List
-              </Button>
-            </div>
-            </motion.div>
-            
-            <div className="hidden lg:block"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Summary */}
-      <section className="py-16 bg-accent">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-8 text-white">PDO Threading & Face Thread Lift Treatment London</h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-              <p className="text-gray-300">60-90 minutes including consultation</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Calendar className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-              <p className="text-gray-300">2-3 years with premium PDO threads</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Activity className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-              <p className="text-gray-300">0-2 days downtime, full recovery in 1 week</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Syringe className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-              <p className="text-gray-300">Local anaesthetic for comfort</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Before & After Gallery */}
-      <section className="py-20 bg-black">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4">PDO Threads Before and After Results London</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Explore authentic PDO threads before and after results from our London clinic. 
-              See real thread face lift before after transformations, including mono threads before and after, 
-              and collagen threads before and after results showing natural facial thread lift outcomes.
-            </p>
-          </motion.div>
-
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
-              {beforeAfterImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group cursor-pointer p-2"
-                  >
-                    <div className="aspect-square overflow-hidden rounded-lg mb-3">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        width="400"
-                        height="400"
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <p className="text-white text-sm font-medium text-center">{image.caption}</p>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-            <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-          </Carousel>
-
-        </div>
-      </section>
-
-      {/* Understanding Thread Lifts - New Comprehensive Content Section */}
-      <section className="py-20 bg-accent">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-3xl font-bold mb-6 text-white text-center">Understanding PDO Thread Lifts: A Complete Guide</h2>
-            
-            <div className="space-y-6 text-gray-300">
-              <p>
-                The PDO thread lift London treatment represents a breakthrough in non-surgical facial rejuvenation. 
-                This innovative threading face lift procedure uses dissolvable PDO lifting threads to provide immediate 
-                lifting whilst stimulating your body's natural collagen production for lasting results. Our comprehensive 
-                thread lifts before and after gallery demonstrates the remarkable transformations achievable through this minimally invasive procedure.
-              </p>
-
-              <p>
-                <a href="https://onlinelibrary.wiley.com/doi/10.1111/jocd.15709#:~:text=4.1%20PDO%20threads%20definition,high%20degree%20of%20tissue%20regeneration.&text=Thread%20lift%20is%20a%20minimally,wrinkles%2C%20and%20marked%20facial%20pores.&text=Their%20main%20effect%20is%20to,such%20as%20PDO%20thread%20lifting." target="_blank" rel="noopener noreferrer" className="text-link hover:text-link-hover hover:underline">
-                  According to research published in Plastic and Reconstructive Surgery
-                </a>, PDO threads have shown excellent safety profiles and patient satisfaction rates exceeding 90%. 
-                The thread facelift works by inserting biocompatible threads in face tissue, creating a supportive mesh 
-                that lifts sagging skin whilst encouraging natural collagen threads before and after production over time.
-              </p>
-
-
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Types of Threads Section */}
-      <section className="py-20 bg-black">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-white">Types of Threads in Face Treatments</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of premium PDO threads, each designed for specific lifting and rejuvenation outcomes. <a href="https://pubmed.ncbi.nlm.nih.gov/32766067/" target="_blank" rel="noopener noreferrer" className="text-link hover:text-link-hover hover:underline">Clinical studies</a> consistently report patient satisfaction rates of 80–95% following thread lift procedures.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Mono Threads */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500 h-full hover:border-purple-400 transition-all duration-300">
-                <CardHeader>
-                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <Activity className="text-purple-600" size={28} />
-                  </div>
-                  <CardTitle className="text-white text-2xl text-center">Mono Threads</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center">
-                    Smooth threads for skin rejuvenation and texture improvement
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Collagen stimulation</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Skin tightening</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Fine line reduction</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Cog Threads */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-gradient-to-br from-pink-900/30 to-purple-900/30 border-pink-500 h-full hover:border-pink-400 transition-all duration-300">
-                <CardHeader>
-                  <div className="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <Star className="text-pink-600" size={28} />
-                  </div>
-                  <CardTitle className="text-white text-2xl text-center">Cog Threads</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center">
-                    Barbed threads for powerful lifting and repositioning
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-pink-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Maximum lifting</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-pink-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Facial contouring</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-pink-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Immediate results</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Screw Threads */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-blue-500 h-full hover:border-blue-400 transition-all duration-300">
-                <CardHeader>
-                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <Shield className="text-blue-600" size={28} />
-                  </div>
-                  <CardTitle className="text-white text-2xl text-center">Screw Threads</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center">
-                    Intertwined threads for volume restoration
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-blue-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Volume enhancement</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-blue-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Deep support</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="text-blue-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300">Hollow area treatment</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline and Aftercare Section */}
-      <section className="py-20 bg-accent">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-3xl font-bold mb-8 text-white">Thread Lift Journey & Care</h2>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Expected Timeline and Results Column */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-black border-gray-800 h-full">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl">Expected Timeline and Results</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-gray-300">
-                  <div className="space-y-3">
-                    <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">Immediate:</div>
-                      <div>Visible lifting effect from thread placement</div>
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">2-7 days:</div>
-                      <div>Initial swelling subsides, mechanical lift becomes apparent</div>
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">2 weeks:</div>
-                      <div>2 weeks after thread lift shows significant improvement as swelling reduces</div>
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">3 months:</div>
-                      <div>Thread lift after 3 months reveals optimal results as collagen production peaks</div>
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">2-3 years:</div>
-                      <div>Long-lasting natural-looking results maintained</div>
-                    </div>
-                  </div>
-                  <p className="pt-4 border-t border-gray-800">
-                    Results develop gradually, with the true beauty of PDO threading emerging over subsequent months as collagen production increases, ensuring natural-looking facial rejuvenation.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Aftercare Column */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-black border-gray-800 h-full">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl">Aftercare Guidelines</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-gray-300">
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-white">First 24 hours:</strong> Keep head elevated and avoid lying flat
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-white">First week:</strong> Avoid strenuous exercise and facial massage
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-white">Facial expressions:</strong> Avoid excessive facial movements for 2 weeks
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-white">Skincare:</strong> Use gentle products and avoid harsh treatments
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-white">Sun protection:</strong> Apply SPF daily to protect treated areas
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-white">Follow-up:</strong> Attend scheduled appointments for optimal results
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+              className="absolute -top-60 left-[-10%] w-[600px] h-[600px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
 
-          {/* Benefits Card - Centered below both columns */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mt-12 max-w-4xl mx-auto"
-          >
-            <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
-              <h3 className="text-2xl font-semibold text-white mb-6 text-center">The Specific Benefits of PDO Thread Lift Include:</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-300">The ultra-fine threads naturally break down within the body over 6-8 months, with results lasting about 18 months.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-300">The transparent material is invisible under the skin.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-300">The threads are cone-free, preventing tissue damage.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-300">They have an excellent safety record, the same type used in cardiac and other surgical sutures.</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <Breadcrumb
+              items={[
+                { label: 'Treatments', path: '/treatments/' },
+                { label: 'HA Makeover', path: '/treatments/ha-makeover/' }
+              ]}
+              currentPage="PDO Threads"
+            />
 
-      {/* PDO Thread Lift Procedure Section */}
-      <section className="py-20 bg-black">
-        <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">
-                How Does Face Threading Lift Work?
-              </h2>
-              <div className="space-y-4 text-gray-300">
-                <p>
-                  During a face thread lift procedure, our expert practitioners insert specialized threads for face treatment 
-                  beneath the skin using fine needles. These PDO mono threads before and after treatment create an immediate 
-                  lifting effect, whilst also triggering your body's healing response. Over the following weeks, new collagen 
-                  forms around the threads, enhancing the lift and improving skin quality. The thread lift after 3 months 
-                  shows optimal results as collagen production peaks.
-                </p>
-                <p>
-                  What are PDO threads exactly? PDO (polydioxanone) is a synthetic absorbable surgical suture material that's 
-                  been used safely in medical procedures for over 30 years. When used for facial threading lift treatments, 
-                  these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
-                  support, meaning your thread lift before and after results can last 2-3 years.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/mHn0TARBHik"
-                  title="PDO Thread Lift Procedure Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full aspect-video"
-                ></iframe>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Treatment Areas Section */}
-      <section className="py-20 bg-accent">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-white">What Areas Can Thread Lifts Treat?</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Face lift using threads can address multiple areas for comprehensive facial threading lift rejuvenation. 
-              Our threads face treatments provide natural-looking thread facelift results across various facial zones.
-            </p>
-            <p className="text-gray-300 max-w-3xl mx-auto mt-4">
-              The PDO thread lift London treatment is designed to reposition the facial skin and trigger the body's 
-              natural response by producing collagen and improving blood circulation, which tightens the tissue. 
-              Results continue to improve even 3 months after thread lift treatment, with optimal thread lift after 
-              3 months outcomes visible as swelling subsides and collagen remodeling continues.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { area: "Sagging Facial Skin", description: "Lift and tighten loose, sagging skin with PDO threading across the face" },
-              { area: "Cheek Lift with Threads", description: "Restore volume and lift to the mid-face area using PDO threads" },
-              { area: "Forehead and Brow Threading", description: "Smooth forehead lines and lift drooping brows with thread lifting" },
-              { area: "PDO Thread Lift Eyes", description: "Address crow's feet and under-eye sagging with specialized eye threads" },
-              { area: "Neck, Jawline Thread Lift", description: "Define jawline and tighten neck skin with facial threads" },
-              { area: "Deep Wrinkles Treatment", description: "Soften nasolabial folds and marionette lines using threading techniques" },
-              { area: "Facial Threading Lift", description: "Lift downturned mouth corners for a youthful appearance with threads" },
-              { area: "Perioral Thread Treatment", description: "Reduce smoker's lines and perioral wrinkles with PDO threads" },
-              { area: "Body Thread Lifting", description: "Treat abdomen, arms, and other body areas requiring thread lifting" }
-            ].map((item, index) => (
+            <div className="pt-12 pb-4 max-w-3xl">
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg">{item.area}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">{item.description}</p>
-                  </CardContent>
-                </Card>
+                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                  PDO Thread{" "}
+                  <span className="text-[#C9A050] font-light">Lift</span>
+                </h1>
+                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                  Non-surgical facial lifting using dissolvable threads that lift, tighten, and stimulate your body's own collagen — structure restored, naturally.
+                </p>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Pricing Section */}
-      <section id="pricing-section" className="py-20 bg-black">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-white">Thread Lift Cost UK</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Transparent thread lift cost pricing for premium PDO threads London treatments. 
-              Our thread face lift price includes consultation, facial threading lift procedure, 
-              and aftercare support from our expert medical team.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-accent border-purple-500 h-full text-center">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl">Complete Threads Face Lift</CardTitle>
-                  <div className="text-purple-300 text-4xl font-bold">£2,750</div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300">Comprehensive face lift by threading for dramatic facial thread lift results</p>
-                  <div className="space-y-2 text-left">
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300">Full face and neck treatment</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300">Consultation included</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300">Extended aftercare support</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
-                </div>
-                <CardHeader className="pt-8">
-                  <CardTitle className="text-white text-2xl">Cheek Lift with Threads</CardTitle>
-                  <div className="text-white text-4xl font-bold">£650-£950</div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-purple-100">Perfect for cheek lift with threads and facial threading enhancement</p>
-                  <div className="space-y-2 text-left">
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">Targeted jawline treatment</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">Immediate lifting effect</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">2-3 year results</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-accent border-gray-700 h-full text-center">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                  <div className="text-purple-300 text-4xl font-bold">£50</div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300">Professional assessment and treatment planning</p>
-                  <div className="space-y-2 text-left">
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300">Full facial assessment</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300">Treatment recommendations</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300">Deducted from treatment cost</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
+              >
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />30–60 Min</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Local Anaesthetic</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Lasts 12–24 Months</span>
+              </motion.div>
+            </div>
           </div>
 
-          {/* Additional Pricing Options */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-12"
-          >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">PDO Mono Threads & Facial Threading Lift Prices</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { area: "Face Threading Lift (Lower Face)", price: "£650" },
-                { area: "Face Lift Threading Cost (Chin)", price: "£500-£750" },
-                { area: "PDO Thread Before and After (Under Eye)", price: "£400" },
-                { area: "Facial Threading (Eyebrow Lift)", price: "£600" },
-                { area: "Face Threads Before and After (Combined)", price: "£900" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-900 rounded-lg p-6 text-center border border-gray-700"
-                >
-                  <h4 className="text-white font-semibold mb-2">{item.area}</h4>
-                  <p className="text-purple-300 text-2xl font-bold">{item.price}</p>
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            TWO-COLUMN LAYOUT
+        ═══════════════════════════════════════════ */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
+            {/* LEFT — Main Content */}
+            <div className="space-y-14">
+
+              {/* What Are PDO Threads */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    What Are <span className="text-[#C9A050] font-light">PDO Threads?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        PDO (polydioxanone) threads are medical-grade dissolvable sutures placed beneath the skin to lift sagging tissue and stimulate natural collagen production. They've been used safely in surgery for decades and are now one of the most effective non-surgical lifting treatments available.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Unlike <Link to="/treatments/dermal-fillers/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">dermal fillers</Link> which restore volume, or <Link to="/treatments/botox/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Botox</Link> which relaxes muscles, PDO threads work mechanically — physically repositioning tissue whilst triggering a healing response that builds new collagen and elastin.
+                      </p>
+                      <p>
+                        The threads dissolve naturally over 6–9 months, but the structural collagen they stimulate continues to provide support for 12–24 months or longer. This makes PDO threads a uniquely effective bridge between injectable treatments and surgical intervention.
+                      </p>
+                    </div>
+                  </ExpandableSection>
                 </motion.div>
-              ))}
+              </section>
+
+              {/* Thread Types — Mono vs Cog */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Mono Threads vs <span className="text-[#C9A050] font-light">Cog Threads</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <div className="grid md:grid-cols-2 gap-5">
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <p className="text-sm font-medium text-[#C9A050] mb-3">Mono Threads</p>
+                          <ul className="space-y-2 text-white/45 text-xs font-light">
+                            <li>• Smooth, fine threads</li>
+                            <li>• Stimulate collagen production</li>
+                            <li>• Improve skin texture and tightness</li>
+                            <li>• Ideal for skin quality improvement</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                          <p className="text-sm font-medium text-white/60 mb-3">Cog Threads</p>
+                          <ul className="space-y-2 text-white/45 text-xs font-light">
+                            <li>• Barbed threads that grip tissue</li>
+                            <li>• Provide immediate mechanical lift</li>
+                            <li>• Best for jawline, mid-face, jowls</li>
+                            <li>• Stronger, longer-lasting results</li>
+                          </ul>
+                        </div>
+                      </div>
+                    }
+                  >
+                    <div className="mt-4 space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        Most thread lift treatments combine both types strategically — cog threads for structural lifting in areas like the jawline and cheeks, and mono threads for overall skin tightening and texture refinement.
+                      </p>
+                      {/* Cog thread close-up image */}
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden">
+                        <img
+                          src="/images/treatments/pdo-threads/pdo-cog-thread-close-up.jpg"
+                          alt="Close-up of a PDO cog thread being inserted beneath the skin — showing the fine barbed suture used for tissue lifting"
+                          className="w-full h-auto object-contain"
+                          loading="lazy"
+                        />
+                        <div className="px-5 py-3 border-t border-white/[0.06]">
+                          <p className="text-white/40 text-xs font-light">
+                            A PDO cog thread during insertion — the fine barbed suture anchors into tissue to provide mechanical lift
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* How It Works */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    How the Procedure <span className="text-[#C9A050] font-light">Works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <ul className="space-y-3 text-white/45 text-sm font-light">
+                        <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Detailed facial assessment and treatment planning</li>
+                        <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Local anaesthetic applied to the treatment area</li>
+                        <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Threads inserted using fine needles or cannulae</li>
+                      </ul>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light mt-3">
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Threads positioned and adjusted for optimal lift</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Immediate visible lifting — results refine over 2–3 months</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Procedure takes 30–60 minutes depending on the treatment area</li>
+                    </ul>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Treatment Areas */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Treatment <span className="text-[#C9A050] font-light">Areas</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">Face & Jawline</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Jowl lifting and jawline definition</li>
+                        <li>• Mid-face and cheek lifting</li>
+                        <li>• Brow lift</li>
+                        <li>• Nasolabial fold reduction</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">Neck & Décolletage</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Neck tightening and crepey skin</li>
+                        <li>• Jawline-to-neck contour</li>
+                        <li>• Skin laxity improvement</li>
+                        <li>• Collagen stimulation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Am I Suitable */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                        <p className="text-sm font-medium text-white">May Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Mild to moderate skin laxity</li>
+                        <li>• Early jowling or sagging jawline</li>
+                        <li>• Desire for non-surgical lifting</li>
+                        <li>• Aged 30–65 with reasonable skin quality</li>
+                        <li>• Looking for a natural, refreshed appearance</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <AlertTriangle className="w-5 h-5 text-white/40" />
+                        <p className="text-sm font-medium text-white">May Not Be Suitable</p>
+                      </div>
+                      <ul className="space-y-2 text-white/45 text-xs font-light">
+                        <li>• Severe skin laxity (surgical facelift may be better)</li>
+                        <li>• Active skin infection at treatment site</li>
+                        <li>• Blood clotting disorders</li>
+                        <li>• Pregnancy or breastfeeding</li>
+                        <li>• Autoimmune conditions</li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Before & After */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    PDO Thread Lift <span className="text-[#C9A050] font-light">Before & After</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Results are visible immediately after treatment, with continued improvement over 2–3 months as collagen production increases and swelling settles. Individual results vary depending on age, skin quality, and the number of threads used.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {beforeAfterImages.map((image, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-auto object-contain"
+                          loading="lazy"
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                  <p className="text-white/25 text-xs mt-4 font-light italic">
+                    All images show real patients treated at CosmeDocs. Results vary per individual. Images shown with consistent positioning and lighting.
+                  </p>
+                </motion.div>
+              </section>
+
+              {/* Results & Expectations */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Results & <span className="text-[#C9A050] font-light">Expectations</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Lifting is visible immediately after treatment. Over the following 2–3 months, results continue to improve as collagen production increases and the tissue adapts to its new position.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        The threads dissolve naturally over 6–9 months, but the collagen framework they create provides structural support for 12–24 months. Some patients see continued benefit for up to 3 years.
+                      </p>
+                      <p>
+                        Results depend on your age, skin quality, degree of laxity, and the number and type of threads used. Your doctor will give you a realistic assessment of what to expect during consultation.
+                      </p>
+                      <p>
+                        PDO threads are particularly effective when combined with other treatments such as <Link to="/treatments/dermal-fillers/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">dermal fillers</Link> for volume or <Link to="/treatments/profhilo/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Profhilo</Link> for skin hydration and quality.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Aftercare */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Most patients return to normal activities within 1–3 days. Mild swelling and bruising are common but resolve within a week.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light mt-3">
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid strenuous exercise for 1–2 weeks</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Sleep on your back for the first week</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Do not massage or apply pressure to the treated area</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid facials, saunas, and extreme heat for 2 weeks</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Apply ice if swelling or bruising occurs</li>
+                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />A follow-up assessment is typically scheduled at 2 weeks</li>
+                    </ul>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Risks */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Risks & <span className="text-[#C9A050] font-light">Considerations</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        PDO threads have been used safely in medicine for decades. However, like all procedures, there are potential risks that your doctor will discuss during consultation.
+                      </p>
+                    }
+                  >
+                    <ul className="space-y-3 text-white/45 text-sm font-light mt-3">
+                      <li className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/30 flex-shrink-0 mt-0.5" />Mild swelling and bruising (common, resolves in 5–7 days)</li>
+                      <li className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/30 flex-shrink-0 mt-0.5" />Temporary tightness or pulling sensation</li>
+                      <li className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/30 flex-shrink-0 mt-0.5" />Dimpling at insertion points (usually temporary)</li>
+                      <li className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/30 flex-shrink-0 mt-0.5" />Infection (rare, mitigated by sterile technique)</li>
+                      <li className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/30 flex-shrink-0 mt-0.5" />Thread migration or palpability (rare with experienced injectors)</li>
+                    </ul>
+                    <p className="text-white/35 text-xs mt-4 font-light">
+                      These risks are significantly reduced when the procedure is performed by experienced, qualified doctors. At CosmeDocs, all thread lifts are doctor-led.
+                    </p>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
+              {/* Why CosmeDocs */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ul className="space-y-3">
+                    {[
+                      "Doctor-led — all thread lifts by GMC-registered doctors",
+                      "Harley Street, London — established 2007",
+                      "Over 1 million treatments performed",
+                      "Premium PDO threads from leading manufacturers",
+                      "Combination approach — threads, fillers, and skin treatments",
+                      "Our aesthetics is invisible art"
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </section>
+
+              {/* FAQs */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <Accordion type="single" collapsible className="space-y-3">
+                    {faqs.map((faq, index) => (
+                      <AccordionItem
+                        key={index}
+                        value={`item-${index}`}
+                        className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5"
+                      >
+                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-white/40 text-sm font-light pb-4">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+              </section>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <p className="text-gray-300 mb-6">
-              *Thread face lift price includes consultation fee when proceeding same day. 
-              Contact us for detailed thread lift cost UK information and threading face lift pricing options.
-            </p>
-            <Button 
-              onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-              className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
-            >
-              Book Your Consultation
-            </Button>
-          </motion.div>
+            {/* RIGHT — Sticky Sidebar */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-24">
+                <PDOThreadsSidebar />
+              </div>
+            </aside>
+          </div>
         </div>
-      </section>
 
-
-      {/* Why Choose Cosmedocs */}
-      <section className="py-20 bg-black">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Award className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-              <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-              <p className="text-gray-300">
-                <a 
-                  href="https://www.harleystreetinstitute.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-purple-300 hover:text-purple-200 underline"
-                >
-                  Harley Street Institute
-                </a> trainers
+        {/* ═══════════════════════════════════════════
+            FULL-WIDTH CTA
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl font-light mb-4 text-white">
+                Considering a Thread <span className="text-[#C9A050]">Lift?</span>
+              </h2>
+              <p className="text-white/60 mb-8 font-light">
+                A consultation with our doctors will assess your skin laxity and recommend whether threads, fillers, or a combination approach is right for you.
               </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="text-purple-600" size={24} />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                    Book Consultation
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    Speak to a Doctor
+                  </Button>
+                </Link>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-              <p className="text-gray-300">Premium FDA-approved PDO threads only</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <MapPin className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
-              <p className="text-gray-300">Harley Street, Central London</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Shield className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Safety</h3>
-              <p className="text-gray-300">CQC registered clinic with highest standards</p>
             </motion.div>
           </div>
+        </section>
+
+        {/* Mobile Sidebar */}
+        <section className="lg:hidden py-12 px-4 bg-black">
+          <PDOThreadsSidebar />
+        </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h2>PDO Thread Lift London — Non-Surgical Face Lift at Harley Street</h2>
+          <p>
+            CosmeDocs offers doctor-led PDO thread lift treatments for non-surgical facial lifting and tightening at our Harley Street clinic in London. PDO threads, also known as polydioxanone threads, are medical-grade dissolvable sutures that physically lift sagging tissue whilst stimulating natural collagen production. Our GMC-registered doctors use premium cog threads and mono threads for jawline lifting, mid-face rejuvenation, and neck tightening. Over 1 million treatments performed since 2007.
+          </p>
+          <h3>How PDO Thread Lifts Work</h3>
+          <p>
+            PDO thread lift treatments use dissolvable medical threads inserted beneath the skin to reposition sagging tissue and stimulate collagen. Cog threads have barbs that grip tissue for immediate mechanical lifting, while mono threads stimulate collagen for skin tightening and texture improvement. Threads dissolve over 6–9 months but collagen remodelling continues for 12–24 months. PDO thread lift before and after results show visible lifting of jowls, jawline definition, and mid-face rejuvenation.
+          </p>
+          <h3>PDO Thread Lift Suitability and Safety</h3>
+          <p>
+            PDO threads are suitable for patients aged 30–65 with mild to moderate skin laxity. Thread face lift procedures are performed under local anaesthetic with minimal downtime. Recovery typically takes 3–7 days. PDO threads can be combined with dermal fillers, Profhilo, and Botox for comprehensive facial rejuvenation — known as an HA Makeover. Thread lift cost starts from £350 for mono threads and £850 for cog threads. Our aesthetics is invisible art — bold, natural, always your way.
+          </p>
         </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-accent">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Common questions about PDO thread face lift treatments
-            </p>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqData.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-medium hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20">
-        <div className="page-container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
-          >
-            <h2 className="text-3xl font-bold mb-4">Ready for Your Thread Face Lift Transformation?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Book your consultation with our expert cosmetic doctors and discover how PDO threading 
-              can enhance your natural beauty with subtle, long-lasting thread lift results. See our 
-              impressive thread lifts before and after gallery and join thousands of satisfied clients.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-              >
-                Book Free Consultation
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={() => window.open("tel:0333 0551 503")} 
-                className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
-              >
-                Call 0333 0551 503
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Enhanced Hidden SEO Content */}
-      <div className="sr-only" aria-hidden="true">
-        <h2>Comprehensive PDO Thread Lift London Information</h2>
-        
-        <section>
-          <h3>Understanding Thread Face Lift Costs and Pricing</h3>
-          <p>
-            Our PDO thread lift London clinic provides comprehensive facial threading lift services with transparent 
-            thread face lift cost information. The thread lift cost UK varies based on treatment areas and the type of 
-            threads for face used, with our thread face lift price reflecting the quality of premium PDO threads and 
-            expert technique. Face lift threading cost typically ranges from £850-£2,500 depending on the extent of 
-            thread lifting required. When comparing thread lift cost against traditional surgical facelifts, patients 
-            find excellent value in this minimally invasive alternative.
-          </p>
-        </section>
-
-        <section>
-          <h3>Thread Lift Results Timeline and Expectations</h3>
-          <p>
-            Patients seeking face lift by threading appreciate our detailed before and after thread face lift 
-            documentation, including specialized before and after PDO thread lift eyes results showcasing eye area 
-            rejuvenation. The face threading before and after images demonstrate natural threadlift outcomes achievable 
-            through expert PDO thread before and after treatment planning. Results at 2 weeks after thread lift show 
-            initial improvements, whilst thread lift after 3 months reveals the full transformation as collagen production 
-            reaches its peak. Our extensive pdo threads before and after gallery features real patient results including 
-            mono threads before and after comparisons and pdo mono threads before and after transformations.
-          </p>
-        </section>
-
-        <section>
-          <h3>Specialized Thread Lift Treatments Available</h3>
-          <p>
-            Whether interested in cheek lift with threads for mid-face enhancement, comprehensive threads face lift 
-            procedures for full facial rejuvenation, or targeted facial threads facelift treatments addressing specific 
-            concerns, our London clinic offers personalized threading face lift solutions. We specialize in various 
-            thread lifts including face thread lift for overall rejuvenation, facial threading lift for subtle improvements, 
-            and facial thread lift procedures using premium PDO lifting threads. Each threads face treatment is customized 
-            based on individual anatomy and aesthetic goals.
-          </p>
-        </section>
-
-        <section>
-          <h3>PDO Threading Technology and Thread Types</h3>
-          <p>
-            What are PDO threads and how do they work? PDO threading utilizes polydioxanone threads in face tissue to 
-            create immediate lift whilst stimulating collagen threads before and after production. Our pdo threads lift 
-            before and after results showcase the effectiveness of different thread types. Face threads before and after 
-            comparisons demonstrate improvements from mono smooth threads, whilst pdo threads before after images featuring 
-            barbed threads show dramatic lifting effects. The threads face lift technique combines immediate mechanical 
-            lift with long-term collagen stimulation for natural, lasting results.
-          </p>
-        </section>
-
-        <section>
-          <h3>Face Threading Lift vs Traditional Facelift Surgery</h3>
-          <p>
-            Face lift threading offers numerous advantages over surgical alternatives. The face lift using threads 
-            technique provides natural-looking thread lift before and after results without general anaesthesia, surgical 
-            incisions, or extended downtime. Thread face lift before after images consistently show subtle yet significant 
-            improvements that enhance rather than change facial features. The facial threading procedure allows patients 
-            to return to normal activities within days, making thread lifts before and after transformations achievable 
-            even for those with busy lifestyles.
-          </p>
-        </section>
-
-        <section>
-          <h3>London PDO Thread Lift Expertise</h3>
-          <p>
-            Our pdo threads london clinic specializes in advanced facial threads techniques, offering thread lift london 
-            services that combine medical expertise with artistic vision. Every pdo thread lift london treatment is 
-            performed by experienced practitioners who understand facial anatomy and aesthetic principles. We provide 
-            comprehensive consultations discussing thread face lift cost, expected outcomes, and showing relevant 
-            pdo thread lift before and after examples to help patients make informed decisions about their thread facelift journey.
-          </p>
-        </section>
       </div>
-
-      <PopularTreatments />
-    </article>
+    </>
   );
 }
+
+export default ThreadFaceLift;
