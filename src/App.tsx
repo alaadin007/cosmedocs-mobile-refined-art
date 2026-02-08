@@ -166,6 +166,7 @@ const ClinicNameConfusion = lazy(() => import("./pages/blog/ClinicNameConfusion"
 const TearTroughFillerResultsExplained = lazy(() => import("./pages/blog/TearTroughFillerResultsExplained"));
 const JawFillerResultsExplained = lazy(() => import("./pages/blog/JawFillerResultsExplained"));
 const ChinFillerResultsExplained = lazy(() => import("./pages/blog/ChinFillerResultsExplained"));
+const LipFillerResultsExplained = lazy(() => import("./pages/blog/LipFillerResultsExplained"));
 const BotoxFAQs = lazy(() => import("./pages/BotoxFAQs"));
 const UltimateBotoxGuide = lazy(() => import("./pages/UltimateBotoxGuide"));
 const Blepharoplasty = lazy(() => import("./pages/Blepharoplasty"));
@@ -654,6 +655,8 @@ const App = () => {
                           <Route path="/blog/jaw-filler-results-explained/" element={<JawFillerResultsExplained />} />
                           <Route path="/blog/chin-filler-results-explained" element={<ChinFillerResultsExplained />} />
                           <Route path="/blog/chin-filler-results-explained/" element={<ChinFillerResultsExplained />} />
+                          <Route path="/blog/lip-filler-results-explained" element={<LipFillerResultsExplained />} />
+                          <Route path="/blog/lip-filler-results-explained/" element={<LipFillerResultsExplained />} />
 
                           <Route path="/journal" element={<BlogHome />} />
                           <Route path="/blog" element={<BlogHome />} />
