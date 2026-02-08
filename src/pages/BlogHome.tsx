@@ -1,188 +1,184 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Calendar, ArrowRight, Clock, TrendingUp, BookOpen, Microscope, Award, GraduationCap, Image as ImageIcon, BarChart3, ChevronDown, Syringe, Sparkles, BeakerIcon } from "lucide-react";
-import { useState } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { ArrowRight } from "lucide-react";
+import Home2Header from "@/components/home2/Home2Header";
+import Footer from "@/components/Footer";
+
+interface ArticleLink {
+  title: string;
+  category: string;
+  path: string;
+  excerpt?: string;
+}
 
 const BlogHome = () => {
-  const [selectedPoll, setSelectedPoll] = useState<string | null>(null);
-  
   const seoData = generateSEOMetadata(
-    "CosmeDocs Journal | Aesthetic Medicine Education & Research",
-    "Explore cutting-edge aesthetic medicine research, clinical education, treatment guides, and before & after transformations. Professional insights from UK's leading aesthetic practitioners.",
-    "/journal"
+    "CosmeDocs Blog | Aesthetic Medicine Insights & Skin Science",
+    "Expert articles on aesthetic medicine, skin science, treatment guides and patient education from Harley Street doctors. Evidence-based insights since 2007.",
+    "/blog"
   );
 
   const featuredArticle = {
-    title: "In layers, not lines. In planes, not pages.",
+    title: "In Layers, Not Lines. In Planes, Not Pages.",
     subtitle: "The CosmeDocs way of teaching aesthetics.",
-    description: "At CosmeDocs, we believe aesthetic medicine must be learned not through dissection, but through depth. For too long, anatomy has been taught as if every injector were a surgeon — memorising vessels, nerves, and muscles they will never see. But aesthetic practitioners work differently. Our canvas is alive. We sculpt, not cut. We restore, not remove.",
+    excerpt:
+      "At CosmeDocs, we believe aesthetic medicine must be learned not through dissection, but through depth. Our canvas is alive. We sculpt, not cut. We restore, not remove.",
     category: "AESTHETIC PHILOSOPHY",
-    readTime: "3 min read",
-    date: "6 November 2025",
-    slug: "/blog/beauty-ethnic-neutrality",
-    image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png"
+    path: "/blog/beauty-ethnic-neutrality",
+    image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png",
   };
 
-  const researchPublications = [
+  const headlineArticles: ArticleLink[] = [
     {
-      title: "Underarms: A Comprehensive Review for Aesthetic Practitioners",
-      category: "RESEARCH",
-      time: "3 hours ago",
-      color: "bg-blue-500"
+      title: "Vitamin C & Ferulic Acid: The Science Behind Radiant Skin",
+      category: "SKIN SCIENCE",
+      path: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
     },
     {
-      title: "Frown Area Botox Dosing: Evidence-Based Protocols and Best Practices",
-      category: "RESEARCH",
-      time: "5 hours ago",
-      color: "bg-blue-500"
+      title: "Lazy Skin Syndrome: The Hidden Cost of Moisturiser Dependency",
+      category: "COSMETALK",
+      path: "/cosmetalk/lazy-skin-syndrome",
     },
     {
-      title: "Aesthetics is Easy: Breaking Down the Myths and Reality",
-      category: "INSIGHT",
-      time: "6 hours ago",
-      color: "bg-purple-500"
-    }
-  ];
-
-  const latestNews = [
-    {
-      title: "Profhilo and Polynucleotides: How to Elevate Your Practice with Skin Boosters",
-      description: "Discover how advanced skin boosters like Profhilo and Polynucleotides transform skin rejuvenation protocols.",
+      title: "Inside the Mind of an Aesthetic Doctor",
       category: "CLINICAL",
-      date: "22 October, 2025",
-      image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop",
-      slug: "/cosmetalk/flawless-skin"
+      path: "/inside-mind-aesthetic-doctor-blog",
     },
     {
-      title: "Botulinum Toxin for Calf Compartment Syndrome: A Novel Approach",
-      description: "Exploring the innovative use of botulinum toxin in treating calf compartment syndrome beyond aesthetic applications.",
-      category: "RESEARCH",
-      date: "21 October, 2025",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
-      slug: "/botox-calf-reduction"
+      title: "Aesthetic Maintenance: Understanding Long-Term Costs",
+      category: "PATIENT GUIDE",
+      path: "/aesthetic-maintenance-cost-blog",
     },
-    {
-      title: "Manual Dexterity Does Not Predict Early Practice Outcomes in Aesthetic Medicine",
-      description: "Retrospective study reveals surprising findings about the role of manual skills in early aesthetic practice success.",
-      category: "JOURNAL",
-      date: "21 October, 2025",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
-      slug: "/inside-mind-aesthetic-doctor-blog"
+  ];
+
+  const skinScienceArticles = {
+    featured: {
+      title: "How to Get Flawless Skin: Clinical Dermatology Tips",
+      excerpt:
+        "Evidence-based skincare strategies combining professional treatments with daily routines for lasting results.",
+      category: "SKIN SCIENCE",
+      path: "/cosmetalk/flawless-skin",
     },
-    {
-      title: "Fellowship vs Masters in Aesthetic Medicine: The Complete Guide",
-      description: "Comprehensive comparison of training pathways to help you make an informed decision about your aesthetic medicine career.",
+    headlines: [
+      {
+        title: "Smoker's Lines in Women: Prevention & Treatment Options",
+        path: "/cosmetalk/smokers-lines-women",
+      },
+      {
+        title: "Vitamin C & Ferulic Acid Benefits for Skin Health",
+        path: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
+      },
+      {
+        title: "Lazy Skin Syndrome: Breaking Moisturiser Dependency",
+        path: "/cosmetalk/lazy-skin-syndrome",
+      },
+      {
+        title: "How to Get Rid of Bruises Quickly After Treatment",
+        path: "/blog/how-to-get-rid-of-bruises-quickly",
+      },
+    ],
+    secondary: {
+      title: "Skin Tags: What They Are & How to Remove Them Safely",
+      excerpt:
+        "Professional guidance on identifying and safely removing skin tags with clinical methods.",
+      category: "DERMATOLOGY",
+      path: "/blog/skin-tags-and-skin-tag-removal",
+    },
+  };
+
+  const treatmentArticles = {
+    featured: {
+      title: "Non-Surgical Nose Job: The Complete Patient Guide",
+      excerpt:
+        "Everything you need to know about reshaping your nose without surgery — from dermal filler to PCL threads.",
+      category: "TREATMENT GUIDE",
+      path: "/non-surgical-nose-job-blog",
+    },
+    headlines: [
+      {
+        title: "PDO Thread Face Lift: What You Need to Know",
+        path: "/pdo-threads-blog",
+      },
+      {
+        title: "Lip Wrinkles: Causes, Myths & Treatment Options",
+        path: "/blog/lip-wrinkles-treatments",
+      },
+      {
+        title: "Long-Term Aesthetic Care: Planning Your Journey",
+        path: "/long-term-aesthetic-care-blog",
+      },
+      {
+        title: "Forehead Wrinkles: Myths, Tips & What Actually Works",
+        path: "/blog/forehead-wrinkles-myths-tips",
+      },
+    ],
+    secondary: {
+      title: "The Ultimate Botox Guide: From Science to Results",
+      excerpt:
+        "A comprehensive, evidence-based guide to botulinum toxin treatments — what it does, how it works, and what to expect.",
       category: "EDUCATION",
-      date: "20 October, 2025",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop",
-      slug: "/cosmetalk"
-    }
-  ];
+      path: "/ultimate-botox-guide",
+    },
+  };
 
-  const treatmentCategories = [
-    {
-      name: "Foundation Treatments",
-      icon: Sparkles,
-      treatments: [
-        { name: "Botox", slug: "/botox-london" },
-        { name: "Dermal Fillers", slug: "/dermal-fillers" },
-        { name: "Lip Fillers", slug: "/lip-fillers" },
-        { name: "Skin Boosters", slug: "/treatments" }
-      ]
+  const clinicalArticles = {
+    featured: {
+      title: "Inside the Mind of an Aesthetic Doctor",
+      excerpt:
+        "What really drives clinical decision-making in aesthetic medicine? A candid look at the art behind the science.",
+      category: "CLINICAL INSIGHT",
+      path: "/inside-mind-aesthetic-doctor-blog",
     },
-    {
-      name: "Advanced Procedures",
-      icon: BeakerIcon,
-      treatments: [
-        { name: "PDO Thread Lift", slug: "/thread-face-lift" },
-        { name: "Non-Surgical Nose Job", slug: "/non-surgical-nose-job" },
-        { name: "Jawline Contouring", slug: "/jawline-filler" },
-        { name: "Fat Dissolving", slug: "/fat-dissolve" }
-      ]
+    headlines: [
+      {
+        title: "Orofacial & Neck Pain: Breaking the Tension Cycle",
+        path: "/cosmetalk/orofacial-neck-pain-cycle",
+      },
+      {
+        title: "Aesthetic Maintenance Costs: An Honest Breakdown",
+        path: "/aesthetic-maintenance-cost-blog",
+      },
+      {
+        title: "Beauty & Ethnic Neutrality in Aesthetic Medicine",
+        path: "/blog/beauty-ethnic-neutrality",
+      },
+      {
+        title: "The Eight-Point Facelift Technique Explained",
+        path: "/eight-point-facelift",
+      },
+    ],
+    secondary: {
+      title: "London Tweakments: The Rise of Natural Aesthetics",
+      excerpt:
+        "How subtle, considered treatments are redefining beauty standards in the capital.",
+      category: "TREND",
+      path: "/london-tweakments-natural-aesthetics",
     },
-    {
-      name: "Specialist Treatments",
-      icon: Award,
-      treatments: [
-        { name: "Masseter Botox", slug: "/masseter-botox" },
-        { name: "Nefertiti Lift", slug: "/nefertiti-botox-face-jaw-lift" },
-        { name: "Tear Trough Filler", slug: "/tear-trough-filler" },
-        { name: "Temple Fillers", slug: "/temple-filler-london" }
-      ]
-    }
-  ];
+  };
 
-  const polls = [
-    {
-      id: "treatment-interest",
-      question: "Which treatment are you most interested in learning about?",
-      options: [
-        { label: "Botox Techniques", votes: 45 },
-        { label: "Dermal Filler Artistry", votes: 38 },
-        { label: "Thread Lifts", votes: 25 },
-        { label: "Skin Boosters", votes: 32 }
-      ]
-    },
-    {
-      id: "content-preference",
-      question: "What content would you like to see more of?",
-      options: [
-        { label: "Clinical Research", votes: 52 },
-        { label: "Before & After Cases", votes: 61 },
-        { label: "Treatment Guides", votes: 43 },
-        { label: "Patient Education", votes: 29 }
-      ]
-    }
-  ];
-
-  const beforeAfterGalleries = [
-    {
-      title: "Botox Transformations",
-      description: "Natural, subtle results across forehead, frown lines, and crow's feet",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop",
-      slug: "/botox-cost-london",
-      count: "50+ cases"
-    },
-    {
-      title: "Lip Filler Gallery",
-      description: "From subtle enhancement to full, natural-looking lips",
-      image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=300&fit=crop",
-      slug: "/lip-fillers",
-      count: "100+ cases"
-    },
-    {
-      title: "Non-Surgical Rhinoplasty",
-      description: "Reshaping and refining without surgery",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=300&fit=crop",
-      slug: "/non-surgical-nose-job",
-      count: "30+ cases"
-    },
-    {
-      title: "Complete Face Gallery",
-      description: "Full facial rejuvenation and harmonisation results",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop",
-      slug: "/before-after-gallery",
-      count: "200+ cases"
-    }
+  const sidebarQuickLinks = [
+    { label: "Botox Treatments", path: "/treatments/botox/" },
+    { label: "Dermal Fillers", path: "/treatments/dermal-fillers/" },
+    { label: "Lip Fillers", path: "/treatments/lip-fillers/" },
+    { label: "Non-Surgical Nose Job", path: "/treatments/nose-filler/" },
+    { label: "Before & After Gallery", path: "/before-after/" },
+    { label: "Book Consultation", path: "https://med.as.me/harleystreet" },
   ];
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "CosmeDocs Journal - Aesthetic Medicine Education",
-    "description": "Cutting-edge aesthetic medicine research, clinical education, and treatment insights",
-    "url": "https://www.cosmedocs.co.uk/journal"
+    name: "CosmeDocs Blog — Aesthetic Medicine Insights",
+    description:
+      "Expert articles on aesthetic medicine, skin science, and patient education from Harley Street doctors.",
+    url: "https://cosmedocs.co.uk/blog",
+    publisher: {
+      "@type": "MedicalBusiness",
+      name: "CosmeDocs",
+      url: "https://cosmedocs.co.uk/",
+    },
   };
 
   return (
@@ -190,402 +186,332 @@ const BlogHome = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="aesthetic medicine research, cosmetic treatment education, clinical aesthetics, before after gallery, aesthetic training, botox research, filler techniques, non-surgical procedures" />
-        <link rel="canonical" href={seoData.canonical} />
-        
+        <link rel="canonical" href="https://cosmedocs.co.uk/blog" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content="https://cosmedocs.co.uk/blog" />
         <meta property="og:type" content="website" />
-        
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Hero Header */}
-        <section className="bg-gradient-to-b from-black to-secondary border-b border-border">
-          <div className="container mx-auto px-4 py-12">
+      <div className="min-h-screen bg-black text-white">
+        <Home2Header />
+
+        {/* Masthead */}
+        <section className="border-b border-white/[0.06] pt-28 pb-6 px-4">
+          <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-8"
             >
-              <h1 className="text-5xl font-bold text-foreground mb-3">
-                CosmeDocs <span className="text-purple-400">Journal</span>
+              <h1 className="text-4xl md:text-5xl font-extralight tracking-tight mb-2">
+                Cosme<span className="text-[#C9A050] font-light">Docs</span>{" "}
+                Blog
               </h1>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Aesthetic Medicine Education • Clinical Research • Treatment Innovation
+              <p className="text-white/30 text-sm font-light tracking-wide">
+                Skin Science • Treatment Insights • Clinical Research • Patient
+                Education
               </p>
-              <div className="flex justify-center gap-3 mt-6">
-                <Button asChild variant="default" size="lg">
-                  <Link to="/contact">Book Consultation</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="/before-after-gallery">View Gallery</Link>
-                </Button>
-              </div>
             </motion.div>
           </div>
         </section>
 
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Main Content Area */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Featured Article */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Link to={featuredArticle.slug}>
-                  <Card className="overflow-hidden hover:border-primary transition-colors cursor-pointer">
-                    <div className="relative h-80">
-                      <img 
-                        src={featuredArticle.image}
-                        alt={featuredArticle.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <Badge className="mb-3 bg-purple-500/90 text-white border-0">
-                          {featuredArticle.category}
-                        </Badge>
-                        <h2 className="text-3xl font-bold text-white mb-2">
-                          {featuredArticle.title}
-                        </h2>
-                        <p className="text-gray-200 text-sm italic mb-3">
-                          {featuredArticle.subtitle}
-                        </p>
-                        <div className="flex items-center gap-3 text-gray-300 text-sm">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            {featuredArticle.date}
-                          </span>
-                          <span>•</span>
-                          <span>{featuredArticle.readTime}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
+        {/* ═══════════════════════════════════════════
+            TOP — Featured + Headlines + Sidebar
+        ═══════════════════════════════════════════ */}
+        <section className="max-w-7xl mx-auto px-4 py-10">
+          <div className="grid lg:grid-cols-[1fr_300px_240px] gap-8">
+            {/* Featured Article */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Link to={featuredArticle.path} className="group block">
+                <div className="rounded-xl overflow-hidden border border-white/[0.08] mb-4">
+                  <img
+                    src={featuredArticle.image}
+                    alt={featuredArticle.title}
+                    className="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+                <span className="text-[#C9A050] text-xs font-medium tracking-wider uppercase">
+                  {featuredArticle.category}
+                </span>
+                <h2 className="text-2xl md:text-3xl font-light mt-2 mb-2 group-hover:text-[#C9A050]/80 transition-colors leading-tight">
+                  {featuredArticle.title}
+                </h2>
+                <p className="text-white/40 text-sm font-light italic mb-2">
+                  {featuredArticle.subtitle}
+                </p>
+                <p className="text-white/35 text-sm font-light leading-relaxed">
+                  {featuredArticle.excerpt}
+                </p>
+              </Link>
+            </motion.div>
+
+            {/* Headline Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="space-y-0"
+            >
+              {headlineArticles.map((article, i) => (
+                <Link
+                  key={i}
+                  to={article.path}
+                  className="block py-4 border-b border-white/[0.06] last:border-0 group"
+                >
+                  <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
+                    {article.category}
+                  </span>
+                  <h3 className="text-sm font-medium text-white/80 mt-1 leading-snug group-hover:text-[#C9A050] transition-colors">
+                    {article.title}
+                  </h3>
                 </Link>
-              </motion.div>
-
-              {/* Research & Publications */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1 h-8 bg-primary" />
-                  <h2 className="text-2xl font-bold text-foreground">AESTHETIC RESEARCH & PUBLICATIONS</h2>
-                </div>
-                <div className="grid md:grid-cols-3 gap-4">
-                  {researchPublications.map((pub, index) => (
-                    <Card key={index} className="hover:border-primary transition-colors cursor-pointer">
-                      <CardHeader className="pb-3">
-                        <Badge className={`${pub.color} text-white border-0 w-fit mb-2 text-xs`}>
-                          {pub.category}
-                        </Badge>
-                        <CardTitle className="text-base leading-tight">
-                          {pub.title}
-                        </CardTitle>
-                        <p className="text-xs text-muted-foreground mt-2">{pub.time}</p>
-                      </CardHeader>
-                    </Card>
-                  ))}
-                </div>
-                <Link to="/cosmetalk" className="inline-flex items-center text-primary hover:underline mt-4 text-sm font-medium">
-                  Read Full Story <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </motion.div>
-
-              {/* Latest News */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1 h-8 bg-primary" />
-                  <h2 className="text-2xl font-bold text-foreground">LATEST NEWS</h2>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {latestNews.map((news, index) => (
-                    <Link key={index} to={news.slug}>
-                      <Card className="overflow-hidden hover:border-primary transition-colors cursor-pointer h-full">
-                        <div className="relative h-48">
-                          <img 
-                            src={news.image}
-                            alt={news.title}
-                            className="w-full h-full object-cover"
-                          />
-                          <Badge className="absolute top-3 left-3 text-xs bg-purple-500/90 text-white border-0">
-                            {news.category}
-                          </Badge>
-                        </div>
-                        <CardHeader>
-                          <CardTitle className="text-lg leading-tight mb-2">
-                            {news.title}
-                          </CardTitle>
-                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                            {news.description}
-                          </p>
-                          <p className="text-xs text-muted-foreground">{news.date}</p>
-                        </CardHeader>
-                      </Card>
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Before & After Galleries */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-1 h-8 bg-primary" />
-                    <h2 className="text-2xl font-bold text-foreground">BEFORE & AFTER GALLERIES</h2>
-                  </div>
-                  <Link to="/before-after-gallery">
-                    <Button variant="outline" size="sm">
-                      View All <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
-                </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {beforeAfterGalleries.map((gallery, index) => (
-                    <Link key={index} to={gallery.slug}>
-                      <Card className="overflow-hidden hover:border-primary transition-colors cursor-pointer">
-                        <div className="relative h-48">
-                          <img 
-                            src={gallery.image}
-                            alt={gallery.title}
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                            <ImageIcon className="w-12 h-12 text-white" />
-                          </div>
-                          <Badge className="absolute bottom-3 right-3 bg-black/70 text-white border-0">
-                            {gallery.count}
-                          </Badge>
-                        </div>
-                        <CardHeader className="pb-3">
-                          <CardTitle className="text-base">{gallery.title}</CardTitle>
-                          <p className="text-sm text-muted-foreground">{gallery.description}</p>
-                        </CardHeader>
-                      </Card>
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+              ))}
+            </motion.div>
 
             {/* Sidebar */}
-            <div className="space-y-6">
-              {/* Quick Treatment Links */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <Card className="bg-black border-primary/30">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-white flex items-center gap-2">
-                      <Syringe className="w-5 h-5" />
-                      QUICK TREATMENT LINKS
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    {treatmentCategories.map((category, index) => {
-                      const Icon = category.icon;
-                      return (
-                        <Accordion key={index} type="single" collapsible>
-                          <AccordionItem value={category.name} className="border-border">
-                            <AccordionTrigger className="text-sm font-semibold text-white hover:text-primary">
-                              <span className="flex items-center gap-2">
-                                <Icon className="w-4 h-4" />
-                                {category.name}
-                              </span>
-                            </AccordionTrigger>
-                            <AccordionContent>
-                              <div className="space-y-2 pl-6">
-                                {category.treatments.map((treatment, idx) => (
-                                  <Link 
-                                    key={idx}
-                                    to={treatment.slug}
-                                    className="block text-sm text-gray-300 hover:text-primary transition-colors"
-                                  >
-                                    {treatment.name}
-                                  </Link>
-                                ))}
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-                      );
-                    })}
-                    <Button asChild className="w-full" size="sm">
-                      <Link to="/treatments">View All Treatments</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
+            <motion.aside
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="hidden lg:block space-y-6"
+            >
+              {/* Quick Links */}
+              <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                <h4 className="text-xs font-medium text-white/60 tracking-wider uppercase mb-4">
+                  Quick Links
+                </h4>
+                <div className="space-y-3">
+                  {sidebarQuickLinks.map((link, i) => (
+                    <Link
+                      key={i}
+                      to={link.path}
+                      className="flex items-center gap-2 text-sm text-[#C9A050]/70 hover:text-[#C9A050] transition-colors font-light"
+                    >
+                      <span>{link.label}</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
-              {/* Polls & Surveys */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-white flex items-center gap-2">
-                      <BarChart3 className="w-5 h-5" />
-                      COMMUNITY POLLS
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    {polls.map((poll) => {
-                      const totalVotes = poll.options.reduce((sum, opt) => sum + opt.votes, 0);
-                      return (
-                        <div key={poll.id} className="space-y-3">
-                          <p className="text-sm font-medium text-white">{poll.question}</p>
-                          <div className="space-y-2">
-                            {poll.options.map((option, idx) => {
-                              const percentage = Math.round((option.votes / totalVotes) * 100);
-                              return (
-                                <button
-                                  key={idx}
-                                  onClick={() => setSelectedPoll(poll.id)}
-                                  className="w-full text-left"
-                                >
-                                  <div className="flex justify-between text-xs text-gray-300 mb-1">
-                                    <span>{option.label}</span>
-                                    <span>{percentage}%</span>
-                                  </div>
-                                  <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                                    <div 
-                                      className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300"
-                                      style={{ width: `${percentage}%` }}
-                                    />
-                                  </div>
-                                </button>
-                              );
-                            })}
-                          </div>
-                          <p className="text-xs text-gray-400">{totalVotes} votes</p>
-                        </div>
-                      );
-                    })}
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Newsletter */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <Card className="bg-gradient-to-br from-black to-secondary border-primary/30">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-white">Stay Updated</CardTitle>
-                    <p className="text-sm text-gray-300">
-                      Get the latest research, treatment guides, and aesthetic insights delivered to your inbox.
-                    </p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      <input 
-                        type="email" 
-                        placeholder="Your email address" 
-                        className="w-full px-4 py-2 text-sm rounded-md bg-background border border-border text-foreground placeholder-muted-foreground"
-                      />
-                      <Button className="w-full">
-                        Subscribe
-                      </Button>
-                      <p className="text-xs text-gray-400 text-center">
-                        Join 5,000+ aesthetic professionals
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Resources */}
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="text-lg">Resources</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <Link to="/cosmetalk" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <BookOpen className="w-4 h-4" />
-                    All Articles
-                  </Link>
-                  <Link to="/treatments" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <GraduationCap className="w-4 h-4" />
-                    Treatment Guides
-                  </Link>
-                  <Link to="/before-after-gallery" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <ImageIcon className="w-4 h-4" />
-                    Photo Gallery
-                  </Link>
-                  <Link to="/about" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Award className="w-4 h-4" />
-                    Our Team
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
+              {/* Philosophy Sidebar */}
+              <div className="border-t border-white/[0.06] pt-5">
+                <span className="text-[#C9A050] text-[10px] tracking-wider uppercase font-medium">
+                  Our Philosophy
+                </span>
+                <p className="text-white/50 text-sm font-light mt-2 leading-relaxed italic">
+                  "Our aesthetics is invisible art — bold, natural, always your
+                  way."
+                </p>
+                <p className="text-white/25 text-xs font-light mt-2">
+                  CosmeDocs • Since 2007
+                </p>
+              </div>
+            </motion.aside>
           </div>
-        </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            CATEGORY SECTION: Skin Science
+        ═══════════════════════════════════════════ */}
+        <CategorySection
+          title="Skin Science"
+          data={skinScienceArticles}
+          delay={0}
+        />
+
+        {/* ═══════════════════════════════════════════
+            CATEGORY SECTION: Treatment Insights
+        ═══════════════════════════════════════════ */}
+        <CategorySection
+          title="Treatment Insights"
+          data={treatmentArticles}
+          delay={0.1}
+        />
+
+        {/* ═══════════════════════════════════════════
+            CATEGORY SECTION: Clinical & Research
+        ═══════════════════════════════════════════ */}
+        <CategorySection
+          title="Clinical & Research"
+          data={clinicalArticles}
+          delay={0.2}
+        />
+
+        {/* ═══════════════════════════════════════════
+            CTA
+        ═══════════════════════════════════════════ */}
+        <section className="py-16 px-4 border-t border-white/[0.06]">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-extralight mb-4">
+                Have a Question About a{" "}
+                <span className="text-[#C9A050] font-light">Treatment?</span>
+              </h2>
+              <p className="text-white/40 text-sm font-light mb-8">
+                Our Harley Street doctors are happy to discuss your concerns
+                during a consultation.
+              </p>
+              <a
+                href="https://med.as.me/harleystreet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#C9A050] hover:bg-[#B8913F] text-black px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
+              >
+                Book Consultation
+              </a>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Comprehensive Aesthetic Medicine Education</h2>
+        <div
+          className="sr-only"
+          aria-hidden="true"
+          role="complementary"
+          aria-label="Extended blog information for search engines"
+        >
+          <h2>CosmeDocs Blog: Expert Aesthetic Medicine Articles</h2>
           <p>
-            CosmeDocs Journal serves as the premier educational resource for aesthetic medicine practitioners, 
-            students, and patients seeking evidence-based information on cosmetic treatments. Our platform features 
-            peer-reviewed research publications covering advanced injection techniques, facial anatomy for injectors, 
-            patient safety protocols, and innovative treatment methodologies. Explore detailed before and after 
-            galleries showcasing real patient transformations across botulinum toxin treatments, dermal filler 
-            applications, thread lifting procedures, and comprehensive facial rejuvenation protocols. Our research 
-            section includes clinical studies on optimal dosing strategies for botox in various facial zones, 
-            filler placement techniques for natural-looking results, complication management, and long-term 
-            treatment outcomes. Educational content covers foundation treatments including anti-wrinkle injections 
-            for forehead lines, frown lines, crow's feet, and bunny lines, plus advanced procedures like 
-            non-surgical rhinoplasty, jawline contouring, chin augmentation, tear trough correction, and temple 
-            volumisation. Learn about cutting-edge skin booster technologies including Profhilo, polynucleotides, 
-            and hyaluronic acid-based treatments that stimulate natural collagen production. Our clinical insights 
-            section provides practical guidance on patient consultation techniques, treatment planning strategies, 
-            managing patient expectations, and building successful aesthetic practices. Browse comprehensive 
-            treatment galleries organised by procedure type, showing subtle enhancement to dramatic transformation 
-            results, all achieved through expert injection techniques and artistic precision. Stay informed about 
-            latest industry developments, regulatory updates, product innovations, and emerging treatment trends 
-            shaping the future of aesthetic medicine. Access detailed anatomical guides specifically designed for 
-            aesthetic injectors, covering facial danger zones, vascular mapping, nerve pathways, and optimal 
-            injection depths for safe and effective treatments. Discover evidence-based protocols for combination 
-            treatments that address multiple signs of ageing simultaneously, including the strategic use of 
-            neurotoxins, dermal fillers, and biostimulatory products. Learn from experienced practitioners about 
-            managing complications, recognising adverse events early, and implementing appropriate intervention 
-            strategies. Our content emphasises natural-looking results that enhance rather than change facial 
-            features, maintaining individual character while addressing aesthetic concerns. Explore patient education 
-            resources explaining treatment processes, expected outcomes, recovery timelines, and maintenance 
-            requirements for optimal long-term results. Join our community of aesthetic professionals dedicated to 
-            advancing clinical excellence, patient safety, and ethical practice standards in cosmetic medicine.
+            The CosmeDocs Blog features expert articles on aesthetic medicine,
+            skin science, and patient education from Harley Street
+            doctors. Topics include botox treatment guides, dermal filler
+            insights, skincare science, non-surgical procedures, clinical
+            research and evidence-based aesthetic practice. Our doctors share
+            their clinical expertise covering anti-wrinkle treatments, lip
+            fillers, non-surgical rhinoplasty, thread lifts, skin boosters and
+            facial rejuvenation. Patient education articles explain treatment
+            processes, expected outcomes, recovery timelines and aftercare
+            guidance. Our aesthetics is invisible art — bold, natural, always
+            your way.
           </p>
         </div>
+
+        <Footer />
       </div>
     </>
   );
 };
+
+/* ─────────────────────────────────────────────
+   CATEGORY SECTION COMPONENT
+   Reusable magazine-style category block
+   ───────────────────────────────────────────── */
+interface CategoryData {
+  featured: {
+    title: string;
+    excerpt: string;
+    category: string;
+    path: string;
+  };
+  headlines: { title: string; path: string }[];
+  secondary: {
+    title: string;
+    excerpt: string;
+    category: string;
+    path: string;
+  };
+}
+
+const CategorySection = ({
+  title,
+  data,
+  delay = 0,
+}: {
+  title: string;
+  data: CategoryData;
+  delay?: number;
+}) => (
+  <section className="border-t border-white/[0.06]">
+    <div className="max-w-7xl mx-auto px-4 py-10">
+      {/* Category Header */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay }}
+        className="flex items-center gap-3 mb-8"
+      >
+        <h2 className="text-xl font-light text-white/80">{title}</h2>
+        <ArrowRight className="w-4 h-4 text-white/30" />
+      </motion.div>
+
+      <div className="grid lg:grid-cols-[1fr_280px_1fr] gap-8">
+        {/* Featured (left) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay }}
+        >
+          <Link to={data.featured.path} className="group block">
+            <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
+              {data.featured.category}
+            </span>
+            <h3 className="text-xl md:text-2xl font-light mt-2 mb-3 group-hover:text-[#C9A050]/80 transition-colors leading-tight">
+              {data.featured.title}
+            </h3>
+            <p className="text-white/35 text-sm font-light leading-relaxed">
+              {data.featured.excerpt}
+            </p>
+          </Link>
+        </motion.div>
+
+        {/* Headlines (middle) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: delay + 0.1 }}
+          className="space-y-0"
+        >
+          {data.headlines.map((article, i) => (
+            <Link
+              key={i}
+              to={article.path}
+              className="block py-3 border-b border-white/[0.06] last:border-0 group"
+            >
+              <h4 className="text-sm font-medium text-white/70 leading-snug group-hover:text-[#C9A050] transition-colors">
+                {article.title}
+              </h4>
+            </Link>
+          ))}
+        </motion.div>
+
+        {/* Secondary (right) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: delay + 0.2 }}
+        >
+          <Link to={data.secondary.path} className="group block">
+            <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
+              {data.secondary.category}
+            </span>
+            <h3 className="text-xl font-light mt-2 mb-3 group-hover:text-[#C9A050]/80 transition-colors leading-tight">
+              {data.secondary.title}
+            </h3>
+            <p className="text-white/35 text-sm font-light leading-relaxed">
+              {data.secondary.excerpt}
+            </p>
+          </Link>
+        </motion.div>
+      </div>
+    </div>
+  </section>
+);
 
 export default BlogHome;
