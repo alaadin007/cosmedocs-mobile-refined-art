@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
 import BlogSidebar from '@/components/blog/BlogSidebar';
-import chinFillerHero from '@/assets/blog-chin-filler-hero.jpg';
+import chinFillerHero from '@/assets/blog-cover-chin-filler.jpg';
 import chinAugmentationDiagram from '@/assets/blog-chin-augmentation-diagram.png';
 import BlogAuthorEEAT from '@/components/blog/BlogAuthorEEAT';
+import memeChessKing from '@/assets/meme-chess-king.jpg';
 
 const ChinFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
@@ -256,6 +257,21 @@ const ChinFillerResultsExplained = () => {
                       Anatomical illustration showing chin augmentation placement. The filler is deposited 
                       periostally along the mentalis region to improve forward projection and profile balance 
                       — not to create width or lateral extension.
+                    </figcaption>
+                  </figure>
+                </motion.section>
+
+                {/* Meme — Chess King */}
+                <motion.section {...fadeIn}>
+                  <figure className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                    <img
+                      src={memeChessKing}
+                      alt="A single gold chess king standing alone on an empty board"
+                      className="w-full h-auto block"
+                      loading="lazy"
+                    />
+                    <figcaption className="px-5 py-3 border-t border-white/[0.06] text-white/40 text-xs leading-relaxed font-light italic">
+                      The chin: one piece, strategically placed, changes the entire board.
                     </figcaption>
                   </figure>
                 </motion.section>
