@@ -222,15 +222,17 @@ const BeforeAfterBotox = () => {
                   viewport={{ once: true }}
                   className="break-inside-avoid"
                 >
-                  <div className="group relative rounded-xl overflow-hidden">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading="lazy"
-                      className="w-full h-auto block rounded-xl group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-16 pb-5 px-5 rounded-b-xl">
-                      <p className="text-white/70 text-sm leading-relaxed font-light">
+                  <div className="group rounded-xl overflow-hidden bg-white/[0.03] border border-white/[0.08]">
+                    <div className="overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                      />
+                    </div>
+                    <div className="px-5 py-3 border-t border-white/[0.06]">
+                      <p className="text-white/40 text-xs leading-relaxed font-light">
                         {image.caption}
                       </p>
                     </div>
