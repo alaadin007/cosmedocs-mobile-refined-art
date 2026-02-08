@@ -326,15 +326,21 @@ const App = () => {
                           <Route path="/treatments/oily-skin-botox" element={<OilySkinBotox />} />
                           <Route path="/treatments/oily-skin-botox/" element={<OilySkinBotox />} />
                           
-                          {/* Medical Botox standalone pages (kept active) */}
-                          <Route path="/treatments/migraine-botox" element={<MigraineBotox />} />
-                          <Route path="/treatments/migraine-botox/" element={<MigraineBotox />} />
-                          <Route path="/treatments/hyperhidrosis-botox" element={<ExcessiveSweatBotox />} />
-                          <Route path="/treatments/hyperhidrosis-botox/" element={<ExcessiveSweatBotox />} />
+                          {/* Medical Botox standalone pages - redirect old URLs to new /medical/ children */}
+                          <Route path="/treatments/migraine-botox" element={<Navigate to="/medical/botox-for-migraines/" replace />} />
+                          <Route path="/treatments/migraine-botox/" element={<Navigate to="/medical/botox-for-migraines/" replace />} />
+                          <Route path="/treatments/hyperhidrosis-botox" element={<Navigate to="/medical/botox-for-hyperhidrosis/" replace />} />
+                          <Route path="/treatments/hyperhidrosis-botox/" element={<Navigate to="/medical/botox-for-hyperhidrosis/" replace />} />
                           
-                          {/* Medical Botox Sub-hub */}
-                          <Route path="/treatments/botox/medical" element={<MedicalBotoxHub />} />
-                          <Route path="/treatments/botox/medical/" element={<MedicalBotoxHub />} />
+                          {/* Medical Hub child pages */}
+                          <Route path="/medical/botox-for-migraines" element={<MigraineBotox />} />
+                          <Route path="/medical/botox-for-migraines/" element={<MigraineBotox />} />
+                          <Route path="/medical/botox-for-hyperhidrosis" element={<ExcessiveSweatBotox />} />
+                          <Route path="/medical/botox-for-hyperhidrosis/" element={<ExcessiveSweatBotox />} />
+                          
+                          {/* Medical Botox Sub-hub - redirect to /medical/ */}
+                          <Route path="/treatments/botox/medical" element={<Navigate to="/medical/" replace />} />
+                          <Route path="/treatments/botox/medical/" element={<Navigate to="/medical/" replace />} />
                           
                           {/* Dermal Fillers Hub & Sub-treatments */}
                           <Route path="/treatments/dermal-fillers" element={<DermalFillers />} />
@@ -489,9 +495,9 @@ const App = () => {
                           <Route path="/nefertiti-lift" element={<Navigate to="/treatments/nefertiti-lift/" replace />} />
                           <Route path="/trap-botox" element={<Navigate to="/treatments/trap-botox/" replace />} />
                           <Route path="/botox-calf-reduction" element={<Navigate to="/treatments/calf-slimming-botox/" replace />} />
-                          <Route path="/migraine-botox" element={<Navigate to="/treatments/migraine-botox/" replace />} />
+                          <Route path="/migraine-botox" element={<Navigate to="/medical/botox-for-migraines/" replace />} />
                           <Route path="/bruxism-botox" element={<Navigate to="/treatments/bruxism-botox/" replace />} />
-                          <Route path="/excessive-sweat-botox" element={<Navigate to="/treatments/hyperhidrosis-botox/" replace />} />
+                          <Route path="/excessive-sweat-botox" element={<Navigate to="/medical/botox-for-hyperhidrosis/" replace />} />
                           <Route path="/oily-skin-botox" element={<Navigate to="/treatments/oily-skin-botox/" replace />} />
                           <Route path="/trigger-point-botox" element={<Navigate to="/treatments/trigger-point-botox/" replace />} />
                           <Route path="/forehead-botox" element={<Navigate to="/treatments/forehead-lines-botox/" replace />} />

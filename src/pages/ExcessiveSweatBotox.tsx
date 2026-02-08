@@ -14,7 +14,7 @@ const ExcessiveSweatBotox = () => {
   const seoData = generateSEOMetadata(
     "Hyperhidrosis Botox London | Harley Street Doctors",
     "Doctor-led botox for excessive sweating (hyperhidrosis) in underarms, hands & feet. FDA-approved treatment lasting 6–12 months at our Harley Street clinic.",
-    "/treatments/hyperhidrosis-botox/"
+    "/medical/botox-for-hyperhidrosis/"
   );
 
   const faqs = [
@@ -179,8 +179,7 @@ const ExcessiveSweatBotox = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
               items={[
-                { label: 'Treatments', path: '/treatments/' },
-                { label: 'Medical Botox', path: '/treatments/botox/medical/' }
+                { label: 'Medical', path: '/medical/' }
               ]}
               currentPage="Hyperhidrosis Botox"
             />

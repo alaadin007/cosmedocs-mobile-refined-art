@@ -14,7 +14,7 @@ const MigraineBotox = () => {
   const seoData = generateSEOMetadata(
     "Migraine Botox London | Chronic Headache Treatment | Harley Street",
     "FDA-approved botox for chronic migraines. Doctor-led treatment reducing headache frequency and intensity at our Harley Street clinic. From £450.",
-    "/treatments/migraine-botox/"
+    "/medical/botox-for-migraines/"
   );
 
   const faqs = [
@@ -199,8 +199,7 @@ const MigraineBotox = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
               items={[
-                { label: 'Treatments', path: '/treatments/' },
-                { label: 'Medical Botox', path: '/treatments/botox/medical/' }
+                { label: 'Medical', path: '/medical/' }
               ]}
               currentPage="Chronic Migraine Botox"
             />

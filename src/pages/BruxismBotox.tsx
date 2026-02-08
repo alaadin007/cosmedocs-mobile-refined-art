@@ -180,8 +180,7 @@ const BruxismBotox = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
               items={[
-                { label: 'Treatments', path: '/treatments/' },
-                { label: 'Medical Botox', path: '/treatments/botox/medical/' }
+                { label: 'Medical', path: '/medical/' }
               ]}
               currentPage="Bruxism / TMJ Botox"
             />

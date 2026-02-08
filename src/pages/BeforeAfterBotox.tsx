@@ -303,7 +303,7 @@ const BeforeAfterBotox = () => {
                 </Link>
 
                 <Link
-                  to="/treatments/botox/medical/"
+                  to="/medical/"
                   className="group flex items-center justify-between p-5 bg-white/[0.03] border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-all duration-300"
                 >
                   <div>
