@@ -12,7 +12,7 @@ const areaCards = [
     id: "forehead-lines",
     title: "Forehead Lines",
     description: "Smoothing horizontal forehead lines for a refreshed, natural appearance.",
-    image: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png",
+    image: "/images/before-after/botox/forehead-lines-before-after-preview.jpg",
     link: "#forehead-lines",
     imageCount: 1,
     treatments: ["Horizontal Lines", "Frontalis Muscle"]
@@ -21,7 +21,7 @@ const areaCards = [
     id: "frown-lines",
     title: "Frown Lines",
     description: "Softening glabella wrinkles between the brows for a calmer, more relaxed look.",
-    image: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png",
+    image: "/images/before-after/botox/frown-lines-before-after-preview.jpg",
     link: "#frown-lines",
     imageCount: 1,
     treatments: ["Glabella Lines", "11 Lines"]
@@ -237,12 +237,12 @@ const BeforeAfterBotox = () => {
                     to={card.link}
                     className="group block bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-[#C9A050]/30 transition-all duration-300"
                   >
-                    <div className="aspect-[16/10] overflow-hidden bg-gray-900">
+                    <div className="overflow-hidden bg-gray-900">
                       {card.image ? (
                         <img
                           src={card.image}
                           alt={`${card.title} before and after results`}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
                         />
                       ) : (
