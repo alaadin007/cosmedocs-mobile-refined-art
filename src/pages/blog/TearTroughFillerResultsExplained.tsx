@@ -13,11 +13,11 @@ import baRedensity from '@/assets/blog-tear-trough-ba-redensity.png';
 import baCloseup from '@/assets/blog-tear-trough-ba-closeup.png';
 import polynucleotide from '@/assets/blog-tear-trough-polynucleotide.png';
 
-const TearTroughFillerBeforeAndAfterBlog = () => {
+const TearTroughFillerResultsExplained = () => {
   const seoData = generateSEOMetadata(
-    "Tear Trough Filler Before & After: What Good Results Actually Look Like | CosmeDocs",
-    "Why under-eyes hollow, why fillers sometimes fail, and what genuinely good tear trough results look like. An honest guide from Harley Street doctors — not a highlight reel.",
-    "/blog/tear-trough-filler-before-and-after"
+    "Tear Trough Filler Results Explained | Suitability & Expectations",
+    "An expert explanation of tear trough filler results, why outcomes vary, who this treatment suits, and when alternatives are more appropriate.",
+    "/blog/tear-trough-filler-results-explained"
   );
 
   const structuredData = {
@@ -25,8 +25,8 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/tear-trough-filler-before-and-after/#article",
-        "headline": "Tear Trough Filler Before & After: What Good Results Actually Look Like",
+        "@id": "https://www.cosmedocs.co.uk/blog/tear-trough-filler-results-explained/#article",
+        "headline": "Tear Trough Filler Results Explained: What Improvement Really Looks Like",
         "description": seoData.description,
         "author": {
           "@type": "Person",
@@ -58,9 +58,9 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/tear-trough-filler-before-and-after/"
+          "@id": "https://www.cosmedocs.co.uk/blog/tear-trough-filler-results-explained/"
         },
-        "keywords": "tear trough filler before and after, under eye filler results, tear trough treatment, dark circles filler, under eye hollowing, tear trough anatomy, polynucleotide eye rejuvenation",
+        "keywords": "tear trough filler results explained, under eye filler suitability, tear trough outcomes, who is suitable for tear trough filler, why tear trough results vary, polynucleotide eye rejuvenation",
         "articleSection": "Aesthetic Education",
         "wordCount": 1800,
         "inLanguage": "en-GB"
@@ -109,7 +109,7 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="tear trough filler before and after, under eye filler results, dark circles treatment, tear trough anatomy, polynucleotide eye rejuvenation, under eye hollowing, Harley Street" />
+        <meta name="keywords" content="tear trough filler results explained, under eye filler suitability, tear trough outcomes, why tear trough results vary, polynucleotide eye rejuvenation, who is suitable, Harley Street" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
@@ -138,17 +138,17 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
                 Aesthetic Education
               </span>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight mt-4 mb-6 leading-[1.15]">
-                Tear Trough Filler Before &amp; After:
+                Tear Trough Filler Results Explained:
                 <br />
                 <span className="text-[#C9A050] font-light">
-                  What Good Results{" "}
+                  What Improvement{" "}
                 </span>
-                <span className="text-white/60">Actually Look Like</span>
+                <span className="text-white/60">Really Looks Like</span>
               </h1>
               <p className="text-white/40 text-lg font-light leading-relaxed max-w-3xl">
-                The internet is full of tear trough transformations. Most of them are misleading. 
-                Here's what honest results look like, why some under-eyes shouldn't be filled at all, 
-                and what separates a good outcome from a regrettable one.
+                Why outcomes vary between patients, who this treatment genuinely suits, 
+                and when an alternative approach is more appropriate. An honest interpretation 
+                of tear trough filler results — not a highlight reel.
               </p>
               <div className="flex items-center gap-6 mt-8 text-white/30 text-sm font-light">
                 <span>Dr Ahmed Haq</span>
@@ -302,10 +302,10 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
                   </div>
                 </motion.section>
 
-                {/* Before & After: Redensity 2 */}
+                {/* Interpreting Results */}
                 <motion.section {...fadeIn}>
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
-                    What Good Results Actually Look Like
+                    Interpreting Tear Trough Results: What Improvement Looks Like
                   </h2>
                   <p className="text-white/60 text-lg font-light leading-relaxed mb-6">
                     Good tear trough results are the ones you barely notice. The goal isn't to eliminate 
@@ -512,13 +512,29 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
                   </div>
                 </motion.section>
 
+                {/* B&A Hub Link */}
+                <motion.section {...fadeIn}>
+                  <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 mb-8">
+                    <p className="text-white/40 text-xs uppercase tracking-wider mb-3">Visual Evidence</p>
+                    <p className="text-white/50 text-sm leading-relaxed">
+                      For a comprehensive collection of clinical photographs, visit our{" "}
+                      <Link
+                        to="/before-after/dermal-fillers/"
+                        className="text-[#C9A050] hover:underline"
+                      >
+                        tear trough filler before and after results
+                      </Link>.
+                    </p>
+                  </div>
+                </motion.section>
+
                 {/* Closing */}
                 <motion.section {...fadeIn}>
                   <div className="border-t border-white/[0.06] pt-10">
                     <p className="text-white/60 text-lg font-light leading-relaxed mb-6">
-                      The best before and after images aren't the most dramatic ones. They're the ones 
-                      where you look at the "after" and think: <em>"they just look well."</em> That's the 
-                      invisible art. That's what good treatment is supposed to do — improve without announcing.
+                      The most useful results aren't the most dramatic ones. They're the ones 
+                      where the patient looks rested, not altered. That's the invisible art. 
+                      That's what good treatment is supposed to do — improve without announcing.
                     </p>
                     <p className="text-white/40 text-sm italic">
                       Results vary depending on individual anatomy, skin quality, and degree of volume loss. 
@@ -573,9 +589,9 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
         {/* Hidden SEO content */}
         <div aria-hidden="true" role="complementary" aria-label="Additional context for search engines" className="sr-only">
           <p>
-            Tear trough filler before and after blog from CosmeDocs Harley Street. This educational 
-            article explores why under-eyes hollow with age, why tear trough filler sometimes fails, 
-            what genuinely good results look like, and who should not have tear trough filler treatment. 
+            Tear trough filler results explained by CosmeDocs Harley Street. This educational 
+            article explores why under-eye filler outcomes vary between patients, why tear trough 
+            filler sometimes fails, who is suitable and who should consider alternatives. 
             The article covers anatomy of the tear trough including the orbital fat pad, orbicularis 
             oculi muscle, and periorbital ligaments. It discusses the Tyndall effect, overcorrection 
             risks, and the importance of patient selection in tear trough treatment. Polynucleotide 
@@ -593,4 +609,4 @@ const TearTroughFillerBeforeAndAfterBlog = () => {
   );
 };
 
-export default TearTroughFillerBeforeAndAfterBlog;
+export default TearTroughFillerResultsExplained;

@@ -337,6 +337,12 @@
 /cosmetalk/orofacial-neck-pain-cycle    /blog/orofacial-neck-pain-cycle/    301
 /cosmetalk/orofacial-neck-pain-cycle/   /blog/orofacial-neck-pain-cycle/    301
 
+# Blog URL repositioning — B&A → Results Explained
+/blog/tear-trough-filler-before-and-after     /blog/tear-trough-filler-results-explained/   301
+/blog/tear-trough-filler-before-and-after/    /blog/tear-trough-filler-results-explained/   301
+/blog/jaw-filler-before-and-after             /blog/jaw-filler-results-explained/            301
+/blog/jaw-filler-before-and-after/            /blog/jaw-filler-results-explained/            301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
