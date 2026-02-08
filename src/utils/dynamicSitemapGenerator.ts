@@ -9,6 +9,7 @@ interface SitemapUrl {
 interface SitemapData {
   pages: SitemapUrl[];
   treatments: SitemapUrl[];
+  beforeAfter: SitemapUrl[];
   blog: SitemapUrl[];
   locations: SitemapUrl[];
 }
@@ -16,155 +17,152 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Updated for Phase 4 migration - core pages with trailing slashes
+// ===== CANONICAL PAGE ROUTES (content pages only, no redirects) =====
+
 const pageRoutes = [
-  '/', '/treatments/', '/about/', '/contact/', '/partners/', '/partnerships/', '/auth/', '/dashboard/',
-  '/treatments-summary-arabic/', '/treatments-summary-chinese/', '/treatments-summary-japanese/',
-  '/our-team/', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-aesthetician/',
-  '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/',
-  '/before-after/', '/before-after/botox/', '/before-after/dermal-fillers/', '/before-after/skin-rejuvenation/', '/before-after/ha-makeover/',
-  '/membership/', '/harley-street-consulting-rooms/',
-  '/testimonials/', '/aesthetics-at-a-glance/',
-  // Phase 4 hub pages
-  '/concerns/', '/medical/', '/safety/'
+  '/',
+  '/treatments/',
+  '/prices/',
+  '/about-us/',
+  '/contact/',
+  '/our-team/',
+  '/our-team/dr-ahmed-haq/',
+  '/our-team/dr-hena-haq/',
+  '/our-team/laerta-aesthetician/',
+  '/our-team/dr-hassan-mirza/',
+  '/our-team/dr-noor-hotaki/',
+  '/testimonials/',
+  '/harley-street-consulting-rooms/',
+  '/private-gp-doctor/',
+  '/membership/',
+  '/partners/',
+  '/partnerships/',
+  '/fellowship-invitation/',
+  '/aesthetic-training/',
+  '/aesthetics-at-a-glance/',
+  '/aesthetic-intelligence/',
+  '/aesthetic-treatments-made-easy/',
+  '/medical-student-work-experience/',
+  '/treatments-summary-arabic/',
+  '/treatments-summary-chinese/',
+  '/treatments-summary-japanese/',
+  '/concerns/',
+  '/medical/',
+  '/safety/',
+  '/botox-faqs/',
+  '/ultimate-botox-guide/'
 ];
 
-// New nested treatment routes
 const treatmentRoutes = [
-  // Botox Hub & Sub-treatments
-  '/treatments/botox',
-  '/treatments/botox-cost',
-  '/treatments/masseter-botox',
-  '/treatments/lip-flip',
-  '/treatments/gummy-smile-botox',
-  '/treatments/chin-botox',
-  '/treatments/frown-line-botox',
-  '/treatments/crows-feet-botox',
-  '/treatments/forehead-lines-botox',
-  '/treatments/bunny-lines-botox',
-  '/treatments/nasal-flaring-botox',
-  '/treatments/nefertiti-lift',
-  '/treatments/trap-botox',
-  '/treatments/calf-slimming-botox',
-  '/treatments/migraine-botox',
-  '/treatments/bruxism-botox',
-  '/treatments/hyperhidrosis-botox',
-  '/treatments/oily-skin-botox',
-  '/treatments/trigger-point-botox',
-  '/treatments/botox/medical',
-  '/medical/botox-for-migraines',
-  '/medical/botox-for-hyperhidrosis',
-  
-  // Dermal Fillers Hub & Sub-treatments
-  '/treatments/dermal-fillers',
-  '/treatments/lip-fillers',
-  '/treatments/cupid-bow-lips',
-  '/treatments/cheek-filler',
-  '/treatments/chin-filler',
-  '/treatments/jawline-filler',
-  '/treatments/nose-filler',
-  '/treatments/tear-trough-filler',
-  '/treatments/temple-filler',
-  '/treatments/forehead-filler',
-  '/treatments/neck-filler',
-  '/treatments/marionette-lines',
-  '/treatments/nasolabial-folds',
-  '/treatments/filler-dissolving',
-  '/treatments/ear-lobe-rejuvenation',
-  
-  // Skin Rejuvenation & Advanced
-  '/treatments/profhilo',
-  '/treatments/polynucleotides',
-  '/treatments/prp',
-  '/treatments/hydrafacial',
-  '/treatments/chemical-peel',
-  '/treatments/microneedling',
-  '/treatments/pdo-threads',
-  '/treatments/ha-makeover',
-  '/treatments/non-surgical-facelift',
-  '/treatments/non-surgical-ponytail',
-  '/treatments/fat-dissolving',
-  '/treatments/prescription-skincare',
-  '/treatments/peel-to-reveal',
-  
+  // Botox
+  '/treatments/botox/',
+  '/treatments/masseter-botox/',
+  '/treatments/lip-flip/',
+  '/treatments/oily-skin-botox/',
+  '/treatments/trap-botox/',
+  '/treatments/calf-slimming-botox/',
+  '/treatments/bruxism-botox/',
+  // Medical Botox
+  '/medical/botox-for-migraines/',
+  '/medical/botox-for-hyperhidrosis/',
+  // Dermal Fillers
+  '/treatments/dermal-fillers/',
+  '/treatments/lip-fillers/',
+  '/treatments/jawline-filler/',
+  '/treatments/cheek-filler/',
+  '/treatments/chin-filler/',
+  '/treatments/tear-trough-filler/',
+  '/treatments/temple-filler/',
+  '/treatments/dermal-fillers/nose/',
+  // Skin Rejuvenation
+  '/treatments/skin-rejuvenation/',
+  '/treatments/profhilo/',
+  '/treatments/polynucleotides/',
+  '/treatments/prp-vampire-facial/',
+  '/treatments/microneedling/',
+  '/treatments/chemical-peels/',
+  '/treatments/hydrafacial/',
+  '/treatments/pdo-threads/',
+  '/treatments/fat-dissolving/',
+  '/treatments/ha-makeover/',
+  // Laser
+  '/treatments/laser-treatments/',
+  '/treatments/co2-laser/',
+  '/treatments/laser-hair-removal/',
+  '/treatments/pico-laser/',
   // Plastic Surgery
-  '/treatments/plastic-surgery',
-  '/treatments/blepharoplasty',
-  '/treatments/rhinoplasty',
-  '/treatments/facelift-surgery',
-  '/treatments/liposuction',
-  '/treatments/co2-laser',
-  '/treatments/scar-reduction',
-  '/treatments/hair-transplant',
-  
-  // Medical Dermatology
-  '/treatments/dermatology',
-  '/treatments/acne',
-  '/treatments/mole-removal',
-  '/treatments/eczema',
-  '/treatments/psoriasis',
-  '/treatments/hyperpigmentation',
-  
+  '/treatments/plastic-surgery/',
+  '/treatments/blepharoplasty/',
+  '/treatments/rhinoplasty/',
+  '/treatments/facelift-surgery/',
+  '/treatments/liposuction/',
+  '/treatments/scar-reduction/',
+  '/treatments/hair-transplant/',
+  // Concerns / Dermatology
+  '/concerns/acne/',
+  '/concerns/eczema/',
+  '/concerns/pigmentation-melasma/',
+  '/concerns/anti-ageing/',
   // Specialised
-  '/treatments/intimate-bleaching',
-  '/treatments/advanced-consultation',
-  '/treatments/clinical-concepts'
+  '/treatments/intimate-bleaching/',
+  '/treatments/advanced-consultation/',
+  '/treatments/clinical-concepts/'
 ];
 
+const beforeAfterRoutes = [
+  '/before-after/',
+  '/before-after/botox/',
+  '/before-after/botox/masseter/',
+  '/before-after/dermal-fillers/',
+  '/before-after/dermal-fillers/lips/',
+  '/before-after/dermal-fillers/nose/',
+  '/before-after/dermal-fillers/cheeks/',
+  '/before-after/dermal-fillers/jawline/',
+  '/before-after/dermal-fillers/tear-trough/',
+  '/before-after/dermal-fillers/chin/',
+  '/before-after/skin-rejuvenation/',
+  '/before-after/ha-makeover/'
+];
+
+// ONLY 4 blogs permitted
 const blogRoutes = [
-  '/blog/how-to-get-rid-of-bruises-quickly',
-  '/blog/forehead-wrinkles-myths-tips',
-  '/blog/lip-wrinkles-treatments',
-  '/blog/skin-tags-and-skin-tag-removal',
-  '/blog/beauty-ethnic-neutrality',
-  '/long-term-aesthetic-care-blog',
-  '/aesthetic-maintenance-cost-blog',
-  '/pdo-threads-blog',
-  '/non-surgical-nose-job-blog',
-  '/chinese-london-aesthetics-blog',
-  '/inside-mind-aesthetic-doctor-blog',
-  '/blog',
-  '/blog/vitamin-c-ferulic-acid-benefits',
-  '/blog/smokers-lines-women',
-  '/blog/flawless-skin',
-  '/blog/lazy-skin-syndrome',
-  '/blog/orofacial-neck-pain-cycle',
-  '/journal',
-  '/botox-faqs',
-  '/ultimate-botox-guide'
+  '/blog/',
+  '/blog/tear-trough-filler-results-explained/',
+  '/blog/jaw-filler-results-explained/',
+  '/blog/chin-filler-results-explained/',
+  '/blog/lip-filler-results-explained/'
 ];
 
 const locationRoutes = [
-  '/birmingham',
-  '/manchester',
-  '/cardiff',
-  '/delhi',
-  '/karachi',
-  '/barbados'
+  '/birmingham/',
+  '/manchester/',
+  '/cardiff/',
+  '/delhi/',
+  '/karachi/',
+  '/barbados/'
 ];
 
-// Function to determine priority based on route importance
 function getPriority(route: string): number {
   if (route === '/') return 1.0;
-  if (['/treatments', '/treatments/botox', '/treatments/dermal-fillers', '/treatments/lip-fillers'].includes(route)) return 0.9;
-  if (route === '/harley-street-consulting-rooms') return 0.8;
-  if (route.includes('/treatments/')) return 0.8;
-  if (route.includes('blog') || route.includes('cosmetalk') || route.includes('journal')) return 0.7;
-  if (locationRoutes.includes(route)) return 0.7;
+  if (['/treatments/', '/treatments/botox/', '/treatments/dermal-fillers/', '/treatments/lip-fillers/'].includes(route)) return 0.9;
+  if (route.startsWith('/treatments/') || route.startsWith('/medical/')) return 0.8;
+  if (route.startsWith('/concerns/')) return 0.7;
+  if (route === '/before-after/') return 0.8;
+  if (route.startsWith('/before-after/')) return 0.6;
+  if (route.startsWith('/blog/')) return 0.7;
+  if (route.startsWith('/birmingham') || route.startsWith('/manchester') || route.startsWith('/cardiff')) return 0.7;
   return 0.6;
 }
 
-// Function to determine change frequency
 function getChangeFreq(route: string): 'weekly' | 'monthly' {
-  if (route === '/' || route === '/treatments') return 'weekly';
+  if (['/', '/treatments/', '/prices/', '/before-after/', '/blog/'].includes(route)) return 'weekly';
+  if (route.includes('/lip-fillers')) return 'weekly';
   return 'monthly';
 }
 
 function createSitemapUrl(route: string): SitemapUrl {
-  // Ensure trailing slash for all URLs
-  const urlPath = route.endsWith('/') || route === '/' ? route : `${route}/`;
   return {
-    loc: `${baseUrl}${urlPath}`,
+    loc: `${baseUrl}${route}`,
     lastmod: currentDate,
     changefreq: getChangeFreq(route),
     priority: getPriority(route)
@@ -174,6 +172,7 @@ function createSitemapUrl(route: string): SitemapUrl {
 export const generateDynamicSitemapData = (): SitemapData => ({
   pages: pageRoutes.map(createSitemapUrl),
   treatments: treatmentRoutes.map(createSitemapUrl),
+  beforeAfter: beforeAfterRoutes.map(createSitemapUrl),
   blog: blogRoutes.map(createSitemapUrl),
   locations: locationRoutes.map(createSitemapUrl)
 });
@@ -190,7 +189,7 @@ export function generateSitemapXML(urls: SitemapUrl[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
-  
+
 ${urlEntries}
 </urlset>`;
 }
@@ -199,6 +198,7 @@ export function generateSitemapIndex(): string {
   const sitemaps = [
     { loc: `${baseUrl}/sitemap-pages.xml`, lastmod: currentDate },
     { loc: `${baseUrl}/sitemap-treatments.xml`, lastmod: currentDate },
+    { loc: `${baseUrl}/sitemap-before-after.xml`, lastmod: currentDate },
     { loc: `${baseUrl}/sitemap-blog.xml`, lastmod: currentDate },
     { loc: `${baseUrl}/sitemap-locations.xml`, lastmod: currentDate }
   ];
@@ -214,7 +214,6 @@ ${sitemapEntries}
 </sitemapindex>`;
 }
 
-// Utility function to generate all sitemaps
 export function generateAllDynamicSitemaps(): Record<string, string> {
   const data = generateDynamicSitemapData();
   
@@ -222,6 +221,7 @@ export function generateAllDynamicSitemaps(): Record<string, string> {
     'sitemap.xml': generateSitemapIndex(),
     'sitemap-pages.xml': generateSitemapXML(data.pages),
     'sitemap-treatments.xml': generateSitemapXML(data.treatments),
+    'sitemap-before-after.xml': generateSitemapXML(data.beforeAfter),
     'sitemap-blog.xml': generateSitemapXML(data.blog),
     'sitemap-locations.xml': generateSitemapXML(data.locations)
   };

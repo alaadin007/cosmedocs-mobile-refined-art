@@ -1,122 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
-  
+
   <url>
-    <loc>https://www.cosmedocs.co.uk/non-surgical-nose-job-blog/</loc>
-    <lastmod>2025-12-15</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.co.uk/blog/tear-trough-filler-results-explained/</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/aesthetic-maintenance-cost-blog/</loc>
-    <lastmod>2025-12-15</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/jaw-filler-results-explained/</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/chinese-london-aesthetics-blog/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/long-term-aesthetic-care-blog/</loc>
-    <lastmod>2025-12-15</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/chin-filler-results-explained/</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.co.uk/inside-mind-aesthetic-doctor-blog/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/vitamin-c-ferulic-acid-benefits/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/smokers-lines-women/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/flawless-skin/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/orofacial-neck-pain-cycle/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/forehead-wrinkles-myths-tips/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/lip-wrinkles-treatments/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/skin-tags-and-skin-tag-removal/</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.co.uk/blog/beauty-ethnic-neutrality/</loc>
-    <lastmod>2025-12-15</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/lip-filler-results-explained/</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
