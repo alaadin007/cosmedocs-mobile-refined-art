@@ -231,7 +231,7 @@ const App = () => {
                           <Route path="/testimonials" element={<Testimonials />} />
                           <Route path="/testimonials/" element={<Testimonials />} />
                           <Route path="/thank-you" element={<ThankYou />} />
-                          <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
+                          <Route path="/before-after-gallery" element={<Navigate to="/before-after/" replace />} />
                           <Route path="/membership" element={<Membership />} />
                           <Route path="/our-team/dr-ahmed-haq" element={<DrAhmedHaq />} />
                           <Route path="/our-team/dr-ahmed-haq/" element={<DrAhmedHaq />} />
@@ -601,9 +601,6 @@ const App = () => {
                           
                           <Route path="/before-after/skin-rejuvenation" element={<BeforeAfterSkinRejuvenation />} />
                           <Route path="/before-after/skin-rejuvenation/" element={<BeforeAfterSkinRejuvenation />} />
-                          
-                          {/* Legacy gallery URL redirect */}
-                          <Route path="/before-after-gallery" element={<Navigate to="/before-after/" replace />} />
                           
                           {/* Blog & Content Routes */}
                           <Route path="/botox-faqs" element={<BotoxFAQs />} />
