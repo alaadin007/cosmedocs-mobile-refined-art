@@ -133,6 +133,10 @@ const BlogHome = () => {
     },
     headlines: [
       {
+        title: "Trust in Medical Aesthetics: The Rule for Medical Brands",
+        path: "/blog/trust-in-medical-aesthetics",
+      },
+      {
         title: "Orofacial & Neck Pain: Breaking the Tension Cycle",
         path: "/cosmetalk/orofacial-neck-pain-cycle",
       },
@@ -143,10 +147,6 @@ const BlogHome = () => {
       {
         title: "Beauty & Ethnic Neutrality in Aesthetic Medicine",
         path: "/blog/beauty-ethnic-neutrality",
-      },
-      {
-        title: "The Eight-Point Facelift Technique Explained",
-        path: "/eight-point-facelift",
       },
     ],
     secondary: {
