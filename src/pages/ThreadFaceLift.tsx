@@ -525,6 +525,23 @@ export function ThreadFaceLift() {
                 </motion.div>
               </section>
 
+              {/* PrivaDr Partnership */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <div className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-2xl p-6">
+                    <p className="text-sm font-medium text-[#C9A050] mb-3">In Partnership with PrivaDr</p>
+                    <p className="text-white/50 text-sm leading-relaxed font-light mb-3">
+                      Our PDO thread lift service is delivered in collaboration with <strong className="text-white/70">PrivaDr</strong>, a CQC-registered clinic. This partnership ensures every thread lift procedure is carried out in a fully regulated clinical environment, meeting the highest standards of patient safety and care.
+                    </p>
+                    <div className="flex items-center gap-3 text-xs text-white/30 tracking-wide uppercase">
+                      <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />CQC Registered</span>
+                      <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                      <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Regulated Care</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
               {/* FAQs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>

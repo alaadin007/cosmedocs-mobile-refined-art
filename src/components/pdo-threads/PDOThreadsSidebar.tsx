@@ -49,7 +49,7 @@ const PDOThreadsSidebar = () => {
         </div>
       </motion.div>
 
-      {/* Doctor Credentials */}
+      {/* Doctor Credentials & Partnership */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -69,6 +69,10 @@ const PDOThreadsSidebar = () => {
           <li className="flex items-start gap-2">
             <span className="w-1 h-1 rounded-full bg-[#C9A050]/50 mt-1.5 flex-shrink-0" />
             1M+ procedures since 2007
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="w-1 h-1 rounded-full bg-[#C9A050]/50 mt-1.5 flex-shrink-0" />
+            In partnership with PrivaDr
           </li>
           <li className="flex items-start gap-2">
             <span className="w-1 h-1 rounded-full bg-[#C9A050]/50 mt-1.5 flex-shrink-0" />
