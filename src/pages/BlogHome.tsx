@@ -176,11 +176,11 @@ const BlogHome = () => {
       },
     ],
     secondary: {
-      title: "London Tweakments: The Rise of Natural Aesthetics",
+      title: "How to Book the Correct CosmeDocs Clinic",
       excerpt:
-        "How subtle, considered treatments are redefining beauty standards in the capital.",
-      category: "TREND",
-      path: "/london-tweakments-natural-aesthetics",
+        "Patients sometimes tell us they've booked the wrong clinic by mistake. Here's how to ensure you're booking the original CosmeDocs on Harley Street.",
+      category: "PATIENT GUIDANCE",
+      path: "/blog/cosmedocs-vs-similarly-named-clinics",
     },
   };
 

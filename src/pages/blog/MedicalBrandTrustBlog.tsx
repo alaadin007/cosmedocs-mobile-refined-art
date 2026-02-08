@@ -553,7 +553,7 @@ const MedicalBrandTrustBlog = () => {
                   {[
                     { title: "Inside the Mind of an Aesthetic Doctor", path: "/inside-mind-aesthetic-doctor-blog", category: "Clinical" },
                     { title: "Beauty & Ethnic Neutrality in Aesthetics", path: "/blog/beauty-ethnic-neutrality", category: "Philosophy" },
-                    { title: "London Tweakments: The Rise of Natural Aesthetics", path: "/london-tweakments-natural-aesthetics", category: "Trend" },
+                    { title: "How to Book the Correct CosmeDocs Clinic", path: "/blog/cosmedocs-vs-similarly-named-clinics", category: "Guidance" },
                   ].map((article, i) => (
                     <Link
                       key={i}
