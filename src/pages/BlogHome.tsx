@@ -53,6 +53,16 @@ const BlogHome = () => {
     },
   ];
 
+  const editorialArticles = [
+    {
+      title: "The Long-Term Benefits of Aesthetic Continuity",
+      subtitle: "Why returning to the same doctor matters — and what you gain over five years.",
+      category: "EDITORIAL",
+      path: "/long-term-aesthetic-care-blog",
+      icon: "arrow",
+    },
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -151,6 +161,38 @@ const BlogHome = () => {
           </div>
         </section>
 
+        {/* Editorial Section */}
+        {editorialArticles.length > 0 && (
+          <section className="max-w-7xl mx-auto px-4 pb-10">
+            <div className="border-t border-white/[0.06] pt-8">
+              <h3 className="text-xs font-medium text-white/40 tracking-wider uppercase mb-6">
+                Editorial
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {editorialArticles.map((article, i) => (
+                  <Link
+                    key={i}
+                    to={article.path}
+                    className="group block p-5 rounded-xl border border-white/[0.06] hover:border-[#C9A050]/30 transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.04]"
+                  >
+                    <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
+                      {article.category}
+                    </span>
+                    <h4 className="text-lg font-light text-white/80 mt-2 mb-2 group-hover:text-[#C9A050] transition-colors leading-snug">
+                      {article.title}
+                    </h4>
+                    <p className="text-white/30 text-sm font-light leading-relaxed">
+                      {article.subtitle}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-[#C9A050]/60 text-xs mt-3 group-hover:text-[#C9A050] transition-colors">
+                      Read article <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
         {/* CTA */}
         <section className="py-16 px-4 border-t border-white/[0.06]">
           <div className="max-w-3xl mx-auto text-center">

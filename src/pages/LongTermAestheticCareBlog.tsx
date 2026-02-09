@@ -1,58 +1,35 @@
-
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
-import AutoLinkedText from "@/components/AutoLinkedText";
-import { Users, Clock, Award, TrendingUp, Heart, Lightbulb } from "lucide-react";
+import { Clock, Award, Heart, ArrowRight } from "lucide-react";
+import BlogSidebar from "@/components/blog/BlogSidebar";
+import BlogAuthorEEAT from "@/components/blog/BlogAuthorEEAT";
 
 const LongTermAestheticCareBlog = () => {
   const seoData = generateSEOMetadata(
-    "Long-Term Aesthetic Care Benefits | Cosmedocs",
+    "Long-Term Aesthetic Care Benefits | CosmeDocs",
     "Why returning to the same aesthetic doctor improves results. Cost-effective five-year beauty planning strategies.",
-    "/blog/long-term-aesthetic-care-benefits"
+    "/long-term-aesthetic-care-blog"
   );
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "The Long-Term Benefits of Aesthetic Continuity: Why Returning to the Same Doctor Matters",
-    "description": "Explore the advantages of building a long-term relationship with your aesthetic practitioner for optimal anti-aging results and personalized treatment plans.",
-    "author": {
+    headline: "The Long-Term Benefits of Aesthetic Continuity: Why Returning to the Same Doctor Matters",
+    description: seoData.description,
+    author: {
       "@type": "Organization",
-      "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "addressRegion": "Greater London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
+      name: "CosmeDocs",
+      url: "https://www.cosmedocs.co.uk",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "Cosmedocs",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.cosmedocs.com/logo.png"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "addressRegion": "Greater London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
+      name: "CosmeDocs",
     },
-    "datePublished": "2025-06-17",
-    "dateModified": "2025-06-17",
-    "mainEntityOfPage": "https://www.cosmedocs.co.uk/blog/long-term-aesthetic-care-benefits/",
-    "image": "https://www.cosmedocs.com/lovable-uploads/aesthetic-continuity-blog.jpg"
+    datePublished: "2025-06-17",
+    dateModified: "2026-02-09",
+    mainEntityOfPage: "https://www.cosmedocs.co.uk/long-term-aesthetic-care-blog/",
   };
 
   return (
@@ -60,427 +37,299 @@ const LongTermAestheticCareBlog = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="aesthetic doctor London, long-term beauty planning, anti-aging treatments, facial rejuvenation, aesthetic continuity, cosmetic medicine, five-year beauty plan, aesthetic maintenance, facial aging prevention" />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/long-term-aesthetic-care-blog/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/long-term-aesthetic-care-blog/" />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={seoData.image} />
-        <meta property="og:site_name" content="Cosmedocs" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content={seoData.image} />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black">
-          <div className="page-container">
+      <div className="min-h-screen bg-black text-white">
+        {/* Hero */}
+        <section className="relative py-20 md:py-28">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
+          <div className="relative max-w-4xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                The Long-Term Benefits of Aesthetic Continuity
-                <span className="block text-yellow-400 text-2xl md:text-3xl mt-4">
-                  Why Returning to the Same Doctor Matters
-                </span>
+              <span className="text-[#C9A050] text-xs font-medium tracking-[0.25em] uppercase">
+                Editorial
+              </span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight mt-4 mb-6 leading-[1.15] tracking-tight">
+                The Long-Term Benefits of{" "}
+                <span className="text-[#C9A050] font-light">Aesthetic Continuity</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Understanding the profound advantages of building a lasting relationship with your aesthetic practitioner for optimal anti-aging results and personalized care.
+              <p className="text-white/40 text-lg font-light max-w-2xl mx-auto mb-8">
+                Why returning to the same doctor matters — and what you gain over five years.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-                <div className="flex items-center gap-2">
-                  <Clock size={16} />
-                  <span>7 min read</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award size={16} />
-                  <span>Expert insights</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Heart size={16} />
-                  <span>Patient-focused</span>
-                </div>
+              <div className="flex flex-wrap justify-center gap-6 text-xs text-white/30">
+                <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 7 min read</span>
+                <span className="flex items-center gap-1.5"><Award className="w-3.5 h-3.5" /> Expert insights</span>
+                <span className="flex items-center gap-1.5"><Heart className="w-3.5 h-3.5" /> Patient-focused</span>
               </div>
             </motion.div>
           </div>
+          {/* Gold line */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-[#C9A050]/40" />
         </section>
 
-        {/* Introduction */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
+        {/* Content + Sidebar */}
+        <section className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid lg:grid-cols-[1fr_240px] gap-12">
+            {/* Main content */}
+            <article className="max-w-3xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="prose prose-lg max-w-none"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-8"
               >
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  <AutoLinkedText>
-                    In the world of aesthetic medicine, there's a prevailing tendency to chase the latest deals, jump between practitioners, 
-                    or seek quick fixes for individual concerns. While this approach might seem economical or adventurous, it fundamentally 
-                    misunderstands the nature of facial aging and the sophisticated art of anti-aging treatments. At Cosmedocs, 
-                    we believe that true aesthetic excellence emerges from continuity, understanding, and the development of long-term 
-                    relationships between practitioner and patient.
-                  </AutoLinkedText>
+                <p className="text-white/45 text-lg font-light leading-relaxed">
+                  In the world of aesthetic medicine, there's a prevailing tendency to chase the latest deals, jump between practitioners, 
+                  or seek quick fixes for individual concerns. While this approach might seem economical, it fundamentally 
+                  misunderstands the nature of facial ageing and the sophisticated art of anti-ageing treatments.
                 </p>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  <AutoLinkedText>
-                    Facial aging is not a sudden event—it's a gradual, complex process that unfolds over years and decades. 
-                    Just as you wouldn't expect to achieve optimal dental health by only visiting a dentist when you have a toothache, 
-                    achieving and maintaining youthful, natural-looking results requires a strategic, long-term approach. 
-                    Our aesthetics is invisible art, and like any masterpiece, it requires time, patience, and consistent vision to create.
-                  </AutoLinkedText>
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
-        {/* The Five-Year Vision */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-center">The Five-Year Aesthetic Vision</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <Card className="bg-background">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-3">
-                      <TrendingUp className="h-6 w-6 text-yellow-600" />
-                      Predictive Planning
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      When we see a patient for the first time, we don't just address their immediate concerns. We develop a comprehensive 
-                      five-year plan that considers their unique facial structure, aging patterns, lifestyle factors, and aesthetic goals.
+                <p className="text-white/45 font-light leading-relaxed">
+                  Facial ageing is not a sudden event — it's a gradual, complex process that unfolds over years. 
+                  Just as you wouldn't expect optimal dental health by only visiting a dentist during emergencies, 
+                  achieving and maintaining youthful, natural-looking results requires a strategic, long-term approach. 
+                  Our aesthetics is invisible art, and like any masterpiece, it requires time, patience, and consistent vision.
+                </p>
+
+                {/* Section: Five-Year Vision */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                    The Five-Year <span className="text-[#C9A050] font-light">Aesthetic Vision</span>
+                  </h2>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    When we see a patient for the first time, we don't just address their immediate concerns. We develop a comprehensive 
+                    five-year plan that considers their unique facial structure, ageing patterns, lifestyle factors, and aesthetic goals.
+                  </p>
+
+                  <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                    {[
+                      { title: "Predictive Planning", desc: "Sun exposure history, lifestyle habits, facial expressions, volume loss patterns, and genetic predispositions all shape a personalised strategy." },
+                      { title: "Proactive Care", desc: "Instead of waiting for significant ageing signs, we implement preventive measures that preserve natural beauty over time." },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <h3 className="text-sm font-medium text-[#C9A050] mb-2">{item.title}</h3>
+                        <p className="text-white/35 text-sm font-light leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-white/45 font-light leading-relaxed">
+                    It's the difference between maintaining a garden throughout the seasons versus 
+                    trying to revive it after years of neglect.
+                  </p>
+                </div>
+
+                {/* Section: What You Don't Know */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                    What You Don't Know <span className="text-[#C9A050] font-light">You Need</span>
+                  </h2>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Many patients come believing they know exactly what they want — perhaps lip filler, or Botox for crow's feet. 
+                    Sometimes they're absolutely right. However, it's often what they <em>don't</em> know they need that makes 
+                    the most significant difference.
+                  </p>
+
+                  <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl mb-6">
+                    <p className="text-sm font-medium text-[#C9A050] mb-2">The Subtle Art of Comprehensive Assessment</p>
+                    <p className="text-white/40 text-sm font-light leading-relaxed">
+                      An experienced practitioner doesn't just see the concern you've identified — they observe how it relates 
+                      to your entire facial harmony. They notice the subtle volume loss in your temples affecting brow position, 
+                      or how treating nasolabial folds might benefit from addressing cheek volume first. This holistic approach 
+                      is only possible when your practitioner truly knows your face.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
 
-                <Card className="bg-background">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-3">
-                      <Users className="h-6 w-6 text-yellow-600" />
-                      Individual Assessment
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Each patient's plan is tailored to their specific needs: sun exposure history, lifestyle habits, facial expressions, 
-                      volume loss patterns, and genetic predispositions all influence our long-term strategy.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                <AutoLinkedText>
-                  This five-year vision allows us to work proactively rather than reactively. Instead of waiting for significant aging 
-                  signs to appear, we can implement preventive measures, maintain existing volume, and make subtle adjustments that 
-                  preserve natural beauty over time. It's the difference between maintaining a garden throughout the seasons versus 
-                  trying to revive it after years of neglect.
-                </AutoLinkedText>
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Understanding vs. Assumptions */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-8 text-center">What You Don't Know You Need</h2>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  <AutoLinkedText>
-                    Many patients come to us believing they know exactly what they want—perhaps lip filler, or Botox for crow's feet. 
-                    Sometimes they're absolutely right about their needs. However, it's often what they don't know they need that makes 
-                    the most significant difference to their overall appearance and satisfaction with treatment.
-                  </AutoLinkedText>
-                </p>
-
-                <div className="bg-accent rounded-lg p-8 mb-8">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
-                    <Lightbulb className="h-5 w-5 text-yellow-600" />
-                    The Subtle Art of Comprehensive Assessment
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <AutoLinkedText>
-                      An experienced practitioner doesn't just see the concern you've identified—they observe how that concern relates 
-                      to your entire facial harmony. They notice the subtle volume loss in your temples that's affecting your brow position, 
-                      or the way treating your nasolabial folds might benefit from addressing cheek volume first. This holistic approach 
-                      is only possible when your practitioner truly knows your face and has observed how it responds to previous treatments.
-                    </AutoLinkedText>
+                  <p className="text-white/45 font-light leading-relaxed">
+                    When you jump between practitioners, each new doctor starts from scratch. They see a snapshot 
+                    without understanding your treatment history, healing patterns, or personal aesthetic preferences. 
+                    This lack of continuity often leads to over-treatment, under-treatment, or treatments that work against each other.
                   </p>
                 </div>
 
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  <AutoLinkedText>
-                    When you jump from practitioner to practitioner, each new doctor starts from scratch. They see a snapshot of your 
-                    face at one moment in time, without the benefit of understanding your treatment history, your healing patterns, 
-                    or your personal aesthetic preferences. This lack of continuity often leads to over-treatment, under-treatment, 
-                    or treatments that work against each other rather than in harmony.
-                  </AutoLinkedText>
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+                {/* Section: Value of Experience */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                    The Value of <span className="text-[#C9A050] font-light">Experience</span>
+                  </h2>
 
-        {/* Experience and Expertise */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-center">The Value of Experience</h2>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                <AutoLinkedText>
-                  Yes, some practitioners are more expensive than others, and there's often a good reason for this premium. 
-                  The older and more experienced the practitioner, the more they can achieve with the same syringe that you pay for. 
-                  This isn't just about technical skill—though that's certainly important—it's about the accumulated wisdom that 
-                  comes from treating thousands of faces and learning from both successes and challenges.
-                </AutoLinkedText>
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">Beyond Basic Treatment</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    <AutoLinkedText>
-                      Perioral rejuvenation, for example, isn't just about lip filler. An experienced practitioner understands that 
-                      treating the lips in isolation often creates an unnatural result. They know when to address the surrounding 
-                      areas—the philtrum, the corners of the mouth, the chin projection—to create a harmonious, youthful appearance.
-                    </AutoLinkedText>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Some practitioners are more expensive than others, and there's often good reason. 
+                    The older and more experienced the practitioner, the more they can achieve with the same syringe. 
+                    This isn't just about technical skill — it's about the accumulated wisdom from treating thousands of faces.
                   </p>
-                </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">Strategic Combinations</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    <AutoLinkedText>
-                      Similarly, experienced practitioners know that Botox treatment can be enhanced by adding a tiny amount of filler 
-                      in strategic locations. This combination approach not only provides better results but often makes the Botox 
-                      last longer, creating more affordable maintenance with superior outcomes.
-                    </AutoLinkedText>
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* The Economics of Continuity */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-8 text-center">The True Economics of Aesthetic Care</h2>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  <AutoLinkedText>
-                    While chasing deals and switching practitioners might seem economical in the short term, it often proves more 
-                    expensive and less satisfying in the long run. When you work with the same practitioner over time, they develop 
-                    an intimate understanding of how your face responds to treatment, which products work best for you, and what 
-                    techniques achieve your desired results most efficiently.
-                  </AutoLinkedText>
-                </p>
-
-                <div className="bg-accent rounded-lg p-8 mb-8">
-                  <h3 className="text-xl font-semibold mb-6">Long-Term Value Benefits:</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-2">Optimized Treatment Plans</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Treatments become more targeted and effective as your practitioner learns your unique response patterns.
+                  <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <h3 className="text-sm font-medium text-[#C9A050] mb-2">Beyond Basic Treatment</h3>
+                      <p className="text-white/35 text-sm font-light leading-relaxed">
+                        Perioral rejuvenation isn't just about lip filler. An experienced practitioner knows when to address 
+                        the philtrum, mouth corners, and chin projection for harmonious results.
                       </p>
                     </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Reduced Waste</h4>
-                      <p className="text-sm text-muted-foreground">
-                        No repeating unsuccessful approaches or overcompensating for unknown factors.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Preventive Approach</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Early intervention often requires less product and achieves better results than corrective treatments.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Consistent Quality</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Maintained results require less dramatic interventions and provide more natural-looking outcomes.
+                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <h3 className="text-sm font-medium text-[#C9A050] mb-2">Strategic Combinations</h3>
+                      <p className="text-white/35 text-sm font-light leading-relaxed">
+                        Experienced practitioners know that Botox can be enhanced by adding targeted filler. 
+                        This combination often makes the Botox last longer with superior outcomes.
                       </p>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
-        {/* Building Trust and Understanding */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-center">The Reward of Long-Term Relationships</h2>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                <AutoLinkedText>
-                  The subtle art of aesthetic medicine truly rewards both practitioners and patients when there's long-term follow-up 
-                  and continuity of care. This relationship allows for refinements, adjustments, and improvements that simply aren't 
-                  possible in one-off treatments or sporadic interventions.
-                </AutoLinkedText>
-              </p>
+                {/* Section: Economics */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                    The True Economics of <span className="text-[#C9A050] font-light">Aesthetic Care</span>
+                  </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card className="bg-background">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold mb-3">Trust Development</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Over time, patients become more comfortable expressing their concerns and preferences, leading to better communication and outcomes.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-background">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold mb-3">Refined Technique</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Practitioners can fine-tune their approach based on how each patient's skin and features respond to specific treatments.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-background">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold mb-3">Evolving Goals</h4>
-                    <p className="text-sm text-muted-foreground">
-                      As patients age, their aesthetic goals may change, and a long-term practitioner can adapt the treatment plan accordingly.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Conclusion */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <h2 className="text-3xl font-bold mb-8">Choosing Continuity for Lasting Beauty</h2>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  <AutoLinkedText>
-                    At Cosmedocs, we understand that true aesthetic enhancement is not about dramatic transformations or chasing trends. 
-                    It's about the quiet art of aging gracefully, maintaining your natural beauty, and feeling confident in your own skin. 
-                    This philosophy—that our aesthetics is invisible art—can only be fully realized through the continuity of care and 
-                    the development of long-term therapeutic relationships.
-                  </AutoLinkedText>
-                </p>
-
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  <AutoLinkedText>
-                    When you choose to work with the same practitioner over time, you're not just investing in treatments—you're investing 
-                    in a partnership that understands your unique beauty, respects your individual goals, and works with you to maintain 
-                    and enhance your natural features as you move through different stages of life. This approach is bold in its subtlety, 
-                    natural in its enhancement, and always, truly your way.
-                  </AutoLinkedText>
-                </p>
-
-                <div className="bg-gradient-to-r from-yellow-600 to-yellow-700 rounded-lg p-8 text-white">
-                  <h3 className="text-xl font-bold mb-4">Ready to Begin Your Long-Term Aesthetic Journey?</h3>
-                  <p className="mb-6">
-                    Discover the benefits of continuity in aesthetic care with our experienced practitioners at Cosmedocs.
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    While chasing deals and switching practitioners might seem economical short-term, it often proves more 
+                    expensive and less satisfying long-term. When you work with the same practitioner, they develop 
+                    an intimate understanding of how your face responds to treatment.
                   </p>
-                  <Link to="/contact">
-                    <Button className="bg-white text-yellow-600 hover:bg-gray-100">
-                      Schedule Your Consultation
-                    </Button>
-                  </Link>
+
+                  <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                    {[
+                      { title: "Optimised Plans", desc: "Treatments become more targeted as your practitioner learns your unique response patterns." },
+                      { title: "Reduced Waste", desc: "No repeating unsuccessful approaches or overcompensating for unknown factors." },
+                      { title: "Preventive Approach", desc: "Early intervention requires less product and achieves better results." },
+                      { title: "Consistent Quality", desc: "Maintained results require less dramatic interventions with more natural outcomes." },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <h3 className="text-sm font-medium text-white/60 mb-1">{item.title}</h3>
+                        <p className="text-white/35 text-sm font-light leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Section: Relationships */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                    The Reward of <span className="text-[#C9A050] font-light">Long-Term Relationships</span>
+                  </h2>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    The subtle art of aesthetic medicine truly rewards both practitioners and patients when there's long-term 
+                    continuity of care. This relationship allows for refinements, adjustments, and improvements that simply 
+                    aren't possible in one-off treatments.
+                  </p>
+
+                  <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                    {[
+                      { title: "Trust Development", desc: "Patients become more comfortable expressing concerns, leading to better communication and outcomes." },
+                      { title: "Refined Technique", desc: "Practitioners fine-tune their approach based on how each patient's skin responds." },
+                      { title: "Evolving Goals", desc: "As patients age, a long-term practitioner adapts the treatment plan accordingly." },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <h3 className="text-sm font-medium text-[#C9A050] mb-2">{item.title}</h3>
+                        <p className="text-white/35 text-sm font-light leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Conclusion */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                    Choosing Continuity for <span className="text-[#C9A050] font-light">Lasting Beauty</span>
+                  </h2>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    At CosmeDocs, true aesthetic enhancement is not about dramatic transformations or chasing trends. 
+                    It's about the quiet art of ageing gracefully, maintaining your natural beauty, and feeling confident in your own skin.
+                  </p>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-8">
+                    When you choose to work with the same practitioner over time, you're not just investing in treatments — 
+                    you're investing in a partnership that understands your unique beauty, respects your goals, and works with you 
+                    to maintain and enhance your natural features as you move through life. Bold, natural, always your way.
+                  </p>
+
+                  {/* CTA */}
+                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-8 text-center">
+                    <h3 className="text-xl font-extralight mb-3">
+                      Ready to Begin Your <span className="text-[#C9A050] font-light">Long-Term Journey?</span>
+                    </h3>
+                    <p className="text-white/35 text-sm font-light mb-6">
+                      Discover the benefits of continuity in aesthetic care with our Harley Street doctors.
+                    </p>
+                    <a
+                      href="https://med.as.me/harleystreet"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-[#C9A050] hover:bg-[#B8913F] text-black px-8 py-3 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105"
+                    >
+                      Book Consultation
+                    </a>
+                  </div>
+                </div>
+
+                {/* Author EEAT */}
+                <div className="pt-8">
+                  <BlogAuthorEEAT doctor="ahmed" articleContext="Dr. Haq has developed long-term aesthetic care plans for thousands of patients over 17+ years, observing how continuity of care directly improves clinical outcomes and patient satisfaction." />
+                </div>
+
+                {/* Related Articles */}
+                <div className="pt-8 border-t border-white/[0.06]">
+                  <h3 className="text-xs font-medium text-white/40 tracking-wider uppercase mb-4">
+                    Continue Reading
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      { title: "The Ultimate Botox Guide", path: "/ultimate-botox-guide/" },
+                      { title: "Smart Aesthetics: Before You Choose a Treatment", path: "/aesthetic-treatments-made-easy" },
+                      { title: "Lip Filler Results Explained", path: "/blog/lip-filler-results-explained/" },
+                    ].map((article, i) => (
+                      <Link
+                        key={i}
+                        to={article.path}
+                        className="flex items-center justify-between py-3 border-b border-white/[0.04] last:border-0 group"
+                      >
+                        <span className="text-sm text-white/60 font-light group-hover:text-[#C9A050] transition-colors">
+                          {article.title}
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-white/20 group-hover:text-[#C9A050] transition-colors" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
-            </div>
+            </article>
+
+            {/* Sidebar */}
+            <BlogSidebar delay={0.4} />
           </div>
         </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Long-Term Aesthetic Care Benefits London Cosmedocs</h2>
+          <h2>Long-Term Aesthetic Care Benefits London CosmeDocs</h2>
           <p>
-            Long-term aesthetic care planning London, benefits of same aesthetic doctor, five-year beauty plan London, 
-            anti-aging treatment continuity, facial aging prevention London, aesthetic medicine long-term relationships, 
-            cosmetic doctor continuity benefits, aesthetic treatment planning London, facial rejuvenation long-term care, 
-            beauty maintenance London, aesthetic practitioner relationships, cosmetic medicine continuity, anti-aging 
-            strategy London, facial treatment planning, aesthetic care consistency, beauty enhancement long-term, 
-            cosmetic treatment relationships, aesthetic medicine planning, facial aging treatment London, beauty 
-            maintenance strategy, aesthetic doctor relationships London, cosmetic care continuity, anti-aging 
-            practitioner benefits, facial enhancement planning, aesthetic treatment consistency London.
-          </p>
-          <p>
-            At Cosmedocs London, we emphasize the importance of building long-term relationships with aesthetic 
-            practitioners for optimal anti-aging results. Our approach to facial aging recognizes that effective 
-            treatment requires understanding individual patient factors including sun exposure, lifestyle habits, 
-            facial expressions, volume loss patterns, and genetic predispositions. The five-year aesthetic planning 
-            approach ensures comprehensive care that addresses current concerns while preventing future aging signs. 
-            Experienced practitioners at our London clinic can achieve superior results through strategic treatment 
-            combinations, understanding how Botox and dermal fillers work synergistically for longer-lasting, more 
-            natural outcomes. The economics of aesthetic continuity demonstrate that working with the same practitioner 
-            over time provides better value through optimized treatment plans, reduced waste, preventive approaches, 
-            and consistent quality results. Our philosophy of invisible art aesthetic medicine rewards both practitioners 
-            and patients through long-term follow-up and continuity of care, allowing for refinements and improvements 
-            that create naturally beautiful, age-appropriate results.
+            Long-term aesthetic care planning London, benefits of same aesthetic doctor, five-year beauty plan, 
+            anti-ageing treatment continuity, facial ageing prevention, aesthetic medicine long-term relationships, 
+            cosmetic doctor continuity benefits, aesthetic treatment planning, facial rejuvenation long-term care, 
+            beauty maintenance, aesthetic practitioner relationships. Our aesthetics is invisible art — bold, natural, always your way.
           </p>
         </div>
       </div>
