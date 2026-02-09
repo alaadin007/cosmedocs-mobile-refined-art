@@ -61,6 +61,13 @@ const BlogHome = () => {
       path: "/long-term-aesthetic-care-blog",
       icon: "arrow",
     },
+    {
+      title: "Aesthetic Treatment Maintenance Costs: What to Really Expect",
+      subtitle: "How to budget wisely for long-term aesthetic care — and why continuity saves you money.",
+      category: "EDITORIAL",
+      path: "/aesthetic-maintenance-cost-blog",
+      icon: "arrow",
+    },
   ];
 
   const structuredData = {

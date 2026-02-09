@@ -297,6 +297,7 @@ const LongTermAestheticCareBlog = () => {
                   </h3>
                   <div className="space-y-3">
                     {[
+                      { title: "Aesthetic Treatment Maintenance Costs", path: "/aesthetic-maintenance-cost-blog" },
                       { title: "The Ultimate Botox Guide", path: "/ultimate-botox-guide/" },
                       { title: "Smart Aesthetics: Before You Choose a Treatment", path: "/aesthetic-treatments-made-easy" },
                       { title: "Lip Filler Results Explained", path: "/blog/lip-filler-results-explained/" },
