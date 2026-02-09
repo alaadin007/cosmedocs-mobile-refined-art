@@ -89,7 +89,12 @@ const BlogHome = lazy(() => import("./pages/BlogHome"));
 const EightPointFacelift = lazy(() => import("./pages/EightPointFacelift"));
 const ChinesePatients = lazy(() => import("./pages/ChinesePatients"));
 const ArabicPatients = lazy(() => import("./pages/ArabicPatients"));
-const TreatmentsSummaryJapanese = lazy(() => import("./pages/TreatmentsSummaryJapanese"));
+const SwedishPatients = lazy(() => import("./pages/SwedishPatients"));
+const NorwegianPatients = lazy(() => import("./pages/NorwegianPatients"));
+const FinnishPatients = lazy(() => import("./pages/FinnishPatients"));
+const GermanPatients = lazy(() => import("./pages/GermanPatients"));
+const FrenchPatients = lazy(() => import("./pages/FrenchPatients"));
+const JapanesePatients = lazy(() => import("./pages/JapanesePatients"));
 const BirminghamHome = lazy(() => import("./pages/BirminghamHome"));
 const ManchesterHome = lazy(() => import("./pages/ManchesterHome"));
 const CardiffHome = lazy(() => import("./pages/CardiffHome"));
@@ -691,7 +696,22 @@ const App = () => {
                           <Route path="/treatments-summary-chinese" element={<Navigate to="/chinese-patients/" replace />} />
                           <Route path="/arabic-patients" element={<ArabicPatients />} />
                           <Route path="/treatments-summary-arabic" element={<Navigate to="/arabic-patients/" replace />} />
-                          <Route path="/treatments-summary-japanese" element={<TreatmentsSummaryJapanese />} />
+                          <Route path="/treatments-summary-japanese" element={<Navigate to="/japanese-patients/" replace />} />
+                          <Route path="/treatments-summary-japanese/" element={<Navigate to="/japanese-patients/" replace />} />
+                          
+                          {/* International Patient Hubs */}
+                          <Route path="/swedish-patients" element={<SwedishPatients />} />
+                          <Route path="/swedish-patients/" element={<SwedishPatients />} />
+                          <Route path="/norwegian-patients" element={<NorwegianPatients />} />
+                          <Route path="/norwegian-patients/" element={<NorwegianPatients />} />
+                          <Route path="/finnish-patients" element={<FinnishPatients />} />
+                          <Route path="/finnish-patients/" element={<FinnishPatients />} />
+                          <Route path="/german-patients" element={<GermanPatients />} />
+                          <Route path="/german-patients/" element={<GermanPatients />} />
+                          <Route path="/french-patients" element={<FrenchPatients />} />
+                          <Route path="/french-patients/" element={<FrenchPatients />} />
+                          <Route path="/japanese-patients" element={<JapanesePatients />} />
+                          <Route path="/japanese-patients/" element={<JapanesePatients />} />
                           
                           {/* Other pages */}
                           <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
