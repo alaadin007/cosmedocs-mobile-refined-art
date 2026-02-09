@@ -55,6 +55,13 @@ const BlogHome = () => {
 
   const editorialArticles = [
     {
+      title: "Untraceably You: Look 5–10 Years Younger Naturally",
+      subtitle: "Why invisible results require more skill than dramatic ones — the philosophy behind undetectable rejuvenation.",
+      category: "PHILOSOPHY",
+      path: "/untraceably-you",
+      icon: "sparkles",
+    },
+    {
       title: "The Long-Term Benefits of Aesthetic Continuity",
       subtitle: "Why returning to the same doctor matters — and what you gain over five years.",
       category: "EDITORIAL",
