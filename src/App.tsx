@@ -87,7 +87,7 @@ const LazySkinSyndrome = lazy(() => import("./pages/LazySkinSyndrome"));
 const BeautyEthnicNeutrality = lazy(() => import("./pages/blog/BeautyEthnicNeutrality"));
 const BlogHome = lazy(() => import("./pages/BlogHome"));
 const EightPointFacelift = lazy(() => import("./pages/EightPointFacelift"));
-const TreatmentsSummaryChinese = lazy(() => import("./pages/TreatmentsSummaryChinese"));
+const ChinesePatients = lazy(() => import("./pages/ChinesePatients"));
 const ArabicPatients = lazy(() => import("./pages/ArabicPatients"));
 const TreatmentsSummaryJapanese = lazy(() => import("./pages/TreatmentsSummaryJapanese"));
 const BirminghamHome = lazy(() => import("./pages/BirminghamHome"));
@@ -687,7 +687,8 @@ const App = () => {
                           <Route path="/barbados" element={<BarbadosHome />} />
                           
                           {/* Language summary pages */}
-                          <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
+                          <Route path="/chinese-patients" element={<ChinesePatients />} />
+                          <Route path="/treatments-summary-chinese" element={<Navigate to="/chinese-patients/" replace />} />
                           <Route path="/arabic-patients" element={<ArabicPatients />} />
                           <Route path="/treatments-summary-arabic" element={<Navigate to="/arabic-patients/" replace />} />
                           <Route path="/treatments-summary-japanese" element={<TreatmentsSummaryJapanese />} />
