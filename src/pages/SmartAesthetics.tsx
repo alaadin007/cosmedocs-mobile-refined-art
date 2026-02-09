@@ -591,6 +591,10 @@ export default function SmartAesthetics() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span><strong className="text-gray-900">Muscle</strong> — the layer of contraction. Repeated expressions etch lines into skin, and over time, chronic contraction shortens the face. The frown pulls the brows down; the mentalis and DAO push upward — both forces compressing the mid-face, reshaping you from the inside out.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-amber-600 font-bold text-xl">•</span>
                     <span><strong className="text-gray-900">Fat pads</strong> — where contour hides.</span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -680,14 +684,26 @@ export default function SmartAesthetics() {
                 <p>
                   Here's the truth nobody likes to hear:
                   Most dry skin isn't dehydrated — it's blocked.
-                  When dead cells pile up, water from the dermis can't reach the surface.
-                  So you keep adding more moisturiser, and the skin keeps ignoring you.
+                  Dead skin is dry skin. Water doesn't diffuse through dead cell layers — it can't.
+                  Think of it like dead grass: you don't water it and hope for the best — you cut it off so new growth can breathe.
                 </p>
 
                 <p>
-                  At CosmeDocs, we take a different route — we clear the traffic.
-                  We gently strip the barrier, allowing the water to flow up again.
-                  Real hydration happens when the skin starts breathing.
+                  Your body already knows how to hydrate itself. Water rises from the dermis, through living tissue, to the surface.
+                  But when dead cells pile up, they form a wall. You keep layering on moisturiser, and the skin keeps ignoring you —
+                  because the moisture has nowhere to go and nowhere to come from.
+                </p>
+
+                <p>
+                  The rest of your body handles this naturally. Clothes against the skin gently exfoliate as you move —
+                  your arms, your legs, your torso — they shed dead cells constantly without you thinking about it.
+                  The face doesn't get that luxury. It's exposed, unprotected, and accumulates faster than it sheds.
+                </p>
+
+                <p>
+                  That's why at CosmeDocs, we don't just moisturise — we exfoliate.
+                  AHAs, chemical peels, medical-grade resurfacing — we clear the dead layer so water can do what it was always meant to do: rise.
+                  Real hydration starts when you stop blocking it.
                 </p>
 
                 <PauseAndThink principleId="skin-not-surface" />
