@@ -156,10 +156,10 @@ const PauseAndThink = ({ principleId }: { principleId: string }) => {
   };
 
   return (
-    <div className="my-10 bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 md:p-8">
+    <div className="my-10 bg-gradient-to-br from-[#C9A050]/10 to-[#C9A050]/5 border border-[#C9A050]/30 rounded-2xl p-6 md:p-8">
       <div className="flex items-center gap-3 mb-4">
-        <Brain className="w-6 h-6 text-amber-600" />
-        <span className="font-semibold text-amber-800">Pause & Think</span>
+        <Brain className="w-6 h-6 text-[#C9A050]" />
+        <span className="font-semibold text-[#C9A050]">Pause & Think</span>
       </div>
       
       <p className="text-lg font-medium text-gray-900 mb-6">{quiz.question}</p>
@@ -177,7 +177,7 @@ const PauseAndThink = ({ principleId }: { principleId: string }) => {
                   : selectedAnswer === index
                   ? "bg-red-100 border-red-500 text-red-800"
                   : "bg-gray-100 border-gray-200 text-gray-500"
-                : "bg-white border-gray-200 hover:border-amber-400 hover:bg-amber-50"
+                : "bg-white border-gray-200 hover:border-[#C9A050] hover:bg-[#C9A050]/10"
             }`}
           >
             {option}
@@ -191,7 +191,7 @@ const PauseAndThink = ({ principleId }: { principleId: string }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="mt-6 p-4 bg-white/80 rounded-xl border border-amber-200"
+            className="mt-6 p-4 bg-white/80 rounded-xl border border-[#C9A050]/30"
           >
             <p className="text-gray-700 leading-relaxed">{quiz.explanation}</p>
           </motion.div>
@@ -227,7 +227,7 @@ const RelatedTreatments = ({ principleId }: { principleId: string }) => {
 
 export default function SmartAesthetics() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [currentPrincipleIndex, setCurrentPrincipleIndex] = useState(-1); // -1 for entry block
+  const [currentPrincipleIndex, setCurrentPrincipleIndex] = useState(-1);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -309,7 +309,7 @@ export default function SmartAesthetics() {
               <div className="p-4">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2">
-                    <Lightbulb className="h-5 w-5 text-amber-600" />
+                    <Lightbulb className="h-5 w-5 text-[#C9A050]" />
                     <h2 className="font-semibold text-lg text-gray-900">Smart Aesthetics</h2>
                   </div>
                   <Button
@@ -331,8 +331,8 @@ export default function SmartAesthetics() {
                   }}
                   className={`w-full text-left px-4 py-3 rounded-lg mb-4 transition-colors ${
                     currentPrincipleIndex === -1
-                      ? "bg-amber-500 text-white"
-                      : "bg-amber-100 hover:bg-amber-200 text-amber-900"
+                      ? "bg-[#C9A050] text-white"
+                      : "bg-[#C9A050]/20 hover:bg-[#C9A050]/30 text-[#C9A050]"
                   }`}
                 >
                   <div>
@@ -376,7 +376,7 @@ export default function SmartAesthetics() {
         >
           <div className="p-4">
             <div className="flex items-center gap-2 mb-6">
-              <Lightbulb className="h-5 w-5 text-amber-600" />
+              <Lightbulb className="h-5 w-5 text-[#C9A050]" />
               <h2 className="font-semibold text-lg text-gray-900">Smart Aesthetics</h2>
             </div>
 
@@ -385,8 +385,8 @@ export default function SmartAesthetics() {
               onClick={() => setCurrentPrincipleIndex(-1)}
               className={`w-full text-left px-4 py-3 rounded-lg mb-4 transition-colors ${
                 currentPrincipleIndex === -1
-                  ? "bg-amber-500 text-white"
-                  : "bg-amber-100 hover:bg-amber-200 text-amber-900"
+                  ? "bg-[#C9A050] text-white"
+                  : "bg-[#C9A050]/20 hover:bg-[#C9A050]/30 text-[#C9A050]"
               }`}
             >
               <div>
@@ -423,7 +423,7 @@ export default function SmartAesthetics() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="md:hidden fixed top-20 left-4 z-50 p-2 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hover:bg-amber-600 transition-colors"
+            className="md:hidden fixed top-20 left-4 z-50 p-2 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hover:bg-[#C9A050] transition-colors"
             aria-label={sidebarOpen ? "Close menu" : "Open menu"}
           >
             <Menu className="h-5 w-5 text-white" />
@@ -448,7 +448,7 @@ export default function SmartAesthetics() {
               >
                 {/* Hero Entry Block */}
                 <div className="text-center mb-12">
-                  <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-4">Smart Aesthetics Series</p>
+                  <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-4">Smart Aesthetics Series</p>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
                     Before You Choose a Treatment
                   </h1>
@@ -469,9 +469,9 @@ export default function SmartAesthetics() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
                   <button
                     onClick={() => setCurrentPrincipleIndex(0)}
-                    className="group flex flex-col items-center gap-3 p-6 bg-white border-2 border-gray-200 hover:border-amber-500 rounded-2xl transition-all duration-300 hover:shadow-lg"
+                    className="group flex flex-col items-center gap-3 p-6 bg-white border-2 border-gray-200 hover:border-[#C9A050] rounded-2xl transition-all duration-300 hover:shadow-lg"
                   >
-                    <Lightbulb className="w-8 h-8 text-amber-500 group-hover:scale-110 transition-transform" />
+                    <Lightbulb className="w-8 h-8 text-[#C9A050] group-hover:scale-110 transition-transform" />
                     <span className="font-semibold text-gray-900">Read the Thinking</span>
                     <span className="text-sm text-gray-500">Learn the principles</span>
                   </button>
@@ -499,7 +499,7 @@ export default function SmartAesthetics() {
 
                 {/* Philosophy Intro */}
                 <div className="prose prose-gray prose-lg max-w-none">
-                  <div className="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl mb-8">
+                  <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-6 rounded-r-xl mb-8">
                     <p className="text-lg font-medium text-gray-900 mb-2">Short, intelligent guidance to help you avoid aesthetic mistakes.</p>
                     <p className="text-gray-600 m-0">Dip in anywhere. Each principle stands alone.</p>
                   </div>
@@ -529,7 +529,7 @@ export default function SmartAesthetics() {
                   <div className="mt-10 pt-8 border-t border-gray-200 text-center">
                     <Button
                       onClick={() => setCurrentPrincipleIndex(0)}
-                      className="bg-gray-900 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-xl"
+                      className="bg-gray-900 hover:bg-[#C9A050] text-white px-8 py-6 text-lg rounded-xl"
                     >
                       Start Reading the Principles
                       <ChevronRight className="ml-2 h-5 w-5" />
@@ -546,7 +546,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 1</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 1</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   Why Most Treatments Fail
                 </h1>
@@ -582,23 +582,23 @@ export default function SmartAesthetics() {
 
                 <ul className="list-none space-y-3 my-6 pl-0">
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong className="text-gray-900">Epidermis</strong> — where renewal happens.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong className="text-gray-900">Dermis</strong> — where strength lives.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong className="text-gray-900">Muscle</strong> — the layer of contraction. Repeated expressions etch lines into skin, and over time, chronic contraction shortens the face. The frown pulls the brows down; the mentalis and DAO push upward — both forces compressing the mid-face, reshaping you from the inside out.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong className="text-gray-900">Fat pads</strong> — where contour hides.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong className="text-gray-900">Ligaments</strong> — the truth about lift.</span>
                   </li>
                 </ul>
@@ -607,7 +607,7 @@ export default function SmartAesthetics() {
                   Once you know the layers, the rest is common sense dressed as science.
                 </p>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     Trends change every quarter. Anatomy hasn't updated in a few million years.
@@ -626,7 +626,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 2</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 2</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   Skin Is Not a Surface
                 </h1>
@@ -661,7 +661,7 @@ export default function SmartAesthetics() {
                   Dead cells hang around longer than they should, muting your glow.
                 </p>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     Think of your skin like glass — clarity depends on turnover, not thickness.
@@ -718,7 +718,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 3</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 3</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   Structure Before Lift
                 </h1>
@@ -752,7 +752,7 @@ export default function SmartAesthetics() {
                   Sunlight speeds it up. Sugar ruins it. Stress accelerates the exit.
                 </p>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     You don't age. You decompress.
@@ -798,7 +798,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 4</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 4</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   The Volume Story
                 </h1>
@@ -830,24 +830,24 @@ export default function SmartAesthetics() {
 
                 <ul className="list-none space-y-3 my-6 pl-0">
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Upper cheeks deflate → nasolabial folds deepen</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Temples hollow → the forehead looks longer, harder</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Jawline fat descends → jowls form, chin softens</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Under-eye fat separates → tear troughs appear</span>
                   </li>
                 </ul>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     You don't lose youth. You lose distribution.
@@ -871,7 +871,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 5</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 5</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   The Thirties Shift
                 </h1>
@@ -894,24 +894,24 @@ export default function SmartAesthetics() {
 
                 <ul className="list-none space-y-3 my-6 pl-0">
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Collagen production slows by about 1% each year after 25</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Bone resorption begins, especially around the eyes and jaw</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Fat pads start to separate — the malar pad descends slightly</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span>Expression lines begin etching into the skin permanently</span>
                   </li>
                 </ul>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     The thirties aren't about repair. They're about prevention with precision.
@@ -942,7 +942,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 6</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 6</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   The Forties Logic
                 </h1>
@@ -969,24 +969,24 @@ export default function SmartAesthetics() {
 
                 <ul className="list-none space-y-3 my-6 pl-0">
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">1.</span>
+                    <span className="text-[#C9A050] font-bold text-xl">1.</span>
                     <span><strong>Restore volume first</strong> — cheeks, temples, under-eyes</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">2.</span>
+                    <span className="text-[#C9A050] font-bold text-xl">2.</span>
                     <span><strong>Lift strategically</strong> — threads, targeted filler placement</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">3.</span>
+                    <span className="text-[#C9A050] font-bold text-xl">3.</span>
                     <span><strong>Relax selectively</strong> — Botox where tension creates lines</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">4.</span>
+                    <span className="text-[#C9A050] font-bold text-xl">4.</span>
                     <span><strong>Rebuild skin quality</strong> — Profhilo, polynucleotides</span>
                   </li>
                 </ul>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     The 40s require a plan, not a product. Each treatment should support the next.
@@ -1004,7 +1004,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 7</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 7</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   The Fifties Elegance
                 </h1>
@@ -1031,24 +1031,24 @@ export default function SmartAesthetics() {
 
                 <ul className="list-none space-y-3 my-6 pl-0">
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong>Global approach</strong> — treat face, neck, décolletage together</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong>Skin resurfacing</strong> — lasers for texture, tone, sun damage</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong>Surgical consideration</strong> — when non-surgical reaches its limits</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">•</span>
+                    <span className="text-[#C9A050] font-bold text-xl">•</span>
                     <span><strong>Maintenance mindset</strong> — regular touch-ups over dramatic interventions</span>
                   </li>
                 </ul>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     The goal is harmony, not youth. Looking refreshed, not changed.
@@ -1066,7 +1066,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 8</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 8</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   When Not to Treat
                 </h1>
@@ -1132,7 +1132,7 @@ export default function SmartAesthetics() {
                   </li>
                 </ul>
 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 my-6 not-prose">
+                <div className="bg-[#C9A050]/10 border-l-4 border-[#C9A050] p-4 my-6 not-prose">
                   <p className="text-sm font-semibold text-gray-900">💡 Key Insight:</p>
                   <p className="text-gray-700 mt-1">
                     At CosmeDocs, we're proud of the treatments we don't do as much as the ones we do.
@@ -1150,7 +1150,7 @@ export default function SmartAesthetics() {
                 animate={{ opacity: 1, y: 0 }}
                 className="prose prose-gray prose-lg max-w-none"
               >
-                <p className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-2">Principle 9</p>
+                <p className="text-sm font-medium text-[#C9A050] uppercase tracking-wide mb-2">Principle 9</p>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   Core Principles
                 </h1>
@@ -1167,32 +1167,32 @@ export default function SmartAesthetics() {
 
                 <div className="space-y-6 my-10">
                   <div className="bg-gray-900 text-white p-6 rounded-xl">
-                    <p className="text-amber-400 font-semibold mb-2">1. Anatomy First</p>
+                    <p className="text-[#C9A050] font-semibold mb-2">1. Anatomy First</p>
                     <p className="text-gray-300 m-0">Understand the structure before reaching for the syringe.</p>
                   </div>
                   
                   <div className="bg-gray-900 text-white p-6 rounded-xl">
-                    <p className="text-amber-400 font-semibold mb-2">2. Depth Matters</p>
+                    <p className="text-[#C9A050] font-semibold mb-2">2. Depth Matters</p>
                     <p className="text-gray-300 m-0">The right treatment at the wrong depth is the wrong treatment.</p>
                   </div>
                   
                   <div className="bg-gray-900 text-white p-6 rounded-xl">
-                    <p className="text-amber-400 font-semibold mb-2">3. Less is More</p>
+                    <p className="text-[#C9A050] font-semibold mb-2">3. Less is More</p>
                     <p className="text-gray-300 m-0">Subtlety is a skill. Restraint is a virtue.</p>
                   </div>
                   
                   <div className="bg-gray-900 text-white p-6 rounded-xl">
-                    <p className="text-amber-400 font-semibold mb-2">4. Build, Don't Patch</p>
+                    <p className="text-[#C9A050] font-semibold mb-2">4. Build, Don't Patch</p>
                     <p className="text-gray-300 m-0">Restore the foundation. The surface will follow.</p>
                   </div>
                   
                   <div className="bg-gray-900 text-white p-6 rounded-xl">
-                    <p className="text-amber-400 font-semibold mb-2">5. You, But Refined</p>
+                    <p className="text-[#C9A050] font-semibold mb-2">5. You, But Refined</p>
                     <p className="text-gray-300 m-0">The goal is always enhancement, never replacement.</p>
                   </div>
                 </div>
 
-                <blockquote className="border-l-4 border-amber-500 pl-6 italic text-xl my-8 text-gray-800">
+                <blockquote className="border-l-4 border-[#C9A050] pl-6 italic text-xl my-8 text-gray-800">
                   "Quiet, not loud. Invisible, not exaggerated. Transformation that speaks — without saying a word."
                 </blockquote>
 
@@ -1215,7 +1215,7 @@ export default function SmartAesthetics() {
                 {currentPrincipleIndex < principles.length - 1 && (
                   <Button
                     onClick={handleNext}
-                    className="gap-2 bg-gray-900 hover:bg-amber-600"
+                    className="gap-2 bg-gray-900 hover:bg-[#C9A050]"
                   >
                     Next Principle
                     <ChevronRight className="h-4 w-4" />
