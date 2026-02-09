@@ -62,6 +62,27 @@ const BlogHome = () => {
       icon: "sparkles",
     },
     {
+      title: "Inside the Mind of an Aesthetic Doctor",
+      subtitle: "What a Harley Street doctor actually thinks during a consultation — the unseen decisions behind every result.",
+      category: "BEHIND THE SCENES",
+      path: "/inside-mind-aesthetic-doctor-blog",
+      icon: "eye",
+    },
+    {
+      title: "Why Threads Are Changing the Conversation About Ageing",
+      subtitle: "The science of mechanical lifting — and why it appeals to patients who want structure, not volume.",
+      category: "INSIGHT",
+      path: "/pdo-threads-blog",
+      icon: "syringe",
+    },
+    {
+      title: "Why Women Get Smoker's Lines — Even Without Smoking",
+      subtitle: "The biomechanics of the orbicularis oris, why it's almost exclusively a female concern, and what can be done.",
+      category: "CLINICAL INSIGHT",
+      path: "/blog/smokers-lines-women",
+      icon: "sparkles",
+    },
+    {
       title: "The Long-Term Benefits of Aesthetic Continuity",
       subtitle: "Why returning to the same doctor matters — and what you gain over five years.",
       category: "EDITORIAL",
