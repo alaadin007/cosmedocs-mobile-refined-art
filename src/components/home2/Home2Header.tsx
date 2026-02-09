@@ -110,6 +110,7 @@ const navItems = [
   { label: "Pricing", link: "/treatments/" },
   { label: "Concerns", link: "/concerns/" },
   { label: "Gallery", link: "/before-after/" },
+  { label: "Smart Aesthetics", link: "/aesthetic-treatments-made-easy/" },
   { label: "Blog", link: "/blog/" },
   { label: "About", link: "/about/" },
   { label: "Contact", link: "/contact/" },
