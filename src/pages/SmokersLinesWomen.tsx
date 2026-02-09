@@ -1,394 +1,258 @@
-import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import { motion } from "framer-motion";
+import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
+import { Clock, Award, ArrowRight } from "lucide-react";
+import BlogSidebar from "@/components/blog/BlogSidebar";
+import BlogAuthorEEAT from "@/components/blog/BlogAuthorEEAT";
+import smokersLinesPout from "@/assets/smokers-lines-pouting-expression.jpeg";
+import smokersLinesClinical from "@/assets/smokers-lines-clinical.jpeg";
 
 const SmokersLinesWomen = () => {
+  const seoData = generateSEOMetadata(
+    "Why Women Get Smoker's Lines (Even Without Smoking) | CosmeDocs",
+    "Why 99% of smoker's lines patients are women — even non-smokers. The real cause is the pouting expression, not cigarettes. Expert insight from Harley Street doctors.",
+    "/blog/smokers-lines-women/"
+  );
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "Why Women Get Smoker's Lines — Even Without Smoking",
+    description: seoData.description,
+    author: { "@type": "Organization", name: "CosmeDocs", url: "https://www.cosmedocs.co.uk" },
+    publisher: { "@type": "Organization", name: "CosmeDocs" },
+    datePublished: "2024-01-15",
+    dateModified: "2026-02-09",
+    mainEntityOfPage: "https://www.cosmedocs.co.uk/blog/smokers-lines-women/",
+  };
+
   return (
     <>
       <Helmet>
-        <title>Why Women Get Smokers Lines (Even Without Smoking) | CosmedTalk</title>
-        <meta name="description" content="Why 99% of smoker's lines patients are women. Lip anatomy, speech patterns & lifestyle factors causing perioral wrinkles." />
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
         <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/smokers-lines-women/" />
-        <meta property="og:title" content="Why Women Get Smokers Lines (Even Without Smoking) | CosmedTalk" />
-        <meta property="og:description" content="Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines." />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/smokers-lines-women/" />
         <meta property="og:type" content="article" />
-        <meta name="keywords" content="smokers lines women, perioral lines, lip wrinkles, female facial aging, non-smoker lines, lip anatomy, speech patterns, cosmetic treatment" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "Why Women Get Smokers Lines (Even Without Smoking)",
-            "author": {
-              "@type": "Organization",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Cosmedocs",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://cosmedocs.co.uk/logo.png"
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
-            },
-            "datePublished": "2024-01-15",
-            "dateModified": "2024-01-15",
-            "description": "Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines.",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://www.cosmedocs.co.uk/blog/smokers-lines-women/"
-            }
-          })}
-        </script>
-        <script async src="//www.instagram.com/embed.js"></script>
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
-        {/* Header */}
-        <section className="py-8 border-b border-gray-800">
-          <div className="container mx-auto px-4">
-            <Link to="/blog/" className="inline-flex items-center text-gray-300 hover:text-white mb-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to CosmeTalk
-            </Link>
-            <div className="flex items-center space-x-4 text-sm text-gray-400">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-1" />
-                January 15, 2024
+      <div className="min-h-screen bg-black text-white">
+        {/* Hero */}
+        <section className="relative py-20 md:py-28">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute -top-40 right-[-10%] w-[500px] h-[500px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.05) 0%, transparent 60%)' }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+          <div className="relative max-w-4xl mx-auto px-4 text-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+              <span className="text-[#C9A050] text-xs font-medium tracking-[0.25em] uppercase">Clinical Insight</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight mt-4 mb-6 leading-[1.15] tracking-tight">
+                Why Women Get <span className="text-[#C9A050] font-light">Smoker's Lines</span>
+                <br className="hidden sm:block" />
+                <span className="text-white/60 text-2xl sm:text-3xl md:text-4xl"> — Even Without Smoking</span>
+              </h1>
+              <p className="text-white/40 text-lg font-light max-w-2xl mx-auto mb-8">
+                The name is misleading. The cause isn't cigarettes — it's an expression. And it's almost exclusively female.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 text-xs text-white/30">
+                <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 7 min read</span>
+                <span className="flex items-center gap-1.5"><Award className="w-3.5 h-3.5" /> Clinical observation</span>
               </div>
-              <div className="flex items-center">
-                <User className="w-4 h-4 mr-1" />
-                Edited by Dr. Ahmed Haq, Dr. Hena Haq • Harley Street Institute
-              </div>
-            </div>
+            </motion.div>
+          </div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-[#C9A050]/40" />
+        </section>
+
+        {/* Content + Sidebar */}
+        <section className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid lg:grid-cols-[1fr_240px] gap-12">
+            <article className="max-w-3xl">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="space-y-8">
+
+                <p className="text-white/45 text-lg font-light leading-relaxed">
+                  They're called "smoker's lines." It's one of the most misleading names in aesthetic medicine. Because the overwhelming majority of patients who present with perioral lines — those fine vertical creases that radiate from the upper lip — have never smoked a day in their lives. And almost every single one of them is a woman.
+                </p>
+                <p className="text-white/45 font-light leading-relaxed">
+                  In over 17 years of clinical practice at CosmeDocs, we have rarely — if ever — treated a male patient for isolated perioral lines. Not once for a male non-smoker. That statistic alone should tell you that the cause isn't tobacco. It's biomechanics.
+                </p>
+
+                {/* The Real Cause */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">The Real Cause: <span className="text-[#C9A050] font-light">The Pout</span></h2>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    The orbicularis oris — the circular muscle surrounding the mouth — contracts every time you purse your lips. But there's a crucial distinction that explains everything: women <em>pout</em>, men <em>purse</em>.
+                  </p>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Pouting involves a specific forward projection of the lips combined with a gentle compression of the upper lip border. It's an expression almost exclusive to women — used in speech, in thought, in reaction, in social signalling. Men, when they do engage the orbicularis oris, tend to purse — a flatter, more horizontal compression that doesn't create the same vertical etching on the skin above the lip.
+                  </p>
+
+                  <div className="my-8 rounded-xl overflow-hidden border border-white/[0.08]">
+                    <img src={smokersLinesPout} alt="Clinical photograph showing perioral lines caused by repeated pouting expression — vertical creases radiating from the upper lip" className="w-full object-cover max-h-[400px]" loading="lazy" />
+                    <div className="px-4 py-3 bg-white/[0.02] border-t border-white/[0.06]">
+                      <p className="text-xs text-white/30 font-light italic">Perioral lines visible during orbicularis oris contraction. Note the vertical radiation pattern exclusive to the pouting expression.</p>
+                    </div>
+                  </div>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    This is why non-smoking women develop these lines. It's not about what you inhale — it's about how you <em>move</em>. The muscle contracts, the skin above it folds, and over thousands of repetitions across decades, those folds etch permanently into the dermis.
+                  </p>
+
+                  <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl mb-6">
+                    <p className="text-sm font-medium text-[#C9A050] mb-2">Clinical observation</p>
+                    <p className="text-white/40 text-sm font-light leading-relaxed">Male smokers — even heavy, lifelong smokers — rarely present with isolated perioral lines. When they do develop them, the lines tend to be shallower and less defined. The male expression pattern simply doesn't create the same mechanical stress on the upper lip skin.</p>
+                  </div>
+                </div>
+
+                {/* Straws, Speech & Culture */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">Straws, Speech & <span className="text-[#C9A050] font-light">Cultural Expression</span></h2>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Once you understand that the cause is the <em>expression</em> rather than the <em>substance</em>, the list of contributing factors expands far beyond cigarettes. Drinking through straws replicates the exact same orbicularis oris contraction pattern. The lip pushes forward, the skin compresses, and the same vertical lines form. One straw a day for twenty years leaves its mark.
+                  </p>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    But perhaps the most fascinating contributing factor is <strong className="text-white/70">speech pattern</strong>. Certain languages and accents require more frequent engagement of the pouting muscles. French speakers, for example, use pronounced lip rounding for vowels like <em>ou</em>, <em>u</em>, and <em>eu</em> — sounds that don't exist in English and demand significant orbicularis oris activation with every sentence.
+                  </p>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    We've observed the same pattern in speakers of Portuguese, Italian, and other Romance languages where rounded vowel sounds dominate. The "oui" muscles, as we sometimes call them informally, work harder than their English-speaking equivalents. Over a lifetime of conversation, this linguistic biomechanics contributes meaningfully to perioral line development.
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                    {[
+                      { title: "The Pout", desc: "Forward lip projection — kissing, emotional expression, social signalling. Almost exclusively a female movement pattern." },
+                      { title: "Straw Drinking", desc: "Identical orbicularis oris contraction as pouting. Daily repetition over years creates cumulative dermal etching." },
+                      { title: "Speech Patterns", desc: "Languages requiring rounded vowels (French, Portuguese, Italian) engage the pouting muscles significantly more." },
+                      { title: "Musical Instruments", desc: "Wind and brass players — flute, clarinet, trumpet — sustain orbicularis oris contraction for extended periods." },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <h3 className="text-sm font-medium text-[#C9A050] mb-2">{item.title}</h3>
+                        <p className="text-white/35 text-sm font-light leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Anatomy */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">Why the Upper Lip Is <span className="text-[#C9A050] font-light">So Vulnerable</span></h2>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    The skin of the upper lip is among the thinnest on the face. It sits directly over muscle with very little subcutaneous fat cushioning the impact of repeated contraction. Unlike the cheek or forehead — where fat pads absorb some of the mechanical stress — the upper lip has almost no buffer between the moving muscle and the skin surface.
+                  </p>
+
+                  <div className="my-8 rounded-xl overflow-hidden border border-white/[0.08]">
+                    <img src={smokersLinesClinical} alt="Clinical photograph showing perioral region at rest — subtle vertical lines visible even without active expression" className="w-full object-cover max-h-[400px]" loading="lazy" />
+                    <div className="px-4 py-3 bg-white/[0.02] border-t border-white/[0.06]">
+                      <p className="text-xs text-white/30 font-light italic">Perioral region at rest. Established lines remain visible even without active contraction — evidence of permanent dermal etching from repeated expression.</p>
+                    </div>
+                  </div>
+
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Add to this the natural loss of collagen and elastin that accelerates after 30, and you have a perfect storm: thin skin, high-frequency muscle movement, diminishing structural support, and — in women specifically — the pouting expression pattern that men simply don't replicate.
+                  </p>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Oestrogen decline during perimenopause and menopause further compounds the problem. As oestrogen drops, dermal thickness reduces and collagen production slows — precisely when the cumulative damage from decades of expression is becoming visible. The timing is cruel but biologically logical.
+                  </p>
+                </div>
+
+                {/* Treatment */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">How We Approach <span className="text-[#C9A050] font-light">Treatment</span></h2>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Understanding the mechanism changes the treatment strategy entirely. If the cause were simply "ageing skin," you'd just resurface. But because perioral lines are expression-driven, effective treatment requires a layered approach that addresses both the muscle behaviour and the skin quality simultaneously.
+                  </p>
+                  <div className="space-y-4 mb-6">
+                    {[
+                      { title: "Muscle Relaxation (Botox)", desc: "Small, precise doses of botulinum toxin into the orbicularis oris reduce the intensity of the pouting contraction without affecting speech or expression. Prevention and treatment in one.", link: { text: "Learn more about Botox treatments", path: "/treatments/botox/" } },
+                      { title: "Dermal Filler", desc: "Hyaluronic acid filler placed superficially into the lines restores volume that decades of folding have depleted. This isn't about plumping the lips — it's about rebuilding the skin architecture above them.", link: { text: "Explore dermal filler treatments", path: "/treatments/dermal-fillers/" } },
+                      { title: "Skin Quality Restoration", desc: "Polynucleotides and skin boosters rebuild the dermis from within — stimulating collagen, improving elasticity, and thickening the skin so it resists future folding. The most underrated part of the protocol.", link: { text: "Discover skin rejuvenation options", path: "/treatments/skin-rejuvenation/" } },
+                      { title: "Surface Resurfacing", desc: "Chemical peels and laser treatments smooth existing lines at the epidermal level. They work best as a complement to deeper structural work — not as a standalone solution.", link: null },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <h3 className="text-sm font-medium text-[#C9A050] mb-2">{item.title}</h3>
+                        <p className="text-white/35 text-sm font-light leading-relaxed">{item.desc}</p>
+                        {item.link && (
+                          <Link to={item.link.path} className="inline-flex items-center gap-1 text-xs text-[#C9A050]/60 hover:text-[#C9A050] mt-3 transition-colors">
+                            {item.link.text} <ArrowRight className="w-3 h-3" />
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl mb-6">
+                    <p className="text-sm font-medium text-[#C9A050] mb-2">When not to treat</p>
+                    <p className="text-white/40 text-sm font-light leading-relaxed">Very fine lines only visible in extreme close-up or harsh lighting often don't warrant treatment. If they don't bother you at normal conversation distance, we'll tell you that. At CosmeDocs, we're as proud of the treatments we <em>don't</em> do as the ones we do.</p>
+                  </div>
+                </div>
+
+                {/* Bigger Picture */}
+                <div className="pt-6">
+                  <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
+                  <h2 className="text-2xl md:text-3xl font-extralight mb-6">The Bigger <span className="text-[#C9A050] font-light">Picture</span></h2>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    Perioral lines don't exist in isolation. They're part of a broader pattern of lower-face ageing that includes lip volume loss, nasolabial fold deepening, marionette line formation, and chin texture changes. Treating the lines alone without considering the surrounding architecture often produces an incomplete or unnatural result.
+                  </p>
+                  <p className="text-white/45 font-light leading-relaxed mb-6">
+                    That's why a comprehensive <Link to="/treatments/dermal-fillers/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">perioral assessment</Link> matters more than spot-treating individual lines. The lips, the skin above them, the chin below — they function as a unit. Harmony beats precision every time.
+                  </p>
+                  <p className="text-white/45 font-light leading-relaxed mb-8">
+                    For those thinking about long-term care, understanding <Link to="/aesthetic-maintenance-cost-blog" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">how to budget for ongoing aesthetic maintenance</Link> and the <Link to="/long-term-aesthetic-care-blog" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">benefits of practitioner continuity</Link> will help you approach treatment as a plan rather than a purchase. Our aesthetics is invisible art — bold, natural, always your way.
+                  </p>
+
+                  {/* CTA */}
+                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-8 text-center">
+                    <h3 className="text-xl font-extralight mb-3">Concerned About <span className="text-[#C9A050] font-light">Perioral Lines?</span></h3>
+                    <p className="text-white/35 text-sm font-light mb-6">Our Harley Street doctors can assess whether treatment is appropriate — or whether it's best left alone.</p>
+                    <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C9A050] hover:bg-[#B8913F] text-black px-8 py-3 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105">
+                      Book Consultation
+                    </a>
+                  </div>
+                </div>
+
+                {/* Author EEAT */}
+                <div className="pt-8">
+                  <BlogAuthorEEAT doctor="ahmed" articleContext="Dr. Haq has treated thousands of patients for perioral lines over 17+ years, observing the near-exclusive female presentation regardless of smoking history — clinical insight that informs the multi-layered treatment protocols described in this article." />
+                </div>
+
+                {/* Related */}
+                <div className="pt-8 border-t border-white/[0.06]">
+                  <h3 className="text-xs font-medium text-white/40 tracking-wider uppercase mb-4">Continue Reading</h3>
+                  <div className="space-y-3">
+                    {[
+                      { title: "Dermal Filler Treatments", path: "/treatments/dermal-fillers/" },
+                      { title: "Skin Rejuvenation & Polynucleotides", path: "/treatments/skin-rejuvenation/" },
+                      { title: "Lip Filler Results Explained", path: "/blog/lip-filler-results-explained/" },
+                      { title: "Aesthetic Maintenance Costs", path: "/aesthetic-maintenance-cost-blog" },
+                      { title: "The Long-Term Benefits of Aesthetic Continuity", path: "/long-term-aesthetic-care-blog" },
+                    ].map((article, i) => (
+                      <Link key={i} to={article.path} className="flex items-center justify-between py-3 border-b border-white/[0.04] last:border-0 group">
+                        <span className="text-sm text-white/60 font-light group-hover:text-[#C9A050] transition-colors">{article.title}</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-white/20 group-hover:text-[#C9A050] transition-colors" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </article>
+            <BlogSidebar delay={0.4} />
           </div>
         </section>
 
-        {/* Article Content */}
-        <article className="container mx-auto px-4 py-12 max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Why Women Get Smokers Lines 
-              <span className="block text-purple-300">(Even Without Smoking)</span>
-            </h1>
-
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              In our clinic, 99.9% of patients seeking treatment for smokers lines are women. Surprisingly, the vast majority have never smoked. 
-              So why do these perioral lines predominantly affect females? The answer lies in fascinating anatomical and behavioral differences.
-            </p>
-
-            {/* Main Banner Image */}
-            <div className="w-full h-64 md:h-80 rounded-lg mb-12 overflow-hidden">
-              <img 
-                src="/lovable-uploads/e3b8f0b0-e43f-4c9f-8e4a-47afe43a1022.png" 
-                alt="Close-up view of perioral lines around the mouth area showing smokers lines"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-semibold mb-4 text-purple-300">The Anatomy of Attraction... to Wrinkles</h2>
-              
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                The most compelling explanation lies in how men and women use their lips differently during everyday activities. 
-                Watch a woman drink from a straw – she naturally purses her lips, creating horizontal compression lines around the mouth. 
-                Men, conversely, tend to wrap their lips vertically around the straw, creating minimal horizontal stress on the perioral area.
-              </p>
-
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                This fundamental difference in lip mechanics extends beyond drinking. Women are more likely to:
-              </p>
-
-              <ul className="mb-6 text-gray-300 space-y-2">
-                <li>• Apply lipstick with precise pursing movements</li>
-                <li>• Use lip balm with careful dabbing motions</li>
-                <li>• Sip hot beverages with delicate lip positioning</li>
-                <li>• Practice speech patterns that emphasize lip articulation</li>
-              </ul>
-
-              <h2 className="text-2xl font-semibold mb-4 text-purple-300">The Linguistics of Lines</h2>
-              
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                Certain speech patterns and accents contribute significantly to smokers line formation. Take the French "oui" – 
-                this pronunciation requires intense lip pursing that's practiced more frequently by women learning or speaking French. 
-                Similarly, women tend to be more expressive with their facial muscles during conversation, creating repetitive 
-                movements that eventually form permanent lines.
-              </p>
-
-              {/* Treatment Image - Immediate Post-Treatment */}
-              <div className="w-full h-64 md:h-80 rounded-lg mb-8 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/84ed81e8-cd33-4b3b-9301-e42d9a95da5a.png" 
-                  alt="Immediate post-treatment appearance showing temporary redness that will settle as lines improve"
-                  className="w-full h-full object-cover"
-                />
-                <p className="text-center text-sm text-gray-400 mt-2 italic">
-                  Immediate post-treatment: Initial redness settles within hours as lines soften and disappear
-                </p>
-              </div>
-
-              <h2 className="text-2xl font-semibold mb-4 text-purple-300">Hormonal and Structural Factors</h2>
-              
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                Women's skin undergoes significant hormonal changes throughout life, particularly during menopause when estrogen 
-                levels decline dramatically. This hormonal shift accelerates collagen breakdown in the delicate perioral area, 
-                making women more susceptible to line formation from repetitive movements.
-              </p>
-
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                Additionally, women typically have:
-              </p>
-
-              <ul className="mb-6 text-gray-300 space-y-2">
-                <li>• Thinner skin around the lip area</li>
-                <li>• More expressive facial muscle usage</li>
-                <li>• Greater attention to lip aesthetics leading to more manipulation</li>
-                <li>• Different collagen distribution patterns</li>
-              </ul>
-
-              <h2 className="text-2xl font-semibold mb-4 text-purple-300">The Psychology Behind the Purse</h2>
-              
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                Social conditioning plays a fascinating role. Women are often taught from a young age to drink and eat "delicately," 
-                which involves more controlled, pursed lip movements. Men, traditionally, aren't subjected to the same social expectations 
-                around refined eating and drinking behaviors.
-              </p>
-
-              {/* Treatment Image Placeholder 2 */}
-              <div className="bg-gray-800 rounded-lg p-6 text-center my-8">
-                <p className="text-gray-400">[Treatment Image 2: Dermal filler treatment for perioral rejuvenation]</p>
-              </div>
-
-              <h2 className="text-2xl font-semibold mb-4 text-purple-300">Are We Being Sexist? The Science Says No</h2>
-              
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                While it might seem discriminatory, the statistics don't lie. The overwhelming female prevalence of smokers lines 
-                stems from genuine biological, behavioral, and social factors. It's not about capability or habits being "worse" 
-                in women – it's about fundamental differences in anatomy, hormones, and learned behaviors.
-              </p>
-
-              <h2 className="text-2xl font-semibold mb-4 text-purple-300">Modern Solutions for an Age-Old Issue</h2>
-              
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                Understanding these causes helps us provide better treatment options. At Cosmedocs, we use targeted approaches 
-                including dermal fillers, anti-wrinkle injections, and skin resurfacing treatments specifically designed for 
-                the female perioral anatomy. Our treatments address not just the lines themselves, but the underlying causes 
-                that create them.
-              </p>
-
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                The key is early intervention and understanding your individual risk factors. Whether you're a French speaker, 
-                a straw enthusiast, or simply blessed with expressive lips, there are effective treatments available to maintain 
-                a smooth, youthful perioral area.
-              </p>
-
-              {/* Instagram Reel Embed */}
-              <div className="flex justify-center my-8">
-                <blockquote 
-                  className="instagram-media" 
-                  data-instgrm-captioned 
-                  data-instgrm-permalink="https://www.instagram.com/reel/DCZoNKot3qo/?utm_source=ig_embed&utm_campaign=loading" 
-                  data-instgrm-version="14" 
-                  style={{ 
-                    background: '#FFF', 
-                    border: 0, 
-                    borderRadius: '3px', 
-                    boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', 
-                    margin: '1px', 
-                    maxWidth: '540px', 
-                    minWidth: '326px', 
-                    padding: 0, 
-                    width: '99.375%' 
-                  }}
-                >
-                  <div style={{ padding: '16px' }}>
-                    <a 
-                      href="https://www.instagram.com/reel/DCZoNKot3qo/?utm_source=ig_embed&utm_campaign=loading" 
-                      style={{ 
-                        background: '#FFFFFF', 
-                        lineHeight: 0, 
-                        padding: '0 0', 
-                        textAlign: 'center', 
-                        textDecoration: 'none', 
-                        width: '100%' 
-                      }} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', flexGrow: 0, height: '40px', marginRight: '14px', width: '40px' }}></div>
-                        <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
-                          <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: 0, height: '14px', marginBottom: '6px', width: '100px' }}></div>
-                          <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: 0, height: '14px', width: '60px' }}></div>
-                        </div>
-                      </div>
-                      <div style={{ padding: '19% 0' }}></div>
-                      <div style={{ display: 'block', height: '50px', margin: '0 auto 12px', width: '50px' }}>
-                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                              <g>
-                                <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div style={{ paddingTop: '8px' }}>
-                        <div style={{ color: '#3897f0', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 550, lineHeight: '18px' }}>
-                          View this post on Instagram
-                        </div>
-                      </div>
-                      <div style={{ padding: '12.5% 0' }}></div>
-                      <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '14px', alignItems: 'center' }}>
-                        <div>
-                          <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', height: '12.5px', width: '12.5px', transform: 'translateX(0px) translateY(7px)' }}></div>
-                          <div style={{ backgroundColor: '#F4F4F4', height: '12.5px', transform: 'rotate(-45deg) translateX(3px) translateY(1px)', width: '12.5px', flexGrow: 0, marginRight: '14px', marginLeft: '2px' }}></div>
-                          <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', height: '12.5px', width: '12.5px', transform: 'translateX(9px) translateY(-18px)' }}></div>
-                        </div>
-                        <div style={{ marginLeft: '8px' }}>
-                          <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', flexGrow: 0, height: '20px', width: '20px' }}></div>
-                          <div style={{ width: 0, height: 0, borderTop: '2px solid transparent', borderLeft: '6px solid #f4f4f4', borderBottom: '2px solid transparent', transform: 'translateX(16px) translateY(-4px) rotate(30deg)' }}></div>
-                        </div>
-                        <div style={{ marginLeft: 'auto' }}>
-                          <div style={{ width: '0px', borderTop: '8px solid #F4F4F4', borderRight: '8px solid transparent', transform: 'translateY(16px)' }}></div>
-                          <div style={{ backgroundColor: '#F4F4F4', flexGrow: 0, height: '12px', width: '16px', transform: 'translateY(-4px)' }}></div>
-                          <div style={{ width: 0, height: 0, borderTop: '8px solid #F4F4F4', borderLeft: '8px solid transparent', transform: 'translateY(-4px) translateX(8px)' }}></div>
-                        </div>
-                      </div>
-                      <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center', marginBottom: '24px' }}>
-                        <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: 0, height: '14px', marginBottom: '6px', width: '224px' }}></div>
-                        <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: 0, height: '14px', width: '144px' }}></div>
-                      </div>
-                    </a>
-                    <p style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', lineHeight: '17px', marginBottom: 0, marginTop: '8px', overflow: 'hidden', padding: '8px 0 7px', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      <a href="https://www.instagram.com/reel/DCZoNKot3qo/?utm_source=ig_embed&utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
-                        A post shared by COSMEDOCS • Cosmetic Doctors (@cosmedocs)
-                      </a>
-                    </p>
-                  </div>
-                </blockquote>
-              </div>
-
-              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 mt-8">
-                <h3 className="text-lg font-semibold mb-3 text-white">Expert Insight</h3>
-                <p className="text-gray-300 italic">
-                  "The fascinating thing about smokers lines is that they tell a story of how we live, speak, and express ourselves. 
-                  In women, these lines are often a testament to decades of animated conversation, careful grooming habits, and 
-                  expressive communication – all beautiful aspects of femininity that unfortunately leave their mark on the skin."
-                </p>
-                <p className="text-purple-300 text-sm mt-2">- CosmedTalk Editorial Team</p>
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="mt-12 text-center">
-              <Card className="bg-gray-900 border-purple-500/20">
-                <CardHeader>
-                  <CardTitle className="text-white">Concerned About Perioral Lines?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 mb-6">
-                    Our expert team specializes in treating smokers lines with natural-looking results. 
-                    Book a consultation to discuss your personalized treatment options.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button className="bg-purple-600 hover:bg-purple-700">
-                      Book Consultation
-                    </Button>
-                    <Button variant="outline" className="border-purple-500 text-purple-300 hover:bg-purple-500/10">
-                      View Treatment Options
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </motion.div>
-        {/* Hidden SEO Content */}
-        <div className="mt-16" style={{ visibility: 'hidden', position: 'absolute', left: '-9999px' }}>
-          <h2>Comprehensive Guide to Smokers Lines in Women</h2>
-          <p>Understanding why women develop smokers lines requires examining anatomical differences, hormonal factors, and lifestyle patterns. These perioral wrinkles affect 99% of patients seeking treatment, with women being disproportionately affected due to specific biological and behavioral factors.</p>
-          
-          <h3>Advanced Treatment Options for Perioral Lines</h3>
-          <p>Modern aesthetic medicine offers multiple approaches to treating smokers lines, from preventive Botox injections to dermal filler placement and skin resurfacing techniques. The key to successful treatment lies in understanding the underlying muscle dynamics and choosing the appropriate intervention based on individual anatomy and severity.</p>
-          
-          <h3>Prevention and Long-term Management</h3>
-          <p>Preventing the formation of smokers lines involves a combination of sun protection, proper skincare, and early intervention with professional treatments. Understanding the role of repetitive muscle movements and environmental factors helps in developing personalized prevention strategies for long-term skin health.</p>
+        {/* Hidden SEO */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>Smoker's Lines Treatment Women London CosmeDocs</h2>
+          <p>Smoker's lines women non-smokers, perioral lines treatment London, upper lip wrinkles women, orbicularis oris pouting expression, lip lines dermal filler, perioral rejuvenation Harley Street, smoker's lines Botox, polynucleotides perioral lines, skin boosters upper lip, chemical peels smoker's lines, perioral ageing women, lip line treatment non-smoker, French accent lip lines, straw drinking perioral wrinkles. Our aesthetics is invisible art — bold, natural, always your way.</p>
         </div>
-
-        {/* Related Blog Cards */}
-        <div className="mt-16 border-t border-gray-800 pt-8">
-          <h3 className="text-2xl font-bold text-white mb-8">Related Articles</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
-              <CardContent className="p-0">
-                <div className="h-48 bg-gradient-to-r from-orange-600 to-red-600 rounded-t-lg flex items-center justify-center">
-                  <span className="text-white text-sm">Lazy Skin Syndrome Image</span>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-white font-semibold mb-2">Lazy Skin Syndrome</h4>
-                  <p className="text-gray-400 text-sm mb-4">Discover how moisturisers may be creating skin dependency and how to fix it.</p>
-                  <Button asChild variant="outline" size="sm">
-                    <Link to="/blog/lazy-skin-syndrome">Read More</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
-              <CardContent className="p-0">
-                <div className="h-48 bg-gradient-to-r from-purple-600 to-pink-600 rounded-t-lg flex items-center justify-center">
-                  <span className="text-white text-sm">Flawless Skin Guide Image</span>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-white font-semibold mb-2">How to Achieve Flawless Skin</h4>
-                  <p className="text-gray-400 text-sm mb-4">Discover the 9-step dermatologist-approved plan to transform your skin naturally.</p>
-                  <Button asChild variant="outline" size="sm">
-                    <Link to="/blog/flawless-skin">Read More</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
-              <CardContent className="p-0">
-                <div className="h-48 bg-gradient-to-r from-green-600 to-teal-600 rounded-t-lg flex items-center justify-center">
-                  <span className="text-white text-sm">Vitamin C Benefits Image</span>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-white font-semibold mb-2">Vitamin C & Ferulic Acid Benefits</h4>
-                  <p className="text-gray-400 text-sm mb-4">The science behind vitamin C serums and their anti-aging properties.</p>
-                  <Button asChild variant="outline" size="sm">
-                    <Link to="/blog/vitamin-c-ferulic-acid-benefits">Read More</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-        </article>
       </div>
     </>
   );
