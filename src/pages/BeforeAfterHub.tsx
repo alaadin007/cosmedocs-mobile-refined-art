@@ -60,6 +60,14 @@ const galleryCategories = [
     link: "/before-after/skin-rejuvenation/",
     image: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png",
     treatments: ["Profhilo", "Polynucleotides", "Microneedling", "Chemical Peels", "PRP"]
+  },
+  {
+    id: "laser-hair-removal",
+    title: "Laser Hair Removal Results",
+    description: "Progressive hair reduction results with medical-grade laser technology — tailored to skin type and treatment area.",
+    link: "/before-after/laser-hair-removal/",
+    image: null,
+    treatments: ["Face", "Body", "Legs", "Bikini"]
   }
 ];
 
@@ -308,13 +316,17 @@ const BeforeAfterHub = () => {
                     to={category.link}
                     className="group block bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9A050]/30 transition-all duration-300 h-full"
                   >
-                    <div className="aspect-[16/10] overflow-hidden">
-                      <img
-                        src={category.image}
-                        alt={category.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
+                    <div className="aspect-[16/10] overflow-hidden bg-neutral-800/50 flex items-center justify-center">
+                      {category.image ? (
+                        <img
+                          src={category.image}
+                          alt={category.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <Camera className="w-8 h-8 text-white/20" />
+                      )}
                     </div>
                     <div className="p-6">
                       <h3 className="text-lg font-medium text-white mb-2 group-hover:text-[#C9A050] transition-colors flex items-center gap-2">

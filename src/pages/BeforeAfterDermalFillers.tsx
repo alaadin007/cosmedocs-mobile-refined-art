@@ -63,6 +63,14 @@ const areaCards = [
     image: null,
     link: "/before-after/dermal-fillers/temples/",
     imageCount: 0
+  },
+  {
+    id: "full-face-makeover",
+    title: "Full Face Makeover",
+    subtitle: "Comprehensive HA rejuvenation",
+    image: "/images/before-after/ha-makeover/ha-makeover-anatomy-planning.jpg",
+    link: "/before-after/dermal-fillers/full-face-makeover/",
+    imageCount: 10
   }
 ];
 

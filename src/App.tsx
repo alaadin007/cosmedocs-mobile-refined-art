@@ -43,6 +43,10 @@ const BeforeAfterCheekFiller = lazy(() => import("./pages/BeforeAfterCheekFiller
 const BeforeAfterJawlineFiller = lazy(() => import("./pages/BeforeAfterJawlineFiller"));
 const BeforeAfterTearTroughFiller = lazy(() => import("./pages/BeforeAfterTearTroughFiller"));
 const BeforeAfterChinFiller = lazy(() => import("./pages/BeforeAfterChinFiller"));
+const BeforeAfterTempleFiller = lazy(() => import("./pages/BeforeAfterTempleFiller"));
+const BeforeAfterFullFaceMakeover = lazy(() => import("./pages/BeforeAfterFullFaceMakeover"));
+const BeforeAfterPolynucleotides = lazy(() => import("./pages/BeforeAfterPolynucleotides"));
+const BeforeAfterLaserHairRemoval = lazy(() => import("./pages/BeforeAfterLaserHairRemoval"));
 const Membership = lazy(() => import("./pages/Membership"));
 const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
 const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
@@ -625,14 +629,26 @@ const App = () => {
                           <Route path="/before-after/dermal-fillers/chin" element={<BeforeAfterChinFiller />} />
                           <Route path="/before-after/dermal-fillers/chin/" element={<BeforeAfterChinFiller />} />
                           
+                          <Route path="/before-after/dermal-fillers/temples" element={<BeforeAfterTempleFiller />} />
+                          <Route path="/before-after/dermal-fillers/temples/" element={<BeforeAfterTempleFiller />} />
+                          <Route path="/before-after/dermal-fillers/full-face-makeover" element={<BeforeAfterFullFaceMakeover />} />
+                          <Route path="/before-after/dermal-fillers/full-face-makeover/" element={<BeforeAfterFullFaceMakeover />} />
+                          
                           {/* Botox Sub-Galleries */}
                           <Route path="/before-after/botox/masseter" element={<BeforeAfterBotoxMasseter />} />
                           <Route path="/before-after/botox/masseter/" element={<BeforeAfterBotoxMasseter />} />
                           
                           <Route path="/before-after/skin-rejuvenation" element={<BeforeAfterSkinRejuvenation />} />
                           <Route path="/before-after/skin-rejuvenation/" element={<BeforeAfterSkinRejuvenation />} />
-                          <Route path="/before-after/ha-makeover" element={<BeforeAfterHAMakeover />} />
-                          <Route path="/before-after/ha-makeover/" element={<BeforeAfterHAMakeover />} />
+                          <Route path="/before-after/skin-rejuvenation/polynucleotides" element={<BeforeAfterPolynucleotides />} />
+                          <Route path="/before-after/skin-rejuvenation/polynucleotides/" element={<BeforeAfterPolynucleotides />} />
+                          
+                          <Route path="/before-after/laser-hair-removal" element={<BeforeAfterLaserHairRemoval />} />
+                          <Route path="/before-after/laser-hair-removal/" element={<BeforeAfterLaserHairRemoval />} />
+                          
+                          {/* Legacy redirect: ha-makeover → dermal-fillers/full-face-makeover */}
+                          <Route path="/before-after/ha-makeover" element={<Navigate to="/before-after/dermal-fillers/full-face-makeover/" replace />} />
+                          <Route path="/before-after/ha-makeover/" element={<Navigate to="/before-after/dermal-fillers/full-face-makeover/" replace />} />
                           
                           {/* Blog & Content Routes */}
                           <Route path="/botox-faqs" element={<BotoxFAQs />} />
