@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
@@ -19,8 +19,6 @@ interface Category {
   label: string;
   items: TreatmentItem[];
 }
-
-const smartAestheticsLink = { label: "Smart Aesthetics", link: "/aesthetic-treatments-made-easy" };
 
 const categories: Category[] = [
   {
@@ -122,13 +120,6 @@ export default function TreatmentCategoryNav() {
     <div className="relative bg-black/30 backdrop-blur-md border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-center gap-1 py-2 overflow-x-auto scrollbar-hide">
-          <Link
-            to={smartAestheticsLink.link}
-            className="text-sm px-4 py-2 rounded-md transition-all duration-200 whitespace-nowrap text-amber-400 hover:text-amber-300 hover:bg-white/10 font-medium"
-          >
-            {smartAestheticsLink.label}
-          </Link>
-          <div className="w-px h-5 bg-white/20 mx-1" />
           {categories.map((category) => (
             <DropdownMenu key={category.id} onOpenChange={(open) => open && setActiveCategory(category.id)}>
               <DropdownMenuTrigger asChild>
