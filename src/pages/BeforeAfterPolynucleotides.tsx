@@ -3,9 +3,23 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, MapPin, Calendar, Camera } from 'lucide-react';
+import { ArrowRight, Shield, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
+import BeforeAfterGrid from '@/components/BeforeAfterGrid';
+
+const polynucleotideImages = [
+  {
+    src: "/images/before-after/polynucleotides-skin-boosting-before-after.png",
+    alt: "Before and after images showing the rejuvenating effects of polynucleotides on skin, highlighting smoother texture and reduced fine lines.",
+    caption: "Transformed Skin: Polynucleotides Skin Boosting Effect — visible improvement in skin texture, hydration, and fine line reduction following a personalised polynucleotide treatment course."
+  },
+  {
+    src: "/images/before-after/polynucleotides-male-face-before-after.png",
+    alt: "Before and after photos of a male face, showing the effects of polynucleotide treatments on skin texture and under-eye area, with visible improvement in smoothness and reduced wrinkles.",
+    caption: "Male Face & Under-Eye Rejuvenation — polynucleotide therapy targeting crepey skin and under-eye concerns, demonstrating improved skin tone, smoothness, and reduced wrinkles after treatment."
+  }
+];
 
 const BeforeAfterPolynucleotides = () => {
   const seoData = generateSEOMetadata(
@@ -48,6 +62,7 @@ const BeforeAfterPolynucleotides = () => {
       </Helmet>
 
       <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+        {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-neutral-800 pt-0 pb-16">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
@@ -75,26 +90,89 @@ const BeforeAfterPolynucleotides = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-neutral-900">
+        {/* Comprehensive Description */}
+        <section className="py-16 bg-neutral-900 border-b border-white/[0.06]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-              className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-10 text-center"
-            >
-              <Camera className="w-7 h-7 text-white/15 mx-auto mb-4" />
-              <p className="text-white/40 mb-1 font-light">Gallery images coming soon</p>
-              <p className="text-white/25 text-sm font-light">Contact us to see examples during your consultation</p>
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-12">
+              <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                <h2 className="text-2xl font-light text-white mb-5 tracking-tight">
+                  What Results Polynucleotides <span className="text-[#C9A050]">Can Achieve</span>
+                </h2>
+                <p className="text-white/40 text-sm leading-relaxed font-light mb-6">
+                  Browse real polynucleotides before and after results showing improvements in skin quality, hydration, texture, and overall skin vitality. These outcomes reflect personalised treatment planning and gradual biological skin regeneration rather than instant volume-based changes.
+                </p>
+                <ul className="space-y-3">
+                  {['Skin texture and smoothness', 'Hydration and glow', 'Fine line softening', 'Overall skin quality enhancement'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-white/50 text-sm font-light">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C9A050]/60 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-white/30 text-xs mt-6 font-light leading-relaxed">
+                  Results develop progressively over time as collagen stimulation and tissue regeneration occur. Individual results vary depending on skin condition, age, lifestyle factors, and treatment protocol.
+                </p>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }}>
+                <h2 className="text-2xl font-light text-white mb-5 tracking-tight">
+                  Understanding <span className="text-[#C9A050]">Treatment Outcomes</span>
+                </h2>
+                <p className="text-white/40 text-sm leading-relaxed font-light mb-6">
+                  Polynucleotide treatments work by stimulating cellular repair and skin regeneration. Results vary between individuals and depend on:
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    'Skin health and baseline condition',
+                    'Age and collagen activity',
+                    'Number of sessions completed',
+                    'Post-treatment skincare compliance',
+                    'Lifestyle and sun exposure habits'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-white/50 text-sm font-light">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C9A050]/60 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-white/30 text-xs mt-6 font-light leading-relaxed">
+                  Multiple sessions may be required for optimal improvement. Our doctors will assess your skin and recommend a tailored programme.
+                </p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
+        {/* Gallery */}
+        <section className="py-20 bg-neutral-900">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="mb-10">
+              <h2 className="text-2xl font-light text-white mb-3 tracking-tight">
+                Polynucleotides Before and After <span className="text-[#C9A050]">Results Gallery</span>
+              </h2>
+              <p className="text-white/40 text-sm leading-relaxed font-light max-w-2xl">
+                Below you can view real polynucleotides before and after results showing gradual improvements achieved through personalised treatment planning and regenerative skin therapy.
+              </p>
+            </motion.div>
+
+            <BeforeAfterGrid
+              images={polynucleotideImages}
+              initialDisplay={4}
+              loadMoreIncrement={4}
+            />
+          </div>
+        </section>
+
+        {/* Disclaimer */}
         <section className="py-8 border-t border-white/[0.06] bg-neutral-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <p className="text-center text-white/25 text-xs max-w-3xl mx-auto leading-relaxed font-light">
-              Individual results may vary. All images show real patients treated at CosmeDocs. Photos are unretouched and taken under consistent clinical conditions. A consultation is required before any treatment.
+              Individual results may vary. All images show real patients treated at CosmeDocs. Photos are unretouched and taken under consistent clinical conditions. Before and after images are provided for educational purposes only. A consultation is required to assess suitability and expected results.
             </p>
           </div>
         </section>
 
+        {/* CTA */}
         <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-2xl">
@@ -119,9 +197,10 @@ const BeforeAfterPolynucleotides = () => {
           </div>
         </section>
 
+        {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Polynucleotide Treatment Before and After Gallery</h2>
-          <p>Browse authentic polynucleotide treatment before and after results from CosmeDocs Harley Street. Polynucleotides are regenerative biostimulators that repair skin at a cellular level, improving hydration, elasticity, and overall skin quality. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <p>Browse authentic polynucleotide treatment before and after results from CosmeDocs Harley Street. Polynucleotides are regenerative biostimulators that repair skin at a cellular level, improving hydration, elasticity, and overall skin quality. With the polynucleotides skin regenerative therapy you can see visible improvements in skin texture, smoothness, hydration, glow, fine line softening, and overall skin quality enhancement. All treatments at CosmeDocs are delivered by qualified medical professionals using regulated products and evidence-based techniques. The clinical approach focuses on natural-looking enhancements, facial balance and proportion, patient safety and ethical practice, and personalised treatment planning. The goal is refined, balanced improvement and not overcorrection. Our aesthetics is invisible art — bold, natural, always your way.</p>
         </div>
       </div>
     </>
