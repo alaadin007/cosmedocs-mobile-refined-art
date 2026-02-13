@@ -5,48 +5,52 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 
-// Gallery sections with anchors for skin rejuvenation treatments
-const gallerySections = [
+const galleryImages = [
   {
-    id: "profhilo",
-    title: "Profhilo",
-    description: "Bio-remodelling for skin hydration and laxity",
-    images: [
-      { src: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png", alt: "Profhilo before and after showing improved skin hydration and texture", caption: "Improved skin quality and hydration" }
-    ]
+    src: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png",
+    alt: "Profhilo before and after showing improved skin hydration and texture on the face",
+    caption: (
+      <>
+        <strong className="text-white/90">Profhilo — Bio-Remodelling</strong>
+        <br />
+        Visible improvement in skin hydration, firmness, and overall radiance. Profhilo uses ultra-pure hyaluronic acid to stimulate collagen and elastin production, delivering a natural glow without adding volume.
+      </>
+    )
   },
   {
-    id: "polynucleotides",
-    title: "Polynucleotides",
-    description: "Regenerative skin treatment for deep rejuvenation",
-    images: []
+    src: "/images/before-after/polynucleotides-skin-boosting-before-after.png",
+    alt: "Polynucleotides skin boosting before and after showing rejuvenated skin texture",
+    caption: (
+      <>
+        <strong className="text-white/90">Polynucleotides — Skin Boosting</strong>
+        <br />
+        Deep regenerative improvement achieved through polynucleotide therapy. This treatment harnesses DNA-derived bio-stimulators to repair damaged skin cells, reduce fine lines, and restore a youthful, dewy complexion from within.
+      </>
+    )
   },
   {
-    id: "microneedling",
-    title: "Microneedling",
-    description: "Collagen induction therapy for texture and scarring",
-    images: [
-      { src: "/lovable-uploads/04ac4a20-e938-4966-8d5b-cdba7b58908f.png", alt: "Microneedling treatment progression showing skin improvement", caption: "Progressive skin improvement" }
-    ]
+    src: "/images/before-after/polynucleotides-male-face-before-after.png",
+    alt: "Polynucleotides male face and under-eye rejuvenation before and after results",
+    caption: (
+      <>
+        <strong className="text-white/90">Polynucleotides — Male Face & Under-Eye</strong>
+        <br />
+        Targeted under-eye and facial skin rejuvenation for male patients. Polynucleotides address dark circles, crepey skin, and loss of elasticity — delivering subtle, natural results suited to masculine facial anatomy.
+      </>
+    )
   },
   {
-    id: "chemical-peel",
-    title: "Chemical Peels",
-    description: "Exfoliation for pigmentation, acne, and texture",
-    images: []
-  },
-  {
-    id: "prp",
-    title: "PRP (Platelet-Rich Plasma)",
-    description: "Your own growth factors for natural rejuvenation",
-    images: []
-  },
-  {
-    id: "hydrafacial",
-    title: "HydraFacial",
-    description: "Deep cleansing and hydration treatment",
-    images: []
+    src: "/lovable-uploads/04ac4a20-e938-4966-8d5b-cdba7b58908f.png",
+    alt: "Microneedling treatment progression showing significant skin texture improvement",
+    caption: (
+      <>
+        <strong className="text-white/90">Microneedling — Collagen Induction Therapy</strong>
+        <br />
+        Progressive skin improvement through controlled micro-injuries that stimulate the body's natural healing response. Effective for acne scarring, enlarged pores, uneven texture, and fine lines — results build over a course of treatments.
+      </>
+    )
   }
 ];
 
@@ -119,7 +123,7 @@ const BeforeAfterSkinRejuvenation = () => {
                 Skin Rejuvenation Before & After Results
               </h1>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Real patient transformations showcasing the power of advanced skin rejuvenation treatments from our Harley Street clinic.
+                Real patient transformations showcasing the power of advanced skin rejuvenation treatments from our Harley Street clinic. Our aesthetics is invisible art — quiet, not loud.
               </p>
             </motion.div>
           </div>
@@ -145,74 +149,64 @@ const BeforeAfterSkinRejuvenation = () => {
           </div>
         </section>
 
-        {/* Quick Navigation */}
-        <section className="py-8 bg-accent/50 sticky top-0 z-40 backdrop-blur-sm border-b border-white/10">
+        {/* Comprehensive Description */}
+        <section className="py-16 md:py-20">
           <div className="page-container">
-            <div className="flex flex-wrap gap-3 justify-center">
-              {gallerySections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className="px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
-                >
-                  {section.title}
-                </a>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="grid md:grid-cols-2 gap-10 md:gap-16"
+              >
+                <div>
+                  <p className="text-[#C9A050] text-sm font-medium tracking-widest uppercase mb-4">Understanding Our Results</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-snug">
+                    What Skin Rejuvenation Can Achieve
+                  </h2>
+                  <p className="text-gray-400 leading-relaxed mb-4">
+                    Skin rejuvenation encompasses a range of regenerative treatments designed to restore your skin's natural vitality. From bio-remodelling with Profhilo to cellular repair through Polynucleotides, each approach targets different layers of the skin to address hydration, texture, laxity, and overall luminosity.
+                  </p>
+                  <p className="text-gray-400 leading-relaxed">
+                    At CosmeDocs, transformation speaks without saying a word. Our doctor-led protocols are tailored to your unique skin biology, ensuring results that look natural, feel effortless, and age gracefully.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[#C9A050] text-sm font-medium tracking-widest uppercase mb-4">Our Approach</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-snug">
+                    Bold, Natural, Always Your Way
+                  </h2>
+                  <p className="text-gray-400 leading-relaxed mb-4">
+                    Every image in this gallery represents a real patient treated at our Harley Street clinic. We photograph under consistent clinical lighting and angles to give you an honest view of what each treatment can deliver.
+                  </p>
+                  <p className="text-gray-400 leading-relaxed">
+                    Results vary depending on individual skin type, lifestyle, and treatment plan. Our doctors will discuss realistic expectations during your consultation, ensuring your journey is guided by expertise and transparency — minimal, quiet, never exaggerated.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Gallery Sections */}
-        <section className="py-16">
+        {/* Unified Gallery */}
+        <section className="py-16 md:py-20 bg-accent/30">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto space-y-20">
-              {gallerySections.map((section) => (
-                <motion.div
-                  key={section.id}
-                  id={section.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="scroll-mt-32"
-                >
-                  <div className="mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{section.title}</h2>
-                    <p className="text-gray-400">{section.description}</p>
-                  </div>
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="mb-12"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Patient Gallery</h2>
+                <p className="text-gray-400 max-w-2xl">
+                  Browse real before and after results across our skin rejuvenation treatments — including Profhilo, Polynucleotides, Microneedling, and more.
+                </p>
+              </motion.div>
 
-                  {section.images.length > 0 ? (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {section.images.map((image, imageIndex) => (
-                        <motion.div
-                          key={imageIndex}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.5, delay: imageIndex * 0.1 }}
-                          viewport={{ once: true }}
-                          className="group relative overflow-hidden rounded-xl bg-gray-900"
-                        >
-                          <img 
-                            src={image.src} 
-                            alt={image.alt}
-                            className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-white text-sm">{image.caption}</p>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="bg-gray-900/30 border border-white/10 rounded-xl p-12 text-center">
-                      <p className="text-gray-500">Gallery images coming soon</p>
-                      <p className="text-gray-600 text-sm mt-2">Contact us to see examples during your consultation</p>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+              <BeforeAfterGrid images={galleryImages} initialDisplay={4} />
             </div>
           </div>
         </section>
@@ -333,13 +327,19 @@ const BeforeAfterSkinRejuvenation = () => {
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Skin Rejuvenation Before & After Gallery - Real Results</h2>
-          <p>View authentic skin rejuvenation before and after photos from our Harley Street clinic. Our expert doctors deliver transformative results using Profhilo, Polynucleotides, microneedling, chemical peels, and PRP treatments.</p>
+          <p>View authentic skin rejuvenation before and after photos from our Harley Street clinic. Our expert doctors deliver transformative results using Profhilo, Polynucleotides, microneedling, chemical peels, and PRP treatments. Aesthetic medicine by CosmeDocs is minimal — quiet, not loud — invisible, not exaggerated.</p>
           
-          <h3>Bio-Remodelling Results</h3>
-          <p>Browse Profhilo and Polynucleotide treatment results showing improved skin hydration, texture, and laxity. These regenerative treatments stimulate your own collagen production for natural, lasting improvements.</p>
+          <h3>Profhilo Bio-Remodelling Results</h3>
+          <p>Profhilo is a revolutionary bio-remodelling treatment that uses ultra-pure hyaluronic acid to stimulate collagen and elastin. Results include improved skin hydration, firmness, and a natural radiance without adding volume or changing facial structure.</p>
           
-          <h3>Collagen Induction Therapy Results</h3>
-          <p>Explore microneedling and PRP before and after photos showing reduced scarring, improved texture, and overall skin rejuvenation. Each treatment programme is tailored to your specific skin concerns.</p>
+          <h3>Polynucleotide Regenerative Results</h3>
+          <p>Polynucleotide therapy delivers deep cellular regeneration using DNA-derived bio-stimulators. These treatments repair damaged skin cells, reduce fine lines, improve dark circles and crepey skin, and restore youthful elasticity for both men and women.</p>
+
+          <h3>Microneedling Collagen Induction Results</h3>
+          <p>Microneedling creates controlled micro-injuries to trigger the body's natural healing response. Over a course of treatments, patients see progressive improvement in acne scarring, enlarged pores, uneven texture, and fine lines.</p>
+
+          <h3>Chemical Peel and PRP Results</h3>
+          <p>Chemical peels exfoliate damaged skin layers to reveal fresher, brighter skin beneath, targeting pigmentation and texture. PRP (Platelet-Rich Plasma) harnesses your own growth factors for natural rejuvenation and skin repair.</p>
         </div>
       </div>
     </>
