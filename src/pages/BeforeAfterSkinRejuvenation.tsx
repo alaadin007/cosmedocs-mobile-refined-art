@@ -9,8 +9,74 @@ import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 
 const galleryImages = [
   {
-    src: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png",
-    alt: "Profhilo before and after showing improved skin hydration and texture on the face",
+    src: "/images/before-after/thread-lift-before-after-1.png",
+    alt: "PDO thread lift before and after procedure showing facial lifting and contouring results",
+    caption: (
+      <>
+        <strong className="text-white/90">PDO Thread Lift — Facial Contouring</strong>
+        <br />
+        Visible lift and definition achieved through PDO threads. This minimally invasive procedure uses dissolvable threads to lift sagging skin, stimulate collagen production, and restore youthful facial contours — with final results developing over several weeks as swelling settles.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/pdo-threads-before-after.jpg",
+    alt: "PDO thread lift before and after image performed in London showing improved jawline definition",
+    caption: (
+      <>
+        <strong className="text-white/90">PDO Threads — Jawline Definition</strong>
+        <br />
+        Noticeable improvement in jawline sharpness and mid-face lift following PDO thread treatment at our London clinic. Threads provide structural support whilst encouraging the body's natural collagen response for sustained results.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/thread-face-lift-before-after.jpg",
+    alt: "Thread face lift before and after showing natural facial rejuvenation",
+    caption: (
+      <>
+        <strong className="text-white/90">Thread Face Lift — Natural Rejuvenation</strong>
+        <br />
+        A subtle yet transformative result from thread lifting, delivering a refreshed appearance without the need for surgical intervention. Ideal for patients seeking natural-looking anti-ageing outcomes.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/melasma-treatment-before-after.png",
+    alt: "Effective melasma treatment utilising microneedling, prescription skincare, and chemical peel techniques",
+    caption: (
+      <>
+        <strong className="text-white/90">Melasma Management — Combined Approach</strong>
+        <br />
+        Significant improvement in melasma pigmentation achieved through a tailored combination of microneedling, prescription skincare, and chemical peels. This multi-modality approach addresses both surface discolouration and deeper melanin deposits.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/profhilo-neck-before-after-1.jpg",
+    alt: "Profhilo before and after of neck area showing improved skin texture and hydration",
+    caption: (
+      <>
+        <strong className="text-white/90">Profhilo — Neck Rejuvenation</strong>
+        <br />
+        Remarkable transformation of neck skin texture through Profhilo bio-remodelling. Ultra-pure hyaluronic acid stimulates collagen and elastin deep within the dermis, delivering improved firmness, hydration, and a smoother neck contour.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/profhilo-neck-before-after-2.jpg",
+    alt: "Enhanced skin texture following Profhilo neck and lower face treatment before and after",
+    caption: (
+      <>
+        <strong className="text-white/90">Profhilo — Neck & Lower Face</strong>
+        <br />
+        Visible enhancement in skin quality across the neck and lower face. Profhilo's unique spreading properties allow it to treat larger areas with fewer injection points, making it ideal for crepey, dehydrated skin in these delicate zones.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/profhilo-treatment-before-after.jpeg",
+    alt: "Profhilo treatment before and after showing improved facial skin radiance and hydration",
     caption: (
       <>
         <strong className="text-white/90">Profhilo — Bio-Remodelling</strong>
@@ -20,24 +86,35 @@ const galleryImages = [
     )
   },
   {
-    src: "/images/before-after/polynucleotides-skin-boosting-before-after.png",
-    alt: "Polynucleotides skin boosting before and after showing rejuvenated skin texture",
+    src: "/images/before-after/hydrafacial-wrinkles-before-after.jpg",
+    alt: "HydraFacial before and after showing reduced wrinkles and fine lines",
     caption: (
       <>
-        <strong className="text-white/90">Polynucleotides — Skin Boosting</strong>
+        <strong className="text-white/90">HydraFacial — Wrinkle Reduction</strong>
         <br />
-        Deep regenerative improvement achieved through polynucleotide therapy. This treatment harnesses DNA-derived bio-stimulators to repair damaged skin cells, reduce fine lines, and restore a youthful, dewy complexion from within.
+        Noticeable reduction in fine lines and surface wrinkles following HydraFacial treatment. This multi-step facial cleanses, exfoliates, and infuses skin with intensive serums — delivering instant radiance and long-term skin health benefits.
       </>
     )
   },
   {
-    src: "/images/before-after/polynucleotides-male-face-before-after.png",
-    alt: "Polynucleotides male face and under-eye rejuvenation before and after results",
+    src: "/images/before-after/hydrafacial-before-after.png",
+    alt: "HydraFacial before and after showing visible difference in skin appearance and clarity",
     caption: (
       <>
-        <strong className="text-white/90">Polynucleotides — Male Face & Under-Eye</strong>
+        <strong className="text-white/90">HydraFacial — Skin Clarity</strong>
         <br />
-        Targeted under-eye and facial skin rejuvenation for male patients. Polynucleotides address dark circles, crepey skin, and loss of elasticity — delivering subtle, natural results suited to masculine facial anatomy.
+        Visible improvement in overall skin clarity, tone, and texture. The patented vortex technology removes impurities whilst simultaneously delivering hydrating and brightening actives deep into the skin.
+      </>
+    )
+  },
+  {
+    src: "/images/before-after/hydrafacial-skin-hydration-before-after.jpg",
+    alt: "HydraFacial before and after showing improved skin hydration and glow",
+    caption: (
+      <>
+        <strong className="text-white/90">HydraFacial — Skin Hydration</strong>
+        <br />
+        Immediate boost in skin hydration and a healthy, dewy glow following HydraFacial treatment. Suitable for all skin types, this treatment addresses dullness, congestion, and dehydration in a single session.
       </>
     )
   },
@@ -245,17 +322,17 @@ const BeforeAfterSkinRejuvenation = () => {
                 </Link>
 
                 <Link 
-                  to="/treatments/polynucleotides/"
+                  to="/before-after/skin-rejuvenation/polynucleotides/"
                   className="group block p-6 bg-black/40 border border-white/10 rounded-xl hover:border-[#C9A050]/30 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#C9A050] transition-colors">
-                    Polynucleotide Treatment
+                    Polynucleotide Before & After
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Regenerative treatment for deep skin rejuvenation and repair.
+                    View dedicated before & after results for polynucleotide skin rejuvenation.
                   </p>
                   <span className="inline-flex items-center gap-1 text-[#C9A050] text-sm font-medium">
-                    View treatment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    View gallery <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
 
