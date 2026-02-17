@@ -2,6 +2,11 @@
   publish = "dist"
   command = "npm run build"
 
+# Edge function for injecting page-specific SEO meta tags
+[[edge_functions]]
+  function = "inject-meta"
+  path = "/*"
+
 # Disable Netlify's URL processing to avoid redirect conflicts
 [build.processing]
   skip_processing = false
