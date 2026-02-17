@@ -21,60 +21,33 @@ const currentDate = new Date().toISOString().split('T')[0];
 
 const pageRoutes = [
   '/',
-  '/treatments/',
-  '/prices/',
-  '/about-us/',
-  '/contact/',
+  '/about/',
   '/our-team/',
   '/our-team/dr-ahmed-haq/',
   '/our-team/dr-hena-haq/',
   '/our-team/laerta-aesthetician/',
-  '/our-team/dr-hassan-mirza/',
-  '/our-team/dr-noor-hotaki/',
-  '/testimonials/',
-  '/harley-street-consulting-rooms/',
-  '/private-gp-doctor/',
-  '/membership/',
-  '/partners/',
-  '/partnerships/',
-  '/fellowship-invitation/',
-  '/aesthetic-training/',
-  '/aesthetics-at-a-glance/',
-  '/aesthetic-intelligence/',
-  '/aesthetic-treatments-made-easy/',
-  '/medical-student-work-experience/',
-  '/treatments-summary-arabic/',
-  '/treatments-summary-chinese/',
-  '/treatments-summary-japanese/',
-  '/concerns/',
-  '/medical/',
+  '/medical-skincare/',
   '/safety/',
-  '/botox-faqs/',
-  '/ultimate-botox-guide/'
+  '/testimonials/',
+  '/contact/',
+  '/book-consultation/'
 ];
 
 const treatmentRoutes = [
-  // Botox
+  // Botox Hub
   '/treatments/botox/',
   '/treatments/masseter-botox/',
-  '/treatments/lip-flip/',
+  '/treatments/botox-lip-flip/',
   '/treatments/oily-skin-botox/',
-  '/treatments/trap-botox/',
-  '/treatments/calf-slimming-botox/',
-  '/treatments/bruxism-botox/',
-  // Medical Botox
-  '/medical/botox-for-migraines/',
-  '/medical/botox-for-hyperhidrosis/',
-  // Dermal Fillers
+  // Dermal Fillers Hub
   '/treatments/dermal-fillers/',
   '/treatments/lip-fillers/',
   '/treatments/jawline-filler/',
-  '/treatments/cheek-filler/',
+  '/treatments/cheek-fillers/',
   '/treatments/chin-filler/',
   '/treatments/tear-trough-filler/',
   '/treatments/temple-filler/',
-  '/treatments/dermal-fillers/nose/',
-  // Skin Rejuvenation
+  // Skin Rejuvenation Hub
   '/treatments/skin-rejuvenation/',
   '/treatments/profhilo/',
   '/treatments/polynucleotides/',
@@ -84,44 +57,38 @@ const treatmentRoutes = [
   '/treatments/hydrafacial/',
   '/treatments/pdo-threads/',
   '/treatments/fat-dissolving/',
-  '/treatments/ha-makeover/',
-  // Laser
+  // Laser Hub
   '/treatments/laser-treatments/',
-  '/treatments/co2-laser/',
   '/treatments/laser-hair-removal/',
+  '/treatments/co2-laser/',
   '/treatments/pico-laser/',
-  // Plastic Surgery
-  '/treatments/plastic-surgery/',
-  '/treatments/blepharoplasty/',
-  '/treatments/rhinoplasty/',
-  '/treatments/facelift-surgery/',
-  '/treatments/liposuction/',
-  '/treatments/scar-reduction/',
-  '/treatments/hair-transplant/',
-  // Concerns / Dermatology
+  // Medical Hub
+  '/medical/',
+  '/medical/botox-for-migraines/',
+  '/medical/botox-for-hyperhidrosis/',
+  // Concerns Hub
+  '/concerns/',
   '/concerns/acne/',
-  '/concerns/eczema/',
   '/concerns/pigmentation-melasma/',
   '/concerns/anti-ageing/',
-  // Specialised
-  '/treatments/intimate-bleaching/',
-  '/treatments/advanced-consultation/',
-  '/treatments/clinical-concepts/'
+  '/concerns/non-surgical-facelift/'
 ];
 
 const beforeAfterRoutes = [
   '/before-after/',
   '/before-after/botox/',
-  '/before-after/botox/masseter/',
   '/before-after/dermal-fillers/',
   '/before-after/dermal-fillers/lips/',
-  '/before-after/dermal-fillers/nose/',
-  '/before-after/dermal-fillers/cheeks/',
   '/before-after/dermal-fillers/jawline/',
-  '/before-after/dermal-fillers/tear-trough/',
+  '/before-after/dermal-fillers/cheeks/',
   '/before-after/dermal-fillers/chin/',
+  '/before-after/dermal-fillers/temples/',
+  '/before-after/dermal-fillers/tear-trough/',
+  '/before-after/dermal-fillers/nose/',
+  '/before-after/dermal-fillers/full-face-makeover/',
   '/before-after/skin-rejuvenation/',
-  '/before-after/ha-makeover/'
+  '/before-after/skin-rejuvenation/polynucleotides/',
+  '/before-after/laser-hair-removal/'
 ];
 
 // ONLY 4 blogs permitted
@@ -133,29 +100,21 @@ const blogRoutes = [
   '/blog/lip-filler-results-explained/'
 ];
 
-const locationRoutes = [
-  '/birmingham/',
-  '/manchester/',
-  '/cardiff/',
-  '/delhi/',
-  '/karachi/',
-  '/barbados/'
-];
+const locationRoutes: string[] = [];
 
 function getPriority(route: string): number {
   if (route === '/') return 1.0;
-  if (['/treatments/', '/treatments/botox/', '/treatments/dermal-fillers/', '/treatments/lip-fillers/'].includes(route)) return 0.9;
+  if (['/treatments/botox/', '/treatments/dermal-fillers/', '/treatments/lip-fillers/', '/treatments/skin-rejuvenation/'].includes(route)) return 0.9;
   if (route.startsWith('/treatments/') || route.startsWith('/medical/')) return 0.8;
   if (route.startsWith('/concerns/')) return 0.7;
   if (route === '/before-after/') return 0.8;
   if (route.startsWith('/before-after/')) return 0.6;
   if (route.startsWith('/blog/')) return 0.7;
-  if (route.startsWith('/birmingham') || route.startsWith('/manchester') || route.startsWith('/cardiff')) return 0.7;
   return 0.6;
 }
 
 function getChangeFreq(route: string): 'weekly' | 'monthly' {
-  if (['/', '/treatments/', '/prices/', '/before-after/', '/blog/'].includes(route)) return 'weekly';
+  if (['/', '/treatments/', '/before-after/', '/blog/'].includes(route)) return 'weekly';
   if (route.includes('/lip-fillers')) return 'weekly';
   return 'monthly';
 }
@@ -199,8 +158,7 @@ export function generateSitemapIndex(): string {
     { loc: `${baseUrl}/sitemap-pages.xml`, lastmod: currentDate },
     { loc: `${baseUrl}/sitemap-treatments.xml`, lastmod: currentDate },
     { loc: `${baseUrl}/sitemap-before-after.xml`, lastmod: currentDate },
-    { loc: `${baseUrl}/sitemap-blog.xml`, lastmod: currentDate },
-    { loc: `${baseUrl}/sitemap-locations.xml`, lastmod: currentDate }
+    { loc: `${baseUrl}/sitemap-blog.xml`, lastmod: currentDate }
   ];
 
   const sitemapEntries = sitemaps.map(sitemap => `  <sitemap>
@@ -222,7 +180,6 @@ export function generateAllDynamicSitemaps(): Record<string, string> {
     'sitemap-pages.xml': generateSitemapXML(data.pages),
     'sitemap-treatments.xml': generateSitemapXML(data.treatments),
     'sitemap-before-after.xml': generateSitemapXML(data.beforeAfter),
-    'sitemap-blog.xml': generateSitemapXML(data.blog),
-    'sitemap-locations.xml': generateSitemapXML(data.locations)
+    'sitemap-blog.xml': generateSitemapXML(data.blog)
   };
 }
