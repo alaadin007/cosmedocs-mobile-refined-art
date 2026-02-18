@@ -1081,6 +1081,26 @@ const ForeheadFillers = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>Forehead Filler London — Expert Dermal Filler Treatment at Harley Street</h2>
+          <p>
+            Cosmedocs offers specialist forehead filler treatments at our Harley Street clinic in London. Forehead fillers use hyaluronic acid dermal fillers to correct indentations, concavities, deep lines, and volume loss in the forehead area. Our experienced doctors restore smooth, natural forehead contours using precise injection techniques that deliver subtle, refined results. Treatment typically takes 15-30 minutes with minimal downtime.
+          </p>
+          <h3>Forehead Indentation and Concavity Correction</h3>
+          <p>
+            Forehead indentation, or concavity, refers to areas of the forehead that appear sunken, hollow, or depressed compared to surrounding areas. Causes include natural ageing, loss of subcutaneous fat, genetic predisposition, bone structure variations, and previous trauma. Forehead fillers effectively restore volume and create smooth, even contours. Our doctors use advanced layering techniques to build natural-looking volume without overfilling.
+          </p>
+          <h3>Forehead Filler Results and Aftercare</h3>
+          <p>
+            Forehead filler results are visible immediately and typically last 15-18 months. The hyaluronic acid gradually integrates with your natural tissue for seamless results. Side effects are minimal and temporary, including mild swelling, redness, or bruising at injection sites. The fillers we use can be dissolved with hyaluronidase if adjustments are needed, providing complete peace of mind. Our aesthetics is invisible art — bold, natural, always your way.
+          </p>
+          <h3>Forehead Filler Cost at Cosmedocs</h3>
+          <p>
+            Forehead filler treatment at Cosmedocs is available from £400. All treatments include comprehensive consultation, premium hyaluronic acid fillers, expert injection by GMC-registered doctors, and aftercare support. Book your forehead filler consultation at our Harley Street clinic — Cosmedocs has been delivering exceptional aesthetic results since 2007 with over one million treatments performed.
+          </p>
+        </div>
       </div>
     </>
   );

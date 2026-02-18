@@ -855,18 +855,25 @@ export default function DermalFillers() {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Dermal Fillers London - Complete Guide to Facial Enhancement</h2>
+        <div className="sr-only" aria-hidden="true">
+          <h2>Dermal Fillers London — Complete Guide to Facial Enhancement</h2>
           <p>
             Dermal fillers London at CosmeDocs Harley Street. Doctor-led hyaluronic acid filler treatments for lips,
             cheeks, jawline, chin, tear trough, and temples. GMC-registered doctors providing natural-looking facial
-            rejuvenation since 2007 with over 1 million injections performed. Our full-face approach ensures balanced,
-            subtle results that enhance your appearance without altering your identity. Premium hyaluronic acid products
-            including Juvederm and Restylane range. Treatments include lip fillers, cheek fillers, jawline filler,
-            chin filler, tear trough filler, temple filler, non-surgical nose job, nasolabial fold treatment, and
-            marionette line correction. All fillers are biocompatible and fully reversible with hyaluronidase.
-            Our aesthetics is invisible art. Bold, natural, always your way. Consultation-led approach with honest
-            advice and realistic expectations. CQC registered clinic in London's medical district.
+            rejuvenation since 2007 with over one million injections performed. Our full-face approach ensures balanced,
+            subtle results that enhance your appearance without altering your identity.
+          </p>
+          <h3>Types of Dermal Fillers and Treatment Areas</h3>
+          <p>
+            We use premium hyaluronic acid products including Juvederm and Restylane range, selected for each specific treatment area. Treatments include lip fillers for volume and definition, cheek fillers for midface restoration, jawline filler for contouring and definition, chin filler for profile enhancement, tear trough filler for under-eye hollows, temple filler for volume loss, and non-surgical nose job for nasal reshaping. All fillers are biocompatible, naturally metabolised, and fully reversible with hyaluronidase.
+          </p>
+          <h3>The Full-Face Approach to Dermal Fillers</h3>
+          <p>
+            Rather than treating individual areas in isolation, our doctors assess the face as a complete unit. Facial ageing involves interconnected changes — cheek volume loss creates deeper nasolabial folds, temple hollowing affects brow position, and jawline bone resorption contributes to jowling. By addressing these changes holistically, we achieve more natural, harmonious results that restore facial balance rather than creating an obviously "filled" appearance. This is our invisible art — transformation that speaks without saying a word.
+          </p>
+          <h3>Dermal Filler Safety and Aftercare</h3>
+          <p>
+            Safety is paramount at Cosmedocs. All treatments are performed by GMC-registered doctors with extensive training in facial anatomy and filler injection techniques. We maintain emergency protocols including hyaluronidase for filler dissolution. Aftercare includes avoiding strenuous exercise for 24 hours, gentle facial massage as directed, and follow-up appointments to assess results. Our aesthetics is invisible art — bold, natural, always your way. CQC registered clinic in London's prestigious Harley Street medical district.
           </p>
         </div>
       </div>

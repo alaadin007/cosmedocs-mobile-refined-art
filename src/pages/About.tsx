@@ -282,7 +282,41 @@ const About = () => {
           </div>
         </section>
 
-        
+        {/* Hidden SEO Content */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>About Cosmedocs — Harley Street Aesthetic Medicine Since 2007</h2>
+          <p>
+            Cosmedocs is a premier Harley Street aesthetic medicine clinic established in 2007, 
+            offering doctor-led cosmetic treatments in the heart of London's renowned medical district. 
+            With over one million injections performed since inception, Cosmedocs has built an 
+            unrivalled reputation for excellence in non-surgical aesthetic procedures. The clinic's 
+            philosophy centres on invisible art — subtle, natural enhancements that speak without 
+            saying a word. Bold, natural, always your way.
+          </p>
+          <p>
+            All practitioners at Cosmedocs are GMC-registered and operate under CQC compliance. 
+            The clinic holds Save Face accreditation and is fully insured, maintaining the highest 
+            standards of patient safety and care. Our approach prioritises integrity over revenue, 
+            longevity over trends, and restraint over excess. We believe the most powerful enhancements 
+            are those that go unnoticed — creating subtle shifts that leave others wondering what's 
+            changed, but unable to pinpoint exactly what.
+          </p>
+          <p>
+            Located at 10 Harley Street, London W1G 9PF, our boutique clinic has served thousands 
+            of patients seeking refined, natural-looking results. From anti-wrinkle injections and 
+            dermal fillers to advanced skin rejuvenation treatments, every consultation is doctor-led, 
+            ensuring you receive expert guidance tailored to your individual needs and aspirations. 
+            Our commitment to ethical practice means we sometimes say no — recommending against 
+            treatments that aren't in your best interest, even when asked.
+          </p>
+          <p>
+            Cosmedocs goes beyond traditional beauty clinics by focusing on treatments designed for 
+            both medical and psychological purposes, understanding that physical appearance can 
+            profoundly impact mental health and overall well-being. The clinic's values of honesty, 
+            excellence, respect, prudence, and community guide every consultation and treatment decision. 
+            Book your consultation today to experience considered care from Harley Street doctors.
+          </p>
+        </div>
       </div>
     </>
   );

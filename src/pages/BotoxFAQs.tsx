@@ -749,6 +749,24 @@ export default function BotoxFAQs() {
             excessive heat including saunas and hot baths. These precautions help ensure the Botox remains in 
             the intended location and produces optimal results.
           </p>
+          <p>
+            Botox FAQs frequently asked questions cover topics including what is Botox, how does Botox work, 
+            is Botox safe, what are the side effects of Botox, how long does Botox last, how much does Botox 
+            cost in London, what areas can be treated with Botox, and what to expect during a Botox consultation. 
+            Our Harley Street specialists answer questions about Botox for forehead lines, frown lines, crow's 
+            feet, bunny lines, gummy smile, masseter reduction, hyperhidrosis, and preventative Botox treatments. 
+            Understanding Botox safety, efficacy, and realistic expectations helps patients make informed decisions 
+            about their aesthetic journey. Cosmedocs has performed over one million injections since 2007, making 
+            our doctors among the most experienced Botox practitioners in London.
+          </p>
+          <p>
+            Additional Botox questions include information about Botox alternatives, combination treatments with 
+            dermal fillers, the difference between Botox brands, baby Botox approaches, and how to choose the 
+            right Botox practitioner. Our comprehensive FAQ resource addresses concerns about Botox during 
+            pregnancy, Botox interactions with medications, and when to avoid Botox treatments. Cosmedocs 
+            follows the philosophy of invisible art — our aesthetics is minimal, quiet, not loud, delivering 
+            transformation that speaks without saying a word. Bold, natural, always your way.
+          </p>
         </div>
       </main>
     </>

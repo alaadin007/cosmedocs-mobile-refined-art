@@ -336,10 +336,11 @@ const DrAhmedHaq = () => {
             exceptional outcomes that enhance natural beauty while maintaining authenticity.
           </p>
           <p>
-            Keywords: Dr Ahmed Haq, cosmetic physician London, aesthetic treatments, botox specialist, facial contouring expert, non-surgical 
-            procedures, Cosmedocs team, Harley Street Institute trainer, Royal College Surgeons graduate, British Association Cosmetic Doctors, 
-            advanced injectable procedures, jaw reduction specialist, lip enhancement, non-surgical nose job, tear trough treatment, Nefertiti 
-            facelift, skin peels, microdermabrasion, aesthetic medicine London, invisible art cosmetics, bold natural always your way.
+            Keywords: Dr Ahmed Haq cosmetic physician London, aesthetic treatments Harley Street, botox specialist London, facial contouring expert, non-surgical procedures, Cosmedocs medical director, Harley Street Institute trainer, Royal College Surgeons graduate, British Association Cosmetic Doctors member, advanced injectable procedures, jaw reduction specialist, lip enhancement, non-surgical nose job, tear trough treatment, Nefertiti facelift, aesthetic medicine London. Dr Haq has personally performed tens of thousands of aesthetic procedures and continues to push the boundaries of non-surgical facial rejuvenation through innovative techniques and continuous professional development.
+          </p>
+          <h3>Dr Haq's Areas of Expertise</h3>
+          <p>
+            Dr Ahmed Haq specialises in complex facial contouring procedures including non-surgical rhinoplasty, jawline and chin enhancement, masseter reduction for jaw slimming, and advanced full-face rejuvenation using a combination of dermal fillers and anti-wrinkle injections. His expertise in facial anatomy and injection technique allows him to achieve subtle, natural-looking results that embody the Cosmedocs invisible art philosophy. As medical director, Dr Haq ensures every treatment delivered at Cosmedocs meets the highest standards of clinical excellence and patient safety.
           </p>
         </div>
       </div>

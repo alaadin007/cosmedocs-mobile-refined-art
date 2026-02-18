@@ -187,9 +187,15 @@ const HydraFacial = () => {
 
         <section className="lg:hidden py-12 px-4 bg-black"><HydraFacialSidebar /></section>
 
-        <div className="sr-only">
+        <div className="sr-only" aria-hidden="true">
           <h2>HydraFacial London — Expert Vortex Facial Treatment at Harley Street</h2>
-          <p>CosmeDocs offers HydraFacial treatments at our Harley Street clinic in London. HydraFacial uses patented Vortex-Fusion technology for deep cleansing, exfoliation, extraction, and hydration in one treatment. Suitable for all skin types with zero downtime. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <p>CosmeDocs offers HydraFacial treatments at our Harley Street clinic in London. HydraFacial uses patented Vortex-Fusion technology for deep cleansing, exfoliation, extraction, and hydration in one multi-step treatment. Suitable for all skin types including sensitive skin, with zero downtime and immediately visible results. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <h3>HydraFacial Treatment Steps</h3>
+          <p>The HydraFacial treatment involves six key steps: deep cleansing to remove surface impurities, gentle acid peel for exfoliation, painless automated extractions using vortex suction technology, hydration infusion with hyaluronic acid serums, antioxidant protection application, and LED light therapy for enhanced results. Each step builds upon the previous one to deliver comprehensive skin improvement in a single 30-45 minute session.</p>
+          <h3>HydraFacial Benefits and Skin Concerns</h3>
+          <p>HydraFacial effectively addresses multiple skin concerns including dullness, uneven texture, congested pores, fine lines, dehydration, hyperpigmentation, and early signs of ageing. The treatment delivers instant radiance and glow, making it ideal before special events or as part of a regular skincare maintenance programme. Clinical studies demonstrate measurable improvements in skin hydration, pore size, and overall skin quality after treatment.</p>
+          <h3>HydraFacial Pricing and Booking</h3>
+          <p>HydraFacial at Cosmedocs is available from £175 per session. We offer signature, deluxe, and platinum packages to suit different skin needs and budgets. Our experienced practitioners customise each HydraFacial with targeted boosters and serums selected for your specific skin concerns. Book your HydraFacial consultation at our Harley Street clinic — Cosmedocs has been delivering exceptional skin treatments since 2007.</p>
         </div>
       </div>
     </>

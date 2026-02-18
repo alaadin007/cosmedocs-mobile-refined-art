@@ -197,9 +197,15 @@ const PolynucleotideTreatment = () => {
 
         <section className="lg:hidden py-12 px-4 bg-black"><PolynucleotideSidebar /></section>
 
-        <div className="sr-only">
+        <div className="sr-only" aria-hidden="true">
           <h2>Polynucleotide Treatment London — Advanced DNA Repair Therapy at Harley Street</h2>
-          <p>CosmeDocs offers doctor-led polynucleotide treatments for skin regeneration, under-eye rejuvenation, and hair restoration at our Harley Street clinic. Polynucleotide therapy uses purified DNA fragments (PDRN) to stimulate cellular repair, boost collagen synthesis, and enhance skin quality from within. Results develop progressively over months. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <p>CosmeDocs offers doctor-led polynucleotide treatments for skin regeneration, under-eye rejuvenation, and hair restoration at our Harley Street clinic. Polynucleotide therapy uses purified DNA fragments (PDRN) to stimulate cellular repair, boost collagen synthesis, and enhance skin quality from within. Results develop progressively over 2-3 months as the biological repair cascade activates fibroblasts and promotes new collagen formation.</p>
+          <h3>How Polynucleotides Work</h3>
+          <p>Polynucleotides are purified DNA fragments derived from salmon or trout DNA. When injected into the skin, they act as biological scaffolding that stimulates fibroblast activity, promotes angiogenesis (new blood vessel formation), and activates the skin's natural repair mechanisms. Unlike traditional hyaluronic acid fillers that add volume, polynucleotides work at a cellular level to genuinely regenerate skin quality, improving texture, elasticity, hydration, and overall radiance from within.</p>
+          <h3>Polynucleotide Treatment Areas and Applications</h3>
+          <p>Polynucleotide therapy is particularly effective for under-eye rejuvenation (treating dark circles and crepey skin), facial skin quality improvement, neck and décolletage rejuvenation, hand rejuvenation, and scalp treatments for hair thinning. The treatment is ideal for patients seeking genuine skin quality improvement rather than volumising effects, making it a perfect complement to other aesthetic treatments.</p>
+          <h3>Polynucleotide Treatment Cost and Course</h3>
+          <p>Polynucleotide treatment at Cosmedocs is available from £450 per session. A course of 2-3 treatments spaced 3-4 weeks apart is typically recommended for optimal results, with maintenance sessions every 6-12 months. Our GMC-registered doctors assess your skin quality and concerns during consultation to recommend the most appropriate treatment protocol. Our aesthetics is invisible art — bold, natural, always your way.</p>
         </div>
       </div>
     </>

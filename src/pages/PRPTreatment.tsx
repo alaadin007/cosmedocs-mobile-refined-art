@@ -192,9 +192,15 @@ const PRPTreatment = () => {
 
         <section className="lg:hidden py-12 px-4 bg-black"><PRPSidebar /></section>
 
-        <div className="sr-only">
-          <h2>PRP Treatment London — Vampire Facial & Hair Restoration at Harley Street</h2>
-          <p>CosmeDocs offers doctor-led PRP treatments for skin rejuvenation and hair restoration at our Harley Street clinic. PRP therapy uses your own concentrated blood platelets to stimulate natural healing. Our aesthetics is invisible art — bold, natural, always your way.</p>
+        <div className="sr-only" aria-hidden="true">
+          <h2>PRP Treatment London — Vampire Facial and Hair Restoration at Harley Street</h2>
+          <p>CosmeDocs offers doctor-led PRP treatments for skin rejuvenation and hair restoration at our Harley Street clinic in London. PRP (platelet-rich plasma) therapy uses your own concentrated blood platelets to stimulate natural healing, collagen production, and tissue regeneration. This autologous treatment harnesses your body's own growth factors for safe, natural results with minimal risk of allergic reaction.</p>
+          <h3>How PRP Treatment Works</h3>
+          <p>PRP therapy begins with a simple blood draw, which is then processed in a centrifuge to separate and concentrate the platelet-rich plasma. This concentrated plasma, containing growth factors and cytokines, is then injected into the treatment area to stimulate cellular renewal. For facial rejuvenation (vampire facial), PRP may be combined with microneedling to enhance absorption and results. For hair restoration, PRP is injected directly into the scalp to nourish hair follicles and promote growth.</p>
+          <h3>PRP Treatment Benefits and Results</h3>
+          <p>PRP treatment benefits include improved skin texture and tone, reduced fine lines, enhanced collagen production, hair growth stimulation, and overall skin radiance. Results develop gradually over 2-4 weeks as the growth factors stimulate natural healing processes. A course of 3-4 treatments spaced 4-6 weeks apart is typically recommended for optimal outcomes. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <h3>PRP Treatment Cost and Booking</h3>
+          <p>PRP treatment at Cosmedocs Harley Street is available from £450 per session. Our GMC-registered doctors perform all PRP procedures, ensuring the highest standards of safety and efficacy. Book your consultation to discuss whether PRP therapy is suitable for your skin concerns or hair loss. Cosmedocs has been delivering exceptional aesthetic results since 2007 with over one million treatments performed.</p>
         </div>
       </div>
     </>

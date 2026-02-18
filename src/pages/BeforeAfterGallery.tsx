@@ -375,18 +375,21 @@ const BeforeAfterGallery = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Real Patient Results Gallery</h2>
-          <p>View authentic before and after photos from our Harley Street clinic. Our patients have achieved natural, beautiful results with Botox, dermal fillers, lip enhancement, non-surgical nose jobs, and facial rejuvenation treatments.</p>
+        <div className="sr-only" aria-hidden="true">
+          <h2>Real Patient Results Gallery — Before and After Photos</h2>
+          <p>View authentic before and after photos from our Harley Street clinic. Our patients have achieved natural, beautiful results with Botox, dermal fillers, lip enhancement, non-surgical nose jobs, and facial rejuvenation treatments. Each image showcases genuine patient transformations performed by our GMC-registered doctors at Cosmedocs London.</p>
           
           <h3>Treatment Results Showcase</h3>
-          <p>Browse through hundreds of real patient transformations including lip filler before and after photos, Botox treatment results, dermal filler makeovers, jawline contouring, cheek enhancement, and non-surgical nose job outcomes.</p>
+          <p>Browse through real patient transformations including lip filler before and after photos, Botox treatment results for forehead lines and crow's feet, dermal filler makeovers for cheeks and jawline, chin filler contouring, temple filler restoration, tear trough treatment for under-eye hollows, and non-surgical nose job outcomes using hyaluronic acid fillers.</p>
           
           <h3>Expert Aesthetic Medicine London</h3>
-          <p>CosmeDocs has performed over 1 million injections since 2007. Our before and after gallery demonstrates our commitment to natural-looking results and aesthetic excellence on Harley Street, London.</p>
+          <p>CosmeDocs has performed over one million injections since 2007. Our before and after gallery demonstrates our commitment to natural-looking results and aesthetic excellence on Harley Street, London. Every treatment is carefully documented to showcase the subtle, refined outcomes that define our invisible art approach to aesthetic medicine.</p>
+          
+          <h3>Facial Rejuvenation Results</h3>
+          <p>Our gallery includes results from Profhilo bio-remodelling, polynucleotide therapy, skin booster treatments, masseter Botox for jaw slimming, Nefertiti lift for jawline definition, and comprehensive facial rejuvenation programmes. Each patient's journey demonstrates how our doctor-led approach achieves harmonious, balanced outcomes that enhance natural beauty without appearing overdone.</p>
           
           <h3>Patient Testimonials Visual Evidence</h3>
-          <p>See the transformative power of invisible art aesthetic medicine. Our philosophy of bold, natural, always your way is evident in every before and after comparison in our comprehensive results gallery.</p>
+          <p>See the transformative power of invisible art aesthetic medicine. Our philosophy of bold, natural, always your way is evident in every before and after comparison. Cosmedocs specialises in subtle enhancements that speak without saying a word — transformation that leaves others wondering what's changed, but unable to pinpoint exactly what. Book your consultation to discuss how we can help you achieve similar natural-looking results.</p>
         </div>
       </div>
     </>

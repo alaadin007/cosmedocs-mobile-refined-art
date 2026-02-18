@@ -1234,6 +1234,37 @@ const Prices = () => {
             Book a Consultation
           </Button>
         </div>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>Cosmedocs Price List — Aesthetic Treatment Costs London</h2>
+          <p>
+            Cosmedocs offers transparent pricing for all aesthetic treatments at our Harley Street clinic in London. 
+            Our comprehensive price list covers Botox anti-wrinkle injections starting from £200, dermal fillers 
+            from £300, lip fillers from £300, cheek fillers from £350, jawline fillers, chin fillers, temple fillers, 
+            tear trough treatment, and non-surgical rhinoplasty. All prices include consultation, treatment, and 
+            aftercare with GMC-registered doctors.
+          </p>
+          <p>
+            Skin rejuvenation treatments include Profhilo bio-remodelling from £300, polynucleotide therapy from £450, 
+            skin boosters from £250, HydraFacial from £175, medical-grade chemical peels, microneedling with PRP, 
+            and PDO thread lifts. Our medical dermatology services cover acne treatment, mole removal, skin tag removal, 
+            psoriasis management, eczema treatment, and prescription skincare consultations.
+          </p>
+          <p>
+            Advanced Botox treatments available include masseter botox for jaw slimming from £350, hyperhidrosis 
+            treatment for excessive sweating from £450, calf slimming botox from £400, and specialist treatments 
+            for gummy smile, bunny lines, lip flip, chin dimpling, and neck bands. Men's Botox pricing reflects 
+            additional product required for stronger facial muscles.
+          </p>
+          <p>
+            Plastic surgery options through our sister brand CosmeSurg include rhinoplasty, blepharoplasty, 
+            facelift procedures, and liposuction. All surgical consultations are conducted by specialist 
+            surgeons with extensive experience in cosmetic surgery. Our aesthetics is invisible art — 
+            bold, natural, always your way. Every treatment at Cosmedocs is delivered by experienced 
+            practitioners who prioritise natural-looking results and patient safety above all else.
+          </p>
+        </div>
       </div>
     </div>
     </>
