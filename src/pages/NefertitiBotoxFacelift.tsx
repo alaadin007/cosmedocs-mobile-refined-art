@@ -36,10 +36,10 @@ export default function NefertitiBotoxFacelift() {
   ];
 
   const relatedTreatments = [
-    { name: "Face Botox Areas", price: "£200-400", link: "/botox-london" },
-    { name: "Lower Face Botox", price: "£250-350", link: "/lower-face-botox" },
-    { name: "Chin Botox", price: "£200-300", link: "/chin-botox" },
-    { name: "Non-Surgical Facelift", price: "£800-1200", link: "/non-surgical-facelift" }
+    { name: "Face Botox Areas", price: "£200-400", link: "/treatments/botox/" },
+    { name: "Lower Face Botox", price: "£250-350", link: "/treatments/botox/" },
+    { name: "Chin Botox", price: "£200-300", link: "/treatments/botox/" },
+    { name: "Non-Surgical Facelift", price: "£800-1200", link: "/concerns/non-surgical-facelift/" }
   ];
 
   useEffect(() => {

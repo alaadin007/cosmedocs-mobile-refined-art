@@ -666,7 +666,7 @@ export default function BotoxFAQs() {
                   size="lg" 
                   className="bg-purple-600 text-white hover:bg-purple-700 border-purple-500"
                 >
-                  <Link to="/ai-chat">
+                  <Link to="/contact/">
                     <Sparkles className="w-5 h-5 mr-2" />
                     Talk to our AI Professor
                   </Link>
