@@ -426,7 +426,18 @@ const Testimonials = () => {
         <div className="sr-only" aria-hidden="true">
           <h2>Cosmedocs Client Testimonials and Reviews</h2>
           <p>
-            Read authentic client testimonials and reviews from Cosmedocs patients who have experienced our aesthetic treatments in London. Our clients share their experiences with Botox treatments, dermal fillers, facial rejuvenation, and various cosmetic procedures performed by Dr Ahmed Haq and the Cosmedocs team at our Harley Street clinic. These genuine reviews highlight our commitment to professional service, natural-looking results, competitive pricing, and exceptional patient care. Our testimonials demonstrate consistent satisfaction with treatment outcomes, staff professionalism, clinic accessibility, and the expertise of our medical practitioners. Clients appreciate our honest approach, detailed consultations, comprehensive aftercare, and our philosophy of never encouraging unnecessary treatments. Whether seeking anti-wrinkle injections, dermal filler treatments, or specialized procedures like hyperhidrosis treatment, our reviews reflect the trust and confidence patients place in Cosmedocs for their aesthetic medicine needs. Book your consultation today and join our community of satisfied clients who recommend Cosmedocs for safe, effective, and affordable aesthetic treatments in London.
+            Read authentic client testimonials and reviews from Cosmedocs patients who have experienced our aesthetic treatments in London. Our clients share their experiences with Botox treatments, dermal fillers, facial rejuvenation, and various cosmetic procedures performed by Dr Ahmed Haq and the Cosmedocs team at our Harley Street clinic. These genuine reviews highlight our commitment to professional service, natural-looking results, competitive pricing, and exceptional patient care.
+          </p>
+          <p>
+            Our testimonials demonstrate consistent satisfaction with treatment outcomes, staff professionalism, clinic accessibility, and the expertise of our medical practitioners. Clients appreciate our honest approach, detailed consultations, comprehensive aftercare, and our philosophy of never encouraging unnecessary treatments. Whether seeking anti-wrinkle injections, dermal filler treatments, or specialised procedures like hyperhidrosis treatment, our reviews reflect the trust and confidence patients place in Cosmedocs.
+          </p>
+          <h3>Why Patients Choose Cosmedocs Harley Street</h3>
+          <p>
+            With over one million injections performed since 2007, Cosmedocs has earned the trust of thousands of patients seeking natural-looking aesthetic enhancements. Our 4.9-star rating reflects our unwavering commitment to excellence, safety, and patient satisfaction. Every treatment is delivered by GMC-registered doctors who prioritise your wellbeing and aesthetic goals. Our invisible art philosophy ensures results that are subtle, refined, and authentically you — bold, natural, always your way.
+          </p>
+          <h3>Verified Patient Experiences</h3>
+          <p>
+            Our client reviews span a wide range of treatments including Botox for forehead lines, crow's feet, and frown lines, dermal fillers for lips, cheeks, jawline, and chin, non-surgical rhinoplasty, skin rejuvenation with Profhilo and polynucleotides, HydraFacial treatments, and medical dermatology consultations. Patients consistently praise the natural-looking results, comfortable treatment experience, and comprehensive aftercare provided by the Cosmedocs team at our Harley Street clinic in London.
           </p>
         </div>
       </div>

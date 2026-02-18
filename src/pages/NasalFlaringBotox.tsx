@@ -504,7 +504,13 @@ const NasalFlaringBotox = () => {
           <p>Nasal flaring occurs when the dilator naris muscle contracts excessively, causing nostrils to widen beyond the natural range during breathing, speaking, or expressions. This can affect facial harmony and create an appearance of constant effort. Professional botox treatment relaxes this muscle, reducing excessive flaring while maintaining adequate breathing function.</p>
           
           <h4>Treatment Process and Nasal Care</h4>
-          <p>Our nasal flaring botox treatment begins with a detailed nasal consultation and muscle analysis. The injection process takes 5-10 minutes using specialized techniques for the delicate nostril area. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide specific nasal aftercare instructions and ongoing support throughout your treatment journey.</p>
+          <p>Our nasal flaring botox treatment begins with a detailed nasal consultation and muscle analysis. The injection process takes 5-10 minutes using specialised techniques for the delicate nostril area. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide specific nasal aftercare instructions and ongoing support throughout your treatment journey.</p>
+          
+          <h4>Nasal Flaring Botox Cost and Combination Treatments</h4>
+          <p>Nasal flaring botox at Cosmedocs is available as a standalone treatment or as part of our comprehensive nasal package at £275, which includes nasal flaring correction, bunny lines treatment, and nose tip lift. Many patients combine nasal flaring botox with non-surgical rhinoplasty using dermal fillers for complete nasal reshaping without surgery. Our doctors assess your overall nasal aesthetics to recommend the most effective treatment plan for achieving balanced, harmonious results.</p>
+          
+          <h4>Why Choose Cosmedocs for Nasal Botox Treatments</h4>
+          <p>Cosmedocs has performed over one million injections since 2007, with extensive experience in delicate nasal procedures. Our GMC-registered doctors understand the complex anatomy of the nose and the importance of preserving natural breathing function whilst achieving aesthetic improvement. Every nasal flaring treatment follows our invisible art philosophy — subtle refinements that enhance your natural features without obvious signs of treatment. Book your consultation at our Harley Street clinic to discuss your nasal concerns with an experienced aesthetic doctor. Bold, natural, always your way.</p>
         </div>
       </div>
     </>

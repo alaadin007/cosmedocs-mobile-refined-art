@@ -669,9 +669,22 @@ const NonSurgicalFacelift = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="hidden">
+        <div className="sr-only" aria-hidden="true">
+          <h2>Non-Surgical Facelift London — Liquid Facelift at Harley Street</h2>
           <p>
-            Non-surgical facelift London treatments at Cosmedocs offer advanced facial rejuvenation without surgery. Our expert practitioners specialise in liquid facelift techniques using premium dermal fillers and PDO threads to lift, contour, and restore youthful facial features. With over 10 years of experience training doctors internationally, we provide personalised treatment plans for Level 1, 2, and 3 facial sagging. Our non-surgical face lift approach addresses jowls, volume loss, nasolabial folds, and marionette lines with minimal downtime and natural results. Book your consultation at our Harley Street clinic to discover how our invisible art philosophy can transform your appearance through expert non-surgical facial rejuvenation techniques tailored to your unique needs and aesthetic goals.
+            Non-surgical facelift London treatments at Cosmedocs offer advanced facial rejuvenation without surgery. Our expert practitioners specialise in liquid facelift techniques using premium dermal fillers and PDO threads to lift, contour, and restore youthful facial features. With over 15 years of experience training doctors internationally, we provide personalised treatment plans for Level 1, 2, and 3 facial sagging.
+          </p>
+          <h3>Understanding Facial Ageing Levels</h3>
+          <p>
+            Our non-surgical face lift approach uses a clinical grading system to assess facial ageing and recommend the most appropriate treatment. Level one involves early signs of volume loss and mild jowling — fully treatable with strategic filler placement. Level two presents moderate sagging with noticeable jowls and deeper folds — a combination of fillers and PDO threads delivers optimal results. Level three involves significant tissue descent where surgical referral may be more appropriate.
+          </p>
+          <h3>Treatment Options for Non-Surgical Facial Rejuvenation</h3>
+          <p>
+            Our liquid facelift combines multiple treatments including cheek volume restoration with dermal fillers, jawline contouring and definition, nasolabial fold and marionette line correction, temple hollowing treatment, tear trough rejuvenation, and PDO thread lifting for skin tightening. Each treatment plan is customised to address your specific concerns and facial anatomy, ensuring natural-looking results that maintain your authentic appearance.
+          </p>
+          <h3>Non-Surgical Facelift Cost and Consultation</h3>
+          <p>
+            Non-surgical facelift costs at Cosmedocs vary depending on the combination of treatments required. During your consultation, our doctors will assess your facial anatomy, discuss your goals, and provide transparent pricing for your personalised treatment plan. Our invisible art philosophy means we prioritise natural, refined results — transformation that speaks without saying a word. Bold, natural, always your way. Book your consultation at our Harley Street clinic today.
           </p>
         </div>
       </div>

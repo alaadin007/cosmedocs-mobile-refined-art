@@ -986,7 +986,13 @@ const CrowsFeetBotox = () => {
           <p>Crow's feet develop from repeated contractions of the orbicularis oculi muscle during smiling, laughing, and squinting. These dynamic wrinkles become more pronounced over time, creating permanent lines that can age your appearance. Professional botox treatment relaxes these muscles, smoothing existing lines and preventing further development.</p>
           
           <h4>Treatment Process and Eye Area Care</h4>
-          <p>Our crow's feet botox treatment begins with a detailed eye area consultation and muscle analysis. The injection process takes 10-15 minutes using specialized techniques for the delicate eye area. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide specific eye area aftercare instructions and ongoing support.</p>
+          <p>Our crow's feet botox treatment begins with a detailed eye area consultation and muscle analysis. The injection process takes 10-15 minutes using specialised techniques for the delicate eye area. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide specific eye area aftercare instructions and ongoing support.</p>
+          
+          <h4>Crow's Feet Botox Cost and Combination Treatments</h4>
+          <p>Crow's feet botox at Cosmedocs is available from £200 as part of our comprehensive anti-wrinkle treatment menu. Many patients combine crow's feet treatment with forehead lines and frown lines for a complete upper face rejuvenation — our 3-area botox package offers excellent value. Our GMC-registered doctors have extensive experience in periorbital injection techniques, ensuring precise muscle targeting that smooths wrinkles whilst preserving natural expression and eye movement.</p>
+          
+          <h4>Preventing and Managing Eye Area Ageing</h4>
+          <p>Crow's feet develop from repeated contractions of the orbicularis oculi muscle during smiling, laughing, and squinting over many years. Preventative botox treatments can slow the progression from dynamic lines (visible only during expression) to static lines (permanently visible at rest). Combined with daily sun protection and appropriate skincare, regular botox maintenance helps preserve a youthful, refreshed eye area. Cosmedocs has performed over one million injections since 2007 — our aesthetics is invisible art, bold, natural, always your way.</p>
         </div>
       </div>
     </>

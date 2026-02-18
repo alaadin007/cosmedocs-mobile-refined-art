@@ -594,23 +594,21 @@ const AdvancedConsultation = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Advanced Aesthetic Medicine Consultation London Birmingham Manchester Cardiff</h2>
+          <h2>Advanced Aesthetic Consultation with Dr Ahmed Haq — Millimetre-Precision Facial Optimisation</h2>
           <p>
-            Dr Ahmed Haq aesthetic medicine consultation advanced techniques millimeter precision facial optimization 
-            temporal hollowing lip corner enhancement chin volumization expert aesthetic physician 15 years experience 
-            training doctors aesthetic medicine london birmingham manchester cardiff cosmedocs natural results 
-            invisible enhancement facial rejuvenation volume restoration jowl reversal midface lifting perioral 
-            enhancement jawline definition aesthetic consultation booking expert aesthetic physician advanced training 
-            natural facial enhancement subtle aesthetic improvements millimeter adjustments facial volume restoration 
-            age reversal techniques 30-60 optimal treatment window facial anatomy expertise aesthetic medicine science 
-            volume loss correction sagging reversal expert consultation aesthetic medicine training physician education 
-            advanced aesthetic techniques natural facial rejuvenation invisible art aesthetic philosophy millimeter 
-            precision medicine facial optimization expert consultation aesthetic medicine london aesthetic physician 
-            training advanced techniques facial enhancement natural results cosmedocs aesthetic clinic dr ahmed haq 
-            consultation booking aesthetic medicine expertise facial rejuvenation techniques advanced consultation 
-            millimeter precision aesthetic enhancement natural facial optimization volume restoration techniques 
-            expert aesthetic physician consultation facial anatomy expertise aesthetic medicine london birmingham 
-            manchester cardiff advanced aesthetic consultation booking natural facial enhancement techniques.
+            Dr Ahmed Haq offers advanced aesthetic consultations at Cosmedocs Harley Street, specialising in millimetre-precision facial optimisation for patients seeking expert-level refinements. With over 15 years of experience and expertise in training doctors across the UK, Dr Haq provides detailed facial assessments that identify subtle asymmetries, volume deficits, and proportional imbalances invisible to less experienced practitioners. His advanced consultation process uses clinical photography, proportional analysis, and comprehensive facial mapping.
+          </p>
+          <h3>Specialist Treatment Areas</h3>
+          <p>
+            Advanced consultation areas include temporal hollowing correction, oral commissure (lip corner) enhancement, perioral rejuvenation, midface volumisation, jawline definition and contouring, chin projection, and subtle brow positioning through strategic filler placement. Dr Haq's approach addresses the interconnected nature of facial ageing — understanding that the face sinks before it sags, and that stopping the sinking process through strategic volume restoration allows sagging to reverse naturally.
+          </p>
+          <h3>The 30-60 Age Optimal Treatment Window</h3>
+          <p>
+            The optimal window for advanced aesthetic intervention is between ages 30 and 60, when facial changes are developing but skin elasticity remains sufficient for excellent outcomes. Dr Haq can reverse mild to moderate jowls (grade one) effectively through non-surgical techniques, while providing honest assessments when surgical intervention may be more appropriate. This commitment to honesty and patient welfare is central to the Cosmedocs philosophy.
+          </p>
+          <h3>Training and Clinical Excellence</h3>
+          <p>
+            As a trainer at the Harley Street Institute and founder of Cosmedocs' clinical protocols, Dr Haq brings an educator's precision to every consultation. His advanced techniques have been taught to hundreds of medical professionals across London, Birmingham, Manchester, Cardiff, and internationally. Patients seeking the highest level of aesthetic expertise and personalised treatment planning choose Dr Haq's advanced consultation for facial rejuvenation, volume restoration, and age reversal techniques. Our aesthetics is invisible art — bold, natural, always your way.
           </p>
         </div>
       </div>

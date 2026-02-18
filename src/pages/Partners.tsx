@@ -637,6 +637,20 @@ const Partners = () => {
           </p>
         </div>
       </section>
+
+      {/* Hidden SEO Content */}
+      <div className="sr-only" aria-hidden="true">
+        <h2>CosmeDoc Franchise Opportunity — Harley Street Heritage Aesthetic Clinic Partnership</h2>
+        <p>
+          CosmeDoc offers a first-of-its-kind boutique Harley Street franchise opportunity for ambitious medical professionals across the United Kingdom. As a sister company of the world-renowned Harley Street Institute, our franchise model brings prestigious Harley Street heritage, clinical excellence, and proven business systems to locations in London, Birmingham, Manchester, Cardiff, and beyond. Our innovative approach eliminates traditional barriers to entry whilst maintaining the highest standards of aesthetic medicine.
+        </p>
+        <p>
+          The CosmeDoc franchise partnership includes comprehensive training through the Harley Street Institute, access to established brand recognition, proven marketing systems, ongoing clinical support, and proprietary treatment protocols developed over 15 years of aesthetic practice. Franchisees benefit from our established reputation, premium product supply chains, and continuous professional development programmes that ensure consistent quality across all locations.
+        </p>
+        <p>
+          Our franchise investment tiers — Essentials, Professional, and Premium — cater to different practice sizes and ambitions, with monthly fees starting from competitive rates that reflect the value of Harley Street association and support. Each partnership includes territory exclusivity, comprehensive onboarding, and access to our network of experienced aesthetic practitioners and business mentors. Join the CosmeDoc family and bring world-class aesthetic medicine to your community.
+        </p>
+      </div>
     </div>
   );
 };
