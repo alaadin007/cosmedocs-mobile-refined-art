@@ -396,6 +396,16 @@
 /blog/*                                       /treatments/                                    301
 
 # =====================================================
+# PHASE 6: Orphan URL Cleanup
+# =====================================================
+/ai-chat                          /contact/                           301
+/ai-chat/                         /contact/                           301
+/before-and-after-gallery         /before-after/                      301
+/before-and-after-gallery/        /before-after/                      301
+/lower-face-botox                 /treatments/botox/                  301
+/lower-face-botox/                /treatments/botox/                  301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
