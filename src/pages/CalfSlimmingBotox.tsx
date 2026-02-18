@@ -94,20 +94,43 @@ const CalfSlimmingBotox = () => {
                 "@type": "MedicalBusiness",
                 "@id": "https://www.cosmedocs.co.uk/#organization",
                 "name": "CosmeDocs",
-                "description": "Doctor-led aesthetic medicine clinic on Harley Street",
+                "description": "Doctor-led aesthetic medicine clinic on Harley Street, London. Specialists in calf reduction Botox and advanced aesthetic treatments.",
                 "url": "https://www.cosmedocs.co.uk/",
+                "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+                "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
+                "priceRange": "££",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
                   "addressLocality": "London",
+                  "addressRegion": "Greater London",
                   "postalCode": "W1G 9PF",
                   "addressCountry": "GB"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 51.5074,
+                  "longitude": -0.1278
+                },
+                "telephone": "+44 20 3733 3227",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+44 20 3733 3227",
+                  "contactType": "customer service",
+                  "availableLanguage": ["English"]
                 },
                 "medicalSpecialty": "Aesthetic Medicine",
                 "openingHoursSpecification": [
                   { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
                   { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00" }
-                ]
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "156",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                }
               },
               {
                 "@type": "MedicalProcedure",
