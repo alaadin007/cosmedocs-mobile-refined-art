@@ -175,7 +175,7 @@ const MarionnetteLines = () => {
           "price": "325",
           "priceCurrency": "GBP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.cosmedocs.co.uk/marionette-lines/"
+          "url": "https://www.cosmedocs.co.uk/treatments/marionette-lines/"
         }
       },
       {
@@ -191,13 +191,13 @@ const MarionnetteLines = () => {
             "@type": "ListItem",
             "position": 2,
             "name": "Dermal Fillers",
-            "item": "https://www.cosmedocs.co.uk/dermal-fillers/"
+            "item": "https://www.cosmedocs.co.uk/treatments/dermal-fillers/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Marionette Lines Treatment",
-            "item": "https://www.cosmedocs.co.uk/marionette-lines/"
+            "item": "https://www.cosmedocs.co.uk/treatments/marionette-lines/"
           }
         ]
       }
