@@ -123,7 +123,7 @@ export default function Liposuction() {
                   Our fat dissolving injections offer a non-surgical alternative for smaller areas.
                 </p>
                 <Button asChild variant="outline" className="border-purple-500/30">
-                  <Link to="/fat-dissolve">
+                  <Link to="/treatments/fat-dissolving/">
                     Learn About Fat Dissolving Injections
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>

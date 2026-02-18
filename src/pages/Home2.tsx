@@ -605,7 +605,7 @@ export default function Home2() {
             </div>
 
             <div className="mt-12 text-center">
-              <Link to="/before-after-gallery">
+              <Link to="/before-after/">
                 <Button className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-6 text-sm font-medium group">
                   View Full Gallery
                   <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

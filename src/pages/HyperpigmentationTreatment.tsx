@@ -571,7 +571,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Vitamin A Products</h4>
                         <p className="text-gray-300 text-sm leading-relaxed">
-                          Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, and cellular turnover for improved pigmentation. Works synergistically with <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">regenerative treatments</Link>.
+                          Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, and cellular turnover for improved pigmentation. Works synergistically with <Link to="/treatments/prp-vampire-facial/" className="text-purple-300 hover:text-purple-200 underline">regenerative treatments</Link>.
                         </p>
                       </div>
                     </CardContent>

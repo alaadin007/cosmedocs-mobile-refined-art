@@ -111,7 +111,7 @@ export default function Rhinoplasty() {
                   Our non-surgical nose job uses dermal fillers to reshape and refine your nose without surgery.
                 </p>
                 <Button asChild variant="outline" className="border-purple-500/30">
-                  <Link to="/non-surgical-nose-job">
+                  <Link to="/treatments/nose-filler/">
                     Learn About Non-Surgical Nose Job
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>

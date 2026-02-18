@@ -327,11 +327,11 @@ const Prices = () => {
               title: "Fat Dissolve/Emsculpt",
               price: "POC",
               description: "Non-invasive body contouring and fat reduction",
-              link: "/fat-dissolve"
+              link: "/treatments/fat-dissolving/"
             },
             {
               title: "PDO Threads",
-              link: "/pdo-threads"
+              link: "/treatments/pdo-threads/"
             },
             {
               title: "Ear Lobe Rejuvenation",
