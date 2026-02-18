@@ -366,7 +366,7 @@ const BotoxCalfReduction = () => {
                   The procedure works by strategically injecting Botox into specific points of the calf muscle. This causes controlled muscle relaxation.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Over time, the treated muscle gradually reduces in size. The result is visibly slimmer and more proportionate calves. Many patients combine this with <a href="/fat-dissolving-injections" className="text-purple-300 hover:text-purple-200 underline">fat dissolving injections</a> for comprehensive leg refinement.
+                  Over time, the treated muscle gradually reduces in size. The result is visibly slimmer and more proportionate calves. Many patients combine this with <a href="/treatments/fat-dissolving/" className="text-purple-300 hover:text-purple-200 underline">fat dissolving injections</a> for comprehensive leg refinement.
                 </p>
                 
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">

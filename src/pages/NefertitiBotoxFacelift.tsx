@@ -400,7 +400,7 @@ export default function NefertitiBotoxFacelift() {
 
             <div className="text-center mt-8">
               <Button className="bg-black text-white border-2 border-white hover:bg-white hover:text-black rounded-full px-8 py-3" asChild>
-                <Link to="/before-after-gallery">View Full Gallery</Link>
+                <Link to="/before-after/">View Full Gallery</Link>
               </Button>
             </div>
           </div>

@@ -894,7 +894,7 @@ export default function AcneTreatment() {
                   <Sparkles className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Advanced Technology</h3>
-                <p className="text-gray-300">Latest acne treatment options including laser therapy and <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">advanced therapies</Link></p>
+                <p className="text-gray-300">Latest acne treatment options including laser therapy and <Link to="/treatments/prp-vampire-facial/" className="text-purple-300 hover:text-purple-200 underline">advanced therapies</Link></p>
               </motion.div>
 
               <motion.div

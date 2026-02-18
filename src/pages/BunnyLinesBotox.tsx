@@ -826,7 +826,7 @@ const BunnyLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Complement your botox bunny lines treatment with <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin boosters</Link> or <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> to improve overall skin texture and quality whilst smoothing wrinkles on the nose.
+                      Complement your botox bunny lines treatment with <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin boosters</Link> or <Link to="/treatments/prp-vampire-facial/" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> to improve overall skin texture and quality whilst smoothing wrinkles on the nose.
                     </p>
                   </CardContent>
                 </Card>
@@ -1001,7 +1001,7 @@ const BunnyLinesBotox = () => {
               <h2 className="text-3xl font-bold mb-4">Ready to Smooth Your Bunny Lines?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert cosmetic doctors and discover how our invisible art approach 
-                can refine your nose bridge with natural bunny lines botox before and after results. We also offer <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> and other <Link to="/treatments" className="text-purple-400 hover:text-purple-300 underline">aesthetic treatments</Link> for comprehensive facial rejuvenation.
+                can refine your nose bridge with natural bunny lines botox before and after results. We also offer <Link to="/treatments/prp-vampire-facial/" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> and other <Link to="/treatments/" className="text-purple-400 hover:text-purple-300 underline">aesthetic treatments</Link> for comprehensive facial rejuvenation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

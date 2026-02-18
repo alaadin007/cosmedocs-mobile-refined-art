@@ -1701,14 +1701,14 @@ const MoleSkinTagRemoval = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Link to="/prp-treatment">
+                <Link to="/treatments/prp-vampire-facial/">
                   <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
                     <CardHeader>
                       <CardTitle className="text-white">PRP Treatment</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-300">
-                        Harness your body's healing power with <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">PRP therapy</Link>. Natural skin rejuvenation and hair restoration.
+                        Harness your body's healing power with <Link to="/treatments/prp-vampire-facial/" className="text-purple-300 hover:text-purple-200 underline">PRP therapy</Link>. Natural skin rejuvenation and hair restoration.
                       </p>
                     </CardContent>
                   </Card>

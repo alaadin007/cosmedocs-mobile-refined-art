@@ -252,7 +252,7 @@ const LazySkinSyndrome = () => {
               <div className="bg-blue-900/30 rounded-lg p-6">
                 <h4 className="text-white font-semibold mb-3">Step 2: Stimulate the Dermis</h4>
                 <ul className="text-gray-300 space-y-2 list-disc list-inside">
-                  <li><Link to="/prp-treatment" className="text-blue-400 hover:text-blue-300 underline">Microneedling or PRP</Link> to wake up fibroblasts</li>
+                  <li><Link to="/treatments/prp-vampire-facial/" className="text-blue-400 hover:text-blue-300 underline">Microneedling or PRP</Link> to wake up fibroblasts</li>
                   <li>Retinoids or peptides to boost collagen & elastin</li>
                   <li>RF therapy or IPL to trigger deep repair</li>
                 </ul>
