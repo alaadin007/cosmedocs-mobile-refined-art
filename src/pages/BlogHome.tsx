@@ -55,6 +55,13 @@ const BlogHome = () => {
 
   const editorialArticles = [
     {
+      title: "Turning 30 in 2026: The Smart Woman's Guide to Preventative Aesthetics",
+      subtitle: "Baby Botox, collagen banking & the death of the duck lip — an honest guide to what you actually need at 30.",
+      category: "PREJUVENATION",
+      path: "/turning-30-aesthetic-guide",
+      icon: "sparkles",
+    },
+    {
       title: "Untraceably You: Look 5–10 Years Younger Naturally",
       subtitle: "Why invisible results require more skill than dramatic ones — the philosophy behind undetectable rejuvenation.",
       category: "PHILOSOPHY",
