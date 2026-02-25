@@ -76,6 +76,7 @@ const FellowshipInvitation = lazy(() => import("./pages/FellowshipInvitation"));
 const LongTermAestheticCareBlog = lazy(() => import("./pages/LongTermAestheticCareBlog"));
 const AestheticMaintenanceCostBlog = lazy(() => import("./pages/AestheticMaintenanceCostBlog"));
 const NonSurgicalNoseJobBlog = lazy(() => import("./pages/NonSurgicalNoseJobBlog"));
+const Turning30AestheticGuide = lazy(() => import("./pages/Turning30AestheticGuide"));
 const ClinicalConceptsToFlawlessSkin = lazy(() => import("./pages/ClinicalConceptsToFlawlessSkin"));
 const ChineseLondonAestheticsBlog = lazy(() => import("./pages/ChineseLondonAestheticsBlog"));
 const VitaminCSerumBenefitsBlog = lazy(() => import("./pages/VitaminCSerumBenefitsBlog"));
@@ -721,6 +722,8 @@ const App = () => {
                           <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
                           <Route path="/aesthetic-treatments-made-easy" element={<SmartAesthetics />} />
                           <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
+                          <Route path="/turning-30-aesthetic-guide" element={<Turning30AestheticGuide />} />
+                          <Route path="/turning-30-aesthetic-guide/" element={<Turning30AestheticGuide />} />
                           <Route path="/campaign-ads" element={<CampaignAds />} />
                           
                           <Route path="/aesthetic-training" element={<AestheticTraining />} />
