@@ -111,11 +111,11 @@ const BlogHome = () => {
     name: "CosmeDocs Blog — Aesthetic Medicine Insights",
     description:
       "Expert articles on aesthetic medicine, skin science, and patient education from Harley Street doctors.",
-    url: "https://cosmedocs.co.uk/blog/",
+    url: "https://www.cosmedocs.com/blog/",
     publisher: {
       "@type": "MedicalBusiness",
       name: "CosmeDocs",
-      url: "https://cosmedocs.co.uk/",
+      url: "https://www.cosmedocs.com/",
     },
   };
 
@@ -124,10 +124,10 @@ const BlogHome = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/blog/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/blog/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/blog/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/blog/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

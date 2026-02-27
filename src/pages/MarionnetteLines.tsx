@@ -95,11 +95,11 @@ const MarionnetteLines = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#organization",
+        "@id": "https://www.cosmedocs.com/#organization",
         "name": "Cosmedocs",
-        "url": "https://www.cosmedocs.co.uk/",
-        "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-        "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
+        "url": "https://www.cosmedocs.com/",
+        "logo": "https://www.cosmedocs.com/cosmedocs-logo.png",
+        "image": ["https://www.cosmedocs.com/cosmedocs-logo.png"],
         "description": "Expert aesthetic medicine clinic in London specialising in marionette lines treatment and liquid facelifts",
         "priceRange": "££",
         "address": {
@@ -151,12 +151,12 @@ const MarionnetteLines = () => {
       },
       {
         "@type": "Physician",
-        "@id": "https://www.cosmedocs.co.uk/#physician-ahmed-haq",
+        "@id": "https://www.cosmedocs.com/#physician-ahmed-haq",
         "name": "Dr. Ahmed Haq",
         "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
         "medicalSpecialty": "Aesthetic Medicine",
         "worksFor": {
-          "@id": "https://www.cosmedocs.co.uk/#organization"
+          "@id": "https://www.cosmedocs.com/#organization"
         }
       },
       {
@@ -164,7 +164,7 @@ const MarionnetteLines = () => {
         "serviceType": "Marionette Lines Filler Treatment",
         "description": "Expert marionette lines treatment using premium hyaluronic acid dermal fillers. Non-surgical liquid facelift approach for facial rejuvenation in London.",
         "provider": {
-          "@id": "https://www.cosmedocs.co.uk/#organization"
+          "@id": "https://www.cosmedocs.com/#organization"
         },
         "areaServed": {
           "@type": "City",
@@ -175,7 +175,7 @@ const MarionnetteLines = () => {
           "price": "325",
           "priceCurrency": "GBP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.cosmedocs.co.uk/treatments/marionette-lines/"
+          "url": "https://www.cosmedocs.com/treatments/marionette-lines/"
         }
       },
       {
@@ -185,19 +185,19 @@ const MarionnetteLines = () => {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.cosmedocs.co.uk/"
+            "item": "https://www.cosmedocs.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Dermal Fillers",
-            "item": "https://www.cosmedocs.co.uk/treatments/dermal-fillers/"
+            "item": "https://www.cosmedocs.com/treatments/dermal-fillers/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Marionette Lines Treatment",
-            "item": "https://www.cosmedocs.co.uk/treatments/marionette-lines/"
+            "item": "https://www.cosmedocs.com/treatments/marionette-lines/"
           }
         ]
       }

@@ -21,16 +21,16 @@ export default function Turning30AestheticGuide() {
     author: {
       "@type": "Organization",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk",
+      url: "https://www.cosmedocs.com",
     },
     publisher: {
       "@type": "Organization",
       name: "CosmeDocs",
-      logo: { "@type": "ImageObject", url: "https://www.cosmedocs.co.uk/lovable-uploads/cosmedocs-logo.png" },
+      logo: { "@type": "ImageObject", url: "https://www.cosmedocs.com/lovable-uploads/cosmedocs-logo.png" },
     },
     datePublished: "2026-02-25",
     dateModified: "2026-02-25",
-    mainEntityOfPage: "https://www.cosmedocs.co.uk/turning-30-aesthetic-guide/",
+    mainEntityOfPage: "https://www.cosmedocs.com/turning-30-aesthetic-guide/",
     keywords: "preventative botox, baby botox, skin boosters, collagen banking, turning 30 aesthetics, prejuvenation, lip flip, polynucleotides, profhilo, glass skin",
   };
 
@@ -39,10 +39,10 @@ export default function Turning30AestheticGuide() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/turning-30-aesthetic-guide/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/turning-30-aesthetic-guide/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/turning-30-aesthetic-guide/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/turning-30-aesthetic-guide/" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

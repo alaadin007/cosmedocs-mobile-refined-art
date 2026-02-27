@@ -24,7 +24,7 @@ const BotoxDublin = () => {
     "@type": "MedicalClinic",
     "name": "Cosmedocs - Aesthetic Clinic London for Irish Patients",
     "description": "Specialist injectable clinic in London for Irish patients. Botox, dermal fillers, hyaluronic acid treatments by expert doctors.",
-    "url": "https://www.cosmedocs.co.uk/botox-dublin",
+    "url": "https://www.cosmedocs.com/botox-dublin",
     "telephone": "+44 207 436 4441",
     "address": {
       "@type": "PostalAddress",
@@ -50,10 +50,10 @@ const BotoxDublin = () => {
         <title>Botox Dublin & Fillers Dublin | Aesthetic Injections in London | Cosmedocs</title>
         <meta name="description" content="Specialist injectable clinic in London for Irish patients. Botox, dermal fillers, lip fillers at competitive prices. Harley Street since 2007. Over 1 million injections." />
         <meta name="keywords" content="botox dublin, fillers dublin, aesthetic injections dublin, dermal fillers dublin, botox london, aesthetic clinic london, cosmetic doctor london, botox harley street, fillers london irish, non surgical nose job dublin, lip fillers dublin, chin filler dublin" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/botox-dublin/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/botox-dublin/" />
         <meta property="og:title" content="Botox Dublin & Fillers Dublin | Injectable Clinic London" />
         <meta property="og:description" content="Specialist injectable clinic in London for Irish patients. Competitive prices, natural results, expertise since 2007." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/botox-dublin/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/botox-dublin/" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_IE" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

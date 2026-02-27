@@ -59,7 +59,7 @@ const medicalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "name": "Cosmedocs Scar Reduction Clinic",
-  "url": "https://www.cosmedocs.co.uk/scar-reduction/",
+  "url": "https://www.cosmedocs.com/scar-reduction/",
   "telephone": "+44 20 3733 3227",
   "priceRange": "£200-£300",
   "address": {
@@ -149,13 +149,13 @@ const ScarReduction = () => {
           content="Expert scar reduction treatments in London from £200. Steroid injections, 5-FU & botulinum toxin for keloid and hypertrophic scars. Private clinic on Harley Street. Book consultation today." 
         />
         <meta name="keywords" content="scar reduction London, keloid treatment London, hypertrophic scar treatment, steroid injection scar, 5-FU scar treatment, Kenalog injection London, scar injection therapy, C-section scar treatment London, Harley Street scar clinic, triamcinolone injection UK" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/scar-reduction/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/scar-reduction/" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Scar Reduction Treatment London | Keloid & Hypertrophic Scar Injections" />
         <meta property="og:description" content="Advanced injectable scar reduction from £200. Expert treatment for keloid, hypertrophic and surgical scars at Harley Street, London." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/scar-reduction/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/scar-reduction/" />
         <meta property="og:locale" content="en_GB" />
         
         {/* Twitter */}

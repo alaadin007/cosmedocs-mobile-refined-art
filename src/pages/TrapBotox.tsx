@@ -57,10 +57,10 @@ const TrapBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/trap-botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/trap-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/trap-botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/trap-botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -71,7 +71,7 @@ const TrapBotox = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -90,7 +90,7 @@ const TrapBotox = () => {
                 "name": "Trap Botox (TrapTox / Barbie Botox)",
                 "alternateName": ["Trapezius Botox", "TrapTox", "Barbie Botox", "Shoulder Slimming Botox"],
                 "description": "Botulinum toxin injection into the trapezius muscles for shoulder slimming, neck elongation, and chronic tension relief.",
-                "url": "https://cosmedocs.co.uk/treatments/trap-botox/",
+                "url": "https://www.cosmedocs.com/treatments/trap-botox/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Trapezius Muscles (Shoulders/Neck)",
                 "followup": "Results visible in 1–2 weeks, full effect at 4–6 weeks, lasting 4–6 months.",

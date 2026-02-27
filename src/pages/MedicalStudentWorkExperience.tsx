@@ -39,7 +39,7 @@ const MedicalStudentWorkExperience = () => {
     "provider": {
       "@type": "Organization",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk"
+      "url": "https://www.cosmedocs.com"
     },
     "occupationalCategory": "Medical Professional",
     "timeToComplete": "P2W",

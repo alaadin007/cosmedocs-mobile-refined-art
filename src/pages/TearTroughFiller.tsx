@@ -54,9 +54,9 @@ const TearTroughFiller = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#clinic",
+        "@id": "https://www.cosmedocs.com/#clinic",
         name: "CosmeDocs",
-        url: "https://www.cosmedocs.co.uk/",
+        url: "https://www.cosmedocs.com/",
         telephone: "+442071231123",
         address: {
           "@type": "PostalAddress",
@@ -86,7 +86,7 @@ const TearTroughFiller = () => {
         name: "Tear Trough Filler Treatment",
         alternateName: "Under Eye Filler",
         description: "Minimally invasive under-eye treatment using premium hyaluronic acid to restore volume, reduce dark circles, and minimise puffiness.",
-        url: "https://www.cosmedocs.co.uk/treatments/tear-trough-filler/",
+        url: "https://www.cosmedocs.com/treatments/tear-trough-filler/",
         procedureType: "NoninvasiveProcedure",
         bodyLocation: "Under eye, tear trough region",
         followup: "Review appointment recommended at 2 weeks post-treatment.",
@@ -104,7 +104,7 @@ const TearTroughFiller = () => {
           description: "Tear trough filler from £425; Polynucleotide from £450",
         },
         availability: "https://schema.org/InStock",
-        seller: { "@id": "https://www.cosmedocs.co.uk/#clinic" },
+        seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
       {
         "@type": "FAQPage",
@@ -117,10 +117,10 @@ const TearTroughFiller = () => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.co.uk/treatments/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/treatments/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Tear Trough Filler", item: "https://www.cosmedocs.co.uk/treatments/tear-trough-filler/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.com/treatments/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/treatments/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Tear Trough Filler", item: "https://www.cosmedocs.com/treatments/tear-trough-filler/" },
         ],
       },
     ],
@@ -131,10 +131,10 @@ const TearTroughFiller = () => {
       <Helmet>
         <title>Tear Trough Filler Treatment | Under Eye | Harley Street Doctors</title>
         <meta name="description" content="Doctor-led tear trough filler from £425. Reduce dark circles, under-eye hollows, and eye bags at our Harley Street clinic. Natural results since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/tear-trough-filler/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
         <meta property="og:title" content="Tear Trough Filler Treatment | Under Eye | Harley Street Doctors" />
         <meta property="og:description" content="Doctor-led tear trough filler from £425. Reduce dark circles and under-eye hollows at our Harley Street clinic." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/tear-trough-filler/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

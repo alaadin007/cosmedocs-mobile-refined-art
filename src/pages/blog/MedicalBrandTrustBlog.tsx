@@ -17,7 +17,7 @@ const MedicalBrandTrustBlog = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/trust-in-medical-aesthetics/#article",
+        "@id": "https://www.cosmedocs.com/blog/trust-in-medical-aesthetics/#article",
         "headline": "Trust in Medical Aesthetics: Why Philosophy Builds Confidence, Not Operational Transparency",
         "description": "Why medical brands must communicate growth, not mistakes. A guide to building patient trust through philosophy, maturity and restraint in aesthetic medicine.",
         "author": {
@@ -32,10 +32,10 @@ const MedicalBrandTrustBlog = () => {
         "publisher": {
           "@type": "MedicalBusiness",
           "name": "CosmeDocs",
-          "url": "https://www.cosmedocs.co.uk/",
+          "url": "https://www.cosmedocs.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cosmedocs.co.uk/logo.png"
+            "url": "https://www.cosmedocs.com/logo.png"
           },
           "address": {
             "@type": "PostalAddress",
@@ -50,7 +50,7 @@ const MedicalBrandTrustBlog = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/trust-in-medical-aesthetics/"
+          "@id": "https://www.cosmedocs.com/blog/trust-in-medical-aesthetics/"
         },
         "keywords": "medical brand trust, aesthetic clinic communication, patient trust, medical marketing ethics, aesthetic medicine philosophy, clinic credibility, Harley Street, cosmetic clinic reputation",
         "articleSection": "Clinical Philosophy",

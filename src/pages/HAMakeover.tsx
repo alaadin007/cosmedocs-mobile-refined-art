@@ -20,7 +20,7 @@ export default function HAMakeover() {
         "@type": "MedicalBusiness",
         "name": "CosmeDocs",
         "description": "Doctor-led aesthetic medicine clinic on Harley Street, London. Established 2007.",
-        "url": "https://www.cosmedocs.co.uk/",
+        "url": "https://www.cosmedocs.com/",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "8-10 Harley Street",
@@ -38,16 +38,16 @@ export default function HAMakeover() {
         "@type": "MedicalProcedure",
         "name": "HA Makeover",
         "description": "Full-face dermal filler rejuvenation using hyaluronic acid for structural support, volume restoration, and natural facial balance.",
-        "url": "https://www.cosmedocs.co.uk/treatments/ha-makeover/",
+        "url": "https://www.cosmedocs.com/treatments/ha-makeover/",
         "procedureType": "Non-surgical",
         "followup": "Review appointment at 2-4 weeks"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.cosmedocs.co.uk/treatments/" },
-          { "@type": "ListItem", "position": 3, "name": "HA Makeover", "item": "https://www.cosmedocs.co.uk/treatments/ha-makeover/" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.cosmedocs.com/treatments/" },
+          { "@type": "ListItem", "position": 3, "name": "HA Makeover", "item": "https://www.cosmedocs.com/treatments/ha-makeover/" }
         ]
       }
     ]
@@ -58,10 +58,10 @@ export default function HAMakeover() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/ha-makeover/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/ha-makeover/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/ha-makeover/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/ha-makeover/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

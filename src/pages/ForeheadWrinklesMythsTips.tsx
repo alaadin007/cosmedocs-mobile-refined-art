@@ -80,19 +80,19 @@ const ForeheadWrinklesMythsTips = () => {
     "author": {
       "@type": "Person",
       "name": "Dr. Ahmed Haq",
-      "url": "https://www.cosmedocs.co.uk/team/dr-ahmed-haq"
+      "url": "https://www.cosmedocs.com/team/dr-ahmed-haq"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Cosmedocs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cosmedocs.co.uk/logo.png"
+        "url": "https://www.cosmedocs.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/blog/forehead-wrinkles-myths-tips"
+      "@id": "https://www.cosmedocs.com/blog/forehead-wrinkles-myths-tips"
     }
   };
 

@@ -79,7 +79,7 @@ const LaserTreatmentsHub = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led laser treatments on Harley Street, London",
-                "url": "https://cosmedocs.co.uk/treatments/laser-treatments/",
+                "url": "https://www.cosmedocs.com/treatments/laser-treatments/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -92,9 +92,9 @@ const LaserTreatmentsHub = () => {
               {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cosmedocs.co.uk/" },
-                  { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://cosmedocs.co.uk/treatments/" },
-                  { "@type": "ListItem", "position": 3, "name": "Laser Treatments", "item": "https://cosmedocs.co.uk/treatments/laser-treatments/" }
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+                  { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.cosmedocs.com/treatments/" },
+                  { "@type": "ListItem", "position": 3, "name": "Laser Treatments", "item": "https://www.cosmedocs.com/treatments/laser-treatments/" }
                 ]
               }
             ]

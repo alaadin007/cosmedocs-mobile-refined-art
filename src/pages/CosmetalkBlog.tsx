@@ -204,7 +204,7 @@ const CosmetalkBlog = () => {
     "@type": "Blog",
     "name": "Cosmetalk - Cosmedocs Blog",
     "description": "Expert insights on aesthetic medicine, skincare, and non-surgical treatments",
-    "url": "https://www.cosmedocs.co.uk/blog/",
+    "url": "https://www.cosmedocs.com/blog/",
     "publisher": {
       "@type": "Organization",
       "name": "Cosmedocs",

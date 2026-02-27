@@ -39,10 +39,10 @@ const Microneedling = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/microneedling/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/microneedling/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/microneedling/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/microneedling/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -51,7 +51,7 @@ const Microneedling = () => {
               {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
                 "medicalSpecialty": "Aesthetic Medicine"
               },
@@ -60,7 +60,7 @@ const Microneedling = () => {
                 "name": "Microneedling Treatment",
                 "alternateName": ["Collagen Induction Therapy", "Skin Needling", "Dermal Needling"],
                 "description": "Professional medical-grade microneedling using controlled micro-injuries to stimulate collagen and elastin production for skin rejuvenation, acne scar treatment, and texture improvement.",
-                "url": "https://www.cosmedocs.co.uk/treatments/microneedling/",
+                "url": "https://www.cosmedocs.com/treatments/microneedling/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Face, Neck, Décolletage, Hands, Body"
               },
@@ -69,7 +69,7 @@ const Microneedling = () => {
                 "name": "Microneedling Treatment",
                 "price": "250",
                 "priceCurrency": "GBP",
-                "url": "https://www.cosmedocs.co.uk/treatments/microneedling/",
+                "url": "https://www.cosmedocs.com/treatments/microneedling/",
                 "availability": "https://schema.org/InStock",
                 "seller": { "@type": "MedicalBusiness", "name": "CosmeDocs" }
               },

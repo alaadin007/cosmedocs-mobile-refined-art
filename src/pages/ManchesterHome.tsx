@@ -94,10 +94,10 @@ const ManchesterHome = () => {
         <title>Manchester Botox, Lip Filler & Dermal Fillers | Cosmedocs Manchester</title>
         <meta name="description" content="Greater Manchester aesthetic clinic: expert botox, lip & dermal fillers. Premium treatments. Invisible art philosophy." />
         <meta name="keywords" content="manchester botox, manchester lip filler, manchester dermal fillers, botox manchester, lip fillers manchester, aesthetic clinic manchester, cosmetic treatments manchester" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/manchester" />
+        <link rel="canonical" href="https://www.cosmedocs.com/manchester" />
         <meta property="og:title" content="Manchester Botox, Lip Filler & Dermal Fillers | Cosmedocs Manchester" />
         <meta property="og:description" content="Premier Manchester botox, lip filler and dermal filler treatments. Expert aesthetic medicine in Greater Manchester with invisible art philosophy." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/manchester" />
+        <meta property="og:url" content="https://www.cosmedocs.com/manchester" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://cosmedocs.com/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png" />
         <script type="application/ld+json">

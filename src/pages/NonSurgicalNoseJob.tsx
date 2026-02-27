@@ -155,7 +155,7 @@ const NonSurgicalNoseJob = () => {
             "@type": "MedicalClinic",
             "name": "Cosmedocs - Non-Surgical Nose Job",
             "description": "Premium non-surgical nose job treatments in London's Harley Street",
-            "url": "https://www.cosmedocs.co.uk/non-surgical-nose-job",
+            "url": "https://www.cosmedocs.com/non-surgical-nose-job",
             "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
@@ -210,13 +210,13 @@ const NonSurgicalNoseJob = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk"
+                "item": "https://www.cosmedocs.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",

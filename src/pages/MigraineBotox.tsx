@@ -69,10 +69,10 @@ const MigraineBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/migraine-botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/migraine-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/migraine-botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/migraine-botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -83,7 +83,7 @@ const MigraineBotox = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic and therapeutic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -110,7 +110,7 @@ const MigraineBotox = () => {
                 "@type": "MedicalProcedure",
                 "name": "Migraine Botox Treatment",
                 "description": "FDA-approved botulinum toxin treatment for chronic migraine prevention, blocking pain signal transmission at up to 31 strategic injection sites across the head, neck, and shoulders.",
-                "url": "https://cosmedocs.co.uk/treatments/migraine-botox/",
+                "url": "https://www.cosmedocs.com/treatments/migraine-botox/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Head, Neck, Shoulders",
                 "followup": "Relief begins within 2–4 weeks, with maximum benefits at 12 weeks. Treatments repeated every 12 weeks.",

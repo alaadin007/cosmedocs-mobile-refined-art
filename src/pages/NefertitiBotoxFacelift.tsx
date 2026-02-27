@@ -107,7 +107,7 @@ export default function NefertitiBotoxFacelift() {
         "performer": {
           "@type": "MedicalClinic",
           "name": "Cosmedocs",
-          "url": "https://www.cosmedocs.co.uk",
+          "url": "https://www.cosmedocs.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "10 Harley Street",
@@ -132,7 +132,7 @@ export default function NefertitiBotoxFacelift() {
         "@type": "VideoObject",
         "name": "Nefertiti Neck Lift Treatment Video",
         "description": "Watch the Nefertiti Neck Lift procedure with Botox injections demonstrating a quick, painless treatment for jawline definition and neck contouring.",
-        "thumbnailUrl": "https://www.cosmedocs.co.uk/placeholder.svg",
+        "thumbnailUrl": "https://www.cosmedocs.com/placeholder.svg",
         "uploadDate": "2024-05-01",
         "contentUrl": "https://www.cosmedocs.com/wp-content/uploads/2024/05/Nefertiti-2-ad.mp4",
         "duration": "PT2M"
@@ -144,19 +144,19 @@ export default function NefertitiBotoxFacelift() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.cosmedocs.co.uk"
+            "item": "https://www.cosmedocs.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Treatments",
-            "item": "https://www.cosmedocs.co.uk/treatments"
+            "item": "https://www.cosmedocs.com/treatments"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Nefertiti Lift",
-            "item": "https://www.cosmedocs.co.uk/nefertiti-botox-face-jaw-lift"
+            "item": "https://www.cosmedocs.com/nefertiti-botox-face-jaw-lift"
           }
         ]
       },

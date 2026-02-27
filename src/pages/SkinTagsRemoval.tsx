@@ -59,7 +59,7 @@ const SkinTagsRemoval = () => {
     "@type": "BlogPosting",
     "headline": "Skin Tags: What Are These Fleshy Skin Flaps & How To Untag Them",
     "description": "Discover what skin tags are, their causes, and safe professional removal methods including cryotherapy, electrocautery, and excision. Expert advice from Cosmedocs on getting rid of skin tags for good.",
-    "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+    "image": "https://www.cosmedocs.com/placeholder.svg",
     "datePublished": publishDate,
     "dateModified": lastModified,
     "author": {
@@ -71,7 +71,7 @@ const SkinTagsRemoval = () => {
       "name": "Cosmedocs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cosmedocs.co.uk/placeholder.svg"
+        "url": "https://www.cosmedocs.com/placeholder.svg"
       }
     }
   };
@@ -81,11 +81,11 @@ const SkinTagsRemoval = () => {
       <Helmet>
         <title>Skin Tags Removal: Safe Professional Treatment Guide | Cosmedocs</title>
         <meta name="description" content="Learn about skin tags, their causes, and professional removal methods including cryotherapy and electrocautery. Expert dermatology advice from Cosmedocs on safe skin tag removal." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/skin-tags-and-skin-tag-removal" />
+        <link rel="canonical" href="https://www.cosmedocs.com/blog/skin-tags-and-skin-tag-removal" />
         <meta property="og:title" content="Skin Tags: What They Are & How To Remove Them Safely" />
         <meta property="og:description" content="Comprehensive guide to understanding and safely removing skin tags with professional treatments. Get expert advice from Cosmedocs dermatologists." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/skin-tags-and-skin-tag-removal" />
+        <meta property="og:url" content="https://www.cosmedocs.com/blog/skin-tags-and-skin-tag-removal" />
         <meta property="article:published_time" content={publishDate} />
         <meta property="article:modified_time" content={lastModified} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

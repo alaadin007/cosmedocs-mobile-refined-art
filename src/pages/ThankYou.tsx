@@ -13,7 +13,7 @@ const ThankYou = () => {
         <title>Thank You - Message Received | Cosmedocs</title>
         <meta name="description" content="Thank you for contacting Cosmedocs. We have received your message and will get back to you soon." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/thank-you" />
+        <link rel="canonical" href="https://www.cosmedocs.com/thank-you" />
       </Helmet>
 
       <div className="bg-black text-white py-24">

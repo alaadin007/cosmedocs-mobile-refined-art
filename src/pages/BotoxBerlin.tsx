@@ -24,7 +24,7 @@ const BotoxBerlin = () => {
     "@type": "MedicalClinic",
     "name": "Cosmedocs - Ästhetische Klinik London",
     "description": "Spezialisierte Klinik für ästhetische Injektionen in London für deutsche Patienten. Botox, Filler, Hyaluronsäure von erfahrenen Ärzten.",
-    "url": "https://www.cosmedocs.co.uk/botox-berlin",
+    "url": "https://www.cosmedocs.com/botox-berlin",
     "telephone": "+44 207 436 4441",
     "address": {
       "@type": "PostalAddress",
@@ -50,10 +50,10 @@ const BotoxBerlin = () => {
         <title>Botox Berlin & Filler Berlin | Ästhetische Injektionen in London | Cosmedocs</title>
         <meta name="description" content="Spezialisierte Injektionsklinik in London für deutsche Patienten. Botox, Filler, Hyaluronsäure zu wettbewerbsfähigen Preisen. Harley Street seit 2007. Über 1 Million Injektionen." />
         <meta name="keywords" content="botox berlin, filler berlin, ästhetische injektionen berlin, hyaluronsäure berlin, botox london, ästhetische klinik london, schönheitsarzt london, botox harley street, filler london deutsch, nasenkorrektur ohne op berlin, lippen berlin, kinn berlin" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/botox-berlin/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/botox-berlin/" />
         <meta property="og:title" content="Botox Berlin & Filler Berlin | Injektionsklinik London" />
         <meta property="og:description" content="Spezialisierte Injektionsklinik in London für deutsche Patienten. Wettbewerbsfähige Preise, natürliche Ergebnisse, Expertise seit 2007." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/botox-berlin/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/botox-berlin/" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

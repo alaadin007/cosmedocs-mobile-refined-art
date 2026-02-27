@@ -131,7 +131,7 @@ const ForeheadLinesBotox = () => {
             "name": "Cosmedocs",
             "url": seoData.canonical,
             "telephone": "+44 20 3733 3227",
-            "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+            "image": "https://www.cosmedocs.com/default-og-image.jpg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -184,13 +184,13 @@ const ForeheadLinesBotox = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk"
+                "item": "https://www.cosmedocs.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/botox-london"
+                "item": "https://www.cosmedocs.com/botox-london"
               },
               {
                 "@type": "ListItem",

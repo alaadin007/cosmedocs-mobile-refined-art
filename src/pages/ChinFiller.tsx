@@ -50,9 +50,9 @@ const ChinFiller = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#clinic",
+        "@id": "https://www.cosmedocs.com/#clinic",
         name: "CosmeDocs",
-        url: "https://www.cosmedocs.co.uk/",
+        url: "https://www.cosmedocs.com/",
         telephone: "+442071231123",
         address: {
           "@type": "PostalAddress",
@@ -82,7 +82,7 @@ const ChinFiller = () => {
         name: "Chin Filler Treatment",
         alternateName: "Liquid Mentoplasty",
         description: "Non-surgical chin augmentation using premium hyaluronic acid dermal fillers for profile enhancement, facial balance, and lower face definition.",
-        url: "https://www.cosmedocs.co.uk/treatments/chin-filler/",
+        url: "https://www.cosmedocs.com/treatments/chin-filler/",
         procedureType: "NoninvasiveProcedure",
         bodyLocation: "Chin, lower face",
         followup: "Review appointment recommended at 2 weeks post-treatment.",
@@ -100,7 +100,7 @@ const ChinFiller = () => {
           description: "1.2ml chin filler from £350; 2.4ml from £650; 3.6ml from £850",
         },
         availability: "https://schema.org/InStock",
-        seller: { "@id": "https://www.cosmedocs.co.uk/#clinic" },
+        seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
       {
         "@type": "FAQPage",
@@ -116,10 +116,10 @@ const ChinFiller = () => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.co.uk/treatments/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/treatments/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Chin Filler", item: "https://www.cosmedocs.co.uk/treatments/chin-filler/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.com/treatments/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/treatments/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Chin Filler", item: "https://www.cosmedocs.com/treatments/chin-filler/" },
         ],
       },
     ],
@@ -130,10 +130,10 @@ const ChinFiller = () => {
       <Helmet>
         <title>Chin Filler Treatment | Profile Enhancement | Harley Street Doctors</title>
         <meta name="description" content="Doctor-led chin filler treatment from £350. Non-surgical chin augmentation for profile balance and lower face definition at our Harley Street clinic. Since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/chin-filler/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/chin-filler/" />
         <meta property="og:title" content="Chin Filler Treatment | Profile Enhancement | Harley Street Doctors" />
         <meta property="og:description" content="Doctor-led chin filler treatment from £350. Non-surgical chin augmentation for profile balance and lower face definition at our Harley Street clinic." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/chin-filler/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/chin-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

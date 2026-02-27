@@ -43,9 +43,9 @@ const CheekFiller = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#clinic",
+        "@id": "https://www.cosmedocs.com/#clinic",
         name: "CosmeDocs",
-        url: "https://www.cosmedocs.co.uk/",
+        url: "https://www.cosmedocs.com/",
         telephone: "+442071231123",
         address: {
           "@type": "PostalAddress",
@@ -66,7 +66,7 @@ const CheekFiller = () => {
         "@type": "MedicalProcedure",
         name: "Cheek Filler Treatment",
         description: "Non-surgical cheek augmentation and mid-face volume restoration using premium hyaluronic acid dermal fillers. Doctor-led treatment at Harley Street for natural facial contouring.",
-        url: "https://www.cosmedocs.co.uk/treatments/cheek-filler/",
+        url: "https://www.cosmedocs.com/treatments/cheek-filler/",
         procedureType: "NoninvasiveProcedure",
         bodyLocation: "Cheeks, mid-face, zygomatic region",
         followup: "Review appointment recommended at 2–3 weeks post-treatment.",
@@ -84,7 +84,7 @@ const CheekFiller = () => {
           description: "1ml cheek filler from £350; 2ml from £650; 3ml from £950",
         },
         availability: "https://schema.org/InStock",
-        seller: { "@id": "https://www.cosmedocs.co.uk/#clinic" },
+        seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
       {
         "@type": "FAQPage",
@@ -100,10 +100,10 @@ const CheekFiller = () => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.co.uk/treatments/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/treatments/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Cheek Filler", item: "https://www.cosmedocs.co.uk/treatments/cheek-filler/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.com/treatments/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/treatments/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Cheek Filler", item: "https://www.cosmedocs.com/treatments/cheek-filler/" },
         ],
       },
     ],
@@ -114,10 +114,10 @@ const CheekFiller = () => {
       <Helmet>
         <title>Cheek Filler Treatment | Mid-Face Volume | Harley Street Doctors</title>
         <meta name="description" content="Doctor-led cheek filler treatment for mid-face volume restoration and facial contouring. Natural, structural results at our Harley Street clinic. Since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/cheek-filler/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/cheek-filler/" />
         <meta property="og:title" content="Cheek Filler Treatment | Mid-Face Volume | Harley Street Doctors" />
         <meta property="og:description" content="Doctor-led cheek filler treatment for mid-face volume restoration and facial contouring. Natural, structural results at our Harley Street clinic." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/cheek-filler/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/cheek-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

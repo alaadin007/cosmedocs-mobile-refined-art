@@ -30,8 +30,8 @@ const FlawlessSkin = () => {
         <meta property="og:title" content="How to Get Flawless Skin Naturally: Anti-Ageing Aesthetic Dermatology Tips" />
         <meta property="og:description" content="Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/flawless-skin/" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/flawless-skin/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/blog/flawless-skin/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/blog/flawless-skin/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -54,7 +54,7 @@ const FlawlessSkin = () => {
               "name": "Cosmedocs",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://cosmedocs.co.uk/logo.png"
+                "url": "https://www.cosmedocs.com/logo.png"
               },
               "address": {
                 "@type": "PostalAddress",
@@ -70,7 +70,7 @@ const FlawlessSkin = () => {
             "description": "Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.cosmedocs.co.uk/blog/flawless-skin/"
+              "@id": "https://www.cosmedocs.com/blog/flawless-skin/"
             }
           })}
         </script>
