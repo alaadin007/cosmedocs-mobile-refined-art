@@ -56,9 +56,9 @@ const JawlineFiller = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#clinic",
+        "@id": "https://www.cosmedocs.com/#clinic",
         name: "CosmeDocs",
-        url: "https://www.cosmedocs.co.uk/",
+        url: "https://www.cosmedocs.com/",
         telephone: "+442071231123",
         address: {
           "@type": "PostalAddress",
@@ -88,7 +88,7 @@ const JawlineFiller = () => {
         name: "Jawline Filler Treatment",
         alternateName: "Jaw Filler",
         description: "Non-surgical jawline enhancement using premium hyaluronic acid dermal fillers for definition, contouring, and jowl correction.",
-        url: "https://www.cosmedocs.co.uk/treatments/jawline-filler/",
+        url: "https://www.cosmedocs.com/treatments/jawline-filler/",
         procedureType: "NoninvasiveProcedure",
         bodyLocation: "Jawline, mandibular border",
         followup: "Results last 15–18 months. Review appointment recommended at 2 weeks.",
@@ -106,7 +106,7 @@ const JawlineFiller = () => {
           description: "1ml jawline filler from £350; Natural HD Package £950",
         },
         availability: "https://schema.org/InStock",
-        seller: { "@id": "https://www.cosmedocs.co.uk/#clinic" },
+        seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
       {
         "@type": "FAQPage",
@@ -119,10 +119,10 @@ const JawlineFiller = () => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.co.uk/treatments/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/treatments/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Jawline Filler", item: "https://www.cosmedocs.co.uk/treatments/jawline-filler/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.com/treatments/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/treatments/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Jawline Filler", item: "https://www.cosmedocs.com/treatments/jawline-filler/" },
         ],
       },
     ],
@@ -133,10 +133,10 @@ const JawlineFiller = () => {
       <Helmet>
         <title>Jawline Filler Treatment | Harley Street Doctors</title>
         <meta name="description" content="Doctor-led jawline filler from £350. Define, contour, and sculpt your jawline at our Harley Street clinic. Natural results since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/jawline-filler/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/jawline-filler/" />
         <meta property="og:title" content="Jawline Filler Treatment | Harley Street Doctors" />
         <meta property="og:description" content="Doctor-led jawline filler from £350. Define, contour, and sculpt your jawline at our Harley Street clinic." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/jawline-filler/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/jawline-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

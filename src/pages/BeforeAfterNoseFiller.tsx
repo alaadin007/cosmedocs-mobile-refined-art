@@ -265,10 +265,10 @@ const BeforeAfterNoseFiller = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/before-after/dermal-fillers/nose/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/dermal-fillers/nose/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/before-after/dermal-fillers/nose/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/dermal-fillers/nose/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -279,7 +279,7 @@ const BeforeAfterNoseFiller = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -293,7 +293,7 @@ const BeforeAfterNoseFiller = () => {
                 "@type": "ImageGallery",
                 "name": "Non-Surgical Nose Job Before & After Results",
                 "description": "Real nose filler patient transformations from CosmeDocs Harley Street",
-                "url": "https://cosmedocs.co.uk/before-after/dermal-fillers/nose/"
+                "url": "https://www.cosmedocs.com/before-after/dermal-fillers/nose/"
               }
             ]
           })}

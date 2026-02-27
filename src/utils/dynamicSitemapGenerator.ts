@@ -14,7 +14,7 @@ interface SitemapData {
   locations: SitemapUrl[];
 }
 
-const baseUrl = 'https://www.cosmedocs.co.uk';
+const baseUrl = 'https://www.cosmedocs.com';
 const currentDate = new Date().toISOString().split('T')[0];
 
 // ===== CANONICAL PAGE ROUTES (content pages only, no redirects) =====

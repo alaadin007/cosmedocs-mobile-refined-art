@@ -83,10 +83,10 @@ const BeforeAfterHub = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
@@ -97,10 +97,10 @@ const BeforeAfterHub = () => {
             "@graph": [
               {
                 "@type": "MedicalBusiness",
-                "@id": "https://www.cosmedocs.co.uk/#clinic",
+                "@id": "https://www.cosmedocs.com/#clinic",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street, London — since 2007",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "telephone": "+442071231123",
                 "address": {
                   "@type": "PostalAddress",
@@ -119,22 +119,22 @@ const BeforeAfterHub = () => {
               },
               {
                 "@type": "ImageGallery",
-                "@id": "https://www.cosmedocs.co.uk/before-after/#gallery",
+                "@id": "https://www.cosmedocs.com/before-after/#gallery",
                 "name": "Before & After Results Gallery",
                 "description": "Real patient before and after transformations from CosmeDocs Harley Street — Botox, dermal fillers, and skin rejuvenation results.",
-                "url": "https://www.cosmedocs.co.uk/before-after/"
+                "url": "https://www.cosmedocs.com/before-after/"
               },
               {
                 "@type": "WebPage",
-                "@id": "https://www.cosmedocs.co.uk/before-after/#page",
+                "@id": "https://www.cosmedocs.com/before-after/#page",
                 "name": seoData.title,
                 "description": seoData.description,
-                "url": "https://www.cosmedocs.co.uk/before-after/",
+                "url": "https://www.cosmedocs.com/before-after/",
                 "breadcrumb": {
                   "@type": "BreadcrumbList",
                   "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.co.uk/" },
-                    { "@type": "ListItem", "position": 2, "name": "Before & After", "item": "https://www.cosmedocs.co.uk/before-after/" }
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Before & After", "item": "https://www.cosmedocs.com/before-after/" }
                   ]
                 }
               }

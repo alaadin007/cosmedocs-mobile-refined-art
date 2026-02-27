@@ -219,14 +219,14 @@ export default function CampaignAds() {
                       </div>
                     </div>
 
-                    <p className="text-[10px] text-white/60 italic">Full treatment menu at cosmedocs.co.uk</p>
+                    <p className="text-[10px] text-white/60 italic">Full treatment menu at cosmedocs.com</p>
                   </div>
 
                   {/* Footer */}
                   <div className="border-t border-white/20 pt-3 mt-3">
                     <div className="flex items-center justify-between">
                       <div className="text-[10px] space-y-0.5">
-                        <p className="font-medium">www.cosmedocs.co.uk</p>
+                        <p className="font-medium">www.cosmedocs.com</p>
                         <p className="text-white/70">020 7060 1960</p>
                       </div>
                       <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
