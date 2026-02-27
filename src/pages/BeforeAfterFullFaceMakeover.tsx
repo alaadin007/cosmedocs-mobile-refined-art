@@ -73,10 +73,10 @@ const BeforeAfterFullFaceMakeover = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/dermal-fillers/full-face-makeover/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/dermal-fillers/full-face-makeover/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/dermal-fillers/full-face-makeover/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/dermal-fillers/full-face-makeover/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -86,7 +86,7 @@ const BeforeAfterFullFaceMakeover = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
                 "medicalSpecialty": "Aesthetic Medicine"
               },
@@ -94,7 +94,7 @@ const BeforeAfterFullFaceMakeover = () => {
                 "@type": "ImageGallery",
                 "name": "Full Face Makeover Before & After Results",
                 "description": "Real full-face dermal filler rejuvenation results from CosmeDocs Harley Street",
-                "url": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/full-face-makeover/"
+                "url": "https://www.cosmedocs.com/before-after/dermal-fillers/full-face-makeover/"
               }
             ]
           })}

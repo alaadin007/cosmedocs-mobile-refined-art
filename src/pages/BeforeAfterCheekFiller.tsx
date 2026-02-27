@@ -45,9 +45,9 @@ const schemaMarkup = {
   "@graph": [
     {
       "@type": "MedicalBusiness",
-      "@id": "https://www.cosmedocs.co.uk/#clinic",
+      "@id": "https://www.cosmedocs.com/#clinic",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk/",
+      url: "https://www.cosmedocs.com/",
       telephone: "+442071231123",
       address: {
         "@type": "PostalAddress",
@@ -65,11 +65,11 @@ const schemaMarkup = {
     },
     {
       "@type": "ImageGallery",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/#gallery",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/#gallery",
       name: "Cheek Filler Before and After Results",
       description:
         "Real patient before and after photographs demonstrating mid-face volume restoration and cheek contouring achieved through dermal filler treatment at CosmeDocs Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/",
       numberOfItems: 6,
       about: {
         "@type": "MedicalProcedure",
@@ -80,18 +80,18 @@ const schemaMarkup = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/#page",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/#page",
       name: "Cheek Filler Before & After Results | Harley Street Clinic",
       description:
         "Real patient before and after results showing mid-face volume restoration with cheek filler. Subtle, doctor-led treatment on Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/",
       breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.co.uk/before-after/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Cheek Filler Results", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.com/before-after/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/before-after/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Cheek Filler Results", item: "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/" },
         ],
       },
     },
@@ -107,10 +107,10 @@ const BeforeAfterCheekFiller = () => {
           name="description"
           content="Real patient before and after results showing mid-face volume restoration with cheek filler. Subtle, doctor-led treatment on Harley Street."
         />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/" />
         <meta property="og:title" content="Cheek Filler Before & After Results | Harley Street Clinic" />
         <meta property="og:description" content="Real patient before and after results showing mid-face volume restoration with cheek filler. Subtle, doctor-led treatment on Harley Street." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/dermal-fillers/cheeks/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

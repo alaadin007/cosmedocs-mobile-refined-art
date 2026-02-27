@@ -54,9 +54,9 @@ const schemaMarkup = {
   "@graph": [
     {
       "@type": "MedicalBusiness",
-      "@id": "https://www.cosmedocs.co.uk/#clinic",
+      "@id": "https://www.cosmedocs.com/#clinic",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk/",
+      url: "https://www.cosmedocs.com/",
       telephone: "+442071231123",
       address: {
         "@type": "PostalAddress",
@@ -74,11 +74,11 @@ const schemaMarkup = {
     },
     {
       "@type": "ImageGallery",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/#gallery",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/#gallery",
       name: "Tear Trough Filler Before and After Results",
       description:
         "Real patient before and after photographs demonstrating under-eye volume restoration, dark circle reduction, and tear trough correction achieved through dermal filler treatment at CosmeDocs Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/",
       numberOfItems: galleryImages.length,
       about: {
         "@type": "MedicalProcedure",
@@ -89,18 +89,18 @@ const schemaMarkup = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/#page",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/#page",
       name: "Tear Trough Filler Before & After Results | Harley Street",
       description:
         "Real patient before and after results showing under-eye volume restoration and dark circle reduction with tear trough filler. Doctor-led treatment on Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/",
       breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.co.uk/before-after/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Tear Trough Filler Results", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.com/before-after/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/before-after/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Tear Trough Filler Results", item: "https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/" },
         ],
       },
     },
@@ -116,10 +116,10 @@ const BeforeAfterTearTroughFiller = () => {
           name="description"
           content="Real patient before and after results showing under-eye volume restoration and dark circle reduction with tear trough filler. Doctor-led treatment on Harley Street."
         />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/" />
         <meta property="og:title" content="Tear Trough Filler Before & After Results | Harley Street" />
         <meta property="og:description" content="Real patient before and after results showing under-eye volume restoration and dark circle reduction with tear trough filler. Doctor-led treatment on Harley Street." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/dermal-fillers/tear-trough/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

@@ -53,9 +53,9 @@ const TempleFiller = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#clinic",
+        "@id": "https://www.cosmedocs.com/#clinic",
         name: "CosmeDocs",
-        url: "https://www.cosmedocs.co.uk/",
+        url: "https://www.cosmedocs.com/",
         telephone: "+442071231123",
         address: {
           "@type": "PostalAddress",
@@ -84,7 +84,7 @@ const TempleFiller = () => {
         "@type": "MedicalProcedure",
         name: "Temple Filler Treatment",
         description: "Non-surgical temple volume restoration using premium hyaluronic acid dermal fillers. Addresses hollow temples and provides subtle eye-lifting effect.",
-        url: "https://www.cosmedocs.co.uk/treatments/temple-filler/",
+        url: "https://www.cosmedocs.com/treatments/temple-filler/",
         procedureType: "NoninvasiveProcedure",
         bodyLocation: "Temples, temporal region",
         followup: "Review appointment recommended at 2 weeks post-treatment.",
@@ -102,7 +102,7 @@ const TempleFiller = () => {
           description: "Single temple from £400; both temples £650",
         },
         availability: "https://schema.org/InStock",
-        seller: { "@id": "https://www.cosmedocs.co.uk/#clinic" },
+        seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
       {
         "@type": "FAQPage",
@@ -115,10 +115,10 @@ const TempleFiller = () => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.co.uk/treatments/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/treatments/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Temple Filler", item: "https://www.cosmedocs.co.uk/treatments/temple-filler/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.cosmedocs.com/treatments/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/treatments/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Temple Filler", item: "https://www.cosmedocs.com/treatments/temple-filler/" },
         ],
       },
     ],
@@ -129,10 +129,10 @@ const TempleFiller = () => {
       <Helmet>
         <title>Temple Filler Treatment | Volume Restoration | Harley Street Doctors</title>
         <meta name="description" content="Doctor-led temple filler treatment from £400. Restore hollow temples, enhance facial symmetry, and achieve a subtle eye-lifting effect at our Harley Street clinic. Since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/temple-filler/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/temple-filler/" />
         <meta property="og:title" content="Temple Filler Treatment | Volume Restoration | Harley Street Doctors" />
         <meta property="og:description" content="Doctor-led temple filler treatment from £400. Restore hollow temples and enhance facial symmetry at our Harley Street clinic." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/temple-filler/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/temple-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>
