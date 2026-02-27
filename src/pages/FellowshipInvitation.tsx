@@ -42,7 +42,7 @@ const FellowshipInvitation = () => {
         <title>Welcome {FELLOW_TITLE} - Your CosmeDocs Partner Invitation</title>
         <meta name="description" content="Fellowship graduates: join our partner network. Transform your aesthetic practice with national support & mentorship." />
         <meta name="keywords" content="cosmedocs fellowship, aesthetic medicine partner, harley street training, aesthetic clinic partnership" />
-        <link rel="canonical" href={`https://www.cosmedocs.co.uk/fellowship-invitation-${FELLOW_NAME.toLowerCase().replace(/\s+/g, '-')}`} />
+        <link rel="canonical" href={`https://www.cosmedocs.com/fellowship-invitation-${FELLOW_NAME.toLowerCase().replace(/\s+/g, '-')}`} />
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
@@ -271,7 +271,7 @@ const FellowshipInvitation = () => {
                   <p className="text-lg">
                     There is no cost to activate and no fee for the first 6 months, then after only if we have made you more money. See our{' '}
                     <a 
-                      href="https://www.cosmedocs.co.uk/partners" 
+                      href="https://www.cosmedocs.com/partners" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-white hover:text-gray-300 underline"

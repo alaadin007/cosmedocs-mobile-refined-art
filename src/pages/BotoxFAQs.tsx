@@ -106,7 +106,7 @@ export default function BotoxFAQs() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
+    "url": "https://www.cosmedocs.com",
     "telephone": "+44 20 3733 3227",
     "address": {
       "@type": "PostalAddress",
@@ -133,19 +133,19 @@ export default function BotoxFAQs() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.cosmedocs.co.uk"
+        "item": "https://www.cosmedocs.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Botox London",
-        "item": "https://www.cosmedocs.co.uk/botox-london"
+        "item": "https://www.cosmedocs.com/botox-london"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Botox FAQs",
-        "item": "https://www.cosmedocs.co.uk/botox-faqs"
+        "item": "https://www.cosmedocs.com/botox-faqs"
       }
     ]
   };

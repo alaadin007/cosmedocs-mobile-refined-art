@@ -20,11 +20,11 @@ const SmokersLinesWomen = () => {
     "@type": "BlogPosting",
     headline: "Why Women Get Smoker's Lines — Even Without Smoking",
     description: seoData.description,
-    author: { "@type": "Organization", name: "CosmeDocs", url: "https://www.cosmedocs.co.uk" },
+    author: { "@type": "Organization", name: "CosmeDocs", url: "https://www.cosmedocs.com" },
     publisher: { "@type": "Organization", name: "CosmeDocs" },
     datePublished: "2024-01-15",
     dateModified: "2026-02-09",
-    mainEntityOfPage: "https://www.cosmedocs.co.uk/blog/smokers-lines-women/",
+    mainEntityOfPage: "https://www.cosmedocs.com/blog/smokers-lines-women/",
   };
 
   return (
@@ -32,10 +32,10 @@ const SmokersLinesWomen = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/smokers-lines-women/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/blog/smokers-lines-women/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/smokers-lines-women/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/blog/smokers-lines-women/" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

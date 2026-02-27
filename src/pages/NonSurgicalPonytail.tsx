@@ -109,7 +109,7 @@ const NonSurgicalPonytail = () => {
             "url": seoData.canonical,
             "telephone": "+44 20 3733 3227",
             "priceRange": "££",
-            "image": "https://www.cosmedocs.co.uk/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png",
+            "image": "https://www.cosmedocs.com/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -182,25 +182,25 @@ const NonSurgicalPonytail = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk/"
+                "item": "https://www.cosmedocs.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/botox-london"
+                "item": "https://www.cosmedocs.com/botox-london"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Non-Surgical Ponytail Lift",
-                "item": "https://www.cosmedocs.co.uk/non-surgical-ponytail"
+                "item": "https://www.cosmedocs.com/non-surgical-ponytail"
               }
             ]
           })}

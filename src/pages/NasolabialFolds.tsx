@@ -185,19 +185,19 @@ const NasolabialFolds = () => {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.cosmedocs.co.uk"
+              "item": "https://www.cosmedocs.com"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Dermal Fillers",
-              "item": "https://www.cosmedocs.co.uk/dermal-fillers"
+              "item": "https://www.cosmedocs.com/dermal-fillers"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Nasolabial Folds",
-              "item": "https://www.cosmedocs.co.uk/nasolabial-folds"
+              "item": "https://www.cosmedocs.com/nasolabial-folds"
             }
           ]
         })}

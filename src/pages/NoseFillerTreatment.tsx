@@ -22,10 +22,10 @@ const NoseFillerTreatment = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/dermal-fillers/nose/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/dermal-fillers/nose/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/dermal-fillers/nose/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/dermal-fillers/nose/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -36,7 +36,7 @@ const NoseFillerTreatment = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -50,7 +50,7 @@ const NoseFillerTreatment = () => {
                 "@type": "MedicalProcedure",
                 "name": "Non-Surgical Nose Job (Liquid Rhinoplasty)",
                 "description": "Non-surgical nose reshaping using dermal fillers and/or PCL threads for profile refinement, tip lifting, dorsal hump camouflage, and contour correction.",
-                "url": "https://cosmedocs.co.uk/treatments/dermal-fillers/nose/",
+                "url": "https://www.cosmedocs.com/treatments/dermal-fillers/nose/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Nose",
                 "followup": "Results can last 2–3 years depending on modality. Dermal fillers: 12–18 months. PCL threads: up to 3 years.",

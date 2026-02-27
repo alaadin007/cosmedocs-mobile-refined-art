@@ -80,7 +80,7 @@ const ClinicNameConfusion = () => {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
-        "https://www.cosmedocs.co.uk/blog/cosmedocs-vs-similarly-named-clinics/",
+        "https://www.cosmedocs.com/blog/cosmedocs-vs-similarly-named-clinics/",
     },
   };
 
@@ -226,7 +226,7 @@ const ClinicNameConfusion = () => {
                     ["Doctors", "GMC-registered medical doctors"],
                     [
                       "Website",
-                      "cosmedocs.com or cosmedocs.co.uk",
+                      "cosmedocs.com",
                     ],
                     [
                       "Brand",

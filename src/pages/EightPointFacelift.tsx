@@ -30,7 +30,7 @@ export default function EightPointFacelift() {
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
     "description": "Expert 8 Point Face Lift treatments in London using premium dermal fillers for natural facial rejuvenation",
-    "url": "https://www.cosmedocs.co.uk/8-point-facelift",
+    "url": "https://www.cosmedocs.com/8-point-facelift",
     "telephone": "+44 20 3733 3227",
     "email": "info@cosmedocs.com",
     "address": {
@@ -115,7 +115,7 @@ export default function EightPointFacelift() {
     "provider": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk",
+      "url": "https://www.cosmedocs.com",
       "telephone": "+44 20 3733 3227",
       "address": {
         "@type": "PostalAddress",
@@ -133,9 +133,9 @@ export default function EightPointFacelift() {
     "@type": "MedicalOrganization",
     "name": "Cosmedocs",
     "alternateName": "CosmeDocs Harley Street",
-    "url": "https://www.cosmedocs.co.uk",
-    "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
-    "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "url": "https://www.cosmedocs.com",
+    "logo": "https://www.cosmedocs.com/default-og-image.jpg",
+    "image": "https://www.cosmedocs.com/default-og-image.jpg",
     "description": "Leading aesthetic medicine clinic in Harley Street, London, specialising in non-surgical facial rejuvenation treatments",
     "address": {
       "@type": "PostalAddress",
@@ -472,19 +472,19 @@ export default function EightPointFacelift() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk"
+                "item": "https://www.cosmedocs.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "8 Point Face Lift",
-                "item": "https://www.cosmedocs.co.uk/8-point-facelift"
+                "item": "https://www.cosmedocs.com/8-point-facelift"
               }
             ]
           })}

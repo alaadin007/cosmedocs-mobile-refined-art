@@ -23,10 +23,10 @@ const ConcernsHub = () => {
     "@graph": [
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#organization",
+        "@id": "https://www.cosmedocs.com/#organization",
         "name": "Cosmedocs",
-        "url": "https://www.cosmedocs.co.uk/",
-        "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+        "url": "https://www.cosmedocs.com/",
+        "logo": "https://www.cosmedocs.com/default-og-image.jpg",
         "telephone": "+44 20 3733 3227",
         "address": {
           "@type": "PostalAddress",
@@ -48,11 +48,11 @@ const ConcernsHub = () => {
       },
       {
         "@type": "MedicalWebPage",
-        "@id": "https://www.cosmedocs.co.uk/concerns/",
-        "url": "https://www.cosmedocs.co.uk/concerns/",
+        "@id": "https://www.cosmedocs.com/concerns/",
+        "url": "https://www.cosmedocs.com/concerns/",
         "name": seoData.title,
         "description": seoData.description,
-        "isPartOf": { "@id": "https://www.cosmedocs.co.uk/#website" },
+        "isPartOf": { "@id": "https://www.cosmedocs.com/#website" },
         "about": {
           "@type": "MedicalCondition",
           "name": "Dermatological and Aesthetic Concerns",
@@ -67,8 +67,8 @@ const ConcernsHub = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", "position": 2, "name": "Concerns", "item": "https://www.cosmedocs.co.uk/concerns/" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Concerns", "item": "https://www.cosmedocs.com/concerns/" }
         ]
       }
     ]

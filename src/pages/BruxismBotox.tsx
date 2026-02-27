@@ -53,10 +53,10 @@ const BruxismBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/bruxism-botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/bruxism-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/bruxism-botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/bruxism-botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -67,7 +67,7 @@ const BruxismBotox = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic and therapeutic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -95,7 +95,7 @@ const BruxismBotox = () => {
                 "name": "Bruxism Botox Treatment",
                 "alternateName": "TMJ Botox Treatment",
                 "description": "Therapeutic botulinum toxin treatment targeting the masseter and temporalis muscles to relieve teeth grinding, jaw clenching, and TMJ disorders.",
-                "url": "https://cosmedocs.co.uk/treatments/bruxism-botox/",
+                "url": "https://www.cosmedocs.com/treatments/bruxism-botox/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Masseter muscles, Temporalis muscles",
                 "followup": "Results begin within 1–2 weeks, lasting 4–6 months. Follow-up assessment available.",

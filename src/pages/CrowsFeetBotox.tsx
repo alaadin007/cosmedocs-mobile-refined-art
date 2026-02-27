@@ -182,13 +182,13 @@ const CrowsFeetBotox = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk"
+                "item": "https://www.cosmedocs.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",
@@ -207,7 +207,7 @@ const CrowsFeetBotox = () => {
             "@type": "VideoObject",
             "name": "Crow's Feet Botox Treatment Technique",
             "description": "Expert demonstration of crow's feet botox injection technique showing precise orbital muscle targeting for natural results",
-            "thumbnailUrl": "https://www.cosmedocs.co.uk/placeholder.svg",
+            "thumbnailUrl": "https://www.cosmedocs.com/placeholder.svg",
             "uploadDate": "2021-09-15",
             "contentUrl": "https://www.cosmedocs.com/wp-content/uploads/2021/09/Crows_Feet_Trim-1.mp4",
             "embedUrl": "https://www.cosmedocs.com/wp-content/uploads/2021/09/Crows_Feet_Trim-1.mp4",
@@ -217,7 +217,7 @@ const CrowsFeetBotox = () => {
               "name": "Cosmedocs",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.cosmedocs.co.uk/logo.png"
+                "url": "https://www.cosmedocs.com/logo.png"
               },
               "address": {
                 "@type": "PostalAddress",

@@ -224,13 +224,13 @@ const HyperpigmentationTreatment = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk/"
+                "item": "https://www.cosmedocs.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",

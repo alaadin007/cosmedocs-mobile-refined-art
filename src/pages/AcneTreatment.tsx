@@ -65,7 +65,7 @@ export default function AcneTreatment() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
+    "url": "https://www.cosmedocs.com",
     "telephone": "+44 20 3733 3227",
     "address": {
       "@type": "PostalAddress",
@@ -210,13 +210,13 @@ export default function AcneTreatment() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk/"
+                "item": "https://www.cosmedocs.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",

@@ -21,7 +21,7 @@ const ChinFillerResultsExplained = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/chin-filler-results-explained/#article",
+        "@id": "https://www.cosmedocs.com/blog/chin-filler-results-explained/#article",
         "headline": "Chin Filler Results Explained: Balance, Projection & Natural Profiles",
         "description": seoData.description,
         "author": {
@@ -36,10 +36,10 @@ const ChinFillerResultsExplained = () => {
         "publisher": {
           "@type": "MedicalBusiness",
           "name": "CosmeDocs",
-          "url": "https://www.cosmedocs.co.uk/",
+          "url": "https://www.cosmedocs.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cosmedocs.co.uk/logo.png"
+            "url": "https://www.cosmedocs.com/logo.png"
           },
           "address": {
             "@type": "PostalAddress",
@@ -54,7 +54,7 @@ const ChinFillerResultsExplained = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/chin-filler-results-explained/"
+          "@id": "https://www.cosmedocs.com/blog/chin-filler-results-explained/"
         },
         "keywords": "chin filler results explained, profile balance, chin projection, chin filler suitability, overfilled chin, chin vs jaw filler, chin augmentation",
         "articleSection": "Aesthetic Education",
@@ -63,7 +63,7 @@ const ChinFillerResultsExplained = () => {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://www.cosmedocs.co.uk/blog/chin-filler-results-explained/#faq",
+        "@id": "https://www.cosmedocs.com/blog/chin-filler-results-explained/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -101,9 +101,9 @@ const ChinFillerResultsExplained = () => {
       },
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#organization",
+        "@id": "https://www.cosmedocs.com/#organization",
         "name": "CosmeDocs",
-        "url": "https://www.cosmedocs.co.uk/",
+        "url": "https://www.cosmedocs.com/",
         "telephone": "+442074594188",
         "address": {
           "@type": "PostalAddress",

@@ -58,10 +58,10 @@ const LipFlip = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/lip-flip/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/lip-flip/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/lip-flip/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/lip-flip/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -72,7 +72,7 @@ const LipFlip = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -86,7 +86,7 @@ const LipFlip = () => {
                 "@type": "MedicalProcedure",
                 "name": "Lip Flip Botox Treatment",
                 "description": "Non-invasive lip enhancement using botulinum toxin to relax upper lip muscles, revealing more lip tissue for a subtly fuller appearance without added volume.",
-                "url": "https://cosmedocs.co.uk/treatments/lip-flip/",
+                "url": "https://www.cosmedocs.com/treatments/lip-flip/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Upper Lip",
                 "followup": "Results visible in 3–7 days, lasting 2–3 months. Follow-up assessment available.",

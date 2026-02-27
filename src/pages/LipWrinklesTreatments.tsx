@@ -59,7 +59,7 @@ const LipWrinklesTreatments = () => {
     "@type": "BlogPosting",
     "headline": "Lip Wrinkles Reveal Your Age & Much More - Here Is How To Fix Them",
     "description": "Discover the causes of lip wrinkles and vertical lip lines, plus 7 effective treatments including dermal fillers, Botox, laser resurfacing, and prevention tips from Cosmedocs experts.",
-    "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+    "image": "https://www.cosmedocs.com/placeholder.svg",
     "datePublished": publishDate,
     "dateModified": lastModified,
     "author": {
@@ -71,7 +71,7 @@ const LipWrinklesTreatments = () => {
       "name": "Cosmedocs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cosmedocs.co.uk/placeholder.svg"
+        "url": "https://www.cosmedocs.com/placeholder.svg"
       }
     }
   };
@@ -81,11 +81,11 @@ const LipWrinklesTreatments = () => {
       <Helmet>
         <title>Lip Wrinkles Treatment: 7 Ways to Fix Vertical Lip Lines | Cosmedocs</title>
         <meta name="description" content="Learn about lip wrinkles causes, prevention, and 7 top treatments including dermal fillers, Botox, and laser resurfacing. Expert advice from Cosmedocs on fixing vertical lip lines." />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/lip-wrinkles-treatments" />
+        <link rel="canonical" href="https://www.cosmedocs.com/blog/lip-wrinkles-treatments" />
         <meta property="og:title" content="Lip Wrinkles Treatment: 7 Ways to Fix Vertical Lip Lines" />
         <meta property="og:description" content="Discover effective treatments for lip wrinkles and smoker's lines. From dermal fillers to prevention tips, learn how to restore youthful lips." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/lip-wrinkles-treatments" />
+        <meta property="og:url" content="https://www.cosmedocs.com/blog/lip-wrinkles-treatments" />
         <meta property="article:published_time" content={publishDate} />
         <meta property="article:modified_time" content={lastModified} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

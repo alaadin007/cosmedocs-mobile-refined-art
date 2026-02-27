@@ -74,12 +74,12 @@ const BotoxCalfReduction = () => {
             "@graph": [
               {
                 "@type": "MedicalBusiness",
-                "@id": "https://www.cosmedocs.co.uk/#organization",
+                "@id": "https://www.cosmedocs.com/#organization",
                 "name": "Cosmedocs",
                 "description": "Expert botox calf reduction treatments in London",
-                "url": "https://www.cosmedocs.co.uk/",
-                "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-                "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
+                "url": "https://www.cosmedocs.com/",
+                "logo": "https://www.cosmedocs.com/cosmedocs-logo.png",
+                "image": ["https://www.cosmedocs.com/cosmedocs-logo.png"],
                 "telephone": "+44 20 3733 3227",
                 "priceRange": "££",
                 "address": {
@@ -134,7 +134,7 @@ const BotoxCalfReduction = () => {
                 "name": "Dr. Ahmed Haq",
                 "medicalSpecialty": "Aesthetic Medicine",
                 "worksFor": {
-                  "@id": "https://www.cosmedocs.co.uk/#organization"
+                  "@id": "https://www.cosmedocs.com/#organization"
                 }
               },
               {
@@ -144,13 +144,13 @@ const BotoxCalfReduction = () => {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.cosmedocs.co.uk/"
+                    "item": "https://www.cosmedocs.com/"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Botox Calf Reduction",
-                    "item": "https://www.cosmedocs.co.uk/botox-calf-reduction/"
+                    "item": "https://www.cosmedocs.com/botox-calf-reduction/"
                   }
                 ]
               }
