@@ -42,15 +42,15 @@ const HydraFacial = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/hydrafacial/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/hydrafacial/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/hydrafacial/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/hydrafacial/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({ "@context": "https://schema.org", "@graph": [
-            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.co.uk/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" } },
-            { "@type": "MedicalProcedure", "name": "HydraFacial Treatment", "description": "Multi-step facial using Vortex-Fusion technology for deep cleansing, exfoliation, and hydration.", "url": "https://www.cosmedocs.co.uk/treatments/hydrafacial/", "procedureType": "NoninvasiveProcedure" },
+            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" } },
+            { "@type": "MedicalProcedure", "name": "HydraFacial Treatment", "description": "Multi-step facial using Vortex-Fusion technology for deep cleansing, exfoliation, and hydration.", "url": "https://www.cosmedocs.com/treatments/hydrafacial/", "procedureType": "NoninvasiveProcedure" },
             { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
           ] })}
         </script>

@@ -50,17 +50,17 @@ const AboutUs = () => {
       },
       {
         "@type": "AboutPage",
-        "@id": "https://www.cosmedocs.co.uk/about-us/",
-        "url": "https://www.cosmedocs.co.uk/about-us/",
+        "@id": "https://www.cosmedocs.com/about-us/",
+        "url": "https://www.cosmedocs.com/about-us/",
         "name": seoData.title,
         "description": seoData.description,
-        "isPartOf": { "@id": "https://www.cosmedocs.co.uk/" },
-        "mainEntity": { "@id": "https://www.cosmedocs.co.uk/#organization" }
+        "isPartOf": { "@id": "https://www.cosmedocs.com/" },
+        "mainEntity": { "@id": "https://www.cosmedocs.com/#organization" }
       },
       createDoctorSchema({
         name: "Dr A. Farhan Haq",
         jobTitle: "Cosmetic Physician & Medical Director",
-        url: "https://www.cosmedocs.co.uk/our-team/dr-ahmed-haq/",
+        url: "https://www.cosmedocs.com/our-team/dr-ahmed-haq/",
         alumniOf: "Royal College of Surgeons Medical School",
         memberOf: "British Association of Cosmetic Doctors",
         skills: ["Botox", "Dermal Fillers", "Non-Surgical Rhinoplasty", "Facial Contouring", "Jaw Reduction"]
@@ -68,22 +68,22 @@ const AboutUs = () => {
       createDoctorSchema({
         name: "Dr Hena Haq",
         jobTitle: "Cosmetic Physician & Programme Director",
-        url: "https://www.cosmedocs.co.uk/our-team/dr-hena-haq/",
+        url: "https://www.cosmedocs.com/our-team/dr-hena-haq/",
         alumniOf: "Oxford Medical School",
         skills: ["Subtle Tweakments", "Lip Enhancement", "Skin Rejuvenation", "Tear Trough Treatment"]
       }),
       createDoctorSchema({
         name: "Dr Hassan A. Mirza",
         jobTitle: "Consultant Dermatologist",
-        url: "https://www.cosmedocs.co.uk/our-team/dr-hassan-mirza/",
+        url: "https://www.cosmedocs.com/our-team/dr-hassan-mirza/",
         memberOf: "Royal College of Physicians",
         skills: ["Dermatology", "Acne Treatment", "Psoriasis", "Eczema", "Mole Removal"]
       }),
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.cosmedocs.co.uk/about-us/" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.cosmedocs.com/about-us/" }
         ]
       }
     ]

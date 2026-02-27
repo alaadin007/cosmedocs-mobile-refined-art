@@ -94,10 +94,10 @@ const BirminghamHome = () => {
         <title>Birmingham Botox & Fillers | Cosmedocs</title>
         <meta name="description" content="Birmingham aesthetic clinic: botox, lip fillers & dermal fillers. West Midlands expert treatments. Invisible artistry." />
         <meta name="keywords" content="birmingham botox, birmingham lip filler, birmingham dermal fillers, botox birmingham, lip fillers birmingham, aesthetic clinic birmingham, cosmetic treatments birmingham" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/birmingham" />
+        <link rel="canonical" href="https://www.cosmedocs.com/birmingham" />
         <meta property="og:title" content="Birmingham Botox & Fillers | Cosmedocs" />
         <meta property="og:description" content="Premier Birmingham botox, lip filler and dermal filler treatments. Expert aesthetic medicine in West Midlands with invisible art philosophy." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/birmingham" />
+        <meta property="og:url" content="https://www.cosmedocs.com/birmingham" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://cosmedocs.com/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png" />
         <script type="application/ld+json">

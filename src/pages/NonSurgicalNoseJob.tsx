@@ -222,7 +222,7 @@ const NonSurgicalNoseJob = () => {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Non-Surgical Nose Job",
-                "item": "https://www.cosmedocs.co.uk/non-surgical-nose-job"
+                "item": "https://www.cosmedocs.com/non-surgical-nose-job"
               }
             ]
           })}

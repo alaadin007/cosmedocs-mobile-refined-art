@@ -36,7 +36,7 @@ const VitaminCSerumBenefitsBlog = () => {
       "name": "Cosmedocs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://cosmedocs.co.uk/logo.png"
+        "url": "https://www.cosmedocs.com/logo.png"
       },
       "address": {
         "@type": "PostalAddress",
@@ -51,7 +51,7 @@ const VitaminCSerumBenefitsBlog = () => {
     "dateModified": "2025-01-17",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/blog/vitamin-c-ferulic-acid-benefits/"
+      "@id": "https://www.cosmedocs.com/blog/vitamin-c-ferulic-acid-benefits/"
     }
   };
 

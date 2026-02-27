@@ -73,7 +73,7 @@ export default function PsoriasisTreatment() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
+    "url": "https://www.cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
@@ -149,19 +149,19 @@ export default function PsoriasisTreatment() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.cosmedocs.co.uk"
+            "item": "https://www.cosmedocs.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Treatments",
-            "item": "https://www.cosmedocs.co.uk/treatments"
+            "item": "https://www.cosmedocs.com/treatments"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Psoriasis Treatment",
-            "item": "https://www.cosmedocs.co.uk/psoriasis-treatment"
+            "item": "https://www.cosmedocs.com/psoriasis-treatment"
           }
         ]
       },
@@ -171,7 +171,7 @@ export default function PsoriasisTreatment() {
         "price": "150",
         "priceCurrency": "GBP",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cosmedocs.co.uk/psoriasis-treatment",
+        "url": "https://www.cosmedocs.com/psoriasis-treatment",
         "priceValidUntil": "2025-12-31"
       }
     ]

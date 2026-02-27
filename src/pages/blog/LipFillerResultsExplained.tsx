@@ -24,7 +24,7 @@ const LipFillerResultsExplained = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/lip-filler-results-explained/#article",
+        "@id": "https://www.cosmedocs.com/blog/lip-filler-results-explained/#article",
         "headline": "Lip Filler Results Explained: Shape, Proportion & Natural Outcomes",
         "description": seoData.description,
         "author": {
@@ -39,10 +39,10 @@ const LipFillerResultsExplained = () => {
         "publisher": {
           "@type": "MedicalBusiness",
           "name": "CosmeDocs",
-          "url": "https://www.cosmedocs.co.uk/",
+          "url": "https://www.cosmedocs.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cosmedocs.co.uk/logo.png"
+            "url": "https://www.cosmedocs.com/logo.png"
           },
           "address": {
             "@type": "PostalAddress",
@@ -57,7 +57,7 @@ const LipFillerResultsExplained = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/lip-filler-results-explained/"
+          "@id": "https://www.cosmedocs.com/blog/lip-filler-results-explained/"
         },
         "keywords": "lip filler results explained, natural lip filler, shape vs size, lip proportion, duck lips, overfilled lips, lip filler suitability, lip augmentation outcomes",
         "articleSection": "Aesthetic Education",
@@ -66,7 +66,7 @@ const LipFillerResultsExplained = () => {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://www.cosmedocs.co.uk/blog/lip-filler-results-explained/#faq",
+        "@id": "https://www.cosmedocs.com/blog/lip-filler-results-explained/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -104,9 +104,9 @@ const LipFillerResultsExplained = () => {
       },
       {
         "@type": "MedicalBusiness",
-        "@id": "https://www.cosmedocs.co.uk/#organization",
+        "@id": "https://www.cosmedocs.com/#organization",
         "name": "CosmeDocs",
-        "url": "https://www.cosmedocs.co.uk/",
+        "url": "https://www.cosmedocs.com/",
         "telephone": "+442074594188",
         "address": {
           "@type": "PostalAddress",

@@ -20,11 +20,11 @@ export default function UntraceablyYouCampaign() {
     "@type": "BlogPosting",
     headline: "Untraceably You — How to Look 5–10 Years Younger Without Anyone Knowing",
     description: seoData.description,
-    author: { "@type": "Organization", name: "CosmeDocs", url: "https://www.cosmedocs.co.uk" },
+    author: { "@type": "Organization", name: "CosmeDocs", url: "https://www.cosmedocs.com" },
     publisher: { "@type": "Organization", name: "CosmeDocs" },
     datePublished: "2025-01-11",
     dateModified: "2026-02-09",
-    mainEntityOfPage: "https://www.cosmedocs.co.uk/untraceably-you/",
+    mainEntityOfPage: "https://www.cosmedocs.com/untraceably-you/",
   };
 
   return (
@@ -32,10 +32,10 @@ export default function UntraceablyYouCampaign() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/untraceably-you/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/untraceably-you/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/untraceably-you/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/untraceably-you/" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

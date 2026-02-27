@@ -11,7 +11,7 @@ export const useWebsiteScraper = () => {
     setIsScraping(true);
     setProgress(0);
 
-    // Common pages to scrape from cosmedocs.co.uk
+    // Common pages to scrape from cosmedocs.com
     const pagesToScrape = [
       '',
       '/treatments',

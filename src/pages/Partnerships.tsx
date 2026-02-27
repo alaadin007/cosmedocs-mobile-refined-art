@@ -126,14 +126,14 @@ const Partnerships = () => {
           name="keywords" 
           content="PMU jobs London, microblading jobs, permanent makeup artist job, aesthetic practitioner jobs, beauty therapist jobs, SMP jobs, cosmetic tattoo jobs, lip blush technician, brow technician jobs, aesthetic partnerships" 
         />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/partnerships" />
+        <link rel="canonical" href="https://www.cosmedocs.com/partnerships" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Become a CosmeDocs Partner - Aesthetic Careers & PMU Jobs" />
         <meta property="og:description" content="Stop looking for a job. Start building your aesthetic career as a CosmeDocs partner. PMU, microblading, SMP & beauty professionals welcome." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/partnerships" />
-        <meta property="og:image" content="https://www.cosmedocs.co.uk/partnerships-og.jpg" />
+        <meta property="og:url" content="https://www.cosmedocs.com/partnerships" />
+        <meta property="og:image" content="https://www.cosmedocs.com/partnerships-og.jpg" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -150,7 +150,7 @@ const Partnerships = () => {
             "hiringOrganization": {
               "@type": "Organization",
               "name": "CosmeDocs",
-              "sameAs": "https://www.cosmedocs.co.uk"
+              "sameAs": "https://www.cosmedocs.com"
             },
             "jobLocation": {
               "@type": "Place",
