@@ -26,7 +26,7 @@ const TearTroughFillerResultsExplained = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/tear-trough-filler-results-explained/#article",
+        "@id": "https://www.cosmedocs.com/blog/tear-trough-filler-results-explained/#article",
         "headline": "Tear Trough Filler Results Explained: What Improvement Really Looks Like",
         "description": seoData.description,
         "author": {
@@ -41,10 +41,10 @@ const TearTroughFillerResultsExplained = () => {
         "publisher": {
           "@type": "MedicalBusiness",
           "name": "CosmeDocs",
-          "url": "https://www.cosmedocs.co.uk/",
+          "url": "https://www.cosmedocs.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cosmedocs.co.uk/logo.png"
+            "url": "https://www.cosmedocs.com/logo.png"
           },
           "address": {
             "@type": "PostalAddress",
@@ -59,7 +59,7 @@ const TearTroughFillerResultsExplained = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/tear-trough-filler-results-explained/"
+          "@id": "https://www.cosmedocs.com/blog/tear-trough-filler-results-explained/"
         },
         "keywords": "tear trough filler results explained, under eye filler suitability, tear trough outcomes, who is suitable for tear trough filler, why tear trough results vary, polynucleotide eye rejuvenation",
         "articleSection": "Aesthetic Education",

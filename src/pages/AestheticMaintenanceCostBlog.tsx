@@ -21,7 +21,7 @@ const AestheticMaintenanceCostBlog = () => {
     author: {
       "@type": "Organization",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk",
+      url: "https://www.cosmedocs.com",
     },
     publisher: {
       "@type": "Organization",
@@ -29,7 +29,7 @@ const AestheticMaintenanceCostBlog = () => {
     },
     datePublished: "2024-01-26",
     dateModified: "2026-02-09",
-    mainEntityOfPage: "https://www.cosmedocs.co.uk/aesthetic-maintenance-cost-blog/",
+    mainEntityOfPage: "https://www.cosmedocs.com/aesthetic-maintenance-cost-blog/",
   };
 
   return (
@@ -37,10 +37,10 @@ const AestheticMaintenanceCostBlog = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/aesthetic-maintenance-cost-blog/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/aesthetic-maintenance-cost-blog/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/aesthetic-maintenance-cost-blog/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/aesthetic-maintenance-cost-blog/" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

@@ -80,10 +80,10 @@ const CalfSlimmingBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/calf-slimming-botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/calf-slimming-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/calf-slimming-botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/calf-slimming-botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -92,12 +92,12 @@ const CalfSlimmingBotox = () => {
             "@graph": [
               {
                 "@type": "MedicalBusiness",
-                "@id": "https://www.cosmedocs.co.uk/#organization",
+                "@id": "https://www.cosmedocs.com/#organization",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street, London. Specialists in calf reduction Botox and advanced aesthetic treatments.",
-                "url": "https://www.cosmedocs.co.uk/",
-                "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
-                "image": ["https://www.cosmedocs.co.uk/cosmedocs-logo.png"],
+                "url": "https://www.cosmedocs.com/",
+                "logo": "https://www.cosmedocs.com/cosmedocs-logo.png",
+                "image": ["https://www.cosmedocs.com/cosmedocs-logo.png"],
                 "priceRange": "££",
                 "address": {
                   "@type": "PostalAddress",
@@ -137,12 +137,12 @@ const CalfSlimmingBotox = () => {
                 "name": "Calf Reduction Botox",
                 "alternateName": ["Calf Slimming Botox", "Calf Botox", "Non-Surgical Calf Reduction", "Gastrocnemius Botox"],
                 "description": "Non-surgical calf reduction using botulinum toxin to partially relax the gastrocnemius muscle, creating slimmer, more proportionate lower legs.",
-                "url": "https://www.cosmedocs.co.uk/treatments/calf-slimming-botox/",
+                "url": "https://www.cosmedocs.com/treatments/calf-slimming-botox/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Gastrocnemius Muscle (Calf)",
                 "followup": "Early softening at 2–4 weeks, visible slimming at 6–10 weeks, peak result around 3 months. Lasts 4–6 months.",
                 "howPerformed": "Botulinum toxin injected at multiple strategic points within the gastrocnemius muscle to gradually reduce bulk and create a slimmer calf profile.",
-                "provider": { "@id": "https://www.cosmedocs.co.uk/#organization" }
+                "provider": { "@id": "https://www.cosmedocs.com/#organization" }
               },
               {
                 "@type": "FAQPage",

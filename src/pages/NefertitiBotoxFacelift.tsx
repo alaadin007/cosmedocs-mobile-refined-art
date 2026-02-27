@@ -163,8 +163,8 @@ export default function NefertitiBotoxFacelift() {
       {
         "@type": "Organization",
         "name": "Cosmedocs",
-        "url": "https://www.cosmedocs.co.uk",
-        "logo": "https://www.cosmedocs.co.uk/logo.png",
+        "url": "https://www.cosmedocs.com",
+        "logo": "https://www.cosmedocs.com/logo.png",
         "description": "Leading aesthetic medicine clinic in London's Harley Street, specialising in non-surgical cosmetic treatments with over 1 million injections performed since 2007.",
         "address": {
           "@type": "PostalAddress",
@@ -180,7 +180,7 @@ export default function NefertitiBotoxFacelift() {
         "price": "300",
         "priceCurrency": "GBP",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cosmedocs.co.uk/nefertiti-botox-face-jaw-lift",
+        "url": "https://www.cosmedocs.com/nefertiti-botox-face-jaw-lift",
         "priceValidUntil": "2025-12-31"
       }
     ]

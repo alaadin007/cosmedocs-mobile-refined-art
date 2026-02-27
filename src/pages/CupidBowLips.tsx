@@ -102,7 +102,7 @@ const CupidBowLips = () => {
             "url": seoData.canonical,
             "telephone": "+44 20 3733 3227",
             "priceRange": "££",
-            "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+            "image": "https://www.cosmedocs.com/placeholder.svg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -171,25 +171,25 @@ const CupidBowLips = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk/"
+                "item": "https://www.cosmedocs.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Lip Treatments",
-                "item": "https://www.cosmedocs.co.uk/lip-fillers"
+                "item": "https://www.cosmedocs.com/lip-fillers"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Cupid's Bow Enhancement",
-                "item": "https://www.cosmedocs.co.uk/cupid-bow-lips"
+                "item": "https://www.cosmedocs.com/cupid-bow-lips"
               }
             ]
           })}
@@ -235,7 +235,7 @@ const CupidBowLips = () => {
               }
             ],
             "availability": "https://schema.org/InStock",
-            "url": "https://www.cosmedocs.co.uk/cupid-bow-lips",
+            "url": "https://www.cosmedocs.com/cupid-bow-lips",
             "seller": {
               "@type": "MedicalClinic",
               "name": "Cosmedocs",
@@ -255,30 +255,30 @@ const CupidBowLips = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageObject",
-            "contentUrl": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
+            "contentUrl": "https://www.cosmedocs.com/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
             "name": "Before and after Cupid's bow enhancement showing defined lip peaks",
             "description": "Perfectly defined Cupid's bow creating elegant lip shape",
-            "thumbnailUrl": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png"
+            "thumbnailUrl": "https://www.cosmedocs.com/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png"
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageObject",
-            "contentUrl": "https://www.cosmedocs.co.uk/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png",
+            "contentUrl": "https://www.cosmedocs.com/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png",
             "name": "Before and after Cupid's bow lip filler London showing natural definition",
             "description": "Enhanced Cupid's bow with natural-looking definition and symmetry",
-            "thumbnailUrl": "https://www.cosmedocs.co.uk/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png"
+            "thumbnailUrl": "https://www.cosmedocs.com/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png"
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageObject",
-            "contentUrl": "https://www.cosmedocs.co.uk/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png",
+            "contentUrl": "https://www.cosmedocs.com/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png",
             "name": "Before and after subtle Cupid's bow enhancement London",
             "description": "Subtle Cupid's bow refinement for balanced, proportionate lips",
-            "thumbnailUrl": "https://www.cosmedocs.co.uk/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png"
+            "thumbnailUrl": "https://www.cosmedocs.com/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png"
           })}
         </script>
       </Helmet>

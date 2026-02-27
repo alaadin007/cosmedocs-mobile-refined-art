@@ -22,19 +22,19 @@ const OrofacialNeckPainBlog = () => {
     "author": {
       "@type": "Organization",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk"
+      "url": "https://www.cosmedocs.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Cosmedocs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cosmedocs.co.uk/logo.png"
+        "url": "https://www.cosmedocs.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/blog/orofacial-neck-pain-cycle/"
+      "@id": "https://www.cosmedocs.com/blog/orofacial-neck-pain-cycle/"
     },
     "about": {
       "@type": "MedicalCondition",

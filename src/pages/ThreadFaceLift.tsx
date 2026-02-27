@@ -84,10 +84,10 @@ export function ThreadFaceLift() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/pdo-threads/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/pdo-threads/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/pdo-threads/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/pdo-threads/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -96,10 +96,10 @@ export function ThreadFaceLift() {
             "@graph": [
               {
                 "@type": "MedicalBusiness",
-                "@id": "https://www.cosmedocs.co.uk/#organization",
+                "@id": "https://www.cosmedocs.com/#organization",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -118,12 +118,12 @@ export function ThreadFaceLift() {
                 "name": "PDO Thread Lift",
                 "alternateName": ["Thread Face Lift", "PDO Threading", "Non-Surgical Face Lift", "Cog Thread Lift"],
                 "description": "Non-surgical facial lifting using dissolvable PDO threads that physically lift sagging tissue and stimulate collagen production for lasting rejuvenation.",
-                "url": "https://www.cosmedocs.co.uk/treatments/pdo-threads/",
+                "url": "https://www.cosmedocs.com/treatments/pdo-threads/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Face, Jawline, Mid-face, Neck",
                 "followup": "Results visible immediately, improving over 2–3 months. Threads dissolve over 6–9 months with collagen remodelling lasting 12–24 months.",
                 "howPerformed": "Medical-grade PDO threads inserted beneath the skin using fine needles or cannulae under local anaesthetic. Cog threads provide mechanical lift; mono threads stimulate collagen.",
-                "provider": { "@id": "https://www.cosmedocs.co.uk/#organization" }
+                "provider": { "@id": "https://www.cosmedocs.com/#organization" }
               },
               {
                 "@type": "FAQPage",
