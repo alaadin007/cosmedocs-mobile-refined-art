@@ -29,8 +29,8 @@ const TriggerPointBotox = () => {
     "provider": {
       "@type": "MedicalClinic",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk",
-      "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+      "url": "https://www.cosmedocs.com",
+      "logo": "https://www.cosmedocs.com/default-og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "10 Harley Street",
@@ -59,8 +59,8 @@ const TriggerPointBotox = () => {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
-    "url": "https://www.cosmedocs.co.uk",
+    "image": "https://www.cosmedocs.com/default-og-image.jpg",
+    "url": "https://www.cosmedocs.com",
     "telephone": "+44-20-7999-9999",
     "address": {
       "@type": "PostalAddress",

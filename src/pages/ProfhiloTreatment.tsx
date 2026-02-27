@@ -50,17 +50,17 @@ const ProfhiloTreatment = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/profhilo/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/profhilo/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/profhilo/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/profhilo/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
-              { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.co.uk/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }, "medicalSpecialty": "Aesthetic Medicine" },
-              { "@type": "MedicalProcedure", "name": "Profhilo Bio-Remodelling Treatment", "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production.", "url": "https://www.cosmedocs.co.uk/treatments/profhilo/", "procedureType": "NoninvasiveProcedure", "bodyLocation": "Face, Neck, Hands" },
+              { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }, "medicalSpecialty": "Aesthetic Medicine" },
+              { "@type": "MedicalProcedure", "name": "Profhilo Bio-Remodelling Treatment", "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production.", "url": "https://www.cosmedocs.com/treatments/profhilo/", "procedureType": "NoninvasiveProcedure", "bodyLocation": "Face, Neck, Hands" },
               { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
             ]
           })}

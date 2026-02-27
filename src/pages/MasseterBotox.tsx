@@ -59,10 +59,10 @@ const MasseterBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/masseter-botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/masseter-botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/masseter-botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/masseter-botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -73,7 +73,7 @@ const MasseterBotox = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -91,7 +91,7 @@ const MasseterBotox = () => {
                 "@type": "MedicalProcedure",
                 "name": "Masseter Botox Treatment",
                 "description": "Botulinum toxin injection into the masseter muscles for jaw slimming and bruxism relief. Dual cosmetic and medical benefits.",
-                "url": "https://cosmedocs.co.uk/treatments/masseter-botox/",
+                "url": "https://www.cosmedocs.com/treatments/masseter-botox/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Masseter Muscle (Jaw)",
                 "followup": "Results visible in 1–2 weeks, lasting 4–6 months. Follow-up assessment included.",

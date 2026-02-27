@@ -74,7 +74,7 @@ const HowToGetRidOfBruises = () => {
     "@type": "BlogPosting",
     "headline": "How to Get Rid of Bruises Quickly: Expert Medical Guide",
     "description": "Discover expert-approved methods to heal bruises faster. Learn about medical treatments, natural remedies, and prevention strategies from aesthetic medicine specialists.",
-    "image": "https://www.cosmedocs.co.uk/images/blog/bruises/hero-bruises.jpg",
+    "image": "https://www.cosmedocs.com/images/blog/bruises/hero-bruises.jpg",
     "datePublished": publishDate,
     "dateModified": lastModified,
     "wordCount": 2500,
@@ -83,7 +83,7 @@ const HowToGetRidOfBruises = () => {
     "author": {
       "@type": "Person",
       "name": "Dr. Ahmed Haq",
-      "url": "https://www.cosmedocs.co.uk/about",
+      "url": "https://www.cosmedocs.com/about",
       "jobTitle": "Medical Director",
       "worksFor": {
         "@type": "Organization",
@@ -95,12 +95,12 @@ const HowToGetRidOfBruises = () => {
       "name": "Cosmedocs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cosmedocs.co.uk/logo.png"
+        "url": "https://www.cosmedocs.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly"
+      "@id": "https://www.cosmedocs.com/blog/how-to-get-rid-of-bruises-quickly"
     }
   };
 
@@ -109,7 +109,7 @@ const HowToGetRidOfBruises = () => {
     "@type": "MedicalWebPage",
     "name": "How to Get Rid of Bruises Quickly: Expert Medical Guide",
     "description": "Discover expert-approved methods to heal bruises faster. Learn about medical treatments, natural remedies, and prevention strategies.",
-    "url": "https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly",
+    "url": "https://www.cosmedocs.com/blog/how-to-get-rid-of-bruises-quickly",
     "lastReviewed": lastModified,
     "reviewedBy": {
       "@type": "Person",
@@ -130,19 +130,19 @@ const HowToGetRidOfBruises = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.cosmedocs.co.uk"
+        "item": "https://www.cosmedocs.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.cosmedocs.co.uk/blog/"
+        "item": "https://www.cosmedocs.com/blog/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "How to Get Rid of Bruises Quickly",
-        "item": "https://www.cosmedocs.co.uk/blog/how-to-get-rid-of-bruises-quickly"
+        "item": "https://www.cosmedocs.com/blog/how-to-get-rid-of-bruises-quickly"
       }
     ]
   };
@@ -177,12 +177,12 @@ const HowToGetRidOfBruises = () => {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.cosmedocs.co.uk/images/blog/bruises/hero-bruises.jpg" />
+        <meta property="og:image" content="https://www.cosmedocs.com/images/blog/bruises/hero-bruises.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content="https://www.cosmedocs.co.uk/images/blog/bruises/hero-bruises.jpg" />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/images/blog/bruises/hero-bruises.jpg" />
         
         <meta name="robots" content="index, follow" />
         <meta name="article:published_time" content={publishDate} />

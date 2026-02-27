@@ -19,10 +19,10 @@ const BeforeAfterLaserHairRemoval = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/laser-hair-removal/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/laser-hair-removal/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/laser-hair-removal/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/laser-hair-removal/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -32,7 +32,7 @@ const BeforeAfterLaserHairRemoval = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
                 "medicalSpecialty": "Aesthetic Medicine"
               },
@@ -40,7 +40,7 @@ const BeforeAfterLaserHairRemoval = () => {
                 "@type": "ImageGallery",
                 "name": "Laser Hair Removal Before & After Results",
                 "description": "Real patient laser hair removal results from CosmeDocs Harley Street",
-                "url": "https://www.cosmedocs.co.uk/before-after/laser-hair-removal/"
+                "url": "https://www.cosmedocs.com/before-after/laser-hair-removal/"
               }
             ]
           })}

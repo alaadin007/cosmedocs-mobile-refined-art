@@ -116,7 +116,7 @@ const BunnyLinesBotox = () => {
             "url": seoData.canonical,
             "telephone": "+44 20 3733 3227",
             "priceRange": "££",
-            "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+            "image": "https://www.cosmedocs.com/placeholder.svg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -171,25 +171,25 @@ const BunnyLinesBotox = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.cosmedocs.co.uk/"
+                "item": "https://www.cosmedocs.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
+                "item": "https://www.cosmedocs.com/treatments"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/botox-london"
+                "item": "https://www.cosmedocs.com/botox-london"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Bunny Lines Botox",
-                "item": "https://www.cosmedocs.co.uk/bunny-lines-botox"
+                "item": "https://www.cosmedocs.com/bunny-lines-botox"
               }
             ]
           })}

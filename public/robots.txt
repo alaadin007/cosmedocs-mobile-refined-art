@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.cosmedocs.co.uk/sitemap.xml
+Sitemap: https://www.cosmedocs.com/sitemap.xml
 
 # ===== SEARCH ENGINE CRAWLERS =====
 

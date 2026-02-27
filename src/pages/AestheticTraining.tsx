@@ -53,7 +53,7 @@ const AestheticTraining = () => {
         "provider": {
           "@type": "Organization",
           "name": "Cosmedocs",
-          "url": "https://www.cosmedocs.co.uk",
+          "url": "https://www.cosmedocs.com",
           "telephone": "+44 20 3733 3227",
           "address": {
             "@type": "PostalAddress",

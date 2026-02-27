@@ -5,7 +5,7 @@ export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "Cosmedocs",
-  "url": "https://www.cosmedocs.co.uk",
+  "url": "https://www.cosmedocs.com",
   "telephone": "+44 20 3733 3227",
   "address": {
     "@type": "PostalAddress",
@@ -60,7 +60,7 @@ export const LOCATION_SCHEMAS = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs Birmingham",
-    "url": "https://www.cosmedocs.co.uk/birmingham",
+    "url": "https://www.cosmedocs.com/birmingham",
     "telephone": "+44 121 318 4218",
     "address": {
       "@type": "PostalAddress",
@@ -94,7 +94,7 @@ export const LOCATION_SCHEMAS = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs Manchester",
-    "url": "https://www.cosmedocs.co.uk/manchester",
+    "url": "https://www.cosmedocs.com/manchester",
     "telephone": "+44 161 503 1350",
     "address": {
       "@type": "PostalAddress",
@@ -128,7 +128,7 @@ export const LOCATION_SCHEMAS = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs Cardiff",
-    "url": "https://www.cosmedocs.co.uk/cardiff",
+    "url": "https://www.cosmedocs.com/cardiff",
     "telephone": "+44 29 2009 0909",
     "address": {
       "@type": "PostalAddress",
@@ -179,7 +179,7 @@ export const createDoctorSchema = (doctorData: {
   "worksFor": {
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
+    "url": "https://www.cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",

@@ -21,8 +21,8 @@ export default function DermalFillers() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "image": ["https://www.cosmedocs.co.uk/default-og-image.jpg"],
-    "url": "https://www.cosmedocs.co.uk",
+    "image": ["https://www.cosmedocs.com/default-og-image.jpg"],
+    "url": "https://www.cosmedocs.com",
     "telephone": "+44 20 3733 3227",
     "priceRange": "££",
     "address": {

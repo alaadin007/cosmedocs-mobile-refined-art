@@ -6,7 +6,7 @@ export const generateSEOMetadata = (title: string, description: string, canonica
   return {
     title: title,
     description: description,
-    canonical: `https://www.cosmedocs.co.uk${normalizedCanonical}`,
-    image: image || "https://www.cosmedocs.co.uk/default-og-image.jpg"
+    canonical: `https://www.cosmedocs.com${normalizedCanonical}`,
+    image: image || "https://www.cosmedocs.com/default-og-image.jpg"
   };
 };

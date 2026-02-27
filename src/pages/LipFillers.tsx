@@ -70,10 +70,10 @@ const LipFillers = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/treatments/lip-fillers/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/lip-fillers/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/treatments/lip-fillers/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/lip-fillers/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -84,7 +84,7 @@ const LipFillers = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street, London. Established 2007.",
-                "url": "https://cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
@@ -112,7 +112,7 @@ const LipFillers = () => {
                 "name": "Lip Filler Treatment",
                 "alternateName": "Lip Augmentation",
                 "description": "Doctor-led lip augmentation using premium hyaluronic acid dermal fillers to enhance lip volume, shape, and definition with natural-looking results.",
-                "url": "https://cosmedocs.co.uk/treatments/lip-fillers/",
+                "url": "https://www.cosmedocs.com/treatments/lip-fillers/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Lips",
                 "followup": "Results visible immediately, final outcome at 2 weeks. Lasts 6–12 months.",
