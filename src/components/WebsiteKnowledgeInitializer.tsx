@@ -21,9 +21,9 @@ const WebsiteKnowledgeInitializer = () => {
 
       // If no content exists and we haven't initialized yet, start scraping
       if ((!data || data.length === 0) && !hasInitialized) {
-        console.log('Initializing knowledge base from cosmedocs.co.uk...');
+        console.log('Initializing knowledge base from cosmedocs.com...');
         setHasInitialized(true);
-        await scrapeWebsite('https://cosmedocs.co.uk');
+        await scrapeWebsite('https://cosmedocs.com');
       }
     };
 

@@ -62,10 +62,10 @@ const BeforeAfterBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://cosmedocs.co.uk/before-after/botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/botox/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://cosmedocs.co.uk/before-after/botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/botox/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
@@ -76,9 +76,9 @@ const BeforeAfterBotox = () => {
             "@graph": [
               {
                 "@type": "MedicalBusiness",
-                "@id": "https://www.cosmedocs.co.uk/#clinic",
+                "@id": "https://www.cosmedocs.com/#clinic",
                 "name": "CosmeDocs",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "telephone": "+442071231123",
                 "address": {
                   "@type": "PostalAddress",
@@ -96,23 +96,23 @@ const BeforeAfterBotox = () => {
               },
               {
                 "@type": "ImageGallery",
-                "@id": "https://www.cosmedocs.co.uk/before-after/botox/#gallery",
+                "@id": "https://www.cosmedocs.com/before-after/botox/#gallery",
                 "name": "Botox Before and After Results",
                 "description": "Real patient before and after photographs demonstrating natural wrinkle reduction achieved through expert Botox treatment at CosmeDocs Harley Street.",
-                "url": "https://www.cosmedocs.co.uk/before-after/botox/"
+                "url": "https://www.cosmedocs.com/before-after/botox/"
               },
               {
                 "@type": "WebPage",
-                "@id": "https://www.cosmedocs.co.uk/before-after/botox/#page",
+                "@id": "https://www.cosmedocs.com/before-after/botox/#page",
                 "name": "Botox Before & After Results | Harley Street",
                 "description": seoData.description,
-                "url": "https://www.cosmedocs.co.uk/before-after/botox/",
+                "url": "https://www.cosmedocs.com/before-after/botox/",
                 "breadcrumb": {
                   "@type": "BreadcrumbList",
                   "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.co.uk/" },
-                    { "@type": "ListItem", "position": 2, "name": "Before & After", "item": "https://www.cosmedocs.co.uk/before-after/" },
-                    { "@type": "ListItem", "position": 3, "name": "Botox Results", "item": "https://www.cosmedocs.co.uk/before-after/botox/" }
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Before & After", "item": "https://www.cosmedocs.com/before-after/" },
+                    { "@type": "ListItem", "position": 3, "name": "Botox Results", "item": "https://www.cosmedocs.com/before-after/botox/" }
                   ]
                 }
               }

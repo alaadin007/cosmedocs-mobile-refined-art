@@ -95,9 +95,9 @@ const schemaMarkup = {
   "@graph": [
     {
       "@type": "MedicalBusiness",
-      "@id": "https://www.cosmedocs.co.uk/#clinic",
+      "@id": "https://www.cosmedocs.com/#clinic",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk/",
+      url: "https://www.cosmedocs.com/",
       telephone: "+442071231123",
       address: {
         "@type": "PostalAddress",
@@ -115,11 +115,11 @@ const schemaMarkup = {
     },
     {
       "@type": "ImageGallery",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/#gallery",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/jawline/#gallery",
       name: "Jawline Filler Before and After Results",
       description:
         "Real patient before and after photographs demonstrating jawline definition, jowl correction, and lower face contouring achieved through dermal filler treatment at CosmeDocs Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/jawline/",
       numberOfItems: galleryImages.length,
       about: {
         "@type": "MedicalProcedure",
@@ -130,18 +130,18 @@ const schemaMarkup = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/#page",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/jawline/#page",
       name: "Jawline Filler Before & After Results | Harley Street Clinic",
       description:
         "Real patient before and after results showing jawline definition and lower face contouring with dermal filler. Doctor-led treatment on Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/jawline/",
       breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.co.uk/before-after/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Jawline Filler Results", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.com/before-after/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/before-after/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Jawline Filler Results", item: "https://www.cosmedocs.com/before-after/dermal-fillers/jawline/" },
         ],
       },
     },
@@ -157,10 +157,10 @@ const BeforeAfterJawlineFiller = () => {
           name="description"
           content="Real patient before and after results showing jawline definition and lower face contouring with dermal filler. Doctor-led treatment on Harley Street."
         />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/dermal-fillers/jawline/" />
         <meta property="og:title" content="Jawline Filler Before & After Results | Harley Street Clinic" />
         <meta property="og:description" content="Real patient before and after results showing jawline definition and lower face contouring with dermal filler. Doctor-led treatment on Harley Street." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/dermal-fillers/jawline/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/dermal-fillers/jawline/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

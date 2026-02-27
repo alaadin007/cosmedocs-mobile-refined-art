@@ -30,8 +30,8 @@ const LazySkinSyndrome = () => {
         <meta property="og:title" content="Lazy Skin Syndrome: Why Moisturisers May Be Hurting You" />
         <meta property="og:description" content="Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/blog/lazy-skin-syndrome/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/blog/lazy-skin-syndrome/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -54,7 +54,7 @@ const LazySkinSyndrome = () => {
               "name": "Cosmedocs",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://cosmedocs.co.uk/logo.png"
+                "url": "https://cosmedocs.com/logo.png"
               },
               "address": {
                 "@type": "PostalAddress",
@@ -70,7 +70,7 @@ const LazySkinSyndrome = () => {
             "description": "Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.cosmedocs.co.uk/blog/lazy-skin-syndrome/"
+              "@id": "https://www.cosmedocs.com/blog/lazy-skin-syndrome/"
             }
           })}
         </script>

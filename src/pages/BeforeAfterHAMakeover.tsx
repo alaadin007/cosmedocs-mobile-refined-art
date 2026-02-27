@@ -73,10 +73,10 @@ const BeforeAfterHAMakeover = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/ha-makeover/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/ha-makeover/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/ha-makeover/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/ha-makeover/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -86,7 +86,7 @@ const BeforeAfterHAMakeover = () => {
                 "@type": "MedicalBusiness",
                 "name": "CosmeDocs",
                 "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://www.cosmedocs.co.uk/",
+                "url": "https://www.cosmedocs.com/",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "8-10 Harley Street",
@@ -100,7 +100,7 @@ const BeforeAfterHAMakeover = () => {
                 "@type": "ImageGallery",
                 "name": "HA Makeover Before & After Results",
                 "description": "Real full-face rejuvenation patient transformations from CosmeDocs Harley Street",
-                "url": "https://www.cosmedocs.co.uk/before-after/ha-makeover/"
+                "url": "https://www.cosmedocs.com/before-after/ha-makeover/"
               }
             ]
           })}

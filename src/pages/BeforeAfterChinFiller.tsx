@@ -46,9 +46,9 @@ const schemaMarkup = {
   "@graph": [
     {
       "@type": "MedicalBusiness",
-      "@id": "https://www.cosmedocs.co.uk/#clinic",
+      "@id": "https://www.cosmedocs.com/#clinic",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk/",
+      url: "https://www.cosmedocs.com/",
       telephone: "+442071231123",
       address: {
         "@type": "PostalAddress",
@@ -66,11 +66,11 @@ const schemaMarkup = {
     },
     {
       "@type": "ImageGallery",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/#gallery",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/chin/#gallery",
       name: "Chin Filler Before and After Results",
       description:
         "Real patient before and after photographs demonstrating chin augmentation, profile balancing, and lower face definition achieved through dermal filler treatment at CosmeDocs Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/chin/",
       numberOfItems: galleryImages.length,
       about: {
         "@type": "MedicalProcedure",
@@ -81,18 +81,18 @@ const schemaMarkup = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/#page",
+      "@id": "https://www.cosmedocs.com/before-after/dermal-fillers/chin/#page",
       name: "Chin Filler Before & After Results | Harley Street",
       description:
         "Real patient before and after results showing chin augmentation and profile balancing with dermal filler. Doctor-led treatment on Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/",
+      url: "https://www.cosmedocs.com/before-after/dermal-fillers/chin/",
       breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.co.uk/" },
-          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.co.uk/before-after/" },
-          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/" },
-          { "@type": "ListItem", position: 4, name: "Chin Filler Results", item: "https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Before & After", item: "https://www.cosmedocs.com/before-after/" },
+          { "@type": "ListItem", position: 3, name: "Dermal Fillers", item: "https://www.cosmedocs.com/before-after/dermal-fillers/" },
+          { "@type": "ListItem", position: 4, name: "Chin Filler Results", item: "https://www.cosmedocs.com/before-after/dermal-fillers/chin/" },
         ],
       },
     },
@@ -108,10 +108,10 @@ const BeforeAfterChinFiller = () => {
           name="description"
           content="Real patient before and after results showing chin augmentation and profile balancing with dermal filler. Doctor-led treatment on Harley Street."
         />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/dermal-fillers/chin/" />
         <meta property="og:title" content="Chin Filler Before & After Results | Harley Street" />
         <meta property="og:description" content="Real patient before and after results showing chin augmentation and profile balancing with dermal filler." />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/dermal-fillers/chin/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/dermal-fillers/chin/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

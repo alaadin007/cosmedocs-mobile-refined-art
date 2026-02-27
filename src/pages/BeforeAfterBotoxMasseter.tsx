@@ -48,11 +48,11 @@ const schemaMarkup = {
   "@graph": [
     {
       "@type": "MedicalBusiness",
-      "@id": "https://www.cosmedocs.co.uk/#clinic",
+      "@id": "https://www.cosmedocs.com/#clinic",
       name: "CosmeDocs",
-      url: "https://www.cosmedocs.co.uk/",
-      logo: "https://www.cosmedocs.co.uk/logo.png",
-      image: "https://www.cosmedocs.co.uk/og-masseter-ba.jpg",
+      url: "https://www.cosmedocs.com/",
+      logo: "https://www.cosmedocs.com/logo.png",
+      image: "https://www.cosmedocs.com/og-masseter-ba.jpg",
       telephone: "+442071231123",
       address: {
         "@type": "PostalAddress",
@@ -70,15 +70,15 @@ const schemaMarkup = {
     },
     {
       "@type": "ImageGallery",
-      "@id": "https://www.cosmedocs.co.uk/before-after/botox/masseter/#gallery",
+      "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#gallery",
       name: "Masseter Botox Before and After Results",
       description:
         "Real patient before and after photographs demonstrating jawline slimming and facial contouring achieved through masseter Botox treatment at CosmeDocs Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/botox/masseter/",
+      url: "https://www.cosmedocs.com/before-after/botox/masseter/",
       numberOfItems: 6,
       isPartOf: {
         "@type": "WebPage",
-        "@id": "https://www.cosmedocs.co.uk/before-after/botox/masseter/#page",
+        "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#page",
       },
       about: {
         "@type": "MedicalProcedure",
@@ -90,18 +90,18 @@ const schemaMarkup = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.co.uk/before-after/botox/masseter/#page",
+      "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#page",
       name: "Masseter Botox Before & After Results | Harley Street Clinic",
       description:
         "Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street.",
-      url: "https://www.cosmedocs.co.uk/before-after/botox/masseter/",
+      url: "https://www.cosmedocs.com/before-after/botox/masseter/",
       isPartOf: {
         "@type": "WebSite",
-        "@id": "https://www.cosmedocs.co.uk/#website",
+        "@id": "https://www.cosmedocs.com/#website",
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://www.cosmedocs.co.uk/og-masseter-ba.jpg",
+        url: "https://www.cosmedocs.com/og-masseter-ba.jpg",
       },
       breadcrumb: {
         "@type": "BreadcrumbList",
@@ -110,25 +110,25 @@ const schemaMarkup = {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://www.cosmedocs.co.uk/",
+            item: "https://www.cosmedocs.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Before & After",
-            item: "https://www.cosmedocs.co.uk/before-after/",
+            item: "https://www.cosmedocs.com/before-after/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Botox Results",
-            item: "https://www.cosmedocs.co.uk/before-after/botox/",
+            item: "https://www.cosmedocs.com/before-after/botox/",
           },
           {
             "@type": "ListItem",
             position: 4,
             name: "Masseter Botox Results",
-            item: "https://www.cosmedocs.co.uk/before-after/botox/masseter/",
+            item: "https://www.cosmedocs.com/before-after/botox/masseter/",
           },
         ],
       },
@@ -145,7 +145,7 @@ const schemaMarkup = {
       publisher: {
         "@type": "Organization",
         name: "CosmeDocs",
-        url: "https://www.cosmedocs.co.uk/",
+        url: "https://www.cosmedocs.com/",
       },
     },
   ],
@@ -160,13 +160,13 @@ const BeforeAfterBotoxMasseter = () => {
           name="description"
           content="Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street."
         />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/before-after/botox/masseter/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/before-after/botox/masseter/" />
         <meta property="og:title" content="Masseter Botox Before & After Results | Harley Street Clinic" />
         <meta
           property="og:description"
           content="Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street."
         />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/before-after/botox/masseter/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/before-after/botox/masseter/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>

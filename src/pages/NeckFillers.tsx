@@ -110,7 +110,7 @@ const NeckFillers = () => {
             "@context": "https://schema.org",
             "@type": "MedicalClinic",
             "name": "Cosmedocs",
-            "url": "https://www.cosmedocs.co.uk",
+            "url": "https://www.cosmedocs.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",

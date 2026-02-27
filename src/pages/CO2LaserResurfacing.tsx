@@ -355,9 +355,9 @@ export default function CO2LaserResurfacing() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
+    "url": "https://www.cosmedocs.com",
     "telephone": "+44 20 7036 2076",
-    "email": "info@cosmedocs.co.uk",
+    "email": "info@cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
@@ -421,7 +421,7 @@ export default function CO2LaserResurfacing() {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.cosmedocs.co.uk/images/co2-laser-resurfacing-og.jpg" />
+        <meta property="og:image" content="https://www.cosmedocs.com/images/co2-laser-resurfacing-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
@@ -1028,7 +1028,7 @@ export default function CO2LaserResurfacing() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  <a href="mailto:info@cosmedocs.co.uk">
+                  <a href="mailto:info@cosmedocs.com">
                     <Mail className="w-5 h-5 mr-2" />
                     Email Us
                   </a>

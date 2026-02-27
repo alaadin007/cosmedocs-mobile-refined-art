@@ -27,7 +27,7 @@ const JawFillerResultsExplained = () => {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://www.cosmedocs.co.uk/blog/jaw-filler-results-explained/#article",
+        "@id": "https://www.cosmedocs.com/blog/jaw-filler-results-explained/#article",
         "headline": "Jaw Filler Results Explained: Structure, Contour & Natural Outcomes",
         "description": seoData.description,
         "author": {
@@ -42,10 +42,10 @@ const JawFillerResultsExplained = () => {
         "publisher": {
           "@type": "MedicalBusiness",
           "name": "CosmeDocs",
-          "url": "https://www.cosmedocs.co.uk/",
+          "url": "https://www.cosmedocs.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cosmedocs.co.uk/logo.png"
+            "url": "https://www.cosmedocs.com/logo.png"
           },
           "address": {
             "@type": "PostalAddress",
@@ -60,7 +60,7 @@ const JawFillerResultsExplained = () => {
         "dateModified": "2026-02-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.cosmedocs.co.uk/blog/jaw-filler-results-explained/"
+          "@id": "https://www.cosmedocs.com/blog/jaw-filler-results-explained/"
         },
         "keywords": "jaw filler results explained, jawline filler outcomes, masculine jaw filler, feminine jawline filler, overfilled jaw, structure vs contour, jaw filler suitability",
         "articleSection": "Aesthetic Education",

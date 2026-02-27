@@ -39,7 +39,7 @@ const InternationalPatientPage = ({ data, images }: Props) => {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Cosmedocs",
-    "url": `https://www.cosmedocs.co.uk/${data.slug}/`,
+    "url": `https://www.cosmedocs.com/${data.slug}/`,
     "telephone": "+44 20 3733 3227",
     "address": {
       "@type": "PostalAddress",

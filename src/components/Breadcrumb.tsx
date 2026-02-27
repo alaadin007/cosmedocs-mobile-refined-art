@@ -26,19 +26,19 @@ const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.cosmedocs.co.uk"
+        "item": "https://www.cosmedocs.com"
       },
       ...breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.label,
-        "item": `https://www.cosmedocs.co.uk${item.path || item.href || ''}`
+        "item": `https://www.cosmedocs.com${item.path || item.href || ''}`
       })),
       ...(finalPage ? [{
         "@type": "ListItem",
         "position": breadcrumbItems.length + 2,
         "name": finalPage,
-        "item": `https://www.cosmedocs.co.uk${window.location.pathname}`
+        "item": `https://www.cosmedocs.com${window.location.pathname}`
       }] : [])
     ]
   };

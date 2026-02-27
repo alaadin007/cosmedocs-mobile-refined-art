@@ -312,7 +312,7 @@ const Partners = () => {
         <title>CosmeDoc Franchise Opportunity | Harley Street Heritage & Innovation</title>
         <meta name="description" content="Join the UK's first boutique Harley Street aesthetic clinic franchise. CosmeDoc, sister company of Harley Street Institute, offers world-class training with low-overhead, high-impact franchise model for medical professionals." />
         <meta name="keywords" content="Harley Street aesthetic franchise, boutique clinic franchise, medical aesthetic franchise, CosmeDoc franchise, Harley Street Institute training, low investment franchise, aesthetic clinic business opportunity" />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/partners" />
+        <link rel="canonical" href="https://www.cosmedocs.com/partners" />
         <script type="application/ld+json">
         {`
           {

@@ -35,15 +35,15 @@ const PolynucleotideTreatment = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.co.uk/treatments/polynucleotides/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/polynucleotides/" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.co.uk/treatments/polynucleotides/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/polynucleotides/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({ "@context": "https://schema.org", "@graph": [
-            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.co.uk/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }, "medicalSpecialty": "Aesthetic Medicine" },
-            { "@type": "MedicalProcedure", "name": "Polynucleotide Treatment", "description": "Advanced DNA repair therapy using PDRN to stimulate cellular regeneration for skin rejuvenation and hair restoration.", "url": "https://www.cosmedocs.co.uk/treatments/polynucleotides/", "procedureType": "NoninvasiveProcedure" },
+            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }, "medicalSpecialty": "Aesthetic Medicine" },
+            { "@type": "MedicalProcedure", "name": "Polynucleotide Treatment", "description": "Advanced DNA repair therapy using PDRN to stimulate cellular regeneration for skin rejuvenation and hair restoration.", "url": "https://www.cosmedocs.com/treatments/polynucleotides/", "procedureType": "NoninvasiveProcedure" },
             { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
           ] })}
         </script>
