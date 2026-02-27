@@ -571,6 +571,75 @@
 # Peel to reveal
 /treatments/peel-to-reveal                 /treatments/peel-to-reveal/ 301
 
+# Polynucleotide
+/treatments/polynucleotide                 /treatments/polynucleotides/ 301
+/treatments/polynucleotide/                /treatments/polynucleotides/ 301
+
+# Prescription skin care
+/treatments/prescription-skin-care         /treatments/prescription-skincare/ 301
+/treatments/prescription-skin-care/        /treatments/prescription-skincare/ 301
+
+# Private GP
+/treatments/private-gp-doctor-london       /private-gp-doctor/         301
+/treatments/private-gp-doctor-london/      /private-gp-doctor/         301
+
+# Profhilo
+/treatments/profhilo-treatment             /treatments/profhilo/       301
+/treatments/profhilo-treatment/            /treatments/profhilo/       301
+
+# Psoriasis
+/treatments/psoriasis-treatment            /concerns/                  301
+/treatments/psoriasis-treatment/           /concerns/                  301
+
+# Semi-permanent makeup
+/treatments/semi-permanent-makeup          /concerns/                  301
+/treatments/semi-permanent-makeup/         /concerns/                  301
+
+# Skin peel
+/treatments/skin-peel-treatment            /treatments/chemical-peel/  301
+/treatments/skin-peel-treatment/           /treatments/chemical-peel/  301
+
+# Skin rejuvenation
+/treatments/skin-rejuvnation               /treatments/skin-rejuvenation/ 301
+/treatments/skin-rejuvnation/              /treatments/skin-rejuvenation/ 301
+
+# Skin tag removal
+/treatments/skin-tag-removal-clinic        /concerns/                  301
+/treatments/skin-tag-removal-clinic/       /concerns/                  301
+
+# Stubborn fat deposits
+/treatments/stubborn-fat-deposits          /treatments/fat-dissolving/ 301
+/treatments/stubborn-fat-deposits/         /treatments/fat-dissolving/ 301
+
+# Sun damage
+/treatments/sun-damage                     /concerns/                  301
+/treatments/sun-damage/                    /concerns/                  301
+
+# Surgical treatments
+/treatments/surgical-treatments            /treatments/plastic-surgery/ 301
+/treatments/surgical-treatments/           /treatments/plastic-surgery/ 301
+
+# Tear trough filler (old slug)
+/treatments/tear-trough-filler             /treatments/tear-trough-filler/ 301
+
+# Temple filler
+/treatments/temple-filler                  /treatments/temple-filler/  301
+
+# Thread face lift
+/treatments/thread-face-lift               /treatments/pdo-threads/    301
+/treatments/thread-face-lift/              /treatments/pdo-threads/    301
+
+# Tired eyes
+/treatments/tired-eyes                     /treatments/tear-trough-filler/ 301
+/treatments/tired-eyes/                    /treatments/tear-trough-filler/ 301
+
+# Trap botox
+/treatments/trap-botox                     /treatments/trap-botox/     301
+
+# Weight loss programmes
+/treatments/weight-loss-programmes         /                           301
+/treatments/weight-loss-programmes/        /                           301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
