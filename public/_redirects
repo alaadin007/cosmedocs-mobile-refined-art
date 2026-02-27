@@ -406,6 +406,79 @@
 /lower-face-botox/                /treatments/botox/                  301
 
 # =====================================================
+# PHASE 7: Legacy /treatments/* WordPress URL Cleanup
+# Old treatment slugs → canonical treatment pages
+# =====================================================
+
+# Facelift variations
+/treatments/11-point-facelift-treatment    /treatments/ha-makeover/    301
+/treatments/11-point-facelift-treatment/   /treatments/ha-makeover/    301
+/treatments/8-point-facelift-treatment     /treatments/ha-makeover/    301
+/treatments/8-point-facelift-treatment/    /treatments/ha-makeover/    301
+
+# Concerns consolidation
+/treatments/ageing-skin-concerns           /concerns/                  301
+/treatments/ageing-skin-concerns/          /concerns/                  301
+/treatments/black-heads-and-white-spots    /concerns/                  301
+/treatments/black-heads-and-white-spots/   /concerns/                  301
+
+# Aqualyx → fat dissolving
+/treatments/aqualyx                        /treatments/fat-dissolving/ 301
+/treatments/aqualyx/                       /treatments/fat-dissolving/ 301
+
+# Botox legacy slugs → canonical pages
+/treatments/botox-calf-reduction           /treatments/calf-slimming-botox/ 301
+/treatments/botox-calf-reduction/          /treatments/calf-slimming-botox/ 301
+/treatments/botox-crows-feet               /treatments/botox/          301
+/treatments/botox-crows-feet/              /treatments/botox/          301
+/treatments/botox-for-bruxism              /treatments/bruxism-botox/  301
+/treatments/botox-for-bruxism/             /treatments/bruxism-botox/  301
+/treatments/botox-for-forehead-lines       /treatments/botox/          301
+/treatments/botox-for-forehead-lines/      /treatments/botox/          301
+/treatments/botox-for-gummy-smile          /treatments/botox/          301
+/treatments/botox-for-gummy-smile/         /treatments/botox/          301
+/treatments/botox-frown-lines              /treatments/botox/          301
+/treatments/botox-frown-lines/             /treatments/botox/          301
+/treatments/botox-lip-flip                 /treatments/lip-flip/       301
+/treatments/botox-lip-flip/                /treatments/lip-flip/       301
+/treatments/botox-london                   /treatments/botox/          301
+/treatments/botox-london/                  /treatments/botox/          301
+/treatments/botox-nefertiti-facelift-treatment  /treatments/botox/     301
+/treatments/botox-nefertiti-facelift-treatment/ /treatments/botox/     301
+/treatments/botox-nefertiti-neck-lift      /treatments/botox/          301
+/treatments/botox-nefertiti-neck-lift/     /treatments/botox/          301
+/treatments/bunny-lines-botox-treatment    /treatments/botox/          301
+/treatments/bunny-lines-botox-treatment/   /treatments/botox/          301
+/treatments/dimpled-chin-botox             /treatments/botox/          301
+/treatments/dimpled-chin-botox/            /treatments/botox/          301
+
+# Calf/cellulite
+/treatments/calf-reduction                 /treatments/calf-slimming-botox/ 301
+/treatments/calf-reduction/                /treatments/calf-slimming-botox/ 301
+/treatments/cellulite                      /treatments/fat-dissolving/ 301
+/treatments/cellulite/                     /treatments/fat-dissolving/ 301
+
+# Filler plurals
+/treatments/cheek-fillers                  /treatments/cheek-filler/   301
+/treatments/cheek-fillers/                 /treatments/cheek-filler/   301
+
+# Chemical peel variants
+/treatments/chemical-peel-london           /treatments/chemical-peel/  301
+/treatments/chemical-peel-london/          /treatments/chemical-peel/  301
+/treatments/chemical-peel-treatment        /treatments/chemical-peel/  301
+/treatments/chemical-peel-treatment/       /treatments/chemical-peel/  301
+
+# Dermal fillers duplicate
+/treatments/dermal-fillers-2               /treatments/dermal-fillers/ 301
+/treatments/dermal-fillers-2/              /treatments/dermal-fillers/ 301
+
+# Skin therapy → microneedling
+/treatments/dermaroller-skin-therapy       /treatments/microneedling/  301
+/treatments/dermaroller-skin-therapy/      /treatments/microneedling/  301
+/treatments/diamond-tip-microdermabrasion  /treatments/microneedling/  301
+/treatments/diamond-tip-microdermabrasion/ /treatments/microneedling/  301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
