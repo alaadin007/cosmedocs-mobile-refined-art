@@ -506,11 +506,10 @@
 /treatments/hydrafacial-london             /treatments/hydrafacial/    301
 /treatments/hydrafacial-london/            /treatments/hydrafacial/    301
 
-# Jawline filler (already canonical but catch old slug)
-/treatments/jawline-filler                 /treatments/jawline-filler/ 301
+# Jawline filler — no self-redirect needed (canonical page exists)
 
 # Laser
-/treatments/laser-hair-removal             /treatments/laser-hair-removal/ 301
+# laser-hair-removal — no self-redirect needed (canonical page exists)
 /treatments/laser-hair-removal-treatment   /treatments/laser-hair-removal/ 301
 /treatments/laser-hair-removal-treatment/  /treatments/laser-hair-removal/ 301
 /treatments/laser-treatments               /treatments/laser-hair-removal/ 301
@@ -568,8 +567,7 @@
 /treatments/o-shot-treatment               /                           301
 /treatments/o-shot-treatment/              /                           301
 
-# Peel to reveal
-/treatments/peel-to-reveal                 /treatments/peel-to-reveal/ 301
+# Peel to reveal — no self-redirect needed (canonical page exists)
 
 # Polynucleotide
 /treatments/polynucleotide                 /treatments/polynucleotides/ 301
@@ -619,11 +617,9 @@
 /treatments/surgical-treatments            /treatments/plastic-surgery/ 301
 /treatments/surgical-treatments/           /treatments/plastic-surgery/ 301
 
-# Tear trough filler (old slug)
-/treatments/tear-trough-filler             /treatments/tear-trough-filler/ 301
+# Tear trough filler — no self-redirect needed (canonical page exists)
 
-# Temple filler
-/treatments/temple-filler                  /treatments/temple-filler/  301
+# Temple filler — no self-redirect needed (canonical page exists)
 
 # Thread face lift
 /treatments/thread-face-lift               /treatments/pdo-threads/    301
@@ -633,8 +629,7 @@
 /treatments/tired-eyes                     /treatments/tear-trough-filler/ 301
 /treatments/tired-eyes/                    /treatments/tear-trough-filler/ 301
 
-# Trap botox
-/treatments/trap-botox                     /treatments/trap-botox/     301
+# Trap botox — no self-redirect needed (canonical page exists)
 
 # Weight loss programmes
 /treatments/weight-loss-programmes         /                           301
