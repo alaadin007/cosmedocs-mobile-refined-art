@@ -478,6 +478,99 @@
 /treatments/diamond-tip-microdermabrasion  /treatments/microneedling/  301
 /treatments/diamond-tip-microdermabrasion/ /treatments/microneedling/  301
 
+# Downturned mouth
+/treatments/downturned-mouth-botox         /treatments/botox/          301
+/treatments/downturned-mouth-botox/        /treatments/botox/          301
+
+# Eczema
+/treatments/eczema-treatment               /concerns/                  301
+/treatments/eczema-treatment/              /concerns/                  301
+
+# Emsculpt
+/treatments/emsculpt-non-invasive-fat-reduction-treatment  /treatments/fat-dissolving/ 301
+/treatments/emsculpt-non-invasive-fat-reduction-treatment/ /treatments/fat-dissolving/ 301
+
+# Thread veins / volume loss / fine lines
+/treatments/facial-thread-veins-treatment  /concerns/                  301
+/treatments/facial-thread-veins-treatment/ /concerns/                  301
+/treatments/facial-volume-loss             /treatments/dermal-fillers/ 301
+/treatments/facial-volume-loss/            /treatments/dermal-fillers/ 301
+/treatments/fine-lines-and-wrinkles        /treatments/botox/          301
+/treatments/fine-lines-and-wrinkles/       /treatments/botox/          301
+
+# Forehead fillers
+/treatments/forehead-fillers               /treatments/dermal-fillers/ 301
+/treatments/forehead-fillers/              /treatments/dermal-fillers/ 301
+
+# Hydrafacial
+/treatments/hydrafacial-london             /treatments/hydrafacial/    301
+/treatments/hydrafacial-london/            /treatments/hydrafacial/    301
+
+# Jawline filler (already canonical but catch old slug)
+/treatments/jawline-filler                 /treatments/jawline-filler/ 301
+
+# Laser
+/treatments/laser-hair-removal             /treatments/laser-hair-removal/ 301
+/treatments/laser-hair-removal-treatment   /treatments/laser-hair-removal/ 301
+/treatments/laser-hair-removal-treatment/  /treatments/laser-hair-removal/ 301
+/treatments/laser-treatments               /treatments/laser-hair-removal/ 301
+/treatments/laser-treatments/              /treatments/laser-hair-removal/ 301
+
+# Leg vein / lifestyle
+/treatments/leg-vein-sclerotherapy         /concerns/                  301
+/treatments/leg-vein-sclerotherapy/        /concerns/                  301
+/treatments/lifestyle-medicine             /                           301
+/treatments/lifestyle-medicine/            /                           301
+
+# Lip fillers
+/treatments/lip-fillers-injections         /treatments/lip-fillers/    301
+/treatments/lip-fillers-injections/        /treatments/lip-fillers/    301
+
+# Masseter duplicates
+/treatments/masseter-botox-002             /treatments/masseter-botox/ 301
+/treatments/masseter-botox-002/            /treatments/masseter-botox/ 301
+
+# Med spa facials
+/treatments/med-spa-facials                /treatments/chemical-peel/  301
+/treatments/med-spa-facials/               /treatments/chemical-peel/  301
+
+# Microneedling
+/treatments/microneedling-treatment        /treatments/microneedling/  301
+/treatments/microneedling-treatment/       /treatments/microneedling/  301
+
+# Mole removal
+/treatments/mole-skin-tag-removal          /concerns/                  301
+/treatments/mole-skin-tag-removal/         /concerns/                  301
+
+# Morpheus8
+/treatments/morpheus8                      /                           301
+/treatments/morpheus8/                     /                           301
+
+# Nasal flare
+/treatments/nasal-flare-botox              /treatments/botox/          301
+/treatments/nasal-flare-botox/             /treatments/botox/          301
+
+# Neck fillers / necklines
+/treatments/neck-fillers                   /treatments/dermal-fillers/ 301
+/treatments/neck-fillers/                  /treatments/dermal-fillers/ 301
+/treatments/necklines-wrinkles-and-cords   /treatments/botox/          301
+/treatments/necklines-wrinkles-and-cords/  /treatments/botox/          301
+
+# Non-surgical nose job
+/treatments/non-surgical-nose-job          /treatments/nose-filler/    301
+/treatments/non-surgical-nose-job/         /treatments/nose-filler/    301
+
+# Oily skin botox
+/treatments/oily-skin-botox               /treatments/botox/          301
+/treatments/oily-skin-botox/              /treatments/botox/          301
+
+# O-shot
+/treatments/o-shot-treatment               /                           301
+/treatments/o-shot-treatment/              /                           301
+
+# Peel to reveal
+/treatments/peel-to-reveal                 /treatments/peel-to-reveal/ 301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
