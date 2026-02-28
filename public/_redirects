@@ -636,6 +636,17 @@
 /treatments/weight-loss-programmes/        /                           301
 
 # =====================================================
+# PHASE 8: Legacy structural redirects
+# =====================================================
+/contact-us/                                /contact/                                         301
+/team/dr-hassan/                            /our-team/dr-hassan-mirza/                        301
+/cosmedocs-team/                            /our-team/                                        301
+/cosmetic-treatments/                       /treatments/                                      301
+/concerns/hyperpigmentation/                /concerns/pigmentation-melasma/                   301
+/before-after/skin-rejuvnation/polynucleotides/  /before-after/skin-rejuvenation/polynucleotides/  301
+/before-after/skin-rejuvnation/             /before-after/skin-rejuvenation/                  301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
