@@ -290,4 +290,12 @@
     <mobile:mobile/>
   </url>
 
+  <url>
+    <loc>https://www.cosmedocs.com/media-news/</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
 </urlset>

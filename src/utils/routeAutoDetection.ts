@@ -17,7 +17,8 @@ const ROUTE_REGISTRY = {
     '/thank-you/', '/fellowship-invitation/', '/8-point-facelift/', '/blog/',
     '/aesthetic-training/', '/testimonials/', '/aesthetics-at-a-glance/',
     '/home', '/home2', '/our-team/dr-ahmed-haq/', '/our-team/dr-hena-haq/', '/our-team/laerta-aesthetician/',
-    '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/', '/admin/video-upload'
+    '/our-team/dr-hassan-mirza/', '/our-team/dr-noor-hotaki/', '/admin/video-upload',
+    '/media-news/'
   ],
   treatments: [
     // Core aesthetic treatments
