@@ -693,6 +693,34 @@
 /revitalise/revitalise-c20-vitamin-c-serum-for-face               /shop/    301
 
 # =====================================================
+# PHASE 10: Legacy Skin Education Guide Sub-Pages
+# =====================================================
+/skin-education-guide/visible-skin-signs-of-ageing/                           /skin-education-guide/  301
+/skin-education-guide/understanding-sun-protection-rating/                     /skin-education-guide/  301
+/skin-education-guide/understanding-different-types-sunscreens-choosing-right-one/  /skin-education-guide/  301
+/skin-education-guide/understanding-anti-ageing/                               /skin-education-guide/  301
+/skin-education-guide/types-of-sensitive-skin/                                 /skin-education-guide/  301
+/skin-education-guide/the-s-of-cres-principles-stimulate/                      /skin-education-guide/  301
+/skin-education-guide/the-revitalise-of-cres-principles/                       /skin-education-guide/  301
+/skin-education-guide/the-cleanse-of-cres-principles/                          /skin-education-guide/  301
+/skin-education-guide/sunscreen-application/                                   /skin-education-guide/  301
+/skin-education-guide/sun-protection-advice/                                   /skin-education-guide/  301
+/skin-education-guide/reverse-photoageing/                                     /skin-education-guide/  301
+/skin-education-guide/important-considerations-sunscreens/                     /skin-education-guide/  301
+/skin-education-guide/hypodermis-deepest-skin-layer/                           /skin-education-guide/  301
+/skin-education-guide/how-to-stay-protected-from-sun/                          /skin-education-guide/  301
+/skin-education-guide/epidermis-first-skin-layer/                              /skin-education-guide/  301
+/skin-education-guide/e-cres-principles-exfoliate/                             /skin-education-guide/  301
+/skin-education-guide/different-types-of-allergic-reactions/                    /skin-education-guide/  301
+/skin-education-guide/dermis-the-second-skin-layer/                            /skin-education-guide/  301
+/skin-education-guide/debate-on-the-effectiveness-of-sunblock/                 /skin-education-guide/  301
+/skin-education-guide/cres-principles-a-summary/                               /skin-education-guide/  301
+/skin-education-guide/causes-skin-ageing-summary/                              /skin-education-guide/  301
+/skin-education-guide/care-sensitive-skin/                                      /skin-education-guide/  301
+/skin-education-guide/biophysical-skin-changes-depth-analysis/                 /skin-education-guide/  301
+/skin-education-guide/10-tips-sensitive-skin/                                  /skin-education-guide/  301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
