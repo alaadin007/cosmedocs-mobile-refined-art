@@ -647,6 +647,52 @@
 /before-after/skin-rejuvnation/             /before-after/skin-rejuvenation/                  301
 
 # =====================================================
+# PHASE 9: Legacy Product/Shop URL Migration
+# =====================================================
+/products-range/                            /shop/    301
+/products-range                             /shop/    301
+/revitalise/obagi-professional-vitamin-c-serum-l-ascorbic-acid/   /shop/    301
+/revitalise/obagi-professional-vitamin-c-serum-l-ascorbic-acid    /shop/    301
+/cleanse/cleanse-deep-pore-facial-cleanser/                       /shop/    301
+/cleanse/cleanse-deep-pore-facial-cleanser                        /shop/    301
+/sun-protection/protect-spf-50-broad-spectrum-sun-protection-gel/ /shop/    301
+/sun-protection/protect-spf-50-broad-spectrum-sun-protection-gel  /shop/    301
+/sun-protection/protect-spf-20-broad-spectrum-sun-protection-gel/ /shop/    301
+/sun-protection/protect-spf-20-broad-spectrum-sun-protection-gel  /shop/    301
+/skin-care-packages/restore-skin-barrier-plus/                    /shop/    301
+/skin-care-packages/restore-skin-barrier-plus                     /shop/    301
+/sun-protection/heliocare-advanced-gel-spf-50/                    /shop/    301
+/sun-protection/heliocare-advanced-gel-spf-50                     /shop/    301
+/sun-protection/heliocare-tinted-gel-cream-light-spf-50/          /shop/    301
+/sun-protection/heliocare-tinted-gel-cream-light-spf-50           /shop/    301
+/sun-protection/heliocare-tinted-gel-cream-brown-spf-50/          /shop/    301
+/sun-protection/heliocare-tinted-gel-cream-brown-spf-50           /shop/    301
+/exfoliate/neostrata-renewal-cream/                               /shop/    301
+/exfoliate/neostrata-renewal-cream                                /shop/    301
+/stimulate/obagi-retinol-cream/                                   /shop/    301
+/stimulate/obagi-retinol-cream                                    /shop/    301
+/stimulate/stimulate-mp-multi-peptide-facial-serum/               /shop/    301
+/stimulate/stimulate-mp-multi-peptide-facial-serum                /shop/    301
+/stimulate/retinaldehyde/                                         /shop/    301
+/stimulate/retinaldehyde                                          /shop/    301
+/sun-protection/spf-30-photo-reflective-tint/                     /shop/    301
+/sun-protection/spf-30-photo-reflective-tint                      /shop/    301
+/revitalise/obagi-professional-c-serum-15/                        /shop/    301
+/revitalise/obagi-professional-c-serum-15                         /shop/    301
+/revitalise/revitalise-c12-ferulic-acid/                          /shop/    301
+/revitalise/revitalise-c12-ferulic-acid                           /shop/    301
+/exfoliate/exfoliate-plus-exfoliator-gel/                         /shop/    301
+/exfoliate/exfoliate-plus-exfoliator-gel                          /shop/    301
+/exfoliate/exfoliate-facial-exfoliator-gel/                       /shop/    301
+/exfoliate/exfoliate-facial-exfoliator-gel                        /shop/    301
+/revitalise/revitalise-c12-vitamin-c-facial-serum/                /shop/    301
+/revitalise/revitalise-c12-vitamin-c-facial-serum                 /shop/    301
+/stimulate/retinol-cream/                                         /shop/    301
+/stimulate/retinol-cream                                          /shop/    301
+/revitalise/revitalise-c20-vitamin-c-serum-for-face/              /shop/    301
+/revitalise/revitalise-c20-vitamin-c-serum-for-face               /shop/    301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
