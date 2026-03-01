@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Star } from "lucide-react";
-import Layout from "@/components/Layout";
+
 
 const products = [
   {
@@ -36,7 +36,7 @@ const products = [
 
 const Shop = () => {
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Shop Cosmeceuticals | Potent Targeted Skincare | Cosmedocs</title>
         <meta
@@ -205,7 +205,7 @@ const Shop = () => {
           patients at our Harley Street clinic in London. Free shipping on orders over £50.
         </p>
       </div>
-    </Layout>
+    </>
   );
 };
 
