@@ -59,6 +59,7 @@ const BotoxDublin = lazy(() => import("./pages/BotoxDublin"));
 const Partners = lazy(() => import("./pages/Partners"));
 const MediaNews = lazy(() => import("./pages/MediaNews"));
 const Shop = lazy(() => import("./pages/Shop"));
+const SkinEducationGuide = lazy(() => import("./pages/SkinEducationGuide"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
 const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
@@ -279,6 +280,8 @@ const App = () => {
                           <Route path="/media-news/" element={<MediaNews />} />
                           <Route path="/shop" element={<Shop />} />
                           <Route path="/shop/" element={<Shop />} />
+                          <Route path="/skin-education-guide" element={<SkinEducationGuide />} />
+                          <Route path="/skin-education-guide/" element={<SkinEducationGuide />} />
                           <Route path="/auth" element={<Auth />} />
                           <Route path="/dashboard" element={<Dashboard />} />
                           <Route path="/admin/video-upload" element={<VideoUpload />} />
