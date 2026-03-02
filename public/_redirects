@@ -223,7 +223,8 @@
 /book-consultation                /contact/                           301
 /book-consultation/               /contact/                           301
 /price-list                       /prices/                            301
-/skin-boosters                    /treatments/                        301
+/skin-boosters                    /treatments/skin-rejuvenation/      301
+/skin-boosters/                   /treatments/skin-rejuvenation/      301
 /about                            /about-us/                          301
 /about/                           /about-us/                          301
 

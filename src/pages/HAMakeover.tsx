@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 
 export default function HAMakeover() {
   const seoData = generateSEOMetadata(
-    "HA Makeover | Full-Face Dermal Filler Rejuvenation | CosmeDocs Harley Street",
-    "Bespoke HA Makeover — full-face dermal filler rejuvenation by GMC-registered doctors on Harley Street. Anatomy-led planning for invisible, natural results since 2007.",
+    "HA Makeover | Full-Face Rejuvenation | Cosmedocs",
+    "Bespoke HA Makeover — full-face dermal filler rejuvenation by GMC-registered doctors on Harley Street. Natural results since 2007.",
     "/treatments/ha-makeover/"
   );
 

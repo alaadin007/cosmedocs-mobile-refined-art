@@ -8,7 +8,7 @@ import BlogAuthorEEAT from "@/components/blog/BlogAuthorEEAT";
 
 export default function Turning30AestheticGuide() {
   const seoData = generateSEOMetadata(
-    "Turning 30 in 2026: The Smart Woman's Guide to Preventative Aesthetics | CosmeDocs",
+    "Turning 30 Aesthetics Guide 2026 | CosmeDocs",
     "Preventative Botox, skin boosters, collagen banking & subtle lip refinement — what women approaching 30 actually need (and what they don't). Evidence-based guide from Harley Street doctors.",
     "/turning-30-aesthetic-guide/"
   );
