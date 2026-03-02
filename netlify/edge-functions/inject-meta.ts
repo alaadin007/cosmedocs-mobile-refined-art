@@ -27,10 +27,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Lip Flip London | Botox Lip Enhancement | Cosmedocs',
     description: 'Subtle lip enhancement with the Botox lip flip. Non-filler alternative for a natural pout. Doctor-led on Harley Street.'
   },
-  '/treatments/oily-skin-botox/': {
-    title: 'Botox for Oily Skin London | Cosmedocs Harley Street',
-    description: 'Reduce excess oil production with micro-Botox. Minimise pores & control shine. Doctor-led treatment on Harley Street.'
-  },
+  // oily-skin-botox removed: redirects to /treatments/botox/
   '/treatments/trap-botox/': {
     title: 'Trap Botox London | Trapezius Slimming | Cosmedocs',
     description: 'Slim your trapezius muscles with Trap Botox. Elongate your neck & relieve shoulder tension. Doctor-led on Harley Street.'
@@ -629,6 +626,17 @@ export default async function handler(request: Request, context: any) {
     );
   } else {
     html = html.replace('</head>', `  <meta name="description" content="${meta.description}" />\n</head>`);
+  }
+
+  // Inject or replace canonical tag to match sitemap URLs
+  const canonicalUrl = `https://www.cosmedocs.com${path}`;
+  if (/<link\s+rel=["']canonical["']\s+href=["'].*?["']\s*\/?>/i.test(html)) {
+    html = html.replace(
+      /<link\s+rel=["']canonical["']\s+href=["'].*?["']\s*\/?>/i,
+      `<link rel="canonical" href="${canonicalUrl}" />`
+    );
+  } else {
+    html = html.replace('</head>', `  <link rel="canonical" href="${canonicalUrl}" />\n</head>`);
   }
 
   return new Response(html, {
