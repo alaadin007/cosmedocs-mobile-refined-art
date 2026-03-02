@@ -42,8 +42,9 @@ const Auth = () => {
   return (
     <>
       <Helmet>
-        <title>Sign In - CosmeDocs Assessment Portal</title>
-        <meta name="description" content="Sign in to access your facial, hair, and skin lesion assessment results on CosmeDocs." />
+        <title>Sign In | CosmeDocs AI Aesthetic Assessment</title>
+        <meta name="description" content="Sign in to your CosmeDocs AI assessment portal. Access facial, hair and skin analysis results from our Harley Street clinic." />
+        <link rel="canonical" href="https://ai.cosmedocs.com/auth/" />
       </Helmet>
 
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
