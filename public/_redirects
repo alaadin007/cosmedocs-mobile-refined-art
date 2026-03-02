@@ -721,6 +721,12 @@
 /skin-education-guide/10-tips-sensitive-skin/                                  /skin-education-guide/  301
 
 # =====================================================
+# Duplicate content consolidation
+# =====================================================
+/home2      /   301
+/home2/     /   301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200

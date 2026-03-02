@@ -580,12 +580,24 @@ function normalisePath(path: string): string {
 
 export default async function handler(request: Request, context: any) {
   const url = new URL(request.url);
-  const path = normalisePath(url.pathname);
+  const rawPath = url.pathname;
 
-  // Only process HTML page requests, skip assets
-  if (/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|otf|json|xml|txt|mp4|webm|webp)$/i.test(url.pathname)) {
+  // Skip asset requests entirely
+  if (/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|otf|json|xml|txt|mp4|webm|webp)$/i.test(rawPath)) {
     return context.next();
   }
+
+  // 301 redirect non-trailing-slash HTML paths to trailing-slash version
+  if (rawPath !== '/' && !rawPath.endsWith('/') && !/\.[a-zA-Z0-9]+$/.test(rawPath)) {
+    const newUrl = new URL(request.url);
+    newUrl.pathname = rawPath + '/';
+    return new Response(null, {
+      status: 301,
+      headers: { Location: newUrl.toString() },
+    });
+  }
+
+  const path = normalisePath(rawPath);
 
   const response = await context.next();
   const contentType = response.headers.get('content-type') || '';
