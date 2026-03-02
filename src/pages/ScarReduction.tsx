@@ -89,7 +89,7 @@ const medicalBusinessSchema = {
       "closes": "17:00"
     }
   ],
-  "medicalSpecialty": "Dermatology"
+  
 };
 
 const faqSchema = {

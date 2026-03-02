@@ -154,7 +154,7 @@ const MarionnetteLines = () => {
         "@id": "https://www.cosmedocs.com/#physician-ahmed-haq",
         "name": "Dr. Ahmed Haq",
         "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
-        "medicalSpecialty": "Aesthetic Medicine",
+        
         "worksFor": {
           "@id": "https://www.cosmedocs.com/#organization"
         }

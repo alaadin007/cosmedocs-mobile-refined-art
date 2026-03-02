@@ -157,11 +157,6 @@ export default function Home2() {
             },
             "telephone": "+442037333227",
             "priceRange": "£££",
-            "medicalSpecialty": [
-              "Aesthetic Medicine",
-              "Dermatology",
-              "Cosmetic Medicine"
-            ],
             "founder": {
               "@type": "Person",
               "name": "Dr Ahmed Haq",

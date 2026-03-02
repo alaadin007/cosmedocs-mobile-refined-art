@@ -154,7 +154,7 @@ const DermalFillerAreas = () => {
                   "postalCode": "W1G 9PF",
                   "addressCountry": "GB"
                 },
-                "medicalSpecialty": "Aesthetic Medicine",
+                
                 "openingHoursSpecification": [
                   {
                     "@type": "OpeningHoursSpecification",

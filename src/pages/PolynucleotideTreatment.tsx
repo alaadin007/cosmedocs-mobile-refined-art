@@ -42,7 +42,7 @@ const PolynucleotideTreatment = () => {
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({ "@context": "https://schema.org", "@graph": [
-            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }, "medicalSpecialty": "Aesthetic Medicine" },
+            { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" } },
             { "@type": "MedicalProcedure", "name": "Polynucleotide Treatment", "description": "Advanced DNA repair therapy using PDRN to stimulate cellular regeneration for skin rejuvenation and hair restoration.", "url": "https://www.cosmedocs.com/treatments/polynucleotides/", "procedureType": "NoninvasiveProcedure" },
             { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
           ] })}

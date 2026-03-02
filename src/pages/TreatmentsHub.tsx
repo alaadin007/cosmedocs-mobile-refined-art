@@ -152,10 +152,6 @@ const TreatmentsHub = () => {
                 name: "Aesthetic Treatments",
                 description: seoData.description,
                 isPartOf: { "@id": "https://cosmedocs.com/#website" },
-                about: {
-                  "@type": "MedicalSpecialty",
-                  name: "Aesthetic Medicine",
-                },
               },
               {
                 "@type": "BreadcrumbList",

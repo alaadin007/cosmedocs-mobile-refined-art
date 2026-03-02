@@ -54,7 +54,7 @@ const CheekFiller = () => {
           postalCode: "W1G 8QR",
           addressCountry: "GB",
         },
-        medicalSpecialty: "Aesthetic Medicine",
+        
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "4.9",

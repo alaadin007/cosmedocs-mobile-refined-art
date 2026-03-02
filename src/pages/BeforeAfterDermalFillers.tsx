@@ -115,7 +115,7 @@ const BeforeAfterDermalFillers = () => {
                   "postalCode": "W1G 9PF",
                   "addressCountry": "GB"
                 },
-                "medicalSpecialty": "Aesthetic Medicine"
+                
               },
               {
                 "@type": "ImageGallery",

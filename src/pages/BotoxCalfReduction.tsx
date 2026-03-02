@@ -132,7 +132,7 @@ const BotoxCalfReduction = () => {
               {
                 "@type": "Physician",
                 "name": "Dr. Ahmed Haq",
-                "medicalSpecialty": "Aesthetic Medicine",
+                
                 "worksFor": {
                   "@id": "https://www.cosmedocs.com/#organization"
                 }

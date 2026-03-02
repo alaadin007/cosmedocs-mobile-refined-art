@@ -107,7 +107,7 @@ const Index = () => {
                 "closes": "16:00"
               }
             ],
-            "medicalSpecialty": "Cosmetic Medicine",
+            
             "availableService": [
               {
                 "@type": "MedicalProcedure",

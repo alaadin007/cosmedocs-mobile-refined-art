@@ -377,7 +377,7 @@ export default function CO2LaserResurfacing() {
       "bestRating": "5",
       "ratingCount": "312"
     },
-    "medicalSpecialty": "Dermatology",
+    
     "availableService": {
       "@type": "MedicalProcedure",
       "name": "CO2 Laser Resurfacing",
