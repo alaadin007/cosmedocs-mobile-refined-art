@@ -11,8 +11,8 @@ import ExpandableSection from "@/components/ui/expandable-section";
 
 const SkinRejuvenationHub = () => {
   const seoData = generateSEOMetadata(
-    "Skin Rejuvenation | Bio-Remodelling & Skin Quality | Cosmedocs Harley Street",
-    "Explore our skin rejuvenation treatments including Profhilo, Polynucleotides, PRP, Microneedling, Chemical Peels, HydraFacial, PDO Threads, and fat dissolving. Doctor-led care on Harley Street.",
+    "Skin Rejuvenation London | Cosmedocs Harley Street",
+    "Advanced skin rejuvenation including Profhilo, polynucleotides, PRP, microneedling & chemical peels. Doctor-led on Harley Street.",
     "/treatments/skin-rejuvenation/"
   );
 

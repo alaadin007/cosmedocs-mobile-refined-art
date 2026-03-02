@@ -533,7 +533,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     description: 'Expert treatment for hyperpigmentation and dark spots. Pico laser, chemical peels & prescription skincare.'
   },
   '/turning-30-aesthetic-guide/': {
-    title: 'Turning 30 in 2026: Smart Guide to Preventative Aesthetics | CosmeDocs',
+    title: 'Turning 30 Aesthetics Guide 2026 | CosmeDocs',
     description: 'Baby Botox, skin boosters, collagen banking & subtle lip refinement — the honest guide to what women approaching 30 actually need. By Harley Street doctors.'
   },
   // AI Assessment Pages (ai.cosmedocs.com)
