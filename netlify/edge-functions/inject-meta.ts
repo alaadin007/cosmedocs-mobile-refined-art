@@ -536,6 +536,39 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Turning 30 in 2026: Smart Guide to Preventative Aesthetics | CosmeDocs',
     description: 'Baby Botox, skin boosters, collagen banking & subtle lip refinement — the honest guide to what women approaching 30 actually need. By Harley Street doctors.'
   },
+  // AI Assessment Pages (ai.cosmedocs.com)
+  '/auth/': {
+    title: 'Sign In | CosmeDocs AI Aesthetic Assessment',
+    description: 'Sign in to your CosmeDocs AI assessment portal. Access facial, hair and skin analysis results from our Harley Street clinic.'
+  },
+  '/dashboard/': {
+    title: 'My Assessments Dashboard | CosmeDocs AI',
+    description: 'View and manage your facial, hair and skin lesion assessment history. Track your aesthetic journey with CosmeDocs AI tools.'
+  },
+  '/facial-assessment/': {
+    title: 'AI Facial Assessment | CosmeDocs Harley Street',
+    description: 'AI-powered facial analysis evaluating skin quality, volume loss and ageing signs. Get personalised treatment recommendations from CosmeDocs.'
+  },
+  '/advanced-facial-assessment/': {
+    title: 'Advanced AI Facial Assessment | CosmeDocs',
+    description: 'Comprehensive AI facial analysis with detailed scoring across dynamic lines, static lines, volume and skin surface. CosmeDocs Harley Street.'
+  },
+  '/hair-assessment/': {
+    title: 'AI Hair Analysis | CosmeDocs Harley Street',
+    description: 'AI-powered hair and scalp assessment. Evaluate hair density, thinning patterns and get personalised restoration recommendations from CosmeDocs.'
+  },
+  '/skin-lesion/': {
+    title: 'AI Skin Lesion Analysis | CosmeDocs Harley Street',
+    description: 'AI-assisted skin lesion screening and analysis. Upload images for preliminary assessment by CosmeDocs dermatology specialists.'
+  },
+  '/dental/': {
+    title: 'AI Dental Assessment | CosmeDocs Harley Street',
+    description: 'AI-powered dental and smile assessment. Evaluate smile aesthetics and get recommendations for treatments including gummy smile Botox.'
+  },
+  '/privacy/': {
+    title: 'Privacy Policy | CosmeDocs AI Assessment',
+    description: 'How CosmeDocs protects your data and privacy during AI aesthetic assessments. GDPR compliant data handling at our Harley Street clinic.'
+  },
 };
 
 // Normalise path: ensure trailing slash

@@ -88,8 +88,9 @@ const Dashboard = () => {
   return (
     <>
       <Helmet>
-        <title>Dashboard - CosmeDocs Assessment Portal</title>
-        <meta name="description" content="View your facial, hair, and skin lesion assessment results." />
+        <title>My Assessments Dashboard | CosmeDocs AI</title>
+        <meta name="description" content="View and manage your facial, hair and skin lesion assessment history. Track your aesthetic journey with CosmeDocs AI tools." />
+        <link rel="canonical" href="https://ai.cosmedocs.com/dashboard/" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
