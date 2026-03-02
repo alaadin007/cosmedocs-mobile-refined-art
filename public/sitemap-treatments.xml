@@ -28,13 +28,7 @@
     <mobile:mobile/>
   </url>
 
-  <url>
-    <loc>https://www.cosmedocs.com/treatments/oily-skin-botox/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
+  <!-- oily-skin-botox removed: redirects to /treatments/botox/ -->
 
   <url>
     <loc>https://www.cosmedocs.com/treatments/trap-botox/</loc>
