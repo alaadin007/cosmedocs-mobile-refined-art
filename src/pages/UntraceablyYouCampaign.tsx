@@ -45,11 +45,9 @@ export default function UntraceablyYouCampaign() {
         <section className="relative py-20 md:py-28">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
+            <div
               className="absolute -top-40 left-[-10%] w-[600px] h-[600px] rounded-full"
               style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.04) 0%, transparent 60%)' }}
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
           <div className="relative max-w-4xl mx-auto px-4 text-center">
@@ -73,7 +71,7 @@ export default function UntraceablyYouCampaign() {
         </section>
 
         {/* Content + Sidebar */}
-        <section className="max-w-7xl mx-auto px-4 py-12">
+        <section className="max-w-7xl mx-auto px-4 py-12 lazy-section">
           <div className="grid lg:grid-cols-[1fr_240px] gap-12">
             <article className="max-w-3xl">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="space-y-8">
