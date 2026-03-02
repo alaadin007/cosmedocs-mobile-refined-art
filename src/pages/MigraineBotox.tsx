@@ -91,7 +91,7 @@ const MigraineBotox = () => {
                   "postalCode": "W1G 9PF",
                   "addressCountry": "GB"
                 },
-                "medicalSpecialty": "Therapeutic Medicine",
+                
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "4.9",

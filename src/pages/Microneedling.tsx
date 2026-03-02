@@ -53,7 +53,7 @@ const Microneedling = () => {
                 "name": "CosmeDocs",
                 "url": "https://www.cosmedocs.com/",
                 "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
-                "medicalSpecialty": "Aesthetic Medicine"
+                
               },
               {
                 "@type": "MedicalProcedure",

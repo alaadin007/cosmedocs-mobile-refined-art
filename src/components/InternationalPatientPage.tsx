@@ -49,7 +49,7 @@ const InternationalPatientPage = ({ data, images }: Props) => {
       "addressCountry": "GB"
     },
     "availableLanguage": ["English"],
-    "medicalSpecialty": "Cosmetic Medicine"
+    
   };
 
   return (

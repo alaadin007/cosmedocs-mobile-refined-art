@@ -92,7 +92,7 @@ const LipFillers = () => {
                   "postalCode": "W1G 9PF",
                   "addressCountry": "GB"
                 },
-                "medicalSpecialty": "Aesthetic Medicine",
+                
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "4.9",

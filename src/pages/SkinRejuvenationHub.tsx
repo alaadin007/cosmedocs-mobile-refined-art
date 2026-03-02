@@ -55,7 +55,7 @@ const SkinRejuvenationHub = () => {
                 "description": "Doctor-led skin rejuvenation treatments on Harley Street, London",
                 "url": "https://www.cosmedocs.com/treatments/skin-rejuvenation/",
                 "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
-                "medicalSpecialty": "Aesthetic Medicine"
+                
               },
               {
                 "@type": "BreadcrumbList",

@@ -79,7 +79,7 @@ const TrapBotox = () => {
                   "postalCode": "W1G 9PF",
                   "addressCountry": "GB"
                 },
-                "medicalSpecialty": "Aesthetic Medicine",
+                
                 "openingHoursSpecification": [
                   { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
                   { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00" }

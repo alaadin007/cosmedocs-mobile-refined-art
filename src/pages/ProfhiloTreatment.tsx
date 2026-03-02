@@ -59,7 +59,7 @@ const ProfhiloTreatment = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
-              { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }, "medicalSpecialty": "Aesthetic Medicine" },
+              { "@type": "MedicalBusiness", "name": "CosmeDocs", "url": "https://www.cosmedocs.com/", "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" } },
               { "@type": "MedicalProcedure", "name": "Profhilo Bio-Remodelling Treatment", "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production.", "url": "https://www.cosmedocs.com/treatments/profhilo/", "procedureType": "NoninvasiveProcedure", "bodyLocation": "Face, Neck, Hands" },
               { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }
             ]
