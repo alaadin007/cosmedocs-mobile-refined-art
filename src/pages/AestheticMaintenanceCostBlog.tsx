@@ -51,16 +51,6 @@ const AestheticMaintenanceCostBlog = () => {
         {/* Hero */}
         <section className="relative py-20 md:py-28">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
-          {/* Gold orb */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
-              className="absolute -top-40 right-[-10%] w-[500px] h-[500px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.05) 0%, transparent 60%)' }}
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
-
           <div className="relative max-w-4xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -88,15 +78,10 @@ const AestheticMaintenanceCostBlog = () => {
         </section>
 
         {/* Content + Sidebar */}
-        <section className="max-w-7xl mx-auto px-4 py-12">
+        <section className="max-w-7xl mx-auto px-4 py-12 lazy-section">
           <div className="grid lg:grid-cols-[1fr_240px] gap-12">
             <article className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-8"
-              >
+              <div className="space-y-8">
                 {/* Intro */}
                 <p className="text-white/45 text-lg font-light leading-relaxed">
                   Let's be honest: nobody walks into a clinic thinking about the <em>fifth</em> appointment.
@@ -136,7 +121,7 @@ const AestheticMaintenanceCostBlog = () => {
                 </div>
 
                 {/* Section: What Treatments Actually Cost Over Time */}
-                <div className="pt-6">
+                <div className="pt-6 lazy-section">
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                     What Treatments <span className="text-[#C9A050] font-light">Actually Cost Over Time</span>
@@ -188,7 +173,7 @@ const AestheticMaintenanceCostBlog = () => {
                 </div>
 
                 {/* Section: The Hidden Cost of Switching */}
-                <div className="pt-6">
+                <div className="pt-6 lazy-section">
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                     The Hidden Cost of <span className="text-[#C9A050] font-light">Switching Clinics</span>
@@ -225,7 +210,7 @@ const AestheticMaintenanceCostBlog = () => {
                 </div>
 
                 {/* Section: How to Budget Intelligently */}
-                <div className="pt-6">
+                <div className="pt-6 lazy-section">
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                     How to Budget <span className="text-[#C9A050] font-light">Intelligently</span>
@@ -264,7 +249,7 @@ const AestheticMaintenanceCostBlog = () => {
                 </div>
 
                 {/* Section: What Experience Buys You */}
-                <div className="pt-6">
+                <div className="pt-6 lazy-section">
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                     What Experience <span className="text-[#C9A050] font-light">Actually Buys You</span>
@@ -294,7 +279,7 @@ const AestheticMaintenanceCostBlog = () => {
                 </div>
 
                 {/* Section: The Long Game */}
-                <div className="pt-6">
+                <div className="pt-6 lazy-section">
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                     The Long Game: <span className="text-[#C9A050] font-light">Prevention Over Correction</span>
@@ -326,7 +311,7 @@ const AestheticMaintenanceCostBlog = () => {
                 </div>
 
                 {/* Conclusion & CTA */}
-                <div className="pt-6">
+                <div className="pt-6 lazy-section">
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
                   <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                     Choosing <span className="text-[#C9A050] font-light">Wisely</span>
@@ -394,7 +379,7 @@ const AestheticMaintenanceCostBlog = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </article>
 
             {/* Sidebar */}

@@ -156,15 +156,9 @@ const DrNoorHotaki = () => {
         </section>
 
         {/* Biography Section */}
-        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white lazy-section">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
+            <div className="max-w-4xl mx-auto">
               <div className="bg-black/30 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <GraduationCap className="h-6 w-6 text-yellow-400" />
@@ -189,20 +183,14 @@ const DrNoorHotaki = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Areas of Expertise Section */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background lazy-section">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-6xl mx-auto"
-            >
+            <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-foreground mb-4">
                   Areas of Expertise
@@ -213,15 +201,8 @@ const DrNoorHotaki = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {areasOfExpertise.map((area, index) => (
-                  <motion.div
-                    key={area}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
+                {areasOfExpertise.map((area) => (
+                  <div key={area} className="group">
                     <Card className="h-full border-border hover:border-yellow-400/50 transition-all duration-300 hover:shadow-lg hover:scale-105">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-3">
@@ -232,23 +213,17 @@ const DrNoorHotaki = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Testimonial Section */}
-        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white lazy-section">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto text-center"
-            >
+            <div className="max-w-4xl mx-auto text-center">
               <div className="mb-12">
                 <h2 className="text-3xl font-bold mb-6">Patient Testimonials</h2>
                 <div className="flex justify-center mb-8">
@@ -268,20 +243,14 @@ const DrNoorHotaki = () => {
                   <p className="text-yellow-400 font-medium">- Verified Patient</p>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black">
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black lazy-section">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-2xl mx-auto text-center"
-            >
+            <div className="max-w-2xl mx-auto text-center">
               <div className="bg-black/30 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-8">
                 <h2 className="text-3xl font-bold text-white mb-4">
                   Experience the Future of Facial Rejuvenation
@@ -296,7 +265,7 @@ const DrNoorHotaki = () => {
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 

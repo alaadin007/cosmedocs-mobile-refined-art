@@ -100,17 +100,13 @@ export default function FaceBotox() {
         <section className="relative flex items-center overflow-hidden pb-16 pt-4">
           {/* Flowing gradient orbs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
+            <div
               className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
               style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.12) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
-              animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -30, 0] }}
-              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
-            <motion.div
+            <div
               className="absolute top-1/3 -left-60 w-[500px] h-[500px] rounded-full"
               style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
-              animate={{ scale: [1, 1.2, 1], x: [0, 40, 0] }}
-              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             />
           </div>
 
@@ -167,31 +163,19 @@ export default function FaceBotox() {
                   {/* Wrinkle wave SVG lines */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <svg viewBox="0 0 500 500" className="w-[460px] h-[460px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Wave lines radiating from centre — mimicking forehead wrinkles */}
                       {[
-                        { d: "M50 250 Q125 210, 200 250 T350 250 T500 250", opacity: 0.08, delay: 0 },
-                        { d: "M30 210 Q130 165, 220 210 T370 210 T490 210", opacity: 0.1, delay: 0.5 },
-                        { d: "M30 290 Q130 335, 220 290 T370 290 T490 290", opacity: 0.1, delay: 1 },
-                        { d: "M40 170 Q140 120, 230 170 T380 170 T480 170", opacity: 0.12, delay: 1.5 },
-                        { d: "M40 330 Q140 380, 230 330 T380 330 T480 330", opacity: 0.12, delay: 2 },
-                        { d: "M60 130 Q160 80, 250 130 T400 130 T500 130", opacity: 0.07, delay: 2.5 },
-                        { d: "M60 370 Q160 420, 250 370 T400 370 T500 370", opacity: 0.07, delay: 3 },
-                        { d: "M80 95 Q180 50, 260 95 T420 95 T520 95", opacity: 0.05, delay: 3.5 },
-                        { d: "M80 405 Q180 450, 260 405 T420 405 T520 405", opacity: 0.05, delay: 4 },
+                        { d: "M50 250 Q125 210, 200 250 T350 250 T500 250", opacity: 0.08 },
+                        { d: "M30 210 Q130 165, 220 210 T370 210 T490 210", opacity: 0.1 },
+                        { d: "M30 290 Q130 335, 220 290 T370 290 T490 290", opacity: 0.1 },
+                        { d: "M40 170 Q140 120, 230 170 T380 170 T480 170", opacity: 0.12 },
+                        { d: "M40 330 Q140 380, 230 330 T380 330 T480 330", opacity: 0.12 },
+                        { d: "M60 130 Q160 80, 250 130 T400 130 T500 130", opacity: 0.07 },
+                        { d: "M60 370 Q160 420, 250 370 T400 370 T500 370", opacity: 0.07 },
+                        { d: "M80 95 Q180 50, 260 95 T420 95 T520 95", opacity: 0.05 },
+                        { d: "M80 405 Q180 450, 260 405 T420 405 T520 405", opacity: 0.05 },
                       ].map((wave, i) => (
-                        <motion.path
-                          key={i}
-                          d={wave.d}
-                          stroke="#C9A050"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          opacity={wave.opacity}
-                          initial={{ pathLength: 0, opacity: 0 }}
-                          animate={{ pathLength: 1, opacity: wave.opacity }}
-                          transition={{ duration: 2, delay: wave.delay * 0.3, ease: "easeOut" }}
-                        />
+                        <path key={i} d={wave.d} stroke="#C9A050" strokeWidth="1.5" strokeLinecap="round" opacity={wave.opacity} />
                       ))}
-                      {/* Subtle centre glow */}
                       <circle cx="250" cy="250" r="60" fill="url(#centreGlow)" />
                       <defs>
                         <radialGradient id="centreGlow" cx="0.5" cy="0.5" r="0.5">
@@ -202,12 +186,8 @@ export default function FaceBotox() {
                     </svg>
                   </div>
 
-                  {/* Floating "Trusted Clinic" badge */}
-                  <motion.div
-                    className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10"
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  >
+                  {/* Trusted Clinic badge */}
+                  <div className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#C9A050] flex items-center justify-center"><Star className="h-5 w-5 text-black fill-black" /></div>
                       <div>
@@ -215,47 +195,31 @@ export default function FaceBotox() {
                         <div className="text-xs text-white/60">Since 2007</div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
 
-                  {/* Floating "Invisible Needle" infographic */}
-                  <motion.div
-                    className="absolute top-[45%] -right-2 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10 w-[260px]"
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  >
+                  {/* Invisible Needle infographic */}
+                  <div className="absolute top-[45%] -right-2 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10 w-[260px]">
                     <div className="flex items-center gap-2 mb-3">
                       <Syringe className="w-4 h-4 text-[#C9A050]" />
                       <span className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider">Invisible Needle</span>
                     </div>
-                    {/* Needle vs Hair — diameter cross-section comparison */}
                     <svg viewBox="0 0 220 80" className="w-full mb-3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Needle cross-section circle — 33G = 0.20mm, scaled up */}
                       <circle cx="45" cy="38" r="20" stroke="#C9A050" strokeWidth="1.5" fill="#C9A050" fillOpacity="0.1" />
                       <text x="45" y="42" fill="#C9A050" fontSize="8" fontFamily="sans-serif" textAnchor="middle" fontWeight="bold">0.20mm</text>
                       <text x="45" y="10" fill="white" fillOpacity="0.6" fontSize="8" fontFamily="sans-serif" textAnchor="middle">33G Needle</text>
                       <line x1="45" y1="14" x2="45" y2="17" stroke="white" strokeWidth="0.5" strokeOpacity="0.3" />
-
-                      {/* Hair cross-section circle — 0.07mm */}
                       <circle cx="130" cy="38" r="7" stroke="white" strokeWidth="0.8" strokeOpacity="0.4" fill="white" fillOpacity="0.05" />
                       <text x="130" y="41" fill="white" fillOpacity="0.5" fontSize="6" fontFamily="sans-serif" textAnchor="middle">0.07</text>
                       <text x="130" y="10" fill="white" fillOpacity="0.4" fontSize="8" fontFamily="sans-serif" textAnchor="middle">Human Hair</text>
                       <line x1="130" y1="14" x2="130" y2="30" stroke="white" strokeWidth="0.5" strokeOpacity="0.2" />
-
-                      {/* "vs" label */}
                       <text x="88" y="42" fill="white" fillOpacity="0.2" fontSize="9" fontFamily="sans-serif" textAnchor="middle">vs</text>
-
-                      {/* Diameter label */}
                       <text x="110" y="75" fill="white" fillOpacity="0.2" fontSize="7" fontFamily="sans-serif" textAnchor="middle">Cross-section diameter</text>
                     </svg>
                     <p className="text-[10px] text-white/40 leading-relaxed">The tiniest needle in the industry — literally invisible. Only ~3× thicker than a human hair.</p>
-                  </motion.div>
+                  </div>
 
                   {/* Review teaser card */}
-                  <motion.div
-                    className="absolute bottom-16 -left-4 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-5 shadow-xl shadow-black/30 border border-white/10 max-w-[300px]"
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  >
+                  <div className="absolute bottom-16 -left-4 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-5 shadow-xl shadow-black/30 border border-white/10 max-w-[300px]">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 rounded-full bg-[#C9A050] flex items-center justify-center text-black text-xs font-bold">E</div>
                       <div>
@@ -265,7 +229,7 @@ export default function FaceBotox() {
                     </div>
                     <p className="text-xs text-white/60 leading-relaxed">"My friends keep asking what skincare I'm using because I look so refreshed but no one can tell I've had anything done!"</p>
                     <Link to="/testimonials" className="inline-flex items-center gap-1 text-xs text-[#C9A050] mt-2 hover:underline">More real experiences</Link>
-                  </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -275,7 +239,7 @@ export default function FaceBotox() {
         {/* ═══════════════════════════════════════════
             MAIN CONTENT — Two-column layout
         ═══════════════════════════════════════════ */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lazy-section">
           <div className="grid lg:grid-cols-[1fr_380px] gap-12">
             {/* LEFT — Educational Content */}
             <div className="space-y-14">

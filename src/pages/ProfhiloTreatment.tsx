@@ -72,9 +72,8 @@ const ProfhiloTreatment = () => {
         <section className="relative overflow-hidden bg-black pt-0 pb-20">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
-              animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }} />
+            <div className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }} />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb items={[{ label: 'Treatments', path: '/treatments/' }, { label: 'Skin Rejuvenation', path: '/treatments/skin-rejuvenation/' }]} currentPage="Profhilo" />
@@ -100,7 +99,7 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Two-Column Layout */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lazy-section">
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             <div className="space-y-14">
               {/* What Is Profhilo */}

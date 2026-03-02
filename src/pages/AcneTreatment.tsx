@@ -302,7 +302,7 @@ export default function AcneTreatment() {
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
+        <section className="py-16 bg-accent lazy-section">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -379,7 +379,7 @@ export default function AcneTreatment() {
 
 
         {/* What is Acne - Two Column Layout */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-accent lazy-section">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -490,7 +490,7 @@ export default function AcneTreatment() {
         </section>
 
         {/* Comprehensive Treatment Approach */}
-        <section className="py-20">
+        <section className="py-20 lazy-section">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

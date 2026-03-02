@@ -146,11 +146,9 @@ export function ThreadFaceLift() {
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
 
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
+            <div
               className="absolute -top-60 left-[-10%] w-[600px] h-[600px] rounded-full"
               style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
 
@@ -198,7 +196,7 @@ export function ThreadFaceLift() {
         {/* ═══════════════════════════════════════════
             TWO-COLUMN LAYOUT
         ═══════════════════════════════════════════ */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lazy-section">
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             {/* LEFT — Main Content */}
             <div className="space-y-14">
