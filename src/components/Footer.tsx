@@ -54,7 +54,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link to="/treatments/botox/" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Botox
+                  Anti-Wrinkle Treatment
                 </Link>
               </li>
               <li>
