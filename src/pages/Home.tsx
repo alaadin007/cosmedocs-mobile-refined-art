@@ -115,20 +115,19 @@ const Home = () => {
                 Bold • Natural • Always Your Way
               </p>
 
-              {/* AI Tools Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
+              {/* AI Tools — Inline Row */}
+              <div className="flex flex-wrap justify-center gap-3 max-w-xl mx-auto mb-10">
                 {aiTools.map((tool, i) => (
                   <motion.button
                     key={i}
                     onClick={() => handleAIAction(tool.action)}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
-                    className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C9A050]/50 rounded-2xl p-5 transition-all duration-300 hover:bg-white/10"
+                    transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
+                    className="group flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C9A050]/50 rounded-full px-4 py-2.5 transition-all duration-300 hover:bg-white/10"
                   >
-                    <tool.icon className="h-6 w-6 text-[#C9A050] mx-auto mb-3" />
-                    <p className="font-medium text-white mb-1">{tool.label}</p>
-                    <p className="text-xs text-white/50">{tool.description}</p>
+                    <tool.icon className="h-4 w-4 text-[#C9A050]" />
+                    <span className="text-sm text-white/80 font-medium">{tool.label}</span>
                   </motion.button>
                 ))}
               </div>
@@ -177,7 +176,7 @@ const Home = () => {
         <QuickAccessTreatments />
 
         {/* Trust Section */}
-        <section className="relative py-20 px-6 bg-white/[0.02]">
+        <section className="relative py-12 px-6 bg-white/[0.02]">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -223,7 +222,7 @@ const Home = () => {
         </section>
 
         {/* Philosophy Teaser */}
-        <section className="relative py-24 px-6">
+        <section className="relative py-14 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -247,7 +246,7 @@ const Home = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-24 px-6 bg-gradient-to-b from-transparent to-[#C9A050]/10">
+        <section className="relative py-14 px-6 bg-gradient-to-b from-transparent to-[#C9A050]/10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

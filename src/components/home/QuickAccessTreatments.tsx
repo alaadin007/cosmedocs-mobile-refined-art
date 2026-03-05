@@ -95,11 +95,11 @@ export default function QuickAccessTreatments() {
   return (
     <nav
       aria-label="Explore treatments"
-      className="relative py-20 md:py-24 px-6"
+      className="relative py-12 md:py-14 px-6"
     >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-light mb-3 tracking-tight">
             Explore Our <span className="text-[#C9A050]">Treatments</span>
           </h2>
