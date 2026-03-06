@@ -63,11 +63,16 @@ const treatmentCategories = [
   },
   {
     label: "Skin Boosters",
-    hubLink: "/treatments/skin-boosters/",
+    hubLink: "/treatments/skin-rejuvenation/",
     items: [
-      { title: "Skin Boosters Overview", link: "/treatments/skin-boosters/", isOverview: true },
+      { title: "Skin Boosters Overview", link: "/treatments/skin-rejuvenation/", isOverview: true },
       { title: "Profhilo", link: "/treatments/profhilo/" },
       { title: "Polynucleotides", link: "/treatments/polynucleotides/" },
+      { title: "Sunekos 200", link: "/treatments/sunekos/" },
+      { title: "Jalupro", link: "/treatments/jalupro/" },
+      { title: "Lumi Eyes", link: "/treatments/lumi-eyes/" },
+      { title: "Exosomes", link: "/treatments/exosomes/" },
+      { title: "Microneedling", link: "/treatments/microneedling/" },
       { title: "HydraFacial", link: "/treatments/hydrafacial/" },
       { title: "PRP Treatment", link: "/treatments/prp/" },
       { title: "Chemical Peel", link: "/treatments/chemical-peel/" },

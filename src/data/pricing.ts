@@ -265,9 +265,11 @@ export const skinBoostersPricing: PricingSection = {
   items: [
     { title: "PROFHILO", price: "£350 per session", description: "Bio-remodeling hyaluronic acid treatment for skin laxity and hydration", link: "/treatments/profhilo/" },
     { title: "POLYNUCLEOTIDES", price: "£300 per session", description: "DNA-based regenerative treatment to stimulate cellular renewal", link: "/treatments/polynucleotides/" },
+    { title: "SUNEKOS 200", price: "£275 per session", description: "Patented amino acid and hyaluronic acid formula for bio-revitalisation", link: "/treatments/sunekos/" },
+    { title: "JALUPRO", price: "£275 per session", description: "Amino acid complex for deep skin restructuring and fibroblast stimulation", link: "/treatments/jalupro/" },
+    { title: "LUMI EYES", price: "£250 per session", description: "Specialised polynucleotide treatment for under-eye rejuvenation", link: "/treatments/lumi-eyes/" },
+    { title: "EXOSOMES", price: "POC", description: "Next-generation regenerative therapy using cellular signalling molecules", link: "/treatments/exosomes/" },
     { title: "REDENSITY 1", price: "£250 per session", description: "Targeted skin quality enhancer for face, neck, and décolletage" },
-    { title: "JALUPRO", price: "£275 per session", description: "Amino acid complex for deep skin restructuring" },
-    { title: "SUNEKOS", price: "£275 per session", description: "Hyaluronic acid and amino acid treatment for periorbital areas" },
     { title: "MICRONEEDLING", price: "£250 per session", description: "Advanced collagen induction therapy for flawless skin rejuvenation", link: "/treatments/microneedling/" },
   ],
 };

@@ -68,6 +68,10 @@ const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
 const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
 const NonSurgicalFaceliftHub = lazy(() => import("./pages/NonSurgicalFaceliftHub"));
 const EndolaserLift = lazy(() => import("./pages/EndolaserLift"));
+const Sunekos = lazy(() => import("./pages/Sunekos"));
+const Jalupro = lazy(() => import("./pages/Jalupro"));
+const LumiEyes = lazy(() => import("./pages/LumiEyes"));
+const Exosomes = lazy(() => import("./pages/Exosomes"));
 const ThreadFaceLift = lazy(() => import("./pages/ThreadFaceLift").then(m => ({ default: m.ThreadFaceLift })));
 const TriggerPointBotox = lazy(() => import("./pages/TriggerPointBotox"));
 const AcneTreatment = lazy(() => import("./pages/AcneTreatment"));
@@ -420,6 +424,14 @@ const App = () => {
                           <Route path="/treatments/profhilo/" element={<ProfhiloTreatment />} />
                           <Route path="/treatments/polynucleotides" element={<PolynucleotideTreatment />} />
                           <Route path="/treatments/polynucleotides/" element={<PolynucleotideTreatment />} />
+                          <Route path="/treatments/sunekos" element={<Sunekos />} />
+                          <Route path="/treatments/sunekos/" element={<Sunekos />} />
+                          <Route path="/treatments/jalupro" element={<Jalupro />} />
+                          <Route path="/treatments/jalupro/" element={<Jalupro />} />
+                          <Route path="/treatments/lumi-eyes" element={<LumiEyes />} />
+                          <Route path="/treatments/lumi-eyes/" element={<LumiEyes />} />
+                          <Route path="/treatments/exosomes" element={<Exosomes />} />
+                          <Route path="/treatments/exosomes/" element={<Exosomes />} />
                           <Route path="/treatments/prp-vampire-facial" element={<PRPTreatment />} />
                           <Route path="/treatments/prp-vampire-facial/" element={<PRPTreatment />} />
                           <Route path="/treatments/prp" element={<Navigate to="/treatments/prp-vampire-facial/" replace />} />

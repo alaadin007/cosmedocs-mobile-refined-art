@@ -71,11 +71,16 @@ const categories: Category[] = [
     id: "skinBoosters",
     label: "Skin Boosters",
     items: [
-      { title: "Profhilo", link: "/profhilo" },
-      { title: "Polynucleotides", link: "/polynucleotide-treatment" },
-      { title: "HydraFacial", link: "/hydrafacial" },
-      { title: "PRP Treatment", link: "/prp-treatment" },
-      { title: "Chemical Peel", link: "/chemical-peel" },
+      { title: "Profhilo", link: "/treatments/profhilo/" },
+      { title: "Polynucleotides", link: "/treatments/polynucleotides/" },
+      { title: "Sunekos 200", link: "/treatments/sunekos/" },
+      { title: "Jalupro", link: "/treatments/jalupro/" },
+      { title: "Lumi Eyes", link: "/treatments/lumi-eyes/" },
+      { title: "Exosomes", link: "/treatments/exosomes/" },
+      { title: "Microneedling", link: "/treatments/microneedling/" },
+      { title: "HydraFacial", link: "/treatments/hydrafacial/" },
+      { title: "PRP Treatment", link: "/treatments/prp/" },
+      { title: "Chemical Peel", link: "/treatments/chemical-peel/" },
     ]
   },
   {
