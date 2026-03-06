@@ -40,6 +40,16 @@ const categories: TreatmentCategory[] = [
     ],
   },
   {
+    id: "facelift",
+    label: "Non-Surgical Facelift",
+    areas: [
+      { label: "Nefertiti Botox Lift", path: "/treatments/nefertiti-lift/" },
+      { label: "HA Makeover", path: "/treatments/ha-makeover/" },
+      { label: "PDO Thread Lift", path: "/treatments/pdo-threads/" },
+      { label: "Endolaser Lift", path: "/treatments/endolaser/" },
+    ],
+  },
+  {
     id: "skin-boosters",
     label: "Skin Boosters",
     areas: [
