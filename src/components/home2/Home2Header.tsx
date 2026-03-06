@@ -51,12 +51,14 @@ const treatmentCategories = [
     ]
   },
   {
-    label: "HA Makeover",
-    hubLink: "/treatments/ha-makeover/",
+    label: "Non-Surgical Facelift",
+    hubLink: "/treatments/non-surgical-facelift/",
     items: [
-      { title: "HA Makeover Overview", link: "/treatments/ha-makeover/", isOverview: true },
-      { title: "Full Face Rejuvenation", link: "/treatments/non-surgical-facelift/" },
-      { title: "PDO Threads", link: "/treatments/pdo-threads/" },
+      { title: "Non-Surgical Facelift Overview", link: "/treatments/non-surgical-facelift/", isOverview: true },
+      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
+      { title: "HA Makeover", link: "/treatments/ha-makeover/" },
+      { title: "PDO Thread Lift", link: "/treatments/pdo-threads/" },
+      { title: "Endolaser Lift", link: "/treatments/endolaser/" },
     ]
   },
   {
