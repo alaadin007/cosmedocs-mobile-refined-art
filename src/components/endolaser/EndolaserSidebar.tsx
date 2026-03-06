@@ -19,7 +19,7 @@ const EndolaserSidebar = () => {
           <GlanceStat icon={<Clock className="w-4 h-4" />} label="Duration" value="45–90 minutes" />
           <GlanceStat icon={<Calendar className="w-4 h-4" />} label="Results last" value="2–3+ years" />
           <GlanceStat icon={<Activity className="w-4 h-4" />} label="Recovery" value="4–5 days swelling" />
-          <GlanceStat icon={<Zap className="w-4 h-4" />} label="Technology" value="1470nm laser fibre" />
+          <GlanceStat icon={<Zap className="w-4 h-4" />} label="Technology" value="Dual 980nm + 1470nm laser" />
           <GlanceStat icon={<ShieldCheck className="w-4 h-4" />} label="Anaesthesia" value="Local anaesthetic" />
         </div>
       </motion.div>
