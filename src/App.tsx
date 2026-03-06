@@ -66,6 +66,7 @@ const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
 const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
 const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
 const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
+const NonSurgicalFaceliftHub = lazy(() => import("./pages/NonSurgicalFaceliftHub"));
 const ThreadFaceLift = lazy(() => import("./pages/ThreadFaceLift").then(m => ({ default: m.ThreadFaceLift })));
 const TriggerPointBotox = lazy(() => import("./pages/TriggerPointBotox"));
 const AcneTreatment = lazy(() => import("./pages/AcneTreatment"));
