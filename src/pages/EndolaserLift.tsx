@@ -20,7 +20,7 @@ const EndolaserLift = () => {
   const faqs = [
     {
       question: "What is the Endolaser Endolift treatment?",
-      answer: "The Endolaser Endolift is a minimally invasive laser procedure using a 1470nm laser fibre inserted beneath the skin to tighten tissue, stimulate collagen production, and reduce small pockets of fat. It delivers controlled thermal energy directly to the subdermal layer, achieving skin tightening and lifting without surgery. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
+      answer: "The Endolaser Endolift is a minimally invasive dual-wavelength laser procedure using 980nm and 1470nm laser fibres inserted beneath the skin. The 980nm wavelength targets fat reduction whilst the 1470nm wavelength delivers precise skin tightening and collagen stimulation. This combined approach achieves both fat reduction and skin tightening in a single treatment. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
     },
     {
       question: "How long do Endolaser results last?",
@@ -119,12 +119,12 @@ const EndolaserLift = () => {
                 "@type": "MedicalProcedure",
                 "name": "Endolaser Endolift Treatment",
                 "alternateName": "Endolift Laser Face Lift",
-                "description": "Minimally invasive laser skin tightening and fat reduction using 1470nm laser fibre technology for face lifting, jowl tightening, eyebrow lift, and double chin reduction.",
+                "description": "Minimally invasive dual-wavelength laser skin tightening and fat reduction using combined 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, eyebrow lift, and double chin reduction.",
                 "url": "https://www.cosmedocs.com/treatments/endolaser/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Face, Chin, Eyes, Jawline",
                 "followup": "Results visible within 2–4 weeks, continuing to improve for 3–6 months. Lasts 2–3+ years.",
-                "howPerformed": "A 1470nm laser fibre is inserted beneath the skin through micro-incisions under local anaesthetic. Controlled thermal energy tightens tissue, stimulates collagen, and reduces fat deposits with precision targeting."
+                "howPerformed": "A dual-wavelength laser fibre (980nm for fat reduction, 1470nm for skin tightening) is inserted beneath the skin through micro-incisions under local anaesthetic. The combined wavelengths simultaneously tighten tissue, stimulate collagen, and reduce fat deposits with precision targeting."
               },
               {
                 "@type": "FAQPage",
@@ -271,7 +271,7 @@ const EndolaserLift = () => {
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        The Endolaser — also known as the Endolift — is a minimally invasive laser procedure that delivers controlled thermal energy directly beneath the skin using a ultra-thin 1470nm laser fibre. Unlike external energy devices such as HIFU or Morpheus8, the laser fibre is inserted through micro-incisions to precisely target the subdermal tissue layer where collagen production, skin tightening, and fat reduction occur.
+                        The Endolaser — also known as the Endolift — is a minimally invasive dual-wavelength laser procedure that delivers controlled thermal energy directly beneath the skin. It combines two laser wavelengths: 980nm for targeted fat reduction and 1470nm for precise skin tightening and collagen stimulation. Unlike external energy devices such as HIFU or Morpheus8, the laser fibre is inserted through micro-incisions to directly target the subdermal tissue layer.
                       </p>
                     }
                   >
@@ -366,10 +366,10 @@ const EndolaserLift = () => {
                   >
                     <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
-                        Through tiny micro-incisions (typically 1–2mm), an ultra-thin 1470nm laser fibre is guided beneath the skin into the subdermal tissue plane. The laser emits controlled thermal energy at precise temperatures — hot enough to stimulate collagen contraction and new collagen synthesis, whilst simultaneously liquefying targeted fat cells.
+                        Through tiny micro-incisions (typically 1–2mm), an ultra-thin dual-wavelength laser fibre is guided beneath the skin into the subdermal tissue plane. The system combines two wavelengths working in tandem: 980nm laser energy selectively targets and liquefies fat cells, whilst the 1470nm wavelength delivers precise thermal energy to tighten skin and stimulate new collagen synthesis.
                       </p>
                       <p>
-                        The 1470nm wavelength is specifically selected for its affinity to water and fat — the two primary targets in skin tightening and body contouring. This wavelength delivers optimal thermal effect at the tissue level without damaging surrounding structures or the skin surface.
+                        This dual-wavelength approach is what sets the Endolaser apart — the 980nm wavelength has a high affinity for fat, making it exceptionally effective for contouring and fat reduction, whilst the 1470nm wavelength targets water in tissue, delivering optimal collagen contraction and skin tightening. Both wavelengths work simultaneously, achieving comprehensive rejuvenation in a single pass.
                       </p>
                       <p>
                         Your doctor monitors tissue temperature throughout the procedure using real-time feedback, ensuring consistent and safe energy delivery. The entire treatment takes 45–90 minutes depending on the number of zones treated.
@@ -473,7 +473,7 @@ const EndolaserLift = () => {
                       <p className="text-sm font-medium text-[#C9A050] mb-3">Endolaser Endolift</p>
                       <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Direct subdermal energy delivery</li>
-                        <li>• 1470nm laser precision</li>
+                        <li>• Dual 980nm + 1470nm laser precision</li>
                         <li>• Results last 2–3+ years</li>
                         <li>• Does not dissolve existing fillers</li>
                         <li>• Treats skin + fat simultaneously</li>
@@ -688,7 +688,7 @@ const EndolaserLift = () => {
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
           <h2>Endolaser Endolift London | Non-Surgical Face Lift Harley Street</h2>
-          <p>CosmeDocs offers the Endolaser Endolift treatment in London — a minimally invasive laser face lift using 1470nm laser fibre technology for skin tightening, jowl lifting, eyebrow elevation, and double chin reduction. Led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute, our Endolaser treatments deliver transformative facial rejuvenation results lasting 2–3+ years. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <p>CosmeDocs offers the Endolaser Endolift treatment in London — a minimally invasive dual-wavelength laser face lift using combined 980nm and 1470nm laser fibre technology. The 980nm wavelength targets fat reduction whilst the 1470nm delivers skin tightening, jowl lifting, eyebrow elevation, and double chin reduction. Led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute, our Endolaser treatments deliver transformative facial rejuvenation results lasting 2–3+ years. Our aesthetics is invisible art — bold, natural, always your way.</p>
 
           <h3>Endolift Laser Face Lift Cost London</h3>
           <p>Endolaser Endolift pricing at CosmeDocs Harley Street: Eyebrow Lift from £450, Jawline and Jowl tightening from £950, Cheek and Nasolabial Fold lifting from £950, Chin tightening and double chin reduction from £950. Our transparent pricing includes consultation, local anaesthetic, treatment, and comprehensive aftercare support. The consultation fee of £50 is deducted from your treatment cost if you proceed.</p>
