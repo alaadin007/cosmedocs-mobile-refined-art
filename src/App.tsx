@@ -67,6 +67,7 @@ const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
 const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
 const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
 const NonSurgicalFaceliftHub = lazy(() => import("./pages/NonSurgicalFaceliftHub"));
+const EndolaserLift = lazy(() => import("./pages/EndolaserLift"));
 const ThreadFaceLift = lazy(() => import("./pages/ThreadFaceLift").then(m => ({ default: m.ThreadFaceLift })));
 const TriggerPointBotox = lazy(() => import("./pages/TriggerPointBotox"));
 const AcneTreatment = lazy(() => import("./pages/AcneTreatment"));
@@ -445,6 +446,8 @@ const App = () => {
                           <Route path="/treatments/8-point-facelift/" element={<Navigate to="/treatments/ha-makeover/" replace />} />
                           <Route path="/treatments/non-surgical-facelift" element={<NonSurgicalFaceliftHub />} />
                           <Route path="/treatments/non-surgical-facelift/" element={<NonSurgicalFaceliftHub />} />
+                          <Route path="/treatments/endolaser" element={<EndolaserLift />} />
+                          <Route path="/treatments/endolaser/" element={<EndolaserLift />} />
                           <Route path="/treatments/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/non-surgical-ponytail/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/prescription-skincare" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
