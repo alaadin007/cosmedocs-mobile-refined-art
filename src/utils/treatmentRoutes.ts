@@ -46,6 +46,10 @@ const TREATMENT_ROUTES = [
   // Skin Rejuvenation & Advanced
   '/treatments/profhilo',
   '/treatments/polynucleotides',
+  '/treatments/sunekos',
+  '/treatments/jalupro',
+  '/treatments/lumi-eyes',
+  '/treatments/exosomes',
   '/treatments/prp',
   '/treatments/hydrafacial',
   '/treatments/chemical-peel',

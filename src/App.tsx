@@ -424,6 +424,14 @@ const App = () => {
                           <Route path="/treatments/profhilo/" element={<ProfhiloTreatment />} />
                           <Route path="/treatments/polynucleotides" element={<PolynucleotideTreatment />} />
                           <Route path="/treatments/polynucleotides/" element={<PolynucleotideTreatment />} />
+                          <Route path="/treatments/sunekos" element={<Sunekos />} />
+                          <Route path="/treatments/sunekos/" element={<Sunekos />} />
+                          <Route path="/treatments/jalupro" element={<Jalupro />} />
+                          <Route path="/treatments/jalupro/" element={<Jalupro />} />
+                          <Route path="/treatments/lumi-eyes" element={<LumiEyes />} />
+                          <Route path="/treatments/lumi-eyes/" element={<LumiEyes />} />
+                          <Route path="/treatments/exosomes" element={<Exosomes />} />
+                          <Route path="/treatments/exosomes/" element={<Exosomes />} />
                           <Route path="/treatments/prp-vampire-facial" element={<PRPTreatment />} />
                           <Route path="/treatments/prp-vampire-facial/" element={<PRPTreatment />} />
                           <Route path="/treatments/prp" element={<Navigate to="/treatments/prp-vampire-facial/" replace />} />
