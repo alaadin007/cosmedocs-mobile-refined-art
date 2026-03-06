@@ -49,6 +49,10 @@ const EndolaserSidebar = () => {
         <div className="mt-3 pt-3 border-t border-white/[0.06]">
           <p className="text-xs text-white/25">Consultation fee deducted from treatment cost</p>
         </div>
+        <div className="mt-3 pt-3 border-t border-white/[0.06] bg-[#C9A050]/[0.06] rounded-lg p-3">
+          <p className="text-xs font-medium text-[#C9A050]">Repeat & Refine</p>
+          <p className="text-xs text-white/40 mt-1">50% off any repeat Endolaser area after 6 months — further improve your results.</p>
+        </div>
       </motion.div>
 
       {/* Partner Clinic */}
