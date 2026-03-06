@@ -58,12 +58,12 @@ const categories: Category[] = [
     ]
   },
   {
-    id: "hyaluronic",
-    label: "HA Makeover",
+    id: "facelift",
+    label: "Non-Surgical Facelift",
     items: [
-      { title: "HA Makeover Overview", link: "/treatments/ha-makeover" },
-      { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
-      { title: "PDO Threads", link: "/pdo-threads" },
+      { title: "HA Makeover", link: "/treatments/ha-makeover" },
+      { title: "PDO Threads", link: "/treatments/pdo-threads" },
+      { title: "Endolaser Lift", link: "/treatments/endolaser" },
     ]
   },
   {
