@@ -170,6 +170,7 @@ const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWo
 const SmartAesthetics = lazy(() => import("./pages/SmartAesthetics"));
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
 const CampaignAds = lazy(() => import("./pages/CampaignAds"));
+const SocialMediaGallery = lazy(() => import("./pages/SocialMediaGallery"));
 
 const SpinToWin = lazy(() => import("./pages/SpinToWin"));
 const OrofacialNeckPainBlog = lazy(() => import("./pages/OrofacialNeckPainBlog"));
