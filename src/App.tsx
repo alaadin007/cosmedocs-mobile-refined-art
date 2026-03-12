@@ -170,6 +170,7 @@ const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWo
 const SmartAesthetics = lazy(() => import("./pages/SmartAesthetics"));
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
 const CampaignAds = lazy(() => import("./pages/CampaignAds"));
+const SocialMediaGallery = lazy(() => import("./pages/SocialMediaGallery"));
 
 const SpinToWin = lazy(() => import("./pages/SpinToWin"));
 const OrofacialNeckPainBlog = lazy(() => import("./pages/OrofacialNeckPainBlog"));
@@ -750,6 +751,8 @@ const App = () => {
                           <Route path="/turning-30-aesthetic-guide" element={<Turning30AestheticGuide />} />
                           <Route path="/turning-30-aesthetic-guide/" element={<Turning30AestheticGuide />} />
                           <Route path="/campaign-ads" element={<CampaignAds />} />
+                          <Route path="/social-media-gallery" element={<SocialMediaGallery />} />
+                          <Route path="/social-media-gallery/" element={<SocialMediaGallery />} />
                           
                           <Route path="/aesthetic-training" element={<AestheticTraining />} />
                           
