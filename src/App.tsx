@@ -751,6 +751,8 @@ const App = () => {
                           <Route path="/turning-30-aesthetic-guide" element={<Turning30AestheticGuide />} />
                           <Route path="/turning-30-aesthetic-guide/" element={<Turning30AestheticGuide />} />
                           <Route path="/campaign-ads" element={<CampaignAds />} />
+                          <Route path="/social-media-gallery" element={<SocialMediaGallery />} />
+                          <Route path="/social-media-gallery/" element={<SocialMediaGallery />} />
                           
                           <Route path="/aesthetic-training" element={<AestheticTraining />} />
                           
