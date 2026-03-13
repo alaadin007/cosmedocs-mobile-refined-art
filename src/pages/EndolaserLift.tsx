@@ -229,6 +229,10 @@ const EndolaserLift = () => {
                     <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
                     Harley Street
                   </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
+                    In Association with CQC-Registered PrivaDr Ltd
+                  </span>
                 </motion.div>
               </div>
 
