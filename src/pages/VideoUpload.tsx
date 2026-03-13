@@ -16,6 +16,7 @@ const VideoUpload = () => {
   const { toast } = useToast();
   const [uploading, setUploading] = useState(false);
   const [videos, setVideos] = useState<TreatmentVideo[]>([]);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [formData, setFormData] = useState({
     title: '',
     treatment_name: '',
@@ -44,9 +45,22 @@ const VideoUpload = () => {
     loadVideos();
   }, []);
 
-  const handleVideoUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file) return;
+    if (file) {
+      setSelectedFile(file);
+    }
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      toast({
+        title: "No file selected",
+        description: "Please select a video file first",
+        variant: "destructive"
+      });
+      return;
+    }
 
     if (!formData.title || !formData.treatment_name) {
       toast({
@@ -60,32 +74,27 @@ const VideoUpload = () => {
     setUploading(true);
 
     try {
-      // Generate unique filename
-      const fileExt = file.name.split('.').pop();
+      const fileExt = selectedFile.name.split('.').pop();
       const fileName = `${Date.now()}_${Math.random().toString(36).substring(2)}.${fileExt}`;
       
-      // Upload to Supabase Storage
       const { data: uploadData, error: uploadError } = await supabase.storage
         .from('treatment-videos')
-        .upload(fileName, file);
+        .upload(fileName, selectedFile);
 
       if (uploadError) throw uploadError;
 
-      // Get public URL
       const { data: { publicUrl } } = supabase.storage
         .from('treatment-videos')
         .getPublicUrl(uploadData.path);
 
-      // Save metadata to database
-      const { data: videoData, error: dbError } = await supabase
+      const { error: dbError } = await supabase
         .from('treatment_videos')
         .insert({
           title: formData.title,
           treatment_name: formData.treatment_name,
           description: formData.description,
           video_url: publicUrl,
-          file_size: file.size,
-          // Note: Duration would need to be calculated client-side or server-side
+          file_size: selectedFile.size,
         })
         .select()
         .single();
@@ -97,8 +106,8 @@ const VideoUpload = () => {
         description: "Your video is now available for use on treatment pages",
       });
 
-      // Reset form and reload videos
       setFormData({ title: '', treatment_name: '', description: '' });
+      setSelectedFile(null);
       loadVideos();
 
     } catch (error: any) {
@@ -218,24 +227,40 @@ const VideoUpload = () => {
                   <input
                     type="file"
                     accept="video/*"
-                    onChange={handleVideoUpload}
+                    onChange={handleFileSelect}
                     disabled={uploading}
                     className="block w-full text-sm text-white/70 
                              file:mr-4 file:py-2 file:px-4
                              file:rounded-full file:border-0
                              file:text-sm file:font-medium
-                             file:bg-primary file:text-black
+                             file:bg-primary file:text-primary-foreground
                              hover:file:bg-primary/80
                              file:cursor-pointer cursor-pointer"
                   />
+                  {selectedFile && (
+                    <p className="text-white/60 text-sm mt-2">
+                      Selected: {selectedFile.name} ({(selectedFile.size / (1024 * 1024)).toFixed(1)} MB)
+                    </p>
+                  )}
                 </div>
 
-                {uploading && (
-                  <div className="flex items-center justify-center py-4">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-                    <span className="ml-2 text-white/80">Uploading...</span>
-                  </div>
-                )}
+                <Button
+                  onClick={handleUpload}
+                  disabled={uploading || !selectedFile || !formData.title || !formData.treatment_name}
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  {uploading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-foreground mr-2"></div>
+                      Uploading...
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="h-4 w-4 mr-2" />
+                      Upload Video
+                    </>
+                  )}
+                </Button>
               </CardContent>
             </Card>
 
