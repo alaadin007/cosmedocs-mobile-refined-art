@@ -227,24 +227,39 @@ const VideoUpload = () => {
                   <input
                     type="file"
                     accept="video/*"
-                    onChange={handleVideoUpload}
+                    onChange={handleFileSelect}
                     disabled={uploading}
                     className="block w-full text-sm text-white/70 
                              file:mr-4 file:py-2 file:px-4
                              file:rounded-full file:border-0
                              file:text-sm file:font-medium
-                             file:bg-primary file:text-black
+                             file:bg-primary file:text-primary-foreground
                              hover:file:bg-primary/80
                              file:cursor-pointer cursor-pointer"
                   />
+                  {selectedFile && (
+                    <p className="text-white/60 text-sm mt-2">
+                      Selected: {selectedFile.name} ({(selectedFile.size / (1024 * 1024)).toFixed(1)} MB)
+                    </p>
+                  )}
                 </div>
 
-                {uploading && (
-                  <div className="flex items-center justify-center py-4">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-                    <span className="ml-2 text-white/80">Uploading...</span>
-                  </div>
-                )}
+                <Button
+                  onClick={handleUpload}
+                  disabled={uploading || !selectedFile || !formData.title || !formData.treatment_name}
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  {uploading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-foreground mr-2"></div>
+                      Uploading...
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="h-4 w-4 mr-2" />
+                      Upload Video
+                    </>
+                  )}
               </CardContent>
             </Card>
 
