@@ -45,9 +45,22 @@ const VideoUpload = () => {
     loadVideos();
   }, []);
 
-  const handleVideoUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file) return;
+    if (file) {
+      setSelectedFile(file);
+    }
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      toast({
+        title: "No file selected",
+        description: "Please select a video file first",
+        variant: "destructive"
+      });
+      return;
+    }
 
     if (!formData.title || !formData.treatment_name) {
       toast({
@@ -61,32 +74,27 @@ const VideoUpload = () => {
     setUploading(true);
 
     try {
-      // Generate unique filename
-      const fileExt = file.name.split('.').pop();
+      const fileExt = selectedFile.name.split('.').pop();
       const fileName = `${Date.now()}_${Math.random().toString(36).substring(2)}.${fileExt}`;
       
-      // Upload to Supabase Storage
       const { data: uploadData, error: uploadError } = await supabase.storage
         .from('treatment-videos')
-        .upload(fileName, file);
+        .upload(fileName, selectedFile);
 
       if (uploadError) throw uploadError;
 
-      // Get public URL
       const { data: { publicUrl } } = supabase.storage
         .from('treatment-videos')
         .getPublicUrl(uploadData.path);
 
-      // Save metadata to database
-      const { data: videoData, error: dbError } = await supabase
+      const { error: dbError } = await supabase
         .from('treatment_videos')
         .insert({
           title: formData.title,
           treatment_name: formData.treatment_name,
           description: formData.description,
           video_url: publicUrl,
-          file_size: file.size,
-          // Note: Duration would need to be calculated client-side or server-side
+          file_size: selectedFile.size,
         })
         .select()
         .single();
@@ -98,8 +106,8 @@ const VideoUpload = () => {
         description: "Your video is now available for use on treatment pages",
       });
 
-      // Reset form and reload videos
       setFormData({ title: '', treatment_name: '', description: '' });
+      setSelectedFile(null);
       loadVideos();
 
     } catch (error: any) {
