@@ -16,6 +16,7 @@ const VideoUpload = () => {
   const { toast } = useToast();
   const [uploading, setUploading] = useState(false);
   const [videos, setVideos] = useState<TreatmentVideo[]>([]);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [formData, setFormData] = useState({
     title: '',
     treatment_name: '',
