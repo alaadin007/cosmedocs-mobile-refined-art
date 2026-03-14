@@ -346,6 +346,53 @@ const LipFillers = () => {
                 </motion.div>
               </section>
 
+              {/* Our Secret Cocktail */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Our Secret <span className="text-[#C9A050] font-light">Filler Cocktail</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Not all lip fillers are created equal — and neither are all lips. Over 20 years of injecting, we've developed a proprietary cocktail approach that most clinics simply don't offer. The result? Lips that look <em>and feel</em> like your own.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        What most patients don't realise is that every filler brand — Juvederm, Restylane, Teoxane — carries a dozen or more products, each with a different consistency, elasticity, and molecular weight. Choosing the right <em>combination</em> for your unique lip anatomy is everything. It's the difference between lips that feel stiff and unnatural, and lips that move, hydrate, and feel indistinguishable from your own tissue.
+                      </p>
+                      <p>
+                        Our doctors use an exclusive blend of Swiss and French hyaluronic acid fillers — carefully selected for their complementary properties. One for deep structural volume. Another for superficial hydration and softness. The precise ratio is tailored to your lip tissue, existing volume, and desired outcome.
+                      </p>
+                      <div className="grid grid-cols-2 gap-3 my-4">
+                        {[
+                          { label: "Swiss HA", detail: "Structural support & longevity" },
+                          { label: "French HA", detail: "Hydration & natural softness" },
+                          { label: "Volume layer", detail: "Body & projection" },
+                          { label: "Hydration layer", detail: "Suppleness & lip feel" },
+                        ].map((item) => (
+                          <div key={item.label} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 text-center">
+                            <p className="text-[#C9A050]/70 text-xs font-medium mb-1">{item.label}</p>
+                            <p className="text-white/40 text-[11px]">{item.detail}</p>
+                          </div>
+                        ))}
+                      </div>
+                      <p>
+                        This layered cocktail technique is something we've refined over two decades and over a million injections. It's why our patients consistently describe their results as "feeling like my own lips" — because the filler integrates with your tissue rather than sitting on top of it.
+                      </p>
+                      <div className="p-5 bg-white/[0.03] border border-white/[0.06] rounded-xl">
+                        <p className="text-white/40 text-xs leading-relaxed font-light">
+                          <strong className="text-[#C9A050]/80">Why it matters:</strong> A single filler product gives you one texture, one behaviour. Our cocktail approach layers multiple consistencies — volume where you need projection, hydration where you need softness — so your lips don't just look natural, they <em>feel</em> natural. That's the invisible art.
+                        </p>
+                      </div>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
               {/* 0.5ml vs 1ml */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
