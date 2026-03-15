@@ -328,35 +328,35 @@
 # =====================================================
 
 # --- Cosmetalk legacy → /treatments/ (no individual blogs exist) ---
-/cosmetalk                        /treatments/                        301
-/cosmetalk/                       /treatments/                        301
-/cosmetalk/*                      /treatments/                        301
+/cosmetalk                        /blog/                        301
+/cosmetalk/                       /blog/                        301
+/cosmetalk/*                      /blog/                        301
 
 # --- Semrush-confirmed: Tear Trough blog redirect ---
-/blog/tear-trough-filler-before-and-after     /blog/tear-trough-filler-results-explained/   301
-/blog/tear-trough-filler-before-and-after/    /blog/tear-trough-filler-results-explained/   301
+/blog/tear-trough-filler-before-and-after     /before-after/dermal-fillers/tear-trough/   301
+/blog/tear-trough-filler-before-and-after/    /before-after/dermal-fillers/tear-trough/   301
 
 # --- Semrush-confirmed: Jaw Filler blog redirect ---
-/blog/jaw-filler-before-and-after             /blog/jaw-filler-results-explained/            301
-/blog/jaw-filler-before-and-after/            /blog/jaw-filler-results-explained/            301
+/blog/jaw-filler-before-and-after             /before-after/dermal-fillers/jawline/            301
+/blog/jaw-filler-before-and-after/            /before-after/dermal-fillers/jawline/            301
 
 # --- Semrush-confirmed: Chin Filler blog redirect ---
-/blog/chin-filler-before-and-after            /blog/chin-filler-results-explained/            301
-/blog/chin-filler-before-and-after/           /blog/chin-filler-results-explained/            301
-/blog/chin-filler                             /blog/chin-filler-results-explained/            301
-/blog/chin-filler/                            /blog/chin-filler-results-explained/            301
+/blog/chin-filler-before-and-after            /before-after/dermal-fillers/chin/            301
+/blog/chin-filler-before-and-after/           /before-after/dermal-fillers/chin/            301
+/blog/chin-filler                             /treatments/chin-filler/                      301
+/blog/chin-filler/                            /treatments/chin-filler/                      301
 
 # --- Live-site-confirmed: Lip Filler blog redirects ---
-/blog/natural-lip-fillers                     /blog/lip-filler-results-explained/             301
-/blog/natural-lip-fillers/                    /blog/lip-filler-results-explained/             301
-/blog/lip-filler-before-and-after             /blog/lip-filler-results-explained/             301
-/blog/lip-filler-before-and-after/            /blog/lip-filler-results-explained/             301
-/blog/lip-fillers-before-and-after            /blog/lip-filler-results-explained/             301
-/blog/lip-fillers-before-and-after/           /blog/lip-filler-results-explained/             301
-/blog/lip-filler                              /blog/lip-filler-results-explained/             301
-/blog/lip-filler/                             /blog/lip-filler-results-explained/             301
-/blog/lip-augmentation-before-and-after       /blog/lip-filler-results-explained/             301
-/blog/lip-augmentation-before-and-after/      /blog/lip-filler-results-explained/             301
+/blog/natural-lip-fillers                     /treatments/lip-fillers/                     301
+/blog/natural-lip-fillers/                    /treatments/lip-fillers/                     301
+/blog/lip-filler-before-and-after             /before-after/dermal-fillers/lips/             301
+/blog/lip-filler-before-and-after/            /before-after/dermal-fillers/lips/             301
+/blog/lip-fillers-before-and-after            /before-after/dermal-fillers/lips/             301
+/blog/lip-fillers-before-and-after/           /before-after/dermal-fillers/lips/             301
+/blog/lip-filler                              /treatments/lip-fillers/                       301
+/blog/lip-filler/                             /treatments/lip-fillers/                       301
+/blog/lip-augmentation-before-and-after       /before-after/dermal-fillers/lips/             301
+/blog/lip-augmentation-before-and-after/      /before-after/dermal-fillers/lips/             301
 
 # --- Semrush-confirmed: Filler Complications → Treatment page ---
 /blog/filler-gone-wrong                       /treatments/dermal-fillers/                     301
