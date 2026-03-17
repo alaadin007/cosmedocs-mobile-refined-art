@@ -36,7 +36,7 @@ const EndolaserLift = () => {
     },
     {
       question: "How much does Endolaser cost?",
-      answer: "Endolaser pricing at CosmeDocs: Eyebrow Lift from £450, Jawline/Jowls from £950, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
+      answer: "Endolift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,250, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
     },
     {
       question: "Is Endolaser better than HIFU or Morpheus8?",
