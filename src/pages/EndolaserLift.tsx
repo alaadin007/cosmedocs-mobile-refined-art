@@ -12,8 +12,8 @@ import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
-    "Endolaser Endolift London | Face, Chin & Eye Lift | Harley Street",
-    "Minimally invasive Endolaser Endolift for face lifting, jowl tightening, eyebrow lift & double chin reduction. Led by Harley Street Institute trainer. From £450.",
+    "Endolift London | Laser Face Lift Harley Street | From £450",
+    "Endolift laser treatment in London by the Lead Trainer at Harley Street Institute. Non-surgical face lift for jowls, jawline, eyebrow lift & double chin. CQC-registered. From £450.",
     "/treatments/endolaser/"
   );
 
