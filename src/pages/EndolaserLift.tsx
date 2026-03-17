@@ -234,11 +234,11 @@ const EndolaserLift = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
-                    Endolaser Endolift{" "}
+                    Endolift Laser{" "}
                     <span className="text-[#C9A050] font-light">London</span>
                   </h1>
                   <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
-                    Minimally invasive laser face lifting, skin tightening & fat reduction — for the face, chin, eyes and jawline. A powerful treatment in the right hands.
+                    Minimally invasive Endolift laser face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Performed by the Lead Trainer at the Harley Street Institute.
                   </p>
                 </motion.div>
 
