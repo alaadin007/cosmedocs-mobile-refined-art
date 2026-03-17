@@ -117,14 +117,16 @@ const EndolaserLift = () => {
               },
               {
                 "@type": "MedicalProcedure",
-                "name": "Endolaser Endolift Treatment",
-                "alternateName": "Endolift Laser Face Lift",
-                "description": "Minimally invasive dual-wavelength laser skin tightening and fat reduction using combined 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, eyebrow lift, and double chin reduction.",
+                "name": "Endolift Laser Treatment London",
+                "alternateName": ["Endolaser Endolift", "Endolift London", "Laser Face Lift London", "Non-Surgical Facelift London"],
+                "description": "Minimally invasive Endolift laser treatment in London using dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow lift, and double chin reduction at Harley Street.",
                 "url": "https://www.cosmedocs.com/treatments/endolaser/",
                 "procedureType": "NoninvasiveProcedure",
-                "bodyLocation": "Face, Chin, Eyes, Jawline",
-                "followup": "Results visible within 2–4 weeks, continuing to improve for 3–6 months. Lasts 2–3+ years.",
-                "howPerformed": "A dual-wavelength laser fibre (980nm for fat reduction, 1470nm for skin tightening) is inserted beneath the skin through micro-incisions under local anaesthetic. The combined wavelengths simultaneously tighten tissue, stimulate collagen, and reduce fat deposits with precision targeting."
+                "bodyLocation": "Face, Chin, Eyes, Jawline, Jowls, Neck",
+                "preparation": "Consultation with doctor to assess facial anatomy and create personalised treatment plan. Local anaesthetic administered before procedure.",
+                "followup": "Results visible within 2–4 weeks, continuing to improve for 3–6 months. Lasts 2–3+ years. Follow-up at 2–4 weeks post-treatment.",
+                "howPerformed": "A dual-wavelength laser fibre (980nm for fat reduction, 1470nm for skin tightening) is inserted beneath the skin through micro-incisions under local anaesthetic. The combined wavelengths simultaneously tighten tissue, stimulate collagen, and reduce fat deposits with precision targeting.",
+                "status": "https://schema.org/EventScheduled"
               },
               {
                 "@type": "FAQPage",
@@ -138,20 +140,53 @@ const EndolaserLift = () => {
                 }))
               },
               {
-                "@type": "Offer",
-                "name": "Endolaser Endolift Treatment",
-                "priceCurrency": "GBP",
-                "price": "450",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "priceCurrency": "GBP",
-                  "minPrice": "450",
-                  "maxPrice": "950"
-                },
-                "availability": "https://schema.org/InStock",
-                "seller": {
+                "@type": "Service",
+                "name": "Endolift Laser Treatment London",
+                "serviceType": "Non-Surgical Facelift",
+                "provider": {
                   "@type": "MedicalBusiness",
-                  "name": "CosmeDocs"
+                  "name": "CosmeDocs",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "10 Harley Street",
+                    "addressLocality": "London",
+                    "postalCode": "W1G 9PF",
+                    "addressCountry": "GB"
+                  }
+                },
+                "areaServed": {
+                  "@type": "City",
+                  "name": "London"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Endolift Treatment Pricing",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Eyebrow Lift",
+                      "priceCurrency": "GBP",
+                      "price": "450"
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Jawline & Jowls",
+                      "priceCurrency": "GBP",
+                      "price": "1250"
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Cheeks & Nasolabial Folds",
+                      "priceCurrency": "GBP",
+                      "price": "950"
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Chin & Double Chin",
+                      "priceCurrency": "GBP",
+                      "price": "950"
+                    }
+                  ]
                 }
               }
             ]
