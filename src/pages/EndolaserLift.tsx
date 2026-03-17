@@ -405,7 +405,7 @@ const EndolaserLift = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
                       { area: "Eyebrow Lift", desc: "Elevates drooping brows for a refreshed, open-eyed appearance without surgery. Ideal for hooded upper lids.", price: "£450" },
-                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Endolaser zone.", price: "£950" },
+                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Endolaser zone.", price: "£1,250" },
                       { area: "Cheeks & Nasolabial Folds", desc: "Lifts mid-face tissue and softens deep nasolabial fold lines from within.", price: "£950" },
                       { area: "Chin & Double Chin", desc: "Reduces submental fat and tightens chin skin for a sharper, more defined profile.", price: "£950" },
                       { area: "Under-Eye Bags", desc: "Treats lower eyelid puffiness by tightening tissue and reducing fat herniation.", price: "POC" },
