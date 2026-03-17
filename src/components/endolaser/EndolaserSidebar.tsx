@@ -35,7 +35,7 @@ const EndolaserSidebar = () => {
         <div className="space-y-2">
           {[
             { tier: "Eyebrow Lift", price: "£450" },
-            { tier: "Jawline / Jowls", price: "£950" },
+            { tier: "Jawline / Jowls", price: "£1,250" },
             { tier: "Cheeks / Nasolabial", price: "£950" },
             { tier: "Chin / Double Chin", price: "£950" },
             { tier: "Consultation", price: "£50" },
