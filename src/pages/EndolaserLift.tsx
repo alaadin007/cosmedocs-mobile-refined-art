@@ -12,8 +12,8 @@ import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
-    "Endolaser Endolift London | Face, Chin & Eye Lift | Harley Street",
-    "Minimally invasive Endolaser Endolift for face lifting, jowl tightening, eyebrow lift & double chin reduction. Led by Harley Street Institute trainer. From £450.",
+    "Endolift London | Laser Face Lift Harley Street | From £450",
+    "Endolift laser treatment in London by the Lead Trainer at Harley Street Institute. Non-surgical face lift for jowls, jawline, eyebrow lift & double chin. CQC-registered. From £450.",
     "/treatments/endolaser/"
   );
 
@@ -36,7 +36,7 @@ const EndolaserLift = () => {
     },
     {
       question: "How much does Endolaser cost?",
-      answer: "Endolaser pricing at CosmeDocs: Eyebrow Lift from £450, Jawline/Jowls from £950, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
+      answer: "Endolift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,250, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
     },
     {
       question: "Is Endolaser better than HIFU or Morpheus8?",
@@ -117,14 +117,16 @@ const EndolaserLift = () => {
               },
               {
                 "@type": "MedicalProcedure",
-                "name": "Endolaser Endolift Treatment",
-                "alternateName": "Endolift Laser Face Lift",
-                "description": "Minimally invasive dual-wavelength laser skin tightening and fat reduction using combined 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, eyebrow lift, and double chin reduction.",
+                "name": "Endolift Laser Treatment London",
+                "alternateName": ["Endolaser Endolift", "Endolift London", "Laser Face Lift London", "Non-Surgical Facelift London"],
+                "description": "Minimally invasive Endolift laser treatment in London using dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow lift, and double chin reduction at Harley Street.",
                 "url": "https://www.cosmedocs.com/treatments/endolaser/",
                 "procedureType": "NoninvasiveProcedure",
-                "bodyLocation": "Face, Chin, Eyes, Jawline",
-                "followup": "Results visible within 2–4 weeks, continuing to improve for 3–6 months. Lasts 2–3+ years.",
-                "howPerformed": "A dual-wavelength laser fibre (980nm for fat reduction, 1470nm for skin tightening) is inserted beneath the skin through micro-incisions under local anaesthetic. The combined wavelengths simultaneously tighten tissue, stimulate collagen, and reduce fat deposits with precision targeting."
+                "bodyLocation": "Face, Chin, Eyes, Jawline, Jowls, Neck",
+                "preparation": "Consultation with doctor to assess facial anatomy and create personalised treatment plan. Local anaesthetic administered before procedure.",
+                "followup": "Results visible within 2–4 weeks, continuing to improve for 3–6 months. Lasts 2–3+ years. Follow-up at 2–4 weeks post-treatment.",
+                "howPerformed": "A dual-wavelength laser fibre (980nm for fat reduction, 1470nm for skin tightening) is inserted beneath the skin through micro-incisions under local anaesthetic. The combined wavelengths simultaneously tighten tissue, stimulate collagen, and reduce fat deposits with precision targeting.",
+                "status": "https://schema.org/EventScheduled"
               },
               {
                 "@type": "FAQPage",
@@ -138,20 +140,53 @@ const EndolaserLift = () => {
                 }))
               },
               {
-                "@type": "Offer",
-                "name": "Endolaser Endolift Treatment",
-                "priceCurrency": "GBP",
-                "price": "450",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "priceCurrency": "GBP",
-                  "minPrice": "450",
-                  "maxPrice": "950"
-                },
-                "availability": "https://schema.org/InStock",
-                "seller": {
+                "@type": "Service",
+                "name": "Endolift Laser Treatment London",
+                "serviceType": "Non-Surgical Facelift",
+                "provider": {
                   "@type": "MedicalBusiness",
-                  "name": "CosmeDocs"
+                  "name": "CosmeDocs",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "10 Harley Street",
+                    "addressLocality": "London",
+                    "postalCode": "W1G 9PF",
+                    "addressCountry": "GB"
+                  }
+                },
+                "areaServed": {
+                  "@type": "City",
+                  "name": "London"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Endolift Treatment Pricing",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Eyebrow Lift",
+                      "priceCurrency": "GBP",
+                      "price": "450"
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Jawline & Jowls",
+                      "priceCurrency": "GBP",
+                      "price": "1250"
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Cheeks & Nasolabial Folds",
+                      "priceCurrency": "GBP",
+                      "price": "950"
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Endolift Chin & Double Chin",
+                      "priceCurrency": "GBP",
+                      "price": "950"
+                    }
+                  ]
                 }
               }
             ]
@@ -199,11 +234,11 @@ const EndolaserLift = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
-                    Endolaser Endolift{" "}
+                    Endolift Laser{" "}
                     <span className="text-[#C9A050] font-light">London</span>
                   </h1>
                   <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
-                    Minimally invasive laser face lifting, skin tightening & fat reduction — for the face, chin, eyes and jawline. A powerful treatment in the right hands.
+                    Minimally invasive Endolift laser face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Performed by the Lead Trainer at the Harley Street Institute.
                   </p>
                 </motion.div>
 
@@ -370,7 +405,7 @@ const EndolaserLift = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
                       { area: "Eyebrow Lift", desc: "Elevates drooping brows for a refreshed, open-eyed appearance without surgery. Ideal for hooded upper lids.", price: "£450" },
-                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Endolaser zone.", price: "£950" },
+                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Endolaser zone.", price: "£1,250" },
                       { area: "Cheeks & Nasolabial Folds", desc: "Lifts mid-face tissue and softens deep nasolabial fold lines from within.", price: "£950" },
                       { area: "Chin & Double Chin", desc: "Reduces submental fat and tightens chin skin for a sharper, more defined profile.", price: "£950" },
                       { area: "Under-Eye Bags", desc: "Treats lower eyelid puffiness by tightening tissue and reducing fat herniation.", price: "POC" },
@@ -725,23 +760,29 @@ const EndolaserLift = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Endolaser Endolift London | Non-Surgical Face Lift Harley Street</h2>
-          <p>CosmeDocs offers the Endolaser Endolift treatment in London — a minimally invasive dual-wavelength laser face lift using combined 980nm and 1470nm laser fibre technology. The 980nm wavelength targets fat reduction whilst the 1470nm delivers skin tightening, jowl lifting, eyebrow elevation, and double chin reduction. Led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute, our Endolaser treatments deliver transformative facial rejuvenation results lasting 2–3+ years. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <h2>Endolift London — Non-Surgical Laser Face Lift at Harley Street</h2>
+          <p>CosmeDocs is a leading provider of Endolift laser treatment in London, located at 10 Harley Street, W1G 9PF. Our Endolift procedure uses dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow elevation, and double chin reduction. Led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute, CosmeDocs has performed over 1 million aesthetic treatments since 2007. Endolift results last 2–3+ years with minimal downtime. CQC-registered partner clinic. Our aesthetics is invisible art — bold, natural, always your way.</p>
 
-          <h3>Endolift Laser Face Lift Cost London</h3>
-          <p>Endolaser Endolift pricing at CosmeDocs Harley Street: Eyebrow Lift from £450, Jawline and Jowl tightening from £950, Cheek and Nasolabial Fold lifting from £950, Chin tightening and double chin reduction from £950. Our transparent pricing includes consultation, local anaesthetic, treatment, and comprehensive aftercare support. The consultation fee of £50 is deducted from your treatment cost if you proceed.</p>
+          <h3>Endolift Cost London — Treatment Pricing 2025</h3>
+          <p>How much does Endolift cost in London? At CosmeDocs Harley Street, Endolift pricing starts from £450 for an Eyebrow Lift. Jawline and Jowl tightening costs £1,250, Cheek and Nasolabial Fold lifting from £950, and Chin tightening or double chin reduction from £950. Consultation costs £50, fully redeemable against treatment. Our pricing includes local anaesthetic, the procedure, and comprehensive aftercare. Repeat sessions after 6 months receive a 50% discount.</p>
 
-          <h3>Endolaser vs HIFU vs Morpheus8 London</h3>
-          <p>The Endolaser Endolift delivers energy directly beneath the skin via a laser fibre, providing more precise and controlled thermal delivery compared to external energy devices like HIFU and Morpheus8. This subdermal approach achieves more consistent skin tightening results, does not dissolve existing dermal fillers, and typically requires fewer treatment sessions. Results last 2–3+ years compared to 6–12 months with HIFU.</p>
+          <h3>Endolift vs HIFU vs Morpheus8 — Which Is Best in London?</h3>
+          <p>Endolift delivers laser energy directly beneath the skin via a micro-fibre, achieving more precise and controlled results compared to external devices like HIFU, Morpheus8, and radiofrequency treatments. Key advantages of Endolift over HIFU in London: subdermal energy delivery (not transcutaneous), dual-wavelength fat reduction and skin tightening in one session, does not dissolve existing dermal fillers, results lasting 2–3+ years versus 6–12 months with HIFU. Endolift is considered the gold standard for non-surgical face lifting among London aesthetic clinics.</p>
 
-          <h3>Non-Surgical Facelift London | Jowl Tightening Without Surgery</h3>
-          <p>The Endolaser represents the most advanced level of non-surgical face lifting available at CosmeDocs. For patients seeking jawline definition, jowl reduction, eyebrow lifting, or double chin treatment without surgical facelift, the Endolaser provides a minimally invasive alternative with local anaesthetic, 4–5 days recovery, and long-lasting results. Treatment is performed in association with partner clinic PrivaDr.</p>
+          <h3>Best Endolift Clinic London — Why Choose CosmeDocs Harley Street</h3>
+          <p>What makes CosmeDocs the best Endolift clinic in London? Dr Ahmed Haq is the Lead Trainer for the Endolift device at the Harley Street Institute, training other doctors in advanced technique. CosmeDocs uses a targeted, zone-specific approach rather than a generalised all-over treatment. The clinic has been established since 2007 with over 243 verified patient reviews averaging 4.9 stars. Treatments are performed in association with CQC-registered PrivaDr Ltd, ensuring clinical governance and specialist nursing support.</p>
 
-          <h3>Endolaser Recovery Time and Swelling</h3>
-          <p>Endolaser Endolift recovery involves an average of 4–5 days of swelling. Peak swelling occurs at 24–48 hours and gradually subsides over the following days. Most patients return to normal activities within 5–7 days. Collagen remodelling continues for 3–6 months post-treatment, with progressive improvement in skin tightness and lifting. Final results establish at 3–6 months and last 2–3+ years.</p>
+          <h3>Non-Surgical Facelift London — Jowl Tightening Without Surgery</h3>
+          <p>Looking for a non-surgical facelift in London? The Endolift laser is the most advanced non-surgical face lifting modality available at CosmeDocs. Ideal for sagging jowls, loss of jawline definition, drooping eyebrows, double chin, and under-eye bags. The Endolift works at the subdermal level to tighten skin, stimulate collagen, and reduce fat — all under local anaesthetic with 4–5 days recovery. Many London patients choose Endolift as an alternative to surgical facelift, thread lifts, or HIFU.</p>
 
-          <h3>Endolaser Combination Treatments London</h3>
-          <p>The Endolaser achieves optimal results when combined with complementary treatments including HA dermal fillers for volume restoration, PDO thread lifts for mechanical lifting, and Nefertiti Botox for platysmal band relaxation. At CosmeDocs, we have developed multi-modality protocols that address skin laxity, volume loss, and fat redistribution within a single comprehensive treatment plan. The Endolaser does not dissolve existing fillers, making it ideal for patients with previous aesthetic work.</p>
+          <h3>Endolift Recovery Time London</h3>
+          <p>Endolift recovery time: 4–5 days average swelling, peak at 24–48 hours, most patients return to work within 5–7 days. Collagen remodelling continues for 3–6 months. Final results at 3–6 months, lasting 2–3+ years. Minimal bruising. No visible scarring. No general anaesthetic required.</p>
+
+          <h3>Endolift Near Me — Central London W1</h3>
+          <p>Searching for Endolift near me in London? CosmeDocs is centrally located at 10 Harley Street, London W1G 9PF — easily accessible from Oxford Circus, Regent's Park, Bond Street, and Baker Street tube stations. We serve patients from across London including Mayfair, Marylebone, Kensington, Chelsea, Westminster, Knightsbridge, Notting Hill, Hampstead, Islington, the City of London, Canary Wharf, and surrounding areas. Book your Endolift consultation today.</p>
+
+          <h3>Endolift Combination Treatments London</h3>
+          <p>Endolift achieves optimal results when combined with complementary treatments. Popular combinations at CosmeDocs London: Endolift with HA dermal fillers for volume restoration, Endolift with PDO thread lifts for mechanical support, and Endolift with Nefertiti Botox for platysmal band relaxation and neck rejuvenation. Our multi-modality approach addresses skin laxity, volume loss, and fat redistribution in a single comprehensive treatment plan. The Endolift does not dissolve existing fillers.</p>
         </div>
       </div>
     </>
