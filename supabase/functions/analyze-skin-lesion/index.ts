@@ -139,7 +139,7 @@ Provide your analysis in clear, structured paragraphs that are easy to understan
   } catch (error) {
     console.error('Error in analyze-skin-lesion:', error);
     return new Response(
-      JSON.stringify({ error: error.message || 'Internal server error' }),
+      JSON.stringify({ error: error instanceof Error ? error.message : 'Internal server error' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
