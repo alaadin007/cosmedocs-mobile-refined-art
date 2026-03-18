@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "Who performs non-surgical facelifts at Cosmedocs?",
-    a: "All non-surgical facelift treatments at Cosmedocs are performed by GMC-registered doctors with advanced training in facial anatomy. Our lead practitioner is the lead trainer for the Harley Street Institute and has over 17 years of experience in aesthetic medicine. Endolaser treatments are performed in partnership with our specialist clinic, Priva Dr.",
+    a: "All non-surgical facelift treatments at Cosmedocs are performed by GMC-registered doctors with advanced training in facial anatomy. Our lead practitioner is the lead trainer for the Harley Street Institute and has over 17 years of experience in aesthetic medicine. Laser Fibre Lift treatments are performed in partnership with our specialist clinic, Priva Dr.",
   },
   {
     q: "How much does a non-surgical facelift cost in London?",
