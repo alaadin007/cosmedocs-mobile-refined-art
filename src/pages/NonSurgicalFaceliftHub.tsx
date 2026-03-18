@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "Can non-surgical facelift treatments be combined?",
-    a: "Absolutely — and at Cosmedocs, combination is our preferred approach. The Nefertiti Lift pairs naturally with an HA Makeover. PDO threads are almost always combined with fillers for lower-face rejuvenation. Endolaser complements existing filler work without dissolving it. Your doctor will design a bespoke treatment plan during your consultation.",
+    a: "Absolutely — and at Cosmedocs, combination is our preferred approach. The Nefertiti Lift pairs naturally with an HA Makeover. PDO threads are almost always combined with fillers for lower-face rejuvenation. The Laser Fibre Lift complements existing filler work without dissolving it. Your doctor will design a bespoke treatment plan during your consultation.",
   },
   {
     q: "How long do non-surgical facelift results last?",
