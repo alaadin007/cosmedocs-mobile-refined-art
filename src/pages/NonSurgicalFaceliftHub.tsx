@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "Is there any downtime with a non-surgical facelift?",
-    a: "Downtime depends on the treatment chosen. The Nefertiti Lift has no downtime. HA Makeover involves mild swelling for 2–3 days. PDO threads require 3–5 days of recovery. Endolaser typically involves 4–5 days of swelling. All are significantly less invasive than surgical alternatives.",
+    a: "Downtime depends on the treatment chosen. The Nefertiti Lift has no downtime. HA Makeover involves mild swelling for 2–3 days. PDO threads require 3–5 days of recovery. The Laser Fibre Lift typically involves 4–5 days of swelling. All are significantly less invasive than surgical alternatives.",
   },
   {
     q: "Who performs non-surgical facelifts at Cosmedocs?",
