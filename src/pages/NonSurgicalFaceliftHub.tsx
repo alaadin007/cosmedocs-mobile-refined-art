@@ -92,8 +92,8 @@ const faqs = [
 
 const NonSurgicalFaceliftHub = () => {
   const seoData = generateSEOMetadata(
-    "Non-Surgical Facelift London | Endolift & Threads",
-    "Expert non-surgical facelift London. Nefertiti Botox, HA Makeover, PDO thread lift & Endolaser Endolift. Doctor-led at Harley Street. Natural lifting results. Book today.",
+    "Non-Surgical Facelift London | Laser Fibre Lift & Threads",
+    "Expert non-surgical facelift London. Nefertiti Botox, HA Makeover, PDO thread lift & Laser Fibre Lift. Doctor-led at Harley Street. Natural lifting results. Book today.",
     "/treatments/non-surgical-facelift"
   );
 
