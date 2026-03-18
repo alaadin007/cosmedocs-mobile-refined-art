@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "How long do non-surgical facelift results last?",
-    a: "Results vary by modality: Botox-based lifts last 3–4 months, HA Makeover results last 12–18 months, PDO threads provide lift for 12–18 months, and Endolaser results can last 2–3 years as collagen continues to remodel. Maintenance treatments extend longevity significantly.",
+    a: "Results vary by modality: Botox-based lifts last 3–4 months, HA Makeover results last 12–18 months, PDO threads provide lift for 12–18 months, and Laser Fibre Lift results can last 2–3 years as collagen continues to remodel. Maintenance treatments extend longevity significantly.",
   },
   {
     q: "Is there any downtime with a non-surgical facelift?",
