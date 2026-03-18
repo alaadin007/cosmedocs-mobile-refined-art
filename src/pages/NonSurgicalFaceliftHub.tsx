@@ -324,9 +324,9 @@ const NonSurgicalFaceliftHub = () => {
                   </p>
                 </div>
                 <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                  <h3 className="text-white font-light mb-3">Endolaser + Fillers</h3>
+                  <h3 className="text-white font-light mb-3">Laser Fibre Lift + Fillers</h3>
                   <p className="text-white/55 text-sm font-extralight leading-relaxed">
-                    At Cosmedocs, we have learned to replace volume, tighten skin, and reduce excess fat in a targeted, zone-specific manner. Unlike a general all-over Endolift, our approach does not dissolve your existing fillers — it complements them. Endolaser addresses the skin and fat layers while fillers maintain the volumetric framework beneath.
+                    At Cosmedocs, we have learned to replace volume, tighten skin, and reduce excess fat in a targeted, zone-specific manner. Our approach does not dissolve your existing fillers — it complements them. The Laser Fibre Lift addresses the skin and fat layers while fillers maintain the volumetric framework beneath.
                   </p>
                 </div>
                 <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
