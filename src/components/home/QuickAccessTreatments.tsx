@@ -41,7 +41,7 @@ const categories: TreatmentCategory[] = [
   },
   {
     id: "facelift",
-    label: "Non-Surgical Facelift",
+    label: "Mini Facelifts",
     areas: [
       { label: "Nefertiti Botox Lift", path: "/treatments/nefertiti-lift/" },
       { label: "HA Makeover", path: "/treatments/ha-makeover/" },

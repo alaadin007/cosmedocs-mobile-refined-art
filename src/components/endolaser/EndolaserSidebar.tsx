@@ -75,7 +75,7 @@ const EndolaserSidebar = () => {
         transition={{ duration: 0.6, delay: 0.38 }}
         className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5"
       >
-        <p className="text-sm font-medium text-white/70 mb-3">Non-Surgical Facelift Options</p>
+        <p className="text-sm font-medium text-white/70 mb-3">Mini Facelift Options</p>
         <div className="space-y-2">
           <Link to="/treatments/nefertiti-lift/" className="block text-xs text-[#C9A050] hover:underline">Nefertiti Botox Lift →</Link>
           <Link to="/treatments/ha-makeover/" className="block text-xs text-[#C9A050] hover:underline">HA Makeover →</Link>

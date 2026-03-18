@@ -32,7 +32,7 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
     { title: "Profhilo", link: "/profhilo" },
   ],
   "fifties-elegance": [
-    { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
+    { title: "Mini Facelift", link: "/non-surgical-facelift" },
     { title: "Neck Fillers", link: "/neck-fillers" },
     { title: "CO2 Laser", link: "/co2-laser-resurfacing" },
   ],
