@@ -81,8 +81,8 @@ const faqs = [
     a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
   },
   {
-    q: "What is Endolaser and how does it differ from HIFU?",
-    a: "Endolaser (Endolift) delivers laser energy directly beneath the skin via a micro-fibre optic cannula, providing precise skin tightening, fat reduction, and collagen stimulation. Unlike HIFU, which works from outside the skin with focused ultrasound, Endolaser acts from within — offering more targeted results with fewer sessions. It is particularly effective for jowls, under-eye bags, and double chin reduction.",
+    q: "What is the Laser Fibre Lift and how does it differ from HIFU?",
+    a: "The Laser Fibre Lift delivers laser energy directly beneath the skin via a micro-fibre optic cannula, providing precise skin tightening, fat reduction, and collagen stimulation. Unlike HIFU, which works from outside the skin with focused ultrasound, the Laser Fibre Lift acts from within — offering more targeted results with fewer sessions. It is particularly effective for jowls, under-eye bags, and double chin reduction.",
   },
   {
     q: "Will a non-surgical facelift look natural?",
