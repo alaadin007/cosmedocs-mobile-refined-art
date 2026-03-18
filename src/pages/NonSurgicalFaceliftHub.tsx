@@ -228,7 +228,7 @@ const NonSurgicalFaceliftHub = () => {
                 At Cosmedocs, we believe a truly effective non-surgical facelift is never a single treatment — it is a strategy. Facial ageing affects multiple tissue layers simultaneously: muscles pull downward, volume depletes, skin loses elasticity, and stubborn fat pockets form beneath the chin and along the jowls. No single device or injectable addresses every layer.
               </p>
               <p>
-                That is why we have developed a multi-modality approach, combining four distinct lifting techniques — each addressing a different aspect of facial ageing. From the subtle muscle relaxation of a Nefertiti Botox Lift to the deep tissue remodelling of Endolaser, our doctors design bespoke treatment plans that work synergistically, delivering results that are greater than the sum of their parts.
+                That is why we have developed a multi-modality approach, combining four distinct lifting techniques — each addressing a different aspect of facial ageing. From the subtle muscle relaxation of a Nefertiti Botox Lift to the deep tissue remodelling of the Laser Fibre Lift, our doctors design bespoke treatment plans that work synergistically, delivering results that are greater than the sum of their parts.
               </p>
               <p>
                 Our aesthetics is invisible art. Bold, natural, always your way. Transformation that speaks — without saying a word.
