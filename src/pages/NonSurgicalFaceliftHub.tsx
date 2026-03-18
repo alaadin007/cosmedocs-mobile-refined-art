@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "How much does a non-surgical facelift cost in London?",
-    a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Endolaser treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
+    a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
   },
   {
     q: "What is Endolaser and how does it differ from HIFU?",
