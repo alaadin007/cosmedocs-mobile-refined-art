@@ -43,11 +43,11 @@ const treatments = [
     price: "From £800",
   },
   {
-    title: "Endolaser Lift",
+    title: "Laser Fibre Lift",
     path: "/treatments/endolaser/",
     intensity: "Level 4 — Tissue Remodelling",
     description:
-      "The most advanced non-surgical lift in our portfolio. Endolaser (also known as Endolift) delivers laser energy beneath the skin via a micro-fibre optic cannula, simultaneously tightening skin, dissolving small pockets of stubborn fat, and stimulating deep collagen remodelling. At Cosmedocs, we have refined our approach: rather than a general all-over treatment, we target specific zones — jowls, under-eye bags, eyebrow lifting, double chin — complementing your existing filler work without dissolving it. Performed in partnership with our specialist clinic, Priva Dr.",
+      "The most advanced non-surgical lift in our portfolio. The Laser Fibre Lift delivers laser energy beneath the skin via a micro-fibre optic cannula, simultaneously tightening skin, dissolving small pockets of stubborn fat, and stimulating deep collagen remodelling. At Cosmedocs, we have refined our approach: rather than a general all-over treatment, we target specific zones — jowls, under-eye bags, eyebrow lifting, double chin — complementing your existing filler work without dissolving it. Performed in partnership with our specialist clinic, Priva Dr.",
     bestFor: "Skin laxity, jowls, under-eye bags, double chin, brow ptosis",
     downtime: "4–5 days average swelling",
     results: "Progressive improvement over 3–6 months as collagen remodels, lasting 2–3 years",
