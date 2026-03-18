@@ -19,7 +19,7 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
   "volume-story": [
     { title: "Cheek Filler", link: "/cheek-filler" },
     { title: "Tear Trough Filler", link: "/tear-trough-filler" },
-    { title: "Non-Surgical Facelift", link: "/non-surgical-facelift" },
+    { title: "Mini Facelift", link: "/non-surgical-facelift" },
   ],
   "thirties-shift": [
     { title: "Preventative Botox", link: "/botox-london" },
