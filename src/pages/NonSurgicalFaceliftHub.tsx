@@ -376,7 +376,7 @@ const NonSurgicalFaceliftHub = () => {
                   <li>• Recovery measured in days, not weeks</li>
                   <li>• Natural, harmonious results that enhance — never alter — your identity</li>
                   <li>• Follow-up review appointments included</li>
-                  <li>• Endolaser treatments in partnership with Priva Dr</li>
+                  <li>• Laser Fibre Lift treatments in partnership with Priva Dr</li>
                 </ul>
               </div>
             </div>
