@@ -395,7 +395,7 @@ const NonSurgicalFaceliftHub = () => {
                   Non-surgical facelifts demand an intimate understanding of facial anatomy, tissue biomechanics, and aesthetic proportion. At Cosmedocs, every treatment is performed by a GMC-registered doctor with advanced training in injectable techniques, thread lifting, and laser-assisted procedures.
                 </p>
                 <p>
-                  Our lead practitioner serves as the <strong className="text-white/90 font-light">lead trainer for the Harley Street Institute</strong>, training the next generation of aesthetic doctors in advanced lifting techniques including Endolaser. With over 17 years of clinical experience and tens of thousands of procedures performed, you are in the hands of one of London's most experienced non-surgical facelift practitioners.
+                  Our lead practitioner serves as the <strong className="text-white/90 font-light">lead trainer for the Harley Street Institute</strong>, training the next generation of aesthetic doctors in advanced lifting techniques including the Laser Fibre Lift. With over 17 years of clinical experience and tens of thousands of procedures performed, you are in the hands of one of London's most experienced non-surgical facelift practitioners.
                 </p>
                 <p>
                   It is not just the device that produces the results — it is the hands behind it. A powerful treatment needs to be done in the right hands.
