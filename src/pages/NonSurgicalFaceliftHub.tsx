@@ -494,7 +494,7 @@ const NonSurgicalFaceliftHub = () => {
         <div className="sr-only" aria-hidden="true">
           <h2>Non-Surgical Facelift London — Comprehensive Guide</h2>
           <p>
-            Cosmedocs offers the most comprehensive range of non-surgical facelift treatments in London, performed by GMC-registered doctors at our Harley Street clinic. Our multi-modality approach combines Nefertiti Botox lifting, hyaluronic acid dermal filler makeovers, PDO thread lifts, and Endolaser Endolift technology to address every layer of facial ageing without surgery or general anaesthesia.
+            Cosmedocs offers the most comprehensive range of non-surgical facelift treatments in London, performed by GMC-registered doctors at our Harley Street clinic. Our multi-modality approach combines Nefertiti Botox lifting, hyaluronic acid dermal filler makeovers, PDO thread lifts, and Laser Fibre Lift technology to address every layer of facial ageing without surgery or general anaesthesia.
           </p>
           <p>
             The Nefertiti Botox Lift is the lightest form of non-surgical facial lifting available. Named after the Egyptian queen famed for her elegant neck and jawline, this treatment uses botulinum toxin to relax the platysmal bands — the muscles that pull the lower face downward as we age. By releasing this downward tension, the jawline appears sharper, the neck smoother, and the overall facial contour more refined. The Nefertiti Lift is frequently combined with an HA Makeover for patients who want both muscle relaxation and volumetric restoration in a single appointment.
