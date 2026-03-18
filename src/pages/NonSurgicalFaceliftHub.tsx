@@ -58,7 +58,7 @@ const treatments = [
 const faqs = [
   {
     q: "What is the best non-surgical facelift treatment?",
-    a: "There is no single 'best' treatment — the ideal approach depends on your anatomy, degree of ageing, and goals. Mild early ageing may only need a Nefertiti Botox Lift, whilst moderate volume loss responds beautifully to an HA Makeover. For genuine tissue repositioning, PDO threads or Endolaser provide mechanical and thermal lifting respectively. Our doctors frequently combine modalities for optimal, natural results.",
+    a: "There is no single 'best' treatment — the ideal approach depends on your anatomy, degree of ageing, and goals. Mild early ageing may only need a Nefertiti Botox Lift, whilst moderate volume loss responds beautifully to an HA Makeover. For genuine tissue repositioning, PDO threads or the Laser Fibre Lift provide mechanical and thermal lifting respectively. Our doctors frequently combine modalities for optimal, natural results.",
   },
   {
     q: "Can non-surgical facelift treatments be combined?",
