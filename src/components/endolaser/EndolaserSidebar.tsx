@@ -51,7 +51,7 @@ const EndolaserSidebar = () => {
         </div>
         <div className="mt-3 pt-3 border-t border-white/[0.06] bg-[#C9A050]/[0.06] rounded-lg p-3">
           <p className="text-xs font-medium text-[#C9A050]">Repeat & Refine</p>
-          <p className="text-xs text-white/40 mt-1">50% off any repeat Endolaser area after 6 months — further improve your results.</p>
+          <p className="text-xs text-white/40 mt-1">50% off any repeat Laser Fibre Lift area after 6 months — further improve your results.</p>
         </div>
       </motion.div>
 
@@ -64,7 +64,7 @@ const EndolaserSidebar = () => {
       >
         <p className="text-sm font-medium text-white/70 mb-3">Partner Clinic</p>
         <p className="text-xs text-white/40 leading-relaxed mb-3">
-          Endolaser Lift treatments are performed in association with our partner clinic PrivaDr, ensuring access to dedicated surgical-grade facilities and specialist nursing support.
+          Laser Fibre Lift treatments are performed in association with our partner clinic PrivaDr, ensuring access to dedicated surgical-grade facilities and specialist nursing support.
         </p>
       </motion.div>
 

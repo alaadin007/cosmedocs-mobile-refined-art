@@ -46,7 +46,7 @@ const categories: TreatmentCategory[] = [
       { label: "Nefertiti Botox Lift", path: "/treatments/nefertiti-lift/" },
       { label: "HA Makeover", path: "/treatments/ha-makeover/" },
       { label: "PDO Thread Lift", path: "/treatments/pdo-threads/" },
-      { label: "Endolaser Lift", path: "/treatments/endolaser/" },
+      { label: "Laser Fibre Lift", path: "/treatments/endolaser/" },
     ],
   },
   {

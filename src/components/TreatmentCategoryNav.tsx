@@ -64,7 +64,7 @@ const categories: Category[] = [
       { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift" },
       { title: "HA Makeover", link: "/treatments/ha-makeover" },
       { title: "PDO Thread Lift", link: "/treatments/pdo-threads" },
-      { title: "Endolaser Lift", link: "/treatments/endolaser" },
+      { title: "Laser Fibre Lift", link: "/treatments/endolaser" },
     ]
   },
   {

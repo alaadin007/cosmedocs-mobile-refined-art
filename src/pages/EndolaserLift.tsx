@@ -12,50 +12,50 @@ import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
-    "Endolift London | Laser Face Lift Harley Street | From £450",
-    "Endolift laser treatment in London by the Lead Trainer at Harley Street Institute. Non-surgical face lift for jowls, jawline, eyebrow lift & double chin. CQC-registered. From £450.",
+    "Laser Fibre Lift London | Laser Face Lift Harley Street | From £450",
+    "Laser Fibre Lift treatment in London by the Lead Trainer at Harley Street Institute. Non-surgical face lift for jowls, jawline, eyebrow lift & double chin. CQC-registered. From £450.",
     "/treatments/endolaser/"
   );
 
   const faqs = [
     {
-      question: "What is the Endolaser Endolift treatment?",
-      answer: "The Endolaser Endolift is a minimally invasive dual-wavelength laser procedure using 980nm and 1470nm laser fibres inserted beneath the skin. The 980nm wavelength targets fat reduction whilst the 1470nm wavelength delivers precise skin tightening and collagen stimulation. This combined approach achieves both fat reduction and skin tightening in a single treatment. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
+      question: "What is the Laser Fibre Lift treatment?",
+      answer: "The Laser Fibre Lift is a minimally invasive dual-wavelength laser procedure using 980nm and 1470nm laser fibres inserted beneath the skin. The 980nm wavelength targets fat reduction whilst the 1470nm wavelength delivers precise skin tightening and collagen stimulation. This combined approach achieves both fat reduction and skin tightening in a single treatment. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
     },
     {
-      question: "How long do Endolaser results last?",
-      answer: "Results from the Endolaser Endolift typically last 2–3+ years. The treatment stimulates ongoing collagen remodelling which continues to improve skin quality for several months after the procedure. Because the laser creates structural changes within the dermal tissue, the lifting effect is long-lasting and can be maintained with periodic touch-up sessions."
+      question: "How long do Laser Fibre Lift results last?",
+      answer: "Results from the Laser Fibre Lift typically last 2–3+ years. The treatment stimulates ongoing collagen remodelling which continues to improve skin quality for several months after the procedure. Because the laser creates structural changes within the dermal tissue, the lifting effect is long-lasting and can be maintained with periodic touch-up sessions."
     },
     {
-      question: "What is the recovery time for Endolaser?",
+      question: "What is the recovery time for the Laser Fibre Lift?",
       answer: "Most patients experience swelling for 4–5 days on average. The swelling is most noticeable in the first 48 hours and gradually subsides. You can typically return to normal daily activities within 5–7 days. Bruising is usually minimal. We provide comprehensive aftercare guidance to optimise your recovery and final results."
     },
     {
-      question: "Does the Endolaser dissolve existing fillers?",
-      answer: "No. Unlike some energy-based treatments such as HIFU or radiofrequency, the Endolaser does not dissolve existing dermal fillers. At CosmeDocs, we have learned to complement the Endolaser with strategic volume replacement — tightening skin and reducing excess fat where needed whilst preserving your existing filler work. This combined approach delivers superior results compared to a blind, all-over-the-face laser treatment."
+      question: "Does the Laser Fibre Lift dissolve existing fillers?",
+      answer: "No. Unlike some energy-based treatments such as HIFU or radiofrequency, the Laser Fibre Lift does not dissolve existing dermal fillers. At CosmeDocs, we have learned to complement the Laser Fibre Lift with strategic volume replacement — tightening skin and reducing excess fat where needed whilst preserving your existing filler work. This combined approach delivers superior results compared to a blind, all-over-the-face laser treatment."
     },
     {
-      question: "How much does Endolaser cost?",
-      answer: "Endolift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,250, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
+      question: "How much does the Laser Fibre Lift cost?",
+      answer: "Laser Fibre Lift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,250, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
     },
     {
-      question: "Is Endolaser better than HIFU or Morpheus8?",
-      answer: "The Endolaser delivers energy directly beneath the skin via a laser fibre, providing more precise and controlled thermal delivery compared to external energy devices like HIFU or Morpheus8. This direct approach typically achieves more consistent tightening results with fewer sessions. However, the right treatment depends on your individual anatomy — your doctor will assess which modality or combination is most suitable during consultation."
+      question: "Is the Laser Fibre Lift better than HIFU or Morpheus8?",
+      answer: "The Laser Fibre Lift delivers energy directly beneath the skin via a laser fibre, providing more precise and controlled thermal delivery compared to external energy devices like HIFU or Morpheus8. This direct approach typically achieves more consistent tightening results with fewer sessions. However, the right treatment depends on your individual anatomy — your doctor will assess which modality or combination is most suitable during consultation."
     },
     {
-      question: "What areas can Endolaser treat?",
-      answer: "The Endolaser is versatile and can treat the eyebrows (brow lift), jowls and jawline (lower face tightening), cheeks and nasolabial folds (mid-face rejuvenation), chin and submental area (double chin reduction), under-eye bags, neck skin laxity, and small pockets of body fat. It is particularly effective for facial skin tightening and contouring."
+      question: "What areas can the Laser Fibre Lift treat?",
+      answer: "The Laser Fibre Lift is versatile and can treat the eyebrows (brow lift), jowls and jawline (lower face tightening), cheeks and nasolabial folds (mid-face rejuvenation), chin and submental area (double chin reduction), under-eye bags, neck skin laxity, and small pockets of body fat. It is particularly effective for facial skin tightening and contouring."
     },
     {
-      question: "Who performs the Endolaser treatment at CosmeDocs?",
-      answer: "Endolaser treatments at CosmeDocs are led by Dr Ahmed Haq, who is the Lead Trainer for this device at the Harley Street Institute. He trains other medical professionals in advanced Endolaser techniques. The treatment is performed in association with our partner clinic PrivaDr, ensuring access to specialist facilities and nursing support."
+      question: "Who performs the Laser Fibre Lift treatment at CosmeDocs?",
+      answer: "Laser Fibre Lift treatments at CosmeDocs are led by Dr Ahmed Haq, who is the Lead Trainer for this device at the Harley Street Institute. He trains other medical professionals in advanced laser fibre techniques. The treatment is performed in association with our partner clinic PrivaDr, ensuring access to specialist facilities and nursing support."
     },
     {
-      question: "Can Endolaser be combined with other treatments?",
-      answer: "Absolutely. In fact, combining the Endolaser with complementary treatments often produces the best outcomes. It works exceptionally well alongside HA dermal fillers for volume restoration, PDO threads for additional mechanical lifting, and Botox for muscle relaxation. Your doctor will recommend the optimal combination based on your facial assessment."
+      question: "Can the Laser Fibre Lift be combined with other treatments?",
+      answer: "Absolutely. In fact, combining the Laser Fibre Lift with complementary treatments often produces the best outcomes. It works exceptionally well alongside HA dermal fillers for volume restoration, PDO threads for additional mechanical lifting, and Botox for muscle relaxation. Your doctor will recommend the optimal combination based on your facial assessment."
     },
     {
-      question: "Is the Endolaser treatment painful?",
+      question: "Is the Laser Fibre Lift treatment painful?",
       answer: "The procedure is performed under local anaesthetic, so discomfort during treatment is minimal. Most patients describe the sensation as gentle warmth beneath the skin. Post-procedure, you may experience mild tenderness and swelling for 4–5 days, which is managed with standard aftercare protocols and over-the-counter pain relief if needed."
     }
   ];
@@ -117,9 +117,9 @@ const EndolaserLift = () => {
               },
               {
                 "@type": "MedicalProcedure",
-                "name": "Endolift Laser Treatment London",
-                "alternateName": ["Endolaser Endolift", "Endolift London", "Laser Face Lift London", "Non-Surgical Facelift London"],
-                "description": "Minimally invasive Endolift laser treatment in London using dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow lift, and double chin reduction at Harley Street.",
+                "name": "Laser Fibre Lift London",
+                "alternateName": ["Laser Fibre Lift", "Laser Face Lift London", "Non-Surgical Facelift London"],
+                "description": "Minimally invasive Laser Fibre Lift treatment in London using dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow lift, and double chin reduction at Harley Street.",
                 "url": "https://www.cosmedocs.com/treatments/endolaser/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Face, Chin, Eyes, Jawline, Jowls, Neck",
@@ -141,7 +141,7 @@ const EndolaserLift = () => {
               },
               {
                 "@type": "Service",
-                "name": "Endolift Laser Treatment London",
+                "name": "Laser Fibre Lift London",
                 "serviceType": "Non-Surgical Facelift",
                 "provider": {
                   "@type": "MedicalBusiness",
@@ -160,29 +160,29 @@ const EndolaserLift = () => {
                 },
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
-                  "name": "Endolift Treatment Pricing",
+                  "name": "Laser Fibre Lift Pricing",
                   "itemListElement": [
                     {
                       "@type": "Offer",
-                      "name": "Endolift Eyebrow Lift",
+                      "name": "Laser Fibre Lift Eyebrow Lift",
                       "priceCurrency": "GBP",
                       "price": "450"
                     },
                     {
                       "@type": "Offer",
-                      "name": "Endolift Jawline & Jowls",
+                      "name": "Laser Fibre Lift Jawline & Jowls",
                       "priceCurrency": "GBP",
                       "price": "1250"
                     },
                     {
                       "@type": "Offer",
-                      "name": "Endolift Cheeks & Nasolabial Folds",
+                      "name": "Laser Fibre Lift Cheeks & Nasolabial Folds",
                       "priceCurrency": "GBP",
                       "price": "950"
                     },
                     {
                       "@type": "Offer",
-                      "name": "Endolift Chin & Double Chin",
+                      "name": "Laser Fibre Lift Chin & Double Chin",
                       "priceCurrency": "GBP",
                       "price": "950"
                     }
@@ -220,9 +220,9 @@ const EndolaserLift = () => {
             <Breadcrumb
               items={[
                 { label: 'Treatments', path: '/treatments/' },
-                { label: 'Non-Surgical Facelift', path: '/treatments/non-surgical-facelift/' }
+                { label: 'Mini Facelifts', path: '/treatments/non-surgical-facelift/' }
               ]}
-              currentPage="Endolaser Lift"
+              currentPage="Laser Fibre Lift"
             />
 
             <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
@@ -234,11 +234,11 @@ const EndolaserLift = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
-                    Endolift Laser{" "}
+                    Laser Fibre Lift{" "}
                     <span className="text-[#C9A050] font-light">London</span>
                   </h1>
                   <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
-                    Minimally invasive Endolift laser face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Performed by the Lead Trainer at the Harley Street Institute.
+                    Minimally invasive laser fibre face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Performed by the Lead Trainer at the Harley Street Institute.
                   </p>
                 </motion.div>
 
@@ -305,7 +305,7 @@ const EndolaserLift = () => {
             className="text-center mb-8"
           >
             <h2 className="text-2xl md:text-3xl font-extralight text-white/85 mb-2">
-              See the <span className="text-[#C9A050] font-light">Endolaser in Action</span>
+              See the <span className="text-[#C9A050] font-light">Laser Fibre Lift in Action</span>
             </h2>
             <div className="w-10 h-px bg-[#C9A050]/40 mx-auto" />
           </motion.div>
@@ -318,7 +318,7 @@ const EndolaserLift = () => {
           >
             <iframe
               src="https://www.youtube.com/embed/Y2yqPdDJoiA"
-              title="Endolaser Endolift Treatment at CosmeDocs"
+              title="Laser Fibre Lift Treatment at CosmeDocs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
@@ -334,17 +334,17 @@ const EndolaserLift = () => {
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             <div className="space-y-14">
 
-              {/* What Is Endolaser */}
+              {/* What Is the Laser Fibre Lift */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    What Is the <span className="text-[#C9A050] font-light">Endolaser Endolift?</span>
+                    What Is the <span className="text-[#C9A050] font-light">Laser Fibre Lift?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        The Endolaser — also known as the Endolift — is a minimally invasive dual-wavelength laser procedure that delivers controlled thermal energy directly beneath the skin. It combines two laser wavelengths: 980nm for targeted fat reduction and 1470nm for precise skin tightening and collagen stimulation. Unlike external energy devices such as HIFU or Morpheus8, the laser fibre is inserted through micro-incisions to directly target the subdermal tissue layer.
+                        The Laser Fibre Lift is a minimally invasive dual-wavelength laser procedure that delivers controlled thermal energy directly beneath the skin. It combines two laser wavelengths: 980nm for targeted fat reduction and 1470nm for precise skin tightening and collagen stimulation. Unlike external energy devices such as HIFU or Morpheus8, the laser fibre is inserted through micro-incisions to directly target the subdermal tissue layer.
                       </p>
                     }
                   >
@@ -353,7 +353,7 @@ const EndolaserLift = () => {
                         This internal approach means the energy reaches exactly where it is needed — tightening skin from within, stimulating new collagen formation, and liquefying small pockets of unwanted fat. The precision of subdermal laser delivery allows us to treat specific areas of the face and body with remarkable accuracy, achieving lifting and contouring results that external devices simply cannot match.
                       </p>
                       <p>
-                        Originally developed for body contouring and small-pocket fat reduction, the Endolaser has proven exceptionally effective for facial rejuvenation. At CosmeDocs, we have refined the technique specifically for face lifting, jowl tightening, eyebrow elevation, under-eye bag treatment, and chin contouring — positioning it as the most advanced non-surgical facelift modality in our clinical toolkit.
+                        Originally developed for body contouring and small-pocket fat reduction, the Laser Fibre Lift has proven exceptionally effective for facial rejuvenation. At CosmeDocs, we have refined the technique specifically for face lifting, jowl tightening, eyebrow elevation, under-eye bag treatment, and chin contouring — positioning it as the most advanced non-surgical facelift modality in our clinical toolkit.
                       </p>
                       <p>
                         The treatment is performed under local anaesthetic with minimal downtime. Most patients experience 4–5 days of swelling before seeing the lifting and tightening results emerge. Unlike surgical facelifts, there are no visible scars, no general anaesthesia, and the recovery period is measured in days rather than weeks.
@@ -367,25 +367,25 @@ const EndolaserLift = () => {
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    Why Endolaser Is <span className="text-[#C9A050] font-light">Different</span>
+                    Why the Laser Fibre Lift Is <span className="text-[#C9A050] font-light">Different</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        The critical difference between the Endolaser and other skin tightening technologies lies in energy delivery. External devices like HIFU, radiofrequency, and Morpheus8 deliver energy from outside the skin and hope it penetrates to the correct depth. The Endolaser fibre is placed directly where the energy is needed.
+                        The critical difference between the Laser Fibre Lift and other skin tightening technologies lies in energy delivery. External devices like HIFU, radiofrequency, and Morpheus8 deliver energy from outside the skin and hope it penetrates to the correct depth. The laser fibre is placed directly where the energy is needed.
                       </p>
                     }
                   >
                     <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
-                        This fundamental difference in approach means the Endolaser achieves more consistent, predictable results. There is no energy loss through the epidermis, no risk of surface burns, and the thermal effect is concentrated precisely at the tissue plane where collagen remodelling and fat reduction occur.
+                        This fundamental difference in approach means the Laser Fibre Lift achieves more consistent, predictable results. There is no energy loss through the epidermis, no risk of surface burns, and the thermal effect is concentrated precisely at the tissue plane where collagen remodelling and fat reduction occur.
                       </p>
                       <p>
-                        However — and this is crucial — <strong className="text-white/60">it is not just the device that produces the results</strong>. The Endolaser is a powerful instrument that requires expert understanding of facial anatomy, tissue planes, and the interplay between skin tightening, volume loss, and structural support. In inexperienced hands, any laser device can produce suboptimal results. In expert hands, the Endolaser delivers transformative facial rejuvenation.
+                        However — and this is crucial — <strong className="text-white/60">it is not just the device that produces the results</strong>. The Laser Fibre Lift is a powerful instrument that requires expert understanding of facial anatomy, tissue planes, and the interplay between skin tightening, volume loss, and structural support. In inexperienced hands, any laser device can produce suboptimal results. In expert hands, the Laser Fibre Lift delivers transformative facial rejuvenation.
                       </p>
                       <p>
-                        Dr Ahmed Haq is the Lead Trainer for this device at the Harley Street Institute, training other medical professionals in advanced Endolaser techniques. This level of expertise ensures that every treatment at CosmeDocs is performed with the precision, anatomical knowledge, and clinical judgement that the technology demands.
+                        Dr Ahmed Haq is the Lead Trainer for this device at the Harley Street Institute, training other medical professionals in advanced laser fibre techniques. This level of expertise ensures that every treatment at CosmeDocs is performed with the precision, anatomical knowledge, and clinical judgement that the technology demands.
                       </p>
                     </div>
                   </ExpandableSection>
@@ -396,16 +396,16 @@ const EndolaserLift = () => {
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    Endolaser <span className="text-[#C9A050] font-light">Treatment Areas</span>
+                    Laser Fibre Lift <span className="text-[#C9A050] font-light">Treatment Areas</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
-                    The Endolaser Endolift is exceptionally versatile, treating multiple facial zones with precision. At CosmeDocs, we focus on targeted, area-specific treatment rather than a generalised all-over approach — delivering superior results by addressing each zone's unique anatomy.
+                    The Laser Fibre Lift is exceptionally versatile, treating multiple facial zones with precision. At CosmeDocs, we focus on targeted, area-specific treatment rather than a generalised all-over approach — delivering superior results by addressing each zone's unique anatomy.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
                       { area: "Eyebrow Lift", desc: "Elevates drooping brows for a refreshed, open-eyed appearance without surgery. Ideal for hooded upper lids.", price: "£450" },
-                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Endolaser zone.", price: "£1,250" },
+                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Laser Fibre Lift zone.", price: "£1,250" },
                       { area: "Cheeks & Nasolabial Folds", desc: "Lifts mid-face tissue and softens deep nasolabial fold lines from within.", price: "£950" },
                       { area: "Chin & Double Chin", desc: "Reduces submental fat and tightens chin skin for a sharper, more defined profile.", price: "£950" },
                       { area: "Under-Eye Bags", desc: "Treats lower eyelid puffiness by tightening tissue and reducing fat herniation.", price: "POC" },
@@ -427,7 +427,7 @@ const EndolaserLift = () => {
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    How the Endolaser <span className="text-[#C9A050] font-light">Works</span>
+                    How the Laser Fibre Lift <span className="text-[#C9A050] font-light">Works</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
@@ -442,7 +442,7 @@ const EndolaserLift = () => {
                         Through tiny micro-incisions (typically 1–2mm), an ultra-thin dual-wavelength laser fibre is guided beneath the skin into the subdermal tissue plane. The system combines two wavelengths working in tandem: 980nm laser energy selectively targets and liquefies fat cells, whilst the 1470nm wavelength delivers precise thermal energy to tighten skin and stimulate new collagen synthesis.
                       </p>
                       <p>
-                        This dual-wavelength approach is what sets the Endolaser apart — the 980nm wavelength has a high affinity for fat, making it exceptionally effective for contouring and fat reduction, whilst the 1470nm wavelength targets water in tissue, delivering optimal collagen contraction and skin tightening. Both wavelengths work simultaneously, achieving comprehensive rejuvenation in a single pass.
+                        This dual-wavelength approach is what sets the Laser Fibre Lift apart — the 980nm wavelength has a high affinity for fat, making it exceptionally effective for contouring and fat reduction, whilst the 1470nm wavelength targets water in tissue, delivering optimal collagen contraction and skin tightening. Both wavelengths work simultaneously, achieving comprehensive rejuvenation in a single pass.
                       </p>
                       <p>
                         Your doctor monitors tissue temperature throughout the procedure using real-time feedback, ensuring consistent and safe energy delivery. The entire treatment takes 45–90 minutes depending on the number of zones treated.
@@ -465,19 +465,19 @@ const EndolaserLift = () => {
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        At CosmeDocs, we do not perform a general, blind all-over-the-face Endolift. Our approach is strategic, targeted, and integrative — combining the Endolaser with complementary modalities to achieve comprehensive facial rejuvenation that respects your existing aesthetic work.
+                        At CosmeDocs, we do not perform a general, blind all-over-the-face laser lift. Our approach is strategic, targeted, and integrative — combining the Laser Fibre Lift with complementary modalities to achieve comprehensive facial rejuvenation that respects your existing aesthetic work.
                       </p>
                     }
                   >
                     <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
-                        We have learned to replace volume where it has been lost, tighten skin where it has become lax, and reduce excess fat where it creates heaviness — all within a single treatment strategy. Crucially, the Endolaser <strong className="text-white/60">does not dissolve your existing dermal fillers</strong>. This is a significant advantage over some energy-based devices that can compromise previous filler work.
+                        We have learned to replace volume where it has been lost, tighten skin where it has become lax, and reduce excess fat where it creates heaviness — all within a single treatment strategy. Crucially, the Laser Fibre Lift <strong className="text-white/60">does not dissolve your existing dermal fillers</strong>. This is a significant advantage over some energy-based devices that can compromise previous filler work.
                       </p>
                       <p>
-                        Instead, we complement the Endolaser with strategic filler placement, creating a multi-modality approach that addresses all dimensions of facial ageing: volume loss, skin laxity, and fat redistribution. This is the invisible art of aesthetic medicine — transformation that speaks without saying a word.
+                        Instead, we complement the Laser Fibre Lift with strategic filler placement, creating a multi-modality approach that addresses all dimensions of facial ageing: volume loss, skin laxity, and fat redistribution. This is the invisible art of aesthetic medicine — transformation that speaks without saying a word.
                       </p>
                       <p>
-                        The Endolaser sits at the top of our four-level non-surgical facelift hierarchy. For patients who have progressed beyond Botox-based lifting (Nefertiti), volume-based lifting (HA Makeover), and mechanical lifting (PDO Threads), the Endolaser represents the most advanced non-surgical intervention available — offering results that were previously only achievable through surgical facelifts.
+                        The Laser Fibre Lift sits at the top of our four-level non-surgical facelift hierarchy. For patients who have progressed beyond Botox-based lifting (Nefertiti), volume-based lifting (HA Makeover), and mechanical lifting (PDO Threads), the Laser Fibre Lift represents the most advanced non-surgical intervention available — offering results that were previously only achievable through surgical facelifts.
                       </p>
                     </div>
                   </ExpandableSection>
@@ -492,7 +492,7 @@ const EndolaserLift = () => {
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
-                    Real patient testimonials filmed immediately after their Endolaser Endolift treatment, sharing their experience and initial impressions.
+                    Real patient testimonials filmed immediately after their Laser Fibre Lift treatment, sharing their experience and initial impressions.
                   </p>
                   <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 text-center">
                     <Zap className="w-10 h-10 text-[#C9A050]/30 mx-auto mb-4" />
@@ -534,16 +534,16 @@ const EndolaserLift = () => {
                 </motion.div>
               </section>
 
-              {/* Endolaser vs Other Treatments */}
+              {/* Laser Fibre Lift vs Other Treatments */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    Endolaser vs <span className="text-[#C9A050] font-light">Other Treatments</span>
+                    Laser Fibre Lift vs <span className="text-[#C9A050] font-light">Other Treatments</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="grid md:grid-cols-2 gap-5">
                     <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
-                      <p className="text-sm font-medium text-[#C9A050] mb-3">Endolaser Endolift</p>
+                      <p className="text-sm font-medium text-[#C9A050] mb-3">Laser Fibre Lift</p>
                       <ul className="space-y-2 text-white/45 text-xs font-light">
                         <li>• Direct subdermal energy delivery</li>
                         <li>• Dual 980nm + 1470nm laser precision</li>
@@ -567,7 +567,7 @@ const EndolaserLift = () => {
                   </div>
                   <div className="mt-4 p-5 bg-white/[0.03] border border-white/[0.06] rounded-xl">
                     <p className="text-white/40 text-xs leading-relaxed font-light">
-                      <strong className="text-[#C9A050]/80">Doctor's note:</strong> The best treatment is always the one suited to your individual anatomy and goals. During consultation, we assess whether Endolaser, PDO threads, fillers, or a combination approach will deliver the optimal result for your facial structure.
+                      <strong className="text-[#C9A050]/80">Doctor's note:</strong> The best treatment is always the one suited to your individual anatomy and goals. During consultation, we assess whether the Laser Fibre Lift, PDO threads, fillers, or a combination approach will deliver the optimal result for your facial structure.
                     </p>
                   </div>
                 </motion.div>
@@ -583,19 +583,19 @@ const EndolaserLift = () => {
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        The Endolaser reaches its full potential when combined with complementary treatments. At CosmeDocs, we have developed multi-modality protocols that address all dimensions of facial ageing in a single treatment plan.
+                        The Laser Fibre Lift reaches its full potential when combined with complementary treatments. At CosmeDocs, we have developed multi-modality protocols that address all dimensions of facial ageing in a single treatment plan.
                       </p>
                     }
                   >
                     <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
-                        <strong className="text-white/60">Endolaser + HA Fillers:</strong> The Endolaser tightens and reduces excess tissue whilst fillers restore lost volume. This combination is particularly effective for patients with both skin laxity and volume depletion — a common presentation in patients aged 45–65.
+                        <strong className="text-white/60">Laser Fibre Lift + HA Fillers:</strong> The Laser Fibre Lift tightens and reduces excess tissue whilst fillers restore lost volume. This combination is particularly effective for patients with both skin laxity and volume depletion — a common presentation in patients aged 45–65.
                       </p>
                       <p>
-                        <strong className="text-white/60">Endolaser + PDO Threads:</strong> For patients requiring both skin tightening and mechanical lifting, combining Endolaser with PDO threads creates a dual-action lift. The Endolaser addresses skin quality and fat, whilst threads provide immediate structural support.
+                        <strong className="text-white/60">Laser Fibre Lift + PDO Threads:</strong> For patients requiring both skin tightening and mechanical lifting, combining the Laser Fibre Lift with PDO threads creates a dual-action lift. The laser addresses skin quality and fat, whilst threads provide immediate structural support.
                       </p>
                       <p>
-                        <strong className="text-white/60">Endolaser + Botox (Nefertiti):</strong> Combining lower face laser tightening with Nefertiti Botox for platysmal band relaxation creates comprehensive jawline and neck rejuvenation — addressing both skin laxity and muscle-driven ageing.
+                        <strong className="text-white/60">Laser Fibre Lift + Botox (Nefertiti):</strong> Combining lower face laser tightening with Nefertiti Botox for platysmal band relaxation creates comprehensive jawline and neck rejuvenation — addressing both skin laxity and muscle-driven ageing.
                       </p>
                       <p>
                         Your doctor will recommend the optimal combination during your consultation, based on a thorough assessment of your facial anatomy, skin quality, volume status, and aesthetic goals.
@@ -655,13 +655,13 @@ const EndolaserLift = () => {
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ul className="space-y-3">
                     {[
-                      "Lead Trainer for Endolaser at the Harley Street Institute",
+                      "Lead Trainer for this laser device at the Harley Street Institute",
                       "Doctor-led — all treatments by GMC-registered doctors",
                       "Targeted approach — not a blind all-over-the-face treatment",
                       "Does not dissolve existing fillers — preserves your aesthetic work",
                       "Performed in association with partner clinic PrivaDr",
                       "Over 1 million treatments performed since 2007",
-                      "Multi-modality expertise — combining Endolaser with fillers, threads & Botox",
+                      "Multi-modality expertise — combining laser fibre with fillers, threads & Botox",
                       "Our aesthetics is invisible art — bold, natural, always your way"
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
@@ -683,7 +683,7 @@ const EndolaserLift = () => {
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        Proper aftercare is essential to optimise your Endolaser results. Following these guidelines will support healing, minimise downtime, and ensure the best possible outcome from your treatment.
+                        Proper aftercare is essential to optimise your Laser Fibre Lift results. Following these guidelines will support healing, minimise downtime, and ensure the best possible outcome from your treatment.
                       </p>
                     }
                   >
@@ -731,10 +731,10 @@ const EndolaserLift = () => {
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl font-light mb-4 text-white/85">
-                Ready for a <span className="text-[#C9A050]">Non-Surgical Facelift?</span>
+                Ready for a <span className="text-[#C9A050]">Mini Facelift?</span>
               </h2>
               <p className="text-white/50 mb-8 font-light">
-                A consultation with our doctors will assess your facial anatomy and recommend whether Endolaser, fillers, threads, or a combination approach will deliver the transformation you're looking for.
+                A consultation with our doctors will assess your facial anatomy and recommend whether the Laser Fibre Lift, fillers, threads, or a combination approach will deliver the transformation you're looking for.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
@@ -760,29 +760,29 @@ const EndolaserLift = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Endolift London — Non-Surgical Laser Face Lift at Harley Street</h2>
-          <p>CosmeDocs is a leading provider of Endolift laser treatment in London, located at 10 Harley Street, W1G 9PF. Our Endolift procedure uses dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow elevation, and double chin reduction. Led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute, CosmeDocs has performed over 1 million aesthetic treatments since 2007. Endolift results last 2–3+ years with minimal downtime. CQC-registered partner clinic. Our aesthetics is invisible art — bold, natural, always your way.</p>
+          <h2>Laser Fibre Lift London — Non-Surgical Laser Face Lift at Harley Street</h2>
+          <p>CosmeDocs is a leading provider of Laser Fibre Lift treatment in London, located at 10 Harley Street, W1G 9PF. Our Laser Fibre Lift procedure uses dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow elevation, and double chin reduction. Led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute, CosmeDocs has performed over 1 million aesthetic treatments since 2007. Results last 2–3+ years with minimal downtime. CQC-registered partner clinic. Our aesthetics is invisible art — bold, natural, always your way.</p>
 
-          <h3>Endolift Cost London — Treatment Pricing 2025</h3>
-          <p>How much does Endolift cost in London? At CosmeDocs Harley Street, Endolift pricing starts from £450 for an Eyebrow Lift. Jawline and Jowl tightening costs £1,250, Cheek and Nasolabial Fold lifting from £950, and Chin tightening or double chin reduction from £950. Consultation costs £50, fully redeemable against treatment. Our pricing includes local anaesthetic, the procedure, and comprehensive aftercare. Repeat sessions after 6 months receive a 50% discount.</p>
+          <h3>Laser Fibre Lift Cost London — Treatment Pricing 2025</h3>
+          <p>How much does the Laser Fibre Lift cost in London? At CosmeDocs Harley Street, pricing starts from £450 for an Eyebrow Lift. Jawline and Jowl tightening costs £1,250, Cheek and Nasolabial Fold lifting from £950, and Chin tightening or double chin reduction from £950. Consultation costs £50, fully redeemable against treatment. Our pricing includes local anaesthetic, the procedure, and comprehensive aftercare. Repeat sessions after 6 months receive a 50% discount.</p>
 
-          <h3>Endolift vs HIFU vs Morpheus8 — Which Is Best in London?</h3>
-          <p>Endolift delivers laser energy directly beneath the skin via a micro-fibre, achieving more precise and controlled results compared to external devices like HIFU, Morpheus8, and radiofrequency treatments. Key advantages of Endolift over HIFU in London: subdermal energy delivery (not transcutaneous), dual-wavelength fat reduction and skin tightening in one session, does not dissolve existing dermal fillers, results lasting 2–3+ years versus 6–12 months with HIFU. Endolift is considered the gold standard for non-surgical face lifting among London aesthetic clinics.</p>
+          <h3>Laser Fibre Lift vs HIFU vs Morpheus8 — Which Is Best in London?</h3>
+          <p>The Laser Fibre Lift delivers laser energy directly beneath the skin via a micro-fibre, achieving more precise and controlled results compared to external devices like HIFU, Morpheus8, and radiofrequency treatments. Key advantages of the Laser Fibre Lift over HIFU in London: subdermal energy delivery (not transcutaneous), dual-wavelength fat reduction and skin tightening in one session, does not dissolve existing dermal fillers, results lasting 2–3+ years versus 6–12 months with HIFU. The Laser Fibre Lift is considered the gold standard for non-surgical face lifting among London aesthetic clinics.</p>
 
-          <h3>Best Endolift Clinic London — Why Choose CosmeDocs Harley Street</h3>
-          <p>What makes CosmeDocs the best Endolift clinic in London? Dr Ahmed Haq is the Lead Trainer for the Endolift device at the Harley Street Institute, training other doctors in advanced technique. CosmeDocs uses a targeted, zone-specific approach rather than a generalised all-over treatment. The clinic has been established since 2007 with over 243 verified patient reviews averaging 4.9 stars. Treatments are performed in association with CQC-registered PrivaDr Ltd, ensuring clinical governance and specialist nursing support.</p>
+          <h3>Best Laser Fibre Lift Clinic London — Why Choose CosmeDocs Harley Street</h3>
+          <p>What makes CosmeDocs the best Laser Fibre Lift clinic in London? Dr Ahmed Haq is the Lead Trainer for this device at the Harley Street Institute, training other doctors in advanced technique. CosmeDocs uses a targeted, zone-specific approach rather than a generalised all-over treatment. The clinic has been established since 2007 with over 243 verified patient reviews averaging 4.9 stars. Treatments are performed in association with CQC-registered PrivaDr Ltd, ensuring clinical governance and specialist nursing support.</p>
 
           <h3>Non-Surgical Facelift London — Jowl Tightening Without Surgery</h3>
-          <p>Looking for a non-surgical facelift in London? The Endolift laser is the most advanced non-surgical face lifting modality available at CosmeDocs. Ideal for sagging jowls, loss of jawline definition, drooping eyebrows, double chin, and under-eye bags. The Endolift works at the subdermal level to tighten skin, stimulate collagen, and reduce fat — all under local anaesthetic with 4–5 days recovery. Many London patients choose Endolift as an alternative to surgical facelift, thread lifts, or HIFU.</p>
+          <p>Looking for a non-surgical facelift in London? The Laser Fibre Lift is the most advanced non-surgical face lifting modality available at CosmeDocs. Ideal for sagging jowls, loss of jawline definition, drooping eyebrows, double chin, and under-eye bags. The Laser Fibre Lift works at the subdermal level to tighten skin, stimulate collagen, and reduce fat — all under local anaesthetic with 4–5 days recovery. Many London patients choose the Laser Fibre Lift as an alternative to surgical facelift, thread lifts, or HIFU.</p>
 
-          <h3>Endolift Recovery Time London</h3>
-          <p>Endolift recovery time: 4–5 days average swelling, peak at 24–48 hours, most patients return to work within 5–7 days. Collagen remodelling continues for 3–6 months. Final results at 3–6 months, lasting 2–3+ years. Minimal bruising. No visible scarring. No general anaesthetic required.</p>
+          <h3>Laser Fibre Lift Recovery Time London</h3>
+          <p>Laser Fibre Lift recovery time: 4–5 days average swelling, peak at 24–48 hours, most patients return to work within 5–7 days. Collagen remodelling continues for 3–6 months. Final results at 3–6 months, lasting 2–3+ years. Minimal bruising. No visible scarring. No general anaesthetic required.</p>
 
-          <h3>Endolift Near Me — Central London W1</h3>
-          <p>Searching for Endolift near me in London? CosmeDocs is centrally located at 10 Harley Street, London W1G 9PF — easily accessible from Oxford Circus, Regent's Park, Bond Street, and Baker Street tube stations. We serve patients from across London including Mayfair, Marylebone, Kensington, Chelsea, Westminster, Knightsbridge, Notting Hill, Hampstead, Islington, the City of London, Canary Wharf, and surrounding areas. Book your Endolift consultation today.</p>
+          <h3>Laser Fibre Lift Near Me — Central London W1</h3>
+          <p>Searching for Laser Fibre Lift near me in London? CosmeDocs is centrally located at 10 Harley Street, London W1G 9PF — easily accessible from Oxford Circus, Regent's Park, Bond Street, and Baker Street tube stations. We serve patients from across London including Mayfair, Marylebone, Kensington, Chelsea, Westminster, Knightsbridge, Notting Hill, Hampstead, Islington, the City of London, Canary Wharf, and surrounding areas. Book your consultation today.</p>
 
-          <h3>Endolift Combination Treatments London</h3>
-          <p>Endolift achieves optimal results when combined with complementary treatments. Popular combinations at CosmeDocs London: Endolift with HA dermal fillers for volume restoration, Endolift with PDO thread lifts for mechanical support, and Endolift with Nefertiti Botox for platysmal band relaxation and neck rejuvenation. Our multi-modality approach addresses skin laxity, volume loss, and fat redistribution in a single comprehensive treatment plan. The Endolift does not dissolve existing fillers.</p>
+          <h3>Laser Fibre Lift Combination Treatments London</h3>
+          <p>The Laser Fibre Lift achieves optimal results when combined with complementary treatments. Popular combinations at CosmeDocs London: Laser Fibre Lift with HA dermal fillers for volume restoration, Laser Fibre Lift with PDO thread lifts for mechanical support, and Laser Fibre Lift with Nefertiti Botox for platysmal band relaxation and neck rejuvenation. Our multi-modality approach addresses skin laxity, volume loss, and fat redistribution in a single comprehensive treatment plan. The Laser Fibre Lift does not dissolve existing fillers.</p>
         </div>
       </div>
     </>
