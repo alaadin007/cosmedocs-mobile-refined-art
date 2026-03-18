@@ -84,7 +84,7 @@ const ConcernsHubSidebar = () => {
             { label: "Pigmentation & Melasma", path: "/concerns/pigmentation-melasma/" },
             { label: "Eczema & Dermatitis", path: "/concerns/eczema/" },
             { label: "Anti-Ageing", path: "/concerns/anti-ageing/" },
-            { label: "Non-Surgical Facelift", path: "/concerns/non-surgical-facelift/" },
+            { label: "Mini Facelift", path: "/concerns/non-surgical-facelift/" },
           ].map((item) => (
             <Link
               key={item.path}

@@ -24,6 +24,7 @@ const treatmentCategories = [
       { title: "Masseter", link: "/treatments/masseter-botox/" },
       { title: "Trap Botox", link: "/treatments/trap-botox/" },
       { title: "Calf Reduction", link: "/treatments/calf-slimming-botox/" },
+      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
       { title: "Medical Botox", link: "/treatments/botox/medical/", isSubHeader: true },
       { title: "Hyperhidrosis", link: "/treatments/hyperhidrosis-botox/" },
       { title: "Bruxism / TMJ", link: "/treatments/bruxism-botox/" },
@@ -48,13 +49,14 @@ const treatmentCategories = [
       { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas/#prejowl" },
       { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas/#perioral" },
       { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas/#volume" },
+      { title: "HA Makeover", link: "/treatments/ha-makeover/" },
     ]
   },
   {
-    label: "Non-Surgical Facelift",
+    label: "Mini Facelifts",
     hubLink: "/treatments/non-surgical-facelift/",
     items: [
-      { title: "Non-Surgical Facelift Overview", link: "/treatments/non-surgical-facelift/", isOverview: true },
+      { title: "Mini Facelifts Overview", link: "/treatments/non-surgical-facelift/", isOverview: true },
       { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
       { title: "HA Makeover", link: "/treatments/ha-makeover/" },
       { title: "PDO Thread Lift", link: "/treatments/pdo-threads/" },

@@ -19,7 +19,7 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
   "volume-story": [
     { title: "Cheek Filler", link: "/cheek-filler" },
     { title: "Tear Trough Filler", link: "/tear-trough-filler" },
-    { title: "Non-Surgical Facelift", link: "/non-surgical-facelift" },
+    { title: "Mini Facelift", link: "/non-surgical-facelift" },
   ],
   "thirties-shift": [
     { title: "Preventative Botox", link: "/botox-london" },
@@ -32,7 +32,7 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
     { title: "Profhilo", link: "/profhilo" },
   ],
   "fifties-elegance": [
-    { title: "Full Face Rejuvenation", link: "/non-surgical-facelift" },
+    { title: "Mini Facelift", link: "/non-surgical-facelift" },
     { title: "Neck Fillers", link: "/neck-fillers" },
     { title: "CO2 Laser", link: "/co2-laser-resurfacing" },
   ],

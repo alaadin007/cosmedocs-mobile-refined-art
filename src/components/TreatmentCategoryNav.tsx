@@ -59,7 +59,7 @@ const categories: Category[] = [
   },
   {
     id: "facelift",
-    label: "Non-Surgical Facelift",
+    label: "Mini Facelifts",
     items: [
       { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift" },
       { title: "HA Makeover", link: "/treatments/ha-makeover" },

@@ -36,7 +36,7 @@ const PopularTreatments = memo(({
       link: "/dermal-fillers"
     },
     {
-      title: "Non-Surgical Facelift & Neck Lift",
+      title: "Mini Facelift & Neck Lift",
       description: "✓ No scars, no marks\n⏱ Lasting 2-3 years\n\nCombination of volumising and lifting dissolvable threads. Forming and teaching this combination since 2014 — one of the first in the UK.\n\n✓ No downtime",
       link: "/non-surgical-facelift"
     },
