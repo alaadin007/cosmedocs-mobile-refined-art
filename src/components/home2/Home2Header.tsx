@@ -24,6 +24,7 @@ const treatmentCategories = [
       { title: "Masseter", link: "/treatments/masseter-botox/" },
       { title: "Trap Botox", link: "/treatments/trap-botox/" },
       { title: "Calf Reduction", link: "/treatments/calf-slimming-botox/" },
+      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
       { title: "Medical Botox", link: "/treatments/botox/medical/", isSubHeader: true },
       { title: "Hyperhidrosis", link: "/treatments/hyperhidrosis-botox/" },
       { title: "Bruxism / TMJ", link: "/treatments/bruxism-botox/" },
