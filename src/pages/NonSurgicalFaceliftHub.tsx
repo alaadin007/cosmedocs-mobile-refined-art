@@ -175,7 +175,7 @@ const NonSurgicalFaceliftHub = () => {
               className="text-lg md:text-xl text-white/60 font-extralight max-w-2xl mx-auto mb-10 leading-relaxed"
             >
               Four doctor-led modalities — from the lightest Botox refinement to deep
-              Endolaser tissue remodelling — combined to lift, restore, and rejuvenate
+              laser fibre tissue remodelling — combined to lift, restore, and rejuvenate
               without surgery.
             </motion.p>
 
