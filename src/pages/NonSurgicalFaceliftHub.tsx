@@ -518,7 +518,7 @@ const NonSurgicalFaceliftHub = () => {
             Recovery from non-surgical facelift treatments at Cosmedocs varies by modality. The Nefertiti Botox Lift requires no downtime. The HA Makeover involves mild swelling for 2-3 days. PDO thread lifts require 3-5 days of recovery with mild swelling and tenderness. The Laser Fibre Lift treatment typically involves 4-5 days of swelling on average. All modalities are significantly less invasive than surgical facelift alternatives, with recovery measured in days rather than weeks.
           </p>
           <p>
-            Prices for non-surgical facelift treatments at our London Harley Street clinic start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Endolaser treatment of specific zones including eyebrow lift, jawline and jowls, cheeks and nasolabial folds, and chin tightening for double chin reduction.
+            Prices for non-surgical facelift treatments at our London Harley Street clinic start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment of specific zones including eyebrow lift, jawline and jowls, cheeks and nasolabial folds, and chin tightening for double chin reduction.
           </p>
         </div>
       </div>
