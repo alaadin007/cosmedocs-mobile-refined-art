@@ -293,39 +293,6 @@ const EndolaserLift = () => {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
 
-        {/* ═══════════════════════════════════════════
-            VIDEO SECTION
-        ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-2xl md:text-3xl font-extralight text-white/85 mb-2">
-              See the <span className="text-[#C9A050] font-light">Laser Fibre Lift in Action</span>
-            </h2>
-            <div className="w-10 h-px bg-[#C9A050]/40 mx-auto" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative aspect-video rounded-2xl overflow-hidden border border-white/[0.06]"
-          >
-            <iframe
-              src="https://www.youtube.com/embed/Y2yqPdDJoiA"
-              title="Laser Fibre Lift Treatment at CosmeDocs"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-              loading="lazy"
-            />
-          </motion.div>
-        </section>
 
         {/* ═══════════════════════════════════════════
             TWO-COLUMN LAYOUT
