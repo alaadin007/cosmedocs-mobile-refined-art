@@ -407,6 +407,12 @@ const Contact = () => {
                   <p>London, W1G 9PF</p>
                   <p>United Kingdom</p>
                 </address>
+                <div className="bg-white/[0.02] border border-[#C9A050]/20 rounded-xl p-4 mb-4">
+                  <p className="text-xs text-[#C9A050] font-medium uppercase tracking-wider mb-1.5">Completely Discreet</p>
+                  <p className="text-xs text-white/50 leading-relaxed">
+                    No outside signage. No clinic branding on the door. Our Harley Street location is intentionally unmarked — your privacy is absolute. Trusted by public figures, celebrities and high-profile patients who require total confidentiality.
+                  </p>
+                </div>
                 <a
                   href="https://maps.google.com/?q=10+Harley+Street+London+W1G+9PF"
                   target="_blank"
