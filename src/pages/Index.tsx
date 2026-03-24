@@ -2,6 +2,7 @@ import { useState, lazy, Suspense, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { TooltipProvider } from "@/components/ui/tooltip";
 import AnimatedDots from "@/components/AnimatedDots";
+import DiscretionBadge from "@/components/DiscretionBadge";
 import { generateSEOMetadata } from '@/utils/seo';
 import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
@@ -204,6 +205,9 @@ const Index = () => {
                 
                 <div className="mb-8 max-w-xl mx-auto">
                   <p className="text-muted-foreground mb-4">art • science • a touch of magic</p>
+                  <div className="flex justify-center mb-4">
+                    <DiscretionBadge />
+                  </div>
                   <p className="text-muted-foreground/70 text-sm leading-relaxed">
                     All done with the finest needles imported,<br />
                     because every detail matters.
