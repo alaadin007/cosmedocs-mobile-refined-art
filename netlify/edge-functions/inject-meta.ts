@@ -23,6 +23,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Botox Units Explained: How Many Do You Need? (2026)',
     description: 'How many units of Botox do you need? Area-by-area breakdown for forehead, frown lines, crow\'s feet & more. Expert dosing guide from Harley Street.'
   },
+  '/how-long-does-botox-last/': {
+    title: 'How Long Does Botox Last? Duration Guide (2026)',
+    description: 'Botox lasts 3–6 months depending on area, dosing & lifestyle. Area-by-area timeline, first-time expectations & how to make results last longer.'
+  },
   '/treatments/botox-cost/': {
     title: 'Cost of Botox in London | Expert Injectable Clinic',
     description: 'Transparent Botox pricing from £275. Expert anti-wrinkle injections at London\'s leading pure injectable clinic. Premium results, honest costs.'

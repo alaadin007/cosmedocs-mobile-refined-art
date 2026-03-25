@@ -379,6 +379,7 @@ const BotoxCostUK = () => {
                       <p><strong className="text-white/60">Muscle strength:</strong> Stronger facial muscles require more units to achieve the same effect. This is why men typically need higher doses and why the <Link to="/treatments/masseter-botox/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline">masseter muscle</Link> requires 40–80 units compared to 10–25 for the frown.</p>
                       <p><strong className="text-white/60">Under-dosing:</strong> This is the most common — and most preventable — cause of short-lived results. Clinics offering very low prices often achieve this by using fewer units. The result looks good for 4–6 weeks, then fades rapidly. Dr Ahmed Haq notes: <em className="text-white/60">"Correct dosing isn't about using more — it's about using enough. We tailor every treatment to the individual patient's muscle dynamics."</em></p>
                       <p><strong className="text-white/60">Treatment frequency:</strong> Patients who maintain consistent Botox schedules often find their results last progressively longer over time, as muscles weaken with repeated treatment. This is one reason why long-term Botox actually becomes more cost-effective.</p>
+                      <p className="text-white/50 mt-2">For a detailed timeline of what to expect, read our <Link to="/how-long-does-botox-last/" className="text-[#C9A050] hover:underline">guide to how long Botox lasts</Link>.</p>
                     </div>
                   </ExpandableSection>
                 </motion.div>
