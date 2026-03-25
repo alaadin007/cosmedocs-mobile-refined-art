@@ -150,6 +150,7 @@ const CosmeDerm = lazy(() => import("./pages/CosmeDerm"));
 const BotoxCostLondon = lazy(() => import("./pages/BotoxCostLondon"));
 const BotoxCostUK = lazy(() => import("./pages/BotoxCostUK"));
 const BotoxUnitsExplained = lazy(() => import("./pages/BotoxUnitsExplained"));
+const HowLongDoesBotoxLast = lazy(() => import("./pages/HowLongDoesBotoxLast"));
 const AestheticsAtGlance = lazy(() => import("./pages/AestheticsAtGlance"));
 const FrownLineBotox = lazy(() => import("./pages/FrownLineBotox"));
 const CrowsFeetBotox = lazy(() => import("./pages/CrowsFeetBotox"));
@@ -638,6 +639,8 @@ const App = () => {
                           <Route path="/botox-cost-uk/" element={<BotoxCostUK />} />
                           <Route path="/botox-units-explained" element={<BotoxUnitsExplained />} />
                           <Route path="/botox-units-explained/" element={<BotoxUnitsExplained />} />
+                          <Route path="/how-long-does-botox-last" element={<HowLongDoesBotoxLast />} />
+                          <Route path="/how-long-does-botox-last/" element={<HowLongDoesBotoxLast />} />
                           
 {/* ============================================= */}
                           {/* BEFORE & AFTER GALLERIES - New nested routes */}
