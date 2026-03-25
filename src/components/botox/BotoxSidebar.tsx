@@ -70,6 +70,25 @@ const BotoxSidebar = () => {
       </motion.div>
 
 
+      {/* Pricing Guide Link */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-2xl p-5"
+      >
+        <p className="text-sm text-white/80 mb-2">
+          <span className="text-[#C9A050] font-medium">Botox Pricing Explained</span> — Understand units, dosing, and what affects cost.
+        </p>
+        <Link
+          to="/botox-cost-uk/"
+          className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium"
+        >
+          Read pricing guide
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </motion.div>
+
       {/* Medical Botox Link */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
