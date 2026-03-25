@@ -306,4 +306,12 @@
     <mobile:mobile/>
   </url>
 
+  <url>
+    <loc>https://www.cosmedocs.com/botox-units-explained/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
 </urlset>

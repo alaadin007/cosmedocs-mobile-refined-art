@@ -19,6 +19,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Botox Cost UK (2026): Prices, Units & What Affects Cost',
     description: 'Clear explanation of Botox pricing in the UK, how many units you need, and why costs vary. Learn what you\'re really paying for from Harley Street doctors.'
   },
+  '/botox-units-explained/': {
+    title: 'Botox Units Explained: How Many Do You Need? (2026)',
+    description: 'How many units of Botox do you need? Area-by-area breakdown for forehead, frown lines, crow\'s feet & more. Expert dosing guide from Harley Street.'
+  },
   '/treatments/botox-cost/': {
     title: 'Cost of Botox in London | Expert Injectable Clinic',
     description: 'Transparent Botox pricing from £275. Expert anti-wrinkle injections at London\'s leading pure injectable clinic. Premium results, honest costs.'
