@@ -652,7 +652,11 @@ const Prices = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl font-bold mb-2 text-amber-400">{treatments.botox.title}</h2>
-              <p className="text-gray-400 mb-6">{treatments.botox.subtitle}</p>
+              <p className="text-gray-400 mb-4">{treatments.botox.subtitle}</p>
+              <p className="text-sm text-gray-500 mb-6">
+                Want to understand what affects Botox pricing?{' '}
+                <Link to="/botox-cost-uk/" className="text-amber-400 hover:underline">Read our complete Botox cost guide</Link>
+              </p>
               
               <div className="mt-8">
                 {treatments.botox.items.map((item, index) => (
