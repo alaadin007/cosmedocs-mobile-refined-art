@@ -818,9 +818,12 @@ export default function FaceBotox() {
                       </AccordionItem>
                     ))}
                   </Accordion>
-                  <div className="mt-6 text-center">
-                    <Link to="/botox-faqs" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors">
+                  <div className="mt-6 flex flex-col sm:flex-row items-center gap-4 justify-center">
+                    <Link to="/botox-faqs/" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors">
                       View all Botox FAQs <ArrowRight className="w-3 h-3" />
+                    </Link>
+                    <Link to="/botox-cost-uk/" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors">
+                      Botox pricing explained <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
                 </motion.div>
