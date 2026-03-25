@@ -325,6 +325,7 @@ const BotoxCostUK = () => {
                         </div>
                       </div>
                     </div>
+                    <p className="text-sm text-white/50 mt-4">For a full area-by-area breakdown, see our <Link to="/botox-units-explained/" className="text-[#C9A050] hover:underline">complete Botox units guide</Link>.</p>
                   </div>
                 </motion.div>
               </section>
