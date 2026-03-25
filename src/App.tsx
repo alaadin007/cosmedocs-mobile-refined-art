@@ -148,6 +148,7 @@ const FatDissolve = lazy(() => import("./pages/FatDissolve"));
 const OilySkinBotox = lazy(() => import("./pages/OilySkinBotox"));
 const CosmeDerm = lazy(() => import("./pages/CosmeDerm"));
 const BotoxCostLondon = lazy(() => import("./pages/BotoxCostLondon"));
+const BotoxCostUK = lazy(() => import("./pages/BotoxCostUK"));
 const AestheticsAtGlance = lazy(() => import("./pages/AestheticsAtGlance"));
 const FrownLineBotox = lazy(() => import("./pages/FrownLineBotox"));
 const CrowsFeetBotox = lazy(() => import("./pages/CrowsFeetBotox"));
@@ -631,7 +632,9 @@ const App = () => {
                           <Route path="/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/skin-boosters/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
-                          <Route path="/botox-price-london" element={<Navigate to="/treatments/botox-cost/" replace />} />
+                          <Route path="/botox-price-london" element={<Navigate to="/botox-cost-uk/" replace />} />
+                          <Route path="/botox-cost-uk" element={<BotoxCostUK />} />
+                          <Route path="/botox-cost-uk/" element={<BotoxCostUK />} />
                           
 {/* ============================================= */}
                           {/* BEFORE & AFTER GALLERIES - New nested routes */}

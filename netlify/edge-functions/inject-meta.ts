@@ -15,6 +15,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Botox London | Anti-Wrinkle Injections | Cosmedocs Harley Street',
     description: 'Expert Botox treatments from £275. Doctor-led anti-wrinkle injections for forehead lines, crow\'s feet & frown lines. Harley Street since 2007.'
   },
+  '/botox-cost-uk/': {
+    title: 'Botox Cost UK (2026): Prices, Units & What Affects Cost',
+    description: 'Clear explanation of Botox pricing in the UK, how many units you need, and why costs vary. Learn what you\'re really paying for from Harley Street doctors.'
+  },
   '/treatments/botox-cost/': {
     title: 'Cost of Botox in London | Expert Injectable Clinic',
     description: 'Transparent Botox pricing from £275. Expert anti-wrinkle injections at London\'s leading pure injectable clinic. Premium results, honest costs.'
