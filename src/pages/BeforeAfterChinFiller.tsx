@@ -6,38 +6,59 @@ import { ArrowRight } from "lucide-react";
 const galleryImages = [
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-1.jpg",
-    alt: "Before and after chin filler showing improved facial balance and lower face definition",
+    alt: "Before and after chin filler showing improved facial balance and lower face definition at CosmeDocs Harley Street",
+    title: "Chin filler before and after — facial balance improvement",
     caption: "Improved facial balance and lower face definition following chin filler treatment.",
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-2.jpg",
-    alt: "Before and after chin filler demonstrating enhanced jawline contour and chin projection",
+    alt: "Before and after chin filler demonstrating enhanced jawline contour and chin projection at CosmeDocs",
+    title: "Chin filler before and after — jawline contour enhancement",
     caption: "Enhanced jawline contour and chin projection with strategic filler placement.",
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-3.jpg",
-    alt: "Before and after chin filler showing profile harmonisation and improved chin shape",
+    alt: "Before and after chin filler showing profile harmonisation and improved chin shape at Harley Street clinic",
+    title: "Chin filler before and after — profile harmonisation",
     caption: "Profile harmonisation and improved chin shape — subtle, natural results.",
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-4.jpg",
     alt: "Before and after chin filler demonstrating improved profile projection and jawline definition",
+    title: "Chin filler before and after — profile projection",
     caption: "Improved profile projection and jawline definition through targeted chin augmentation.",
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-5.jpg",
-    alt: "Before and after chin filler showing chin contouring and lower face balance",
+    alt: "Before and after chin filler showing chin contouring and lower face balance at CosmeDocs London",
+    title: "Chin filler before and after — chin contouring",
     caption: "Chin contouring for improved lower face balance and smoother profile line.",
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-6.jpg",
-    alt: "Before and after chin filler showing V-line chin enhancement and projection",
+    alt: "Before and after chin filler showing V-line chin enhancement and projection at Harley Street",
+    title: "Chin filler before and after — V-line enhancement",
     caption: "V-line chin enhancement — refined projection whilst maintaining natural facial proportions.",
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/before-after/dermal-fillers/chin/chin-filler-result-7.jpg",
-    alt: "Before and after chin filler demonstrating facial rejuvenation and chin augmentation",
+    alt: "Before and after chin filler demonstrating facial rejuvenation and chin augmentation at CosmeDocs",
+    title: "Chin filler before and after — facial rejuvenation",
     caption: "Facial rejuvenation through chin augmentation — a more balanced, defined lower face.",
+    width: 800,
+    height: 600,
   },
 ];
 
@@ -78,6 +99,18 @@ const schemaMarkup = {
         procedureType: "https://schema.org/NoninvasiveProcedure",
         bodyLocation: "Chin, mentalis region",
       },
+      image: galleryImages.map((img, i) => ({
+        "@type": "ImageObject",
+        "@id": `https://www.cosmedocs.com/before-after/dermal-fillers/chin/#image-${i + 1}`,
+        url: `https://www.cosmedocs.com${img.src}`,
+        name: img.title,
+        description: img.alt,
+        caption: img.caption,
+        width: img.width,
+        height: img.height,
+        creator: { "@type": "Organization", name: "CosmeDocs" },
+        copyrightHolder: { "@type": "Organization", name: "CosmeDocs" },
+      })),
     },
     {
       "@type": "WebPage",
@@ -165,7 +198,11 @@ const BeforeAfterChinFiller = () => {
                       <img
                         src={image.src}
                         alt={image.alt}
+                        title={image.title}
+                        width={image.width}
+                        height={image.height}
                         loading={index < 2 ? "eager" : "lazy"}
+                        decoding="async"
                         className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                       />
                     </div>
