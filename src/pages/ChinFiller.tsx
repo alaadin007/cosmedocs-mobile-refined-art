@@ -391,22 +391,38 @@ const ChinFiller = () => {
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
                     Below is an example of chin filler used to enhance profile balance and improve chin projection. Strategic placement creates a more defined lower face while maintaining natural facial harmony.
                   </p>
-                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
+                  <Link to="/before-after/dermal-fillers/chin/" className="block relative group rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
                     <img
                       src="/images/before-after/dermal-fillers/chin/chin-filler-result-3.jpg"
-                      alt="Before and after chin filler showing profile harmonisation and improved chin shape"
+                      alt="Before and after chin filler showing profile harmonisation and improved chin shape at CosmeDocs Harley Street"
+                      title="Chin filler before and after — click to view full gallery"
+                      width={800}
+                      height={600}
                       loading="lazy"
-                      className="w-full h-auto block"
+                      decoding="async"
+                      className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                     />
-                  </div>
+                    {/* Blinking overlay badge */}
+                    <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-black/70 backdrop-blur-sm border border-[#C9A050]/40 rounded-full px-4 py-2 group-hover:border-[#C9A050] transition-colors">
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C9A050] opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#C9A050]" />
+                      </span>
+                      <span className="text-[#C9A050] text-xs font-medium">View Full Gallery</span>
+                    </div>
+                  </Link>
                   <p className="text-white/30 text-xs font-light italic mb-6">
                     All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial structure and treatment plan.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/chin/"
-                    className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#D4AF6A] text-sm font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#C9A050]/10 border border-[#C9A050]/30 hover:bg-[#C9A050]/20 hover:border-[#C9A050]/50 text-[#C9A050] rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300"
                   >
-                    View real chin filler before & after results
+                    <span className="relative flex h-2 w-2 mr-1">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C9A050] opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C9A050]" />
+                    </span>
+                    View real chin filler before &amp; after results
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <p className="text-white/30 text-xs font-light mt-2">
