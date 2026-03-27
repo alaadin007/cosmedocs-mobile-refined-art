@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/table";
 import BotoxUnitsSidebar from "@/components/botox-units/BotoxUnitsSidebar";
 import ExpandableSection from "@/components/ui/expandable-section";
+import unitsImg from "@/assets/botox-units-precision.jpg";
 
 const BotoxUnitsExplained = () => {
   const faqSchema = {
@@ -630,9 +631,9 @@ const BotoxUnitsExplained = () => {
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
                     { label: "Botox Cost UK — Full Pricing Guide", path: "/botox-cost-uk/" },
-                    { label: "Botox Treatments", path: "/treatments/botox/" },
-                    { label: "Botox Lip Flip", path: "/treatments/lip-flip/" },
-                    { label: "Masseter Botox", path: "/treatments/masseter-botox/" },
+                    { label: "How Long Does Botox Last?", path: "/how-long-does-botox-last/" },
+                    { label: "Cheap vs Expensive Botox", path: "/cheap-botox-vs-expensive/" },
+                    { label: "Botox Prices London", path: "/botox-price-london/" },
                     { label: "Before & After Botox", path: "/before-after/botox/" },
                     { label: "Botox FAQs", path: "/botox-faqs/" },
                   ].map((link) => (

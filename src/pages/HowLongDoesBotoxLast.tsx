@@ -7,6 +7,7 @@ import { AlertTriangle, CheckCircle, Info, ArrowRight, Clock, Activity, Zap, Cal
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxLongevitySidebar from "@/components/botox-longevity/BotoxLongevitySidebar";
+import timelineImg from "@/assets/botox-timeline-journey.jpg";
 
 const HowLongDoesBotoxLast = () => {
   const faqs = [
