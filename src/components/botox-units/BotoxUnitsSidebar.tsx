@@ -106,9 +106,11 @@ const BotoxUnitsSidebar = () => {
         <div className="space-y-2">
           {[
             { label: "Botox Cost UK — Pricing Guide", path: "/botox-cost-uk/" },
+            { label: "How Long Does Botox Last?", path: "/how-long-does-botox-last/" },
+            { label: "Cheap vs Expensive Botox", path: "/cheap-botox-vs-expensive/" },
+            { label: "Botox Prices London", path: "/botox-price-london/" },
             { label: "Botox treatments", path: "/treatments/botox/" },
             { label: "Before & after Botox", path: "/before-after/botox/" },
-            { label: "Botox FAQs", path: "/botox-faqs/" },
           ].map((link) => (
             <Link
               key={link.path}

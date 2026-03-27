@@ -126,9 +126,11 @@ const BotoxCostSidebar = () => {
         <p className="text-sm font-medium text-white/70 mb-3">Related Treatments</p>
         <div className="space-y-2">
           {[
+            { label: "Botox Units Explained", path: "/botox-units-explained/" },
+            { label: "How Long Does Botox Last?", path: "/how-long-does-botox-last/" },
+            { label: "Cheap vs Expensive Botox", path: "/cheap-botox-vs-expensive/" },
+            { label: "Botox Prices London", path: "/botox-price-london/" },
             { label: "Botox treatments", path: "/treatments/botox/" },
-            { label: "Botox lip flip", path: "/treatments/lip-flip/" },
-            { label: "Masseter Botox", path: "/treatments/masseter-botox/" },
             { label: "Before & after Botox", path: "/before-after/botox/" },
           ].map((link) => (
             <Link

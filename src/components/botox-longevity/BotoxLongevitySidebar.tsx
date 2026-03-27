@@ -107,6 +107,8 @@ const BotoxLongevitySidebar = () => {
           {[
             { label: "Botox Cost UK — Pricing Guide", path: "/botox-cost-uk/" },
             { label: "Botox Units Explained", path: "/botox-units-explained/" },
+            { label: "Cheap vs Expensive Botox", path: "/cheap-botox-vs-expensive/" },
+            { label: "Botox Prices London", path: "/botox-price-london/" },
             { label: "Botox treatments", path: "/treatments/botox/" },
             { label: "Before & after Botox", path: "/before-after/botox/" },
           ].map((link) => (
