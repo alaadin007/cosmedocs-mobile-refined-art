@@ -122,6 +122,12 @@ const HowLongDoesBotoxLast = () => {
                 </p>
               </motion.header>
 
+              {/* Hero Image */}
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }}>
+                <img src={timelineImg} alt="Botox treatment timeline journey visualisation — CosmeDocs Harley Street duration guide" width={1024} height={640} loading="lazy" className="w-full rounded-2xl border border-white/10" />
+                <p className="text-xs text-white/20 mt-2 italic">Your Botox journey — understanding the timeline from treatment to results</p>
+              </motion.div>
+
               {/* ─── SECTION 1: Quick Answer (fully visible) ─── */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}

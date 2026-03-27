@@ -196,6 +196,14 @@ const BotoxUnitsExplained = () => {
           </div>
         </section>
 
+        {/* Hero Image */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
+            <img src={unitsImg} alt="Precision Botox syringes with measured unit markings — CosmeDocs Harley Street dosing expertise" width={1024} height={640} loading="lazy" className="w-full max-w-3xl rounded-2xl border border-white/10" />
+            <p className="text-xs text-white/20 mt-2 italic">Precision dosing — every unit measured for natural, lasting results</p>
+          </motion.div>
+        </div>
+
         {/* Two-column layout */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
