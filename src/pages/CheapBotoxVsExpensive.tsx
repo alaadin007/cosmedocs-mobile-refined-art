@@ -220,7 +220,7 @@ const CheapBotoxVsExpensive = () => {
               </motion.div>
 
               {/* Red Flags Section */}
-              <ExpandableSection title="Red Flags: How to Spot Under-Dosed Botox" defaultExpanded={false}>
+              <ExpandableSection preview={<h2 className="text-xl font-bold text-white">Red Flags: How to Spot Under-Dosed Botox</h2>} label="Show warning signs" collapseLabel="Hide warning signs">
                 <div className="space-y-4">
                   <p className="text-white/60 text-sm">At our Harley Street clinic, we regularly see patients who've had disappointing results elsewhere. These are the warning signs Dr Haq identifies:</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -244,7 +244,7 @@ const CheapBotoxVsExpensive = () => {
               </ExpandableSection>
 
               {/* What Premium Botox Includes */}
-              <ExpandableSection title="What You Get with Premium, Doctor-Led Botox" defaultExpanded={false}>
+              <ExpandableSection preview={<h2 className="text-xl font-bold text-white">What You Get with Premium, Doctor-Led Botox</h2>} label="Show details" collapseLabel="Hide details">
                 <div className="space-y-4">
                   <p className="text-white/60 text-sm">At CosmeDocs on Harley Street, every treatment includes more than just the injection. With 17+ years of experience, Dr Ahmed Haq has refined a comprehensive approach:</p>
                   <div className="space-y-3">
@@ -269,7 +269,7 @@ const CheapBotoxVsExpensive = () => {
               </ExpandableSection>
 
               {/* Safety Comparison */}
-              <ExpandableSection title="Safety: Why Practitioner Experience Matters More Than Price" defaultExpanded={false}>
+              <ExpandableSection preview={<h2 className="text-xl font-bold text-white">Safety: Why Practitioner Experience Matters More Than Price</h2>} label="Read safety analysis" collapseLabel="Hide safety analysis">
                 <div className="space-y-4">
                   <p className="text-white/60 text-sm">Botox has an excellent safety profile when administered correctly. The risks increase not from the product itself, but from inexperienced injection technique:</p>
                   <div className="overflow-x-auto rounded-xl border border-white/10">

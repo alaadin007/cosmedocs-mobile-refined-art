@@ -233,7 +233,7 @@ const BotoxPriceLondon = () => {
               </motion.div>
 
               {/* London vs Rest of UK */}
-              <ExpandableSection title="London vs Rest of UK: Price Comparison" defaultExpanded={false}>
+              <ExpandableSection preview={<h2 className="text-xl font-bold text-white">London vs Rest of UK: Price Comparison</h2>} label="Compare prices" collapseLabel="Hide comparison">
                 <div className="space-y-4">
                   <div className="overflow-x-auto rounded-xl border border-white/10">
                     <Table>
@@ -271,7 +271,7 @@ const BotoxPriceLondon = () => {
               </ExpandableSection>
 
               {/* What to Look For */}
-              <ExpandableSection title="Choosing a London Botox Clinic: What to Check" defaultExpanded={false}>
+              <ExpandableSection preview={<h2 className="text-xl font-bold text-white">Choosing a London Botox Clinic: What to Check</h2>} label="View checklist" collapseLabel="Hide checklist">
                 <div className="space-y-3">
                   {[
                     { check: "CQC registration", detail: "The clinic should be registered with the Care Quality Commission for cosmetic treatments" },
