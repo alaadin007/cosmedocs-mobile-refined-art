@@ -158,7 +158,7 @@ const BeforeAfterTearTroughFiller = () => {
         {/* Gallery */}
         <section className="pb-16 md:pb-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
               {galleryImages.map((image, index) => (
                 <motion.figure
                   key={index}
