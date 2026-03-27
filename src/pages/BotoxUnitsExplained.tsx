@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/table";
 import BotoxUnitsSidebar from "@/components/botox-units/BotoxUnitsSidebar";
 import ExpandableSection from "@/components/ui/expandable-section";
+import unitsImg from "@/assets/botox-units-precision.jpg";
 
 const BotoxUnitsExplained = () => {
   const faqSchema = {
@@ -194,6 +195,14 @@ const BotoxUnitsExplained = () => {
             </div>
           </div>
         </section>
+
+        {/* Hero Image */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
+            <img src={unitsImg} alt="Precision Botox syringes with measured unit markings — CosmeDocs Harley Street dosing expertise" width={1024} height={640} loading="lazy" className="w-full max-w-3xl rounded-2xl border border-white/10" />
+            <p className="text-xs text-white/20 mt-2 italic">Precision dosing — every unit measured for natural, lasting results</p>
+          </motion.div>
+        </div>
 
         {/* Two-column layout */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
@@ -630,9 +639,9 @@ const BotoxUnitsExplained = () => {
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
                     { label: "Botox Cost UK — Full Pricing Guide", path: "/botox-cost-uk/" },
-                    { label: "Botox Treatments", path: "/treatments/botox/" },
-                    { label: "Botox Lip Flip", path: "/treatments/lip-flip/" },
-                    { label: "Masseter Botox", path: "/treatments/masseter-botox/" },
+                    { label: "How Long Does Botox Last?", path: "/how-long-does-botox-last/" },
+                    { label: "Cheap vs Expensive Botox", path: "/cheap-botox-vs-expensive/" },
+                    { label: "Botox Prices London", path: "/botox-price-london/" },
                     { label: "Before & After Botox", path: "/before-after/botox/" },
                     { label: "Botox FAQs", path: "/botox-faqs/" },
                   ].map((link) => (

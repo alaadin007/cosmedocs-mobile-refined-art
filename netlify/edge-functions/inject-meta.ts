@@ -27,6 +27,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'How Long Does Botox Last? Duration Guide (2026)',
     description: 'Botox lasts 3–6 months depending on area, dosing & lifestyle. Area-by-area timeline, first-time expectations & how to make results last longer.'
   },
+  '/cheap-botox-vs-expensive/': {
+    title: 'Cheap Botox vs Expensive: What\'s the Difference? (2026)',
+    description: 'Cheap vs expensive Botox compared: dosing, safety, longevity & real cost per month. Learn why budget Botox often costs more long-term.'
+  },
+  '/botox-price-london/': {
+    title: 'Botox Prices London: What Does It Cost? (2026)',
+    description: 'London Botox prices from £275. Compare Harley Street, Central London & outer borough pricing. Area-by-area cost breakdown from Harley Street doctors.'
+  },
   '/treatments/botox-cost/': {
     title: 'Cost of Botox in London | Expert Injectable Clinic',
     description: 'Transparent Botox pricing from £275. Expert anti-wrinkle injections at London\'s leading pure injectable clinic. Premium results, honest costs.'

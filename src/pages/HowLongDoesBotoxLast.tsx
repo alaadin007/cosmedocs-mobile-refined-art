@@ -7,6 +7,7 @@ import { AlertTriangle, CheckCircle, Info, ArrowRight, Clock, Activity, Zap, Cal
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxLongevitySidebar from "@/components/botox-longevity/BotoxLongevitySidebar";
+import timelineImg from "@/assets/botox-timeline-journey.jpg";
 
 const HowLongDoesBotoxLast = () => {
   const faqs = [
@@ -120,6 +121,12 @@ const HowLongDoesBotoxLast = () => {
                   Part of our <Link to="/botox-cost-uk/" className="text-[#C9A050]/60 hover:text-[#C9A050] underline">Botox Cost UK</Link> guide
                 </p>
               </motion.header>
+
+              {/* Hero Image */}
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }}>
+                <img src={timelineImg} alt="Botox treatment timeline journey visualisation — CosmeDocs Harley Street duration guide" width={1024} height={640} loading="lazy" className="w-full rounded-2xl border border-white/10" />
+                <p className="text-xs text-white/20 mt-2 italic">Your Botox journey — understanding the timeline from treatment to results</p>
+              </motion.div>
 
               {/* ─── SECTION 1: Quick Answer (fully visible) ─── */}
               <section>

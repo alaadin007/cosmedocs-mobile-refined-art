@@ -316,7 +316,23 @@
 
   <url>
     <loc>https://www.cosmedocs.com/how-long-does-botox-last/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/cheap-botox-vs-expensive/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/botox-price-london/</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>

@@ -7,6 +7,7 @@ import { AlertTriangle, CheckCircle, Info, ArrowRight, Users, RefreshCw, Calcula
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxCostSidebar from "@/components/botox-cost/BotoxCostSidebar";
+import premiumImg from "@/assets/botox-premium-quality.jpg";
 
 const BotoxCostUK = () => {
   const faqs = [
@@ -138,6 +139,12 @@ const BotoxCostUK = () => {
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>
+
+            {/* Hero Image */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="max-w-3xl pb-8">
+              <img src={premiumImg} alt="Premium Botox vial and gold syringe on dark marble surface — CosmeDocs Harley Street quality assurance" width={1024} height={640} className="w-full rounded-2xl border border-white/10" />
+              <p className="text-xs text-white/20 mt-2 italic">Premium-grade toxin and precision dosing — the foundation of lasting results</p>
+            </motion.div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
