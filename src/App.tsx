@@ -150,6 +150,8 @@ const CosmeDerm = lazy(() => import("./pages/CosmeDerm"));
 const BotoxCostLondon = lazy(() => import("./pages/BotoxCostLondon"));
 const BotoxCostUK = lazy(() => import("./pages/BotoxCostUK"));
 const BotoxUnitsExplained = lazy(() => import("./pages/BotoxUnitsExplained"));
+const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
+const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
 const HowLongDoesBotoxLast = lazy(() => import("./pages/HowLongDoesBotoxLast"));
 const AestheticsAtGlance = lazy(() => import("./pages/AestheticsAtGlance"));
 const FrownLineBotox = lazy(() => import("./pages/FrownLineBotox"));
@@ -634,13 +636,16 @@ const App = () => {
                           <Route path="/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/skin-boosters" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/treatments/skin-boosters/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
-                          <Route path="/botox-price-london" element={<Navigate to="/botox-cost-uk/" replace />} />
+                          <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
+                          <Route path="/botox-price-london/" element={<BotoxPriceLondon />} />
                           <Route path="/botox-cost-uk" element={<BotoxCostUK />} />
                           <Route path="/botox-cost-uk/" element={<BotoxCostUK />} />
                           <Route path="/botox-units-explained" element={<BotoxUnitsExplained />} />
                           <Route path="/botox-units-explained/" element={<BotoxUnitsExplained />} />
                           <Route path="/how-long-does-botox-last" element={<HowLongDoesBotoxLast />} />
                           <Route path="/how-long-does-botox-last/" element={<HowLongDoesBotoxLast />} />
+                          <Route path="/cheap-botox-vs-expensive" element={<CheapBotoxVsExpensive />} />
+                          <Route path="/cheap-botox-vs-expensive/" element={<CheapBotoxVsExpensive />} />
                           
 {/* ============================================= */}
                           {/* BEFORE & AFTER GALLERIES - New nested routes */}
