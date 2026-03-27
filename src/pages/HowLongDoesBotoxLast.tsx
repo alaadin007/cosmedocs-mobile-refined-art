@@ -391,7 +391,7 @@ const HowLongDoesBotoxLast = () => {
                           <AlertTriangle className="w-4 h-4 text-red-400/70 mt-0.5 flex-shrink-0" />
                           <div>
                             <p className="text-red-400/80 text-xs font-semibold uppercase tracking-wider mb-1">Warning</p>
-                            <p className="text-white/50 text-sm font-light">Avoid clinics that offer "top-ups" as a solution to short-lived results. If Botox consistently wears off within 6–8 weeks, the initial dose was insufficient. Paying for top-ups on top of under-dosed treatments costs more than a single correctly dosed session.</p>
+                            <p className="text-white/50 text-sm font-light">Avoid clinics that offer "top-ups" as a solution to short-lived results. If Botox consistently wears off within 6–8 weeks, the initial dose was insufficient. Paying for top-ups on top of under-dosed treatments costs more than a single correctly dosed session. Read our <Link to="/cheap-botox-vs-expensive/" className="text-[#C9A050] hover:underline">cheap vs expensive Botox comparison</Link> to understand the real trade-offs.</p>
                           </div>
                         </div>
                       </div>
@@ -444,7 +444,7 @@ const HowLongDoesBotoxLast = () => {
                   </div>
 
                   <p className="text-sm text-white/50">
-                    For a full pricing analysis, see our <Link to="/botox-cost-uk/" className="text-[#C9A050] hover:underline">complete Botox cost UK guide</Link>.
+                    For a full pricing analysis, see our <Link to="/botox-cost-uk/" className="text-[#C9A050] hover:underline">complete Botox cost UK guide</Link>. If you're based in the capital, our <Link to="/botox-price-london/" className="text-[#C9A050] hover:underline">Botox prices in London</Link> guide breaks down costs by area.
                   </p>
                 </motion.div>
               </section>
