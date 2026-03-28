@@ -43,33 +43,14 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
     </noscript>
 
-    <!-- Defer Google Analytics until after page load -->
+    <!-- Google tag (gtag.js) - GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1TYCHPT0Q"></script>
     <script>
-      if (typeof requestIdleCallback !== 'undefined') {
-        requestIdleCallback(function() {
-          var s = document.createElement('script');
-          s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-M1TYCHPT0Q';
-          document.head.appendChild(s);
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-M1TYCHPT0Q', { send_page_view: false });
-        });
-      } else {
-        window.addEventListener('load', function() {
-          setTimeout(function() {
-            var s = document.createElement('script');
-            s.async = true;
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-M1TYCHPT0Q';
-            document.head.appendChild(s);
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-M1TYCHPT0Q', { send_page_view: false });
-          }, 2000);
-        });
-      }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M1TYCHPT0Q');
+      gtag('config', 'AW-705430122');
     </script>
   </head>
 
