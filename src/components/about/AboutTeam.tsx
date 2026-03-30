@@ -85,8 +85,6 @@ const AboutTeam = () => (
                   </a>
                   <a
                     href={bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#C9A050] text-black text-xs tracking-wider uppercase px-4 py-2 rounded-full hover:bg-[#B8913F] transition-colors"
                   >
                     <Calendar className="w-3.5 h-3.5" />

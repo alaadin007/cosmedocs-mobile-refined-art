@@ -646,7 +646,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Dermaroller Treatment</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Micro-needling technology promoting skin rejuvenation whilst infusing powerful antioxidants and brightening agents into the skin. According to <a href="https://dermnetnz.org/topics/post-inflammatory-hyperpigmentation" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">DermNet NZ</a>, micro-needling can be effective for treating post-inflammatory hyperpigmentation when combined with appropriate skincare.
+                          Micro-needling technology promoting skin rejuvenation whilst infusing powerful antioxidants and brightening agents into the skin. According to <span className="text-purple-300">DermNet NZ</span>, micro-needling can be effective for treating post-inflammatory hyperpigmentation when combined with appropriate skincare.
                         </p>
                         <div className="text-xs text-purple-300">✓ Micro-needling • ✓ Antioxidant infusion • ✓ Cell turnover</div>
                       </div>
