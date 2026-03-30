@@ -45,28 +45,28 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
     </noscript>
 
-    <!-- Google tag (gtag.js) - Deferred loading for performance -->
+    <!-- Google tag (gtag.js) - Load after user interaction or 5s delay -->
     <script>
-      // Load gtag after page becomes interactive to reduce unused JS
-      function loadGtag() {
-        var s = document.createElement('script');
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-F63JH4BC64';
-        s.async = true;
+      var gtagLoaded=false;
+      function loadGtag(){
+        if(gtagLoaded)return;gtagLoaded=true;
+        var s=document.createElement('script');
+        s.src='https://www.googletagmanager.com/gtag/js?id=G-F63JH4BC64';
+        s.async=true;
         document.head.appendChild(s);
-        s.onload = function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-F63JH4BC64');
-          gtag('config', 'AW-705430122');
+        s.onload=function(){
+          window.dataLayer=window.dataLayer||[];
+          function g(){dataLayer.push(arguments);}
+          window.gtag=g;
+          g('js',new Date());
+          g('config','G-F63JH4BC64',{send_page_view:true});
+          g('config','AW-705430122');
         };
       }
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadGtag, { timeout: 3000 });
-      } else {
-        setTimeout(loadGtag, 2000);
-      }
+      ['scroll','click','keydown','touchstart'].forEach(function(e){
+        document.addEventListener(e,loadGtag,{once:true,passive:true});
+      });
+      setTimeout(loadGtag,5000);
     </script>
   </head>
 
