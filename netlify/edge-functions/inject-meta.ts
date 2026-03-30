@@ -649,14 +649,16 @@ export default async function handler(request: Request, context: any) {
   }
 
   // Inject or replace canonical tag to match sitemap URLs
+  // Include data-rh="true" so react-helmet-async recognises it and replaces
+  // instead of adding a duplicate canonical tag
   const canonicalUrl = `https://www.cosmedocs.com${path}`;
-  if (/<link\s+rel=["']canonical["']\s+href=["'].*?["']\s*\/?>/i.test(html)) {
+  if (/<link\s+rel=["']canonical["'].*?\/?>/i.test(html)) {
     html = html.replace(
-      /<link\s+rel=["']canonical["']\s+href=["'].*?["']\s*\/?>/i,
-      `<link rel="canonical" href="${canonicalUrl}" />`
+      /<link\s+rel=["']canonical["'].*?\/?>/i,
+      `<link rel="canonical" href="${canonicalUrl}" data-rh="true" />`
     );
   } else {
-    html = html.replace('</head>', `  <link rel="canonical" href="${canonicalUrl}" />\n</head>`);
+    html = html.replace('</head>', `  <link rel="canonical" href="${canonicalUrl}" data-rh="true" />\n</head>`);
   }
 
   return new Response(html, {
