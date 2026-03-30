@@ -4,7 +4,7 @@ import drAhmedImg from "@/assets/dr-ahmed-haq.png";
 import drHenaImg from "@/assets/dr-hena-haq.png";
 import drHassanImg from "@/assets/dr-hassan-mirza.png";
 
-const bookingUrl = "https://med.as.me/cosmedocs";
+const bookingUrl = "/contact/";
 
 const doctors = [
   {
