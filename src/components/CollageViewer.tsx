@@ -27,10 +27,13 @@ const CollageViewer = ({ images, caption }: CollageViewerProps) => {
               key={index} 
               className="relative overflow-hidden"
             >
-              <img
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                width={200}
+                height={200}
+                loading="lazy"
               />
             </div>
           ))}
