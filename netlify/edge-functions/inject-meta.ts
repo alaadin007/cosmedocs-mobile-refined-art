@@ -599,7 +599,7 @@ export default async function handler(request: Request, context: any) {
   const url = new URL(request.url);
   const rawPath = url.pathname;
 
-  // Skip asset requests entirely
+  // Skip asset requests entirely — fast path, no context.next()
   if (/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|otf|json|xml|txt|mp4|webm|webp)$/i.test(rawPath)) {
     return context.next();
   }
@@ -616,6 +616,12 @@ export default async function handler(request: Request, context: any) {
 
   const path = normalisePath(rawPath);
 
+  // Check meta BEFORE fetching origin — if no match, pass through without buffering
+  const meta = PAGE_META[path];
+  if (!meta) {
+    return context.next();
+  }
+
   const response = await context.next();
   const contentType = response.headers.get('content-type') || '';
 
@@ -624,41 +630,25 @@ export default async function handler(request: Request, context: any) {
     return response;
   }
 
-  const meta = PAGE_META[path];
-  if (!meta) {
-    return response;
-  }
-
   let html = await response.text();
 
-  // Replace existing <title> tag (or insert if missing)
-  if (/<title>.*?<\/title>/i.test(html)) {
-    html = html.replace(/<title>.*?<\/title>/i, `<title>${meta.title}</title>`);
-  } else {
-    html = html.replace('</head>', `  <title>${meta.title}</title>\n</head>`);
-  }
-
-  // Replace existing meta description (or insert if missing)
-  if (/<meta\s+name=["']description["']\s+content=["'].*?["']\s*\/?>/i.test(html)) {
-    html = html.replace(
-      /<meta\s+name=["']description["']\s+content=["'].*?["']\s*\/?>/i,
-      `<meta name="description" content="${meta.description}" />`
-    );
-  } else {
-    html = html.replace('</head>', `  <meta name="description" content="${meta.description}" />\n</head>`);
-  }
-
-  // Inject or replace canonical tag to match sitemap URLs
-  // Include data-rh="true" so react-helmet-async recognises it and replaces
-  // instead of adding a duplicate canonical tag
+  // Build replacement strings once
+  const titleTag = `<title>${meta.title}</title>`;
+  const descTag = `<meta name="description" content="${meta.description}" />`;
   const canonicalUrl = `https://www.cosmedocs.com${path}`;
+  const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" data-rh="true" />`;
+
+  // Single-pass replacements using pre-compiled patterns
+  html = html.replace(/<title>.*?<\/title>/i, titleTag);
+  html = html.replace(
+    /<meta\s+name=["']description["']\s+content=["'].*?["']\s*\/?>/i,
+    descTag
+  );
+
   if (/<link\s+rel=["']canonical["'].*?\/?>/i.test(html)) {
-    html = html.replace(
-      /<link\s+rel=["']canonical["'].*?\/?>/i,
-      `<link rel="canonical" href="${canonicalUrl}" data-rh="true" />`
-    );
+    html = html.replace(/<link\s+rel=["']canonical["'].*?\/?>/i, canonicalTag);
   } else {
-    html = html.replace('</head>', `  <link rel="canonical" href="${canonicalUrl}" data-rh="true" />\n</head>`);
+    html = html.replace('</head>', `  ${canonicalTag}\n</head>`);
   }
 
   return new Response(html, {
