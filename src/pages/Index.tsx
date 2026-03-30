@@ -237,7 +237,7 @@ const Index = () => {
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
                     className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
                   >
-                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
                     <h3 className="text-lg font-semibold mb-2">
                       Chat With Our <span className="text-purple">AI</span>esthetics Doctor
                     </h3>
