@@ -45,14 +45,28 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
     </noscript>
 
-    <!-- Google tag (gtag.js) - GA4 + Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F63JH4BC64"></script>
+    <!-- Google tag (gtag.js) - Deferred loading for performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F63JH4BC64');
-      gtag('config', 'AW-705430122');
+      // Load gtag after page becomes interactive to reduce unused JS
+      function loadGtag() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-F63JH4BC64';
+        s.async = true;
+        document.head.appendChild(s);
+        s.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-F63JH4BC64');
+          gtag('config', 'AW-705430122');
+        };
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGtag, { timeout: 3000 });
+      } else {
+        setTimeout(loadGtag, 2000);
+      }
     </script>
   </head>
 
@@ -165,7 +179,7 @@
         </footer>
       </noscript>
     </div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
