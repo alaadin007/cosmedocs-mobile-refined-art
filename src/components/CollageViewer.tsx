@@ -1,5 +1,6 @@
 
 import React from 'react';
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface CollageImage {
   src: string;
