@@ -144,6 +144,7 @@ const TrapBotox = () => {
                   Trap{" "}
                   <span className="text-[#C9A050] font-light">Botox</span>
                 </h1>
+                <p className="text-sm text-[#C9A050]/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
                   Shoulder slimming and neck elongation through targeted trapezius muscle reduction — elegance refined, tension released.
                 </p>

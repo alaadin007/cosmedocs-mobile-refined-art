@@ -185,6 +185,7 @@ const BotoxCalfReduction = () => {
                   <span className="block text-purple-300">Reduction</span>
                   <span className="block text-sm mt-4">Sculpt elegant leg contours with precision</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />

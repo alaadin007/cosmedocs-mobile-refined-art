@@ -196,6 +196,7 @@ const BruxismBotox = () => {
                     Bruxism{" "}
                     <span className="text-[#C9A050] font-light">& TMJ Botox</span>
                   </h1>
+                  <p className="text-sm text-[#C9A050]/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                   <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
                     Therapeutic botulinum toxin to relieve teeth grinding, jaw clenching, and TMJ pain — with the added benefit of jawline refinement.
                   </p>

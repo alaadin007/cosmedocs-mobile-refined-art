@@ -179,6 +179,7 @@ const ChinBotox = () => {
                   <span className="text-purple-300">Chin Botox London</span>
                   <span className="block text-sm mt-4">Invisible art - smooth dimpled chin botox enhancement that speaks without words</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Botox for Dimpled Chin & Pebble Chin Botox</p>
                   <p className="text-sm text-gray-300">15-20 minutes • Chin botox before and after results visible in days</p>

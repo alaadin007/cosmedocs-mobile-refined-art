@@ -124,6 +124,7 @@ export default function FaceBotox() {
                     The art of
                     <span className="block font-semibold text-[#C9A050]">invisible anti-wrinkle</span>
                   </h1>
+                  <p className="text-sm text-[#C9A050]/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
 
                   <p className="text-lg md:text-xl text-white/60 mb-4 max-w-xl leading-relaxed font-light">
                     Your comprehensive guide to Botox. Understanding how it works, what to expect, and achieving results so natural they're undetectable.

@@ -252,6 +252,7 @@ const OilySkinBotox = () => {
                   <span className="block text-xl md:text-2xl mt-4 text-gray-300">Best Skin Treatment for Oily Skin & Greasy T-Zone</span>
                   <span className="block text-sm mt-2 font-normal">Putting the squeeze on oily skin in your T-zone</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8 space-y-3">
                   <p className="text-2xl text-purple-300 font-bold">Greasy Skin Treatment & Sebum Control</p>
                   <p className="text-lg text-gray-200">The best oily face treatment - 30% oil reduction for a balanced, matte complexion</p>
