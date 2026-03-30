@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = 'G-M1TYCHPT0Q';
+const GA_MEASUREMENT_ID = 'G-F63JH4BC64';
 
 export const GoogleAnalytics = () => {
   useEffect(() => {
