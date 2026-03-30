@@ -4,7 +4,7 @@ import drAhmedImg from "@/assets/dr-ahmed-haq.png";
 import drHenaImg from "@/assets/dr-hena-haq.png";
 import drHassanImg from "@/assets/dr-hassan-mirza.png";
 
-const bookingUrl = "https://med.as.me/cosmedocs";
+const bookingUrl = "/contact/";
 
 const doctors = [
   {
@@ -85,8 +85,6 @@ const AboutTeam = () => (
                   </a>
                   <a
                     href={bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#C9A050] text-black text-xs tracking-wider uppercase px-4 py-2 rounded-full hover:bg-[#B8913F] transition-colors"
                   >
                     <Calendar className="w-3.5 h-3.5" />

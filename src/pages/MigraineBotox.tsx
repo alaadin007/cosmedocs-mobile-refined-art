@@ -328,7 +328,7 @@ const MigraineBotox = () => {
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
                     Understanding what triggers your migraines is crucial for effective management. Research from{" "}
-                    <a href="https://migrainetrust.org/live-with-migraine/treatments/botox/" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">The Migraine Trust</a>{" "}
+                    <span className="text-[#C9A050]/70">The Migraine Trust</span>{" "}
                     highlights several common factors:
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
