@@ -651,9 +651,16 @@ export default async function handler(request: Request, context: any) {
     html = html.replace('</head>', `  ${canonicalTag}\n</head>`);
   }
 
+  const headers = new Headers(response.headers);
+  headers.set('x-edge-meta', '1');
+  // Cache HTML for 60s at CDN level, revalidate in background
+  if (!headers.has('cache-control')) {
+    headers.set('cache-control', 'public, s-maxage=60, stale-while-revalidate=300');
+  }
+
   return new Response(html, {
     status: response.status,
-    headers: response.headers,
+    headers,
   });
 }
 

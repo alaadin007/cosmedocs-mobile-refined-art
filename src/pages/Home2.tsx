@@ -941,6 +941,8 @@ export default function Home2() {
                 <img 
                   src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
                   alt="Google" 
+                  width={92}
+                  height={30}
                   className="h-4 opacity-70"
                 />
                 <span>See all reviews on Google</span>
