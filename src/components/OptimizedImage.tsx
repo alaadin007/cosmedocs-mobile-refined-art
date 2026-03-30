@@ -15,36 +15,29 @@ const OptimizedImage = ({ src, alt, width, height, ...props }: OptimizedImagePro
   const isJpg = src.endsWith('.jpg') || src.endsWith('.jpeg');
 
   if (isUpload && (isPng || isJpg)) {
-    // Build Netlify Image CDN URL with resize + WebP
     const params = new URLSearchParams({
       url: src,
       fm: 'webp',
-      q: '80',
+      q: '75',
     });
 
-    // Add resize params if width/height provided (serve at display size, not full size)
     const displayWidth = typeof width === 'number' ? width : typeof width === 'string' ? parseInt(width) : undefined;
     const displayHeight = typeof height === 'number' ? height : typeof height === 'string' ? parseInt(height) : undefined;
 
-    // Request 2x for retina, capped at 1600px
     if (displayWidth) {
-      params.set('w', String(Math.min(displayWidth * 2, 1600)));
+      params.set('w', String(Math.min(displayWidth * 2, 1200)));
     }
     if (displayHeight) {
-      params.set('h', String(Math.min(displayHeight * 2, 1600)));
+      params.set('h', String(Math.min(displayHeight * 2, 1200)));
     }
     if (displayWidth || displayHeight) {
       params.set('fit', 'cover');
     }
 
-    const webpSrc = `/.netlify/images?${params.toString()}`;
+    const cdnSrc = `/.netlify/images?${params.toString()}`;
 
-    return (
-      <picture>
-        <source srcSet={webpSrc} type="image/webp" />
-        <img src={src} alt={alt} width={width} height={height} {...props} />
-      </picture>
-    );
+    // Use CDN URL as primary src so PageSpeed sees the optimised version
+    return <img src={cdnSrc} alt={alt} width={width} height={height} {...props} />;
   }
 
   return <img src={src} alt={alt} width={width} height={height} {...props} />;

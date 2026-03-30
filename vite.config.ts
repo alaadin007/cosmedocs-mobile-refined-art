@@ -42,7 +42,10 @@ export default defineConfig(({ mode }) => ({
           if (id.includes('@tanstack')) {
             return 'query';
           }
-          // Supabase
+          // Supabase - split into auth (needed early) and rest
+          if (id.includes('@supabase/auth')) {
+            return 'supabase-auth';
+          }
           if (id.includes('@supabase')) {
             return 'supabase';
           }
