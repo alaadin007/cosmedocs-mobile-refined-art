@@ -52,6 +52,8 @@ const BeforeAfterGrid = ({
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
+                width={600}
+                height={600}
                 className="w-full h-auto block rounded-xl group-hover:scale-[1.02] transition-transform duration-500 ease-out"
               />
               {/* Gradient overlay for caption */}
