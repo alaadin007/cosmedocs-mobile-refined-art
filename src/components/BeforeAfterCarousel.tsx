@@ -5,6 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface BeforeAfterImage {
   src: string;
@@ -129,13 +130,13 @@ const BeforeAfterCarousel = () => {
                       className="aspect-square overflow-hidden rounded-xl mb-4 cursor-pointer group relative"
                       onClick={() => openModal(index)}
                     >
-                      <img 
+                      <OptimizedImage 
                         src={image.src} 
                         alt={image.alt}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
-                        width="400"
-                        height="400"
+                        width={400}
+                        height={400}
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -206,13 +207,13 @@ const BeforeAfterCarousel = () => {
                       transition={{ duration: 0.3 }}
                       className="absolute inset-0 flex items-center justify-center p-4"
                     >
-                      <img
+                      <OptimizedImage
                         src={beforeAfterImages[selectedImageIndex].src}
                         alt={beforeAfterImages[selectedImageIndex].alt}
                         className="max-h-full max-w-full object-contain"
                         loading="lazy"
-                        width="800"
-                        height="800"
+                        width={800}
+                        height={800}
                       />
                     </motion.div>
                   </AnimatePresence>

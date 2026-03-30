@@ -4,9 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import AnimatedDots from "@/components/AnimatedDots";
 import DiscretionBadge from "@/components/DiscretionBadge";
 import { generateSEOMetadata } from '@/utils/seo';
-import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
-import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
-import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
+import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.webp";
+import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.webp";
+import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.webp";
 
 // Lazy load heavy components
 const PopularTreatments = lazy(() => import("@/components/PopularTreatments"));

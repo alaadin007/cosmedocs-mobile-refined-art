@@ -27,6 +27,10 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Enable Netlify Image CDN for next-gen format serving
+[images]
+  remote_images = ["https://.*\\.supabase\\.co/.*"]
+
 # Prerender configuration
 [[plugins]]
   package = "@netlify/plugin-lighthouse"

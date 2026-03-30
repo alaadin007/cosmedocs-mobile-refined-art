@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface BeforeAfterImage {
   src: string;
@@ -47,7 +48,7 @@ const BeforeAfterGrid = ({
             className="break-inside-avoid"
           >
             <div className="group relative rounded-xl overflow-hidden">
-              <img
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
