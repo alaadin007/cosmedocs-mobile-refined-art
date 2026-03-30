@@ -424,7 +424,7 @@ const HyperpigmentationTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Understanding Skin Pigmentation Disorders</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Hyperpigmentation is a common skin pigmentation disorder where melanin, the natural pigment that gives your skin its colour, is overproduced. When melanocytes (pigment-producing cells) become overactive, they create excess melanin in certain areas, leading to uneven skin tone, dark patches on face and body, and post-inflammatory hyperpigmentation. According to the <a href="https://www.nhs.uk/conditions/skin-pigmentation-disorders/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NHS</a>, these conditions are common and can affect people of all skin types.
+                Hyperpigmentation is a common skin pigmentation disorder where melanin, the natural pigment that gives your skin its colour, is overproduced. When melanocytes (pigment-producing cells) become overactive, they create excess melanin in certain areas, leading to uneven skin tone, dark patches on face and body, and post-inflammatory hyperpigmentation. According to the <span className="text-purple-300">NHS</span>, these conditions are common and can affect people of all skin types.
               </p>
             </motion.div>
 
