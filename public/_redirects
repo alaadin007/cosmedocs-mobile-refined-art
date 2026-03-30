@@ -69,6 +69,28 @@
 /face-botox-areas                 /treatments/botox/                  301
 /face-botox-areas/                /treatments/botox/                  301
 
+# Botox sub-page consolidation (canonical hub)
+/treatments/botox-cost            /treatments/botox/                  301
+/treatments/botox-cost/           /treatments/botox/                  301
+/treatments/gummy-smile-botox     /treatments/botox/                  301
+/treatments/gummy-smile-botox/    /treatments/botox/                  301
+/treatments/chin-botox            /treatments/botox/                  301
+/treatments/chin-botox/           /treatments/botox/                  301
+/treatments/frown-line-botox      /treatments/botox/                  301
+/treatments/frown-line-botox/     /treatments/botox/                  301
+/treatments/crows-feet-botox      /treatments/botox/                  301
+/treatments/crows-feet-botox/     /treatments/botox/                  301
+/treatments/forehead-lines-botox  /treatments/botox/                  301
+/treatments/forehead-lines-botox/ /treatments/botox/                  301
+/treatments/bunny-lines-botox     /treatments/botox/                  301
+/treatments/bunny-lines-botox/    /treatments/botox/                  301
+/treatments/nasal-flaring-botox   /treatments/botox/                  301
+/treatments/nasal-flaring-botox/  /treatments/botox/                  301
+/treatments/nefertiti-lift        /treatments/botox/                  301
+/treatments/nefertiti-lift/       /treatments/botox/                  301
+/treatments/trigger-point-botox   /treatments/botox/                  301
+/treatments/trigger-point-botox/  /treatments/botox/                  301
+
 # ----- DERMAL FILLER TREATMENTS -----
 /dermal-fillers                   /treatments/dermal-fillers/         301
 /dermal-fillers/                  /treatments/dermal-fillers/         301
