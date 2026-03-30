@@ -222,13 +222,13 @@ const Index = () => {
                 {/* AI Quick Links Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                   <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
-                    <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
                     <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
                     <p className="text-sm text-muted-foreground">Face • Hair • Skin Lesions</p>
                   </a>
                   
                   <a href="/aesthetic-treatments-made-easy" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
-                    <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
                     <h3 className="text-lg font-semibold mb-2">Smart Aesthetics Series</h3>
                     <p className="text-sm text-muted-foreground">Avoid aesthetic mistakes</p>
                   </a>
@@ -237,7 +237,7 @@ const Index = () => {
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
                     className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
                   >
-                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
                     <h3 className="text-lg font-semibold mb-2">
                       Chat With Our <span className="text-purple">AI</span>esthetics Doctor
                     </h3>
