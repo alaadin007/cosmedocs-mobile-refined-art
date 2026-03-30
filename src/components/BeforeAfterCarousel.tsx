@@ -207,13 +207,13 @@ const BeforeAfterCarousel = () => {
                       transition={{ duration: 0.3 }}
                       className="absolute inset-0 flex items-center justify-center p-4"
                     >
-                      <img
+                      <OptimizedImage
                         src={beforeAfterImages[selectedImageIndex].src}
                         alt={beforeAfterImages[selectedImageIndex].alt}
                         className="max-h-full max-w-full object-contain"
                         loading="lazy"
-                        width="800"
-                        height="800"
+                        width={800}
+                        height={800}
                       />
                     </motion.div>
                   </AnimatePresence>
