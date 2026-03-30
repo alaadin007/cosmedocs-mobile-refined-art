@@ -279,6 +279,7 @@ const FrownLineBotox = () => {
                   <span className="text-purple-300">Botox for Frown Lines & 11 Lines</span>
                   <span className="block text-2xl mt-4">Invisible art - smooth expression that speaks without words</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Glabellar Lines Botox Treatment in London</p>
                   <p className="text-lg text-gray-300">10-15 minutes • Results last 3-4 months • Natural before and after results</p>

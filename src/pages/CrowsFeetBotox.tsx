@@ -257,6 +257,7 @@ const CrowsFeetBotox = () => {
                   <span className="text-purple-300">Crow's Feet Botox & Eye Wrinkle Treatment</span>
                   <span className="block text-2xl mt-4">Invisible art - crease less eyes that speak without words</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Crows Feet Treatment in London</p>
                   <p className="text-lg text-gray-300">10-15 minutes • Results last 3-4 months • Natural before and after results</p>

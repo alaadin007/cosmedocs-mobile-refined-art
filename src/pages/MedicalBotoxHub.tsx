@@ -78,6 +78,7 @@ const MedicalBotoxHub = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight">
                 Medical <span className="text-[#C9A050]">Botox</span>
               </h1>
+              <p className="text-sm text-[#C9A050]/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
               <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
                 Botulinum toxin has established medical applications beyond cosmetic use. 
                 These clinical treatments address genuine health conditions that can 

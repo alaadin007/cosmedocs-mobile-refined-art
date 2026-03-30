@@ -256,6 +256,7 @@ const BunnyLinesBotox = () => {
                   <span className="text-purple-300">Bunny Lines Botox London</span>
                   <span className="block text-sm mt-4">Invisible art - nose wrinkles treatment that speaks without words</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Botox for Nose Wrinkles & Nasal Lines</p>
                   <p className="text-sm text-gray-300">5-10 minutes • Botox bunny lines • Results last 3-4 months</p>

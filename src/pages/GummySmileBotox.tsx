@@ -163,6 +163,7 @@ const GummySmileBotox = () => {
                   <span className="text-purple-300">Gummy Smile Botox</span>
                   <span className="block text-sm mt-4">Invisible art - natural smile enhancement that speaks without words</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Gummy Smile Correction</p>
                   <p className="text-sm text-gray-300">Quick 15-minute treatment • Natural results • Expert precision</p>

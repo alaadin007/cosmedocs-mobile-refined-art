@@ -306,6 +306,7 @@ const TriggerPointBotox = () => {
                   <span className="text-purple-300">Trigger Point Botox</span>
                   <span className="block text-sm mt-4">Invisible art - expert relief for head, neck & shoulder pain of muscular origin</span>
                 </h1>
+                <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Relief for Muscular Head, Neck & Shoulder Pain</p>
                   <p className="text-sm text-gray-300">Expert trigger point botox for chronic muscle tension and pain - from £450</p>
