@@ -118,7 +118,7 @@ const EndolaserLift = () => {
               {
                 "@type": "MedicalProcedure",
                 "name": "Laser Fibre Lift London",
-                "alternateName": ["Laser Fibre Lift", "Laser Face Lift London", "Non-Surgical Facelift London"],
+                "alternateName": ["Laser Fibre Lift", "Endolaser", "Endolaser Lift", "Laser Face Lift London", "Non-Surgical Facelift London"],
                 "description": "Minimally invasive Laser Fibre Lift treatment in London using dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow lift, and double chin reduction at Harley Street.",
                 "url": "https://www.cosmedocs.com/treatments/endolaser/",
                 "procedureType": "NoninvasiveProcedure",
