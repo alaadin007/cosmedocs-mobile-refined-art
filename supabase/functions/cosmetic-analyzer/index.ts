@@ -9,7 +9,7 @@ const corsHeaders = {
 
 const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-const lovableApiKey = Deno.env.get('LOVABLE_API_KEY')!;
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY')!;
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -20,7 +20,6 @@ serve(async (req) => {
     const { productUrl, productName } = await req.json();
     console.log('Analyzing product:', productUrl);
 
-    // Initialize Supabase client
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Check if product already analyzed recently
@@ -45,10 +44,9 @@ serve(async (req) => {
       });
     }
 
-    // Extract product name from URL if not provided
     const inferredName = productName || extractProductNameFromUrl(productUrl);
 
-    // Use Lovable AI with Gemini to analyze the product
+    // Use OpenAI GPT-4o for complex product analysis
     const systemPrompt = `You are CosmeDocs' advanced cosmetic analysis system, specializing in evidence-based ingredient evaluation from a clinical dermatology perspective with graded effect assessment and anti-damage protection analysis.
 
 CRITICAL ANALYSIS REQUIREMENTS:
@@ -218,32 +216,33 @@ Return ONLY a valid JSON object with this exact structure:
   "notes": ""
 }`;
 
-    const lovableApiKey = Deno.env.get('LOVABLE_API_KEY')!;
+    console.log('Calling OpenAI GPT-4o for cosmetic analysis...');
 
-    // Call Lovable AI with Gemini Pro for image and web analysis
-    const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const aiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${lovableApiKey}`,
+        'Authorization': `Bearer ${openAIApiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-2.5-pro',
+        model: 'gpt-4o',
         messages: [
           { role: 'system', content: systemPrompt },
           { 
             role: 'user', 
-            content: `Analyze this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease search the web for this product, analyze any product images, ingredient lists, and claims. Provide comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
+            content: `Analyze this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease analyze any product images, ingredient lists, and claims based on your knowledge. Provide comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
           }
         ],
+        max_tokens: 4000,
+        temperature: 0.3,
         response_format: { type: 'json_object' }
       }),
     });
 
     if (!aiResponse.ok) {
       const errorText = await aiResponse.text();
-      console.error('Lovable AI error:', aiResponse.status, errorText);
-      throw new Error(`AI analysis failed: ${aiResponse.status} ${errorText}`);
+      console.error('OpenAI error:', aiResponse.status, errorText);
+      throw new Error(`OpenAI API error: ${aiResponse.status} ${errorText}`);
     }
 
     const aiData = await aiResponse.json();
@@ -291,7 +290,6 @@ function extractProductNameFromUrl(url: string): string {
     const urlObj = new URL(url);
     const pathname = urlObj.pathname;
     
-    // Remove common e-commerce URL patterns
     let productName = pathname
       .split('/')
       .pop() || ''
@@ -300,7 +298,6 @@ function extractProductNameFromUrl(url: string): string {
       .replace(/\d+/g, '')
       .trim();
     
-    // Capitalize words
     productName = productName
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
