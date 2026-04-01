@@ -311,7 +311,7 @@ const EndolaserLift = () => {
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
-                        The Laser Fibre Lift is a minimally invasive dual-wavelength laser procedure that delivers controlled thermal energy directly beneath the skin. It combines two laser wavelengths: 980nm for targeted fat reduction and 1470nm for precise skin tightening and collagen stimulation. Unlike external energy devices such as HIFU or Morpheus8, the laser fibre is inserted through micro-incisions to directly target the subdermal tissue layer.
+                        The Laser Fibre Lift — commonly referred to as Endolaser — is a minimally invasive dual-wavelength laser procedure that delivers controlled thermal energy directly beneath the skin. This endolaser technology combines two laser wavelengths: 980nm for targeted fat reduction and 1470nm for precise skin tightening and collagen stimulation. Unlike external energy devices such as HIFU or Morpheus8, the endolaser fibre is inserted through micro-incisions to directly target the subdermal tissue layer.
                       </p>
                     }
                   >
