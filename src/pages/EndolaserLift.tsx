@@ -238,7 +238,7 @@ const EndolaserLift = () => {
                     <span className="text-[#C9A050] font-light">London</span>
                   </h1>
                   <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
-                    Minimally invasive laser fibre face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Performed by the Lead Trainer at the Harley Street Institute.
+                    Minimally invasive endolaser face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Also known as Endolaser. Performed by the Lead Trainer at the Harley Street Institute.
                   </p>
                 </motion.div>
 
