@@ -19,8 +19,8 @@ const EndolaserLift = () => {
 
   const faqs = [
     {
-      question: "What is the Laser Fibre Lift treatment?",
-      answer: "The Laser Fibre Lift is a minimally invasive dual-wavelength laser procedure using 980nm and 1470nm laser fibres inserted beneath the skin. The 980nm wavelength targets fat reduction whilst the 1470nm wavelength delivers precise skin tightening and collagen stimulation. This combined approach achieves both fat reduction and skin tightening in a single treatment. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
+      question: "What is the Laser Fibre Lift (Endolaser) treatment?",
+      answer: "The Laser Fibre Lift — also known as Endolaser — is a minimally invasive dual-wavelength laser procedure using 980nm and 1470nm laser fibres inserted beneath the skin. The 980nm wavelength targets fat reduction whilst the 1470nm wavelength delivers precise skin tightening and collagen stimulation. This combined Endolaser approach achieves both fat reduction and skin tightening in a single treatment. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
     },
     {
       question: "How long do Laser Fibre Lift results last?",
