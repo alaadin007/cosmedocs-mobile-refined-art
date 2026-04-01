@@ -305,7 +305,7 @@ const EndolaserLift = () => {
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
-                    What Is the <span className="text-[#C9A050] font-light">Laser Fibre Lift?</span>
+                    What Is the <span className="text-[#C9A050] font-light">Laser Fibre Lift (Endolaser)?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
