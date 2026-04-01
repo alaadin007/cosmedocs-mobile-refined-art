@@ -1,15 +1,12 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-const lovableApiKey = Deno.env.get('LOVABLE_API_KEY')!;
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -17,10 +14,12 @@ serve(async (req) => {
   }
 
   try {
-    const { question, includeWebSearch = false } = await req.json();
+    const { question } = await req.json();
     console.log('AI Knowledge Chat question:', question);
 
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    if (!openAIApiKey) {
+      throw new Error('OPENAI_API_KEY is not configured');
+    }
 
     // Build comprehensive pricing context
     const priceContext = `CosmeDocs is a prestigious aesthetic medicine clinic on Harley Street, London, established in 2007 with over 1M+ injections performed.
@@ -88,27 +87,22 @@ Additional Context: CosmeDocs operates using innovative AI and blockchain-based 
 
     const systemPrompt = `${priceContext}
 
-You are an expert CosmeDocs AI Assistant specializing in aesthetic medicine and cosmetic treatments. Always provide specific pricing from the context above when asked about costs. Use British English spellings. Be professional, reassuring, and emphasize the importance of consultation for medical advice.`;
+You are an expert CosmeDocs AI Assistant specialising in aesthetic medicine and cosmetic treatments. Always provide specific pricing from the context above when asked about costs. Use British English spellings. Be professional, reassuring, and emphasise the importance of consultation for medical advice.`;
 
-    console.log('Calling Lovable AI with Gemini...');
+    console.log('Calling OpenAI GPT-4o-mini...');
 
-    const messages = [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: question }
-    ];
-
-    // If web search is requested, use a model with search capabilities
-    const model = includeWebSearch ? 'google/gemini-2.5-pro' : 'google/gemini-2.5-flash';
-
-    const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const aiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${lovableApiKey}`,
+        'Authorization': `Bearer ${openAIApiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model,
-        messages,
+        model: 'gpt-4o-mini',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: question }
+        ],
         temperature: 0.7,
         max_tokens: 1000
       }),
@@ -116,7 +110,7 @@ You are an expert CosmeDocs AI Assistant specializing in aesthetic medicine and 
 
     if (!aiResponse.ok) {
       const errorText = await aiResponse.text();
-      console.error('Lovable AI error:', aiResponse.status, errorText);
+      console.error('OpenAI error:', aiResponse.status, errorText);
       
       if (aiResponse.status === 429) {
         return new Response(JSON.stringify({ 
@@ -126,17 +120,8 @@ You are an expert CosmeDocs AI Assistant specializing in aesthetic medicine and 
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
-      
-      if (aiResponse.status === 402) {
-        return new Response(JSON.stringify({ 
-          error: 'AI service requires additional credits. Please contact support.' 
-        }), {
-          status: 402,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        });
-      }
 
-      throw new Error(`AI analysis failed: ${aiResponse.status}`);
+      throw new Error(`OpenAI API error: ${aiResponse.status}`);
     }
 
     const aiData = await aiResponse.json();
