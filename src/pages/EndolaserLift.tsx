@@ -39,8 +39,8 @@ const EndolaserLift = () => {
       answer: "Laser Fibre Lift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,250, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
     },
     {
-      question: "Is the Laser Fibre Lift better than HIFU or Morpheus8?",
-      answer: "The Laser Fibre Lift delivers energy directly beneath the skin via a laser fibre, providing more precise and controlled thermal delivery compared to external energy devices like HIFU or Morpheus8. This direct approach typically achieves more consistent tightening results with fewer sessions. However, the right treatment depends on your individual anatomy — your doctor will assess which modality or combination is most suitable during consultation."
+      question: "Is the Endolaser (Laser Fibre Lift) better than HIFU or Morpheus8?",
+      answer: "The Endolaser Laser Fibre Lift delivers energy directly beneath the skin via a laser fibre, providing more precise and controlled thermal delivery compared to external energy devices like HIFU or Morpheus8. This direct Endolaser approach typically achieves more consistent tightening results with fewer sessions. However, the right treatment depends on your individual anatomy — your doctor will assess which modality or combination is most suitable during consultation."
     },
     {
       question: "What areas can the Laser Fibre Lift treat?",
