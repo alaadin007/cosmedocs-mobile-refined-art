@@ -167,6 +167,31 @@ const FrownLineBotox = () => {
           })}
         </script>
 
+        {/* ScholarlyArticle Schema — HSI Cross-Link */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ScholarlyArticle",
+            "name": "Frown Area Botox Dosing: A Clinical Review",
+            "url": "https://www.harleystreetinstitute.com/aesthetic-medicine-journal/frown-area-botox-dosing",
+            "author": {
+              "@type": "Person",
+              "name": "Dr Ahmed Haq",
+              "jobTitle": "Medical Director",
+              "worksFor": [
+                { "@type": "MedicalClinic", "name": "CosmeDocs", "url": "https://www.cosmedocs.com" },
+                { "@type": "EducationalOrganization", "name": "Harley Street Institute", "url": "https://www.harleystreetinstitute.com" }
+              ]
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Harley Street Institute",
+              "url": "https://www.harleystreetinstitute.com"
+            },
+            "about": "Evidence-based dosing strategies for glabellar frown lines with botulinum toxin, including five-point injection technique, dose-duration analysis, and safety profile from survey of 243 aesthetic physicians."
+          })}
+        </script>
+
         {/* Offer Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -957,6 +982,79 @@ const FrownLineBotox = () => {
                 </Card>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Clinical Evidence — HSI Cross-Link */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Clinical Evidence: <span className="text-purple-300">Optimal Frown Line Dosing</span></h2>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                A comprehensive clinical review published by the <a href="https://www.harleystreetinstitute.com/aesthetic-medicine-journal/frown-area-botox-dosing" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Harley Street Institute</a> — authored by HSI &amp; AI, supervised by Dr Ahmed Haq (CosmeDocs) — examines evidence-based dosing strategies for glabellar frown lines, balancing efficacy, duration, and safety.
+              </p>
+
+              <div className="space-y-6 text-gray-300 leading-relaxed">
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
+                  <h3 className="text-xl font-semibold text-white mb-4">Standard vs Off-Label Dosing</h3>
+                  <p className="mb-4">
+                    The FDA-approved dose for glabellar lines is 20 units of onabotulinumtoxinA (Botox), providing 3–4 months duration with an 85% efficacy rate. Survey data from 243 practising aesthetic physicians reveals that 52% prefer 15–20 unit starting doses, whilst 67% adjust doses higher for male patients due to increased muscle mass.
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="border-b border-purple-500/30">
+                          <th className="text-left py-2 px-3 text-purple-300">Dose Strategy</th>
+                          <th className="text-left py-2 px-3 text-purple-300">Duration</th>
+                          <th className="text-left py-2 px-3 text-purple-300">Side Effect Risk</th>
+                          <th className="text-left py-2 px-3 text-purple-300">Best For</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-800">
+                          <td className="py-2 px-3">Light (10–15U)</td>
+                          <td className="py-2 px-3">2–3 months</td>
+                          <td className="py-2 px-3">Very low (&lt;2%)</td>
+                          <td className="py-2 px-3">First-time patients</td>
+                        </tr>
+                        <tr className="border-b border-gray-800">
+                          <td className="py-2 px-3">Standard (20U)</td>
+                          <td className="py-2 px-3">3–4 months</td>
+                          <td className="py-2 px-3">Low (&lt;5%)</td>
+                          <td className="py-2 px-3">Most patients</td>
+                        </tr>
+                        <tr className="border-b border-gray-800">
+                          <td className="py-2 px-3">High (30–40U)</td>
+                          <td className="py-2 px-3">4–5 months</td>
+                          <td className="py-2 px-3">Moderate (5–10%)</td>
+                          <td className="py-2 px-3">Strong muscles, males</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
+                  <h3 className="text-xl font-semibold text-white mb-4">Five-Point Injection Pattern</h3>
+                  <p className="mb-3">
+                    The gold standard technique involves five injections: one into the procerus muscle (8U) at the midline above the nasofrontal angle, two into the medial belly of each corrugator supercilii (5U each), and two into the lateral aspect of each corrugator (1–2U each). Maintaining greater than 1cm distance from the orbital rim is critical to prevent eyelid complications.
+                  </p>
+                  <p>
+                    Males typically require 25–30% higher doses due to increased muscle mass and strength. The review emphasises technique refinement over routine dose escalation — proper injection depth and anatomical understanding reduce adverse events more effectively than conservative dosing alone.
+                  </p>
+                </div>
+
+                <p className="text-gray-500 text-xs italic">
+                  Source: Harley Street Institute — <a href="https://www.harleystreetinstitute.com/aesthetic-medicine-journal/frown-area-botox-dosing" target="_blank" rel="noopener noreferrer" className="text-purple-400/70 hover:text-purple-300 underline">Frown Area Botox Dosing: A Clinical Review</a>. Authored by HSI &amp; AI, supervised by Dr Ahmed Haq (CosmeDocs). References: PubMed clinical trials, Cochrane Library systematic reviews.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
