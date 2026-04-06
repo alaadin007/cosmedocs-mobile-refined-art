@@ -499,7 +499,65 @@ const Partnerships = () => {
           </div>
         </section>
 
-        {/* How to Join */}
+        {/* Investment Recovery Advantage */}
+        <section className="py-16 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center space-y-6"
+            >
+              <TrendingUp className="w-12 h-12 text-primary mx-auto" />
+              <h2 className="text-3xl font-bold">Smart Investment, Faster Returns</h2>
+              
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Our partnership model is structured to protect your investment. Through our specialist financial planning, partners can recover up to <strong className="text-foreground">50% of their initial investment in the first year</strong>.
+              </p>
+
+              <div className="bg-background p-8 rounded-lg border border-border max-w-2xl mx-auto text-left space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">50% Capital Recovery — Year One</p>
+                      <p className="text-muted-foreground text-sm">Invest in your training and clinic space, and withdraw half your investment back within the first twelve months through our structured financial framework.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">Tax-Efficient Structuring</p>
+                      <p className="text-muted-foreground text-sm">Our specialist advisory team ensures your partnership is set up to maximise legitimate tax advantages available to healthcare professionals.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">Your Investment Works Twice</p>
+                      <p className="text-muted-foreground text-sm">Every pound you invest in training and clinic infrastructure generates both career capital and financial returns — making your professional development genuinely self-funding.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-border">
+                  <p className="text-sm text-muted-foreground italic">
+                    Full details of the investment recovery structure are shared during the partnership consultation. This is not a loan — it is a legitimate capital efficiency model designed for healthcare professionals investing in their practice.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 max-w-2xl mx-auto">
+                <p className="text-lg font-semibold">
+                  💡 Example: Invest £50K in training &amp; clinic space → withdraw £25K back in year one
+                </p>
+                <p className="text-muted-foreground text-sm mt-2">
+                  Making your total net investment just £25K for a fully equipped, branded, client-ready aesthetic practice.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
         <section id="apply" className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <motion.div
