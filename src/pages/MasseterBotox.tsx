@@ -98,6 +98,22 @@ const MasseterBotox = () => {
                 "howPerformed": "Botulinum toxin injected into the masseter muscles at strategic points to reduce muscle size and activity."
               },
               {
+                "@type": "ScholarlyArticle",
+                "name": "Bruxism & Masseter Hypertrophy: A Comprehensive Botox Review",
+                "url": "https://www.harleystreetinstitute.com/journal/bruxism-masseter-hypertrophy-botox-review",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Harley Street Institute",
+                  "url": "https://www.harleystreetinstitute.com"
+                },
+                "about": "Comprehensive review of bruxism pathophysiology, masseter hypertrophy assessment, and evidence-based botulinum toxin treatment protocols.",
+                "citation": [
+                  "Zieliński G, et al. Global Prevalence of Sleep Bruxism and Awake Bruxism. J Clin Med. 2024;13(14):4259",
+                  "Chen Y, et al. Effectiveness of Botulinum Toxin Injection on Bruxism. Aesthetic Plast Surg. 2023;47(2):775-790",
+                  "Nobre BBS, et al. Exploring botulinum toxin's impact on masseter hypertrophy. Sci Rep. 2024;14:14522"
+                ]
+              },
+              {
                 "@type": "FAQPage",
                 "mainEntity": faqs.map(faq => ({
                   "@type": "Question",
@@ -459,6 +475,41 @@ const MasseterBotox = () => {
                 </motion.div>
               </section>
 
+              {/* Clinical Evidence — HSI Cross-Link */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Clinical Evidence: <span className="text-[#C9A050] font-light">Bruxism & Masseter Hypertrophy</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                        Bruxism affects approximately 22% of adults globally, with sleep bruxism at ~21% and awake bruxism at ~23%. A comprehensive review published by the <a href="https://www.harleystreetinstitute.com/journal/bruxism-masseter-hypertrophy-botox-review" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Harley Street Institute</a> synthesises current evidence on botulinum toxin's role in managing this prevalent condition.
+                      </p>
+                    }
+                  >
+                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                      <p>
+                        The review details how chronic bruxism drives masseter hypertrophy — the muscle enlarges through repetitive overactivity, much like skeletal muscle responds to exercise. Ultrasonographic studies confirm increased masseter thickness in bruxism patients, and the resulting square jawline represents what clinicians term "pseudo-ageing": the lower face widens relative to the upper and middle thirds, disrupting the youthful V-shaped contour.
+                      </p>
+                      <p>
+                        A 2023 systematic review and meta-analysis (Chen Y, et al., <em>Aesthetic Plast Surg</em>) found that botulinum toxin injections led to significant reduction in bite force as early as one month compared to placebo. Pain severity also decreased in a dose-dependent manner, with benefits lasting 3–4 months per treatment cycle.
+                      </p>
+                      <p>
+                        The Harley Street Institute's clinical grading system classifies masseter bulk from Small (normal — lower face clearly narrower than cheekbones) through Medium, Large, to Extra-Large (jaw wider than cheekbones with extremely bulky masseters). This standardised assessment guides precise dosing: 20–30 units per side for average hypertrophy, up to 40–50+ units for very large muscles.
+                      </p>
+                      <p>
+                        Studies demonstrate an average cross-sectional area reduction of approximately 30% after a single injection, with cumulative improvement after repeat treatments. Importantly, sleep bruxism is now understood as a centrally mediated phenomenon tied to micro-arousals, explaining why peripheral treatments like mouthguards protect teeth but do not address the underlying neuromuscular driver.
+                      </p>
+                      <p className="text-white/30 text-xs italic">
+                        Source: Harley Street Institute Journal — <a href="https://www.harleystreetinstitute.com/journal/bruxism-masseter-hypertrophy-botox-review" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/50 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Bruxism & Masseter Hypertrophy: A Comprehensive Botox Review</a>. Key references: Zieliński G, et al. (2024) J Clin Med; Chen Y, et al. (2023) Aesthetic Plast Surg; Nobre BBS, et al. (2024) Sci Rep.
+                      </p>
+                    </div>
+                  </ExpandableSection>
+                </motion.div>
+              </section>
+
               {/* Why CosmeDocs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
@@ -471,6 +522,7 @@ const MasseterBotox = () => {
                       "Doctor-led — all treatments by GMC-registered doctors",
                       "Harley Street, London — established 2007",
                       "Over 1 million treatments performed",
+                      "Lead trainer for masseter botox at the Harley Street Institute",
                       "Conservative philosophy — safety and subtlety first",
                       "Personalised dosing based on muscle assessment",
                       "Our aesthetics is invisible art"
