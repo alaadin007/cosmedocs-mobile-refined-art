@@ -206,6 +206,10 @@ const HAMakeover = lazy(() => import("./pages/HAMakeover"));
 const BeforeAfterHAMakeover = lazy(() => import("./pages/BeforeAfterHAMakeover"));
 const MedicalBotoxHub = lazy(() => import("./pages/MedicalBotoxHub"));
 const Safety = lazy(() => import("./pages/Safety"));
+const SalicylicAcidPeel = lazy(() => import("./pages/SalicylicAcidPeel"));
+const GlycolicAcidPeel = lazy(() => import("./pages/GlycolicAcidPeel"));
+const LacticAcidPeel = lazy(() => import("./pages/LacticAcidPeel"));
+const TCAPeel = lazy(() => import("./pages/TCAPeel"));
 
 // Optimized loading component
 const PageLoader = memo(() => (
@@ -446,6 +450,14 @@ const App = () => {
                           <Route path="/treatments/microneedling/" element={<Microneedling />} />
                           <Route path="/treatments/chemical-peels" element={<ChemicalPeel />} />
                           <Route path="/treatments/chemical-peels/" element={<ChemicalPeel />} />
+                          <Route path="/treatments/chemical-peels/salicylic-acid-peel" element={<SalicylicAcidPeel />} />
+                          <Route path="/treatments/chemical-peels/salicylic-acid-peel/" element={<SalicylicAcidPeel />} />
+                          <Route path="/treatments/chemical-peels/glycolic-acid-peel" element={<GlycolicAcidPeel />} />
+                          <Route path="/treatments/chemical-peels/glycolic-acid-peel/" element={<GlycolicAcidPeel />} />
+                          <Route path="/treatments/chemical-peels/lactic-acid-peel" element={<LacticAcidPeel />} />
+                          <Route path="/treatments/chemical-peels/lactic-acid-peel/" element={<LacticAcidPeel />} />
+                          <Route path="/treatments/chemical-peels/tca-peel" element={<TCAPeel />} />
+                          <Route path="/treatments/chemical-peels/tca-peel/" element={<TCAPeel />} />
                           <Route path="/treatments/chemical-peel" element={<Navigate to="/treatments/chemical-peels/" replace />} />
                           <Route path="/treatments/chemical-peel/" element={<Navigate to="/treatments/chemical-peels/" replace />} />
                           <Route path="/treatments/hydrafacial" element={<HydraFacial />} />
