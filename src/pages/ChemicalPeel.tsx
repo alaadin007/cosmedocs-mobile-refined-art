@@ -136,14 +136,11 @@ const ChemicalPeel = () => {
             <div className="pt-12 pb-4 max-w-3xl">
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                 <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
-                  Chemical <span className="text-[#C9A050] font-light">Peels</span> London
-                </h1>
-                <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl mb-4">
-                  Medical-grade skin peels at Harley Street — from gentle AHA brightening to deep TCA resurfacing. Our clinicians customise every peel with supporting active ingredients for results that are visible, natural, and always your way.
-                </p>
-                <p className="text-sm text-white/35 font-extralight leading-relaxed max-w-xl">
-                  CosmeDocs offers salicylic acid, glycolic acid, lactic acid, and TCA peels — each enhanced with mandelic acid, azelaic acid, pyruvic acid, retinol, and powerful antioxidants. Our signature <strong className="text-[#C9A050]/70">Peel to Reveal</strong> cocktail combines multiple agents into one bespoke treatment.
-                </p>
+                   Skin <span className="text-[#C9A050] font-light">Peels</span> London
+                 </h1>
+                 <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl">
+                   A medical facial that removes dead skin cells — the root cause of uneven texture, dull tone, and premature ageing. Fresh, clear skin revealed in one session.
+                 </p>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Skin Specialist-Led</span>
