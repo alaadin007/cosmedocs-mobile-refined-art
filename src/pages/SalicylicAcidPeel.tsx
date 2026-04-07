@@ -11,8 +11,8 @@ import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSide
 
 const SalicylicAcidPeel = () => {
   const seoData = generateSEOMetadata(
-    "Salicylic Acid Peel London | BHA Peel From £150 | Cosmedocs Harley Street",
-    "Fat-soluble salicylic acid peel for acne, oily skin & blackheads. The only BHA peel that penetrates deep into pores. Enhanced with mandelic acid & azelaic acid. From £150.",
+    "Salicylic Acid Peel London | BHA Peel From £100 | Cosmedocs Harley Street",
+    "Fat-soluble salicylic acid peel for acne, oily skin & blackheads. The only BHA peel that penetrates deep into pores. Enhanced with mandelic acid & azelaic acid. From £100.",
     "/treatments/chemical-peels/salicylic-acid-peel/"
   );
 
@@ -72,7 +72,7 @@ const SalicylicAcidPeel = () => {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–30 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £150</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>
