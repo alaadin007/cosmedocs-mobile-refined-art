@@ -354,6 +354,25 @@ const CalfSlimmingBotox = () => {
                 </motion.div>
               </section>
 
+              {/* Instagram Reel */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Watch: Calf <span className="text-[#C9A050] font-light">Reduction</span> in Action
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="max-w-md">
+                    <blockquote
+                      className="instagram-media"
+                      data-instgrm-captioned
+                      data-instgrm-permalink="https://www.instagram.com/reel/DQ7GRLdDCaW/?igsh=MW9sa3hqaWRuaDdxMw=="
+                      data-instgrm-version="14"
+                      style={{ background: '#000', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', maxWidth: '100%', width: '100%' }}
+                    />
+                  </div>
+                </motion.div>
+              </section>
+
               {/* How It Works */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
