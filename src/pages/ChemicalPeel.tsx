@@ -13,8 +13,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 const ChemicalPeel = () => {
   const seoData = generateSEOMetadata(
-    "Chemical Peels London | Skin Peels From £120 | Cosmedocs Harley Street",
-    "Medical-grade skin peels at Harley Street — salicylic, glycolic, lactic acid & TCA peels for acne, pigmentation, melasma. Plus our signature Peel to Reveal cocktail. From £120.",
+    "Chemical Peels London | Skin Peels From £100 | Cosmedocs Harley Street",
+    "Medical-grade skin peels at Harley Street — salicylic, glycolic, lactic acid & TCA peels for acne, pigmentation, melasma. Plus our signature Peel to Reveal cocktail. From £100.",
     "/treatments/chemical-peels/"
   );
 
@@ -91,7 +91,7 @@ const ChemicalPeel = () => {
 
   const faqs = [
     { question: "What types of chemical peels does CosmeDocs offer?", answer: "We offer four primary peel types — salicylic acid (BHA), glycolic acid (AHA), lactic acid (AHA), and TCA peels — plus our signature Peel to Reveal multi-acid cocktail. Each is enhanced with supporting agents such as mandelic acid, azelaic acid, pyruvic acid, retinol, and antioxidants tailored to your specific skin concerns." },
-    { question: "How much do chemical peels cost at Harley Street?", answer: "Light AHA peels (glycolic, lactic) start from £120, salicylic acid peels from £150, and TCA peels from £250. Our Peel to Reveal cocktail starts from £120. Course packages offer better value for multiple sessions." },
+    { question: "How much do chemical peels cost at Harley Street?", answer: "All skin peels start from £100 per session. Our Peel to Reveal signature cocktail starts from £150. Course packages offer better value for multiple sessions." },
     { question: "How many peel sessions do I need?", answer: "This depends on your skin concern and peel type. Light peels typically benefit from 4–6 sessions spaced 2–4 weeks apart. Medium peels may need 2–3 sessions. TCA peels may require only 1–2 treatments. Your practitioner will create a personalised plan." },
     { question: "What is Peel to Reveal?", answer: "Peel to Reveal is our signature cocktail peel — a customised fusion of multiple active peeling agents (glycolic, lactic, salicylic, TCA) combined with mandelic acid, azelaic acid, kojic acid, glutathione, and natural extracts. The clinician adjusts the cocktail according to your specific skin concerns." },
     { question: "Is there downtime after a chemical peel?", answer: "Light peels have minimal downtime — slight redness for a few hours. Medium peels may cause peeling for 3–5 days. TCA peels require 5–10 days of recovery. Your practitioner will advise based on your skin type and lifestyle." },
@@ -146,9 +146,9 @@ const ChemicalPeel = () => {
                 </p>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Skin Specialist-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–45 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £120</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>
