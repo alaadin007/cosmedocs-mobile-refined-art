@@ -11,8 +11,8 @@ import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSide
 
 const LacticAcidPeel = () => {
   const seoData = generateSEOMetadata(
-    "Lactic Acid Peel London | Gentle AHA Peel From £120 | Cosmedocs Harley Street",
-    "Gentle lactic acid peel for sensitive skin, mild pigmentation & hydration. The moisturising AHA that exfoliates without drying. Enhanced with azelaic acid & antioxidants. From £120.",
+    "Lactic Acid Peel London | Gentle AHA Peel From £100 | Cosmedocs Harley Street",
+    "Gentle lactic acid peel for sensitive skin, mild pigmentation & hydration. The moisturising AHA that exfoliates without drying. Enhanced with azelaic acid & antioxidants. From £100.",
     "/treatments/chemical-peels/lactic-acid-peel/"
   );
 
@@ -22,7 +22,7 @@ const LacticAcidPeel = () => {
     { question: "Can lactic acid peels treat pigmentation?", answer: "Yes. Lactic acid inhibits tyrosinase — the enzyme responsible for melanin production — making it effective for mild-to-moderate hyperpigmentation and melasma. When combined with azelaic acid, kojic acid, and vitamin C in our protocols, the depigmenting effect is enhanced significantly." },
     { question: "How many sessions do I need?", answer: "We typically recommend 4–6 sessions spaced 2–3 weeks apart for optimal results. Lactic acid peels are cumulative — each session builds upon the last. Maintenance peels every 6–8 weeks help sustain the improvement." },
     { question: "What supporting ingredients do you use?", answer: "We enhance lactic acid peels with azelaic acid (anti-inflammatory, anti-pigmentation), mandelic acid (for dual-AHA exfoliation), retinol (pre-treatment cell turnover), hyaluronic acid (hydration boost), and antioxidants including glutathione and vitamin C for post-peel protection." },
-    { question: "How much does a lactic acid peel cost?", answer: "Lactic acid peels start from £120 per session at our Harley Street clinic. Course packages are available for multiple sessions." },
+    { question: "How much does a lactic acid peel cost?", answer: "Lactic acid peels start from £100 per session at our Harley Street clinic. Course packages are available for multiple sessions." },
   ];
 
   return (
@@ -70,7 +70,7 @@ const LacticAcidPeel = () => {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–30 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £120</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>

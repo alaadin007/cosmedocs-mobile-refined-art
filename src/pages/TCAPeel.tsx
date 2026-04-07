@@ -11,15 +11,15 @@ import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSide
 
 const TCAPeel = () => {
   const seoData = generateSEOMetadata(
-    "TCA Peel London | Trichloroacetic Acid Peel From £250 | Cosmedocs Harley Street",
-    "Medical-grade TCA peel for deep scarring, pigmentation & sun damage. Medium-to-deep resurfacing with retinol pre-treatment & antioxidant recovery. From £250 at Harley Street.",
+    "TCA Peel London | Trichloroacetic Acid Peel From £100 | Cosmedocs Harley Street",
+    "Medical-grade TCA peel for deep scarring, pigmentation & sun damage. Medium-to-deep resurfacing with retinol pre-treatment & antioxidant recovery. From £100 at Harley Street.",
     "/treatments/chemical-peels/tca-peel/"
   );
 
   const faqs = [
     { question: "What is a TCA peel?", answer: "TCA (trichloroacetic acid) is a medium-to-deep chemical peel that penetrates beyond the epidermis into the papillary dermis. It causes controlled protein denaturation — coagulating the damaged upper skin layers so they peel away over 5–10 days, revealing restructured, smoother skin beneath with new collagen formation." },
     { question: "What skin concerns does TCA treat?", answer: "TCA peels are particularly effective for deep acne scarring, resistant hyperpigmentation, melasma, significant sun damage (photoageing), deep wrinkles, and pre-cancerous actinic keratoses. They deliver more dramatic results than superficial AHA/BHA peels." },
-    { question: "How much does a TCA peel cost?", answer: "TCA peels at CosmeDocs start from £250 per session. The exact cost depends on the treatment area and concentration used. Many patients require only 1–3 sessions for significant improvement." },
+    { question: "How much does a TCA peel cost?", answer: "TCA peels at CosmeDocs start from £100 per session. The exact cost depends on the treatment area and concentration used. Many patients require only 1–3 sessions for significant improvement." },
     { question: "What is the downtime for a TCA peel?", answer: "TCA peels require 5–10 days of downtime. You will experience redness, tightness, and significant peeling/flaking as the damaged skin sheds. Social downtime of at least one week is recommended. Your practitioner will provide a detailed recovery timeline." },
     { question: "What supporting ingredients do you use with TCA?", answer: "TCA peels at CosmeDocs include retinol pre-treatment (2–4 weeks prior to thin the stratum corneum), azelaic acid (to reduce post-inflammatory pigmentation risk), and post-peel antioxidant recovery with glutathione, vitamin C, and hyaluronic acid. Mandelic acid may be used in the pre-peel protocol for darker skin tones." },
     { question: "Is TCA safe for darker skin tones?", answer: "TCA peels carry a higher risk of post-inflammatory hyperpigmentation in Fitzpatrick IV–VI skin types. At CosmeDocs, we mitigate this risk with careful pre-treatment protocols (retinol, mandelic acid priming), conservative concentrations, and azelaic acid support. Not all darker skin types are suitable — a thorough consultation is essential." },
@@ -71,7 +71,7 @@ const TCAPeel = () => {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />30–45 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £250</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>

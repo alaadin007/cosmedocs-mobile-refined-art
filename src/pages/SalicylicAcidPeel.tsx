@@ -11,15 +11,15 @@ import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSide
 
 const SalicylicAcidPeel = () => {
   const seoData = generateSEOMetadata(
-    "Salicylic Acid Peel London | BHA Peel From £150 | Cosmedocs Harley Street",
-    "Fat-soluble salicylic acid peel for acne, oily skin & blackheads. The only BHA peel that penetrates deep into pores. Enhanced with mandelic acid & azelaic acid. From £150.",
+    "Salicylic Acid Peel London | BHA Peel From £100 | Cosmedocs Harley Street",
+    "Fat-soluble salicylic acid peel for acne, oily skin & blackheads. The only BHA peel that penetrates deep into pores. Enhanced with mandelic acid & azelaic acid. From £100.",
     "/treatments/chemical-peels/salicylic-acid-peel/"
   );
 
   const faqs = [
     { question: "Why is salicylic acid fat-soluble and why does that matter?", answer: "Salicylic acid is the only beta hydroxy acid (BHA) used in chemical peels. Unlike AHAs (glycolic, lactic) which are water-soluble, salicylic acid is lipophilic — meaning it dissolves in fat and oil. This unique property allows it to penetrate through the sebum that lines your pores, reaching deep into the follicular unit to dissolve plugs, kill bacteria, and reduce inflammation from within. AHAs can only work on the skin surface." },
     { question: "What skin types is a salicylic acid peel best for?", answer: "Salicylic acid peels are ideal for oily, acne-prone, and congested skin. They are particularly effective for patients with blackheads, whiteheads, inflammatory acne, and enlarged pores. Because of its anti-inflammatory properties, it is also suitable for rosacea-prone skin when used at lower concentrations." },
-    { question: "How much does a salicylic acid peel cost?", answer: "Salicylic acid peels at CosmeDocs start from £150 per session. We recommend a course of 4–6 sessions spaced 2–3 weeks apart for optimal results. Course packages are available for better value." },
+    { question: "How much does a salicylic acid peel cost?", answer: "Salicylic acid peels at CosmeDocs start from £100 per session. We recommend a course of 4–6 sessions spaced 2–3 weeks apart for optimal results. Course packages are available for better value." },
     { question: "How does salicylic acid compare to glycolic acid?", answer: "Glycolic acid (AHA) is water-soluble and works on the skin surface — excellent for texture, fine lines, and dullness. Salicylic acid (BHA) is fat-soluble and works within the pore — making it the superior choice for acne, oiliness, and congestion. At CosmeDocs, we often combine both in our Peel to Reveal cocktail for comprehensive results." },
     { question: "What supporting ingredients do you use with salicylic acid peels?", answer: "We enhance salicylic acid peels with mandelic acid (gentle exfoliation for darker skin tones), azelaic acid (anti-inflammatory, targets post-acne marks), tea tree oil (natural antibacterial), and antioxidants including vitamin C and glutathione to protect and brighten newly revealed skin." },
     { question: "Is there downtime after a salicylic acid peel?", answer: "Downtime is minimal — typically 1–3 days of mild peeling and slight redness. Most patients return to work the same day. Gentle flaking may occur from day 2–3 as the skin renews. SPF is essential during the healing period." },
@@ -72,7 +72,7 @@ const SalicylicAcidPeel = () => {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–30 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £150</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>

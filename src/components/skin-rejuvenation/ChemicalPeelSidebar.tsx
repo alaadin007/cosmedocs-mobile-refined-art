@@ -30,9 +30,8 @@ const ChemicalPeelSidebar = () => {
         <p className="text-sm font-medium text-white/70 mb-3">Treatment Pricing</p>
         <div className="space-y-2">
           {[
-            { tier: "Light Peel", price: "From £120" },
-            { tier: "Medium Peel", price: "From £200" },
-            { tier: "TCA Peel", price: "From £250" },
+            { tier: "All Skin Peels", price: "From £100" },
+            { tier: "Peel to Reveal", price: "From £150" },
           ].map((item) => (
             <div key={item.tier} className="flex items-center justify-between text-sm">
               <span className="text-white/40">{item.tier}</span>

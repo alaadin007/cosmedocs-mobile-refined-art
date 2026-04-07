@@ -278,8 +278,8 @@ export const skinMedicinePricing: PricingSection = {
   id: "skin-medicine",
   title: "SKIN & HAIR MEDICINE",
   items: [
-    { title: "Light Peels (no obvious flaking or dryness)", price: "£125", description: "Glycolic, Lactic, Pyruvic, Salycylic" },
-    { title: "Medium Grade Peels (Peel To Reveal)", price: "£250", description: "Most popular – little flaking and dryness for 1 week" },
+    { title: "Skin Peels (Light, Medium, TCA)", price: "From £100", description: "Glycolic, Lactic, Pyruvic, Salicylic, TCA" },
+    { title: "Peel to Reveal (Signature Cocktail)", price: "From £150", description: "Most popular – multi-acid fusion peel" },
     { title: "Deep Tissue Grade Peel (Phenol)", price: "£1,000" },
     { title: "Microneedling 1 Session", price: "£150", link: "/treatments/microneedling/" },
     { title: "Microneedling 3 Sessions", price: "£350", description: "+ Complimentary Retinol (RRP £50)", link: "/treatments/microneedling/" },
