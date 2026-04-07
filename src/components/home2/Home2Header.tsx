@@ -77,7 +77,7 @@ const treatmentCategories = [
       { title: "Microneedling", link: "/treatments/microneedling/" },
       { title: "HydraFacial", link: "/treatments/hydrafacial/" },
       { title: "PRP Treatment", link: "/treatments/prp/" },
-      { title: "Chemical Peel", link: "/treatments/chemical-peel/" },
+      { title: "Skin Peel (Chemical)", link: "/treatments/chemical-peels/" },
     ]
   },
   {

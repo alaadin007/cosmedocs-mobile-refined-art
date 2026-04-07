@@ -188,11 +188,10 @@ const SalicylicAcidPeel = () => {
                 <h3 className="text-lg font-light text-white/60 mb-4">Other Peel Types</h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { label: "Chemical Peels Hub", path: "/treatments/chemical-peels/" },
+                    { label: "Skin Peels Hub", path: "/treatments/chemical-peels/" },
                     { label: "Glycolic Acid Peel", path: "/treatments/chemical-peels/glycolic-acid-peel/" },
                     { label: "Lactic Acid Peel", path: "/treatments/chemical-peels/lactic-acid-peel/" },
                     { label: "TCA Peel", path: "/treatments/chemical-peels/tca-peel/" },
-                    { label: "Peel to Reveal", path: "/peel-to-reveal/" },
                   ].map(link => (
                     <Link key={link.path} to={link.path} className="text-xs text-white/30 hover:text-[#C9A050] border border-white/[0.08] rounded-full px-3 py-1.5 transition-colors">
                       {link.label}
