@@ -97,6 +97,26 @@ const SalicylicAcidPeel = () => {
                 </motion.div>
               </section>
 
+              {/* Pore Diagram */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">How Salicylic Acid <span className="text-[#C9A050] font-light">Cleans Your Pores</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/40 text-sm font-light mb-6">A clinical diagram showing the three-stage process: clogged pore → BHA penetration and exfoliation → clear, refined pore.</p>
+                  <div className="rounded-2xl overflow-hidden border border-white/[0.08]">
+                    <img
+                      src="/images/treatments/salicylic-acid-pore-diagram.jpg"
+                      alt="Salicylic acid BHA pore cleaning diagram showing sebum plug dissolution, P. acnes bacteria reduction, fat-soluble exfoliation and clear pore result"
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <p className="text-xs text-white/20 font-light mt-3 text-center">Clogged pore → Salicylic acid (BHA) fat-soluble penetration → Exfoliation & bacterial reduction → Clear pore</p>
+                </motion.div>
+              </section>
+
               {/* Fat Solubility Deep Dive */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
