@@ -615,40 +615,48 @@ export default function Home2() {
           <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#C9A050]/5 rounded-full blur-3xl -translate-y-1/2" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-4xl"
-            >
-              <p className="text-[#C9A050] text-sm font-medium mb-4 tracking-wide uppercase">Why CosmeDocs</p>
-              <h2 className="text-3xl md:text-4xl font-light text-white mb-8">
-                Why Choose <span className="font-semibold text-[#C9A050]">CosmeDocs</span>?
-              </h2>
-              
-              <div className="space-y-6 text-white/70 leading-relaxed">
-                <p>
-                  At CosmeDocs, we operate as a doctor-led aesthetic clinic — not an injector-led one. The distinction matters. 
-                  Every consultation, every treatment plan, and every injection is performed by GMC-registered medical doctors 
-                  with advanced training in facial anatomy and aesthetic medicine. This isn't simply about credentials; it's about 
-                  understanding the science behind ageing, the art of facial harmony, and the responsibility that comes with 
-                  changing how someone looks.
-                </p>
+            <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-[#C9A050] text-sm font-medium mb-4 tracking-wide uppercase">Why CosmeDocs</p>
+                <h2 className="text-3xl md:text-4xl font-light text-white mb-8">
+                  Why Choose <span className="font-semibold text-[#C9A050]">CosmeDocs</span>?
+                </h2>
                 
-                <p>
-                  We're also known for saying "no" when appropriate. If a treatment won't serve you — or worse, could compromise 
-                  your natural appearance — we'll tell you. This approach has earned us trust over nearly two decades because 
-                  patients know our recommendations are honest, not profit-driven. We believe in long-term aesthetic planning, 
-                  not quick fixes that leave you looking overdone.
-                </p>
-                
-                <p>
-                  Our philosophy centres on natural outcomes over trends. Whilst social media may celebrate exaggerated lips or 
-                  frozen foreheads, we champion subtle refinement — the kind that makes people wonder if you've had work done 
-                  rather than know it. It's aesthetic medicine designed for real life, not Instagram filters.
-                </p>
-              </div>
-            </motion.div>
+                <div className="space-y-4 text-white/70 leading-relaxed">
+                  <p>
+                    Doctor-led, not injector-led. Every treatment is performed by GMC-registered medical doctors with advanced training in facial anatomy. We understand the science behind ageing and the responsibility that comes with changing how someone looks.
+                  </p>
+                  <p>
+                    We're known for saying "no" when appropriate. If a treatment won't serve you, we'll tell you. Honest recommendations, long-term planning — not quick fixes.
+                  </p>
+                  <p>
+                    Natural outcomes over trends. Subtle refinement that makes people wonder, not know. Aesthetic medicine designed for real life.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Instagram CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="hidden lg:block"
+              >
+                <a href="https://www.instagram.com/cosmedocs" target="_blank" rel="noopener noreferrer" className="block bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6 hover:border-[#C9A050]/30 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <svg className="w-6 h-6 text-[#C9A050]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    <span className="text-white/80 font-medium text-sm">@cosmedocs</span>
+                  </div>
+                  <p className="text-white/40 text-sm mb-1">124K followers</p>
+                  <p className="text-[#C9A050] text-sm group-hover:underline">Get to know us better →</p>
+                </a>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -668,20 +676,9 @@ export default function Home2() {
                 Treatments Designed <span className="font-semibold text-[#C9A050]">Around You</span>
               </h2>
               
-              <div className="space-y-6 text-white/70 leading-relaxed mb-10">
+              <div className="text-white/70 leading-relaxed mb-10">
                 <p>
-                  Our comprehensive treatment menu spans facial aesthetics, skin quality, hair restoration, and medical aesthetics — 
-                  all delivered with a non-surgical focus that prioritises safety and natural results. Rather than offering a 
-                  one-size-fits-all solution, we create personalised treatment plans that evolve with you.
-                </p>
-                
-                <p>
-                  Whether you're considering <Link to="/botox-london" className="text-[#C9A050] hover:underline">anti-wrinkle injections</Link> to 
-                  soften expression lines, <Link to="/lip-fillers" className="text-[#C9A050] hover:underline">lip enhancement</Link> for 
-                  subtle volume, or <Link to="/dermal-fillers" className="text-[#C9A050] hover:underline">dermal fillers</Link> to restore 
-                  youthful contours, our doctors will guide you toward treatments that complement your unique facial structure. 
-                  For those seeking to improve skin texture and radiance, our <Link to="/skin-treatments" className="text-[#C9A050] hover:underline">skin rejuvenation treatments</Link> offer 
-                  results that speak for themselves.
+                  From <Link to="/botox-london" className="text-[#C9A050] hover:underline">anti-wrinkle injections</Link> and <Link to="/lip-fillers" className="text-[#C9A050] hover:underline">lip enhancement</Link> to <Link to="/dermal-fillers" className="text-[#C9A050] hover:underline">dermal fillers</Link> and <Link to="/skin-treatments" className="text-[#C9A050] hover:underline">skin rejuvenation</Link> — personalised treatment plans that evolve with you.
                 </p>
               </div>
             </motion.div>
