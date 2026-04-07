@@ -11,8 +11,8 @@ import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSide
 
 const GlycolicAcidPeel = () => {
   const seoData = generateSEOMetadata(
-    "Glycolic Acid Peel London | AHA Peel From £120 | Cosmedocs Harley Street",
-    "Medical-grade glycolic acid peel for fine lines, dullness, sun damage & uneven texture. The smallest AHA molecule for maximum penetration. Enhanced with retinol & antioxidants. From £120.",
+    "Glycolic Acid Peel London | AHA Peel From £100 | Cosmedocs Harley Street",
+    "Medical-grade glycolic acid peel for fine lines, dullness, sun damage & uneven texture. The smallest AHA molecule for maximum penetration. Enhanced with retinol & antioxidants. From £100.",
     "/treatments/chemical-peels/glycolic-acid-peel/"
   );
 
@@ -22,7 +22,7 @@ const GlycolicAcidPeel = () => {
     { question: "How many glycolic acid peel sessions do I need?", answer: "For optimal results, we recommend 4–6 sessions spaced 2–4 weeks apart. Maintenance peels every 6–8 weeks can sustain the improvement. Your practitioner will design a personalised treatment plan during consultation." },
     { question: "Is glycolic acid safe for darker skin tones?", answer: "Yes, when used at appropriate concentrations by experienced practitioners. For Fitzpatrick IV–VI skin types, we often combine glycolic acid with mandelic acid (which has a larger molecule and slower penetration) to reduce the risk of post-inflammatory hyperpigmentation whilst maintaining efficacy." },
     { question: "What supporting ingredients do you use with glycolic acid peels?", answer: "We enhance glycolic acid peels with retinol (pre-treatment to accelerate cell turnover), azelaic acid (anti-inflammatory and brightening), mandelic acid (for darker skin types), vitamin C (antioxidant protection), glutathione (free radical neutralisation), and kojic acid (pigment inhibition)." },
-    { question: "How much does a glycolic acid peel cost?", answer: "Glycolic acid peels start from £120 per session at our Harley Street clinic. Course packages of 4–6 sessions are available at reduced rates." },
+    { question: "How much does a glycolic acid peel cost?", answer: "Glycolic acid peels start from £100 per session at our Harley Street clinic. Course packages of 4–6 sessions are available at reduced rates." },
   ];
 
   return (
@@ -70,7 +70,7 @@ const GlycolicAcidPeel = () => {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–40 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £120</span>
+                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
               </motion.div>
             </div>
