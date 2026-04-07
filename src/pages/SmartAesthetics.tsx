@@ -202,6 +202,46 @@ export default function SmartAesthetics() {
                     </a>
                   </div>
 
+                  {/* The Apple Analogy */}
+                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6 md:p-10 mb-10">
+                    <h2 className="text-2xl md:text-3xl font-extralight mb-2 tracking-tight">
+                      Think of an <span className="text-[#C9A050] font-light">Apple</span>
+                    </h2>
+                    <p className="text-white/30 text-sm font-light mb-6">The simplest way to understand your face.</p>
+
+                    <div className="grid md:grid-cols-[280px_1fr] gap-8 items-center mb-8">
+                      <div className="mx-auto md:mx-0">
+                        <img
+                          src="/images/apple-skin-analogy.jpeg"
+                          alt="Cross-section of an apple — the red skin represents your skin layers, the yellow flesh represents your fat, muscle, and bone"
+                          className="w-56 h-56 object-contain rounded-2xl"
+                          loading="eager"
+                        />
+                      </div>
+                      <div className="space-y-4">
+                        <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4">
+                          <p className="text-sm font-medium text-red-400 mb-1">🍎 The Red Skin = Your Skin</p>
+                          <p className="text-white/50 text-sm font-light leading-relaxed">
+                            That thin outer layer — just the first 2mm. When people talk about "skin treatments," this is what they mean. Microneedling, polynucleotides, Morpheus, chemical peels — they all work here. They can thicken, firm, and brighten your skin. But they <strong className="text-white/70">cannot lift</strong>.
+                          </p>
+                        </div>
+                        <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4">
+                          <p className="text-sm font-medium text-yellow-400 mb-1">🍏 The Yellow Flesh = Your Volume</p>
+                          <p className="text-white/50 text-sm font-light leading-relaxed">
+                            Fat pads, muscles, bone — the structure beneath. When this layer shrinks with age, the skin above it sags and falls, creating hollows and concavities. No amount of skin tightening can compensate for volume loss underneath. The apple skin wrinkles because the flesh inside has shrunk.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl">
+                      <p className="text-sm font-medium text-[#C9A050] mb-2">The Key Lesson</p>
+                      <p className="text-white/50 text-sm font-light leading-relaxed">
+                        That's where dermal fillers come in — there is no replacement. Whether you choose hyaluronic acid, polylactic acid (Sculptra), calcium hydroxylapatite (Radiesse), or even your own fat — volume loss requires volume restoration. Spending money on skin treatments to fix a volume problem is like polishing the apple skin when the flesh inside has withered. Right treatment, right layer, right result.
+                      </p>
+                    </div>
+                  </div>
+
                   {/* Philosophy Intro */}
                   <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-6 rounded-r-xl mb-10">
                     <p className="text-white/70 font-light mb-1">Short, intelligent guidance to help you avoid aesthetic mistakes.</p>
