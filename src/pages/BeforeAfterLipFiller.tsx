@@ -76,6 +76,15 @@ const galleryImages = [
         <strong className="text-[#C9A050]">Choosing your lip size is predictable, not accidental.</strong> Before → 1ml → 2ml — precise volume control allows patients to build gradually and choose exactly the fullness they want.
       </span>
     )
+  },
+  {
+    src: "/images/before-after/lips/lip-filler-overfilled-dissolved-refilled.jpg",
+    alt: "Overfilled lip filler correction showing dissolving and refilling results at CosmeDocs Harley Street",
+    caption: (
+      <span>
+        <strong className="text-[#C9A050]">Fixing lips done elsewhere:</strong> Overfilled → dissolved with Hyalase → refilled with precision. A fresh start for lips that lost their natural shape — restored to balanced, natural volume.
+      </span>
+    )
   }
 ];
 
