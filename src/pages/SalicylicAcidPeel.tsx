@@ -186,6 +186,7 @@ const SalicylicAcidPeel = () => {
               {/* Internal Links */}
               <section>
                 <h3 className="text-lg font-light text-white/60 mb-4">Other Peel Types</h3>
+                <p className="text-sm text-[#C9A050] font-light mb-4">Peel to Reveal — our signature cocktail peel — from £150</p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     { label: "Skin Peels Hub", path: "/treatments/chemical-peels/" },
