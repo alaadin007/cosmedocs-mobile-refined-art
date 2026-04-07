@@ -97,6 +97,26 @@ const SalicylicAcidPeel = () => {
                 </motion.div>
               </section>
 
+              {/* Pore Diagram */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">How Salicylic Acid <span className="text-[#C9A050] font-light">Cleans Your Pores</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/40 text-sm font-light mb-6">A clinical diagram showing the three-stage process: clogged pore → BHA penetration and exfoliation → clear, refined pore.</p>
+                  <div className="rounded-2xl overflow-hidden border border-white/[0.08]">
+                    <img
+                      src="/images/treatments/salicylic-acid-pore-diagram.jpg"
+                      alt="Salicylic acid BHA pore cleaning diagram showing sebum plug dissolution, P. acnes bacteria reduction, fat-soluble exfoliation and clear pore result"
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <p className="text-xs text-white/20 font-light mt-3 text-center">Clogged pore → Salicylic acid (BHA) fat-soluble penetration → Exfoliation & bacterial reduction → Clear pore</p>
+                </motion.div>
+              </section>
+
               {/* Fat Solubility Deep Dive */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
@@ -186,13 +206,13 @@ const SalicylicAcidPeel = () => {
               {/* Internal Links */}
               <section>
                 <h3 className="text-lg font-light text-white/60 mb-4">Other Peel Types</h3>
+                <p className="text-sm text-[#C9A050] font-light mb-4">Peel to Reveal — our signature cocktail peel — from £150</p>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { label: "Chemical Peels Hub", path: "/treatments/chemical-peels/" },
+                    { label: "Skin Peels Hub", path: "/treatments/chemical-peels/" },
                     { label: "Glycolic Acid Peel", path: "/treatments/chemical-peels/glycolic-acid-peel/" },
                     { label: "Lactic Acid Peel", path: "/treatments/chemical-peels/lactic-acid-peel/" },
                     { label: "TCA Peel", path: "/treatments/chemical-peels/tca-peel/" },
-                    { label: "Peel to Reveal", path: "/peel-to-reveal/" },
                   ].map(link => (
                     <Link key={link.path} to={link.path} className="text-xs text-white/30 hover:text-[#C9A050] border border-white/[0.08] rounded-full px-3 py-1.5 transition-colors">
                       {link.label}
