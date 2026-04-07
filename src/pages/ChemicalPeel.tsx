@@ -176,6 +176,28 @@ const ChemicalPeel = () => {
                 </motion.div>
               </section>
 
+              {/* 4-Year Anti-Ageing Result */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">4 Years of <span className="text-[#C9A050] font-light">Anti-Ageing</span></h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-4" />
+                  <p className="text-white/50 text-sm leading-relaxed font-light mb-6">
+                    One peel per year. Four years of results. This patient's skin has visibly reversed the signs of ageing — improved tone, refined texture, and a natural glow that speaks for itself.
+                  </p>
+                  <div className="max-w-lg rounded-2xl overflow-hidden border border-white/[0.08]">
+                    <img
+                      src="/images/before-after/skin-peel-4-year-anti-ageing.png"
+                      alt="Before and after skin peel results over 4 years of annual treatments at CosmeDocs Harley Street"
+                      className="w-full h-auto"
+                      loading="lazy"
+                      width={960}
+                      height={960}
+                    />
+                  </div>
+                  <p className="text-xs text-white/20 mt-3 italic">Once-a-year skin peel — 4 years of cumulative anti-ageing results</p>
+                </motion.div>
+              </section>
+
               {/* Peel Comparison Table */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
