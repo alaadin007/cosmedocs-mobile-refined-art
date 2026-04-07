@@ -58,6 +58,15 @@ const galleryImages = [
     src: "/images/before-after/dermal-fillers/lips/full-face-filler-rejuvenation.jpg",
     alt: "Comprehensive facial filler treatment including lips showing restored volume and contour",
     caption: "Comprehensive facial volume restoration including lip enhancement for overall facial harmony."
+  },
+  {
+    src: "/images/before-after/lips/lip-filler-journey-5-weeks.jpg",
+    alt: "Lip filler journey showing before, immediately after, and 5 weeks later results at CosmeDocs Harley Street",
+    caption: (
+      <span>
+        <strong className="text-[#C9A050]">The real journey:</strong> Before, immediately after, and 5 weeks later — we present realistic results, not just our best ones. Swelling settles, filler integrates, and the final outcome speaks for itself.
+      </span>
+    )
   }
 ];
 
@@ -131,7 +140,11 @@ const BeforeAfterLipFiller = () => {
               </h1>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 Real patient results showing natural lip enhancement, corrections, and complication management 
-                from our Harley Street clinic. Every result reflects our commitment to subtle, balanced aesthetics.
+                from our Harley Street clinic. We present realistic results, not just our best ones — because 
+                honest outcomes build real trust.
+              </p>
+              <p className="text-sm text-[#C9A050]/70 mt-4 italic font-light">
+                "Our aesthetics is invisible art — bold, natural, always your way."
               </p>
             </motion.div>
           </div>
