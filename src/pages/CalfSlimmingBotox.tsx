@@ -40,6 +40,16 @@ const CalfSlimmingBotox = () => {
     "/treatments/calf-slimming-botox/"
   );
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.instagram.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      try { document.body.removeChild(script); } catch {}
+    };
+  }, []);
+
   const faqs = [
     {
       question: "What is calf reduction Botox?",
