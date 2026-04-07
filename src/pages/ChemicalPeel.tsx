@@ -41,7 +41,7 @@ const ChemicalPeel = () => {
       bestFor: "Fine lines, dullness, sun damage, texture",
       depth: "Superficial to medium",
       downtime: "1–3 days",
-      price: "From £120",
+      price: "From £100",
       link: "/treatments/chemical-peels/glycolic-acid-peel/",
     },
     {
@@ -50,7 +50,7 @@ const ChemicalPeel = () => {
       bestFor: "Sensitive skin, hydration, mild pigmentation",
       depth: "Superficial",
       downtime: "Minimal",
-      price: "From £120",
+      price: "From £100",
       link: "/treatments/chemical-peels/lactic-acid-peel/",
     },
     {
@@ -68,7 +68,7 @@ const ChemicalPeel = () => {
       bestFor: "Comprehensive renewal, anti-ageing, radiance",
       depth: "Customised",
       downtime: "3–5 days",
-      price: "From £120",
+      price: "From £150",
       link: "/peel-to-reveal/",
     },
   ];
