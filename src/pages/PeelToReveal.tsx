@@ -15,7 +15,7 @@ import {
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const PeelToReveal = () => {
-  const seoData = generateSEOMetadata("Peel to Reveal London | £120 | Cosmedocs", "Revolutionary Peel to Reveal treatment in London's Harley Street. Deep skin cleansing, repairing & rejuvenation with powerful antioxidants. From £120.", "/peel-to-reveal");
+  const seoData = generateSEOMetadata("Peel to Reveal London | From £150 | Cosmedocs", "Revolutionary Peel to Reveal treatment in London's Harley Street. Deep skin cleansing, repairing & rejuvenation with powerful antioxidants. From £150.", "/peel-to-reveal");
   const bookingUrl = "https://med.as.me/harleystreet";
 
   // Before/after images for the viewer - Real Cosmedocs results
@@ -96,7 +96,7 @@ const PeelToReveal = () => {
   const faqs = [
     {
       question: "How much does Peel to Reveal cost?",
-      answer: "Peel to Reveal Lite starts from £120, and Peel to Reveal Plus is £250. We offer 25% off your second treatment if performed within 6 months, making it an affordable ongoing skincare solution."
+      answer: "Peel to Reveal starts from £150. We offer 25% off your second treatment if performed within 6 months, making it an affordable ongoing skincare solution."
     },
     {
       question: "How long does the Peel to Reveal treatment take?",
