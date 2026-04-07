@@ -67,6 +67,15 @@ const galleryImages = [
         <strong className="text-[#C9A050]">The real journey:</strong> Before, immediately after, and 5 weeks later — we present realistic results, not just our best ones. Swelling settles, filler integrates, and the final outcome speaks for itself.
       </span>
     )
+  },
+  {
+    src: "/images/before-after/lips/lip-filler-1ml-2ml-progression.jpg",
+    alt: "Lip filler before and after showing predictable results with 1ml and 2ml volume comparison at CosmeDocs Harley Street",
+    caption: (
+      <span>
+        <strong className="text-[#C9A050]">Choosing your lip size is predictable, not accidental.</strong> Before → 1ml → 2ml — precise volume control allows patients to build gradually and choose exactly the fullness they want.
+      </span>
+    )
   }
 ];
 
