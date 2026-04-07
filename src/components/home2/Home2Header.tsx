@@ -85,6 +85,7 @@ const treatmentCategories = [
     hubLink: "/treatments/skin-hair/",
     items: [
       { title: "Skin & Hair Overview", link: "/treatments/skin-hair/", isOverview: true },
+      { title: "Laser Hair Removal", link: "/treatments/laser-hair-removal/" },
       { title: "Microneedling", link: "/treatments/microneedling/" },
       { title: "Fat Dissolving", link: "/treatments/fat-dissolving/" },
       { title: "Hair Transplant", link: "/treatments/hair-transplant/" },
