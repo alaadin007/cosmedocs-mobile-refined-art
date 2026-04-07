@@ -103,7 +103,7 @@ const SalicylicAcidPeel = () => {
                   <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">How Salicylic Acid <span className="text-[#C9A050] font-light">Cleans Your Pores</span></h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <p className="text-white/40 text-sm font-light mb-6">A clinical diagram showing the three-stage process: clogged pore → BHA penetration and exfoliation → clear, refined pore.</p>
-                  <div className="rounded-2xl overflow-hidden border border-white/[0.08]">
+                  <div className="max-w-xl rounded-2xl overflow-hidden border border-white/[0.08]">
                     <img
                       src="/images/treatments/salicylic-acid-pore-diagram.jpg"
                       alt="Salicylic acid BHA pore cleaning diagram showing sebum plug dissolution, P. acnes bacteria reduction, fat-soluble exfoliation and clear pore result"
