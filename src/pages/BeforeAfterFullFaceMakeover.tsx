@@ -50,6 +50,16 @@ const galleryImages = [
     caption: "Natural facial balance achieved through considered, multi-point dermal filler placement."
   },
   {
+    src: "/images/before-after/ha-makeover/ha-makeover-natural-balance-profile.jpg",
+    alt: "Before and after full face makeover profile view showing natural facial balance with multi-point dermal filler",
+    caption: "Profile view — natural facial balance achieved through considered, multi-point dermal filler placement."
+  },
+  {
+    src: "/images/before-after/ha-makeover/ha-makeover-natural-balance-front.jpg",
+    alt: "Before and after full face makeover front view showing natural facial balance with multi-point dermal filler",
+    caption: "Front view — natural facial balance and refreshed appearance through bespoke multi-point dermal filler placement."
+  },
+  {
     src: "/images/before-after/ha-makeover/ha-makeover-male-rejuvenation.jpg",
     alt: "Before and after full face makeover showing male full-face rejuvenation",
     caption: "Male full-face rejuvenation — restoring structure and reducing visible signs of ageing."
