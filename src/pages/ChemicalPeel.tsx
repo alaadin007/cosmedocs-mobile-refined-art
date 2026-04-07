@@ -133,20 +133,25 @@ const ChemicalPeel = () => {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb items={[{ label: 'Treatments', path: '/treatments/' }, { label: 'Skin Rejuvenation', path: '/treatments/skin-rejuvenation/' }]} currentPage="Chemical Peels" />
-            <div className="pt-12 pb-4 max-w-3xl">
-              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
-                   Skin <span className="text-[#C9A050] font-light">Peels</span> London
-                 </h1>
-                 <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl">
-                   A medical facial that removes dead skin cells — the root cause of uneven texture, dull tone, and premature ageing. Fresh, clear skin revealed in one session.
-                 </p>
-              </motion.div>
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Skin Specialist-Led</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–45 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
+            <div className="pt-12 pb-4 flex flex-col lg:flex-row items-center gap-10">
+              <div className="max-w-2xl">
+                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                     Skin <span className="text-[#C9A050] font-light">Peels</span> London
+                   </h1>
+                   <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl">
+                     A medical facial that removes dead skin cells — the root cause of uneven texture, dull tone, and premature ageing. Fresh, clear skin revealed in one session.
+                   </p>
+                </motion.div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Skin Specialist-Led</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–45 Min</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £100</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
+                </motion.div>
+              </div>
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="w-full max-w-xs lg:max-w-sm flex-shrink-0">
+                <img src="/images/treatments/skin-peel-dead-skin-diagram.jpg" alt="Clinical diagram showing dead skin cells being removed during a skin peel treatment" className="w-full h-auto rounded-2xl" width={1024} height={640} />
               </motion.div>
             </div>
           </div>
