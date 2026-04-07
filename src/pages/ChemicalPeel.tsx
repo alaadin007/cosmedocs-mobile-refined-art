@@ -196,6 +196,7 @@ const ChemicalPeel = () => {
                   </div>
                   <p className="text-xs text-white/20 mt-3 italic">Once-a-year skin peel — 4 years of cumulative anti-ageing results</p>
                 </motion.div>
+              </section>
 
               {/* Peel Comparison Table */}
               <section>
