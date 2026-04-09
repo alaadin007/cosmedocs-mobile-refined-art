@@ -332,6 +332,8 @@ const App = () => {
                           {/* Botox Hub & Sub-treatments */}
                           <Route path="/treatments/botox" element={<FaceBotox />} />
                           <Route path="/treatments/botox/" element={<FaceBotox />} />
+                          <Route path="/treatments/botox-light" element={<FaceBotoxLight />} />
+                          <Route path="/treatments/botox-light/" element={<FaceBotoxLight />} />
                           {/* Botox pages redirected to hub */}
                           <Route path="/treatments/botox-cost" element={<Navigate to="/treatments/botox/" replace />} />
                           <Route path="/treatments/botox-cost/" element={<Navigate to="/treatments/botox/" replace />} />
