@@ -11,9 +11,13 @@ interface BreadcrumbItem {
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
   currentPage?: string;
+  variant?: "dark" | "light";
 }
 
-const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
+const Breadcrumb = ({ items, currentPage, variant = "dark" }: BreadcrumbProps) => {
+  const isLight = variant === "light";
+  const linkColor = isLight ? "text-gray-400 hover:text-[#C9A050]" : "text-white/50 hover:text-[#C9A050]";
+  const chevronColor = isLight ? "text-gray-300" : "text-white/30";
   // If currentPage is provided, use it. Otherwise, treat the last item as the current page
   const breadcrumbItems = currentPage ? items : items.slice(0, -1);
   const finalPage = currentPage || (items.length > 0 ? items[items.length - 1].label : '');
@@ -56,12 +60,12 @@ const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
           <li className="flex items-center gap-2">
             <Link 
               to="/" 
-              className="text-white/50 hover:text-[#C9A050] transition-colors flex items-center gap-1"
+              className={`${linkColor} transition-colors flex items-center gap-1`}
             >
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
-            <ChevronRight className="w-4 h-4 text-white/30" />
+            <ChevronRight className={`w-4 h-4 ${chevronColor}`} />
           </li>
           
           {breadcrumbItems.map((item, index) => {
@@ -70,11 +74,11 @@ const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
               <li key={itemPath} className="flex items-center gap-2">
                 <Link 
                   to={itemPath}
-                  className="text-white/50 hover:text-[#C9A050] transition-colors"
+                  className={`${linkColor} transition-colors`}
                 >
                   {item.label}
                 </Link>
-                <ChevronRight className="w-4 h-4 text-white/30" />
+                <ChevronRight className={`w-4 h-4 ${chevronColor}`} />
               </li>
             );
           })}
