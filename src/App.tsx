@@ -80,6 +80,7 @@ const DermalFillers = lazy(() => import("./pages/DermalFillers"));
 const DermalFillerAreas = lazy(() => import("./pages/DermalFillerAreas"));
 const NefertitiBotoxFacelift = lazy(() => import("./pages/NefertitiBotoxFacelift"));
 const FaceBotox = lazy(() => import("./pages/FaceBotox"));
+const FaceBotoxLight = lazy(() => import("./pages/FaceBotoxLight"));
 const AdvancedConsultation = lazy(() => import("./pages/AdvancedConsultation"));
 const FellowshipInvitation = lazy(() => import("./pages/FellowshipInvitation"));
 const LongTermAestheticCareBlog = lazy(() => import("./pages/LongTermAestheticCareBlog"));
