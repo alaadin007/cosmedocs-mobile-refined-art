@@ -80,6 +80,7 @@ const DermalFillers = lazy(() => import("./pages/DermalFillers"));
 const DermalFillerAreas = lazy(() => import("./pages/DermalFillerAreas"));
 const NefertitiBotoxFacelift = lazy(() => import("./pages/NefertitiBotoxFacelift"));
 const FaceBotox = lazy(() => import("./pages/FaceBotox"));
+const FaceBotoxLight = lazy(() => import("./pages/FaceBotoxLight"));
 const AdvancedConsultation = lazy(() => import("./pages/AdvancedConsultation"));
 const FellowshipInvitation = lazy(() => import("./pages/FellowshipInvitation"));
 const LongTermAestheticCareBlog = lazy(() => import("./pages/LongTermAestheticCareBlog"));
@@ -331,6 +332,8 @@ const App = () => {
                           {/* Botox Hub & Sub-treatments */}
                           <Route path="/treatments/botox" element={<FaceBotox />} />
                           <Route path="/treatments/botox/" element={<FaceBotox />} />
+                          <Route path="/treatments/botox-light" element={<FaceBotoxLight />} />
+                          <Route path="/treatments/botox-light/" element={<FaceBotoxLight />} />
                           {/* Botox pages redirected to hub */}
                           <Route path="/treatments/botox-cost" element={<Navigate to="/treatments/botox/" replace />} />
                           <Route path="/treatments/botox-cost/" element={<Navigate to="/treatments/botox/" replace />} />
