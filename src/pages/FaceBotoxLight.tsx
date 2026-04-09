@@ -749,8 +749,8 @@ export default function FaceBotoxLight() {
                       { v: "difference", q: "What is the difference between Botox and fillers?", a: "Botox relaxes muscles to reduce dynamic wrinkles (lines with movement). Fillers add volume to restore lost fullness and soften static lines. They treat different concerns and are often used together." },
                     ].map((faq) => (
                       <AccordionItem key={faq.v} value={faq.v} className="border-gray-200">
-                        <AccordionTrigger className={`${textH}/70 hover:${goldText} text-left text-sm font-light`}>{faq.q}</AccordionTrigger>
-                        <AccordionContent className={`${textMuted} text-xs font-light`}>{faq.a}</AccordionContent>
+                        <AccordionTrigger className="text-gray-700 hover:text-[#C9A050] text-left text-sm font-light">{faq.q}</AccordionTrigger>
+                        <AccordionContent className="text-gray-400 text-xs font-light">{faq.a}</AccordionContent>
                       </AccordionItem>
                     ))}
                   </Accordion>
