@@ -312,6 +312,56 @@ const ChinFiller = () => {
                 </motion.div>
               </section>
 
+              {/* Why the Chin Matters */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why the Chin Matters for Your <span className="text-[#C9A050] font-light">Profile</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
+                    The chin plays a key role in facial balance. A short or weak chin can make the lips or nose appear more prominent, even if they are proportionate.
+                  </p>
+                  <p className="text-white/50 text-sm font-light mb-3">By improving chin projection and height, we can:</p>
+                  <ul className="space-y-3 text-white/45 text-sm font-light mb-6">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                      <span>Enhance your side profile</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                      <span>Improve overall facial harmony</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                      <span>Reduce the need for excessive lip filler</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                      <span>Support a more defined jawline</span>
+                    </li>
+                  </ul>
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    We assess both projection (how far forward the chin sits) and vertical height (how long the chin appears) to create natural, balanced results.
+                  </p>
+
+                  {/* Chin vs Jawline subsection */}
+                  <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 mt-4">
+                    <h3 className="text-lg font-light text-white mb-3">
+                      Chin vs Jawline — <span className="text-[#C9A050]">Why Both Matter</span>
+                    </h3>
+                    <p className="text-white/45 text-sm leading-relaxed font-light mb-3">
+                      The chin acts as the anchor of the lower face, while the jawline creates the contour.
+                    </p>
+                    <p className="text-white/45 text-sm leading-relaxed font-light">
+                      If the chin is underdeveloped,{" "}
+                      <Link to="/treatments/jawline-filler/" className="text-[#C9A050] hover:underline">jawline filler</Link>{" "}
+                      alone may not achieve optimal results. In many cases, treating both areas together creates a smoother, more defined appearance.
+                    </p>
+                  </div>
+                </motion.div>
+              </section>
+
               {/* How It Works */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
