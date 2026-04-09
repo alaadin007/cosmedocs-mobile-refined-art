@@ -284,6 +284,58 @@ const JawlineFiller = () => {
                 </motion.div>
               </section>
 
+              {/* Why the Chin Matters for Jawline */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Why the Chin Is Important for <span className="text-[#C9A050] font-light">Jawline Results</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
+                    Many patients focus on the jawline, but the chin is essential for creating a balanced lower face.
+                  </p>
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    If the chin is short or set back, jawline filler alone may appear heavy or less defined. By supporting the chin, we can create a more continuous and natural contour from the front of the face to the jawline.
+                  </p>
+
+                  {/* How Much Filler */}
+                  <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 mb-6">
+                    <h3 className="text-lg font-light text-white mb-3">
+                      How Much Filler <span className="text-[#C9A050]">Might Be Needed?</span>
+                    </h3>
+                    <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
+                      The amount of filler depends on your facial structure and goals. Typical ranges:
+                    </p>
+                    <ul className="space-y-3 text-white/45 text-sm font-light mb-4">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/60">Chin only:</strong> 0.5 – 3 ml</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/60">Jawline only:</strong> 2 – 4 ml</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" />
+                        <span><strong className="text-white/60">Chin and jawline combined:</strong> 3 – 8 ml</span>
+                      </li>
+                    </ul>
+                    <p className="text-white/40 text-xs font-light italic">
+                      Men often require slightly higher volumes to achieve stronger definition.
+                    </p>
+                  </div>
+
+                  {/* CTA to Chin Filler */}
+                  <Link
+                    to="/treatments/chin-filler/"
+                    className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium"
+                  >
+                    Considering chin enhancement as well? View our Chin Filler page to learn how both treatments work together
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+              </section>
+
               {/* How It Works */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
