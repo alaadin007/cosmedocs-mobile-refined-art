@@ -15,7 +15,7 @@ export default function FaceBotoxLight() {
   const seoData = generateSEOMetadata(
     "Botox | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
     "Complete guide to Botox. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
-    "/treatments/botox-light/"
+    "/treatments/botox/"
   );
 
   const medicalBusinessSchema = {
@@ -51,7 +51,7 @@ export default function FaceBotoxLight() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={seoData.canonical} />
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
@@ -59,7 +59,7 @@ export default function FaceBotoxLight() {
       <div className={`${bg} overflow-x-hidden`}>
         {/* Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox (Light)" />
+          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox" variant="light" />
         </div>
 
         {/* ═══════════════════════════════════════════
