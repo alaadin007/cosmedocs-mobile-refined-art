@@ -59,7 +59,7 @@ export default function FaceBotoxLight() {
       <div className={`${bg} overflow-x-hidden`}>
         {/* Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox (Light)" />
+          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox" />
         </div>
 
         {/* ═══════════════════════════════════════════

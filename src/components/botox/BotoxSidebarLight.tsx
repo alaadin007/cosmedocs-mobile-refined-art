@@ -34,6 +34,7 @@ const BotoxSidebarLight = () => {
           categories={["botox-face", "botox-contouring", "botox-sweattox"]}
           title="Botox Prices"
           compact
+          variant="light"
         />
       </motion.div>
 
