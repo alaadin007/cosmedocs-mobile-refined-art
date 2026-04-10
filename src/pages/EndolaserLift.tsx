@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, AlertTriangle, Heart, ArrowRight, Zap } from "lucide-react";
+import endolaserDeviceFull from "@/assets/endolaser-device-full.jpeg";
+import endolaserDeviceDetail from "@/assets/endolaser-device-detail.jpeg";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
@@ -271,21 +273,33 @@ const EndolaserLift = () => {
                 </motion.div>
               </div>
 
-              {/* Right: Icon */}
+              {/* Right: Device images */}
               <motion.div
-                className="hidden lg:flex flex-shrink-0 w-[200px] h-[200px] items-center justify-center"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                className="hidden lg:flex flex-shrink-0 w-[340px] h-[380px] items-center justify-center relative"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               >
-                <motion.div
-                  className="w-full h-full rounded-full flex items-center justify-center"
-                  style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.08) 0%, transparent 70%)' }}
-                  animate={{ scale: [1, 1.08, 1] }}
+                {/* Full device — main */}
+                <motion.img
+                  src={endolaserDeviceFull}
+                  alt="Laser Fibre Lift device with fibre optic cannula"
+                  className="absolute w-[280px] h-auto object-contain drop-shadow-2xl z-10 rounded-lg"
+                  style={{ filter: 'brightness(0.85) contrast(1.1)' }}
+                  animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <Zap className="w-16 h-16 text-[#C9A050]/30" />
-                </motion.div>
+                />
+                {/* Detail shot — offset behind */}
+                <motion.img
+                  src={endolaserDeviceDetail}
+                  alt="Laser Fibre Lift dual-wavelength detail"
+                  className="absolute top-4 right-0 w-[180px] h-auto object-cover rounded-lg opacity-40 z-0"
+                  style={{ filter: 'brightness(0.6) contrast(1.2)' }}
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                />
+                {/* Gold glow behind */}
+                <div className="absolute inset-0 rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 70%)' }} />
               </motion.div>
             </div>
           </div>
