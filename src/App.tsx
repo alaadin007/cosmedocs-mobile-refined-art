@@ -797,6 +797,7 @@ const App = () => {
                     </Layout>
                   } />
                 </Routes>
+                </LanguageProvider>
               </AuthProvider>
             </BrowserRouter>
           </TooltipProvider>
