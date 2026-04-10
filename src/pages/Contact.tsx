@@ -21,7 +21,9 @@ import {
   ArrowRight,
   Send,
 } from "lucide-react";
-import { generateSEOMetadata } from '@/utils/seo';
+import { useT, useLanguage } from '@/i18n/LanguageContext';
+import { generateHreflangLinks, getCanonicalUrl } from '@/i18n/config';
+import type { SupportedLanguage } from '@/i18n/types';
 
 const InlineAIChat = lazy(() => import("@/components/InlineAIChat"));
 
@@ -54,11 +56,11 @@ const instagramUrl = "https://www.instagram.com/cosmedocs/";
 
 const Contact = () => {
   const navigate = useNavigate();
-  const seoData = generateSEOMetadata(
-    "Contact Cosmedocs | Harley Street Aesthetic Clinic London",
-    "Get in touch with Cosmedocs. Book a consultation, ask a question, or message us on WhatsApp. Harley Street, London since 2007.",
-    "/contact"
-  );
+  const t = useT('contact');
+  const { language, isRTL, common } = useLanguage();
+  
+  const hreflangLinks = generateHreflangLinks('contact');
+  const canonicalUrl = getCanonicalUrl(language, 'contact');
 
   const [formData, setFormData] = useState({
     name: "",
@@ -125,19 +127,24 @@ const Contact = () => {
     }
   };
 
+  const homeLink = language === 'en' ? '/' : `/${language}/`;
+
   return (
     <>
       <Helmet>
-        <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
-        <meta property="og:title" content={seoData.title} />
-        <meta property="og:description" content={seoData.description} />
+        <title>{t('meta.title', 'Contact Cosmedocs | Harley Street Aesthetic Clinic London')}</title>
+        <meta name="description" content={t('meta.description', 'Get in touch with Cosmedocs. Book a consultation, ask a question, or message us on WhatsApp. Harley Street, London since 2007.')} />
+        <link rel="canonical" href={canonicalUrl} data-rh="true" />
+        <meta property="og:title" content={t('meta.title', 'Contact Cosmedocs')} />
+        <meta property="og:description" content={t('meta.description', '')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:title" content={t('meta.title', '')} />
+        <meta name="twitter:description" content={t('meta.description', '')} />
+        {hreflangLinks.map(link => (
+          <link key={link.hreflang} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+        ))}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -163,7 +170,7 @@ const Contact = () => {
               },
               {
                 "@type": "ContactPage",
-                "@id": "https://cosmedocs.com/contact/",
+                "@id": `${canonicalUrl}`,
                 name: "Contact Cosmedocs",
                 isPartOf: { "@id": "https://cosmedocs.com/#website" },
               },
@@ -171,7 +178,7 @@ const Contact = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://cosmedocs.com/" },
-                  { "@type": "ListItem", position: 2, name: "Contact", item: "https://cosmedocs.com/contact/" },
+                  { "@type": "ListItem", position: 2, name: "Contact", item: canonicalUrl },
                 ],
               },
             ],
@@ -179,16 +186,16 @@ const Contact = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
+      <div className="bg-black text-white min-h-screen" dir={isRTL ? 'rtl' : undefined}>
         {/* ── Hero ── */}
         <section className="relative pt-28 pb-16 overflow-hidden">
           <div className="absolute top-20 right-1/4 w-[500px] h-[500px] rounded-full bg-[#C9A050]/[0.04] blur-[120px] pointer-events-none" />
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
             <nav className="flex items-center gap-2 text-xs text-white/40 mb-10" aria-label="Breadcrumb">
-              <Link to="/" className="hover:text-[#C9A050] transition-colors">Home</Link>
+              <Link to={homeLink} className="hover:text-[#C9A050] transition-colors">{common?.breadcrumb?.home ?? 'Home'}</Link>
               <span>/</span>
-              <span className="text-white/60">Contact</span>
+              <span className="text-white/60">{t('breadcrumbContact', 'Contact')}</span>
             </nav>
 
             <motion.div
@@ -197,14 +204,13 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[#C9A050] text-xs font-semibold tracking-[0.25em] uppercase mb-4">
-                Get In Touch
+                {t('heroTagline', 'Get In Touch')}
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extralight leading-[1.1] mb-6">
-                Contact Us
+                {t('heroTitle', 'Contact Us')}
               </h1>
               <p className="text-base sm:text-lg text-white/60 font-extralight leading-relaxed max-w-2xl">
-                Whether you'd like to book a consultation, ask a question, or simply learn more about our treatments — 
-                we're here to help. Reach us however suits you best.
+                {t('heroSubtitle', "Whether you'd like to book a consultation, ask a question, or simply learn more about our treatments — we're here to help. Reach us however suits you best.")}
               </p>
             </motion.div>
           </div>
@@ -225,9 +231,9 @@ const Contact = () => {
               className="group bg-[#C9A050] hover:bg-[#B8903F] rounded-2xl p-6 transition-all duration-300"
             >
               <Calendar className="w-7 h-7 text-black mb-4" />
-              <p className="text-base font-medium text-black mb-1">Book Direct</p>
+              <p className="text-base font-medium text-black mb-1">{t('bookDirect', 'Book Direct')}</p>
               <p className="text-sm text-black/60">
-                Schedule your consultation online
+                {t('bookDirectDesc', 'Schedule your consultation online')}
               </p>
             </motion.a>
 
@@ -243,9 +249,9 @@ const Contact = () => {
               className="group bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-emerald-500/30 rounded-2xl p-6 transition-all duration-300"
             >
               <MessageSquare className="w-7 h-7 text-emerald-400 mb-4" />
-              <p className="text-base font-medium text-white mb-1">WhatsApp</p>
+              <p className="text-base font-medium text-white mb-1">{t('whatsappLabel', 'WhatsApp')}</p>
               <p className="text-sm text-white/50">
-                Message us directly on WhatsApp
+                {t('whatsappDesc', 'Message us directly on WhatsApp')}
               </p>
             </motion.a>
 
@@ -259,7 +265,7 @@ const Contact = () => {
               className="group bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-[#C9A050]/30 rounded-2xl p-6 transition-all duration-300"
             >
               <Phone className="w-7 h-7 text-[#C9A050] mb-4" />
-              <p className="text-base font-medium text-white mb-1">Call Us</p>
+              <p className="text-base font-medium text-white mb-1">{t('callUs', 'Call Us')}</p>
               <p className="text-sm text-white/50">
                 0333 0551 503
               </p>
@@ -277,7 +283,7 @@ const Contact = () => {
               className="group bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-pink-500/30 rounded-2xl p-6 transition-all duration-300"
             >
               <Instagram className="w-7 h-7 text-pink-400 mb-4" />
-              <p className="text-base font-medium text-white mb-1">Instagram</p>
+              <p className="text-base font-medium text-white mb-1">{t('instagram', 'Instagram')}</p>
               <p className="text-sm text-white/50">
                 @cosmedocs
               </p>
@@ -300,32 +306,31 @@ const Contact = () => {
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <Send className="w-5 h-5 text-[#C9A050]" />
-                  <h2 className="text-xl font-medium text-white">Ask a Question</h2>
+                  <h2 className="text-xl font-medium text-white">{t('askQuestion', 'Ask a Question')}</h2>
                 </div>
                 <p className="text-sm text-white/50 font-extralight mb-8">
-                  Send us your question directly and our team will get back to you as soon as possible — 
-                  usually within a few hours during clinic hours.
+                  {t('askQuestionDesc', 'Send us your question directly and our team will get back to you as soon as possible — usually within a few hours during clinic hours.')}
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="name" className="block text-xs text-white/50 uppercase tracking-wider mb-2">
-                        Name
+                        {t('formName', 'Name')}
                       </label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Your name"
+                        placeholder={t('formNamePlaceholder', 'Your name')}
                         className="bg-white/[0.04] border-white/[0.08] focus:border-[#C9A050]/50 text-white placeholder:text-white/25 rounded-xl h-12"
                         required
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-xs text-white/50 uppercase tracking-wider mb-2">
-                        Email
+                        {t('formEmail', 'Email')}
                       </label>
                       <Input
                         id="email"
@@ -333,7 +338,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="your@email.com"
+                        placeholder={t('formEmailPlaceholder', 'your@email.com')}
                         className="bg-white/[0.04] border-white/[0.08] focus:border-[#C9A050]/50 text-white placeholder:text-white/25 rounded-xl h-12"
                         required
                       />
@@ -342,7 +347,7 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="phone" className="block text-xs text-white/50 uppercase tracking-wider mb-2">
-                      Phone <span className="text-white/30">(optional)</span>
+                      {t('formPhone', 'Phone')} <span className="text-white/30">{t('formPhoneOptional', '(optional)')}</span>
                     </label>
                     <Input
                       id="phone"
@@ -350,14 +355,14 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+44 7XXX XXX XXX"
+                      placeholder={t('formPhonePlaceholder', '+44 7XXX XXX XXX')}
                       className="bg-white/[0.04] border-white/[0.08] focus:border-[#C9A050]/50 text-white placeholder:text-white/25 rounded-xl h-12"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-xs text-white/50 uppercase tracking-wider mb-2">
-                      Your Question
+                      {t('formQuestion', 'Your Question')}
                     </label>
                     <Textarea
                       id="message"
@@ -365,7 +370,7 @@ const Contact = () => {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your enquiry or what treatment you're interested in..."
+                      placeholder={t('formQuestionPlaceholder', "Tell us about your enquiry or what treatment you're interested in...")}
                       className="bg-white/[0.04] border-white/[0.08] focus:border-[#C9A050]/50 text-white placeholder:text-white/25 rounded-xl resize-none"
                       required
                     />
@@ -376,12 +381,12 @@ const Contact = () => {
                     className="w-full bg-[#C9A050] hover:bg-[#B8903F] text-black font-medium rounded-full h-12 text-sm"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Your Question"}
+                    {isSubmitting ? t('formSubmitting', 'Sending...') : t('formSubmit', 'Send Your Question')}
                     {!isSubmitting && <ArrowRight className="w-4 h-4 ml-2" />}
                   </Button>
 
                   <p className="text-xs text-white/30 text-center">
-                    Your message goes directly to our clinic team — no AI, no chatbot. A real person will respond.
+                    {t('formDisclaimer', 'Your message goes directly to our clinic team — no AI, no chatbot. A real person will respond.')}
                   </p>
                 </form>
               </div>
@@ -399,18 +404,18 @@ const Contact = () => {
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <MapPin className="w-5 h-5 text-[#C9A050]" />
-                  <p className="text-sm font-medium text-white uppercase tracking-wider">Our Clinic</p>
+                  <p className="text-sm font-medium text-white uppercase tracking-wider">{t('ourClinic', 'Our Clinic')}</p>
                 </div>
                 <address className="not-italic text-sm text-white/60 font-extralight space-y-1 mb-4">
-                  <p className="text-white/80 font-medium">Cosmedocs</p>
-                  <p>10 Harley Street</p>
-                  <p>London, W1G 9PF</p>
-                  <p>United Kingdom</p>
+                  <p className="text-white/80 font-medium">{t('clinicName', 'Cosmedocs')}</p>
+                  <p>{t('clinicAddress1', '10 Harley Street')}</p>
+                  <p>{t('clinicAddress2', 'London, W1G 9PF')}</p>
+                  <p>{t('clinicCountry', 'United Kingdom')}</p>
                 </address>
                 <div className="bg-white/[0.02] border border-[#C9A050]/20 rounded-xl p-4 mb-4">
-                  <p className="text-xs text-[#C9A050] font-medium uppercase tracking-wider mb-1.5">Completely Discreet</p>
+                  <p className="text-xs text-[#C9A050] font-medium uppercase tracking-wider mb-1.5">{t('discreteTitle', 'Completely Discreet')}</p>
                   <p className="text-xs text-white/50 leading-relaxed">
-                    No outside signage. No clinic branding on the door. Our Harley Street location is intentionally unmarked — your privacy is absolute. Trusted by public figures, celebrities and high-profile patients who require total confidentiality.
+                    {t('discreteText', "No outside signage. No clinic branding on the door. Our Harley Street location is intentionally unmarked — your privacy is absolute. Trusted by public figures, celebrities and high-profile patients who require total confidentiality.")}
                   </p>
                 </div>
                 <a
@@ -419,7 +424,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs text-[#C9A050] hover:text-[#D4AF61] transition-colors"
                 >
-                  View on Google Maps
+                  {t('viewOnMaps', 'View on Google Maps')}
                   <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
@@ -428,20 +433,20 @@ const Contact = () => {
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-5 h-5 text-[#C9A050]" />
-                  <p className="text-sm font-medium text-white uppercase tracking-wider">Opening Hours</p>
+                  <p className="text-sm font-medium text-white uppercase tracking-wider">{t('openingHours', 'Opening Hours')}</p>
                 </div>
                 <ul className="space-y-2.5 text-sm">
                   <li className="flex justify-between text-white/60">
-                    <span>Monday – Friday</span>
-                    <span className="text-white/80">9:00 – 19:00</span>
+                    <span>{t('monFri', 'Monday – Friday')}</span>
+                    <span className="text-white/80">{t('monFriHours', '9:00 – 19:00')}</span>
                   </li>
                   <li className="flex justify-between text-white/60">
-                    <span>Saturday</span>
-                    <span className="text-white/80">10:00 – 16:00</span>
+                    <span>{t('saturday', 'Saturday')}</span>
+                    <span className="text-white/80">{t('saturdayHours', '10:00 – 16:00')}</span>
                   </li>
                   <li className="flex justify-between text-white/60">
-                    <span>Sunday</span>
-                    <span className="text-white/40">Closed</span>
+                    <span>{t('sunday', 'Sunday')}</span>
+                    <span className="text-white/40">{t('sundayClosed', 'Closed')}</span>
                   </li>
                 </ul>
               </div>
@@ -450,7 +455,7 @@ const Contact = () => {
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Phone className="w-5 h-5 text-[#C9A050]" />
-                  <p className="text-sm font-medium text-white uppercase tracking-wider">Direct Lines</p>
+                  <p className="text-sm font-medium text-white uppercase tracking-wider">{t('directLines', 'Direct Lines')}</p>
                 </div>
                 <div className="space-y-3">
                   <a href="tel:+443330551503" className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group">
@@ -472,7 +477,7 @@ const Contact = () => {
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Instagram className="w-5 h-5 text-[#C9A050]" />
-                  <p className="text-sm font-medium text-white uppercase tracking-wider">Connect</p>
+                  <p className="text-sm font-medium text-white uppercase tracking-wider">{t('connect', 'Connect')}</p>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <a
@@ -491,7 +496,7 @@ const Contact = () => {
                     className="flex items-center gap-2 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-emerald-500/30 rounded-xl px-4 py-2.5 text-sm text-white/60 hover:text-white transition-all"
                   >
                     <MessageSquare className="w-4 h-4 text-emerald-400" />
-                    WhatsApp
+                    {t('whatsappLabel', 'WhatsApp')}
                   </a>
                   <a
                     href={bookingUrl}
@@ -500,14 +505,14 @@ const Contact = () => {
                     className="flex items-center gap-2 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-[#C9A050]/30 rounded-xl px-4 py-2.5 text-sm text-white/60 hover:text-white transition-all"
                   >
                     <Calendar className="w-4 h-4 text-[#C9A050]" />
-                    Book Online
+                    {t('bookOnline', 'Book Online')}
                   </a>
                 </div>
               </div>
 
               {/* Trust row */}
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-2">
-                {["Since 2007", "Harley Street", "Doctor-Led"].map((item) => (
+                {[t('trustSince2007', 'Since 2007'), t('trustHarleyStreet', 'Harley Street'), t('trustDoctorLed', 'Doctor-Led')].map((item) => (
                   <span key={item} className="flex items-center gap-2 text-xs text-white/40 uppercase tracking-wider">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#C9A050]" />
                     {item}
@@ -528,14 +533,13 @@ const Contact = () => {
           >
             <div className="text-center mb-8">
               <p className="text-[#C9A050] text-xs font-semibold tracking-[0.25em] uppercase mb-3">
-                Instant Answers
+                {t('instantAnswers', 'Instant Answers')}
               </p>
               <p className="text-2xl sm:text-3xl font-extralight text-white mb-3">
-                Aesthetic Intelligence
+                {t('aestheticIntelligence', 'Aesthetic Intelligence')}
               </p>
               <p className="text-sm text-white/50 font-extralight max-w-lg mx-auto">
-                Get instant answers about treatments, pricing, and booking. Our AI assistant is trained on 
-                our full treatment portfolio and can help you find exactly what you need.
+                {t('aiDescription', 'Get instant answers about treatments, pricing, and booking. Our AI assistant is trained on our full treatment portfolio and can help you find exactly what you need.')}
               </p>
             </div>
             <div className="max-w-2xl mx-auto">

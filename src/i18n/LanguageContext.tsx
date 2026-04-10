@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useRef, ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import type { SupportedLanguage, LanguageTranslations, CommonTranslation, PageTranslation, Tier1PageKey } from './types';
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from './config';
@@ -102,4 +102,54 @@ export function useTranslation(pageKey: Tier1PageKey) {
     language,
     isRTL,
   };
+}
+
+/**
+ * useT — deep translation accessor with English fallback.
+ * Usage:
+ *   const t = useT('contact');
+ *   t('hero.title')           → returns translated string or English fallback
+ *   t('hero.title', 'Default') → returns translated string or 'Default'
+ */
+export function useT(pageKey: Tier1PageKey) {
+  const { translations, language } = useLanguage();
+
+  // Load English as fallback synchronously (it's tiny and always loaded)
+  const enTranslations = useRef<LanguageTranslations | null>(null);
+  useEffect(() => {
+    if (language !== 'en') {
+      import('./translations/en/index').then(m => { enTranslations.current = m.default; });
+    }
+  }, [language]);
+
+  const t = useCallback((key: string, fallback?: string): string => {
+    // Try current language first — check content, then full page object (for meta.*)
+    const currentPage = translations?.pages[pageKey];
+    let val = getNestedValue(currentPage?.content, key);
+    if (typeof val === 'string') return val;
+    val = getNestedValue(currentPage, key);
+    if (typeof val === 'string') return val;
+
+    // Try English fallback
+    const enPage = language === 'en' ? currentPage : enTranslations.current?.pages[pageKey];
+    let enVal = getNestedValue(enPage?.content, key);
+    if (typeof enVal === 'string') return enVal;
+    enVal = getNestedValue(enPage, key);
+    if (typeof enVal === 'string') return enVal;
+
+    return fallback ?? key;
+  }, [translations, pageKey, language]);
+
+  return t;
+}
+
+function getNestedValue(obj: unknown, path: string): unknown {
+  if (!obj || typeof obj !== 'object') return undefined;
+  const keys = path.split('.');
+  let current: unknown = obj;
+  for (const k of keys) {
+    if (current === null || current === undefined || typeof current !== 'object') return undefined;
+    current = (current as Record<string, unknown>)[k];
+  }
+  return current;
 }
