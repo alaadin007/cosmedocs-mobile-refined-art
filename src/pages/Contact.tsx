@@ -57,7 +57,7 @@ const instagramUrl = "https://www.instagram.com/cosmedocs/";
 const Contact = () => {
   const navigate = useNavigate();
   const t = useT('contact');
-  const { language, isRTL } = useLanguage();
+  const { language, isRTL, common } = useLanguage();
   
   const hreflangLinks = generateHreflangLinks('contact');
   const canonicalUrl = getCanonicalUrl(language, 'contact');
@@ -193,7 +193,7 @@ const Contact = () => {
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
             <nav className="flex items-center gap-2 text-xs text-white/40 mb-10" aria-label="Breadcrumb">
-              <Link to={homeLink} className="hover:text-[#C9A050] transition-colors">{t('breadcrumb.home', 'Home')}</Link>
+              <Link to={homeLink} className="hover:text-[#C9A050] transition-colors">{common?.breadcrumb?.home ?? 'Home'}</Link>
               <span>/</span>
               <span className="text-white/60">{t('breadcrumbContact', 'Contact')}</span>
             </nav>
