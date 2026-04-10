@@ -11,7 +11,6 @@ import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
 import ErrorBoundary from "./components/ErrorBoundary";
-import ErrorBoundary from "./components/ErrorBoundary";
 
 // Eager load critical pages only
 import Index from "./pages/Index";
