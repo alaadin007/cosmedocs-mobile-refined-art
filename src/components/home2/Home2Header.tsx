@@ -2,8 +2,8 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Calendar, Search, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-// Removed unused dropdown imports - using custom mega menu implementation
 import { Button } from "@/components/ui/button";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
@@ -321,6 +321,9 @@ export default function Home2Header() {
 
             {/* Right Actions */}
             <div className="flex items-center gap-1 sm:gap-2">
+              {/* Language Selector */}
+              <LanguageSelector variant="header" />
+
               {/* Mobile Menu Toggle - Larger touch target */}
               <Button
                 variant="ghost"
@@ -417,6 +420,12 @@ export default function Home2Header() {
                   <X className="h-6 w-6" />
                 </Button>
               </div>
+            </div>
+
+              {/* Language Selector in Mobile */}
+            <div className="flex items-center justify-between px-5 py-3 border-b border-white/10">
+              <span className="text-sm text-white/50">Language</span>
+              <LanguageSelector variant="header" />
             </div>
 
             {/* Quick Actions Bar */}
