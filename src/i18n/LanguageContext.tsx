@@ -123,14 +123,18 @@ export function useT(pageKey: Tier1PageKey) {
   }, [language]);
 
   const t = useCallback((key: string, fallback?: string): string => {
-    // Try current language first
+    // Try current language first — check content, then full page object (for meta.*)
     const currentPage = translations?.pages[pageKey];
-    const val = getNestedValue(currentPage?.content, key);
+    let val = getNestedValue(currentPage?.content, key);
+    if (typeof val === 'string') return val;
+    val = getNestedValue(currentPage, key);
     if (typeof val === 'string') return val;
 
     // Try English fallback
     const enPage = language === 'en' ? currentPage : enTranslations.current?.pages[pageKey];
-    const enVal = getNestedValue(enPage?.content, key);
+    let enVal = getNestedValue(enPage?.content, key);
+    if (typeof enVal === 'string') return enVal;
+    enVal = getNestedValue(enPage, key);
     if (typeof enVal === 'string') return enVal;
 
     return fallback ?? key;
