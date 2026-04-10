@@ -213,6 +213,9 @@ const GlycolicAcidPeel = lazy(() => import("./pages/GlycolicAcidPeel"));
 const LacticAcidPeel = lazy(() => import("./pages/LacticAcidPeel"));
 const TCAPeel = lazy(() => import("./pages/TCAPeel"));
 
+const TranslatedHomepage = lazy(() => import("./pages/TranslatedHomepage"));
+const TranslatedTreatmentPage = lazy(() => import("./pages/TranslatedTreatmentPage"));
+
 // Optimized loading component
 const PageLoader = memo(() => (
   <div className="flex items-center justify-center min-h-[50vh]" aria-busy="true">
