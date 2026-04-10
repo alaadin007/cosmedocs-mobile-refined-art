@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useRef, ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import type { SupportedLanguage, LanguageTranslations, CommonTranslation, PageTranslation, Tier1PageKey } from './types';
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from './config';
