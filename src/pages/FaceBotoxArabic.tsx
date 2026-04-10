@@ -702,7 +702,7 @@ export default function FaceBotoxArabic() {
             </div>
 
             {/* LEFT (RTL secondary) — Sticky Sidebar */}
-            <aside className="hidden lg:block">
+            <aside className="hidden lg:block" dir="ltr">
               <div className="sticky top-24">
                 <BotoxSidebarLight />
               </div>
@@ -745,7 +745,7 @@ export default function FaceBotoxArabic() {
         </section>
 
         {/* Mobile Pricing */}
-        <section className="lg:hidden py-12 px-4 bg-white">
+        <section className="lg:hidden py-12 px-4 bg-white" dir="ltr">
           <BotoxSidebarLight />
         </section>
 
