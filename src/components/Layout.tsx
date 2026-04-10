@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, lazy, Suspense, memo } from "react";
 import { Helmet } from "react-helmet-async";
 import Home2Header from "./home2/Home2Header";
+import LanguageSelector from "./LanguageSelector";
 
 // Lazy load heavy components with preload hints
 const Footer = lazy(() => import("./Footer"));

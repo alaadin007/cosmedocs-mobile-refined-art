@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.cosmedocs.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/botox/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/dermal-fillers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/lip-fillers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/jawline-filler/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/chin-filler/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/tear-trough-filler/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/skin-rejuvenation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/prices/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/about-us/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -154,6 +155,13 @@ export default function Footer() {
           </div>
         </div>
       </motion.div>
+
+      {/* Language Selector Strip */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+          <LanguageSelector variant="footer" />
+        </div>
+      </div>
 
       {/* Legal / Compliance Strip */}
       <div className="border-t border-white/10">
