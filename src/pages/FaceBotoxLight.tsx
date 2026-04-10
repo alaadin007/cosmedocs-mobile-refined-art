@@ -10,8 +10,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxSidebarLight from '@/components/botox/BotoxSidebarLight';
 import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
+import { useT, useLanguage } from '@/i18n/LanguageContext';
+import { generateHreflangLinks, getCanonicalUrl } from '@/i18n/config';
+import type { SupportedLanguage } from '@/i18n/types';
 
 export default function FaceBotoxLight() {
+  const t = useT('botox');
+  const { language } = useLanguage();
+  const hreflangLinks = generateHreflangLinks('botox');
+  const canonicalUrl = getCanonicalUrl(language, 'botox');
+
   const seoData = generateSEOMetadata(
     "Botox | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
     "Complete guide to Botox. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
@@ -49,17 +57,20 @@ export default function FaceBotoxLight() {
   return (
     <>
       <Helmet>
-        <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
+        <title>{t('meta.title', seoData.title)}</title>
+        <meta name="description" content={t('meta.description', seoData.description)} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href={canonicalUrl} />
+        {hreflangLinks.map(link => (
+          <link key={link.hreflang} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+        ))}
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
 
       <div className={`${bg} overflow-x-hidden`}>
         {/* Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Botox" variant="light" />
+          <Breadcrumb items={[{ label: t('breadcrumbTreatments', 'Treatments'), path: '/treatments' }]} currentPage={t('breadcrumbBotox', 'Botox')} variant="light" />
         </div>
 
         {/* ═══════════════════════════════════════════
@@ -81,20 +92,20 @@ export default function FaceBotoxLight() {
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm text-gray-600 mb-6 border border-gray-200">
                     <MapPin className="h-4 w-4 text-[#C9A050]" />
-                    8-10 Harley Street, London W1G 9PF
+                    {t('heroLocation', '8-10 Harley Street, London W1G 9PF')}
                   </div>
 
                   <h1 className={`text-5xl md:text-6xl lg:text-7xl font-light ${textH} mb-6 leading-[1.1] tracking-tight`}>
-                    The art of
-                    <span className={`block font-semibold ${goldText}`}>invisible anti-wrinkle</span>
+                    {t('heroTitle1', 'The art of')}
+                    <span className={`block font-semibold ${goldText}`}>{t('heroTitle2', 'invisible anti-wrinkle')}</span>
                   </h1>
-                  <p className={`text-sm ${goldText}/60 tracking-widest uppercase mb-4 font-light`}>Natural · Longer Lasting Results</p>
+                  <p className={`text-sm ${goldText}/60 tracking-widest uppercase mb-4 font-light`}>{t('heroTagline', 'Natural · Longer Lasting Results')}</p>
 
                   <p className={`text-lg md:text-xl ${textBody} mb-4 max-w-xl leading-relaxed font-light`}>
-                    Your comprehensive guide to Botox. Understanding how it works, what to expect, and achieving results so natural they're undetectable.
+                    {t('heroDesc', 'Your comprehensive guide to Botox. Understanding how it works, what to expect, and achieving results so natural they\'re undetectable.')}
                   </p>
                   <p className={`text-base ${textMuted} mb-10 max-w-xl leading-relaxed font-light`}>
-                    At CosmeDocs, anti-wrinkle treatments are practised with restraint and precision. GMC-registered doctors deliver subtle, doctor-led care designed to refresh — never overwhelm. Since 2007, we've focused on natural results that look effortless, not obvious.
+                    {t('heroSubdesc', 'At CosmeDocs, anti-wrinkle treatments are practised with restraint and precision. GMC-registered doctors deliver subtle, doctor-led care designed to refresh — never overwhelm. Since 2007, we\'ve focused on natural results that look effortless, not obvious.')}
                   </p>
                 </motion.div>
 
@@ -103,22 +114,22 @@ export default function FaceBotoxLight() {
                     onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
                     className={`group ${goldBg} hover:bg-[#B8924A] text-white rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20`}
                   >
-                    Book Consultation <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    {t('bookConsultation', 'Book Consultation')} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
                     variant="ghost"
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
                     className="text-gray-600 hover:text-gray-900 hover:bg-gray-200/60 rounded-full px-8 py-6 text-base font-medium border border-gray-300"
                   >
-                    <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" /> Ask AI Doctor
+                    <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" /> {t('askAiDoctor', 'Ask AI Doctor')}
                   </Button>
                 </motion.div>
 
                 {/* Trust indicators */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className={`mt-16 flex flex-wrap gap-8 text-sm ${textMuted}`}>
-                  <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#C9A050]/70" /> GMC Registered</span>
-                  <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#C9A050]/70" /> 17+ Years</span>
-                  <span className="flex items-center gap-2"><Star className="h-4 w-4 text-[#C9A050]/70 fill-[#C9A050]/70" /> 4.9 Rating</span>
+                  <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#C9A050]/70" /> {t('trustGMC', 'GMC Registered')}</span>
+                  <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#C9A050]/70" /> {t('trust17Years', '17+ Years')}</span>
+                  <span className="flex items-center gap-2"><Star className="h-4 w-4 text-[#C9A050]/70 fill-[#C9A050]/70" /> {t('trustRating', '4.9 Rating')}</span>
                 </motion.div>
               </div>
 

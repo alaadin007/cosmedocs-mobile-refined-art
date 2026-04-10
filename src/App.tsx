@@ -268,7 +268,7 @@ const App = () => {
                   {/* Arabic Routes */}
                   <Route path="/ar/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/ar/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
-                  <Route path="/ar/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="botox" /></Suspense></Layout>} />
+                  <Route path="/ar/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxLight /></Suspense></Layout>} />
                   <Route path="/ar/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
                   <Route path="/ar/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="lipFillers" /></Suspense></Layout>} />
                   <Route path="/ar/treatments/jawline-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="jawlineFiller" /></Suspense></Layout>} />
@@ -282,7 +282,7 @@ const App = () => {
                   {/* French Routes — with translated slugs */}
                   <Route path="/fr/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/fr/traitements/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
-                  <Route path="/fr/traitements/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="botox" /></Suspense></Layout>} />
+                  <Route path="/fr/traitements/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxLight /></Suspense></Layout>} />
                   <Route path="/fr/traitements/acide-hyaluronique/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
                   <Route path="/fr/traitements/injection-levres/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="lipFillers" /></Suspense></Layout>} />
                   <Route path="/fr/traitements/filler-machoire/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="jawlineFiller" /></Suspense></Layout>} />
@@ -296,7 +296,7 @@ const App = () => {
                   {/* Spanish Routes — with translated slugs */}
                   <Route path="/es/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
-                  <Route path="/es/tratamientos/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="botox" /></Suspense></Layout>} />
+                  <Route path="/es/tratamientos/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxLight /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/acido-hialuronico/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/relleno-labios/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="lipFillers" /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/relleno-mandibula/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="jawlineFiller" /></Suspense></Layout>} />
