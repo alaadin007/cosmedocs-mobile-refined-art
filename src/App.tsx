@@ -276,7 +276,7 @@ const App = () => {
                   <Route path="/ar/treatments/tear-trough-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="tearTroughFiller" /></Suspense></Layout>} />
                   <Route path="/ar/treatments/skin-rejuvenation/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="skinRejuvenation" /></Suspense></Layout>} />
                   <Route path="/ar/prices/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/ar/contact/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="contact" /></Suspense></Layout>} />
+                  <Route path="/ar/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
                   <Route path="/ar/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
                   
                   {/* French Routes — with translated slugs */}
@@ -290,7 +290,7 @@ const App = () => {
                   <Route path="/fr/traitements/cernes-creuses/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="tearTroughFiller" /></Suspense></Layout>} />
                   <Route path="/fr/traitements/rajeunissement-peau/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="skinRejuvenation" /></Suspense></Layout>} />
                   <Route path="/fr/tarifs/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/fr/contact/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="contact" /></Suspense></Layout>} />
+                  <Route path="/fr/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
                   <Route path="/fr/a-propos/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
                   
                   {/* Spanish Routes — with translated slugs */}
@@ -304,7 +304,7 @@ const App = () => {
                   <Route path="/es/tratamientos/ojeras/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="tearTroughFiller" /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/rejuvenecimiento-piel/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="skinRejuvenation" /></Suspense></Layout>} />
                   <Route path="/es/precios/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="contact" /></Suspense></Layout>} />
+                  <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
                   <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
 
                   {/* Non-trailing-slash versions redirect */}
