@@ -10,8 +10,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxSidebarLight from '@/components/botox/BotoxSidebarLight';
 import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
+import { useT, useLanguage } from '@/i18n/LanguageContext';
+import { generateHreflangLinks, getCanonicalUrl } from '@/i18n/config';
+import type { SupportedLanguage } from '@/i18n/types';
 
 export default function FaceBotoxLight() {
+  const t = useT('botox');
+  const { language } = useLanguage();
+  const hreflangLinks = generateHreflangLinks('botox');
+  const canonicalUrl = getCanonicalUrl(language, 'botox');
+
   const seoData = generateSEOMetadata(
     "Botox | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
     "Complete guide to Botox. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
@@ -49,10 +57,13 @@ export default function FaceBotoxLight() {
   return (
     <>
       <Helmet>
-        <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
+        <title>{t('meta.title', seoData.title)}</title>
+        <meta name="description" content={t('meta.description', seoData.description)} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href={canonicalUrl} />
+        {hreflangLinks.map(link => (
+          <link key={link.hreflang} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+        ))}
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
 
