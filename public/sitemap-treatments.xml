@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- ===== BOTOX ===== -->
 
   <url>
     <loc>https://www.cosmedocs.com/treatments/botox/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/botox/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/botox/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/botox/" />
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>

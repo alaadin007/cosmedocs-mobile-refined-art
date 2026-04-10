@@ -18,6 +18,11 @@
   </url>
   <url>
     <loc>https://www.cosmedocs.com/fr/traitements/botox/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/botox/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/botox/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/botox/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
