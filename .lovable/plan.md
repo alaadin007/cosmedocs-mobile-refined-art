@@ -1,110 +1,169 @@
 
 
-## Botox Cost UK — SEO Pillar Page (Updated with Expert Fixes)
+# Multilingual Architecture: SEO-First i18n for CosmeDocs
 
-### Summary
+## Overview
 
-Build a ~3,000-word pillar page at `/botox-cost-uk/` using the LipFillers.tsx two-column pattern. Incorporates all expert SEO feedback: visible-first content, no sr-only SEO block, top-answer paragraph, E-E-A-T signals, and People Also Ask integration.
+Build a proper multilingual routing system with real, indexable translated pages for Arabic, French, and Spanish (with English as master). Start with Tier 1 priority pages (~10-15 per language), implement hreflang, language selector, and a data-driven translation system that auto-inherits structural changes from English master pages.
 
-### Expert Fixes Applied
+## Architecture
 
-1. **ExpandableSection usage** — First 3 sections (Quick Answer, Pricing Breakdown, Units Guide) render fully visible. Only deeper sections (Longevity, Cost Over Time, Cheap vs Premium, UK vs US) use ExpandableSection.
-2. **No sr-only SEO block** — All keyword content integrated naturally into visible sections and FAQs.
-3. **Top Answer Paragraph** — 50-word direct answer paragraph immediately under H1, optimised for featured snippets and AI answers.
-4. **E-E-A-T signals throughout** — "Dr Ahmed Haq explains...", "At our Harley Street clinic...", "With 17+ years experience..." woven into section content, not just sidebar.
-5. **People Also Ask H3s** — Embedded inside content sections (e.g., "Is Botox worth the cost?", "Does more units mean better results?").
-6. **"Who Is This For?" section** — First-timers, clinic-switchers, patients with poor previous results.
-7. **Treatment Journey timeline** — Day 0 → Day 14 → Month 3 → Month 6 visual timeline section.
-8. **Subtle competitor comparison** — Authority-signalling language without naming clinics.
+```text
+URL Structure (subfolder model):
+/                          → English homepage (default, no prefix)
+/ar/                       → Arabic homepage
+/fr/                       → French homepage  
+/es/                       → Spanish homepage
 
-### Files
+/treatments/botox/         → English Botox
+/ar/treatments/botox/      → Arabic Botox
+/fr/traitements/botox/     → French Botox
+/es/tratamientos/botox/    → Spanish Botox
+```
 
-| File | Change |
-|------|--------|
-| `src/pages/BotoxCostUK.tsx` | **NEW** ~850 lines. Full pillar page |
-| `src/components/botox-cost/BotoxCostSidebar.tsx` | **NEW** Sidebar with At a Glance, price cards (£275–£425), Key Concepts list, review card, related links, Book CTA |
-| `src/App.tsx` | Add lazy import + route `/botox-cost-uk/`. Update `/botox-price-london` redirect target to `/botox-cost-uk/` |
-| `netlify/edge-functions/inject-meta.ts` | Add meta for `/botox-cost-uk/`: title "Botox Cost UK (2026): Prices, Units & What Affects Cost" |
+## Tier 1 Pages (Phase 1 — launch these first)
 
-### Page Structure (Left Column)
+Per language: ~12 pages
+1. Homepage
+2. /treatments/ (hub)
+3. /treatments/botox/
+4. /treatments/dermal-fillers/
+5. /treatments/lip-fillers/
+6. /treatments/jawline-filler/
+7. /treatments/chin-filler/
+8. /treatments/tear-trough-filler/
+9. /treatments/skin-rejuvenation/
+10. /prices/
+11. /contact/
+12. /about/
 
-**1. H1 + Top Answer Paragraph** (fully visible)
-- H1: "Botox Cost UK: Pricing, Units & What You're Really Paying For"
-- Trust row: Doctor-Led · From £275 · Since 2007 · Harley Street
-- Direct answer paragraph (50 words): "Botox in the UK typically costs £200–£400 for 3 areas. Prices vary depending on units used, practitioner experience, and clinic location. While cheaper treatments may use lower doses, experienced providers focus on long-term results and facial balance."
+## Technical Plan
 
-**2. Quick Answer Block** (fully visible, gold-bordered callout)
-- 4 bullet direct answers targeting featured snippets
-- No ExpandableSection
+### 1. Translation data system (`src/i18n/`)
 
-**3. How Much Does Botox Cost?** (fully visible — NO expand)
-- CosmeDocs pricing table (1/2/3 areas, men vs women)
-- Cheap vs Experienced comparison table
-- Embedded H3: "Why is Botox more expensive in London?"
+Create a structured translation layer:
 
-**4. How Many Units Do You Need?** (fully visible — NO expand)
-- Forehead 10–30, Frown 10–25, Crow's feet 12–24, Masseter 40–60
-- Embedded H3: "Does more units mean better results?"
-- Dr Ahmed Haq quote on dosing philosophy
+- **`src/i18n/types.ts`** — TypeScript interface for page translations (title, meta, sections, headings, body blocks, FAQ items)
+- **`src/i18n/config.ts`** — Language config: supported locales, slug mappings per language (e.g. `treatments` → `traitements` in French), RTL flags
+- **`src/i18n/translations/ar/`** — Arabic translation files per page
+- **`src/i18n/translations/fr/`** — French translation files per page
+- **`src/i18n/translations/es/`** — Spanish translation files per page
 
-**5. Why Botox Prices Vary** (ExpandableSection)
-- Dose, expertise, technique, location, brand
-- EXPERT TIP and WARNING callout boxes
-- Embedded H3: "Is Botox worth the cost?"
+Each translation file exports structured content that mirrors the English page's sections. When English adds a new section, the translation file can fall back to English until translated.
 
-**6. Why Botox Wears Off Faster** (ExpandableSection)
-- Metabolism, muscle strength, under-dosing, exercise
-- Dr Haq clinical insight
+### 2. Language context provider (`src/i18n/LanguageContext.tsx`)
 
-**7. Botox Cost vs Value Over 5 Years** (ExpandableSection)
-- Real maths comparison table
-- £250/3mo vs £350/6mo
+- React context providing current language, available languages, and switch function
+- Persists choice in localStorage
+- Does NOT auto-redirect based on browser language (per Google guidance)
+- Provides `useLanguage()` hook and `useTranslation(pageKey)` hook
 
-**8. Cheap Botox vs Premium** (ExpandableSection)
-- Side-by-side table (dose, duration, visits, safety)
-- WARNING callout — subtle competitor comparison language
+### 3. Translated page wrapper component
 
-**9. Who Is This Page For?** (fully visible)
-- First-time patients, clinic-switchers, patients with poor results
-- Conversion-focused bullets
+- **`src/components/TranslatedPage.tsx`** — wraps English page components, injecting translated content via context
+- Handles: translated Helmet metadata, hreflang tags, self-canonical, lang attribute on `<html>`, RTL support for Arabic
 
-**10. Your First Botox: What to Expect** (fully visible)
-- Timeline: Day 0 → Day 14 → Month 3 → Month 6
-- Increases time on page and trust
+### 4. Routing changes (`src/App.tsx`)
 
-**11. FAQs** (Accordion, 10 questions)
-- Naturally absorbs keyword variations from the removed sr-only block
+Add language-prefixed route groups:
 
-### Sidebar (Right Column)
+```text
+/:lang/                    → Translated homepage
+/:lang/treatments/botox/   → Translated Botox (slug mapped per language)
+/:lang/traitements/botox/  → French alternate slug
+etc.
+```
 
-- At a Glance (Duration: 10–20 min, Results: 3–6 months, Recovery: None)
-- Quick Price Card (£275–£425)
-- Key Concepts Covered (AI search optimised list)
-- Review card (matching BotoxSidebar pattern)
-- Related Treatment Links: /treatments/botox/, /treatments/lip-flip/, /treatments/masseter-botox/, /prices/, /before-after/botox/
-- DiscretionBadge (inline variant)
-- Book CTA
+A `LanguageRouter` wrapper component will:
+- Parse the `/:lang` param
+- Set the language context
+- Map translated slugs back to the correct English page component
+- Render the page with translated content overlay
 
-### CTA Section (bottom)
-- "Ready to understand your Botox options?"
-- Two buttons: Book Consultation + Get Personalised Plan
+### 5. Hreflang implementation
 
-### Internal Linking (bidirectional)
-- **From this page**: /treatments/botox/, /treatments/lip-flip/, /treatments/masseter-botox/, /prices/, /before-after/botox/, /treatments/nefertiti-lift/
-- **Back-links needed** (separate task): Update /treatments/botox/ hub and /prices/ to link to `/botox-cost-uk/`
+Every translated page gets reciprocal hreflang tags in `<head>`:
 
-### JSON-LD Schema
-- `Article` (headline, author: Dr Ahmed Haq, datePublished: 2026-03-25)
-- `FAQPage` (10 questions)
-- `MedicalBusiness` (standard CosmeDocs block per validation standard)
-- `Offer` (priceCurrency: GBP, lowPrice: 275, highPrice: 425)
+```html
+<link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/botox/" />
+<link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/botox/" />
+<link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/botox/" />
+<link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/botox/" />
+<link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/botox/" />
+```
 
-### SEO Keyword Hierarchy
-- **Primary**: botox cost uk
-- **Secondary**: botox price uk, how much is botox 3 areas
-- **Supporting**: botox units, cheap vs expensive botox, why does botox not last
+English pages also get these hreflang tags added via a shared utility.
 
-### What This Does NOT Build
-- The 4 supporting cluster articles (/botox-units-explained/, /cheap-botox-vs-expensive/, /how-long-does-botox-last/, /botox-price-london/) — these come after the pillar is live
-- No cannibalisation with /treatments/botox/ (that page = treatment info, this page = pricing education)
+### 6. Language selector component
+
+- Visible in header and footer
+- Shows language names in their native script: English, العربية, Français, Español
+- Links to the equivalent page in the selected language
+- Stores preference in localStorage but never force-redirects
+- Optional "View this page in Arabic?" suggestion bar (non-blocking)
+
+### 7. Navigation & breadcrumbs translation
+
+- Header navigation items translated per language
+- Breadcrumb labels translated
+- Footer links translated
+- Internal links within translated pages point to same-language equivalents
+
+### 8. Sitemap updates
+
+- Add `sitemap-ar.xml`, `sitemap-fr.xml`, `sitemap-es.xml`
+- Each contains only published translated URLs
+- Add to sitemap index
+- Include `xhtml:link` hreflang annotations in all sitemaps
+
+### 9. Auto-sync mechanism
+
+When English master pages change (e.g. new treatment added to hub):
+- Translation files use a `lastSyncedVersion` field
+- A dev-time script flags stale translations
+- Untranslated sections fall back to English content with a `[needs translation]` marker in dev mode
+- Structural elements (treatment lists, pricing items) can be shared from English data and only labels/descriptions need translation
+
+### 10. Migrate existing international pages
+
+The current `/arabic-patients`, `/french-patients` etc. become 301 redirects to the new `/ar/`, `/fr/` homepages. Their existing translated data files feed into the new system.
+
+## Files to create/modify
+
+| File | Action |
+|---|---|
+| `src/i18n/config.ts` | Create — language config, slug maps |
+| `src/i18n/types.ts` | Create — translation interfaces |
+| `src/i18n/LanguageContext.tsx` | Create — context + hooks |
+| `src/i18n/translations/ar/*.ts` | Create — Arabic Tier 1 pages |
+| `src/i18n/translations/fr/*.ts` | Create — French Tier 1 pages |
+| `src/i18n/translations/es/*.ts` | Create — Spanish Tier 1 pages |
+| `src/components/TranslatedPage.tsx` | Create — wrapper with hreflang + meta |
+| `src/components/LanguageSelector.tsx` | Create — header/footer selector |
+| `src/components/Header.tsx` | Modify — add language selector |
+| `src/components/Footer.tsx` | Modify — add language selector |
+| `src/components/Layout.tsx` | Modify — language context provider |
+| `src/App.tsx` | Modify — add `/:lang/*` route group |
+| `src/utils/seo.ts` | Modify — hreflang generation utility |
+| `public/sitemap.xml` | Modify — add language sitemaps |
+| `public/_redirects` | Modify — redirect old international pages |
+
+## What this does NOT do (by design)
+
+- Does not translate the entire site — only Tier 1 pages
+- Does not auto-redirect based on browser language
+- Does not use a JS translation widget as the SEO layer
+- Does not create thin/duplicate content — each page has unique translated copy
+- Does not translate slugs that would break if CMS can't handle them cleanly (keeps English slugs as fallback where needed)
+
+## Rollout order
+
+1. Build i18n infrastructure (config, context, types)
+2. Create Arabic translations for Tier 1 (leveraging existing `arabicPatientData.ts`)
+3. Create French translations for Tier 1 (leveraging existing `frenchPatientData.ts`)
+4. Create Spanish translations for Tier 1 (new)
+5. Add routing + hreflang + language selector
+6. Migrate old `/arabic-patients` etc. to redirects
+7. Update sitemaps
+8. Test and verify
 
