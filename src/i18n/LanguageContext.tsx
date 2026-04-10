@@ -103,3 +103,49 @@ export function useTranslation(pageKey: Tier1PageKey) {
     isRTL,
   };
 }
+
+/**
+ * useT — deep translation accessor with English fallback.
+ * Usage:
+ *   const t = useT('contact');
+ *   t('hero.title')           → returns translated string or English fallback
+ *   t('hero.title', 'Default') → returns translated string or 'Default'
+ */
+export function useT(pageKey: Tier1PageKey) {
+  const { translations, language } = useLanguage();
+
+  // Load English as fallback synchronously (it's tiny and always loaded)
+  const enTranslations = useRef<LanguageTranslations | null>(null);
+  useEffect(() => {
+    if (language !== 'en') {
+      import('./translations/en/index').then(m => { enTranslations.current = m.default; });
+    }
+  }, [language]);
+
+  const t = useCallback((key: string, fallback?: string): string => {
+    // Try current language first
+    const currentPage = translations?.pages[pageKey];
+    const val = getNestedValue(currentPage?.content, key);
+    if (typeof val === 'string') return val;
+
+    // Try English fallback
+    const enPage = language === 'en' ? currentPage : enTranslations.current?.pages[pageKey];
+    const enVal = getNestedValue(enPage?.content, key);
+    if (typeof enVal === 'string') return enVal;
+
+    return fallback ?? key;
+  }, [translations, pageKey, language]);
+
+  return t;
+}
+
+function getNestedValue(obj: unknown, path: string): unknown {
+  if (!obj || typeof obj !== 'object') return undefined;
+  const keys = path.split('.');
+  let current: unknown = obj;
+  for (const k of keys) {
+    if (current === null || current === undefined || typeof current !== 'object') return undefined;
+    current = (current as Record<string, unknown>)[k];
+  }
+  return current;
+}
