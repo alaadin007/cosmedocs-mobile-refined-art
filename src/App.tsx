@@ -243,6 +243,7 @@ const App = () => {
             <Sonner />
             <BrowserRouter>
               <AuthProvider>
+                <LanguageProvider>
                 <ScrollToTop />
                 <TrailingSlashRedirect />
                 <Routes>
