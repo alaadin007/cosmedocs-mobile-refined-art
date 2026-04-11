@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Lightbulb, Menu, MessageCircle, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Lightbulb, Menu, MessageCircle, Sparkles, Eye, Droplets, Activity, CircleDot, ExternalLink } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import { motion } from "framer-motion";
 import SmartAestheticsSidebar from "@/components/smart-aesthetics/SmartAestheticsSidebar";
@@ -239,6 +239,99 @@ export default function SmartAesthetics() {
                       <p className="text-white/50 text-sm font-light leading-relaxed">
                         That's where dermal fillers come in — there is no replacement. Whether you choose hyaluronic acid, polylactic acid (Sculptra), calcium hydroxylapatite (Radiesse), or even your own fat — volume loss requires volume restoration. Spending money on skin treatments to fix a volume problem is like polishing the apple skin when the flesh inside has withered. Right treatment, right layer, right result.
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Self-Assessment: Check Your Aesthetics Profile */}
+                  <div className="bg-gradient-to-br from-[#C9A050]/10 to-transparent border border-[#C9A050]/20 rounded-2xl p-6 md:p-10 mb-10">
+                    <span className="text-[#C9A050] text-xs font-medium tracking-[0.25em] uppercase">Your Aesthetics Profile</span>
+                    <h2 className="text-2xl md:text-3xl font-extralight mt-3 mb-2 tracking-tight">
+                      How to <span className="text-[#C9A050] font-light">Check Your Face</span> Like a Specialist
+                    </h2>
+                    <p className="text-white/40 text-sm font-light mb-8">The aim of aesthetics is not to fix everything — it's to find the lowest-hanging fruit.</p>
+
+                    <div className="space-y-4">
+                      {/* Tone & Harmony */}
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <div className="flex items-start gap-3">
+                          <Eye className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
+                          <div>
+                            <h3 className="font-medium text-sm text-white/80 mb-2">1. Tone & Harmony</h3>
+                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                              Does your neck tone match your face? Compare the shade — if your face is darker or redder than your neck, it could indicate sun damage, inflammation, or product build-up. A specialist looks at the face and neck as one unit, not two separate zones.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Texture */}
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <div className="flex items-start gap-3">
+                          <CircleDot className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
+                          <div>
+                            <h3 className="font-medium text-sm text-white/80 mb-2">2. Texture</h3>
+                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                              Run your fingers across your cheek, then your neck. Is there a difference? Roughness, enlarged pores, or bumpy skin indicates dead cell build-up and congestion — the surface layer is holding onto what it should be shedding.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Hydration */}
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <div className="flex items-start gap-3">
+                          <Droplets className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
+                          <div>
+                            <h3 className="font-medium text-sm text-white/80 mb-2">3. Hydration Direction</h3>
+                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                              Look at your neck — it's hydrated from <em>below</em>. The skin looks matte, not glossy. That's deep hydration. Now look at your face — if it looks glossy and congested, that's moisture sitting <em>on top</em>, not beneath. Like pouring water on dead grass instead of watering the roots. The fix? Clear the dead layer first. Then hydration reaches where it matters.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Wrinkles in Motion */}
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <div className="flex items-start gap-3">
+                          <Activity className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
+                          <div>
+                            <h3 className="font-medium text-sm text-white/80 mb-2">4. Wrinkles in Motion</h3>
+                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                              Don't just look at your face at rest — <em>move it</em>. Smile, frown, raise your brows. Now stop. The lines that disappear at rest are dynamic — they're a few years away from becoming permanent. The ones that stay? They're already static. Check the upper <em>and</em> lower face — most people forget the chin, the mouth corners, and the neck. These are your early warning signals.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Volume Loss */}
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <div className="flex items-start gap-3">
+                          <span className="text-[#C9A050] mt-0.5 shrink-0 text-lg">◐</span>
+                          <div>
+                            <h3 className="font-medium text-sm text-white/80 mb-2">5. Volume Loss</h3>
+                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                              Under-eye hollows making you look tired? Sunken cheeks creating a gaunt appearance? Sagging jowls softening your jawline? These aren't skin problems — they're volume problems. The fat pads beneath have deflated, and no cream or laser can replace what's been lost. This is where strategic filler creates the most dramatic, natural improvement.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* CTA to AI Assessment */}
+                    <div className="mt-8 bg-white/[0.03] border border-[#C9A050]/30 rounded-xl p-6 text-center">
+                      <p className="text-white/60 font-light text-sm mb-4">
+                        Want a detailed analysis? Our free AI facial assessment evaluates your unique aesthetics profile and identifies your personal low-hanging fruit.
+                      </p>
+                      <a
+                        href="https://ai.cosmedocs.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-black px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105"
+                      >
+                        <Sparkles className="w-4 h-4" />
+                        Free AI Facial Assessment
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
                     </div>
                   </div>
 
