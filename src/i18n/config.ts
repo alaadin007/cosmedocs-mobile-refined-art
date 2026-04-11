@@ -5,6 +5,7 @@ export const SUPPORTED_LANGUAGES: Record<SupportedLanguage, LanguageConfig> = {
   ar: { code: 'ar', name: 'العربية', nameEnglish: 'Arabic', dir: 'rtl', hreflang: 'ar' },
   fr: { code: 'fr', name: 'Français', nameEnglish: 'French', dir: 'ltr', hreflang: 'fr' },
   es: { code: 'es', name: 'Español', nameEnglish: 'Spanish', dir: 'ltr', hreflang: 'es' },
+  zh: { code: 'zh', name: '中文', nameEnglish: 'Chinese', dir: 'ltr', hreflang: 'zh' },
 };
 
 export const DEFAULT_LANGUAGE: SupportedLanguage = 'en';
@@ -66,6 +67,19 @@ export const SLUG_MAP: Record<SupportedLanguage, Record<string, string>> = {
     contact: 'contacto',
     'about-us': 'sobre-nosotros',
   },
+  zh: {
+    treatments: 'treatments',
+    botox: 'botox',
+    'dermal-fillers': 'dermal-fillers',
+    'lip-fillers': 'lip-fillers',
+    'jawline-filler': 'jawline-filler',
+    'chin-filler': 'chin-filler',
+    'tear-trough-filler': 'tear-trough-filler',
+    'skin-rejuvenation': 'skin-rejuvenation',
+    prices: 'prices',
+    contact: 'contact',
+    'about-us': 'about-us',
+  },
 };
 
 // Map page keys to their English route paths (without lang prefix)
@@ -112,7 +126,7 @@ export function getCanonicalUrl(lang: SupportedLanguage, pageKey: Tier1PageKey):
 }
 
 // Generate hreflang links for a page
-export function generateHreflangLinks(pageKey: Tier1PageKey, availableLanguages: SupportedLanguage[] = ['en', 'ar', 'fr', 'es']): Array<{ hreflang: string; href: string }> {
+export function generateHreflangLinks(pageKey: Tier1PageKey, availableLanguages: SupportedLanguage[] = ['en', 'ar', 'fr', 'es', 'zh']): Array<{ hreflang: string; href: string }> {
   const links = availableLanguages.map(lang => ({
     hreflang: SUPPORTED_LANGUAGES[lang].hreflang,
     href: getCanonicalUrl(lang, pageKey),

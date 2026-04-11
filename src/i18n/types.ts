@@ -1,6 +1,6 @@
 // Types for the multilingual translation system
 
-export type SupportedLanguage = 'en' | 'ar' | 'fr' | 'es';
+export type SupportedLanguage = 'en' | 'ar' | 'fr' | 'es' | 'zh';
 
 export interface LanguageConfig {
   code: SupportedLanguage;
