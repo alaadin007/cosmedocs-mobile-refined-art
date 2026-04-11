@@ -315,9 +315,9 @@ const App = () => {
                   <Route path="/ar/treatments/chin-filler/" element={<Layout><Suspense fallback={<PageLoader />}><ChinFillerArabic /></Suspense></Layout>} />
                   <Route path="/ar/treatments/tear-trough-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TearTroughFillerArabic /></Suspense></Layout>} />
                   <Route path="/ar/treatments/skin-rejuvenation/" element={<Layout><Suspense fallback={<PageLoader />}><SkinRejuvenationArabic /></Suspense></Layout>} />
-                  <Route path="/ar/prices/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/ar/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
-                  <Route path="/ar/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
+                  <Route path="/ar/prices/" element={<Layout><Suspense fallback={<PageLoader />}><PricesArabic /></Suspense></Layout>} />
+                   <Route path="/ar/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactArabic /></Suspense></Layout>} />
+                   <Route path="/ar/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsArabic /></Suspense></Layout>} />
                   
                   {/* French Routes — with translated slugs */}
                   <Route path="/fr/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
@@ -329,9 +329,9 @@ const App = () => {
                   <Route path="/fr/traitements/filler-menton/" element={<Layout><Suspense fallback={<PageLoader />}><ChinFillerFrench /></Suspense></Layout>} />
                   <Route path="/fr/traitements/cernes-creuses/" element={<Layout><Suspense fallback={<PageLoader />}><TearTroughFillerFrench /></Suspense></Layout>} />
                   <Route path="/fr/traitements/rajeunissement-peau/" element={<Layout><Suspense fallback={<PageLoader />}><SkinRejuvenationFrench /></Suspense></Layout>} />
-                  <Route path="/fr/tarifs/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/fr/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
-                  <Route path="/fr/a-propos/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
+                  <Route path="/fr/tarifs/" element={<Layout><Suspense fallback={<PageLoader />}><PricesFrench /></Suspense></Layout>} />
+                   <Route path="/fr/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactFrench /></Suspense></Layout>} />
+                   <Route path="/fr/a-propos/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsFrench /></Suspense></Layout>} />
                   
                   {/* Spanish Routes — with translated slugs */}
                   <Route path="/es/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
@@ -343,9 +343,9 @@ const App = () => {
                   <Route path="/es/tratamientos/relleno-menton/" element={<Layout><Suspense fallback={<PageLoader />}><ChinFillerSpanish /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/ojeras/" element={<Layout><Suspense fallback={<PageLoader />}><TearTroughFillerSpanish /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/rejuvenecimiento-piel/" element={<Layout><Suspense fallback={<PageLoader />}><SkinRejuvenationSpanish /></Suspense></Layout>} />
-                  <Route path="/es/precios/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
-                  <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
+                  <Route path="/es/precios/" element={<Layout><Suspense fallback={<PageLoader />}><PricesSpanish /></Suspense></Layout>} />
+                   <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><ContactSpanish /></Suspense></Layout>} />
+                   <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsSpanish /></Suspense></Layout>} />
 
                   {/* Chinese Routes */}
                   <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
@@ -357,9 +357,9 @@ const App = () => {
                   <Route path="/zh/treatments/chin-filler/" element={<Layout><Suspense fallback={<PageLoader />}><ChinFillerChinese /></Suspense></Layout>} />
                   <Route path="/zh/treatments/tear-trough-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TearTroughFillerChinese /></Suspense></Layout>} />
                   <Route path="/zh/treatments/skin-rejuvenation/" element={<Layout><Suspense fallback={<PageLoader />}><SkinRejuvenationChinese /></Suspense></Layout>} />
-                  <Route path="/zh/prices/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
-                  <Route path="/zh/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
-                  <Route path="/zh/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
+                  <Route path="/zh/prices/" element={<Layout><Suspense fallback={<PageLoader />}><PricesChinese /></Suspense></Layout>} />
+                   <Route path="/zh/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactChinese /></Suspense></Layout>} />
+                   <Route path="/zh/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsChinese /></Suspense></Layout>} />
 
                   {/* Non-trailing-slash versions redirect */}
                   <Route path="/ar" element={<Navigate to="/ar/" replace />} />
