@@ -54,6 +54,19 @@ export const LOCATION_SCHEMAS = {
       "addressRegion": "Greater London",
       "postalCode": "W1G 9PF",
       "addressCountry": "GB"
+    },
+    "department": {
+      "@type": "MedicalClinic",
+      "name": "PrivaDr Ltd",
+      "description": "CQC registered partner for all CQC required treatments at 10 Harley Street, London W1G 9PF",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     }
   },
   birmingham: {
