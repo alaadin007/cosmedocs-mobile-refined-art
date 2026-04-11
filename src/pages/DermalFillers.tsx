@@ -111,7 +111,7 @@ export default function DermalFillers() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full">
             {/* Breadcrumbs */}
             <div className="mb-6">
-              <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Dermal Fillers" />
+              <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Dermal Fillers" variant="light" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">

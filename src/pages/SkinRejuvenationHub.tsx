@@ -86,7 +86,7 @@ const SkinRejuvenationHub = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
               items={[{ label: 'Treatments', path: '/treatments/' }]}
-              currentPage="Skin Rejuvenation"
+              currentPage="Skin Rejuvenation" variant="light"
             />
             <div className="pt-12 pb-4 max-w-3xl">
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
