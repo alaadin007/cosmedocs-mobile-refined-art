@@ -21,6 +21,7 @@ const translationLoaders: Record<SupportedLanguage, () => Promise<{ default: Lan
   ar: () => import('./translations/ar/index'),
   fr: () => import('./translations/fr/index'),
   es: () => import('./translations/es/index'),
+  zh: () => import('./translations/zh/index'),
 };
 
 function detectLanguageFromPath(pathname: string): SupportedLanguage {
