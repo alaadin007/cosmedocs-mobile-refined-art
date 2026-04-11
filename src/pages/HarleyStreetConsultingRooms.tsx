@@ -366,6 +366,15 @@ export default function HarleyStreetConsultingRooms() {
                     <p className="text-gray-600">Central London's Medical Quarter</p>
                   </div>
                 </div>
+                <div className="flex items-start gap-4 mt-2 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                  <Shield className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-sm">CQC Registered Partner</p>
+                    <p className="text-gray-600 text-sm">
+                      We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
               <div className="mt-8">
                 <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600">
