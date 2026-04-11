@@ -412,6 +412,11 @@ const Contact = () => {
                   <p>{t('clinicAddress2', 'London, W1G 9PF')}</p>
                   <p>{t('clinicCountry', 'United Kingdom')}</p>
                 </address>
+                <div className="bg-white/[0.03] border border-white/10 rounded-lg p-3 mb-4">
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    We work with <span className="text-white/90 font-medium">PrivaDr Ltd</span>, 10 Harley Street, London W1G 9PF for all CQC required treatments.
+                  </p>
+                </div>
                 <div className="bg-white/[0.02] border border-[#C9A050]/20 rounded-xl p-4 mb-4">
                   <p className="text-xs text-[#C9A050] font-medium uppercase tracking-wider mb-1.5">{t('discreteTitle', 'Completely Discreet')}</p>
                   <p className="text-xs text-white/50 leading-relaxed">
