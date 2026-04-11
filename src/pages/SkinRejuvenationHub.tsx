@@ -77,7 +77,7 @@ const SkinRejuvenationHub = () => {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.08) 0%, transparent 60%)' }}
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
             />

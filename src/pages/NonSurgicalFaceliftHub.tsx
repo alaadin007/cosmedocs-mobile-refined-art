@@ -143,8 +143,8 @@ const NonSurgicalFaceliftHub = () => {
         {/* ── HERO ── */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#C9A050]/5 rounded-full blur-[120px]" />
-            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A050]/3 rounded-full blur-[100px]" />
+            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#C9A050]/8 rounded-full blur-[120px]" />
+            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A050]/5 rounded-full blur-[100px]" />
           </div>
 
           <div className="max-w-4xl mx-auto text-center relative z-10">

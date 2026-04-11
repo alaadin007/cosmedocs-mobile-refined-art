@@ -96,13 +96,13 @@ export default function DermalFillers() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.12) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.08) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
               animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -30, 0] }}
               transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
               className="absolute top-1/3 -left-60 w-[500px] h-[500px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.02) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
               animate={{ scale: [1, 1.2, 1], x: [0, 40, 0] }}
               transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             />
@@ -832,7 +832,7 @@ export default function DermalFillers() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-300 text-gray-900 hover:bg-white hover:text-white rounded-full px-8 py-6"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white rounded-full px-8 py-6"
                   onClick={() => window.location.href = 'tel:03330551503'}
                 >
                   <Phone className="w-4 h-4 mr-2" /> 0333 055 1503
