@@ -85,9 +85,10 @@ const FaceBotoxLight = lazy(() => import("./pages/FaceBotoxLight"));
 const FaceBotoxArabic = lazy(() => import("./pages/FaceBotoxArabic"));
 const FaceBotoxFrench = lazy(() => import("./pages/FaceBotoxFrench"));
 const FaceBotoxSpanish = lazy(() => import("./pages/FaceBotoxSpanish"));
-const DermalFillersArabic = lazy(() => import("./pages/DermalFillersArabic"));
-const DermalFillersFrench = lazy(() => import("./pages/DermalFillersFrench"));
-const DermalFillersSpanish = lazy(() => import("./pages/DermalFillersSpanish"));
+const LipFillersArabic = lazy(() => import("./pages/LipFillersArabic"));
+const LipFillersFrench = lazy(() => import("./pages/LipFillersFrench"));
+const LipFillersSpanish = lazy(() => import("./pages/LipFillersSpanish"));
+const LipFillersChinese = lazy(() => import("./pages/LipFillersChinese"));
 const AdvancedConsultation = lazy(() => import("./pages/AdvancedConsultation"));
 const FellowshipInvitation = lazy(() => import("./pages/FellowshipInvitation"));
 const LongTermAestheticCareBlog = lazy(() => import("./pages/LongTermAestheticCareBlog"));
@@ -275,8 +276,8 @@ const App = () => {
                   <Route path="/ar/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/ar/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
                   <Route path="/ar/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxArabic /></Suspense></Layout>} />
-                  <Route path="/ar/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersArabic /></Suspense></Layout>} />
-                  <Route path="/ar/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="lipFillers" /></Suspense></Layout>} />
+                  <Route path="/ar/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
+                  <Route path="/ar/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersArabic /></Suspense></Layout>} />
                   <Route path="/ar/treatments/jawline-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="jawlineFiller" /></Suspense></Layout>} />
                   <Route path="/ar/treatments/chin-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="chinFiller" /></Suspense></Layout>} />
                   <Route path="/ar/treatments/tear-trough-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="tearTroughFiller" /></Suspense></Layout>} />
@@ -289,8 +290,8 @@ const App = () => {
                   <Route path="/fr/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/fr/traitements/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
                   <Route path="/fr/traitements/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxFrench /></Suspense></Layout>} />
-                  <Route path="/fr/traitements/acide-hyaluronique/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersFrench /></Suspense></Layout>} />
-                  <Route path="/fr/traitements/injection-levres/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="lipFillers" /></Suspense></Layout>} />
+                  <Route path="/fr/traitements/acide-hyaluronique/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
+                  <Route path="/fr/traitements/injection-levres/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersFrench /></Suspense></Layout>} />
                   <Route path="/fr/traitements/filler-machoire/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="jawlineFiller" /></Suspense></Layout>} />
                   <Route path="/fr/traitements/filler-menton/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="chinFiller" /></Suspense></Layout>} />
                   <Route path="/fr/traitements/cernes-creuses/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="tearTroughFiller" /></Suspense></Layout>} />
@@ -303,8 +304,8 @@ const App = () => {
                   <Route path="/es/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxSpanish /></Suspense></Layout>} />
-                  <Route path="/es/tratamientos/acido-hialuronico/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersSpanish /></Suspense></Layout>} />
-                  <Route path="/es/tratamientos/relleno-labios/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="lipFillers" /></Suspense></Layout>} />
+                  <Route path="/es/tratamientos/acido-hialuronico/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
+                  <Route path="/es/tratamientos/relleno-labios/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersSpanish /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/relleno-mandibula/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="jawlineFiller" /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/relleno-menton/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="chinFiller" /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/ojeras/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="tearTroughFiller" /></Suspense></Layout>} />
@@ -313,10 +314,21 @@ const App = () => {
                   <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
                   <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
 
+                  {/* Chinese Routes */}
+                  <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersChinese /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="botox" /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
+                  <Route path="/zh/prices/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
+                  <Route path="/zh/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
+                  <Route path="/zh/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
+
                   {/* Non-trailing-slash versions redirect */}
                   <Route path="/ar" element={<Navigate to="/ar/" replace />} />
                   <Route path="/fr" element={<Navigate to="/fr/" replace />} />
                   <Route path="/es" element={<Navigate to="/es/" replace />} />
+                  <Route path="/zh" element={<Navigate to="/zh/" replace />} />
 
                   {/* All other routes use Layout with Home2Header */}
                   <Route path="*" element={
