@@ -314,10 +314,21 @@ const App = () => {
                   <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
                   <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
 
+                  {/* Chinese Routes */}
+                  <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersChinese /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="botox" /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
+                  <Route path="/zh/prices/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
+                  <Route path="/zh/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
+                  <Route path="/zh/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
+
                   {/* Non-trailing-slash versions redirect */}
                   <Route path="/ar" element={<Navigate to="/ar/" replace />} />
                   <Route path="/fr" element={<Navigate to="/fr/" replace />} />
                   <Route path="/es" element={<Navigate to="/es/" replace />} />
+                  <Route path="/zh" element={<Navigate to="/zh/" replace />} />
 
                   {/* All other routes use Layout with Home2Header */}
                   <Route path="*" element={
