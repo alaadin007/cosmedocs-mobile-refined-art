@@ -87,7 +87,7 @@ export default function DermalFillers() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <div className="bg-black overflow-x-hidden">
+      <div className="bg-[#F5F5F3] overflow-x-hidden">
         {/* ═══════════════════════════════════════════
             HERO — Two-column, matching Botox style
         ═══════════════════════════════════════════ */}
@@ -96,13 +96,13 @@ export default function DermalFillers() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.12) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.08) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
               animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -30, 0] }}
               transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
               className="absolute top-1/3 -left-60 w-[500px] h-[500px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.02) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
               animate={{ scale: [1, 1.2, 1], x: [0, 40, 0] }}
               transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             />
@@ -111,27 +111,27 @@ export default function DermalFillers() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full">
             {/* Breadcrumbs */}
             <div className="mb-6">
-              <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Dermal Fillers" />
+              <Breadcrumb items={[{ label: 'Treatments', path: '/treatments' }]} currentPage="Dermal Fillers" variant="light" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left — Content */}
               <div>
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full text-sm text-white/70 mb-6 border border-white/10">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm text-gray-700 mb-6 border border-gray-200">
                     <MapPin className="h-4 w-4 text-[#C9A050]" />
                     8-10 Harley Street, London W1G 9PF
                   </div>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-[1.1] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-6 leading-[1.1] tracking-tight">
                     The art of
                     <span className="block font-semibold text-[#C9A050]">invisible restoration</span>
                   </h1>
 
-                  <p className="text-lg md:text-xl text-white/60 mb-4 max-w-xl leading-relaxed font-light">
+                  <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-xl leading-relaxed font-light">
                     Your comprehensive guide to dermal fillers. Understanding hyaluronic acid, how it restores volume, and achieving results so natural they're undetectable.
                   </p>
-                  <p className="text-base text-white/50 mb-10 max-w-xl leading-relaxed font-light">
+                  <p className="text-base text-gray-500 mb-10 max-w-xl leading-relaxed font-light">
                     At CosmeDocs, fillers are placed with precision and restraint. GMC-registered doctors assess your face as a whole, restoring balance — never altering identity. Since 2007, our philosophy has been invisible art.
                   </p>
                 </motion.div>
@@ -139,21 +139,21 @@ export default function DermalFillers() {
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4">
                   <Button
                     onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                    className="group bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20"
+                    className="group bg-[#C9A050] hover:bg-[#B8924A] text-white rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20"
                   >
                     Book Consultation <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
                     variant="ghost"
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                    className="text-white/80 hover:text-white hover:bg-white/10 rounded-full px-8 py-6 text-base font-medium border border-white/20"
+                    className="text-gray-700 hover:text-gray-900 hover:bg-gray-200/60 rounded-full px-8 py-6 text-base font-medium border border-gray-300"
                   >
                     <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" /> Ask AI Doctor
                   </Button>
                 </motion.div>
 
                 {/* Trust indicators */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 flex flex-wrap gap-8 text-sm text-white/50">
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 flex flex-wrap gap-8 text-sm text-gray-500">
                   <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#C9A050]/70" /> GMC Registered</span>
                   <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#C9A050]/70" /> 17+ Years</span>
                   <span className="flex items-center gap-2"><Star className="h-4 w-4 text-[#C9A050]/70 fill-[#C9A050]/70" /> 4.9 Rating</span>
@@ -218,22 +218,22 @@ export default function DermalFillers() {
 
                   {/* Floating "Trusted Clinic" badge */}
                   <motion.div
-                    className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10"
+                    className="absolute top-8 right-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-gray-200"
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#C9A050] flex items-center justify-center"><Star className="h-5 w-5 text-black fill-black" /></div>
+                      <div className="w-10 h-10 rounded-full bg-[#C9A050] flex items-center justify-center"><Star className="h-5 w-5 text-black fill-white" /></div>
                       <div>
-                        <div className="text-sm font-semibold text-white">Trusted Clinic</div>
-                        <div className="text-xs text-white/60">Since 2007</div>
+                        <div className="text-sm font-semibold text-gray-900">Trusted Clinic</div>
+                        <div className="text-xs text-gray-600">Since 2007</div>
                       </div>
                     </div>
                   </motion.div>
 
                   {/* Floating "Hyaluronic Acid" info badge */}
                   <motion.div
-                    className="absolute top-[45%] -right-2 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/30 border border-white/10 w-[240px]"
+                    className="absolute top-[45%] -right-2 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/5 border border-gray-200 w-[240px]"
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                   >
@@ -241,10 +241,10 @@ export default function DermalFillers() {
                       <Droplets className="w-4 h-4 text-[#C9A050]" />
                       <span className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider">Hyaluronic Acid</span>
                     </div>
-                    <p className="text-[11px] text-white/60 leading-relaxed mb-2">
+                    <p className="text-[11px] text-gray-600 leading-relaxed mb-2">
                       A naturally occurring substance in skin that retains moisture and provides structural support.
                     </p>
-                    <div className="flex items-center gap-3 text-[10px] text-white/40">
+                    <div className="flex items-center gap-3 text-[10px] text-gray-400">
                       <span className="flex items-center gap-1"><Check className="w-3 h-3 text-[#C9A050]" /> Biocompatible</span>
                       <span className="flex items-center gap-1"><Check className="w-3 h-3 text-[#C9A050]" /> Reversible</span>
                     </div>
@@ -252,18 +252,18 @@ export default function DermalFillers() {
 
                   {/* Review teaser card */}
                   <motion.div
-                    className="absolute bottom-16 -left-4 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-5 shadow-xl shadow-black/30 border border-white/10 max-w-[300px]"
+                    className="absolute bottom-16 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-5 shadow-xl shadow-black/5 border border-gray-200 max-w-[300px]"
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   >
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 rounded-full bg-[#C9A050] flex items-center justify-center text-black text-xs font-bold">J</div>
                       <div>
-                        <div className="text-sm font-medium text-white">Jessica K.</div>
+                        <div className="text-sm font-medium text-gray-900">Jessica K.</div>
                         <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#C9A050] fill-[#C9A050]" />)}</div>
                       </div>
                     </div>
-                    <p className="text-xs text-white/60 leading-relaxed">"Everyone says I look amazing but they can't put their finger on why. That's the sign of truly excellent work."</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">"Everyone says I look amazing but they can't put their finger on why. That's the sign of truly excellent work."</p>
                     <Link to="/testimonials" className="inline-flex items-center gap-1 text-xs text-[#C9A050] mt-2 hover:underline">More real experiences</Link>
                   </motion.div>
                 </div>
@@ -283,20 +283,20 @@ export default function DermalFillers() {
               {/* What Are Dermal Fillers */}
               <section id="what-are-fillers-">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     What Are <span className="text-[#C9A050] font-light">Dermal Fillers?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         Dermal fillers are injectable treatments most commonly made from hyaluronic acid — a substance naturally found in the skin that helps retain hydration, volume, and elasticity. As we age, the face loses structural support — bone recedes, fat pads shift, and skin becomes thinner. Dermal fillers work by restoring this lost volume, lifting sagging tissues, and softening lines — without surgery.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <p className="text-xs font-medium text-white/60 mb-4">What Fillers Can Address</p>
+                    <div className="space-y-4 text-gray-600 text-sm leading-relaxed font-light">
+                      <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                        <p className="text-xs font-medium text-gray-600 mb-4">What Fillers Can Address</p>
                         <ul className="space-y-2">
                           {["Restore age-related volume loss in cheeks, temples, and lips", "Improve facial proportions and symmetry", "Support sagging tissues and lift jowls", "Soften static lines and nasolabial folds", "Enhance natural contours — jawline, chin, lips"].map((fact) => (
                             <li key={fact} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" /><span>{fact}</span></li>
@@ -314,7 +314,7 @@ export default function DermalFillers() {
               {/* How They Work */}
               <section id="how-they-work">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     How Dermal Fillers <span className="text-[#C9A050] font-light">Work</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -326,18 +326,18 @@ export default function DermalFillers() {
                           { step: "2", title: "Injection", desc: "Hyaluronic acid gel is precisely placed using cannulae or fine needles at specific depths to restore or enhance volume." },
                           { step: "3", title: "Integration", desc: "The filler integrates with surrounding tissue, drawing moisture and providing natural-looking support and structure." },
                         ].map((s) => (
-                          <div key={s.step} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 text-center">
+                          <div key={s.step} className="bg-white border border-gray-200 rounded-2xl p-5 text-center">
                             <div className="bg-[#C9A050]/15 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-3">
                               <span className="text-sm font-medium text-[#C9A050]">{s.step}</span>
                             </div>
-                            <p className="text-sm font-medium text-white/70 mb-1">{s.title}</p>
-                            <p className="text-white/40 text-xs font-light">{s.desc}</p>
+                            <p className="text-sm font-medium text-gray-700 mb-1">{s.title}</p>
+                            <p className="text-gray-400 text-xs font-light">{s.desc}</p>
                           </div>
                         ))}
                       </div>
                     }
                   >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-4 text-gray-600 text-sm leading-relaxed font-light">
                       <p>
                         Unlike Botox which relaxes muscles, dermal fillers physically add volume beneath the skin's surface. The hyaluronic acid in fillers is biocompatible — meaning it works with your body, not against it.
                       </p>
@@ -352,21 +352,21 @@ export default function DermalFillers() {
               {/* Treatment Areas */}
               <section id="treatment-areas">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Treatment <span className="text-[#C9A050] font-light">Areas</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                  <p className="text-gray-600 text-sm leading-relaxed font-light mb-6">
                     Each area of the face has unique anatomy, ageing patterns, and requirements. Our doctors tailor product choice, placement depth, and volume to each individual area.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4 mb-6">
                     {treatmentAreaCards.map((card) => (
-                      <div key={card.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
-                        <p className="text-sm font-medium text-white/70 mb-2">{card.title}</p>
-                        <p className="text-white/35 text-xs font-light mb-3">{card.description}</p>
+                      <div key={card.title} className="bg-white border border-gray-200 rounded-2xl p-5">
+                        <p className="text-sm font-medium text-gray-700 mb-2">{card.title}</p>
+                        <p className="text-gray-400 text-xs font-light mb-3">{card.description}</p>
                         <ul className="space-y-1.5">
                           {card.areas.map((area) => (
-                            <li key={area} className="flex items-center gap-2 text-xs text-white/45 font-light">
+                            <li key={area} className="flex items-center gap-2 text-xs text-gray-600 font-light">
                               <Check className="w-3 h-3 text-[#C9A050]/60" /> {area}
                             </li>
                           ))}
@@ -388,7 +388,7 @@ export default function DermalFillers() {
                       { label: "Tear Trough", to: "/treatments/tear-trough-filler/" },
                       { label: "Temple Filler", to: "/treatments/temple-filler/" },
                     ].map((link) => (
-                      <Link key={link.label} to={link.to} className="px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full text-xs text-white/45 hover:text-[#C9A050] hover:border-[#C9A050]/30 transition-all font-light">
+                      <Link key={link.label} to={link.to} className="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:text-[#C9A050] hover:border-[#C9A050]/30 transition-all font-light">
                         {link.label}
                       </Link>
                     ))}
@@ -399,20 +399,20 @@ export default function DermalFillers() {
               {/* Full-Face Approach */}
               <section id="full-face-approach">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     A Full-Face <span className="text-[#C9A050] font-light">Approach</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         Facial ageing does not occur in isolation. Lines, folds, and hollowing are often the result of structural changes elsewhere in the face. That's why our doctors adopt a full-face approach — assessing how different regions interact, and how restoring support in one area can naturally improve another.
                       </p>
                     }
                   >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <p className="text-xs font-medium text-white/60 mb-4">This approach:</p>
+                    <div className="space-y-4 text-gray-600 text-sm leading-relaxed font-light">
+                      <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                        <p className="text-xs font-medium text-gray-600 mb-4">This approach:</p>
                         <ul className="space-y-2">
                           {["Reduces the risk of overfilling any single area", "Produces more natural, balanced results", "Preserves facial movement and expression", "Delivers longer-lasting outcomes with less product"].map((item) => (
                             <li key={item} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#C9A050]/60 mt-0.5 flex-shrink-0" /><span>{item}</span></li>
@@ -430,33 +430,33 @@ export default function DermalFillers() {
               {/* Who Is Suitable */}
               <section id="who-is-suitable-">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Who Is <span className="text-[#C9A050] font-light">Suitable?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
                       <div className="grid md:grid-cols-2 gap-4">
-                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-6">
                           <div className="flex items-center gap-2 mb-3">
                             <Sparkles className="w-4 h-4 text-[#C9A050]/60" />
-                            <p className="text-sm font-medium text-white/70">Enhancement</p>
+                            <p className="text-sm font-medium text-gray-700">Enhancement</p>
                           </div>
-                          <p className="text-white/45 text-xs leading-relaxed font-light">For those seeking to enhance facial features — lip volume, cheek definition, jawline contouring — regardless of age.</p>
+                          <p className="text-gray-600 text-xs leading-relaxed font-light">For those seeking to enhance facial features — lip volume, cheek definition, jawline contouring — regardless of age.</p>
                         </div>
-                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-6">
                           <div className="flex items-center gap-2 mb-3">
                             <Activity className="w-4 h-4 text-[#C9A050]/60" />
-                            <p className="text-sm font-medium text-white/70">Restoration</p>
+                            <p className="text-sm font-medium text-gray-700">Restoration</p>
                           </div>
-                          <p className="text-white/45 text-xs leading-relaxed font-light">For age-related volume loss — hollow cheeks, deep nasolabial folds, thinning lips, temple hollowing. Restoring what time has taken.</p>
+                          <p className="text-gray-600 text-xs leading-relaxed font-light">For age-related volume loss — hollow cheeks, deep nasolabial folds, thinning lips, temple hollowing. Restoring what time has taken.</p>
                         </div>
                       </div>
                     }
                   >
-                    <div className="space-y-5 text-white/45 text-sm leading-relaxed font-light">
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <p className="text-xs font-medium text-white/60 mb-4">Age Considerations</p>
+                    <div className="space-y-5 text-gray-600 text-sm leading-relaxed font-light">
+                      <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                        <p className="text-xs font-medium text-gray-600 mb-4">Age Considerations</p>
                         <div className="grid md:grid-cols-3 gap-5">
                           {[
                             { age: "20s–30s", text: "Enhancement-focused. Lip definition, chin projection, or subtle cheek contour. Light volumes, natural results." },
@@ -465,7 +465,7 @@ export default function DermalFillers() {
                           ].map((a) => (
                             <div key={a.age}>
                               <p className="text-[#C9A050]/70 font-medium text-xs mb-1">{a.age}</p>
-                              <p className="text-white/40 text-xs font-light">{a.text}</p>
+                              <p className="text-gray-400 text-xs font-light">{a.text}</p>
                             </div>
                           ))}
                         </div>
@@ -478,7 +478,7 @@ export default function DermalFillers() {
               {/* Results Timeline */}
               <section id="results">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Results <span className="text-[#C9A050] font-light">Timeline</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -493,17 +493,17 @@ export default function DermalFillers() {
                           <div key={t.title} className="flex items-start gap-3">
                             <div className="w-1.5 h-1.5 rounded-full bg-[#C9A050]/50 mt-2 flex-shrink-0" />
                             <div>
-                              <p className="text-xs font-medium text-white/60 mb-0.5">{t.title}</p>
-                              <p className="text-white/40 text-xs font-light">{t.desc}</p>
+                              <p className="text-xs font-medium text-gray-600 mb-0.5">{t.title}</p>
+                              <p className="text-gray-400 text-xs font-light">{t.desc}</p>
                             </div>
                           </div>
                         ))}
                       </div>
                     }
                   >
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                      <p className="text-xs font-medium text-white/60 mb-3">Duration by Area</p>
-                      <div className="grid md:grid-cols-2 gap-3 text-xs text-white/40 font-light">
+                    <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                      <p className="text-xs font-medium text-gray-600 mb-3">Duration by Area</p>
+                      <div className="grid md:grid-cols-2 gap-3 text-xs text-gray-400 font-light">
                         {[
                           { label: "Lips", desc: "6–12 months (high movement area)" },
                           { label: "Cheeks", desc: "12–18 months" },
@@ -512,7 +512,7 @@ export default function DermalFillers() {
                         ].map((f) => (
                           <div key={f.label} className="flex items-start gap-2">
                             <Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" />
-                            <span><strong className="text-white/55">{f.label}:</strong> {f.desc}</span>
+                            <span><strong className="text-gray-500">{f.label}:</strong> {f.desc}</span>
                           </div>
                         ))}
                       </div>
@@ -524,33 +524,33 @@ export default function DermalFillers() {
               {/* Fillers vs Botox */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     How Fillers Fit Into <span className="text-[#C9A050] font-light">Facial Rejuvenation</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         Understanding the difference between dermal fillers and <Link to="/treatments/botox/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Botox</Link> helps you make informed decisions about your treatment plan.
                       </p>
                     }
                   >
                     <div className="space-y-4">
                       <div className="grid md:grid-cols-2 gap-4">
-                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-6">
                           <p className="text-sm font-medium text-[#C9A050]/80 mb-3">Dermal Fillers</p>
                           <p className="text-[#C9A050]/50 text-xs mb-3 font-light">Adds volume → Restores lost fullness</p>
-                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                          <ul className="space-y-1.5 text-gray-400 text-xs font-light">
                             <li>• Lines present at rest (static lines)</li>
                             <li>• Cheeks, lips, jawline, nasolabial folds</li>
                             <li>• Volume restoration & contouring</li>
                             <li>• Results last 6–18 months</li>
                           </ul>
                         </div>
-                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                          <p className="text-sm font-medium text-white/60 mb-3">Botox</p>
-                          <p className="text-white/35 text-xs mb-3 font-light">Relaxes muscles → Reduces dynamic wrinkles</p>
-                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                          <p className="text-sm font-medium text-gray-600 mb-3">Botox</p>
+                          <p className="text-gray-400 text-xs mb-3 font-light">Relaxes muscles → Reduces dynamic wrinkles</p>
+                          <ul className="space-y-1.5 text-gray-400 text-xs font-light">
                             <li>• Lines that appear with expression</li>
                             <li>• Forehead, frown lines, crow's feet</li>
                             <li>• Preventative treatment</li>
@@ -558,7 +558,7 @@ export default function DermalFillers() {
                           </ul>
                         </div>
                       </div>
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         Many patients benefit from a combined approach. Botox addresses dynamic lines whilst fillers restore lost volume — together, they create comprehensive facial rejuvenation.
                       </p>
                       <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-[#C9A050]/70 hover:text-[#C9A050] text-xs font-light transition-colors">
@@ -572,13 +572,13 @@ export default function DermalFillers() {
               {/* Choosing a Clinic */}
               <section id="choosing-a-clinic">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Choosing a <span className="text-[#C9A050] font-light">Clinic</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         Dermal fillers require deep understanding of facial anatomy. The difference between natural results and overfilled outcomes comes down to practitioner skill.
                       </p>
                     }
@@ -590,9 +590,9 @@ export default function DermalFillers() {
                         { icon: <Users className="w-4 h-4 text-[#C9A050]/60" />, title: "Consultation Process", desc: "A thorough consultation should assess your concerns, explain options, and set realistic expectations." },
                         { icon: <Star className="w-4 h-4 text-[#C9A050]/60" />, title: "Reviews & Results", desc: "Check verified reviews and before/after galleries. Consistent positive feedback indicates reliable practitioners." },
                       ].map((c) => (
-                        <div key={c.title} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
-                          <div className="flex items-center gap-2 mb-2">{c.icon}<p className="text-xs font-medium text-white/60">{c.title}</p></div>
-                          <p className="text-white/40 text-xs font-light">{c.desc}</p>
+                        <div key={c.title} className="bg-white border border-gray-200 rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-2">{c.icon}<p className="text-xs font-medium text-gray-600">{c.title}</p></div>
+                          <p className="text-gray-400 text-xs font-light">{c.desc}</p>
                         </div>
                       ))}
                     </div>
@@ -603,31 +603,31 @@ export default function DermalFillers() {
               {/* Safety */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Safety & <span className="text-[#C9A050] font-light">Your Consultation</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         Hyaluronic acid fillers have an excellent safety profile. They are biocompatible, temporary, and — importantly — fully reversible using an enzyme called hyaluronidase.
                       </p>
                     }
                   >
                     <div className="space-y-4">
                       <div className="grid md:grid-cols-2 gap-4">
-                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
-                          <div className="flex items-center gap-2 mb-3"><Shield className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-white/60">Safety Profile</p></div>
-                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-3"><Shield className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-gray-600">Safety Profile</p></div>
+                          <ul className="space-y-1.5 text-gray-400 text-xs font-light">
                             <li>• FDA and CE approved products</li>
                             <li>• Biocompatible — works with your body</li>
                             <li>• Fully reversible with hyaluronidase</li>
                             <li>• Temporary — naturally absorbed over time</li>
                           </ul>
                         </div>
-                        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
-                          <div className="flex items-center gap-2 mb-3"><Heart className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-white/60">During Your Consultation</p></div>
-                          <ul className="space-y-1.5 text-white/40 text-xs font-light">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-5">
+                          <div className="flex items-center gap-2 mb-3"><Heart className="w-4 h-4 text-[#C9A050]/60" /><p className="text-xs font-medium text-gray-600">During Your Consultation</p></div>
+                          <ul className="space-y-1.5 text-gray-400 text-xs font-light">
                             <li>• Full facial assessment and medical history</li>
                             <li>• Discussion of concerns and goals</li>
                             <li>• Honest advice — we say no when appropriate</li>
@@ -636,10 +636,10 @@ export default function DermalFillers() {
                           </ul>
                         </div>
                       </div>
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
-                        <p className="text-xs font-medium text-white/60 mb-2">Contraindications</p>
-                        <p className="text-white/35 text-xs font-light mb-2">Dermal fillers may not be suitable if you:</p>
-                        <ul className="grid md:grid-cols-2 gap-1.5 text-white/40 text-xs font-light">
+                      <div className="bg-white border border-gray-200 rounded-xl p-5">
+                        <p className="text-xs font-medium text-gray-600 mb-2">Contraindications</p>
+                        <p className="text-gray-400 text-xs font-light mb-2">Dermal fillers may not be suitable if you:</p>
+                        <ul className="grid md:grid-cols-2 gap-1.5 text-gray-400 text-xs font-light">
                           <li>• Are pregnant or breastfeeding</li>
                           <li>• Have active skin infection at the site</li>
                           <li>• Have certain autoimmune conditions</li>
@@ -654,32 +654,32 @@ export default function DermalFillers() {
               {/* Filler Migration Myth */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     The Filler Migration <span className="text-[#C9A050] font-light">Myth</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <ExpandableSection
                     preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
+                      <p className="text-gray-600 text-sm leading-relaxed font-light">
                         "Filler migration" is one of the most commonly repeated concerns in aesthetics — but it's largely a misconception. Hyaluronic acid filler, when placed correctly by an experienced practitioner, integrates with the surrounding tissue and stays precisely where it's injected.
                       </p>
                     }
                   >
-                    <div className="space-y-5 text-white/45 text-sm leading-relaxed font-light">
+                    <div className="space-y-5 text-gray-600 text-sm leading-relaxed font-light">
                       <p>
                         What's often labelled as migration is typically the result of poor injection technique — filler placed too superficially, in excessive volumes, or in the wrong tissue plane. When product is deposited incorrectly, it can spread beyond the intended area, creating an unnatural appearance that gets blamed on the filler itself rather than the method of placement.
                       </p>
 
                       {/* Dr. Quote */}
-                      <div className="bg-white/[0.03] border-l-2 border-[#C9A050] rounded-r-xl p-6">
-                        <blockquote className="text-white/60 text-xs italic leading-relaxed mb-4">
+                      <div className="bg-white border-l-2 border-[#C9A050] rounded-r-xl p-6">
+                        <blockquote className="text-gray-600 text-xs italic leading-relaxed mb-4">
                           "Migration is a technique problem, not a product problem. When filler is placed at the correct depth, in the right tissue plane, with appropriate volumes — it simply doesn't migrate. What patients see on social media and attribute to migration is almost always the result of poor placement or overfilling. With proper anatomical knowledge and restraint, this concern is entirely avoidable."
                         </blockquote>
                         <div className="flex items-center gap-3">
                           <div className="w-8 h-8 rounded-full bg-[#C9A050] flex items-center justify-center text-black text-xs font-bold">AH</div>
                           <div>
-                            <p className="text-white/70 font-medium text-xs">Dr. Ahmed Haq</p>
-                            <p className="text-white/40 text-[10px]">Medical Director, CosmeDocs</p>
+                            <p className="text-gray-700 font-medium text-xs">Dr. Ahmed Haq</p>
+                            <p className="text-gray-400 text-[10px]">Medical Director, CosmeDocs</p>
                           </div>
                         </div>
                       </div>
@@ -687,7 +687,7 @@ export default function DermalFillers() {
                       <p>
                         At CosmeDocs, every injection is guided by deep anatomical understanding. Our doctors use precise cannula and needle techniques, selecting the correct product viscosity and depth for each area — ensuring filler stays exactly where it's intended.
                       </p>
-                      <p className="text-white/35 text-xs">
+                      <p className="text-gray-400 text-xs">
                         This is why choosing a qualified, experienced doctor-led clinic matters. Technique is the single greatest factor in achieving safe, natural, long-lasting results.
                       </p>
                     </div>
@@ -698,22 +698,22 @@ export default function DermalFillers() {
               {/* Preparation & Aftercare */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Preparation & <span className="text-[#C9A050] font-light">Aftercare</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
-                      <p className="text-xs font-medium text-white/60 mb-3">Before Treatment</p>
-                      <ul className="space-y-2 text-white/40 text-xs font-light">
+                    <div className="bg-white border border-gray-200 rounded-2xl p-5">
+                      <p className="text-xs font-medium text-gray-600 mb-3">Before Treatment</p>
+                      <ul className="space-y-2 text-gray-400 text-xs font-light">
                         {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Inform practitioner of all medications", "Avoid dental work 2 weeks before/after"].map((t) => (
                           <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
-                      <p className="text-xs font-medium text-white/60 mb-3">After Treatment</p>
-                      <ul className="space-y-2 text-white/40 text-xs font-light">
+                    <div className="bg-white border border-gray-200 rounded-2xl p-5">
+                      <p className="text-xs font-medium text-gray-600 mb-3">After Treatment</p>
+                      <ul className="space-y-2 text-gray-400 text-xs font-light">
                         {["Avoid touching or pressing treated areas for 6 hours", "Skip intense exercise for 24–48 hours", "Avoid saunas, steam rooms, and extreme heat", "Sleep slightly elevated the first night"].map((t) => (
                           <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
                         ))}
@@ -726,12 +726,12 @@ export default function DermalFillers() {
               {/* Dermal Filler Before & After Results */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Dermal Filler Before & After <span className="text-[#C9A050] font-light">Results</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="mb-5">
-                    <div className="rounded-xl overflow-hidden border border-white/[0.08]">
+                    <div className="rounded-xl overflow-hidden border border-gray-200">
                       <img
                         src="/images/before-after/dermal-fillers/full-face-filler-before-after-preview.jpg"
                         alt="Full-face dermal filler before and after showing facial rejuvenation"
@@ -740,7 +740,7 @@ export default function DermalFillers() {
                       />
                     </div>
                   </div>
-                  <p className="text-white/35 text-xs mb-5 font-light">
+                  <p className="text-gray-400 text-xs mb-5 font-light">
                     All images show real patients treated by our doctors at our Harley Street clinic. Results vary depending on facial anatomy and treatment plan.
                   </p>
                   <Link
@@ -755,7 +755,7 @@ export default function DermalFillers() {
               {/* Why Choose Cosmedocs */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Why Choose <span className="text-[#C9A050] font-light">CosmeDocs?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -769,8 +769,8 @@ export default function DermalFillers() {
                     ].map((w) => (
                       <div key={w.title} className="text-center">
                         <div className="bg-[#C9A050]/10 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2 text-[#C9A050]/60">{w.icon}</div>
-                        <p className="text-xs font-medium text-white/60 mb-0.5">{w.title}</p>
-                        <p className="text-white/35 text-[10px] font-light">{w.desc}</p>
+                        <p className="text-xs font-medium text-gray-600 mb-0.5">{w.title}</p>
+                        <p className="text-gray-400 text-[10px] font-light">{w.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -780,7 +780,7 @@ export default function DermalFillers() {
               {/* FAQs */}
               <section id="faqs">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2 leading-tight">
                     Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
@@ -794,9 +794,9 @@ export default function DermalFillers() {
                       { v: "combine", q: "Can dermal fillers be combined with Botox?", a: "Yes, many patients benefit from combining both. Fillers restore volume and structure whilst Botox addresses dynamic expression lines. Your doctor will advise on the best approach during consultation." },
                       { v: "reverse", q: "Can dermal fillers be reversed?", a: "Yes, hyaluronic acid fillers can be dissolved using an enzyme called hyaluronidase. This provides an important safety measure and allows adjustments if needed." },
                     ].map((faq) => (
-                      <AccordionItem key={faq.v} value={faq.v} className="border-white/[0.08]">
-                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light">{faq.q}</AccordionTrigger>
-                        <AccordionContent className="text-white/40 text-xs font-light">{faq.a}</AccordionContent>
+                      <AccordionItem key={faq.v} value={faq.v} className="border-gray-200">
+                        <AccordionTrigger className="text-gray-700 hover:text-[#C9A050] text-left text-sm font-light">{faq.q}</AccordionTrigger>
+                        <AccordionContent className="text-gray-400 text-xs font-light">{faq.a}</AccordionContent>
                       </AccordionItem>
                     ))}
                   </Accordion>
@@ -816,30 +816,30 @@ export default function DermalFillers() {
         {/* ═══════════════════════════════════════════
             FULL-WIDTH CTA
         ═══════════════════════════════════════════ */}
-        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+        <section className="py-20 px-6 bg-gradient-to-b from-gray-100 to-white">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-light mb-4 text-white">
+              <h2 className="text-3xl font-light mb-4 text-gray-900">
                 Your Consultation <span className="text-[#C9A050]">Begins Here</span>
               </h2>
-              <p className="text-white/60 mb-8">Considered care from Harley Street doctors</p>
+              <p className="text-gray-600 mb-8">Considered care from Harley Street doctors</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-6"
+                  className="bg-[#C9A050] hover:bg-[#B8924A] text-white rounded-full px-8 py-6"
                   onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                 >
                   Book Consultation
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white/20 text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white rounded-full px-8 py-6"
                   onClick={() => window.location.href = 'tel:03330551503'}
                 >
                   <Phone className="w-4 h-4 mr-2" /> 0333 055 1503
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-green-500/50 text-green-400 hover:bg-green-500 hover:text-white rounded-full px-8 py-6"
+                  className="border-green-500/50 text-green-400 hover:bg-green-500 hover:text-gray-900 rounded-full px-8 py-6"
                   onClick={() => window.open('https://wa.me/447535076003', '_blank')}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp
@@ -850,7 +850,7 @@ export default function DermalFillers() {
         </section>
 
         {/* Mobile Pricing (shown below content on small screens) */}
-        <section className="lg:hidden py-12 px-4 bg-black">
+        <section className="lg:hidden py-12 px-4 bg-[#F5F5F3]">
           <DermalFillersSidebar />
         </section>
 

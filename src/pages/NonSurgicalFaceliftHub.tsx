@@ -139,12 +139,12 @@ const NonSurgicalFaceliftHub = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-[#F5F5F3]">
         {/* ── HERO ── */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#C9A050]/5 rounded-full blur-[120px]" />
-            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A050]/3 rounded-full blur-[100px]" />
+            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#C9A050]/8 rounded-full blur-[120px]" />
+            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A050]/5 rounded-full blur-[100px]" />
           </div>
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -165,14 +165,14 @@ const NonSurgicalFaceliftHub = () => {
               Non-Surgical{" "}
               <span className="text-[#C9A050]">Facelift</span>
               <br />
-              <span className="text-2xl md:text-3xl text-white/50 font-light">London</span>
+              <span className="text-2xl md:text-3xl text-gray-500 font-light">London</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-white/60 font-extralight max-w-2xl mx-auto mb-10 leading-relaxed"
+              className="text-lg md:text-xl text-gray-600 font-extralight max-w-2xl mx-auto mb-10 leading-relaxed"
             >
               Four doctor-led modalities — from the lightest Botox refinement to deep
               laser fibre tissue remodelling — combined to lift, restore, and rejuvenate
@@ -184,7 +184,7 @@ const NonSurgicalFaceliftHub = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-[0.15em] text-white/35 mb-10"
+              className="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-[0.15em] text-gray-400 mb-10"
             >
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C9A050]" />
@@ -207,7 +207,7 @@ const NonSurgicalFaceliftHub = () => {
             >
               <Button
                 asChild
-                className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-10 py-6 text-base font-medium"
+                className="bg-[#C9A050] hover:bg-[#B8924A] text-white rounded-full px-10 py-6 text-base font-medium"
               >
                 <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                   Book Your Consultation
@@ -218,12 +218,12 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── PHILOSOPHY ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extralight mb-8 tracking-tight">
               Our Approach to <span className="text-[#C9A050]">Facial Lifting</span>
             </h2>
-            <div className="space-y-6 text-white/65 font-extralight text-base md:text-lg leading-relaxed">
+            <div className="space-y-6 text-gray-600 font-extralight text-base md:text-lg leading-relaxed">
               <p>
                 At Cosmedocs, we believe a truly effective non-surgical facelift is never a single treatment — it is a strategy. Facial ageing affects multiple tissue layers simultaneously: muscles pull downward, volume depletes, skin loses elasticity, and stubborn fat pockets form beneath the chin and along the jowls. No single device or injectable addresses every layer.
               </p>
@@ -238,12 +238,12 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── TREATMENT MODALITIES ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extralight mb-4 tracking-tight text-center">
               Four Levels of <span className="text-[#C9A050]">Non-Surgical Lifting</span>
             </h2>
-            <p className="text-center text-white/45 font-light text-sm mb-14 max-w-2xl mx-auto">
+            <p className="text-center text-gray-600 font-light text-sm mb-14 max-w-2xl mx-auto">
               From the lightest Botox refinement to deep laser tissue remodelling —
               each modality targets a different layer of facial ageing.
             </p>
@@ -256,7 +256,7 @@ const NonSurgicalFaceliftHub = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="relative bg-white/[0.02] border border-white/[0.06] rounded-2xl p-8 md:p-10 hover:border-[#C9A050]/20 transition-colors duration-500"
+                  className="relative bg-white border border-gray-200 rounded-2xl p-8 md:p-10 hover:border-[#C9A050]/20 transition-colors duration-500"
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-6">
                     <div className="flex-1">
@@ -264,22 +264,22 @@ const NonSurgicalFaceliftHub = () => {
                         {t.intensity}
                       </p>
                       <h3 className="text-xl md:text-2xl font-light mb-4">{t.title}</h3>
-                      <p className="text-white/60 font-extralight leading-relaxed mb-6">
+                      <p className="text-gray-600 font-extralight leading-relaxed mb-6">
                         {t.description}
                       </p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                         <div>
-                          <p className="text-white/35 text-xs uppercase tracking-wider mb-1">Best For</p>
-                          <p className="text-white/70 text-sm font-light">{t.bestFor}</p>
+                          <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Best For</p>
+                          <p className="text-gray-700 text-sm font-light">{t.bestFor}</p>
                         </div>
                         <div>
-                          <p className="text-white/35 text-xs uppercase tracking-wider mb-1">Downtime</p>
-                          <p className="text-white/70 text-sm font-light">{t.downtime}</p>
+                          <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Downtime</p>
+                          <p className="text-gray-700 text-sm font-light">{t.downtime}</p>
                         </div>
                         <div>
-                          <p className="text-white/35 text-xs uppercase tracking-wider mb-1">Results</p>
-                          <p className="text-white/70 text-sm font-light">{t.results}</p>
+                          <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Results</p>
+                          <p className="text-gray-700 text-sm font-light">{t.results}</p>
                         </div>
                       </div>
                     </div>
@@ -288,7 +288,7 @@ const NonSurgicalFaceliftHub = () => {
                       <p className="text-[#C9A050] text-lg font-light">{t.price}</p>
                       <Link
                         to={t.path}
-                        className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#C9A050] transition-colors"
+                        className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-[#C9A050] transition-colors"
                       >
                         Learn More <ArrowRight className="h-4 w-4" />
                       </Link>
@@ -301,37 +301,37 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── COMBINATION STRATEGY ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extralight mb-8 tracking-tight">
               Why We <span className="text-[#C9A050]">Combine</span> Treatments
             </h2>
-            <div className="space-y-6 text-white/65 font-extralight text-base md:text-lg leading-relaxed">
+            <div className="space-y-6 text-gray-600 font-extralight text-base md:text-lg leading-relaxed">
               <p>
                 The most natural, long-lasting non-surgical facelift results come from treating multiple tissue layers simultaneously. At Cosmedocs, our doctors routinely combine modalities in a single treatment session or across a phased plan:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                  <h3 className="text-white font-light mb-3">Botox + HA Makeover</h3>
-                  <p className="text-white/55 text-sm font-extralight leading-relaxed">
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h3 className="text-gray-900 font-light mb-3">Botox + HA Makeover</h3>
+                  <p className="text-gray-500 text-sm font-extralight leading-relaxed">
                     The Nefertiti Lift relaxes downward-pulling platysmal muscles while the HA Makeover replaces lost volume in the midface, jawline, and temples. Together, they create a comprehensive liquid facelift that addresses both dynamic muscle pull and static volume loss — the two primary drivers of lower-face ageing.
                   </p>
                 </div>
-                <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                  <h3 className="text-white font-light mb-3">PDO Threads + HA Makeover</h3>
-                  <p className="text-white/55 text-sm font-extralight leading-relaxed">
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h3 className="text-gray-900 font-light mb-3">PDO Threads + HA Makeover</h3>
+                  <p className="text-gray-500 text-sm font-extralight leading-relaxed">
                     PDO threads provide genuine mechanical lift — physically repositioning sagging tissue — whilst fillers restore the volumetric scaffold that holds everything in place. This combination is our go-to for moderate-to-advanced lower-face ageing, particularly jowls and nasolabial depth.
                   </p>
                 </div>
-                <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                  <h3 className="text-white font-light mb-3">Laser Fibre Lift + Fillers</h3>
-                  <p className="text-white/55 text-sm font-extralight leading-relaxed">
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h3 className="text-gray-900 font-light mb-3">Laser Fibre Lift + Fillers</h3>
+                  <p className="text-gray-500 text-sm font-extralight leading-relaxed">
                     At Cosmedocs, we have learned to replace volume, tighten skin, and reduce excess fat in a targeted, zone-specific manner. Our approach does not dissolve your existing fillers — it complements them. The Laser Fibre Lift addresses the skin and fat layers while fillers maintain the volumetric framework beneath.
                   </p>
                 </div>
-                <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
-                  <h3 className="text-white font-light mb-3">Full Multi-Modality Plan</h3>
-                  <p className="text-white/55 text-sm font-extralight leading-relaxed">
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h3 className="text-gray-900 font-light mb-3">Full Multi-Modality Plan</h3>
+                  <p className="text-gray-500 text-sm font-extralight leading-relaxed">
                     For comprehensive rejuvenation, a phased approach over 3–6 months combining all four modalities delivers the most dramatic yet natural transformation. Your doctor designs a bespoke timeline based on your anatomy, skin quality, and aesthetic goals.
                   </p>
                 </div>
@@ -341,18 +341,18 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── WHO IS IT FOR ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extralight mb-8 tracking-tight">
               Is a Non-Surgical Facelift <span className="text-[#C9A050]">Right for You?</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-white font-light mb-4 flex items-center gap-2">
+                <h3 className="text-gray-900 font-light mb-4 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-[#C9A050]" />
                   Ideal Candidates
                 </h3>
-                <ul className="space-y-3 text-white/60 font-extralight text-sm">
+                <ul className="space-y-3 text-gray-600 font-extralight text-sm">
                   <li>• Early to moderate signs of facial sagging and jowling</li>
                   <li>• Volume loss in cheeks, temples, or jawline</li>
                   <li>• Neck bands or platysmal banding</li>
@@ -364,11 +364,11 @@ const NonSurgicalFaceliftHub = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-white font-light mb-4 flex items-center gap-2">
+                <h3 className="text-gray-900 font-light mb-4 flex items-center gap-2">
                   <Shield className="h-5 w-5 text-[#C9A050]" />
                   What to Expect
                 </h3>
-                <ul className="space-y-3 text-white/60 font-extralight text-sm">
+                <ul className="space-y-3 text-gray-600 font-extralight text-sm">
                   <li>• Thorough consultation with a GMC-registered doctor</li>
                   <li>• Bespoke treatment plan tailored to your anatomy</li>
                   <li>• Treatments performed at our Harley Street clinic</li>
@@ -384,18 +384,18 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── PRACTITIONER CREDENTIALS ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extralight mb-8 tracking-tight">
               Your <span className="text-[#C9A050]">Doctor</span>
             </h2>
-            <div className="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-8 md:p-10">
-              <div className="space-y-4 text-white/65 font-extralight leading-relaxed">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10">
+              <div className="space-y-4 text-gray-600 font-extralight leading-relaxed">
                 <p>
                   Non-surgical facelifts demand an intimate understanding of facial anatomy, tissue biomechanics, and aesthetic proportion. At Cosmedocs, every treatment is performed by a GMC-registered doctor with advanced training in injectable techniques, thread lifting, and laser-assisted procedures.
                 </p>
                 <p>
-                  Our lead practitioner serves as the <strong className="text-white/90 font-light">lead trainer for the Harley Street Institute</strong>, training the next generation of aesthetic doctors in advanced lifting techniques including the Laser Fibre Lift. With over 17 years of clinical experience and tens of thousands of procedures performed, you are in the hands of one of London's most experienced non-surgical facelift practitioners.
+                  Our lead practitioner serves as the <strong className="text-gray-800 font-light">lead trainer for the Harley Street Institute</strong>, training the next generation of aesthetic doctors in advanced lifting techniques including the Laser Fibre Lift. With over 17 years of clinical experience and tens of thousands of procedures performed, you are in the hands of one of London's most experienced non-surgical facelift practitioners.
                 </p>
                 <p>
                   It is not just the device that produces the results — it is the hands behind it. A powerful treatment needs to be done in the right hands.
@@ -420,7 +420,7 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extralight mb-10 tracking-tight text-center">
               Frequently Asked <span className="text-[#C9A050]">Questions</span>
@@ -429,15 +429,15 @@ const NonSurgicalFaceliftHub = () => {
               {faqs.map((faq, i) => (
                 <details
                   key={i}
-                  className="group bg-white/[0.02] border border-white/[0.06] rounded-xl overflow-hidden"
+                  className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
                 >
-                  <summary className="cursor-pointer px-6 py-5 text-white/90 font-light text-base list-none flex items-center justify-between hover:bg-white/[0.03] transition-colors">
+                  <summary className="cursor-pointer px-6 py-5 text-gray-800 font-light text-base list-none flex items-center justify-between hover:bg-white transition-colors">
                     {faq.q}
                     <span className="text-[#C9A050] text-xl ml-4 transition-transform group-open:rotate-45">
                       +
                     </span>
                   </summary>
-                  <div className="px-6 pb-5 text-white/55 font-extralight text-sm leading-relaxed">
+                  <div className="px-6 pb-5 text-gray-500 font-extralight text-sm leading-relaxed">
                     {faq.a}
                   </div>
                 </details>
@@ -464,24 +464,24 @@ const NonSurgicalFaceliftHub = () => {
         </section>
 
         {/* ── REVIEWS ── */}
-        <section className="py-16 md:py-24 px-6 border-t border-white/5">
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <ClientReviews />
         </section>
 
         {/* ── CTA ── */}
-        <section className="py-20 md:py-28 px-6 border-t border-white/5">
+        <section className="py-20 md:py-28 px-6 border-t border-gray-200">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-4xl font-extralight mb-6 tracking-tight">
               Ready to Explore Your{" "}
               <span className="text-[#C9A050]">Lifting Options?</span>
             </h2>
-            <p className="text-white/50 font-extralight mb-10 max-w-xl mx-auto">
+            <p className="text-gray-500 font-extralight mb-10 max-w-xl mx-auto">
               Book a consultation with our Harley Street doctors to discuss which non-surgical
               facelift approach — or combination — is right for your anatomy and goals.
             </p>
             <Button
               asChild
-              className="bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-12 py-6 text-base font-medium"
+              className="bg-[#C9A050] hover:bg-[#B8924A] text-white rounded-full px-12 py-6 text-base font-medium"
             >
               <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                 Book Consultation

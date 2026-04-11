@@ -70,14 +70,14 @@ const SkinRejuvenationHub = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
+      <div className="min-h-screen bg-[#F5F5F3] overflow-x-hidden">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-black pt-0 pb-20">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+        <section className="relative overflow-hidden bg-[#F5F5F3] pt-0 pb-20">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/40 to-transparent" />
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.08) 0%, transparent 60%)' }}
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -86,20 +86,20 @@ const SkinRejuvenationHub = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <Breadcrumb
               items={[{ label: 'Treatments', path: '/treatments/' }]}
-              currentPage="Skin Rejuvenation"
+              currentPage="Skin Rejuvenation" variant="light"
             />
             <div className="pt-12 pb-4 max-w-3xl">
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                 <p className="text-[#C9A050] text-xs uppercase tracking-widest mb-4 font-medium">Treatment Hub</p>
-                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
+                <h1 className="text-4xl md:text-[3.5rem] font-extralight text-gray-900 leading-[1.1] tracking-tight mb-6">
                   Skin <span className="text-[#C9A050] font-light">Rejuvenation</span>
                 </h1>
-                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-extralight max-w-xl">
                   Bio-remodelling, regenerative therapies, and advanced skin quality treatments — doctor-led, science-backed, always natural.
                 </p>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
+                className="mt-10 flex flex-wrap items-center gap-6 text-xs text-gray-400 tracking-wide uppercase">
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Since 2007</span>
                 <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
@@ -111,14 +111,14 @@ const SkinRejuvenationHub = () => {
         </section>
 
         {/* Treatment Grid */}
-        <section className="py-16 bg-neutral-900">
+        <section className="py-16 bg-[#F5F5F3]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">
+              <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2">
                 What Skin Rejuvenation <span className="text-[#C9A050] font-light">Includes</span>
               </h2>
               <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-              <p className="text-white/40 text-sm font-light max-w-3xl leading-relaxed">
+              <p className="text-gray-400 text-sm font-light max-w-3xl leading-relaxed">
                 From injectable bio-remodellers to advanced surface treatments, our skin rejuvenation category brings together the most effective approaches to restoring and maintaining skin health.
               </p>
             </motion.div>
@@ -127,12 +127,12 @@ const SkinRejuvenationHub = () => {
               {treatments.map((treatment, index) => (
                 <motion.div key={treatment.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }}>
                   <Link to={treatment.link}
-                    className="group block bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6 h-full hover:border-[#C9A050]/30 transition-all duration-300">
+                    className="group block bg-white border border-gray-200 rounded-2xl p-6 h-full hover:border-[#C9A050]/30 transition-all duration-300">
                     <div className="bg-[#C9A050]/10 rounded-full w-10 h-10 flex items-center justify-center mb-4 group-hover:bg-[#C9A050]/20 transition-colors">
                       <treatment.icon className="w-5 h-5 text-[#C9A050]" />
                     </div>
-                    <h3 className="text-base font-medium mb-2 text-white group-hover:text-[#C9A050] transition-colors">{treatment.title}</h3>
-                    <p className="text-white/40 text-xs leading-relaxed mb-3 font-light">{treatment.description}</p>
+                    <h3 className="text-base font-medium mb-2 text-gray-900 group-hover:text-[#C9A050] transition-colors">{treatment.title}</h3>
+                    <p className="text-gray-400 text-xs leading-relaxed mb-3 font-light">{treatment.description}</p>
                     <span className="text-[#C9A050] text-xs font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                       Learn more <ArrowRight className="w-3 h-3" />
                     </span>
@@ -144,23 +144,23 @@ const SkinRejuvenationHub = () => {
         </section>
 
         {/* Who Benefits */}
-        <section className="py-16 bg-black">
+        <section className="py-16 bg-[#F5F5F3]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">
+              <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2">
                 Who <span className="text-[#C9A050] font-light">Benefits?</span>
               </h2>
               <div className="w-10 h-px bg-[#C9A050]/40 mb-8" />
               <div className="grid md:grid-cols-2 gap-5">
-                <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                <div className="bg-white border border-gray-200 rounded-2xl p-6">
                   <p className="text-sm font-medium text-[#C9A050] mb-3">Preventative Care</p>
-                  <p className="text-white/45 text-sm leading-relaxed font-light">
+                  <p className="text-gray-600 text-sm leading-relaxed font-light">
                     Patients in their late twenties and thirties seeking to maintain skin quality, boost hydration, and address early textural changes. Profhilo and HydraFacial are ideal starting points.
                   </p>
                 </div>
-                <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                <div className="bg-white border border-gray-200 rounded-2xl p-6">
                   <p className="text-sm font-medium text-[#C9A050] mb-3">Restorative Treatment</p>
-                  <p className="text-white/45 text-sm leading-relaxed font-light">
+                  <p className="text-gray-600 text-sm leading-relaxed font-light">
                     Those experiencing visible signs of skin ageing — loss of firmness, uneven tone, or textural irregularities — may benefit from Polynucleotides, PRP, or PDO threads combined with surface treatments.
                   </p>
                 </div>
@@ -170,21 +170,21 @@ const SkinRejuvenationHub = () => {
         </section>
 
         {/* Our Approach */}
-        <section className="py-16 bg-neutral-900">
+        <section className="py-16 bg-[#F5F5F3]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">
+              <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2">
                 Our Approach to <span className="text-[#C9A050] font-light">Skin Health</span>
               </h2>
               <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
               <ExpandableSection
                 preview={
-                  <p className="text-white/45 text-sm leading-relaxed font-light">
+                  <p className="text-gray-600 text-sm leading-relaxed font-light">
                     At CosmeDocs, skin rejuvenation is not about quick fixes. We take a consultation-led approach, assessing your skin's condition, your lifestyle, and your goals before recommending any treatment.
                   </p>
                 }
               >
-                <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
+                <div className="space-y-4 text-gray-600 text-sm leading-relaxed font-light">
                   <p>
                     Many of our patients benefit from combining treatments — for example, pairing Profhilo for deep hydration with microneedling for surface renewal. This layered approach addresses skin health at multiple levels, producing results that look and feel natural.
                   </p>
@@ -198,11 +198,11 @@ const SkinRejuvenationHub = () => {
         </section>
 
         {/* B&A Teaser */}
-        <section className="py-16 bg-black">
+        <section className="py-16 bg-[#F5F5F3]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-2xl md:text-3xl font-extralight text-white mb-4">See Real <span className="text-[#C9A050] font-light">Results</span></h2>
-              <p className="text-white/40 text-sm mb-6 font-light">View genuine before and after transformations from our skin rejuvenation patients.</p>
+              <h2 className="text-2xl md:text-3xl font-extralight text-gray-900 mb-4">See Real <span className="text-[#C9A050] font-light">Results</span></h2>
+              <p className="text-gray-400 text-sm mb-6 font-light">View genuine before and after transformations from our skin rejuvenation patients.</p>
               <Link to="/before-after/skin-rejuvenation/"
                 className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#d4af5a] text-sm font-medium transition-colors">
                 View Before & After Gallery <ArrowRight className="w-4 h-4" />
@@ -212,17 +212,17 @@ const SkinRejuvenationHub = () => {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-neutral-900">
+        <section className="py-16 bg-[#F5F5F3]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
-            <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">
+            <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2">
               Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
             </h2>
             <div className="w-10 h-px bg-[#C9A050]/40 mb-8" />
             <Accordion type="single" collapsible className="space-y-3">
               {faqItems.map((item, index) => (
-                <AccordionItem key={index} value={`faq-${index}`} className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5">
-                  <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">{item.question}</AccordionTrigger>
-                  <AccordionContent className="text-white/40 text-sm font-light pb-4">{item.answer}</AccordionContent>
+                <AccordionItem key={index} value={`faq-${index}`} className="bg-white border border-gray-200 rounded-xl px-5">
+                  <AccordionTrigger className="text-gray-700 hover:text-[#C9A050] text-left text-sm font-light py-4">{item.question}</AccordionTrigger>
+                  <AccordionContent className="text-gray-400 text-sm font-light pb-4">{item.answer}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -230,23 +230,23 @@ const SkinRejuvenationHub = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
+        <section className="py-20 px-6 bg-gradient-to-b from-gray-100 to-white">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-light mb-4 text-white">
+              <h2 className="text-3xl font-light mb-4 text-gray-900">
                 Start Your Skin <span className="text-[#C9A050]">Journey</span>
               </h2>
-              <p className="text-white/60 mb-8 font-light text-sm">
+              <p className="text-gray-600 mb-8 font-light text-sm">
                 Book a consultation with our doctors to discover which skin rejuvenation treatment is right for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
-                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
+                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-white font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
                     Book Consultation <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </a>
                 <Link to="/contact">
-                  <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                  <Button variant="ghost" className="border border-gray-300 text-gray-700 hover:text-gray-900 hover:bg-gray-200/60 px-8 py-5 rounded-full text-base w-full sm:w-auto">
                     Speak to a Doctor
                   </Button>
                 </Link>
