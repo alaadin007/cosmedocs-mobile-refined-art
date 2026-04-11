@@ -89,6 +89,8 @@ const LipFillersArabic = lazy(() => import("./pages/LipFillersArabic"));
 const LipFillersFrench = lazy(() => import("./pages/LipFillersFrench"));
 const LipFillersSpanish = lazy(() => import("./pages/LipFillersSpanish"));
 const LipFillersChinese = lazy(() => import("./pages/LipFillersChinese"));
+const FaceBotoxChinese = lazy(() => import("./pages/FaceBotoxChinese"));
+const DermalFillersChinese = lazy(() => import("./pages/DermalFillersChinese"));
 const AdvancedConsultation = lazy(() => import("./pages/AdvancedConsultation"));
 const FellowshipInvitation = lazy(() => import("./pages/FellowshipInvitation"));
 const LongTermAestheticCareBlog = lazy(() => import("./pages/LongTermAestheticCareBlog"));
@@ -318,8 +320,8 @@ const App = () => {
                   <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
                   <Route path="/zh/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
                   <Route path="/zh/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersChinese /></Suspense></Layout>} />
-                  <Route path="/zh/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="botox" /></Suspense></Layout>} />
-                  <Route path="/zh/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="dermalFillers" /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxChinese /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersChinese /></Suspense></Layout>} />
                   <Route path="/zh/prices/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="prices" /></Suspense></Layout>} />
                   <Route path="/zh/contact/" element={<Layout><Suspense fallback={<PageLoader />}><Contact /></Suspense></Layout>} />
                   <Route path="/zh/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="about" /></Suspense></Layout>} />
