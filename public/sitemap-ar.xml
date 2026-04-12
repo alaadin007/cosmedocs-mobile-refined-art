@@ -7,6 +7,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -28,46 +29,97 @@
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/treatments/dermal-fillers/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/dermal-fillers/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/dermal-fillers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/acide-hyaluronique/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/acido-hialuronico/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/dermal-fillers/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/treatments/lip-fillers/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/lip-fillers/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/lip-fillers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/injection-levres/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/relleno-labios/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/lip-fillers/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/treatments/jawline-filler/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/jawline-filler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/jawline-filler/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/filler-machoire/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/relleno-mandibula/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/jawline-filler/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/treatments/chin-filler/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/chin-filler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/chin-filler/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/filler-menton/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/relleno-menton/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/chin-filler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/chin-filler/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/treatments/tear-trough-filler/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/tear-trough-filler/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/cernes-creuses/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/ojeras/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/tear-trough-filler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/treatments/skin-rejuvenation/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/skin-rejuvenation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/skin-rejuvenation/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/rajeunissement-peau/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/rejuvenecimiento-piel/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/skin-rejuvenation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/skin-rejuvenation/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/prices/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/prices/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/prices/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/tarifs/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/precios/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/prices/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/prices/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/contact/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/contacto/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/contact/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cosmedocs.com/ar/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/about-us/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/about-us/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/a-propos/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/sobre-nosotros/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/about-us/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/about-us/" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
