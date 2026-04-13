@@ -422,7 +422,8 @@ const Shop = () => {
               <p className="text-gray-500 font-light text-sm">A quick reference for why both products work better together.</p>
             </div>
 
-            <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            {/* Desktop table */}
+            <div className="hidden md:block overflow-x-auto rounded-xl border border-gray-200 bg-white">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-200 bg-gray-50">
@@ -459,6 +460,32 @@ const Shop = () => {
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            {/* Mobile stacked cards */}
+            <div className="md:hidden space-y-4">
+              {[
+                { cell: "Keratinocytes", icon: <Shield className="w-5 h-5 text-emerald-500" />, am: "Ceramide synthesis, barrier reinforcement", pm: "Accelerated turnover, fresh cell exposure" },
+                { cell: "Melanocytes", icon: <Sparkles className="w-5 h-5 text-violet-500" />, am: "Tyrosinase inhibition, prevents new spots", pm: "Melanin dispersal, fades existing marks" },
+                { cell: "Fibroblasts", icon: <FlaskConical className="w-5 h-5 text-amber-500" />, am: "MMP neutralisation, collagen preservation", pm: "Direct collagen + elastin stimulation" },
+              ].map((item) => (
+                <div key={item.cell} className="bg-white rounded-xl border border-gray-200 p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    {item.icon}
+                    <span className="font-medium text-gray-900">{item.cell}</span>
+                  </div>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-start gap-2">
+                      <Sun className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
+                      <p className="text-gray-600 font-light"><span className="text-amber-600 font-medium">AM:</span> {item.am}</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Moon className="w-4 h-4 text-violet-500 mt-0.5 shrink-0" />
+                      <p className="text-gray-600 font-light"><span className="text-violet-600 font-medium">PM:</span> {item.pm}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
