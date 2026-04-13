@@ -24,6 +24,50 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.cosmedocs.com/zh/treatments/botox/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/botox/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/botox/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/botox/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/botox/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/zh/treatments/dermal-fillers/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/dermal-fillers/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/dermal-fillers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/acide-hyaluronique/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/acido-hialuronico/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/dermal-fillers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/dermal-fillers/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/zh/treatments/lip-fillers/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/lip-fillers/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/lip-fillers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/injection-levres/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/relleno-labios/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/lip-fillers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/lip-fillers/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/zh/treatments/jawline-filler/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/jawline-filler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/jawline-filler/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/filler-machoire/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/relleno-mandibula/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/jawline-filler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/jawline-filler/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.cosmedocs.com/zh/treatments/chin-filler/</loc>
     <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/chin-filler/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/chin-filler/" />
