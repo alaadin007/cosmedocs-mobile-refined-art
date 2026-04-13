@@ -49,13 +49,13 @@ export default function PauseAndThink({ principleId }: { principleId: string }) 
   };
 
   return (
-    <div className="my-10 bg-white/[0.03] border border-[#C9A050]/20 rounded-2xl p-6 md:p-8">
+    <div className="my-10 bg-white border border-[#C9A050]/20 rounded-2xl p-6 md:p-8 shadow-sm">
       <div className="flex items-center gap-3 mb-5">
         <Brain className="w-5 h-5 text-[#C9A050]" />
         <span className="font-medium text-sm text-[#C9A050]">Pause & Think</span>
       </div>
 
-      <p className="text-lg font-light text-white/80 mb-6">{quiz.question}</p>
+      <p className="text-lg font-light text-gray-800 mb-6">{quiz.question}</p>
 
       <div className="space-y-3">
         {quiz.options.map((option, index) => (
@@ -66,11 +66,11 @@ export default function PauseAndThink({ principleId }: { principleId: string }) 
             className={`w-full text-left px-4 py-3 rounded-xl border transition-all duration-300 text-sm font-light ${
               revealed
                 ? index === quiz.correctIndex
-                  ? "bg-green-900/30 border-green-500/50 text-green-300"
+                  ? "bg-green-50 border-green-300 text-green-700"
                   : selectedAnswer === index
-                  ? "bg-red-900/30 border-red-500/50 text-red-300"
-                  : "bg-white/[0.02] border-white/[0.06] text-white/30"
-                : "bg-white/[0.02] border-white/[0.08] hover:border-[#C9A050]/40 hover:bg-[#C9A050]/5 text-white/60"
+                  ? "bg-red-50 border-red-300 text-red-600"
+                  : "bg-gray-50 border-gray-200 text-gray-400"
+                : "bg-gray-50 border-gray-200 hover:border-[#C9A050]/40 hover:bg-amber-50 text-gray-600"
             }`}
           >
             {option}
@@ -84,9 +84,9 @@ export default function PauseAndThink({ principleId }: { principleId: string }) 
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="mt-6 p-4 bg-white/[0.03] rounded-xl border border-[#C9A050]/20"
+            className="mt-6 p-4 bg-amber-50 rounded-xl border border-[#C9A050]/20"
           >
-            <p className="text-white/50 text-sm font-light leading-relaxed">{quiz.explanation}</p>
+            <p className="text-gray-600 text-sm font-light leading-relaxed">{quiz.explanation}</p>
           </motion.div>
         )}
       </AnimatePresence>

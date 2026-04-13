@@ -20,7 +20,7 @@ const principles = [
   { id: "core-principles", title: "Core Principles", subtitle: "The CosmeDocs philosophy" },
 ];
 
-// Shared article wrapper for dark-theme principle content
+// Shared article wrapper — light theme
 const PrincipleArticle = ({
   number,
   title,
@@ -39,38 +39,38 @@ const PrincipleArticle = ({
       <span className="text-[#C9A050] text-xs font-medium tracking-[0.25em] uppercase">
         Principle {number}
       </span>
-      <h1 className="text-3xl md:text-4xl font-extralight mt-3 mb-2 tracking-tight">{title}</h1>
-      <p className="text-white/30 text-sm font-light">{subtitle}</p>
+      <h1 className="text-3xl md:text-4xl font-extralight text-gray-900 mt-3 mb-2 tracking-tight">{title}</h1>
+      <p className="text-gray-400 text-sm font-light">{subtitle}</p>
     </div>
-    <p className="text-xl italic text-white/30 text-center py-4 font-extralight">"{quote}"</p>
+    <p className="text-xl italic text-gray-300 text-center py-4 font-extralight">"{quote}"</p>
     {children}
   </motion.article>
 );
 
-// Reusable styled blocks
+// Reusable styled blocks — light theme
 const Insight = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl">
+  <div className="bg-amber-50 border-l-2 border-[#C9A050]/60 p-5 rounded-r-xl">
     <p className="text-sm font-medium text-[#C9A050] mb-2">Key Insight</p>
-    <p className="text-white/40 text-sm font-light leading-relaxed">{children}</p>
+    <p className="text-gray-600 text-sm font-light leading-relaxed">{children}</p>
   </div>
 );
 
 const GoldBullet = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-3">
     <span className="text-[#C9A050] mt-1.5 text-xs">●</span>
-    <span className="text-white/45 font-light leading-relaxed">{children}</span>
+    <span className="text-gray-600 font-light leading-relaxed">{children}</span>
   </li>
 );
 
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   <>
     <div className="w-12 h-px bg-[#C9A050]/40 mt-8 mb-6" />
-    <h3 className="text-xl md:text-2xl font-extralight mb-4">{children}</h3>
+    <h3 className="text-xl md:text-2xl font-extralight text-gray-900 mb-4">{children}</h3>
   </>
 );
 
 const P = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-white/45 font-light leading-relaxed">{children}</p>
+  <p className="text-gray-600 font-light leading-relaxed">{children}</p>
 );
 
 export default function SmartAesthetics() {
@@ -122,19 +122,19 @@ export default function SmartAesthetics() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-[#F5F5F3] text-gray-900">
         <div className="flex">
           {/* Mobile overlay */}
           {sidebarOpen && (
-            <div className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40" onClick={() => setSidebarOpen(false)}>
-              <div className="fixed inset-y-0 left-0 w-[85%] max-w-sm bg-black/95 border-r border-white/[0.06] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40" onClick={() => setSidebarOpen(false)}>
+              <div className="fixed inset-y-0 left-0 w-[85%] max-w-sm bg-white border-r border-gray-200 overflow-y-auto shadow-xl" onClick={(e) => e.stopPropagation()}>
                 <SmartAestheticsSidebar principles={principles} currentIndex={currentPrincipleIndex} onSelect={handleNav} onClose={() => setSidebarOpen(false)} isMobile />
               </div>
             </div>
           )}
 
           {/* Desktop sidebar */}
-          <aside className="hidden lg:block lg:w-72 border-r border-white/[0.06] bg-black sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto">
+          <aside className="hidden lg:block lg:w-72 border-r border-gray-200 bg-white sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto">
             <SmartAestheticsSidebar principles={principles} currentIndex={currentPrincipleIndex} onSelect={handleNav} />
           </aside>
 
@@ -143,10 +143,10 @@ export default function SmartAesthetics() {
             {/* Mobile menu toggle */}
             <button
               onClick={() => setSidebarOpen(true)}
-              className="lg:hidden fixed top-28 left-4 z-30 p-2.5 bg-white/[0.05] border border-white/[0.1] rounded-xl backdrop-blur-sm hover:bg-[#C9A050]/20 transition-colors"
+              className="lg:hidden fixed top-28 left-4 z-30 p-2.5 bg-white border border-gray-200 rounded-xl shadow-sm hover:bg-amber-50 transition-colors"
               aria-label="Open menu"
             >
-              <Menu className="h-4 w-4 text-white/60" />
+              <Menu className="h-4 w-4 text-gray-500" />
             </button>
 
             <div className="max-w-3xl mx-auto px-6 md:px-8 py-12">
@@ -156,18 +156,18 @@ export default function SmartAesthetics() {
                   {/* Hero */}
                   <div className="text-center mb-12">
                     <span className="text-[#C9A050] text-xs font-medium tracking-[0.25em] uppercase">Smart Aesthetics Series</span>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight mt-4 mb-4 tracking-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-900 mt-4 mb-4 tracking-tight">
                       Before You Choose a <span className="text-[#C9A050] font-light">Treatment</span>
                     </h1>
-                    <p className="text-white/40 text-lg font-light">Answer one question:</p>
+                    <p className="text-gray-400 text-lg font-light">Answer one question:</p>
                   </div>
 
                   {/* Core Question */}
-                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-8 md:p-12 text-center mb-10">
-                    <p className="text-xl md:text-2xl font-extralight text-white/80 mb-4">
+                  <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-12 text-center mb-10 shadow-sm">
+                    <p className="text-xl md:text-2xl font-extralight text-gray-800 mb-4">
                       What actually changes in the face as we age?
                     </p>
-                    <p className="text-white/30 font-light">
+                    <p className="text-gray-400 font-light">
                       Most people guess wrong — and that's why they waste money.
                     </p>
                   </div>
@@ -176,38 +176,38 @@ export default function SmartAesthetics() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
                     <button
                       onClick={() => handleNav(0)}
-                      className="group flex flex-col items-center gap-3 p-6 bg-white/[0.03] border border-white/[0.08] hover:border-[#C9A050]/40 rounded-2xl transition-all duration-300"
+                      className="group flex flex-col items-center gap-3 p-6 bg-white border border-gray-200 hover:border-[#C9A050]/40 rounded-2xl transition-all duration-300 shadow-sm"
                     >
                       <Lightbulb className="w-7 h-7 text-[#C9A050] group-hover:scale-110 transition-transform" />
-                      <span className="font-medium text-sm text-white/80">Read the Thinking</span>
-                      <span className="text-xs text-white/30">Learn the principles</span>
+                      <span className="font-medium text-sm text-gray-800">Read the Thinking</span>
+                      <span className="text-xs text-gray-400">Learn the principles</span>
                     </button>
                     <button
                       onClick={() => window.dispatchEvent(new CustomEvent("open-chatbot"))}
-                      className="group flex flex-col items-center gap-3 p-6 bg-white/[0.03] border border-white/[0.08] hover:border-[#C9A050]/40 rounded-2xl transition-all duration-300"
+                      className="group flex flex-col items-center gap-3 p-6 bg-white border border-gray-200 hover:border-[#C9A050]/40 rounded-2xl transition-all duration-300 shadow-sm"
                     >
                       <MessageCircle className="w-7 h-7 text-[#C9A050] group-hover:scale-110 transition-transform" />
-                      <span className="font-medium text-sm text-white/80">Ask Our AI Doctor</span>
-                      <span className="text-xs text-white/30">Get instant answers</span>
+                      <span className="font-medium text-sm text-gray-800">Ask Our AI Doctor</span>
+                      <span className="text-xs text-gray-400">Get instant answers</span>
                     </button>
                     <a
                       href="https://ai.cosmedocs.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex flex-col items-center gap-3 p-6 bg-white/[0.03] border border-white/[0.08] hover:border-[#C9A050]/40 rounded-2xl transition-all duration-300"
+                      className="group flex flex-col items-center gap-3 p-6 bg-white border border-gray-200 hover:border-[#C9A050]/40 rounded-2xl transition-all duration-300 shadow-sm"
                     >
                       <Sparkles className="w-7 h-7 text-[#C9A050] group-hover:scale-110 transition-transform" />
-                      <span className="font-medium text-sm text-white/80">Free AI Assessment</span>
-                      <span className="text-xs text-white/30">Analyse your face</span>
+                      <span className="font-medium text-sm text-gray-800">Free AI Assessment</span>
+                      <span className="text-xs text-gray-400">Analyse your face</span>
                     </a>
                   </div>
 
                   {/* The Apple Analogy */}
-                  <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6 md:p-10 mb-10">
-                    <h2 className="text-2xl md:text-3xl font-extralight mb-2 tracking-tight">
+                  <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 mb-10 shadow-sm">
+                    <h2 className="text-2xl md:text-3xl font-extralight text-gray-900 mb-2 tracking-tight">
                       Think of an <span className="text-[#C9A050] font-light">Apple</span>
                     </h2>
-                    <p className="text-white/30 text-sm font-light mb-6">The simplest way to understand your face.</p>
+                    <p className="text-gray-400 text-sm font-light mb-6">The simplest way to understand your face.</p>
 
                     <div className="grid md:grid-cols-[280px_1fr] gap-8 items-center mb-8">
                       <div className="mx-auto md:mx-0">
@@ -219,45 +219,45 @@ export default function SmartAesthetics() {
                         />
                       </div>
                       <div className="space-y-4">
-                        <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4">
-                          <p className="text-sm font-medium text-red-400 mb-1">🍎 The Red Skin = Your Skin</p>
-                          <p className="text-white/50 text-sm font-light leading-relaxed">
-                            That thin outer layer — just the first 2mm. When people talk about "skin treatments," this is what they mean. Microneedling, polynucleotides, Morpheus, chemical peels — they all work here. They can thicken, firm, and brighten your skin. But they <strong className="text-white/70">cannot lift</strong>.
+                        <div className="bg-red-50 border border-red-200/60 rounded-xl p-4">
+                          <p className="text-sm font-medium text-red-600 mb-1">🍎 The Red Skin = Your Skin</p>
+                          <p className="text-gray-600 text-sm font-light leading-relaxed">
+                            That thin outer layer — just the first 2mm. When people talk about "skin treatments," this is what they mean. Microneedling, polynucleotides, Morpheus, chemical peels — they all work here. They can thicken, firm, and brighten your skin. But they <strong className="text-gray-800">cannot lift</strong>.
                           </p>
                         </div>
-                        <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4">
-                          <p className="text-sm font-medium text-yellow-400 mb-1">🍏 The Yellow Flesh = Your Volume</p>
-                          <p className="text-white/50 text-sm font-light leading-relaxed">
+                        <div className="bg-yellow-50 border border-yellow-200/60 rounded-xl p-4">
+                          <p className="text-sm font-medium text-yellow-700 mb-1">🍏 The Yellow Flesh = Your Volume</p>
+                          <p className="text-gray-600 text-sm font-light leading-relaxed">
                             Fat pads, muscles, bone — the structure beneath. When this layer shrinks with age, the skin above it sags and falls, creating hollows and concavities. No amount of skin tightening can compensate for volume loss underneath. The apple skin wrinkles because the flesh inside has shrunk.
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl">
+                    <div className="bg-amber-50 border-l-2 border-[#C9A050]/60 p-5 rounded-r-xl">
                       <p className="text-sm font-medium text-[#C9A050] mb-2">The Key Lesson</p>
-                      <p className="text-white/50 text-sm font-light leading-relaxed">
+                      <p className="text-gray-600 text-sm font-light leading-relaxed">
                         That's where dermal fillers come in — there is no replacement. Whether you choose hyaluronic acid, polylactic acid (Sculptra), calcium hydroxylapatite (Radiesse), or even your own fat — volume loss requires volume restoration. Spending money on skin treatments to fix a volume problem is like polishing the apple skin when the flesh inside has withered. Right treatment, right layer, right result.
                       </p>
                     </div>
                   </div>
 
-                  {/* Self-Assessment: Check Your Aesthetics Profile */}
-                  <div className="bg-gradient-to-br from-[#C9A050]/10 to-transparent border border-[#C9A050]/20 rounded-2xl p-6 md:p-10 mb-10">
+                  {/* Self-Assessment */}
+                  <div className="bg-gradient-to-br from-amber-50 to-white border border-[#C9A050]/20 rounded-2xl p-6 md:p-10 mb-10 shadow-sm">
                     <span className="text-[#C9A050] text-xs font-medium tracking-[0.25em] uppercase">Your Aesthetics Profile</span>
-                    <h2 className="text-2xl md:text-3xl font-extralight mt-3 mb-2 tracking-tight">
+                    <h2 className="text-2xl md:text-3xl font-extralight text-gray-900 mt-3 mb-2 tracking-tight">
                       How to <span className="text-[#C9A050] font-light">Check Your Face</span> Like a Specialist
                     </h2>
-                    <p className="text-white/40 text-sm font-light mb-8">The aim of aesthetics is not to fix everything — it's to find the lowest-hanging fruit.</p>
+                    <p className="text-gray-400 text-sm font-light mb-8">The aim of aesthetics is not to fix everything — it's to find the lowest-hanging fruit.</p>
 
                     <div className="space-y-4">
                       {/* Tone & Harmony */}
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <div className="bg-white border border-gray-200 rounded-xl p-5">
                         <div className="flex items-start gap-3">
                           <Eye className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
                           <div>
-                            <h3 className="font-medium text-sm text-white/80 mb-2">1. Tone & Harmony</h3>
-                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                            <h3 className="font-medium text-sm text-gray-800 mb-2">1. Tone & Harmony</h3>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed">
                               Does your neck tone match your face? Compare the shade — if your face is darker or redder than your neck, it could indicate sun damage, inflammation, or product build-up. A specialist looks at the face and neck as one unit, not two separate zones.
                             </p>
                           </div>
@@ -265,12 +265,12 @@ export default function SmartAesthetics() {
                       </div>
 
                       {/* Texture */}
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <div className="bg-white border border-gray-200 rounded-xl p-5">
                         <div className="flex items-start gap-3">
                           <CircleDot className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
                           <div>
-                            <h3 className="font-medium text-sm text-white/80 mb-2">2. Texture</h3>
-                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                            <h3 className="font-medium text-sm text-gray-800 mb-2">2. Texture</h3>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed">
                               Run your fingers across your cheek, then your neck. Is there a difference? Roughness, enlarged pores, or bumpy skin indicates dead cell build-up and congestion — the surface layer is holding onto what it should be shedding.
                             </p>
                           </div>
@@ -278,12 +278,12 @@ export default function SmartAesthetics() {
                       </div>
 
                       {/* Hydration */}
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <div className="bg-white border border-gray-200 rounded-xl p-5">
                         <div className="flex items-start gap-3">
                           <Droplets className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
                           <div>
-                            <h3 className="font-medium text-sm text-white/80 mb-2">3. Hydration Direction</h3>
-                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                            <h3 className="font-medium text-sm text-gray-800 mb-2">3. Hydration Direction</h3>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed">
                               Look at your neck — it's hydrated from <em>below</em>. The skin looks matte, not glossy. That's deep hydration. Now look at your face — if it looks glossy and congested, that's moisture sitting <em>on top</em>, not beneath. Like pouring water on dead grass instead of watering the roots. The fix? Clear the dead layer first. Then hydration reaches where it matters.
                             </p>
                           </div>
@@ -291,12 +291,12 @@ export default function SmartAesthetics() {
                       </div>
 
                       {/* Wrinkles in Motion */}
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <div className="bg-white border border-gray-200 rounded-xl p-5">
                         <div className="flex items-start gap-3">
                           <Activity className="w-5 h-5 text-[#C9A050] mt-0.5 shrink-0" />
                           <div>
-                            <h3 className="font-medium text-sm text-white/80 mb-2">4. Wrinkles in Motion</h3>
-                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                            <h3 className="font-medium text-sm text-gray-800 mb-2">4. Wrinkles in Motion</h3>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed">
                               Don't just look at your face at rest — <em>move it</em>. Smile, frown, raise your brows. Now stop. The lines that disappear at rest are dynamic — they're a few years away from becoming permanent. The ones that stay? They're already static. Check the upper <em>and</em> lower face — most people forget the chin, the mouth corners, and the neck. These are your early warning signals.
                             </p>
                           </div>
@@ -304,12 +304,12 @@ export default function SmartAesthetics() {
                       </div>
 
                       {/* Volume Loss */}
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <div className="bg-white border border-gray-200 rounded-xl p-5">
                         <div className="flex items-start gap-3">
                           <span className="text-[#C9A050] mt-0.5 shrink-0 text-lg">◐</span>
                           <div>
-                            <h3 className="font-medium text-sm text-white/80 mb-2">5. Volume Loss</h3>
-                            <p className="text-white/45 text-sm font-light leading-relaxed">
+                            <h3 className="font-medium text-sm text-gray-800 mb-2">5. Volume Loss</h3>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed">
                               Under-eye hollows making you look tired? Sunken cheeks creating a gaunt appearance? Sagging jowls softening your jawline? These aren't skin problems — they're volume problems. The fat pads beneath have deflated, and no cream or laser can replace what's been lost. This is where strategic filler creates the most dramatic, natural improvement.
                             </p>
                           </div>
@@ -318,15 +318,15 @@ export default function SmartAesthetics() {
                     </div>
 
                     {/* CTA to AI Assessment */}
-                    <div className="mt-8 bg-white/[0.03] border border-[#C9A050]/30 rounded-xl p-6 text-center">
-                      <p className="text-white/60 font-light text-sm mb-4">
+                    <div className="mt-8 bg-white border border-[#C9A050]/30 rounded-xl p-6 text-center shadow-sm">
+                      <p className="text-gray-500 font-light text-sm mb-4">
                         Want a detailed analysis? Our free AI facial assessment evaluates your unique aesthetics profile and identifies your personal low-hanging fruit.
                       </p>
                       <a
                         href="https://ai.cosmedocs.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-black px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105"
+                        className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-white px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105"
                       >
                         <Sparkles className="w-4 h-4" />
                         Free AI Facial Assessment
@@ -336,28 +336,28 @@ export default function SmartAesthetics() {
                   </div>
 
                   {/* Philosophy Intro */}
-                  <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-6 rounded-r-xl mb-10">
-                    <p className="text-white/70 font-light mb-1">Short, intelligent guidance to help you avoid aesthetic mistakes.</p>
-                    <p className="text-white/30 text-sm font-light">Dip in anywhere. Each principle stands alone.</p>
+                  <div className="bg-amber-50 border-l-2 border-[#C9A050]/60 p-6 rounded-r-xl mb-10">
+                    <p className="text-gray-700 font-light mb-1">Short, intelligent guidance to help you avoid aesthetic mistakes.</p>
+                    <p className="text-gray-400 text-sm font-light">Dip in anywhere. Each principle stands alone.</p>
                   </div>
 
                   <div className="w-12 h-px bg-[#C9A050]/40 mb-6" />
-                  <h2 className="text-2xl font-extralight mb-6">The <span className="text-[#C9A050] font-light">Philosophy</span></h2>
+                  <h2 className="text-2xl font-extralight text-gray-900 mb-6">The <span className="text-[#C9A050] font-light">Philosophy</span></h2>
 
-                  <p className="text-xl italic text-white/25 text-center my-8 font-extralight">
+                  <p className="text-xl italic text-gray-300 text-center my-8 font-extralight">
                     "You can't fix what you don't understand."
                   </p>
 
-                  <div className="space-y-5 text-white/45 font-light leading-relaxed">
+                  <div className="space-y-5 text-gray-600 font-light leading-relaxed">
                     <p>Every few months, the industry throws another miracle at you — ultrasound this, radiofrequency that, a laser with a colour name to make it sound scientific. They promise lift, glow, youth, redemption.</p>
                     <p>Here's the problem: your skin didn't suddenly forget how to be skin. Biology didn't change — marketing did.</p>
-                    <p className="text-white/60 font-normal">At CosmeDocs, we don't chase trends. We chase truth. Anatomy, not algorithms. Logic, not luck.</p>
+                    <p className="text-gray-800 font-normal">At CosmeDocs, we don't chase trends. We chase truth. Anatomy, not algorithms. Logic, not luck.</p>
                   </div>
 
                   <div className="mt-12 text-center">
                     <button
                       onClick={() => handleNav(0)}
-                      className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-black px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105"
+                      className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-white px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 hover:scale-105"
                     >
                       Start Reading the Principles
                       <ChevronRight className="w-4 h-4" />
@@ -375,11 +375,11 @@ export default function SmartAesthetics() {
                   <P>That's why we start with why. Why did it drop, dull, or deepen? Why are you chasing light with a laser when what you lost was volume?</P>
                   <P>The answers live in layers:</P>
                   <ul className="list-none space-y-3 pl-0">
-                    <GoldBullet><strong className="text-white/70">Epidermis</strong> — where renewal happens.</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Dermis</strong> — where strength lives.</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Muscle</strong> — the layer of contraction. Repeated expressions etch lines into skin, and over time, chronic contraction shortens the face.</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Fat pads</strong> — where contour hides.</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Ligaments</strong> — the truth about lift.</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Epidermis</strong> — where renewal happens.</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Dermis</strong> — where strength lives.</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Muscle</strong> — the layer of contraction. Repeated expressions etch lines into skin, and over time, chronic contraction shortens the face.</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Fat pads</strong> — where contour hides.</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Ligaments</strong> — the truth about lift.</GoldBullet>
                   </ul>
                   <P>Once you know the layers, the rest is common sense dressed as science.</P>
                   <Insight>Trends change every quarter. Anatomy hasn't updated in a few million years.</Insight>
@@ -398,7 +398,7 @@ export default function SmartAesthetics() {
                   <Insight>Think of your skin like glass — clarity depends on turnover, not thickness.</Insight>
                   <P>That's why at CosmeDocs, we don't start with needles; we start with renewal. Peels, retinol, medical-grade skincare — they're not indulgence, they're hygiene for the soul of your skin.</P>
                   <SectionHeading>Where Hydration Really Comes From</SectionHeading>
-                  <p className="text-lg italic text-white/25 font-extralight">"Moisture doesn't come from your cream — it comes from below."</p>
+                  <p className="text-lg italic text-gray-300 font-extralight">"Moisture doesn't come from your cream — it comes from below."</p>
                   <P>Here's the truth nobody likes to hear: most dry skin isn't dehydrated — it's blocked. Dead skin is dry skin. Water doesn't diffuse through dead cell layers — it can't.</P>
                   <P>Your body already knows how to hydrate itself. Water rises from the dermis, through living tissue, to the surface. But when dead cells pile up, they form a wall.</P>
                   <P>The face doesn't get the luxury of natural exfoliation from clothing. It's exposed, unprotected, and accumulates faster than it sheds.</P>
@@ -419,7 +419,7 @@ export default function SmartAesthetics() {
                   <SectionHeading>Why Tightening Alone Doesn't Work</SectionHeading>
                   <P>Here's the dirty secret behind "skin tightening": you can't tighten what isn't supported. High-energy devices try to shrink collagen, but if the fat below is gone and the ligaments are loose, all you're doing is pulling on an empty tent.</P>
                   <P>That's why some people chase ultrasound, RF, lasers — and still look hollow. They're fixing the wallpaper when the wall's already crumbling.</P>
-                  <p className="text-lg italic text-white/25 text-center font-extralight">"You can't heat your way out of lost volume."</p>
+                  <p className="text-lg italic text-gray-300 text-center font-extralight">"You can't heat your way out of lost volume."</p>
                   <P>At CosmeDocs, we rebuild from the foundation up. Once the dermis has something to grip again — volume, hydration, structure — it remembers how to hold you up.</P>
                   <PauseAndThink principleId="structure-before-lift" />
                   <RelatedTreatments principleId="structure-before-lift" />
@@ -472,10 +472,10 @@ export default function SmartAesthetics() {
                   <P>This is when the face needs more than surface treatments. It needs architecture — strategic volume, calculated lift, intelligent relaxation of overworked muscles.</P>
                   <SectionHeading>The 40s Treatment Philosophy</SectionHeading>
                   <ul className="list-none space-y-3 pl-0">
-                    <GoldBullet><strong className="text-white/70">1. Restore volume first</strong> — cheeks, temples, under-eyes</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">2. Lift strategically</strong> — threads, targeted filler placement</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">3. Relax selectively</strong> — Botox where tension creates lines</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">4. Rebuild skin quality</strong> — Profhilo, polynucleotides</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">1. Restore volume first</strong> — cheeks, temples, under-eyes</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">2. Lift strategically</strong> — threads, targeted filler placement</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">3. Relax selectively</strong> — Botox where tension creates lines</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">4. Rebuild skin quality</strong> — Profhilo, polynucleotides</GoldBullet>
                   </ul>
                   <Insight>The 40s require a plan, not a product. Each treatment should support the next.</Insight>
                   <RelatedTreatments principleId="forties-lift" />
@@ -489,10 +489,10 @@ export default function SmartAesthetics() {
                   <P>Skin laxity is more pronounced. The neck may need attention. Perioral lines appear. Marionette lines deepen. But there's also something beautiful: character, confidence, wisdom lines.</P>
                   <SectionHeading>The 50s Philosophy</SectionHeading>
                   <ul className="list-none space-y-3 pl-0">
-                    <GoldBullet><strong className="text-white/70">Global approach</strong> — treat face, neck, décolletage together</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Skin resurfacing</strong> — lasers for texture, tone, sun damage</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Surgical consideration</strong> — when non-surgical reaches its limits</GoldBullet>
-                    <GoldBullet><strong className="text-white/70">Maintenance mindset</strong> — regular touch-ups over dramatic interventions</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Global approach</strong> — treat face, neck, décolletage together</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Skin resurfacing</strong> — lasers for texture, tone, sun damage</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Surgical consideration</strong> — when non-surgical reaches its limits</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Maintenance mindset</strong> — regular touch-ups over dramatic interventions</GoldBullet>
                   </ul>
                   <Insight>The goal is harmony, not youth. Looking refreshed, not changed.</Insight>
                   <RelatedTreatments principleId="fifties-elegance" />
@@ -507,8 +507,8 @@ export default function SmartAesthetics() {
                   <ul className="list-none space-y-3 pl-0">
                     {["You want to look like someone else", "You're chasing a filter or Photoshop version of yourself", "The \"problem\" only exists in bad lighting or extreme close-ups", "You've had treatment recently and want \"just a little more\"", "You're making the decision emotionally, not rationally"].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="text-red-400/70 mt-1 text-xs">✗</span>
-                        <span className="text-white/45 font-light leading-relaxed">{item}</span>
+                        <span className="text-red-500 mt-1 text-xs">✗</span>
+                        <span className="text-gray-600 font-light leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -517,7 +517,7 @@ export default function SmartAesthetics() {
                     {["You look tired when you're not", "Your reflection doesn't match how you feel inside", "You want subtle enhancement, not transformation", "You've researched and understand what's realistic"].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className="text-[#C9A050] mt-1 text-xs">✓</span>
-                        <span className="text-white/45 font-light leading-relaxed">{item}</span>
+                        <span className="text-gray-600 font-light leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -538,14 +538,14 @@ export default function SmartAesthetics() {
                       { n: "4. Build, Don't Patch", d: "Restore the foundation. The surface will follow." },
                       { n: "5. You, But Refined", d: "The goal is always enhancement, never replacement." },
                     ].map((p, i) => (
-                      <div key={i} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                      <div key={i} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                         <p className="text-sm font-medium text-[#C9A050] mb-1.5">{p.n}</p>
-                        <p className="text-white/40 text-sm font-light">{p.d}</p>
+                        <p className="text-gray-500 text-sm font-light">{p.d}</p>
                       </div>
                     ))}
                   </div>
-                  <div className="bg-white/[0.03] border-l-2 border-[#C9A050]/40 p-5 rounded-r-xl mt-8">
-                    <p className="text-white/40 text-sm font-light italic leading-relaxed">
+                  <div className="bg-amber-50 border-l-2 border-[#C9A050]/60 p-5 rounded-r-xl mt-8">
+                    <p className="text-gray-500 text-sm font-light italic leading-relaxed">
                       "Quiet, not loud. Invisible, not exaggerated. Transformation that speaks — without saying a word."
                     </p>
                   </div>
@@ -555,10 +555,10 @@ export default function SmartAesthetics() {
 
               {/* Navigation */}
               {currentPrincipleIndex >= 0 && (
-                <div className="flex items-center justify-between mt-12 pt-8 border-t border-white/[0.06]">
+                <div className="flex items-center justify-between mt-12 pt-8 border-t border-gray-200">
                   <button
                     onClick={() => handleNav(currentPrincipleIndex - 1)}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/[0.1] hover:border-[#C9A050]/40 rounded-full text-sm text-white/50 hover:text-[#C9A050] transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 hover:border-[#C9A050]/60 rounded-full text-sm text-gray-500 hover:text-[#C9A050] transition-all"
                   >
                     <ChevronLeft className="h-4 w-4" />
                     {currentPrincipleIndex === 0 ? "Back to Start" : "Previous"}
@@ -566,10 +566,10 @@ export default function SmartAesthetics() {
                   {currentPrincipleIndex < principles.length - 1 && (
                     <button
                       onClick={() => handleNav(currentPrincipleIndex + 1)}
-                      className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-black px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
+                      className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
                     >
                       Next Principle
-                      <ChevronRight className="h-4 w-4" />
+                      <ChevronRight className="w-4 h-4" />
                     </button>
                   )}
                 </div>
