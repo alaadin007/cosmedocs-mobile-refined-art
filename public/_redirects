@@ -515,6 +515,40 @@
 /zh/treatments/profhilo                     /index.html                                     200
 /zh/treatments/profhilo/                    /index.html                                     200
 
+# --- Tier 2 translated treatment pages — Japanese ---
+/ja/treatments/nose-filler                  /index.html                                     200
+/ja/treatments/nose-filler/                 /index.html                                     200
+/ja/treatments/profhilo                     /index.html                                     200
+/ja/treatments/profhilo/                    /index.html                                     200
+
+# --- Tier 2 translated treatment pages — German ---
+/de/behandlungen/nasen-filler               /index.html                                     200
+/de/behandlungen/nasen-filler/              /index.html                                     200
+/de/behandlungen/profhilo                   /index.html                                     200
+/de/behandlungen/profhilo/                  /index.html                                     200
+
+# Translated blog rewrites — Japanese
+/ja/blog/vitamin-c-vs-retinol               /index.html                                     200
+/ja/blog/vitamin-c-vs-retinol/              /index.html                                     200
+/ja/blog/three-cell-skin-philosophy         /index.html                                     200
+/ja/blog/three-cell-skin-philosophy/        /index.html                                     200
+/ja/blog/why-ph-matters-vitamin-c           /index.html                                     200
+/ja/blog/why-ph-matters-vitamin-c/          /index.html                                     200
+
+# Translated blog rewrites — German
+/de/blog/vitamin-c-vs-retinol               /index.html                                     200
+/de/blog/vitamin-c-vs-retinol/              /index.html                                     200
+/de/blog/drei-zellen-haut-philosophie       /index.html                                     200
+/de/blog/drei-zellen-haut-philosophie/      /index.html                                     200
+/de/blog/warum-ph-wichtig-vitamin-c         /index.html                                     200
+/de/blog/warum-ph-wichtig-vitamin-c/        /index.html                                     200
+
+# Legacy international page redirects — JA/DE
+/japanese-patients                          /ja/                                            301
+/japanese-patients/                         /ja/                                            301
+/german-patients                            /de/                                            301
+/german-patients/                           /de/                                            301
+
 # --- WILDCARD: Any remaining /blog/* URL → /treatments/ ---
 /blog/*                                       /treatments/                                    301
 
