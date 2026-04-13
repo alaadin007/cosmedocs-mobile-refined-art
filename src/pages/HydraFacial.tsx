@@ -9,6 +9,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import HydraFacialSidebar from "@/components/skin-rejuvenation/HydraFacialSidebar";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const HydraFacial = () => {
   const seoData = generateSEOMetadata("HydraFacial London | Cosmedocs Harley Street", "Deep cleanse, exfoliate & hydrate with HydraFacial. Vortex technology for instantly glowing skin. Doctor-led treatments on Harley Street.", "/treatments/hydrafacial/");
@@ -198,6 +199,13 @@ const HydraFacial = () => {
           <p>HydraFacial at Cosmedocs is available from £175 per session. We offer signature, deluxe, and platinum packages to suit different skin needs and budgets. Our experienced practitioners customise each HydraFacial with targeted boosters and serums selected for your specific skin concerns. Book your HydraFacial consultation at our Harley Street clinic — Cosmedocs has been delivering exceptional skin treatments since 2007.</p>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="general" />
+        </div>
+      </section>
     </>
   );
 };

@@ -8,6 +8,7 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import ChinFillerSidebar from "@/components/chin-filler/ChinFillerSidebar";
 import chinIllustration from "@/assets/jaw-profile-illustration.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const ChinFiller = () => {
   const faqs = [
@@ -645,6 +646,13 @@ const ChinFiller = () => {
           </article>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

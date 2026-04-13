@@ -9,6 +9,7 @@ import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
 import cheekBaPreview from "@/assets/1ml-cheek-fillers-before-after.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const CheekFiller = () => {
   const faqs = [
@@ -637,6 +638,13 @@ const CheekFiller = () => {
           </p>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

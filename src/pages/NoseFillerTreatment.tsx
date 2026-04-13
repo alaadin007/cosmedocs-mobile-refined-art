@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import NoseFillerSidebar from '@/components/nose-filler/NoseFillerSidebar';
 import ExpandableSection from '@/components/ui/expandable-section';
 import noseIllustration from '@/assets/nose-profile-illustration.png';
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const NoseFillerTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -667,6 +668,13 @@ const NoseFillerTreatment = () => {
           </p>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

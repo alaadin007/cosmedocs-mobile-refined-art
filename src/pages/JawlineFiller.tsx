@@ -10,6 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import jawlineGallery2 from "@/assets/jawline-gallery-2.jpg";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const JawlineFiller = () => {
   const faqs = [
@@ -696,6 +697,13 @@ const JawlineFiller = () => {
           </article>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };
