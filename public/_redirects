@@ -458,6 +458,44 @@
 /blog/smokers-lines-women-guide/             /index.html                                     200
 /blog/turning-30-aesthetic-guide             /index.html                                     200
 /blog/turning-30-aesthetic-guide/            /index.html                                     200
+/blog/vitamin-c-vs-retinol                  /index.html                                     200
+/blog/vitamin-c-vs-retinol/                 /index.html                                     200
+/blog/three-cell-skin-philosophy            /index.html                                     200
+/blog/three-cell-skin-philosophy/           /index.html                                     200
+/blog/why-ph-matters-vitamin-c              /index.html                                     200
+/blog/why-ph-matters-vitamin-c/             /index.html                                     200
+
+# Translated blog rewrites — Arabic
+/ar/blog/vitamin-c-vs-retinol               /index.html                                     200
+/ar/blog/vitamin-c-vs-retinol/              /index.html                                     200
+/ar/blog/three-cell-skin-philosophy         /index.html                                     200
+/ar/blog/three-cell-skin-philosophy/        /index.html                                     200
+/ar/blog/why-ph-matters-vitamin-c           /index.html                                     200
+/ar/blog/why-ph-matters-vitamin-c/          /index.html                                     200
+
+# Translated blog rewrites — French
+/fr/blog/vitamine-c-vs-retinol              /index.html                                     200
+/fr/blog/vitamine-c-vs-retinol/             /index.html                                     200
+/fr/blog/philosophie-3-cellules-peau        /index.html                                     200
+/fr/blog/philosophie-3-cellules-peau/       /index.html                                     200
+/fr/blog/pourquoi-ph-important-vitamine-c   /index.html                                     200
+/fr/blog/pourquoi-ph-important-vitamine-c/  /index.html                                     200
+
+# Translated blog rewrites — Spanish
+/es/blog/vitamina-c-vs-retinol              /index.html                                     200
+/es/blog/vitamina-c-vs-retinol/             /index.html                                     200
+/es/blog/filosofia-3-celulas-piel           /index.html                                     200
+/es/blog/filosofia-3-celulas-piel/          /index.html                                     200
+/es/blog/por-que-ph-importa-vitamina-c      /index.html                                     200
+/es/blog/por-que-ph-importa-vitamina-c/     /index.html                                     200
+
+# Translated blog rewrites — Chinese
+/zh/blog/vitamin-c-vs-retinol               /index.html                                     200
+/zh/blog/vitamin-c-vs-retinol/              /index.html                                     200
+/zh/blog/three-cell-skin-philosophy         /index.html                                     200
+/zh/blog/three-cell-skin-philosophy/        /index.html                                     200
+/zh/blog/why-ph-matters-vitamin-c           /index.html                                     200
+/zh/blog/why-ph-matters-vitamin-c/          /index.html                                     200
 
 # --- WILDCARD: Any remaining /blog/* URL → /treatments/ ---
 /blog/*                                       /treatments/                                    301
