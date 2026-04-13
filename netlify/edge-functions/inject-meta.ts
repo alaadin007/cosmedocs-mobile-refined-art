@@ -511,7 +511,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Cosmedocs Barbados | Aesthetic Clinic',
     description: 'Cosmedocs aesthetic treatments in Barbados. Botox, fillers & skin rejuvenation by Harley Street-trained doctors.'
   },
-  // Language pages
+  // Language pages (legacy)
   '/treatments-summary-arabic/': {
     title: 'علاجات التجميل | Cosmedocs London',
     description: 'ملخص علاجات التجميل في كوزمي دوكس. حقن البوتوكس والفيلر وتجديد البشرة في شارع هارلي، لندن.'
@@ -523,6 +523,203 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/treatments-summary-japanese/': {
     title: '美容治療 | Cosmedocs London',
     description: 'Cosmedocsの美容治療の概要。ボトックス、フィラー、スキンリジュビネーション。ロンドン・ハーレーストリート。'
+  },
+  // ===== MULTILINGUAL STATIC PAGES =====
+  // Arabic
+  '/ar/': {
+    title: 'كوزمي دوكس لندن | الطب التجميلي | هارلي ستريت',
+    description: 'عيادة تجميلية في هارلي ستريت بإدارة الدكتور أحمد حق. البوتوكس والفيلر وعلاجات البشرة. فن التجميل الخفي.'
+  },
+  '/ar/treatments/': {
+    title: 'علاجات التجميل لندن | كوزمي دوكس هارلي ستريت',
+    description: 'اكتشف مجموعتنا الكاملة من العلاجات التجميلية بإشراف الأطباء. البوتوكس، الفيلر، تجديد البشرة والليزر في هارلي ستريت.'
+  },
+  '/ar/treatments/botox/': {
+    title: 'البوتوكس لندن | حقن مضادة للتجاعيد | كوزمي دوكس',
+    description: 'علاجات البوتوكس المتخصصة من £275. حقن مضادة للتجاعيد بإشراف الأطباء في هارلي ستريت منذ 2007.'
+  },
+  '/ar/treatments/dermal-fillers/': {
+    title: 'حقن الفيلر لندن | كوزمي دوكس هارلي ستريت',
+    description: 'علاجات الفيلر الجلدي بإشراف الأطباء. فيلر الشفاه والخدود وخط الفك والذقن وتحت العين في هارلي ستريت.'
+  },
+  '/ar/treatments/lip-fillers/': {
+    title: 'فيلر الشفاه لندن | تكبير الشفاه الطبيعي | كوزمي دوكس',
+    description: 'علاجات فيلر الشفاه المتخصصة من £350. تكبير شفاه طبيعي ومتوازن بإشراف أطباء هارلي ستريت.'
+  },
+  '/ar/treatments/jawline-filler/': {
+    title: 'فيلر خط الفك لندن | تحديد الفك | كوزمي دوكس',
+    description: 'نحت وتحديد خط الفك بفيلر متخصص. نحت خط الفك بإشراف أطباء هارلي ستريت منذ 2007.'
+  },
+  '/ar/treatments/chin-filler/': {
+    title: 'فيلر الذقن لندن | تكبير الذقن | كوزمي دوكس',
+    description: 'تحديد وإبراز الذقن بفيلر متخصص. تكبير الذقن بدون جراحة بإشراف أطباء هارلي ستريت.'
+  },
+  '/ar/treatments/tear-trough-filler/': {
+    title: 'فيلر تحت العين لندن | علاج الهالات | كوزمي دوكس',
+    description: 'تجديد منطقة تحت العين بفيلر متخصص. تقليل الهالات السوداء والتجاويف بإشراف أطباء هارلي ستريت.'
+  },
+  '/ar/treatments/skin-rejuvenation/': {
+    title: 'تجديد البشرة لندن | كوزمي دوكس هارلي ستريت',
+    description: 'علاجات تجديد البشرة المتقدمة بما في ذلك بروفايلو والبولينوكليوتيدات والميكرونيدلينج والتقشير الكيميائي.'
+  },
+  '/ar/prices/': {
+    title: 'أسعار العلاج | كوزمي دوكس هارلي ستريت',
+    description: 'أسعار شفافة لجميع العلاجات التجميلية. البوتوكس من £275، فيلر الشفاه من £350. بدون تكاليف مخفية.'
+  },
+  '/ar/contact/': {
+    title: 'اتصل بنا | كوزمي دوكس هارلي ستريت',
+    description: 'تواصل مع كوزمي دوكس. احجز استشارة أو تواصل عبر واتساب. هارلي ستريت، لندن.'
+  },
+  '/ar/about-us/': {
+    title: 'عن كوزمي دوكس | أطباء هارلي ستريت منذ 2007',
+    description: 'تعرف على فريق كوزمي دوكس — أطباء مسجلون في GMC مع أكثر من مليون حقنة منذ 2007.'
+  },
+  // French
+  '/fr/': {
+    title: 'Cosmedocs Londres | Médecine Esthétique | Harley Street',
+    description: 'Clinique esthétique à Harley Street par le Dr Ahmed Haq. Botox, acide hyaluronique et traitements cutanés. L\'art esthétique invisible.'
+  },
+  '/fr/traitements/': {
+    title: 'Traitements Esthétiques Londres | Cosmedocs Harley Street',
+    description: 'Découvrez notre gamme complète de traitements esthétiques. Botox, acide hyaluronique, rajeunissement cutané et laser à Harley Street.'
+  },
+  '/fr/traitements/botox/': {
+    title: 'Botox Londres | Injections Anti-Rides | Cosmedocs Harley Street',
+    description: 'Traitements Botox experts dès £275. Injections anti-rides par des médecins à Harley Street depuis 2007.'
+  },
+  '/fr/traitements/acide-hyaluronique/': {
+    title: 'Acide Hyaluronique Londres | Cosmedocs Harley Street',
+    description: 'Injections d\'acide hyaluronique par des médecins. Lèvres, pommettes, mâchoire, menton et cernes à Harley Street.'
+  },
+  '/fr/traitements/injection-levres/': {
+    title: 'Injection Lèvres Londres | Cosmedocs Harley Street',
+    description: 'Injections lèvres expertes dès £350. Augmentation naturelle des lèvres par des médecins à Harley Street.'
+  },
+  '/fr/traitements/filler-machoire/': {
+    title: 'Filler Mâchoire Londres | Cosmedocs Harley Street',
+    description: 'Sculptez et définissez votre mâchoire avec un filler expert. Contouring de la mâchoire par des médecins à Harley Street.'
+  },
+  '/fr/traitements/filler-menton/': {
+    title: 'Filler Menton Londres | Cosmedocs Harley Street',
+    description: 'Définissez et projetez votre menton avec un filler expert. Augmentation du menton sans chirurgie à Harley Street.'
+  },
+  '/fr/traitements/cernes-creuses/': {
+    title: 'Cernes Creuses Londres | Cosmedocs Harley Street',
+    description: 'Rafraîchissez vos cernes avec un filler expert. Réduisez les cernes et les creux sous les yeux à Harley Street.'
+  },
+  '/fr/traitements/rajeunissement-peau/': {
+    title: 'Rajeunissement Cutané Londres | Cosmedocs Harley Street',
+    description: 'Traitements avancés de rajeunissement cutané incluant Profhilo, polynucléotides, microneedling et peelings chimiques.'
+  },
+  '/fr/tarifs/': {
+    title: 'Tarifs | Cosmedocs Harley Street Londres',
+    description: 'Tarifs transparents pour tous les traitements esthétiques. Botox dès £275, injection lèvres dès £350.'
+  },
+  '/fr/contact/': {
+    title: 'Contact | Cosmedocs Harley Street',
+    description: 'Contactez Cosmedocs. Prenez rendez-vous ou envoyez-nous un message sur WhatsApp. Harley Street, Londres.'
+  },
+  '/fr/a-propos/': {
+    title: 'À Propos de Cosmedocs | Médecins Harley Street depuis 2007',
+    description: 'Découvrez l\'équipe Cosmedocs — médecins GMC avec plus d\'un million d\'injections depuis 2007.'
+  },
+  // Spanish
+  '/es/': {
+    title: 'Cosmedocs Londres | Medicina Estética | Harley Street',
+    description: 'Clínica estética en Harley Street por el Dr. Ahmed Haq. Botox, ácido hialurónico y tratamientos cutáneos. El arte estético invisible.'
+  },
+  '/es/tratamientos/': {
+    title: 'Tratamientos Estéticos Londres | Cosmedocs Harley Street',
+    description: 'Descubra nuestra gama completa de tratamientos estéticos. Botox, ácido hialurónico, rejuvenecimiento cutáneo y láser en Harley Street.'
+  },
+  '/es/tratamientos/botox/': {
+    title: 'Botox Londres | Inyecciones Antiarrugas | Cosmedocs',
+    description: 'Tratamientos de Botox expertos desde £275. Inyecciones antiarrugas por médicos en Harley Street desde 2007.'
+  },
+  '/es/tratamientos/acido-hialuronico/': {
+    title: 'Ácido Hialurónico Londres | Cosmedocs Harley Street',
+    description: 'Inyecciones de ácido hialurónico por médicos. Labios, pómulos, mandíbula, mentón y ojeras en Harley Street.'
+  },
+  '/es/tratamientos/relleno-labios/': {
+    title: 'Relleno de Labios Londres | Cosmedocs Harley Street',
+    description: 'Tratamientos de relleno labial expertos desde £350. Aumento labial natural por médicos en Harley Street.'
+  },
+  '/es/tratamientos/relleno-mandibula/': {
+    title: 'Relleno Mandíbula Londres | Cosmedocs Harley Street',
+    description: 'Esculpa y defina su mandíbula con relleno experto. Contorno mandibular por médicos en Harley Street.'
+  },
+  '/es/tratamientos/relleno-menton/': {
+    title: 'Relleno Mentón Londres | Cosmedocs Harley Street',
+    description: 'Defina y proyecte su mentón con relleno experto. Aumento de mentón sin cirugía en Harley Street.'
+  },
+  '/es/tratamientos/ojeras/': {
+    title: 'Ojeras Londres | Cosmedocs Harley Street',
+    description: 'Refresque sus ojeras con relleno experto. Reduzca las ojeras y las depresiones bajo los ojos en Harley Street.'
+  },
+  '/es/tratamientos/rejuvenecimiento-piel/': {
+    title: 'Rejuvenecimiento Cutáneo Londres | Cosmedocs Harley Street',
+    description: 'Tratamientos avanzados de rejuvenecimiento cutáneo incluyendo Profhilo, polinucleótidos, microneedling y peelings químicos.'
+  },
+  '/es/precios/': {
+    title: 'Precios | Cosmedocs Harley Street Londres',
+    description: 'Precios transparentes para todos los tratamientos estéticos. Botox desde £275, relleno labial desde £350.'
+  },
+  '/es/contacto/': {
+    title: 'Contacto | Cosmedocs Harley Street',
+    description: 'Contacte con Cosmedocs. Reserve una consulta o envíenos un mensaje por WhatsApp. Harley Street, Londres.'
+  },
+  '/es/sobre-nosotros/': {
+    title: 'Sobre Cosmedocs | Médicos Harley Street desde 2007',
+    description: 'Conozca al equipo Cosmedocs — médicos GMC con más de un millón de inyecciones desde 2007.'
+  },
+  // Chinese
+  '/zh/': {
+    title: 'Cosmedocs 伦敦 | 哈利街美容医学诊所',
+    description: '哈利街美容诊所，由Ahmed Haq医生主导。肉毒杆菌、填充剂和皮肤治疗。隐形艺术 — 大胆 — 自然。'
+  },
+  '/zh/treatments/': {
+    title: '伦敦美容治疗 | Cosmedocs 哈利街',
+    description: '探索我们完整的医生主导美容治疗系列。肉毒杆菌、玻尿酸填充、皮肤焕活、激光和整形手术。'
+  },
+  '/zh/treatments/botox/': {
+    title: '伦敦肉毒杆菌 | 抗皱注射 | Cosmedocs 哈利街',
+    description: '专业肉毒杆菌治疗从£275起。自2007年起在哈利街由医生主导的抗皱注射。'
+  },
+  '/zh/treatments/dermal-fillers/': {
+    title: '伦敦玻尿酸填充 | Cosmedocs 哈利街',
+    description: '医生主导的玻尿酸填充治疗。丰唇、苹果肌、下颌线、下巴和泪沟填充在哈利街。'
+  },
+  '/zh/treatments/lip-fillers/': {
+    title: '伦敦丰唇 | 自然唇部增强 | Cosmedocs 哈利街',
+    description: '专业丰唇治疗从£350起。自然、平衡的唇部增强，由哈利街医生操作。'
+  },
+  '/zh/treatments/jawline-filler/': {
+    title: '伦敦下颌线填充 | 下颌塑形 | Cosmedocs 哈利街',
+    description: '使用专业填充剂雕塑和定义您的下颌线。自2007年起在哈利街由医生主导。'
+  },
+  '/zh/treatments/chin-filler/': {
+    title: '伦敦下巴填充 | 下巴增大 | Cosmedocs 哈利街',
+    description: '使用专业填充剂定义和突出您的下巴。哈利街医生主导的非手术下巴增大。'
+  },
+  '/zh/treatments/tear-trough-filler/': {
+    title: '伦敦泪沟填充 | 眼下治疗 | Cosmedocs',
+    description: '使用专业泪沟填充剂刷新疲惫的眼下区域。减少黑眼圈和凹陷。哈利街医生主导。'
+  },
+  '/zh/treatments/skin-rejuvenation/': {
+    title: '伦敦皮肤焕活 | Cosmedocs 哈利街',
+    description: '先进的皮肤焕活治疗，包括Profhilo、多核苷酸、微针和化学换肤。哈利街医生主导。'
+  },
+  '/zh/prices/': {
+    title: '治疗价格 | Cosmedocs 哈利街 伦敦',
+    description: '所有美容治疗的透明价格。肉毒杆菌从£275起，丰唇从£350起。没有隐藏费用。'
+  },
+  '/zh/contact/': {
+    title: '联系 Cosmedocs | 哈利街美容诊所 伦敦',
+    description: '联系Cosmedocs。预约咨询或通过WhatsApp给我们发消息。哈利街，伦敦。'
+  },
+  '/zh/about-us/': {
+    title: '关于 Cosmedocs | 哈利街医生 始于2007年',
+    description: '了解Cosmedocs团队 — GMC注册医生，自2007年以来超过100万次注射。'
   },
   // Dermatology
   '/treatments/dermatology/': {
