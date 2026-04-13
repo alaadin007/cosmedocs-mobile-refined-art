@@ -497,6 +497,24 @@
 /zh/blog/why-ph-matters-vitamin-c           /index.html                                     200
 /zh/blog/why-ph-matters-vitamin-c/          /index.html                                     200
 
+# --- Tier 2 translated treatment pages ---
+/ar/treatments/nose-filler                  /index.html                                     200
+/ar/treatments/nose-filler/                 /index.html                                     200
+/ar/treatments/profhilo                     /index.html                                     200
+/ar/treatments/profhilo/                    /index.html                                     200
+/fr/traitements/rhinoplastie-medicale       /index.html                                     200
+/fr/traitements/rhinoplastie-medicale/      /index.html                                     200
+/fr/traitements/profhilo                    /index.html                                     200
+/fr/traitements/profhilo/                   /index.html                                     200
+/es/tratamientos/relleno-nariz              /index.html                                     200
+/es/tratamientos/relleno-nariz/             /index.html                                     200
+/es/tratamientos/profhilo                   /index.html                                     200
+/es/tratamientos/profhilo/                  /index.html                                     200
+/zh/treatments/nose-filler                  /index.html                                     200
+/zh/treatments/nose-filler/                 /index.html                                     200
+/zh/treatments/profhilo                     /index.html                                     200
+/zh/treatments/profhilo/                    /index.html                                     200
+
 # --- WILDCARD: Any remaining /blog/* URL → /treatments/ ---
 /blog/*                                       /treatments/                                    301
 

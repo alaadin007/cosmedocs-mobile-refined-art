@@ -721,6 +721,40 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: '关于 Cosmedocs | 哈利街医生 始于2007年',
     description: '了解Cosmedocs团队 — GMC注册医生，自2007年以来超过100万次注射。'
   },
+  // Tier 2 — Nose Filler translations
+  '/ar/treatments/nose-filler/': {
+    title: 'تجميل الأنف بدون جراحة لندن | فيلر الأنف | كوزمي دوكس',
+    description: 'تجميل الأنف بدون جراحة باستخدام الفيلر. تصحيح حدبة الأنف وتنحيف الجسر ورفع طرف الأنف. هارلي ستريت منذ 2007.'
+  },
+  '/fr/traitements/rhinoplastie-medicale/': {
+    title: 'Rhinoplastie Médicale Londres | Filler Nez | Cosmedocs',
+    description: 'Rhinoplastie sans chirurgie par acide hyaluronique. Correction de bosse, affinement et projection de la pointe. Harley Street depuis 2007.'
+  },
+  '/es/tratamientos/relleno-nariz/': {
+    title: 'Rinomodelación Londres | Relleno Nariz | Cosmedocs',
+    description: 'Rinomodelación sin cirugía con ácido hialurónico. Corrección de giba, afinamiento y elevación de punta. Harley Street desde 2007.'
+  },
+  '/zh/treatments/nose-filler/': {
+    title: '伦敦鼻部填充 | 非手术鼻整形 | Cosmedocs 哈利街',
+    description: '非手术鼻部塑形，使用玻尿酸填充剂。驼峰矫正、鼻梁细化和鼻尖提升。哈利街专业医生操作，始于2007年。'
+  },
+  // Tier 2 — Profhilo translations
+  '/ar/treatments/profhilo/': {
+    title: 'بروفايلو لندن | تجديد البشرة الحيوي | كوزمي دوكس',
+    description: 'علاج بروفايلو لتجديد البشرة من £350. تحفيز الكولاجين والإيلاستين. هارلي ستريت منذ 2007.'
+  },
+  '/fr/traitements/profhilo/': {
+    title: 'Profhilo Londres | Bio-Remodelage Cutané | Cosmedocs',
+    description: 'Traitement Profhilo bio-remodelage dès £350. Stimule le collagène et l\'élastine pour un rajeunissement naturel. Harley Street depuis 2007.'
+  },
+  '/es/tratamientos/profhilo/': {
+    title: 'Profhilo Londres | Bio-Remodelación Cutánea | Cosmedocs',
+    description: 'Tratamiento Profhilo bio-remodelación desde £350. Estimula colágeno y elastina para rejuvenecimiento natural. Harley Street desde 2007.'
+  },
+  '/zh/treatments/profhilo/': {
+    title: '伦敦Profhilo治疗 | 生物重塑焕肤 | Cosmedocs 哈利街',
+    description: 'Profhilo生物重塑治疗从£350起。刺激胶原蛋白和弹性蛋白，实现自然皮肤焕活。哈利街始于2007年。'
+  },
   // Dermatology
   '/treatments/dermatology/': {
     title: 'Dermatologist Harley Street | Cosmedocs',
