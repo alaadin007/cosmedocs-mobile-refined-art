@@ -59,6 +59,28 @@ export default function ContactGerman() {
             </button>
           </form>
         </div>
+
+        {/* Additional Info */}
+        <section className="max-w-5xl mx-auto px-4 pb-20">
+          <h2 className="text-2xl font-light text-center mb-6">Ihr Besuch bei <span className="text-[#C9A050]">Cosmedocs</span></h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              Cosmedocs befindet sich im Herzen von Londons Mayfair-Viertel, in der weltberühmten Harley Street. Die nächste U-Bahn-Station ist Oxford Circus, nur etwa 5 Gehminuten entfernt. Auch die Station Bond Street ist fußläufig erreichbar. Vom Flughafen Heathrow erreichen Sie uns mit dem Heathrow Express und einem Taxi in etwa 40 Minuten.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Wenn Sie zum ersten Mal zu uns kommen, empfehlen wir zunächst eine Beratung. Dabei besprechen wir Ihre Wünsche im Detail, bewerten Ihren Hautzustand und erstellen einen individuellen Behandlungsplan. Auf Wunsch können Beratung und Behandlung am selben Tag stattfinden — ideal für Patienten, die aus dem Ausland anreisen. Bitte teilen Sie uns dies bei der Terminbuchung mit.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Die Beratung findet auf Englisch statt. Dr. Ahmed Haq und sein Team haben langjährige Erfahrung in der Betreuung internationaler Patienten und erklären alle Schritte in klarer, verständlicher Sprache. Wir verwenden visuelle Hilfsmittel wie Fotos und Diagramme, um die vorgeschlagene Behandlung zu veranschaulichen. Selbstverständlich können Sie jederzeit Fragen stellen.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Sie können uns per E-Mail, Telefon oder WhatsApp kontaktieren. Über WhatsApp haben Sie die Möglichkeit, Fotos zu senden, damit wir Ihre Anliegen vorab besser einschätzen können. Termine können auch online gebucht werden. Wir antworten in der Regel innerhalb von 24 Stunden auf alle Anfragen.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Viele unserer deutschsprachigen Patienten verbinden ihren Besuch mit einem London-Wochenende — Shopping auf der Oxford Street, Theater im West End und eine ästhetische Behandlung bei Cosmedocs. Unsere Ästhetik ist unsichtbare Kunst. Mutig, natürlich, immer Ihr Weg. Wir freuen uns darauf, Sie in unserer Klinik willkommen zu heißen.
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );

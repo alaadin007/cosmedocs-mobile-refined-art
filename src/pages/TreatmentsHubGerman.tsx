@@ -26,11 +26,14 @@ export default function TreatmentsHubGerman() {
         <section className="py-16 md:py-24 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">Ästhetische <span className="text-[#C9A050]">Behandlungen</span></h1>
-            <p className="text-lg text-white/60">Arztgeleitete ästhetische Medizin — seit 2007 an der Harley Street</p>
+            <p className="text-lg text-white/60 mb-6">Arztgeleitete ästhetische Medizin — seit 2007 an der Harley Street</p>
+            <p className="text-sm text-white/40 max-w-2xl mx-auto leading-relaxed">
+              Cosmedocs bietet ein umfassendes Spektrum ästhetischer Behandlungen: Botox, Hyaluronsäure-Filler, Hautverjüngung, Laserbehandlungen und PDO-Fäden. Alle Eingriffe werden von GMC-registrierten Ärzten durchgeführt und basieren auf den neuesten wissenschaftlichen Erkenntnissen.
+            </p>
           </div>
         </section>
 
-        <div className="max-w-5xl mx-auto px-4 pb-20 space-y-8">
+        <div className="max-w-5xl mx-auto px-4 pb-8 space-y-8">
           {categories.map(cat => (
             <div key={cat.title} className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 md:p-8">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
@@ -53,6 +56,28 @@ export default function TreatmentsHubGerman() {
             </div>
           ))}
         </div>
+
+        {/* Educational Content */}
+        <section className="max-w-5xl mx-auto px-4 py-16">
+          <h2 className="text-2xl font-light text-center mb-8">Behandlungs<span className="text-[#C9A050]">ratgeber</span></h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              Die Welt der ästhetischen Medizin bietet zahlreiche Möglichkeiten, und die Auswahl der richtigen Behandlung kann herausfordernd sein. Bei Cosmedocs analysieren wir in einer ausführlichen Beratung Ihre individuelle Gesichtsanatomie, Ihren Hautzustand und Ihre ästhetischen Ziele, um einen maßgeschneiderten Behandlungsplan zu erstellen.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Für dynamische Falten — Falten, die durch Muskelbewegung entstehen — ist Botox die optimale Lösung. Es glättet effektiv Stirnfalten, Zornesfalten und Krähenfüße. Statische Falten hingegen, die auch in Ruhe sichtbar sind, sowie altersbedingter Volumenverlust werden am besten mit Hyaluronsäure-Fillern behandelt.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Wenn Sie eine allgemeine Verbesserung Ihrer Hautqualität anstreben, empfehlen sich Behandlungen wie Profhilo oder Polynukleotide. Diese stimulieren die körpereigene Kollagen- und Elastinproduktion und verbessern Elastizität, Festigkeit und den natürlichen Glow der Haut von innen heraus. Microneedling und chemische Peelings beschleunigen die Hauterneuerung und sind besonders wirksam bei Aknenarben und Pigmentflecken.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Für Anliegen rund um die Gesichtskontur bieten strukturelle Filler an Kinnlinie, Kinn und Wangen eine nicht-chirurgische Lösung für definierte, harmonische Proportionen. Masseter Botox reduziert einen ausgeprägten Kiefer und erzielt einen schlankeren Gesichtsumriss. Die nicht-chirurgische Nasenkorrektur mit Filler kann die Nasenform verfeinern — ganz ohne Operation.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Unsere Ästhetik ist unsichtbare Kunst. Mutig, natürlich, immer Ihr Weg. Unabhängig davon, welche Behandlung Sie wählen — bei Cosmedocs stehen natürliche, harmonische Ergebnisse immer an erster Stelle. Vereinbaren Sie eine unverbindliche Beratung und lassen Sie sich persönlich beraten.
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );

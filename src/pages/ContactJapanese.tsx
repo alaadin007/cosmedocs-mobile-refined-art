@@ -59,6 +59,28 @@ export default function ContactJapanese() {
             </button>
           </form>
         </div>
+
+        {/* Additional Info */}
+        <section className="max-w-5xl mx-auto px-4 pb-20">
+          <h2 className="text-2xl font-light text-center mb-6">ご来院に<span className="text-[#C9A050]">ついて</span></h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              Cosmedocsは、ロンドンのメイフェア地区、世界的に有名なハーレーストリートに位置しています。最寄り駅はOxford Circus（オックスフォード・サーカス）駅で、徒歩約5分です。Bond Street（ボンド・ストリート）駅からも徒歩圏内にあります。ヒースロー空港からはヒースロー・エクスプレスとタクシーで約40分でお越しいただけます。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              初めてお越しの方は、まずカウンセリングをご予約ください。カウンセリングでは、ご希望の治療について詳しくお伺いし、お顔の状態を評価した上で、最適な治療プランをご提案いたします。カウンセリングと施術を同日に受けることも可能ですので、お申し込みの際にお知らせください。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              カウンセリングは英語で行われますが、Dr. Ahmed Haqおよびスタッフは多くの国際患者様を診療した経験があり、分かりやすい言葉で丁寧にご説明いたします。医療用語を避け、写真や図を用いた視覚的な説明を重視しています。ご不明な点があれば、何度でもお気軽にご質問ください。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              お問い合わせはメール、電話、またはWhatsAppで受け付けています。WhatsAppでは写真をお送りいただくことも可能で、事前にお悩みの部位を確認することができます。ご予約はオンラインでも承っております。迅速な対応を心がけておりますので、通常24時間以内にお返事いたします。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              私たちの美学は見えない芸術。大胆、自然、常にあなたらしく。ロンドンでの美容医療体験を、Cosmedocsがお手伝いいたします。日本からのご旅行の際は、ぜひお立ち寄りください。
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );
