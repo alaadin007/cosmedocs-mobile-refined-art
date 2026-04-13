@@ -51,8 +51,8 @@ export default function RelatedTreatments({ principleId }: { principleId: string
   if (!treatments) return null;
 
   return (
-    <div className="mt-10 pt-8 border-t border-white/[0.06]">
-      <p className="text-[10px] font-medium text-white/30 uppercase tracking-[0.2em] mb-4">
+    <div className="mt-10 pt-8 border-t border-gray-200">
+      <p className="text-[10px] font-medium text-gray-400 uppercase tracking-[0.2em] mb-4">
         Where this matters clinically
       </p>
       <div className="flex flex-wrap gap-3">
@@ -67,7 +67,7 @@ export default function RelatedTreatments({ principleId }: { principleId: string
             <Component
               key={index}
               {...(props as any)}
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] hover:bg-[#C9A050]/10 border border-white/[0.08] hover:border-[#C9A050]/30 text-white/50 hover:text-[#C9A050] rounded-full text-xs font-medium transition-all duration-300"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white hover:bg-amber-50 border border-gray-200 hover:border-[#C9A050]/40 text-gray-500 hover:text-[#C9A050] rounded-full text-xs font-medium transition-all duration-300 shadow-sm"
             >
               {treatment.title}
               <ArrowRight className="w-3 h-3" />
