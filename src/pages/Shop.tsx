@@ -11,12 +11,12 @@ const products = [
     subtitle: "Antioxidants Formula on Steroids",
     description:
       "Power up your skin's radiance with 20% L-ascorbic acid, Ferulic acid, and Vitamin E at a low pH. This clinical formula guarantees serum penetration, antioxidant efficacy and stability.",
-    image:
-      "https://www.hsformulations.com/wp-content/uploads/2023/03/product.png",
+    image: vitaminCImg,
     price: "£85.00",
     rating: 5,
     reviews: 7,
-    url: "https://www.hsformulations.com/product/revitalise-c20-topical-vitamin-c-facial-serum/",
+    url: "/shop/vitamin-c-serum/",
+    external: "https://www.hsformulations.com/product/revitalise-c20-topical-vitamin-c-facial-serum/",
     skinType: "Normal, Oily Skin",
     concerns: "Skin ageing, uneven tone, skin spots",
   },
@@ -25,12 +25,12 @@ const products = [
     subtitle: "Dual Retinol (Vitamin A) Cream",
     description:
       "Our retinoid cream contains 0.5% retinol and retinyl palmitate, working together to rejuvenate the skin and provide a glowing complexion with essential hydration and nourishment.",
-    image:
-      "https://www.hsformulations.com/wp-content/uploads/2020/09/stimulate-retinol.png",
+    image: retinolImg,
     price: "£65.00",
     rating: 5,
     reviews: 4,
-    url: "https://www.hsformulations.com/product/retinol-stimulate-re/",
+    url: "/shop/retinol-cream/",
+    external: "https://www.hsformulations.com/product/retinol-stimulate-re/",
     skinType: "Dry, Normal, Oily Skin",
     concerns: "Skin ageing, age spots, sun damage, fine lines & wrinkles",
   },
