@@ -143,7 +143,7 @@ export default function TreatmentCategoryNav() {
               </DropdownMenuTrigger>
               <DropdownMenuContent 
                 align="start" 
-                className="bg-zinc-900 border-zinc-800 min-w-[200px] max-h-[400px] overflow-y-auto z-[60]"
+                className="bg-zinc-950 border-zinc-700 min-w-[220px] max-h-[400px] overflow-y-auto z-[60] shadow-2xl"
               >
                 <DropdownMenuItem
                   className="text-white hover:bg-white/10 cursor-pointer font-medium"
