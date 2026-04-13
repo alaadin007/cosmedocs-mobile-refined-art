@@ -16,6 +16,7 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const HyperpigmentationTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -1011,6 +1012,7 @@ const HyperpigmentationTreatment = () => {
           </p>
         </div>
       </div>
+      <section className="py-12 px-4"><div className="max-w-5xl mx-auto"><SkinFoundationCTA variant="uneven-tone" /></div></section>
     </>
   );
 };

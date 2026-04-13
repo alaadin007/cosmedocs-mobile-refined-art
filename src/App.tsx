@@ -236,6 +236,9 @@ const TearTroughFillerResultsExplained = lazy(() => import("./pages/blog/TearTro
 const JawFillerResultsExplained = lazy(() => import("./pages/blog/JawFillerResultsExplained"));
 const ChinFillerResultsExplained = lazy(() => import("./pages/blog/ChinFillerResultsExplained"));
 const LipFillerResultsExplained = lazy(() => import("./pages/blog/LipFillerResultsExplained"));
+const VitaminCvsRetinol = lazy(() => import("./pages/blog/VitaminCvsRetinol"));
+const ThreeCellPhilosophy = lazy(() => import("./pages/blog/ThreeCellPhilosophy"));
+const WhyPHMattersVitaminC = lazy(() => import("./pages/blog/WhyPHMattersVitaminC"));
 const BotoxFAQs = lazy(() => import("./pages/BotoxFAQs"));
 const UltimateBotoxGuide = lazy(() => import("./pages/UltimateBotoxGuide"));
 const Blepharoplasty = lazy(() => import("./pages/Blepharoplasty"));
@@ -856,6 +859,12 @@ const App = () => {
                           <Route path="/blog/chin-filler-results-explained/" element={<ChinFillerResultsExplained />} />
                           <Route path="/blog/lip-filler-results-explained" element={<LipFillerResultsExplained />} />
                           <Route path="/blog/lip-filler-results-explained/" element={<LipFillerResultsExplained />} />
+                          <Route path="/blog/vitamin-c-vs-retinol" element={<VitaminCvsRetinol />} />
+                          <Route path="/blog/vitamin-c-vs-retinol/" element={<VitaminCvsRetinol />} />
+                          <Route path="/blog/three-cell-skin-philosophy" element={<ThreeCellPhilosophy />} />
+                          <Route path="/blog/three-cell-skin-philosophy/" element={<ThreeCellPhilosophy />} />
+                          <Route path="/blog/why-ph-matters-vitamin-c" element={<WhyPHMattersVitaminC />} />
+                          <Route path="/blog/why-ph-matters-vitamin-c/" element={<WhyPHMattersVitaminC />} />
 
                           {/* Blog hub — lists only the 4 permitted blogs */}
                           <Route path="/journal" element={<BlogHome />} />

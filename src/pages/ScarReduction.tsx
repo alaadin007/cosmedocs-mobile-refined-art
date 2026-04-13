@@ -26,6 +26,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 // Animation variants
 const fadeInUp = {
@@ -1101,6 +1102,7 @@ const ScarReduction = () => {
           </p>
         </div>
       </main>
+      <section className="py-12 px-4"><div className="max-w-5xl mx-auto"><SkinFoundationCTA variant="anti-ageing" /></div></section>
     </>
   );
 };
