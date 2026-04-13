@@ -807,6 +807,58 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Why pH Matters in Vitamin C Serums | Cosmedocs',
     description: 'pH determines whether your Vitamin C serum works. Learn why pH 3.0–3.5 is the clinical sweet spot and how to check if your serum is properly formulated.'
   },
+  // Translated blog — Arabic
+  '/ar/blog/vitamin-c-vs-retinol/': {
+    title: 'فيتامين سي مقابل الريتينول: متى تستخدم كل منهما | Cosmedocs',
+    description: 'هل يجب استخدام فيتامين سي أم الريتينول؟ دليل خبير حول متى تستخدم كل منهما، وكيفية الجمع بينهما بأمان في روتين صباحي/مسائي.'
+  },
+  '/ar/blog/three-cell-skin-philosophy/': {
+    title: 'فلسفة الخلايا الثلاث للبشرة | Cosmedocs',
+    description: 'كل مشكلة جلدية تعود إلى ثلاثة أنواع من الخلايا: الكيراتينية والصباغية والليفية. تعلم كيف يخلق استهداف الثلاثة تحولاً دائماً.'
+  },
+  '/ar/blog/why-ph-matters-vitamin-c/': {
+    title: 'لماذا درجة الحموضة مهمة في سيروم فيتامين سي | Cosmedocs',
+    description: 'درجة الحموضة تحدد ما إذا كان سيروم فيتامين سي يعمل فعلاً. تعلم لماذا pH 3.0-3.5 هو النقطة المثلى سريرياً.'
+  },
+  // Translated blog — French
+  '/fr/blog/vitamine-c-vs-retinol/': {
+    title: 'Vitamine C vs Rétinol : Quand Utiliser Chacun | Cosmedocs',
+    description: 'Faut-il utiliser la Vitamine C ou le Rétinol ? Guide expert sur quand utiliser chacun et comment les combiner en routine matin/soir.'
+  },
+  '/fr/blog/philosophie-3-cellules-peau/': {
+    title: 'La Philosophie des 3 Cellules de la Peau | Cosmedocs',
+    description: 'Chaque problème de peau remonte à trois types de cellules : Kératinocytes, Mélanocytes et Fibroblastes. Découvrez comment cibler les trois crée une transformation durable.'
+  },
+  '/fr/blog/pourquoi-ph-important-vitamine-c/': {
+    title: 'Pourquoi le pH Compte dans les Sérums Vitamine C | Cosmedocs',
+    description: 'Le pH détermine si votre sérum Vitamine C fonctionne réellement. Découvrez pourquoi pH 3,0-3,5 est le point optimal clinique.'
+  },
+  // Translated blog — Spanish
+  '/es/blog/vitamina-c-vs-retinol/': {
+    title: 'Vitamina C vs Retinol: Cuándo Usar Cada Uno | Cosmedocs',
+    description: '¿Debes usar Vitamina C o Retinol? Guía experta sobre cuándo usar cada uno y cómo combinarlos en una rutina AM/PM.'
+  },
+  '/es/blog/filosofia-3-celulas-piel/': {
+    title: 'La Filosofía de las 3 Células de la Piel | Cosmedocs',
+    description: 'Cada problema de piel se remonta a tres tipos de células: Queratinocitos, Melanocitos y Fibroblastos. Descubre cómo apuntar a los tres crea una transformación duradera.'
+  },
+  '/es/blog/por-que-ph-importa-vitamina-c/': {
+    title: 'Por Qué el pH Importa en los Sérums de Vitamina C | Cosmedocs',
+    description: 'El pH determina si tu sérum de Vitamina C realmente funciona. Descubre por qué pH 3,0-3,5 es el punto óptimo clínico.'
+  },
+  // Translated blog — Chinese
+  '/zh/blog/vitamin-c-vs-retinol/': {
+    title: '维生素C与视黄醇：何时使用哪种 | Cosmedocs',
+    description: '应该使用维生素C还是视黄醇？专家指南解析何时使用、如何在早晚护肤中安全组合。'
+  },
+  '/zh/blog/three-cell-skin-philosophy/': {
+    title: '三细胞皮肤哲学详解 | Cosmedocs',
+    description: '每个皮肤问题都可追溯到三种细胞类型：角质形成细胞、黑色素细胞和成纤维细胞。了解如何同时针对三者创造持久转变。'
+  },
+  '/zh/blog/why-ph-matters-vitamin-c/': {
+    title: '为什么pH值在维生素C精华中很重要 | Cosmedocs',
+    description: 'pH值决定您的维生素C精华是否真正有效。了解为什么pH 3.0-3.5是临床最佳点。'
+  },
 };
 
 // Normalise path: ensure trailing slash
