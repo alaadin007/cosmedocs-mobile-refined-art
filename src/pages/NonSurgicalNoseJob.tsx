@@ -7,8 +7,8 @@ import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import {
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
