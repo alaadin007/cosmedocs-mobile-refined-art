@@ -407,11 +407,41 @@ const App = () => {
                    <Route path="/zh/treatments/nose-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="zh" treatmentKey="nose-filler" /></Suspense></Layout>} />
                    <Route path="/zh/treatments/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="zh" treatmentKey="profhilo" /></Suspense></Layout>} />
 
+                   {/* Japanese Routes */}
+                   <Route path="/ja/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageJapanese /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubJapanese /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="botox" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="dermal-fillers" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="lip-fillers" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/jawline-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="jawline-filler" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/chin-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="chin-filler" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/tear-trough-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="tear-trough-filler" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/skin-rejuvenation/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="ja" treatmentKey="skin-rejuvenation" /></Suspense></Layout>} />
+                   <Route path="/ja/prices/" element={<Layout><Suspense fallback={<PageLoader />}><PricesJapanese /></Suspense></Layout>} />
+                   <Route path="/ja/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactJapanese /></Suspense></Layout>} />
+                   <Route path="/ja/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsJapanese /></Suspense></Layout>} />
+
+                   {/* German Routes — with translated slugs */}
+                   <Route path="/de/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageGerman /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubGerman /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/botox/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="botox" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/hyaluronsaeure/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="dermal-fillers" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/lippenunterspritzung/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="lip-fillers" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/kinnlinie-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="jawline-filler" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/kinn-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="chin-filler" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/augenringe-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="tear-trough-filler" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/hautverjuengung/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier1Treatment lang="de" treatmentKey="skin-rejuvenation" /></Suspense></Layout>} />
+                   <Route path="/de/preise/" element={<Layout><Suspense fallback={<PageLoader />}><PricesGerman /></Suspense></Layout>} />
+                   <Route path="/de/kontakt/" element={<Layout><Suspense fallback={<PageLoader />}><ContactGerman /></Suspense></Layout>} />
+                   <Route path="/de/ueber-uns/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsGerman /></Suspense></Layout>} />
+
                    {/* Non-trailing-slash versions redirect */}
-                  <Route path="/ar" element={<Navigate to="/ar/" replace />} />
-                  <Route path="/fr" element={<Navigate to="/fr/" replace />} />
-                  <Route path="/es" element={<Navigate to="/es/" replace />} />
-                  <Route path="/zh" element={<Navigate to="/zh/" replace />} />
+                   <Route path="/ar" element={<Navigate to="/ar/" replace />} />
+                   <Route path="/fr" element={<Navigate to="/fr/" replace />} />
+                   <Route path="/es" element={<Navigate to="/es/" replace />} />
+                   <Route path="/zh" element={<Navigate to="/zh/" replace />} />
+                   <Route path="/ja" element={<Navigate to="/ja/" replace />} />
+                   <Route path="/de" element={<Navigate to="/de/" replace />} />
 
                   {/* All other routes use Layout with Home2Header */}
                   <Route path="*" element={
