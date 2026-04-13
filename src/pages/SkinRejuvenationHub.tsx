@@ -1,3 +1,4 @@
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
@@ -254,6 +255,11 @@ const SkinRejuvenationHub = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">

@@ -1,3 +1,4 @@
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
@@ -437,6 +438,11 @@ const ChemicalPeel = () => {
         <section className="lg:hidden py-12 px-4 bg-black"><ChemicalPeelSidebar /></section>
 
         {/* Visible SEO Content */}
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="oily-barrier" />
+        </div>
+
         <section className="py-16 px-4 bg-black border-t border-white/[0.04]">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-extralight text-white/30 mb-6">Chemical Peels at Harley Street — What You Need to Know</h2>

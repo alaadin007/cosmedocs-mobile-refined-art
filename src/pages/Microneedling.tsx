@@ -1,3 +1,4 @@
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
@@ -417,6 +418,11 @@ const Microneedling = () => {
 
         {/* Mobile Sidebar */}
         <section className="lg:hidden py-12 px-4 bg-black"><MicroneedlingSidebar /></section>
+
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">

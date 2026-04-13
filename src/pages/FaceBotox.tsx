@@ -1,3 +1,4 @@
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -881,6 +882,11 @@ export default function FaceBotox() {
           <BotoxSidebar />
         </section>
 
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Botox London - Complete Guide to Anti-Wrinkle Treatment</h2>
@@ -902,5 +908,3 @@ export default function FaceBotox() {
     </>
   );
 }
-
-

@@ -1,3 +1,4 @@
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
@@ -196,6 +197,11 @@ const PolynucleotideTreatment = () => {
         </section>
 
         <section className="lg:hidden py-12 px-4 bg-black"><PolynucleotideSidebar /></section>
+
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
 
         <div className="sr-only" aria-hidden="true">
           <h2>Polynucleotide Treatment London — Advanced DNA Repair Therapy at Harley Street</h2>
