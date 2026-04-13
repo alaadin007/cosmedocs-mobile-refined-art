@@ -420,6 +420,11 @@ const App = () => {
                    <Route path="/ja/prices/" element={<Layout><Suspense fallback={<PageLoader />}><PricesJapanese /></Suspense></Layout>} />
                    <Route path="/ja/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactJapanese /></Suspense></Layout>} />
                    <Route path="/ja/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsJapanese /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/nose-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="ja" treatmentKey="nose-filler" /></Suspense></Layout>} />
+                   <Route path="/ja/treatments/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="ja" treatmentKey="profhilo" /></Suspense></Layout>} />
+                   <Route path="/ja/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ja" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
+                   <Route path="/ja/blog/three-cell-skin-philosophy/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ja" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
+                   <Route path="/ja/blog/why-ph-matters-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ja" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
 
                    {/* German Routes — with translated slugs */}
                    <Route path="/de/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageGerman /></Suspense></Layout>} />
@@ -434,6 +439,11 @@ const App = () => {
                    <Route path="/de/preise/" element={<Layout><Suspense fallback={<PageLoader />}><PricesGerman /></Suspense></Layout>} />
                    <Route path="/de/kontakt/" element={<Layout><Suspense fallback={<PageLoader />}><ContactGerman /></Suspense></Layout>} />
                    <Route path="/de/ueber-uns/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsGerman /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/nasen-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="de" treatmentKey="nose-filler" /></Suspense></Layout>} />
+                   <Route path="/de/behandlungen/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="de" treatmentKey="profhilo" /></Suspense></Layout>} />
+                   <Route path="/de/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="de" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
+                   <Route path="/de/blog/drei-zellen-haut-philosophie/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="de" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
+                   <Route path="/de/blog/warum-ph-wichtig-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="de" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
 
                    {/* Non-trailing-slash versions redirect */}
                    <Route path="/ar" element={<Navigate to="/ar/" replace />} />
