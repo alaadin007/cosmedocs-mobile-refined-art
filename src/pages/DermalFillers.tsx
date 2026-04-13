@@ -149,7 +149,7 @@ export default function DermalFillers() {
                     onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
                     className="text-gray-700 hover:text-gray-900 hover:bg-gray-200/60 rounded-full px-8 py-6 text-base font-medium border border-gray-300"
                   >
-                    <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" /> Ask AI Doctor
+                    <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" /> Ask Our <span className="text-[#C9A050]">A</span>esthetic <span className="text-[#C9A050]">I</span>ntelligence
                   </Button>
                 </motion.div>
 
