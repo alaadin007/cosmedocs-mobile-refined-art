@@ -173,7 +173,7 @@ const WhyPHMattersVitaminC = () => {
                 </table>
               </div>
 
-              <ExpandableSection title="The Yellow Colour Question">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">The Yellow Colour Question</h3>}>
                 <p className="text-slate-700 leading-relaxed mb-3">
                   Patients often ask why our Vitamin C serum has a golden-yellow hue. This is completely normal and expected — it's the natural colour of ferulic acid, not oxidation. Oxidised Vitamin C turns dark brown/orange and smells metallic. A fresh, properly formulated serum should have a light golden tint and a faint acidic scent.
                 </p>
@@ -187,7 +187,7 @@ const WhyPHMattersVitaminC = () => {
                 </div>
               </ExpandableSection>
 
-              <ExpandableSection title="The Afternoon Reapplication Strategy">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">The Afternoon Reapplication Strategy</h3>}>
                 <p className="text-slate-700 leading-relaxed mb-3">
                   Research shows that applying Vitamin C twice daily — morning and early afternoon (around 2–3 PM) — builds a deeper antioxidant reservoir in the skin. This is particularly beneficial for those with high UV exposure or who work near windows. The afternoon application doesn't replace SPF but significantly boosts your skin's oxidative defence.
                 </p>
@@ -196,7 +196,7 @@ const WhyPHMattersVitaminC = () => {
                 </p>
               </ExpandableSection>
 
-              <ExpandableSection title="How to Test Your Serum's pH at Home">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">How to Test Your Serum's pH at Home</h3>}>
                 <ol className="text-slate-700 space-y-2 list-decimal list-inside">
                   <li>Purchase pH test strips (available from pharmacies or online, ~£3)</li>
                   <li>Apply a drop of serum directly to the strip</li>
@@ -205,7 +205,7 @@ const WhyPHMattersVitaminC = () => {
                 </ol>
               </ExpandableSection>
 
-              <ExpandableSection title="FAQs">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">FAQs</h3>}>
                 <div className="space-y-5">
                   <div>
                     <h4 className="font-semibold text-slate-800 mb-1">What pH should a Vitamin C serum be?</h4>

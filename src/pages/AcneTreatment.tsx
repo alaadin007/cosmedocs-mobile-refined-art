@@ -1038,3 +1038,5 @@ export default function AcneTreatment() {
     </>
   );
 }
+
+// SkinFoundationCTA import at top — added below existing imports

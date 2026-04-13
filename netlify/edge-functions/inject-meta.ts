@@ -795,6 +795,18 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Best Retinol Cream UK | Dual Vitamin A | Cosmedocs',
     description: 'Doctor-formulated dual retinoid cream with 0.5% Retinol & Retinyl Palmitate. Reduces fine lines, improves texture & stimulates collagen. £65 with free shipping.'
   },
+  '/blog/vitamin-c-vs-retinol/': {
+    title: 'Vitamin C vs Retinol: When to Use Each | Cosmedocs',
+    description: 'Should you use Vitamin C or Retinol? Expert guide on when to use each, how to combine them in an AM/PM routine, and which skin concerns they target.'
+  },
+  '/blog/three-cell-skin-philosophy/': {
+    title: 'The 3-Cell Skin Philosophy Explained | Cosmedocs',
+    description: 'Every skin concern traces back to three cell types: Keratinocytes, Melanocytes and Fibroblasts. Learn how targeting all three creates lasting skin transformation.'
+  },
+  '/blog/why-ph-matters-vitamin-c/': {
+    title: 'Why pH Matters in Vitamin C Serums | Cosmedocs',
+    description: 'pH determines whether your Vitamin C serum works. Learn why pH 3.0–3.5 is the clinical sweet spot and how to check if your serum is properly formulated.'
+  },
 };
 
 // Normalise path: ensure trailing slash

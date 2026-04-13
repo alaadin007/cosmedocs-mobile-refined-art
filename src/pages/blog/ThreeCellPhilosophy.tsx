@@ -157,7 +157,7 @@ const ThreeCellPhilosophy = () => {
                 When you visit Cosmedocs for a consultation, your treatment plan is mapped against all three cell types. A patient presenting with fine lines (fibroblasts) might also have sun spots (melanocytes) and dehydration (keratinocytes). Treating only the wrinkles misses two-thirds of the picture.
               </p>
 
-              <ExpandableSection title="The AM/PM Home Protocol">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">The AM/PM Home Protocol</h3>}>
                 <p className="text-slate-700 leading-relaxed mb-3">
                   Our two core cosmeceuticals are designed as a complete daily protocol targeting all three cell types:
                 </p>
@@ -167,7 +167,7 @@ const ThreeCellPhilosophy = () => {
                 </ul>
               </ExpandableSection>
 
-              <ExpandableSection title="Mapping Concerns to Cell Types">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">Mapping Concerns to Cell Types</h3>}>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border border-slate-200 rounded-lg overflow-hidden">
                     <thead className="bg-slate-100">
@@ -190,7 +190,7 @@ const ThreeCellPhilosophy = () => {
                 </div>
               </ExpandableSection>
 
-              <ExpandableSection title="FAQs">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">FAQs</h3>}>
                 <div className="space-y-5">
                   <div>
                     <h4 className="font-semibold text-slate-800 mb-1">What are the 3 cell types in skin?</h4>

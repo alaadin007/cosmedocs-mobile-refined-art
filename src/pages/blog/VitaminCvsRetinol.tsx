@@ -160,7 +160,7 @@ const VitaminCvsRetinol = () => {
                 </table>
               </div>
 
-              <ExpandableSection title="Who Should Prioritise Vitamin C?">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">Who Should Prioritise Vitamin C?</h3>}>
                 <p className="text-slate-700 leading-relaxed mb-3">
                   If you can only choose one active (though we recommend both), Vitamin C is ideal if your primary concerns are:
                 </p>
@@ -172,7 +172,7 @@ const VitaminCvsRetinol = () => {
                 </ul>
               </ExpandableSection>
 
-              <ExpandableSection title="Who Should Prioritise Retinol?">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">Who Should Prioritise Retinol?</h3>}>
                 <p className="text-slate-700 leading-relaxed mb-3">
                   Retinol is the gold standard if your primary concerns are:
                 </p>
@@ -184,7 +184,7 @@ const VitaminCvsRetinol = () => {
                 </ul>
               </ExpandableSection>
 
-              <ExpandableSection title="Common Mistakes When Combining Both">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">Common Mistakes When Combining Both</h3>}>
                 <div className="space-y-4">
                   <div className="flex gap-3">
                     <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -217,7 +217,7 @@ const VitaminCvsRetinol = () => {
                 </div>
               </ExpandableSection>
 
-              <ExpandableSection title="FAQs: Vitamin C vs Retinol">
+              <ExpandableSection preview={<h3 className="text-lg font-semibold text-slate-800 cursor-pointer">FAQs: Vitamin C vs Retinol</h3>}>
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-slate-800 mb-1">Can I use Vitamin C and Retinol together?</h4>
