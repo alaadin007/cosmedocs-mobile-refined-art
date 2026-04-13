@@ -142,7 +142,7 @@ export default function Home2Header() {
     return () => clearInterval(interval);
   }, []);
 
-  // Listen for open-chatbot events (from "Ask AI Doctor" buttons across the site)
+  // Listen for open-chatbot events (from "Ask Our Aesthetic Intelligence" buttons across the site)
   useEffect(() => {
     const handleOpenChatbot = () => setIsSearchOpen(true);
     window.addEventListener('open-chatbot', handleOpenChatbot);
