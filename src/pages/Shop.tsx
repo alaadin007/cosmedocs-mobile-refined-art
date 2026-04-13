@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Star } from "lucide-react";
-
+import { Link } from "react-router-dom";
+import vitaminCImg from "@/assets/revitalise-c20-vitamin-c-serum.png";
+import retinolImg from "@/assets/stimulate-re-retinol-cream.png";
 
 const products = [
   {

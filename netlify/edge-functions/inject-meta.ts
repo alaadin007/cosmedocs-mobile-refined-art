@@ -783,6 +783,18 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Privacy Policy | CosmeDocs AI Assessment',
     description: 'How CosmeDocs protects your data and privacy during AI aesthetic assessments. GDPR compliant data handling at our Harley Street clinic.'
   },
+  '/shop/': {
+    title: 'Shop Cosmeceuticals | Potent Targeted Skincare | Cosmedocs',
+    description: 'Targeted active ingredients in potent concentrations. Doctor-formulated Vitamin C serums, retinol creams and cosmeceuticals. Harley Street Formulations.'
+  },
+  '/shop/vitamin-c-serum/': {
+    title: 'Best Vitamin C Serum UK | 20% L-Ascorbic Acid | Cosmedocs',
+    description: 'Clinical-strength 20% Vitamin C serum with Ferulic acid & Vitamin E at pH 3.0. Doctor-formulated for skin brightening, anti-ageing & barrier repair. £85 with free shipping.'
+  },
+  '/shop/retinol-cream/': {
+    title: 'Best Retinol Cream UK | Dual Vitamin A | Cosmedocs',
+    description: 'Doctor-formulated dual retinoid cream with 0.5% Retinol & Retinyl Palmitate. Reduces fine lines, improves texture & stimulates collagen. £65 with free shipping.'
+  },
 };
 
 // Normalise path: ensure trailing slash
