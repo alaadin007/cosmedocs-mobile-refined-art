@@ -119,6 +119,48 @@ export default function HomepageJapanese() {
           </div>
         </section>
 
+        {/* Medical Tourism */}
+        <section className="max-w-5xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-light text-center mb-6">
+            日本から<span className="text-[#C9A050]">ロンドンへ</span> — 美容医療ツーリズム
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              日本の美容医療は世界的に高い評価を受けていますが、ロンドンのハーレーストリートは200年以上の医療の歴史を持つ、世界で最も権威ある医療街です。Cosmedocsは2007年の設立以来、東京、大阪、名古屋、福岡など日本各地からお越しの患者様をお迎えしてきました。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              日本人の美的感覚は繊細さと控えめさを重視します。Cosmedocsの「見えない芸術」というフィロソフィーは、まさにこの価値観と一致しています。私たちは過度な変化を避け、あなたの自然な美しさを引き出すことに専念しています。施術後に「何かした？」と聞かれることなく、ただ「最近きれいになったね」と言われる — それが私たちの目指す結果です。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              咬筋ボトックスによる小顔治療は、日本人患者様に特に人気の施術です。エラの張りを自然に軽減し、卵型の輪郭に近づけます。また、ふくらはぎ痩身ボトックスも、すらりとした脚のラインを求める方に支持されています。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              すべての施術はGMC（英国医事評議会）登録医師が担当します。使用する製品はすべてFDAおよびCE認証を取得した安全性の高いものです。カウンセリングは英語で行われますが、医療用語を避けた明確な説明を心がけており、これまで多くの日本人患者様に安心してお受けいただいています。
+            </p>
+          </div>
+        </section>
+
+        {/* Philosophy */}
+        <section className="max-w-5xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-light text-center mb-6">
+            私たちの<span className="text-[#C9A050]">美学</span>
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              Cosmedocsの美容医療は「見えない芸術」です。大胆でありながら自然。変化を求めながらも、あなたらしさを失わない。それが私たちのフィロソフィーです。美容医療は「やりすぎ」のイメージがつきまといますが、Cosmedocsは静かで控えめなアプローチを大切にしています。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              ボトックスは表情を凍らせるためではなく、自然な若々しさを取り戻すために。フィラーは顔を大きくするためではなく、失われたボリュームを繊細に補うために。肌の若返り治療は、肌本来の再生力を内側から引き出すために。すべての施術に、この哲学が貫かれています。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Dr. Ahmed Haqは17年以上にわたり、100万回以上の注入を実施してきました。この豊富な経験が、一人ひとりの顔の解剖学を深く理解し、個別化された治療プランを提供する基盤となっています。私たちは流行を追うのではなく、あなたの骨格構造、肌質、ライフスタイルに合わせた、長期的に美しい結果を追求します。
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              ロンドンへの旅行を計画されている方は、カウンセリングと施術を同日に受けることも可能です。多くの日本人患者様が、ロンドン観光やビジネスと組み合わせて来院されています。プライバシーを重視した完全予約制の環境で、安心してご相談いただけます。
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 py-16 text-center">
           <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-10">
@@ -138,10 +180,6 @@ export default function HomepageJapanese() {
             </div>
           </div>
         </section>
-
-        <div className="sr-only" aria-hidden="true">
-          <p>Cosmedocs ロンドン ハーレーストリート 日本人患者 美容クリニック 2007年設立。ボトックス、ダーマルフィラー、咬筋ボトックス小顔治療、ふくらはぎ痩身、HA Makeover若返り。100万回以上の注入実績。医師主導の美容医療で自然な結果。</p>
-        </div>
       </div>
     </>
   );

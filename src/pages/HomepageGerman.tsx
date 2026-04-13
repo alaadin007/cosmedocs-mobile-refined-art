@@ -119,6 +119,48 @@ export default function HomepageGerman() {
           </div>
         </section>
 
+        {/* Medical Tourism */}
+        <section className="max-w-5xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-light text-center mb-6">
+            Von <span className="text-[#C9A050]">Deutschland nach London</span> — Medizintourismus
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              Die Harley Street in London ist seit über 200 Jahren das Zentrum medizinischer Exzellenz in Großbritannien. Cosmedocs hat seit 2007 Tausende von Patienten aus dem deutschsprachigen Raum behandelt — aus Berlin, München, Frankfurt, Hamburg, Wien und Zürich. Die kurze Flugzeit von nur 1-2 Stunden macht London zu einem idealen Ziel für ästhetische Behandlungen auf höchstem Niveau.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Deutsche Patienten schätzen Präzision, Qualität und Zurückhaltung in der ästhetischen Medizin. Genau diese Werte verkörpert Cosmedocs mit der Philosophie der „unsichtbaren Kunst". Wir vermeiden übertriebene Ergebnisse und konzentrieren uns darauf, Ihre natürliche Schönheit subtil zu verfeinern. Das Ziel ist nicht, anders auszusehen — sondern die beste Version Ihrer selbst zu sein.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Im Vergleich zu deutschen Preisen bieten unsere Behandlungen ein ausgezeichnetes Preis-Leistungs-Verhältnis. Botox-Behandlungen beginnen bei £275 (ca. €320), Lippenfiller bei £350 (ca. €410). Alle Behandlungen werden von GMC-registrierten Ärzten durchgeführt — dem britischen Äquivalent der deutschen Ärztekammer. Wir verwenden ausschließlich FDA- und CE-zertifizierte Produkte renommierter Hersteller.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Masseter Botox zur Kieferschlankung ist besonders bei unseren DACH-Patienten beliebt, ebenso wie das HA Makeover — eine umfassende Gesichtsverjüngung mit Hyaluronsäure, die in einer einzigen Sitzung durchgeführt werden kann. Viele Patienten kombinieren ihre Behandlung mit einem London-Wochenende.
+            </p>
+          </div>
+        </section>
+
+        {/* Philosophy */}
+        <section className="max-w-5xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-light text-center mb-6">
+            Unsere <span className="text-[#C9A050]">Philosophie</span>
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm text-white/60 leading-relaxed">
+              „Unsere Ästhetik ist unsichtbare Kunst." Dieser Leitsatz definiert jeden Aspekt unserer Arbeit bei Cosmedocs. Mutig, natürlich, immer Ihr Weg. Ästhetische Medizin bei uns ist minimal — ruhig, nicht laut. Unsichtbar, nicht übertrieben. Es ist eine Transformation, die spricht — ohne ein Wort zu sagen.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Dr. Ahmed Haq hat in über 17 Jahren mehr als eine Million Injektionen durchgeführt. Diese außergewöhnliche Erfahrung ermöglicht es ihm, die individuelle Gesichtsanatomie jedes Patienten präzise zu verstehen und maßgeschneiderte Behandlungspläne zu erstellen. Wir folgen keinen Trends — wir analysieren Ihre Knochenstruktur, Hautqualität und Proportionen, um langfristig schöne, harmonische Ergebnisse zu erzielen.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Botox dient nicht dazu, die Mimik einzufrieren, sondern dynamische Falten sanft zu glätten und dabei Ihre natürliche Ausdruckskraft zu bewahren. Filler ersetzen kein Volumen willkürlich, sondern stellen gezielt die jugendlichen Konturen wieder her, die durch den natürlichen Alterungsprozess verloren gehen. Hautverjüngungsbehandlungen wie Profhilo und Polynukleotide stimulieren die körpereigene Kollagenproduktion von innen.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Beratung und Behandlung können am selben Tag erfolgen — ideal für Patienten, die aus dem Ausland anreisen. Unsere Klinik an der Harley Street bietet eine diskrete, ruhige Umgebung mit höchsten Hygienestandards. Die Beratung findet auf Englisch statt, jedoch in klarer, verständlicher Sprache ohne unnötigen medizinischen Fachjargon.
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 py-16 text-center">
           <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-10">
@@ -138,10 +180,6 @@ export default function HomepageGerman() {
             </div>
           </div>
         </section>
-
-        <div className="sr-only" aria-hidden="true">
-          <p>Cosmedocs ästhetische Klinik Harley Street London für deutschsprachige Patienten seit 2007. Botox, Dermal Filler, Masseter Botox, Wadenverschlankung, HA Makeover. Über 1 Million Injektionen. Arztgeleitete ästhetische Medizin mit natürlichen Ergebnissen.</p>
-        </div>
       </div>
     </>
   );
