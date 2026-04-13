@@ -109,15 +109,51 @@ const CheapBotoxVsExpensive = () => {
                 </p>
               </motion.div>
 
-              {/* Hero Image */}
+              {/* Hero Comparison Graphic */}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-                <img
-                  src={cheapVsPremiumImg}
-                  alt="Cheap vs premium Botox comparison showing luxury and budget treatment differences at CosmeDocs Harley Street"
-                  width={1024}
-                  height={640}
-                  className="w-full rounded-2xl border border-white/10"
-                />
+                <div className="grid grid-cols-2 rounded-2xl overflow-hidden border border-white/10">
+                  {/* Premium Side */}
+                  <div className="bg-gradient-to-b from-zinc-900 to-black p-6 sm:p-8 border-r border-[#C9A050]/30">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Shield className="w-6 h-6 text-[#C9A050]" />
+                      <span className="text-[#C9A050]/60 text-xs uppercase tracking-[0.2em]">CosmeDocs</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight mb-1">LUXURY</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#C9A050] leading-tight mb-5">PREMIUM</h3>
+                    
+                    <p className="text-[#C9A050]/70 text-xs uppercase tracking-wider mb-3 border-b border-[#C9A050]/20 pb-2">Refined Details</p>
+                    <ul className="space-y-2.5 text-white/70 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span>Doctor-led consultation & facial assessment</li>
+                      <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span>Bespoke dosing: 40–64 units for 3 areas</li>
+                      <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span>Allergan Botox / Bocouture only</li>
+                      <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span>Results lasting 3–6 months</li>
+                      <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span>CQC-registered Harley Street clinic</li>
+                      <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span>Free follow-up & top-up included</li>
+                    </ul>
+                    <p className="text-white/25 text-[10px] mt-6 italic">Professional. Precise. Medical Aesthetics.<br/>Experience built on 1 million+ injections.</p>
+                  </div>
+
+                  {/* Budget Side */}
+                  <div className="bg-gradient-to-b from-zinc-600 to-zinc-700 p-6 sm:p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <AlertTriangle className="w-6 h-6 text-zinc-400" />
+                      <span className="text-zinc-400 text-xs uppercase tracking-[0.2em]">Generic Clinic</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight mb-1">BUDGET</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-zinc-400 leading-tight mb-5">GENERIC</h3>
+                    
+                    <p className="text-zinc-400 text-xs uppercase tracking-wider mb-3 border-b border-zinc-500 pb-2">Basic Offering</p>
+                    <ul className="space-y-2.5 text-zinc-300 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-zinc-400 mt-1">•</span>Minimal consultation, no facial mapping</li>
+                      <li className="flex items-start gap-2"><span className="text-zinc-400 mt-1">•</span>Under-dosed: 20–30 units for 3 areas</li>
+                      <li className="flex items-start gap-2"><span className="text-zinc-400 mt-1">•</span>Unspecified or variable product brand</li>
+                      <li className="flex items-start gap-2"><span className="text-zinc-400 mt-1">•</span>Results fading within 6–8 weeks</li>
+                      <li className="flex items-start gap-2"><span className="text-zinc-400 mt-1">•</span>Beauty salon or pop-up setting</li>
+                      <li className="flex items-start gap-2"><span className="text-zinc-400 mt-1">•</span>Top-ups charged separately</li>
+                    </ul>
+                    <p className="text-zinc-500 text-[10px] mt-6 italic">Price-driven. Compromised dosing.<br/>Higher long-term cost from repeat visits.</p>
+                  </div>
+                </div>
                 <p className="text-xs text-white/30 mt-2 text-center italic">Premium vs budget aesthetic treatment — the differences go far beyond price</p>
               </motion.div>
 
