@@ -409,6 +409,18 @@ export default function TranslatedTier1Treatment({ lang, treatmentKey }: Props) 
                   ))}
                 </div>
               </section>
+
+              {/* Extended Educational Content */}
+              {data.extended.length > 0 && (
+                <section>
+                  <div className="space-y-4">
+                    {data.extended.map((paragraph, i) => (
+                      <p key={i} className="text-sm text-white/60 leading-relaxed">{paragraph}</p>
+                    ))}
+                  </div>
+                </section>
+              )}
+
               <section className="text-center py-8 border-t border-white/10">
                 <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8903F] font-semibold transition-colors">
                   {data.bookNow} <ArrowRight className="h-4 w-4" />
