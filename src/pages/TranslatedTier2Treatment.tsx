@@ -28,7 +28,7 @@ function buildHreflangLinks(treatmentKey: TreatmentKey) {
     { hreflang: 'en-gb', href: `${base}${EN_URLS[treatmentKey]}` },
     { hreflang: 'x-default', href: `${base}${EN_URLS[treatmentKey]}` },
   ];
-  for (const lang of ['ar', 'fr', 'es', 'zh'] as Lang[]) {
+  for (const lang of ['ar', 'fr', 'es', 'zh', 'ja', 'de'] as Lang[]) {
     links.push({ hreflang: lang, href: `${base}${URLS[lang][treatmentKey]}` });
   }
   return links;
