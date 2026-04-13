@@ -903,5 +903,3 @@ export default function FaceBotox() {
     </>
   );
 }
-import SkinFoundationCTA from "@/components/SkinFoundationCTA";
-
