@@ -255,6 +255,9 @@ const TCAPeel = lazy(() => import("./pages/TCAPeel"));
 
 const TranslatedHomepage = lazy(() => import("./pages/TranslatedHomepage"));
 const TranslatedTreatmentPage = lazy(() => import("./pages/TranslatedTreatmentPage"));
+const HomepageArabic = lazy(() => import("./pages/HomepageArabic"));
+const HomepageFrench = lazy(() => import("./pages/HomepageFrench"));
+const HomepageSpanish = lazy(() => import("./pages/HomepageSpanish"));
 const TreatmentsHubArabic = lazy(() => import("./pages/TreatmentsHubArabic"));
 const TreatmentsHubFrench = lazy(() => import("./pages/TreatmentsHubFrench"));
 const TreatmentsHubSpanish = lazy(() => import("./pages/TreatmentsHubSpanish"));
