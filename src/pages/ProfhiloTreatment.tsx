@@ -1,3 +1,4 @@
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
@@ -283,6 +284,11 @@ const ProfhiloTreatment = () => {
 
         {/* Mobile Sidebar */}
         <section className="lg:hidden py-12 px-4 bg-black"><ProfhiloSidebar /></section>
+
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
 
         {/* Hidden SEO */}
         <div className="sr-only">
