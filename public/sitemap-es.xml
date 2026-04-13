@@ -133,4 +133,37 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.cosmedocs.com/es/blog/vitamina-c-vs-retinol/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/blog/vitamin-c-vs-retinol/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/blog/vitamin-c-vs-retinol/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/blog/vitamine-c-vs-retinol/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/blog/vitamina-c-vs-retinol/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/blog/vitamin-c-vs-retinol/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/blog/vitamin-c-vs-retinol/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/es/blog/filosofia-3-celulas-piel/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/blog/three-cell-skin-philosophy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/blog/three-cell-skin-philosophy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/blog/philosophie-3-cellules-peau/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/blog/filosofia-3-celulas-piel/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/blog/three-cell-skin-philosophy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/blog/three-cell-skin-philosophy/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/es/blog/por-que-ph-importa-vitamina-c/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/blog/why-ph-matters-vitamin-c/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/blog/why-ph-matters-vitamin-c/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/blog/pourquoi-ph-important-vitamine-c/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/blog/por-que-ph-importa-vitamina-c/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/blog/why-ph-matters-vitamin-c/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/blog/why-ph-matters-vitamin-c/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
