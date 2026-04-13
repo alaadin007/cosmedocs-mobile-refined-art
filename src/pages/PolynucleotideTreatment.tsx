@@ -198,6 +198,11 @@ const PolynucleotideTreatment = () => {
 
         <section className="lg:hidden py-12 px-4 bg-black"><PolynucleotideSidebar /></section>
 
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+
         <div className="sr-only" aria-hidden="true">
           <h2>Polynucleotide Treatment London — Advanced DNA Repair Therapy at Harley Street</h2>
           <p>CosmeDocs offers doctor-led polynucleotide treatments for skin regeneration, under-eye rejuvenation, and hair restoration at our Harley Street clinic. Polynucleotide therapy uses purified DNA fragments (PDRN) to stimulate cellular repair, boost collagen synthesis, and enhance skin quality from within. Results develop progressively over 2-3 months as the biological repair cascade activates fibroblasts and promotes new collagen formation.</p>

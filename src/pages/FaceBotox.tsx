@@ -882,6 +882,11 @@ export default function FaceBotox() {
           <BotoxSidebar />
         </section>
 
+        {/* Skin Foundation CTA */}
+        <div className="max-w-4xl mx-auto px-4">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Botox London - Complete Guide to Anti-Wrinkle Treatment</h2>
