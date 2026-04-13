@@ -14,6 +14,7 @@ interface TreatmentContent {
   benefits: string[];
   glance: { duration: string; results: string; recovery: string; product: string };
   faq: { q: string; a: string }[];
+  extended: string[];
   cta: string;
   bookNow: string;
 }
