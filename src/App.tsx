@@ -14,6 +14,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 
 // Eager load critical pages only
 import Index from "./pages/Index";
+const TranslatedSkincareBlog = lazy(() => import("./pages/blog/TranslatedSkincareBlog"));
 
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
@@ -331,6 +332,9 @@ const App = () => {
                   <Route path="/ar/prices/" element={<Layout><Suspense fallback={<PageLoader />}><PricesArabic /></Suspense></Layout>} />
                    <Route path="/ar/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactArabic /></Suspense></Layout>} />
                    <Route path="/ar/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsArabic /></Suspense></Layout>} />
+                   <Route path="/ar/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
+                   <Route path="/ar/blog/three-cell-skin-philosophy/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
+                   <Route path="/ar/blog/why-ph-matters-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
                   
                   {/* French Routes — with translated slugs */}
                   <Route path="/fr/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageFrench /></Suspense></Layout>} />
@@ -345,6 +349,9 @@ const App = () => {
                   <Route path="/fr/tarifs/" element={<Layout><Suspense fallback={<PageLoader />}><PricesFrench /></Suspense></Layout>} />
                    <Route path="/fr/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactFrench /></Suspense></Layout>} />
                    <Route path="/fr/a-propos/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsFrench /></Suspense></Layout>} />
+                   <Route path="/fr/blog/vitamine-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="fr" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
+                   <Route path="/fr/blog/philosophie-3-cellules-peau/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="fr" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
+                   <Route path="/fr/blog/pourquoi-ph-important-vitamine-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="fr" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
                   
                   {/* Spanish Routes — with translated slugs */}
                   <Route path="/es/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageSpanish /></Suspense></Layout>} />
@@ -359,6 +366,9 @@ const App = () => {
                   <Route path="/es/precios/" element={<Layout><Suspense fallback={<PageLoader />}><PricesSpanish /></Suspense></Layout>} />
                    <Route path="/es/contacto/" element={<Layout><Suspense fallback={<PageLoader />}><ContactSpanish /></Suspense></Layout>} />
                    <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsSpanish /></Suspense></Layout>} />
+                   <Route path="/es/blog/vitamina-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="es" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
+                   <Route path="/es/blog/filosofia-3-celulas-piel/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="es" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
+                   <Route path="/es/blog/por-que-ph-importa-vitamina-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="es" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
 
                   {/* Chinese Routes */}
                   <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageChinese /></Suspense></Layout>} />
@@ -373,6 +383,9 @@ const App = () => {
                   <Route path="/zh/prices/" element={<Layout><Suspense fallback={<PageLoader />}><PricesChinese /></Suspense></Layout>} />
                    <Route path="/zh/contact/" element={<Layout><Suspense fallback={<PageLoader />}><ContactChinese /></Suspense></Layout>} />
                    <Route path="/zh/about-us/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsChinese /></Suspense></Layout>} />
+                   <Route path="/zh/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="zh" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
+                   <Route path="/zh/blog/three-cell-skin-philosophy/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="zh" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
+                   <Route path="/zh/blog/why-ph-matters-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="zh" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
 
                   {/* Non-trailing-slash versions redirect */}
                   <Route path="/ar" element={<Navigate to="/ar/" replace />} />
