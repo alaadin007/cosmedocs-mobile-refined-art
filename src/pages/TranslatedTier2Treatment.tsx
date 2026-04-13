@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Clock, Calendar, Activity, Syringe, Star, Spar
 import Breadcrumb from '@/components/Breadcrumb';
 
 // ─── URL Maps ─────────────────────────────────────────────────────────
-type Lang = 'ar' | 'fr' | 'es' | 'zh';
+type Lang = 'ar' | 'fr' | 'es' | 'zh' | 'ja' | 'de';
 type TreatmentKey = 'nose-filler' | 'profhilo';
 
 const URLS: Record<Lang, Record<TreatmentKey, string>> = {
@@ -13,6 +13,8 @@ const URLS: Record<Lang, Record<TreatmentKey, string>> = {
   fr: { 'nose-filler': '/fr/traitements/rhinoplastie-medicale/', 'profhilo': '/fr/traitements/profhilo/' },
   es: { 'nose-filler': '/es/tratamientos/relleno-nariz/', 'profhilo': '/es/tratamientos/profhilo/' },
   zh: { 'nose-filler': '/zh/treatments/nose-filler/', 'profhilo': '/zh/treatments/profhilo/' },
+  ja: { 'nose-filler': '/ja/treatments/nose-filler/', 'profhilo': '/ja/treatments/profhilo/' },
+  de: { 'nose-filler': '/de/behandlungen/nasen-filler/', 'profhilo': '/de/behandlungen/profhilo/' },
 };
 
 const EN_URLS: Record<TreatmentKey, string> = {
