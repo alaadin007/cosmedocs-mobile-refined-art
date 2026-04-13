@@ -8,6 +8,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock } from "lucide-react";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 export default function EczemaTreatment() {
   const seoData = generateSEOMetadata(
@@ -975,6 +976,7 @@ export default function EczemaTreatment() {
           </p>
         </div>
       </div>
+      <section className="py-12 px-4"><div className="max-w-5xl mx-auto"><SkinFoundationCTA variant="oily-barrier" /></div></section>
     </>
   );
 }

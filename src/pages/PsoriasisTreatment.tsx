@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock, Star, Home, ChevronRight as BreadcrumbChevron } from "lucide-react";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import { Link } from "react-router-dom";
 
 export default function PsoriasisTreatment() {
@@ -1140,6 +1141,7 @@ export default function PsoriasisTreatment() {
           </article>
         </div>
       </div>
+      <section className="py-12 px-4"><div className="max-w-5xl mx-auto"><SkinFoundationCTA variant="oily-barrier" /></div></section>
     </>
   );
 }
