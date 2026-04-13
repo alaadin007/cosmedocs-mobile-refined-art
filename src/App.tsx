@@ -255,6 +255,11 @@ const TCAPeel = lazy(() => import("./pages/TCAPeel"));
 
 const TranslatedHomepage = lazy(() => import("./pages/TranslatedHomepage"));
 const TranslatedTreatmentPage = lazy(() => import("./pages/TranslatedTreatmentPage"));
+const TreatmentsHubArabic = lazy(() => import("./pages/TreatmentsHubArabic"));
+const TreatmentsHubFrench = lazy(() => import("./pages/TreatmentsHubFrench"));
+const TreatmentsHubSpanish = lazy(() => import("./pages/TreatmentsHubSpanish"));
+const TreatmentsHubChinese = lazy(() => import("./pages/TreatmentsHubChinese"));
+const HomepageChinese = lazy(() => import("./pages/HomepageChinese"));
 
 // Optimized loading component
 const PageLoader = memo(() => (
@@ -307,7 +312,7 @@ const App = () => {
                   
                   {/* Arabic Routes */}
                   <Route path="/ar/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
-                  <Route path="/ar/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
+                  <Route path="/ar/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubArabic /></Suspense></Layout>} />
                   <Route path="/ar/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxArabic /></Suspense></Layout>} />
                   <Route path="/ar/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersArabic /></Suspense></Layout>} />
                   <Route path="/ar/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersArabic /></Suspense></Layout>} />
@@ -321,7 +326,7 @@ const App = () => {
                   
                   {/* French Routes — with translated slugs */}
                   <Route path="/fr/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
-                  <Route path="/fr/traitements/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
+                  <Route path="/fr/traitements/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubFrench /></Suspense></Layout>} />
                   <Route path="/fr/traitements/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxFrench /></Suspense></Layout>} />
                    <Route path="/fr/traitements/acide-hyaluronique/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersFrench /></Suspense></Layout>} />
                    <Route path="/fr/traitements/injection-levres/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersFrench /></Suspense></Layout>} />
@@ -335,7 +340,7 @@ const App = () => {
                   
                   {/* Spanish Routes — with translated slugs */}
                   <Route path="/es/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
-                  <Route path="/es/tratamientos/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
+                  <Route path="/es/tratamientos/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubSpanish /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxSpanish /></Suspense></Layout>} />
                    <Route path="/es/tratamientos/acido-hialuronico/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersSpanish /></Suspense></Layout>} />
                    <Route path="/es/tratamientos/relleno-labios/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersSpanish /></Suspense></Layout>} />
@@ -348,8 +353,8 @@ const App = () => {
                    <Route path="/es/sobre-nosotros/" element={<Layout><Suspense fallback={<PageLoader />}><AboutUsSpanish /></Suspense></Layout>} />
 
                   {/* Chinese Routes */}
-                  <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedHomepage /></Suspense></Layout>} />
-                  <Route path="/zh/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTreatmentPage pageKey="treatments" /></Suspense></Layout>} />
+                  <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageChinese /></Suspense></Layout>} />
+                  <Route path="/zh/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubChinese /></Suspense></Layout>} />
                   <Route path="/zh/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersChinese /></Suspense></Layout>} />
                   <Route path="/zh/treatments/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxChinese /></Suspense></Layout>} />
                    <Route path="/zh/treatments/dermal-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><DermalFillersChinese /></Suspense></Layout>} />
