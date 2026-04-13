@@ -110,7 +110,7 @@ const ConcernsHubSidebar = () => {
           className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full py-3 font-medium text-sm transition-all duration-300"
         >
           <Sparkles className="w-4 h-4 text-[#C9A050]" />
-          Ask AI Doctor
+          Ask Our <span className="text-[#C9A050]">A</span>esthetic <span className="text-[#C9A050]">I</span>ntelligence
         </button>
         <a
           href="https://med.as.me/harleystreet"
