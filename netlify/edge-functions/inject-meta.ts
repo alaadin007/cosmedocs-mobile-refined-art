@@ -893,6 +893,144 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: '为什么pH值在维生素C精华中很重要 | Cosmedocs',
     description: 'pH值决定您的维生素C精华是否真正有效。了解为什么pH 3.0-3.5是临床最佳点。'
   },
+  // ===== JAPANESE =====
+  '/ja/': {
+    title: 'Cosmedocs ロンドン | 美容医療 | ハーレーストリート',
+    description: 'ハーレーストリートの美容クリニック。Ahmed Haq医師によるボトックス、フィラー、スキンケア治療。見えない芸術 — 大胆 — 自然。'
+  },
+  '/ja/treatments/': {
+    title: '美容治療 ロンドン | Cosmedocs ハーレーストリート',
+    description: '医師主導の美容治療の全ラインナップ。ボトックス、ヒアルロン酸、肌再生、レーザー治療をハーレーストリートで。'
+  },
+  '/ja/treatments/botox/': {
+    title: 'ボトックス ロンドン | シワ取り注射 | Cosmedocs ハーレーストリート',
+    description: 'ボトックス治療£275から。2007年よりハーレーストリートで医師主導のシワ取り注射。'
+  },
+  '/ja/treatments/dermal-fillers/': {
+    title: 'ヒアルロン酸注入 ロンドン | Cosmedocs ハーレーストリート',
+    description: '医師主導のヒアルロン酸フィラー治療。唇、頬、顎ライン、顎、涙袋フィラーをハーレーストリートで。'
+  },
+  '/ja/treatments/lip-fillers/': {
+    title: 'リップフィラー ロンドン | 自然な唇増大 | Cosmedocs',
+    description: 'リップフィラー治療£350から。ハーレーストリートの医師による自然でバランスの取れた唇増大。'
+  },
+  '/ja/treatments/jawline-filler/': {
+    title: '顎ラインフィラー ロンドン | Cosmedocs ハーレーストリート',
+    description: 'フィラーで顎ラインを彫刻し定義。2007年よりハーレーストリートで医師主導。'
+  },
+  '/ja/treatments/chin-filler/': {
+    title: '顎フィラー ロンドン | 顎増大 | Cosmedocs',
+    description: 'フィラーで顎を定義し突出させる。ハーレーストリートの医師による非外科的顎増大。'
+  },
+  '/ja/treatments/tear-trough-filler/': {
+    title: '涙袋フィラー ロンドン | 目の下の治療 | Cosmedocs',
+    description: '涙袋フィラーで疲れた目の下をリフレッシュ。黒ずみと窪みを軽減。ハーレーストリート医師主導。'
+  },
+  '/ja/treatments/skin-rejuvenation/': {
+    title: '肌再生 ロンドン | Cosmedocs ハーレーストリート',
+    description: 'プロファイロ、ポリヌクレオチド、マイクロニードリング、ケミカルピールを含む先進的な肌再生治療。'
+  },
+  '/ja/prices/': {
+    title: '治療料金 | Cosmedocs ハーレーストリート ロンドン',
+    description: 'すべての美容治療の透明な料金。ボトックス£275から、リップフィラー£350から。隠れた費用なし。'
+  },
+  '/ja/contact/': {
+    title: 'お問い合わせ | Cosmedocs ハーレーストリート',
+    description: 'Cosmedocsにお問い合わせください。ご予約またはWhatsAppでメッセージをお送りください。ハーレーストリート、ロンドン。'
+  },
+  '/ja/about-us/': {
+    title: 'Cosmedocsについて | ハーレーストリート医師 2007年より',
+    description: 'Cosmedocsチームのご紹介 — GMC登録医師、2007年以来100万回以上の注射実績。'
+  },
+  '/ja/treatments/nose-filler/': {
+    title: '鼻フィラー ロンドン | 非外科的鼻整形 | Cosmedocs',
+    description: 'ヒアルロン酸フィラーによる非外科的鼻整形。鼻筋矯正、細化、鼻先リフト。ハーレーストリート2007年より。'
+  },
+  '/ja/treatments/profhilo/': {
+    title: 'プロファイロ ロンドン | バイオリモデリング | Cosmedocs',
+    description: 'プロファイロ治療£350から。コラーゲンとエラスチンを刺激し自然な肌再生を実現。ハーレーストリート。'
+  },
+  '/ja/blog/vitamin-c-vs-retinol/': {
+    title: 'ビタミンCとレチノール：いつ使うべきか | Cosmedocs',
+    description: 'ビタミンCとレチノール、どちらを使うべき？朝晩のルーティンで安全に組み合わせる方法を専門家が解説。'
+  },
+  '/ja/blog/three-cell-skin-philosophy/': {
+    title: '3つの細胞のスキンフィロソフィー | Cosmedocs',
+    description: 'すべての肌の悩みは3種類の細胞に帰結します：ケラチノサイト、メラノサイト、線維芽細胞。3つすべてをターゲットにする方法。'
+  },
+  '/ja/blog/why-ph-matters-vitamin-c/': {
+    title: 'ビタミンC美容液のpHが重要な理由 | Cosmedocs',
+    description: 'pHがビタミンC美容液の効果を決定します。pH 3.0-3.5が臨床的に最適な理由を解説。'
+  },
+  // ===== GERMAN =====
+  '/de/': {
+    title: 'Cosmedocs London | Ästhetische Medizin | Harley Street',
+    description: 'Ästhetische Klinik in der Harley Street von Dr. Ahmed Haq. Botox, Filler und Hautbehandlungen. Unsichtbare Kunst — Mutig — Natürlich.'
+  },
+  '/de/behandlungen/': {
+    title: 'Ästhetische Behandlungen London | Cosmedocs Harley Street',
+    description: 'Entdecken Sie unser vollständiges Spektrum ärztlich geleiteter Behandlungen. Botox, Hyaluronsäure, Hautverjüngung und Laser.'
+  },
+  '/de/behandlungen/botox/': {
+    title: 'Botox London | Anti-Falten-Injektionen | Cosmedocs Harley Street',
+    description: 'Botox-Behandlungen ab £275. Ärztlich geleitete Anti-Falten-Injektionen in der Harley Street seit 2007.'
+  },
+  '/de/behandlungen/hyaluronsaeure/': {
+    title: 'Hyaluronsäure London | Cosmedocs Harley Street',
+    description: 'Ärztlich geleitete Hyaluronsäure-Filler. Lippen, Wangen, Kinnlinie, Kinn und Augenringe in der Harley Street.'
+  },
+  '/de/behandlungen/lippenunterspritzung/': {
+    title: 'Lippenunterspritzung London | Cosmedocs Harley Street',
+    description: 'Lippenunterspritzung ab £350. Natürliche Lippenvergrößerung durch Ärzte in der Harley Street.'
+  },
+  '/de/behandlungen/kinnlinie-filler/': {
+    title: 'Kinnlinie Filler London | Cosmedocs Harley Street',
+    description: 'Formen und definieren Sie Ihre Kinnlinie mit Filler. Kinnlinien-Konturierung durch Ärzte in der Harley Street.'
+  },
+  '/de/behandlungen/kinn-filler/': {
+    title: 'Kinn-Filler London | Kinnvergrößerung | Cosmedocs',
+    description: 'Definieren Sie Ihr Kinn mit Filler. Nicht-chirurgische Kinnvergrößerung durch Ärzte in der Harley Street.'
+  },
+  '/de/behandlungen/augenringe-filler/': {
+    title: 'Augenringe Filler London | Cosmedocs Harley Street',
+    description: 'Auffrischung müder Augen mit Augenringe-Filler. Dunkle Augenringe und Hohlräume reduzieren. Ärztlich geleitet.'
+  },
+  '/de/behandlungen/hautverjuengung/': {
+    title: 'Hautverjüngung London | Cosmedocs Harley Street',
+    description: 'Fortschrittliche Hautverjüngung mit Profhilo, Polynukleotiden, Microneedling und chemischen Peelings.'
+  },
+  '/de/preise/': {
+    title: 'Behandlungspreise | Cosmedocs Harley Street London',
+    description: 'Transparente Preise für alle ästhetischen Behandlungen. Botox ab £275, Lippenunterspritzung ab £350.'
+  },
+  '/de/kontakt/': {
+    title: 'Kontakt | Cosmedocs Harley Street',
+    description: 'Kontaktieren Sie Cosmedocs. Termin buchen oder WhatsApp-Nachricht senden. Harley Street, London.'
+  },
+  '/de/ueber-uns/': {
+    title: 'Über Cosmedocs | Harley Street Ärzte seit 2007',
+    description: 'Lernen Sie das Cosmedocs-Team kennen — GMC-registrierte Ärzte mit über einer Million Injektionen seit 2007.'
+  },
+  '/de/behandlungen/nasen-filler/': {
+    title: 'Nasen-Filler London | Nicht-chirurgische Nasenkorrektur | Cosmedocs',
+    description: 'Nicht-chirurgische Nasenkorrektur mit Hyaluronsäure. Höckerkorrektur, Verfeinerung und Nasenspitzenanhebung. Harley Street seit 2007.'
+  },
+  '/de/behandlungen/profhilo/': {
+    title: 'Profhilo London | Bio-Remodelling | Cosmedocs Harley Street',
+    description: 'Profhilo-Behandlung ab £350. Stimuliert Kollagen und Elastin für natürliche Hautverjüngung. Harley Street.'
+  },
+  '/de/blog/vitamin-c-vs-retinol/': {
+    title: 'Vitamin C vs Retinol: Wann welches verwenden | Cosmedocs',
+    description: 'Vitamin C oder Retinol? Expertenratgeber, wann welches verwendet wird und wie man beide sicher in einer AM/PM-Routine kombiniert.'
+  },
+  '/de/blog/drei-zellen-haut-philosophie/': {
+    title: 'Die 3-Zellen-Haut-Philosophie | Cosmedocs',
+    description: 'Jedes Hautproblem geht auf drei Zelltypen zurück: Keratinozyten, Melanozyten und Fibroblasten. Erfahren Sie, wie das Targeting aller drei funktioniert.'
+  },
+  '/de/blog/warum-ph-wichtig-vitamin-c/': {
+    title: 'Warum der pH-Wert bei Vitamin-C-Seren wichtig ist | Cosmedocs',
+    description: 'Der pH-Wert bestimmt, ob Ihr Vitamin-C-Serum wirkt. Erfahren Sie, warum pH 3,0-3,5 der klinisch optimale Punkt ist.'
+  },
 };
 
 // Normalise path: ensure trailing slash
