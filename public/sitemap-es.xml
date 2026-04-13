@@ -14,6 +14,12 @@
   </url>
   <url>
     <loc>https://www.cosmedocs.com/es/tratamientos/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
