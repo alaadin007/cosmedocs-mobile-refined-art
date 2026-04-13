@@ -180,15 +180,13 @@ const Shop = () => {
                     </span>
                   </div>
 
-                  <a
-                    href={product.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={product.url}
                     className="inline-flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-semibold hover:gap-3 transition-all duration-300 group/link"
                   >
                     More Detail
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
