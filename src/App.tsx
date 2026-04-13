@@ -15,6 +15,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 // Eager load critical pages only
 import Index from "./pages/Index";
 const TranslatedSkincareBlog = lazy(() => import("./pages/blog/TranslatedSkincareBlog"));
+const TranslatedTier2Treatment = lazy(() => import("./pages/TranslatedTier2Treatment"));
 
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
@@ -335,8 +336,10 @@ const App = () => {
                    <Route path="/ar/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
                    <Route path="/ar/blog/three-cell-skin-philosophy/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
                    <Route path="/ar/blog/why-ph-matters-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
-                  
-                  {/* French Routes — with translated slugs */}
+                   <Route path="/ar/treatments/nose-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="ar" treatmentKey="nose-filler" /></Suspense></Layout>} />
+                   <Route path="/ar/treatments/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="ar" treatmentKey="profhilo" /></Suspense></Layout>} />
+                   
+                   {/* French Routes — with translated slugs */}
                   <Route path="/fr/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageFrench /></Suspense></Layout>} />
                   <Route path="/fr/traitements/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubFrench /></Suspense></Layout>} />
                   <Route path="/fr/traitements/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxFrench /></Suspense></Layout>} />
@@ -352,8 +355,10 @@ const App = () => {
                    <Route path="/fr/blog/vitamine-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="fr" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
                    <Route path="/fr/blog/philosophie-3-cellules-peau/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="fr" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
                    <Route path="/fr/blog/pourquoi-ph-important-vitamine-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="fr" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
-                  
-                  {/* Spanish Routes — with translated slugs */}
+                   <Route path="/fr/traitements/rhinoplastie-medicale/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="fr" treatmentKey="nose-filler" /></Suspense></Layout>} />
+                   <Route path="/fr/traitements/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="fr" treatmentKey="profhilo" /></Suspense></Layout>} />
+                   
+                   {/* Spanish Routes — with translated slugs */}
                   <Route path="/es/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageSpanish /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubSpanish /></Suspense></Layout>} />
                   <Route path="/es/tratamientos/botox/" element={<Layout><Suspense fallback={<PageLoader />}><FaceBotoxSpanish /></Suspense></Layout>} />
@@ -369,8 +374,10 @@ const App = () => {
                    <Route path="/es/blog/vitamina-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="es" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
                    <Route path="/es/blog/filosofia-3-celulas-piel/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="es" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
                    <Route path="/es/blog/por-que-ph-importa-vitamina-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="es" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
+                   <Route path="/es/tratamientos/relleno-nariz/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="es" treatmentKey="nose-filler" /></Suspense></Layout>} />
+                   <Route path="/es/tratamientos/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="es" treatmentKey="profhilo" /></Suspense></Layout>} />
 
-                  {/* Chinese Routes */}
+                   {/* Chinese Routes */}
                   <Route path="/zh/" element={<Layout><Suspense fallback={<PageLoader />}><HomepageChinese /></Suspense></Layout>} />
                   <Route path="/zh/treatments/" element={<Layout><Suspense fallback={<PageLoader />}><TreatmentsHubChinese /></Suspense></Layout>} />
                   <Route path="/zh/treatments/lip-fillers/" element={<Layout><Suspense fallback={<PageLoader />}><LipFillersChinese /></Suspense></Layout>} />
@@ -386,8 +393,10 @@ const App = () => {
                    <Route path="/zh/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="zh" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
                    <Route path="/zh/blog/three-cell-skin-philosophy/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="zh" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
                    <Route path="/zh/blog/why-ph-matters-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="zh" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
+                   <Route path="/zh/treatments/nose-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="zh" treatmentKey="nose-filler" /></Suspense></Layout>} />
+                   <Route path="/zh/treatments/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="zh" treatmentKey="profhilo" /></Suspense></Layout>} />
 
-                  {/* Non-trailing-slash versions redirect */}
+                   {/* Non-trailing-slash versions redirect */}
                   <Route path="/ar" element={<Navigate to="/ar/" replace />} />
                   <Route path="/fr" element={<Navigate to="/fr/" replace />} />
                   <Route path="/es" element={<Navigate to="/es/" replace />} />
