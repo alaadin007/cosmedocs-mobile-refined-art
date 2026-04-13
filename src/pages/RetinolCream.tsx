@@ -142,7 +142,7 @@ const RetinolCream = () => {
                 <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-2 leading-[1.1]">
                   Stimulate <span className="font-semibold text-amber-600">RE</span>
                 </h1>
-                <p className="text-lg text-gray-500 font-light mb-6">Dual Retinol (Vitamin A) Cream</p>
+                <p className="text-lg text-gray-500 font-light mb-6">Retinol+ Dual Vitamin A Cream</p>
 
                 <p className="text-gray-600 font-light leading-relaxed mb-6 max-w-xl">
                   A precision-engineered dual retinoid cream combining 0.5% Retinol with Retinyl Palmitate in a hydrating base of Hyaluronic acid and Ceramide-3. Formulated by Harley Street cosmetic doctors for nighttime cellular renewal — targeting fibroblasts, keratinocytes and melanocytes to reverse the visible signs of ageing from the inside out.
