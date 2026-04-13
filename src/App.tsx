@@ -16,6 +16,17 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Index from "./pages/Index";
 const TranslatedSkincareBlog = lazy(() => import("./pages/blog/TranslatedSkincareBlog"));
 const TranslatedTier2Treatment = lazy(() => import("./pages/TranslatedTier2Treatment"));
+const TranslatedTier1Treatment = lazy(() => import("./pages/TranslatedTier1Treatment"));
+const HomepageJapanese = lazy(() => import("./pages/HomepageJapanese"));
+const HomepageGerman = lazy(() => import("./pages/HomepageGerman"));
+const TreatmentsHubJapanese = lazy(() => import("./pages/TreatmentsHubJapanese"));
+const TreatmentsHubGerman = lazy(() => import("./pages/TreatmentsHubGerman"));
+const PricesJapanese = lazy(() => import("./pages/PricesJapanese"));
+const PricesGerman = lazy(() => import("./pages/PricesGerman"));
+const ContactJapanese = lazy(() => import("./pages/ContactJapanese"));
+const ContactGerman = lazy(() => import("./pages/ContactGerman"));
+const AboutUsJapanese = lazy(() => import("./pages/AboutUsJapanese"));
+const AboutUsGerman = lazy(() => import("./pages/AboutUsGerman"));
 
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
