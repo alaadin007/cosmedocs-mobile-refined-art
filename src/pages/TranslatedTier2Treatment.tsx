@@ -318,6 +318,80 @@ const TREATMENTS: Record<Lang, Record<TreatmentKey, TreatmentData>> = {
       dir: 'ltr',
     },
   },
+  // ═══════════════════════════════════════════
+  // JAPANESE
+  // ═══════════════════════════════════════════
+  ja: {
+    'nose-filler': {
+      meta: { title: '鼻フィラー ロンドン | 非外科的鼻整形 | Cosmedocs', description: 'ヒアルロン酸フィラーによる非外科的鼻整形。鼻筋矯正、細化、鼻先リフト。ハーレーストリート2007年より。', keywords: '鼻フィラー, 非外科的鼻整形, ロンドン, ハーレーストリート' },
+      breadcrumbs: { parent: '治療', parentPath: '/ja/treatments/', current: '鼻フィラー' },
+      hero: { h1: '非外科的鼻整形', subtitle: '精密な医療美容で横顔を改善 — 手術不要、ダウンタイムなし' },
+      intro: { heading: '鼻フィラーとは？', text: '鼻フィラーは、ヒアルロン酸やPCLスレッドを使用して鼻の形状を改善する非外科的な美容施術です。段差を滑らかにし、対称性を改善し、鼻先を持ち上げることができます。施術時間は15〜30分で、効果は2〜3年持続します。' },
+      benefits: ['段差の隠蔽', '鼻筋の細化', '鼻先のリフト', '非対称の矯正', 'ダウンタイムなし', '即時効果'],
+      glance: { duration: '15〜30分', results: '最大2〜3年', recovery: '最小限の回復期間', product: 'HAフィラー＆PCLスレッド' },
+      faq: [
+        { q: '鼻フィラーは安全ですか？', a: 'はい。17年以上の経験を持つGMC登録医師が施術します。' },
+        { q: '施術時間はどのくらいですか？', a: '通常15〜30分、局所麻酔を使用します。' },
+        { q: '鼻フィラーの費用は？', a: 'HAフィラー£450から、PCLスレッド£950から。' },
+      ],
+      cta: 'ご予約', bookNow: '今すぐ予約',
+      review: { name: 'Yuki T.', initial: 'Y', text: '鼻の段差がずっと気になっていました。数分で自然に滑らかになりました。' },
+      dir: 'ltr',
+    },
+    'profhilo': {
+      meta: { title: 'プロファイロ ロンドン | バイオリモデリング | Cosmedocs', description: 'プロファイロ治療£350から。コラーゲンとエラスチンを刺激し自然な肌再生。ハーレーストリート。', keywords: 'プロファイロ, バイオリモデリング, ヒアルロン酸, コラーゲン, ロンドン' },
+      breadcrumbs: { parent: '治療', parentPath: '/ja/treatments/', current: 'プロファイロ' },
+      hero: { h1: 'プロファイロ — バイオリモデリング', subtitle: '高濃度ヒアルロン酸でコラーゲンとエラスチンを自然に刺激' },
+      intro: { heading: 'プロファイロとは？', text: 'プロファイロは64mgのヒアルロン酸を使用した先進的なバイオリモデリング治療です。コラーゲンとエラスチンの生成を刺激し、肌のトーン、弾力性、質を大幅に改善します。' },
+      benefits: ['弾力性の改善', '深層保湿', 'コラーゲン刺激', '顔・首・手に対応', '最小限のダウンタイム', '自然な結果'],
+      glance: { duration: '20〜30分', results: '6〜12ヶ月', recovery: '最小限の回復期間', product: 'ヒアルロン酸 (64mg)' },
+      faq: [
+        { q: '何回の施術が必要ですか？', a: '通常、最適な結果を得るために4〜6週間間隔で2回の施術が必要です。' },
+        { q: 'フィラーとの違いは？', a: 'プロファイロは肌をバイオリモデリングし保湿します。フィラーは特定の部位にボリュームを追加します。' },
+        { q: '費用はいくらですか？', a: '初回£350から、2回目以降£300から。' },
+      ],
+      cta: 'ご予約', bookNow: '今すぐ予約',
+      review: { name: 'Yuki T.', initial: 'Y', text: '肌が本当に輝いています。2回のプロファイロで皆に何をしたのか聞かれます。' },
+      dir: 'ltr',
+    },
+  },
+  // ═══════════════════════════════════════════
+  // GERMAN
+  // ═══════════════════════════════════════════
+  de: {
+    'nose-filler': {
+      meta: { title: 'Nasen-Filler London | Nicht-chirurgische Nasenkorrektur | Cosmedocs', description: 'Nicht-chirurgische Nasenkorrektur mit Hyaluronsäure. Höckerkorrektur, Verfeinerung und Nasenspitzenanhebung. Harley Street seit 2007.', keywords: 'Nasen-Filler, nicht-chirurgische Nasenkorrektur, London, Harley Street' },
+      breadcrumbs: { parent: 'Behandlungen', parentPath: '/de/behandlungen/', current: 'Nasen-Filler' },
+      hero: { h1: 'Nicht-chirurgische Nasenkorrektur', subtitle: 'Präzise Profilverbesserung ohne OP — kein Ausfallzeit' },
+      intro: { heading: 'Was ist ein Nasen-Filler?', text: 'Nasen-Filler ist ein nicht-chirurgisches Verfahren mit Hyaluronsäure oder PCL-Fäden zur Umformung der Nase. Höcker glätten, Nasenrücken verfeinern und Nasenspitze anheben — alles in 15-30 Minuten. Ergebnisse halten bis zu 2-3 Jahre.' },
+      benefits: ['Höckerkaschierung', 'Nasenrückenverfeinerung', 'Nasenspitzenanhebung', 'Asymmetriekorrektur', 'Keine Ausfallzeit', 'Sofortige Ergebnisse'],
+      glance: { duration: '15-30 Minuten', results: 'Bis zu 2-3 Jahre', recovery: 'Minimale Erholungszeit', product: 'HA-Filler & PCL-Fäden' },
+      faq: [
+        { q: 'Ist der Nasen-Filler sicher?', a: 'Ja, durchgeführt von GMC-registrierten Ärzten mit über 17 Jahren Erfahrung.' },
+        { q: 'Wie lange dauert die Behandlung?', a: 'In der Regel 15-30 Minuten mit lokaler Betäubung.' },
+        { q: 'Was kostet ein Nasen-Filler?', a: 'Ab £450 für HA-Filler und £950 für PCL-Fäden.' },
+      ],
+      cta: 'Termin buchen', bookNow: 'Jetzt buchen',
+      review: { name: 'Anna K.', initial: 'A', text: 'Der Höcker auf meiner Nase hat mich immer gestört. Dr. Haq hat ihn in Minuten geglättet — das Ergebnis ist so natürlich.' },
+      dir: 'ltr',
+    },
+    'profhilo': {
+      meta: { title: 'Profhilo London | Bio-Remodelling | Cosmedocs Harley Street', description: 'Profhilo-Behandlung ab £350. Stimuliert Kollagen und Elastin für natürliche Hautverjüngung. Harley Street.', keywords: 'Profhilo, Bio-Remodelling, Hyaluronsäure, Kollagen, London' },
+      breadcrumbs: { parent: 'Behandlungen', parentPath: '/de/behandlungen/', current: 'Profhilo' },
+      hero: { h1: 'Profhilo — Bio-Remodelling', subtitle: 'Hochkonzentrierte Hyaluronsäure zur natürlichen Kollagen- und Elastinstimulation' },
+      intro: { heading: 'Was ist Profhilo?', text: 'Profhilo ist eine fortschrittliche Bio-Remodelling-Behandlung mit 64 mg Hyaluronsäure zur Hautregeneration von innen. Stimuliert Kollagen- und Elastinproduktion und verbessert Hautton, Elastizität und Qualität erheblich.' },
+      benefits: ['Verbesserte Elastizität', 'Tiefenhydration', 'Kollagenstimulation', 'Geeignet für Gesicht, Hals und Hände', 'Minimale Ausfallzeit', 'Natürliche Ergebnisse'],
+      glance: { duration: '20-30 Minuten', results: '6-12 Monate', recovery: 'Minimale Erholungszeit', product: 'Hyaluronsäure (64 mg)' },
+      faq: [
+        { q: 'Wie viele Sitzungen brauche ich?', a: 'In der Regel zwei Sitzungen im Abstand von 4-6 Wochen für optimale Ergebnisse.' },
+        { q: 'Was ist der Unterschied zu Fillern?', a: 'Profhilo remodelliert und hydratisiert die Haut, während Filler bestimmten Bereichen Volumen hinzufügen.' },
+        { q: 'Was kostet Profhilo?', a: 'Erste Sitzung ab £350, Folgesitzungen ab £300.' },
+      ],
+      cta: 'Termin buchen', bookNow: 'Jetzt buchen',
+      review: { name: 'Anna K.', initial: 'A', text: 'Meine Haut strahlt jetzt wirklich. Zwei Profhilo-Sitzungen und alle fragen, was ich gemacht habe.' },
+      dir: 'ltr',
+    },
+  },
 };
 
 // ─── Component ────────────────────────────────────────────────────────
