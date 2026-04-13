@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sun, Moon, AlertTriangle, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExpandableSection } from "@/components/ui/expandable-section";
+import ExpandableSection from "@/components/ui/expandable-section";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import Breadcrumb from "@/components/Breadcrumb";
 
