@@ -11,6 +11,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import MasseterSidebar from "@/components/masseter/MasseterSidebar";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const MasseterBotox = () => {
   const seoData = generateSEOMetadata(
@@ -630,6 +631,13 @@ const MasseterBotox = () => {
           </p>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="general" />
+        </div>
+      </section>
     </>
   );
 };

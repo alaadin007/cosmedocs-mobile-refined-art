@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import LipFlipSidebar from "@/components/lip-flip/LipFlipSidebar";
 import lipIllustration from "@/assets/lip-profile-illustration.png";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const LipFlip = () => {
   const seoData = generateSEOMetadata(
@@ -665,6 +666,13 @@ const LipFlip = () => {
           </p>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

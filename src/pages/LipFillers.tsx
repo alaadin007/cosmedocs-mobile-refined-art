@@ -10,6 +10,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import LipFillersSidebar from "@/components/lip-fillers/LipFillersSidebar";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
@@ -743,6 +744,13 @@ const LipFillers = () => {
           <p>Our invisible art philosophy ensures natural-looking lip enhancement that complements your facial features. Doctor-led lip filler treatment at our Harley Street clinic uses expert technique for subtle, sophisticated results. Whether you choose 0.5ml for a gentle enhancement or 1ml for more visible transformation, your lips will look naturally beautiful. We also offer lip flip Botox treatment which can be combined with fillers for comprehensive lip enhancement. Book your lip filler consultation today at our Harley Street clinic.</p>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

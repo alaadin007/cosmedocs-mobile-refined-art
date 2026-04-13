@@ -8,6 +8,7 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import TearTroughFillerSidebar from "@/components/tear-trough/TearTroughFillerSidebar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import tearTroughPreview from "@/assets/tear-trough-gallery-2.jpeg";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const TearTroughFiller = () => {
   const faqs = [
@@ -538,6 +539,13 @@ const TearTroughFiller = () => {
           </article>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

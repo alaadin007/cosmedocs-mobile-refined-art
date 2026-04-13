@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import TempleFillerSidebar from "@/components/temple-filler/TempleFillerSidebar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const TempleFiller = () => {
   const faqs = [
@@ -512,6 +513,13 @@ const TempleFiller = () => {
           </article>
         </div>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };

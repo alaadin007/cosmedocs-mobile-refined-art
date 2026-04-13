@@ -8,6 +8,7 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import {
+import SkinFoundationCTA from "@/components/SkinFoundationCTA";
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -1360,6 +1361,13 @@ const NonSurgicalNoseJob = () => {
         </article>
         </main>
       </div>
+
+      {/* Skin Foundation CTA */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SkinFoundationCTA variant="anti-ageing" />
+        </div>
+      </section>
     </>
   );
 };
