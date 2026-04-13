@@ -166,4 +166,26 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/nose-filler/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/dermal-fillers/nose/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/nose-filler/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/rhinoplastie-medicale/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/relleno-nariz/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/nose-filler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/dermal-fillers/nose/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/ar/treatments/profhilo/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/profhilo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/profhilo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/profhilo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/profhilo/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.cosmedocs.com/zh/treatments/profhilo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/profhilo/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
