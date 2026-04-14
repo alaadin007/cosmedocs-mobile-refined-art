@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
-import { ArrowRight, Syringe, Sparkles, Eye } from "lucide-react";
+import { ArrowRight, Syringe, Sparkles, Eye, Brain } from "lucide-react";
 import BlogHeroSlider from "@/components/blog/BlogHeroSlider";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 
-// Import botox guide hero for featured article thumbnail
+import smartAestheticsHero from "@/assets/smart-aesthetics-hero.jpg";
 import botoxGuideHero from "@/assets/botox-guide-hero.jpg";
 
 const BlogHome = () => {
@@ -17,13 +17,13 @@ const BlogHome = () => {
   );
 
   const featuredArticle = {
-    title: "The Ultimate Botox Guide: From Science to Results",
-    subtitle: "The definitive, evidence-based guide to botulinum toxin treatments.",
+    title: "Smart Aesthetics: Understand Your Face Before You Treat It",
+    subtitle: "The interactive course that teaches you how aesthetic treatments actually work — from the inside out.",
     excerpt:
-      "Everything you need to know about Botox — what it does, how it works, what to expect, and how to choose the right practitioner. Written by Harley Street doctors with 17+ years of experience.",
-    category: "EDUCATION",
-    path: "/ultimate-botox-guide/",
-    image: botoxGuideHero,
+      "Why do some treatments fail? What causes sagging first — skin, fat, or bone? Learn the 9 clinical principles Harley Street doctors use to plan every procedure. Free, visual, and built for patients who want to understand before they commit.",
+    category: "SMART AESTHETICS",
+    path: "/aesthetic-treatments-made-easy/",
+    image: smartAestheticsHero,
   };
 
   const resultsExplainedArticles = [
@@ -54,6 +54,13 @@ const BlogHome = () => {
   ];
 
   const editorialArticles = [
+    {
+      title: "The Ultimate Botox Guide: From Science to Results",
+      subtitle: "The definitive, evidence-based guide to botulinum toxin — what it does, how it works, and how to choose the right practitioner.",
+      category: "EDUCATION",
+      path: "/ultimate-botox-guide/",
+      icon: "syringe",
+    },
     {
       title: "Turning 30 in 2026: The Smart Woman's Guide to Preventative Aesthetics",
       subtitle: "Baby Botox, collagen banking & the death of the duck lip — an honest guide to what you actually need at 30.",
@@ -298,6 +305,7 @@ const ArticleIcon = ({ name, className }: { name?: string; className?: string })
     case "syringe": return <Syringe className={className} />;
     case "sparkles": return <Sparkles className={className} />;
     case "eye": return <Eye className={className} />;
+    case "brain": return <Brain className={className} />;
     default: return <ArrowRight className={className} />;
   }
 };
