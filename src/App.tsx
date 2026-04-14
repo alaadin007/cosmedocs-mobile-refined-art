@@ -274,6 +274,7 @@ const TCAPeel = lazy(() => import("./pages/TCAPeel"));
 const TranslatedHomepage = lazy(() => import("./pages/TranslatedHomepage"));
 const TranslatedTreatmentPage = lazy(() => import("./pages/TranslatedTreatmentPage"));
 const HomepageArabic = lazy(() => import("./pages/HomepageArabic"));
+const LondonSummerAestheticsArabic = lazy(() => import("./pages/LondonSummerAestheticsArabic"));
 const HomepageFrench = lazy(() => import("./pages/HomepageFrench"));
 const HomepageSpanish = lazy(() => import("./pages/HomepageSpanish"));
 const TreatmentsHubArabic = lazy(() => import("./pages/TreatmentsHubArabic"));
@@ -347,6 +348,7 @@ const App = () => {
                    <Route path="/ar/blog/vitamin-c-vs-retinol/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="vitamin-c-vs-retinol" /></Suspense></Layout>} />
                    <Route path="/ar/blog/three-cell-skin-philosophy/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="three-cell-philosophy" /></Suspense></Layout>} />
                    <Route path="/ar/blog/why-ph-matters-vitamin-c/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedSkincareBlog lang="ar" articleKey="ph-vitamin-c" /></Suspense></Layout>} />
+                   <Route path="/ar/london-summer-aesthetics/" element={<Layout><Suspense fallback={<PageLoader />}><LondonSummerAestheticsArabic /></Suspense></Layout>} />
                    <Route path="/ar/treatments/nose-filler/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="ar" treatmentKey="nose-filler" /></Suspense></Layout>} />
                    <Route path="/ar/treatments/profhilo/" element={<Layout><Suspense fallback={<PageLoader />}><TranslatedTier2Treatment lang="ar" treatmentKey="profhilo" /></Suspense></Layout>} />
                    
