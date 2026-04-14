@@ -8,7 +8,7 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import Breadcrumb from "@/components/Breadcrumb";
 
 type BlogArticleKey = 'vitamin-c-vs-retinol' | 'three-cell-philosophy' | 'ph-vitamin-c';
-type BlogLang = 'ar' | 'fr' | 'es' | 'zh';
+type BlogLang = 'ar' | 'fr' | 'es' | 'zh' | 'ja' | 'de';
 
 interface BlogTranslation {
   meta: { title: string; description: string };
@@ -315,6 +315,140 @@ const translations: Record<BlogLang, Record<BlogArticleKey, VitaminCData | Three
       cta: { primary: '购买 Revitalise C20 — £85', secondary: '', heading: '试试正确配方的维生素C', subtext: '20% L-抗坏血酸、阿魏酸、维生素E——pH 3.0-3.5。' },
     } as PHData,
   },
+  ja: {
+    'vitamin-c-vs-retinol': {
+      meta: { title: 'ビタミンC vs レチノール：いつ使うべき？ | Cosmedocs', description: 'ビタミンCとレチノール、どちらを使うべき？朝晩のルーティンで安全に組み合わせる方法を専門医が解説。' },
+      breadcrumbs: ['ホーム', 'ブログ', 'ビタミンC vs レチノール'],
+      tag: 'CosmeTalk • スキンケア科学',
+      h1: 'ビタミンC vs レチノール：いつ使うべき？',
+      subtitle: '皮膚科学で最もエビデンスのある2つの有効成分 — どちらをいつ使うべきか？',
+      author: 'Ahmed Haq 医師',
+      readTime: '8分で読めます',
+      shortAnswer: { heading: '簡潔な答え', text: '両方使いましょう — ただし1日の異なる時間帯に。ビタミンCは朝の抗酸化シールドとして。レチノールは肌が修復モードに入る夜に。' },
+      am: { label: '朝', title: 'ビタミンC', points: ['紫外線・大気汚染によるフリーラジカルを中和', 'チロシナーゼを阻害 → 色素沈着を軽減', 'SPFと併用で光保護を強化', 'コラーゲンの架橋を安定化'] },
+      pm: { label: '夜', title: 'レチノール', points: ['線維芽細胞のレチノイド受容体を活性化', 'ケラチノサイトのターンオーバーを加速', 'メラノサイトの色素分布を正常化', 'コラーゲンI型・III型の合成を促進'] },
+      whyNot: { heading: '同時に使えない理由', p1: 'ビタミンCは低pH（2.5-3.5）で最も効果を発揮します。レチノールはやや高いpH（5.5-6.0）でより効率的に変換されます。同時塗布はpHの競合を引き起こします。', p2: '朝晩の分離は便宜上だけでなく、生化学的に最適なのです。' },
+      cellPerspective: { heading: '3細胞の視点', text: 'Cosmedocsでは、3つの基本的な皮膚細胞タイプを軸に処方を設計しています。' },
+      table: { cell: '細胞タイプ', vitC: 'ビタミンC効果', retinol: 'レチノール効果', rows: [['ケラチノサイト', 'セラミドサポートでバリアを強化', 'ターンオーバー加速、毛穴詰まり解消'], ['メラノサイト', 'チロシナーゼ阻害 → シミ軽減', 'メラニン凝集を均一に分散'], ['線維芽細胞', 'コラーゲン合成の必須補因子', 'レチノイド受容体活性化 → 新コラーゲン']] },
+      faq: [
+        { q: 'ビタミンCとレチノールは一緒に使えますか？', a: 'はい — ビタミンCを朝、レチノールを夜に使用してください。この分離で効果を最大化し、刺激を最小限にします。' },
+        { q: 'エイジングケアにはどちらが効果的？', a: '両方とも不可欠です。レチノールはコラーゲン生成を促進し、ビタミンCはフリーラジカルを中和します。' },
+        { q: 'いつ頃効果が現れますか？', a: 'ビタミンCの明るさは2-4週間で実感。レチノールの効果は8-12週間後に現れます。' },
+      ],
+      cta: { primary: 'ビタミンCを購入', secondary: 'レチノール+を購入', heading: 'ルーティンを始めませんか？', subtext: '当院の医療コスメは3つの皮膚細胞タイプすべてをターゲットに設計されています。' },
+    } as VitaminCData,
+    'three-cell-philosophy': {
+      meta: { title: '3細胞スキンフィロソフィー | Cosmedocs', description: 'すべての肌トラブルは3つの細胞タイプに起因します。3つすべてをターゲットにすることで持続的な変化が生まれる理由を解説。' },
+      breadcrumbs: ['ホーム', 'ブログ', '3細胞フィロソフィー'],
+      tag: 'CosmeTalk • 皮膚科学',
+      h1: '3細胞スキンフィロソフィー',
+      subtitle: 'すべての肌の悩み — エイジング、肌ムラ、毛穴詰まり — は3つの細胞タイプに帰着します。',
+      author: 'Ahmed Haq 医師',
+      readTime: '10分で読めます',
+      whyMatter: { heading: 'なぜ3つの細胞が重要か', text: '肌には30種以上の細胞がありますが、目に見える肌の健康の大部分を担うのはたった3種類です。' },
+      cells: [
+        { name: 'ケラチノサイト', subtitle: 'バリアビルダー • 表皮の約90%', description: '水分を保持し刺激物を防ぐ物理的バリアを形成。セラミドと脂肪酸を産生します。', treatments: 'ケミカルピーリング、ハイドラフェイシャル、レチノール+' },
+        { name: 'メラノサイト', subtitle: '色素レギュレーター • 基底層の約5-10%', description: 'メラニンを産生し、肌色と紫外線防御を提供します。', treatments: 'ビタミンC美容液、ピコレーザー、ケミカルピーリング' },
+        { name: '線維芽細胞', subtitle: '構造クリエーター • 真皮の結合組織', description: 'コラーゲン、エラスチン、ヒアルロン酸を産生。25歳以降、活性は年約1%ずつ低下します。', treatments: 'レチノール+、PRP、マイクロニードリング' },
+      ],
+      clinical: { heading: '臨床での適用方法', text: 'Cosmedocsでのカウンセリングでは、治療プランは3つの細胞タイプすべてに基づいて設計されます。' },
+      faq: [
+        { q: '肌の3つの細胞タイプとは？', a: 'ケラチノサイト（バリア）、メラノサイト（色素）、線維芽細胞（コラーゲン、エラスチン、ヒアルロン酸）。' },
+        { q: 'なぜ3つすべてをターゲットにすべき？', a: 'ほとんどの肌トラブルは少なくとも2種の細胞の機能障害を伴います。1つだけでは不完全な結果になります。' },
+      ],
+      cta: { primary: 'コスメを購入', secondary: 'カウンセリング予約', heading: '3細胞アプローチを体験', subtext: '3つの基本皮膚細胞タイプすべてをターゲットにした医療コスメから始めましょう。' },
+    } as ThreeCellData,
+    'ph-vitamin-c': {
+      meta: { title: 'ビタミンC美容液でpHが重要な理由 | Cosmedocs', description: 'pH値がビタミンC美容液の効果を決定します。なぜpH 3.0-3.5が臨床的に最適なのかを解説。' },
+      breadcrumbs: ['ホーム', 'ブログ', 'pHが重要な理由'],
+      tag: 'CosmeTalk • 処方科学',
+      h1: 'ビタミンC美容液でpHが重要な理由',
+      subtitle: 'あなたのビタミンC美容液は無駄かもしれません。pHはL-アスコルビン酸が肌に浸透するかどうかを決める最重要因子です。',
+      author: 'Ahmed Haq 医師',
+      readTime: '7分で読めます',
+      problem: { heading: 'pHの問題', p1: 'L-アスコルビン酸 — 皮膚浸透が証明された唯一のビタミンC形態 — は中性pHでは荷電分子です。', p2: 'pH 3.5以下でプロトン化（無荷電）となり、バリアを通過できるようになります。' },
+      sweetSpot: { heading: 'pHスイートスポット' },
+      phScale: [
+        { label: 'pH < 2.5', desc: '酸性すぎ — 刺激と化学火傷のリスク' },
+        { label: 'pH 3.0–3.5', desc: '✓ 最適 — 最大浸透、最小刺激' },
+        { label: 'pH 4.0–5.0', desc: '吸収低下 — 荷電分子がブロック' },
+        { label: 'pH > 5.0', desc: '吸収ほぼなし — 実質無効' },
+      ],
+      triangle: { heading: '安定トライアングル：ビタミンC + E + フェルラ酸', p1: '2005年のデューク大学の研究で、ビタミンEとフェルラ酸の添加が光保護能力を2倍にすることが証明されました。', p2: '当院のRevitalise C20美容液はこの科学的に検証された組み合わせを採用しています。' },
+      faq: [
+        { q: 'ビタミンC美容液のpHはいくつであるべき？', a: 'pH 3.0-3.5が最適。2.5未満は刺激を引き起こし、3.5超では吸収が大幅に低下します。' },
+        { q: 'ビタミンC美容液が茶色くなるのはなぜ？', a: '酸化です。フェルラ酸とビタミンEが処方を安定させます。' },
+      ],
+      cta: { primary: 'Revitalise C20を購入 — £85', secondary: '', heading: '正しく処方されたビタミンCを試す', subtext: '20% L-アスコルビン酸、フェルラ酸、ビタミンE — pH 3.0-3.5。' },
+    } as PHData,
+  },
+  de: {
+    'vitamin-c-vs-retinol': {
+      meta: { title: 'Vitamin C vs Retinol: Wann welches verwenden? | Cosmedocs', description: 'Vitamin C oder Retinol? Expertenguide: Wann Sie welches verwenden und wie Sie beide sicher in Ihrer Morgen-/Abendroutine kombinieren.' },
+      breadcrumbs: ['Startseite', 'Blog', 'Vitamin C vs Retinol'],
+      tag: 'CosmeTalk • Hautpflege-Wissenschaft',
+      h1: 'Vitamin C vs Retinol: Wann welches verwenden?',
+      subtitle: 'Zwei der am besten erforschten Wirkstoffe in der Dermatologie — aber welchen sollten Sie wann verwenden?',
+      author: 'Dr. Ahmed Haq',
+      readTime: '8 Min. Lesezeit',
+      shortAnswer: { heading: 'Die kurze Antwort', text: 'Verwenden Sie beide — aber zu verschiedenen Tageszeiten. Vitamin C gehört in Ihre Morgenroutine als antioxidativer Schutzschild. Retinol gehört in den Abend, wenn Ihre Haut in den Reparaturmodus wechselt.' },
+      am: { label: 'Morgens', title: 'Vitamin C', points: ['Neutralisiert freie Radikale durch UV und Umweltverschmutzung', 'Hemmt Tyrosinase → reduziert Pigmentierung', 'Verstärkt Lichtschutz zusammen mit SPF', 'Stabilisiert Kollagen-Quervernetzungen'] },
+      pm: { label: 'Abends', title: 'Retinol', points: ['Aktiviert Retinoid-Rezeptoren auf Fibroblasten', 'Beschleunigt die Keratinozyten-Erneuerung', 'Normalisiert die Pigmentverteilung der Melanozyten', 'Stimuliert Kollagen I & III Synthese'] },
+      whyNot: { heading: 'Warum nicht gleichzeitig?', p1: 'Vitamin C wirkt am besten bei niedrigem pH (2,5-3,5). Retinol konvertiert effizienter bei leicht höherem pH (5,5-6,0). Gleichzeitige Anwendung erzeugt einen pH-Konflikt.', p2: 'Die Morgen-/Abendtrennung ist nicht nur praktisch — sie ist biochemisch optimal.' },
+      cellPerspective: { heading: 'Die 3-Zellen-Perspektive', text: 'Bei Cosmedocs formulieren wir um drei grundlegende Hautzelltypen herum.' },
+      table: { cell: 'Zelltyp', vitC: 'Vitamin C Effekt', retinol: 'Retinol Effekt', rows: [['Keratinozyten', 'Stärkt die Barriere durch Ceramid-Unterstützung', 'Beschleunigt Erneuerung, befreit Poren'], ['Melanozyten', 'Hemmt Tyrosinase → reduziert dunkle Flecken', 'Verteilt Melanin-Cluster gleichmäßig'], ['Fibroblasten', 'Essentieller Kofaktor für Kollagensynthese', 'Aktiviert Retinoid-Rezeptoren → neues Kollagen']] },
+      faq: [
+        { q: 'Kann ich Vitamin C und Retinol zusammen verwenden?', a: 'Ja — Vitamin C morgens und Retinol abends. Diese Trennung maximiert die Wirksamkeit ohne Reizung.' },
+        { q: 'Was ist besser für Anti-Aging?', a: 'Beide sind essentiell. Retinol stimuliert die Kollagenproduktion, während Vitamin C freie Radikale neutralisiert.' },
+        { q: 'Wann sehe ich Ergebnisse?', a: 'Vitamin C Aufhellung ist in 2-4 Wochen sichtbar. Retinol-Vorteile zeigen sich nach 8-12 Wochen.' },
+      ],
+      cta: { primary: 'Vitamin C kaufen', secondary: 'Retinol+ kaufen', heading: 'Bereit, Ihre Routine zu starten?', subtext: 'Unsere Kosmezeutika sind für die Zusammenarbeit konzipiert — alle drei wesentlichen Hautzelltypen werden gezielt angesprochen.' },
+    } as VitaminCData,
+    'three-cell-philosophy': {
+      meta: { title: 'Die 3-Zellen-Philosophie der Haut | Cosmedocs', description: 'Jedes Hautproblem lässt sich auf drei Zelltypen zurückführen. Erfahren Sie, wie das gezielte Ansprechen aller drei eine dauerhafte Transformation bewirkt.' },
+      breadcrumbs: ['Startseite', 'Blog', '3-Zellen-Philosophie'],
+      tag: 'CosmeTalk • Hautwissenschaft',
+      h1: 'Die 3-Zellen-Philosophie der Haut',
+      subtitle: 'Jedes Hautproblem — Alterung, ungleichmäßiger Teint, verstopfte Poren — lässt sich auf drei Zelltypen zurückführen.',
+      author: 'Dr. Ahmed Haq',
+      readTime: '10 Min. Lesezeit',
+      whyMatter: { heading: 'Warum die 3 Zellen wichtig sind', text: 'Ihre Haut enthält über 30 Zelltypen, aber drei sind für den Großteil der sichtbaren Hautgesundheit verantwortlich.' },
+      cells: [
+        { name: 'Keratinozyten', subtitle: 'Die Barrierebauer • ~90% der Epidermis', description: 'Bilden die physische Barriere, die Feuchtigkeit hält und Reizstoffe abwehrt. Produzieren Ceramide und Fettsäuren.', treatments: 'Chemisches Peeling, HydraFacial, Retinol+' },
+        { name: 'Melanozyten', subtitle: 'Die Pigmentregulatoren • ~5-10% der Basalschicht', description: 'Produzieren Melanin, das der Haut Farbe verleiht und UV-Schutz bietet.', treatments: 'Vitamin C Serum, Pico-Laser, Chemisches Peeling' },
+        { name: 'Fibroblasten', subtitle: 'Die Strukturbildner • Bindegewebe der Dermis', description: 'Produzieren Kollagen, Elastin und Hyaluronsäure. Nach 25 sinkt ihre Aktivität um ca. 1% pro Jahr.', treatments: 'Retinol+, PRP, Microneedling' },
+      ],
+      clinical: { heading: 'Klinische Anwendung', text: 'Bei Ihrer Beratung bei Cosmedocs wird Ihr Behandlungsplan anhand aller drei Zelltypen erstellt.' },
+      faq: [
+        { q: 'Was sind die 3 Hautzelltypen?', a: 'Keratinozyten (Barriere), Melanozyten (Pigment) und Fibroblasten (Kollagen, Elastin, Hyaluronsäure).' },
+        { q: 'Warum alle drei ansprechen?', a: 'Die meisten Hautprobleme betreffen mindestens zwei Zelltypen. Nur einen anzusprechen liefert unvollständige Ergebnisse.' },
+      ],
+      cta: { primary: 'Kosmezeutika kaufen', secondary: 'Beratung buchen', heading: 'Erleben Sie den 3-Zellen-Ansatz', subtext: 'Beginnen Sie mit ärztlich formulierten Kosmezeutika, die alle drei wesentlichen Hautzelltypen ansprechen.' },
+    } as ThreeCellData,
+    'ph-vitamin-c': {
+      meta: { title: 'Warum der pH-Wert bei Vitamin C Seren wichtig ist | Cosmedocs', description: 'Der pH-Wert bestimmt, ob Ihr Vitamin C Serum tatsächlich wirkt. Erfahren Sie, warum pH 3,0-3,5 der klinisch optimale Bereich ist.' },
+      breadcrumbs: ['Startseite', 'Blog', 'Warum der pH-Wert wichtig ist'],
+      tag: 'CosmeTalk • Formulierungswissenschaft',
+      h1: 'Warum der pH-Wert bei Vitamin C Seren wichtig ist',
+      subtitle: 'Ihr Vitamin C Serum könnte wirkungslos sein. Der pH-Wert ist der wichtigste Faktor.',
+      author: 'Dr. Ahmed Haq',
+      readTime: '7 Min. Lesezeit',
+      problem: { heading: 'Das pH-Problem', p1: 'L-Ascorbinsäure — die einzige Form von Vitamin C, die nachweislich in die Haut eindringt — ist bei neutralem pH ein geladenes Molekül.', p2: 'Unter pH 3,5 wird es protoniert (ungeladen) und kann die Barriere passieren.' },
+      sweetSpot: { heading: 'Der pH-Sweetspot' },
+      phScale: [
+        { label: 'pH < 2,5', desc: 'Zu sauer — Reizung und chemische Verbrennungen' },
+        { label: 'pH 3,0–3,5', desc: '✓ Optimal — maximale Penetration, minimale Reizung' },
+        { label: 'pH 4,0–5,0', desc: 'Reduzierte Absorption — geladenes Molekül blockiert' },
+        { label: 'pH > 5,0', desc: 'Minimale Absorption — praktisch unwirksam' },
+      ],
+      triangle: { heading: 'Das Stabilitätsdreieck: Vitamin C + E + Ferulasäure', p1: 'Die Duke-University-Studie von 2005 bewies, dass die Zugabe von Vitamin E und Ferulasäure die Lichtschutzkapazität verdoppelte.', p2: 'Unser Revitalise C20 Serum verwendet diese wissenschaftlich validierte Kombination.' },
+      faq: [
+        { q: 'Welchen pH-Wert sollte ein Vitamin C Serum haben?', a: 'pH 3,0-3,5 ist optimal. Unter 2,5 verursacht Reizung; über 3,5 reduziert die Absorption erheblich.' },
+        { q: 'Warum wird mein Vitamin C Serum braun?', a: 'Oxidation. Ferulasäure und Vitamin E stabilisieren die Formel.' },
+      ],
+      cta: { primary: 'Revitalise C20 kaufen — £85', secondary: '', heading: 'Probieren Sie korrekt formuliertes Vitamin C', subtext: '20% L-Ascorbinsäure, Ferulasäure, Vitamin E — bei pH 3,0-3,5.' },
+    } as PHData,
+  },
 };
 
 // URL mapping
@@ -323,6 +457,8 @@ const BLOG_URLS: Record<BlogLang, Record<BlogArticleKey, string>> = {
   fr: { 'vitamin-c-vs-retinol': '/fr/blog/vitamine-c-vs-retinol/', 'three-cell-philosophy': '/fr/blog/philosophie-3-cellules-peau/', 'ph-vitamin-c': '/fr/blog/pourquoi-ph-important-vitamine-c/' },
   es: { 'vitamin-c-vs-retinol': '/es/blog/vitamina-c-vs-retinol/', 'three-cell-philosophy': '/es/blog/filosofia-3-celulas-piel/', 'ph-vitamin-c': '/es/blog/por-que-ph-importa-vitamina-c/' },
   zh: { 'vitamin-c-vs-retinol': '/zh/blog/vitamin-c-vs-retinol/', 'three-cell-philosophy': '/zh/blog/three-cell-skin-philosophy/', 'ph-vitamin-c': '/zh/blog/why-ph-matters-vitamin-c/' },
+  ja: { 'vitamin-c-vs-retinol': '/ja/blog/vitamin-c-vs-retinol/', 'three-cell-philosophy': '/ja/blog/three-cell-skin-philosophy/', 'ph-vitamin-c': '/ja/blog/why-ph-matters-vitamin-c/' },
+  de: { 'vitamin-c-vs-retinol': '/de/blog/vitamin-c-vs-retinol/', 'three-cell-philosophy': '/de/blog/drei-zellen-hautphilosophie/', 'ph-vitamin-c': '/de/blog/warum-ph-wert-vitamin-c/' },
 };
 
 const EN_URLS: Record<BlogArticleKey, string> = {
@@ -349,6 +485,8 @@ export default function TranslatedSkincareBlog({ lang, articleKey }: Props) {
     { hreflang: 'fr', href: `https://www.cosmedocs.com${BLOG_URLS.fr[articleKey]}` },
     { hreflang: 'es', href: `https://www.cosmedocs.com${BLOG_URLS.es[articleKey]}` },
     { hreflang: 'zh', href: `https://www.cosmedocs.com${BLOG_URLS.zh[articleKey]}` },
+    { hreflang: 'ja', href: `https://www.cosmedocs.com${BLOG_URLS.ja[articleKey]}` },
+    { hreflang: 'de', href: `https://www.cosmedocs.com${BLOG_URLS.de[articleKey]}` },
     { hreflang: 'x-default', href: `https://www.cosmedocs.com${EN_URLS[articleKey]}` },
   ];
 
