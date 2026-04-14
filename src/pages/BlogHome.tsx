@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Link } from "react-router-dom";
-import { ArrowRight, Syringe, Sparkles, Eye } from "lucide-react";
+import { ArrowRight, Syringe, Sparkles, Eye, Brain } from "lucide-react";
 import BlogHeroSlider from "@/components/blog/BlogHeroSlider";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 
-// Import botox guide hero for featured article thumbnail
+import smartAestheticsHero from "@/assets/smart-aesthetics-hero.jpg";
 import botoxGuideHero from "@/assets/botox-guide-hero.jpg";
 
 const BlogHome = () => {
