@@ -574,6 +574,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'عن كوزمي دوكس | أطباء هارلي ستريت منذ 2007',
     description: 'تعرف على فريق كوزمي دوكس — أطباء مسجلون في GMC مع أكثر من مليون حقنة منذ 2007.'
   },
+  '/ar/london-summer-aesthetics/': {
+    title: 'تجميل الصيف في لندن | Cosmedocs هارلي ستريت — للزائرين العرب',
+    description: 'استمتعي بعلاجات تجميلية فاخرة في هارلي ستريت خلال زيارتك للندن. بوتوكس وفيلر بأيدي أطباء متخصصين — جودة عالمية بأسعار تنافسية.'
+  },
   // French
   '/fr/': {
     title: 'Cosmedocs Londres | Médecine Esthétique | Harley Street',
