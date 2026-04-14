@@ -17,13 +17,13 @@ const BlogHome = () => {
   );
 
   const featuredArticle = {
-    title: "The Ultimate Botox Guide: From Science to Results",
-    subtitle: "The definitive, evidence-based guide to botulinum toxin treatments.",
+    title: "Smart Aesthetics: Understand Your Face Before You Treat It",
+    subtitle: "The interactive course that teaches you how aesthetic treatments actually work — from the inside out.",
     excerpt:
-      "Everything you need to know about Botox — what it does, how it works, what to expect, and how to choose the right practitioner. Written by Harley Street doctors with 17+ years of experience.",
-    category: "EDUCATION",
-    path: "/ultimate-botox-guide/",
-    image: botoxGuideHero,
+      "Why do some treatments fail? What causes sagging first — skin, fat, or bone? Learn the 9 clinical principles Harley Street doctors use to plan every procedure. Free, visual, and built for patients who want to understand before they commit.",
+    category: "SMART AESTHETICS",
+    path: "/aesthetic-treatments-made-easy/",
+    image: smartAestheticsHero,
   };
 
   const resultsExplainedArticles = [
