@@ -849,6 +849,10 @@
 /home2      /   301
 /home2/     /   301
 
+# Arabic summer tourism page
+/ar/london-summer-aesthetics    /ar/london-summer-aesthetics/   301
+/ar/london-summer-aesthetics/   /index.html                     200
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
