@@ -1,6 +1,7 @@
 import { ChevronRight, Home } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { generateBreadcrumbSchema } from "@/utils/richSchemas";
 
 interface BreadcrumbItem {
   label: string;
@@ -15,37 +16,21 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb = ({ items, currentPage, variant = "dark" }: BreadcrumbProps) => {
+  const location = useLocation();
   const isLight = variant === "light";
   const linkColor = isLight ? "text-gray-400 hover:text-[#C9A050]" : "text-white/50 hover:text-[#C9A050]";
   const chevronColor = isLight ? "text-gray-300" : "text-white/30";
-  // If currentPage is provided, use it. Otherwise, treat the last item as the current page
   const breadcrumbItems = currentPage ? items : items.slice(0, -1);
   const finalPage = currentPage || (items.length > 0 ? items[items.length - 1].label : '');
   
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.cosmedocs.com"
-      },
-      ...breadcrumbItems.map((item, index) => ({
-        "@type": "ListItem",
-        "position": index + 2,
-        "name": item.label,
-        "item": `https://www.cosmedocs.com${item.path || item.href || ''}`
-      })),
-      ...(finalPage ? [{
-        "@type": "ListItem",
-        "position": breadcrumbItems.length + 2,
-        "name": finalPage,
-        "item": `https://www.cosmedocs.com${window.location.pathname}`
-      }] : [])
-    ]
-  };
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    breadcrumbItems.map(item => ({
+      name: item.label,
+      url: item.path || item.href || '',
+    })),
+    finalPage,
+    location.pathname
+  );
 
   return (
     <>
