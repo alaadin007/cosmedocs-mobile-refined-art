@@ -1,20 +1,94 @@
 import { useState, useCallback, useRef, useEffect } from "react";
+import { useConversation } from "@elevenlabs/react";
 import { supabase } from "@/integrations/supabase/client";
 import { 
   Mic, MicOff, Camera, X, Phone, PhoneOff, 
-  Volume2, Sparkles, Upload, ChevronRight,
-  Loader2, MessageCircle
+  Sparkles, ChevronRight, Loader2, MessageCircle
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 type ConsultationPhase = 'welcome' | 'skin' | 'wrinkles' | 'volume' | 'summary';
-type Message = { role: 'user' | 'assistant'; content: string };
 
 interface PatientInfo {
   name: string;
   images: { phase: ConsultationPhase; dataUrl: string }[];
   analyses: { phase: string; text: string }[];
 }
+
+// Voice wave bars component
+const VoiceWaves = ({ isActive, level }: { isActive: boolean; level: number }) => {
+  const bars = 5;
+  return (
+    <div className="flex items-center gap-[3px] h-6">
+      {Array.from({ length: bars }).map((_, i) => {
+        const baseHeight = isActive ? 0.3 + Math.random() * 0.7 : 0.15;
+        const height = Math.max(0.15, Math.min(1, baseHeight * (0.5 + level)));
+        const delay = i * 0.1;
+        return (
+          <div
+            key={i}
+            className={`w-[3px] rounded-full transition-all duration-150 ${
+              isActive ? 'bg-[#C9A050]' : 'bg-white/20'
+            }`}
+            style={{
+              height: `${height * 24}px`,
+              animationDelay: `${delay}s`,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+// Animated voice visualiser that polls volume
+const LiveVoiceVisualiser = ({ 
+  conversation, 
+  isSpeaking 
+}: { 
+  conversation: ReturnType<typeof useConversation>; 
+  isSpeaking: boolean;
+}) => {
+  const [bars, setBars] = useState<number[]>([0.15, 0.15, 0.15, 0.15, 0.15]);
+  const frameRef = useRef<number>();
+
+  useEffect(() => {
+    const update = () => {
+      const vol = isSpeaking 
+        ? conversation.getOutputVolume() 
+        : conversation.getInputVolume();
+      const v = typeof vol === 'number' ? vol : 0;
+      
+      setBars(prev => prev.map((_, i) => {
+        const jitter = (Math.random() - 0.5) * 0.3;
+        return Math.max(0.1, Math.min(1, v * 2 + jitter));
+      }));
+      
+      frameRef.current = requestAnimationFrame(update);
+    };
+    
+    frameRef.current = requestAnimationFrame(update);
+    return () => {
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+    };
+  }, [conversation, isSpeaking]);
+
+  return (
+    <div className="flex items-center justify-center gap-[3px] h-10">
+      {bars.map((h, i) => (
+        <div
+          key={i}
+          className={`w-[4px] rounded-full transition-all duration-100 ${
+            isSpeaking ? 'bg-[#C9A050]' : 'bg-green-400'
+          }`}
+          style={{ height: `${Math.max(4, h * 40)}px` }}
+        />
+      ))}
+    </div>
+  );
+};
+
+const AGENT_ID = 'agent_01jx39axdsfc0s9y7jcqjj75fd';
 
 const VoiceConsultationWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,197 +97,92 @@ const VoiceConsultationWidget = () => {
   const [patientInfo, setPatientInfo] = useState<PatientInfo>({
     name: '', images: [], analyses: []
   });
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [isListening, setIsListening] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [isThinking, setIsThinking] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(false);
   const [isAnalysing, setIsAnalysing] = useState(false);
   const [analysisResult, setAnalysisResult] = useState<string | null>(null);
   const [transcript, setTranscript] = useState<string[]>([]);
-  const [isSessionActive, setIsSessionActive] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
-  const recognitionRef = useRef<any>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // ElevenLabs Conversational AI
+  const conversation = useConversation({
+    onConnect: () => {
+      console.log('Voice consultation connected');
+      setTranscript(prev => [...prev, '🎙️ Connected — speak naturally']);
+    },
+    onDisconnect: () => {
+      console.log('Voice consultation disconnected');
+      setTranscript(prev => [...prev, '📞 Consultation ended']);
+    },
+    onMessage: (message) => {
+      if (message.type === 'user_transcript') {
+        const text = (message as any).user_transcription_event?.user_transcript;
+        if (text) setTranscript(prev => [...prev, `You: ${text}`]);
+      } else if (message.type === 'agent_response') {
+        const text = (message as any).agent_response_event?.agent_response;
+        if (text) setTranscript(prev => [...prev, `Dr. AI: ${text}`]);
+      }
+    },
+    onError: (error) => {
+      console.error('Conversation error:', error);
+      toast({ 
+        title: "Connection Error", 
+        description: "Voice connection interrupted. Please try again.", 
+        variant: "destructive" 
+      });
+    },
+  });
 
   // Scroll to bottom on new messages
   useEffect(() => {
     setTimeout(() => chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
   }, [transcript]);
 
-  // Initialize Web Speech API
-  const startListening = useCallback(() => {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      toast({ title: "Not Supported", description: "Speech recognition is not supported in this browser. Please use Chrome.", variant: "destructive" });
-      return;
-    }
-
-    const recognition = new SpeechRecognition();
-    recognition.continuous = true;
-    recognition.interimResults = false;
-    recognition.lang = 'en-GB';
-
-    recognition.onresult = (event: any) => {
-      const last = event.results[event.results.length - 1];
-      if (last.isFinal) {
-        const text = last[0].transcript.trim();
-        if (text) {
-          handleUserMessage(text);
-        }
-      }
-    };
-
-    recognition.onerror = (event: any) => {
-      console.error('Speech recognition error:', event.error);
-      if (event.error !== 'no-speech' && event.error !== 'aborted') {
-        toast({ title: "Microphone Error", description: `Speech error: ${event.error}`, variant: "destructive" });
-      }
-    };
-
-    recognition.onend = () => {
-      // Restart if session is still active
-      if (isSessionActive) {
-        try { recognition.start(); } catch {}
-      } else {
-        setIsListening(false);
-      }
-    };
-
-    recognitionRef.current = recognition;
-    recognition.start();
-    setIsListening(true);
-  }, [isSessionActive]);
-
-  const stopListening = useCallback(() => {
-    if (recognitionRef.current) {
-      recognitionRef.current.stop();
-      recognitionRef.current = null;
-    }
-    setIsListening(false);
-  }, []);
-
-  // Send text to our AI and get spoken response
-  const handleUserMessage = useCallback(async (text: string) => {
-    const userMsg: Message = { role: 'user', content: text };
-    setMessages(prev => [...prev, userMsg]);
-    setTranscript(prev => [...prev, `You: ${text}`]);
-    setIsThinking(true);
-
-    try {
-      // Get the latest analysis context
-      const latestAnalysis = patientInfo.analyses.length > 0 
-        ? patientInfo.analyses.map(a => `${a.phase}: ${a.text}`).join('\n\n')
-        : undefined;
-
-      const { data, error } = await supabase.functions.invoke('ai-voice-consultation', {
-        body: {
-          messages: [...messages, userMsg].map(m => ({ role: m.role, content: m.content })),
-          imageAnalysis: latestAnalysis,
-        }
-      });
-
-      if (error) throw error;
-
-      const reply = data?.reply || "I apologise, could you repeat that?";
-      const assistantMsg: Message = { role: 'assistant', content: reply };
-      setMessages(prev => [...prev, assistantMsg]);
-      setTranscript(prev => [...prev, `Dr. AI: ${reply}`]);
-
-      // Speak the response via ElevenLabs TTS
-      await speakText(reply);
-    } catch (err: any) {
-      console.error('AI consultation error:', err);
-      const errorMsg = err.message || 'Could not process your message.';
-      setTranscript(prev => [...prev, `⚠️ ${errorMsg}`]);
-      toast({ title: "Error", description: errorMsg, variant: "destructive" });
-    } finally {
-      setIsThinking(false);
-    }
-  }, [messages, patientInfo.analyses]);
-
-  // ElevenLabs TTS
-  const speakText = useCallback(async (text: string) => {
-    setIsSpeaking(true);
-    try {
-      const { data, error } = await supabase.functions.invoke('elevenlabs-tts', {
-        body: { text }
-      });
-
-      if (error) throw error;
-
-      if (data?.audio) {
-        const audioBlob = Uint8Array.from(atob(data.audio), c => c.charCodeAt(0));
-        const blob = new Blob([audioBlob], { type: 'audio/mpeg' });
-        const url = URL.createObjectURL(blob);
-        
-        if (audioRef.current) {
-          audioRef.current.pause();
-        }
-        
-        const audio = new Audio(url);
-        audioRef.current = audio;
-        audio.onended = () => {
-          setIsSpeaking(false);
-          URL.revokeObjectURL(url);
-        };
-        audio.onerror = () => {
-          setIsSpeaking(false);
-          URL.revokeObjectURL(url);
-        };
-        await audio.play();
-      } else {
-        setIsSpeaking(false);
-      }
-    } catch (err) {
-      console.error('TTS error:', err);
-      setIsSpeaking(false);
-      // Fallback to browser TTS
-      if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-GB';
-        utterance.onend = () => setIsSpeaking(false);
-        window.speechSynthesis.speak(utterance);
-      }
-    }
-  }, []);
-
-  // Start consultation
+  // Start real-time voice consultation
   const startConsultation = useCallback(async () => {
+    setIsConnecting(true);
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
-    } catch {
-      toast({ title: "Microphone Required", description: "Please allow microphone access to use voice consultation.", variant: "destructive" });
-      return;
+
+      // Get signed token from our edge function
+      const { data, error } = await supabase.functions.invoke('elevenlabs-conversation-token', {
+        body: { agentId: AGENT_ID }
+      });
+
+      if (error || !data?.token) {
+        throw new Error(error?.message || 'Failed to get conversation token');
+      }
+
+      setCurrentPhase('skin');
+      setIsExpanded(true);
+
+      // Start the real-time conversation
+      await conversation.startSession({
+        token: data.token,
+      });
+
+      // Send patient context
+      if (patientInfo.name) {
+        conversation.sendContextualUpdate(`The patient's name is ${patientInfo.name}. Greet them by name.`);
+      }
+    } catch (err: any) {
+      console.error('Failed to start consultation:', err);
+      toast({ 
+        title: "Connection Failed", 
+        description: err.message || "Could not start voice consultation.", 
+        variant: "destructive" 
+      });
+    } finally {
+      setIsConnecting(false);
     }
-
-    setIsSessionActive(true);
-    setCurrentPhase('skin');
-    setIsExpanded(true);
-
-    const greeting = patientInfo.name 
-      ? `Welcome ${patientInfo.name}. I'm Dr. Haq's AI consultation assistant at Cosmedocs Harley Street. Let's begin with your skin quality assessment. Could you upload a clear photo of your face, and I'll compare your skin's condition? I'll look at tone, texture, pores, and how your skin has been affected by environmental factors.`
-      : "Welcome to your Cosmedocs consultation. I'm Dr. Haq's AI assistant. Let's start by assessing your skin quality. Please upload a clear photo of your face, and tell me — what are your main skin concerns?";
-    
-    const assistantMsg: Message = { role: 'assistant', content: greeting };
-    setMessages([assistantMsg]);
-    setTranscript([`Dr. AI: ${greeting}`]);
-    
-    await speakText(greeting);
-    startListening();
-  }, [patientInfo.name, speakText, startListening]);
+  }, [conversation, patientInfo.name]);
 
   // End consultation
-  const endConsultation = useCallback(() => {
-    setIsSessionActive(false);
-    stopListening();
-    if (audioRef.current) {
-      audioRef.current.pause();
-    }
-    setIsSpeaking(false);
+  const endConsultation = useCallback(async () => {
+    await conversation.endSession();
     setCurrentPhase('summary');
-  }, [stopListening]);
+  }, [conversation]);
 
   // Image handling
   const handleImageCapture = useCallback(() => {
@@ -239,7 +208,7 @@ const VoiceConsultationWidget = () => {
         images: [...prev.images, { phase: currentPhase, dataUrl }]
       }));
 
-      setTranscript(prev => [...prev, `📸 Image uploaded for ${currentPhase} analysis...`]);
+      setTranscript(prev => [...prev, `📸 Photo uploaded — analysing...`]);
       setIsAnalysing(true);
       setAnalysisResult(null);
       
@@ -249,7 +218,7 @@ const VoiceConsultationWidget = () => {
           body: {
             images: [base64],
             phase: currentPhase === 'welcome' ? 'skin' : currentPhase,
-            patientContext: patientInfo.name ? `Patient name: ${patientInfo.name}. Previous analyses: ${patientInfo.analyses.map(a => a.text.substring(0, 100)).join('; ')}` : undefined,
+            patientContext: patientInfo.name ? `Patient: ${patientInfo.name}` : undefined,
           }
         });
 
@@ -261,40 +230,24 @@ const VoiceConsultationWidget = () => {
           ...prev,
           analyses: [...prev.analyses, { phase: currentPhase, text: analysis }]
         }));
-        setTranscript(prev => [...prev, `🔬 Analysis complete.`]);
+        setTranscript(prev => [...prev, `🔬 Analysis complete`]);
 
-        // Now send the analysis to our AI to discuss conversationally
-        const discussionMsg: Message = { role: 'user', content: `[Image analysis completed for ${currentPhase}. Please discuss these findings with me.]` };
-        setMessages(prev => [...prev, discussionMsg]);
-        
-        setIsThinking(true);
-        const { data: aiData, error: aiError } = await supabase.functions.invoke('ai-voice-consultation', {
-          body: {
-            messages: [...messages, discussionMsg].map(m => ({ role: m.role, content: m.content })),
-            imageAnalysis: analysis,
-          }
-        });
-
-        if (aiError) throw aiError;
-
-        const reply = aiData?.reply || "I can see the results. Let me discuss what I've found.";
-        const assistantMsg: Message = { role: 'assistant', content: reply };
-        setMessages(prev => [...prev, assistantMsg]);
-        setTranscript(prev => [...prev, `Dr. AI: ${reply}`]);
-        setIsThinking(false);
-
-        await speakText(reply);
+        // Feed the analysis back into the live conversation
+        if (conversation.status === 'connected') {
+          conversation.sendContextualUpdate(
+            `IMAGE ANALYSIS RESULTS for ${currentPhase} phase:\n${analysis}\n\nDiscuss these findings naturally. Reference specific areas and recommend treatments with prices.`
+          );
+        }
       } catch (err: any) {
         console.error('Analysis error:', err);
-        toast({ title: "Analysis Error", description: "Could not analyse the image. Please try again.", variant: "destructive" });
-        setIsThinking(false);
+        toast({ title: "Analysis Error", description: "Could not analyse the image.", variant: "destructive" });
       } finally {
         setIsAnalysing(false);
       }
     };
     reader.readAsDataURL(file);
     e.target.value = '';
-  }, [currentPhase, patientInfo, messages, speakText]);
+  }, [currentPhase, patientInfo, conversation]);
 
   // Phase advancement
   const advancePhase = useCallback(async () => {
@@ -306,22 +259,20 @@ const VoiceConsultationWidget = () => {
       setAnalysisResult(null);
 
       if (next === 'summary') {
-        endConsultation();
+        await endConsultation();
         return;
       }
 
-      const phaseIntros: Record<string, string> = {
-        wrinkles: "Excellent. Let's move on to assess your lines and wrinkles. Upload a photo and I'll distinguish between dynamic lines that respond to Botox and static lines that benefit from fillers.",
-        volume: "Now let's look at facial volume and structure. Upload a photo and I'll assess areas like your cheeks, jawline, under-eyes, and lips for volume balance and harmony.",
-      };
-
-      const intro = phaseIntros[next] || `Moving to ${next} assessment.`;
-      const msg: Message = { role: 'assistant', content: intro };
-      setMessages(prev => [...prev, msg]);
-      setTranscript(prev => [...prev, `➡️ Moving to ${next}...`, `Dr. AI: ${intro}`]);
-      await speakText(intro);
+      // Tell the agent to transition phases
+      if (conversation.status === 'connected') {
+        const phaseInstructions: Record<string, string> = {
+          wrinkles: "The patient is ready to move to Phase 2: Lines & Wrinkles. Transition naturally - tell them you'll now look at their lines and wrinkles, distinguishing dynamic lines (respond to Botox) from static lines (need fillers). Ask them to upload a new photo.",
+          volume: "The patient is ready to move to Phase 3: Volume & Structure. Transition naturally - tell them you'll now assess facial volume including cheeks, jawline, under-eyes and lips. Ask them to upload a photo.",
+        };
+        conversation.sendContextualUpdate(phaseInstructions[next] || `Moving to ${next} phase.`);
+      }
     }
-  }, [currentPhase, endConsultation, speakText]);
+  }, [currentPhase, endConsultation, conversation]);
 
   const phaseLabels: Record<ConsultationPhase, { title: string; subtitle: string; icon: string }> = {
     welcome: { title: 'Welcome', subtitle: "Let's begin your consultation", icon: '👋' },
@@ -330,6 +281,8 @@ const VoiceConsultationWidget = () => {
     volume: { title: 'Volume & Structure', subtitle: 'Facial harmony & balance', icon: '💎' },
     summary: { title: 'Summary', subtitle: 'Your personalised plan', icon: '📋' },
   };
+
+  const isConnected = conversation.status === 'connected';
 
   if (!isOpen) {
     return (
@@ -390,11 +343,11 @@ const VoiceConsultationWidget = () => {
             <div className="bg-white/5 rounded-xl p-4 border border-[#C9A050]/20">
               <h4 className="text-[#C9A050] font-medium mb-2">AI Voice Consultation</h4>
               <p className="text-white/70 text-sm leading-relaxed">
-                Welcome to your Cosmedocs AI consultation. Our voice-guided system will assess 
+                Speak naturally with Dr. Haq's AI assistant. It will guide you through 
                 <strong className="text-white"> Skin Quality → Lines & Wrinkles → Volume & Structure</strong>.
               </p>
               <p className="text-white/40 text-xs mt-3 italic">
-                Powered by Cosmedocs AI • Voice by ElevenLabs
+                Real-time conversation • Natural interruptions • Voice by ElevenLabs
               </p>
               <p className="text-white/50 text-xs mt-1 italic">
                 Our aesthetics is invisible art — Bold • Natural • Always Your Way
@@ -414,10 +367,14 @@ const VoiceConsultationWidget = () => {
 
             <button
               onClick={startConsultation}
-              className="w-full bg-gradient-to-r from-[#C9A050] to-[#B8913F] text-black font-medium py-3 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+              disabled={isConnecting}
+              className="w-full bg-gradient-to-r from-[#C9A050] to-[#B8913F] text-black font-medium py-3 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-50"
             >
-              <Phone className="h-4 w-4" />
-              Start Voice Consultation
+              {isConnecting ? (
+                <><Loader2 className="h-4 w-4 animate-spin" /> Connecting...</>
+              ) : (
+                <><Phone className="h-4 w-4" /> Start Voice Consultation</>
+              )}
             </button>
           </div>
         )}
@@ -425,8 +382,26 @@ const VoiceConsultationWidget = () => {
         {/* Active Consultation */}
         {currentPhase !== 'welcome' && currentPhase !== 'summary' && (
           <>
-            {/* Transcript */}
-            <div className="space-y-2">
+            {/* Live Voice Indicator */}
+            {isConnected && (
+              <div className="flex flex-col items-center py-4 space-y-3">
+                <div className={`w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  conversation.isSpeaking 
+                    ? 'bg-[#C9A050]/20 ring-2 ring-[#C9A050]/40 ring-offset-2 ring-offset-black' 
+                    : 'bg-green-500/10 ring-2 ring-green-500/30 ring-offset-2 ring-offset-black'
+                }`}>
+                  <LiveVoiceVisualiser conversation={conversation} isSpeaking={conversation.isSpeaking} />
+                </div>
+                <p className={`text-xs font-medium ${
+                  conversation.isSpeaking ? 'text-[#C9A050]' : 'text-green-400'
+                }`}>
+                  {conversation.isSpeaking ? 'Dr. AI is speaking...' : 'Listening to you...'}
+                </p>
+              </div>
+            )}
+
+            {/* Transcript (collapsed, scrollable) */}
+            <div className="space-y-2 max-h-[200px] overflow-y-auto">
               {transcript.map((line, i) => (
                 <div key={i} className={`text-xs p-2 rounded-lg ${
                   line.startsWith('You:') ? 'bg-[#C9A050]/10 text-[#C9A050] ml-8' :
@@ -436,11 +411,6 @@ const VoiceConsultationWidget = () => {
                   {line}
                 </div>
               ))}
-              {isThinking && (
-                <div className="bg-white/5 text-white/50 text-xs p-2 rounded-lg mr-8 flex items-center gap-2">
-                  <Loader2 className="h-3 w-3 animate-spin" /> Thinking...
-                </div>
-              )}
               <div ref={chatEndRef} />
             </div>
 
@@ -512,28 +482,15 @@ const VoiceConsultationWidget = () => {
       {currentPhase !== 'welcome' && currentPhase !== 'summary' && (
         <div className="p-4 border-t border-[#C9A050]/20 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2">
-            {/* Voice Status */}
-            <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs ${
-              isSpeaking ? 'bg-[#C9A050]/20 text-[#C9A050]' : 
-              isListening ? 'bg-green-500/20 text-green-400' :
+            {/* Voice Status with waves */}
+            <div className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs ${
+              conversation.isSpeaking ? 'bg-[#C9A050]/20 text-[#C9A050]' : 
+              isConnected ? 'bg-green-500/20 text-green-400' :
               'bg-white/5 text-white/40'
             }`}>
-              {isSpeaking ? (
-                <><Volume2 className="h-3 w-3 animate-pulse" /> Speaking</>
-              ) : isListening ? (
-                <><Mic className="h-3 w-3" /> Listening</>
-              ) : (
-                <><MicOff className="h-3 w-3" /> Paused</>
-              )}
+              {isConnected && <VoiceWaves isActive={isConnected} level={conversation.isSpeaking ? 0.8 : 0.5} />}
+              {conversation.isSpeaking ? 'Speaking' : isConnected ? 'Live' : 'Disconnected'}
             </div>
-
-            {/* Toggle Mic */}
-            <button 
-              onClick={() => isListening ? stopListening() : startListening()} 
-              className={`p-2 rounded-full ${isListening ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' : 'bg-green-500/20 text-green-400 hover:bg-green-500/30'}`}
-            >
-              {isListening ? <MicOff className="h-3.5 w-3.5" /> : <Mic className="h-3.5 w-3.5" />}
-            </button>
 
             {/* End Call */}
             <button onClick={endConsultation} className="p-2 bg-red-500/20 text-red-400 rounded-full hover:bg-red-500/30">
