@@ -57,6 +57,10 @@ IMPORTANT RULES:
 - Transition between phases naturally: "Now that we've looked at your skin quality, shall we move on to assess your lines and wrinkles?"
 - End consultations by encouraging booking: "Book your consultation at Cosmedocs Harley Street"`;
 
+// This function serves as an OpenAI-compatible Custom LLM endpoint for ElevenLabs.
+// ElevenLabs sends standard chat completion requests; we inject our clinic knowledge
+// and proxy to Lovable AI Gateway, returning the response in OpenAI format.
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -68,26 +72,21 @@ serve(async (req) => {
       throw new Error('LOVABLE_API_KEY is not configured');
     }
 
-    const { messages, imageAnalysis } = await req.json();
+    const body = await req.json();
 
-    if (!messages || !Array.isArray(messages)) {
-      return new Response(JSON.stringify({ error: 'messages array is required' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
+    // ElevenLabs Custom LLM sends OpenAI-compatible requests
+    // It includes: model, messages, temperature, max_tokens, etc.
+    const incomingMessages = body.messages || [];
 
-    // Inject image analysis context if provided
-    const systemMessages: any[] = [
+    // Inject our clinic knowledge as the system prompt, 
+    // preserving any context ElevenLabs has already added
+    const messagesWithKnowledge = [
       { role: 'system', content: CLINIC_KNOWLEDGE },
+      ...incomingMessages,
     ];
 
-    if (imageAnalysis) {
-      systemMessages.push({
-        role: 'system',
-        content: `IMAGE ANALYSIS RESULTS:\n${imageAnalysis}\n\nDiscuss these findings naturally in your response. Reference specific areas and recommend treatments with prices.`,
-      });
-    }
+    // Check if imageAnalysis context was passed (from our frontend via contextual update)
+    // ElevenLabs sends contextual updates as system messages, so they'll be in the messages array
 
     const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
       method: 'POST',
@@ -96,25 +95,22 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-2.5-flash',
-        messages: [
-          ...systemMessages,
-          ...messages,
-        ],
-        max_tokens: 300,
-        temperature: 0.7,
+        model: body.model || 'google/gemini-2.5-flash',
+        messages: messagesWithKnowledge,
+        max_tokens: body.max_tokens || 300,
+        temperature: body.temperature ?? 0.7,
       }),
     });
 
     if (!response.ok) {
       if (response.status === 429) {
-        return new Response(JSON.stringify({ error: 'Rate limited, please try again shortly.' }), {
+        return new Response(JSON.stringify({ error: { message: 'Rate limited, please try again shortly.' } }), {
           status: 429,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
       if (response.status === 402) {
-        return new Response(JSON.stringify({ error: 'AI credits exhausted. Please add funds.' }), {
+        return new Response(JSON.stringify({ error: { message: 'AI credits exhausted.' } }), {
           status: 402,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
@@ -124,15 +120,18 @@ serve(async (req) => {
       throw new Error(`AI gateway error: ${response.status}`);
     }
 
+    // Return the full OpenAI-compatible response directly
+    // ElevenLabs expects standard OpenAI chat completion format
     const data = await response.json();
-    const reply = data.choices?.[0]?.message?.content || 'I apologise, could you repeat that?';
 
-    return new Response(JSON.stringify({ reply }), {
+    return new Response(JSON.stringify(data), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
     console.error('Error in ai-voice-consultation:', error);
-    return new Response(JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' }), {
+    return new Response(JSON.stringify({ 
+      error: { message: error instanceof Error ? error.message : 'Unknown error' }
+    }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
