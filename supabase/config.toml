@@ -35,3 +35,9 @@ verify_jwt = false
 
 [functions.ai-skin-consultation]
 verify_jwt = false
+
+[functions.ai-voice-consultation]
+verify_jwt = false
+
+[functions.elevenlabs-tts]
+verify_jwt = false

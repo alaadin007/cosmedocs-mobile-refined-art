@@ -1,98 +1,221 @@
-import { useState, useCallback, useRef } from "react";
-import { useConversation } from "@elevenlabs/react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { 
   Mic, MicOff, Camera, X, Phone, PhoneOff, 
-  Volume2, VolumeX, Upload, ChevronRight, 
-  Sparkles, User, MessageCircle
+  Volume2, Sparkles, Upload, ChevronRight,
+  Loader2, MessageCircle
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 type ConsultationPhase = 'welcome' | 'skin' | 'wrinkles' | 'volume' | 'summary';
+type Message = { role: 'user' | 'assistant'; content: string };
 
 interface PatientInfo {
   name: string;
-  concerns: string[];
   images: { phase: ConsultationPhase; dataUrl: string }[];
   analyses: { phase: string; text: string }[];
 }
-
-const AGENT_ID_KEY = 'cosmedocs_elevenlabs_agent_id';
 
 const VoiceConsultationWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentPhase, setCurrentPhase] = useState<ConsultationPhase>('welcome');
   const [patientInfo, setPatientInfo] = useState<PatientInfo>({
-    name: '', concerns: [], images: [], analyses: []
+    name: '', images: [], analyses: []
   });
-  const [agentId, setAgentId] = useState(() => localStorage.getItem(AGENT_ID_KEY) || '');
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [isListening, setIsListening] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isThinking, setIsThinking] = useState(false);
   const [isAnalysing, setIsAnalysing] = useState(false);
   const [analysisResult, setAnalysisResult] = useState<string | null>(null);
   const [transcript, setTranscript] = useState<string[]>([]);
-  const [isConnecting, setIsConnecting] = useState(false);
+  const [isSessionActive, setIsSessionActive] = useState(false);
+
   const fileInputRef = useRef<HTMLInputElement>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<any>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const conversation = useConversation({
-    onConnect: () => {
-      setTranscript(prev => [...prev, "🎙️ Connected — I'm ready for your consultation."]);
-    },
-    onDisconnect: () => {
-      setTranscript(prev => [...prev, "📞 Consultation paused."]);
-    },
-    onMessage: (message: any) => {
-      if (message.type === 'user_transcript') {
-        setTranscript(prev => [...prev, `You: ${message.user_transcription_event?.user_transcript || ''}`]);
-      } else if (message.type === 'agent_response') {
-        setTranscript(prev => [...prev, `Dr. AI: ${message.agent_response_event?.agent_response || ''}`]);
-      }
-      setTimeout(() => chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
-    },
-    onError: (error: any) => {
-      console.error('Voice error:', error);
-      toast({ title: "Connection Error", description: "Voice connection issue. Please try again.", variant: "destructive" });
-    },
-  });
+  // Scroll to bottom on new messages
+  useEffect(() => {
+    setTimeout(() => chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
+  }, [transcript]);
 
-  const startConversation = useCallback(async () => {
-    if (!agentId.trim()) {
-      toast({ title: "Agent ID Required", description: "Please enter your ElevenLabs Agent ID first.", variant: "destructive" });
+  // Initialize Web Speech API
+  const startListening = useCallback(() => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      toast({ title: "Not Supported", description: "Speech recognition is not supported in this browser. Please use Chrome.", variant: "destructive" });
       return;
     }
-    localStorage.setItem(AGENT_ID_KEY, agentId);
-    setIsConnecting(true);
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = false;
+    recognition.lang = 'en-GB';
+
+    recognition.onresult = (event: any) => {
+      const last = event.results[event.results.length - 1];
+      if (last.isFinal) {
+        const text = last[0].transcript.trim();
+        if (text) {
+          handleUserMessage(text);
+        }
+      }
+    };
+
+    recognition.onerror = (event: any) => {
+      console.error('Speech recognition error:', event.error);
+      if (event.error !== 'no-speech' && event.error !== 'aborted') {
+        toast({ title: "Microphone Error", description: `Speech error: ${event.error}`, variant: "destructive" });
+      }
+    };
+
+    recognition.onend = () => {
+      // Restart if session is still active
+      if (isSessionActive) {
+        try { recognition.start(); } catch {}
+      } else {
+        setIsListening(false);
+      }
+    };
+
+    recognitionRef.current = recognition;
+    recognition.start();
+    setIsListening(true);
+  }, [isSessionActive]);
+
+  const stopListening = useCallback(() => {
+    if (recognitionRef.current) {
+      recognitionRef.current.stop();
+      recognitionRef.current = null;
+    }
+    setIsListening(false);
+  }, []);
+
+  // Send text to our AI and get spoken response
+  const handleUserMessage = useCallback(async (text: string) => {
+    const userMsg: Message = { role: 'user', content: text };
+    setMessages(prev => [...prev, userMsg]);
+    setTranscript(prev => [...prev, `You: ${text}`]);
+    setIsThinking(true);
+
+    try {
+      // Get the latest analysis context
+      const latestAnalysis = patientInfo.analyses.length > 0 
+        ? patientInfo.analyses.map(a => `${a.phase}: ${a.text}`).join('\n\n')
+        : undefined;
+
+      const { data, error } = await supabase.functions.invoke('ai-voice-consultation', {
+        body: {
+          messages: [...messages, userMsg].map(m => ({ role: m.role, content: m.content })),
+          imageAnalysis: latestAnalysis,
+        }
+      });
+
+      if (error) throw error;
+
+      const reply = data?.reply || "I apologise, could you repeat that?";
+      const assistantMsg: Message = { role: 'assistant', content: reply };
+      setMessages(prev => [...prev, assistantMsg]);
+      setTranscript(prev => [...prev, `Dr. AI: ${reply}`]);
+
+      // Speak the response via ElevenLabs TTS
+      await speakText(reply);
+    } catch (err: any) {
+      console.error('AI consultation error:', err);
+      const errorMsg = err.message || 'Could not process your message.';
+      setTranscript(prev => [...prev, `⚠️ ${errorMsg}`]);
+      toast({ title: "Error", description: errorMsg, variant: "destructive" });
+    } finally {
+      setIsThinking(false);
+    }
+  }, [messages, patientInfo.analyses]);
+
+  // ElevenLabs TTS
+  const speakText = useCallback(async (text: string) => {
+    setIsSpeaking(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('elevenlabs-tts', {
+        body: { text }
+      });
+
+      if (error) throw error;
+
+      if (data?.audio) {
+        const audioBlob = Uint8Array.from(atob(data.audio), c => c.charCodeAt(0));
+        const blob = new Blob([audioBlob], { type: 'audio/mpeg' });
+        const url = URL.createObjectURL(blob);
+        
+        if (audioRef.current) {
+          audioRef.current.pause();
+        }
+        
+        const audio = new Audio(url);
+        audioRef.current = audio;
+        audio.onended = () => {
+          setIsSpeaking(false);
+          URL.revokeObjectURL(url);
+        };
+        audio.onerror = () => {
+          setIsSpeaking(false);
+          URL.revokeObjectURL(url);
+        };
+        await audio.play();
+      } else {
+        setIsSpeaking(false);
+      }
+    } catch (err) {
+      console.error('TTS error:', err);
+      setIsSpeaking(false);
+      // Fallback to browser TTS
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-GB';
+        utterance.onend = () => setIsSpeaking(false);
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+  }, []);
+
+  // Start consultation
+  const startConsultation = useCallback(async () => {
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
-
-      const { data, error } = await supabase.functions.invoke('elevenlabs-conversation-token', {
-        body: { agentId: agentId.trim() }
-      });
-
-      if (error || !data?.token) {
-        throw new Error(error?.message || 'No token received');
-      }
-
-      await conversation.startSession({
-        conversationToken: data.token,
-        connectionType: 'webrtc',
-      });
-
-      setCurrentPhase('skin');
-      setIsExpanded(true);
-    } catch (err: any) {
-      console.error('Failed to start:', err);
-      toast({ title: "Connection Failed", description: err.message || "Could not start voice consultation.", variant: "destructive" });
-    } finally {
-      setIsConnecting(false);
+    } catch {
+      toast({ title: "Microphone Required", description: "Please allow microphone access to use voice consultation.", variant: "destructive" });
+      return;
     }
-  }, [conversation, agentId]);
 
-  const endConversation = useCallback(async () => {
-    await conversation.endSession();
+    setIsSessionActive(true);
+    setCurrentPhase('skin');
+    setIsExpanded(true);
+
+    const greeting = patientInfo.name 
+      ? `Welcome ${patientInfo.name}. I'm Dr. Haq's AI consultation assistant at Cosmedocs Harley Street. Let's begin with your skin quality assessment. Could you upload a clear photo of your face, and I'll compare your skin's condition? I'll look at tone, texture, pores, and how your skin has been affected by environmental factors.`
+      : "Welcome to your Cosmedocs consultation. I'm Dr. Haq's AI assistant. Let's start by assessing your skin quality. Please upload a clear photo of your face, and tell me — what are your main skin concerns?";
+    
+    const assistantMsg: Message = { role: 'assistant', content: greeting };
+    setMessages([assistantMsg]);
+    setTranscript([`Dr. AI: ${greeting}`]);
+    
+    await speakText(greeting);
+    startListening();
+  }, [patientInfo.name, speakText, startListening]);
+
+  // End consultation
+  const endConsultation = useCallback(() => {
+    setIsSessionActive(false);
+    stopListening();
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+    setIsSpeaking(false);
     setCurrentPhase('summary');
-  }, [conversation]);
+  }, [stopListening]);
 
+  // Image handling
   const handleImageCapture = useCallback(() => {
     fileInputRef.current?.click();
   }, []);
@@ -117,8 +240,6 @@ const VoiceConsultationWidget = () => {
       }));
 
       setTranscript(prev => [...prev, `📸 Image uploaded for ${currentPhase} analysis...`]);
-
-      // Send to AI for analysis
       setIsAnalysing(true);
       setAnalysisResult(null);
       
@@ -128,7 +249,7 @@ const VoiceConsultationWidget = () => {
           body: {
             images: [base64],
             phase: currentPhase === 'welcome' ? 'skin' : currentPhase,
-            patientContext: patientInfo.name ? `Patient name: ${patientInfo.name}. Previous concerns: ${patientInfo.concerns.join(', ')}` : undefined,
+            patientContext: patientInfo.name ? `Patient name: ${patientInfo.name}. Previous analyses: ${patientInfo.analyses.map(a => a.text.substring(0, 100)).join('; ')}` : undefined,
           }
         });
 
@@ -140,39 +261,70 @@ const VoiceConsultationWidget = () => {
           ...prev,
           analyses: [...prev.analyses, { phase: currentPhase, text: analysis }]
         }));
-        setTranscript(prev => [...prev, `🔬 Analysis: ${analysis.substring(0, 200)}...`]);
+        setTranscript(prev => [...prev, `🔬 Analysis complete.`]);
 
-        // Send analysis context to voice agent
-        if (conversation.status === 'connected') {
-          conversation.sendContextualUpdate(`Image analysis result for ${currentPhase}: ${analysis}`);
-        }
+        // Now send the analysis to our AI to discuss conversationally
+        const discussionMsg: Message = { role: 'user', content: `[Image analysis completed for ${currentPhase}. Please discuss these findings with me.]` };
+        setMessages(prev => [...prev, discussionMsg]);
+        
+        setIsThinking(true);
+        const { data: aiData, error: aiError } = await supabase.functions.invoke('ai-voice-consultation', {
+          body: {
+            messages: [...messages, discussionMsg].map(m => ({ role: m.role, content: m.content })),
+            imageAnalysis: analysis,
+          }
+        });
+
+        if (aiError) throw aiError;
+
+        const reply = aiData?.reply || "I can see the results. Let me discuss what I've found.";
+        const assistantMsg: Message = { role: 'assistant', content: reply };
+        setMessages(prev => [...prev, assistantMsg]);
+        setTranscript(prev => [...prev, `Dr. AI: ${reply}`]);
+        setIsThinking(false);
+
+        await speakText(reply);
       } catch (err: any) {
         console.error('Analysis error:', err);
         toast({ title: "Analysis Error", description: "Could not analyse the image. Please try again.", variant: "destructive" });
+        setIsThinking(false);
       } finally {
         setIsAnalysing(false);
       }
     };
     reader.readAsDataURL(file);
     e.target.value = '';
-  }, [currentPhase, patientInfo, conversation]);
+  }, [currentPhase, patientInfo, messages, speakText]);
 
-  const advancePhase = useCallback(() => {
+  // Phase advancement
+  const advancePhase = useCallback(async () => {
     const phases: ConsultationPhase[] = ['welcome', 'skin', 'wrinkles', 'volume', 'summary'];
     const idx = phases.indexOf(currentPhase);
     if (idx < phases.length - 1) {
       const next = phases[idx + 1];
       setCurrentPhase(next);
       setAnalysisResult(null);
-      if (conversation.status === 'connected') {
-        conversation.sendContextualUpdate(`Moving to phase: ${next}. Please guide the patient through ${next} assessment.`);
+
+      if (next === 'summary') {
+        endConsultation();
+        return;
       }
-      setTranscript(prev => [...prev, `➡️ Moving to ${next} assessment...`]);
+
+      const phaseIntros: Record<string, string> = {
+        wrinkles: "Excellent. Let's move on to assess your lines and wrinkles. Upload a photo and I'll distinguish between dynamic lines that respond to Botox and static lines that benefit from fillers.",
+        volume: "Now let's look at facial volume and structure. Upload a photo and I'll assess areas like your cheeks, jawline, under-eyes, and lips for volume balance and harmony.",
+      };
+
+      const intro = phaseIntros[next] || `Moving to ${next} assessment.`;
+      const msg: Message = { role: 'assistant', content: intro };
+      setMessages(prev => [...prev, msg]);
+      setTranscript(prev => [...prev, `➡️ Moving to ${next}...`, `Dr. AI: ${intro}`]);
+      await speakText(intro);
     }
-  }, [currentPhase, conversation]);
+  }, [currentPhase, endConsultation, speakText]);
 
   const phaseLabels: Record<ConsultationPhase, { title: string; subtitle: string; icon: string }> = {
-    welcome: { title: 'Welcome', subtitle: 'Let\'s begin your consultation', icon: '👋' },
+    welcome: { title: 'Welcome', subtitle: "Let's begin your consultation", icon: '👋' },
     skin: { title: 'Skin Quality', subtitle: 'Tone, texture, pores & clarity', icon: '✨' },
     wrinkles: { title: 'Lines & Wrinkles', subtitle: 'Dynamic and static lines', icon: '📐' },
     volume: { title: 'Volume & Structure', subtitle: 'Facial harmony & balance', icon: '💎' },
@@ -192,13 +344,13 @@ const VoiceConsultationWidget = () => {
   }
 
   return (
-    <div className={`fixed z-50 bg-black/95 backdrop-blur-xl border border-[#C9A050]/30 rounded-2xl shadow-2xl transition-all duration-500 ${
+    <div className={`fixed z-50 bg-black/95 backdrop-blur-xl border border-[#C9A050]/30 rounded-2xl shadow-2xl transition-all duration-500 flex flex-col ${
       isExpanded 
         ? 'bottom-4 right-4 left-4 top-4 md:left-auto md:w-[480px] md:top-4' 
         : 'bottom-20 right-4 w-[380px] max-h-[600px]'
     }`}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-[#C9A050]/20">
+      <div className="flex items-center justify-between p-4 border-b border-[#C9A050]/20 shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A050] to-[#8B7332] flex items-center justify-center text-lg">
             {phaseLabels[currentPhase].icon}
@@ -212,34 +364,39 @@ const VoiceConsultationWidget = () => {
           <button onClick={() => setIsExpanded(!isExpanded)} className="text-white/50 hover:text-white p-1">
             <MessageCircle className="h-4 w-4" />
           </button>
-          <button onClick={() => { endConversation(); setIsOpen(false); }} className="text-white/50 hover:text-white p-1">
+          <button onClick={() => { endConsultation(); setIsOpen(false); }} className="text-white/50 hover:text-white p-1">
             <X className="h-4 w-4" />
           </button>
         </div>
       </div>
 
       {/* Phase Progress */}
-      <div className="flex px-4 py-2 gap-1">
-        {(['skin', 'wrinkles', 'volume'] as ConsultationPhase[]).map((phase) => (
-          <div key={phase} className={`flex-1 h-1 rounded-full transition-colors ${
-            currentPhase === phase ? 'bg-[#C9A050]' : 
-            ['skin', 'wrinkles', 'volume'].indexOf(phase) < ['skin', 'wrinkles', 'volume'].indexOf(currentPhase as any) ? 'bg-[#C9A050]/50' : 'bg-white/10'
-          }`} />
-        ))}
-      </div>
+      {currentPhase !== 'welcome' && (
+        <div className="flex px-4 py-2 gap-1 shrink-0">
+          {(['skin', 'wrinkles', 'volume'] as ConsultationPhase[]).map((phase) => (
+            <div key={phase} className={`flex-1 h-1 rounded-full transition-colors ${
+              currentPhase === phase ? 'bg-[#C9A050]' : 
+              ['skin', 'wrinkles', 'volume'].indexOf(phase) < ['skin', 'wrinkles', 'volume'].indexOf(currentPhase as any) ? 'bg-[#C9A050]/50' : 'bg-white/10'
+            }`} />
+          ))}
+        </div>
+      )}
 
       {/* Content Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3" style={{ maxHeight: isExpanded ? 'calc(100vh - 280px)' : '320px' }}>
-        {/* Welcome / Agent ID */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-0">
+        {/* Welcome */}
         {currentPhase === 'welcome' && (
           <div className="space-y-4">
             <div className="bg-white/5 rounded-xl p-4 border border-[#C9A050]/20">
               <h4 className="text-[#C9A050] font-medium mb-2">AI Voice Consultation</h4>
               <p className="text-white/70 text-sm leading-relaxed">
-                Welcome to your Cosmedocs AI consultation. Our voice-guided system will walk you through 
-                a comprehensive facial assessment: <strong>Skin Quality → Lines & Wrinkles → Volume & Structure</strong>.
+                Welcome to your Cosmedocs AI consultation. Our voice-guided system will assess 
+                <strong className="text-white"> Skin Quality → Lines & Wrinkles → Volume & Structure</strong>.
               </p>
-              <p className="text-white/50 text-xs mt-2 italic">
+              <p className="text-white/40 text-xs mt-3 italic">
+                Powered by Cosmedocs AI • Voice by ElevenLabs
+              </p>
+              <p className="text-white/50 text-xs mt-1 italic">
                 Our aesthetics is invisible art — Bold • Natural • Always Your Way
               </p>
             </div>
@@ -255,34 +412,12 @@ const VoiceConsultationWidget = () => {
               />
             </div>
 
-            <div className="space-y-2">
-              <label className="text-white/70 text-xs">ElevenLabs Agent ID</label>
-              <input
-                type="text"
-                value={agentId}
-                onChange={(e) => setAgentId(e.target.value)}
-                placeholder="Enter your Agent ID..."
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-[#C9A050]/50"
-              />
-              <p className="text-white/30 text-xs">Find this in your ElevenLabs Conversational AI dashboard</p>
-            </div>
-
             <button
-              onClick={startConversation}
-              disabled={isConnecting || !agentId.trim()}
-              className="w-full bg-gradient-to-r from-[#C9A050] to-[#B8913F] text-black font-medium py-3 rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
+              onClick={startConsultation}
+              className="w-full bg-gradient-to-r from-[#C9A050] to-[#B8913F] text-black font-medium py-3 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
             >
-              {isConnecting ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />
-                  Connecting...
-                </>
-              ) : (
-                <>
-                  <Phone className="h-4 w-4" />
-                  Start Voice Consultation
-                </>
-              )}
+              <Phone className="h-4 w-4" />
+              Start Voice Consultation
             </button>
           </div>
         )}
@@ -301,6 +436,11 @@ const VoiceConsultationWidget = () => {
                   {line}
                 </div>
               ))}
+              {isThinking && (
+                <div className="bg-white/5 text-white/50 text-xs p-2 rounded-lg mr-8 flex items-center gap-2">
+                  <Loader2 className="h-3 w-3 animate-spin" /> Thinking...
+                </div>
+              )}
               <div ref={chatEndRef} />
             </div>
 
@@ -327,7 +467,7 @@ const VoiceConsultationWidget = () => {
 
             {isAnalysing && (
               <div className="flex items-center gap-2 text-[#C9A050] text-sm">
-                <div className="w-4 h-4 border-2 border-[#C9A050]/30 border-t-[#C9A050] rounded-full animate-spin" />
+                <Loader2 className="h-4 w-4 animate-spin" />
                 Analysing your image...
               </div>
             )}
@@ -356,41 +496,53 @@ const VoiceConsultationWidget = () => {
             >
               Book Your In-Person Consultation
             </a>
+            <a
+              href="https://wa.me/447735606447"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-white/5 border border-[#C9A050]/30 text-[#C9A050] font-medium py-3 rounded-xl text-center hover:bg-white/10 transition-colors"
+            >
+              WhatsApp Us
+            </a>
           </div>
         )}
       </div>
 
       {/* Bottom Controls */}
       {currentPhase !== 'welcome' && currentPhase !== 'summary' && (
-        <div className="p-4 border-t border-[#C9A050]/20 flex items-center justify-between">
+        <div className="p-4 border-t border-[#C9A050]/20 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2">
             {/* Voice Status */}
             <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs ${
-              conversation.status === 'connected' 
-                ? conversation.isSpeaking ? 'bg-[#C9A050]/20 text-[#C9A050]' : 'bg-green-500/20 text-green-400'
-                : 'bg-white/5 text-white/40'
+              isSpeaking ? 'bg-[#C9A050]/20 text-[#C9A050]' : 
+              isListening ? 'bg-green-500/20 text-green-400' :
+              'bg-white/5 text-white/40'
             }`}>
-              {conversation.status === 'connected' ? (
-                conversation.isSpeaking ? (
-                  <><Volume2 className="h-3 w-3 animate-pulse" /> Speaking</>
-                ) : (
-                  <><Mic className="h-3 w-3" /> Listening</>
-                )
+              {isSpeaking ? (
+                <><Volume2 className="h-3 w-3 animate-pulse" /> Speaking</>
+              ) : isListening ? (
+                <><Mic className="h-3 w-3" /> Listening</>
               ) : (
-                <><MicOff className="h-3 w-3" /> Disconnected</>
+                <><MicOff className="h-3 w-3" /> Paused</>
               )}
             </div>
 
+            {/* Toggle Mic */}
+            <button 
+              onClick={() => isListening ? stopListening() : startListening()} 
+              className={`p-2 rounded-full ${isListening ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' : 'bg-green-500/20 text-green-400 hover:bg-green-500/30'}`}
+            >
+              {isListening ? <MicOff className="h-3.5 w-3.5" /> : <Mic className="h-3.5 w-3.5" />}
+            </button>
+
             {/* End Call */}
-            {conversation.status === 'connected' && (
-              <button onClick={endConversation} className="p-2 bg-red-500/20 text-red-400 rounded-full hover:bg-red-500/30">
-                <PhoneOff className="h-3.5 w-3.5" />
-              </button>
-            )}
+            <button onClick={endConsultation} className="p-2 bg-red-500/20 text-red-400 rounded-full hover:bg-red-500/30">
+              <PhoneOff className="h-3.5 w-3.5" />
+            </button>
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Camera / Upload */}
+            {/* Camera */}
             <input
               ref={fileInputRef}
               type="file"
@@ -411,10 +563,9 @@ const VoiceConsultationWidget = () => {
             {/* Next Phase */}
             <button
               onClick={advancePhase}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#C9A050]/20 border border-[#C9A050]/30 rounded-full text-[#C9A050] text-xs hover:bg-[#C9A050]/30 transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-full text-[#C9A050] text-xs hover:bg-[#C9A050]/20 transition-colors"
             >
-              Next
-              <ChevronRight className="h-3.5 w-3.5" />
+              Next <ChevronRight className="h-3.5 w-3.5" />
             </button>
           </div>
         </div>
