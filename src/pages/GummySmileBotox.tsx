@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import FAQSchema from '@/components/seo/FAQSchema';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -147,6 +148,7 @@ const GummySmileBotox = () => {
           })}
         </script>
       </Helmet>
+      <FAQSchema faqs={faqs} />
 
       <div className="bg-black text-white">
         {/* Hero Section */}

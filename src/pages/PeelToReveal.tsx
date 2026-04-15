@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
+import FAQSchema from '@/components/seo/FAQSchema';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, Activity, Droplets, Shield, Star, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -175,6 +176,7 @@ const PeelToReveal = () => {
         })}
         </script>
       </Helmet>
+      <FAQSchema faqs={faqs} />
 
       <div className="bg-black text-white">
         {/* Hero Section - Updated to match LipFillers design */}
