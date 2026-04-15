@@ -1004,9 +1004,7 @@ const App = () => {
                 </Routes>
                 </LanguageProvider>
               </AuthProvider>
-              <ConversationProvider>
-                <VoiceConsultationWidget />
-              </ConversationProvider>
+              <VoiceConsultationWidget />
             </BrowserRouter>
           </TooltipProvider>
         </HelmetProvider>
