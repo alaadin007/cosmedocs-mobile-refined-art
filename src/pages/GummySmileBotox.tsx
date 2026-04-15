@@ -148,6 +148,7 @@ const GummySmileBotox = () => {
           })}
         </script>
       </Helmet>
+      <FAQSchema faqs={faqs} />
 
       <div className="bg-black text-white">
         {/* Hero Section */}

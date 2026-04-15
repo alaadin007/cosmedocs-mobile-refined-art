@@ -90,6 +90,7 @@ const NonSurgicalFacelift = () => {
         <meta property="og:url" content={seoData.canonical} />
         <meta name="keywords" content="non-surgical facelift London, non-surgical face lift, liquid facelift UK, facial rejuvenation, PDO threads London, dermal fillers facelift, jowl treatment, facial volume restoration, anti-aging London, Harley Street facelift" />
       </Helmet>
+      <FAQSchema faqs={faqs} />
 
       <div className="bg-black text-white">
         {/* Hero Section */}

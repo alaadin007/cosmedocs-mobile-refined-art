@@ -176,6 +176,7 @@ const PeelToReveal = () => {
         })}
         </script>
       </Helmet>
+      <FAQSchema faqs={faqs} />
 
       <div className="bg-black text-white">
         {/* Hero Section - Updated to match LipFillers design */}

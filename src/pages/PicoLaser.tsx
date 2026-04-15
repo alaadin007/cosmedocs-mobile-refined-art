@@ -80,6 +80,7 @@ export default function PicoLaser() {
           })}
         </script>
       </Helmet>
+      <FAQSchema faqs={faqs} />
 
       <div className="bg-black text-white">
         {/* Hero */}
