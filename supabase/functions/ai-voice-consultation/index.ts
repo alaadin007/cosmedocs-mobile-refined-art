@@ -95,7 +95,7 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: body.model || 'google/gemini-2.5-flash',
+        model: 'google/gemini-2.5-flash',
         messages: messagesWithKnowledge,
         max_tokens: body.max_tokens || 300,
         temperature: body.temperature ?? 0.7,
