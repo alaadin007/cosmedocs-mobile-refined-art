@@ -59,8 +59,8 @@ const HeroSection = () => (
         </div>
       </div>
 
-      <h1 className="text-3xl md:text-5xl font-bold mb-6">Boutique Harley Street Aesthetic Clinic Franchise with Fellowship Training</h1>
-      <p className="text-lg md:text-xl mb-6 text-gray-300">CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, brings you 15+ years of boutique excellence in a groundbreaking franchise model. All partners receive <strong>Fellowship in Aesthetic Medicine training</strong> - the same prestigious program offered by Harley Street Institute - plus comprehensive business development support.</p>
+      <h1 className="text-3xl md:text-5xl font-bold mb-6">Aesthetic Clinic Franchise UK — Harley Street Beauty Franchise by CosmeDoc</h1>
+      <p className="text-lg md:text-xl mb-6 text-gray-300">Launch your own aesthetic clinic franchise backed by 15+ years of Harley Street excellence. CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, offers the UK's only doctor-led beauty franchise with <strong>Fellowship in Aesthetic Medicine training</strong>, protected territories, and a proven low-overhead business model for medical professionals.</p>
       
       {/* Fellowship Training Highlight with Logo */}
       <div className="mb-6 p-4 bg-amber-500/15 rounded-lg border border-amber-500/40 max-w-3xl mx-auto">
@@ -309,47 +309,102 @@ const Partners = () => {
   return (
     <div className="bg-black text-white">
       <Helmet>
-        <title>CosmeDoc Franchise Opportunity | Harley Street Heritage & Innovation</title>
-        <meta name="description" content="Join the UK's first boutique Harley Street aesthetic clinic franchise. CosmeDoc, sister company of Harley Street Institute, offers world-class training with low-overhead, high-impact franchise model for medical professionals." />
-        <meta name="keywords" content="Harley Street aesthetic franchise, boutique clinic franchise, medical aesthetic franchise, CosmeDoc franchise, Harley Street Institute training, low investment franchise, aesthetic clinic business opportunity" />
-        <link rel="canonical" href="https://www.cosmedocs.com/partners" />
+        <title>Aesthetic Clinic Franchise UK | Beauty Franchise | CosmeDoc Harley Street</title>
+        <meta name="description" content="Open your own aesthetic clinic franchise with CosmeDoc — the UK's only Harley Street beauty franchise. Doctor-led model, Fellowship training, protected territories. Investment from £25,000." />
+        <meta name="keywords" content="aesthetic clinic franchise, beauty franchise, aesthetics franchise UK, cosmetic clinic franchise, medical aesthetics franchise, beauty clinic franchise opportunity, aesthetic business franchise, Harley Street franchise" />
+        <link rel="canonical" href="https://www.cosmedocs.com/partners/" />
         <script type="application/ld+json">
-        {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "CosmeDoc Aesthetic Clinic Franchise",
-            "description": "Revolutionary boutique Harley Street aesthetic clinic franchise with world-class training from Harley Street Institute.",
-            "provider": {
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "CosmeDoc Aesthetic Clinic Franchise",
+          "description": "The UK's only Harley Street aesthetic clinic franchise and beauty franchise opportunity for medical professionals. Doctor-led model with Fellowship training.",
+          "provider": {
+            "@type": "Organization",
+            "name": "CosmeDoc",
+            "url": "https://www.cosmedocs.com",
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "parentOrganization": {
               "@type": "Organization",
-              "name": "CosmeDoc",
-              "url": "https://cosmedocs.com",
-              "telephone": "+44 20 3733 3227",
+              "name": "Harley Street Institute",
+              "url": "https://www.harleystreetinstitute.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "10 Harley Street",
                 "addressLocality": "London",
-                "addressRegion": "Greater London",
                 "postalCode": "W1G 9PF",
                 "addressCountry": "GB"
-              },
-              "parentOrganization": {
-                "@type": "Organization",
-                "name": "Harley Street Institute",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "10 Harley Street",
-                  "addressLocality": "London",
-                  "postalCode": "W1G 9PF",
-                  "addressCountry": "GB"
-                }
+              }
+            }
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          "serviceType": "Aesthetic Clinic Franchise",
+          "offers": {
+            "@type": "Offer",
+            "price": "25000",
+            "priceCurrency": "GBP",
+            "description": "Complete Harley Street aesthetic clinic franchise package with Fellowship training"
+          }
+        })}
+        </script>
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does an aesthetic clinic franchise cost in the UK?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The CosmeDoc aesthetic clinic franchise starts from £25,000 for the complete package including Fellowship in Aesthetic Medicine training, brand rights, business systems, and protected territory. Monthly franchise fees range from £500–£1,500. Experienced practitioners may qualify for reduced investment based on existing qualifications."
               }
             },
+            {
+              "@type": "Question",
+              "name": "Do I need my own clinic premises to start a beauty franchise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The CosmeDoc beauty franchise model is specifically designed to minimise overhead. You can partner with local clinics, rent treatment rooms, or use medical centre space. Our low-overhead approach means you can start generating revenue without the capital expense of dedicated premises."
+              }
             },
-            "areaServed": "United Kingdom",
-            "serviceType": "Medical Aesthetic Franchise Development"
-          }
-        `}
+            {
+              "@type": "Question",
+              "name": "Who can apply for an aesthetic clinic franchise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our aesthetic clinic franchise is exclusively for registered healthcare professionals: GMC-registered doctors, GDC-registered dentists, NMC-registered nurses with prescribing rights, pharmacist prescribers, and qualified independent prescribers insured for aesthetics."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What training is included in the beauty franchise package?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every CosmeDoc franchisee receives the Fellowship in Aesthetic Medicine — the same prestigious programme delivered by our sister company, Harley Street Institute. This includes advanced injection techniques, clinical safety protocols, business development mentorship, and ongoing professional support."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What makes CosmeDoc different from other aesthetics franchises?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CosmeDoc is the UK's only franchise backed by 15+ years of Harley Street clinical heritage. Unlike volume-driven models, we focus on quality and discretion — invisible art, not exaggerated results. Our doctor-led approach, AI-powered business systems, and exclusive territory protection set us apart from traditional beauty franchises."
+              }
+            }
+          ]
+        })}
         </script>
       </Helmet>
 
