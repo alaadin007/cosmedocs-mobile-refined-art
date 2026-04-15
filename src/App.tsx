@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense, memo } from "react";
 import VoiceConsultationWidget from "./components/VoiceConsultationWidget";
+import { ConversationProvider } from "@elevenlabs/react";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Layout from "./components/Layout";
@@ -1004,7 +1005,9 @@ const App = () => {
                 </Routes>
                 </LanguageProvider>
               </AuthProvider>
-              <VoiceConsultationWidget />
+              <ConversationProvider>
+                <VoiceConsultationWidget />
+              </ConversationProvider>
             </BrowserRouter>
           </TooltipProvider>
         </HelmetProvider>
