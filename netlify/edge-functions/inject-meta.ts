@@ -443,12 +443,12 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     description: 'Join the Cosmedocs membership programme. Exclusive discounts, priority bookings & complimentary treatments.'
   },
   '/partners/': {
-    title: 'Partners & Collaborations | Cosmedocs',
-    description: 'Our trusted partners and industry collaborations. Working with leading brands in aesthetic medicine.'
+    title: 'Aesthetic Clinic Franchise UK | Beauty Franchise | CosmeDoc Harley Street',
+    description: 'Open your own aesthetic clinic franchise backed by Harley Street. The UK\'s only doctor-led beauty franchise with Fellowship training, protected territories. From £25,000.'
   },
   '/partnerships/': {
-    title: 'Partnership Opportunities | Cosmedocs',
-    description: 'Explore partnership opportunities with Cosmedocs. Collaborate with London\'s leading aesthetic clinic.'
+    title: 'Aesthetic Clinic Franchise UK | Beauty Franchise Opportunity | CosmeDoc',
+    description: 'Join the UK\'s premier aesthetic clinic franchise. CosmeDoc beauty franchise includes Harley Street Institute training, brand rights & territory protection.'
   },
   '/fellowship-invitation/': {
     title: 'Fellowship Invitation | Cosmedocs Harley Street',
