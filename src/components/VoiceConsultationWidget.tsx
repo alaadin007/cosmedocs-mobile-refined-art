@@ -115,12 +115,12 @@ const VoiceConsultationWidget = () => {
       console.log('Voice consultation disconnected');
       setTranscript(prev => [...prev, '📞 Consultation ended']);
     },
-    onMessage: (message) => {
-      if (message.type === 'user_transcript') {
-        const text = (message as any).user_transcription_event?.user_transcript;
+    onMessage: (message: any) => {
+      if (message?.type === 'user_transcript') {
+        const text = message?.user_transcription_event?.user_transcript;
         if (text) setTranscript(prev => [...prev, `You: ${text}`]);
-      } else if (message.type === 'agent_response') {
-        const text = (message as any).agent_response_event?.agent_response;
+      } else if (message?.type === 'agent_response') {
+        const text = message?.agent_response_event?.agent_response;
         if (text) setTranscript(prev => [...prev, `Dr. AI: ${text}`]);
       }
     },
@@ -159,8 +159,8 @@ const VoiceConsultationWidget = () => {
 
       // Start the real-time conversation
       await conversation.startSession({
-        token: data.token,
-      });
+        conversationToken: data.token,
+      } as any);
 
       // Send patient context
       if (patientInfo.name) {
