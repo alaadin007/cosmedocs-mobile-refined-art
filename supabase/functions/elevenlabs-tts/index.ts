@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { encode as base64Encode } from "https://deno.land/std@0.168.0/encoding/base64.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -16,8 +17,29 @@ serve(async (req) => {
       throw new Error('ELEVENLABS_API_KEY is not configured');
     }
 
-    const { text, voiceId } = await req.json();
+    const body = await req.json();
+    const { text, voiceId, action } = body;
 
+    // Handle STT token generation
+    if (action === 'stt-token') {
+      const tokenRes = await fetch(
+        'https://api.elevenlabs.io/v1/single-use-token/realtime_scribe',
+        {
+          method: 'POST',
+          headers: { 'xi-api-key': ELEVENLABS_API_KEY },
+        }
+      );
+      if (!tokenRes.ok) {
+        const err = await tokenRes.text();
+        throw new Error(`STT token error: ${tokenRes.status} ${err}`);
+      }
+      const tokenData = await tokenRes.json();
+      return new Response(JSON.stringify({ token: tokenData.token }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // TTS
     if (!text || typeof text !== 'string') {
       return new Response(JSON.stringify({ error: 'text is required' }), {
         status: 400,
@@ -25,25 +47,25 @@ serve(async (req) => {
       });
     }
 
-    // Default to a professional British male voice (Daniel)
-    const selectedVoice = voiceId || 'onwK4e9ZLuTAKqWW03F9';
+    // George - warm British male voice
+    const selectedVoice = voiceId || 'JBFqnCBsd6RMkjVDRZzb';
 
     const response = await fetch(
-      `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}`,
+      `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}/stream?output_format=mp3_44100_128`,
       {
         method: 'POST',
         headers: {
           'xi-api-key': ELEVENLABS_API_KEY,
           'Content-Type': 'application/json',
-          'Accept': 'audio/mpeg',
         },
         body: JSON.stringify({
           text: text.substring(0, 2000),
           model_id: 'eleven_turbo_v2_5',
           voice_settings: {
-            stability: 0.6,
+            stability: 0.5,
             similarity_boost: 0.8,
             style: 0.3,
+            speed: 1.15,
           },
         }),
       }
@@ -52,7 +74,7 @@ serve(async (req) => {
     if (!response.ok) {
       const errText = await response.text();
       console.error('ElevenLabs TTS error:', response.status, errText);
-      
+
       if (response.status === 429) {
         return new Response(JSON.stringify({ error: 'Voice rate limited. Please wait a moment.' }), {
           status: 429,
@@ -63,7 +85,8 @@ serve(async (req) => {
     }
 
     const audioBuffer = await response.arrayBuffer();
-    const base64Audio = btoa(String.fromCharCode(...new Uint8Array(audioBuffer)));
+    // Use proper base64 encoding (btoa with spread crashes on large buffers)
+    const base64Audio = base64Encode(audioBuffer);
 
     return new Response(JSON.stringify({ audio: base64Audio }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
