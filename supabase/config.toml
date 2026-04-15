@@ -29,3 +29,9 @@ verify_jwt = false
 
 [functions.analyze-skin-lesion]
 verify_jwt = false
+
+[functions.elevenlabs-conversation-token]
+verify_jwt = false
+
+[functions.ai-skin-consultation]
+verify_jwt = false
