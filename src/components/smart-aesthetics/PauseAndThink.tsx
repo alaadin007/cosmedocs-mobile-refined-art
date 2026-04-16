@@ -34,6 +34,12 @@ const quizQuestions: Record<string, QuizQuestion> = {
     correctIndex: 1,
     explanation: "The malar fat pad descends and separates from the orbital fat, creating a visible trough. The skin above simply reveals what's happening below.",
   },
+  "three-cell-philosophy": {
+    question: "Why should skincare target all three cell types?",
+    options: ["It's a marketing strategy", "Most concerns involve at least two cell types", "One product can't contain enough ingredients"],
+    correctIndex: 1,
+    explanation: "Most visible skin concerns — ageing, dullness, pigmentation — involve dysfunction in at least two of the three key cell types. Addressing only one creates incomplete, short-lived results.",
+  },
 };
 
 export default function PauseAndThink({ principleId }: { principleId: string }) {

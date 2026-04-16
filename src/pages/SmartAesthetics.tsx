@@ -11,6 +11,7 @@ import RelatedTreatments from "@/components/smart-aesthetics/RelatedTreatments";
 const principles = [
   { id: "why-treatments-fail", title: "Why Most Treatments Fail", subtitle: "The truth about wasted money" },
   { id: "skin-not-surface", title: "Skin Is Not a Surface", subtitle: "Understanding the layers" },
+  { id: "three-cell-philosophy", title: "The 3-Cell Foundation", subtitle: "Keratinocytes, Melanocytes, Fibroblasts" },
   { id: "structure-before-lift", title: "Structure Before Lift", subtitle: "The dermis architecture" },
   { id: "volume-story", title: "The Volume Story", subtitle: "Fat, muscle & first signs of time" },
   { id: "thirties-shift", title: "The Thirties Shift", subtitle: "When structure changes" },
@@ -134,7 +135,7 @@ export default function SmartAesthetics() {
           )}
 
           {/* Desktop sidebar */}
-          <aside className="hidden lg:block lg:w-72 border-r border-gray-200 bg-white sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto">
+          <aside className="hidden lg:block lg:w-72 border-r border-gray-200 bg-white sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto z-10">
             <SmartAestheticsSidebar principles={principles} currentIndex={currentPrincipleIndex} onSelect={handleNav} />
           </aside>
 
@@ -408,9 +409,71 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 3 */}
+              {/* Principle 3 — The 3-Cell Foundation */}
               {currentPrincipleIndex === 2 && (
-                <PrincipleArticle number={3} title="Structure Before Lift" subtitle="The dermis architecture" quote="Beauty isn't skin deep — it's dermis deep.">
+                <PrincipleArticle number={3} title="The 3-Cell Foundation" subtitle="Keratinocytes, Melanocytes, Fibroblasts" quote="Every skin concern traces back to three cells.">
+                  <P>Your skin contains over 30 cell types, but three are responsible for the vast majority of visible skin health. At CosmeDocs, we formulate our cosmeceuticals and design our clinical treatments around these three cellular pillars. Every product, every protocol, every recommendation maps back to this framework.</P>
+
+                  <SectionHeading>1. Keratinocytes — The Barrier Builders</SectionHeading>
+                  <P>Keratinocytes make up roughly 90% of the epidermis. They produce ceramides, fatty acids, and natural moisturising factors (NMFs). They are the reason your skin keeps moisture in and irritants out.</P>
+                  <P>When keratinocyte function is compromised — through sun damage, harsh products, or neglect — you see dehydration, sensitivity, oiliness, and congestion. The barrier breaks down, and everything else follows.</P>
+                  <Insight>Most "sensitive skin" isn't a skin type — it's a keratinocyte barrier in distress.</Insight>
+
+                  <SectionHeading>2. Melanocytes — The Pigment Regulators</SectionHeading>
+                  <P>Melanocytes live in the basal layer — roughly 5–10% of it — and produce melanin, the pigment that gives skin its colour and provides UV protection. They are exquisitely sensitive.</P>
+                  <P>Dysfunction leads to hyperpigmentation, melasma, post-inflammatory marks, and uneven tone. The key insight: melanocyte regulation is dose-sensitive. Aggressive treatments can trigger rebound pigmentation, making things worse.</P>
+                  <Insight>The goal is never to destroy melanocytes — it's to regulate them. Gently, consistently, intelligently.</Insight>
+
+                  <SectionHeading>3. Fibroblasts — The Structure Makers</SectionHeading>
+                  <P>Fibroblasts live in the dermis and produce the three pillars of youthful skin: collagen (structure), elastin (bounce), and hyaluronic acid (hydration). They are the construction workers of your face.</P>
+                  <P>After age 25, fibroblast activity declines by roughly 1% per year. This is why injectable treatments like <Link to="/treatments/profhilo/" className="text-[#C9A050] hover:underline">Profhilo</Link> and <Link to="/treatments/polynucleotides/" className="text-[#C9A050] hover:underline">polynucleotides</Link> work — they directly stimulate dormant fibroblasts back into production.</P>
+
+                  <SectionHeading>Why Target All Three?</SectionHeading>
+                  <P>Most skin concerns — ageing, dullness, pigmentation, acne — involve dysfunction in at least two of these cell types. Targeting only one creates incomplete results. A patient with fine lines (fibroblasts) might also have sun spots (melanocytes) and dehydration (keratinocytes). Treating only the wrinkles misses two-thirds of the picture.</P>
+
+                  <div className="overflow-x-auto mt-6">
+                    <table className="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                      <thead className="bg-gray-100">
+                        <tr>
+                          <th className="text-left p-3 font-semibold text-gray-700">Concern</th>
+                          <th className="text-center p-3 font-semibold text-emerald-700">K</th>
+                          <th className="text-center p-3 font-semibold text-purple-700">M</th>
+                          <th className="text-center p-3 font-semibold text-cyan-700">F</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-600">
+                        <tr className="border-t"><td className="p-3">Fine lines & wrinkles</td><td className="p-3 text-center">—</td><td className="p-3 text-center">—</td><td className="p-3 text-center">✓✓</td></tr>
+                        <tr className="border-t bg-gray-50/50"><td className="p-3">Hyperpigmentation</td><td className="p-3 text-center">✓</td><td className="p-3 text-center">✓✓</td><td className="p-3 text-center">—</td></tr>
+                        <tr className="border-t"><td className="p-3">Acne & congestion</td><td className="p-3 text-center">✓✓</td><td className="p-3 text-center">—</td><td className="p-3 text-center">—</td></tr>
+                        <tr className="border-t bg-gray-50/50"><td className="p-3">Dehydration</td><td className="p-3 text-center">✓✓</td><td className="p-3 text-center">—</td><td className="p-3 text-center">✓</td></tr>
+                        <tr className="border-t"><td className="p-3">Sagging & laxity</td><td className="p-3 text-center">—</td><td className="p-3 text-center">—</td><td className="p-3 text-center">✓✓</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <SectionHeading>The AM/PM Protocol</SectionHeading>
+                  <P>Our two core cosmeceuticals are designed as a complete daily protocol targeting all three cell types:</P>
+                  <ul className="list-none space-y-3 pl-0">
+                    <GoldBullet><strong className="text-gray-800">Morning — <Link to="/shop/vitamin-c-serum/" className="text-[#C9A050] hover:underline">Revitalise C20</Link>:</strong> 20% L-ascorbic acid protects keratinocyte barriers from oxidative damage, inhibits melanocyte tyrosinase, and provides the cofactor fibroblasts need for collagen synthesis.</GoldBullet>
+                    <GoldBullet><strong className="text-gray-800">Evening — <Link to="/shop/retinol-cream/" className="text-[#C9A050] hover:underline">Stimulate RE (Retinol+)</Link>:</strong> Dual retinoids accelerate keratinocyte turnover, normalise melanocyte pigment distribution, and activate fibroblast retinoid receptors for new collagen production.</GoldBullet>
+                  </ul>
+                  <Insight>Two products. Three cell types. One philosophy. That's the foundation that makes professional treatments last.</Insight>
+
+                  <div className="bg-white border border-gray-200 rounded-xl p-6 mt-6 text-center">
+                    <p className="text-sm text-gray-500 font-light mb-3">Explore the full 3-Cell Philosophy</p>
+                    <Link to="/blog/three-cell-skin-philosophy/" className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#B8913F] font-medium text-sm transition-colors">
+                      Read the Deep Dive <ExternalLink className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+
+                  <PauseAndThink principleId="three-cell-philosophy" />
+                  <RelatedTreatments principleId="three-cell-philosophy" />
+                </PrincipleArticle>
+              )}
+
+              {/* Principle 4 */}
+              {currentPrincipleIndex === 3 && (
+                <PrincipleArticle number={4} title="Structure Before Lift" subtitle="The dermis architecture" quote="Beauty isn't skin deep — it's dermis deep.">
                   <P>If the epidermis is the skin you see in the mirror, the dermis is the one that quietly holds it up. It's the scaffolding under the wallpaper — invisible until it starts to collapse. This is where strength, bounce, and resilience live.</P>
                   <SectionHeading>The Scaffolding Beneath the Smile</SectionHeading>
                   <P>The dermis is where collagen and elastin hang out — the two best friends you took for granted your whole life. Collagen gives firmness. Elastin gives snap. Together, they're the reason a 25-year-old can stay up all night and still look alive in the morning.</P>
@@ -426,9 +489,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 4 */}
-              {currentPrincipleIndex === 3 && (
-                <PrincipleArticle number={4} title="The Volume Story" subtitle="Fat, muscle & the first signs of time" quote="The third layer tells the truth — softly, then louder.">
+              {/* Principle 5 */}
+              {currentPrincipleIndex === 4 && (
+                <PrincipleArticle number={5} title="The Volume Story" subtitle="Fat, muscle & the first signs of time" quote="The third layer tells the truth — softly, then louder.">
                   <P>Beneath the dermis lies the soft layer — subcutaneous fat, fascia, muscle. This is where the real shaping happens. Where your contours are born. Cheekbones don't emerge from bone alone; they rise on pillows of fat that give softness to angles.</P>
                   <P>In youth, fat pads sit high and full — in the cheeks, temples, under the eyes, around the jawline. They make the face look lifted without anyone lifting it.</P>
                   <SectionHeading>What Happens When Fat Shifts</SectionHeading>
@@ -446,9 +509,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 5 */}
-              {currentPrincipleIndex === 4 && (
-                <PrincipleArticle number={5} title="The Thirties Shift" subtitle="When structure changes" quote="The thirties whisper what the forties will say out loud.">
+              {/* Principle 6 */}
+              {currentPrincipleIndex === 5 && (
+                <PrincipleArticle number={6} title="The Thirties Shift" subtitle="When structure changes" quote="The thirties whisper what the forties will say out loud.">
                   <P>The thirties are when the mirror starts telling the truth. Not harshly — just honestly. You wake up with pillow creases that last longer. That line between your brows stopped leaving when you stopped frowning. Something subtle shifted.</P>
                   <SectionHeading>The First Signs</SectionHeading>
                   <ul className="list-none space-y-3 pl-0">
@@ -465,9 +528,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 6 */}
-              {currentPrincipleIndex === 5 && (
-                <PrincipleArticle number={6} title="The Forties Logic" subtitle="The era of lift" quote="The forties demand strategy, not just products.">
+              {/* Principle 7 */}
+              {currentPrincipleIndex === 6 && (
+                <PrincipleArticle number={7} title="The Forties Logic" subtitle="The era of lift" quote="The forties demand strategy, not just products.">
                   <P>By now, the whispers have become statements. Jowls are forming. The jawline isn't as sharp. Eyelids feel heavier. Nasolabial folds have settled in permanently.</P>
                   <P>This is when the face needs more than surface treatments. It needs architecture — strategic volume, calculated lift, intelligent relaxation of overworked muscles.</P>
                   <SectionHeading>The 40s Treatment Philosophy</SectionHeading>
@@ -482,9 +545,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 7 */}
-              {currentPrincipleIndex === 6 && (
-                <PrincipleArticle number={7} title="The Fifties Elegance" subtitle="Elasticity & energy" quote="The fifties are about elegance, not erasure.">
+              {/* Principle 8 */}
+              {currentPrincipleIndex === 7 && (
+                <PrincipleArticle number={8} title="The Fifties Elegance" subtitle="Elasticity & energy" quote="The fifties are about elegance, not erasure.">
                   <P>By fifty, you know your face. You've lived in it. The question isn't "how do I look younger?" — it's "how do I look like the best version of myself?"</P>
                   <P>Skin laxity is more pronounced. The neck may need attention. Perioral lines appear. Marionette lines deepen. But there's also something beautiful: character, confidence, wisdom lines.</P>
                   <SectionHeading>The 50s Philosophy</SectionHeading>
@@ -499,9 +562,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 8 */}
-              {currentPrincipleIndex === 7 && (
-                <PrincipleArticle number={8} title="When Not to Treat" subtitle="The wisdom of restraint" quote="Sometimes the best treatment is no treatment.">
+              {/* Principle 9 */}
+              {currentPrincipleIndex === 8 && (
+                <PrincipleArticle number={9} title="When Not to Treat" subtitle="The wisdom of restraint" quote="Sometimes the best treatment is no treatment.">
                   <P>This might be the most important principle of all. Not everything needs fixing. Not every line is a problem. Some faces are chased into looking worse by practitioners who can't say no.</P>
                   <SectionHeading>Signs You Don't Need Treatment</SectionHeading>
                   <ul className="list-none space-y-3 pl-0">
@@ -526,9 +589,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 9 */}
-              {currentPrincipleIndex === 8 && (
-                <PrincipleArticle number={9} title="Core Principles" subtitle="The CosmeDocs philosophy" quote="Our aesthetics is invisible art.">
+              {/* Principle 10 */}
+              {currentPrincipleIndex === 9 && (
+                <PrincipleArticle number={10} title="Core Principles" subtitle="The CosmeDocs philosophy" quote="Our aesthetics is invisible art.">
                   <P>After everything you've read, here are the principles we live by at CosmeDocs. They're not trends. They're not marketing. They're the foundation of everything we do.</P>
                   <div className="space-y-4 mt-8">
                     {[
