@@ -489,9 +489,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 4 */}
-              {currentPrincipleIndex === 3 && (
-                <PrincipleArticle number={4} title="The Volume Story" subtitle="Fat, muscle & the first signs of time" quote="The third layer tells the truth — softly, then louder.">
+              {/* Principle 5 */}
+              {currentPrincipleIndex === 4 && (
+                <PrincipleArticle number={5} title="The Volume Story" subtitle="Fat, muscle & the first signs of time" quote="The third layer tells the truth — softly, then louder.">
                   <P>Beneath the dermis lies the soft layer — subcutaneous fat, fascia, muscle. This is where the real shaping happens. Where your contours are born. Cheekbones don't emerge from bone alone; they rise on pillows of fat that give softness to angles.</P>
                   <P>In youth, fat pads sit high and full — in the cheeks, temples, under the eyes, around the jawline. They make the face look lifted without anyone lifting it.</P>
                   <SectionHeading>What Happens When Fat Shifts</SectionHeading>
