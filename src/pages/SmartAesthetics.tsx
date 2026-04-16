@@ -134,7 +134,7 @@ export default function SmartAesthetics() {
           )}
 
           {/* Desktop sidebar */}
-          <aside className="hidden lg:block lg:w-72 border-r border-gray-200 bg-white sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto">
+          <aside className="hidden lg:block lg:w-72 border-r border-gray-200 bg-white sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto z-10">
             <SmartAestheticsSidebar principles={principles} currentIndex={currentPrincipleIndex} onSelect={handleNav} />
           </aside>
 
