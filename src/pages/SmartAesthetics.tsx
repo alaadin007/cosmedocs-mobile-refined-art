@@ -11,6 +11,7 @@ import RelatedTreatments from "@/components/smart-aesthetics/RelatedTreatments";
 const principles = [
   { id: "why-treatments-fail", title: "Why Most Treatments Fail", subtitle: "The truth about wasted money" },
   { id: "skin-not-surface", title: "Skin Is Not a Surface", subtitle: "Understanding the layers" },
+  { id: "three-cell-philosophy", title: "The 3-Cell Foundation", subtitle: "Keratinocytes, Melanocytes, Fibroblasts" },
   { id: "structure-before-lift", title: "Structure Before Lift", subtitle: "The dermis architecture" },
   { id: "volume-story", title: "The Volume Story", subtitle: "Fat, muscle & first signs of time" },
   { id: "thirties-shift", title: "The Thirties Shift", subtitle: "When structure changes" },
