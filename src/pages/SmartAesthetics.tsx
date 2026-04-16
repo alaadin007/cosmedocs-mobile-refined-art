@@ -509,9 +509,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 5 */}
-              {currentPrincipleIndex === 4 && (
-                <PrincipleArticle number={5} title="The Thirties Shift" subtitle="When structure changes" quote="The thirties whisper what the forties will say out loud.">
+              {/* Principle 6 */}
+              {currentPrincipleIndex === 5 && (
+                <PrincipleArticle number={6} title="The Thirties Shift" subtitle="When structure changes" quote="The thirties whisper what the forties will say out loud.">
                   <P>The thirties are when the mirror starts telling the truth. Not harshly — just honestly. You wake up with pillow creases that last longer. That line between your brows stopped leaving when you stopped frowning. Something subtle shifted.</P>
                   <SectionHeading>The First Signs</SectionHeading>
                   <ul className="list-none space-y-3 pl-0">
@@ -528,9 +528,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 6 */}
-              {currentPrincipleIndex === 5 && (
-                <PrincipleArticle number={6} title="The Forties Logic" subtitle="The era of lift" quote="The forties demand strategy, not just products.">
+              {/* Principle 7 */}
+              {currentPrincipleIndex === 6 && (
+                <PrincipleArticle number={7} title="The Forties Logic" subtitle="The era of lift" quote="The forties demand strategy, not just products.">
                   <P>By now, the whispers have become statements. Jowls are forming. The jawline isn't as sharp. Eyelids feel heavier. Nasolabial folds have settled in permanently.</P>
                   <P>This is when the face needs more than surface treatments. It needs architecture — strategic volume, calculated lift, intelligent relaxation of overworked muscles.</P>
                   <SectionHeading>The 40s Treatment Philosophy</SectionHeading>
@@ -545,9 +545,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 7 */}
-              {currentPrincipleIndex === 6 && (
-                <PrincipleArticle number={7} title="The Fifties Elegance" subtitle="Elasticity & energy" quote="The fifties are about elegance, not erasure.">
+              {/* Principle 8 */}
+              {currentPrincipleIndex === 7 && (
+                <PrincipleArticle number={8} title="The Fifties Elegance" subtitle="Elasticity & energy" quote="The fifties are about elegance, not erasure.">
                   <P>By fifty, you know your face. You've lived in it. The question isn't "how do I look younger?" — it's "how do I look like the best version of myself?"</P>
                   <P>Skin laxity is more pronounced. The neck may need attention. Perioral lines appear. Marionette lines deepen. But there's also something beautiful: character, confidence, wisdom lines.</P>
                   <SectionHeading>The 50s Philosophy</SectionHeading>
@@ -562,9 +562,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 8 */}
-              {currentPrincipleIndex === 7 && (
-                <PrincipleArticle number={8} title="When Not to Treat" subtitle="The wisdom of restraint" quote="Sometimes the best treatment is no treatment.">
+              {/* Principle 9 */}
+              {currentPrincipleIndex === 8 && (
+                <PrincipleArticle number={9} title="When Not to Treat" subtitle="The wisdom of restraint" quote="Sometimes the best treatment is no treatment.">
                   <P>This might be the most important principle of all. Not everything needs fixing. Not every line is a problem. Some faces are chased into looking worse by practitioners who can't say no.</P>
                   <SectionHeading>Signs You Don't Need Treatment</SectionHeading>
                   <ul className="list-none space-y-3 pl-0">
@@ -589,9 +589,9 @@ export default function SmartAesthetics() {
                 </PrincipleArticle>
               )}
 
-              {/* Principle 9 */}
-              {currentPrincipleIndex === 8 && (
-                <PrincipleArticle number={9} title="Core Principles" subtitle="The CosmeDocs philosophy" quote="Our aesthetics is invisible art.">
+              {/* Principle 10 */}
+              {currentPrincipleIndex === 9 && (
+                <PrincipleArticle number={10} title="Core Principles" subtitle="The CosmeDocs philosophy" quote="Our aesthetics is invisible art.">
                   <P>After everything you've read, here are the principles we live by at CosmeDocs. They're not trends. They're not marketing. They're the foundation of everything we do.</P>
                   <div className="space-y-4 mt-8">
                     {[
