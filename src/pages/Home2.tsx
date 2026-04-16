@@ -13,6 +13,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
 import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
+import heroFacialHarmony from "@/assets/hero-facial-harmony.jpg";
 
 const popularTreatments = [
   {
@@ -343,17 +344,34 @@ export default function Home2() {
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 <div className="relative aspect-square">
-                  {/* Decorative circles */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-80 h-80 rounded-full border border-[#C9A050]/20" />
+                  {/* Decorative orbital rings */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-[26rem] h-[26rem] rounded-full border border-[#C9A050]/15" />
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-64 h-64 rounded-full border border-[#C9A050]/15" />
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-[22rem] h-[22rem] rounded-full border border-[#C9A050]/10" />
                   </div>
+
+                  {/* Premium facial harmony hero image */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#C9A050]/20 to-[#C9A050]/5" />
+                    <div className="relative w-[22rem] h-[22rem] rounded-full overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_0_80px_-10px_rgba(201,160,80,0.35)]">
+                      <img
+                        src={heroFacialHarmony}
+                        alt="Premium medical aesthetic — facial harmony mapping at Cosmedocs Harley Street"
+                        width={1024}
+                        height={1024}
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Subtle vignette to blend into dark background */}
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_55%,_rgba(0,0,0,0.55)_100%)]" />
+                    </div>
                   </div>
-                  
+
+                  {/* Floating caption — Premium Medical Aesthetic */}
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.4em] uppercase text-[#C9A050]/80 font-light">
+                    Premium Medical Aesthetic
+                  </div>
+
                 {/* Floating cards */}
                   <motion.div 
                     className="absolute top-8 right-0 bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl shadow-black/20 border border-white/10"
