@@ -44,6 +44,12 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
     { title: "View All Treatments", link: "/treatments" },
     { title: "About CosmeDocs", link: "/about" },
   ],
+  "three-cell-philosophy": [
+    { title: "Vitamin C Serum", link: "/shop/vitamin-c-serum/" },
+    { title: "Retinol Cream", link: "/shop/retinol-cream/" },
+    { title: "Shop Cosmeceuticals", link: "/shop/" },
+    { title: "Read the Full Article", link: "/blog/three-cell-skin-philosophy/" },
+  ],
 };
 
 export default function RelatedTreatments({ principleId }: { principleId: string }) {
