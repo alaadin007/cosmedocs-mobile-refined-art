@@ -163,6 +163,24 @@ export default function SmartAesthetics() {
                     <p className="text-gray-400 text-lg font-light">Answer one question:</p>
                   </div>
 
+                  {/* Cinematic Intro Video */}
+                  <figure className="mb-12">
+                    <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.35)] ring-1 ring-[#C9A050]/20 bg-black">
+                      <video
+                        src="/videos/smart-aesthetics-invisible-art.mp4"
+                        className="w-full h-auto block"
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster="/images/apple-skin-analogy.jpeg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl" />
+                    </div>
+                    <figcaption className="mt-3 text-center text-xs tracking-[0.2em] uppercase text-[#C9A050]/80 font-medium">
+                      The Invisible Art of Facial Architecture
+                    </figcaption>
+                  </figure>
+
                   {/* Core Question */}
                   <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-12 text-center mb-10 shadow-sm">
                     <p className="text-xl md:text-2xl font-extralight text-gray-800 mb-4">
