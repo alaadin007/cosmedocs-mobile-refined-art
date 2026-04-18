@@ -11,11 +11,26 @@ import {
   X,
   ArrowLeft,
   Loader2,
+  Download,
+  Mail,
+  Phone,
+  MapPin,
+  User,
+  ShieldCheck,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import jsPDF from "jspdf";
 
-type Stage = "intro" | "capture" | "review" | "analysing" | "results";
+type Stage = "intro" | "capture" | "review" | "consent" | "analysing" | "results";
+
+interface ConsentDetails {
+  name: string;
+  email: string;
+  phone: string;
+  city: string;
+  consent: boolean;
+}
 
 interface ExpressionStep {
   key: string;
