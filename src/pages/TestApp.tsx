@@ -638,4 +638,214 @@ const ResultGroup = ({ title, subtitle, data }: { title: string; subtitle: strin
   </div>
 );
 
+
+const ConsentField = ({
+  icon, placeholder, value, onChange, type = "text",
+}: {
+  icon: React.ReactNode;
+  placeholder: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+}) => (
+  <div className="flex items-center gap-3 px-4 py-3 rounded-2xl border border-white/10 bg-white/[0.03] focus-within:border-amber-300/50 transition">
+    <span className="text-amber-200/70">{icon}</span>
+    <input
+      type={type}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+      className="flex-1 bg-transparent outline-none text-white placeholder:text-white/30 text-sm"
+    />
+  </div>
+);
+
+const generatePdf = (details: ConsentDetails, analysis: Analysis) => {
+  const doc = new jsPDF({ unit: "pt", format: "a4" });
+  const pageW = doc.internal.pageSize.getWidth();
+  const pageH = doc.internal.pageSize.getHeight();
+  const margin = 48;
+  let y = margin;
+
+  const gold: [number, number, number] = [201, 160, 80];
+  const ink: [number, number, number] = [25, 25, 28];
+  const muted: [number, number, number] = [110, 110, 115];
+
+  const ensureSpace = (h: number) => {
+    if (y + h > pageH - margin) {
+      doc.addPage();
+      y = margin;
+    }
+  };
+
+  // Header band
+  doc.setFillColor(...ink);
+  doc.rect(0, 0, pageW, 90, "F");
+  doc.setTextColor(...gold);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(9);
+  doc.text("COSMEDOCS · AESTHETIC INTELLIGENCE", margin, 38);
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(20);
+  doc.setFont("helvetica", "bold");
+  doc.text("Your Personalised Reading", margin, 66);
+  doc.setFont("helvetica", "italic");
+  doc.setFontSize(9);
+  doc.setTextColor(...gold);
+  doc.text("Bold • Natural • Always Your Way", margin, 82);
+  y = 120;
+
+  // Patient block
+  doc.setTextColor(...ink);
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "bold");
+  doc.text("PREPARED FOR", margin, y);
+  y += 14;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  doc.text(`${details.name}`, margin, y); y += 14;
+  doc.setTextColor(...muted);
+  doc.setFontSize(10);
+  doc.text(`${details.email}  ·  ${details.phone}`, margin, y); y += 12;
+  doc.text(`${details.city}  ·  ${new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`, margin, y);
+  y += 22;
+
+  // Summary
+  doc.setDrawColor(...gold);
+  doc.setLineWidth(0.6);
+  doc.line(margin, y, pageW - margin, y);
+  y += 18;
+  doc.setTextColor(...ink);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(11);
+  doc.text(`Perceived Age: ${analysis.perceivedAge}`, margin, y);
+  y += 16;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  doc.setTextColor(60, 60, 65);
+  const summaryLines = doc.splitTextToSize(analysis.overallSummary, pageW - margin * 2);
+  doc.text(summaryLines, margin, y);
+  y += summaryLines.length * 12 + 14;
+
+  const renderGroup = (title: string, data: Record<string, ScoreNode>) => {
+    ensureSpace(40);
+    doc.setFillColor(245, 240, 230);
+    doc.rect(margin, y, pageW - margin * 2, 20, "F");
+    doc.setTextColor(...ink);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.text(title.toUpperCase(), margin + 8, y + 14);
+    y += 28;
+
+    Object.entries(data).forEach(([k, v]) => {
+      const noteLines = doc.splitTextToSize(v.note, pageW - margin * 2 - 90);
+      const blockH = Math.max(28, noteLines.length * 11 + 14);
+      ensureSpace(blockH);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(10);
+      doc.setTextColor(...ink);
+      doc.text(prettyKey(k), margin, y);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9);
+      doc.setTextColor(...muted);
+      doc.text(noteLines, margin, y + 12);
+      // Score chip
+      const chipLabel = `${v.score} · ${scoreLabel(v.score).toUpperCase()}`;
+      const chipW = doc.getTextWidth(chipLabel) + 14;
+      const chipColors: Record<number, [number, number, number]> = {
+        0: [220, 240, 220], 1: [250, 240, 200], 2: [250, 220, 195], 3: [250, 210, 215],
+      };
+      doc.setFillColor(...(chipColors[v.score] ?? [240, 240, 240]));
+      doc.roundedRect(pageW - margin - chipW, y - 10, chipW, 16, 8, 8, "F");
+      doc.setTextColor(...ink);
+      doc.setFontSize(8);
+      doc.text(chipLabel, pageW - margin - chipW + 7, y + 1);
+      y += blockH;
+    });
+    y += 6;
+  };
+
+  renderGroup("Dynamic Lines (on expression)", analysis.dynamicLines);
+  renderGroup("Static Lines (at rest)", analysis.staticLines);
+  renderGroup("Volume Loss", analysis.volumeLoss);
+  renderGroup("Skin", analysis.skin);
+
+  // Treatment plan
+  ensureSpace(40);
+  doc.setFillColor(...ink);
+  doc.rect(margin, y, pageW - margin * 2, 22, "F");
+  doc.setTextColor(...gold);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+  doc.text("PRESCRIBED TREATMENT PLAN", margin + 8, y + 15);
+  y += 32;
+
+  analysis.recommendations.forEach((r) => {
+    const rationaleLines = doc.splitTextToSize(r.rationale, pageW - margin * 2 - 16);
+    const blockH = 30 + rationaleLines.length * 11 + 18;
+    ensureSpace(blockH);
+    doc.setDrawColor(...gold);
+    doc.setLineWidth(0.4);
+    doc.roundedRect(margin, y, pageW - margin * 2, blockH - 6, 6, 6, "S");
+    doc.setTextColor(...ink);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.text(r.treatment, margin + 10, y + 16);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(...muted);
+    doc.text(rationaleLines, margin + 10, y + 30);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(9);
+    doc.setTextColor(...ink);
+    doc.text(`Dose: ${r.dose}`, margin + 10, y + blockH - 14);
+    doc.setTextColor(...gold);
+    doc.text(r.indicativePrice, pageW - margin - 10 - doc.getTextWidth(r.indicativePrice), y + blockH - 14);
+    y += blockH + 6;
+  });
+
+  // Skincare
+  ensureSpace(50);
+  doc.setFillColor(245, 240, 230);
+  doc.rect(margin, y, pageW - margin * 2, 20, "F");
+  doc.setTextColor(...ink);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+  doc.text("DAILY SKINCARE", margin + 8, y + 14);
+  y += 28;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  analysis.skincare.forEach((s) => {
+    const lines = doc.splitTextToSize(`•  ${s}`, pageW - margin * 2);
+    ensureSpace(lines.length * 12 + 4);
+    doc.setTextColor(50, 50, 55);
+    doc.text(lines, margin, y);
+    y += lines.length * 12 + 4;
+  });
+
+  // Footer on last page
+  const pageCount = (doc as any).internal.getNumberOfPages();
+  for (let i = 1; i <= pageCount; i++) {
+    doc.setPage(i);
+    doc.setDrawColor(...gold);
+    doc.setLineWidth(0.4);
+    doc.line(margin, pageH - 50, pageW - margin, pageH - 50);
+    doc.setTextColor(...muted);
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "italic");
+    doc.text(analysis.motto, margin, pageH - 34);
+    doc.setFont("helvetica", "normal");
+    doc.text(`Cosmedocs · Harley Street · London    Page ${i} / ${pageCount}`, pageW - margin, pageH - 34, { align: "right" });
+    doc.setFontSize(7);
+    doc.text(
+      "Educational reading. Not a substitute for in-clinic medical consultation. Indicative pricing — confirmed at consultation.",
+      margin, pageH - 22
+    );
+  }
+
+  const fname = `cosmedocs-reading-${details.name.trim().split(/\s+/)[0].toLowerCase() || "patient"}.pdf`;
+  doc.save(fname);
+  toast.success("Your reading has been downloaded.");
+};
+
 export default TestApp;
