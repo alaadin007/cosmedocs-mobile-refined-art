@@ -7,6 +7,7 @@ import AboutTeam from '@/components/about/AboutTeam';
 import AboutHolisticApproach from '@/components/about/AboutHolisticApproach';
 import AboutBrands from '@/components/about/AboutBrands';
 import AboutTrustSignals from '@/components/about/AboutTrustSignals';
+import AboutHospitalAffiliations from '@/components/about/AboutHospitalAffiliations';
 import AboutCTA from '@/components/about/AboutCTA';
 
 const canonical = 'https://www.cosmedocs.com/ja/about-us/';
@@ -40,6 +41,7 @@ export default function AboutUsJapanese() {
           <AboutHolisticApproach />
           <AboutBrands />
           <AboutTrustSignals />
+          <AboutHospitalAffiliations />
           <AboutCTA />
         </div>
       </div>
