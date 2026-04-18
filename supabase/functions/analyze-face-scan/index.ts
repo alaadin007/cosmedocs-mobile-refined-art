@@ -8,7 +8,7 @@ const corsHeaders = {
 };
 
 interface CapturedPhoto {
-  expression: string; // "neutral" | "frown" | "raise-eyebrows" | "smile" | "squint" | "sad"
+  expression: string; // "neutral" | "frown" | "raise-eyebrows" | "smile" | "squint" | "sad" | "left-oblique" | "right-oblique"
   label: string;
   dataUrl: string; // data:image/jpeg;base64,...
 }
