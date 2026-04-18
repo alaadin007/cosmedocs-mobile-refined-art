@@ -41,6 +41,7 @@ export default function AboutUsJapanese() {
           <AboutHolisticApproach />
           <AboutBrands />
           <AboutTrustSignals />
+          <AboutHospitalAffiliations />
           <AboutCTA />
         </div>
       </div>
