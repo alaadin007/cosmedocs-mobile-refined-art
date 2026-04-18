@@ -592,6 +592,13 @@ const TestApp = () => {
                   <p className="text-[10px] text-white/30 mt-2">Cosmedocs · Harley Street · London</p>
                 </div>
 
+                <button
+                  onClick={() => analysis && generatePdf(details, analysis)}
+                  className="w-full bg-white/[0.04] border border-amber-300/40 text-amber-100 font-medium py-4 rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
+                >
+                  <Download className="w-4 h-4" /> Download My Report (PDF)
+                </button>
+
                 <a
                   href="https://med.as.me/harleystreet"
                   target="_blank"
