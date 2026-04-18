@@ -32,6 +32,7 @@ const AboutUsGerman = lazy(() => import("./pages/AboutUsGerman"));
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
+const TestApp = lazy(() => import("./pages/TestApp"));
 
 const Prices = lazy(() => import("./pages/Prices"));
 const TreatmentsHub = lazy(() => import("./pages/TreatmentsHub"));
@@ -322,6 +323,11 @@ const App = () => {
                     </Suspense>
                   } />
                   <Route path="/home2" element={<Navigate to="/" replace />} />
+                  <Route path="/testapp" element={
+                    <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+                      <TestApp />
+                    </Suspense>
+                  } />
                   <Route path="/botox2" element={<Navigate to="/treatments/botox/" replace />} />
                   <Route path="/botox-paris" element={
                     <Suspense fallback={<PageLoader />}>
