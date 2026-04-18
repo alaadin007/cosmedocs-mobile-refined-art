@@ -88,6 +88,8 @@ const AboutTeam = () => (
                 <div className="flex gap-3 mt-2">
                   <a
                     href={doctor.profileUrl}
+                    target={doctor.profileUrl.startsWith("http") ? "_blank" : undefined}
+                    rel={doctor.profileUrl.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-2 text-[#C9A050] text-xs tracking-wider uppercase hover:text-[#B8913F] transition-colors"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
