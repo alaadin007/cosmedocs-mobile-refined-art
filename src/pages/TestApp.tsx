@@ -31,6 +31,8 @@ const STEPS: ExpressionStep[] = [
   { key: "smile", label: "Big Smile", cue: "Full natural smile, show teeth.", why: "Crow's feet, smile lines, cheek lift." },
   { key: "squint", label: "Squint", cue: "Squint as if in bright sun.", why: "Bunny lines, deep crow's feet." },
   { key: "sad", label: "Sad / Down-Turn", cue: "Pull mouth corners down.", why: "Marionette lines, neck bands." },
+  { key: "left-oblique", label: "Left ¾ View", cue: "Face stays straight — move the camera to your 11 o'clock.", why: "Left cheek, temple & jawline volume." },
+  { key: "right-oblique", label: "Right ¾ View", cue: "Face stays straight — move the camera to your 1 o'clock.", why: "Right cheek, temple & jawline volume." },
 ];
 
 interface Captured {
