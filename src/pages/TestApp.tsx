@@ -18,6 +18,7 @@ import {
   User,
   ShieldCheck,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import jsPDF from "jspdf";
@@ -246,9 +247,18 @@ const TestApp = () => {
               exit={{ opacity: 0 }}
               className="flex-1 flex flex-col items-center justify-between p-6 text-center bg-gradient-to-b from-black via-zinc-950 to-black"
             >
-              <div className="pt-8">
-                <p className="text-[10px] tracking-[0.4em] text-amber-200/80 uppercase">Cosmedocs</p>
-                <p className="text-[10px] tracking-[0.3em] text-white/40 uppercase mt-1">Aesthetic Intelligence</p>
+              <div className="w-full flex items-start justify-between pt-8">
+                <div className="text-left">
+                  <p className="text-[10px] tracking-[0.4em] text-amber-200/80 uppercase">Cosmedocs</p>
+                  <p className="text-[10px] tracking-[0.3em] text-white/40 uppercase mt-1">Aesthetic Intelligence</p>
+                </div>
+                <Link
+                  to="/"
+                  aria-label="Close and return to website"
+                  className="w-9 h-9 rounded-full bg-white/5 border border-white/10 text-white/70 flex items-center justify-center active:scale-95 transition"
+                >
+                  <X className="w-4 h-4" />
+                </Link>
               </div>
 
               <motion.div
