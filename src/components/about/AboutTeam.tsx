@@ -3,6 +3,7 @@ import { ExternalLink, Calendar } from "lucide-react";
 import drAhmedImg from "@/assets/dr-ahmed-haq.png";
 import drHenaImg from "@/assets/dr-hena-haq.png";
 import drHassanImg from "@/assets/dr-hassan-mirza.png";
+import drKarimImg from "@/assets/dr-karim-kassam.jpg";
 
 const bookingUrl = "/contact/";
 
@@ -33,6 +34,15 @@ const doctors = [
     profileUrl: "/our-team/dr-hassan-mirza/",
     bio: "Dr Hassan A. Mirza is a highly experienced Dermatology Consultant currently working within the NHS. He completed his dermatology training in London hospitals, complemented by internal medicine training in Sheffield. A proud member of the Royal College of Physicians and the British Association of Dermatologists, Dr Mirza has also gained international experience through rotations in Orlando.",
     specialties: ["Acne", "Hair Loss", "Psoriasis", "Eczema", "Mole Removal", "Pigmentation"],
+  },
+  {
+    name: "Mr Karim Kassam",
+    role: "Consultant Maxillofacial & Plastic Surgeon",
+    credentials: "Medical School • Dental School • Plastic, Maxillofacial & Reconstructive Surgery Training",
+    image: drKarimImg,
+    profileUrl: "https://www.maxillofacialplasticsurgery.com",
+    bio: "Mr Karim Kassam is a distinguished Maxillofacial and Plastic Surgeon who completed both medical school and dental school, followed by extensive years of specialist training in Plastic, Maxillofacial and Reconstructive Surgery. His dual qualification gives him a uniquely comprehensive understanding of facial anatomy — combining the precision of dentistry, the structural insight of maxillofacial surgery and the artistry of plastic reconstruction. At Cosmedocs, his specialities include upper eyelid surgery (blepharoplasty), facelift surgery, treatment of facial scars, and facial reconstruction following trauma or cancer.",
+    specialties: ["Upper Eyelid Surgery", "Facelift", "Facial Scar Revision", "Post-Trauma Reconstruction", "Post-Cancer Reconstruction"],
   },
 ];
 
@@ -78,6 +88,8 @@ const AboutTeam = () => (
                 <div className="flex gap-3 mt-2">
                   <a
                     href={doctor.profileUrl}
+                    target={doctor.profileUrl.startsWith("http") ? "_blank" : undefined}
+                    rel={doctor.profileUrl.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-2 text-[#C9A050] text-xs tracking-wider uppercase hover:text-[#B8913F] transition-colors"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />

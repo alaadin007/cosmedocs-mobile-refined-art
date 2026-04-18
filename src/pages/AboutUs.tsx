@@ -79,6 +79,12 @@ const AboutUs = () => {
         memberOf: "Royal College of Physicians",
         skills: ["Dermatology", "Acne Treatment", "Psoriasis", "Eczema", "Mole Removal"]
       }),
+      createDoctorSchema({
+        name: "Mr Karim Kassam",
+        jobTitle: "Consultant Maxillofacial & Plastic Surgeon",
+        url: "https://www.maxillofacialplasticsurgery.com",
+        skills: ["Upper Eyelid Surgery", "Facelift Surgery", "Facial Scar Revision", "Facial Reconstruction", "Post-Trauma Surgery", "Post-Cancer Reconstruction"]
+      }),
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
