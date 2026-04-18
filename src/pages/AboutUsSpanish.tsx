@@ -53,6 +53,7 @@ const AboutUsSpanish = () => {
           <AboutHolisticApproach />
           <AboutBrands />
           <AboutTrustSignals />
+          <AboutHospitalAffiliations />
           <AboutCTA />
         </div>
       </div>
