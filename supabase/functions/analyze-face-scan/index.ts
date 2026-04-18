@@ -61,7 +61,7 @@ serve(async (req) => {
     > = [
       {
         type: "text",
-        text: `Patient submitted ${body.photos.length} photos${body.age ? `, age ${body.age}` : ""}. Each labelled with the expression. Analyse dynamic lines (only seen on expression), static lines (etched at rest), volume loss, and skin quality. Then return ONLY a JSON object via the provided tool.`,
+        text: `Patient submitted ${body.photos.length} photos${body.age ? `, age ${body.age}` : ""}. Each is labelled with the expression or angle. Front-facing expressions reveal dynamic lines, static lines and skin quality. The two oblique 3/4 views (left-oblique = camera at patient's 11 o'clock, right-oblique = camera at 1 o'clock, head stays straight) are critical for assessing volume loss in the temples, mid-face, cheeks, jawline and chin projection — use these as the primary evidence for volumeLoss scoring. Cross-reference left vs right for asymmetry. Then return ONLY a JSON object via the provided tool.`,
       },
     ];
 
