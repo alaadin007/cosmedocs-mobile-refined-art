@@ -11,11 +11,26 @@ import {
   X,
   ArrowLeft,
   Loader2,
+  Download,
+  Mail,
+  Phone,
+  MapPin,
+  User,
+  ShieldCheck,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import jsPDF from "jspdf";
 
-type Stage = "intro" | "capture" | "review" | "analysing" | "results";
+type Stage = "intro" | "capture" | "review" | "consent" | "analysing" | "results";
+
+interface ConsentDetails {
+  name: string;
+  email: string;
+  phone: string;
+  city: string;
+  consent: boolean;
+}
 
 interface ExpressionStep {
   key: string;
@@ -71,6 +86,13 @@ const TestApp = () => {
   const [streamReady, setStreamReady] = useState(false);
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [details, setDetails] = useState<ConsentDetails>({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    consent: false,
+  });
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -176,8 +198,18 @@ const TestApp = () => {
       const msg = e?.message ?? "Analysis failed. Please try again.";
       setError(msg);
       toast.error(msg);
-      setStage("review");
+      setStage("consent");
     }
+  };
+
+  const submitConsent = () => {
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details.email.trim());
+    if (!details.name.trim() || details.name.length < 2) return toast.error("Please enter your name.");
+    if (!emailOk) return toast.error("Please enter a valid email.");
+    if (!details.phone.trim() || details.phone.replace(/\D/g, "").length < 7) return toast.error("Please enter a valid phone number.");
+    if (!details.city.trim()) return toast.error("Please enter your city.");
+    if (!details.consent) return toast.error("Please confirm AI consent to continue.");
+    runAnalysis();
   };
 
   const restart = () => {
@@ -186,6 +218,7 @@ const TestApp = () => {
     setPendingPhoto(null);
     setAnalysis(null);
     setError(null);
+    setDetails({ name: "", email: "", phone: "", city: "", consent: false });
     setStage("intro");
   };
 
@@ -395,12 +428,78 @@ const TestApp = () => {
 
               <div className="mt-auto p-6 space-y-2">
                 <button
-                  onClick={runAnalysis}
+                  onClick={() => setStage("consent")}
                   className="w-full bg-gradient-to-r from-amber-300 to-amber-500 text-black font-medium py-4 rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
                 >
-                  <Sparkles className="w-4 h-4" /> Analyse My Face
+                  <Sparkles className="w-4 h-4" /> Continue
                 </button>
                 <button onClick={restart} className="w-full text-white/50 text-sm py-2">Start over</button>
+              </div>
+            </motion.div>
+          )}
+
+          {/* CONSENT */}
+          {stage === "consent" && (
+            <motion.div
+              key="consent"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="flex-1 flex flex-col bg-black overflow-y-auto"
+            >
+              <div className="px-6 pt-6 pb-2 flex items-center justify-between">
+                <button onClick={() => setStage("review")} className="text-white/60 p-2 -ml-2"><ArrowLeft className="w-5 h-5" /></button>
+                <p className="text-[10px] tracking-[0.3em] text-amber-200/80 uppercase">Final Step</p>
+                <div className="w-9" />
+              </div>
+
+              <div className="px-6 pb-4">
+                <h2 className="text-2xl font-light">Release your reading.</h2>
+                <p className="text-sm text-white/50 mt-2 leading-relaxed">
+                  Add a few details so we can prepare your downloadable report. Your photographs are processed for analysis only — never published, never sold.
+                </p>
+              </div>
+
+              <div className="px-6 space-y-3">
+                <ConsentField icon={<User className="w-4 h-4" />} placeholder="Full name" value={details.name}
+                  onChange={(v) => setDetails({ ...details, name: v })} />
+                <ConsentField icon={<Mail className="w-4 h-4" />} placeholder="Email" type="email" value={details.email}
+                  onChange={(v) => setDetails({ ...details, email: v })} />
+                <ConsentField icon={<Phone className="w-4 h-4" />} placeholder="Phone" type="tel" value={details.phone}
+                  onChange={(v) => setDetails({ ...details, phone: v })} />
+                <ConsentField icon={<MapPin className="w-4 h-4" />} placeholder="City" value={details.city}
+                  onChange={(v) => setDetails({ ...details, city: v })} />
+
+                <button
+                  type="button"
+                  onClick={() => setDetails({ ...details, consent: !details.consent })}
+                  className="w-full text-left flex gap-3 items-start p-4 rounded-2xl border border-white/10 bg-white/[0.03] active:scale-[0.99] transition"
+                >
+                  <div className={`mt-0.5 w-5 h-5 rounded border flex items-center justify-center shrink-0 transition ${details.consent ? "bg-amber-300 border-amber-300" : "border-white/30"}`}>
+                    {details.consent && <Check className="w-3.5 h-3.5 text-black" strokeWidth={3} />}
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    I consent to my photographs being analysed by Cosmedocs Aesthetic Intelligence and to receiving my personalised reading. I understand this is educational and not a substitute for in-clinic consultation.
+                  </p>
+                </button>
+              </div>
+
+              {error && (
+                <div className="mx-6 mt-4 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-200 text-xs flex items-start gap-2">
+                  <X className="w-4 h-4 shrink-0 mt-0.5" /> {error}
+                </div>
+              )}
+
+              <div className="mt-auto p-6 space-y-2">
+                <button
+                  onClick={submitConsent}
+                  className="w-full bg-gradient-to-r from-amber-300 to-amber-500 text-black font-medium py-4 rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
+                >
+                  <ShieldCheck className="w-4 h-4" /> Release & Analyse
+                </button>
+                <p className="text-[10px] text-white/30 text-center leading-relaxed">
+                  Bold • Natural • Always Your Way
+                </p>
               </div>
             </motion.div>
           )}
@@ -493,6 +592,13 @@ const TestApp = () => {
                   <p className="text-[10px] text-white/30 mt-2">Cosmedocs · Harley Street · London</p>
                 </div>
 
+                <button
+                  onClick={() => analysis && generatePdf(details, analysis)}
+                  className="w-full bg-white/[0.04] border border-amber-300/40 text-amber-100 font-medium py-4 rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
+                >
+                  <Download className="w-4 h-4" /> Download My Report (PDF)
+                </button>
+
                 <a
                   href="https://med.as.me/harleystreet"
                   target="_blank"
@@ -531,5 +637,215 @@ const ResultGroup = ({ title, subtitle, data }: { title: string; subtitle: strin
     </div>
   </div>
 );
+
+
+const ConsentField = ({
+  icon, placeholder, value, onChange, type = "text",
+}: {
+  icon: React.ReactNode;
+  placeholder: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+}) => (
+  <div className="flex items-center gap-3 px-4 py-3 rounded-2xl border border-white/10 bg-white/[0.03] focus-within:border-amber-300/50 transition">
+    <span className="text-amber-200/70">{icon}</span>
+    <input
+      type={type}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+      className="flex-1 bg-transparent outline-none text-white placeholder:text-white/30 text-sm"
+    />
+  </div>
+);
+
+const generatePdf = (details: ConsentDetails, analysis: Analysis) => {
+  const doc = new jsPDF({ unit: "pt", format: "a4" });
+  const pageW = doc.internal.pageSize.getWidth();
+  const pageH = doc.internal.pageSize.getHeight();
+  const margin = 48;
+  let y = margin;
+
+  const gold: [number, number, number] = [201, 160, 80];
+  const ink: [number, number, number] = [25, 25, 28];
+  const muted: [number, number, number] = [110, 110, 115];
+
+  const ensureSpace = (h: number) => {
+    if (y + h > pageH - margin) {
+      doc.addPage();
+      y = margin;
+    }
+  };
+
+  // Header band
+  doc.setFillColor(...ink);
+  doc.rect(0, 0, pageW, 90, "F");
+  doc.setTextColor(...gold);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(9);
+  doc.text("COSMEDOCS · AESTHETIC INTELLIGENCE", margin, 38);
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(20);
+  doc.setFont("helvetica", "bold");
+  doc.text("Your Personalised Reading", margin, 66);
+  doc.setFont("helvetica", "italic");
+  doc.setFontSize(9);
+  doc.setTextColor(...gold);
+  doc.text("Bold • Natural • Always Your Way", margin, 82);
+  y = 120;
+
+  // Patient block
+  doc.setTextColor(...ink);
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "bold");
+  doc.text("PREPARED FOR", margin, y);
+  y += 14;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  doc.text(`${details.name}`, margin, y); y += 14;
+  doc.setTextColor(...muted);
+  doc.setFontSize(10);
+  doc.text(`${details.email}  ·  ${details.phone}`, margin, y); y += 12;
+  doc.text(`${details.city}  ·  ${new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`, margin, y);
+  y += 22;
+
+  // Summary
+  doc.setDrawColor(...gold);
+  doc.setLineWidth(0.6);
+  doc.line(margin, y, pageW - margin, y);
+  y += 18;
+  doc.setTextColor(...ink);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(11);
+  doc.text(`Perceived Age: ${analysis.perceivedAge}`, margin, y);
+  y += 16;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  doc.setTextColor(60, 60, 65);
+  const summaryLines = doc.splitTextToSize(analysis.overallSummary, pageW - margin * 2);
+  doc.text(summaryLines, margin, y);
+  y += summaryLines.length * 12 + 14;
+
+  const renderGroup = (title: string, data: Record<string, ScoreNode>) => {
+    ensureSpace(40);
+    doc.setFillColor(245, 240, 230);
+    doc.rect(margin, y, pageW - margin * 2, 20, "F");
+    doc.setTextColor(...ink);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.text(title.toUpperCase(), margin + 8, y + 14);
+    y += 28;
+
+    Object.entries(data).forEach(([k, v]) => {
+      const noteLines = doc.splitTextToSize(v.note, pageW - margin * 2 - 90);
+      const blockH = Math.max(28, noteLines.length * 11 + 14);
+      ensureSpace(blockH);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(10);
+      doc.setTextColor(...ink);
+      doc.text(prettyKey(k), margin, y);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9);
+      doc.setTextColor(...muted);
+      doc.text(noteLines, margin, y + 12);
+      // Score chip
+      const chipLabel = `${v.score} · ${scoreLabel(v.score).toUpperCase()}`;
+      const chipW = doc.getTextWidth(chipLabel) + 14;
+      const chipColors: Record<number, [number, number, number]> = {
+        0: [220, 240, 220], 1: [250, 240, 200], 2: [250, 220, 195], 3: [250, 210, 215],
+      };
+      doc.setFillColor(...(chipColors[v.score] ?? [240, 240, 240]));
+      doc.roundedRect(pageW - margin - chipW, y - 10, chipW, 16, 8, 8, "F");
+      doc.setTextColor(...ink);
+      doc.setFontSize(8);
+      doc.text(chipLabel, pageW - margin - chipW + 7, y + 1);
+      y += blockH;
+    });
+    y += 6;
+  };
+
+  renderGroup("Dynamic Lines (on expression)", analysis.dynamicLines);
+  renderGroup("Static Lines (at rest)", analysis.staticLines);
+  renderGroup("Volume Loss", analysis.volumeLoss);
+  renderGroup("Skin", analysis.skin);
+
+  // Treatment plan
+  ensureSpace(40);
+  doc.setFillColor(...ink);
+  doc.rect(margin, y, pageW - margin * 2, 22, "F");
+  doc.setTextColor(...gold);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+  doc.text("PRESCRIBED TREATMENT PLAN", margin + 8, y + 15);
+  y += 32;
+
+  analysis.recommendations.forEach((r) => {
+    const rationaleLines = doc.splitTextToSize(r.rationale, pageW - margin * 2 - 16);
+    const blockH = 30 + rationaleLines.length * 11 + 18;
+    ensureSpace(blockH);
+    doc.setDrawColor(...gold);
+    doc.setLineWidth(0.4);
+    doc.roundedRect(margin, y, pageW - margin * 2, blockH - 6, 6, 6, "S");
+    doc.setTextColor(...ink);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.text(r.treatment, margin + 10, y + 16);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(...muted);
+    doc.text(rationaleLines, margin + 10, y + 30);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(9);
+    doc.setTextColor(...ink);
+    doc.text(`Dose: ${r.dose}`, margin + 10, y + blockH - 14);
+    doc.setTextColor(...gold);
+    doc.text(r.indicativePrice, pageW - margin - 10 - doc.getTextWidth(r.indicativePrice), y + blockH - 14);
+    y += blockH + 6;
+  });
+
+  // Skincare
+  ensureSpace(50);
+  doc.setFillColor(245, 240, 230);
+  doc.rect(margin, y, pageW - margin * 2, 20, "F");
+  doc.setTextColor(...ink);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+  doc.text("DAILY SKINCARE", margin + 8, y + 14);
+  y += 28;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  analysis.skincare.forEach((s) => {
+    const lines = doc.splitTextToSize(`•  ${s}`, pageW - margin * 2);
+    ensureSpace(lines.length * 12 + 4);
+    doc.setTextColor(50, 50, 55);
+    doc.text(lines, margin, y);
+    y += lines.length * 12 + 4;
+  });
+
+  // Footer on last page
+  const pageCount = (doc as any).internal.getNumberOfPages();
+  for (let i = 1; i <= pageCount; i++) {
+    doc.setPage(i);
+    doc.setDrawColor(...gold);
+    doc.setLineWidth(0.4);
+    doc.line(margin, pageH - 50, pageW - margin, pageH - 50);
+    doc.setTextColor(...muted);
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "italic");
+    doc.text(analysis.motto, margin, pageH - 34);
+    doc.setFont("helvetica", "normal");
+    doc.text(`Cosmedocs · Harley Street · London    Page ${i} / ${pageCount}`, pageW - margin, pageH - 34, { align: "right" });
+    doc.setFontSize(7);
+    doc.text(
+      "Educational reading. Not a substitute for in-clinic medical consultation. Indicative pricing — confirmed at consultation.",
+      margin, pageH - 22
+    );
+  }
+
+  const fname = `cosmedocs-reading-${details.name.trim().split(/\s+/)[0].toLowerCase() || "patient"}.pdf`;
+  doc.save(fname);
+  toast.success("Your reading has been downloaded.");
+};
 
 export default TestApp;
