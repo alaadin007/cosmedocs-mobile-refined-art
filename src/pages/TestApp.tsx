@@ -46,6 +46,8 @@ const STEPS: ExpressionStep[] = [
   { key: "smile", label: "Big Smile", cue: "Full natural smile, show teeth.", why: "Crow's feet, smile lines, cheek lift." },
   { key: "squint", label: "Squint", cue: "Squint as if in bright sun.", why: "Bunny lines, deep crow's feet." },
   { key: "sad", label: "Sad / Down-Turn", cue: "Pull mouth corners down.", why: "Marionette lines, neck bands." },
+  { key: "left-oblique", label: "Left ¾ View", cue: "Face stays straight — move the camera to your 11 o'clock.", why: "Left cheek, temple & jawline volume." },
+  { key: "right-oblique", label: "Right ¾ View", cue: "Face stays straight — move the camera to your 1 o'clock.", why: "Right cheek, temple & jawline volume." },
 ];
 
 interface Captured {
@@ -265,7 +267,7 @@ const TestApp = () => {
                 <div className="space-y-3">
                   <h1 className="text-3xl font-light tracking-tight">Your Face,<br />Read by Science.</h1>
                   <p className="text-sm text-white/60 max-w-xs leading-relaxed">
-                    Six photographs across natural expressions. Our doctor-led AI scores lines, volume and skin from 0–3 — then prescribes the lightest possible touch.
+                    Eight photographs — six expressions plus two side views. Our doctor-led AI scores lines, volume and skin from 0–3 — then prescribes the lightest possible touch.
                   </p>
                 </div>
 
@@ -393,11 +395,11 @@ const TestApp = () => {
             >
               <div className="px-6 pt-6 pb-3">
                 <p className="text-[10px] tracking-[0.3em] text-amber-200/80 uppercase">Review</p>
-                <h2 className="text-2xl font-light mt-1">All six captured.</h2>
+                <h2 className="text-2xl font-light mt-1">All eight captured.</h2>
                 <p className="text-sm text-white/50 mt-1">Tap any tile to retake before we analyse.</p>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 px-4">
+              <div className="grid grid-cols-4 gap-2 px-4">
                 {STEPS.map((s) => {
                   const cap = captures.find((c) => c.step.key === s.key);
                   return (
@@ -550,9 +552,27 @@ const TestApp = () => {
               </div>
 
               <div className="p-4 space-y-6">
+                <div>
+                  <p className="text-[10px] tracking-[0.3em] text-amber-200/80 uppercase mb-2">How we score</p>
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 grid grid-cols-4 gap-2">
+                    {[
+                      { s: 0, label: "None", desc: "No issue" },
+                      { s: 1, label: "Mild", desc: "Dynamic only" },
+                      { s: 2, label: "Moderate", desc: "Treatment dose" },
+                      { s: 3, label: "Severe", desc: "Higher dose" },
+                    ].map((l) => (
+                      <div key={l.s} className={`rounded-xl border px-2 py-2 text-center ${scoreColour(l.s)}`}>
+                        <p className="text-base font-light leading-none">{l.s}</p>
+                        <p className="text-[10px] uppercase tracking-wider mt-1">{l.label}</p>
+                        <p className="text-[9px] opacity-70 mt-0.5 leading-tight">{l.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <ResultGroup title="Dynamic Lines" subtitle="Visible only on expression" data={analysis.dynamicLines} />
                 <ResultGroup title="Static Lines" subtitle="Etched at rest" data={analysis.staticLines} />
-                <ResultGroup title="Volume Loss" subtitle="Filler-zone mapping" data={analysis.volumeLoss} />
+                <ResultGroup title="Volume Loss" subtitle="Filler-zone mapping (front + side views)" data={analysis.volumeLoss} />
                 <ResultGroup title="Skin" subtitle="Surface, tone & clarity" data={analysis.skin} />
 
                 <div>
