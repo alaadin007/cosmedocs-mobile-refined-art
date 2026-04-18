@@ -151,6 +151,7 @@ const AboutUs = () => {
           <AboutHolisticApproach />
           <AboutBrands />
           <AboutTrustSignals />
+          <AboutHospitalAffiliations />
           <AboutCTA />
         </div>
 
