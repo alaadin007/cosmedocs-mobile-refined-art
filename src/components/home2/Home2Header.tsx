@@ -242,7 +242,7 @@ export default function Home2Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="fixed left-0 right-0 top-16 md:top-20 w-screen bg-black/98 backdrop-blur-xl shadow-2xl z-50"
+                      className="fixed left-0 right-0 top-16 md:top-20 w-screen bg-black backdrop-blur-xl shadow-2xl z-50 border-t border-[#C9A050]/20"
                     >
                       <div className="max-w-7xl mx-auto px-8 py-8">
                         <div className="grid grid-cols-7 gap-6">
