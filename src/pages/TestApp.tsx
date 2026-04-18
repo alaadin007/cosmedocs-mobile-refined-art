@@ -86,6 +86,13 @@ const TestApp = () => {
   const [streamReady, setStreamReady] = useState(false);
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [details, setDetails] = useState<ConsentDetails>({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    consent: false,
+  });
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
