@@ -41,3 +41,6 @@ verify_jwt = false
 
 [functions.elevenlabs-tts]
 verify_jwt = false
+
+[functions.analyze-face-scan]
+verify_jwt = false
