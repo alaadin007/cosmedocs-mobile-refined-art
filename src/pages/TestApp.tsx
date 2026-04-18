@@ -198,8 +198,18 @@ const TestApp = () => {
       const msg = e?.message ?? "Analysis failed. Please try again.";
       setError(msg);
       toast.error(msg);
-      setStage("review");
+      setStage("consent");
     }
+  };
+
+  const submitConsent = () => {
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details.email.trim());
+    if (!details.name.trim() || details.name.length < 2) return toast.error("Please enter your name.");
+    if (!emailOk) return toast.error("Please enter a valid email.");
+    if (!details.phone.trim() || details.phone.replace(/\D/g, "").length < 7) return toast.error("Please enter a valid phone number.");
+    if (!details.city.trim()) return toast.error("Please enter your city.");
+    if (!details.consent) return toast.error("Please confirm AI consent to continue.");
+    runAnalysis();
   };
 
   const restart = () => {
@@ -208,6 +218,7 @@ const TestApp = () => {
     setPendingPhoto(null);
     setAnalysis(null);
     setError(null);
+    setDetails({ name: "", email: "", phone: "", city: "", consent: false });
     setStage("intro");
   };
 
