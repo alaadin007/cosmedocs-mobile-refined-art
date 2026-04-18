@@ -428,12 +428,78 @@ const TestApp = () => {
 
               <div className="mt-auto p-6 space-y-2">
                 <button
-                  onClick={runAnalysis}
+                  onClick={() => setStage("consent")}
                   className="w-full bg-gradient-to-r from-amber-300 to-amber-500 text-black font-medium py-4 rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
                 >
-                  <Sparkles className="w-4 h-4" /> Analyse My Face
+                  <Sparkles className="w-4 h-4" /> Continue
                 </button>
                 <button onClick={restart} className="w-full text-white/50 text-sm py-2">Start over</button>
+              </div>
+            </motion.div>
+          )}
+
+          {/* CONSENT */}
+          {stage === "consent" && (
+            <motion.div
+              key="consent"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="flex-1 flex flex-col bg-black overflow-y-auto"
+            >
+              <div className="px-6 pt-6 pb-2 flex items-center justify-between">
+                <button onClick={() => setStage("review")} className="text-white/60 p-2 -ml-2"><ArrowLeft className="w-5 h-5" /></button>
+                <p className="text-[10px] tracking-[0.3em] text-amber-200/80 uppercase">Final Step</p>
+                <div className="w-9" />
+              </div>
+
+              <div className="px-6 pb-4">
+                <h2 className="text-2xl font-light">Release your reading.</h2>
+                <p className="text-sm text-white/50 mt-2 leading-relaxed">
+                  Add a few details so we can prepare your downloadable report. Your photographs are processed for analysis only — never published, never sold.
+                </p>
+              </div>
+
+              <div className="px-6 space-y-3">
+                <ConsentField icon={<User className="w-4 h-4" />} placeholder="Full name" value={details.name}
+                  onChange={(v) => setDetails({ ...details, name: v })} />
+                <ConsentField icon={<Mail className="w-4 h-4" />} placeholder="Email" type="email" value={details.email}
+                  onChange={(v) => setDetails({ ...details, email: v })} />
+                <ConsentField icon={<Phone className="w-4 h-4" />} placeholder="Phone" type="tel" value={details.phone}
+                  onChange={(v) => setDetails({ ...details, phone: v })} />
+                <ConsentField icon={<MapPin className="w-4 h-4" />} placeholder="City" value={details.city}
+                  onChange={(v) => setDetails({ ...details, city: v })} />
+
+                <button
+                  type="button"
+                  onClick={() => setDetails({ ...details, consent: !details.consent })}
+                  className="w-full text-left flex gap-3 items-start p-4 rounded-2xl border border-white/10 bg-white/[0.03] active:scale-[0.99] transition"
+                >
+                  <div className={`mt-0.5 w-5 h-5 rounded border flex items-center justify-center shrink-0 transition ${details.consent ? "bg-amber-300 border-amber-300" : "border-white/30"}`}>
+                    {details.consent && <Check className="w-3.5 h-3.5 text-black" strokeWidth={3} />}
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    I consent to my photographs being analysed by Cosmedocs Aesthetic Intelligence and to receiving my personalised reading. I understand this is educational and not a substitute for in-clinic consultation.
+                  </p>
+                </button>
+              </div>
+
+              {error && (
+                <div className="mx-6 mt-4 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-200 text-xs flex items-start gap-2">
+                  <X className="w-4 h-4 shrink-0 mt-0.5" /> {error}
+                </div>
+              )}
+
+              <div className="mt-auto p-6 space-y-2">
+                <button
+                  onClick={submitConsent}
+                  className="w-full bg-gradient-to-r from-amber-300 to-amber-500 text-black font-medium py-4 rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
+                >
+                  <ShieldCheck className="w-4 h-4" /> Release & Analyse
+                </button>
+                <p className="text-[10px] text-white/30 text-center leading-relaxed">
+                  Bold • Natural • Always Your Way
+                </p>
               </div>
             </motion.div>
           )}
