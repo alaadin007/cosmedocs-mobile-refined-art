@@ -54,6 +54,7 @@ const AboutUsArabic = () => {
           <AboutHolisticApproach />
           <AboutBrands />
           <AboutTrustSignals />
+          <AboutHospitalAffiliations />
           <AboutCTA />
         </div>
       </div>
