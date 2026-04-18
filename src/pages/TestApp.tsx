@@ -362,11 +362,11 @@ const TestApp = () => {
             >
               <div className="px-6 pt-6 pb-3">
                 <p className="text-[10px] tracking-[0.3em] text-amber-200/80 uppercase">Review</p>
-                <h2 className="text-2xl font-light mt-1">All six captured.</h2>
+                <h2 className="text-2xl font-light mt-1">All eight captured.</h2>
                 <p className="text-sm text-white/50 mt-1">Tap any tile to retake before we analyse.</p>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 px-4">
+              <div className="grid grid-cols-4 gap-2 px-4">
                 {STEPS.map((s) => {
                   const cap = captures.find((c) => c.step.key === s.key);
                   return (
