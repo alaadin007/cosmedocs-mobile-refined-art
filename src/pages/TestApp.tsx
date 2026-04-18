@@ -234,7 +234,7 @@ const TestApp = () => {
                 <div className="space-y-3">
                   <h1 className="text-3xl font-light tracking-tight">Your Face,<br />Read by Science.</h1>
                   <p className="text-sm text-white/60 max-w-xs leading-relaxed">
-                    Six photographs across natural expressions. Our doctor-led AI scores lines, volume and skin from 0–3 — then prescribes the lightest possible touch.
+                    Eight photographs — six expressions plus two side views. Our doctor-led AI scores lines, volume and skin from 0–3 — then prescribes the lightest possible touch.
                   </p>
                 </div>
 
