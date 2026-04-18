@@ -453,9 +453,27 @@ const TestApp = () => {
               </div>
 
               <div className="p-4 space-y-6">
+                <div>
+                  <p className="text-[10px] tracking-[0.3em] text-amber-200/80 uppercase mb-2">How we score</p>
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 grid grid-cols-4 gap-2">
+                    {[
+                      { s: 0, label: "None", desc: "No issue" },
+                      { s: 1, label: "Mild", desc: "Dynamic only" },
+                      { s: 2, label: "Moderate", desc: "Treatment dose" },
+                      { s: 3, label: "Severe", desc: "Higher dose" },
+                    ].map((l) => (
+                      <div key={l.s} className={`rounded-xl border px-2 py-2 text-center ${scoreColour(l.s)}`}>
+                        <p className="text-base font-light leading-none">{l.s}</p>
+                        <p className="text-[10px] uppercase tracking-wider mt-1">{l.label}</p>
+                        <p className="text-[9px] opacity-70 mt-0.5 leading-tight">{l.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <ResultGroup title="Dynamic Lines" subtitle="Visible only on expression" data={analysis.dynamicLines} />
                 <ResultGroup title="Static Lines" subtitle="Etched at rest" data={analysis.staticLines} />
-                <ResultGroup title="Volume Loss" subtitle="Filler-zone mapping" data={analysis.volumeLoss} />
+                <ResultGroup title="Volume Loss" subtitle="Filler-zone mapping (front + side views)" data={analysis.volumeLoss} />
                 <ResultGroup title="Skin" subtitle="Surface, tone & clarity" data={analysis.skin} />
 
                 <div>
