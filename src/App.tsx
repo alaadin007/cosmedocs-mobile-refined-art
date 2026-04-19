@@ -251,6 +251,7 @@ const TearTroughFillerResultsExplained = lazy(() => import("./pages/blog/TearTro
 const JawFillerResultsExplained = lazy(() => import("./pages/blog/JawFillerResultsExplained"));
 const ChinFillerResultsExplained = lazy(() => import("./pages/blog/ChinFillerResultsExplained"));
 const LipFillerResultsExplained = lazy(() => import("./pages/blog/LipFillerResultsExplained"));
+const BotoxPlacementGuideLondon = lazy(() => import("./pages/blog/BotoxPlacementGuideLondon"));
 const VitaminCvsRetinol = lazy(() => import("./pages/blog/VitaminCvsRetinol"));
 const ThreeCellPhilosophy = lazy(() => import("./pages/blog/ThreeCellPhilosophy"));
 const WhyPHMattersVitaminC = lazy(() => import("./pages/blog/WhyPHMattersVitaminC"));
@@ -947,6 +948,8 @@ const App = () => {
                           <Route path="/blog/three-cell-skin-philosophy/" element={<ThreeCellPhilosophy />} />
                           <Route path="/blog/why-ph-matters-vitamin-c" element={<WhyPHMattersVitaminC />} />
                           <Route path="/blog/why-ph-matters-vitamin-c/" element={<WhyPHMattersVitaminC />} />
+                          <Route path="/blog/botox-placement-guide-london" element={<BotoxPlacementGuideLondon />} />
+                          <Route path="/blog/botox-placement-guide-london/" element={<BotoxPlacementGuideLondon />} />
 
                           {/* Blog hub — lists only the 4 permitted blogs */}
                           <Route path="/journal" element={<BlogHome />} />
