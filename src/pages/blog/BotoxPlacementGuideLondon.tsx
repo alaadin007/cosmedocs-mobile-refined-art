@@ -399,7 +399,10 @@ const BotoxPlacementGuideLondon = () => {
 
                 {/* Author EEAT */}
                 <motion.section {...fadeIn}>
-                  <BlogAuthorEEAT />
+                  <BlogAuthorEEAT
+                    doctor="ahmed"
+                    articleContext="Dr Ahmed Haq leads the anti-wrinkle treatment programme at CosmeDocs Harley Street, with over a decade of experience mapping facial anatomy for natural, expression-preserving outcomes."
+                  />
                 </motion.section>
 
               </div>
