@@ -32,8 +32,11 @@ const CalfBotoxSidebar = () => {
         className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5"
       >
         <p className="text-sm font-medium text-white/70 mb-3">Treatment Pricing</p>
+        <div className="flex items-baseline gap-2 mb-2">
+          <span className="text-2xl font-light text-[#C9A050]">£650–£700</span>
+        </div>
         <p className="text-white/45 text-xs font-light leading-relaxed">
-          Pricing depends on muscle size, number of units required, and desired degree of slimming. A personalised treatment plan and exact cost are provided after consultation.
+          Final price depends on the exact dosage required to achieve proportionate, natural slimming of the gastrocnemius muscle.
         </p>
         <div className="mt-3 pt-3 border-t border-white/[0.06]">
           <p className="text-xs text-white/25">Includes consultation & follow-up</p>
