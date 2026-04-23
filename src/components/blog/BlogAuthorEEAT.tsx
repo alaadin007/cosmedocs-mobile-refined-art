@@ -33,7 +33,7 @@ const DOCTOR_DATA: Record<DoctorProfile, {
       "British Association of Cosmetic Doctors (BACD)",
       "Harley Street Institute — Faculty Trainer"
     ],
-    experience: "17+ years in aesthetic medicine · 1M+ procedures since 2007",
+    experience: "17+ years in aesthetic medicine · 1M+ individual injections since 2007*",
     specialities: [
       "Complex facial contouring",
       "Non-surgical jaw reduction",
@@ -145,6 +145,11 @@ const BlogAuthorEEAT = ({ doctor, articleContext }: BlogAuthorEEATProps) => {
                 <p className="text-white/60 text-xs font-medium uppercase tracking-wider">Experience</p>
               </div>
               <p className="text-white/45 text-sm font-light">{data.experience}</p>
+              {data.experience.includes("1M+") && (
+                <p className="text-white/35 text-xs font-light leading-relaxed mt-2">
+                  *This refers to individual injections administered, not one million clients; a single treatment case may involve multiple injection points.
+                </p>
+              )}
             </div>
 
             {/* Professional Memberships */}
