@@ -38,7 +38,7 @@ const featuredTransformations = [
       treatment: "A staged course of masseter Botox to gradually reduce muscle bulk over several sessions. No filler was placed in the cheeks. The face transitioned from a square to a soft oval shape as the lower third slimmed.",
       truth: "Her cheeks now appear more prominent — without a single drop of cheek filler. Sometimes the right answer isn't to add. It's to diagnose correctly and rebalance what's already there."
     }
-  }
+  },
   {
     src: "/lovable-uploads/04ac4a20-e938-4966-8d5b-cdba7b58908f.png",
     alt: "Skin rejuvenation before and after showing improved texture and radiance",
