@@ -18,6 +18,9 @@ const AboutHero = () => (
           Doctor-led aesthetic medicine rooted in honesty, excellence, and respect.
           Our aesthetics is invisible art — bold, natural, always your way.
         </p>
+        <p className="text-[#C9A050]/80 text-base md:text-lg italic max-w-2xl mx-auto leading-relaxed mt-5 tracking-wide font-light">
+          The art of invisible beauty — restored, refined, never revealed.
+        </p>
       </motion.div>
     </div>
   </section>
