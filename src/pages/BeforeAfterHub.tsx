@@ -282,6 +282,31 @@ const BeforeAfterHub = () => {
                       <p className="text-white/40 text-xs leading-relaxed font-light">
                         {item.caption}
                       </p>
+
+                      {item.clinicalNote && (
+                        <div className="mt-4 pt-4 border-t border-white/[0.06] space-y-2.5">
+                          <p className="text-[#C9A050]/80 text-[10px] font-medium uppercase tracking-[0.2em]">
+                            Doctor's Clinical Note
+                          </p>
+                          <div className="space-y-2">
+                            <div>
+                              <span className="text-white/55 text-[11px] font-medium">Lip classification: </span>
+                              <span className="text-white/40 text-[11px] font-light leading-relaxed">{item.clinicalNote.classification}</span>
+                            </div>
+                            <div>
+                              <span className="text-white/55 text-[11px] font-medium">Assessment: </span>
+                              <span className="text-white/40 text-[11px] font-light leading-relaxed">{item.clinicalNote.assessment}</span>
+                            </div>
+                            <div>
+                              <span className="text-white/55 text-[11px] font-medium">Treatment: </span>
+                              <span className="text-white/40 text-[11px] font-light leading-relaxed">{item.clinicalNote.treatment}</span>
+                            </div>
+                            <div className="pt-1.5 border-l-2 border-[#C9A050]/40 pl-3">
+                              <span className="text-white/55 text-[11px] italic font-light leading-relaxed">{item.clinicalNote.truth}</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
