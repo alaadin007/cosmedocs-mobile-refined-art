@@ -29,10 +29,16 @@ const featuredTransformations = [
   },
   {
     src: "/lovable-uploads/cbb65a65-f2dc-4d3b-a5ae-7f2596f129f4.png",
-    alt: "Facial contouring before and after showing jawline definition",
+    alt: "Facial contouring before and after — square face transformed to oval through masseter reduction",
     treatment: "Facial Contouring",
-    caption: "Sculpted definition along the jawline — balanced, natural, never overdone."
-  },
+    caption: "Sculpted definition along the jawline — balanced, natural, never overdone.",
+    clinicalNote: {
+      classification: "Masseteric hypertrophy presenting as a square lower-face shape",
+      assessment: "Patient originally requested cheek enhancement, believing her cheeks lacked projection. Clinical examination revealed bilateral masseteric hypertrophy — enlarged jaw muscles widening the lower third and visually 'flattening' the midface by comparison.",
+      treatment: "A staged course of masseter Botox to gradually reduce muscle bulk over several sessions. No filler was placed in the cheeks. The face transitioned from a square to a soft oval shape as the lower third slimmed.",
+      truth: "Her cheeks now appear more prominent — without a single drop of cheek filler. Sometimes the right answer isn't to add. It's to diagnose correctly and rebalance what's already there."
+    }
+  }
   {
     src: "/lovable-uploads/04ac4a20-e938-4966-8d5b-cdba7b58908f.png",
     alt: "Skin rejuvenation before and after showing improved texture and radiance",
