@@ -11,9 +11,15 @@ import Breadcrumb from '@/components/Breadcrumb';
 const featuredTransformations = [
   {
     src: "/lovable-uploads/729455dc-8926-4c98-9c54-10530134f7f3.png",
-    alt: "Lip enhancement before and after showing natural volume restoration",
+    alt: "Lip enhancement before and after showing natural volume restoration in a pocketed lip shape",
     treatment: "Lip Enhancement",
-    caption: "Subtle volume restoration — enhancing natural lip shape without overcorrection."
+    caption: "Subtle volume restoration — enhancing natural lip shape without overcorrection.",
+    clinicalNote: {
+      classification: "Pocketed lips (medium–large lip morphology)",
+      assessment: "Pocketed lips are typically medium to large at baseline and, as they lose volume with age, develop fine vertical lines and a slightly deflated border. They often look 'tired' rather than thin.",
+      treatment: "A small amount of the softest hyaluronic acid gel was placed for hydration only — restoring suppleness, smoothing fine lines, and reviving the natural lip border.",
+      truth: "This is not a lip job. It's lip hydration. No reshaping, no inflation, no change in identity — the patient's natural lip architecture is fully preserved."
+    }
   },
   {
     src: "/lovable-uploads/def5f295-bb56-4f08-9271-7e38269dffc8.png",
@@ -276,6 +282,31 @@ const BeforeAfterHub = () => {
                       <p className="text-white/40 text-xs leading-relaxed font-light">
                         {item.caption}
                       </p>
+
+                      {item.clinicalNote && (
+                        <div className="mt-4 pt-4 border-t border-white/[0.06] space-y-2.5">
+                          <p className="text-[#C9A050]/80 text-[10px] font-medium uppercase tracking-[0.2em]">
+                            Doctor's Clinical Note
+                          </p>
+                          <div className="space-y-2">
+                            <div>
+                              <span className="text-white/55 text-[11px] font-medium">Lip classification: </span>
+                              <span className="text-white/40 text-[11px] font-light leading-relaxed">{item.clinicalNote.classification}</span>
+                            </div>
+                            <div>
+                              <span className="text-white/55 text-[11px] font-medium">Assessment: </span>
+                              <span className="text-white/40 text-[11px] font-light leading-relaxed">{item.clinicalNote.assessment}</span>
+                            </div>
+                            <div>
+                              <span className="text-white/55 text-[11px] font-medium">Treatment: </span>
+                              <span className="text-white/40 text-[11px] font-light leading-relaxed">{item.clinicalNote.treatment}</span>
+                            </div>
+                            <div className="pt-1.5 border-l-2 border-[#C9A050]/40 pl-3">
+                              <span className="text-white/55 text-[11px] italic font-light leading-relaxed">{item.clinicalNote.truth}</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
