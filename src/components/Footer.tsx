@@ -45,6 +45,9 @@ export default function Footer() {
             <p className="text-sm text-white/40 mt-2">
               Established on Harley Street in 2007.
             </p>
+            <p className="text-xs text-[#C9A050]/70 italic mt-4 leading-relaxed max-w-xs tracking-wide font-light">
+              The art of invisible beauty — restored, refined, never revealed.
+            </p>
           </div>
 
           {/* Treatments Navigation */}
