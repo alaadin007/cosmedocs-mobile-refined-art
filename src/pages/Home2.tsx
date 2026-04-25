@@ -283,8 +283,11 @@ export default function Home2() {
                     </span>
                   </h1>
                   
-                  <p className="text-lg md:text-xl text-white/60 mb-6 max-w-xl leading-relaxed font-light">
+                  <p className="text-lg md:text-xl text-white/60 mb-3 max-w-xl leading-relaxed font-light">
                     Aesthetic medicine that whispers rather than shouts. Transformations so natural, they're undetectable.
+                  </p>
+                  <p className="text-sm md:text-base text-[#C9A050]/80 italic mb-6 max-w-xl leading-relaxed font-light tracking-wide">
+                    The art of invisible beauty — restored, refined, never revealed.
                   </p>
                   <p className="text-base text-white/50 mb-10 max-w-xl leading-relaxed font-light">
                     At CosmeDocs, aesthetic medicine is practised with restraint, precision, and respect for individuality. From our Harley Street clinic, GMC-registered doctors deliver subtle, doctor-led treatments designed to refresh — never overwhelm. Since 2007, we've focused on natural results that look effortless, not obvious.
