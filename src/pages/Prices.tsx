@@ -622,7 +622,7 @@ const Prices = () => {
       </Helmet>
       <div className="bg-black text-white py-24">
       <div className="page-container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Our Price Guide</h1>
           <p className="text-gray-400 max-w-3xl mx-auto">
             As highly experienced injectors in London since 2007, we specialize in carefully administering high doses of botox 
@@ -630,6 +630,42 @@ const Prices = () => {
             now taught to professionals internationally. Our team of experts are also trainers for the prestigious 
             Harley Street Institute. Trust us for safe, effective and natural-looking results.
           </p>
+        </div>
+
+        {/* The Pricing Paradox — Honest Note */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="relative rounded-2xl border border-[#C9A050]/25 bg-gradient-to-br from-[#C9A050]/[0.07] via-white/[0.02] to-transparent p-8 md:p-10">
+            <div className="absolute -top-3 left-8 px-3 py-1 bg-black border border-[#C9A050]/30 rounded-full">
+              <span className="text-[10px] tracking-[0.25em] uppercase text-[#C9A050] font-medium">
+                The Pricing Paradox
+              </span>
+            </div>
+
+            <h2 className="text-xl md:text-2xl font-light text-white mb-4 leading-snug">
+              The price you see is the <span className="text-[#C9A050]">maximum</span> you'll pay — not the minimum.
+            </h2>
+
+            <div className="space-y-4 text-sm md:text-base text-white/65 leading-relaxed font-light">
+              <p>
+                Most aesthetic pricing is misleading. A "treatment price" usually buys a fixed product allocation 
+                — and any leftover quietly belongs to the clinic. We don't work that way.
+              </p>
+              <p>
+                If your treatment doesn't use the full vial or syringe, the remainder is yours. We'll use it for a 
+                second tweakment in the same session — a brow lift, a lip flip, a chin refinement — at no extra cost. 
+                Nothing is wasted, and nothing is held back.
+              </p>
+              <p className="pt-2 border-l-2 border-[#C9A050]/50 pl-4 text-white/75 italic">
+                The paradox: the longer our patients stay with us, the less they pay for more. Trust deepens, our 
+                clinicians become familiar with your anatomy and goals, and treatments are layered with greater 
+                precision — meaning regulars often receive considerably more value for the same headline price.
+              </p>
+              <p className="text-white/50 text-xs md:text-sm pt-2">
+                Loyalty isn't rewarded with a discount card. It's rewarded with better aesthetic outcomes, more 
+                considered planning, and small additions you didn't have to ask for.
+              </p>
+            </div>
+          </div>
         </div>
 
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="max-w-4xl mx-auto">
