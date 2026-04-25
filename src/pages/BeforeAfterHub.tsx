@@ -11,9 +11,15 @@ import Breadcrumb from '@/components/Breadcrumb';
 const featuredTransformations = [
   {
     src: "/lovable-uploads/729455dc-8926-4c98-9c54-10530134f7f3.png",
-    alt: "Lip enhancement before and after showing natural volume restoration",
+    alt: "Lip enhancement before and after showing natural volume restoration in a pocketed lip shape",
     treatment: "Lip Enhancement",
-    caption: "Subtle volume restoration — enhancing natural lip shape without overcorrection."
+    caption: "Subtle volume restoration — enhancing natural lip shape without overcorrection.",
+    clinicalNote: {
+      classification: "Pocketed lips (medium–large lip morphology)",
+      assessment: "Pocketed lips are typically medium to large at baseline and, as they lose volume with age, develop fine vertical lines and a slightly deflated border. They often look 'tired' rather than thin.",
+      treatment: "A small amount of the softest hyaluronic acid gel was placed for hydration only — restoring suppleness, smoothing fine lines, and reviving the natural lip border.",
+      truth: "This is not a lip job. It's lip hydration. No reshaping, no inflation, no change in identity — the patient's natural lip architecture is fully preserved."
+    }
   },
   {
     src: "/lovable-uploads/def5f295-bb56-4f08-9271-7e38269dffc8.png",
