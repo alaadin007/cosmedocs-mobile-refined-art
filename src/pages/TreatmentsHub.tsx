@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import { ArrowRight } from 'lucide-react';
+import calfSlimmingLuxury from '@/assets/calf-slimming-luxury.jpg';
 
 /* ─── treatment category data ─── */
 interface TreatmentCategory {
@@ -12,6 +13,8 @@ interface TreatmentCategory {
   link: string;
   items: string[];
   accent?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const treatmentCategories: TreatmentCategory[] = [
@@ -20,6 +23,8 @@ const treatmentCategories: TreatmentCategory[] = [
     subtitle: "Muscle modulation & prevention",
     description: "Precision anti-wrinkle injections for dynamic lines, facial contouring, and medical conditions. Administered by expert injectors since 2007.",
     link: "/treatments/botox/",
+    image: calfSlimmingLuxury,
+    imageAlt: "Sculpted calf — calf slimming Botox at Cosmedocs Harley Street",
     items: [
       "Forehead, Frown & Crow's Feet",
       "Lip Flip & Gummy Smile",
@@ -255,6 +260,23 @@ const TreatmentsHub = () => {
                     </div>
                     <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-[#C9A050] transition-colors mt-1 flex-shrink-0" />
                   </div>
+
+                  {/* Optional gold-edge feature image */}
+                  {cat.image && (
+                    <div className="flex justify-center mb-5">
+                      <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_0_60px_-15px_rgba(201,160,80,0.45)]">
+                        <img
+                          src={cat.image}
+                          alt={cat.imageAlt || cat.title}
+                          loading="lazy"
+                          width={256}
+                          height={256}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-[#C9A050]/20 pointer-events-none" />
+                      </div>
+                    </div>
+                  )}
 
                   {/* Description */}
                   <p className="text-sm text-white/50 font-extralight leading-relaxed mb-5">
