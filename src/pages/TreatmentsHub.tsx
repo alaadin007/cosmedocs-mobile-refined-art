@@ -25,6 +25,7 @@ const treatmentCategories: TreatmentCategory[] = [
       "Lip Flip & Gummy Smile",
       "Masseter & Jawline Slimming",
       "Nefertiti Lift",
+      "Calf Slimming & Trap Reduction",
       "Medical Botox (Migraine, Sweating)",
     ],
   },
