@@ -23,6 +23,8 @@ const treatmentCategories: TreatmentCategory[] = [
     subtitle: "Muscle modulation & prevention",
     description: "Precision anti-wrinkle injections for dynamic lines, facial contouring, and medical conditions. Administered by expert injectors since 2007.",
     link: "/treatments/botox/",
+    image: calfSlimmingLuxury,
+    imageAlt: "Sculpted calf — calf slimming Botox at Cosmedocs Harley Street",
     items: [
       "Forehead, Frown & Crow's Feet",
       "Lip Flip & Gummy Smile",
