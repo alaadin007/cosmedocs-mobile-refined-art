@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import { ArrowRight } from 'lucide-react';
+import calfSlimmingLuxury from '@/assets/calf-slimming-luxury.jpg';
 
 /* ─── treatment category data ─── */
 interface TreatmentCategory {
@@ -12,6 +13,8 @@ interface TreatmentCategory {
   link: string;
   items: string[];
   accent?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const treatmentCategories: TreatmentCategory[] = [
