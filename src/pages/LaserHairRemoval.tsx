@@ -82,6 +82,22 @@ export default function LaserHairRemoval() {
       question: "What is a Course (5+1 FREE)?",
       answer: "Our course packages include 5 sessions plus 1 bonus session FREE. This is the most cost-effective way to achieve maximum reduction, as hair grows in cycles and multiple sessions are needed to target all follicles during their active growth phase."
     },
+    {
+      question: "How qualified are your laser therapists?",
+      answer: "Every laser therapist at Cosmedocs holds a recognised NVQ/VTCT Level 5–7 qualification in Laser & IPL Hair Reduction, plus the mandatory Core of Knowledge in Laser Safety. Treatments are supervised by a designated Laser Protection Adviser (LPA) and follow JCCP-aligned protocols. Our team averages 8+ years of clinical laser experience — not a beauty salon technician with a weekend course."
+    },
+    {
+      question: "Is this safe for darker skin tones (Fitzpatrick IV–VI)?",
+      answer: "Yes — and it's where most clinics fail. The Nd:YAG 1064nm wavelength bypasses surface melanin entirely, making it the gold-standard for skin types IV–VI with no risk of pigmentation changes when used correctly. Many high-street salons only offer Alexandrite (755nm), which is unsafe on darker skin. We patch-test every new client and our AI calibrates the wavelength ratio specifically to your Fitzpatrick type."
+    },
+    {
+      question: "What are the real risks of laser hair removal?",
+      answer: "When performed by an under-qualified operator on the wrong wavelength or fluence, risks include burns, blistering, hyper- or hypo-pigmentation, scarring, and paradoxical hair growth. These complications are almost always caused by operator error, not the technology itself. This is why therapist qualification, machine class, and a mandatory patch test 24–48 hours before your first session matter more than the price tag."
+    },
+    {
+      question: "What questions should I ask before booking anywhere?",
+      answer: "1) Is your machine MHRA-registered and what is its make and model? 2) Does my therapist hold NVQ Level 4+ in Laser & IPL plus Core of Knowledge? 3) Who is your Laser Protection Adviser (LPA)? 4) Do you offer a mandatory patch test? 5) What wavelengths are available for my skin tone? If a clinic cannot answer all five clearly, walk away."
+    },
   ];
 
   return (
