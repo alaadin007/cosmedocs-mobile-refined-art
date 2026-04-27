@@ -21,6 +21,10 @@ const EndolaserLift = () => {
 
   const faqs = [
     {
+      question: "Is the Endolaser device CE and UKCA approved?",
+      answer: "Yes. Our Endolaser (Laser Fibre Lift) device holds both CE marking (EU conformity) and UKCA certification (UK Conformity Assessed) as a Class IIb medical device. UKCA is the post-Brexit UK equivalent of CE marking and is required for any medical device legally placed on the Great Britain market. Many endolaser devices currently used in the UK only carry CE marks; ours is fully UKCA certified — meaning it has been independently assessed against UK MHRA regulations. The treatment is operated through our partner PrivaDr Ltd, which is CQC-registered (Care Quality Commission) at 10 Harley Street, London W1G 9PF."
+    },
+    {
       question: "What is the Laser Fibre Lift (Endolaser) treatment?",
       answer: "The Laser Fibre Lift — also known as Endolaser — is a minimally invasive dual-wavelength laser procedure using 980nm and 1470nm laser fibres inserted beneath the skin. The 980nm wavelength targets fat reduction whilst the 1470nm wavelength delivers precise skin tightening and collagen stimulation. This combined Endolaser approach achieves both fat reduction and skin tightening in a single treatment. At CosmeDocs, we have refined this technique to complement existing volume replacement and deliver targeted, precise results rather than a general all-over approach."
     },
