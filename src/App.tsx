@@ -189,6 +189,7 @@ const Microneedling = lazy(() => import("./pages/Microneedling"));
 const TearTroughFiller = lazy(() => import("./pages/TearTroughFiller"));
 const TrapBotox = lazy(() => import("./pages/TrapBotox"));
 const CalfSlimmingBotox = lazy(() => import("./pages/CalfSlimmingBotox"));
+const BotoxCalfsClinical = lazy(() => import("./pages/BotoxCalfsClinical"));
 const VideoUpload = lazy(() => import("./pages/VideoUpload"));
 const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
 const TempleFiller = lazy(() => import("./pages/TempleFiller"));
