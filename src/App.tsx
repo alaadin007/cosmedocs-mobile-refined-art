@@ -569,6 +569,8 @@ const App = () => {
                           <Route path="/treatments/trap-botox/" element={<TrapBotox />} />
                           <Route path="/treatments/calf-slimming-botox" element={<CalfSlimmingBotox />} />
                           <Route path="/treatments/calf-slimming-botox/" element={<CalfSlimmingBotox />} />
+                          <Route path="/treatments/botox/calfs" element={<BotoxCalfsClinical />} />
+                          <Route path="/treatments/botox/calfs/" element={<BotoxCalfsClinical />} />
                           <Route path="/treatments/bruxism-botox" element={<BruxismBotox />} />
                           <Route path="/treatments/bruxism-botox/" element={<BruxismBotox />} />
                           <Route path="/treatments/trigger-point-botox" element={<Navigate to="/treatments/botox/" replace />} />
