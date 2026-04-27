@@ -125,13 +125,25 @@ export default function LaserHairRemoval() {
             {
               "@type": "MedicalProcedure",
               "name": "Laser Hair Removal",
-              "alternateName": ["Permanent Hair Removal", "Diode Laser Hair Removal", "Triple Wavelength Laser"],
-              "description": "Advanced 3000W triple wavelength laser hair removal with AI skin-matching technology and -2°C contact cooling for virtually painless permanent hair reduction.",
+              "alternateName": ["Permanent Hair Removal", "Diode Laser Hair Removal", "Triple Wavelength Laser", "Nd:YAG Laser Hair Removal"],
+              "description": "Doctor-led laser hair removal at Harley Street, London. Performed by NVQ Level 5–7 qualified laser specialists under designated Laser Protection Adviser (LPA) supervision, using an MHRA-registered 3000W triple-wavelength platform (Alexandrite 755nm, Diode 808nm, Nd:YAG 1064nm) with AI skin-matching and -2°C contact cooling. Safe for Fitzpatrick I–VI.",
               "url": "https://www.cosmedocs.com/treatments/laser-hair-removal/",
               "procedureType": "NoninvasiveProcedure",
-              "howPerformed": "Triple wavelength laser (755nm, 808nm, 1064nm) with AI-powered settings targeting hair follicles during their active growth phase.",
-              "preparation": "Shave treatment area 24 hours before. Avoid waxing, plucking, sun exposure, and fake tan for 2-4 weeks prior.",
-              "followup": "Apply SPF 30+ daily. Avoid sun, heat treatments, and exercise for 24-48 hours."
+              "bodyLocation": ["Face", "Underarms", "Bikini", "Legs", "Back", "Chest", "Arms"],
+              "howPerformed": "Triple wavelength medical laser (755nm/808nm/1064nm) with AI-calibrated fluence and pulse-width targeting hair follicles in the anagen growth phase. Mandatory 24–48 hour patch test before the first session.",
+              "preparation": "Shave treatment area 24 hours before. Avoid waxing, plucking, sun exposure, and fake tan for 2–4 weeks prior. Disclose all medications and recent skincare to your therapist.",
+              "followup": "Apply SPF 30+ daily. Avoid sun, heat treatments, and exercise for 24–48 hours. Hair sheds over 1–3 weeks.",
+              "performer": {
+                "@type": "MedicalOrganization",
+                "name": "Cosmedocs Harley Street",
+                "url": "https://www.cosmedocs.com/",
+                "memberOf": { "@type": "Organization", "name": "Joint Council for Cosmetic Practitioners (JCCP) aligned" },
+                "hasCredential": [
+                  { "@type": "EducationalOccupationalCredential", "credentialCategory": "NVQ/VTCT Level 5–7 in Laser & IPL Hair Reduction" },
+                  { "@type": "EducationalOccupationalCredential", "credentialCategory": "Core of Knowledge in Laser Safety" },
+                  { "@type": "EducationalOccupationalCredential", "credentialCategory": "Designated Laser Protection Adviser (LPA) supervision" }
+                ]
+              }
             },
             {
               "@type": "FAQPage",
