@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Snowflake, Zap, Brain, Shield, Clock, Sparkles, ArrowRight } from 'lucide-react';
+import { CheckCircle, Snowflake, Zap, Brain, Shield, Clock, Sparkles, ArrowRight, Award, GraduationCap, ShieldCheck, FileCheck, Eye, AlertTriangle } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from 'react-router-dom';
 import Breadcrumb from "@/components/Breadcrumb";
