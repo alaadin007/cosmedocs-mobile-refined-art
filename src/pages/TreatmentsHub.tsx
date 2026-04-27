@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import { ArrowRight } from 'lucide-react';
 import calfSlimmingLuxury from '@/assets/calf-slimming-luxury.jpg';
+import calfLuxJpg480 from '@/assets/calf-slimming-luxury-480.jpg';
+import calfLuxJpg768 from '@/assets/calf-slimming-luxury-768.jpg';
+import calfLuxJpg1200 from '@/assets/calf-slimming-luxury-1200.jpg';
+import calfLuxWebp480 from '@/assets/calf-slimming-luxury-480.webp';
+import calfLuxWebp768 from '@/assets/calf-slimming-luxury-768.webp';
+import calfLuxWebp1200 from '@/assets/calf-slimming-luxury-1200.webp';
+
+const calfImageSet = {
+  webpSrcSet: `${calfLuxWebp480} 480w, ${calfLuxWebp768} 768w, ${calfLuxWebp1200} 1200w`,
+  jpgSrcSet: `${calfLuxJpg480} 480w, ${calfLuxJpg768} 768w, ${calfLuxJpg1200} 1200w`,
+  fallback: calfLuxJpg480,
+};
 
 /* ─── treatment category data ─── */
 interface TreatmentCategory {
