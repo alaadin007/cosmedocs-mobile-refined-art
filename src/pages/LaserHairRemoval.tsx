@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Snowflake, Zap, Brain, Shield, Clock, Sparkles, ArrowRight } from 'lucide-react';
+import { CheckCircle, Snowflake, Zap, Brain, Shield, Clock, Sparkles, ArrowRight, Award, GraduationCap, ShieldCheck, FileCheck, Eye, AlertTriangle } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from 'react-router-dom';
 import Breadcrumb from "@/components/Breadcrumb";
@@ -11,8 +11,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 export default function LaserHairRemoval() {
   const seoData = generateSEOMetadata(
-    "Laser Hair Removal London | 50% Off First Session | From £15 | Cosmedocs Harley Street",
-    "Advanced 3000W triple wavelength laser hair removal with AI skin-matching technology & -2°C cooling. 80-90% permanent reduction. Safe for all skin tones. 50% off first-time clients. Harley Street, London.",
+    "Laser Hair Removal London | Level 5–7 Therapists | Harley Street | Cosmedocs",
+    "Doctor-led laser hair removal at Harley Street. Level 5–7 NVQ-qualified specialists, LPA-supervised, MHRA-registered 3000W triple-wavelength laser. Safe for all skin tones (Fitzpatrick I–VI). 50% off first session. From £15.",
     "/treatments/laser-hair-removal/"
   );
 
@@ -82,6 +82,22 @@ export default function LaserHairRemoval() {
       question: "What is a Course (5+1 FREE)?",
       answer: "Our course packages include 5 sessions plus 1 bonus session FREE. This is the most cost-effective way to achieve maximum reduction, as hair grows in cycles and multiple sessions are needed to target all follicles during their active growth phase."
     },
+    {
+      question: "How qualified are your laser therapists?",
+      answer: "Every laser therapist at Cosmedocs holds a recognised NVQ/VTCT Level 5–7 qualification in Laser & IPL Hair Reduction, plus the mandatory Core of Knowledge in Laser Safety. Treatments are supervised by a designated Laser Protection Adviser (LPA) and follow JCCP-aligned protocols. Our team averages 8+ years of clinical laser experience — not a beauty salon technician with a weekend course."
+    },
+    {
+      question: "Is this safe for darker skin tones (Fitzpatrick IV–VI)?",
+      answer: "Yes — and it's where most clinics fail. The Nd:YAG 1064nm wavelength bypasses surface melanin entirely, making it the gold-standard for skin types IV–VI with no risk of pigmentation changes when used correctly. Many high-street salons only offer Alexandrite (755nm), which is unsafe on darker skin. We patch-test every new client and our AI calibrates the wavelength ratio specifically to your Fitzpatrick type."
+    },
+    {
+      question: "What are the real risks of laser hair removal?",
+      answer: "When performed by an under-qualified operator on the wrong wavelength or fluence, risks include burns, blistering, hyper- or hypo-pigmentation, scarring, and paradoxical hair growth. These complications are almost always caused by operator error, not the technology itself. This is why therapist qualification, machine class, and a mandatory patch test 24–48 hours before your first session matter more than the price tag."
+    },
+    {
+      question: "What questions should I ask before booking anywhere?",
+      answer: "1) Is your machine MHRA-registered and what is its make and model? 2) Does my therapist hold NVQ Level 4+ in Laser & IPL plus Core of Knowledge? 3) Who is your Laser Protection Adviser (LPA)? 4) Do you offer a mandatory patch test? 5) What wavelengths are available for my skin tone? If a clinic cannot answer all five clearly, walk away."
+    },
   ];
 
   return (
@@ -109,13 +125,25 @@ export default function LaserHairRemoval() {
             {
               "@type": "MedicalProcedure",
               "name": "Laser Hair Removal",
-              "alternateName": ["Permanent Hair Removal", "Diode Laser Hair Removal", "Triple Wavelength Laser"],
-              "description": "Advanced 3000W triple wavelength laser hair removal with AI skin-matching technology and -2°C contact cooling for virtually painless permanent hair reduction.",
+              "alternateName": ["Permanent Hair Removal", "Diode Laser Hair Removal", "Triple Wavelength Laser", "Nd:YAG Laser Hair Removal"],
+              "description": "Doctor-led laser hair removal at Harley Street, London. Performed by NVQ Level 5–7 qualified laser specialists under designated Laser Protection Adviser (LPA) supervision, using an MHRA-registered 3000W triple-wavelength platform (Alexandrite 755nm, Diode 808nm, Nd:YAG 1064nm) with AI skin-matching and -2°C contact cooling. Safe for Fitzpatrick I–VI.",
               "url": "https://www.cosmedocs.com/treatments/laser-hair-removal/",
               "procedureType": "NoninvasiveProcedure",
-              "howPerformed": "Triple wavelength laser (755nm, 808nm, 1064nm) with AI-powered settings targeting hair follicles during their active growth phase.",
-              "preparation": "Shave treatment area 24 hours before. Avoid waxing, plucking, sun exposure, and fake tan for 2-4 weeks prior.",
-              "followup": "Apply SPF 30+ daily. Avoid sun, heat treatments, and exercise for 24-48 hours."
+              "bodyLocation": ["Face", "Underarms", "Bikini", "Legs", "Back", "Chest", "Arms"],
+              "howPerformed": "Triple wavelength medical laser (755nm/808nm/1064nm) with AI-calibrated fluence and pulse-width targeting hair follicles in the anagen growth phase. Mandatory 24–48 hour patch test before the first session.",
+              "preparation": "Shave treatment area 24 hours before. Avoid waxing, plucking, sun exposure, and fake tan for 2–4 weeks prior. Disclose all medications and recent skincare to your therapist.",
+              "followup": "Apply SPF 30+ daily. Avoid sun, heat treatments, and exercise for 24–48 hours. Hair sheds over 1–3 weeks.",
+              "performer": {
+                "@type": "MedicalOrganization",
+                "name": "Cosmedocs Harley Street",
+                "url": "https://www.cosmedocs.com/",
+                "memberOf": { "@type": "Organization", "name": "Joint Council for Cosmetic Practitioners (JCCP) aligned" },
+                "hasCredential": [
+                  { "@type": "EducationalOccupationalCredential", "credentialCategory": "NVQ/VTCT Level 5–7 in Laser & IPL Hair Reduction" },
+                  { "@type": "EducationalOccupationalCredential", "credentialCategory": "Core of Knowledge in Laser Safety" },
+                  { "@type": "EducationalOccupationalCredential", "credentialCategory": "Designated Laser Protection Adviser (LPA) supervision" }
+                ]
+              }
             },
             {
               "@type": "FAQPage",
@@ -152,17 +180,18 @@ export default function LaserHairRemoval() {
                   <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
                     Laser Hair <span className="text-[#C9A050] font-light">Removal</span>
                   </h1>
-                  <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl mb-4">
-                    London's most advanced 3000W triple wavelength laser with -2°C cooling — virtually painless, safe for all skin tones, 80–90% permanent reduction.
+                  <p className="text-base md:text-lg text-white/55 leading-relaxed font-light max-w-2xl mb-4">
+                    Doctor-led. <span className="text-white/80">Level 5–7 NVQ-qualified laser specialists.</span> LPA-supervised on an MHRA-registered 3000W triple-wavelength platform — engineered for permanent reduction on every Fitzpatrick skin tone (I–VI).
                   </p>
-                  <p className="text-sm text-white/30 font-extralight">
-                    AI-powered skin matching automatically calibrates power settings to your hair type and skin tone for optimal results every session.
+                  <p className="text-sm text-white/35 font-extralight">
+                    In laser, the operator matters more than the machine. Ours have been doing this — safely — for 8+ years on average.
                   </p>
                 </motion.div>
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £15</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />-2°C Painless Tech</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />All Skin Tones</span>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-white/35 tracking-wide uppercase">
+                  <span className="flex items-center gap-1.5"><GraduationCap className="w-3.5 h-3.5 text-[#C9A050]/70" />Level 5–7 Therapists</span>
+                  <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-[#C9A050]/70" />LPA-Supervised</span>
+                  <span className="flex items-center gap-1.5"><Snowflake className="w-3.5 h-3.5 text-blue-400/70" />-2°C Painless</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Fitzpatrick I–VI</span>
                   <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-8">
@@ -179,6 +208,90 @@ export default function LaserHairRemoval() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="space-y-16">
+
+
+            {/* Safety & Therapist Expertise — Authority Pillar */}
+            <section aria-labelledby="safety-pillar">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                <div className="inline-flex items-center gap-2 bg-[#C9A050]/10 border border-[#C9A050]/25 rounded-full px-3 py-1 mb-4">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#C9A050]" />
+                  <span className="text-[#C9A050] text-[11px] font-medium tracking-wide uppercase">The Safety Standard</span>
+                </div>
+                <h2 id="safety-pillar" className="text-3xl md:text-4xl font-extralight text-white mb-2">
+                  In laser, the <span className="text-[#C9A050] font-light">operator</span> matters more than the machine.
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/55 text-sm md:text-base leading-relaxed font-light max-w-3xl mb-8">
+                  Burns, scarring, pigmentation changes and paradoxical hair growth are almost never caused by the laser — they're caused by an under-qualified operator picking the wrong wavelength, fluence or pulse-width for your skin. We invest in the people behind the device so the device behaves predictably on every Fitzpatrick type.
+                </p>
+
+                {/* Credentials grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                  {[
+                    { icon: <GraduationCap className="w-5 h-5" />, title: "Level 5–7 Therapists", desc: "NVQ/VTCT Level 5 to Level 7 in Laser & IPL Hair Reduction. Not a weekend course." },
+                    { icon: <Award className="w-5 h-5" />, title: "Core of Knowledge", desc: "Mandatory accredited Core of Knowledge in Laser Safety. Renewed regularly." },
+                    { icon: <Eye className="w-5 h-5" />, title: "LPA-Supervised", desc: "Designated Laser Protection Adviser oversight. JCCP-aligned protocols." },
+                    { icon: <FileCheck className="w-5 h-5" />, title: "MHRA-Registered Device", desc: "Medical-grade 3000W triple-wavelength platform. Not high-street IPL." },
+                  ].map((item) => (
+                    <div key={item.title} className="p-5 bg-white/[0.03] rounded-xl border border-[#C9A050]/15 hover:border-[#C9A050]/30 transition-colors">
+                      <div className="text-[#C9A050] mb-3">{item.icon}</div>
+                      <p className="text-white/85 text-sm font-medium mb-1.5">{item.title}</p>
+                      <p className="text-white/40 text-xs leading-relaxed font-light">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Differentiator: how to choose any clinic */}
+                <div className="rounded-2xl border border-[#C9A050]/20 bg-gradient-to-br from-[#C9A050]/[0.06] via-white/[0.02] to-transparent p-6 md:p-8 mb-8">
+                  <div className="flex items-start gap-3 mb-5">
+                    <AlertTriangle className="w-5 h-5 text-[#C9A050] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="text-white text-base md:text-lg font-light mb-1">Five questions to ask any laser clinic — before you book.</h3>
+                      <p className="text-white/45 text-xs font-light">If they can't answer all five clearly, walk away. This applies to us too.</p>
+                    </div>
+                  </div>
+                  <ol className="space-y-3 text-sm">
+                    {[
+                      { q: "Is your machine MHRA-registered? What is the make, model and class?", a: "Ours: 3000W triple-wavelength medical platform — Alexandrite 755nm + Diode 808nm + Nd:YAG 1064nm." },
+                      { q: "What qualification does my therapist hold?", a: "All ours: NVQ/VTCT Level 5–7 in Laser & IPL Hair Reduction + Core of Knowledge in Laser Safety." },
+                      { q: "Who is your Laser Protection Adviser (LPA)?", a: "We have a designated LPA on record. Ask to see the LPA report on request." },
+                      { q: "Will I get a mandatory patch test before my first treatment?", a: "Yes — 24–48 hours before your first session. Non-negotiable, even if you've had laser elsewhere." },
+                      { q: "Which wavelengths can you use on my Fitzpatrick skin type?", a: "We use Nd:YAG 1064nm as standard for Fitzpatrick IV–VI. Alexandrite-only clinics are unsafe on darker skin." },
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-3 pl-1">
+                        <span className="text-[#C9A050] font-medium text-xs mt-0.5 min-w-[18px]">{String(i + 1).padStart(2, '0')}</span>
+                        <div>
+                          <p className="text-white/80 font-light leading-snug">{item.q}</p>
+                          <p className="text-white/45 text-xs font-light mt-1 leading-relaxed">→ {item.a}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Patch test & protocol */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-5 bg-white/[0.03] rounded-xl border border-white/[0.08]">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Shield className="w-4 h-4 text-[#C9A050]" />
+                      <p className="text-white/85 text-sm font-medium">Mandatory Patch Test</p>
+                    </div>
+                    <p className="text-white/45 text-xs leading-relaxed font-light">
+                      Every new client receives a complimentary patch test 24–48 hours before their first session — regardless of prior laser history elsewhere. Skin behaves differently on different machines.
+                    </p>
+                  </div>
+                  <div className="p-5 bg-white/[0.03] rounded-xl border border-white/[0.08]">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]" />
+                      <p className="text-white/85 text-sm font-medium">Doctor-Led Escalation</p>
+                    </div>
+                    <p className="text-white/45 text-xs leading-relaxed font-light">
+                      Any unusual skin response, hormonal hair pattern, PCOS history or medication interaction is escalated to our medical team — not handled by a salon receptionist.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </section>
 
             {/* Technology Section */}
             <section>
