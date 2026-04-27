@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import { ArrowRight } from 'lucide-react';
 import calfSlimmingLuxury from '@/assets/calf-slimming-luxury.jpg';
+import calfLuxJpg480 from '@/assets/calf-slimming-luxury-480.jpg';
+import calfLuxJpg768 from '@/assets/calf-slimming-luxury-768.jpg';
+import calfLuxJpg1200 from '@/assets/calf-slimming-luxury-1200.jpg';
+import calfLuxWebp480 from '@/assets/calf-slimming-luxury-480.webp';
+import calfLuxWebp768 from '@/assets/calf-slimming-luxury-768.webp';
+import calfLuxWebp1200 from '@/assets/calf-slimming-luxury-1200.webp';
+
+const calfImageSet = {
+  webpSrcSet: `${calfLuxWebp480} 480w, ${calfLuxWebp768} 768w, ${calfLuxWebp1200} 1200w`,
+  jpgSrcSet: `${calfLuxJpg480} 480w, ${calfLuxJpg768} 768w, ${calfLuxJpg1200} 1200w`,
+  fallback: calfLuxJpg480,
+};
 
 /* ─── treatment category data ─── */
 interface TreatmentCategory {
@@ -261,18 +273,33 @@ const TreatmentsHub = () => {
                     <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-[#C9A050] transition-colors mt-1 flex-shrink-0" />
                   </div>
 
-                  {/* Optional gold-edge feature image */}
+                  {/* Optional gold-edge feature image — responsive picture, lazy + async-decoded */}
                   {cat.image && (
                     <div className="flex justify-center mb-5">
                       <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_0_60px_-15px_rgba(201,160,80,0.45)]">
-                        <img
-                          src={cat.image}
-                          alt={cat.imageAlt || cat.title}
-                          loading="lazy"
-                          width={256}
-                          height={256}
-                          className="w-full h-full object-cover"
-                        />
+                        <picture>
+                          <source
+                            type="image/webp"
+                            srcSet={calfImageSet.webpSrcSet}
+                            sizes="(max-width: 640px) 112px, 128px"
+                          />
+                          <source
+                            type="image/jpeg"
+                            srcSet={calfImageSet.jpgSrcSet}
+                            sizes="(max-width: 640px) 112px, 128px"
+                          />
+                          <img
+                            src={calfImageSet.fallback}
+                            alt={cat.imageAlt || cat.title}
+                            loading="lazy"
+                            decoding="async"
+                            // @ts-expect-error fetchpriority is valid HTML
+                            fetchpriority="low"
+                            width={256}
+                            height={256}
+                            className="w-full h-full object-cover"
+                          />
+                        </picture>
                         <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-[#C9A050]/20 pointer-events-none" />
                       </div>
                     </div>
