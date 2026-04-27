@@ -11,8 +11,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 export default function LaserHairRemoval() {
   const seoData = generateSEOMetadata(
-    "Laser Hair Removal London | 50% Off First Session | From £15 | Cosmedocs Harley Street",
-    "Advanced 3000W triple wavelength laser hair removal with AI skin-matching technology & -2°C cooling. 80-90% permanent reduction. Safe for all skin tones. 50% off first-time clients. Harley Street, London.",
+    "Laser Hair Removal London | Level 5–7 Therapists | Harley Street | Cosmedocs",
+    "Doctor-led laser hair removal at Harley Street. Level 5–7 NVQ-qualified specialists, LPA-supervised, MHRA-registered 3000W triple-wavelength laser. Safe for all skin tones (Fitzpatrick I–VI). 50% off first session. From £15.",
     "/treatments/laser-hair-removal/"
   );
 
