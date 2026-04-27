@@ -14,8 +14,8 @@ import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
-    "Laser Fibre Lift (Endolaser) London | Laser Face Lift Harley Street | From £450",
-    "Laser Fibre Lift (Endolaser) treatment in London by the Lead Trainer at Harley Street Institute. Non-surgical face lift for jowls, jawline, eyebrow lift & double chin. CQC-registered. From £450.",
+    "Endolaser London | UKCA & CE Approved Laser Fibre Lift | Harley Street | Cosmedocs",
+    "Endolaser (Laser Fibre Lift) in London — the only UKCA and CE marked dual-wavelength endolaser at Harley Street. Operated via PrivaDr Ltd (CQC-registered partner). Doctor-led, lead-trainer performed. From £450.",
     "/treatments/endolaser/"
   );
 
