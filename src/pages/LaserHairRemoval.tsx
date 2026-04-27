@@ -180,17 +180,18 @@ export default function LaserHairRemoval() {
                   <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
                     Laser Hair <span className="text-[#C9A050] font-light">Removal</span>
                   </h1>
-                  <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl mb-4">
-                    London's most advanced 3000W triple wavelength laser with -2°C cooling — virtually painless, safe for all skin tones, 80–90% permanent reduction.
+                  <p className="text-base md:text-lg text-white/55 leading-relaxed font-light max-w-2xl mb-4">
+                    Doctor-led. <span className="text-white/80">Level 5–7 NVQ-qualified laser specialists.</span> LPA-supervised on an MHRA-registered 3000W triple-wavelength platform — engineered for permanent reduction on every Fitzpatrick skin tone (I–VI).
                   </p>
-                  <p className="text-sm text-white/30 font-extralight">
-                    AI-powered skin matching automatically calibrates power settings to your hair type and skin tone for optimal results every session.
+                  <p className="text-sm text-white/35 font-extralight">
+                    In laser, the operator matters more than the machine. Ours have been doing this — safely — for 8+ years on average.
                   </p>
                 </motion.div>
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase">
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £15</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />-2°C Painless Tech</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />All Skin Tones</span>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-white/35 tracking-wide uppercase">
+                  <span className="flex items-center gap-1.5"><GraduationCap className="w-3.5 h-3.5 text-[#C9A050]/70" />Level 5–7 Therapists</span>
+                  <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-[#C9A050]/70" />LPA-Supervised</span>
+                  <span className="flex items-center gap-1.5"><Snowflake className="w-3.5 h-3.5 text-blue-400/70" />-2°C Painless</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Fitzpatrick I–VI</span>
                   <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Harley Street</span>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-8">
