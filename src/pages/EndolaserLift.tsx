@@ -132,7 +132,23 @@ const EndolaserLift = () => {
                 "preparation": "Consultation with doctor to assess facial anatomy and create personalised treatment plan. Local anaesthetic administered before procedure.",
                 "followup": "Results visible within 2–4 weeks, continuing to improve for 3–6 months. Lasts 2–3+ years. Follow-up at 2–4 weeks post-treatment.",
                 "howPerformed": "A dual-wavelength laser fibre (980nm for fat reduction, 1470nm for skin tightening) is inserted beneath the skin through micro-incisions under local anaesthetic. The combined wavelengths simultaneously tighten tissue, stimulate collagen, and reduce fat deposits with precision targeting.",
-                "status": "https://schema.org/EventScheduled"
+                "status": "https://schema.org/EventScheduled",
+                "usesDevice": {
+                  "@type": "MedicalDevice",
+                  "name": "Dual-Wavelength Endolaser (980nm / 1470nm Laser Fibre)",
+                  "category": "Class IIb Medical Device",
+                  "hasCertification": [
+                    { "@type": "Certification", "name": "UKCA — UK Conformity Assessed", "issuedBy": { "@type": "Organization", "name": "UK MHRA-recognised Approved Body" } },
+                    { "@type": "Certification", "name": "CE — European Conformity Marking", "issuedBy": { "@type": "Organization", "name": "EU Notified Body" } }
+                  ]
+                },
+                "performer": {
+                  "@type": "MedicalOrganization",
+                  "name": "PrivaDr Ltd",
+                  "description": "CQC-registered medical partner providing CQC-regulated facility and clinical governance for Endolaser treatments at 10 Harley Street.",
+                  "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
+                  "memberOf": { "@type": "Organization", "name": "Care Quality Commission (CQC) registered" }
+                }
               },
               {
                 "@type": "FAQPage",
