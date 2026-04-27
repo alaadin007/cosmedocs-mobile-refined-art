@@ -259,16 +259,29 @@ const EndolaserLift = () => {
                     Laser Fibre Lift{" "}
                     <span className="text-[#C9A050] font-light">London</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
+                  <p className="text-lg md:text-xl text-white/40 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
                     Minimally invasive endolaser face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Also known as Endolaser. Performed by the Lead Trainer at the Harley Street Institute.
                   </p>
+
+                  {/* Regulatory authority chips — UKCA + CE + CQC */}
+                  <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                    <span className="inline-flex items-center gap-1.5 bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-full px-3 py-1 text-[11px] text-[#C9A050] font-medium tracking-wide uppercase">
+                      <BadgeCheck className="w-3.5 h-3.5" /> UKCA Approved
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-full px-3 py-1 text-[11px] text-[#C9A050] font-medium tracking-wide uppercase">
+                      <BadgeCheck className="w-3.5 h-3.5" /> CE Marked
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-white/[0.04] border border-white/15 rounded-full px-3 py-1 text-[11px] text-white/70 font-medium tracking-wide uppercase">
+                      <ShieldCheck className="w-3.5 h-3.5" /> CQC-Registered Partner
+                    </span>
+                  </div>
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
+                  className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs text-white/30 tracking-wide uppercase"
                 >
                   <span className="flex items-center gap-1.5">
                     <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
@@ -285,10 +298,6 @@ const EndolaserLift = () => {
                   <span className="flex items-center gap-1.5">
                     <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
                     Harley Street
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />
-                    In Association with CQC-Registered PrivaDr Ltd
                   </span>
                 </motion.div>
               </div>
