@@ -209,6 +209,90 @@ export default function LaserHairRemoval() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="space-y-16">
 
+
+            {/* Safety & Therapist Expertise — Authority Pillar */}
+            <section aria-labelledby="safety-pillar">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                <div className="inline-flex items-center gap-2 bg-[#C9A050]/10 border border-[#C9A050]/25 rounded-full px-3 py-1 mb-4">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#C9A050]" />
+                  <span className="text-[#C9A050] text-[11px] font-medium tracking-wide uppercase">The Safety Standard</span>
+                </div>
+                <h2 id="safety-pillar" className="text-3xl md:text-4xl font-extralight text-white mb-2">
+                  In laser, the <span className="text-[#C9A050] font-light">operator</span> matters more than the machine.
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/55 text-sm md:text-base leading-relaxed font-light max-w-3xl mb-8">
+                  Burns, scarring, pigmentation changes and paradoxical hair growth are almost never caused by the laser — they're caused by an under-qualified operator picking the wrong wavelength, fluence or pulse-width for your skin. We invest in the people behind the device so the device behaves predictably on every Fitzpatrick type.
+                </p>
+
+                {/* Credentials grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                  {[
+                    { icon: <GraduationCap className="w-5 h-5" />, title: "Level 5–7 Therapists", desc: "NVQ/VTCT Level 5 to Level 7 in Laser & IPL Hair Reduction. Not a weekend course." },
+                    { icon: <Award className="w-5 h-5" />, title: "Core of Knowledge", desc: "Mandatory accredited Core of Knowledge in Laser Safety. Renewed regularly." },
+                    { icon: <Eye className="w-5 h-5" />, title: "LPA-Supervised", desc: "Designated Laser Protection Adviser oversight. JCCP-aligned protocols." },
+                    { icon: <FileCheck className="w-5 h-5" />, title: "MHRA-Registered Device", desc: "Medical-grade 3000W triple-wavelength platform. Not high-street IPL." },
+                  ].map((item) => (
+                    <div key={item.title} className="p-5 bg-white/[0.03] rounded-xl border border-[#C9A050]/15 hover:border-[#C9A050]/30 transition-colors">
+                      <div className="text-[#C9A050] mb-3">{item.icon}</div>
+                      <p className="text-white/85 text-sm font-medium mb-1.5">{item.title}</p>
+                      <p className="text-white/40 text-xs leading-relaxed font-light">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Differentiator: how to choose any clinic */}
+                <div className="rounded-2xl border border-[#C9A050]/20 bg-gradient-to-br from-[#C9A050]/[0.06] via-white/[0.02] to-transparent p-6 md:p-8 mb-8">
+                  <div className="flex items-start gap-3 mb-5">
+                    <AlertTriangle className="w-5 h-5 text-[#C9A050] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="text-white text-base md:text-lg font-light mb-1">Five questions to ask any laser clinic — before you book.</h3>
+                      <p className="text-white/45 text-xs font-light">If they can't answer all five clearly, walk away. This applies to us too.</p>
+                    </div>
+                  </div>
+                  <ol className="space-y-3 text-sm">
+                    {[
+                      { q: "Is your machine MHRA-registered? What is the make, model and class?", a: "Ours: 3000W triple-wavelength medical platform — Alexandrite 755nm + Diode 808nm + Nd:YAG 1064nm." },
+                      { q: "What qualification does my therapist hold?", a: "All ours: NVQ/VTCT Level 5–7 in Laser & IPL Hair Reduction + Core of Knowledge in Laser Safety." },
+                      { q: "Who is your Laser Protection Adviser (LPA)?", a: "We have a designated LPA on record. Ask to see the LPA report on request." },
+                      { q: "Will I get a mandatory patch test before my first treatment?", a: "Yes — 24–48 hours before your first session. Non-negotiable, even if you've had laser elsewhere." },
+                      { q: "Which wavelengths can you use on my Fitzpatrick skin type?", a: "We use Nd:YAG 1064nm as standard for Fitzpatrick IV–VI. Alexandrite-only clinics are unsafe on darker skin." },
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-3 pl-1">
+                        <span className="text-[#C9A050] font-medium text-xs mt-0.5 min-w-[18px]">{String(i + 1).padStart(2, '0')}</span>
+                        <div>
+                          <p className="text-white/80 font-light leading-snug">{item.q}</p>
+                          <p className="text-white/45 text-xs font-light mt-1 leading-relaxed">→ {item.a}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Patch test & protocol */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-5 bg-white/[0.03] rounded-xl border border-white/[0.08]">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Shield className="w-4 h-4 text-[#C9A050]" />
+                      <p className="text-white/85 text-sm font-medium">Mandatory Patch Test</p>
+                    </div>
+                    <p className="text-white/45 text-xs leading-relaxed font-light">
+                      Every new client receives a complimentary patch test 24–48 hours before their first session — regardless of prior laser history elsewhere. Skin behaves differently on different machines.
+                    </p>
+                  </div>
+                  <div className="p-5 bg-white/[0.03] rounded-xl border border-white/[0.08]">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-4 h-4 text-[#C9A050]" />
+                      <p className="text-white/85 text-sm font-medium">Doctor-Led Escalation</p>
+                    </div>
+                    <p className="text-white/45 text-xs leading-relaxed font-light">
+                      Any unusual skin response, hormonal hair pattern, PCOS history or medication interaction is escalated to our medical team — not handled by a salon receptionist.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </section>
+
             {/* Technology Section */}
             <section>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
