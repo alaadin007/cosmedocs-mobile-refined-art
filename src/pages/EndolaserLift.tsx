@@ -344,6 +344,66 @@ const EndolaserLift = () => {
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             <div className="space-y-14">
 
+              {/* Regulatory Authority — UKCA + CE + CQC */}
+              <section aria-labelledby="endolaser-regulatory">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <div className="inline-flex items-center gap-2 bg-[#C9A050]/10 border border-[#C9A050]/25 rounded-full px-3 py-1 mb-4">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#C9A050]" />
+                    <span className="text-[#C9A050] text-[11px] font-medium tracking-wide uppercase">Regulatory Standard</span>
+                  </div>
+                  <h2 id="endolaser-regulatory" className="text-3xl md:text-4xl font-extralight text-white/90 mb-2 leading-tight">
+                    The only Endolaser at Harley Street that is{" "}
+                    <span className="text-[#C9A050] font-light">UKCA & CE approved</span>.
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/55 text-sm md:text-base leading-relaxed font-light max-w-3xl mb-8">
+                    Many endolaser devices in circulation across UK clinics carry only a CE mark — the EU conformity standard. After Brexit, the UK introduced the <strong className="text-white/80">UKCA</strong> (UK Conformity Assessed) marking, independently assessed against MHRA regulations for the Great Britain market. Our endolaser holds <strong className="text-white/80">both</strong>. The treatment is operated through our medical partner <strong className="text-white/80">PrivaDr Ltd</strong>, which is <strong className="text-white/80">CQC-registered</strong> at 10 Harley Street, London W1G 9PF — the gold standard for clinical governance in the UK.
+                  </p>
+
+                  <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                    {[
+                      {
+                        icon: <BadgeCheck className="w-5 h-5" />,
+                        title: "UKCA Approved",
+                        sub: "UK Conformity Assessed",
+                        desc: "Independently certified for the UK market against MHRA medical device regulations. Required by law for Class IIb devices placed on the GB market.",
+                      },
+                      {
+                        icon: <BadgeCheck className="w-5 h-5" />,
+                        title: "CE Marked",
+                        sub: "European Conformity",
+                        desc: "Conforms to EU Medical Device Regulation (MDR 2017/745). Recognised across the European Union and the UK.",
+                      },
+                      {
+                        icon: <ShieldCheck className="w-5 h-5" />,
+                        title: "CQC-Registered Partner",
+                        sub: "PrivaDr Ltd",
+                        desc: "We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF — CQC-registered for all CQC-required treatments. Full clinical governance, safeguarding and complaints framework.",
+                      },
+                    ].map((item) => (
+                      <div key={item.title} className="p-5 bg-white/[0.03] rounded-xl border border-[#C9A050]/15 hover:border-[#C9A050]/30 transition-colors">
+                        <div className="text-[#C9A050] mb-3">{item.icon}</div>
+                        <p className="text-white/90 text-sm font-medium">{item.title}</p>
+                        <p className="text-[#C9A050]/70 text-[11px] mb-2 uppercase tracking-wide">{item.sub}</p>
+                        <p className="text-white/45 text-xs leading-relaxed font-light">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="rounded-2xl border border-[#C9A050]/20 bg-gradient-to-br from-[#C9A050]/[0.06] via-white/[0.02] to-transparent p-6 md:p-7">
+                    <div className="flex items-start gap-3">
+                      <FileCheck className="w-5 h-5 text-[#C9A050] flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-white/85 text-sm font-medium mb-1.5">Why this matters before you book any endolaser.</p>
+                        <p className="text-white/55 text-xs md:text-sm leading-relaxed font-light">
+                          Endolaser is a Class IIb medical device — it cuts and delivers thermal energy beneath the skin. A clinic offering this treatment without a UKCA-marked device, a CQC-regulated facility, and a doctor trained on the specific platform is operating outside the UK regulatory framework. Ask any provider for their device's UKCA certificate and the CQC registration number of the facility. We will show you both on request.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
               {/* What Is the Laser Fibre Lift */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
