@@ -7,6 +7,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.webp";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.webp";
 import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.webp";
+import smartAestheticsHero from "@/assets/smart-aesthetics-hero.jpg";
 
 // Lazy load heavy components
 const PopularTreatments = lazy(() => import("@/components/PopularTreatments"));
