@@ -199,6 +199,20 @@ const Index = () => {
                     </h2>
                   </div>
                 </div>
+
+                {/* Smart Aesthetics Hero Visual */}
+                <div className="mb-8 max-w-2xl mx-auto">
+                  <img
+                    src={smartAestheticsHero}
+                    alt="Smart Aesthetics — clinical facial mapping by Cosmedocs Harley Street doctors"
+                    className="w-full h-auto rounded-2xl border border-[#C9A050]/20 shadow-[0_20px_60px_-20px_rgba(201,160,80,0.35)]"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width={1200}
+                    height={800}
+                  />
+                </div>
                 
                 <p className="text-lg md:text-xl italic mb-6">
                   Our aesthetics is invisible art
