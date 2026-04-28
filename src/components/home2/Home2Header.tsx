@@ -387,10 +387,10 @@ export default function Home2Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[100] bg-black"
+            className="fixed inset-0 z-[100] bg-black flex flex-col"
           >
             {/* Header - Larger with login placeholder */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+            <div className="flex-shrink-0 flex items-center justify-between px-5 py-4 border-b border-white/10">
               <Link 
                 to="/" 
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -423,13 +423,13 @@ export default function Home2Header() {
             </div>
 
               {/* Language Selector in Mobile */}
-            <div className="flex items-center justify-between px-5 py-3 border-b border-white/10">
+            <div className="flex-shrink-0 flex items-center justify-between px-5 py-3 border-b border-white/10">
               <span className="text-sm text-white/50">Language</span>
               <LanguageSelector variant="header" />
             </div>
 
             {/* Quick Actions Bar */}
-            <div className="flex gap-3 px-5 py-4 border-b border-white/10">
+            <div className="flex-shrink-0 flex gap-3 px-5 py-4 border-b border-white/10">
               <Button
                 onClick={() => {
                   window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank');
@@ -443,7 +443,7 @@ export default function Home2Header() {
             </div>
 
             {/* Categories */}
-            <div className="overflow-y-auto h-[calc(100vh-140px)]">
+            <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pb-8" style={{ WebkitOverflowScrolling: 'touch' }}>
               {treatmentCategories.map((category, index) => (
                 <motion.div
                   key={category.label}
