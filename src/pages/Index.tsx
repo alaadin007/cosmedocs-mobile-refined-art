@@ -7,6 +7,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.webp";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.webp";
 import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.webp";
+import smartAestheticsHero from "@/assets/smart-aesthetics-hero.jpg";
 
 // Lazy load heavy components
 const PopularTreatments = lazy(() => import("@/components/PopularTreatments"));
@@ -198,6 +199,20 @@ const Index = () => {
                     </h2>
                   </div>
                 </div>
+
+                {/* Smart Aesthetics Hero Visual */}
+                <div className="mb-8 max-w-2xl mx-auto">
+                  <img
+                    src={smartAestheticsHero}
+                    alt="Smart Aesthetics — clinical facial mapping by Cosmedocs Harley Street doctors"
+                    className="w-full h-auto rounded-2xl border border-[#C9A050]/20 shadow-[0_20px_60px_-20px_rgba(201,160,80,0.35)]"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width={1200}
+                    height={800}
+                  />
+                </div>
                 
                 <p className="text-lg md:text-xl italic mb-6">
                   Our aesthetics is invisible art
@@ -223,29 +238,38 @@ const Index = () => {
                   </a>
                 </div>
                 
-                {/* AI Quick Links Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  <a href="https://ai.cosmedocs.com" target="_blank" rel="noopener noreferrer" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
-                    <img src={aiAssessmentIcon} alt="AI Assessment" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
-                    <h3 className="text-lg font-semibold mb-2">Free AI Assessment</h3>
-                    <p className="text-sm text-muted-foreground">Face • Hair • Skin Lesions</p>
-                  </a>
-                  
-                  <a href="/aesthetic-treatments-made-easy" className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center">
-                    <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
-                    <h3 className="text-lg font-semibold mb-2">Smart Aesthetics Series</h3>
-                    <p className="text-sm text-muted-foreground">Avoid aesthetic mistakes</p>
-                  </a>
-                  
-                  <button 
-                    onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                    className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-6 transition-all duration-300 text-center w-full"
+                {/* AI Quick Links Grid — compact 3-in-a-row on mobile, full cards on desktop */}
+                <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-4xl mx-auto">
+                  <a
+                    href="https://ai.cosmedocs.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-3 md:p-6 transition-all duration-300 text-center flex flex-col items-center"
                   >
-                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
-                    <h3 className="text-lg font-semibold mb-2">
-                      Chat With Our <span className="text-purple">AI</span>esthetics Doctor
+                    <img src={aiAssessmentIcon} alt="AI Assessment" className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
+                    <h3 className="text-[11px] md:text-lg font-semibold leading-tight md:mb-2">Free AI Assessment</h3>
+                    <p className="hidden md:block text-sm text-muted-foreground">Face • Hair • Skin Lesions</p>
+                  </a>
+
+                  <a
+                    href="/aesthetic-treatments-made-easy"
+                    className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-3 md:p-6 transition-all duration-300 text-center flex flex-col items-center"
+                  >
+                    <img src={smartAestheticsIcon} alt="Smart Aesthetics" className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
+                    <h3 className="text-[11px] md:text-lg font-semibold leading-tight md:mb-2">Smart Aesthetics</h3>
+                    <p className="hidden md:block text-sm text-muted-foreground">Avoid aesthetic mistakes</p>
+                  </a>
+
+                  <button
+                    onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+                    className="group bg-secondary hover:bg-purple-muted/30 border border-border hover:border-purple/50 rounded-2xl p-3 md:p-6 transition-all duration-300 text-center w-full flex flex-col items-center"
+                  >
+                    <img src={aiDoctorChatIcon} alt="AI Doctor Chat" className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy" width={64} height={64} />
+                    <h3 className="text-[11px] md:text-lg font-semibold leading-tight md:mb-2">
+                      <span className="md:hidden">AI Doctor Chat</span>
+                      <span className="hidden md:inline">Chat With Our <span className="text-purple">AI</span>esthetics Doctor</span>
                     </h3>
-                    <p className="text-sm text-muted-foreground">Ask anything about treatments</p>
+                    <p className="hidden md:block text-sm text-muted-foreground">Ask anything about treatments</p>
                   </button>
                 </div>
               </div>
