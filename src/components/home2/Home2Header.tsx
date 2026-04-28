@@ -387,10 +387,10 @@ export default function Home2Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[100] bg-black"
+            className="fixed inset-0 z-[100] bg-black flex flex-col"
           >
             {/* Header - Larger with login placeholder */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+            <div className="flex-shrink-0 flex items-center justify-between px-5 py-4 border-b border-white/10">
               <Link 
                 to="/" 
                 onClick={() => setIsMobileMenuOpen(false)}
