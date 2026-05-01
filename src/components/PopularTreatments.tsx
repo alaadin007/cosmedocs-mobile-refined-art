@@ -60,13 +60,37 @@ const PopularTreatments = memo(({
   const treatmentsList = treatments || defaultTreatments;
 
   return (
-    <section className={`py-20 bg-background ${className}`} aria-labelledby="treatments-heading">
+    <section className={`py-10 md:py-20 bg-background ${className}`} aria-labelledby="treatments-heading">
       <div className="page-container">
-        <h2 id="treatments-heading" className="text-3xl md:text-4xl font-bold mb-12 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">{title}</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 id="treatments-heading" className="text-2xl md:text-4xl font-bold mb-6 md:mb-12 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-amber-400 to-amber-600">{title}</span></h2>
+
+        {/* Mobile: compact accordion list */}
+        <div className="md:hidden space-y-2">
+          {treatmentsList.map((treatment) => (
+            <details key={treatment.title} className="group bg-accent rounded-lg overflow-hidden">
+              <summary className="flex justify-between items-center gap-2 p-3 cursor-pointer list-none">
+                <h3 className="text-sm font-semibold leading-snug">{treatment.title}</h3>
+                <span className="text-primary text-xs flex-shrink-0 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-3 pb-3">
+                <div className="text-muted-foreground text-xs mb-2 whitespace-pre-line">
+                  <AutoLinkedText>{treatment.description}</AutoLinkedText>
+                </div>
+                {treatment.link && (
+                  <Link to={treatment.link} className="text-link hover:text-link-hover text-xs font-medium">
+                    Learn more →
+                  </Link>
+                )}
+              </div>
+            </details>
+          ))}
+        </div>
+
+        {/* Desktop: full cards */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {treatmentsList.map((treatment, index) => (
-            <div 
-              key={treatment.title} 
+            <div
+              key={treatment.title}
               className="bg-accent rounded-lg p-6 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -75,10 +99,7 @@ const PopularTreatments = memo(({
                 <AutoLinkedText>{treatment.description}</AutoLinkedText>
               </div>
               {treatment.link ? (
-                <Link 
-                  to={treatment.link}
-                  className="text-link hover:text-link-hover text-sm font-medium transition-colors"
-                >
+                <Link to={treatment.link} className="text-link hover:text-link-hover text-sm font-medium transition-colors">
                   Learn more →
                 </Link>
               ) : (
