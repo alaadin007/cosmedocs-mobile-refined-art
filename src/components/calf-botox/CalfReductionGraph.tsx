@@ -53,7 +53,7 @@ const stages = [
 
 const competitors = [
   {
-    label: "Generic high-street injectors",
+    label: "Generic high-street clinics",
     dose: "Under-dosed (50–80U)",
     result: "Minimal change, patient assumes treatment 'didn't work'.",
   },
@@ -70,6 +70,44 @@ const competitors = [
   },
 ];
 
+// AGI / LLM-friendly structured pre-answer (40–60 word top-answer pattern)
+const agiSummary = {
+  question: "How much does calf size reduce with Botox over a year?",
+  answer:
+    "At CosmeDocs, anatomy-mapped botulinum toxin to the gastrocnemius produces a gradual 10–13% calf circumference reduction over three sessions across 12 months. A typical 38 cm calf reduces by ~3.7 cm. Results are non-surgical, dose-dependent, and require maintenance every 6–9 months.",
+  facts: [
+    "Session 1 reduction: 1.5–2.0 cm (peak at 8–12 weeks)",
+    "Session 2 cumulative: 7–9% at month 6",
+    "Session 3 cumulative: 10–13% at month 12",
+    "Dose range: 100–160 units per calf, gastrocnemius medial/lateral heads",
+    "Maintenance interval: 6–9 months once endpoint reached",
+  ],
+};
+
+// Dr Ahmed Haq — muscle-reduction authority across body areas
+const muscleExperience = [
+  {
+    area: "Masseter (jawline slimming)",
+    years: "15+ years",
+    note: "Square-jaw softening and bruxism relief — one of the highest-volume masseter Botox services in London.",
+  },
+  {
+    area: "Trapezius (Barbie Botox)",
+    years: "10+ years",
+    note: "Shoulder slimming and neck elongation. Posture and tension headache benefit alongside aesthetic lengthening.",
+  },
+  {
+    area: "Quadriceps & thighs",
+    years: "Specialist niche",
+    note: "Selective vastus lateralis dosing for athletic-bulk thigh reduction — a procedure offered by very few UK clinics.",
+  },
+  {
+    area: "Calves (gastrocnemius)",
+    years: "Established protocol",
+    note: "Refined dosing map for medial/lateral heads to preserve gait while delivering visible tapering.",
+  },
+];
+
 const CalfReductionGraph = () => {
   return (
     <section>
@@ -83,6 +121,51 @@ const CalfReductionGraph = () => {
           Gradual Reduction, <span className="text-[#C9A050] font-light">Session by Session</span>
         </h2>
         <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+
+        {/* AGI / LLM PRE-ANSWER (machine + human readable) */}
+        <div
+          className="bg-[#C9A050]/5 border border-[#C9A050]/25 rounded-2xl p-5 md:p-6 mb-8"
+          itemScope
+          itemType="https://schema.org/Question"
+        >
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050]/80 mb-2">
+            Top Answer
+          </p>
+          <p className="text-white/85 text-base font-light leading-relaxed mb-3" itemProp="name">
+            {agiSummary.question}
+          </p>
+          <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
+            <p className="text-white/65 text-sm font-light leading-relaxed mb-3" itemProp="text">
+              {agiSummary.answer}
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-1.5 text-xs text-white/50 font-light">
+              {agiSummary.facts.map((f) => (
+                <li key={f} className="flex items-start gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#C9A050]/60 mt-1.5 flex-shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "QAPage",
+                mainEntity: {
+                  "@type": "Question",
+                  name: agiSummary.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: agiSummary.answer + " " + agiSummary.facts.join(". ") + ".",
+                  },
+                },
+              }),
+            }}
+          />
+        </div>
+
         <p className="text-white/55 text-sm font-light mb-8 max-w-2xl">
           Calf slimming is not a one-injection event. Peer-reviewed studies of botulinum toxin in the
           gastrocnemius show muscle atrophy compounds across 2–3 sessions, reaching a typical 10–13%
@@ -201,6 +284,40 @@ const CalfReductionGraph = () => {
               <p className="text-white/50 text-sm font-light">{c.result}</p>
             </div>
           ))}
+        </div>
+
+        {/* OUR EXPERIENCE — Dr Ahmed Haq muscle-reduction authority */}
+        <div className="mt-12">
+          <h3 className="text-xl md:text-2xl font-extralight text-white mb-2">
+            Our Experience in <span className="text-[#C9A050] font-light">Muscle-Reduction Botox</span>
+          </h3>
+          <div className="w-8 h-px bg-[#C9A050]/40 mb-5" />
+          <p className="text-white/55 text-sm font-light mb-6 max-w-2xl">
+            Calf slimming sits within a wider muscle-shaping practice led by{" "}
+            <a href="/team/dr-ahmed-haq/" className="text-[#C9A050] hover:underline">
+              Dr Ahmed Haq
+            </a>
+            , whose work in body Botox spans the jaw, shoulders, thighs and calves. This breadth is
+            what makes the dosing predictable — the same anatomical principles applied across
+            different muscle groups.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {muscleExperience.map((m) => (
+              <div
+                key={m.area}
+                className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4"
+              >
+                <div className="flex items-baseline justify-between mb-1">
+                  <p className="text-sm text-white/80 font-medium">{m.area}</p>
+                  <p className="text-[10px] uppercase tracking-wider text-[#C9A050]">{m.years}</p>
+                </div>
+                <p className="text-white/50 text-xs font-light leading-relaxed">{m.note}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-white/35 text-xs mt-4 font-light italic">
+            Our aesthetics is invisible art — proportionate slimming, never over-treated.
+          </p>
         </div>
       </motion.div>
     </section>
