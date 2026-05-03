@@ -9,6 +9,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import CalfBotoxSidebar from "@/components/calf-botox/CalfBotoxSidebar";
+import CalfReductionGraph from "@/components/calf-botox/CalfReductionGraph";
 
 const beforeAfterImages = [
   {
