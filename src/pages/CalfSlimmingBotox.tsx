@@ -10,7 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import CalfBotoxSidebar from "@/components/calf-botox/CalfBotoxSidebar";
 import CalfReductionGraph from "@/components/calf-botox/CalfReductionGraph";
-import calfHeroGold from "@/assets/calf-hero-gold.png";
+import calfHeroGold from "@/assets/calf-hero-gold.jpg";
 
 const beforeAfterImages = [
   {
