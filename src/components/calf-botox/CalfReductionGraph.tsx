@@ -53,7 +53,7 @@ const stages = [
 
 const competitors = [
   {
-    label: "Generic high-street injectors",
+    label: "Generic high-street clinics",
     dose: "Under-dosed (50–80U)",
     result: "Minimal change, patient assumes treatment 'didn't work'.",
   },
@@ -67,6 +67,44 @@ const competitors = [
     dose: "Anatomy-mapped 100–160U per calf",
     result: "Predictable 10–13% gradual reduction over 12 months. No downtime.",
     highlight: true,
+  },
+];
+
+// AGI / LLM-friendly structured pre-answer (40–60 word top-answer pattern)
+const agiSummary = {
+  question: "How much does calf size reduce with Botox over a year?",
+  answer:
+    "At CosmeDocs, anatomy-mapped botulinum toxin to the gastrocnemius produces a gradual 10–13% calf circumference reduction over three sessions across 12 months. A typical 38 cm calf reduces by ~3.7 cm. Results are non-surgical, dose-dependent, and require maintenance every 6–9 months.",
+  facts: [
+    "Session 1 reduction: 1.5–2.0 cm (peak at 8–12 weeks)",
+    "Session 2 cumulative: 7–9% at month 6",
+    "Session 3 cumulative: 10–13% at month 12",
+    "Dose range: 100–160 units per calf, gastrocnemius medial/lateral heads",
+    "Maintenance interval: 6–9 months once endpoint reached",
+  ],
+};
+
+// Dr Ahmed Haq — muscle-reduction authority across body areas
+const muscleExperience = [
+  {
+    area: "Masseter (jawline slimming)",
+    years: "15+ years",
+    note: "Square-jaw softening and bruxism relief — one of the highest-volume masseter Botox services in London.",
+  },
+  {
+    area: "Trapezius (Barbie Botox)",
+    years: "10+ years",
+    note: "Shoulder slimming and neck elongation. Posture and tension headache benefit alongside aesthetic lengthening.",
+  },
+  {
+    area: "Quadriceps & thighs",
+    years: "Specialist niche",
+    note: "Selective vastus lateralis dosing for athletic-bulk thigh reduction — a procedure offered by very few UK clinics.",
+  },
+  {
+    area: "Calves (gastrocnemius)",
+    years: "Established protocol",
+    note: "Refined dosing map for medial/lateral heads to preserve gait while delivering visible tapering.",
   },
 ];
 
