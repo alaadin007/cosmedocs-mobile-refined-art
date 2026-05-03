@@ -285,6 +285,40 @@ const CalfReductionGraph = () => {
             </div>
           ))}
         </div>
+
+        {/* OUR EXPERIENCE — Dr Ahmed Haq muscle-reduction authority */}
+        <div className="mt-12">
+          <h3 className="text-xl md:text-2xl font-extralight text-white mb-2">
+            Our Experience in <span className="text-[#C9A050] font-light">Muscle-Reduction Botox</span>
+          </h3>
+          <div className="w-8 h-px bg-[#C9A050]/40 mb-5" />
+          <p className="text-white/55 text-sm font-light mb-6 max-w-2xl">
+            Calf slimming sits within a wider muscle-shaping practice led by{" "}
+            <a href="/team/dr-ahmed-haq/" className="text-[#C9A050] hover:underline">
+              Dr Ahmed Haq
+            </a>
+            , whose work in body Botox spans the jaw, shoulders, thighs and calves. This breadth is
+            what makes the dosing predictable — the same anatomical principles applied across
+            different muscle groups.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {muscleExperience.map((m) => (
+              <div
+                key={m.area}
+                className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4"
+              >
+                <div className="flex items-baseline justify-between mb-1">
+                  <p className="text-sm text-white/80 font-medium">{m.area}</p>
+                  <p className="text-[10px] uppercase tracking-wider text-[#C9A050]">{m.years}</p>
+                </div>
+                <p className="text-white/50 text-xs font-light leading-relaxed">{m.note}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-white/35 text-xs mt-4 font-light italic">
+            Our aesthetics is invisible art — proportionate slimming, never over-treated.
+          </p>
+        </div>
       </motion.div>
     </section>
   );
