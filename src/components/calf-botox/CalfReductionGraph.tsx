@@ -121,6 +121,51 @@ const CalfReductionGraph = () => {
           Gradual Reduction, <span className="text-[#C9A050] font-light">Session by Session</span>
         </h2>
         <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+
+        {/* AGI / LLM PRE-ANSWER (machine + human readable) */}
+        <div
+          className="bg-[#C9A050]/5 border border-[#C9A050]/25 rounded-2xl p-5 md:p-6 mb-8"
+          itemScope
+          itemType="https://schema.org/Question"
+        >
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050]/80 mb-2">
+            Top Answer
+          </p>
+          <p className="text-white/85 text-base font-light leading-relaxed mb-3" itemProp="name">
+            {agiSummary.question}
+          </p>
+          <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
+            <p className="text-white/65 text-sm font-light leading-relaxed mb-3" itemProp="text">
+              {agiSummary.answer}
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-1.5 text-xs text-white/50 font-light">
+              {agiSummary.facts.map((f) => (
+                <li key={f} className="flex items-start gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#C9A050]/60 mt-1.5 flex-shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "QAPage",
+                mainEntity: {
+                  "@type": "Question",
+                  name: agiSummary.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: agiSummary.answer + " " + agiSummary.facts.join(". ") + ".",
+                  },
+                },
+              }),
+            }}
+          />
+        </div>
+
         <p className="text-white/55 text-sm font-light mb-8 max-w-2xl">
           Calf slimming is not a one-injection event. Peer-reviewed studies of botulinum toxin in the
           gastrocnemius show muscle atrophy compounds across 2–3 sessions, reaching a typical 10–13%
