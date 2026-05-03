@@ -194,32 +194,50 @@ const CalfSlimmingBotox = () => {
               currentPage="Calf Reduction Botox"
             />
 
-            <div className="pt-12 pb-4 max-w-3xl">
+            <div className="pt-8 md:pt-12 pb-4 grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
+                className="max-w-xl"
               >
                 <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
                   Calf Reduction{" "}
                   <span className="text-[#C9A050] font-light">Botox</span>
                 </h1>
                 <p className="text-sm text-[#C9A050]/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
-                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl">
+                <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight">
                   Non-surgical calf slimming through targeted muscle reduction — proportionate, refined, and contoured over time.
                 </p>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="mt-8 flex flex-wrap items-center gap-4 md:gap-6 text-xs text-white/25 tracking-wide uppercase"
+                >
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–30 Min</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />No Downtime</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Results: 6–10 Weeks</span>
+                </motion.div>
               </motion.div>
 
+              {/* Gold calf anatomy hero visual — visible on mobile */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-10 flex flex-wrap items-center gap-6 text-xs text-white/25 tracking-wide uppercase"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                className="relative mx-auto md:mx-0 w-44 sm:w-56 md:w-64 lg:w-72 flex-shrink-0"
               >
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />20–30 Min</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />No Downtime</span>
-                <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Results: 6–10 Weeks</span>
+                <div className="absolute inset-0 rounded-full bg-[#C9A050]/20 blur-3xl scale-90" aria-hidden="true" />
+                <img
+                  src={calfHeroGold}
+                  alt="Anatomical illustration of calf gastrocnemius muscle in luxury gold — Calf Reduction Botox at CosmeDocs"
+                  width={1080}
+                  height={1920}
+                  fetchPriority="high"
+                  className="relative w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(201,160,80,0.25)]"
+                />
               </motion.div>
             </div>
           </div>
