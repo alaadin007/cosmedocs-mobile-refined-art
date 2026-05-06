@@ -53,10 +53,9 @@ export default defineConfig(({ mode }) => ({
           if (id.includes('react-helmet')) {
             return 'react-core';
           }
-          // Charts
-          if (id.includes('recharts') || id.includes('d3')) {
-            return 'charts';
-          }
+          // Charts: do NOT manually group recharts + d3 — causes
+          // "Cannot access 'e' before initialization" due to circular init order.
+          // Let Rollup handle splitting them automatically.
         },
       },
     },
