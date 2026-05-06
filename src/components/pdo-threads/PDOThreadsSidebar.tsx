@@ -36,7 +36,7 @@ const PDOThreadsSidebar = () => {
           {[
             { tier: "Mono Threads", price: "From £350" },
             { tier: "Cog Threads", price: "From £850" },
-            { tier: "Full Thread Lift", price: "From £1,500" },
+            { tier: "Full Thread Lift", price: "From £2,500" },
           ].map((item) => (
             <div key={item.tier} className="flex items-center justify-between text-sm">
               <span className="text-white/40">{item.tier}</span>
