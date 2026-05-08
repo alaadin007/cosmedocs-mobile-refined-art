@@ -21,19 +21,20 @@ import {
 import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import TrainingEnquiryForm from "@/components/training/TrainingEnquiryForm";
 
 const AestheticTraining = () => {
   const seoData = generateSEOMetadata(
-    "Aesthetic Medicine Training | Cosmedocs London",
-    "Fellowship training with Harley Street Institute since 2014. Live clinic mentorship with real patients.",
-    "/aesthetic-training"
+    "Aesthetic Medicine Training London | Cosmedocs Faculty",
+    "Doctor-led aesthetic medicine training on Harley Street. Fellowship, foundation & advanced courses for GMC, GDC, NMC & GPhC professionals. In partnership with Harley Street Institute.",
+    "/training/"
   );
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Cosmedocs Aesthetic Medicine Training",
-    "url": "https://www.cosmedocs.com/aesthetic-training",
+    "url": "https://www.cosmedocs.com/training/",
     "description": "Fellowship in Aesthetic Medicine offering comprehensive training in injectable procedures and non-surgical treatments",
     "partner": {
       "@type": "Organization",
