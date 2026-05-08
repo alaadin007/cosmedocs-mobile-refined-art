@@ -556,6 +556,24 @@ const AestheticTraining = () => {
           </div>
         </section>
 
+        {/* Training Enquiry Form */}
+        <section id="enquire" className="py-16 px-4 bg-black">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Enquire About Training</h2>
+              <p className="text-gray-400">Speak with the Cosmedocs Faculty office. All enquiries answered within one working day.</p>
+            </div>
+            <TrainingEnquiryForm />
+            <p className="text-center text-xs text-gray-500 mt-6">
+              Cosmedocs Faculty operates in academic partnership with{" "}
+              <a href="https://www.harleystreetinstitute.com" target="_blank" rel="noopener" className="text-amber-400 underline">
+                Harley Street Institute
+              </a>{" "}
+              for accredited fellowship certification.
+            </p>
+          </div>
+        </section>
+
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
           <h2>Cosmedocs Fellowship Aesthetic Medicine Training London Harley Street Institute Partnership</h2>

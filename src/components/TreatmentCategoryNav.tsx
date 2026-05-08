@@ -166,6 +166,13 @@ export default function TreatmentCategoryNav() {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
+          <Button
+            variant="ghost"
+            onClick={() => navigate("/training/")}
+            className="text-sm px-4 py-2 rounded-md whitespace-nowrap text-amber-300 hover:text-amber-200 hover:bg-amber-400/10 border border-amber-400/30"
+          >
+            Training
+          </Button>
         </div>
       </div>
     </div>

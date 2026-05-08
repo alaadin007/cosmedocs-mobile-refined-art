@@ -1,3 +1,7 @@
+
+# Training canonical hub
+/aesthetic-training              /training/                          301
+/aesthetic-training/             /training/                          301
 # =====================================================
 # PHASE 1: Treatment URL Migration - 301 Redirects
 # Flat URLs redirect to new /treatments/ nested structure
