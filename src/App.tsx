@@ -1005,7 +1005,10 @@ const App = () => {
                           <Route path="/social-media-gallery" element={<SocialMediaGallery />} />
                           <Route path="/social-media-gallery/" element={<SocialMediaGallery />} />
                           
+                          <Route path="/training" element={<AestheticTraining />} />
+                          <Route path="/training/" element={<AestheticTraining />} />
                           <Route path="/aesthetic-training" element={<AestheticTraining />} />
+                          <Route path="/aesthetic-training/" element={<AestheticTraining />} />
                           
                           {/* 404 catch-all */}
                           <Route path="*" element={<NotFound />} />

@@ -775,6 +775,45 @@ export type Database = {
         }
         Relationships: []
       }
+      training_enquiries: {
+        Row: {
+          course_interest: string | null
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          message: string | null
+          phone: string | null
+          profession: string | null
+          registration_pin: string | null
+          source: string | null
+        }
+        Insert: {
+          course_interest?: string | null
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          message?: string | null
+          phone?: string | null
+          profession?: string | null
+          registration_pin?: string | null
+          source?: string | null
+        }
+        Update: {
+          course_interest?: string | null
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          message?: string | null
+          phone?: string | null
+          profession?: string | null
+          registration_pin?: string | null
+          source?: string | null
+        }
+        Relationships: []
+      }
       treatment_images: {
         Row: {
           created_at: string
