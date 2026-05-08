@@ -31,7 +31,7 @@ export default function TrainingEnquiryForm() {
       return;
     }
     setSubmitting(true);
-    const { error } = await supabase.from("training_enquiries").insert([
+    const { error } = await (supabase as any).from("training_enquiries").insert([
       { ...form, source: "training-page" },
     ]);
     setSubmitting(false);
@@ -46,11 +46,11 @@ export default function TrainingEnquiryForm() {
   if (submitted) {
     return (
       <Card className="bg-zinc-900 border-amber-500/30">
-        <Cardground className="p-8 text-center">
+        <CardContent className="p-8 text-center">
           <GraduationCap className="h-12 w-12 text-amber-400 mx-auto mb-4" />
           <h3 className="text-2xl font-semibold text-white mb-2">Thank you</h3>
           <p className="text-gray-300">Your training enquiry has been received. Our faculty office will respond within one working day.</p>
-        </Cardground>
+        </CardContent>
       </Card>
     );
   }
