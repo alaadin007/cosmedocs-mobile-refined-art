@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Send, Sparkles, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import TypewriterText from "./TypewriterText";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -126,11 +127,18 @@ export default function InlineAIChat() {
                   : "bg-white/[0.05] text-white/80 rounded-tl-sm border border-white/[0.06]"
               }`}
             >
-              {msg.content.split("\n").map((line, j) => (
-                <p key={j} className={j > 0 ? "mt-2" : ""}>
-                  {line}
-                </p>
-              ))}
+              {msg.role === "assistant" ? (
+                <TypewriterText
+                  text={msg.content}
+                  enabled={i === messages.length - 1}
+                />
+              ) : (
+                msg.content.split("\n").map((line, j) => (
+                  <p key={j} className={j > 0 ? "mt-2" : ""}>
+                    {line}
+                  </p>
+                ))
+              )}
             </div>
           </div>
         ))}

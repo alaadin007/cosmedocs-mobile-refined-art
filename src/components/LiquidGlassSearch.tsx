@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Send, X, Loader2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import TypewriterText from "./TypewriterText";
 
 interface LiquidGlassSearchProps {
   isOpen: boolean;
@@ -173,9 +174,16 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                         : "bg-white/5 text-white/80 rounded-tl-sm"
                     }`}
                   >
-                    {msg.content.split('\n').map((line, j) => (
-                      <p key={j} className={j > 0 ? "mt-2" : ""}>{line}</p>
-                    ))}
+                    {msg.role === "assistant" ? (
+                      <TypewriterText
+                        text={msg.content}
+                        enabled={i === messages.length - 1}
+                      />
+                    ) : (
+                      msg.content.split('\n').map((line, j) => (
+                        <p key={j} className={j > 0 ? "mt-2" : ""}>{line}</p>
+                      ))
+                    )}
                   </div>
                 </div>
               ))}
