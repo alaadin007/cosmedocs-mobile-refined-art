@@ -6,6 +6,7 @@ import { Input } from "./ui/input";
 import { ScrollArea } from "./ui/scroll-area";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "./ui/use-toast";
+import TypewriterText from "./TypewriterText";
 
 interface Message {
   id: string;
@@ -259,7 +260,15 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                           : 'bg-white/5 border border-white/10 text-gray-100'
                       }`}
                     >
-                      <p className="text-sm whitespace-pre-wrap">{formatMessage(message.text)}</p>
+                      {message.isUser ? (
+                        <p className="text-sm whitespace-pre-wrap">{formatMessage(message.text)}</p>
+                      ) : (
+                        <TypewriterText
+                          className="text-sm whitespace-pre-wrap block"
+                          text={formatMessage(message.text)}
+                          enabled={message.id === messages[messages.length - 1]?.id && messages[messages.length - 1]?.isUser === false && message.id !== '1'}
+                        />
+                      )}
                       <span className={`text-xs mt-1 block ${message.isUser ? 'text-black/70' : 'text-gray-500'}`}>
                         {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </span>
