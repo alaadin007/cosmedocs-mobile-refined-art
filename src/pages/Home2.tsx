@@ -37,10 +37,10 @@ const popularTreatments = [
     link: "/treatments/dermal-fillers/",
   },
   {
-    title: "Skin Quality",
-    subtitle: "Bio-Remodelling",
-    description: "Advanced treatments for radiant, hydrated, healthier-looking skin",
-    link: "/treatments/skin-boosters/",
+    title: "Botox Jaw Reduction",
+    subtitle: "Masseter Slimming",
+    description: "Slim and soften a square jawline for a refined, balanced lower face",
+    link: "/treatments/masseter-botox/",
   },
   {
     title: "Under Eye",
@@ -49,10 +49,10 @@ const popularTreatments = [
     link: "/treatments/dermal-fillers/",
   },
   {
-    title: "Skin Rejuvenation",
-    subtitle: "Medical Aesthetics",
-    description: "Evidence-based solutions for texture, tone and overall skin health",
-    link: "/skin-treatments/",
+    title: "Jawline Definition",
+    subtitle: "Endolaser Lift",
+    description: "Sculpt and tighten the jawline with our advanced endolaser fibre lift",
+    link: "/treatments/laser-fibre-lift/",
   },
 ];
 
