@@ -256,6 +256,7 @@ const BotoxPlacementGuideLondon = lazy(() => import("./pages/blog/BotoxPlacement
 const VitaminCvsRetinol = lazy(() => import("./pages/blog/VitaminCvsRetinol"));
 const ThreeCellPhilosophy = lazy(() => import("./pages/blog/ThreeCellPhilosophy"));
 const WhyPHMattersVitaminC = lazy(() => import("./pages/blog/WhyPHMattersVitaminC"));
+const ToothChippingGrindingMasseter = lazy(() => import("./pages/blog/ToothChippingGrindingMasseter"));
 const BotoxFAQs = lazy(() => import("./pages/BotoxFAQs"));
 const UltimateBotoxGuide = lazy(() => import("./pages/UltimateBotoxGuide"));
 const Blepharoplasty = lazy(() => import("./pages/Blepharoplasty"));
@@ -951,6 +952,8 @@ const App = () => {
                           <Route path="/blog/three-cell-skin-philosophy/" element={<ThreeCellPhilosophy />} />
                           <Route path="/blog/why-ph-matters-vitamin-c" element={<WhyPHMattersVitaminC />} />
                           <Route path="/blog/why-ph-matters-vitamin-c/" element={<WhyPHMattersVitaminC />} />
+                          <Route path="/blog/tooth-chipping-grinding-masseter" element={<ToothChippingGrindingMasseter />} />
+                          <Route path="/blog/tooth-chipping-grinding-masseter/" element={<ToothChippingGrindingMasseter />} />
                           <Route path="/blog/botox-placement-guide-london" element={<BotoxPlacementGuideLondon />} />
                           <Route path="/blog/botox-placement-guide-london/" element={<BotoxPlacementGuideLondon />} />
 
