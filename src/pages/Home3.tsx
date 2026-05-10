@@ -5,6 +5,14 @@ import { useRef } from "react";
 import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
+import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
+import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
+import botoxBunnyImg from "@/assets/home3-botox-bunny-lines.jpg";
+import botoxNefertitiImg from "@/assets/home3-botox-nefertiti.jpg";
+import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
+import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
+import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
+import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
