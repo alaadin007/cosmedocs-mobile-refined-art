@@ -354,18 +354,18 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
   return (
     <Link
       to={card.href}
-      className={`group relative overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+      className={`group relative isolate overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
     >
       {card.image && (
-        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 z-0 w-full h-full object-cover" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
       {card.badge && (
-        <span className={`absolute top-5 left-5 z-10 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
+        <span className={`absolute top-5 left-5 z-[2] text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
           {card.badge}
         </span>
       )}
-      <div className="absolute inset-0 p-7 sm:p-9 flex flex-col justify-end">
+      <div className="absolute inset-0 z-[2] p-7 sm:p-9 flex flex-col justify-end">
         <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%]">{card.title}</h3>
         <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/80"} max-w-[88%]`}>{card.tagline}</p>
         <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"} group-hover:gap-2.5 transition-all`}>
