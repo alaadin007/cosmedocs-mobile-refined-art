@@ -255,24 +255,47 @@ const ChemicalPeel = () => {
                 </motion.div>
               </section>
 
-              {/* Peel to Reveal Section */}
+              {/* Don't Be Afraid — Start with Level 1 */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Peel to Reveal — <span className="text-[#C9A050] font-light">Our Signature Cocktail</span></h2>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2">Don't Be <span className="text-[#C9A050] font-light">Afraid</span></h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
                   <div className="bg-gradient-to-br from-[#C9A050]/10 to-transparent border border-[#C9A050]/20 rounded-2xl p-6 md:p-8">
-                    <p className="text-white/55 text-sm leading-relaxed font-light mb-4">
-                      <strong className="text-white/70">Peel to Reveal</strong> is CosmeDocs' proprietary multi-acid cocktail peel — a bespoke fusion of glycolic, lactic, salicylic, and TCA acids combined with mandelic acid, azelaic acid, pyruvic acid, kojic acid, glutathione, and natural botanical extracts including papaya, liquorice, and bearberry.
-                    </p>
-                    <p className="text-white/45 text-sm leading-relaxed font-light mb-4">
-                      Unlike single-acid peels, the Peel to Reveal cocktail is fully customisable by the clinician according to your specific skin concerns. Using our CRES system (Cleanse, Revitalise, Exfoliate, Stimulate), the treatment addresses over a dozen skin issues simultaneously — from acne and pigmentation to fine lines and dullness.
-                    </p>
-                    <p className="text-white/40 text-sm leading-relaxed font-light mb-6">
-                      Results are visible within 10 days. Treatment takes just 10–15 minutes with minimal downtime. Invisible art — transformation that speaks without saying a word.
-                    </p>
-                    <Link to="/peel-to-reveal/" className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:underline font-medium">
-                      Explore Peel to Reveal <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+                      <div className="rounded-xl overflow-hidden border border-white/[0.08]">
+                        <img
+                          src={peelLevel1MayJune}
+                          alt="Real patient before and after results from a Level 1 medical peel — visible improvement in skin tone and clarity from May to June at CosmeDocs Harley Street"
+                          className="w-full h-auto block"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-[#C9A050] text-xs uppercase tracking-[0.25em] font-medium mb-3">Start gently · Level 1 Medical Peel</p>
+                        <p className="text-white/70 text-base md:text-lg leading-relaxed font-light mb-4">
+                          Begin with our entry-level medical peel — a gentle, doctor-led treatment with a reassuringly simple promise.
+                        </p>
+                        <ul className="space-y-3 mb-5">
+                          <li className="flex items-start gap-3 text-sm text-white/60 font-light">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C9A050] flex-shrink-0" />
+                            <span><span className="text-white/85">10-minute treatment</span> — fits into your lunch break.</span>
+                          </li>
+                          <li className="flex items-start gap-3 text-sm text-white/60 font-light">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C9A050] flex-shrink-0" />
+                            <span><span className="text-white/85">Visibly improved skin in 10 days</span> — tone, clarity, and texture refreshed.</span>
+                          </li>
+                          <li className="flex items-start gap-3 text-sm text-white/60 font-light">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C9A050] flex-shrink-0" />
+                            <span><span className="text-white/85">Suitable for most skin indications</span> — pigmentation, dullness, congestion, fine lines.</span>
+                          </li>
+                          <li className="flex items-start gap-3 text-sm text-white/60 font-light">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C9A050] flex-shrink-0" />
+                            <span><span className="text-white/85">No downtime, no flaking</span> — you walk in, you walk out, you glow.</span>
+                          </li>
+                        </ul>
+                        <p className="text-xs text-white/30 italic">Real patient — Level 1 medical peel. May → June. Doctor-led at Harley Street.</p>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </section>
