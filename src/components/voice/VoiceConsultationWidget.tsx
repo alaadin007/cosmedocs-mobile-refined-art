@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Phone, X } from 'lucide-react';
 import VoiceConversation from './VoiceConversation';
 
 const VoiceConsultationWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  if (pathname.startsWith('/home3')) return null;
 
   return (
     <>
