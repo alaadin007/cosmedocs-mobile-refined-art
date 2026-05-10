@@ -381,10 +381,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const get = (t: string) => byTitle[t];
 
   const columns: Column[] = [
-    { kind: "big",   card: get("Three-Area Botox") },
-    { kind: "stack", cards: [get("One Area"), get("Two Areas")] },
-    { kind: "big",   card: get("Forehead Botox") },
-    { kind: "stack", cards: [get("Frown Lines · 11s"), get("Crow's Feet")] },
+    { kind: "big",   card: get("1, 2 or 3 Areas Botox") },
     { kind: "big",   card: get("Lip Flip") },
     { kind: "stack", cards: [get("Brow Lift"), get("Bunny Lines")] },
     { kind: "big",   card: get("Nefertiti Neck Lift") },
