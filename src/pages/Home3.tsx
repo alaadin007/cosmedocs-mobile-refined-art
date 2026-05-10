@@ -5,6 +5,14 @@ import { useRef } from "react";
 import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
+import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
+import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
+import botoxBunnyImg from "@/assets/home3-botox-bunny-lines.jpg";
+import botoxNefertitiImg from "@/assets/home3-botox-nefertiti.jpg";
+import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
+import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
+import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
+import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -56,33 +64,50 @@ const botoxAesthetic: SubCard[] = [
     title: "Lip Flip",
     tagline: "A whisper of upper-lip lift",
     href: "/treatments/lip-flip/",
-    bg: "bg-gradient-to-br from-pink-200 to-rose-400",
-    ink: "text-zinc-900",
+    bg: "bg-black",
+    image: botoxLipFlipImg,
   },
   {
     title: "Gummy Smile",
     tagline: "Refined upper-lip line",
     href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]",
+    bg: "bg-black",
+    image: botoxGummyImg,
   },
   {
     title: "Mentalis · Chin",
     tagline: "Quiet the chin dimpling",
     href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-zinc-900 to-zinc-700",
+    bg: "bg-black",
+    image: botoxMentalisImg,
   },
   {
     title: "Nefertiti Neck Lift",
     tagline: "Sculpt the neck-jaw line",
     href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]",
+    bg: "bg-black",
+    image: botoxNefertitiImg,
   },
   {
     title: "Marionette / DAO",
     tagline: "Lift the corners of the mouth",
     href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-amber-100 to-orange-200",
-    ink: "text-zinc-900",
+    bg: "bg-black",
+    image: botoxMarionetteImg,
+  },
+  {
+    title: "Brow Lift",
+    tagline: "1–2 mm subtle elevation",
+    href: "/treatments/botox/",
+    bg: "bg-black",
+    image: botoxBrowLiftImg,
+  },
+  {
+    title: "Bunny Lines",
+    tagline: "Nose-bridge crinkles",
+    href: "/treatments/botox/",
+    bg: "bg-black",
+    image: botoxBunnyImg,
   },
   {
     title: "Smokers Lines",
@@ -95,8 +120,8 @@ const botoxAesthetic: SubCard[] = [
     title: "Nasal Flaring",
     tagline: "Calm nostril movement",
     href: "/treatments/nasal-flaring-botox/",
-    bg: "bg-gradient-to-br from-stone-200 to-stone-400",
-    ink: "text-zinc-900",
+    bg: "bg-black",
+    image: botoxNasalImg,
   },
 ];
 
