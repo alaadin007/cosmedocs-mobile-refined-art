@@ -433,10 +433,11 @@ const TileCard = ({ card }: { card: SubCard }) => {
 // Tall "spotlight" card used as a column on its own.
 const SpotlightCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
-  return (
+
+  const front = (
     <Link
       to={card.href}
-      className={`group relative isolate overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+      className={`group relative isolate overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
     >
       {card.image && (
         <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 z-0 w-full h-full object-cover" />
@@ -451,12 +452,48 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%]">{card.title}</h3>
         <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/80"} max-w-[88%]`}>{card.tagline}</p>
         <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"} group-hover:gap-2.5 transition-all`}>
-          Discover <ArrowUpRight className="w-4 h-4" />
+          {card.flipImages ? "Hover to see results" : "Discover"} <ArrowUpRight className="w-4 h-4" />
         </span>
       </div>
     </Link>
   );
+
+  if (!card.flipImages || card.flipImages.length === 0) return front;
+
+  return (
+    <div className="group [perspective:1400px] h-full w-full">
+      <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
+        <div className="absolute inset-0 [backface-visibility:hidden]">
+          {front}
+        </div>
+        <Link
+          to={card.href}
+          aria-label={`${card.title} — real patient results`}
+          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
+        >
+          <div className="flex flex-col h-full">
+            <div className="h-2/3 grid grid-rows-2 gap-1 bg-black">
+              {card.flipImages.map((img) => (
+                <div key={img.src} className="relative overflow-hidden bg-black">
+                  <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
+                </div>
+              ))}
+            </div>
+            <div className="h-1/3 p-6 sm:p-7 flex flex-col justify-center">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Real results</p>
+              <h3 className="font-serif text-2xl sm:text-3xl leading-tight tracking-tight">Unedited. Unfiltered.</h3>
+              <p className="mt-2 text-sm text-white/70">{card.flipNote ?? "Real patient outcomes."}</p>
+              <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050]">
+                Book your assessment <ArrowUpRight className="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
 };
+
 
 type Column =
   | { kind: "big"; card: SubCard }
