@@ -220,7 +220,7 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
   return (
     <Link
       to={card.href}
-      className={`group relative overflow-hidden ${card.bg} ${cardSizeClasses[size]} ${
+      className={`group block relative overflow-hidden ${card.bg} ${cardSizeClasses[size]} ${
         card.ink ?? "text-white"
       } transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
     >
