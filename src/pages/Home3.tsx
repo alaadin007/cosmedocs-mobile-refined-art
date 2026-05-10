@@ -107,8 +107,7 @@ const botoxAesthetic: SubCard[] = [
     title: "Nasal Flaring",
     tagline: "Calm nostril movement",
     href: "/treatments/nasal-flaring-botox/",
-    bg: "bg-[#f6efe4]",
-    ink: "text-zinc-900",
+    bg: "bg-black",
     image: botoxNasalImg,
   },
 ];
