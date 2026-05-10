@@ -232,19 +232,20 @@ const FlipReveal = () => {
             >
               <img
                 src={masseterFrontAugOct}
-                alt="Real patient front view: August before and October after masseter Botox showing slimmer lower face"
-                className="absolute inset-0 w-full h-full object-cover"
+                alt="Real patient before and after masseter Botox: narrower lower face, refined jawline contour"
+                className="absolute inset-0 w-full h-full object-contain bg-black"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40" />
-              <div className="absolute top-4 left-4">
+              <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black via-black/40 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black via-black/70 to-transparent" />
+              <div className="absolute top-4 left-1/2 -translate-x-1/2">
                 <span className="inline-block bg-[#C9A050] text-black text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full font-medium">
-                  After · 2 months
+                  Real result
                 </span>
               </div>
               <div className="absolute bottom-0 inset-x-0 p-6 text-center">
                 <p className="text-[#C9A050] font-serif text-xl md:text-2xl leading-tight mb-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                  August → October.
+                  Width refined. Features unchanged.
                 </p>
                 <p className="text-white/70 text-xs md:text-sm mb-3">
                   One real patient. Doctor-led, invisible art.
