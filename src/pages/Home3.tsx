@@ -644,6 +644,8 @@ const Home3 = () => {
             <div key={cat.id} className="border-b border-white/5">
               {cat.id === "botox-aesthetic" ? (
                 <BotoxAestheticSection category={cat} />
+              ) : cat.id === "botox-medical" ? (
+                <MedicalBotoxSection category={cat} />
               ) : (
                 <Row category={cat} index={i} />
               )}
