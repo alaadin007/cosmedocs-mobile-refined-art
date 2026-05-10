@@ -32,45 +32,12 @@ type Category = {
 /* ---------- Aesthetic Botox — full treatment list ----------------------- */
 const botoxAesthetic: SubCard[] = [
   {
-    title: "Three-Area Botox",
-    tagline: "Forehead · Frown · Crow's feet — our signature.",
+    title: "1, 2 or 3 Areas Botox",
+    tagline: "Forehead · Frown · Crow's feet — tailored to your face.",
     href: "/treatments/botox/",
     bg: "bg-black",
     image: botox3AreasImg,
     badge: "Signature",
-  },
-  {
-    title: "One Area",
-    tagline: "Single zone refinement",
-    href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-stone-200 to-stone-400",
-    ink: "text-zinc-900",
-    badge: "from £175",
-  },
-  {
-    title: "Two Areas",
-    tagline: "A balanced upper-face start",
-    href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-zinc-800 to-zinc-950",
-  },
-  {
-    title: "Forehead Botox",
-    tagline: "Smooth brow, kept natural",
-    href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-amber-50 to-amber-200",
-    ink: "text-zinc-900",
-  },
-  {
-    title: "Frown Lines · 11s",
-    tagline: "Soften the inter-brow",
-    href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]",
-  },
-  {
-    title: "Crow's Feet",
-    tagline: "Eye-corner refinement",
-    href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-neutral-800 to-black",
   },
   {
     title: "Brow Lift",
@@ -414,10 +381,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const get = (t: string) => byTitle[t];
 
   const columns: Column[] = [
-    { kind: "big",   card: get("Three-Area Botox") },
-    { kind: "stack", cards: [get("One Area"), get("Two Areas")] },
-    { kind: "big",   card: get("Forehead Botox") },
-    { kind: "stack", cards: [get("Frown Lines · 11s"), get("Crow's Feet")] },
+    { kind: "big",   card: get("1, 2 or 3 Areas Botox") },
     { kind: "big",   card: get("Lip Flip") },
     { kind: "stack", cards: [get("Brow Lift"), get("Bunny Lines")] },
     { kind: "big",   card: get("Nefertiti Neck Lift") },
