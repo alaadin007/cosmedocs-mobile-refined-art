@@ -6,6 +6,7 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import Breadcrumb from "@/components/Breadcrumb";
 import retinolImage from "@/assets/stimulate-re-retinol-cream.png";
 import vitaminCImage from "@/assets/revitalise-c20-vitamin-c-serum.png";
+import retinolHarleyStreetLifestyle from "@/assets/retinol-plus-harley-street-formulations.jpg";
 
 const RetinolCream = () => {
   const productSchema = {
@@ -299,6 +300,39 @@ const RetinolCream = () => {
                 </div>
               </div>
             </ExpandableSection>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            EDITORIAL — IN THE WILD
+        ═══════════════════════════════════════════ */}
+        <section className="py-16 sm:py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="relative">
+              <img
+                src={retinolHarleyStreetLifestyle}
+                alt="Retinol+ Dual Vitamin A Cream by Harley Street Formulations photographed on a London balcony"
+                className="w-full h-auto rounded-2xl shadow-xl object-cover"
+                loading="lazy"
+                width="1200"
+                height="1600"
+              />
+              <span className="absolute bottom-4 left-4 bg-white/85 backdrop-blur-sm text-[10px] uppercase tracking-[0.18em] text-gray-700 px-3 py-1.5 rounded-full">
+                Photographed on Harley Street, London
+              </span>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-amber-600 mb-3 font-medium">A bottle, in its city</p>
+              <h2 className="text-3xl sm:text-4xl font-light text-gray-900 leading-tight mb-5">
+                Quietly formulated. Quietly worn.
+              </h2>
+              <p className="text-gray-600 font-light leading-relaxed mb-4">
+                Stimulate Retinol+ is bottled in airless packaging to protect the encapsulated 0.5% Retinol from light and oxygen — the two things that quietly switch Vitamin A off. Used at night, it sits on the skin like a serum, not a chore.
+              </p>
+              <p className="text-gray-600 font-light leading-relaxed">
+                Bold • Natural • Always Your Way — our skincare follows the same code as our aesthetics. Invisible art, in a bottle.
+              </p>
+            </div>
           </div>
         </section>
 
