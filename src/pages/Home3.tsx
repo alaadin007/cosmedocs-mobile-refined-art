@@ -21,6 +21,7 @@ import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
+import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 
@@ -181,7 +182,18 @@ const categories: Category[] = [
     copy: "Reshaping — not refilling. The chin, nose, jawline and profile, refined with millimetre precision.",
     cta: { label: "Mini Facelifts hub", href: "/non-surgical-facelift/" },
     cards: [
-      { title: "Chin Filler", tagline: "Profile-balancing dose", href: "/treatments/chin-filler/", bg: "bg-gradient-to-br from-stone-200 to-stone-400", ink: "text-zinc-900" },
+      {
+        title: "Chin Filler",
+        tagline: "Profile-balancing dose",
+        href: "/treatments/chin-filler/",
+        bg: "bg-gradient-to-br from-stone-200 to-stone-400",
+        ink: "text-zinc-900",
+        image: chinFillerBaImg,
+        badge: "Profile",
+        flip: {
+          back: "A measured chin projection that re-balances the lower face — softening a recessive jaw, refining the side profile and lifting the chin-neck line. Doctor-led, millimetre dosing for a result that reads as bone, not filler.",
+        },
+      },
       { title: "Non-Surgical Nose", tagline: "Liquid rhinoplasty", href: "/treatments/nose-filler/", bg: "bg-gradient-to-br from-zinc-900 to-zinc-700" },
       { title: "Jawline Definition", tagline: "Filler & PCL threads", href: "/treatments/jawline-filler/", bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]" },
       { title: "Endolaser Lift", tagline: "Laser fibre tightening", href: "/treatments/laser-fibre-lift/", bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]", badge: "New" },
@@ -333,7 +345,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
             <p className="mt-2 text-sm text-white/80 max-w-md">{card.flip?.back}</p>
             <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050]">
-              Discover the HA Makeover <ArrowUpRight className="w-4 h-4" />
+              Discover {card.title} <ArrowUpRight className="w-4 h-4" />
             </span>
           </div>
         </Link>
