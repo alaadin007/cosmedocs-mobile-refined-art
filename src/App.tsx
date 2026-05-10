@@ -32,6 +32,7 @@ const AboutUsGerman = lazy(() => import("./pages/AboutUsGerman"));
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
+const Home3 = lazy(() => import("./pages/Home3"));
 const TestApp = lazy(() => import("./pages/TestApp"));
 
 const Prices = lazy(() => import("./pages/Prices"));
@@ -326,6 +327,16 @@ const App = () => {
                     </Suspense>
                   } />
                   <Route path="/home2" element={<Navigate to="/" replace />} />
+                  <Route path="/home3" element={
+                    <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+                      <Home3 />
+                    </Suspense>
+                  } />
+                  <Route path="/home3/" element={
+                    <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+                      <Home3 />
+                    </Suspense>
+                  } />
                   <Route path="/testapp" element={
                     <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
                       <TestApp />
