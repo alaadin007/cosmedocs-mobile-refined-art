@@ -408,11 +408,11 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
     { kind: "grid",  cards: [get("Gummy Smile"), get("Mentalis · Chin"), get("Marionette / DAO"), get("Nasal Flaring")] },
   ];
 
-  // Column widths
-  const widthBig   = "w-[82vw] sm:w-[380px] md:w-[420px]";
-  const widthStack = "w-[64vw] sm:w-[300px] md:w-[330px]";
-  const widthGrid  = "w-[88vw] sm:w-[460px] md:w-[520px]";
-  const colHeight  = "h-[72vh] min-h-[540px] max-h-[760px]";
+  // Column widths — keep big card narrow enough on mobile so the next column peeks in
+  const widthBig   = "w-[72vw] sm:w-[380px] md:w-[420px]";
+  const widthStack = "w-[58vw] sm:w-[300px] md:w-[330px]";
+  const widthGrid  = "w-[80vw] sm:w-[460px] md:w-[520px]";
+  const colHeight  = "h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]";
 
   return (
     <motion.section
