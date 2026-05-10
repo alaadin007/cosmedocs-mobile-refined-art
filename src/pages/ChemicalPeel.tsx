@@ -63,15 +63,6 @@ const ChemicalPeel = () => {
       price: "From £250",
       link: "/treatments/chemical-peels/tca-peel/",
     },
-    {
-      name: "Peel to Reveal",
-      category: "Multi-Acid Cocktail",
-      bestFor: "Comprehensive renewal, anti-ageing, radiance",
-      depth: "Customised",
-      downtime: "3–5 days",
-      price: "From £150",
-      link: "/peel-to-reveal/",
-    },
   ];
 
   const supportingIngredients = [
