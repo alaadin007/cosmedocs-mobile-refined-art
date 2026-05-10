@@ -267,57 +267,72 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
   );
 };
 
-/* ---------- Flippable card (image front w/ gloss, text back) ---------- */
+/* ---------- Flippable card (simple front, image back) ------------------ */
+
+const FaceMark = () => (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 sm:w-20 sm:h-20" aria-hidden="true">
+    <path d="M32 6c10 0 18 8 18 20v8c0 13-8 24-18 24S14 47 14 34v-8C14 14 22 6 32 6Z" />
+    <path d="M22 30c1.5-1 3-1 4.5 0M37.5 30c1.5-1 3-1 4.5 0" />
+    <path d="M32 32v8M28 44c2 1.5 6 1.5 8 0" />
+    <path d="M20 24c-3 1-4 4-3 7M44 24c3 1 4 4 3 7" />
+  </svg>
+);
 
 const FlipCard = ({ card }: { card: SubCard }) => {
   return (
     <div className="group [perspective:1400px] h-full w-full">
       <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
+        {/* FRONT — minimal: face mark + title */}
         <Link
           to={card.href}
           aria-label={`${card.title} — ${card.tagline}`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] ${card.bg} text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+          className="absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-gradient-to-br from-[#1a1a1a] via-[#241b08] to-[#3a2d10] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
         >
+          {/* soft gold glow */}
+          <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-[360px] h-[360px] rounded-full blur-3xl opacity-40" style={{ background: "radial-gradient(closest-side, rgba(201,160,80,0.55), transparent)" }} />
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_40%)]" />
+
           {card.badge && (
             <span className="absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-[#C9A050] text-black font-semibold">
               {card.badge}
             </span>
           )}
-          <div className="flex flex-col h-full">
-            {card.image && (
-              <div className="relative w-full h-1/2 overflow-hidden bg-black">
-                <img
-                  src={card.image}
-                  alt={`${card.title} before and after — Cosmedocs`}
-                  className="absolute inset-0 w-full h-full object-contain"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_28%,rgba(255,255,255,0)_60%,rgba(201,160,80,0.12)_100%)]" />
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_60%_at_50%_-10%,rgba(255,255,255,0.22),transparent_55%)]" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-black/70" />
-              </div>
-            )}
-            <div className="flex-1 p-7 sm:p-8 flex flex-col justify-end">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
+
+          <div className="absolute inset-0 p-7 sm:p-9 flex flex-col">
+            <div className="flex-1 flex items-center justify-center text-[#C9A050]">
+              <FaceMark />
+            </div>
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Signature</p>
               <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
-              <p className="mt-2 text-sm text-white/75">{card.tagline}</p>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-white/60">
-                Hover to read more <ArrowUpRight className="w-3.5 h-3.5" />
+              <p className="mt-2 text-sm text-white/70">{card.tagline}</p>
+              <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-white/55">
+                Hover to see results <ArrowUpRight className="w-3.5 h-3.5" />
               </span>
             </div>
           </div>
         </Link>
 
+        {/* BACK — full before/after image + caption */}
         <Link
           to={card.href}
-          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-gradient-to-br from-[#C9A050] to-[#8a6d2c] text-black shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
+          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-black text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
         >
-          <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-between">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.24em] mb-3 opacity-70">Signature treatment</p>
-              <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
-              <p className="mt-4 text-sm sm:text-base leading-relaxed text-black/80">{card.flip?.back}</p>
-            </div>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold">
+          {card.image && (
+            <img
+              src={card.image}
+              alt={`${card.title} before and after — Cosmedocs`}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
+          {/* gloss + bottom shade for caption legibility */}
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_30%,rgba(0,0,0,0)_60%,rgba(201,160,80,0.10)_100%)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+          <div className="absolute inset-0 p-7 sm:p-9 flex flex-col justify-end">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
+            <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
+            <p className="mt-2 text-sm text-white/80 max-w-md">{card.flip?.back}</p>
+            <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050]">
               Discover the HA Makeover <ArrowUpRight className="w-4 h-4" />
             </span>
           </div>
@@ -326,6 +341,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
     </div>
   );
 };
+
 
 /* ---------- Horizontal scroller (used by non-aesthetic rows) ----------- */
 
