@@ -20,6 +20,7 @@ import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
 import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
+import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -33,6 +34,7 @@ type SubCard = {
   ink?: string;
   badge?: string;
   image?: string;
+  flip?: { back: string };
 };
 
 type Category = {
@@ -145,9 +147,19 @@ const categories: Category[] = [
     copy: "Where the face has lost structure — cheeks, jowls, mid-face — hyaluronic acid restores it. Quietly. Architecturally.",
     cta: { label: "Dermal Fillers overview", href: "/treatments/dermal-fillers/" },
     cards: [
+      {
+        title: "HA Makeover",
+        tagline: "8 / 11-point lifting",
+        href: "/treatments/ha-makeover/",
+        bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
+        badge: "Signature",
+        image: haMakeoverBaImg,
+        flip: {
+          back: "A doctor-led architectural reset across cheeks, mid-face, jaw and chin — millimetre-by-millimetre, in a single signature appointment. Volume restored where time has taken it. Results that read as you, only rested.",
+        },
+      },
       { title: "Cheek Filler", tagline: "Mid-face lift, no surgery", href: "/treatments/cheek-filler/", bg: "bg-gradient-to-br from-amber-100 to-orange-200", ink: "text-zinc-900" },
       { title: "Jowl & Jawline", tagline: "Sharpen the lower face", href: "/treatments/jawline-filler/", bg: "bg-gradient-to-br from-zinc-800 to-zinc-950" },
-      { title: "HA Makeover", tagline: "8 / 11-point lifting", href: "/treatments/ha-makeover/", bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]", badge: "Signature" },
       { title: "Tear Trough", tagline: "Rested under-eyes", href: "/treatments/tear-trough-filler/", bg: "bg-gradient-to-br from-rose-100 to-rose-300", ink: "text-zinc-900" },
       { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
       { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", bg: "bg-gradient-to-br from-pink-200 to-rose-400", ink: "text-zinc-900" },
