@@ -605,6 +605,29 @@ const Home3 = () => {
           </Button>
         </section>
 
+        {/* Quick Links — pill nav at the bottom for fast jumping back up */}
+        <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-16 border-t border-white/5 pt-12">
+          <h2 className="font-serif text-2xl sm:text-3xl text-white mb-4">Quick Links</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {quickLinks.map((q) => (
+              <a
+                key={q.id}
+                href={`#${q.id}`}
+                onClick={handleQuickJump(q.id)}
+                className="px-5 py-2.5 rounded-full border border-white/20 text-white/85 hover:text-white hover:border-white/60 hover:bg-white/5 text-sm transition"
+              >
+                {q.label}
+              </a>
+            ))}
+            <Link
+              to="/contact/"
+              className="px-5 py-2.5 rounded-full border border-[#C9A050]/40 text-[#C9A050] hover:bg-[#C9A050]/10 text-sm transition"
+            >
+              Book consultation
+            </Link>
+          </div>
+        </section>
+
         <footer className="border-t border-white/10 py-10 px-5 sm:px-8">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-xs text-white/40">
             <p>© {new Date().getFullYear()} Cosmedocs. Doctor-led aesthetic medicine.</p>
