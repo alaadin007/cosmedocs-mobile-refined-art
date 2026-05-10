@@ -335,25 +335,100 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
   );
 };
 
-/* ---------- Aesthetic Botox bento (feature → split → full → split…) ---- */
+/* ---------- Aesthetic Botox bento — one horizontal row ----------------- */
+/* Pattern of columns (scroll →):
+   [Big feature] [2 stacked] [Big] [2 stacked] [Big] [2 stacked] [Big] [2×2 minors] [CTA]
+*/
+
+// Small "tile" card used inside stacked / grid columns — shorter height.
+const TileCard = ({ card }: { card: SubCard }) => {
+  const inkLight = !card.ink;
+  return (
+    <Link
+      to={card.href}
+      className={`group relative overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[24px] flex-1 min-h-0 transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]`}
+    >
+      {card.image && (
+        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
+      {card.badge && (
+        <span className={`absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
+          {card.badge}
+        </span>
+      )}
+      <div className="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end">
+        <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight">{card.title}</h3>
+        <p className={`mt-1.5 text-xs sm:text-sm ${card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+        <span className={`mt-3 inline-flex items-center gap-1 text-xs font-medium ${card.ink ? "text-zinc-900" : "text-white"} group-hover:gap-2 transition-all`}>
+          Discover <ArrowUpRight className="w-3.5 h-3.5" />
+        </span>
+      </div>
+    </Link>
+  );
+};
+
+// Tall "spotlight" card used as a column on its own.
+const SpotlightCard = ({ card }: { card: SubCard }) => {
+  const inkLight = !card.ink;
+  return (
+    <Link
+      to={card.href}
+      className={`group relative overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+    >
+      {card.image && (
+        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
+      {card.badge && (
+        <span className={`absolute top-5 left-5 z-10 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
+          {card.badge}
+        </span>
+      )}
+      <div className="absolute inset-0 p-7 sm:p-9 flex flex-col justify-end">
+        <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%]">{card.title}</h3>
+        <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/80"} max-w-[88%]`}>{card.tagline}</p>
+        <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"} group-hover:gap-2.5 transition-all`}>
+          Discover <ArrowUpRight className="w-4 h-4" />
+        </span>
+      </div>
+    </Link>
+  );
+};
+
+type Column =
+  | { kind: "big"; card: SubCard }
+  | { kind: "stack"; cards: SubCard[] }
+  | { kind: "grid"; cards: SubCard[] };
 
 const BotoxAestheticSection = ({ category }: { category: Category }) => {
-  const [feature, ...rest] = category.cards;
-  // Build alternating blocks of [splitPair, full, splitPair, full…]
-  const blocks: { kind: "split" | "full"; cards: SubCard[] }[] = [];
-  let i = 0;
-  let toggle: "split" | "full" = "split";
-  while (i < rest.length) {
-    if (toggle === "split") {
-      blocks.push({ kind: "split", cards: rest.slice(i, i + 2) });
-      i += 2;
-      toggle = "full";
-    } else {
-      blocks.push({ kind: "full", cards: [rest[i]] });
-      i += 1;
-      toggle = "split";
-    }
-  }
+  const scroller = useRef<HTMLDivElement>(null);
+  const scrollBy = (dir: 1 | -1) => {
+    const el = scroller.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * (el.clientWidth * 0.85), behavior: "smooth" });
+  };
+
+  // Cards by title for explicit composition
+  const byTitle = Object.fromEntries(category.cards.map((c) => [c.title, c]));
+  const get = (t: string) => byTitle[t];
+
+  const columns: Column[] = [
+    { kind: "big",   card: get("Three-Area Botox") },
+    { kind: "stack", cards: [get("One Area"), get("Two Areas")] },
+    { kind: "big",   card: get("Forehead Botox") },
+    { kind: "stack", cards: [get("Frown Lines · 11s"), get("Crow's Feet")] },
+    { kind: "big",   card: get("Lip Flip") },
+    { kind: "stack", cards: [get("Brow Lift"), get("Bunny Lines")] },
+    { kind: "big",   card: get("Nefertiti Neck Lift") },
+    { kind: "grid",  cards: [get("Gummy Smile"), get("Mentalis · Chin"), get("Marionette / DAO"), get("Nasal Flaring")] },
+  ];
+
+  // Column widths
+  const widthBig   = "w-[82vw] sm:w-[380px] md:w-[420px]";
+  const widthStack = "w-[64vw] sm:w-[300px] md:w-[330px]";
+  const widthGrid  = "w-[88vw] sm:w-[460px] md:w-[520px]";
+  const colHeight  = "h-[72vh] min-h-[540px] max-h-[760px]";
 
   return (
     <motion.section
@@ -366,50 +441,75 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
       aria-labelledby={`${category.id}-title`}
     >
       <div className="px-5 sm:px-8 max-w-7xl mx-auto">
-        <div className="mb-7">
-          <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#C9A050] mb-2">
-            {category.eyebrow}
-          </p>
-          <h2 id={`${category.id}-title`} className="font-serif text-3xl sm:text-5xl text-white leading-tight tracking-tight">
-            {category.title}
-          </h2>
-          <p className="mt-3 text-white/65 text-sm sm:text-base max-w-xl">{category.copy}</p>
+        <div className="flex items-end justify-between gap-4 mb-7">
+          <div className="min-w-0">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#C9A050] mb-2">{category.eyebrow}</p>
+            <h2 id={`${category.id}-title`} className="font-serif text-3xl sm:text-5xl text-white leading-tight tracking-tight">
+              {category.title}
+            </h2>
+            <p className="mt-3 text-white/65 text-sm sm:text-base max-w-xl">{category.copy}</p>
+          </div>
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
+            <button onClick={() => scrollBy(-1)} aria-label="Scroll left" className="w-10 h-10 rounded-full bg-white/8 hover:bg-white/15 backdrop-blur flex items-center justify-center text-white/80 transition">
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button onClick={() => scrollBy(1)} aria-label="Scroll right" className="w-10 h-10 rounded-full bg-white/8 hover:bg-white/15 backdrop-blur flex items-center justify-center text-white/80 transition">
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div className="space-y-5 sm:space-y-6">
-          {/* Feature card with the AI image */}
-          <TreatmentCard card={feature} size="feature" />
-
-          {blocks.map((block, idx) =>
-            block.kind === "split" ? (
-              <div
-                key={idx}
-                className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mx-5 sm:-mx-0 px-5 sm:px-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:overflow-visible"
-              >
-                {block.cards.map((c) => (
-                  <TreatmentCard key={c.title} card={c} size="split" />
-                ))}
+      <div
+        ref={scroller}
+        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-5 sm:px-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {columns.map((col, idx) => {
+          if (col.kind === "big") {
+            return (
+              <div key={idx} className={`shrink-0 snap-start ${widthBig} ${colHeight}`}>
+                <SpotlightCard card={col.card} />
               </div>
-            ) : (
-              <TreatmentCard key={idx} card={block.cards[0]} size="full" />
-            ),
-          )}
-
-          <Link
-            to={category.cta.href}
-            className="group block w-full rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur px-8 py-8 transition"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-[#C9A050] mb-1">Explore</p>
-                <p className="text-white font-serif text-2xl sm:text-3xl">{category.cta.label}</p>
+            );
+          }
+          if (col.kind === "stack") {
+            return (
+              <div key={idx} className={`shrink-0 snap-start ${widthStack} ${colHeight} flex flex-col gap-4 sm:gap-5`}>
+                {col.cards.map((c) => <TileCard key={c.title} card={c} />)}
               </div>
-              <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <ChevronRight className="w-5 h-5 text-[#C9A050]" />
-              </div>
+            );
+          }
+          // 2x2 grid for the 4 minor areas
+          return (
+            <div key={idx} className={`shrink-0 snap-start ${widthGrid} ${colHeight} grid grid-cols-2 grid-rows-2 gap-4 sm:gap-5`}>
+              {col.cards.map((c) => (
+                <Link
+                  key={c.title}
+                  to={c.href}
+                  className={`group relative overflow-hidden block ${c.bg} ${c.ink ?? "text-white"} rounded-[22px] transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]`}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
+                  <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-end">
+                    <h3 className="font-serif text-lg sm:text-xl leading-[1.1] tracking-tight">{c.title}</h3>
+                    <p className={`mt-1 text-[11px] sm:text-xs ${c.ink ? "text-zinc-700" : "text-white/75"}`}>{c.tagline}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </Link>
-        </div>
+          );
+        })}
+
+        {/* CTA column at end of row */}
+        <Link
+          to={category.cta.href}
+          className={`group shrink-0 snap-start ${widthStack} ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
+        >
+          <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <ChevronRight className="w-5 h-5 text-[#C9A050]" />
+          </div>
+          <p className="text-white text-sm font-medium leading-snug">{category.cta.label}</p>
+          <p className="text-white/50 text-xs mt-1">View all</p>
+        </Link>
       </div>
     </motion.section>
   );
