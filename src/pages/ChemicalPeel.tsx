@@ -129,9 +129,12 @@ const ChemicalPeel = () => {
             <div className="pt-12 pb-4 flex flex-col lg:flex-row items-center gap-10">
               <div className="max-w-2xl">
                 <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
-                     Skin <span className="text-[#C9A050] font-light">Peels</span> London
+                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-4">
+                     Peel <span className="text-[#C9A050] font-light">To Reveal</span>
                    </h1>
+                   <p className="text-sm md:text-base text-[#C9A050]/80 font-light tracking-wide mb-5">
+                     Fusion Cocktail Peel — multi-oxidants &amp; peeling actives
+                   </p>
                    <p className="text-base md:text-lg text-white/50 leading-relaxed font-light max-w-2xl">
                      A medical facial that removes dead skin cells — the root cause of uneven texture, dull tone, and premature ageing. Fresh, clear skin revealed in one session.
                    </p>
