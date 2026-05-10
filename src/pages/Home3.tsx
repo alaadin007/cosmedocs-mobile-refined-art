@@ -379,7 +379,8 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
 type Column =
   | { kind: "big"; card: SubCard }
   | { kind: "stack"; cards: SubCard[] }
-  | { kind: "grid"; cards: SubCard[] };
+  | { kind: "grid"; cards: SubCard[] }
+  | { kind: "list"; cards: SubCard[]; title?: string; eyebrow?: string };
 
 const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const scroller = useRef<HTMLDivElement>(null);
@@ -393,14 +394,22 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const byTitle = Object.fromEntries(category.cards.map((c) => [c.title, c]));
   const get = (t: string) => byTitle[t];
 
-  // Alternating rhythm: big dark → 2 small light → big dark → 2 small light …
+  // Hero spotlight + a single thin column listing every other refined area.
+  // Marketing cards can be slotted in afterwards.
+  const otherAreas = [
+    get("Brow Lift"),
+    get("Bunny Lines"),
+    get("Lip Flip"),
+    get("Gummy Smile"),
+    get("Mentalis · Chin"),
+    get("Nefertiti Neck Lift"),
+    get("Marionette / DAO"),
+    get("Nasal Flaring"),
+  ].filter(Boolean);
+
   const columns: Column[] = [
-    { kind: "big",   card: get("1, 2 or 3 Areas Botox") },
-    { kind: "stack", cards: [get("Brow Lift"), get("Bunny Lines")] },
-    { kind: "big",   card: get("Lip Flip") },
-    { kind: "stack", cards: [get("Gummy Smile"), get("Mentalis · Chin")] },
-    { kind: "big",   card: get("Nefertiti Neck Lift") },
-    { kind: "stack", cards: [get("Marionette / DAO"), get("Nasal Flaring")] },
+    { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
+    { kind: "list", cards: otherAreas, eyebrow: "Refined Areas", title: "Every other detail" },
   ];
 
   // Column widths — keep big card narrow enough on mobile so the next column peeks in
