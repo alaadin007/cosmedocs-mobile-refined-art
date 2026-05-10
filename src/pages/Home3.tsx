@@ -494,6 +494,73 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   );
 };
 
+/* ---------- Medical Botox — all large spotlight cards in a row ---------- */
+
+const MedicalBotoxSection = ({ category }: { category: Category }) => {
+  const scroller = useRef<HTMLDivElement>(null);
+  const scrollBy = (dir: 1 | -1) => {
+    const el = scroller.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * (el.clientWidth * 0.85), behavior: "smooth" });
+  };
+
+  const widthBig  = "w-[78vw] sm:w-[380px] md:w-[420px]";
+  const colHeight = "h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]";
+
+  return (
+    <motion.section
+      id={category.id}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6 }}
+      className="py-12 sm:py-16 scroll-mt-20"
+      aria-labelledby={`${category.id}-title`}
+    >
+      <div className="px-5 sm:px-8 max-w-7xl mx-auto">
+        <div className="flex items-end justify-between gap-4 mb-7">
+          <div className="min-w-0">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#C9A050] mb-2">{category.eyebrow}</p>
+            <h2 id={`${category.id}-title`} className="font-serif text-3xl sm:text-5xl text-white leading-tight tracking-tight">
+              {category.title}
+            </h2>
+            <p className="mt-3 text-white/65 text-sm sm:text-base max-w-xl">{category.copy}</p>
+          </div>
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
+            <button onClick={() => scrollBy(-1)} aria-label="Scroll left" className="w-10 h-10 rounded-full bg-white/8 hover:bg-white/15 backdrop-blur flex items-center justify-center text-white/80 transition">
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button onClick={() => scrollBy(1)} aria-label="Scroll right" className="w-10 h-10 rounded-full bg-white/8 hover:bg-white/15 backdrop-blur flex items-center justify-center text-white/80 transition">
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={scroller}
+        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-5 sm:px-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {category.cards.map((card) => (
+          <div key={card.title} className={`shrink-0 snap-start ${widthBig} ${colHeight}`}>
+            <SpotlightCard card={card} />
+          </div>
+        ))}
+        <Link
+          to={category.cta.href}
+          className={`group shrink-0 snap-start w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
+        >
+          <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <ChevronRight className="w-5 h-5 text-[#C9A050]" />
+          </div>
+          <p className="text-white text-sm font-medium leading-snug">{category.cta.label}</p>
+          <p className="text-white/50 text-xs mt-1">View all</p>
+        </Link>
+      </div>
+    </motion.section>
+  );
+};
+
 /* ---------- Quick Links ------------------------------------------------- */
 
 const quickLinks = categories.map((c) => ({ id: c.id, label: c.eyebrow.replace(" · ", " ") }));
