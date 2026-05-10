@@ -20,6 +20,7 @@ import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
 import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
+import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -33,6 +34,7 @@ type SubCard = {
   ink?: string;
   badge?: string;
   image?: string;
+  flip?: { back: string };
 };
 
 type Category = {
@@ -145,9 +147,19 @@ const categories: Category[] = [
     copy: "Where the face has lost structure — cheeks, jowls, mid-face — hyaluronic acid restores it. Quietly. Architecturally.",
     cta: { label: "Dermal Fillers overview", href: "/treatments/dermal-fillers/" },
     cards: [
+      {
+        title: "HA Makeover",
+        tagline: "8 / 11-point lifting",
+        href: "/treatments/ha-makeover/",
+        bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
+        badge: "Signature",
+        image: haMakeoverBaImg,
+        flip: {
+          back: "A doctor-led architectural reset across cheeks, mid-face, jaw and chin — millimetre-by-millimetre, in a single signature appointment. Volume restored where time has taken it. Results that read as you, only rested.",
+        },
+      },
       { title: "Cheek Filler", tagline: "Mid-face lift, no surgery", href: "/treatments/cheek-filler/", bg: "bg-gradient-to-br from-amber-100 to-orange-200", ink: "text-zinc-900" },
       { title: "Jowl & Jawline", tagline: "Sharpen the lower face", href: "/treatments/jawline-filler/", bg: "bg-gradient-to-br from-zinc-800 to-zinc-950" },
-      { title: "HA Makeover", tagline: "8 / 11-point lifting", href: "/treatments/ha-makeover/", bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]", badge: "Signature" },
       { title: "Tear Trough", tagline: "Rested under-eyes", href: "/treatments/tear-trough-filler/", bg: "bg-gradient-to-br from-rose-100 to-rose-300", ink: "text-zinc-900" },
       { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
       { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", bg: "bg-gradient-to-br from-pink-200 to-rose-400", ink: "text-zinc-900" },
@@ -246,6 +258,66 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
   );
 };
 
+/* ---------- Flippable card (image front w/ gloss, text back) ---------- */
+
+const FlipCard = ({ card }: { card: SubCard }) => {
+  return (
+    <div className="group [perspective:1400px] h-[60vh] min-h-[460px] max-h-[640px] w-full">
+      <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
+        <Link
+          to={card.href}
+          aria-label={`${card.title} — ${card.tagline}`}
+          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] ${card.bg} text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+        >
+          {card.badge && (
+            <span className="absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-[#C9A050] text-black font-semibold">
+              {card.badge}
+            </span>
+          )}
+          <div className="flex flex-col h-full">
+            {card.image && (
+              <div className="relative w-full h-1/2 overflow-hidden bg-black">
+                <img
+                  src={card.image}
+                  alt={`${card.title} before and after — Cosmedocs`}
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_28%,rgba(255,255,255,0)_60%,rgba(201,160,80,0.12)_100%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_60%_at_50%_-10%,rgba(255,255,255,0.22),transparent_55%)]" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-black/70" />
+              </div>
+            )}
+            <div className="flex-1 p-7 sm:p-8 flex flex-col justify-end">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
+              <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
+              <p className="mt-2 text-sm text-white/75">{card.tagline}</p>
+              <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-white/60">
+                Hover to read more <ArrowUpRight className="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          to={card.href}
+          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-gradient-to-br from-[#C9A050] to-[#8a6d2c] text-black shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
+        >
+          <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.24em] mb-3 opacity-70">Signature treatment</p>
+              <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-black/80">{card.flip?.back}</p>
+            </div>
+            <span className="inline-flex items-center gap-2 text-sm font-semibold">
+              Discover the HA Makeover <ArrowUpRight className="w-4 h-4" />
+            </span>
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
 /* ---------- Horizontal scroller (used by non-aesthetic rows) ----------- */
 
 const Row = ({ category, index }: { category: Category; index: number }) => {
@@ -298,7 +370,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
       >
         {category.cards.map((card) => (
           <div key={card.title} className="shrink-0 snap-start w-[82%] sm:w-[46%] lg:w-[34%]">
-            <TreatmentCard card={card} size="split" />
+            {card.flip ? <FlipCard card={card} /> : <TreatmentCard card={card} size="split" />}
           </div>
         ))}
         <Link
