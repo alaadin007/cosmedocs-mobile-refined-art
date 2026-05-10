@@ -21,6 +21,8 @@ import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
+import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
+import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -35,6 +37,8 @@ type SubCard = {
   badge?: string;
   image?: string;
   flip?: { back: string };
+  flipImages?: { src: string; alt: string }[];
+  flipNote?: string;
 };
 
 type Category = {
@@ -55,6 +59,11 @@ const botoxAesthetic: SubCard[] = [
     bg: "bg-black",
     image: botox3AreasImg,
     badge: "Signature",
+    flipImages: [
+      { src: botoxFrownBaImg, alt: "Frown line softening — before and after, Cosmedocs" },
+      { src: botoxForeheadBaImg, alt: "Forehead lines smoothed — before and after, Cosmedocs" },
+    ],
+    flipNote: "Real, unedited patient results.",
   },
   {
     title: "Brow Lift",
