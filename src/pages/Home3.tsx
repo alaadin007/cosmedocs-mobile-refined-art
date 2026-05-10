@@ -467,6 +467,35 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
               </div>
             );
           }
+          if (col.kind === "list") {
+            return (
+              <div
+                key={idx}
+                className={`shrink-0 snap-start ${widthStack} ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
+              >
+                <div className="px-6 pt-7 pb-5 border-b border-white/8">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">{col.eyebrow ?? "More Areas"}</p>
+                  <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">{col.title ?? "Every other detail"}</h3>
+                </div>
+                <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                  {col.cards.map((c) => (
+                    <li key={c.title}>
+                      <Link
+                        to={c.href}
+                        className="group flex items-start justify-between gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition"
+                      >
+                        <div className="min-w-0">
+                          <p className="font-serif text-[15px] text-white leading-snug truncate">{c.title}</p>
+                          <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
+                        </div>
+                        <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1 shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          }
           // 2x2 grid for the 4 minor areas
           return (
             <div key={idx} className={`shrink-0 snap-start ${widthGrid} ${colHeight} grid grid-cols-2 grid-rows-2 gap-4 sm:gap-5`}>
