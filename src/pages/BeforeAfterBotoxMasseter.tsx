@@ -179,84 +179,110 @@ const FlipReveal = () => {
         </motion.div>
 
         <div
-          className="relative mx-auto w-full max-w-md aspect-[4/5] cursor-pointer select-none"
+          className="relative mx-auto w-full max-w-md aspect-[4/5] select-none"
           style={{ perspective: "1600px" }}
-          onClick={() => setFlipped((f) => !f)}
-          role="button"
-          aria-pressed={flipped}
-          aria-label="Flip card to reveal real before and after photograph"
         >
-          <motion.div
-            className="relative w-full h-full"
-            style={{ transformStyle: "preserve-3d" }}
-            animate={{ rotateY: flipped ? 180 : 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          <button
+            type="button"
+            onClick={() => setFlipped((f) => !f)}
+            aria-pressed={flipped}
+            aria-label="Flip card to reveal real before and after photograph"
+            className="absolute inset-0 w-full h-full cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#C9A050]/60 rounded-2xl bg-transparent border-0 p-0"
+            style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            {/* Front */}
             <div
-              className="absolute inset-0 rounded-2xl overflow-hidden bg-black border border-[#C9A050]/30 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.25)]"
-              style={{ backfaceVisibility: "hidden" }}
+              className="relative w-full h-full transition-transform duration-700 ease-out"
+              style={{
+                transformStyle: "preserve-3d",
+                WebkitTransformStyle: "preserve-3d",
+                transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+              } as React.CSSProperties}
             >
-              <img
-                src={masseterFrontSlimming}
-                alt="Front-view illustration showing slimming of the lower face width with masseter Botox"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-                width={1024}
-                height={1024}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-              <div className="absolute top-4 left-4">
-                <span className="inline-block bg-black/60 backdrop-blur-sm text-[#C9A050] text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full border border-[#C9A050]/30">
-                  Before
-                </span>
+              {/* Front */}
+              <div
+                className="absolute inset-0 rounded-2xl overflow-hidden bg-black border border-[#C9A050]/30 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.25)]"
+                style={{
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                } as React.CSSProperties}
+              >
+                <img
+                  src={masseterFrontSlimming}
+                  alt="Front-view illustration showing slimming of the lower face width with masseter Botox"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  width={1024}
+                  height={1024}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
+                <div className="absolute top-4 left-4">
+                  <span className="inline-block bg-black/60 backdrop-blur-sm text-[#C9A050] text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full border border-[#C9A050]/30">
+                    Before
+                  </span>
+                </div>
+                <div className="absolute bottom-0 inset-x-0 p-6 text-center">
+                  <p className="text-[#C9A050] text-2xl md:text-3xl leading-tight mb-2" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                    A narrower jaw, quietly earned.
+                  </p>
+                  <p className="text-white/70 text-xs md:text-sm mb-4">
+                    Width softens. Proportions return.
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-[#C9A050] text-[11px] uppercase tracking-[0.25em]">
+                    <RotateCw className="w-3.5 h-3.5" />
+                    Tap to see the real result
+                  </span>
+                </div>
               </div>
-              <div className="absolute bottom-0 inset-x-0 p-6 text-center">
-                <p className="text-[#C9A050] font-serif text-2xl md:text-3xl leading-tight mb-2" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                  A narrower jaw, quietly earned.
-                </p>
-                <p className="text-white/70 text-xs md:text-sm mb-4">
-                  Width softens. Proportions return.
-                </p>
-                <span className="inline-flex items-center gap-2 text-[#C9A050] text-[11px] uppercase tracking-[0.25em]">
-                  <RotateCw className="w-3.5 h-3.5" />
-                  Tap to see the real result
-                </span>
-              </div>
-            </div>
 
-            {/* Back */}
-            <div
-              className="absolute inset-0 rounded-2xl overflow-hidden bg-black border border-[#C9A050]/40 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)]"
-              style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
-            >
-              <img
-                src={masseterFrontAugOct}
-                alt="Real patient before and after masseter Botox: narrower lower face, refined jawline contour"
-                className="absolute inset-0 w-full h-full object-contain bg-black"
-                loading="lazy"
-              />
-              <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black via-black/40 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black via-black/70 to-transparent" />
-              <div className="absolute top-4 left-1/2 -translate-x-1/2">
-                <span className="inline-block bg-[#C9A050] text-black text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full font-medium">
-                  Real result
-                </span>
-              </div>
-              <div className="absolute bottom-0 inset-x-0 p-6 text-center">
-                <p className="text-[#C9A050] font-serif text-xl md:text-2xl leading-tight mb-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                  Width refined. Features unchanged.
-                </p>
-                <p className="text-white/70 text-xs md:text-sm mb-3">
-                  One real patient. Doctor-led, invisible art.
-                </p>
-                <span className="inline-flex items-center gap-2 text-[#C9A050]/80 text-[11px] uppercase tracking-[0.25em]">
-                  <RotateCw className="w-3.5 h-3.5" />
-                  Tap to flip back
-                </span>
+              {/* Back */}
+              <div
+                className="absolute inset-0 rounded-2xl overflow-hidden bg-black border border-[#C9A050]/40 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)]"
+                style={{
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                  transform: "rotateY(180deg)",
+                  WebkitTransform: "rotateY(180deg)",
+                } as React.CSSProperties}
+              >
+                <img
+                  src={masseterFrontAugOct}
+                  alt="Real patient before and after masseter Botox: narrower lower face, refined jawline contour"
+                  className="absolute inset-0 w-full h-full object-contain bg-black"
+                  loading="lazy"
+                />
+                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black via-black/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
+                <div className="absolute top-4 left-1/2 -translate-x-1/2">
+                  <span className="inline-block bg-[#C9A050] text-black text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full font-medium">
+                    Real result
+                  </span>
+                </div>
+                <div className="absolute bottom-0 inset-x-0 p-6 text-center">
+                  <p className="text-[#C9A050] text-xl md:text-2xl leading-tight mb-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                    Width refined. Features unchanged.
+                  </p>
+                  <p className="text-white/70 text-xs md:text-sm mb-3">
+                    One real patient. Doctor-led, invisible art.
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-[#C9A050]/80 text-[11px] uppercase tracking-[0.25em]">
+                    <RotateCw className="w-3.5 h-3.5" />
+                    Tap to flip back
+                  </span>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </button>
+        </div>
+
+        <div className="text-center mt-5">
+          <button
+            type="button"
+            onClick={() => setFlipped((f) => !f)}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#C9A050]/40 text-[#C9A050] hover:bg-[#C9A050] hover:text-black text-xs uppercase tracking-[0.25em] transition-all duration-300"
+          >
+            <RotateCw className="w-3.5 h-3.5" />
+            {flipped ? "Show illustration" : "Reveal real result"}
+          </button>
         </div>
       </div>
     </section>
