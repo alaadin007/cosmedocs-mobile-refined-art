@@ -379,7 +379,8 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
 type Column =
   | { kind: "big"; card: SubCard }
   | { kind: "stack"; cards: SubCard[] }
-  | { kind: "grid"; cards: SubCard[] };
+  | { kind: "grid"; cards: SubCard[] }
+  | { kind: "list"; cards: SubCard[]; title?: string; eyebrow?: string };
 
 const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const scroller = useRef<HTMLDivElement>(null);
@@ -393,14 +394,22 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const byTitle = Object.fromEntries(category.cards.map((c) => [c.title, c]));
   const get = (t: string) => byTitle[t];
 
-  // Alternating rhythm: big dark → 2 small light → big dark → 2 small light …
+  // Hero spotlight + a single thin column listing every other refined area.
+  // Marketing cards can be slotted in afterwards.
+  const otherAreas = [
+    get("Brow Lift"),
+    get("Bunny Lines"),
+    get("Lip Flip"),
+    get("Gummy Smile"),
+    get("Mentalis · Chin"),
+    get("Nefertiti Neck Lift"),
+    get("Marionette / DAO"),
+    get("Nasal Flaring"),
+  ].filter(Boolean);
+
   const columns: Column[] = [
-    { kind: "big",   card: get("1, 2 or 3 Areas Botox") },
-    { kind: "stack", cards: [get("Brow Lift"), get("Bunny Lines")] },
-    { kind: "big",   card: get("Lip Flip") },
-    { kind: "stack", cards: [get("Gummy Smile"), get("Mentalis · Chin")] },
-    { kind: "big",   card: get("Nefertiti Neck Lift") },
-    { kind: "stack", cards: [get("Marionette / DAO"), get("Nasal Flaring")] },
+    { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
+    { kind: "list", cards: otherAreas, eyebrow: "Refined Areas", title: "Every other detail" },
   ];
 
   // Column widths — keep big card narrow enough on mobile so the next column peeks in
@@ -455,6 +464,35 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
             return (
               <div key={idx} className={`shrink-0 snap-start ${widthStack} ${colHeight} flex flex-col gap-4 sm:gap-5`}>
                 {col.cards.map((c) => <TileCard key={c.title} card={c} />)}
+              </div>
+            );
+          }
+          if (col.kind === "list") {
+            return (
+              <div
+                key={idx}
+                className={`shrink-0 snap-start ${widthStack} ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
+              >
+                <div className="px-6 pt-7 pb-5 border-b border-white/8">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">{col.eyebrow ?? "More Areas"}</p>
+                  <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">{col.title ?? "Every other detail"}</h3>
+                </div>
+                <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                  {col.cards.map((c) => (
+                    <li key={c.title}>
+                      <Link
+                        to={c.href}
+                        className="group flex items-start justify-between gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition"
+                      >
+                        <div className="min-w-0">
+                          <p className="font-serif text-[15px] text-white leading-snug truncate">{c.title}</p>
+                          <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
+                        </div>
+                        <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1 shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             );
           }
