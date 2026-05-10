@@ -97,16 +97,14 @@ const botoxAesthetic: SubCard[] = [
     title: "Marionette / DAO",
     tagline: "Lift the corners of the mouth",
     href: "/treatments/botox/",
-    bg: "bg-[#f6efe4]",
-    ink: "text-zinc-900",
+    bg: "bg-[#2a2a2a]",
     image: botoxMarionetteImg,
   },
   {
     title: "Nasal Flaring",
     tagline: "Calm nostril movement",
     href: "/treatments/nasal-flaring-botox/",
-    bg: "bg-[#f6efe4]",
-    ink: "text-zinc-900",
+    bg: "bg-[#2a2a2a]",
     image: botoxNasalImg,
   },
 ];
