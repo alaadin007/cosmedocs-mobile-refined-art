@@ -375,16 +375,23 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-5 sm:px-8 max-w-7xl mx-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-5 sm:px-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
-        {category.cards.map((card) => (
-          <div key={card.title} className="shrink-0 snap-start w-[82%] sm:w-[46%] lg:w-[34%]">
-            {card.flip ? <FlipCard card={card} /> : <TreatmentCard card={card} size="split" />}
-          </div>
-        ))}
+        {category.cards.map((card) => {
+          const isBig = !!card.flip;
+          const widthCls = isBig
+            ? "w-[72vw] sm:w-[380px] md:w-[420px]"
+            : "w-[58vw] sm:w-[300px] md:w-[330px]";
+          const heightCls = "h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]";
+          return (
+            <div key={card.title} className={`shrink-0 snap-start ${widthCls} ${heightCls}`}>
+              {card.flip ? <FlipCard card={card} /> : <TreatmentCard card={card} size="split" />}
+            </div>
+          );
+        })}
         <Link
           to={category.cta.href}
-          className="group snap-start shrink-0 w-[60%] sm:w-[220px] md:w-[260px] h-[60vh] min-h-[460px] max-h-[640px] rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition"
+          className="group snap-start shrink-0 w-[58vw] sm:w-[220px] md:w-[260px] h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px] rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition"
         >
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <ChevronRight className="w-5 h-5 text-[#C9A050]" />
