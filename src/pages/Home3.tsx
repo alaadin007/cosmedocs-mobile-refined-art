@@ -259,8 +259,8 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
   return (
     <motion.section
       id={category.id}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay: 0.05 * index }}
       className="py-12 sm:py-16 scroll-mt-20"
@@ -421,8 +421,8 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   return (
     <motion.section
       id={category.id}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
       className="py-12 sm:py-16 scroll-mt-20"
@@ -548,8 +548,8 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
   return (
     <motion.section
       id={category.id}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
       className="py-12 sm:py-16 scroll-mt-20"
