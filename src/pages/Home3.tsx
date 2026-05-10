@@ -799,6 +799,8 @@ const Home3 = () => {
                 <BotoxAestheticSection category={cat} />
               ) : cat.id === "botox-medical" ? (
                 <MedicalBotoxSection category={cat} />
+              ) : cat.id === "flawless-skin" ? (
+                <FlawlessSkinSection category={cat} />
               ) : (
                 <Row category={cat} index={i} />
               )}
