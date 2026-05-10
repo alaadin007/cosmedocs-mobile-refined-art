@@ -74,16 +74,14 @@ const botoxAesthetic: SubCard[] = [
     title: "Gummy Smile",
     tagline: "Refined upper-lip line",
     href: "/treatments/botox/",
-    bg: "bg-[#f6efe4]",
-    ink: "text-zinc-900",
+    bg: "bg-[#2a2a2a]",
     image: botoxGummyImg,
   },
   {
     title: "Mentalis · Chin",
     tagline: "Quiet the chin dimpling",
     href: "/treatments/botox/",
-    bg: "bg-[#f6efe4]",
-    ink: "text-zinc-900",
+    bg: "bg-[#2a2a2a]",
     image: botoxMentalisImg,
   },
   {
