@@ -271,7 +271,7 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
 
 const FlipCard = ({ card }: { card: SubCard }) => {
   return (
-    <div className="group [perspective:1400px] h-[60vh] min-h-[460px] max-h-[640px] w-full">
+    <div className="group [perspective:1400px] h-full w-full">
       <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
         <Link
           to={card.href}
