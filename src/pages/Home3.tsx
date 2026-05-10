@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Home2Header from "@/components/home2/Home2Header";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
 import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
@@ -741,21 +742,7 @@ const Home3 = () => {
       </Helmet>
 
       <main className="min-h-screen bg-black text-white selection:bg-[#C9A050]/40 antialiased">
-        {/* App-style top bar */}
-        <header className="sticky top-0 z-40 backdrop-blur-xl bg-black/60 border-b border-white/5">
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
-            <Link to="/" className="font-serif text-lg tracking-tight">Cosmedocs</Link>
-            <nav className="hidden sm:flex items-center gap-7 text-sm text-white/70">
-              <Link to="/treatments/" className="hover:text-white transition">Treatments</Link>
-              <Link to="/before-after/" className="hover:text-white transition">Results</Link>
-              <Link to="/about-us/" className="hover:text-white transition">About</Link>
-              <Link to="/contact/" className="hover:text-white transition">Contact</Link>
-            </nav>
-            <Button asChild size="sm" className="rounded-full bg-white text-black hover:bg-white/90 text-xs font-semibold">
-              <Link to="/contact/">Book</Link>
-            </Button>
-          </div>
-        </header>
+        <Home2Header />
 
         {/* Hero */}
         <section className="relative px-5 sm:px-8 pt-14 pb-10 sm:pt-24 sm:pb-16 max-w-7xl mx-auto">
