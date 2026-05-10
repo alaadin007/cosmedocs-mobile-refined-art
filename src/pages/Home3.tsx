@@ -173,7 +173,7 @@ const categories: Category[] = [
     copy: "Resurfacing, regeneration and barrier care — the medical-aesthetic foundation behind a lit-from-within finish.",
     cta: { label: "Skin Rejuvenation hub", href: "/skin-rejuvenation/" },
     cards: [
-      { title: "Chemical Peels", tagline: "Glycolic · TCA · Salicylic", href: "/treatments/chemical-peel/", bg: "bg-gradient-to-br from-amber-100 to-orange-300", ink: "text-zinc-900" },
+      { title: "Chemical Peels", tagline: "Glycolic · TCA · Salicylic", href: "/treatments/chemical-peels/", bg: "bg-gradient-to-br from-amber-100 to-orange-300", ink: "text-zinc-900" },
       { title: "Microneedling", tagline: "Collagen induction therapy", href: "/treatments/microneedling/", bg: "bg-gradient-to-br from-stone-700 to-stone-900" },
       { title: "Polynucleotides", tagline: "DNA-level repair", href: "/treatments/polynucleotide-treatment/", bg: "bg-gradient-to-br from-rose-200 to-pink-400", ink: "text-zinc-900", badge: "Regenerative" },
       { title: "Profhilo", tagline: "Bio-remodelling HA", href: "/treatments/profhilo-treatment/", bg: "bg-gradient-to-br from-sky-100 to-sky-300", ink: "text-zinc-900" },
