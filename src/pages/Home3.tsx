@@ -310,7 +310,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
       >
         {category.cards.map((card) => (
           <div key={card.title} className="shrink-0 snap-start w-[82%] sm:w-[46%] lg:w-[34%]">
-            <TreatmentCard card={card} size="split" />
+            {card.flip ? <FlipCard card={card} /> : <TreatmentCard card={card} size="split" />}
           </div>
         ))}
         <Link
