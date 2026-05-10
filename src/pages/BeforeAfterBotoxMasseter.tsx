@@ -154,6 +154,114 @@ const schemaMarkup = {
   ],
 };
 
+const FlipReveal = () => {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <section className="pb-12 md:pb-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-6"
+        >
+          <p className="text-[#C9A050] text-[11px] uppercase tracking-[0.3em] mb-3">
+            Tap to reveal · Real result
+          </p>
+          <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
+            See the <span className="text-[#C9A050]">lower-face slimming</span> — from the front
+          </h2>
+          <p className="text-white/50 text-sm md:text-base max-w-xl mx-auto">
+            A subtle narrowing of the jaw width is the signature of well-judged masseter Botox. 
+            Tap the card to flip and meet a real patient — two months apart.
+          </p>
+        </motion.div>
+
+        <div
+          className="relative mx-auto w-full max-w-md aspect-[4/5] cursor-pointer select-none"
+          style={{ perspective: "1600px" }}
+          onClick={() => setFlipped((f) => !f)}
+          role="button"
+          aria-pressed={flipped}
+          aria-label="Flip card to reveal real before and after photograph"
+        >
+          <motion.div
+            className="relative w-full h-full"
+            style={{ transformStyle: "preserve-3d" }}
+            animate={{ rotateY: flipped ? 180 : 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* Front */}
+            <div
+              className="absolute inset-0 rounded-2xl overflow-hidden bg-black border border-[#C9A050]/30 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.25)]"
+              style={{ backfaceVisibility: "hidden" }}
+            >
+              <img
+                src={masseterFrontSlimming}
+                alt="Front-view illustration showing slimming of the lower face width with masseter Botox"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                width={1024}
+                height={1024}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+              <div className="absolute top-4 left-4">
+                <span className="inline-block bg-black/60 backdrop-blur-sm text-[#C9A050] text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full border border-[#C9A050]/30">
+                  Before
+                </span>
+              </div>
+              <div className="absolute bottom-0 inset-x-0 p-6 text-center">
+                <p className="text-[#C9A050] font-serif text-2xl md:text-3xl leading-tight mb-2" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                  A narrower jaw, quietly earned.
+                </p>
+                <p className="text-white/70 text-xs md:text-sm mb-4">
+                  Width softens. Proportions return.
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#C9A050] text-[11px] uppercase tracking-[0.25em]">
+                  <RotateCw className="w-3.5 h-3.5" />
+                  Tap to see the real result
+                </span>
+              </div>
+            </div>
+
+            {/* Back */}
+            <div
+              className="absolute inset-0 rounded-2xl overflow-hidden bg-black border border-[#C9A050]/40 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)]"
+              style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+            >
+              <img
+                src={masseterFrontAugOct}
+                alt="Real patient front view: August before and October after masseter Botox showing slimmer lower face"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40" />
+              <div className="absolute top-4 left-4">
+                <span className="inline-block bg-[#C9A050] text-black text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 rounded-full font-medium">
+                  After · 2 months
+                </span>
+              </div>
+              <div className="absolute bottom-0 inset-x-0 p-6 text-center">
+                <p className="text-[#C9A050] font-serif text-xl md:text-2xl leading-tight mb-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                  August → October.
+                </p>
+                <p className="text-white/70 text-xs md:text-sm mb-3">
+                  One real patient. Doctor-led, invisible art.
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#C9A050]/80 text-[11px] uppercase tracking-[0.25em]">
+                  <RotateCw className="w-3.5 h-3.5" />
+                  Tap to flip back
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const BeforeAfterBotoxMasseter = () => {
   return (
     <>
