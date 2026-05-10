@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, RotateCw } from "lucide-react";
+import { useState } from "react";
 
+import masseterFrontSlimming from "@/assets/before-after/masseter-front-slimming.jpg";
+import masseterFrontAugOct from "@/assets/before-after/masseter-front-aug-oct.png";
 import masseterBa1 from "@/assets/before-after/masseter-ba-1.png";
 import masseterBa2 from "@/assets/before-after/masseter-ba-2.jpg";
 import masseterBa3 from "@/assets/before-after/masseter-ba-3.jpg";
