@@ -574,28 +574,7 @@ const Home3 = () => {
           />
         </section>
 
-        {/* Quick Links — pill nav that scrolls smoothly to each section */}
-        <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-2">
-          <h2 className="font-serif text-2xl sm:text-3xl text-white mb-4">Quick Links</h2>
-          <div className="flex flex-wrap gap-2.5">
-            {quickLinks.map((q) => (
-              <a
-                key={q.id}
-                href={`#${q.id}`}
-                onClick={handleQuickJump(q.id)}
-                className="px-5 py-2.5 rounded-full border border-white/20 text-white/85 hover:text-white hover:border-white/60 hover:bg-white/5 text-sm transition"
-              >
-                {q.label}
-              </a>
-            ))}
-            <Link
-              to="/contact/"
-              className="px-5 py-2.5 rounded-full border border-[#C9A050]/40 text-[#C9A050] hover:bg-[#C9A050]/10 text-sm transition"
-            >
-              Book consultation
-            </Link>
-          </div>
-        </section>
+        {/* Quick Links moved to bottom of page */}
 
         {/* Category sections */}
         <div className="border-t border-white/5 mt-8">
