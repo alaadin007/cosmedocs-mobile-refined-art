@@ -214,7 +214,7 @@ const cardSizeClasses: Record<CardSize, string> = {
   // Apple-card feel: taller, more presence
   feature: "w-full h-[78vh] min-h-[560px] max-h-[780px] rounded-[32px]",
   full: "w-full h-[60vh] min-h-[460px] max-h-[640px] rounded-[32px]",
-  split: "shrink-0 snap-start w-[82%] sm:w-[46%] lg:w-[44%] h-[60vh] min-h-[460px] max-h-[640px] rounded-[28px]",
+  split: "w-full h-full rounded-[28px]",
 };
 
 const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
