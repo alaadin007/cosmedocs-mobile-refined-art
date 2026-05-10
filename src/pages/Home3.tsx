@@ -13,6 +13,12 @@ import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
 import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
+import medMasseterImg from "@/assets/home3-medical-masseter.jpg";
+import medBruxismImg from "@/assets/home3-medical-bruxism.jpg";
+import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
+import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
+import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
+import medCalfImg from "@/assets/home3-medical-calf.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -123,12 +129,12 @@ const categories: Category[] = [
     copy: "Therapeutic Botox for muscle-driven conditions — grinding, jaw ache, migraine, sweating. Doctor-prescribed.",
     cta: { label: "Medical Botox hub", href: "/medical-botox/" },
     cards: [
-      { title: "Masseter Botox", tagline: "Slim jaw · Stop grinding", href: "/treatments/masseter-botox/", bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]", badge: "Most asked" },
-      { title: "Bruxism Botox", tagline: "Night clenching, treated", href: "/treatments/bruxism-botox/", bg: "bg-gradient-to-br from-zinc-800 to-zinc-950" },
-      { title: "Migraine Botox", tagline: "Chronic migraine protocol", href: "/treatments/migraine-botox/", bg: "bg-gradient-to-br from-indigo-100 to-indigo-300", ink: "text-zinc-900" },
-      { title: "Hyperhidrosis", tagline: "Underarm sweat control", href: "/treatments/hyperhidrosis/", bg: "bg-gradient-to-br from-sky-100 to-sky-300", ink: "text-zinc-900" },
-      { title: "Trapezius Botox", tagline: "Shoulder slimming · pain", href: "/treatments/trap-botox/", bg: "bg-gradient-to-br from-stone-700 to-stone-900" },
-      { title: "Calf Slimming", tagline: "Athletic-leg refinement", href: "/treatments/calf-slimming-botox/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
+      { title: "Masseter Botox", tagline: "Slim jaw · Stop grinding", href: "/treatments/masseter-botox/", bg: "bg-[#0d1218]", image: medMasseterImg, badge: "Most asked" },
+      { title: "Bruxism Botox", tagline: "Night clenching, treated", href: "/treatments/bruxism-botox/", bg: "bg-[#0d1218]", image: medBruxismImg },
+      { title: "Migraine Botox", tagline: "Chronic migraine protocol", href: "/treatments/migraine-botox/", bg: "bg-[#0d1218]", image: medMigraineImg },
+      { title: "Hyperhidrosis", tagline: "Underarm sweat control", href: "/treatments/hyperhidrosis/", bg: "bg-[#0d1218]", image: medHyperhidrosisImg },
+      { title: "Trapezius Botox", tagline: "Shoulder slimming · pain", href: "/treatments/trap-botox/", bg: "bg-[#0d1218]", image: medTrapeziusImg },
+      { title: "Calf Slimming", tagline: "Athletic-leg refinement", href: "/treatments/calf-slimming-botox/", bg: "bg-[#0d1218]", image: medCalfImg },
     ],
   },
   {
