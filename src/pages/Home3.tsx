@@ -51,14 +51,16 @@ const botoxAesthetic: SubCard[] = [
     title: "Brow Lift",
     tagline: "1–2 mm subtle elevation",
     href: "/treatments/botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxBrowLiftImg,
   },
   {
     title: "Bunny Lines",
     tagline: "Nose-bridge crinkles",
     href: "/treatments/botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxBunnyImg,
   },
   {
@@ -72,14 +74,16 @@ const botoxAesthetic: SubCard[] = [
     title: "Gummy Smile",
     tagline: "Refined upper-lip line",
     href: "/treatments/botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxGummyImg,
   },
   {
     title: "Mentalis · Chin",
     tagline: "Quiet the chin dimpling",
     href: "/treatments/botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxMentalisImg,
   },
   {
@@ -93,21 +97,16 @@ const botoxAesthetic: SubCard[] = [
     title: "Marionette / DAO",
     tagline: "Lift the corners of the mouth",
     href: "/treatments/botox/",
-    bg: "bg-black",
-    image: botoxMarionetteImg,
-  },
-  {
-    title: "Smokers Lines",
-    tagline: "Soften perioral lip lines",
-    href: "/treatments/lip-wrinkles-treatments/",
-    bg: "bg-gradient-to-br from-neutral-200 to-neutral-400",
+    bg: "bg-[#f6efe4]",
     ink: "text-zinc-900",
+    image: botoxMarionetteImg,
   },
   {
     title: "Nasal Flaring",
     tagline: "Calm nostril movement",
     href: "/treatments/nasal-flaring-botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxNasalImg,
   },
 ];
@@ -392,12 +391,14 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const byTitle = Object.fromEntries(category.cards.map((c) => [c.title, c]));
   const get = (t: string) => byTitle[t];
 
+  // Alternating rhythm: big dark → 2 small light → big dark → 2 small light …
   const columns: Column[] = [
     { kind: "big",   card: get("1, 2 or 3 Areas Botox") },
-    { kind: "big",   card: get("Lip Flip") },
     { kind: "stack", cards: [get("Brow Lift"), get("Bunny Lines")] },
+    { kind: "big",   card: get("Lip Flip") },
+    { kind: "stack", cards: [get("Gummy Smile"), get("Mentalis · Chin")] },
     { kind: "big",   card: get("Nefertiti Neck Lift") },
-    { kind: "grid",  cards: [get("Gummy Smile"), get("Mentalis · Chin"), get("Marionette / DAO"), get("Nasal Flaring")] },
+    { kind: "stack", cards: [get("Marionette / DAO"), get("Nasal Flaring")] },
   ];
 
   // Column widths — keep big card narrow enough on mobile so the next column peeks in
