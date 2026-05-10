@@ -51,63 +51,57 @@ const botoxAesthetic: SubCard[] = [
     title: "Brow Lift",
     tagline: "1–2 mm subtle elevation",
     href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-rose-100 to-rose-300",
+    bg: "bg-[#f6efe4]",
     ink: "text-zinc-900",
-  },
-  {
-    title: "Bunny Lines",
-    tagline: "Nose-bridge crinkles",
-    href: "/treatments/botox/",
-    bg: "bg-gradient-to-br from-stone-700 to-stone-900",
-  },
-  {
-    title: "Lip Flip",
-    tagline: "A whisper of upper-lip lift",
-    href: "/treatments/lip-flip/",
-    bg: "bg-black",
-    image: botoxLipFlipImg,
-  },
-  {
-    title: "Gummy Smile",
-    tagline: "Refined upper-lip line",
-    href: "/treatments/botox/",
-    bg: "bg-black",
-    image: botoxGummyImg,
-  },
-  {
-    title: "Mentalis · Chin",
-    tagline: "Quiet the chin dimpling",
-    href: "/treatments/botox/",
-    bg: "bg-black",
-    image: botoxMentalisImg,
-  },
-  {
-    title: "Nefertiti Neck Lift",
-    tagline: "Sculpt the neck-jaw line",
-    href: "/treatments/botox/",
-    bg: "bg-black",
-    image: botoxNefertitiImg,
-  },
-  {
-    title: "Marionette / DAO",
-    tagline: "Lift the corners of the mouth",
-    href: "/treatments/botox/",
-    bg: "bg-black",
-    image: botoxMarionetteImg,
-  },
-  {
-    title: "Brow Lift",
-    tagline: "1–2 mm subtle elevation",
-    href: "/treatments/botox/",
-    bg: "bg-black",
     image: botoxBrowLiftImg,
   },
   {
     title: "Bunny Lines",
     tagline: "Nose-bridge crinkles",
     href: "/treatments/botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxBunnyImg,
+  },
+  {
+    title: "Lip Flip",
+    tagline: "A whisper of upper-lip lift",
+    href: "/treatments/lip-flip/",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
+    image: botoxLipFlipImg,
+  },
+  {
+    title: "Gummy Smile",
+    tagline: "Refined upper-lip line",
+    href: "/treatments/botox/",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
+    image: botoxGummyImg,
+  },
+  {
+    title: "Mentalis · Chin",
+    tagline: "Quiet the chin dimpling",
+    href: "/treatments/botox/",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
+    image: botoxMentalisImg,
+  },
+  {
+    title: "Nefertiti Neck Lift",
+    tagline: "Sculpt the neck-jaw line",
+    href: "/treatments/botox/",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
+    image: botoxNefertitiImg,
+  },
+  {
+    title: "Marionette / DAO",
+    tagline: "Lift the corners of the mouth",
+    href: "/treatments/botox/",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
+    image: botoxMarionetteImg,
   },
   {
     title: "Smokers Lines",
@@ -120,7 +114,8 @@ const botoxAesthetic: SubCard[] = [
     title: "Nasal Flaring",
     tagline: "Calm nostril movement",
     href: "/treatments/nasal-flaring-botox/",
-    bg: "bg-black",
+    bg: "bg-[#f6efe4]",
+    ink: "text-zinc-900",
     image: botoxNasalImg,
   },
 ];
@@ -413,11 +408,11 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
     { kind: "grid",  cards: [get("Gummy Smile"), get("Mentalis · Chin"), get("Marionette / DAO"), get("Nasal Flaring")] },
   ];
 
-  // Column widths
-  const widthBig   = "w-[82vw] sm:w-[380px] md:w-[420px]";
-  const widthStack = "w-[64vw] sm:w-[300px] md:w-[330px]";
-  const widthGrid  = "w-[88vw] sm:w-[460px] md:w-[520px]";
-  const colHeight  = "h-[72vh] min-h-[540px] max-h-[760px]";
+  // Column widths — keep big card narrow enough on mobile so the next column peeks in
+  const widthBig   = "w-[72vw] sm:w-[380px] md:w-[420px]";
+  const widthStack = "w-[58vw] sm:w-[300px] md:w-[330px]";
+  const widthGrid  = "w-[80vw] sm:w-[460px] md:w-[520px]";
+  const colHeight  = "h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]";
 
   return (
     <motion.section
@@ -579,28 +574,7 @@ const Home3 = () => {
           />
         </section>
 
-        {/* Quick Links — pill nav that scrolls smoothly to each section */}
-        <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-2">
-          <h2 className="font-serif text-2xl sm:text-3xl text-white mb-4">Quick Links</h2>
-          <div className="flex flex-wrap gap-2.5">
-            {quickLinks.map((q) => (
-              <a
-                key={q.id}
-                href={`#${q.id}`}
-                onClick={handleQuickJump(q.id)}
-                className="px-5 py-2.5 rounded-full border border-white/20 text-white/85 hover:text-white hover:border-white/60 hover:bg-white/5 text-sm transition"
-              >
-                {q.label}
-              </a>
-            ))}
-            <Link
-              to="/contact/"
-              className="px-5 py-2.5 rounded-full border border-[#C9A050]/40 text-[#C9A050] hover:bg-[#C9A050]/10 text-sm transition"
-            >
-              Book consultation
-            </Link>
-          </div>
-        </section>
+        {/* Quick Links moved to bottom of page */}
 
         {/* Category sections */}
         <div className="border-t border-white/5 mt-8">
@@ -629,6 +603,29 @@ const Home3 = () => {
           <Button asChild className="mt-10 rounded-full bg-white text-black hover:bg-white/90 h-12 px-8 font-semibold">
             <Link to="/contact/">Begin your consultation</Link>
           </Button>
+        </section>
+
+        {/* Quick Links — pill nav at the bottom for fast jumping back up */}
+        <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-16 border-t border-white/5 pt-12">
+          <h2 className="font-serif text-2xl sm:text-3xl text-white mb-4">Quick Links</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {quickLinks.map((q) => (
+              <a
+                key={q.id}
+                href={`#${q.id}`}
+                onClick={handleQuickJump(q.id)}
+                className="px-5 py-2.5 rounded-full border border-white/20 text-white/85 hover:text-white hover:border-white/60 hover:bg-white/5 text-sm transition"
+              >
+                {q.label}
+              </a>
+            ))}
+            <Link
+              to="/contact/"
+              className="px-5 py-2.5 rounded-full border border-[#C9A050]/40 text-[#C9A050] hover:bg-[#C9A050]/10 text-sm transition"
+            >
+              Book consultation
+            </Link>
+          </div>
         </section>
 
         <footer className="border-t border-white/10 py-10 px-5 sm:px-8">
