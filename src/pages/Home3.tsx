@@ -345,7 +345,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
             <p className="mt-2 text-sm text-white/80 max-w-md">{card.flip?.back}</p>
             <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050]">
-              Discover the HA Makeover <ArrowUpRight className="w-4 h-4" />
+              Discover {card.title} <ArrowUpRight className="w-4 h-4" />
             </span>
           </div>
         </Link>
