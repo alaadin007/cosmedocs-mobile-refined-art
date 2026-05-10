@@ -313,6 +313,8 @@ const BeforeAfterBotoxMasseter = () => {
           </div>
         </section>
 
+        <FlipReveal />
+
         {/* Gallery Section */}
         <section className="pb-16 md:pb-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
