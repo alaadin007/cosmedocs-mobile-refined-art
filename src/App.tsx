@@ -11,6 +11,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
+import SocialMetaSync from "./components/SocialMetaSync";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 // Eager load critical pages only
