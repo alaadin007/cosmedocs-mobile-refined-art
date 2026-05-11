@@ -36,6 +36,7 @@ import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
+import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
