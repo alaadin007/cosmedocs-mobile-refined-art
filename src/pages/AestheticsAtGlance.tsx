@@ -127,30 +127,29 @@ const BigFlipCard = ({ data }: { data: BigTx }) => {
           flipped ? "[transform:rotateY(180deg)]" : ""
         }`}
       >
-        {/* Front — image */}
+        {/* Front — image-led */}
         <div className="absolute inset-0 [backface-visibility:hidden] rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_40px_80px_-30px_rgba(201,160,80,0.4)]">
           <img src={data.image} alt={data.title} className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
-          <div className="absolute inset-0 p-7 sm:p-12 flex flex-col justify-end">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">{data.eyebrow}</span>
-            <h3 className="mt-3 font-serif text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.02] max-w-2xl">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+          {/* Top eyebrow */}
+          <div className="absolute top-5 left-5 sm:top-7 sm:left-8">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-[#C9A050] bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-[#C9A050]/30">
+              {data.eyebrow}
+            </span>
+          </div>
+          {/* Flip button top-right */}
+          <button
+            onClick={() => setFlipped(true)}
+            aria-label="Flip card"
+            className="absolute top-5 right-5 sm:top-7 sm:right-8 w-11 h-11 rounded-full bg-[#C9A050] text-black flex items-center justify-center shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
+          >
+            <RotateCw className="w-4 h-4" />
+          </button>
+          {/* Bottom title only */}
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+            <h3 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.02] max-w-2xl">
               {data.title}
             </h3>
-            <p className="mt-3 text-white/80 text-sm sm:text-lg max-w-xl">{data.tagline}</p>
-            <div className="mt-6 flex items-center gap-3">
-              <button
-                onClick={() => setFlipped(true)}
-                className="inline-flex items-center gap-2 bg-[#C9A050] text-black px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#b89040] transition"
-              >
-                Read more <RotateCw className="w-3.5 h-3.5" />
-              </button>
-              <Link
-                to={data.href}
-                className="inline-flex items-center gap-1.5 text-[#C9A050] text-sm uppercase tracking-[0.2em] hover:gap-2.5 transition-all"
-              >
-                {data.cta} <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
           </div>
         </div>
         {/* Back — explanation */}
