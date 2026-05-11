@@ -561,7 +561,7 @@ const CardWatermark = ({ title, dark }: { title: string; dark: boolean }) => {
       aria-hidden="true"
       viewBox="0 0 300 260"
       preserveAspectRatio="xMidYMid slice"
-      className="absolute inset-0 w-full h-full pointer-events-none mix-blend-overlay opacity-70"
+      className="absolute inset-0 w-full h-full pointer-events-none opacity-90"
     >
       {motifs[motif]}
     </svg>
