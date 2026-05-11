@@ -330,11 +330,14 @@ const AestheticsAtGlance = () => {
               Every visible skin concern traces back to three cell types working together. We don't treat all three the same way.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {cellCards.map((c, i) => (
-              <CellFlipCard key={c.name} card={c} index={i} />
-            ))}
+          <div className="-mx-5 px-5 overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex gap-5 pb-2 pr-5">
+              {cellCards.map((c, i) => (
+                <CellFlipCard key={c.name} card={c} index={i} />
+              ))}
+            </div>
           </div>
+          <p className="mt-4 text-[11px] uppercase tracking-[0.25em] text-[#C9A050]/70 sm:hidden">Swipe →</p>
         </div>
       </section>
 
