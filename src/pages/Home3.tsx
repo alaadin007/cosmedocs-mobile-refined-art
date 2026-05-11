@@ -34,7 +34,7 @@ import lipAnatomyImg from "@/assets/home3-lip-anatomy.png";
 import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
-import endolaserBaImg from "@/assets/home3-endolaser-ba.jpg";
+import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
