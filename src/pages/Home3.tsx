@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import type { PointerEvent } from "react";
-import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
+
+import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles, RotateCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
@@ -458,17 +458,7 @@ const FaceMark = ({ area }: { area?: string }) => {
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
-  const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const isTapGesture = (event: PointerEvent) => {
-    const start = gestureStart.current;
-    if (!start) return true;
-    const dx = Math.abs(event.clientX - start.x);
-    const dy = Math.abs(event.clientY - start.y);
-    const dt = performance.now() - start.t;
-    if (dx > 8 && dx >= dy * 0.8 && dt < 250) return false;
-    return dx < 10 && dy < 10;
-  };
 
   useEffect(() => {
     const el = containerRef.current;
@@ -485,7 +475,6 @@ const FlipCard = ({ card }: { card: SubCard }) => {
     <div
       ref={containerRef}
       className="[perspective:1400px] h-full w-full select-none"
-      style={{ touchAction: "pan-x pan-y" }}
       onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
       onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
     >
@@ -493,24 +482,9 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
-        {/* FRONT — tap to flip (does not navigate) */}
-        <button
-          type="button"
-          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)", touchAction: "pan-y" }}
-          onPointerDown={(event) => {
-            gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
-          }}
-          onPointerUp={(event) => {
-            if (isTapGesture(event)) setFlipped(true);
-            gestureStart.current = null;
-          }}
-          onPointerCancel={() => {
-            gestureStart.current = null;
-          }}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") setFlipped(true);
-          }}
-          aria-label={`${card.title} — reveal results`}
+        {/* FRONT — passive layer; only the gold corner button flips */}
+        <div
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
@@ -521,7 +495,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             </span>
           )}
 
-          <div className="absolute inset-0 p-7 sm:p-9 flex flex-col">
+          <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
             <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
               <FaceMark area={card.title} />
             </div>
@@ -529,42 +503,31 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>Signature</p>
               <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
               <p className={`mt-2 text-sm ${card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
-              <span className={`mt-4 inline-flex items-center gap-1.5 text-xs ${card.ink ? "text-zinc-900/70" : "text-white/70"}`}>
-                Tap to see results <ArrowUpRight className="w-3.5 h-3.5" />
-              </span>
             </div>
           </div>
-        </button>
 
-        {/* BACK — full before/after image + caption. Tap empty area to flip back. */}
+          {/* Gold corner flip button */}
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            aria-label={`${card.title} — reveal results`}
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center gap-1.5 pl-3 pr-3 py-2 rounded-full bg-[#C9A050] text-black text-[11px] font-semibold shadow-[0_10px_24px_-8px_rgba(201,160,80,0.7)] ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] active:scale-95 transition"
+          >
+            See results <RotateCw className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        {/* BACK — full before/after image + caption. Corner chip flips back. */}
         <div
           style={{ transform: "rotateY(180deg)", WebkitTransform: "rotateY(180deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
-          {/* Tap-to-flip-back layer (sits behind interactive elements) */}
-          <button
-            type="button"
-            style={{ touchAction: "pan-y" }}
-            onPointerDown={(event) => {
-              gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
-            }}
-            onPointerUp={(event) => {
-              if (isTapGesture(event)) setFlipped(false);
-              gestureStart.current = null;
-            }}
-            onPointerCancel={() => {
-              gestureStart.current = null;
-            }}
-            aria-label="Flip card back"
-            className="absolute inset-0 z-0 cursor-pointer"
-          />
-
           {/* Flip-back chip */}
           <button
             type="button"
             onClick={() => setFlipped(false)}
             aria-label="Flip card back"
-            className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur flex items-center justify-center text-white/85"
+            className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-[#C9A050] text-black ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] backdrop-blur flex items-center justify-center"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -724,19 +687,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
   const hasFlip = !!card.flip || (card.flipImages && card.flipImages.length > 0);
 
   const [flipped, setFlipped] = useState(false);
-  const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const isTapGesture = (event: PointerEvent) => {
-    const start = gestureStart.current;
-    if (!start) return true;
-    const dx = Math.abs(event.clientX - start.x);
-    const dy = Math.abs(event.clientY - start.y);
-    const dt = performance.now() - start.t;
-    // Reject quick horizontal swipes (carousel/page scroll intent)
-    if (dx > 8 && dx >= dy * 0.8 && dt < 250) return false;
-    // Reject any sizeable drag
-    return dx < 10 && dy < 10;
-  };
 
   useEffect(() => {
     const el = containerRef.current;
@@ -760,12 +711,9 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           {card.badge}
         </span>
       )}
-      <div className="absolute inset-0 z-[2] p-7 sm:p-9 flex flex-col justify-end">
+      <div className="absolute inset-0 z-[2] p-7 sm:p-9 flex flex-col justify-end pointer-events-none">
         <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%]">{card.title}</h3>
         <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/80"} max-w-[88%]`}>{card.tagline}</p>
-        <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"}`}>
-          {hasFlip ? "Tap to see results" : "Discover"} <ArrowUpRight className="w-4 h-4" />
-        </span>
       </div>
     </>
   );
@@ -778,6 +726,9 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         className={`group relative isolate overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
       >
         {frontInner}
+        <span className={`absolute bottom-5 right-5 z-[3] inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"} pointer-events-none`}>
+          Discover <ArrowUpRight className="w-4 h-4" />
+        </span>
       </Link>
     );
   }
@@ -789,7 +740,6 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
     <div
       ref={containerRef}
       className="[perspective:1400px] h-full w-full select-none"
-      style={{ touchAction: "pan-x pan-y" }}
       onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
       onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
     >
@@ -797,51 +747,38 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
-        {/* FRONT — tap to flip (does not navigate) */}
-        <button
-          type="button"
-          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)", touchAction: "pan-y" }}
-          onPointerDown={(event) => {
-            gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
-          }}
-          onPointerUp={(event) => {
-            if (isTapGesture(event)) setFlipped(true);
-            gestureStart.current = null;
-          }}
-          onPointerCancel={() => {
-            gestureStart.current = null;
-          }}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") setFlipped(true);
-          }}
-          aria-label={`${card.title} — reveal results`}
+        {/* FRONT — passive layer; only the gold corner button flips */}
+        <div
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
         >
           {frontInner}
-        </button>
+
+          {/* Gold corner flip button */}
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            aria-label={`${card.title} — reveal results`}
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center gap-1.5 pl-3 pr-3 py-2 rounded-full bg-[#C9A050] text-black text-[11px] font-semibold shadow-[0_10px_24px_-8px_rgba(201,160,80,0.7)] ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] active:scale-95 transition"
+          >
+            See results <RotateCw className="w-3.5 h-3.5" />
+          </button>
+        </div>
 
         {/* BACK */}
         <div
           style={{ transform: "rotateY(180deg)", WebkitTransform: "rotateY(180deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
-          {/* Tap-to-flip-back layer */}
+          {/* Flip-back chip */}
           <button
             type="button"
-            style={{ touchAction: "pan-y" }}
-            onPointerDown={(event) => {
-              gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
-            }}
-            onPointerUp={(event) => {
-              if (isTapGesture(event)) setFlipped(false);
-              gestureStart.current = null;
-            }}
-            onPointerCancel={() => {
-              gestureStart.current = null;
-            }}
+            onClick={() => setFlipped(false)}
             aria-label="Flip card back"
-            className="absolute inset-0 z-0 cursor-pointer"
-          />
+            className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-[#C9A050] text-black ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] backdrop-blur flex items-center justify-center"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
 
           {card.flip ? (
             <div className={`pointer-events-none absolute inset-0 z-[1] p-5 sm:p-6 flex flex-col ${imageBottom ? "flex-col-reverse" : ""}`}>
