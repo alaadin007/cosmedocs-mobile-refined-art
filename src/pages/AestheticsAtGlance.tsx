@@ -72,7 +72,7 @@ const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
           flipped ? "[transform:rotateY(180deg)]" : ""
         }`}
       >
-        <div className="absolute inset-0 [backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#0d0d0d] via-[#141008] to-[#1f1809] border border-[#C9A050]/25 p-7 flex flex-col shadow-[0_30px_60px_-30px_rgba(201,160,80,0.35)]">
+        <div className="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#0d0d0d] via-[#141008] to-[#1f1809] border border-[#C9A050]/25 p-7 flex flex-col shadow-[0_30px_60px_-30px_rgba(201,160,80,0.35)]">
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/15 border border-[#C9A050]/40 flex items-center justify-center">
             <Icon className="w-5 h-5 text-[#C9A050]" />
           </div>
@@ -90,7 +90,7 @@ const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
             </button>
           </div>
         </div>
-        <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-[#0d0d0d] border border-[#C9A050]/40 p-7 flex flex-col">
+        <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-[#0d0d0d] border border-[#C9A050]/40 p-7 flex flex-col">
           <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A050]">{card.verb} · {card.name}</span>
           <p className="mt-4 text-white text-lg sm:text-xl leading-[1.45] font-light flex-1">{card.back}</p>
           <button
@@ -128,7 +128,7 @@ const BigFlipCard = ({ data }: { data: BigTx }) => {
         }`}
       >
         {/* Front — image-led */}
-        <div className="absolute inset-0 [backface-visibility:hidden] rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_40px_80px_-30px_rgba(201,160,80,0.4)] bg-black">
+        <div className="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_40px_80px_-30px_rgba(201,160,80,0.4)] bg-black">
           {/* Image in original ratio */}
           <img
             src={data.image}
@@ -162,7 +162,7 @@ const BigFlipCard = ({ data }: { data: BigTx }) => {
           </div>
         </div>
         {/* Back — explanation */}
-        <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-[32px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-black border border-[#C9A050]/40 p-7 sm:p-12 flex flex-col">
+        <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] rounded-[32px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-black border border-[#C9A050]/40 p-7 sm:p-12 flex flex-col">
           <span className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">{data.eyebrow}</span>
           <h3 className="mt-3 font-serif text-2xl sm:text-4xl text-white leading-[1.05]">{data.title}</h3>
           <p className="mt-5 text-white/90 text-lg sm:text-2xl lg:text-3xl leading-[1.5] font-light flex-1 max-w-3xl">
