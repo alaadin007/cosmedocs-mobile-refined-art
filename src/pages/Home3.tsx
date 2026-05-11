@@ -458,19 +458,22 @@ const FaceMark = ({ area }: { area?: string }) => {
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
-  const gestureStart = useRef<{ x: number; y: number } | null>(null);
+  const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
   const isTapGesture = (event: PointerEvent) => {
     const start = gestureStart.current;
     if (!start) return true;
-    const movedX = Math.abs(event.clientX - start.x);
-    const movedY = Math.abs(event.clientY - start.y);
-    return movedX < 10 && movedY < 10;
+    const dx = Math.abs(event.clientX - start.x);
+    const dy = Math.abs(event.clientY - start.y);
+    const dt = performance.now() - start.t;
+    if (dx > 8 && dx >= dy * 0.8 && dt < 250) return false;
+    return dx < 10 && dy < 10;
   };
 
   return (
     <div className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
       <div
-        className={`relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] will-change-transform ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
+        style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
         {/* FRONT — tap to flip (does not navigate) */}
         <button
@@ -489,7 +492,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             if (event.key === "Enter" || event.key === " ") setFlipped(true);
           }}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
@@ -516,7 +519,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
 
         {/* BACK — full before/after image + caption. Tap empty area to flip back. */}
         <div
-          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
+          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
         >
           {/* Tap-to-flip-back layer (sits behind interactive elements) */}
           <button
@@ -632,7 +635,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {category.cards.map((card) => {
           const isBig = !!card.flip;
@@ -752,7 +755,8 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
   return (
     <div className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
       <div
-        className={`relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] will-change-transform ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
+        style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
         {/* FRONT — tap to flip (does not navigate) */}
         <button
@@ -771,14 +775,14 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
             if (event.key === "Enter" || event.key === " ") setFlipped(true);
           }}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
           {frontInner}
         </button>
 
         {/* BACK */}
         <div
-          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
+          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
         >
           {/* Tap-to-flip-back layer */}
           <button
@@ -934,7 +938,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {columns.map((col, idx) => {
           if (col.kind === "big") {
@@ -1061,7 +1065,7 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {/* Hero spotlight: first card (Masseter) */}
         {category.cards[0] && (
@@ -1169,7 +1173,7 @@ const FlawlessSkinSection = ({ category }: { category: Category }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {cols.map((col, idx) =>
           col.kind === "big" ? (
