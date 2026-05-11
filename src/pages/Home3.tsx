@@ -626,54 +626,184 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
 /* ---------- Flippable card (simple front, image back) ------------------ */
 
 const FaceMark = ({ area }: { area?: string }) => {
-  // Highlight coordinates per treatment area on a 64x64 schematic face
-  const accents: Record<string, JSX.Element> = {
-    "HA Makeover": (
-      <>
-        <circle cx="22" cy="30" r="3.2" />
-        <circle cx="42" cy="30" r="3.2" />
-        <path d="M24 42c4 3 12 3 16 0" />
-      </>
-    ),
-    "Cheek Filler": (
-      <>
-        <path d="M19 30c2 4 4 6 7 7" />
-        <path d="M45 30c-2 4-4 6-7 7" />
-      </>
-    ),
-    "Jowl & Jawline": (
-      <path d="M16 36c2 8 8 14 16 14s14-6 16-14" />
-    ),
-    "Tear Trough": (
-      <>
-        <path d="M19 30c2 2 6 2 8 0" />
-        <path d="M37 30c2 2 6 2 8 0" />
-      </>
-    ),
-    "Temple Filler": (
-      <>
-        <path d="M14 22c2-3 4-4 7-4" />
-        <path d="M50 22c-2-3-4-4-7-4" />
-      </>
-    ),
-    "Chin Filler": (
-      <path d="M26 46c1.5 3 4.5 4.5 6 4.5s4.5-1.5 6-4.5" />
-    ),
-    "Lip Filler": (
-      <path d="M24 40c2-2 6-2 8 0 2-2 6-2 8 0-2 2-6 3-8 3s-6-1-8-3Z" />
-    ),
+  // A unique abstract line-glyph per treatment — no faces, no repetition.
+  // Each glyph nods to the anatomy / mechanism of action.
+  const glyph = (key: string) => {
+    switch (key) {
+      // Lip — abstract Cupid's bow
+      case "Lip Filler":
+        return (
+          <>
+            <path d="M10 32c4-6 10-6 14 0 4-6 10-6 14 0 4-6 10-6 14 0" />
+            <path d="M10 32c6 8 16 12 22 12s16-4 22-12" stroke="#C9A050" />
+          </>
+        );
+      // Chin — profile arc
+      case "Chin Filler":
+        return (
+          <>
+            <path d="M14 16c0 12 4 22 10 30 4 6 10 6 16 2" />
+            <circle cx="40" cy="48" r="3" fill="#C9A050" stroke="none" />
+          </>
+        );
+      // Cheeks — twin orbs
+      case "Cheek Filler":
+        return (
+          <>
+            <circle cx="22" cy="32" r="9" />
+            <circle cx="42" cy="32" r="9" />
+            <circle cx="22" cy="32" r="2" fill="#C9A050" stroke="none" />
+            <circle cx="42" cy="32" r="2" fill="#C9A050" stroke="none" />
+          </>
+        );
+      // Jowl & jawline — angular jaw line
+      case "Jowl & Jawline":
+        return (
+          <>
+            <path d="M10 22 L20 40 L32 48 L44 40 L54 22" />
+            <path d="M20 40 L44 40" stroke="#C9A050" strokeDasharray="2 3" />
+          </>
+        );
+      // Tear trough — almond + tear
+      case "Tear Trough":
+        return (
+          <>
+            <path d="M10 32c8-10 36-10 44 0-8 10-36 10-44 0Z" />
+            <circle cx="32" cy="32" r="4" />
+            <path d="M32 40c-2 4-2 8 0 10 2-2 2-6 0-10Z" fill="#C9A050" stroke="none" />
+          </>
+        );
+      // Temple — concave hollow with arrow
+      case "Temple Filler":
+        return (
+          <>
+            <path d="M14 18c8 4 8 22 0 28" />
+            <path d="M50 18c-8 4-8 22 0 28" />
+            <path d="M22 32h20M36 28l6 4-6 4" stroke="#C9A050" />
+          </>
+        );
+      // HA Makeover — 8-point compass
+      case "HA Makeover":
+        return (
+          <>
+            <circle cx="32" cy="32" r="20" />
+            {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => {
+              const r = (a * Math.PI) / 180;
+              const x1 = 32 + Math.cos(r) * 14;
+              const y1 = 32 + Math.sin(r) * 14;
+              const x2 = 32 + Math.cos(r) * 20;
+              const y2 = 32 + Math.sin(r) * 20;
+              return <line key={a} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#C9A050" />;
+            })}
+            <circle cx="32" cy="32" r="2" fill="#C9A050" stroke="none" />
+          </>
+        );
+      // Nose — bridge + tip
+      case "Non-Surgical Nose":
+      case "Nose Filler":
+      case "Nose":
+        return (
+          <>
+            <path d="M30 14 L26 44 L32 50 L38 44 L34 14" />
+            <path d="M26 44c2 3 8 3 12 0" stroke="#C9A050" />
+          </>
+        );
+      // Forehead / brow lift — horizontal lines softening
+      case "Forehead":
+      case "Brow Lift":
+        return (
+          <>
+            <path d="M12 22h40" />
+            <path d="M14 30h36" opacity="0.7" />
+            <path d="M18 38h28" opacity="0.5" />
+            <path d="M16 14c4-2 12-2 16 0 4-2 12-2 16 0" stroke="#C9A050" />
+          </>
+        );
+      // Threads — woven mesh
+      case "PDO Threads":
+      case "Thread Lift":
+        return (
+          <>
+            <path d="M10 18 L54 46" />
+            <path d="M10 32 L54 32" stroke="#C9A050" />
+            <path d="M10 46 L54 18" />
+          </>
+        );
+      // Endolaser — wave + dot
+      case "Endolaser":
+      case "Laser":
+        return (
+          <>
+            <path d="M8 32q8-12 16 0t16 0 16 0" />
+            <circle cx="32" cy="32" r="2.5" fill="#C9A050" stroke="none" />
+          </>
+        );
+      // Skin / glow — radiating sun
+      case "Skin Rejuvenation":
+      case "Polynucleotides":
+      case "Profhilo":
+        return (
+          <>
+            <circle cx="32" cy="32" r="8" />
+            {[0, 60, 120, 180, 240, 300].map((a) => {
+              const r = (a * Math.PI) / 180;
+              return (
+                <line
+                  key={a}
+                  x1={32 + Math.cos(r) * 14}
+                  y1={32 + Math.sin(r) * 14}
+                  x2={32 + Math.cos(r) * 22}
+                  y2={32 + Math.sin(r) * 22}
+                  stroke="#C9A050"
+                />
+              );
+            })}
+          </>
+        );
+      default:
+        // Default — minimal hex glyph (never reused as a face)
+        return (
+          <>
+            <path d="M32 8 L52 20 L52 44 L32 56 L12 44 L12 20 Z" />
+            <circle cx="32" cy="32" r="3" fill="#C9A050" stroke="none" />
+          </>
+        );
+    }
   };
+
+  // Choose key by exact match first, otherwise by keyword in the area string
+  const k = (() => {
+    if (!area) return "";
+    const known = [
+      "Lip Filler", "Chin Filler", "Cheek Filler", "Jowl & Jawline",
+      "Tear Trough", "Temple Filler", "HA Makeover",
+      "Non-Surgical Nose", "Nose Filler", "Nose",
+      "Forehead", "Brow Lift",
+      "PDO Threads", "Thread Lift",
+      "Endolaser", "Laser",
+      "Skin Rejuvenation", "Polynucleotides", "Profhilo",
+    ];
+    const exact = known.find((n) => area === n);
+    if (exact) return exact;
+    return known.find((n) => area.toLowerCase().includes(n.toLowerCase())) ?? "";
+  })();
+
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 sm:w-20 sm:h-20" aria-hidden="true">
-      <path d="M32 6c10 0 18 8 18 20v8c0 13-8 24-18 24S14 47 14 34v-8C14 14 22 6 32 6Z" />
-      <path d="M22 30c1.5-1 3-1 4.5 0M37.5 30c1.5-1 3-1 4.5 0" />
-      <path d="M32 32v8M28 44c2 1.5 6 1.5 8 0" />
-      {area && accents[area] && (
-        <g stroke="#C9A050" strokeWidth="2" opacity="0.95">{accents[area]}</g>
-      )}
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-16 h-16 sm:w-20 sm:h-20"
+      aria-hidden="true"
+    >
+      {glyph(k)}
     </svg>
   );
 };
+
 
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
