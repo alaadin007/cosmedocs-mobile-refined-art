@@ -25,6 +25,7 @@ import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
 import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
+import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
 import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 
@@ -208,7 +209,19 @@ const categories: Category[] = [
           image: jowlJawlineBaImg,
         },
       },
-      { title: "Tear Trough", tagline: "Rested under-eyes", href: "/treatments/tear-trough-filler/", bg: "bg-gradient-to-br from-rose-100 to-rose-300", ink: "text-zinc-900" },
+      {
+        title: "Tear Trough",
+        tagline: "Rested under-eyes",
+        href: "/treatments/tear-trough-filler/",
+        bg: "bg-gradient-to-br from-rose-100 to-rose-300",
+        ink: "text-zinc-900",
+        badge: "Under-eye",
+        flip: {
+          back: "Doctor-led correction of the tear-trough hollow — softening shadows and restoring a rested, awake under-eye. Conservative dosing on the periosteum, never superficial. The result reads as sleep, not filler.",
+          imagePosition: "top",
+          image: tearTroughBaImg,
+        },
+      },
       { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
       { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", bg: "bg-gradient-to-br from-pink-200 to-rose-400", ink: "text-zinc-900" },
     ],
