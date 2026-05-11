@@ -121,7 +121,7 @@ type BigTx = {
 const BigFlipCard = ({ data }: { data: BigTx }) => {
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="relative aspect-[16/10] sm:aspect-[16/9] [perspective:1400px]">
+    <div className="relative aspect-[3/4] sm:aspect-[4/5] [perspective:1400px]">
       <div
         className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
           flipped ? "[transform:rotateY(180deg)]" : ""
