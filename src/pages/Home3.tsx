@@ -358,7 +358,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         >
           <div className={`absolute inset-0 p-5 sm:p-6 flex flex-col ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
             {/* Image — original ratio, with animated glowing gold border */}
-            {card.image && (
+            {(card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
                 <div
                   aria-hidden
@@ -366,7 +366,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 />
                 <div className="relative rounded-2xl overflow-hidden bg-black">
                   <img
-                    src={card.image}
+                    src={card.flip?.image ?? card.image}
                     alt={`${card.title} before and after — Cosmedocs`}
                     className="block w-full h-auto"
                   />
