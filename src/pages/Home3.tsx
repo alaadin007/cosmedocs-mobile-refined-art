@@ -373,8 +373,8 @@ const cardSizeClasses: Record<CardSize, string> = {
 /* ---------- Subtle watermark motif per treatment ---------------------- */
 const CardWatermark = ({ title, dark }: { title: string; dark: boolean }) => {
   const t = title.toLowerCase();
-  const stroke = dark ? "rgba(255,255,255,0.10)" : "rgba(20,20,20,0.09)";
-  const accent = "rgba(201,160,80,0.18)";
+  const stroke = dark ? "rgba(255,255,255,0.22)" : "rgba(20,20,20,0.22)";
+  const accent = dark ? "rgba(201,160,80,0.55)" : "rgba(201,160,80,0.45)";
   const common = {
     fill: "none" as const,
     stroke,
@@ -561,7 +561,7 @@ const CardWatermark = ({ title, dark }: { title: string; dark: boolean }) => {
       aria-hidden="true"
       viewBox="0 0 300 260"
       preserveAspectRatio="xMidYMid slice"
-      className="absolute inset-0 w-full h-full pointer-events-none mix-blend-overlay opacity-70"
+      className="absolute inset-0 w-full h-full pointer-events-none opacity-90"
     >
       {motifs[motif]}
     </svg>
