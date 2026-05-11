@@ -373,8 +373,8 @@ const cardSizeClasses: Record<CardSize, string> = {
 /* ---------- Subtle watermark motif per treatment ---------------------- */
 const CardWatermark = ({ title, dark }: { title: string; dark: boolean }) => {
   const t = title.toLowerCase();
-  const stroke = dark ? "rgba(255,255,255,0.10)" : "rgba(20,20,20,0.09)";
-  const accent = "rgba(201,160,80,0.18)";
+  const stroke = dark ? "rgba(255,255,255,0.22)" : "rgba(20,20,20,0.22)";
+  const accent = dark ? "rgba(201,160,80,0.55)" : "rgba(201,160,80,0.45)";
   const common = {
     fill: "none" as const,
     stroke,
