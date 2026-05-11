@@ -476,7 +476,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         <button
           type="button"
           onPointerDown={(event) => {
-            gestureStart.current = { x: event.clientX, y: event.clientY };
+            gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
           }}
           onPointerUp={(event) => {
             if (isTapGesture(event)) setFlipped(true);
@@ -522,7 +522,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           <button
             type="button"
             onPointerDown={(event) => {
-              gestureStart.current = { x: event.clientX, y: event.clientY };
+              gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
             }}
             onPointerUp={(event) => {
               if (isTapGesture(event)) setFlipped(false);
@@ -758,7 +758,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         <button
           type="button"
           onPointerDown={(event) => {
-            gestureStart.current = { x: event.clientX, y: event.clientY };
+            gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
           }}
           onPointerUp={(event) => {
             if (isTapGesture(event)) setFlipped(true);
@@ -784,7 +784,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           <button
             type="button"
             onPointerDown={(event) => {
-              gestureStart.current = { x: event.clientX, y: event.clientY };
+              gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
             }}
             onPointerUp={(event) => {
               if (isTapGesture(event)) setFlipped(false);
