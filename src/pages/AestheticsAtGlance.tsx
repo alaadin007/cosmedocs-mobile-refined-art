@@ -156,7 +156,7 @@ const BigFlipCard = ({ data }: { data: BigTx }) => {
         <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-[32px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-black border border-[#C9A050]/40 p-7 sm:p-12 flex flex-col">
           <span className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">{data.eyebrow}</span>
           <h3 className="mt-3 font-serif text-2xl sm:text-4xl text-white leading-[1.05]">{data.title}</h3>
-          <p className="mt-5 text-white/85 text-base sm:text-xl leading-[1.55] font-light flex-1 max-w-3xl">
+          <p className="mt-5 text-white/90 text-lg sm:text-2xl lg:text-3xl leading-[1.5] font-light flex-1 max-w-3xl">
             {data.back}
           </p>
           <div className="mt-6 flex items-center justify-between">
