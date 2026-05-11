@@ -328,25 +328,36 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         {/* BACK — full before/after image + caption */}
         <Link
           to={card.href}
-          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-black text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
+          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
         >
-          {card.image && (
-            <img
-              src={card.image}
-              alt={`${card.title} before and after — Cosmedocs`}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          )}
-          {/* gloss + bottom shade for caption legibility */}
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_30%,rgba(0,0,0,0)_60%,rgba(201,160,80,0.10)_100%)]" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
-          <div className="absolute inset-0 p-7 sm:p-9 flex flex-col justify-end">
-            <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
-            <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
-            <p className="mt-2 text-sm text-white/80 max-w-md">{card.flip?.back}</p>
-            <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050]">
-              Discover {card.title} <ArrowUpRight className="w-4 h-4" />
-            </span>
+          <div className="absolute inset-0 p-5 sm:p-6 flex flex-col">
+            {/* Image — original ratio at top, with animated glowing gold border */}
+            {card.image && (
+              <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
+                <div
+                  aria-hidden
+                  className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
+                />
+                <div className="relative rounded-2xl overflow-hidden bg-black">
+                  <img
+                    src={card.image}
+                    alt={`${card.title} before and after — Cosmedocs`}
+                    className="block w-full h-auto"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0)_65%,rgba(201,160,80,0.10)_100%)]" />
+                </div>
+              </div>
+            )}
+
+            {/* Caption — bottom */}
+            <div className="mt-4 sm:mt-5 flex-1 flex flex-col justify-end">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
+              <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
+              <p className="mt-2 text-sm text-white/75 max-w-md">{card.flip?.back}</p>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050]">
+                Discover {card.title} <ArrowUpRight className="w-4 h-4" />
+              </span>
+            </div>
           </div>
         </Link>
       </div>
