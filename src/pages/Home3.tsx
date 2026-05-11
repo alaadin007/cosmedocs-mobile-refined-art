@@ -31,6 +31,7 @@ import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
+import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -281,7 +282,17 @@ const categories: Category[] = [
           image: noseBaImg,
         },
       },
-      { title: "Jawline Definition", tagline: "Filler & PCL threads", href: "/treatments/jawline-filler/", bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]" },
+      {
+        title: "Jawline Definition",
+        tagline: "Filler & PCL threads",
+        href: "/treatments/jawline-filler/",
+        bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]",
+        flip: {
+          back: "Doctor-led mandibular contouring — sharpening the gonial angle, lengthening the ramus and lifting the lower face. Filler on bone for structure, PCL threads for soft-tissue support. Definition that reads as bone, never bulk.",
+          imagePosition: "top",
+          image: jawlineBaImg,
+        },
+      },
       { title: "Endolaser Lift", tagline: "Laser fibre tightening", href: "/treatments/laser-fibre-lift/", bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]", badge: "New" },
       { title: "PDO Threads", tagline: "Cog · Mono lifting", href: "/treatments/pdo-threads/", bg: "bg-gradient-to-br from-amber-50 to-amber-200", ink: "text-zinc-900" },
     ],
