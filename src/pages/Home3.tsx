@@ -1604,7 +1604,67 @@ const Home3 = () => {
             ),
           })}
         </script>
+
+        {/* Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://www.cosmedocs.com/#organization",
+            name: "Cosmedocs",
+            url: "https://www.cosmedocs.com",
+            logo: "https://www.cosmedocs.com/logo.png",
+            description: "Doctor-led aesthetic clinic on Harley Street offering cosmetic treatments, anti-ageing solutions and non-surgical procedures.",
+            telephone: "+44 333 0551 503",
+            email: "info@cosmedocs.com",
+            address: { "@type": "PostalAddress", streetAddress: "8-10 Harley Street", addressLocality: "London", postalCode: "W1G 9PF", addressCountry: "GB" },
+            sameAs: ["https://www.instagram.com/cosmedocs", "https://www.facebook.com/cosmedocs"],
+          })}
+        </script>
+
+        {/* MedicalClinic */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            "@id": "https://www.cosmedocs.com/#clinic",
+            name: "Cosmedocs - Harley Street Clinic",
+            image: "https://www.cosmedocs.com/og/cosmedocs-default.jpg",
+            url: "https://www.cosmedocs.com",
+            telephone: "+44 333 0551 503",
+            priceRange: "££",
+            address: { "@type": "PostalAddress", streetAddress: "8-10 Harley Street", addressLocality: "London", postalCode: "W1G 9PF", addressCountry: "GB" },
+            geo: { "@type": "GeoCoordinates", latitude: 51.5177, longitude: -0.1461 },
+            openingHoursSpecification: [
+              { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
+              { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "16:00" },
+            ],
+            availableService: [
+              { "@type": "MedicalProcedure", name: "Anti-Wrinkle Treatment", procedureType: "NoninvasiveProcedure" },
+              { "@type": "MedicalProcedure", name: "Dermal Fillers", procedureType: "NoninvasiveProcedure" },
+              { "@type": "MedicalProcedure", name: "Anti-ageing Treatments", procedureType: "NoninvasiveProcedure" },
+            ],
+          })}
+        </script>
+
+        {/* FAQPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What treatments does Cosmedocs offer?", acceptedAnswer: { "@type": "Answer", text: "Cosmedocs offers a wide range of non-surgical aesthetic treatments including anti-wrinkle injections, dermal fillers, lip fillers, skin rejuvenation and advanced anti-ageing procedures, all performed by qualified medical professionals." } },
+              { "@type": "Question", name: "Where is Cosmedocs located?", acceptedAnswer: { "@type": "Answer", text: "Cosmedocs is located at 8-10 Harley Street, London W1G 9PF — a premium, private setting for all aesthetic consultations and treatments." } },
+              { "@type": "Question", name: "How do I book a consultation at Cosmedocs?", acceptedAnswer: { "@type": "Answer", text: "Book by calling 0333 0551 503, emailing info@cosmedocs.com, or using our online booking system. Both in-person and virtual consultations are available." } },
+              { "@type": "Question", name: "Are Cosmedocs practitioners qualified doctors?", acceptedAnswer: { "@type": "Answer", text: "Yes. Cosmedocs is doctor-led — every practitioner is a qualified medical professional with extensive aesthetic-medicine training. Dr. Ahmed Haq leads the team with over 17 years of experience." } },
+              { "@type": "Question", name: "What is the Cosmedocs approach to aesthetics?", acceptedAnswer: { "@type": "Answer", text: "Our philosophy is invisible art — subtle, natural-looking results that enhance your features without looking overdone. Bold, natural, always your way." } },
+            ],
+          })}
+        </script>
+
+        <html lang="en-GB" />
       </Helmet>
+
 
       <main className="min-h-screen bg-black text-white selection:bg-[#C9A050]/40 antialiased">
         <Home2Header />
