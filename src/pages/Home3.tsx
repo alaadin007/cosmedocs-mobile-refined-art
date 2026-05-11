@@ -370,6 +370,204 @@ const cardSizeClasses: Record<CardSize, string> = {
   split: "w-full h-full rounded-[28px]",
 };
 
+/* ---------- Subtle watermark motif per treatment ---------------------- */
+const CardWatermark = ({ title, dark }: { title: string; dark: boolean }) => {
+  const t = title.toLowerCase();
+  const stroke = dark ? "rgba(255,255,255,0.10)" : "rgba(20,20,20,0.09)";
+  const accent = "rgba(201,160,80,0.18)";
+  const common = {
+    fill: "none" as const,
+    stroke,
+    strokeWidth: 1,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+  };
+
+  type Motif = "dna" | "molecule" | "needle" | "collagen" | "droplet" | "wave" | "lip" | "face" | "hex" | "thread" | "sun" | "muscle";
+  const pick = (): Motif => {
+    if (/polynucleotide|dna|exosome|prp|stem/.test(t)) return "dna";
+    if (/profhilo|sunekos|jalupro|lumi|skin booster|hydrat|mesotherap/.test(t)) return "molecule";
+    if (/microneedl|mesotherapy|injection|filler|botox|anti-wrinkle|toxin/.test(t)) return "needle";
+    if (/collagen|rejuven|peel|glow|facial|hydrafacial/.test(t)) return "collagen";
+    if (/lip/.test(t)) return "lip";
+    if (/laser|pico|ipl|endolaser|hair removal/.test(t)) return "wave";
+    if (/thread|pdo|pcl|nefertiti|jowl|jawline/.test(t)) return "thread";
+    if (/cheek|chin|temple|tear|nose|brow|frown|forehead|bunny|gummy|marionette|mentalis/.test(t)) return "face";
+    if (/migraine|bruxism|masseter|trapezius|calf|hyperhidrosis|nasal|medical/.test(t)) return "muscle";
+    if (/serum|vitamin|retinol|cream|drop/.test(t)) return "droplet";
+    if (/sun|spf|pigment|melasma/.test(t)) return "sun";
+    return "hex";
+  };
+
+  const motif = pick();
+
+  const motifs: Record<Motif, JSX.Element> = {
+    dna: (
+      <g {...common}>
+        {[0, 1, 2, 3, 4].map((i) => {
+          const y = 30 + i * 36;
+          return (
+            <g key={i}>
+              <path d={`M30 ${y} Q90 ${y - 20} 150 ${y} T270 ${y}`} />
+              <path d={`M30 ${y + 12} Q90 ${y + 32} 150 ${y + 12} T270 ${y + 12}`} />
+              {[0, 1, 2, 3, 4, 5].map((j) => (
+                <line key={j} x1={40 + j * 40} y1={y + 2} x2={40 + j * 40} y2={y + 10} stroke={accent} />
+              ))}
+            </g>
+          );
+        })}
+      </g>
+    ),
+    molecule: (
+      <g {...common}>
+        {Array.from({ length: 6 }).map((_, r) =>
+          Array.from({ length: 8 }).map((_, c) => {
+            const x = 30 + c * 35;
+            const y = 35 + r * 35 + (c % 2 ? 17 : 0);
+            return (
+              <g key={`${r}-${c}`}>
+                <circle cx={x} cy={y} r={2.6} fill={c % 5 === 0 ? accent : stroke} stroke="none" />
+                {c < 7 && <line x1={x} y1={y} x2={x + 35} y2={y + ((c + 1) % 2 ? 17 : -17)} />}
+                {r < 5 && <line x1={x} y1={y} x2={x} y2={y + 35} />}
+              </g>
+            );
+          })
+        )}
+      </g>
+    ),
+    needle: (
+      <g {...common}>
+        {[0, 1, 2, 3, 4, 5].map((i) => {
+          const x = 30 + i * 45;
+          return (
+            <g key={i} transform={`rotate(${-18 + i * 6} ${x} 130) translate(${x} 30)`}>
+              <line x1="0" y1="0" x2="0" y2="160" />
+              <path d="M-3 0 L0 -8 L3 0 Z" fill={accent} stroke="none" />
+              <circle cx="0" cy="170" r="2" fill={accent} stroke="none" />
+            </g>
+          );
+        })}
+      </g>
+    ),
+    collagen: (
+      <g {...common}>
+        {Array.from({ length: 14 }).map((_, i) => (
+          <path key={`a${i}`} d={`M0 ${20 + i * 15} Q75 ${10 + i * 15} 150 ${20 + i * 15} T300 ${20 + i * 15}`} />
+        ))}
+        {Array.from({ length: 14 }).map((_, i) => (
+          <path key={`b${i}`} d={`M0 ${20 + i * 15} Q75 ${30 + i * 15} 150 ${20 + i * 15} T300 ${20 + i * 15}`} stroke={accent} opacity="0.5" />
+        ))}
+      </g>
+    ),
+    droplet: (
+      <g {...common}>
+        {Array.from({ length: 18 }).map((_, i) => {
+          const x = 25 + (i % 6) * 45;
+          const y = 30 + Math.floor(i / 6) * 60;
+          return <path key={i} d={`M${x} ${y} C${x + 12} ${y + 14} ${x + 8} ${y + 28} ${x} ${y + 28} C${x - 8} ${y + 28} ${x - 12} ${y + 14} ${x} ${y}Z`} stroke={i % 4 === 0 ? accent : stroke} />;
+        })}
+      </g>
+    ),
+    wave: (
+      <g {...common}>
+        {[0, 1, 2].map((c) => (
+          <g key={c} transform={`translate(${60 + c * 100} 130)`}>
+            {[12, 26, 42, 60, 80].map((r, i) => (
+              <circle key={r} cx="0" cy="0" r={r} stroke={i === 2 ? accent : stroke} />
+            ))}
+          </g>
+        ))}
+      </g>
+    ),
+    lip: (
+      <g {...common}>
+        {Array.from({ length: 6 }).map((_, i) => {
+          const y = 40 + i * 38;
+          return (
+            <g key={i}>
+              <path d={`M30 ${y} Q90 ${y - 18} 150 ${y} T270 ${y}`} />
+              <path d={`M30 ${y} Q90 ${y + 22} 150 ${y} T270 ${y}`} stroke={i % 2 ? accent : stroke} />
+            </g>
+          );
+        })}
+      </g>
+    ),
+    face: (
+      <g {...common}>
+        {[0, 1, 2].map((col) => (
+          <g key={col} transform={`translate(${60 + col * 90} 130)`}>
+            {[18, 30, 44, 60, 78].map((r, i) => (
+              <ellipse key={r} cx="0" cy="0" rx={r * 0.78} ry={r} stroke={i === 2 ? accent : stroke} />
+            ))}
+          </g>
+        ))}
+      </g>
+    ),
+    hex: (
+      <g {...common}>
+        {Array.from({ length: 5 }).map((_, r) =>
+          Array.from({ length: 6 }).map((_, c) => {
+            const x = 35 + c * 50 + (r % 2 ? 25 : 0);
+            const y = 40 + r * 44;
+            const pts = Array.from({ length: 6 })
+              .map((_, k) => {
+                const a = (Math.PI / 3) * k - Math.PI / 6;
+                return `${x + Math.cos(a) * 22},${y + Math.sin(a) * 22}`;
+              })
+              .join(" ");
+            return <polygon key={`${r}-${c}`} points={pts} stroke={(r + c) % 4 === 0 ? accent : stroke} />;
+          })
+        )}
+      </g>
+    ),
+    thread: (
+      <g {...common}>
+        {Array.from({ length: 9 }).map((_, i) => {
+          const y = 30 + i * 24;
+          return (
+            <g key={i}>
+              <path d={`M10 ${y} Q150 ${y - 12} 290 ${y}`} stroke={i % 3 === 0 ? accent : stroke} />
+              {Array.from({ length: 14 }).map((_, k) => (
+                <line key={k} x1={20 + k * 20} y1={y - 3} x2={26 + k * 20} y2={y + 3} />
+              ))}
+            </g>
+          );
+        })}
+      </g>
+    ),
+    sun: (
+      <g {...common}>
+        <circle cx="150" cy="130" r="40" stroke={accent} />
+        {Array.from({ length: 24 }).map((_, i) => {
+          const a = (Math.PI * 2 * i) / 24;
+          return <line key={i} x1={150 + Math.cos(a) * 56} y1={130 + Math.sin(a) * 56} x2={150 + Math.cos(a) * 96} y2={130 + Math.sin(a) * 96} />;
+        })}
+      </g>
+    ),
+    muscle: (
+      <g {...common}>
+        {Array.from({ length: 8 }).map((_, i) => {
+          const y = 30 + i * 28;
+          return (
+            <path key={i} d={`M0 ${y} C75 ${y - 10} 150 ${y + 14} 225 ${y - 6} S330 ${y + 8} 360 ${y}`} stroke={i % 2 ? accent : stroke} />
+          );
+        })}
+      </g>
+    ),
+  };
+
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 300 260"
+      preserveAspectRatio="xMidYMid slice"
+      className="absolute inset-0 w-full h-full pointer-events-none mix-blend-overlay opacity-70"
+    >
+      {motifs[motif]}
+    </svg>
+  );
+};
+
 const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
   const inkLight = !card.ink; // light text on dark bg
   return (
@@ -387,6 +585,7 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}
+      {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       {/* Inner light + bottom shade for legibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
 
@@ -521,6 +720,8 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
             </>
           )}
+
+          {!card.frontImage && <CardWatermark title={card.title} dark={!card.ink} />}
 
           {card.badge && (
             <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
@@ -702,6 +903,7 @@ const TileCard = ({ card }: { card: SubCard }) => {
       {card.image && (
         <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
       )}
+      {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
       {card.badge && (
         <span className={`absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
@@ -743,6 +945,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
       {card.image && (
         <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 z-0 w-full h-full object-cover" />
       )}
+      {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
       {card.badge && (
         <span className={`absolute top-5 left-5 z-[2] text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
