@@ -253,20 +253,6 @@ const categories: Category[] = [
           image: lipAnatomyImg,
         },
       },
-      {
-        title: "Cosmetic Units",
-        tagline: "The architecture beneath the skin",
-        href: "/treatments/dermal-fillers/",
-        bg: "bg-gradient-to-br from-stone-100 to-stone-300",
-        ink: "text-zinc-900",
-        badge: "Anatomy",
-        image: cosmeticUnitsImg,
-        flip: {
-          back: "In youth, skin flows smoothly from one cosmetic unit to the next — forehead into temple, cheek into jaw, lip into chin. With age, fat pads descend and ligaments tighten; the units compartmentalise, casting shadows and breaking the line. Doctor-led filler restores the bridge between units — re-establishing flow, not adding volume.",
-          imagePosition: "top",
-          image: cosmeticUnitsImg,
-        },
-      },
     ],
   },
   {
@@ -1173,6 +1159,7 @@ const Home3 = () => {
               ) : (
                 <Row category={cat} index={i} />
               )}
+              {cat.id === "fillers-anti-ageing" && <CosmeticUnitsFeature />}
             </div>
           ))}
         </div>
