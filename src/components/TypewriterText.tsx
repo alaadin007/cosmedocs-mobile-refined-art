@@ -47,12 +47,54 @@ export default function TypewriterText({
   const visible = text.slice(0, count);
   const isTyping = enabled && count < text.length;
 
+  // Linkify URLs, wa.me links, phone numbers, emails
+  const linkify = (line: string) => {
+    const pattern = /(https?:\/\/[^\s]+|wa\.me\/[^\s]+|\+?\d[\d\s().-]{8,}\d|[\w.+-]+@[\w-]+\.[\w.-]+)/g;
+    const parts: (string | JSX.Element)[] = [];
+    let last = 0;
+    let m: RegExpExecArray | null;
+    let key = 0;
+    while ((m = pattern.exec(line)) !== null) {
+      if (m.index > last) parts.push(line.slice(last, m.index));
+      const match = m[0];
+      let href = match;
+      const isEmail = /@/.test(match);
+      const isUrl = /^https?:\/\//.test(match);
+      const isWa = /^wa\.me\//.test(match);
+      const isPhone = !isEmail && !isUrl && !isWa;
+      if (isEmail) href = `mailto:${match}`;
+      else if (isWa) href = `https://${match}`;
+      else if (isPhone) {
+        const digits = match.replace(/[^\d+]/g, "");
+        // UK Cosmedocs WhatsApp number → open WhatsApp
+        const waDigits = digits.replace(/^\+/, "");
+        href = waDigits.startsWith("44") || waDigits.startsWith("447")
+          ? `https://wa.me/${waDigits}`
+          : `tel:${digits}`;
+      }
+      parts.push(
+        <a
+          key={`lnk-${key++}`}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#C9A050] underline underline-offset-2 hover:text-[#e3c074]"
+        >
+          {match}
+        </a>
+      );
+      last = m.index + match.length;
+    }
+    if (last < line.length) parts.push(line.slice(last));
+    return parts;
+  };
+
   return (
     <span className={className}>
-      {visible.split("\n").map((line, j) => (
+      {visible.split("\n").map((line, j, arr) => (
         <p key={j} className={j > 0 ? "mt-2" : ""}>
-          {line}
-          {isTyping && j === visible.split("\n").length - 1 && (
+          {linkify(line)}
+          {isTyping && j === arr.length - 1 && (
             <span className="inline-block w-[2px] h-[1em] align-middle ml-0.5 bg-current animate-pulse" />
           )}
         </p>
