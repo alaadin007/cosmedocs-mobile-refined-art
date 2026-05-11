@@ -32,7 +32,7 @@ import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
 import lipAnatomyImg from "@/assets/home3-lip-gallery.jpg";
-import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
+import cosmeticUnitsImg from "@/assets/home3-cosmetic-units-gold.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
