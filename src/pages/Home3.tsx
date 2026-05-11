@@ -151,13 +151,6 @@ const botoxAesthetic: SubCard[] = [
     bg: "bg-[#2a2a2a]",
     image: botoxNasalImg,
   },
-  {
-    title: "Calf Slimming",
-    tagline: "Athletic-leg refinement, a slimmer silhouette below the knee.",
-    href: "/treatments/calf-slimming-botox/",
-    bg: "bg-black",
-    image: medCalfImg,
-  },
 ];
 
 const categories: Category[] = [
