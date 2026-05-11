@@ -1339,11 +1339,8 @@ const Home3 = () => {
         <Home2Header />
 
         {/* Hero */}
-        <section className="relative px-5 sm:px-8 pt-14 pb-10 sm:pt-24 sm:pb-16 max-w-7xl mx-auto">
+        <section className="relative px-5 sm:px-8 pt-24 pb-10 sm:pt-28 sm:pb-16 max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-white/8 border border-white/10 text-[11px] uppercase tracking-[0.22em] text-white/70">
-              <Sparkles className="w-3 h-3 text-[#C9A050]" /> Doctor-led · London
-            </div>
             <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-tight mb-6">
               Our aesthetics
               <br />
