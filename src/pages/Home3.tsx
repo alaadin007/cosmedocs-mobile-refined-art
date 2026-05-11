@@ -1539,7 +1539,7 @@ const Home3 = () => {
           name="description"
           content="An iOS-style view of every Cosmedocs treatment. Browse Botox, dermal fillers, contouring and skin concepts as quietly elegant cards, built for thumb-scrolling."
         />
-        <link rel="canonical" href="https://www.cosmedocs.com/home3/" data-rh="true" />
+        <link rel="canonical" href="https://www.cosmedocs.com/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
 
         {/* Open Graph */}
