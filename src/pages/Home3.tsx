@@ -344,44 +344,84 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
 
 /* ---------- Flippable card (simple front, image back) ------------------ */
 
-const FaceMark = () => (
-  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 sm:w-20 sm:h-20" aria-hidden="true">
-    <path d="M32 6c10 0 18 8 18 20v8c0 13-8 24-18 24S14 47 14 34v-8C14 14 22 6 32 6Z" />
-    <path d="M22 30c1.5-1 3-1 4.5 0M37.5 30c1.5-1 3-1 4.5 0" />
-    <path d="M32 32v8M28 44c2 1.5 6 1.5 8 0" />
-    <path d="M20 24c-3 1-4 4-3 7M44 24c3 1 4 4 3 7" />
-  </svg>
-);
+const FaceMark = ({ area }: { area?: string }) => {
+  // Highlight coordinates per treatment area on a 64x64 schematic face
+  const accents: Record<string, JSX.Element> = {
+    "HA Makeover": (
+      <>
+        <circle cx="22" cy="30" r="3.2" />
+        <circle cx="42" cy="30" r="3.2" />
+        <path d="M24 42c4 3 12 3 16 0" />
+      </>
+    ),
+    "Cheek Filler": (
+      <>
+        <path d="M19 30c2 4 4 6 7 7" />
+        <path d="M45 30c-2 4-4 6-7 7" />
+      </>
+    ),
+    "Jowl & Jawline": (
+      <path d="M16 36c2 8 8 14 16 14s14-6 16-14" />
+    ),
+    "Tear Trough": (
+      <>
+        <path d="M19 30c2 2 6 2 8 0" />
+        <path d="M37 30c2 2 6 2 8 0" />
+      </>
+    ),
+    "Temple Filler": (
+      <>
+        <path d="M14 22c2-3 4-4 7-4" />
+        <path d="M50 22c-2-3-4-4-7-4" />
+      </>
+    ),
+    "Chin Filler": (
+      <path d="M26 46c1.5 3 4.5 4.5 6 4.5s4.5-1.5 6-4.5" />
+    ),
+    "Lip Filler": (
+      <path d="M24 40c2-2 6-2 8 0 2-2 6-2 8 0-2 2-6 3-8 3s-6-1-8-3Z" />
+    ),
+  };
+  return (
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 sm:w-20 sm:h-20" aria-hidden="true">
+      <path d="M32 6c10 0 18 8 18 20v8c0 13-8 24-18 24S14 47 14 34v-8C14 14 22 6 32 6Z" />
+      <path d="M22 30c1.5-1 3-1 4.5 0M37.5 30c1.5-1 3-1 4.5 0" />
+      <path d="M32 32v8M28 44c2 1.5 6 1.5 8 0" />
+      {area && accents[area] && (
+        <g stroke="#C9A050" strokeWidth="2" opacity="0.95">{accents[area]}</g>
+      )}
+    </svg>
+  );
+};
 
 const FlipCard = ({ card }: { card: SubCard }) => {
+  const inkLight = !card.ink;
   return (
     <div className="group [perspective:1400px] h-full w-full">
       <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-        {/* FRONT — minimal: face mark + title */}
+        {/* FRONT — original card colour + area-specific face mark */}
         <Link
           to={card.href}
           aria-label={`${card.title} — ${card.tagline}`}
-          className="absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-gradient-to-br from-[#1a1a1a] via-[#241b08] to-[#3a2d10] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
+          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
         >
-          {/* soft gold glow */}
-          <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-[360px] h-[360px] rounded-full blur-3xl opacity-40" style={{ background: "radial-gradient(closest-side, rgba(201,160,80,0.55), transparent)" }} />
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_40%)]" />
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
           {card.badge && (
-            <span className="absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-[#C9A050] text-black font-semibold">
+            <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
               {card.badge}
             </span>
           )}
 
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col">
-            <div className="flex-1 flex items-center justify-center text-[#C9A050]">
-              <FaceMark />
+            <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
+              <FaceMark area={card.title} />
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Signature</p>
+              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>Signature</p>
               <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
-              <p className="mt-2 text-sm text-white/70">{card.tagline}</p>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-white/55">
+              <p className={`mt-2 text-sm ${card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <span className={`mt-4 inline-flex items-center gap-1.5 text-xs ${card.ink ? "text-zinc-900/70" : "text-white/70"}`}>
                 Hover to see results <ArrowUpRight className="w-3.5 h-3.5" />
               </span>
             </div>
