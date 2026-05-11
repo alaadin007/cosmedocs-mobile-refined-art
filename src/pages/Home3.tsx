@@ -697,12 +697,18 @@ const TileCard = ({ card }: { card: SubCard }) => {
 // Tall "spotlight" card used as a column on its own.
 const SpotlightCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
+  const hasFlip = !!card.flip || (card.flipImages && card.flipImages.length > 0);
 
-  const front = (
-    <Link
-      to={card.href}
-      className={`group relative isolate overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
-    >
+  const [flipped, setFlipped] = useState(false);
+  const gestureStart = useRef<{ x: number; y: number } | null>(null);
+  const isTapGesture = (event: PointerEvent) => {
+    const start = gestureStart.current;
+    if (!start) return true;
+    return Math.abs(event.clientX - start.x) < 10 && Math.abs(event.clientY - start.y) < 10;
+  };
+
+  const frontInner = (
+    <>
       {card.image && (
         <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 z-0 w-full h-full object-cover" />
       )}
@@ -715,27 +721,78 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
       <div className="absolute inset-0 z-[2] p-7 sm:p-9 flex flex-col justify-end">
         <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%]">{card.title}</h3>
         <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/80"} max-w-[88%]`}>{card.tagline}</p>
-        <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"} group-hover:gap-2.5 transition-all`}>
-          {card.flipImages || card.flip ? "Hover to see results" : "Discover"} <ArrowUpRight className="w-4 h-4" />
+        <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-medium ${card.ink ? "text-zinc-900" : "text-white"}`}>
+          {hasFlip ? "Tap to see results" : "Discover"} <ArrowUpRight className="w-4 h-4" />
         </span>
       </div>
-    </Link>
+    </>
   );
 
-  // Pretty single-image flip (uses card.flip)
-  if (card.flip && (!card.flipImages || card.flipImages.length === 0)) {
-    const flipImg = card.flip.image ?? card.image;
-    const imageBottom = card.flip.imagePosition === "bottom";
+  // Plain non-flip card → navigate on tap
+  if (!hasFlip) {
     return (
-      <div className="group [perspective:1400px] h-full w-full">
-        <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-          <div className="absolute inset-0 [backface-visibility:hidden]">{front}</div>
-          <Link
-            to={card.href}
-            aria-label={`${card.title} — before and after`}
-            className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
-          >
-            <div className={`absolute inset-0 p-5 sm:p-6 flex flex-col ${imageBottom ? "flex-col-reverse" : ""}`}>
+      <Link
+        to={card.href}
+        className={`group relative isolate overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+      >
+        {frontInner}
+      </Link>
+    );
+  }
+
+  const flipImg = card.flip?.image ?? card.image;
+  const imageBottom = card.flip?.imagePosition === "bottom";
+
+  return (
+    <div className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
+      <div
+        className={`relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] will-change-transform ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+      >
+        {/* FRONT — tap to flip (does not navigate) */}
+        <button
+          type="button"
+          onPointerDown={(event) => {
+            gestureStart.current = { x: event.clientX, y: event.clientY };
+          }}
+          onPointerUp={(event) => {
+            if (isTapGesture(event)) setFlipped(true);
+            gestureStart.current = null;
+          }}
+          onPointerCancel={() => {
+            gestureStart.current = null;
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") setFlipped(true);
+          }}
+          aria-label={`${card.title} — reveal results`}
+          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
+        >
+          {frontInner}
+        </button>
+
+        {/* BACK */}
+        <div
+          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
+        >
+          {/* Tap-to-flip-back layer */}
+          <button
+            type="button"
+            onPointerDown={(event) => {
+              gestureStart.current = { x: event.clientX, y: event.clientY };
+            }}
+            onPointerUp={(event) => {
+              if (isTapGesture(event)) setFlipped(false);
+              gestureStart.current = null;
+            }}
+            onPointerCancel={() => {
+              gestureStart.current = null;
+            }}
+            aria-label="Flip card back"
+            className="absolute inset-0 z-0 cursor-pointer"
+          />
+
+          {card.flip ? (
+            <div className={`pointer-events-none absolute inset-0 z-[1] p-5 sm:p-6 flex flex-col ${imageBottom ? "flex-col-reverse" : ""}`}>
               {flipImg && (
                 <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
                   <div
@@ -752,56 +809,45 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
                 <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
                 <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
                 <p className="mt-2 text-sm text-white/75 max-w-md">{card.flip.back}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050]">
+                <Link
+                  to={card.href}
+                  className="pointer-events-auto mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050] hover:text-[#e3c074] self-start"
+                >
                   Discover {card.title} <ArrowUpRight className="w-4 h-4" />
-                </span>
+                </Link>
               </div>
             </div>
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  if (!card.flipImages || card.flipImages.length === 0) return front;
-
-  return (
-    <div className="group [perspective:1400px] h-full w-full">
-      <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-        <div className="absolute inset-0 [backface-visibility:hidden]">
-          {front}
-        </div>
-        <Link
-          to={card.href}
-          aria-label={`${card.title} — real patient results`}
-          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
-        >
-          <div className="flex flex-col h-full">
-            <div className="h-2/3 p-4 sm:p-5">
-              <div className="relative h-full rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
-                <div
-                  aria-hidden
-                  className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
-                />
-                <div className="relative h-full grid grid-rows-2 gap-1 rounded-2xl overflow-hidden bg-black">
-                  {card.flipImages.map((img) => (
-                    <div key={img.src} className="relative overflow-hidden bg-black">
-                      <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
-                    </div>
-                  ))}
+          ) : (
+            <div className="relative z-[1] pointer-events-none flex flex-col h-full">
+              <div className="h-2/3 p-4 sm:p-5">
+                <div className="relative h-full rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
+                  <div
+                    aria-hidden
+                    className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
+                  />
+                  <div className="relative h-full grid grid-rows-2 gap-1 rounded-2xl overflow-hidden bg-black">
+                    {card.flipImages!.map((img) => (
+                      <div key={img.src} className="relative overflow-hidden bg-black">
+                        <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
+              <div className="h-1/3 p-6 sm:p-7 flex flex-col justify-center">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Real results</p>
+                <h3 className="font-serif text-2xl sm:text-3xl leading-tight tracking-tight">Unedited. Unfiltered.</h3>
+                <p className="mt-2 text-sm text-white/70">{card.flipNote ?? "Real patient outcomes."}</p>
+                <Link
+                  to={card.href}
+                  className="pointer-events-auto mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050] hover:text-[#e3c074] self-start"
+                >
+                  Book your assessment <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
-            <div className="h-1/3 p-6 sm:p-7 flex flex-col justify-center">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Real results</p>
-              <h3 className="font-serif text-2xl sm:text-3xl leading-tight tracking-tight">Unedited. Unfiltered.</h3>
-              <p className="mt-2 text-sm text-white/70">{card.flipNote ?? "Real patient outcomes."}</p>
-              <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050]">
-                Book your assessment <ArrowUpRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-          </div>
-        </Link>
+          )}
+        </div>
       </div>
     </div>
   );
