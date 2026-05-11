@@ -492,6 +492,9 @@ const FlipCard = ({ card }: { card: SubCard }) => {
     <div
       ref={containerRef}
       className="[perspective:1400px] h-full w-full select-none"
+      itemScope
+      itemType="https://schema.org/MedicalProcedure"
+      data-treatment={card.title}
       onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
       onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
     >
