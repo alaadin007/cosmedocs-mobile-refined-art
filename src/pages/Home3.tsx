@@ -28,6 +28,7 @@ import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
 import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
 import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
+import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -222,7 +223,18 @@ const categories: Category[] = [
           image: tearTroughBaImg,
         },
       },
-      { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
+      {
+        title: "Temple Filler",
+        tagline: "Restore the upper-third",
+        href: "/treatments/temple-filler/",
+        bg: "bg-gradient-to-br from-neutral-200 to-neutral-400",
+        ink: "text-zinc-900",
+        flip: {
+          back: "Doctor-led restoration of the temple hollow — re-establishing the upper-third scaffold that frames the brow and lifts the lateral face. Deep, on-bone placement with conservative volumes. The eye reads rested; the face reads structured, never filled.",
+          imagePosition: "top",
+          image: templeFillerBaImg,
+        },
+      },
       { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", bg: "bg-gradient-to-br from-pink-200 to-rose-400", ink: "text-zinc-900" },
     ],
   },
