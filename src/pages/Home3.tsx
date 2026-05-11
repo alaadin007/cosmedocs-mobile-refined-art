@@ -30,6 +30,7 @@ import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
+import lipAnatomyImg from "@/assets/home3-lip-anatomy.png";
 import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
@@ -247,9 +248,9 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-pink-200 to-rose-400",
         ink: "text-zinc-900",
         flip: {
-          back: "Your choice — natural or bold. Doctor-led lip artistry: Cupid's bow definition, considered volume, real hydration. Millimetre dosing for a result that reads as you, never overdone.",
+          back: "Your choice — natural or bold. Doctor-led lip artistry mapped to anatomy: Cupid's bow, vermilion border, tubercles, Glogau-Klein points. Millimetre dosing for a result that reads as you, never overdone.",
           imagePosition: "top",
-          image: lipFillerBaImg,
+          image: lipAnatomyImg,
         },
       },
       {
