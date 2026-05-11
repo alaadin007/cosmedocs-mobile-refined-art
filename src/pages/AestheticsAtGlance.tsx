@@ -6,26 +6,13 @@ import { ArrowUpRight, Share2, Download, Shield, Palette, Zap, RotateCw } from "
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 
-// Reuse Home3 imagery for treatment cards
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
-import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
-import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
-import botoxBunnyImg from "@/assets/home3-botox-bunny-lines.jpg";
-import botoxNefertitiImg from "@/assets/home3-botox-nefertiti.jpg";
-import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
-import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
-import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
-import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
-import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
-import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
-import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
-import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
 import cosmeticUnitsImg from "@/assets/home3-cosmetic-units-gold.jpg";
 
 const seoData = generateSEOMetadata(
   "Aesthetics at a Glance | The Cosmedocs Skin Map",
-  "The doctor-led map of beautiful skin: three cells, wrinkles in motion, and volume loss — kept in quiet balance.",
+  "The doctor-led map of beautiful skin: cosmetic units, three cells, wrinkles in motion, and volume loss — kept in quiet balance.",
   "/aesthetics-at-a-glance/"
 );
 
@@ -46,8 +33,8 @@ const cellCards: CellCard[] = [
     subtitle: "The barrier",
     icon: Shield,
     verb: "Remove",
-    front: "Skin cells that form the surface barrier — what the world sees and touches.",
-    back: "We don't try to wake these. We gently remove the tired, lazy ones — peels, retinoids, resurfacing — so fresh keratinocytes rise to the surface. Smoother skin. Brighter finish.",
+    front: "Surface skin cells. As they age they pile up like dead grass — dull, dry, opaque — sitting on top of the healthy, hydrated skin underneath.",
+    back: "Dead is dead. We don't wake them — we remove them. Medical peels, microdermabrasion and laser resurfacing lift the dry, lifeless layer and expose the living tissue beneath, hydrated from below. Brighter. Softer. Real.",
   },
   {
     name: "Melanocytes",
@@ -67,31 +54,6 @@ const cellCards: CellCard[] = [
   },
 ];
 
-/* -------------------- Treatment cards -------------------- */
-
-type Tx = { title: string; tagline: string; href: string; image: string; badge?: string };
-
-const wrinklesInMotion: Tx[] = [
-  { title: "1, 2 or 3 Areas Botox", tagline: "Forehead · Frown · Crow's feet", href: "/treatments/botox/", image: botox3AreasImg, badge: "Signature" },
-  { title: "Brow Lift", tagline: "1–2 mm subtle elevation", href: "/treatments/botox/", image: botoxBrowLiftImg },
-  { title: "Bunny Lines", tagline: "Nose-bridge crinkles", href: "/treatments/botox/", image: botoxBunnyImg },
-  { title: "Lip Flip", tagline: "A whisper of upper-lip lift", href: "/treatments/lip-flip/", image: botoxLipFlipImg },
-  { title: "Gummy Smile", tagline: "Refined upper-lip line", href: "/treatments/botox/", image: botoxGummyImg },
-  { title: "Mentalis · Chin", tagline: "Quiet the chin dimpling", href: "/treatments/botox/", image: botoxMentalisImg },
-  { title: "Nefertiti Neck Lift", tagline: "Sculpt the neck-jaw line", href: "/treatments/botox/", image: botoxNefertitiImg },
-  { title: "Marionette / DAO", tagline: "Lift the corners of the mouth", href: "/treatments/botox/", image: botoxMarionetteImg },
-];
-
-const volumeLost: Tx[] = [
-  { title: "HA Makeover", tagline: "8 / 11-point lifting", href: "/treatments/ha-makeover/", image: haMakeoverBaImg, badge: "Signature" },
-  { title: "Cheek Filler", tagline: "Mid-face lift, no surgery", href: "/treatments/cheek-filler/", image: cheekFillerBaImg },
-  { title: "Jowl & Jawline", tagline: "Sharpen the lower face", href: "/treatments/jawline-filler/", image: jowlJawlineBaImg },
-  { title: "Tear Trough", tagline: "Rested under-eyes", href: "/treatments/tear-trough-filler/", image: tearTroughBaImg },
-  { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", image: templeFillerBaImg },
-  { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", image: lipFillerBaImg },
-  { title: "Cosmetic Units", tagline: "The anatomical map", href: "/aesthetics-at-a-glance/", image: cosmeticUnitsImg, badge: "Anatomy" },
-];
-
 /* -------------------- Components -------------------- */
 
 const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
@@ -103,14 +65,13 @@ const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="relative h-[420px] [perspective:1200px]"
+      className="relative h-[440px] [perspective:1200px]"
     >
       <div
         className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
           flipped ? "[transform:rotateY(180deg)]" : ""
         }`}
       >
-        {/* Front */}
         <div className="absolute inset-0 [backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#0d0d0d] via-[#141008] to-[#1f1809] border border-[#C9A050]/25 p-7 flex flex-col shadow-[0_30px_60px_-30px_rgba(201,160,80,0.35)]">
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/15 border border-[#C9A050]/40 flex items-center justify-center">
             <Icon className="w-5 h-5 text-[#C9A050]" />
@@ -129,7 +90,6 @@ const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
             </button>
           </div>
         </div>
-        {/* Back */}
         <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-[#0d0d0d] border border-[#C9A050]/40 p-7 flex flex-col">
           <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A050]">{card.verb} · {card.name}</span>
           <p className="mt-4 text-white text-lg sm:text-xl leading-[1.45] font-light flex-1">{card.back}</p>
@@ -146,33 +106,108 @@ const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
   );
 };
 
-const TxCard = ({ card }: { card: Tx }) => (
-  <Link
-    to={card.href}
-    className="group relative block overflow-hidden rounded-[24px] aspect-[4/5] bg-black ring-1 ring-white/10 hover:ring-[#C9A050]/60 transition-all duration-300 hover:-translate-y-1"
-  >
-    <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
-    {card.badge && (
-      <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-[#C9A050]/90 text-black font-medium">
-        {card.badge}
-      </span>
-    )}
-    <div className="absolute inset-x-0 bottom-0 p-5">
-      <h3 className="font-serif text-xl sm:text-2xl text-white leading-tight">{card.title}</h3>
-      <p className="mt-1.5 text-white/75 text-xs sm:text-sm">{card.tagline}</p>
-      <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#C9A050] group-hover:gap-2 transition-all">
-        Discover <ArrowUpRight className="w-3.5 h-3.5" />
-      </span>
-    </div>
-  </Link>
-);
+/* -------------------- Big single Tx flip card -------------------- */
 
-const SectionHead = ({ eyebrow, title, copy }: { eyebrow: string; title: string; copy: string }) => (
-  <div className="max-w-2xl mb-10 sm:mb-14">
-    <p className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050] mb-3">{eyebrow}</p>
-    <h2 className="font-serif text-3xl sm:text-5xl leading-[1.05] text-white">{title}</h2>
-    <p className="mt-4 text-white/65 text-[15px] sm:text-base leading-relaxed">{copy}</p>
+type BigTx = {
+  eyebrow: string;
+  title: string;
+  tagline: string;
+  image: string;
+  back: string;
+  href: string;
+  cta: string;
+};
+
+const BigFlipCard = ({ data }: { data: BigTx }) => {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <div className="relative aspect-[16/10] sm:aspect-[16/9] [perspective:1400px]">
+      <div
+        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
+          flipped ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
+        {/* Front — image */}
+        <div className="absolute inset-0 [backface-visibility:hidden] rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_40px_80px_-30px_rgba(201,160,80,0.4)]">
+          <img src={data.image} alt={data.title} className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+          <div className="absolute inset-0 p-7 sm:p-12 flex flex-col justify-end">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">{data.eyebrow}</span>
+            <h3 className="mt-3 font-serif text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.02] max-w-2xl">
+              {data.title}
+            </h3>
+            <p className="mt-3 text-white/80 text-sm sm:text-lg max-w-xl">{data.tagline}</p>
+            <div className="mt-6 flex items-center gap-3">
+              <button
+                onClick={() => setFlipped(true)}
+                className="inline-flex items-center gap-2 bg-[#C9A050] text-black px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#b89040] transition"
+              >
+                Read more <RotateCw className="w-3.5 h-3.5" />
+              </button>
+              <Link
+                to={data.href}
+                className="inline-flex items-center gap-1.5 text-[#C9A050] text-sm uppercase tracking-[0.2em] hover:gap-2.5 transition-all"
+              >
+                {data.cta} <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* Back — explanation */}
+        <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-[32px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-black border border-[#C9A050]/40 p-7 sm:p-12 flex flex-col">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">{data.eyebrow}</span>
+          <h3 className="mt-3 font-serif text-2xl sm:text-4xl text-white leading-[1.05]">{data.title}</h3>
+          <p className="mt-5 text-white/85 text-base sm:text-xl leading-[1.55] font-light flex-1 max-w-3xl">
+            {data.back}
+          </p>
+          <div className="mt-6 flex items-center justify-between">
+            <Link
+              to={data.href}
+              className="inline-flex items-center gap-2 bg-[#C9A050] text-black px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#b89040] transition"
+            >
+              {data.cta} <ArrowUpRight className="w-4 h-4" />
+            </Link>
+            <button
+              onClick={() => setFlipped(false)}
+              aria-label="Flip back"
+              className="w-10 h-10 rounded-full border border-[#C9A050]/50 text-[#C9A050] flex items-center justify-center hover:bg-[#C9A050]/10 transition"
+            >
+              <RotateCw className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const wrinklesCard: BigTx = {
+  eyebrow: "02 · Wrinkles in Motion · Muscles",
+  title: "1, 2 or 3 Areas Botox.",
+  tagline: "Forehead lines · Frown · Crow's feet — softened, never frozen.",
+  image: botox3AreasImg,
+  back: "Every line that appears when you smile, frown or raise your brow is a muscle creasing the skin above it. We quiet those muscles — softly, doctor-led — in 1, 2 or 3 areas. The expression stays. The fold doesn't. Movement preserved, lines gone.",
+  href: "/treatments/botox/",
+  cta: "Discover Botox",
+};
+
+const volumeCard: BigTx = {
+  eyebrow: "03 · Volume Loss · Architecture",
+  title: "The HA Makeover.",
+  tagline: "8 / 11-point lifting with hyaluronic acid — the architecture restored.",
+  image: haMakeoverBaImg,
+  back: "Time quietly takes structure from the cheeks, mid-face, jaw, temples and lips. The HA Makeover restores it — millimetre by millimetre, point by point — with hyaluronic acid placed deep against the bone. Quiet lift. No bulk. No surgery. The face you remember, returned.",
+  href: "/treatments/ha-makeover/",
+  cta: "HA Makeover",
+};
+
+/* -------------------- Section helpers -------------------- */
+
+const SectionLabel = ({ n, label }: { n: string; label: string }) => (
+  <div className="flex items-center gap-3 mb-5">
+    <span className="font-serif text-[#C9A050] text-2xl">{n}</span>
+    <span className="h-px flex-1 bg-gradient-to-r from-[#C9A050]/60 to-transparent" />
+    <span className="text-[10px] uppercase tracking-[0.35em] text-[#C9A050]">{label}</span>
   </div>
 );
 
@@ -199,7 +234,7 @@ const AestheticsAtGlance = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
+      <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,160,80,0.18),transparent_60%)]" />
         <div className="container mx-auto px-5 max-w-5xl relative">
           <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">
@@ -222,7 +257,7 @@ const AestheticsAtGlance = () => {
             Three cells beneath the skin. Wrinkles that move on the surface. Volume that quietly leaves with time.
             Keep all three in balance — the face stays unmistakably you.
           </motion.p>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-wrap gap-3">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-7 flex flex-wrap gap-3">
             <Button onClick={handleShare} variant="outline" className="border-[#C9A050]/40 bg-transparent text-white hover:bg-[#C9A050]/10 hover:text-white">
               <Share2 className="w-4 h-4 mr-2" /> Share
             </Button>
@@ -233,14 +268,68 @@ const AestheticsAtGlance = () => {
         </div>
       </section>
 
-      {/* Section 1 — Your Skin */}
-      <section className="py-16 sm:py-24 border-t border-white/5">
+      {/* Cosmetic Units of the Face — directly under hero */}
+      <section className="pb-16 sm:pb-20">
         <div className="container mx-auto px-5 max-w-6xl">
-          <SectionHead
-            eyebrow="01 · Your Skin"
-            title="Three cells. One surface."
-            copy="Every visible skin concern traces back to three cell types working together. We don't treat all three the same way."
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 bg-gradient-to-br from-[#0d0d0d] to-[#1a1408]"
+          >
+            <div className="grid lg:grid-cols-[1.05fr_1fr]">
+              <div className="relative aspect-[4/5] lg:aspect-auto lg:min-h-[520px]">
+                <img
+                  src={cosmeticUnitsImg}
+                  alt="The cosmetic units of the face — anatomical map in gold"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/60 via-black/10 to-transparent" />
+              </div>
+              <div className="p-7 sm:p-12 flex flex-col justify-center">
+                <span className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">Anatomy · The Map</span>
+                <h2 className="mt-3 font-serif text-3xl sm:text-5xl leading-[1.03] text-white">
+                  The Cosmetic Units <br className="hidden sm:block" />
+                  <span className="text-[#C9A050]">of the Face.</span>
+                </h2>
+                <p className="mt-5 text-white/75 text-base sm:text-lg leading-relaxed">
+                  The face isn't one canvas — it's a collection of small, distinct units: forehead, brow, temple, cheek,
+                  nose, lip, chin, jaw. Each unit meets the next at a quiet edge.
+                </p>
+                <p className="mt-4 text-white/75 text-base sm:text-lg leading-relaxed">
+                  When skin flow breaks at one of those edges — a line, a lost millimetre of volume, an uneven patch of
+                  tone — the eye catches a shadow. That shadow is what reads as <em className="text-[#C9A050] not-italic">tired, older, off</em>.
+                </p>
+                <p className="mt-4 text-white/85 text-base sm:text-lg leading-relaxed">
+                  Our work is invisible: we read each cosmetic unit, soften the edges between them, and let the light
+                  flow uninterrupted across the face.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2.5">
+                  {["Lines", "Volume loss", "Uneven tone"].map((t) => (
+                    <span key={t} className="text-[11px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full border border-[#C9A050]/40 text-[#C9A050]">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 1 — Your Skin */}
+      <section className="py-16 sm:py-24 border-t border-[#C9A050]/15 bg-gradient-to-b from-black via-[#080604] to-black">
+        <div className="container mx-auto px-5 max-w-6xl">
+          <SectionLabel n="01" label="Your Skin · Three Cells" />
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <h2 className="font-serif text-3xl sm:text-5xl leading-[1.05] text-white">
+              Three cells. <span className="text-[#C9A050]">One surface.</span>
+            </h2>
+            <p className="mt-4 text-white/65 text-[15px] sm:text-base leading-relaxed">
+              Every visible skin concern traces back to three cell types working together. We don't treat all three the same way.
+            </p>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {cellCards.map((c, i) => (
               <CellFlipCard key={c.name} card={c} index={i} />
@@ -250,19 +339,19 @@ const AestheticsAtGlance = () => {
       </section>
 
       {/* Section 2 — Wrinkles in Motion */}
-      <section className="py-16 sm:py-24 border-t border-white/5 bg-gradient-to-b from-black to-[#0a0805]">
+      <section className="py-16 sm:py-24 border-t border-[#C9A050]/15">
         <div className="container mx-auto px-5 max-w-6xl">
-          <SectionHead
-            eyebrow="02 · Wrinkles in Motion"
-            title="Where the muscle creases the skin."
-            copy="Forehead, frown, crow's feet, lip lines, jaw — soft, doctor-led Botox quietens the muscles that fold the skin. Movement preserved. Lines, gone."
-          />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-            {wrinklesInMotion.map((c) => (
-              <TxCard key={c.title} card={c} />
-            ))}
+          <SectionLabel n="02" label="Wrinkles in Motion · Muscles" />
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <h2 className="font-serif text-3xl sm:text-5xl leading-[1.05] text-white">
+              Where the muscle <span className="text-[#C9A050]">creases the skin.</span>
+            </h2>
+            <p className="mt-4 text-white/65 text-[15px] sm:text-base leading-relaxed">
+              Forehead, frown, crow's feet, lip lines, jaw — soft, doctor-led Botox quietens the muscles that fold the skin. Movement preserved. Lines, gone.
+            </p>
           </div>
-          <div className="mt-10">
+          <BigFlipCard data={wrinklesCard} />
+          <div className="mt-8">
             <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-[#C9A050] hover:gap-3 transition-all text-sm uppercase tracking-[0.2em]">
               All Botox treatments <ArrowUpRight className="w-4 h-4" />
             </Link>
@@ -271,19 +360,19 @@ const AestheticsAtGlance = () => {
       </section>
 
       {/* Section 3 — Volume Loss */}
-      <section className="py-16 sm:py-24 border-t border-white/5">
+      <section className="py-16 sm:py-24 border-t border-[#C9A050]/15 bg-gradient-to-b from-black via-[#080604] to-black">
         <div className="container mx-auto px-5 max-w-6xl">
-          <SectionHead
-            eyebrow="03 · Volume Loss"
-            title="Where time has taken structure."
-            copy="Cheeks, mid-face, jaw, temples, lips — hyaluronic acid restores the architecture, millimetre by millimetre. Quietly. Never bulk."
-          />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-            {volumeLost.map((c) => (
-              <TxCard key={c.title} card={c} />
-            ))}
+          <SectionLabel n="03" label="Volume Loss · Architecture" />
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <h2 className="font-serif text-3xl sm:text-5xl leading-[1.05] text-white">
+              Where time has <span className="text-[#C9A050]">taken structure.</span>
+            </h2>
+            <p className="mt-4 text-white/65 text-[15px] sm:text-base leading-relaxed">
+              Cheeks, mid-face, jaw, temples, lips — hyaluronic acid restores the architecture, millimetre by millimetre. Quietly. Never bulk.
+            </p>
           </div>
-          <div className="mt-10">
+          <BigFlipCard data={volumeCard} />
+          <div className="mt-8">
             <Link to="/treatments/dermal-fillers/" className="inline-flex items-center gap-2 text-[#C9A050] hover:gap-3 transition-all text-sm uppercase tracking-[0.2em]">
               Dermal Fillers overview <ArrowUpRight className="w-4 h-4" />
             </Link>
