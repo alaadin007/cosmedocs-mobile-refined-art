@@ -828,6 +828,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           {/* Tap-to-flip-back layer */}
           <button
             type="button"
+            style={{ touchAction: "pan-y" }}
             onPointerDown={(event) => {
               gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
             }}
