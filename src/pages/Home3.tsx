@@ -537,8 +537,10 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             {card.frontImage && <div className="flex-1" />}
             <div>
               <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : "Signature"}</p>
-              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.frontImage ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
-              <p className={`mt-2 text-sm ${card.frontImage ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
+              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <link itemProp="url" href={`https://www.cosmedocs.com${card.href}`} />
+              {(card.image || card.frontImage) && <meta itemProp="image" content={card.frontImage ?? card.image ?? ""} />}
             </div>
           </div>
 
