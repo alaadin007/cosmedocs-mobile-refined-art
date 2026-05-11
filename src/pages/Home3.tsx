@@ -496,7 +496,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         {/* FRONT — tap to flip (does not navigate) */}
         <button
           type="button"
-          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)", touchAction: "pan-y" }}
           onPointerDown={(event) => {
             gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
           }}
@@ -544,6 +544,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           {/* Tap-to-flip-back layer (sits behind interactive elements) */}
           <button
             type="button"
+            style={{ touchAction: "pan-y" }}
             onPointerDown={(event) => {
               gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
             }}
@@ -799,7 +800,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         {/* FRONT — tap to flip (does not navigate) */}
         <button
           type="button"
-          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)", touchAction: "pan-y" }}
           onPointerDown={(event) => {
             gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
           }}
@@ -827,6 +828,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           {/* Tap-to-flip-back layer */}
           <button
             type="button"
+            style={{ touchAction: "pan-y" }}
             onPointerDown={(event) => {
               gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
             }}
