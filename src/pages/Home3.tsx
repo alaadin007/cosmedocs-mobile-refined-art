@@ -716,6 +716,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
 
   const [flipped, setFlipped] = useState(false);
   const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const isTapGesture = (event: PointerEvent) => {
     const start = gestureStart.current;
     if (!start) return true;
@@ -727,6 +728,17 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
     // Reject any sizeable drag
     return dx < 10 && dy < 10;
   };
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => { if (!entry.isIntersecting) setFlipped(false); },
+      { threshold: 0.1 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   const frontInner = (
     <>
