@@ -383,6 +383,31 @@ const NonSurgicalFaceliftHub = () => {
           </div>
         </section>
 
+        {/* ── FINE CANNULA TECHNIQUE ── */}
+        <section className="py-16 md:py-24 px-6 border-t border-gray-200 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-block text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-4">The Cosmedocs Technique</div>
+            <h2 className="text-2xl md:text-3xl font-extralight mb-6 tracking-tight">
+              Fine Cannulas. <span className="text-[#C9A050]">Back to Work the Same Day.</span>
+            </h2>
+            <div className="space-y-4 text-gray-600 font-extralight leading-relaxed">
+              <p>
+                Our lifting technique is deliberately gentle. By favouring fine, blunt-tipped cannulas over sharp needles wherever anatomy allows, we visibly lift and restore the face while sparing the small vessels that cause bruising. The result: most patients walk out without obvious marks and head straight back to work, dinner, or a meeting.
+              </p>
+              <p>
+                We do ask for a little leeway — a touch of concealer for the occasional pinpoint entry mark or mild swelling is sensible insurance. But the days of hiding indoors after facial rejuvenation are over.
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 text-sm">
+                <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span> Fine cannulas — fewer entry points, fewer vessels touched</li>
+                <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span> Visible lift without surgical downtime</li>
+                <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span> Most patients return to work the same day</li>
+                <li className="flex items-start gap-2"><span className="text-[#C9A050] mt-1">•</span> Light make-up usually covers any minor marks</li>
+              </ul>
+              <p className="italic text-gray-500 pt-2">Invisible art — quiet, not loud.</p>
+            </div>
+          </div>
+        </section>
+
         {/* ── PRACTITIONER CREDENTIALS ── */}
         <section className="py-16 md:py-24 px-6 border-t border-gray-200">
           <div className="max-w-4xl mx-auto">
