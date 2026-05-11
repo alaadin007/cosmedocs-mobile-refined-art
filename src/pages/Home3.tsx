@@ -32,7 +32,7 @@ import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
 import lipAnatomyImg from "@/assets/home3-lip-gallery.jpg";
-import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
+import cosmeticUnitsImg from "@/assets/home3-cosmetic-units-gold.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
@@ -50,7 +50,8 @@ type SubCard = {
   ink?: string;
   badge?: string;
   image?: string;
-  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string };
+  frontImage?: string;
+  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string };
   flipImages?: { src: string; alt: string }[];
   flipNote?: string;
 };
@@ -259,13 +260,16 @@ const categories: Category[] = [
         title: "Cosmetic Units of the Face",
         tagline: "The anatomical map",
         href: "/aesthetics-at-a-glance/",
-        bg: "bg-gradient-to-br from-[#1a1408] via-[#2a1f10] to-[#3a2d10]",
+        bg: "bg-black",
         badge: "Anatomy",
         image: cosmeticUnitsImg,
+        frontImage: cosmeticUnitsImg,
         flip: {
           back: "The face is a mosaic of cosmetic units — forehead, temple, cheek, mid-face, jaw, lip, chin. Doctor-led aesthetics restores the bridge between units. Flow re-established. Architecture intact. Volume, returned — never bulk.",
           imagePosition: "top",
           image: cosmeticUnitsImg,
+          largeText: true,
+          eyebrow: "Anatomy · The Map",
         },
       },
     ],
@@ -502,6 +506,19 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
+          {card.frontImage && (
+            <>
+              <img
+                src={card.frontImage}
+                alt={card.title}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+              <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
+            </>
+          )}
+
           {card.badge && (
             <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
               {card.badge}
@@ -509,13 +526,16 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           )}
 
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
-            <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
-              <FaceMark area={card.title} />
-            </div>
+            {!card.frontImage && (
+              <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
+                <FaceMark area={card.title} />
+              </div>
+            )}
+            {card.frontImage && <div className="flex-1" />}
             <div>
-              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>Signature</p>
-              <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
-              <p className={`mt-2 text-sm ${card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : "Signature"}</p>
+              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.frontImage ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
+              <p className={`mt-2 text-sm ${card.frontImage ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
             </div>
           </div>
 
@@ -546,8 +566,8 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           </button>
 
           <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
-            {/* Image — fixed proportion so all card backs share the same rhythm */}
-            {(card.flip?.image ?? card.image) && (
+            {/* Image — hidden when flip.largeText so the back is text-led */}
+            {!card.flip?.largeText && (card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
                 <div
                   aria-hidden
@@ -564,14 +584,14 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               </div>
             )}
 
-            {/* Caption — uniform compact typography across all card backs */}
+            {/* Caption */}
             <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
-              <p className="text-[9px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">Before · After</p>
-              <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight">{card.title}</h3>
-              <p className="mt-2 text-[13px] leading-snug text-white/75 max-w-md line-clamp-5 sm:line-clamp-6">{card.flip?.back}</p>
+              <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
+              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-2xl sm:text-3xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
+              <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>{card.flip?.back}</p>
               <Link
                 to={card.href}
-                className="mt-auto pt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#C9A050] pointer-events-auto self-start"
+                className={`mt-auto pt-3 inline-flex items-center gap-1.5 font-semibold text-[#C9A050] pointer-events-auto self-start ${card.flip?.largeText ? "text-sm" : "text-[13px]"}`}
               >
                 Discover {card.title} <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
