@@ -279,7 +279,7 @@ const categories: Category[] = [
     eyebrow: "Facial Contouring",
     title: "Architecture of the face.",
     copy: "Reshaping — not refilling. The chin, nose, jawline and profile, refined with millimetre precision.",
-    cta: { label: "Mini Facelifts hub", href: "/non-surgical-facelift/" },
+    cta: { label: "Facial Contouring overview", href: "/treatments/dermal-fillers/" },
     cards: [
       {
         title: "Chin Filler",
