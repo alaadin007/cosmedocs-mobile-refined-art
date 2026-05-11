@@ -792,7 +792,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           />
 
           {card.flip ? (
-            <div className={`relative z-[1] pointer-events-none absolute inset-0 p-5 sm:p-6 flex flex-col ${imageBottom ? "flex-col-reverse" : ""}`}>
+            <div className={`pointer-events-none absolute inset-0 z-[1] p-5 sm:p-6 flex flex-col ${imageBottom ? "flex-col-reverse" : ""}`}>
               {flipImg && (
                 <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
                   <div
