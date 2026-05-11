@@ -398,6 +398,36 @@ export default function HAMakeover() {
           </div>
         </section>
 
+        {/* Fine Cannula Technique */}
+        <section className="py-20 border-t border-white/10">
+          <div className="page-container">
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-4">The Cosmedocs Technique</div>
+                <h2 className="text-3xl md:text-4xl font-extralight text-white mb-8">
+                  Fine Cannulas. <span className="text-[#C9A050]">Back to Work the Same Day.</span>
+                </h2>
+                <div className="space-y-6 text-gray-300 font-light leading-relaxed">
+                  <p>
+                    The HA Makeover is delivered through fine, blunt-tipped cannulas wherever anatomy allows — not sharp needles. This single change in technique is why our patients lift, contour and refresh the entire face yet leave the clinic without the bruises and tell-tale marks usually associated with full-face filler work.
+                  </p>
+                  <p>
+                    The majority of patients walk straight back into their day — work, lunch, school pick-up — with nothing visible. We do ask for a little leeway: a touch of concealer to cover the occasional pinpoint entry mark or mild swelling is wise insurance, but extended downtime is not part of the plan.
+                  </p>
+                  <p className="text-gray-400 italic">
+                    Invisible art — quiet, not loud. Transformation that speaks without saying a word.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-20">
           <div className="page-container">
