@@ -544,9 +544,9 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             type="button"
             onClick={() => setFlipped(true)}
             aria-label={`${card.title} — reveal results`}
-            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_20px_rgba(201,160,80,0.85),0_0_40px_rgba(201,160,80,0.4)] ring-1 ring-[#F0D78C]/70 hover:bg-[#d8b463] active:scale-95 transition animate-pulse"
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
           >
-            <ArrowUpRight className="w-5 h-5" />
+            <RotateCw className="w-4 h-4" />
           </button>
         </div>
 
@@ -560,9 +560,9 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             type="button"
             onClick={() => setFlipped(false)}
             aria-label="Flip card back"
-            className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-[#C9A050] text-black ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] backdrop-blur flex items-center justify-center"
+            className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition flex items-center justify-center"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <RotateCw className="w-4 h-4" />
           </button>
 
           <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
@@ -792,9 +792,9 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
             type="button"
             onClick={() => setFlipped(true)}
             aria-label={`${card.title} — reveal results`}
-            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_20px_rgba(201,160,80,0.85),0_0_40px_rgba(201,160,80,0.4)] ring-1 ring-[#F0D78C]/70 hover:bg-[#d8b463] active:scale-95 transition animate-pulse"
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
           >
-            <ArrowUpRight className="w-5 h-5" />
+            <RotateCw className="w-4 h-4" />
           </button>
         </div>
 
@@ -808,9 +808,9 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
             type="button"
             onClick={() => setFlipped(false)}
             aria-label="Flip card back"
-            className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-[#C9A050] text-black ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] backdrop-blur flex items-center justify-center"
+            className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition flex items-center justify-center"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <RotateCw className="w-4 h-4" />
           </button>
 
           {card.flip ? (
