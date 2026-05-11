@@ -6,6 +6,10 @@ import { useRef, useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles, RotateCw, ScanFace } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
+import DiscretionBadge from "@/components/DiscretionBadge";
+import { lazy, Suspense } from "react";
+const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowledgeInitializer"));
+const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
 import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
@@ -1600,7 +1604,67 @@ const Home3 = () => {
             ),
           })}
         </script>
+
+        {/* Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://www.cosmedocs.com/#organization",
+            name: "Cosmedocs",
+            url: "https://www.cosmedocs.com",
+            logo: "https://www.cosmedocs.com/logo.png",
+            description: "Doctor-led aesthetic clinic on Harley Street offering cosmetic treatments, anti-ageing solutions and non-surgical procedures.",
+            telephone: "+44 333 0551 503",
+            email: "info@cosmedocs.com",
+            address: { "@type": "PostalAddress", streetAddress: "8-10 Harley Street", addressLocality: "London", postalCode: "W1G 9PF", addressCountry: "GB" },
+            sameAs: ["https://www.instagram.com/cosmedocs", "https://www.facebook.com/cosmedocs"],
+          })}
+        </script>
+
+        {/* MedicalClinic */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            "@id": "https://www.cosmedocs.com/#clinic",
+            name: "Cosmedocs - Harley Street Clinic",
+            image: "https://www.cosmedocs.com/og/cosmedocs-default.jpg",
+            url: "https://www.cosmedocs.com",
+            telephone: "+44 333 0551 503",
+            priceRange: "££",
+            address: { "@type": "PostalAddress", streetAddress: "8-10 Harley Street", addressLocality: "London", postalCode: "W1G 9PF", addressCountry: "GB" },
+            geo: { "@type": "GeoCoordinates", latitude: 51.5177, longitude: -0.1461 },
+            openingHoursSpecification: [
+              { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
+              { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "16:00" },
+            ],
+            availableService: [
+              { "@type": "MedicalProcedure", name: "Anti-Wrinkle Treatment", procedureType: "NoninvasiveProcedure" },
+              { "@type": "MedicalProcedure", name: "Dermal Fillers", procedureType: "NoninvasiveProcedure" },
+              { "@type": "MedicalProcedure", name: "Anti-ageing Treatments", procedureType: "NoninvasiveProcedure" },
+            ],
+          })}
+        </script>
+
+        {/* FAQPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What treatments does Cosmedocs offer?", acceptedAnswer: { "@type": "Answer", text: "Cosmedocs offers a wide range of non-surgical aesthetic treatments including anti-wrinkle injections, dermal fillers, lip fillers, skin rejuvenation and advanced anti-ageing procedures, all performed by qualified medical professionals." } },
+              { "@type": "Question", name: "Where is Cosmedocs located?", acceptedAnswer: { "@type": "Answer", text: "Cosmedocs is located at 8-10 Harley Street, London W1G 9PF — a premium, private setting for all aesthetic consultations and treatments." } },
+              { "@type": "Question", name: "How do I book a consultation at Cosmedocs?", acceptedAnswer: { "@type": "Answer", text: "Book by calling 0333 0551 503, emailing info@cosmedocs.com, or using our online booking system. Both in-person and virtual consultations are available." } },
+              { "@type": "Question", name: "Are Cosmedocs practitioners qualified doctors?", acceptedAnswer: { "@type": "Answer", text: "Yes. Cosmedocs is doctor-led — every practitioner is a qualified medical professional with extensive aesthetic-medicine training. Dr. Ahmed Haq leads the team with over 17 years of experience." } },
+              { "@type": "Question", name: "What is the Cosmedocs approach to aesthetics?", acceptedAnswer: { "@type": "Answer", text: "Our philosophy is invisible art — subtle, natural-looking results that enhance your features without looking overdone. Bold, natural, always your way." } },
+            ],
+          })}
+        </script>
+
+        <html lang="en-GB" />
       </Helmet>
+
 
       <main className="min-h-screen bg-black text-white selection:bg-[#C9A050]/40 antialiased">
         <Home2Header />
@@ -1632,6 +1696,20 @@ const Home3 = () => {
                 <span className="tracking-wide">Free AI Face Scan</span>
                 <ArrowUpRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
+            </div>
+
+            {/* Quiet trust row — Discretion + Instagram */}
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-white/55">
+              <DiscretionBadge />
+              <a
+                href="https://www.instagram.com/cosmedocs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[#C9A050]/80 hover:text-[#C9A050] transition"
+              >
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                @cosmedocs
+              </a>
             </div>
           </motion.div>
 
@@ -1676,7 +1754,40 @@ const Home3 = () => {
           <Button asChild className="mt-10 rounded-full bg-white text-black hover:bg-white/90 h-12 px-8 font-semibold">
             <Link to="/contact/">Begin your consultation</Link>
           </Button>
+          <div className="mt-4">
+            <a
+              href={ACUITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] text-white/45 hover:text-[#C9A050] underline-offset-4 hover:underline transition"
+            >
+              Or book online instantly →
+            </a>
+          </div>
         </section>
+
+        {/* FAQ — collapsed by default, indexable for SEO */}
+        <section aria-labelledby="home3-faq" className="px-5 sm:px-8 max-w-3xl mx-auto pb-16">
+          <h2 id="home3-faq" className="font-serif text-2xl sm:text-3xl text-white/90 mb-5">Frequently asked</h2>
+          <div className="space-y-2">
+            {[
+              { q: "What treatments does Cosmedocs offer?", a: "A full range of non-surgical aesthetic treatments — anti-wrinkle injections, dermal fillers, lip fillers, skin rejuvenation and advanced anti-ageing — all performed by qualified medical doctors." },
+              { q: "Where is Cosmedocs located?", a: "8-10 Harley Street, London W1G 9PF — a private, premium setting for consultations and treatments." },
+              { q: "How do I book a consultation?", a: "Call 0333 0551 503, email info@cosmedocs.com, or use our online booking. Both in-person and virtual consultations are available." },
+              { q: "Are practitioners qualified doctors?", a: "Yes. Cosmedocs is doctor-led — every practitioner is a qualified medical professional. Dr. Ahmed Haq leads the team with 17+ years of experience." },
+              { q: "What is the Cosmedocs philosophy?", a: "Invisible art — subtle, natural-looking results. Bold, natural, always your way." },
+            ].map((f) => (
+              <details key={f.q} className="group rounded-lg border border-white/10 bg-white/[0.02] open:bg-white/[0.04] transition">
+                <summary className="cursor-pointer list-none px-4 py-3 text-sm text-white/80 hover:text-white flex items-center justify-between gap-3">
+                  <span>{f.q}</span>
+                  <span className="text-[#C9A050] text-xs group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="px-4 pb-4 pt-1 text-[13px] leading-relaxed text-white/60">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
 
         {/* Quick Links, pill nav at the bottom for fast jumping back up */}
         <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-16 border-t border-white/5 pt-12">
@@ -1711,6 +1822,10 @@ const Home3 = () => {
             </div>
           </div>
         </footer>
+
+        <Suspense fallback={null}>
+          <WebsiteKnowledgeInitializer />
+        </Suspense>
       </main>
     </>
   );
