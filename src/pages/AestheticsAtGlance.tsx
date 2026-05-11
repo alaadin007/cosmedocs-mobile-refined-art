@@ -65,7 +65,7 @@ const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="relative h-[440px] [perspective:1200px]"
+      className="relative h-[440px] w-[78vw] sm:w-[340px] shrink-0 snap-center [perspective:1200px]"
     >
       <div
         className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
