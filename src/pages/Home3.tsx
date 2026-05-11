@@ -1338,6 +1338,33 @@ const Home3 = () => {
         />
         <link rel="canonical" href="https://www.cosmedocs.com/home3/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cosmedocs" />
+        <meta property="og:url" content="https://www.cosmedocs.com/home3/" />
+        <meta property="og:title" content="Cosmedocs · Aesthetic Medicine, App-Style" />
+        <meta property="og:description" content="Browse every Cosmedocs treatment as quietly elegant cards. Doctor-led aesthetic medicine on Harley Street, London." />
+        <meta property="og:image" content="https://www.cosmedocs.com/og/cosmedocs-home3.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_GB" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cosmedocs" />
+        <meta name="twitter:title" content="Cosmedocs · Aesthetic Medicine, App-Style" />
+        <meta name="twitter:description" content="Doctor-led aesthetic medicine on Harley Street. Botox, dermal fillers, contouring and skin, in one app-style view." />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/og/cosmedocs-home3.jpg" />
+
+        {/* Per-card OG previews (consumed by crawlers that read alternate og:image tags) */}
+        {categories.flatMap((cat) =>
+          cat.cards
+            .filter((c) => c.image)
+            .map((c) => (
+              <meta key={`og-card-${c.title}`} property="og:image:alt" content={`${c.title} — ${cat.title} at Cosmedocs`} />
+            ))
+        )}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
