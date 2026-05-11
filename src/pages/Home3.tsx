@@ -15,6 +15,7 @@ import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 import medMasseterImg from "@/assets/home3-medical-masseter.jpg";
+import masseterBaImg from "@/assets/home3-masseter-botox-ba.jpg";
 import medBruxismImg from "@/assets/home3-medical-bruxism.jpg";
 import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
 import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
@@ -143,7 +144,18 @@ const categories: Category[] = [
     copy: "Therapeutic Botox for muscle-driven conditions — grinding, jaw ache, migraine, sweating. Doctor-prescribed.",
     cta: { label: "Medical Botox hub", href: "/medical-botox/" },
     cards: [
-      { title: "Masseter Botox", tagline: "Slim jaw · Stop grinding", href: "/treatments/masseter-botox/", bg: "bg-[#0d1218]", image: medMasseterImg, badge: "Most asked" },
+      {
+        title: "Masseter Botox",
+        tagline: "Slim jaw · Stop grinding",
+        href: "/treatments/masseter-botox/",
+        bg: "bg-[#0d1218]",
+        image: masseterBaImg,
+        badge: "Most asked",
+        flip: {
+          back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette — and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
+          imagePosition: "top",
+        },
+      },
       { title: "Bruxism Botox", tagline: "Night clenching, treated", href: "/treatments/bruxism-botox/", bg: "bg-[#0d1218]", image: medBruxismImg },
       { title: "Migraine Botox", tagline: "Chronic migraine protocol", href: "/treatments/migraine-botox/", bg: "bg-[#0d1218]", image: medMigraineImg },
       { title: "Hyperhidrosis", tagline: "Underarm sweat control", href: "/treatments/hyperhidrosis/", bg: "bg-[#0d1218]", image: medHyperhidrosisImg },
