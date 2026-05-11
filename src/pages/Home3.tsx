@@ -50,7 +50,8 @@ type SubCard = {
   ink?: string;
   badge?: string;
   image?: string;
-  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string };
+  frontImage?: string;
+  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string };
   flipImages?: { src: string; alt: string }[];
   flipNote?: string;
 };
