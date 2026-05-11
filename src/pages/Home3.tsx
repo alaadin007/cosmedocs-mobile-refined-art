@@ -482,7 +482,13 @@ const FlipCard = ({ card }: { card: SubCard }) => {
   }, []);
 
   return (
-    <div ref={containerRef} className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
+    <div
+      ref={containerRef}
+      className="[perspective:1400px] h-full w-full select-none"
+      style={{ touchAction: "pan-x pan-y" }}
+      onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
+      onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
+    >
       <div
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
@@ -777,7 +783,13 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
   const imageBottom = card.flip?.imagePosition === "bottom";
 
   return (
-    <div ref={containerRef} className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
+    <div
+      ref={containerRef}
+      className="[perspective:1400px] h-full w-full select-none"
+      style={{ touchAction: "pan-x pan-y" }}
+      onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
+      onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
+    >
       <div
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
