@@ -1083,7 +1083,102 @@ const FlawlessSkinSection = ({ category }: { category: Category }) => {
   );
 };
 
-/* ---------- Quick Links ------------------------------------------------- */
+/* ---------- Cosmetic Units feature (full-bleed editorial) -------------- */
+
+const CosmeticUnitsFeature = () => (
+  <section
+    aria-labelledby="cosmetic-units-title"
+    className="relative overflow-hidden bg-[#080808] text-white"
+  >
+    {/* Soft ambient glow */}
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(201,160,80,0.18),transparent_60%),radial-gradient(ellipse_at_80%_80%,rgba(201,160,80,0.10),transparent_55%)]"
+    />
+    <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      {/* Image */}
+      <div className="lg:col-span-6 relative">
+        <div className="relative rounded-[28px] p-[1.5px] overflow-hidden shadow-[0_50px_120px_-40px_rgba(201,160,80,0.45)]">
+          <div
+            aria-hidden
+            className="absolute -inset-[60%] animate-[spin_12s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0)_30%,#C9A050_48%,#F0D78C_50%,#C9A050_52%,rgba(201,160,80,0)_70%,transparent_100%)] opacity-70"
+          />
+          <div className="relative rounded-[26px] overflow-hidden bg-black">
+            <img
+              src={cosmeticUnitsImg}
+              alt="Cosmetic units of the face — anatomical map of forehead, temple, cheek, jaw, lip and chin"
+              loading="lazy"
+              className="block w-full h-auto"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_60%,rgba(0,0,0,0.45)_100%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_45%,rgba(0,0,0,0)_60%,rgba(201,160,80,0.08)_100%)]" />
+          </div>
+        </div>
+        <p className="mt-4 text-[10px] uppercase tracking-[0.28em] text-[#C9A050]/80">
+          The Cosmetic Units of the Face
+        </p>
+      </div>
+
+      {/* Words of wisdom */}
+      <div className="lg:col-span-6">
+        <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.32em] text-[#C9A050] mb-4">
+          Anatomy · Words of Wisdom
+        </p>
+        <h2
+          id="cosmetic-units-title"
+          className="font-serif text-3xl sm:text-5xl leading-[1.05] tracking-tight"
+        >
+          One face,
+          <br />
+          <span className="italic text-[#C9A050]">many quiet rooms.</span>
+        </h2>
+
+        <div className="mt-8 space-y-5 text-white/75 text-base sm:text-lg leading-relaxed max-w-xl">
+          <p>
+            The face is not a single canvas — it is a mosaic of <em>cosmetic units</em>:
+            forehead, temple, cheek, mid-face, jaw, lip, chin. In youth, light flows
+            from one into the next without interruption.
+          </p>
+          <p>
+            With time, fat pads descend, ligaments tighten, bone resorbs. The units
+            begin to <span className="text-white">compartmentalise</span> — small valleys
+            cast shadows, edges sharpen, the line breaks.
+          </p>
+          <p className="text-white">
+            Doctor-led aesthetics restores the bridge between units — re-establishing
+            flow, never adding bulk. Volume, returned. Architecture, intact.
+          </p>
+        </div>
+
+        {/* Three pillars */}
+        <div className="mt-10 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl">
+          {[
+            { k: "Map", v: "Unit by unit" },
+            { k: "Bridge", v: "Flow restored" },
+            { k: "Quiet", v: "Never bulk" },
+          ].map((p) => (
+            <div
+              key={p.k}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm px-4 py-4"
+            >
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050]">{p.k}</p>
+              <p className="mt-1 text-sm text-white/85">{p.v}</p>
+            </div>
+          ))}
+        </div>
+
+        <Link
+          to="/treatments/dermal-fillers/"
+          className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A050] hover:text-[#F0D78C] transition-colors"
+        >
+          Discover the architectural approach <ArrowUpRight className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
+  </section>
+);
+
+
 
 const quickLinks = categories.map((c) => ({ id: c.id, label: c.eyebrow.replace(" · ", " ") }));
 
