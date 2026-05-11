@@ -22,6 +22,7 @@ import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
+import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
 import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 
@@ -37,7 +38,7 @@ type SubCard = {
   ink?: string;
   badge?: string;
   image?: string;
-  flip?: { back: string };
+  flip?: { back: string; imagePosition?: "top" | "bottom" };
   flipImages?: { src: string; alt: string }[];
   flipNote?: string;
 };
@@ -168,7 +169,19 @@ const categories: Category[] = [
           back: "A doctor-led architectural reset across cheeks, mid-face, jaw and chin — millimetre-by-millimetre, in a single signature appointment. Volume restored where time has taken it. Results that read as you, only rested.",
         },
       },
-      { title: "Cheek Filler", tagline: "Mid-face lift, no surgery", href: "/treatments/cheek-filler/", bg: "bg-gradient-to-br from-amber-100 to-orange-200", ink: "text-zinc-900" },
+      {
+        title: "Cheek Filler",
+        tagline: "Mid-face lift, no surgery",
+        href: "/treatments/cheek-filler/",
+        bg: "bg-gradient-to-br from-amber-100 to-orange-200",
+        ink: "text-zinc-900",
+        image: cheekFillerBaImg,
+        badge: "Mid-face",
+        flip: {
+          back: "Architectural mid-face support — restoring the apex of the cheek to lift the lower face from above. Doctor-led millimetre placement on bone, never bulk. The result reads as restored youth, not added volume.",
+          imagePosition: "bottom",
+        },
+      },
       { title: "Jowl & Jawline", tagline: "Sharpen the lower face", href: "/treatments/jawline-filler/", bg: "bg-gradient-to-br from-zinc-800 to-zinc-950" },
       { title: "Tear Trough", tagline: "Rested under-eyes", href: "/treatments/tear-trough-filler/", bg: "bg-gradient-to-br from-rose-100 to-rose-300", ink: "text-zinc-900" },
       { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
@@ -330,8 +343,8 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           to={card.href}
           className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
         >
-          <div className="absolute inset-0 p-5 sm:p-6 flex flex-col">
-            {/* Image — original ratio at top, with animated glowing gold border */}
+          <div className={`absolute inset-0 p-5 sm:p-6 flex flex-col ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
+            {/* Image — original ratio, with animated glowing gold border */}
             {card.image && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
                 <div
@@ -349,8 +362,8 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               </div>
             )}
 
-            {/* Caption — bottom */}
-            <div className="mt-4 sm:mt-5 flex-1 flex flex-col justify-end">
+            {/* Caption */}
+            <div className={`flex-1 flex flex-col ${card.flip?.imagePosition === "bottom" ? "justify-start pb-4 sm:pb-5" : "justify-end pt-4 sm:pt-5"}`}>
               <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Before · After</p>
               <h3 className="font-serif text-2xl sm:text-3xl leading-[1.1] tracking-tight">{card.title}</h3>
               <p className="mt-2 text-sm text-white/75 max-w-md">{card.flip?.back}</p>
