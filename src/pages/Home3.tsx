@@ -903,6 +903,7 @@ const TileCard = ({ card }: { card: SubCard }) => {
       {card.image && (
         <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
       )}
+      {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
       {card.badge && (
         <span className={`absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
