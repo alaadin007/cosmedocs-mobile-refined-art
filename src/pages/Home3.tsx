@@ -30,6 +30,7 @@ import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
+import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-ba.jpg";
@@ -249,6 +250,20 @@ const categories: Category[] = [
           back: "Your choice — natural or bold. Doctor-led lip artistry: Cupid's bow definition, considered volume, real hydration. Millimetre dosing for a result that reads as you, never overdone.",
           imagePosition: "top",
           image: lipFillerBaImg,
+        },
+      },
+      {
+        title: "Cosmetic Units",
+        tagline: "The architecture beneath the skin",
+        href: "/treatments/dermal-fillers/",
+        bg: "bg-gradient-to-br from-stone-100 to-stone-300",
+        ink: "text-zinc-900",
+        badge: "Anatomy",
+        image: cosmeticUnitsImg,
+        flip: {
+          back: "In youth, skin flows smoothly from one cosmetic unit to the next — forehead into temple, cheek into jaw, lip into chin. With age, fat pads descend and ligaments tighten; the units compartmentalise, casting shadows and breaking the line. Doctor-led filler restores the bridge between units — re-establishing flow, not adding volume.",
+          imagePosition: "top",
+          image: cosmeticUnitsImg,
         },
       },
     ],
