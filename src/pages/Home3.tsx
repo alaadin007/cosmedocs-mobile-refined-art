@@ -255,6 +255,19 @@ const categories: Category[] = [
           image: lipAnatomyImg,
         },
       },
+      {
+        title: "Cosmetic Units of the Face",
+        tagline: "The anatomical map",
+        href: "/aesthetics-at-a-glance/",
+        bg: "bg-gradient-to-br from-[#1a1408] via-[#2a1f10] to-[#3a2d10]",
+        badge: "Anatomy",
+        image: cosmeticUnitsImg,
+        flip: {
+          back: "The face is a mosaic of cosmetic units — forehead, temple, cheek, mid-face, jaw, lip, chin. Doctor-led aesthetics restores the bridge between units. Flow re-established. Architecture intact. Volume, returned — never bulk.",
+          imagePosition: "top",
+          image: cosmeticUnitsImg,
+        },
+      },
     ],
   },
   {
@@ -1360,7 +1373,7 @@ const Home3 = () => {
               ) : (
                 <Row category={cat} index={i} />
               )}
-              {cat.id === "fillers-anti-ageing" && <CosmeticUnitsFeature />}
+              
             </div>
           ))}
         </div>
