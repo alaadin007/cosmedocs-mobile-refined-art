@@ -1542,6 +1542,17 @@ const Home3 = () => {
         <link rel="canonical" href="https://www.cosmedocs.com/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
 
+        {/* Hreflang alternates — international SEO for the homepage */}
+        <link rel="alternate" hrefLang="en-gb" href="https://www.cosmedocs.com/" data-rh="true" />
+        <link rel="alternate" hrefLang="en" href="https://www.cosmedocs.com/" data-rh="true" />
+        <link rel="alternate" hrefLang="ar" href="https://www.cosmedocs.com/ar/" data-rh="true" />
+        <link rel="alternate" hrefLang="fr" href="https://www.cosmedocs.com/fr/" data-rh="true" />
+        <link rel="alternate" hrefLang="es" href="https://www.cosmedocs.com/es/" data-rh="true" />
+        <link rel="alternate" hrefLang="zh" href="https://www.cosmedocs.com/zh/" data-rh="true" />
+        <link rel="alternate" hrefLang="ja" href="https://www.cosmedocs.com/ja/" data-rh="true" />
+        <link rel="alternate" hrefLang="de" href="https://www.cosmedocs.com/de/" data-rh="true" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.cosmedocs.com/" data-rh="true" />
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Cosmedocs" />
