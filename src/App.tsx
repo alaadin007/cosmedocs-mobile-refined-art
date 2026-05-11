@@ -320,6 +320,7 @@ const App = () => {
                 <LanguageProvider>
                 <ScrollToTop />
                 <TrailingSlashRedirect />
+                <SocialMetaSync />
                 <Routes>
                   {/* Home3 is now the canonical root homepage */}
                   <Route path="/" element={
