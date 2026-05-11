@@ -721,6 +721,8 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             </>
           )}
 
+          {!card.frontImage && <CardWatermark title={card.title} dark={!card.ink} />}
+
           {card.badge && (
             <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
               {card.badge}
