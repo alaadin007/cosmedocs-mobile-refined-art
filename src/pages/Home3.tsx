@@ -459,6 +459,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
   const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const isTapGesture = (event: PointerEvent) => {
     const start = gestureStart.current;
     if (!start) return true;
@@ -469,8 +470,19 @@ const FlipCard = ({ card }: { card: SubCard }) => {
     return dx < 10 && dy < 10;
   };
 
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => { if (!entry.isIntersecting) setFlipped(false); },
+      { threshold: 0.1 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <div className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
+    <div ref={containerRef} className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
       <div
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
