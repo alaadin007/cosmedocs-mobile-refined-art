@@ -629,7 +629,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
             : "w-[58vw] sm:w-[300px] md:w-[330px]";
           const heightCls = "h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]";
           return (
-            <div key={card.title} className={`shrink-0 snap-start scroll-mx-5 ${widthCls} ${heightCls}`}>
+            <div key={card.title} className={`shrink-0 ${widthCls} ${heightCls}`}>
               {card.flip ? <FlipCard card={card} /> : <TreatmentCard card={card} size="split" />}
             </div>
           );
