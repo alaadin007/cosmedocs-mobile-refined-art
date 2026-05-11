@@ -1821,7 +1821,12 @@ const Home3 = () => {
               <Link to="/" className="hover:text-white">Classic site</Link>
             </div>
           </div>
+          </div>
         </footer>
+
+        <Suspense fallback={null}>
+          <WebsiteKnowledgeInitializer />
+        </Suspense>
       </main>
     </>
   );
