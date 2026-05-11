@@ -1539,13 +1539,13 @@ const Home3 = () => {
           name="description"
           content="An iOS-style view of every Cosmedocs treatment. Browse Botox, dermal fillers, contouring and skin concepts as quietly elegant cards, built for thumb-scrolling."
         />
-        <link rel="canonical" href="https://www.cosmedocs.com/home3/" data-rh="true" />
+        <link rel="canonical" href="https://www.cosmedocs.com/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Cosmedocs" />
-        <meta property="og:url" content="https://www.cosmedocs.com/home3/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/" />
         <meta property="og:title" content="Cosmedocs · Aesthetic Medicine, App-Style" />
         <meta property="og:description" content="Browse every Cosmedocs treatment as quietly elegant cards. Doctor-led aesthetic medicine on Harley Street, London." />
         <meta property="og:image" content="https://www.cosmedocs.com/og/cosmedocs-home3.jpg" />

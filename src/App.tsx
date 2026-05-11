@@ -320,21 +320,19 @@ const App = () => {
                 <ScrollToTop />
                 <TrailingSlashRedirect />
                 <Routes>
-                  {/* Home2 is now the root - bypasses Layout for custom header/footer */}
+                  {/* Home3 is now the canonical root homepage */}
                   <Route path="/" element={
-                    <Suspense fallback={<PageLoader />}>
-                      <Home2 />
+                    <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+                      <Home3 />
                     </Suspense>
                   } />
                   <Route path="/home2" element={<Navigate to="/" replace />} />
-                  <Route path="/home3" element={
-                    <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
-                      <Home3 />
-                    </Suspense>
-                  } />
-                  <Route path="/home3/" element={
-                    <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
-                      <Home3 />
+                  <Route path="/home3" element={<Navigate to="/" replace />} />
+                  <Route path="/home3/" element={<Navigate to="/" replace />} />
+                  {/* Legacy Home2 preserved for internal preview only */}
+                  <Route path="/home-legacy" element={
+                    <Suspense fallback={<PageLoader />}>
+                      <Home2 />
                     </Suspense>
                   } />
                   <Route path="/testapp" element={
