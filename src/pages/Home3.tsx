@@ -29,6 +29,7 @@ import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
 import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
+import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -235,7 +236,18 @@ const categories: Category[] = [
           image: templeFillerBaImg,
         },
       },
-      { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", bg: "bg-gradient-to-br from-pink-200 to-rose-400", ink: "text-zinc-900" },
+      {
+        title: "Lip Filler",
+        tagline: "Natural, never overdone",
+        href: "/treatments/lip-fillers/",
+        bg: "bg-gradient-to-br from-pink-200 to-rose-400",
+        ink: "text-zinc-900",
+        flip: {
+          back: "Your choice — natural or bold. Doctor-led lip artistry: Cupid's bow definition, considered volume, real hydration. Millimetre dosing for a result that reads as you, never overdone.",
+          imagePosition: "top",
+          image: lipFillerBaImg,
+        },
+      },
     ],
   },
   {
