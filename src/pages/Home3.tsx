@@ -636,7 +636,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
         })}
         <Link
           to={category.cta.href}
-          className="group snap-start scroll-mx-5 shrink-0 w-[58vw] sm:w-[220px] md:w-[260px] h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px] rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition"
+          className="group shrink-0 w-[58vw] sm:w-[220px] md:w-[260px] h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px] rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition"
         >
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <ChevronRight className="w-5 h-5 text-[#C9A050]" />
@@ -875,14 +875,14 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
         {columns.map((col, idx) => {
           if (col.kind === "big") {
             return (
-              <div key={idx} className={`shrink-0 snap-start scroll-mx-5 ${widthBig} ${colHeight}`}>
+              <div key={idx} className={`shrink-0 ${widthBig} ${colHeight}`}>
                 <SpotlightCard card={col.card} />
               </div>
             );
           }
           if (col.kind === "stack") {
             return (
-              <div key={idx} className={`shrink-0 snap-start scroll-mx-5 ${widthStack} ${colHeight} flex flex-col gap-4 sm:gap-5`}>
+              <div key={idx} className={`shrink-0 ${widthStack} ${colHeight} flex flex-col gap-4 sm:gap-5`}>
                 {col.cards.map((c) => <TileCard key={c.title} card={c} />)}
               </div>
             );
@@ -891,7 +891,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
             return (
               <div
                 key={idx}
-                className={`shrink-0 snap-start scroll-mx-5 ${widthStack} ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
+                className={`shrink-0 ${widthStack} ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
               >
                 <div className="px-6 pt-7 pb-5 border-b border-white/8">
                   <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">{col.eyebrow ?? "More Areas"}</p>
@@ -918,7 +918,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
           }
           // 2x2 grid for the 4 minor areas
           return (
-            <div key={idx} className={`shrink-0 snap-start scroll-mx-5 ${widthGrid} ${colHeight} grid grid-cols-2 grid-rows-2 gap-4 sm:gap-5`}>
+            <div key={idx} className={`shrink-0 ${widthGrid} ${colHeight} grid grid-cols-2 grid-rows-2 gap-4 sm:gap-5`}>
               {col.cards.map((c) => (
                 <Link
                   key={c.title}
@@ -939,7 +939,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
         {/* CTA column at end of row */}
         <Link
           to={category.cta.href}
-          className={`group shrink-0 snap-start scroll-mx-5 ${widthStack} ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
+          className={`group shrink-0 ${widthStack} ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
         >
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <ChevronRight className="w-5 h-5 text-[#C9A050]" />
@@ -1001,14 +1001,14 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
       >
         {/* Hero spotlight: first card (Masseter) */}
         {category.cards[0] && (
-          <div className={`shrink-0 snap-start scroll-mx-5 ${widthBig} ${colHeight}`}>
+          <div className={`shrink-0 ${widthBig} ${colHeight}`}>
             <SpotlightCard card={category.cards[0]} />
           </div>
         )}
 
         {/* Thin list column: every other medical Botox treatment */}
         {category.cards.length > 1 && (
-          <div className={`shrink-0 snap-start scroll-mx-5 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}>
+          <div className={`shrink-0 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}>
             <div className="px-6 pt-7 pb-5 border-b border-white/8">
               <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">Therapeutic Botox</p>
               <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">All medical areas</h3>
@@ -1034,7 +1034,7 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
 
         <Link
           to={category.cta.href}
-          className={`group shrink-0 snap-start scroll-mx-5 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
+          className={`group shrink-0 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
         >
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <ChevronRight className="w-5 h-5 text-[#C9A050]" />
@@ -1109,11 +1109,11 @@ const FlawlessSkinSection = ({ category }: { category: Category }) => {
       >
         {cols.map((col, idx) =>
           col.kind === "big" ? (
-            <div key={idx} className={`shrink-0 snap-start scroll-mx-5 ${widthBig} ${colHeight}`}>
+            <div key={idx} className={`shrink-0 ${widthBig} ${colHeight}`}>
               <SpotlightCard card={col.cards[0]} />
             </div>
           ) : (
-            <div key={idx} className={`shrink-0 snap-start scroll-mx-5 ${widthStack} ${colHeight} flex flex-col gap-4 sm:gap-5`}>
+            <div key={idx} className={`shrink-0 ${widthStack} ${colHeight} flex flex-col gap-4 sm:gap-5`}>
               {col.cards.map((c) => <TileCard key={c.title} card={c} />)}
             </div>
           )
@@ -1121,7 +1121,7 @@ const FlawlessSkinSection = ({ category }: { category: Category }) => {
 
         <Link
           to={category.cta.href}
-          className={`group shrink-0 snap-start scroll-mx-5 ${widthStack} ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
+          className={`group shrink-0 ${widthStack} ${colHeight} rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition`}
         >
           <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <ChevronRight className="w-5 h-5 text-[#C9A050]" />
