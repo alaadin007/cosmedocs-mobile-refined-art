@@ -41,6 +41,7 @@ import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
+import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
@@ -71,6 +72,14 @@ type Category = {
 
 /* ---------- Aesthetic Botox, full treatment list ----------------------- */
 const botoxAesthetic: SubCard[] = [
+  {
+    title: "The Finest Needle",
+    tagline: "We don't cut corners — only needle gauge. 32G micro-needles, barely a whisper on the skin.",
+    href: "/treatments/botox/",
+    bg: "bg-black",
+    image: botoxFineNeedleImg,
+    badge: "Almost Painless",
+  },
   {
     title: "1, 2 or 3 Areas Botox",
     tagline: "Forehead · Frown · Crow's feet, tailored to your face.",
