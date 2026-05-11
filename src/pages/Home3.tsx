@@ -620,7 +620,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-proximity scroll-smooth pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-padding-inline:1.25rem] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {category.cards.map((card) => {
           const isBig = !!card.flip;
