@@ -458,19 +458,22 @@ const FaceMark = ({ area }: { area?: string }) => {
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
-  const gestureStart = useRef<{ x: number; y: number } | null>(null);
+  const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
   const isTapGesture = (event: PointerEvent) => {
     const start = gestureStart.current;
     if (!start) return true;
-    const movedX = Math.abs(event.clientX - start.x);
-    const movedY = Math.abs(event.clientY - start.y);
-    return movedX < 10 && movedY < 10;
+    const dx = Math.abs(event.clientX - start.x);
+    const dy = Math.abs(event.clientY - start.y);
+    const dt = performance.now() - start.t;
+    if (dx > 8 && dx >= dy * 0.8 && dt < 250) return false;
+    return dx < 10 && dy < 10;
   };
 
   return (
     <div className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
       <div
-        className={`relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] will-change-transform ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
+        style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
         {/* FRONT — tap to flip (does not navigate) */}
         <button
