@@ -1033,7 +1033,7 @@ const App = () => {
                 </Routes>
                 </LanguageProvider>
               </AuthProvider>
-              <VoiceConsultationWidget />
+              <WhatsAppFloatingButton />
             </BrowserRouter>
           </TooltipProvider>
         </HelmetProvider>
