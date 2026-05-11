@@ -36,6 +36,7 @@ import cosmeticUnitsImg from "@/assets/home3-cosmetic-units.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
+import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -309,7 +310,18 @@ const categories: Category[] = [
           image: endolaserBaImg,
         },
       },
-      { title: "PDO Threads", tagline: "Cog · Mono lifting", href: "/treatments/pdo-threads/", bg: "bg-gradient-to-br from-amber-50 to-amber-200", ink: "text-zinc-900" },
+      {
+        title: "PDO Threads",
+        tagline: "Cog · Mono lifting",
+        href: "/treatments/pdo-threads/",
+        bg: "bg-gradient-to-br from-amber-50 to-amber-200",
+        ink: "text-zinc-900",
+        flip: {
+          back: "Doctor-led PDO thread lifting — Cog threads anchor and reposition lax tissue along the jaw and cheek; Mono threads scaffold the dermis to stimulate collagen. A measured, suture-grade lift that restores the line without surgery.",
+          imagePosition: "top",
+          image: pdoThreadsBaImg,
+        },
+      },
     ],
   },
   {
