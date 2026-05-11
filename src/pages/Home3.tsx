@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import type { PointerEvent } from "react";
 import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
@@ -445,15 +446,36 @@ const FaceMark = ({ area }: { area?: string }) => {
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
+  const gestureStart = useRef<{ x: number; y: number } | null>(null);
+  const isTapGesture = (event: PointerEvent) => {
+    const start = gestureStart.current;
+    if (!start) return true;
+    const movedX = Math.abs(event.clientX - start.x);
+    const movedY = Math.abs(event.clientY - start.y);
+    return movedX < 10 && movedY < 10;
+  };
+
   return (
-    <div className="[perspective:1400px] h-full w-full" style={{ touchAction: "pan-y" }}>
+    <div className="[perspective:1400px] h-full w-full select-none" style={{ touchAction: "pan-x pan-y" }}>
       <div
-        className={`relative w-full h-full transition-transform duration-500 ease-out [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className={`relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] will-change-transform ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         {/* FRONT — tap to flip (does not navigate) */}
         <button
           type="button"
-          onClick={() => setFlipped(true)}
+          onPointerDown={(event) => {
+            gestureStart.current = { x: event.clientX, y: event.clientY };
+          }}
+          onPointerUp={(event) => {
+            if (isTapGesture(event)) setFlipped(true);
+            gestureStart.current = null;
+          }}
+          onPointerCancel={() => {
+            gestureStart.current = null;
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") setFlipped(true);
+          }}
           aria-label={`${card.title} — reveal results`}
           className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
@@ -487,7 +509,16 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           {/* Tap-to-flip-back layer (sits behind interactive elements) */}
           <button
             type="button"
-            onClick={() => setFlipped(false)}
+            onPointerDown={(event) => {
+              gestureStart.current = { x: event.clientX, y: event.clientY };
+            }}
+            onPointerUp={(event) => {
+              if (isTapGesture(event)) setFlipped(false);
+              gestureStart.current = null;
+            }}
+            onPointerCancel={() => {
+              gestureStart.current = null;
+            }}
             aria-label="Flip card back"
             className="absolute inset-0 z-0 cursor-pointer"
           />
@@ -589,7 +620,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
 
       <div
         ref={scroller}
-        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-proximity scroll-smooth pb-4 px-5 sm:px-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-proximity scroll-smooth pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-padding-inline:1.25rem] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {category.cards.map((card) => {
           const isBig = !!card.flip;
