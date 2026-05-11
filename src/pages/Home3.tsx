@@ -492,7 +492,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             if (event.key === "Enter" || event.key === " ") setFlipped(true);
           }}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
@@ -519,7 +519,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
 
         {/* BACK — full before/after image + caption. Tap empty area to flip back. */}
         <div
-          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
+          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
         >
           {/* Tap-to-flip-back layer (sits behind interactive elements) */}
           <button
@@ -775,14 +775,14 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
             if (event.key === "Enter" || event.key === " ") setFlipped(true);
           }}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
           {frontInner}
         </button>
 
         {/* BACK */}
         <div
-          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
+          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
         >
           {/* Tap-to-flip-back layer */}
           <button
