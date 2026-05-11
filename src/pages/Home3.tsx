@@ -799,6 +799,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         {/* FRONT — tap to flip (does not navigate) */}
         <button
           type="button"
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
           onPointerDown={(event) => {
             gestureStart.current = { x: event.clientX, y: event.clientY, t: performance.now() };
           }}
@@ -813,14 +814,15 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
             if (event.key === "Enter" || event.key === " ") setFlipped(true);
           }}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
         >
           {frontInner}
         </button>
 
         {/* BACK */}
         <div
-          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
+          style={{ transform: "rotateY(180deg)", WebkitTransform: "rotateY(180deg)" }}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
           {/* Tap-to-flip-back layer */}
           <button
