@@ -128,12 +128,21 @@ const BigFlipCard = ({ data }: { data: BigTx }) => {
         }`}
       >
         {/* Front — image-led */}
-        <div className="absolute inset-0 [backface-visibility:hidden] rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_40px_80px_-30px_rgba(201,160,80,0.4)]">
-          <img src={data.image} alt={data.title} className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-          {/* Top eyebrow */}
-          <div className="absolute top-5 left-5 sm:top-7 sm:left-8">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-[#C9A050] bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-[#C9A050]/30">
+        <div className="absolute inset-0 [backface-visibility:hidden] rounded-[32px] overflow-hidden ring-1 ring-[#C9A050]/30 shadow-[0_40px_80px_-30px_rgba(201,160,80,0.4)] bg-black">
+          {/* Image in original ratio */}
+          <img
+            src={data.image}
+            alt={data.title}
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+          {/* Glam filter — warm gold wash + vignette */}
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_transparent_55%,_rgba(0,0,0,0.55)_100%)]" />
+          <div className="absolute inset-0 pointer-events-none mix-blend-soft-light bg-gradient-to-br from-[#C9A050]/30 via-transparent to-[#5a3a10]/40" />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/85 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+          {/* Top eyebrow — solid pill for visibility */}
+          <div className="absolute top-5 left-5 sm:top-7 sm:left-8 z-10">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-[#F0D78C] bg-black/80 px-3 py-1.5 rounded-full border border-[#C9A050]/50">
               {data.eyebrow}
             </span>
           </div>
@@ -141,13 +150,13 @@ const BigFlipCard = ({ data }: { data: BigTx }) => {
           <button
             onClick={() => setFlipped(true)}
             aria-label="Flip card"
-            className="absolute top-5 right-5 sm:top-7 sm:right-8 w-11 h-11 rounded-full bg-[#C9A050] text-black flex items-center justify-center shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
+            className="absolute top-5 right-5 sm:top-7 sm:right-8 z-10 w-11 h-11 rounded-full bg-[#C9A050] text-black flex items-center justify-center shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
           >
             <RotateCw className="w-4 h-4" />
           </button>
           {/* Bottom title only */}
-          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-            <h3 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.02] max-w-2xl">
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 z-10">
+            <h3 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.02] max-w-2xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
               {data.title}
             </h3>
           </div>
