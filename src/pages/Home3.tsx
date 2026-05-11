@@ -446,16 +446,16 @@ const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="group [perspective:1400px] h-full w-full">
+    <div className="[perspective:1400px] h-full w-full" style={{ touchAction: "pan-y" }}>
       <div
-        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className={`relative w-full h-full transition-transform duration-500 ease-out [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         {/* FRONT — tap to flip (does not navigate) */}
         <button
           type="button"
           onClick={() => setFlipped(true)}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
