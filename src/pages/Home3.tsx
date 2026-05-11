@@ -518,12 +518,20 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
         >
           <div className="flex flex-col h-full">
-            <div className="h-2/3 grid grid-rows-2 gap-1 bg-black">
-              {card.flipImages.map((img) => (
-                <div key={img.src} className="relative overflow-hidden bg-black">
-                  <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
+            <div className="h-2/3 p-4 sm:p-5">
+              <div className="relative h-full rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
+                <div
+                  aria-hidden
+                  className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
+                />
+                <div className="relative h-full grid grid-rows-2 gap-1 rounded-2xl overflow-hidden bg-black">
+                  {card.flipImages.map((img) => (
+                    <div key={img.src} className="relative overflow-hidden bg-black">
+                      <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
             <div className="h-1/3 p-6 sm:p-7 flex flex-col justify-center">
               <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">Real results</p>
