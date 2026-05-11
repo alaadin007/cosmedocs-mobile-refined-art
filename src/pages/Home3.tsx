@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import type { PointerEvent } from "react";
-import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
+import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles, RotateCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
