@@ -30,6 +30,7 @@ import botoxFrownBaImg from "@/assets/home3-botox-frown-ba.jpg";
 import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
+import noseBaImg from "@/assets/home3-nose-ba.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
@@ -269,7 +270,17 @@ const categories: Category[] = [
           back: "A measured chin projection that re-balances the lower face — softening a recessive jaw, refining the side profile and lifting the chin-neck line. Doctor-led, millimetre dosing for a result that reads as bone, not filler.",
         },
       },
-      { title: "Non-Surgical Nose", tagline: "Liquid rhinoplasty", href: "/treatments/nose-filler/", bg: "bg-gradient-to-br from-zinc-900 to-zinc-700" },
+      {
+        title: "Non-Surgical Nose",
+        tagline: "Liquid rhinoplasty",
+        href: "/treatments/nose-filler/",
+        bg: "bg-gradient-to-br from-zinc-900 to-zinc-700",
+        flip: {
+          back: "Doctor-led liquid rhinoplasty — straightening the bridge, refining the tip, rebalancing the profile in minutes, no surgery. This patient came to us after a surgical rhinoplasty had left an irregularity; we corrected it with millimetre filler placement.",
+          imagePosition: "top",
+          image: noseBaImg,
+        },
+      },
       { title: "Jawline Definition", tagline: "Filler & PCL threads", href: "/treatments/jawline-filler/", bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]" },
       { title: "Endolaser Lift", tagline: "Laser fibre tightening", href: "/treatments/laser-fibre-lift/", bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]", badge: "New" },
       { title: "PDO Threads", tagline: "Cog · Mono lifting", href: "/treatments/pdo-threads/", bg: "bg-gradient-to-br from-amber-50 to-amber-200", ink: "text-zinc-900" },
