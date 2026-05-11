@@ -181,7 +181,7 @@ const categories: Category[] = [
     eyebrow: "Dermal Fillers · Anti-ageing",
     title: "Volume, returned.",
     copy: "Where the face has lost structure — cheeks, jowls, mid-face — hyaluronic acid restores it. Quietly. Architecturally.",
-    cta: { label: "Dermal Fillers overview", href: "/treatments/dermal-fillers/" },
+    cta: { label: "Mini Facelifts hub", href: "/treatments/non-surgical-facelift/" },
     cards: [
       {
         title: "HA Makeover",
