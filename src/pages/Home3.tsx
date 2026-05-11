@@ -945,6 +945,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
       {card.image && (
         <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 z-0 w-full h-full object-cover" />
       )}
+      {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
       {card.badge && (
         <span className={`absolute top-5 left-5 z-[2] text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
