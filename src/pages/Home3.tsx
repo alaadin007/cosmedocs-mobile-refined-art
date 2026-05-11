@@ -1948,7 +1948,6 @@ const Home3 = () => {
             <div className="flex gap-5">
               <Link to="/about-us/" className="hover:text-white">About</Link>
               <Link to="/contact/" className="hover:text-white">Contact</Link>
-              <Link to="/" className="hover:text-white">Classic site</Link>
             </div>
           </div>
         </footer>
