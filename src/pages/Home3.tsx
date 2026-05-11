@@ -700,11 +700,17 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
   const hasFlip = !!card.flip || (card.flipImages && card.flipImages.length > 0);
 
   const [flipped, setFlipped] = useState(false);
-  const gestureStart = useRef<{ x: number; y: number } | null>(null);
+  const gestureStart = useRef<{ x: number; y: number; t: number } | null>(null);
   const isTapGesture = (event: PointerEvent) => {
     const start = gestureStart.current;
     if (!start) return true;
-    return Math.abs(event.clientX - start.x) < 10 && Math.abs(event.clientY - start.y) < 10;
+    const dx = Math.abs(event.clientX - start.x);
+    const dy = Math.abs(event.clientY - start.y);
+    const dt = performance.now() - start.t;
+    // Reject quick horizontal swipes (carousel/page scroll intent)
+    if (dx > 8 && dx >= dy * 0.8 && dt < 250) return false;
+    // Reject any sizeable drag
+    return dx < 10 && dy < 10;
   };
 
   const frontInner = (
