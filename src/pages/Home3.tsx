@@ -502,7 +502,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <ChevronLeft className="w-4 h-4" />
           </button>
 
-          <div className={`relative z-10 absolute inset-0 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
+          <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
             {/* Image — fixed proportion so all card backs share the same rhythm */}
             {(card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
