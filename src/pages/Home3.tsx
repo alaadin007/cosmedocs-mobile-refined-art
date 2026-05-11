@@ -1373,7 +1373,7 @@ const Home3 = () => {
               ) : (
                 <Row category={cat} index={i} />
               )}
-              {cat.id === "fillers-anti-ageing" && <CosmeticUnitsFeature />}
+              
             </div>
           ))}
         </div>
