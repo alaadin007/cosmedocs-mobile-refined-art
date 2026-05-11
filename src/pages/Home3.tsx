@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ChevronRight, ChevronLeft, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Home2Header from "@/components/home2/Home2Header";
@@ -458,14 +458,18 @@ const FaceMark = ({ area }: { area?: string }) => {
 
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
+  const [flipped, setFlipped] = useState(false);
   return (
     <div className="group [perspective:1400px] h-full w-full">
-      <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-        {/* FRONT — original card colour + area-specific face mark */}
-        <Link
-          to={card.href}
-          aria-label={`${card.title} — ${card.tagline}`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+      <div
+        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+      >
+        {/* FRONT — tap to flip (does not navigate) */}
+        <button
+          type="button"
+          onClick={() => setFlipped(true)}
+          aria-label={`${card.title} — reveal results`}
+          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
@@ -484,11 +488,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight">{card.title}</h3>
               <p className={`mt-2 text-sm ${card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
               <span className={`mt-4 inline-flex items-center gap-1.5 text-xs ${card.ink ? "text-zinc-900/70" : "text-white/70"}`}>
-                Hover to see results <ArrowUpRight className="w-3.5 h-3.5" />
+                Tap to see results <ArrowUpRight className="w-3.5 h-3.5" />
               </span>
             </div>
           </div>
-        </Link>
+        </button>
 
         {/* BACK — full before/after image + caption */}
         <Link
