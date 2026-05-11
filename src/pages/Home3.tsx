@@ -446,16 +446,16 @@ const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="group [perspective:1400px] h-full w-full">
+    <div className="[perspective:1400px] h-full w-full" style={{ touchAction: "pan-y" }}>
       <div
-        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className={`relative w-full h-full transition-transform duration-500 ease-out [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         {/* FRONT — tap to flip (does not navigate) */}
         <button
           type="button"
           onClick={() => setFlipped(true)}
           aria-label={`${card.title} — reveal results`}
-          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]`}
+          className={`absolute inset-0 [backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "pointer-events-none" : ""}`}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
@@ -480,12 +480,29 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           </div>
         </button>
 
-        {/* BACK — full before/after image + caption */}
-        <Link
-          to={card.href}
-          className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)]"
+        {/* BACK — full before/after image + caption. Tap empty area to flip back. */}
+        <div
+          className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "" : "pointer-events-none"}`}
         >
-          <div className={`absolute inset-0 p-4 sm:p-5 flex flex-col min-h-0 gap-3 ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
+          {/* Tap-to-flip-back layer (sits behind interactive elements) */}
+          <button
+            type="button"
+            onClick={() => setFlipped(false)}
+            aria-label="Flip card back"
+            className="absolute inset-0 z-0 cursor-pointer"
+          />
+
+          {/* Flip-back chip */}
+          <button
+            type="button"
+            onClick={() => setFlipped(false)}
+            aria-label="Flip card back"
+            className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur flex items-center justify-center text-white/85"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
             {/* Image — fixed proportion so all card backs share the same rhythm */}
             {(card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
@@ -509,12 +526,15 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               <p className="text-[9px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">Before · After</p>
               <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight">{card.title}</h3>
               <p className="mt-2 text-[13px] leading-snug text-white/75 max-w-md line-clamp-5 sm:line-clamp-6">{card.flip?.back}</p>
-              <span className="mt-auto pt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#C9A050]">
+              <Link
+                to={card.href}
+                className="mt-auto pt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#C9A050] pointer-events-auto self-start"
+              >
                 Discover {card.title} <ArrowUpRight className="w-3.5 h-3.5" />
-              </span>
+              </Link>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );
