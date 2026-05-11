@@ -1333,6 +1333,27 @@ const Home3 = () => {
         />
         <link rel="canonical" href="https://www.cosmedocs.com/home3/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Cosmedocs Treatments",
+            itemListElement: categories.flatMap((cat, ci) =>
+              cat.cards.map((card, idx) => ({
+                "@type": "ListItem",
+                position: ci * 100 + idx + 1,
+                item: {
+                  "@type": "MedicalProcedure",
+                  name: card.title,
+                  description: card.flip?.back || card.tagline,
+                  url: `https://www.cosmedocs.com${card.href}`,
+                  ...(card.image ? { image: `https://www.cosmedocs.com${card.image}` } : {}),
+                  category: cat.title,
+                },
+              }))
+            ),
+          })}
+        </script>
       </Helmet>
 
       <main className="min-h-screen bg-black text-white selection:bg-[#C9A050]/40 antialiased">
