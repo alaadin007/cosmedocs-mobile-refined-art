@@ -759,9 +759,9 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
             type="button"
             onClick={() => setFlipped(true)}
             aria-label={`${card.title} — reveal results`}
-            className="absolute bottom-4 right-4 z-30 inline-flex items-center gap-1.5 pl-3 pr-3 py-2 rounded-full bg-[#C9A050] text-black text-[11px] font-semibold shadow-[0_10px_24px_-8px_rgba(201,160,80,0.7)] ring-1 ring-[#F0D78C]/60 hover:bg-[#d8b463] active:scale-95 transition"
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_20px_rgba(201,160,80,0.85),0_0_40px_rgba(201,160,80,0.4)] ring-1 ring-[#F0D78C]/70 hover:bg-[#d8b463] active:scale-95 transition animate-pulse"
           >
-            See results <RotateCw className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-5 h-5" />
           </button>
         </div>
 
