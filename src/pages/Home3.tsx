@@ -585,6 +585,7 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}
+      {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       {/* Inner light + bottom shade for legibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
 
