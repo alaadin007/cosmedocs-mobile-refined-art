@@ -1548,7 +1548,7 @@ const Home3 = () => {
         <meta property="og:url" content="https://www.cosmedocs.com/" />
         <meta property="og:title" content="Cosmedocs · Aesthetic Medicine, App-Style" />
         <meta property="og:description" content="Browse every Cosmedocs treatment as quietly elegant cards. Doctor-led aesthetic medicine on Harley Street, London." />
-        <meta property="og:image" content="https://www.cosmedocs.com/og/cosmedocs-home3.jpg" />
+        <meta property="og:image" content="https://www.cosmedocs.com/og/cosmedocs-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_GB" />
@@ -1558,7 +1558,7 @@ const Home3 = () => {
         <meta name="twitter:site" content="@cosmedocs" />
         <meta name="twitter:title" content="Cosmedocs · Aesthetic Medicine, App-Style" />
         <meta name="twitter:description" content="Doctor-led aesthetic medicine on Harley Street. Botox, dermal fillers, contouring and skin, in one app-style view." />
-        <meta name="twitter:image" content="https://www.cosmedocs.com/og/cosmedocs-home3.jpg" />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/og/cosmedocs-default.jpg" />
 
         {/* Per-card OG previews (consumed by crawlers that read alternate og:image tags) */}
         {categories.flatMap((cat) =>
