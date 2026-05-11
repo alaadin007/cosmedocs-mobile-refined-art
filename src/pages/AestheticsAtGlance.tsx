@@ -1,36 +1,190 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight, Share2, Download, Shield, Palette, Zap, RotateCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Share2, Download, BookOpen, Lightbulb, Users, Target, Award, Sparkles, Zap, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import heroBanner from "@/assets/aesthetics-hero-banner.jpg";
-import supermodelBefore from "@/assets/supermodel-before.jpg";
-import supermodelProgress from "@/assets/supermodel-progress.jpg";
-import supermodelAfter1 from "@/assets/supermodel-after-1.jpg";
-import supermodelAfter2 from "@/assets/supermodel-after-2.jpg";
+
+// Reuse Home3 imagery for treatment cards
+import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
+import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
+import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
+import botoxBunnyImg from "@/assets/home3-botox-bunny-lines.jpg";
+import botoxNefertitiImg from "@/assets/home3-botox-nefertiti.jpg";
+import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
+import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
+import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
+import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
+import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
+import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
+import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
+import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
+import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
+import cosmeticUnitsImg from "@/assets/home3-cosmetic-units-gold.jpg";
 
 const seoData = generateSEOMetadata(
-  "Aesthetics at a Glance | Beautiful Skin | Cosmedocs",
-  "Science of beautiful skin: lazy skin syndrome, cell rejuvenation & treatments. Free ebook reveals professional secrets.",
-  "/aesthetics-at-glance"
+  "Aesthetics at a Glance | The Cosmedocs Skin Map",
+  "The doctor-led map of beautiful skin: three cells, wrinkles in motion, and volume loss — kept in quiet balance.",
+  "/aesthetics-at-a-glance/"
 );
+
+/* -------------------- Cell cards (flip) -------------------- */
+
+type CellCard = {
+  name: string;
+  subtitle: string;
+  icon: typeof Shield;
+  front: string;
+  back: string;
+  verb: string;
+};
+
+const cellCards: CellCard[] = [
+  {
+    name: "Keratinocytes",
+    subtitle: "The barrier",
+    icon: Shield,
+    verb: "Remove",
+    front: "Skin cells that form the surface barrier — what the world sees and touches.",
+    back: "We don't try to wake these. We gently remove the tired, lazy ones — peels, retinoids, resurfacing — so fresh keratinocytes rise to the surface. Smoother skin. Brighter finish.",
+  },
+  {
+    name: "Melanocytes",
+    subtitle: "The pigment",
+    icon: Palette,
+    verb: "Even out",
+    front: "Pigment-producing cells that decide your tone — and your sun spots, melasma and uneven patches.",
+    back: "We don't remove them. We control their output so it's even — vitamin C, tyrosinase inhibitors, gentle pigment lasers. The goal is uniform tone, never bleach.",
+  },
+  {
+    name: "Fibroblasts",
+    subtitle: "The structure",
+    icon: Zap,
+    verb: "Awaken",
+    front: "Deep-dermal cells that produce collagen, elastin and hyaluronic acid — the scaffolding of young skin.",
+    back: "By age 30 only a third are still active. We awaken the rest — Profhilo, polynucleotides, PRP, microneedling. Structure rebuilt from within. Bounce restored.",
+  },
+];
+
+/* -------------------- Treatment cards -------------------- */
+
+type Tx = { title: string; tagline: string; href: string; image: string; badge?: string };
+
+const wrinklesInMotion: Tx[] = [
+  { title: "1, 2 or 3 Areas Botox", tagline: "Forehead · Frown · Crow's feet", href: "/treatments/botox/", image: botox3AreasImg, badge: "Signature" },
+  { title: "Brow Lift", tagline: "1–2 mm subtle elevation", href: "/treatments/botox/", image: botoxBrowLiftImg },
+  { title: "Bunny Lines", tagline: "Nose-bridge crinkles", href: "/treatments/botox/", image: botoxBunnyImg },
+  { title: "Lip Flip", tagline: "A whisper of upper-lip lift", href: "/treatments/lip-flip/", image: botoxLipFlipImg },
+  { title: "Gummy Smile", tagline: "Refined upper-lip line", href: "/treatments/botox/", image: botoxGummyImg },
+  { title: "Mentalis · Chin", tagline: "Quiet the chin dimpling", href: "/treatments/botox/", image: botoxMentalisImg },
+  { title: "Nefertiti Neck Lift", tagline: "Sculpt the neck-jaw line", href: "/treatments/botox/", image: botoxNefertitiImg },
+  { title: "Marionette / DAO", tagline: "Lift the corners of the mouth", href: "/treatments/botox/", image: botoxMarionetteImg },
+];
+
+const volumeLost: Tx[] = [
+  { title: "HA Makeover", tagline: "8 / 11-point lifting", href: "/treatments/ha-makeover/", image: haMakeoverBaImg, badge: "Signature" },
+  { title: "Cheek Filler", tagline: "Mid-face lift, no surgery", href: "/treatments/cheek-filler/", image: cheekFillerBaImg },
+  { title: "Jowl & Jawline", tagline: "Sharpen the lower face", href: "/treatments/jawline-filler/", image: jowlJawlineBaImg },
+  { title: "Tear Trough", tagline: "Rested under-eyes", href: "/treatments/tear-trough-filler/", image: tearTroughBaImg },
+  { title: "Temple Filler", tagline: "Restore the upper-third", href: "/treatments/temple-filler/", image: templeFillerBaImg },
+  { title: "Lip Filler", tagline: "Natural, never overdone", href: "/treatments/lip-fillers/", image: lipFillerBaImg },
+  { title: "Cosmetic Units", tagline: "The anatomical map", href: "/aesthetics-at-a-glance/", image: cosmeticUnitsImg, badge: "Anatomy" },
+];
+
+/* -------------------- Components -------------------- */
+
+const CellFlipCard = ({ card, index }: { card: CellCard; index: number }) => {
+  const [flipped, setFlipped] = useState(false);
+  const Icon = card.icon;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="relative h-[420px] [perspective:1200px]"
+    >
+      <div
+        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
+          flipped ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
+        {/* Front */}
+        <div className="absolute inset-0 [backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#0d0d0d] via-[#141008] to-[#1f1809] border border-[#C9A050]/25 p-7 flex flex-col shadow-[0_30px_60px_-30px_rgba(201,160,80,0.35)]">
+          <div className="w-12 h-12 rounded-full bg-[#C9A050]/15 border border-[#C9A050]/40 flex items-center justify-center">
+            <Icon className="w-5 h-5 text-[#C9A050]" />
+          </div>
+          <span className="mt-6 text-[10px] uppercase tracking-[0.25em] text-[#C9A050]">{card.subtitle}</span>
+          <h3 className="mt-2 font-serif text-3xl sm:text-4xl leading-[1.05] text-white">{card.name}</h3>
+          <p className="mt-4 text-white/70 text-[15px] leading-relaxed flex-1">{card.front}</p>
+          <div className="mt-6 flex items-center justify-between">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/80">Our approach · {card.verb}</span>
+            <button
+              onClick={() => setFlipped(true)}
+              aria-label="Flip card"
+              className="w-10 h-10 rounded-full bg-[#C9A050] text-black flex items-center justify-center shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 transition"
+            >
+              <RotateCw className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+        {/* Back */}
+        <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-[28px] bg-gradient-to-br from-[#1f1809] via-[#141008] to-[#0d0d0d] border border-[#C9A050]/40 p-7 flex flex-col">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A050]">{card.verb} · {card.name}</span>
+          <p className="mt-4 text-white text-lg sm:text-xl leading-[1.45] font-light flex-1">{card.back}</p>
+          <button
+            onClick={() => setFlipped(false)}
+            className="mt-6 self-end w-10 h-10 rounded-full bg-[#C9A050] text-black flex items-center justify-center shadow-[0_0_24px_rgba(201,160,80,0.55)]"
+            aria-label="Flip back"
+          >
+            <RotateCw className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+const TxCard = ({ card }: { card: Tx }) => (
+  <Link
+    to={card.href}
+    className="group relative block overflow-hidden rounded-[24px] aspect-[4/5] bg-black ring-1 ring-white/10 hover:ring-[#C9A050]/60 transition-all duration-300 hover:-translate-y-1"
+  >
+    <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
+    {card.badge && (
+      <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-[#C9A050]/90 text-black font-medium">
+        {card.badge}
+      </span>
+    )}
+    <div className="absolute inset-x-0 bottom-0 p-5">
+      <h3 className="font-serif text-xl sm:text-2xl text-white leading-tight">{card.title}</h3>
+      <p className="mt-1.5 text-white/75 text-xs sm:text-sm">{card.tagline}</p>
+      <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#C9A050] group-hover:gap-2 transition-all">
+        Discover <ArrowUpRight className="w-3.5 h-3.5" />
+      </span>
+    </div>
+  </Link>
+);
+
+const SectionHead = ({ eyebrow, title, copy }: { eyebrow: string; title: string; copy: string }) => (
+  <div className="max-w-2xl mb-10 sm:mb-14">
+    <p className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050] mb-3">{eyebrow}</p>
+    <h2 className="font-serif text-3xl sm:text-5xl leading-[1.05] text-white">{title}</h2>
+    <p className="mt-4 text-white/65 text-[15px] sm:text-base leading-relaxed">{copy}</p>
+  </div>
+);
+
+/* -------------------- Page -------------------- */
 
 const AestheticsAtGlance = () => {
   const handleShare = () => {
     if (navigator.share) {
-      navigator.share({
-        title: 'Aesthetics at a Glance - Cosmedocs',
-        text: 'Discover the science behind beautiful skin with this comprehensive guide',
-        url: window.location.href,
-      });
+      navigator.share({ title: "Aesthetics at a Glance — Cosmedocs", url: window.location.href });
     } else {
       navigator.clipboard.writeText(window.location.href);
     }
-  };
-
-  const handleDownload = () => {
-    window.print();
   };
 
   return (
@@ -38,581 +192,131 @@ const AestheticsAtGlance = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="aesthetics guide, skin care, lazy skin syndrome, dermatology, cosmedocs ebook, anti-aging, skincare routine, professional treatments" />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href={seoData.canonical} data-rh="true" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="article" />
-        <meta property="article:author" content="Cosmedocs" />
-        <meta property="article:published_time" content="2024-01-01" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Book",
-            "name": "Aesthetics at a Glance",
-            "description": seoData.description,
-            "author": {
-              "@type": "Organization",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
-            },
-            "url": seoData.canonical,
-            "datePublished": "2024-01-01",
-            "inLanguage": "en",
-            "genre": "Medical/Health"
-          })}
-        </script>
       </Helmet>
 
-      {/* Hero Banner */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="relative h-96 md:h-[500px] overflow-hidden"
-      >
-        <img
-          src={heroBanner}
-          alt="Aesthetic Medicine Guide - Beautiful Skin"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent flex items-center">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-2 mb-4">
-                <BookOpen className="w-6 h-6 text-purple-400" />
-                <span className="text-sm uppercase tracking-wide text-gray-300">Free Ebook</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Aesthetics at a Glance
-              </h1>
-              <p className="text-lg text-gray-200 mb-6">
-                The complete guide to understanding beautiful skin, from cellular biology to professional treatments
-              </p>
-              <div className="flex items-center gap-4">
-                <Button onClick={handleShare} variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share
-                </Button>
-                <Button onClick={handleDownload} variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download PDF
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <div className="container mx-auto px-4 py-12">
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
-        >
-          <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/30 hover:border-purple-400/50 transition-colors">
-            <CardContent className="p-6 text-center">
-              <Sparkles className="w-10 h-10 text-purple-300 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">3-Step</div>
-              <div className="text-sm text-purple-200">Cellular Approach</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-br from-pink-900/30 to-pink-800/20 border-pink-500/30 hover:border-pink-400/50 transition-colors">
-            <CardContent className="p-6 text-center">
-              <Users className="w-10 h-10 text-pink-300 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">30,000+</div>
-              <div className="text-sm text-pink-200">Patients Treated</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-500/30 hover:border-blue-400/50 transition-colors">
-            <CardContent className="p-6 text-center">
-              <Zap className="w-10 h-10 text-blue-300 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">3 Types</div>
-              <div className="text-sm text-blue-200">Skin Cells Targeted</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-br from-green-900/30 to-green-800/20 border-green-500/30 hover:border-green-400/50 transition-colors">
-            <CardContent className="p-6 text-center">
-              <Heart className="w-10 h-10 text-green-300 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">1M+</div>
-              <div className="text-sm text-green-200">Injections</div>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Content Grid - Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column */}
-          <div className="space-y-12">
-            {/* Introduction */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-white">Introduction: When Skin Gets Lazy</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    Have you noticed how your fingers become wrinkly in the pool? It's not just waterlogging – it's your body actually responding. Immersing in water triggers nerves to constrict blood vessels, slowing the delivery of moisture and nutrients to the skin, which causes that pruney look. In a similar way, our skin can become "lazy" in its daily upkeep if it always gets things handed to it.
-                  </p>
-                  <p>
-                    Overusing heavy moisturizers, for example, can form an occlusive film on the skin and slow down its natural renewal. Dermatologists call this "lazy skin syndrome" – signs include dullness, dryness, congestion and even breakouts, all because old cells hang around on the surface instead of shedding.
-                  </p>
-                  <p>
-                    But don't worry: just like a good workout can get a lazy person back in shape, the right skincare steps can "wake up" your skin. In this eBook, we'll introduce a simple 3-step approach targeting the three key cell types in your skin – keratinocytes, melanocytes, and fibroblasts – plus a bonus step for deeper fixes. It's everything you need for healthy, glowing skin, explained in plain English (with a dash of wit) for the everyday layperson. Let's dive in!
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Step 1 */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/30">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <Sparkles className="w-6 h-6 text-purple-300" />
-                    </div>
-                    <CardTitle className="text-2xl text-purple-300">Step 1: Wake Up Your Keratinocytes</CardTitle>
-                  </div>
-                  <p className="text-purple-200 text-sm">(Exfoliation)</p>
-                </CardHeader>
-                <CardContent className="p-6 text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    Your skin's surface is essentially a brick wall of cells. The bricks are keratinocytes (the main cells in the epidermis) and the mortar is natural oils and lipids. New keratinocytes form in the bottom layer and take about 4 weeks to move up and flake off. When we're young, this process is swift (around 28 days), but it slows with age – by your 50s it might take 50 days or more.
-                  </p>
-                  <p>
-                    As a result, dead cells pile up, making skin look rough, ashy, and "tired". To fix lazy keratinocytes, we need to exfoliate and speed up cell turnover.
-                  </p>
-                  <p>
-                    Chemical exfoliants like AHAs and PHAs are brilliant here. Alpha Hydroxy Acids (AHAs) – such as glycolic, lactic, and mandelic acids – work by loosening the "glue" that holds dull, dead cells on the surface. They reveal fresher skin beneath and can even soften fine lines and uneven pigment.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Step 3 */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6 }}
-            >
-              <Card className="bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-500/30">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 bg-blue-500/20 rounded-full">
-                      <Zap className="w-6 h-6 text-blue-300" />
-                    </div>
-                    <CardTitle className="text-2xl text-blue-300">Step 3: Firm Up Your Fibroblasts</CardTitle>
-                  </div>
-                  <p className="text-blue-200 text-sm">(Collagen Stimulation)</p>
-                </CardHeader>
-                <CardContent className="p-6 text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    Now that the surface is smooth and glowing, let's talk about the supporting framework of your skin. Beneath the epidermis lies the dermis, and its star players are cells called fibroblasts. If keratinocytes are the brick-makers of the epidermis, fibroblasts are the construction workers building the support beams in the dermis – those beams being collagen and elastin fibers.
-                  </p>
-                  <p>
-                    Fibroblasts churn out collagen, elastin, and other matrix components that give skin its firmness, elasticity, and structure. When we're young, fibroblasts are active and our skin is bouncy and thick with collagen (think of a baby's plump cheeks). But as we age (and with cumulative sun damage), fibroblasts get slow and "lazy" too.
-                  </p>
-                  <p>
-                    One way we already mentioned: retinoids. Yes, our hardworking retinol/tretinoin from Step 1 also flexes its muscle down in the dermis. Retinoids have decades of research proving they stimulate fibroblasts to synthesize new collagen fibers and prevent collagen breakdown.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          {/* Right Column */}
-          <div className="space-y-12">
-            {/* Step 2 */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              <Card className="bg-gradient-to-br from-pink-900/30 to-pink-800/20 border-pink-500/30">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 bg-pink-500/20 rounded-full">
-                      <Heart className="w-6 h-6 text-pink-300" />
-                    </div>
-                    <CardTitle className="text-2xl text-pink-300">Step 2: Even Out Your Melanocytes</CardTitle>
-                  </div>
-                  <p className="text-pink-200 text-sm">(Pigment Control)</p>
-                </CardHeader>
-                <CardContent className="p-6 text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    Ever notice how a dull complexion often goes hand-in-hand with uneven tone or lingering spots? That's where your melanocytes come in. Melanocytes are the pigment-producing cells at the base of the epidermis, and they pump out melanin (the stuff that gives our skin its color).
-                  </p>
-                  <p>
-                    They're like tiny in-house paint factories, meant to protect skin from UV rays by tanning it. But various factors (sun exposure, hormones, age, inflammation) can send melanocytes into overdrive or misfire, resulting in hyperpigmentation, sun spots, melasma, or just a generally uneven tone.
-                  </p>
-                  <p>
-                    To rejuvenate, we need to both remove the over-pigmented cells (thank you again, exfoliation from Step 1) and calm down melanin production going forward. One way is through antioxidants. Topical antioxidants like Vitamin C are brightening superstars.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Beyond Skincare */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7 }}
-            >
-              <Card className="bg-gradient-to-br from-green-900/20 to-teal-900/20 border-green-500/30">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-green-400">Beyond Skincare: Movement & Volume</CardTitle>
-                  <p className="text-green-200 text-sm">The Botox and Fillers</p>
-                </CardHeader>
-                <CardContent className="p-6 text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    We've covered the skin's cellular trifecta, but there's more to "anti-aging" or aesthetic rejuvenation than just skin texture and glow. As we age (or even in our late 20s and 30s), two other things often happen: expression lines start etching in, and volume in the face starts diminishing.
-                  </p>
-                  <p>
-                    These aren't issues you can completely fix with creams or serum – this is where cosmetic procedures like Botox and dermal fillers come into play. Let's break it down in a simple way: Botox is for movement-caused wrinkles, and Fillers are for volume loss or static folds.
-                  </p>
-                  <p>
-                    Botox (and similar brands like Dysport, Xeomin, etc.) is a purified neurotoxin (botulinum toxin type A) that, when injected in tiny amounts into specific facial muscles, causes those muscles to relax.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Supermodel Case Study - Treatment Journey Style */}
-        <section className="py-20 bg-gradient-to-r from-amber-50/5 to-yellow-50/5 mt-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-4xl font-light mb-6 text-amber-400">Supermodel Case Study</h2>
-                <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
-                  Witness the complete transformation process of a supermodel over one year of treatment. 
-                  This comprehensive case study showcases the precision and artistry of our aesthetic approach combining skin rejuvenation, wrinkle treatment, and volume restoration.
-                </p>
-              </motion.div>
-            </div>
-            
-            <div className="grid lg:grid-cols-4 gap-8">
-              {/* Before Treatment */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-br from-amber-900/30 to-red-900/20 rounded-xl overflow-hidden shadow-xl border border-amber-500/30">
-                  <div className="p-6 border-b border-amber-500/30">
-                    <div className="bg-amber-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Target className="text-amber-300" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2 text-amber-300">Initial Assessment</h3>
-                    <p className="text-amber-200 text-sm">Before any treatment began</p>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
-                      <img 
-                        src={supermodelBefore} 
-                        alt="Initial consultation showing natural aging signs"
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="text-sm text-amber-200 leading-relaxed">
-                      Initial consultation showing natural aging signs and areas for enhancement. Even supermodels benefit from professional aesthetic care.
-                    </p>
-                  </div>
-                  
-                  <div className="p-4 bg-amber-500/10">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded-full">Baseline Assessment</span>
-                      <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded-full">Natural Aging</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Progress - 6 Months */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/20 rounded-xl overflow-hidden shadow-xl border border-blue-500/30">
-                  <div className="p-6 border-b border-blue-500/30">
-                    <div className="bg-blue-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Lightbulb className="text-blue-300" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2 text-blue-300">Mid-Treatment</h3>
-                    <p className="text-blue-200 text-sm">6 months progress review</p>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
-                      <img 
-                        src={supermodelProgress}
-                        alt="Mid-treatment progress - 6 months in"
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="text-sm text-blue-200 leading-relaxed">
-                      Mid-treatment progress showing significant improvement in skin quality, texture, and overall facial harmony after 6 months of treatment.
-                    </p>
-                  </div>
-                  
-                  <div className="p-4 bg-blue-500/10">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Progressive Results</span>
-                      <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">6 Month Mark</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Final Results 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/20 rounded-xl overflow-hidden shadow-xl border border-green-500/30">
-                  <div className="p-6 border-b border-green-500/30">
-                    <div className="bg-green-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Award className="text-green-300" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2 text-green-300">Final Results</h3>
-                    <p className="text-green-200 text-sm">One year transformation</p>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
-                      <img 
-                        src={supermodelAfter1}
-                        alt="Final results - enhanced volume and contour"
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="text-sm text-green-200 leading-relaxed">
-                      Final results showing enhanced volume and contour restoration. Natural-looking enhancement that maintains facial harmony and authenticity.
-                    </p>
-                  </div>
-                  
-                  <div className="p-4 bg-green-500/10">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Volume Restored</span>
-                      <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Natural Results</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Final Results 2 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/20 rounded-xl overflow-hidden shadow-xl border border-purple-500/30">
-                  <div className="p-6 border-b border-purple-500/30">
-                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Sparkles className="text-purple-300" size={24} />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2 text-purple-300">Aesthetic Perfection</h3>
-                    <p className="text-purple-200 text-sm">Complete transformation</p>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
-                      <img 
-                        src={supermodelAfter2}
-                        alt="Natural enhancement maintaining facial harmony"
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="text-sm text-purple-200 leading-relaxed">
-                      Natural enhancement maintaining perfect facial harmony. The epitome of invisible art - bold, natural, and always authentically beautiful.
-                    </p>
-                  </div>
-                  
-                  <div className="p-4 bg-purple-500/10">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Invisible Art</span>
-                      <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Perfect Harmony</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Treatment Summary */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="mt-16"
-            >
-              <div className="bg-gradient-to-r from-amber-900/10 to-yellow-900/10 rounded-2xl p-8 border border-amber-500/20">
-                <div className="text-center mb-8">
-                  <div className="bg-amber-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                    <Award className="text-amber-400" size={32} />
-                  </div>
-                  <h3 className="text-3xl font-light mb-4 text-amber-400">Complete Transformation Summary</h3>
-                  <p className="text-amber-200 max-w-2xl mx-auto">
-                    One year journey showcasing the power of comprehensive aesthetic medicine combining skin rejuvenation, wrinkle treatment, and volume restoration
-                  </p>
-                </div>
-                
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10">
-                    <h4 className="text-xl font-semibold mb-4 flex items-center text-amber-300">
-                      <Sparkles className="text-amber-400 mr-3" size={20} />
-                      Skin Quality
-                    </h4>
-                    <div className="space-y-2 text-sm text-amber-200">
-                      <p>• Enhanced texture and luminosity</p>
-                      <p>• Improved hydration levels</p>
-                      <p>• Reduced fine lines and wrinkles</p>
-                      <p>• Overall skin rejuvenation</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10">
-                    <h4 className="text-xl font-semibold mb-4 flex items-center text-amber-300">
-                      <Heart className="text-amber-400 mr-3" size={20} />
-                      Volume Restoration
-                    </h4>
-                    <div className="space-y-2 text-sm text-amber-200">
-                      <p>• Strategic volume enhancement</p>
-                      <p>• Natural facial contouring</p>
-                      <p>• Maintained facial proportions</p>
-                      <p>• Age-appropriate results</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10">
-                    <h4 className="text-xl font-semibold mb-4 flex items-center text-amber-300">
-                      <Award className="text-amber-400 mr-3" size={20} />
-                      Our Philosophy
-                    </h4>
-                    <div className="space-y-2 text-sm text-amber-200">
-                      <p>• Invisible art aesthetic</p>
-                      <p>• Bold yet natural results</p>
-                      <p>• Always authentically you</p>
-                      <p>• Transformation that speaks</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <div className="container mx-auto px-4 pb-12">
-          {/* Conclusion */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
-            className="text-center max-w-4xl mx-auto"
+      {/* Hero */}
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,160,80,0.18),transparent_60%)]" />
+        <div className="container mx-auto px-5 max-w-5xl relative">
+          <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050]">
+            The Cosmedocs Skin Map
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mt-4 font-serif text-4xl sm:text-6xl leading-[1.02] tracking-tight"
           >
-            <Card className="bg-gradient-to-br from-gray-900/50 to-black/30 border-gray-500/30">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Skin?</h2>
-                <p className="text-gray-300 leading-relaxed mb-8">
-                  This guide is just the beginning. While good skincare can work wonders, sometimes you need professional help to achieve your aesthetic goals. At Cosmedocs, our expert practitioners combine the latest scientific knowledge with artistic precision to help you achieve the beautiful, natural-looking results you deserve.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    size="lg" 
-                    className="bg-purple-600 hover:bg-purple-700 text-white"
-                    onClick={() => window.open('tel:02071830250', '_self')}
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10"
-                    onClick={handleShare}
-                  >
-                    Share This Guide
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            Aesthetics, <span className="text-[#C9A050]">at a glance.</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-5 max-w-2xl text-white/70 text-base sm:text-lg leading-relaxed"
+          >
+            Three cells beneath the skin. Wrinkles that move on the surface. Volume that quietly leaves with time.
+            Keep all three in balance — the face stays unmistakably you.
+          </motion.p>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-wrap gap-3">
+            <Button onClick={handleShare} variant="outline" className="border-[#C9A050]/40 bg-transparent text-white hover:bg-[#C9A050]/10 hover:text-white">
+              <Share2 className="w-4 h-4 mr-2" /> Share
+            </Button>
+            <Button onClick={() => window.print()} className="bg-[#C9A050] text-black hover:bg-[#b89040]">
+              <Download className="w-4 h-4 mr-2" /> Download PDF
+            </Button>
           </motion.div>
         </div>
+      </section>
 
-        {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Comprehensive Aesthetic Medicine Guide</h2>
-          <p>This comprehensive guide to aesthetics covers everything from lazy skin syndrome to professional cosmetic treatments. Understanding how your skin works at a cellular level is crucial for maintaining healthy, beautiful skin throughout your life.</p>
-          
-          <h3>Understanding Lazy Skin Syndrome</h3>
-          <p>Lazy skin syndrome occurs when your skin becomes dependent on heavy products and stops functioning optimally on its own. This phenomenon is well-documented in dermatological literature and affects millions of people worldwide who over-moisturize or use occlusive products that prevent natural skin renewal.</p>
-          
-          <h3>The Three-Step Cellular Approach</h3>
-          <p>Our evidence-based three-step approach targets the three main cell types in your skin: keratinocytes for surface renewal, melanocytes for even pigmentation, and fibroblasts for structural support. This scientifically-backed method has helped thousands of patients achieve healthier, more radiant skin.</p>
-          
-          <h3>Professional Treatment Options</h3>
-          <p>While home skincare is important, professional treatments like dermal fillers, Botox, and advanced skin rejuvenation procedures can address concerns that topical products cannot. Our clinic has performed over 1 million injections and treated more than 30,000 patients with outstanding results.</p>
-          
-          <h3>Supermodel Case Study Results</h3>
-          <p>The supermodel case study featured in this guide demonstrates the remarkable results possible with comprehensive aesthetic treatment. Over the course of one year, combining skin quality improvement, volume restoration, and wrinkle reduction, this client achieved natural-looking enhancement that maintained perfect facial harmony.</p>
-          
-          <h3>Evidence-Based Aesthetic Medicine</h3>
-          <p>All treatments mentioned in this guide are backed by extensive clinical research and performed by qualified medical professionals. From AHA exfoliation to hyaluronic acid fillers, every recommendation is based on peer-reviewed studies and years of clinical experience.</p>
-          
-          <h3>The Cosmedocs Philosophy</h3>
-          <p>Our aesthetics is invisible art - bold, natural, and always your way. We believe in transformation that speaks without saying a word, creating results that enhance your natural beauty rather than changing who you are.</p>
+      {/* Section 1 — Your Skin */}
+      <section className="py-16 sm:py-24 border-t border-white/5">
+        <div className="container mx-auto px-5 max-w-6xl">
+          <SectionHead
+            eyebrow="01 · Your Skin"
+            title="Three cells. One surface."
+            copy="Every visible skin concern traces back to three cell types working together. We don't treat all three the same way."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {cellCards.map((c, i) => (
+              <CellFlipCard key={c.name} card={c} index={i} />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Section 2 — Wrinkles in Motion */}
+      <section className="py-16 sm:py-24 border-t border-white/5 bg-gradient-to-b from-black to-[#0a0805]">
+        <div className="container mx-auto px-5 max-w-6xl">
+          <SectionHead
+            eyebrow="02 · Wrinkles in Motion"
+            title="Where the muscle creases the skin."
+            copy="Forehead, frown, crow's feet, lip lines, jaw — soft, doctor-led Botox quietens the muscles that fold the skin. Movement preserved. Lines, gone."
+          />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+            {wrinklesInMotion.map((c) => (
+              <TxCard key={c.title} card={c} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-[#C9A050] hover:gap-3 transition-all text-sm uppercase tracking-[0.2em]">
+              All Botox treatments <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 — Volume Loss */}
+      <section className="py-16 sm:py-24 border-t border-white/5">
+        <div className="container mx-auto px-5 max-w-6xl">
+          <SectionHead
+            eyebrow="03 · Volume Loss"
+            title="Where time has taken structure."
+            copy="Cheeks, mid-face, jaw, temples, lips — hyaluronic acid restores the architecture, millimetre by millimetre. Quietly. Never bulk."
+          />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+            {volumeLost.map((c) => (
+              <TxCard key={c.title} card={c} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/treatments/dermal-fillers/" className="inline-flex items-center gap-2 text-[#C9A050] hover:gap-3 transition-all text-sm uppercase tracking-[0.2em]">
+              Dermal Fillers overview <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Balance closing */}
+      <section className="py-20 sm:py-28 border-t border-[#C9A050]/20 bg-gradient-to-b from-[#0a0805] to-black">
+        <div className="container mx-auto px-5 max-w-3xl text-center">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050] mb-4">The Balance</p>
+          <h2 className="font-serif text-3xl sm:text-5xl leading-[1.05]">
+            Skin. Wrinkles. Volume.
+            <br />
+            <span className="text-[#C9A050]">Kept in quiet balance.</span>
+          </h2>
+          <p className="mt-6 text-white/70 text-base sm:text-lg leading-relaxed">
+            When all three are looked after — the cells beneath, the lines on top, the structure underneath — the face is
+            optimised, never overdone. Bold. Natural. Always your way.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link to="/contact/">
+              <Button className="bg-[#C9A050] text-black hover:bg-[#b89040] px-6">Book a consultation</Button>
+            </Link>
+            <Link to="/aesthetic-intelligence/">
+              <Button variant="outline" className="border-[#C9A050]/40 bg-transparent text-white hover:bg-[#C9A050]/10 hover:text-white px-6">
+                Free AI Face Scan <ArrowUpRight className="w-4 h-4 ml-1.5" />
+              </Button>
+            </Link>
+          </div>
+          <p className="mt-10 text-xs text-white/40 italic">Our aesthetics is invisible art.</p>
+        </div>
+      </section>
     </div>
   );
 };
