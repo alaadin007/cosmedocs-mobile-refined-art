@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense, memo } from "react";
-import VoiceConsultationWidget from "./components/voice/VoiceConsultationWidget";
+import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Layout from "./components/Layout";
@@ -1033,7 +1033,7 @@ const App = () => {
                 </Routes>
                 </LanguageProvider>
               </AuthProvider>
-              <VoiceConsultationWidget />
+              <WhatsAppFloatingButton />
             </BrowserRouter>
           </TooltipProvider>
         </HelmetProvider>
