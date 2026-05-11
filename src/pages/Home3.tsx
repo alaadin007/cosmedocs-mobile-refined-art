@@ -39,7 +39,7 @@ type SubCard = {
   ink?: string;
   badge?: string;
   image?: string;
-  flip?: { back: string; imagePosition?: "top" | "bottom" };
+  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string };
   flipImages?: { src: string; alt: string }[];
   flipNote?: string;
 };
@@ -149,11 +149,12 @@ const categories: Category[] = [
         tagline: "Slim jaw · Stop grinding",
         href: "/treatments/masseter-botox/",
         bg: "bg-[#0d1218]",
-        image: masseterBaImg,
+        image: medMasseterImg,
         badge: "Most asked",
         flip: {
           back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette — and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
           imagePosition: "top",
+          image: masseterBaImg,
         },
       },
       { title: "Bruxism Botox", tagline: "Night clenching, treated", href: "/treatments/bruxism-botox/", bg: "bg-[#0d1218]", image: medBruxismImg },
@@ -357,7 +358,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         >
           <div className={`absolute inset-0 p-5 sm:p-6 flex flex-col ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
             {/* Image — original ratio, with animated glowing gold border */}
-            {card.image && (
+            {(card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)]">
                 <div
                   aria-hidden
@@ -365,7 +366,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 />
                 <div className="relative rounded-2xl overflow-hidden bg-black">
                   <img
-                    src={card.image}
+                    src={card.flip?.image ?? card.image}
                     alt={`${card.title} before and after — Cosmedocs`}
                     className="block w-full h-auto"
                   />
