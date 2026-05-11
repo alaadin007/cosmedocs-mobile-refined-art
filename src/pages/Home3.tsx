@@ -1754,7 +1754,40 @@ const Home3 = () => {
           <Button asChild className="mt-10 rounded-full bg-white text-black hover:bg-white/90 h-12 px-8 font-semibold">
             <Link to="/contact/">Begin your consultation</Link>
           </Button>
+          <div className="mt-4">
+            <a
+              href={ACUITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] text-white/45 hover:text-[#C9A050] underline-offset-4 hover:underline transition"
+            >
+              Or book online instantly →
+            </a>
+          </div>
         </section>
+
+        {/* FAQ — collapsed by default, indexable for SEO */}
+        <section aria-labelledby="home3-faq" className="px-5 sm:px-8 max-w-3xl mx-auto pb-16">
+          <h2 id="home3-faq" className="font-serif text-2xl sm:text-3xl text-white/90 mb-5">Frequently asked</h2>
+          <div className="space-y-2">
+            {[
+              { q: "What treatments does Cosmedocs offer?", a: "A full range of non-surgical aesthetic treatments — anti-wrinkle injections, dermal fillers, lip fillers, skin rejuvenation and advanced anti-ageing — all performed by qualified medical doctors." },
+              { q: "Where is Cosmedocs located?", a: "8-10 Harley Street, London W1G 9PF — a private, premium setting for consultations and treatments." },
+              { q: "How do I book a consultation?", a: "Call 0333 0551 503, email info@cosmedocs.com, or use our online booking. Both in-person and virtual consultations are available." },
+              { q: "Are practitioners qualified doctors?", a: "Yes. Cosmedocs is doctor-led — every practitioner is a qualified medical professional. Dr. Ahmed Haq leads the team with 17+ years of experience." },
+              { q: "What is the Cosmedocs philosophy?", a: "Invisible art — subtle, natural-looking results. Bold, natural, always your way." },
+            ].map((f) => (
+              <details key={f.q} className="group rounded-lg border border-white/10 bg-white/[0.02] open:bg-white/[0.04] transition">
+                <summary className="cursor-pointer list-none px-4 py-3 text-sm text-white/80 hover:text-white flex items-center justify-between gap-3">
+                  <span>{f.q}</span>
+                  <span className="text-[#C9A050] text-xs group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="px-4 pb-4 pt-1 text-[13px] leading-relaxed text-white/60">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
 
         {/* Quick Links, pill nav at the bottom for fast jumping back up */}
         <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-16 border-t border-white/5 pt-12">
