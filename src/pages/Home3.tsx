@@ -447,7 +447,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
   const gestureStart = useRef<{ x: number; y: number } | null>(null);
-  const isTapGesture = (event: React.PointerEvent) => {
+  const isTapGesture = (event: PointerEvent) => {
     const start = gestureStart.current;
     if (!start) return true;
     const movedX = Math.abs(event.clientX - start.x);
