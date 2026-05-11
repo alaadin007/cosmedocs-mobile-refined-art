@@ -186,6 +186,7 @@ const categories: Category[] = [
       { title: "Migraine Botox", tagline: "Chronic migraine protocol", href: "/treatments/migraine-botox/", bg: "bg-[#0d1218]", image: medMigraineImg },
       { title: "Hyperhidrosis", tagline: "Underarm sweat control", href: "/treatments/hyperhidrosis/", bg: "bg-[#0d1218]", image: medHyperhidrosisImg },
       { title: "Trapezius Botox", tagline: "Shoulder slimming · pain", href: "/treatments/trap-botox/", bg: "bg-[#0d1218]", image: medTrapeziusImg },
+      { title: "Calf Slimming", tagline: "Athletic-leg refinement", href: "/treatments/calf-slimming-botox/", bg: "bg-[#0d1218]", image: medCalfImg },
     ],
   },
   {
