@@ -566,8 +566,8 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           </button>
 
           <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
-            {/* Image — fixed proportion so all card backs share the same rhythm */}
-            {(card.flip?.image ?? card.image) && (
+            {/* Image — hidden when flip.largeText so the back is text-led */}
+            {!card.flip?.largeText && (card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
                 <div
                   aria-hidden
@@ -584,14 +584,14 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               </div>
             )}
 
-            {/* Caption — uniform compact typography across all card backs */}
+            {/* Caption */}
             <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
-              <p className="text-[9px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">Before · After</p>
-              <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight">{card.title}</h3>
-              <p className="mt-2 text-[13px] leading-snug text-white/75 max-w-md line-clamp-5 sm:line-clamp-6">{card.flip?.back}</p>
+              <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
+              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-2xl sm:text-3xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
+              <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>{card.flip?.back}</p>
               <Link
                 to={card.href}
-                className="mt-auto pt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#C9A050] pointer-events-auto self-start"
+                className={`mt-auto pt-3 inline-flex items-center gap-1.5 font-semibold text-[#C9A050] pointer-events-auto self-start ${card.flip?.largeText ? "text-sm" : "text-[13px]"}`}
               >
                 Discover {card.title} <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
