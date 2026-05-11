@@ -39,7 +39,7 @@ import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
 
 /* -------------------------------------------------------------------------- */
-/*  HOME 3  —  iOS / Apple.co.uk-style category grid                          */
+/*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
 /* -------------------------------------------------------------------------- */
 
 type SubCard = {
@@ -65,18 +65,18 @@ type Category = {
   cards: SubCard[];
 };
 
-/* ---------- Aesthetic Botox — full treatment list ----------------------- */
+/* ---------- Aesthetic Botox, full treatment list ----------------------- */
 const botoxAesthetic: SubCard[] = [
   {
     title: "1, 2 or 3 Areas Botox",
-    tagline: "Forehead · Frown · Crow's feet — tailored to your face.",
+    tagline: "Forehead · Frown · Crow's feet, tailored to your face.",
     href: "/treatments/botox/",
     bg: "bg-black",
     image: botox3AreasImg,
     badge: "Signature",
     flipImages: [
-      { src: botoxFrownBaImg, alt: "Frown line softening — before and after, Cosmedocs" },
-      { src: botoxForeheadBaImg, alt: "Forehead lines smoothed — before and after, Cosmedocs" },
+      { src: botoxFrownBaImg, alt: "Frown line softening, before and after, Cosmedocs" },
+      { src: botoxForeheadBaImg, alt: "Forehead lines smoothed, before and after, Cosmedocs" },
     ],
     flipNote: "Real, unedited patient results.",
   },
@@ -153,7 +153,7 @@ const categories: Category[] = [
     id: "botox-medical",
     eyebrow: "Botox · Medical",
     title: "More than a wrinkle.",
-    copy: "Therapeutic Botox for muscle-driven conditions — grinding, jaw ache, migraine, sweating. Doctor-prescribed.",
+    copy: "Therapeutic Botox for muscle-driven conditions, grinding, jaw ache, migraine, sweating. Doctor-prescribed.",
     cta: { label: "Medical Botox hub", href: "/medical-botox/" },
     cards: [
       {
@@ -164,7 +164,7 @@ const categories: Category[] = [
         image: medMasseterImg,
         badge: "Most asked",
         flip: {
-          back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette — and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
+          back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette, and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
           imagePosition: "top",
           image: masseterBaImg,
         },
@@ -180,7 +180,7 @@ const categories: Category[] = [
     id: "fillers-anti-ageing",
     eyebrow: "Dermal Fillers · Anti-ageing",
     title: "Volume, returned.",
-    copy: "Where the face has lost structure — cheeks, jowls, mid-face — hyaluronic acid restores it. Quietly. Architecturally.",
+    copy: "Where the face has lost structure, cheeks, jowls, mid-face, hyaluronic acid restores it. Quietly. Architecturally.",
     cta: { label: "Mini Facelifts hub", href: "/treatments/non-surgical-facelift/" },
     cards: [
       {
@@ -191,7 +191,7 @@ const categories: Category[] = [
         badge: "Signature",
         image: haMakeoverBaImg,
         flip: {
-          back: "A doctor-led architectural reset across cheeks, mid-face, jaw and chin — millimetre-by-millimetre, in a single signature appointment. Volume restored where time has taken it. Results that read as you, only rested.",
+          back: "A doctor-led architectural reset across cheeks, mid-face, jaw and chin, millimetre-by-millimetre, in a single signature appointment. Volume restored where time has taken it. Results that read as you, only rested.",
         },
       },
       {
@@ -203,7 +203,7 @@ const categories: Category[] = [
         image: cheekFillerBaImg,
         badge: "Mid-face",
         flip: {
-          back: "Architectural mid-face support — restoring the apex of the cheek to lift the lower face from above. Doctor-led millimetre placement on bone, never bulk. The result reads as restored youth, not added volume.",
+          back: "Architectural mid-face support, restoring the apex of the cheek to lift the lower face from above. Doctor-led millimetre placement on bone, never bulk. The result reads as restored youth, not added volume.",
           imagePosition: "bottom",
         },
       },
@@ -214,7 +214,7 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-zinc-800 to-zinc-950",
         badge: "Definition",
         flip: {
-          back: "Doctor-led contouring along the mandibular border — softening the jowl, sharpening the angle and re-defining the chin-to-ear line. Bone-deep millimetre placement, never bulk.",
+          back: "Doctor-led contouring along the mandibular border, softening the jowl, sharpening the angle and re-defining the chin-to-ear line. Bone-deep millimetre placement, never bulk.",
           imagePosition: "top",
           image: jowlJawlineBaImg,
         },
@@ -227,7 +227,7 @@ const categories: Category[] = [
         ink: "text-zinc-900",
         badge: "Under-eye",
         flip: {
-          back: "Doctor-led correction of the tear-trough hollow — softening shadows and restoring a rested, awake under-eye. Conservative dosing on the periosteum, never superficial. The result reads as sleep, not filler.",
+          back: "Doctor-led correction of the tear-trough hollow, softening shadows and restoring a rested, awake under-eye. Conservative dosing on the periosteum, never superficial. The result reads as sleep, not filler.",
           imagePosition: "top",
           image: tearTroughBaImg,
         },
@@ -239,7 +239,7 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-neutral-200 to-neutral-400",
         ink: "text-zinc-900",
         flip: {
-          back: "Doctor-led restoration of the temple hollow — re-establishing the upper-third scaffold that frames the brow and lifts the lateral face. Deep, on-bone placement with conservative volumes. The eye reads rested; the face reads structured, never filled.",
+          back: "Doctor-led restoration of the temple hollow, re-establishing the upper-third scaffold that frames the brow and lifts the lateral face. Deep, on-bone placement with conservative volumes. The eye reads rested; the face reads structured, never filled.",
           imagePosition: "top",
           image: templeFillerBaImg,
         },
@@ -251,7 +251,7 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-pink-200 to-rose-400",
         ink: "text-zinc-900",
         flip: {
-          back: "Your choice — natural or bold. Doctor-led lip artistry mapped to anatomy: Cupid's bow, vermilion border, tubercles, Glogau-Klein points. Millimetre dosing for a result that reads as you, never overdone.",
+          back: "Your choice, natural or bold. Doctor-led lip artistry mapped to anatomy: Cupid's bow, vermilion border, tubercles, Glogau-Klein points. Millimetre dosing for a result that reads as you, never overdone.",
           imagePosition: "top",
           image: lipAnatomyImg,
         },
@@ -265,7 +265,7 @@ const categories: Category[] = [
         image: cosmeticUnitsImg,
         frontImage: cosmeticUnitsImg,
         flip: {
-          back: "The face is a mosaic of cosmetic units — forehead, temple, cheek, mid-face, jaw, lip, chin. Doctor-led aesthetics restores the bridge between units. Flow re-established. Architecture intact. Volume, returned — never bulk.",
+          back: "The face is a mosaic of cosmetic units, forehead, temple, cheek, mid-face, jaw, lip, chin. Doctor-led aesthetics restores the bridge between units. Flow re-established. Architecture intact. Volume, returned, never bulk.",
           imagePosition: "top",
           image: cosmeticUnitsImg,
           largeText: true,
@@ -278,7 +278,7 @@ const categories: Category[] = [
     id: "facial-contouring",
     eyebrow: "Facial Contouring",
     title: "Architecture of the face.",
-    copy: "Reshaping — not refilling. The chin, nose, jawline and profile, refined with millimetre precision.",
+    copy: "Reshaping, not refilling. The chin, nose, jawline and profile, refined with millimetre precision.",
     cta: { label: "Facial Contouring overview", href: "/treatments/dermal-fillers/" },
     cards: [
       {
@@ -290,7 +290,7 @@ const categories: Category[] = [
         image: chinFillerBaImg,
         badge: "Profile",
         flip: {
-          back: "A measured chin projection that re-balances the lower face — softening a recessive jaw, refining the side profile and lifting the chin-neck line. Doctor-led, millimetre dosing for a result that reads as bone, not filler.",
+          back: "A measured chin projection that re-balances the lower face, softening a recessive jaw, refining the side profile and lifting the chin-neck line. Doctor-led, millimetre dosing for a result that reads as bone, not filler.",
         },
       },
       {
@@ -299,7 +299,7 @@ const categories: Category[] = [
         href: "/treatments/nose-filler/",
         bg: "bg-gradient-to-br from-zinc-900 to-zinc-700",
         flip: {
-          back: "Doctor-led liquid rhinoplasty — straightening the bridge, refining the tip, rebalancing the profile in minutes, no surgery. This patient came to us after a surgical rhinoplasty had left an irregularity; we corrected it with millimetre filler placement.",
+          back: "Doctor-led liquid rhinoplasty, straightening the bridge, refining the tip, rebalancing the profile in minutes, no surgery. This patient came to us after a surgical rhinoplasty had left an irregularity; we corrected it with millimetre filler placement.",
           imagePosition: "top",
           image: noseBaImg,
         },
@@ -310,7 +310,7 @@ const categories: Category[] = [
         href: "/treatments/jawline-filler/",
         bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]",
         flip: {
-          back: "Doctor-led mandibular contouring — sharpening the gonial angle, lengthening the ramus and lifting the lower face. Filler on bone for structure, PCL threads for soft-tissue support. Definition that reads as bone, never bulk.",
+          back: "Doctor-led mandibular contouring, sharpening the gonial angle, lengthening the ramus and lifting the lower face. Filler on bone for structure, PCL threads for soft-tissue support. Definition that reads as bone, never bulk.",
           imagePosition: "top",
           image: jawlineBaImg,
         },
@@ -322,7 +322,7 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]",
         badge: "New",
         flip: {
-          back: "Doctor-led dual-wavelength endolaser — a fibre passed beneath the skin to tighten the lower face and neck from within. Mapped, marked and delivered millimetre by millimetre. Real lift, no scalpel, single session.",
+          back: "Doctor-led dual-wavelength endolaser, a fibre passed beneath the skin to tighten the lower face and neck from within. Mapped, marked and delivered millimetre by millimetre. Real lift, no scalpel, single session.",
           imagePosition: "top",
           image: endolaserBaImg,
         },
@@ -334,7 +334,7 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-amber-50 to-amber-200",
         ink: "text-zinc-900",
         flip: {
-          back: "Doctor-led PDO thread lifting — Cog threads anchor and reposition lax tissue along the jaw and cheek; Mono threads scaffold the dermis to stimulate collagen. A measured, suture-grade lift that restores the line without surgery.",
+          back: "Doctor-led PDO thread lifting, Cog threads anchor and reposition lax tissue along the jaw and cheek; Mono threads scaffold the dermis to stimulate collagen. A measured, suture-grade lift that restores the line without surgery.",
           imagePosition: "top",
           image: pdoThreadsBaImg,
         },
@@ -345,7 +345,7 @@ const categories: Category[] = [
     id: "flawless-skin",
     eyebrow: "Flawless Skin Concepts",
     title: "Skin, undone.",
-    copy: "Resurfacing, regeneration and barrier care — the medical-aesthetic foundation behind a lit-from-within finish.",
+    copy: "Resurfacing, regeneration and barrier care, the medical-aesthetic foundation behind a lit-from-within finish.",
     cta: { label: "Skin Rejuvenation hub", href: "/skin-rejuvenation/" },
     cards: [
       { title: "Polynucleotides", tagline: "DNA-level repair", href: "/treatments/polynucleotide-treatment/", bg: "bg-gradient-to-br from-rose-200 to-pink-400", ink: "text-zinc-900", badge: "Regenerative" },
@@ -499,7 +499,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
-        {/* FRONT — passive layer; only the gold corner button flips */}
+        {/* FRONT, passive layer; only the gold corner button flips */}
         <div
           style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
@@ -543,14 +543,14 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           <button
             type="button"
             onClick={() => setFlipped(true)}
-            aria-label={`${card.title} — reveal results`}
+            aria-label={`${card.title}, reveal results`}
             className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
           >
             <RotateCw className="w-4 h-4" />
           </button>
         </div>
 
-        {/* BACK — full before/after image + caption. Corner chip flips back. */}
+        {/* BACK, full before/after image + caption. Corner chip flips back. */}
         <div
           style={{ transform: "rotateY(180deg)", WebkitTransform: "rotateY(180deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-100" : "opacity-0 pointer-events-none"}`}
@@ -566,7 +566,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           </button>
 
           <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
-            {/* Image — hidden when flip.largeText so the back is text-led */}
+            {/* Image, hidden when flip.largeText so the back is text-led */}
             {!card.flip?.largeText && (card.flip?.image ?? card.image) && (
               <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
                 <div
@@ -576,7 +576,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 <div className="relative rounded-2xl overflow-hidden bg-black w-full h-full flex items-center justify-center">
                   <img
                     src={card.flip?.image ?? card.image}
-                    alt={`${card.title} before and after — Cosmedocs`}
+                    alt={`${card.title} before and after, Cosmedocs`}
                     className="block w-full h-full object-contain"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0)_65%,rgba(201,160,80,0.10)_100%)]" />
@@ -681,12 +681,12 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
   );
 };
 
-/* ---------- Aesthetic Botox bento — one horizontal row ----------------- */
+/* ---------- Aesthetic Botox bento, one horizontal row ----------------- */
 /* Pattern of columns (scroll →):
    [Big feature] [2 stacked] [Big] [2 stacked] [Big] [2 stacked] [Big] [2×2 minors] [CTA]
 */
 
-// Small "tile" card used inside stacked / grid columns — shorter height.
+// Small "tile" card used inside stacked / grid columns, shorter height.
 const TileCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   return (
@@ -780,7 +780,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
         className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
-        {/* FRONT — passive layer; only the gold corner button flips */}
+        {/* FRONT, passive layer; only the gold corner button flips */}
         <div
           style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
           className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${card.bg} ${card.ink ?? "text-white"} shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
@@ -791,7 +791,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
           <button
             type="button"
             onClick={() => setFlipped(true)}
-            aria-label={`${card.title} — reveal results`}
+            aria-label={`${card.title}, reveal results`}
             className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
           >
             <RotateCw className="w-4 h-4" />
@@ -822,7 +822,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
                     className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
                   />
                   <div className="relative rounded-2xl overflow-hidden bg-black">
-                    <img src={flipImg} alt={`${card.title} before and after — Cosmedocs`} className="block w-full h-auto" />
+                    <img src={flipImg} alt={`${card.title} before and after, Cosmedocs`} className="block w-full h-auto" />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0)_65%,rgba(201,160,80,0.10)_100%)]" />
                   </div>
                 </div>
@@ -912,7 +912,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
     { kind: "list", cards: otherAreas, eyebrow: "Refined Areas", title: "Every other detail" },
   ];
 
-  // Column widths — keep big card narrow enough on mobile so the next column peeks in
+  // Column widths, keep big card narrow enough on mobile so the next column peeks in
   const widthBig   = "w-[72vw] sm:w-[380px] md:w-[420px]";
   const widthStack = "w-[58vw] sm:w-[300px] md:w-[330px]";
   const widthGrid  = "w-[80vw] sm:w-[460px] md:w-[520px]";
@@ -1032,7 +1032,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   );
 };
 
-/* ---------- Medical Botox — all large spotlight cards in a row ---------- */
+/* ---------- Medical Botox, all large spotlight cards in a row ---------- */
 
 const MedicalBotoxSection = ({ category }: { category: Category }) => {
   const scroller = useRef<HTMLDivElement>(null);
@@ -1127,7 +1127,7 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
   );
 };
 
-/* ---------- Flawless Skin — alternating stack(2) / single columns ------ */
+/* ---------- Flawless Skin, alternating stack(2) / single columns ------ */
 
 const FlawlessSkinSection = ({ category }: { category: Category }) => {
   const scroller = useRef<HTMLDivElement>(null);
@@ -1237,7 +1237,7 @@ const CosmeticUnitsFeature = () => (
           <div className="relative rounded-[26px] overflow-hidden bg-black">
             <img
               src={cosmeticUnitsImg}
-              alt="Cosmetic units of the face — anatomical map of forehead, temple, cheek, jaw, lip and chin"
+              alt="Cosmetic units of the face, anatomical map of forehead, temple, cheek, jaw, lip and chin"
               loading="lazy"
               className="block w-full h-auto"
             />
@@ -1266,17 +1266,17 @@ const CosmeticUnitsFeature = () => (
 
         <div className="mt-8 space-y-5 text-white/75 text-base sm:text-lg leading-relaxed max-w-xl">
           <p>
-            The face is not a single canvas — it is a mosaic of <em>cosmetic units</em>:
+            The face is not a single canvas, it is a mosaic of <em>cosmetic units</em>:
             forehead, temple, cheek, mid-face, jaw, lip, chin. In youth, light flows
             from one into the next without interruption.
           </p>
           <p>
             With time, fat pads descend, ligaments tighten, bone resorbs. The units
-            begin to <span className="text-white">compartmentalise</span> — small valleys
+            begin to <span className="text-white">compartmentalise</span>, small valleys
             cast shadows, edges sharpen, the line breaks.
           </p>
           <p className="text-white">
-            Doctor-led aesthetics restores the bridge between units — re-establishing
+            Doctor-led aesthetics restores the bridge between units, re-establishing
             flow, never adding bulk. Volume, returned. Architecture, intact.
           </p>
         </div>
@@ -1329,7 +1329,7 @@ const Home3 = () => {
         <title>Cosmedocs · Aesthetic Medicine, App-Style</title>
         <meta
           name="description"
-          content="An iOS-style view of every Cosmedocs treatment. Browse Botox, dermal fillers, contouring and skin concepts as quietly elegant cards — built for thumb-scrolling."
+          content="An iOS-style view of every Cosmedocs treatment. Browse Botox, dermal fillers, contouring and skin concepts as quietly elegant cards, built for thumb-scrolling."
         />
         <link rel="canonical" href="https://www.cosmedocs.com/home3/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
@@ -1347,7 +1347,7 @@ const Home3 = () => {
               <span className="text-[#C9A050]">is invisible art.</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-2xl">
-              Bold. Natural. Always your way. Browse our medical-aesthetic treatments — quiet, not loud. Transformation that speaks without saying a word.
+              Bold. Natural. Always your way. Browse our medical-aesthetic treatments, quiet, not loud. Transformation that speaks without saying a word.
             </p>
 
             <div className="mt-8 flex flex-col items-start gap-3">
@@ -1404,14 +1404,14 @@ const Home3 = () => {
             Invisible, not exaggerated.
           </h2>
           <p className="mt-6 text-white/65 text-lg max-w-xl mx-auto">
-            Aesthetic medicine should never announce itself. It should simply let you look — and feel — more like you.
+            Aesthetic medicine should never announce itself. It should simply let you look, and feel, more like you.
           </p>
           <Button asChild className="mt-10 rounded-full bg-white text-black hover:bg-white/90 h-12 px-8 font-semibold">
             <Link to="/contact/">Begin your consultation</Link>
           </Button>
         </section>
 
-        {/* Quick Links — pill nav at the bottom for fast jumping back up */}
+        {/* Quick Links, pill nav at the bottom for fast jumping back up */}
         <section aria-label="Quick links" className="px-5 sm:px-8 max-w-7xl mx-auto pb-16 border-t border-white/5 pt-12">
           <h2 className="font-serif text-2xl sm:text-3xl text-white mb-4">Quick Links</h2>
           <div className="flex flex-wrap gap-2.5">
