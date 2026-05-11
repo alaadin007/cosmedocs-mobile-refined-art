@@ -332,7 +332,7 @@ const categories: Category[] = [
     cta: { label: "Skin Rejuvenation hub", href: "/skin-rejuvenation/" },
     cards: [
       { title: "Polynucleotides", tagline: "DNA-level repair", href: "/treatments/polynucleotide-treatment/", bg: "bg-gradient-to-br from-rose-200 to-pink-400", ink: "text-zinc-900", badge: "Regenerative" },
-      { title: "Profhilo", tagline: "Bio-remodelling HA", href: "/treatments/profhilo-treatment/", bg: "bg-gradient-to-br from-sky-100 to-sky-300", ink: "text-zinc-900" },
+      { title: "Profhilo", tagline: "Bio-remodelling HA", href: "/treatments/profhilo/", bg: "bg-gradient-to-br from-sky-100 to-sky-300", ink: "text-zinc-900" },
       { title: "Exosomes", tagline: "Next-gen messengers", href: "/treatments/exosomes/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
       { title: "PRP", tagline: "Your own plasma", href: "/treatments/prp-treatment/", bg: "bg-gradient-to-br from-[#C9A050] to-[#7a5e25]" },
       { title: "Chemical Peels", tagline: "Glycolic · TCA · Salicylic", href: "/treatments/chemical-peels/", bg: "bg-gradient-to-br from-amber-100 to-orange-300", ink: "text-zinc-900" },
