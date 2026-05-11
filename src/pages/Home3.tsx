@@ -150,6 +150,7 @@ const botoxAesthetic: SubCard[] = [
     href: "/treatments/nasal-flaring-botox/",
     bg: "bg-[#2a2a2a]",
     image: botoxNasalImg,
+  },
   {
     title: "Calf Slimming",
     tagline: "Athletic-leg refinement, a slimmer silhouette below the knee.",
