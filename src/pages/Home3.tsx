@@ -26,6 +26,7 @@ import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
 import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
+import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
