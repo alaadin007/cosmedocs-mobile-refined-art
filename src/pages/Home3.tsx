@@ -26,6 +26,7 @@ import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
 import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
+import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
@@ -200,15 +201,15 @@ const categories: Category[] = [
       { title: "Trapezius Botox", tagline: "Shoulder slimming · pain", href: "/treatments/trap-botox/", bg: "bg-[#0d1218]", image: medTrapeziusImg },
       {
         title: "Calf Slimming",
-        tagline: "Athletic-leg refinement",
+        tagline: "Athletic-leg refinement · since 2010",
         href: "/treatments/calf-slimming-botox/",
         bg: "bg-[#0d1218]",
-        image: medCalfImg,
-        badge: "Signature",
+        image: calfSlimmingCardImg,
+        badge: "Since 2010",
         flip: {
-          back: "Partial-dose Botox into the gastrocnemius softens athletic bulk into a refined, longer-looking calf — function preserved, soleus untouched. Results emerge over 6–12 weeks.",
+          back: "One of the first UK clinics to offer non-surgical calf slimming — refined since 2010. Partial-dose Botox into the gastrocnemius softens athletic bulk into a longer, leaner silhouette. Soleus untouched, function preserved. Results emerge over 6–12 weeks.",
           imagePosition: "top",
-          image: medCalfImg,
+          image: calfSlimmingCardImg,
         },
       },
     ],
