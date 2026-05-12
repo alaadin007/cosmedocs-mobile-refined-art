@@ -27,6 +27,7 @@ import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
 import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
+import hyperhidrosisCardImg from "@/assets/home3-hyperhidrosis-card.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
@@ -190,12 +191,12 @@ const categories: Category[] = [
         tagline: "Underarm sweat control",
         href: "/treatments/hyperhidrosis/",
         bg: "bg-[#0d1218]",
-        image: medHyperhidrosisImg,
+        image: hyperhidrosisCardImg,
         badge: "Most asked",
         flip: {
           back: "Targeted micro-doses neutralise the sweat glands of the underarm — silk shirts, summer suits and stage lights, without the second-guessing. Results settle in under a week and hold for 6–9 months.",
           imagePosition: "top",
-          image: medHyperhidrosisImg,
+          image: hyperhidrosisCardImg,
         },
       },
       { title: "Trapezius Botox", tagline: "Shoulder slimming · pain", href: "/treatments/trap-botox/", bg: "bg-[#0d1218]", image: medTrapeziusImg },
@@ -1472,15 +1473,25 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
           ) : null;
         })()}
 
-        {/* Thin list column: every other medical Botox treatment */}
-        {category.cards.length > 1 && (
+        {/* Third spotlight: Hyperhidrosis (most asked) */}
+        {(() => {
+          const hyper = category.cards.find((c) => /hyperhidrosis/i.test(c.title));
+          return hyper ? (
+            <div className={`shrink-0 ${widthBig} ${colHeight}`}>
+              <SpotlightCard card={hyper} />
+            </div>
+          ) : null;
+        })()}
+
+        {/* Thin list column: every medical Botox treatment */}
+        {category.cards.length > 0 && (
           <div className={`shrink-0 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}>
             <div className="px-6 pt-7 pb-5 border-b border-white/8">
               <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">Therapeutic Botox</p>
               <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">All medical areas</h3>
             </div>
             <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              {category.cards.slice(1).filter((c) => !/calf/i.test(c.title)).map((c) => (
+              {category.cards.map((c) => (
                 <li key={c.title}>
                   <Link
                     to={c.href}
