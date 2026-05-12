@@ -1462,6 +1462,16 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
           </div>
         )}
 
+        {/* Second spotlight: Calf Slimming (signature, since 2010) */}
+        {(() => {
+          const calf = category.cards.find((c) => /calf/i.test(c.title));
+          return calf ? (
+            <div className={`shrink-0 ${widthBig} ${colHeight}`}>
+              <SpotlightCard card={calf} />
+            </div>
+          ) : null;
+        })()}
+
         {/* Thin list column: every other medical Botox treatment */}
         {category.cards.length > 1 && (
           <div className={`shrink-0 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}>
@@ -1470,7 +1480,7 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
               <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">All medical areas</h3>
             </div>
             <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              {category.cards.slice(1).map((c) => (
+              {category.cards.slice(1).filter((c) => !/calf/i.test(c.title)).map((c) => (
                 <li key={c.title}>
                   <Link
                     to={c.href}
