@@ -28,7 +28,7 @@ import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import hyperhidrosisCardImg from "@/assets/home3-hyperhidrosis-card.jpg";
-import haMakeoverBaImg from "@/assets/home3-ha-makeover-ba.jpg";
+import haMakeoverBaImg from "@/assets/home3-ha-makeover-front.png";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
 import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
