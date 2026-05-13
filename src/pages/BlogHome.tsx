@@ -8,6 +8,14 @@ import BlogSidebar from "@/components/blog/BlogSidebar";
 
 import smartAestheticsHero from "@/assets/smart-aesthetics-hero.jpg";
 import botoxGuideHero from "@/assets/botox-guide-hero.jpg";
+import edBotoxGuide from "@/assets/blog/ed-botox-guide.jpg";
+import edTurning30 from "@/assets/blog/ed-turning-30.jpg";
+import edUntraceably from "@/assets/blog/ed-untraceably.jpg";
+import edDoctorMind from "@/assets/blog/ed-doctor-mind.jpg";
+import edThreads from "@/assets/blog/ed-threads.jpg";
+import edSmokersLines from "@/assets/blog/ed-smokers-lines.jpg";
+import edContinuity from "@/assets/blog/ed-continuity.jpg";
+import edMaintenance from "@/assets/blog/ed-maintenance.jpg";
 
 const BlogHome = () => {
   const seoData = generateSEOMetadata(
@@ -60,6 +68,7 @@ const BlogHome = () => {
       category: "EDUCATION",
       path: "/ultimate-botox-guide/",
       icon: "syringe",
+      image: edBotoxGuide,
     },
     {
       title: "Turning 30 in 2026: The Smart Woman's Guide to Preventative Aesthetics",
@@ -67,6 +76,7 @@ const BlogHome = () => {
       category: "PREJUVENATION",
       path: "/turning-30-aesthetic-guide",
       icon: "sparkles",
+      image: edTurning30,
     },
     {
       title: "Untraceably You: Look 5–10 Years Younger Naturally",
@@ -74,6 +84,7 @@ const BlogHome = () => {
       category: "PHILOSOPHY",
       path: "/untraceably-you",
       icon: "sparkles",
+      image: edUntraceably,
     },
     {
       title: "Inside the Mind of an Aesthetic Doctor",
@@ -81,6 +92,7 @@ const BlogHome = () => {
       category: "BEHIND THE SCENES",
       path: "/inside-mind-aesthetic-doctor-blog",
       icon: "eye",
+      image: edDoctorMind,
     },
     {
       title: "Why Threads Are Changing the Conversation About Ageing",
@@ -88,6 +100,7 @@ const BlogHome = () => {
       category: "INSIGHT",
       path: "/pdo-threads-blog",
       icon: "syringe",
+      image: edThreads,
     },
     {
       title: "Why Women Get Smoker's Lines — Even Without Smoking",
@@ -95,6 +108,7 @@ const BlogHome = () => {
       category: "CLINICAL INSIGHT",
       path: "/blog/smokers-lines-women",
       icon: "sparkles",
+      image: edSmokersLines,
     },
     {
       title: "The Long-Term Benefits of Aesthetic Continuity",
@@ -102,6 +116,7 @@ const BlogHome = () => {
       category: "EDITORIAL",
       path: "/long-term-aesthetic-care-blog",
       icon: "arrow",
+      image: edContinuity,
     },
     {
       title: "Aesthetic Treatment Maintenance Costs: What to Really Expect",
@@ -109,6 +124,7 @@ const BlogHome = () => {
       category: "EDITORIAL",
       path: "/aesthetic-maintenance-cost-blog",
       icon: "arrow",
+      image: edMaintenance,
     },
   ];
 
@@ -222,20 +238,34 @@ const BlogHome = () => {
                   <Link
                     key={i}
                     to={article.path}
-                    className="group block p-5 rounded-xl border border-white/[0.06] hover:border-[#C9A050]/30 transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.04]"
+                    className="group block rounded-xl border border-white/[0.06] hover:border-[#C9A050]/30 transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.04] overflow-hidden"
                   >
-                    <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
-                      {article.category}
-                    </span>
-                    <h4 className="text-lg font-light text-white/80 mt-2 mb-2 group-hover:text-[#C9A050] transition-colors leading-snug">
-                      {article.title}
-                    </h4>
-                    <p className="text-white/30 text-sm font-light leading-relaxed">
-                      {article.subtitle}
-                    </p>
-                    <span className="inline-flex items-center gap-1 text-[#C9A050]/60 text-xs mt-3 group-hover:text-[#C9A050] transition-colors">
-                      Read article <ArrowRight className="w-3 h-3" />
-                    </span>
+                    {article.image && (
+                      <div className="overflow-hidden aspect-[16/10] bg-black">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          loading="lazy"
+                          width={1024}
+                          height={640}
+                          className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                        />
+                      </div>
+                    )}
+                    <div className="p-5">
+                      <span className="text-[#C9A050] text-[10px] font-medium tracking-wider uppercase">
+                        {article.category}
+                      </span>
+                      <h4 className="text-lg font-light text-white/80 mt-2 mb-2 group-hover:text-[#C9A050] transition-colors leading-snug">
+                        {article.title}
+                      </h4>
+                      <p className="text-white/30 text-sm font-light leading-relaxed">
+                        {article.subtitle}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-[#C9A050]/60 text-xs mt-3 group-hover:text-[#C9A050] transition-colors">
+                        Read article <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </div>
                   </Link>
                 ))}
               </div>
