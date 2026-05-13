@@ -458,74 +458,73 @@ const AestheticIntelligence = () => {
                             transition={{ duration: 0.3 }}
                           >
                             <Card 
-                              className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/30 group hover:border-l-primary cursor-pointer"
+                              className="h-full relative overflow-hidden border border-[#C9A050]/20 bg-gradient-to-br from-neutral-950 via-neutral-900 to-black hover:border-[#C9A050]/60 hover:shadow-[0_20px_60px_-20px_rgba(201,160,80,0.45)] transition-all duration-300 group cursor-pointer"
                               onClick={() => handleProductClick(analysis)}
                             >
+                              {/* Gold accent ribbon */}
+                              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A050] to-transparent opacity-60" />
                               <CardHeader className="pb-3">
-                                <div className="flex items-start justify-between">
+                                <div className="flex items-start justify-between gap-3">
                                   <div className="flex-1 min-w-0">
-                                    <CardTitle className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors">
+                                    <CardTitle className="text-lg font-semibold line-clamp-2 text-white group-hover:text-[#C9A050] transition-colors">
                                       {analysis.product_name || 'Unknown Product'}
                                     </CardTitle>
-                                    <Badge variant="secondary" className="mt-2 text-xs">
-                                      {brand}
-                                    </Badge>
-                                    <Badge variant="outline" className="mt-1 ml-2 text-xs capitalize">
-                                      {formattedAnalysis.category}
-                                    </Badge>
+                                    <div className="mt-2 flex flex-wrap gap-1.5">
+                                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-[#C9A050]/15 text-[#C9A050] border border-[#C9A050]/40">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A050]" />
+                                        {brand}
+                                      </span>
+                                      <span className="inline-flex px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 capitalize">
+                                        {formattedAnalysis.category}
+                                      </span>
+                                      {formattedAnalysis.ingredientCount > 0 && (
+                                        <span className="inline-flex px-2 py-0.5 rounded-full text-[11px] font-medium bg-sky-500/10 text-sky-300 border border-sky-500/30">
+                                          {formattedAnalysis.ingredientCount} ingredients
+                                        </span>
+                                      )}
+                                    </div>
                                   </div>
-                                  <div className="flex flex-col items-center ml-3">
+                                  <div className="flex flex-col items-center ml-1 shrink-0">
                                     <div className="flex items-center">
-                                      <Star className="h-4 w-4 text-yellow-500 mr-1" />
-                                      <span className={`font-bold text-lg ${getScoreColor(actualScore)}`}>
+                                      <Star className="h-4 w-4 text-[#C9A050] fill-[#C9A050] mr-1" />
+                                      <span className={`font-bold text-xl ${getScoreColor(actualScore)}`}>
                                         {actualScore.toFixed(1)}
                                       </span>
                                     </div>
-                                    <span className="text-xs text-muted-foreground">out of 10</span>
+                                    <span className="text-[10px] uppercase tracking-wider text-white/40">out of 10</span>
                                   </div>
                                 </div>
                               </CardHeader>
                               
                               <CardContent className="pt-0">
                                 <div className="space-y-3">
-                                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                    <Badge variant="outline" className="text-xs">
-                                      {formattedAnalysis.category}
-                                    </Badge>
-                                    {formattedAnalysis.ingredientCount > 0 && (
-                                      <span className="text-xs">
-                                        {formattedAnalysis.ingredientCount} ingredients
-                                      </span>
-                                    )}
-                                  </div>
-
-                                  <p className="text-sm text-muted-foreground line-clamp-3">
+                                  <p className="text-sm text-white/70 line-clamp-3 leading-relaxed">
                                     {formattedAnalysis.summary}
                                   </p>
 
                                   {formattedAnalysis.keyActives.length > 0 && (
                                     <div>
-                                      <h4 className="text-xs font-medium text-muted-foreground mb-1">Key Actives:</h4>
+                                      <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050] mb-1.5">Key Actives</h4>
                                       <div className="flex flex-wrap gap-1">
                                         {formattedAnalysis.keyActives.map((active: any, index: number) => (
-                                          <Badge key={index} variant="outline" className="text-xs px-2 py-0">
+                                          <span key={index} className="inline-flex px-2 py-0.5 rounded-full text-[11px] bg-fuchsia-500/10 text-fuchsia-200 border border-fuchsia-500/30">
                                             {active.ingredient}
-                                          </Badge>
+                                          </span>
                                         ))}
                                       </div>
                                     </div>
                                   )}
 
                                   {formattedAnalysis.bestFor && (
-                                    <div className="bg-muted/30 rounded-lg p-2">
-                                      <p className="text-xs text-muted-foreground">
-                                        <span className="font-medium">Best for:</span> {formattedAnalysis.bestFor}
+                                    <div className="bg-[#C9A050]/5 border border-[#C9A050]/20 rounded-lg p-2">
+                                      <p className="text-xs text-white/70">
+                                        <span className="font-semibold text-[#C9A050]">Best for:</span> {formattedAnalysis.bestFor}
                                       </p>
                                     </div>
                                   )}
 
-                                  <div className="flex items-center justify-between pt-2 border-t">
-                                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                                  <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                                    <div className="flex items-center gap-1 text-xs text-white/40">
                                       <Calendar className="h-3 w-3" />
                                       {new Date(analysis.created_at).toLocaleDateString('en-GB')}
                                     </div>
@@ -533,7 +532,8 @@ const AestheticIntelligence = () => {
                                       href={analysis.product_url}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="flex items-center gap-1 text-xs text-primary hover:underline"
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="flex items-center gap-1 text-xs text-[#C9A050] hover:underline"
                                     >
                                       <ExternalLink className="h-3 w-3" />
                                       View Product
