@@ -215,7 +215,7 @@ const Row = ({ row, index }: { row: RowData; index: number }) => {
             key={card.title + i}
             className="shrink-0 w-[72vw] sm:w-[320px] md:w-[360px] h-[58vh] min-h-[420px] max-h-[560px] sm:h-[64vh] sm:min-h-[480px] sm:max-h-[600px]"
           >
-            <TreatmentCard card={card} bg={cardBgs[i % cardBgs.length]} />
+            <FlipTreatmentCard card={card} bg={cardBgs[i % cardBgs.length]} />
           </div>
         ))}
         <Link
