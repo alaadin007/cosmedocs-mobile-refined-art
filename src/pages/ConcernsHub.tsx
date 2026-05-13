@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, ChevronDown, Sparkles, RotateCw } from "lucide-react";
 import { Link } from "react-router-dom";
 import Breadcrumb from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -17,6 +17,9 @@ type ConcernCard = {
   tagline: string;
   href: string;
   badge?: string;
+  categoryHeading: string;
+  back: string;
+  pathwayNote?: string;
 };
 
 const cardBgs = [
@@ -36,29 +39,105 @@ const Watermark = ({ title }: { title: string }) => (
   </div>
 );
 
-const TreatmentCard = ({ card, bg }: { card: ConcernCard; bg: string }) => (
-  <Link
-    to={card.href}
-    className={`group relative isolate overflow-hidden block ${bg} text-white rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-white/5`}
-  >
-    <Watermark title={card.title} />
-    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/55 pointer-events-none" />
-    {card.badge && (
-      <span className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-black/70 text-white/90 backdrop-blur">
-        {card.badge}
-      </span>
-    )}
-    <div className="absolute inset-0 p-6 sm:p-7 flex flex-col justify-end">
-      <h3 className="font-serif text-2xl sm:text-3xl leading-[1.05] tracking-tight max-w-[90%]">
-        {card.title}
-      </h3>
-      <p className="mt-2 text-sm text-white/70 max-w-[88%]">{card.tagline}</p>
-      <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050] group-hover:gap-2.5 transition-all">
-        Discover <ArrowUpRight className="w-3.5 h-3.5" />
-      </span>
+const FlipTreatmentCard = ({ card, bg }: { card: ConcernCard; bg: string }) => {
+  const [flipped, setFlipped] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => { if (!entry.isIntersecting) setFlipped(false); },
+      { threshold: 0.1 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="[perspective:1400px] h-full w-full select-none"
+      itemScope
+      itemType="https://schema.org/MedicalTherapy"
+      onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
+      onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
+    >
+      <div
+        className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
+        style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
+      >
+        {/* FRONT */}
+        <div
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${bg} text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-white/5 ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+        >
+          <Watermark title={card.title} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/55 pointer-events-none" />
+          {card.badge && (
+            <span className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-black/70 text-white/90 backdrop-blur">
+              {card.badge}
+            </span>
+          )}
+          <div className="absolute inset-0 p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <h3 itemProp="name" className="font-serif text-2xl sm:text-3xl leading-[1.05] tracking-tight max-w-[90%]">
+              {card.title}
+            </h3>
+            <p className="mt-2 text-sm text-white/70 max-w-[88%]">{card.tagline}</p>
+            <Link
+              to={card.href}
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050] pointer-events-auto self-start hover:gap-2.5 transition-all"
+            >
+              Discover <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+            <link itemProp="url" href={`https://www.cosmedocs.com${card.href}`} />
+          </div>
+
+          {/* Gold corner flip button */}
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            aria-label={`${card.title}, reveal pathway detail`}
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
+          >
+            <RotateCw className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* BACK */}
+        <div
+          style={{ transform: "rotateY(180deg)", WebkitTransform: "rotateY(180deg)" }}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-[#C9A050]/20 ${flipped ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        >
+          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(201,160,80,0.14),transparent_60%)]" />
+          <button
+            type="button"
+            onClick={() => setFlipped(false)}
+            aria-label="Flip card back"
+            className="absolute top-3 right-3 z-30 w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition flex items-center justify-center"
+          >
+            <RotateCw className="w-4 h-4" />
+          </button>
+
+          <div className="relative z-10 h-full p-6 sm:p-7 flex flex-col">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">{card.categoryHeading}</p>
+            <h3 className="font-serif text-xl sm:text-2xl leading-tight text-[#F0D78C]">{card.title}</h3>
+            <p itemProp="description" className="mt-3 text-[13px] sm:text-sm text-white/80 leading-relaxed overflow-hidden">{card.back}</p>
+            {card.pathwayNote && (
+              <p className="mt-3 text-[11px] italic text-white/50 leading-snug">{card.pathwayNote}</p>
+            )}
+            <Link
+              to={card.href}
+              className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#C9A050] self-start"
+            >
+              Discover {card.title.split(" ")[0]} <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
-  </Link>
-);
+  );
+};
 
 /* ------------------------------------------------------------------ */
 /*  Horizontal Row scroller                                            */
@@ -136,7 +215,7 @@ const Row = ({ row, index }: { row: RowData; index: number }) => {
             key={card.title + i}
             className="shrink-0 w-[72vw] sm:w-[320px] md:w-[360px] h-[58vh] min-h-[420px] max-h-[560px] sm:h-[64vh] sm:min-h-[480px] sm:max-h-[600px]"
           >
-            <TreatmentCard card={card} bg={cardBgs[i % cardBgs.length]} />
+            <FlipTreatmentCard card={card} bg={cardBgs[i % cardBgs.length]} />
           </div>
         ))}
         <Link
@@ -232,6 +311,33 @@ const TAGLINE_BY_HEADING: Record<string, string> = {
   "Surgical Options (Advanced Laxity)": "Beyond non-surgical",
 };
 
+const TREATMENT_BACK: Record<string, string> = {
+  "Medical-Grade Skincare (incl. Retinoids)": "Doctor-prescribed retinoids, antioxidants and pigment regulators rebuild the dermis from the inside. This is the daily foundation every pathway sits on — without it, in-clinic results fade quickly.",
+  "Pigment-Regulating Skincare": "Targeted topical actives — tranexamic acid, kojic, niacinamide — calibrated to your subtype. Used cyclically alongside SPF 50 to interrupt melanin overproduction without rebound pigmentation.",
+  "Polynucleotides": "Salmon-DNA fragments that signal fibroblasts to regenerate. Improves skin quality, elasticity and tear-trough hollowing across 2–3 sessions. Not a filler — a true bio-stimulator.",
+  "Profhilo": "Pure stabilised hyaluronic acid that hydrates and lifts at the dermal level. Two sessions, four weeks apart. Quiet glow, no volume distortion.",
+  "Microneedling": "Controlled micro-injury triggers collagen remodelling without thermal damage. Safe across all skin types, including melasma-prone Fitzpatrick V–VI.",
+  "PRP Treatment": "Platelet-rich plasma drawn from your own blood, spun and reintroduced. Growth factors accelerate tissue repair and skin quality.",
+  "Cheek Filler": "Hyaluronic acid placed supraperiosteally to restore the deep medial fat compartment. Architectural lift, not pillow cheek.",
+  "Temple Filler": "Conservative volumisation of hollowed temples — one of the earliest signs of facial ageing — to restore the upper-third frame.",
+  "Jawline Filler": "Mandibular angle and pre-jowl sculpting to redefine a softening jawline. Lift-vector technique, not bulk.",
+  "Chin Filler": "Projection and balance for the lower third. Often the missing piece in profile harmony and feminisation/masculinisation.",
+  "Full Face Rejuvenation": "Sequenced multi-modality programme — regenerative, structural and skin-quality treatments staged across months for a cohesive, unread result.",
+  "HA Makeover": "Our 8 or 11-point lifting protocol. A single doctor-led session that re-establishes mid-face support and jawline definition.",
+  "PDO Threads": "Dissolvable cog and mono threads that re-suspend descended tissue and stimulate collagen along thread tracks. No scars, 2–3 year longevity.",
+  "Anti-Wrinkle Injections (Botox)": "Micro-dosed botulinum toxin to soften dynamic lines while preserving authentic expression. Smallest effective dose, never the maximum.",
+  "Fine-Line Dermal Fillers": "Superficial micro-droplet placement for individual etched static lines that have not responded to skincare and regeneration.",
+  "Chemical Peels": "Medical-strength acids selected by skin type — mandelic, Jessner, TCA — to renew the surface and clarify tone without thermal injury.",
+  "HydraFacial": "Decongestion, exfoliation and serum infusion in one session. Barrier-friendly, suitable between active treatments.",
+  "CO₂ Laser": "Fractional or fully ablative resurfacing for deep textural change. Reserved for selected cases after surface treatments have plateaued.",
+  "Hydroquinone Regimens": "Cycled prescription bleaching agent for stubborn pigmentation. Used in defined courses with strict sun protection — never indefinitely.",
+  "Azelaic Acid Protocols": "Anti-inflammatory and pigment-regulating, particularly effective in melasma and post-inflammatory hyperpigmentation.",
+  "Prescription Acne Regimens": "Tailored topical and oral protocols by acne subtype — comedonal, inflammatory, hormonal — managed by our doctors with regular review.",
+  "Acne Treatment": "Multi-stage clinical pathway from active control to scar remodelling, sequenced over months. We treat the disease before the damage.",
+  "Dermal Fillers for Depressed Scars": "Hyaluronic acid placed selectively into individual depressed scars by a doctor familiar with the vascular field.",
+  "Facelift Surgery": "Surgical referral for advanced laxity beyond non-surgical reach. Honest medicine includes knowing when to refer out.",
+};
+
 const buildRows = (): RowData[] =>
   concernsData.map((c, idx) => {
     const cards: ConcernCard[] = [];
@@ -242,6 +348,9 @@ const buildRows = (): RowData[] =>
           tagline: TAGLINE_BY_HEADING[cat.heading] ?? cat.heading,
           href: t.path,
           badge: ti === 0 && cat.heading.includes("Prescription") ? "Foundation" : undefined,
+          categoryHeading: cat.heading,
+          back: TREATMENT_BACK[t.name] ?? `Part of the ${cat.heading.toLowerCase()} layer of the ${c.title.toLowerCase()} pathway. Selected and sequenced by your doctor following clinical assessment, not from a menu.`,
+          pathwayNote: cat.note,
         });
       });
     });
