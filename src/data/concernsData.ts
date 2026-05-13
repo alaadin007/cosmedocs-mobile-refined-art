@@ -78,7 +78,7 @@ export const concernsData = [
       {
         heading: "Prescription & Medical Skincare",
         treatments: [
-          { name: "Prescription Retinoids", path: "/treatments/prescription-skincare/" },
+          { name: "Medical-Grade Skincare (incl. Retinoids)", path: "/treatments/prescription-skincare/" },
           { name: "Pigment-Regulating Skincare", path: "/treatments/prescription-skincare/" },
         ],
       },
