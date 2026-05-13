@@ -216,46 +216,68 @@ Return ONLY a valid JSON object with this exact structure:
   "notes": ""
 }`;
 
-    console.log('Calling OpenAI GPT-4o for cosmetic analysis...');
+    if (!LOVABLE_API_KEY) {
+      throw new Error('LOVABLE_API_KEY is not configured');
+    }
 
-    const aiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+    console.log('Calling Lovable AI Gateway for cosmetic analysis...');
+
+    const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${openAIApiKey}`,
+        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-4o',
+        model: 'google/gemini-2.5-flash',
         messages: [
           { role: 'system', content: systemPrompt },
-          { 
-            role: 'user', 
-            content: `Analyze this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease analyze any product images, ingredient lists, and claims based on your knowledge. Provide comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
+          {
+            role: 'user',
+            content: `Analyse this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nProvide comprehensive analysis following the CosmeDocs framework. Return ONLY valid JSON matching the schema — no markdown, no commentary.`
           }
         ],
-        max_tokens: 4000,
-        temperature: 0.3,
         response_format: { type: 'json_object' }
       }),
     });
 
     if (!aiResponse.ok) {
       const errorText = await aiResponse.text();
-      console.error('OpenAI error:', aiResponse.status, errorText);
-      throw new Error(`OpenAI API error: ${aiResponse.status} ${errorText}`);
+      console.error('AI Gateway error:', aiResponse.status, errorText);
+      if (aiResponse.status === 429) {
+        return new Response(JSON.stringify({ success: false, error: 'Rate limit exceeded. Please try again shortly.' }), {
+          status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      if (aiResponse.status === 402) {
+        return new Response(JSON.stringify({ success: false, error: 'AI credits exhausted. Please add credits in workspace settings.' }), {
+          status: 402, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      throw new Error(`AI Gateway error: ${aiResponse.status}`);
     }
 
     const aiData = await aiResponse.json();
     console.log('AI response received');
-    
-    const analysisData = JSON.parse(aiData.choices[0].message.content);
+
+    let rawContent = aiData.choices[0].message.content || '{}';
+    // Strip code fences if present
+    rawContent = rawContent.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
+    const analysisData = JSON.parse(rawContent);
+
+    const product0 = analysisData?.products?.[0] || {};
+    const finalScore = product0?.scores?.final_score_0to10 ?? null;
+    const brand = product0?.brand || extractBrandFromUrl(productUrl);
+    const resolvedName = product0?.name || inferredName;
 
     // Store the analysis in the database
     const { error: insertError } = await supabase
       .from('product_analyses')
       .upsert({
         product_url: productUrl,
-        product_name: inferredName,
+        product_name: resolvedName,
+        product_brand: brand,
+        overall_score: finalScore,
         analysis_data: analysisData,
         analyzed_at: new Date().toISOString(),
       }, {
@@ -266,9 +288,9 @@ Return ONLY a valid JSON object with this exact structure:
       console.error('Error storing analysis:', insertError);
     }
 
-    return new Response(JSON.stringify({ 
-      success: true, 
-      data: analysisData 
+    return new Response(JSON.stringify({
+      success: true,
+      data: analysisData
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
