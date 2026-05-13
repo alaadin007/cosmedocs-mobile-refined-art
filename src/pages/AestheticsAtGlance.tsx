@@ -408,10 +408,17 @@ const AestheticsAtGlance = () => {
             <Link to="/contact/">
               <Button className="bg-[#C9A050] text-black hover:bg-[#b89040] px-6">Book a consultation</Button>
             </Link>
-            <Link to="/aesthetic-intelligence/">
-              <Button variant="outline" className="border-[#C9A050]/40 bg-transparent text-white hover:bg-[#C9A050]/10 hover:text-white px-6">
-                Free AI Face Scan <ArrowUpRight className="w-4 h-4 ml-1.5" />
-              </Button>
+            <Link to="/testapp" aria-label="Free AI Face Scan" className="group [perspective:800px]">
+              <div className="relative h-11 w-[210px] [transform-style:preserve-3d] animate-[flipPill_6s_ease-in-out_infinite]">
+                {/* Front: cosmedocs logo */}
+                <div className="absolute inset-0 [backface-visibility:hidden] rounded-full border border-[#C9A050]/40 bg-transparent flex items-center justify-center">
+                  <span className="font-serif text-[#C9A050] tracking-[0.18em] text-sm lowercase">cosmedocs</span>
+                </div>
+                {/* Back: Free AI Face Scan */}
+                <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-full border border-[#C9A050]/40 bg-transparent flex items-center justify-center text-white text-sm">
+                  Free AI Face Scan <ArrowUpRight className="w-4 h-4 ml-1.5 text-[#C9A050]" />
+                </div>
+              </div>
             </Link>
           </div>
           <p className="mt-10 text-xs text-white/40 italic">Our aesthetics is invisible art.</p>
