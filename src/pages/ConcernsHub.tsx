@@ -17,6 +17,9 @@ type ConcernCard = {
   tagline: string;
   href: string;
   badge?: string;
+  categoryHeading: string;
+  back: string;
+  pathwayNote?: string;
 };
 
 const cardBgs = [
@@ -36,29 +39,105 @@ const Watermark = ({ title }: { title: string }) => (
   </div>
 );
 
-const TreatmentCard = ({ card, bg }: { card: ConcernCard; bg: string }) => (
-  <Link
-    to={card.href}
-    className={`group relative isolate overflow-hidden block ${bg} text-white rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-white/5`}
-  >
-    <Watermark title={card.title} />
-    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/55 pointer-events-none" />
-    {card.badge && (
-      <span className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-black/70 text-white/90 backdrop-blur">
-        {card.badge}
-      </span>
-    )}
-    <div className="absolute inset-0 p-6 sm:p-7 flex flex-col justify-end">
-      <h3 className="font-serif text-2xl sm:text-3xl leading-[1.05] tracking-tight max-w-[90%]">
-        {card.title}
-      </h3>
-      <p className="mt-2 text-sm text-white/70 max-w-[88%]">{card.tagline}</p>
-      <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050] group-hover:gap-2.5 transition-all">
-        Discover <ArrowUpRight className="w-3.5 h-3.5" />
-      </span>
+const FlipTreatmentCard = ({ card, bg }: { card: ConcernCard; bg: string }) => {
+  const [flipped, setFlipped] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => { if (!entry.isIntersecting) setFlipped(false); },
+      { threshold: 0.1 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="[perspective:1400px] h-full w-full select-none"
+      itemScope
+      itemType="https://schema.org/MedicalTherapy"
+      onMouseEnter={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(true); }}
+      onMouseLeave={() => { if (window.matchMedia("(hover: hover)").matches) setFlipped(false); }}
+    >
+      <div
+        className="relative w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform"
+        style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", WebkitTransform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
+      >
+        {/* FRONT */}
+        <div
+          style={{ transform: "rotateY(0deg)", WebkitTransform: "rotateY(0deg)" }}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] text-left ${bg} text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-white/5 ${flipped ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+        >
+          <Watermark title={card.title} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/55 pointer-events-none" />
+          {card.badge && (
+            <span className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-black/70 text-white/90 backdrop-blur">
+              {card.badge}
+            </span>
+          )}
+          <div className="absolute inset-0 p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <h3 itemProp="name" className="font-serif text-2xl sm:text-3xl leading-[1.05] tracking-tight max-w-[90%]">
+              {card.title}
+            </h3>
+            <p className="mt-2 text-sm text-white/70 max-w-[88%]">{card.tagline}</p>
+            <Link
+              to={card.href}
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050] pointer-events-auto self-start hover:gap-2.5 transition-all"
+            >
+              Discover <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+            <link itemProp="url" href={`https://www.cosmedocs.com${card.href}`} />
+          </div>
+
+          {/* Gold corner flip button */}
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            aria-label={`${card.title}, reveal pathway detail`}
+            className="absolute bottom-4 right-4 z-30 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition"
+          >
+            <RotateCw className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* BACK */}
+        <div
+          style={{ transform: "rotateY(180deg)", WebkitTransform: "rotateY(180deg)" }}
+          className={`absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] block overflow-hidden rounded-[28px] bg-[#0a0a0a] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-[#C9A050]/20 ${flipped ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        >
+          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(201,160,80,0.14),transparent_60%)]" />
+          <button
+            type="button"
+            onClick={() => setFlipped(false)}
+            aria-label="Flip card back"
+            className="absolute top-3 right-3 z-30 w-10 h-10 rounded-full bg-[#C9A050] text-black shadow-[0_0_24px_rgba(201,160,80,0.55)] hover:scale-105 active:scale-95 transition flex items-center justify-center"
+          >
+            <RotateCw className="w-4 h-4" />
+          </button>
+
+          <div className="relative z-10 h-full p-6 sm:p-7 flex flex-col">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-2">{card.categoryHeading}</p>
+            <h3 className="font-serif text-xl sm:text-2xl leading-tight text-[#F0D78C]">{card.title}</h3>
+            <p itemProp="description" className="mt-3 text-[13px] sm:text-sm text-white/80 leading-relaxed overflow-hidden">{card.back}</p>
+            {card.pathwayNote && (
+              <p className="mt-3 text-[11px] italic text-white/50 leading-snug">{card.pathwayNote}</p>
+            )}
+            <Link
+              to={card.href}
+              className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#C9A050] self-start"
+            >
+              Discover {card.title.split(" ")[0]} <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
-  </Link>
-);
+  );
+};
 
 /* ------------------------------------------------------------------ */
 /*  Horizontal Row scroller                                            */
