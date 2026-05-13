@@ -1,78 +1,398 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { generateSEOMetadata } from '@/utils/seo';
+import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, MapPin, Shield, Clock, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Breadcrumb from '@/components/Breadcrumb';
-import ExpandableSection from "@/components/ui/expandable-section";
-import ConcernsHubSidebar from '@/components/concerns/ConcernsHubSidebar';
-import ConcernCard from '@/components/concerns/ConcernCard';
-import { concernsData } from '@/data/concernsData';
+import { ArrowUpRight, ChevronLeft, ChevronRight, ChevronDown, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import Breadcrumb from "@/components/Breadcrumb";
+import { generateSEOMetadata } from "@/utils/seo";
+import { concernsData } from "@/data/concernsData";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+
+/* ------------------------------------------------------------------ */
+/*  Card styling — mirrors Home3 "Apple-style" dark luxury cards       */
+/* ------------------------------------------------------------------ */
+
+type ConcernCard = {
+  title: string;
+  tagline: string;
+  href: string;
+  badge?: string;
+};
+
+const cardBgs = [
+  "bg-[#0d1218]",
+  "bg-[#11161c]",
+  "bg-[#0a0f14]",
+  "bg-[#141a20]",
+];
+
+const Watermark = ({ title }: { title: string }) => (
+  <div aria-hidden className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,160,80,0.18),transparent_60%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(201,160,80,0.08),transparent_55%)]" />
+    <span className="absolute -bottom-6 -right-3 font-serif text-[120px] leading-none text-white/[0.03] select-none whitespace-nowrap">
+      {title.split(" ")[0]}
+    </span>
+  </div>
+);
+
+const TreatmentCard = ({ card, bg }: { card: ConcernCard; bg: string }) => (
+  <Link
+    to={card.href}
+    className={`group relative isolate overflow-hidden block ${bg} text-white rounded-[28px] h-full w-full transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] border border-white/5`}
+  >
+    <Watermark title={card.title} />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/55 pointer-events-none" />
+    {card.badge && (
+      <span className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-black/70 text-white/90 backdrop-blur">
+        {card.badge}
+      </span>
+    )}
+    <div className="absolute inset-0 p-6 sm:p-7 flex flex-col justify-end">
+      <h3 className="font-serif text-2xl sm:text-3xl leading-[1.05] tracking-tight max-w-[90%]">
+        {card.title}
+      </h3>
+      <p className="mt-2 text-sm text-white/70 max-w-[88%]">{card.tagline}</p>
+      <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-[#C9A050] group-hover:gap-2.5 transition-all">
+        Discover <ArrowUpRight className="w-3.5 h-3.5" />
+      </span>
+    </div>
+  </Link>
+);
+
+/* ------------------------------------------------------------------ */
+/*  Horizontal Row scroller                                            */
+/* ------------------------------------------------------------------ */
+
+type RowData = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  copy: string;
+  cards: ConcernCard[];
+  ctaHref: string;
+  ctaLabel: string;
+};
+
+const Row = ({ row, index }: { row: RowData; index: number }) => {
+  const scroller = useRef<HTMLDivElement>(null);
+  const scrollBy = (dir: 1 | -1) => {
+    const el = scroller.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: "smooth" });
+  };
+
+  return (
+    <motion.section
+      id={row.id}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6, delay: 0.05 * index }}
+      className="py-12 sm:py-16 scroll-mt-20"
+      aria-labelledby={`${row.id}-title`}
+    >
+      <div className="px-5 sm:px-8 max-w-7xl mx-auto">
+        <div className="flex items-end justify-between gap-4 mb-7">
+          <div className="min-w-0">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#C9A050] mb-2">
+              {row.eyebrow}
+            </p>
+            <h2
+              id={`${row.id}-title`}
+              className="font-serif text-3xl sm:text-5xl text-white leading-tight tracking-tight"
+            >
+              {row.title}
+            </h2>
+            <p className="mt-3 text-white/65 text-sm sm:text-base max-w-2xl">
+              {row.copy}
+            </p>
+          </div>
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => scrollBy(-1)}
+              aria-label="Scroll left"
+              className="w-10 h-10 rounded-full bg-white/8 hover:bg-white/15 backdrop-blur flex items-center justify-center text-white/80 transition"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scrollBy(1)}
+              aria-label="Scroll right"
+              className="w-10 h-10 rounded-full bg-white/8 hover:bg-white/15 backdrop-blur flex items-center justify-center text-white/80 transition"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={scroller}
+        className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {row.cards.map((card, i) => (
+          <div
+            key={card.title + i}
+            className="shrink-0 w-[72vw] sm:w-[320px] md:w-[360px] h-[58vh] min-h-[420px] max-h-[560px] sm:h-[64vh] sm:min-h-[480px] sm:max-h-[600px]"
+          >
+            <TreatmentCard card={card} bg={cardBgs[i % cardBgs.length]} />
+          </div>
+        ))}
+        <Link
+          to={row.ctaHref}
+          className="group shrink-0 w-[58vw] sm:w-[220px] md:w-[260px] h-[58vh] min-h-[420px] max-h-[560px] sm:h-[64vh] sm:min-h-[480px] sm:max-h-[600px] rounded-[28px] border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur flex flex-col items-center justify-center text-center px-6 transition"
+        >
+          <div className="w-12 h-12 rounded-full bg-[#C9A050]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <ChevronRight className="w-5 h-5 text-[#C9A050]" />
+          </div>
+          <p className="text-white text-sm font-medium leading-snug">
+            {row.ctaLabel}
+          </p>
+          <p className="text-white/50 text-xs mt-1">View all</p>
+        </Link>
+      </div>
+    </motion.section>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/*  Crawlable, visually-collapsed deep-SEO accordion                  */
+/*  Content is always in the DOM (kept invisible via max-height)      */
+/* ------------------------------------------------------------------ */
+
+const DeepClinicalDepth = ({
+  concernTitle,
+  paragraphs,
+}: {
+  concernTitle: string;
+  paragraphs: string[];
+}) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="px-5 sm:px-8 max-w-4xl mx-auto -mt-2 mb-10">
+      <div
+        className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+          open ? "max-h-[3000px]" : "max-h-0"
+        }`}
+        aria-hidden={!open}
+      >
+        <div className="text-white/65 text-sm leading-relaxed space-y-4 pt-4 border-t border-white/10">
+          {paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </div>
+      </div>
+      <button
+        onClick={() => setOpen(!open)}
+        className="mt-4 inline-flex items-center gap-1.5 text-[#C9A050]/80 hover:text-[#C9A050] text-xs uppercase tracking-[0.18em] transition-colors"
+        aria-expanded={open}
+      >
+        {open ? "Show less" : `Read the full clinical note on ${concernTitle.toLowerCase()}`}
+        <ChevronDown
+          className={`w-3.5 h-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+    </div>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/*  Concern → Row mapping                                              */
+/* ------------------------------------------------------------------ */
+
+const slugify = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const TAGLINE_BY_HEADING: Record<string, string> = {
+  "Prescription & Medical Skincare": "Doctor-prescribed foundation",
+  "Skin Regeneration": "Bio-stimulation, not bulk",
+  "Volume & Structural Support": "Architectural restoration",
+  "Advanced Rejuvenation": "Multi-modality protocol",
+  "Prescription & Preventative Care": "Daily medical regimen",
+  "Muscle Modulation": "Quiet wrinkle relaxation",
+  "Skin Quality Support": "Hydration · elasticity",
+  "Targeted Correction": "Selected static lines",
+  "Exfoliation & Resurfacing": "Surface renewal",
+  "Collagen Stimulation": "Regeneration from within",
+  "Advanced Resurfacing": "Selected indications",
+  "Prescription Skincare (Foundation)": "Hydroquinone · retinoids",
+  "Skin Renewal": "Melasma-safe protocols",
+  "Adjunct Treatments": "Supportive, not primary",
+  "Prescription Dermatology": "Acne · scarring control",
+  "Active Acne Control": "Inflammation reduced",
+  "Scar Remodelling": "Collagen rebuild",
+  "Structural Correction (Selected Cases)": "Depressed-scar correction",
+  "Structural Tightening": "Threads · microneedling",
+  "Supportive Volume": "Lift-vector restoration",
+  "Surgical Options (Advanced Laxity)": "Beyond non-surgical",
+};
+
+const buildRows = (): RowData[] =>
+  concernsData.map((c, idx) => {
+    const cards: ConcernCard[] = [];
+    c.categories.forEach((cat) => {
+      cat.treatments.forEach((t, ti) => {
+        cards.push({
+          title: t.name,
+          tagline: TAGLINE_BY_HEADING[cat.heading] ?? cat.heading,
+          href: t.path,
+          badge: ti === 0 && cat.heading.includes("Prescription") ? "Foundation" : undefined,
+        });
+      });
+    });
+
+    const eyebrow = idx === 0 ? "Concern · Most-asked" : `Concern · Pathway ${idx + 1}`;
+
+    return {
+      id: slugify(c.title),
+      eyebrow,
+      title: c.title + ".",
+      copy: c.whatsHappening,
+      cards,
+      ctaHref: "/contact/",
+      ctaLabel: `Discuss ${c.title.split(" ")[0].toLowerCase()} with a doctor`,
+    };
+  });
+
+/* ------------------------------------------------------------------ */
+/*  Deep clinical SEO copy (~500 words per concern, always in DOM)    */
+/* ------------------------------------------------------------------ */
+
+const DEEP_COPY: Record<string, string[]> = {
+  "Facial Ageing & Volume Loss": [
+    "Facial ageing is not one process but several happening in parallel. The deep and superficial fat compartments of the cheek, temple and periorbital region descend and atrophy. The bony platform of the maxilla, mandible and orbit resorbs. Collagen and elastin within the dermis decline at roughly one to one-and-a-half percent per year from the late twenties onward. The retaining ligaments that anchor soft tissue to bone weaken, allowing the mid-face to migrate inferiorly. The visible result is hollowing of the temples, flattening of the cheek, deepening of the nasolabial and labiomental folds, jowl formation along a softening jawline, and a thinning of the perioral and periorbital skin envelope.",
+    "Doctor-led correction starts with assessment, not a syringe. We map volume loss against bone, identify where the soft-tissue envelope has descended versus deflated, and decide whether the priority is structural support, skin quality, or both. Foundational care is medical-grade and prescription skincare — retinoids, antioxidants, sunscreen — to slow the cellular drivers of ageing. On top of that we layer regenerative treatments such as Profhilo, polynucleotides, microneedling and PRP, which restore extracellular matrix quality and signal fibroblasts to behave as they did a decade earlier. Where bone or fat-pad loss has produced visible hollowing, hyaluronic acid filler is placed in deep, structural planes — supraperiosteal cheek, deep medial fat compartment, mandibular angle — to restore the platform that the overlying tissue rests on.",
+    "Advanced cases benefit from combination protocols such as the HA Makeover (an eight or eleven-point lifting sequence), PDO threads to re-suspend lax tissue, and full-face rejuvenation programmes that sequence regenerative, structural and skin-quality treatments over several months. The goal is the same throughout: an unread, rested face. No frozen forehead, no pillow cheek, no operated jawline. Just a face that looks like the patient on a good day, ten years ago. Everything we do is reversible, titratable and medically supervised. Realistic timelines, honest limits, doctor-led aftercare. That is what separates restoration from distortion.",
+  ],
+  "Lines & Wrinkles": [
+    "Lines and wrinkles fall into two clinically distinct groups, and treating them as if they were the same is the commonest reason patients are unhappy with their results. Dynamic lines are produced by repeated muscle contraction — frowning, smiling, squinting — and disappear when the face is at rest. They respond predictably to anti-wrinkle injections (botulinum toxin), which selectively relax the responsible muscle without altering expression elsewhere. Static lines remain visible at rest because the dermis underneath has lost collagen and the epidermis has thinned. Botox alone does not erase a static line; the skin itself has to be rebuilt.",
+    "Our protocol begins with foundational prescription skincare — clinical-strength retinoids, peptides, antioxidants — which is the only intervention proven to thicken the dermis and improve skin quality long-term. For dynamic lines on the upper face (forehead, glabella, crow's feet) we use micro-dosed Botox at the lowest effective dose to soften the line while preserving authentic expression. For deeper, etched static lines we add skin-quality regenerators such as Profhilo, polynucleotides and microneedling, which recruit fibroblasts to lay down new collagen over eight to twelve weeks. Fine, well-selected dermal filler is reserved for individual static lines that have not responded to the above and is placed superficially, in micro-droplet technique, by a doctor who understands the vascular anatomy of the area.",
+    "The patient question we hear most often is whether starting Botox in the late twenties or early thirties prevents future lines. The honest answer, supported by the evidence, is that consistent early intervention does delay the conversion of dynamic lines into static lines, but it cannot stop ageing. We treat early in the spirit of prejuvenation — the smallest effective dose, infrequent intervals, never the maximum the muscle will tolerate. The face should still move, smile, frown, react. Aesthetic medicine should be invisible. If you can tell someone has had it done, it has been done badly.",
+  ],
+  "Skin Texture & Tone": [
+    "Skin texture and tone are governed by three things: the rate at which keratinocytes turn over, the integrity of the lipid barrier, and the quality of the underlying dermal collagen. When any of those three deteriorates — through ultraviolet exposure, pollution, hormonal shifts, or simply time — the surface looks dull, the pores enlarge, the tone becomes uneven, and the skin no longer reflects light cleanly. The fix is sequential, not single-modality. There is no laser, peel or facial that can substitute for a corrected daily regimen.",
+    "Foundation work is medical skincare: a prescription retinoid to accelerate cell turnover, a vitamin C antioxidant to neutralise free radicals, a broad-spectrum SPF 50 used daily, and pigment-regulating actives where indicated. On top of that foundation we layer in-clinic exfoliation and resurfacing — chemical peels selected by skin type and Fitzpatrick phototype, HydraFacial for barrier-friendly decongestion, and microneedling to drive controlled wound healing without thermal injury. For deeper textural concerns and selected scarring we add collagen-stimulating treatments such as PRP and polynucleotides, both of which recruit the patient's own regenerative biology.",
+    "Advanced resurfacing — fractional or fully ablative CO₂ laser — is reserved for cases where surface-level intervention has been exhausted. We do not lead with laser. We do not laser melasma-prone or Fitzpatrick V–VI skin without specific protocol. And we do not use CO₂ as a one-size-fits-all answer to every textural concern. Skin is an organ, not a canvas. Treat it with the same diagnostic rigour you would apply to any other organ.",
+  ],
+  "Pigmentation & Discolouration": [
+    "Pigmentation is the most over-treated and under-diagnosed concern in aesthetic medicine. Hyperpigmentation, melasma, post-inflammatory hyperpigmentation, sun-induced lentigines and hormonal pigmentation all look superficially similar but respond very differently — and in some cases, opposite — to the same intervention. Aggressive resurfacing or heat-based laser on melasma-prone skin can convert a manageable problem into a permanent one. Diagnosis matters before treatment.",
+    "Our pigmentation protocol is built on a foundation of prescription skincare: hydroquinone (cycled, never indefinite) or tranexamic acid as melanin-pathway inhibitors, prescription retinoids to accelerate keratinocyte turnover and clear superficial pigment, azelaic acid for inflammatory and hormonal subtypes, and high-protection daily sunscreen as the single non-negotiable. Without daily SPF 50, no pigmentation treatment will hold.",
+    "In-clinic we use melasma-safe chemical peels — typically modified Jessner, mandelic, or low-concentration TCA — and microneedling at conservative depths to disperse pigment without inducing post-inflammatory hyperpigmentation. Polynucleotides are used as an adjunct to support barrier and reduce inflammatory drive, particularly in melasma. Injectables are not a primary treatment for pigmentation; they are supportive. If a clinic offers you filler or Botox to fix pigmentation, walk out. Pigmentation is a dermatological problem and demands a dermatological pathway.",
+  ],
+  "Acne & Scarring": [
+    "Active acne and acne scarring are two separate problems that require two separate treatment plans. Treating scars while acne is still inflamed is futile — new lesions will produce new scars, and resurfacing the surface while the dermis is still inflamed risks worsening pigmentation. The first phase is always control of active disease. The second phase, often months later, is structural correction of the residual damage.",
+    "Active control begins with a prescription regimen tailored to acne subtype — comedonal, inflammatory, hormonal, nodulocystic — and severity. Topical retinoids, benzoyl peroxide, topical or oral antibiotics, and in selected cases hormonal modulation or oral isotretinoin under appropriate supervision. In-clinic we use medical chemical peels and HydraFacial to decongest follicles and reduce inflammatory load between regimen reviews. Hormonal assessment is offered for persistent, cyclical, or jawline-distributed acne, particularly in adult female patients.",
+    "Once active disease is controlled and the skin has stabilised — typically a window of three to six months — we move to scar remodelling. Microneedling, PRP and polynucleotides drive controlled collagen remodelling for atrophic and rolling scars. Fractional CO₂ laser is reserved for deeper boxcar and ice-pick patterns. Hyaluronic acid dermal filler is used selectively for individual depressed scars, placed by a doctor who understands the vascular field of the area. Subcision releases tethered scar bases. Each tool has its place; none is a universal answer. Honest scar work takes a year or more. Anyone offering a single-session miracle is selling marketing, not medicine.",
+  ],
+  "Skin Laxity & Sagging": [
+    "Laxity is the visible expression of three converging changes: loss of dermal collagen and elastin, weakening of the retaining ligaments that anchor soft tissue to bone, and atrophy of the deep and superficial fat compartments that provide volumetric support. The jawline softens, jowls form, the neck loses definition, and the mid-face descends. Skin-only treatments cannot reverse ligamentous laxity, and volume alone cannot tighten a slack envelope. Honest correction requires a layered approach.",
+    "We begin with skin quality. Profhilo and polynucleotides bio-stimulate fibroblasts to improve dermal hydration and elasticity over a series of treatments. Medical-grade prescription skincare — retinoids, peptides, antioxidants — supports the underlying biology day to day. For tightening of the envelope itself we use PDO threads (cog and mono) to re-suspend descended tissue and stimulate collagen along the thread tracks, and microneedling to drive controlled remodelling.",
+    "Where laxity is compounded by volume loss — and it almost always is — supportive hyaluronic acid filler is placed in lift vectors at the cheek, jawline and chin to recreate the structural platform the soft tissue once rested on. The combination, sequenced thoughtfully, gives the appearance of a lifted face without surgery. There is, however, a ceiling. When laxity has progressed beyond the reach of non-surgical intervention, the honest recommendation is a surgical consultation — a deep-plane facelift performed by a qualified surgeon. We will say so. Aesthetic medicine done well includes knowing when to refer out.",
+  ],
+};
+
+/* ------------------------------------------------------------------ */
+/*  Page                                                               */
+/* ------------------------------------------------------------------ */
 
 const ConcernsHub = () => {
   const seoData = generateSEOMetadata(
-    "Skin Concerns | Doctor-Led Assessment & Treatment | Cosmedocs",
-    "Explore common skin and facial concerns including ageing, volume loss, pigmentation, acne, and skin laxity. Doctor-led assessment and clinically ordered treatment pathways at Harley Street.",
+    "Skin & Face Concerns | Doctor-Led Pathways | Cosmedocs Harley Street",
+    "Browse skin and face concerns clinically — ageing, lines, texture, pigmentation, acne, laxity. Doctor-led assessment and ordered treatment pathways at Harley Street, London.",
     "/concerns/"
   );
 
-  const jsonLdSchema = {
+  const rows = buildRows();
+
+  const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "MedicalBusiness",
         "@id": "https://www.cosmedocs.com/#organization",
-        "name": "Cosmedocs",
-        "url": "https://www.cosmedocs.com/",
-        "logo": "https://www.cosmedocs.com/default-og-image.jpg",
-        "telephone": "+44 20 3733 3227",
-        "address": {
+        name: "Cosmedocs",
+        url: "https://www.cosmedocs.com/",
+        logo: "https://www.cosmedocs.com/default-og-image.jpg",
+        telephone: "+44 20 3733 3227",
+        address: {
           "@type": "PostalAddress",
-          "streetAddress": "10 Harley Street",
-          "addressLocality": "London",
-          "postalCode": "W1G 9PF",
-          "addressCountry": "GB"
+          streetAddress: "10 Harley Street",
+          addressLocality: "London",
+          postalCode: "W1G 9PF",
+          addressCountry: "GB",
         },
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "16:00" }
-        ],
-        "aggregateRating": {
+        aggregateRating: {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "2847",
-          "bestRating": "5"
-        }
+          ratingValue: "4.9",
+          reviewCount: "2847",
+          bestRating: "5",
+        },
       },
       {
         "@type": "MedicalWebPage",
         "@id": "https://www.cosmedocs.com/concerns/",
-        "url": "https://www.cosmedocs.com/concerns/",
-        "name": seoData.title,
-        "description": seoData.description,
-        "isPartOf": { "@id": "https://www.cosmedocs.com/#website" },
-        "about": {
+        url: "https://www.cosmedocs.com/concerns/",
+        name: seoData.title,
+        description: seoData.description,
+        about: concernsData.map((c) => ({
           "@type": "MedicalCondition",
-          "name": "Dermatological and Aesthetic Concerns",
-          "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Face and Skin" }
-        },
-        "mainEntity": concernsData.map(c => ({
-          "@type": "MedicalCondition",
-          "name": c.title,
-          "description": c.whatsHappening
-        }))
+          name: c.title,
+          description: c.whatsHappening,
+          possibleTreatment: c.categories
+            .flatMap((cat) => cat.treatments)
+            .map((t) => ({ "@type": "MedicalTherapy", name: t.name, url: `https://www.cosmedocs.com${t.path}` })),
+        })),
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Concerns", "item": "https://www.cosmedocs.com/concerns/" }
-        ]
-      }
-    ]
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.cosmedocs.com/" },
+          { "@type": "ListItem", position: 2, name: "Concerns", item: "https://www.cosmedocs.com/concerns/" },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I know which concern category my skin falls into?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Most patients present with overlapping concerns — lines and texture, pigmentation and laxity. A doctor-led consultation maps the dominant driver, sequences treatments, and avoids the common mistake of treating one concern in isolation while another worsens.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Are skin concerns treated medically or cosmetically at Cosmedocs?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Both, and always doctor-led. Active acne, eczema, melasma and rosacea are treated dermatologically with prescription regimens. Cosmetic concerns — lines, volume loss, laxity — are addressed with regenerative and structural protocols. The same doctor manages both ends.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Why is prescription skincare positioned as the foundation of every pathway?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Without an active topical regimen — typically a retinoid, antioxidant, sunscreen, and where indicated a pigment regulator — in-clinic interventions deliver short-lived results. Skincare maintains the gains; the clinic accelerates them.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How long do results from a concerns pathway take?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Regenerative protocols (Profhilo, polynucleotides, microneedling) show measurable improvement at eight to twelve weeks. Structural treatments (filler, threads) are visible immediately and continue refining over four to six weeks. Active dermatological conditions are reviewed at six and twelve weeks.",
+            },
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -80,383 +400,124 @@ const ConcernsHub = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href={seoData.canonical} data-rh="true" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:image" content={seoData.image} />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        <meta name="keywords" content="skin concerns, facial ageing, volume loss, wrinkles, pigmentation, acne scarring, skin laxity, aesthetic concerns london, dermatology harley street, skin treatment pathways" />
-        <script type="application/ld+json">{JSON.stringify(jsonLdSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <div className="bg-black overflow-x-hidden">
-        {/* ═══════════════════════════════════════════
-            HERO — Two-column, matching Dermal Fillers hub
-        ═══════════════════════════════════════════ */}
-        <section className="relative flex items-center overflow-hidden pb-16 pt-0">
-          {/* Flowing gradient orbs */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
-              className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201,160,80,0.12) 0%, rgba(201,160,80,0.04) 40%, transparent 70%)' }}
-              animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -30, 0] }}
-              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      <main className="bg-black text-white min-h-screen">
+        {/* Hero */}
+        <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 px-5 sm:px-8 overflow-hidden">
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,160,80,0.18),transparent_55%)]"
+          />
+          <div className="relative max-w-7xl mx-auto">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Concerns", href: "/concerns/" },
+              ]}
             />
             <motion.div
-              className="absolute top-1/3 -left-60 w-[500px] h-[500px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(201,160,80,0.06) 50%, transparent 70%)' }}
-              animate={{ scale: [1, 1.2, 1], x: [0, 40, 0] }}
-              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            />
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full">
-            <div className="mb-6">
-              <Breadcrumb items={[]} currentPage="Concerns" />
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Left — Content */}
-              <div>
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full text-sm text-white/70 mb-6 border border-white/10">
-                    <MapPin className="h-4 w-4 text-[#C9A050]" />
-                    8-10 Harley Street, London W1G 9PF
-                  </div>
-
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-[1.1] tracking-tight">
-                    Understanding your
-                    <span className="block font-semibold text-[#C9A050]">skin concerns</span>
-                  </h1>
-
-                  <p className="text-lg md:text-xl text-white/60 mb-4 max-w-xl leading-relaxed font-light">
-                    Before considering any treatment, it's essential to understand what's actually happening beneath the surface. Our doctors assess the cause — not just the symptom.
-                  </p>
-                  <p className="text-base text-white/50 mb-10 max-w-xl leading-relaxed font-light">
-                    Each concern below follows a medically ordered pathway: from cosmeceuticals through to advanced procedures. This progression mirrors how our doctors think and how treatment plans develop in consultation.
-                  </p>
-                </motion.div>
-
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                    className="group bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20"
-                  >
-                    Book Consultation <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                    className="text-white/80 hover:text-white hover:bg-white/10 rounded-full px-8 py-6 text-base font-medium border border-white/20"
-                  >
-                    <Sparkles className="mr-2 h-4 w-4 text-[#C9A050]" /> Ask Our <span className="text-[#C9A050]">A</span>esthetic <span className="text-[#C9A050]">I</span>ntelligence
-                  </Button>
-                </motion.div>
-
-                {/* Trust indicators */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 flex flex-wrap gap-8 text-sm text-white/50">
-                  <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#C9A050]/70" /> Doctor-Led Assessment</span>
-                  <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#C9A050]/70" /> Since 2007</span>
-                  <span className="flex items-center gap-2"><Star className="h-4 w-4 text-[#C9A050]/70 fill-[#C9A050]/70" /> 4.9 Rating</span>
-                </motion.div>
-              </div>
-
-              {/* Right — Abstract visual */}
-              <motion.div className="hidden lg:block relative" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }}>
-                <div className="relative aspect-square">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg viewBox="0 0 500 500" className="w-[460px] h-[460px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Organic flowing layers — representing skin layers */}
-                      {[
-                        { d: "M100 250 Q150 100, 250 80 Q350 60, 400 200 Q450 340, 250 420 Q50 380, 100 250", opacity: 0.06, delay: 0 },
-                        { d: "M130 250 Q170 130, 250 115 Q330 100, 370 220 Q410 340, 250 390 Q90 360, 130 250", opacity: 0.08, delay: 0.5 },
-                        { d: "M160 250 Q190 160, 250 150 Q310 140, 340 240 Q370 340, 250 360 Q130 340, 160 250", opacity: 0.1, delay: 1 },
-                        { d: "M190 250 Q210 190, 250 185 Q290 180, 310 250 Q330 320, 250 330 Q170 320, 190 250", opacity: 0.12, delay: 1.5 },
-                      ].map((shape, i) => (
-                        <motion.path
-                          key={i}
-                          d={shape.d}
-                          stroke="#C9A050"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          opacity={shape.opacity}
-                          initial={{ pathLength: 0, opacity: 0 }}
-                          animate={{ pathLength: 1, opacity: shape.opacity }}
-                          transition={{ duration: 2.5, delay: shape.delay * 0.3, ease: "easeOut" }}
-                        />
-                      ))}
-                      {/* Diagnostic lines */}
-                      {[
-                        { d: "M250 250 Q180 160, 120 130", opacity: 0.05, delay: 2 },
-                        { d: "M250 250 Q320 160, 380 130", opacity: 0.05, delay: 2.3 },
-                        { d: "M250 250 Q160 300, 80 350", opacity: 0.05, delay: 2.6 },
-                        { d: "M250 250 Q340 300, 420 350", opacity: 0.05, delay: 2.9 },
-                      ].map((line, i) => (
-                        <motion.path
-                          key={`line-${i}`}
-                          d={line.d}
-                          stroke="#C9A050"
-                          strokeWidth="1"
-                          strokeLinecap="round"
-                          strokeDasharray="4 8"
-                          initial={{ pathLength: 0, opacity: 0 }}
-                          animate={{ pathLength: 1, opacity: line.opacity }}
-                          transition={{ duration: 1.5, delay: line.delay, ease: "easeOut" }}
-                        />
-                      ))}
-                      {/* Centre assessment point */}
-                      <motion.circle cx="250" cy="250" r="6" fill="#C9A050" opacity={0.3}
-                        initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }}
-                        transition={{ duration: 0.6, delay: 3.2 }}
-                      />
-                      <motion.circle cx="250" cy="250" r="20" stroke="#C9A050" strokeWidth="0.5" opacity={0.15}
-                        initial={{ scale: 0 }} animate={{ scale: [0, 1.3, 1] }}
-                        transition={{ duration: 0.8, delay: 3.4 }}
-                      />
-                    </svg>
-                  </div>
-
-                  {/* Floating labels */}
-                  {[
-                    { label: "Texture", x: "10%", y: "25%", delay: 3.5 },
-                    { label: "Volume", x: "75%", y: "20%", delay: 3.7 },
-                    { label: "Laxity", x: "5%", y: "70%", delay: 3.9 },
-                    { label: "Tone", x: "78%", y: "72%", delay: 4.1 },
-                  ].map((item, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute text-[10px] tracking-[0.2em] uppercase text-[#C9A050]/40"
-                      style={{ left: item.x, top: item.y }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5, delay: item.delay }}
-                    >
-                      {item.label}
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            MAIN CONTENT — Two-column layout
-        ═══════════════════════════════════════════ */}
-        <section className="relative max-w-7xl mx-auto px-4 sm:px-6 pb-20">
-          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
-            {/* Left — Main Content */}
-            <div>
-              {/* Intro Section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mb-16"
-              >
-                <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-                  A problem-first <span className="text-[#C9A050]">approach</span>
-                </h2>
-                <ExpandableSection
-                  preview={
-                    <p className="text-white/60 leading-relaxed font-light">
-                      At Cosmedocs, we believe that effective aesthetic medicine begins with understanding — not selling.
-                      Before any treatment is discussed, our doctors assess the underlying cause of your concern. This
-                      diagnostic-first philosophy ensures that recommendations are clinically appropriate, medically ordered,
-                      and tailored to your individual anatomy and goals.
-                    </p>
-                  }
-                  label="Read more about our approach"
-                  collapseLabel="Show less"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="mt-8 max-w-3xl"
+            >
+              <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#C9A050] mb-4 inline-flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5" /> Doctor-led · Read clinically
+              </p>
+              <h1 className="font-serif text-5xl sm:text-7xl leading-[0.95] tracking-tight">
+                Concerns,
+                <br />
+                <span className="text-[#C9A050]">read clinically.</span>
+              </h1>
+              <p className="mt-6 text-white/70 text-base sm:text-lg max-w-xl leading-relaxed">
+                Every concern has a sequence. We treat in the order skin biology
+                allows — foundation first, regeneration next, structure last.
+                Bold, natural, always your way.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-2 bg-[#C9A050] text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-[#e3c074] transition"
                 >
-                  <div className="space-y-4 text-white/60 leading-relaxed font-light">
-                    <p>
-                      Each concern below is presented with treatments ordered from least invasive to most advanced —
-                      the same progression a doctor follows in clinical practice. Topicals and cosmeceuticals form
-                      the foundation, followed by device-based skin renewal, then injectables for targeted correction,
-                      and finally structural or surgical procedures where appropriate.
-                    </p>
-                    <p>
-                      This isn't a menu to pick from — it's a framework for understanding how different treatments
-                      work together. Many patients benefit from combining approaches across categories for comprehensive,
-                      natural-looking improvement that develops gradually over time.
-                    </p>
-                    <p>
-                      Our aesthetics is invisible art. Bold, natural, always your way. Transformation that speaks —
-                      without saying a word.
-                    </p>
-                  </div>
-                </ExpandableSection>
-              </motion.div>
-
-              {/* Treatment Pathway Explanation */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mb-12 bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6"
-              >
-                <p className="text-xs text-[#C9A050] uppercase tracking-wider mb-4">How to read these pathways</p>
-                <div className="grid sm:grid-cols-4 gap-4">
-                  {[
-                    { step: "01", label: "Cosmeceuticals", desc: "Prescription skincare" },
-                    { step: "02", label: "Devices & Renewal", desc: "Peels, needling, lasers" },
-                    { step: "03", label: "Injectables", desc: "Botox, fillers, boosters" },
-                    { step: "04", label: "Advanced / Surgical", desc: "Threads, surgery" },
-                  ].map((item) => (
-                    <div key={item.step} className="text-center sm:text-left">
-                      <p className="text-[#C9A050] text-lg font-light mb-1">{item.step}</p>
-                      <p className="text-sm text-white/80 font-medium">{item.label}</p>
-                      <p className="text-xs text-white/40 mt-1">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* ═══════════════════════════════════════════
-                  CONCERN CARDS
-              ═══════════════════════════════════════════ */}
-              <div className="space-y-12">
-                {concernsData.map((concern, i) => (
-                  <ConcernCard key={concern.title} concern={concern} index={i} />
-                ))}
+                  Book a doctor-led assessment <ArrowUpRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/aesthetic-intelligence/"
+                  className="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition"
+                >
+                  Try the AI face scan
+                </Link>
               </div>
-
-              {/* Global Disclaimer */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mt-16 bg-white/[0.03] border border-[#C9A050]/20 rounded-2xl p-6"
-              >
-                <p className="text-white/50 text-sm leading-relaxed">
-                  Treatment plans are individualised and often involve a combination of approaches.
-                  Not all treatments are suitable for every patient or concern. A consultation with
-                  our doctors will help determine the most appropriate pathway for your specific needs,
-                  anatomy, and goals.
-                </p>
-              </motion.div>
-
-              {/* Assessment CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mt-20 text-center lg:text-left"
-              >
-                <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-                  Not sure where to <span className="text-[#C9A050]">start?</span>
-                </h2>
-                <p className="text-white/60 mb-8 max-w-xl leading-relaxed font-light">
-                  A consultation with our doctors will help identify the underlying causes of your
-                  concerns and determine whether treatment is appropriate for you.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/advanced-consultation/"
-                    className="inline-flex items-center justify-center gap-2 bg-[#C9A050] hover:bg-[#B8924A] text-black px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#C9A050]/20"
-                  >
-                    Book Consultation <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    to="/treatments/"
-                    className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C9A050]/50 text-white px-8 py-4 rounded-full font-medium transition-all duration-300"
-                  >
-                    Browse All Treatments
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right — Sticky Sidebar */}
-            <aside className="hidden lg:block">
-              <div className="sticky top-24">
-                <ConcernsHubSidebar />
-              </div>
-            </aside>
-          </div>
-
-          {/* Mobile sidebar content */}
-          <div className="lg:hidden mt-16">
-            <ConcernsHubSidebar />
+            </motion.div>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            HIDDEN SEO CONTENT — ~500 words
-        ═══════════════════════════════════════════ */}
-        <div className="sr-only" aria-hidden="true">
-          <h2>Understanding Skin and Facial Concerns at Cosmedocs Harley Street</h2>
-          <p>
-            Cosmedocs is a doctor-led aesthetic clinic on Harley Street, London, offering comprehensive
-            assessment and treatment for a wide range of skin and facial concerns. Our approach prioritises
-            diagnosis and understanding over treatment selection, ensuring that every recommendation is
-            clinically appropriate and medically ordered.
-          </p>
-          <p>
-            Facial ageing and volume loss are among the most common concerns we address. As the face ages,
-            natural fat pads shift and diminish, collagen production slows, and bone remodelling occurs.
-            These changes lead to temple hollowing, mid-face volume loss, deepening nasolabial folds,
-            and loss of jawline definition. Our treatment pathways begin with prescription skincare and
-            progress through skin regeneration treatments like Profhilo and polynucleotides, structural
-            fillers for cheeks, temples, jawline, and chin, and advanced rejuvenation options including
-            HA Makeover packages and PDO thread lifts.
-          </p>
-          <p>
-            Lines and wrinkles develop from repeated facial expressions — frowning, squinting, and smiling
-            create dynamic lines that eventually become static wrinkles visible at rest. Anti-wrinkle
-            injections with botulinum toxin remain the gold standard for dynamic lines, supported by
-            skin quality treatments like Profhilo and microneedling for overall improvement.
-          </p>
-          <p>
-            Skin texture and tone concerns include enlarged pores, dullness, roughness, and uneven skin
-            surface. These conditions respond well to chemical peels, HydraFacial treatments, and collagen
-            stimulation through microneedling and PRP therapy. Advanced cases may benefit from CO2 laser
-            resurfacing.
-          </p>
-          <p>
-            Pigmentation and discolouration including melasma, post-inflammatory hyperpigmentation, and
-            age spots require careful assessment as treatment approaches vary significantly based on type
-            and cause. Prescription skincare forms the foundation, with chemical peels and melasma-safe
-            microneedling protocols providing controlled improvement.
-          </p>
-          <p>
-            Acne and scarring management requires distinct strategies for active breakouts versus residual
-            scarring. Prescription dermatology addresses active acne, while microneedling, PRP, and
-            polynucleotides support scar remodelling. Structural correction with fillers or laser is
-            considered only after active disease is controlled.
-          </p>
-          <p>
-            Skin laxity and sagging result from collagen and elastin degradation combined with
-            gravitational changes. Profhilo and polynucleotides support skin quality, PDO threads
-            provide structural tightening, and strategic filler placement in lift vectors complements
-            these approaches. Surgical options including facelift and neck lift surgery are discussed
-            when non-surgical approaches reach their limit.
-          </p>
-          <p>
-            All treatments at Cosmedocs are delivered by GMC-registered doctors with over 17 years of
-            experience and more than one million treatments performed since 2007. Our philosophy of
-            invisible art ensures that results are natural, subtle, and aligned with each patient's
-            individual aesthetic goals. We believe in education before intervention and assessment
-            before treatment selection.
-          </p>
-        </div>
+        {/* Quick anchor index */}
+        <nav aria-label="Concerns index" className="px-5 sm:px-8 max-w-7xl mx-auto pb-6">
+          <ul className="flex flex-wrap gap-2 text-xs">
+            {rows.map((r) => (
+              <li key={r.id}>
+                <a
+                  href={`#${r.id}`}
+                  className="inline-block px-3 py-1.5 rounded-full border border-white/15 text-white/70 hover:text-white hover:border-[#C9A050]/60 transition"
+                >
+                  {r.title.replace(/\.$/, "")}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        
-      </div>
+        {/* Concern rows */}
+        {rows.map((row, i) => (
+          <React.Fragment key={row.id}>
+            <Row row={row} index={i} />
+            <DeepClinicalDepth
+              concernTitle={row.title.replace(/\.$/, "")}
+              paragraphs={DEEP_COPY[row.title.replace(/\.$/, "")] ?? []}
+            />
+          </React.Fragment>
+        ))}
 
-      {/* Skin Foundation CTA */}
-      <section className="py-12 px-4">
-        <div className="max-w-5xl mx-auto">
-          <SkinFoundationCTA variant="general" />
-        </div>
-      </section>
+        {/* Skin foundation cross-sell */}
+        <section className="px-5 sm:px-8 py-16">
+          <div className="max-w-5xl mx-auto">
+            <SkinFoundationCTA variant="default" />
+          </div>
+        </section>
+
+        {/* Closing conversion */}
+        <section className="px-5 sm:px-8 py-20 sm:py-28 border-t border-white/10">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#C9A050] mb-4">
+              Your consultation begins here
+            </p>
+            <h2 className="font-serif text-4xl sm:text-5xl leading-tight tracking-tight">
+              The right pathway is the
+              <br />
+              <span className="text-[#C9A050]">honest one.</span>
+            </h2>
+            <p className="mt-5 text-white/65 text-base sm:text-lg leading-relaxed">
+              No upselling. No theatre. A doctor maps your concern, explains the
+              sequence, and tells you what we will not do as clearly as what we
+              will. Aesthetic medicine should be invisible — quiet, not loud.
+            </p>
+            <Link
+              to="/contact/"
+              className="mt-8 inline-flex items-center gap-2 bg-[#C9A050] text-black px-7 py-3.5 rounded-full text-sm font-medium hover:bg-[#e3c074] transition"
+            >
+              Book your assessment <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+      </main>
     </>
   );
 };
