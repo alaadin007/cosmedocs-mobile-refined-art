@@ -489,7 +489,7 @@ const ConcernsHub = () => {
         {/* Skin foundation cross-sell */}
         <section className="px-5 sm:px-8 py-16">
           <div className="max-w-5xl mx-auto">
-            <SkinFoundationCTA variant="default" />
+            <SkinFoundationCTA variant="general" />
           </div>
         </section>
 
