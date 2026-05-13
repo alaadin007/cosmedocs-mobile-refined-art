@@ -311,6 +311,33 @@ const TAGLINE_BY_HEADING: Record<string, string> = {
   "Surgical Options (Advanced Laxity)": "Beyond non-surgical",
 };
 
+const TREATMENT_BACK: Record<string, string> = {
+  "Medical-Grade Skincare (incl. Retinoids)": "Doctor-prescribed retinoids, antioxidants and pigment regulators rebuild the dermis from the inside. This is the daily foundation every pathway sits on — without it, in-clinic results fade quickly.",
+  "Pigment-Regulating Skincare": "Targeted topical actives — tranexamic acid, kojic, niacinamide — calibrated to your subtype. Used cyclically alongside SPF 50 to interrupt melanin overproduction without rebound pigmentation.",
+  "Polynucleotides": "Salmon-DNA fragments that signal fibroblasts to regenerate. Improves skin quality, elasticity and tear-trough hollowing across 2–3 sessions. Not a filler — a true bio-stimulator.",
+  "Profhilo": "Pure stabilised hyaluronic acid that hydrates and lifts at the dermal level. Two sessions, four weeks apart. Quiet glow, no volume distortion.",
+  "Microneedling": "Controlled micro-injury triggers collagen remodelling without thermal damage. Safe across all skin types, including melasma-prone Fitzpatrick V–VI.",
+  "PRP Treatment": "Platelet-rich plasma drawn from your own blood, spun and reintroduced. Growth factors accelerate tissue repair and skin quality.",
+  "Cheek Filler": "Hyaluronic acid placed supraperiosteally to restore the deep medial fat compartment. Architectural lift, not pillow cheek.",
+  "Temple Filler": "Conservative volumisation of hollowed temples — one of the earliest signs of facial ageing — to restore the upper-third frame.",
+  "Jawline Filler": "Mandibular angle and pre-jowl sculpting to redefine a softening jawline. Lift-vector technique, not bulk.",
+  "Chin Filler": "Projection and balance for the lower third. Often the missing piece in profile harmony and feminisation/masculinisation.",
+  "Full Face Rejuvenation": "Sequenced multi-modality programme — regenerative, structural and skin-quality treatments staged across months for a cohesive, unread result.",
+  "HA Makeover": "Our 8 or 11-point lifting protocol. A single doctor-led session that re-establishes mid-face support and jawline definition.",
+  "PDO Threads": "Dissolvable cog and mono threads that re-suspend descended tissue and stimulate collagen along thread tracks. No scars, 2–3 year longevity.",
+  "Anti-Wrinkle Injections (Botox)": "Micro-dosed botulinum toxin to soften dynamic lines while preserving authentic expression. Smallest effective dose, never the maximum.",
+  "Fine-Line Dermal Fillers": "Superficial micro-droplet placement for individual etched static lines that have not responded to skincare and regeneration.",
+  "Chemical Peels": "Medical-strength acids selected by skin type — mandelic, Jessner, TCA — to renew the surface and clarify tone without thermal injury.",
+  "HydraFacial": "Decongestion, exfoliation and serum infusion in one session. Barrier-friendly, suitable between active treatments.",
+  "CO₂ Laser": "Fractional or fully ablative resurfacing for deep textural change. Reserved for selected cases after surface treatments have plateaued.",
+  "Hydroquinone Regimens": "Cycled prescription bleaching agent for stubborn pigmentation. Used in defined courses with strict sun protection — never indefinitely.",
+  "Azelaic Acid Protocols": "Anti-inflammatory and pigment-regulating, particularly effective in melasma and post-inflammatory hyperpigmentation.",
+  "Prescription Acne Regimens": "Tailored topical and oral protocols by acne subtype — comedonal, inflammatory, hormonal — managed by our doctors with regular review.",
+  "Acne Treatment": "Multi-stage clinical pathway from active control to scar remodelling, sequenced over months. We treat the disease before the damage.",
+  "Dermal Fillers for Depressed Scars": "Hyaluronic acid placed selectively into individual depressed scars by a doctor familiar with the vascular field.",
+  "Facelift Surgery": "Surgical referral for advanced laxity beyond non-surgical reach. Honest medicine includes knowing when to refer out.",
+};
+
 const buildRows = (): RowData[] =>
   concernsData.map((c, idx) => {
     const cards: ConcernCard[] = [];
@@ -321,6 +348,9 @@ const buildRows = (): RowData[] =>
           tagline: TAGLINE_BY_HEADING[cat.heading] ?? cat.heading,
           href: t.path,
           badge: ti === 0 && cat.heading.includes("Prescription") ? "Foundation" : undefined,
+          categoryHeading: cat.heading,
+          back: TREATMENT_BACK[t.name] ?? `Part of the ${cat.heading.toLowerCase()} layer of the ${c.title.toLowerCase()} pathway. Selected and sequenced by your doctor following clinical assessment, not from a menu.`,
+          pathwayNote: cat.note,
         });
       });
     });
