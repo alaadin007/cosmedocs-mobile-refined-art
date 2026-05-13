@@ -1,169 +1,70 @@
+## Goal
 
+Rebuild **/concerns** to look and feel exactly like the Home3 page sections in the screenshot: dark luxury theme, gold accents, one horizontal-scrolling Apple-style card row per concern indication, with deeper SEO content hidden behind expandable sections / visually-suppressed prose blocks.
 
-# Multilingual Architecture: SEO-First i18n for CosmeDocs
+## What changes
 
-## Overview
+### 1. Extract shared card primitives (refactor)
+Currently `Row`, `FlipCard`, `TreatmentCard`, `TileCard`, `CardWatermark`, plus `Category` / `SubCard` types live inside `src/pages/Home3.tsx`. Move them into a new module so `/concerns` (and any future page) can reuse the exact same look:
 
-Build a proper multilingual routing system with real, indexable translated pages for Arabic, French, and Spanish (with English as master). Start with Tier 1 priority pages (~10-15 per language), implement hreflang, language selector, and a data-driven translation system that auto-inherits structural changes from English master pages.
+```
+src/components/cards/AppleCardRow.tsx       (Row + types)
+src/components/cards/TreatmentCard.tsx      (TreatmentCard + FlipCard + TileCard + watermark)
+src/components/cards/types.ts               (Category, SubCard, FlipSpec)
+```
 
-## Architecture
+Home3.tsx is updated to import from these modules. No visual change to the homepage.
+
+### 2. New /concerns page architecture
+
+`src/pages/ConcernsHub.tsx` is rewritten as a Home3-style page:
 
 ```text
-URL Structure (subfolder model):
-/                          → English homepage (default, no prefix)
-/ar/                       → Arabic homepage
-/fr/                       → French homepage  
-/es/                       → Spanish homepage
-
-/treatments/botox/         → English Botox
-/ar/treatments/botox/      → Arabic Botox
-/fr/traitements/botox/     → French Botox
-/es/tratamientos/botox/    → Spanish Botox
+[ Hero ]           Black / gold. "Concerns. Read clinically."
+[ Row 1 ]          Facial Ageing & Volume Loss   (6–7 cards)
+[ Row 2 ]          Lines & Wrinkles              (5–6 cards)
+[ Row 3 ]          Skin Texture & Tone           (5–6 cards)
+[ Row 4 ]          Pigmentation & Melasma        (5 cards)
+[ Row 5 ]          Acne & Congestion             (5 cards)
+[ Row 6 ]          Eczema & Sensitive Skin       (4 cards)
+[ Row 7 ]          Hair Loss / Thinning          (4 cards)
+[ Row 8 ]          Skin Laxity & Sagging         (5 cards)
+[ Hidden SEO ]     ~600 words per concern in <ExpandableSection> + visually-condensed prose
+[ FAQ JSON-LD ]    expanded MedicalCondition + FAQPage schema
+[ Sidebar / CTA ]  consultation block (kept)
 ```
 
-## Tier 1 Pages (Phase 1 — launch these first)
+Each card maps to an existing treatment route already in `concernsData`. Two "feature" cards per row use the `flip` variant (front photo, back clinical copy) — same as Masseter / Calf cards on the homepage.
 
-Per language: ~12 pages
-1. Homepage
-2. /treatments/ (hub)
-3. /treatments/botox/
-4. /treatments/dermal-fillers/
-5. /treatments/lip-fillers/
-6. /treatments/jawline-filler/
-7. /treatments/chin-filler/
-8. /treatments/tear-trough-filler/
-9. /treatments/skin-rejuvenation/
-10. /prices/
-11. /contact/
-12. /about/
+### 3. SEO depth (visible + supplementary)
 
-## Technical Plan
+For each concern row the hero copy stays short (~40 words, AI-snippet-optimised). Below each row:
 
-### 1. Translation data system (`src/i18n/`)
+- **Visible**: 60-word "what's happening" paragraph (already in `concernsData`)
+- **Expandable** (`<ExpandableSection>`): ~500–600 words of clinical depth — pathophysiology, treatment ladder, expected timelines, British-English doctor-led tone. Crawlable, collapsed by default.
+- Per-page `MedicalCondition` JSON-LD entries enriched with `signOrSymptom`, `possibleTreatment`, and `expectedPrognosis`.
+- Page-level `FAQPage` JSON-LD with 4–6 questions per concern.
+- Title / meta description / canonical via Helmet, unchanged URL `/concerns/`.
 
-Create a structured translation layer:
+### 4. Imagery
 
-- **`src/i18n/types.ts`** — TypeScript interface for page translations (title, meta, sections, headings, body blocks, FAQ items)
-- **`src/i18n/config.ts`** — Language config: supported locales, slug mappings per language (e.g. `treatments` → `traitements` in French), RTL flags
-- **`src/i18n/translations/ar/`** — Arabic translation files per page
-- **`src/i18n/translations/fr/`** — French translation files per page
-- **`src/i18n/translations/es/`** — Spanish translation files per page
+Reuse existing card imagery from Home3's botox/filler/skin sets where the treatment matches. Where a concern has no existing image (e.g. eczema, hair loss), use a single dark watermark card (`CardWatermark`) — no new image generation in this round to keep cost low. We can add bespoke imagery in a follow-up.
 
-Each translation file exports structured content that mirrors the English page's sections. When English adds a new section, the translation file can fall back to English until translated.
+## Out of scope
 
-### 2. Language context provider (`src/i18n/LanguageContext.tsx`)
+- Translations (EN only this round).
+- Changing the underlying treatment routes or `concernsData` schema beyond adding image references.
+- Generating new AI imagery (can follow up).
 
-- React context providing current language, available languages, and switch function
-- Persists choice in localStorage
-- Does NOT auto-redirect based on browser language (per Google guidance)
-- Provides `useLanguage()` hook and `useTranslation(pageKey)` hook
+## Files touched
 
-### 3. Translated page wrapper component
+- **New**: `src/components/cards/AppleCardRow.tsx`, `TreatmentCard.tsx`, `types.ts`
+- **Edited**: `src/pages/Home3.tsx` (imports only — zero visual change)
+- **Rewritten**: `src/pages/ConcernsHub.tsx`
+- **Edited**: `src/data/concernsData.ts` (add `image`, `tagline`, `flip` fields per treatment card)
 
-- **`src/components/TranslatedPage.tsx`** — wraps English page components, injecting translated content via context
-- Handles: translated Helmet metadata, hreflang tags, self-canonical, lang attribute on `<html>`, RTL support for Arabic
+## Confirm before I build
 
-### 4. Routing changes (`src/App.tsx`)
-
-Add language-prefixed route groups:
-
-```text
-/:lang/                    → Translated homepage
-/:lang/treatments/botox/   → Translated Botox (slug mapped per language)
-/:lang/traitements/botox/  → French alternate slug
-etc.
-```
-
-A `LanguageRouter` wrapper component will:
-- Parse the `/:lang` param
-- Set the language context
-- Map translated slugs back to the correct English page component
-- Render the page with translated content overlay
-
-### 5. Hreflang implementation
-
-Every translated page gets reciprocal hreflang tags in `<head>`:
-
-```html
-<link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/botox/" />
-<link rel="alternate" hreflang="ar" href="https://www.cosmedocs.com/ar/treatments/botox/" />
-<link rel="alternate" hreflang="fr" href="https://www.cosmedocs.com/fr/traitements/botox/" />
-<link rel="alternate" hreflang="es" href="https://www.cosmedocs.com/es/tratamientos/botox/" />
-<link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/botox/" />
-```
-
-English pages also get these hreflang tags added via a shared utility.
-
-### 6. Language selector component
-
-- Visible in header and footer
-- Shows language names in their native script: English, العربية, Français, Español
-- Links to the equivalent page in the selected language
-- Stores preference in localStorage but never force-redirects
-- Optional "View this page in Arabic?" suggestion bar (non-blocking)
-
-### 7. Navigation & breadcrumbs translation
-
-- Header navigation items translated per language
-- Breadcrumb labels translated
-- Footer links translated
-- Internal links within translated pages point to same-language equivalents
-
-### 8. Sitemap updates
-
-- Add `sitemap-ar.xml`, `sitemap-fr.xml`, `sitemap-es.xml`
-- Each contains only published translated URLs
-- Add to sitemap index
-- Include `xhtml:link` hreflang annotations in all sitemaps
-
-### 9. Auto-sync mechanism
-
-When English master pages change (e.g. new treatment added to hub):
-- Translation files use a `lastSyncedVersion` field
-- A dev-time script flags stale translations
-- Untranslated sections fall back to English content with a `[needs translation]` marker in dev mode
-- Structural elements (treatment lists, pricing items) can be shared from English data and only labels/descriptions need translation
-
-### 10. Migrate existing international pages
-
-The current `/arabic-patients`, `/french-patients` etc. become 301 redirects to the new `/ar/`, `/fr/` homepages. Their existing translated data files feed into the new system.
-
-## Files to create/modify
-
-| File | Action |
-|---|---|
-| `src/i18n/config.ts` | Create — language config, slug maps |
-| `src/i18n/types.ts` | Create — translation interfaces |
-| `src/i18n/LanguageContext.tsx` | Create — context + hooks |
-| `src/i18n/translations/ar/*.ts` | Create — Arabic Tier 1 pages |
-| `src/i18n/translations/fr/*.ts` | Create — French Tier 1 pages |
-| `src/i18n/translations/es/*.ts` | Create — Spanish Tier 1 pages |
-| `src/components/TranslatedPage.tsx` | Create — wrapper with hreflang + meta |
-| `src/components/LanguageSelector.tsx` | Create — header/footer selector |
-| `src/components/Header.tsx` | Modify — add language selector |
-| `src/components/Footer.tsx` | Modify — add language selector |
-| `src/components/Layout.tsx` | Modify — language context provider |
-| `src/App.tsx` | Modify — add `/:lang/*` route group |
-| `src/utils/seo.ts` | Modify — hreflang generation utility |
-| `public/sitemap.xml` | Modify — add language sitemaps |
-| `public/_redirects` | Modify — redirect old international pages |
-
-## What this does NOT do (by design)
-
-- Does not translate the entire site — only Tier 1 pages
-- Does not auto-redirect based on browser language
-- Does not use a JS translation widget as the SEO layer
-- Does not create thin/duplicate content — each page has unique translated copy
-- Does not translate slugs that would break if CMS can't handle them cleanly (keeps English slugs as fallback where needed)
-
-## Rollout order
-
-1. Build i18n infrastructure (config, context, types)
-2. Create Arabic translations for Tier 1 (leveraging existing `arabicPatientData.ts`)
-3. Create French translations for Tier 1 (leveraging existing `frenchPatientData.ts`)
-4. Create Spanish translations for Tier 1 (new)
-5. Add routing + hreflang + language selector
-6. Migrate old `/arabic-patients` etc. to redirects
-7. Update sitemaps
-8. Test and verify
-
+1. OK to refactor Home3 card components into shared modules (no visual change to homepage)?
+2. Reuse existing homepage imagery for now — generate bespoke concern imagery later?
+3. Should the page keep the existing right-hand `ConcernsHubSidebar` (treatments index) or drop it for the cleaner Home3-style single-column flow?
