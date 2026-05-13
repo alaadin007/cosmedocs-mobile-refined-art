@@ -133,3 +133,9 @@
     100% { background-position: 200% 0; }
   }
 }
+
+@keyframes flipPill {
+  0%, 40% { transform: rotateY(0deg); }
+  50%, 90% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
