@@ -330,3 +330,33 @@ function extractProductNameFromUrl(url: string): string {
     return 'Unknown Product';
   }
 }
+
+function extractBrandFromUrl(url: string): string {
+  try {
+    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+    const map: Record<string, string> = {
+      'theordinary.com': 'The Ordinary',
+      'cerave.com': 'CeraVe',
+      'cerave.co.uk': 'CeraVe',
+      'neutrogena.com': 'Neutrogena',
+      'loreal-paris.co.uk': "L'Oréal Paris",
+      'olay.co.uk': 'Olay',
+      'clinique.co.uk': 'Clinique',
+      'paulaschoice.co.uk': "Paula's Choice",
+      'paulaschoice.com': "Paula's Choice",
+      'drunkelephant.com': 'Drunk Elephant',
+      'dermalogica.co.uk': 'Dermalogica',
+      'skinceuticals.co.uk': 'SkinCeuticals',
+      'vichy.co.uk': 'Vichy',
+      'laroche-posay.co.uk': 'La Roche-Posay',
+      'eucerin.co.uk': 'Eucerin',
+      'aveeno.co.uk': 'Aveeno',
+      'cetaphil.co.uk': 'Cetaphil',
+    };
+    if (map[host]) return map[host];
+    const root = host.split('.').slice(-2, -1)[0] || host;
+    return root.charAt(0).toUpperCase() + root.slice(1);
+  } catch {
+    return 'Unknown Brand';
+  }
+}
