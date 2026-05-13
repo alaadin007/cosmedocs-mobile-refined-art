@@ -1,0 +1,1 @@
+DELETE FROM public.product_analyses WHERE id IN ('a0b19b8c-7dd2-4fa4-9581-8ba2d1189056','156a669b-773a-4438-8a85-cc31f3e18016');
