@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, ChevronDown, Sparkles, RotateCw } from "lucide-react";
 import { Link } from "react-router-dom";
 import Breadcrumb from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
