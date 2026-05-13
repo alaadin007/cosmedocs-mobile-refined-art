@@ -9,7 +9,7 @@ const corsHeaders = {
 
 const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-const openAIApiKey = Deno.env.get('OPENAI_API_KEY')!;
+const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -216,46 +216,68 @@ Return ONLY a valid JSON object with this exact structure:
   "notes": ""
 }`;
 
-    console.log('Calling OpenAI GPT-4o for cosmetic analysis...');
+    if (!LOVABLE_API_KEY) {
+      throw new Error('LOVABLE_API_KEY is not configured');
+    }
 
-    const aiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+    console.log('Calling Lovable AI Gateway for cosmetic analysis...');
+
+    const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${openAIApiKey}`,
+        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-4o',
+        model: 'google/gemini-2.5-flash',
         messages: [
           { role: 'system', content: systemPrompt },
-          { 
-            role: 'user', 
-            content: `Analyze this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease analyze any product images, ingredient lists, and claims based on your knowledge. Provide comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
+          {
+            role: 'user',
+            content: `Analyse this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nProvide comprehensive analysis following the CosmeDocs framework. Return ONLY valid JSON matching the schema — no markdown, no commentary.`
           }
         ],
-        max_tokens: 4000,
-        temperature: 0.3,
         response_format: { type: 'json_object' }
       }),
     });
 
     if (!aiResponse.ok) {
       const errorText = await aiResponse.text();
-      console.error('OpenAI error:', aiResponse.status, errorText);
-      throw new Error(`OpenAI API error: ${aiResponse.status} ${errorText}`);
+      console.error('AI Gateway error:', aiResponse.status, errorText);
+      if (aiResponse.status === 429) {
+        return new Response(JSON.stringify({ success: false, error: 'Rate limit exceeded. Please try again shortly.' }), {
+          status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      if (aiResponse.status === 402) {
+        return new Response(JSON.stringify({ success: false, error: 'AI credits exhausted. Please add credits in workspace settings.' }), {
+          status: 402, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      throw new Error(`AI Gateway error: ${aiResponse.status}`);
     }
 
     const aiData = await aiResponse.json();
     console.log('AI response received');
-    
-    const analysisData = JSON.parse(aiData.choices[0].message.content);
+
+    let rawContent = aiData.choices[0].message.content || '{}';
+    // Strip code fences if present
+    rawContent = rawContent.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
+    const analysisData = JSON.parse(rawContent);
+
+    const product0 = analysisData?.products?.[0] || {};
+    const finalScore = product0?.scores?.final_score_0to10 ?? null;
+    const brand = product0?.brand || extractBrandFromUrl(productUrl);
+    const resolvedName = product0?.name || inferredName;
 
     // Store the analysis in the database
     const { error: insertError } = await supabase
       .from('product_analyses')
       .upsert({
         product_url: productUrl,
-        product_name: inferredName,
+        product_name: resolvedName,
+        product_brand: brand,
+        overall_score: finalScore,
         analysis_data: analysisData,
         analyzed_at: new Date().toISOString(),
       }, {
@@ -266,9 +288,9 @@ Return ONLY a valid JSON object with this exact structure:
       console.error('Error storing analysis:', insertError);
     }
 
-    return new Response(JSON.stringify({ 
-      success: true, 
-      data: analysisData 
+    return new Response(JSON.stringify({
+      success: true,
+      data: analysisData
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
@@ -306,5 +328,35 @@ function extractProductNameFromUrl(url: string): string {
     return productName || 'Unknown Product';
   } catch {
     return 'Unknown Product';
+  }
+}
+
+function extractBrandFromUrl(url: string): string {
+  try {
+    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+    const map: Record<string, string> = {
+      'theordinary.com': 'The Ordinary',
+      'cerave.com': 'CeraVe',
+      'cerave.co.uk': 'CeraVe',
+      'neutrogena.com': 'Neutrogena',
+      'loreal-paris.co.uk': "L'Oréal Paris",
+      'olay.co.uk': 'Olay',
+      'clinique.co.uk': 'Clinique',
+      'paulaschoice.co.uk': "Paula's Choice",
+      'paulaschoice.com': "Paula's Choice",
+      'drunkelephant.com': 'Drunk Elephant',
+      'dermalogica.co.uk': 'Dermalogica',
+      'skinceuticals.co.uk': 'SkinCeuticals',
+      'vichy.co.uk': 'Vichy',
+      'laroche-posay.co.uk': 'La Roche-Posay',
+      'eucerin.co.uk': 'Eucerin',
+      'aveeno.co.uk': 'Aveeno',
+      'cetaphil.co.uk': 'Cetaphil',
+    };
+    if (map[host]) return map[host];
+    const root = host.split('.').slice(-2, -1)[0] || host;
+    return root.charAt(0).toUpperCase() + root.slice(1);
+  } catch {
+    return 'Unknown Brand';
   }
 }
