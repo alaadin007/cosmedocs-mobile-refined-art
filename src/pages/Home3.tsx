@@ -274,6 +274,28 @@ const categories: Category[] = [
           image: haMakeoverBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
+          slides: [
+            {
+              eyebrow: "Step 1 · Diagnosis",
+              title: "Read the whole face",
+              body: "We map the cosmetic units — forehead, temple, cheek, mid-face, jaw, chin, lip — and identify where volume loss and tone shifts have fragmented continuity. The face is read as one architecture, never one wrinkle at a time.",
+            },
+            {
+              eyebrow: "Step 2 · Architecture",
+              title: "Rebuild from the bone",
+              body: "Deep, on-periosteum placement restores the structural scaffold first — temple, cheek and jaw — so the mid-face is lifted from above. Bone-deep support, never superficial bulk.",
+            },
+            {
+              eyebrow: "Step 3 · Continuity",
+              title: "Re-bridge every unit",
+              body: "Each cosmetic unit is gently re-bridged so the face reads as one continuous surface again. Tear trough into cheek, cheek into jaw, jaw into chin — the seams disappear.",
+            },
+            {
+              eyebrow: "Step 4 · The result",
+              title: "Reads as you, only rested",
+              body: "A single signature visit, doctor-led, millimetre by millimetre. Volume returned, architecture intact. Invisible art — bold, natural, always your way.",
+            },
+          ],
           bullets: [
             "Youth = one continuous face; age fragments it",
             "Re-bridge every unit in a single signature visit",
