@@ -859,6 +859,11 @@ const EndolaserLift = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </a>
+                <Link to="/treatments/eyebrow-lift-endolaser/">
+                  <Button variant="ghost" className="border border-[#C9A050]/40 text-[#C9A050] hover:text-white hover:bg-[#C9A050]/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
+                    Endolaser Brow Lift
+                  </Button>
+                </Link>
                 <Link to="/treatments/non-surgical-facelift/">
                   <Button variant="ghost" className="border border-white/15 text-white/60 hover:text-white hover:bg-white/5 px-8 py-5 rounded-full text-base w-full sm:w-auto">
                     View All Facelift Options
