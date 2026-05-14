@@ -950,18 +950,32 @@ const FaceMark = ({ area }: { area?: string }) => {
 const FlipCard = ({ card }: { card: SubCard }) => {
   const inkLight = !card.ink;
   const [flipped, setFlipped] = useState(false);
+  const [slideIdx, setSlideIdx] = useState(0);
+  const touchStartX = useRef<number | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const slides = card.flip?.slides;
+  const slideCount = slides?.length ?? 0;
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([entry]) => { if (!entry.isIntersecting) setFlipped(false); },
+      ([entry]) => { if (!entry.isIntersecting) { setFlipped(false); setSlideIdx(0); } },
       { threshold: 0.1 }
     );
     io.observe(el);
     return () => io.disconnect();
   }, []);
+
+  const goPrev = () => setSlideIdx((i) => (i - 1 + slideCount) % slideCount);
+  const goNext = () => setSlideIdx((i) => (i + 1) % slideCount);
+  const onTouchStart = (e: React.TouchEvent) => { touchStartX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current == null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(dx) > 40) { dx < 0 ? goNext() : goPrev(); }
+    touchStartX.current = null;
+  };
 
   return (
     <div
