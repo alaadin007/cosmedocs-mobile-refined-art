@@ -329,6 +329,55 @@ const EndolaserLift = () => {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
 
+        {/* ═══════════════════════════════════════════
+            CINEMATIC VIDEO BAND
+        ═══════════════════════════════════════════ */}
+        <section className="relative w-full overflow-hidden bg-black">
+          <div className="relative w-full h-[55vh] md:h-[70vh] min-h-[380px] max-h-[720px]">
+            <video
+              src="/videos/endo.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Cinematic overlays */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80 pointer-events-none" />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%)",
+              }}
+            />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/10 pointer-events-none" />
+
+            {/* Caption */}
+            <div className="absolute inset-0 flex items-end">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 md:pb-16 w-full">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                  className="max-w-2xl"
+                >
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] mb-3">
+                    Inside the treatment
+                  </p>
+                  <h2 className="text-2xl md:text-4xl font-extralight text-white/95 leading-tight">
+                    A single laser fibre. <span className="text-[#C9A050] font-light">Sub-dermal lift.</span>
+                  </h2>
+                  <p className="mt-3 text-sm md:text-base text-white/70 font-light max-w-xl">
+                    Footage of the endolaser fibre delivering controlled thermal energy beneath the skin — quiet, precise, invisible art.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ═══════════════════════════════════════════
             TWO-COLUMN LAYOUT
