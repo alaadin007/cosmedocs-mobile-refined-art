@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, AlertTriangle, Heart, ArrowRight, Zap, ShieldCheck, BadgeCheck, FileCheck } from "lucide-react";
-import endolaserDeviceFull from "@/assets/endolaser-device-full.jpeg";
-import endolaserDeviceDetail from "@/assets/endolaser-device-detail.jpeg";
+import endolaserHeroFace from "@/assets/endolaser-hero-face.jpg";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
@@ -303,33 +302,26 @@ const EndolaserLift = () => {
                 </motion.div>
               </div>
 
-              {/* Right: Device images */}
+              {/* Right: Editorial face with gold lift glow */}
               <motion.div
-                className="hidden lg:flex flex-shrink-0 w-[340px] h-[380px] items-center justify-center relative"
+                className="hidden lg:flex flex-shrink-0 w-[380px] h-[420px] items-center justify-center relative"
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               >
-                {/* Full device — main */}
+                {/* Ambient gold glow behind */}
+                <div className="absolute inset-0 rounded-full" style={{ background: 'radial-gradient(circle at 60% 60%, rgba(201, 160, 80, 0.22) 0%, transparent 65%)' }} />
                 <motion.img
-                  src={endolaserDeviceFull}
-                  alt="Laser Fibre Lift device with fibre optic cannula"
-                  className="absolute w-[280px] h-auto object-contain drop-shadow-2xl z-10 rounded-lg"
-                  style={{ filter: 'brightness(0.85) contrast(1.1)' }}
+                  src={endolaserHeroFace}
+                  alt="Endolaser Laser Fibre Lift — gold light tracing the jawline indicating sub-dermal lift"
+                  width={1024}
+                  height={1024}
+                  className="relative z-10 w-[360px] h-[400px] object-cover rounded-2xl ring-1 ring-[#C9A050]/20 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)]"
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 />
-                {/* Detail shot — offset behind */}
-                <motion.img
-                  src={endolaserDeviceDetail}
-                  alt="Laser Fibre Lift dual-wavelength detail"
-                  className="absolute top-4 right-0 w-[180px] h-auto object-cover rounded-lg opacity-40 z-0"
-                  style={{ filter: 'brightness(0.6) contrast(1.2)' }}
-                  animate={{ y: [0, 4, 0] }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                />
-                {/* Gold glow behind */}
-                <div className="absolute inset-0 rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 70%)' }} />
+                {/* Gold edge gleam */}
+                <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'inset 0 0 60px rgba(201,160,80,0.12)' }} />
               </motion.div>
             </div>
           </div>
