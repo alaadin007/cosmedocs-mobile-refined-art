@@ -35,6 +35,7 @@ import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import artChinImg from "@/assets/home3-art-chin.jpg";
 import artNoseImg from "@/assets/home3-art-nose.jpg";
 import artJawlineImg from "@/assets/home3-art-jawline.jpg";
+import artNonSurgicalFaceliftImg from "@/assets/home3-art-non-surgical-facelift.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
 import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
 import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
@@ -173,6 +174,31 @@ const botoxAesthetic: SubCard[] = [
   },
 ];
 
+/* ---------- Shared: Non-Surgical Facelift journey card ----------------- */
+/* One card, multiple rows. Front tells the patient journey (relax → restore → tighten); back routes to each component treatment. */
+const nonSurgicalFaceliftCard: SubCard = {
+  title: "Non-Surgical Facelift",
+  tagline: "Relax · Restore · Tighten — your three-step lift",
+  href: "/treatments/non-surgical-facelift/",
+  bg: "bg-gradient-to-br from-[#1a1410] via-[#2a1d10] to-[#3a2810]",
+  badge: "Signature Journey",
+  image: artNonSurgicalFaceliftImg,
+  frontImage: artNonSurgicalFaceliftImg,
+  frontImageFit: "cover",
+  flip: {
+    eyebrow: "The Journey · Mild to lifted",
+    largeText: true,
+    back: "Rather than choosing one treatment, we sequence three. Botox Nefertiti relaxes the muscles pulling the lower face down. HA Makeover restores the volume that holds the architecture up — the keystone of the lift. Endolaser or PDO threads tighten the skin from within. Doctor-led, doctor-sequenced, in your time.",
+    bullets: [
+      <Link key="nef" to="/treatments/botox/" className="text-[#C9A050] underline-offset-4 hover:underline">1 · Relax — Nefertiti Botox →</Link>,
+      <Link key="ha" to="/treatments/ha-makeover/" className="text-[#C9A050] underline-offset-4 hover:underline">2 · Restore volume — HA Makeover →</Link>,
+      <Link key="endo" to="/treatments/laser-fibre-lift/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — Endolaser (Laser Fibre Lift) →</Link>,
+      <Link key="pdo" to="/treatments/pdo-threads/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — PDO Thread Lift →</Link>,
+      <Link key="hub" to="/treatments/non-surgical-facelift/" className="text-white/80 underline-offset-4 hover:underline">Mini Facelifts hub →</Link>,
+    ],
+  },
+};
+
 const categories: Category[] = [
   {
     id: "botox-aesthetic",
@@ -263,6 +289,7 @@ const categories: Category[] = [
           ],
         },
       },
+      nonSurgicalFaceliftCard,
       {
         title: "HA Makeover",
         tagline: "Hyaluronic Acid Makeover — your skin's best friend",
@@ -470,30 +497,7 @@ const categories: Category[] = [
           image: jawlineBaImg,
         },
       },
-      {
-        title: "Endolaser Lift",
-        tagline: "Laser fibre tightening",
-        href: "/treatments/laser-fibre-lift/",
-        bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]",
-        badge: "New",
-        flip: {
-          back: "Doctor-led dual-wavelength endolaser, a fibre passed beneath the skin to tighten the lower face and neck from within. Mapped, marked and delivered millimetre by millimetre. Real lift, no scalpel, single session.",
-          imagePosition: "top",
-          image: endolaserBaImg,
-        },
-      },
-      {
-        title: "PDO Threads",
-        tagline: "Cog · Mono lifting",
-        href: "/treatments/pdo-threads/",
-        bg: "bg-gradient-to-br from-amber-50 to-amber-200",
-        ink: "text-zinc-900",
-        flip: {
-          back: "Doctor-led PDO thread lifting, Cog threads anchor and reposition lax tissue along the jaw and cheek; Mono threads scaffold the dermis to stimulate collagen. A measured, suture-grade lift that restores the line without surgery.",
-          imagePosition: "top",
-          image: pdoThreadsBaImg,
-        },
-      },
+      nonSurgicalFaceliftCard,
     ],
   },
   {
