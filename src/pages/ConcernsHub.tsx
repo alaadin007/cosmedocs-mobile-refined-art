@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 import { concernsData } from "@/data/concernsData";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 
 /* ------------------------------------------------------------------ */
 /*  Card styling — mirrors Home3 "Apple-style" dark luxury cards       */
@@ -599,6 +600,13 @@ const ConcernsHub = () => {
         <section className="px-5 sm:px-8 py-16">
           <div className="max-w-5xl mx-auto">
             <SkinFoundationCTA variant="general" />
+          </div>
+        </section>
+
+        {/* Endolaser cross-promote — relevant to skin laxity / ageing concern */}
+        <section className="px-5 sm:px-8 pb-16">
+          <div className="max-w-5xl mx-auto">
+            <EndolaserSpotlight variant="inline" />
           </div>
         </section>
 

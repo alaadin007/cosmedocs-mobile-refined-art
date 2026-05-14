@@ -6,6 +6,7 @@ import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
+import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
 import cheekBaPreview from "@/assets/1ml-cheek-fillers-before-after.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -553,6 +554,11 @@ const CheekFiller = () => {
                     ))}
                   </div>
                 </motion.div>
+              </section>
+
+              {/* Endolaser cross-promote — structural / lift adjacency */}
+              <section>
+                <EndolaserSpotlight variant="inline" />
               </section>
 
               {/* FAQs */}
