@@ -74,7 +74,28 @@ const DrAhmedHaq = () => {
       ]
     },
     "url": "https://www.cosmedocs.com/team/dr-ahmed-haq",
-    "image": "https://www.cosmedocs.com/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png"
+    "image": "https://www.cosmedocs.com/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png",
+    "sameAs": [
+      "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+    ],
+    "subjectOf": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Investigating Gender Differences in Canadian Plastic Surgery Online Patient Education",
+        "author": "Chawla S, Mazhar L, Ding J, Faheem S, Haq AF, Khosa F",
+        "isPartOf": { "@type": "Periodical", "name": "Aesthetic Surgery Journal" },
+        "datePublished": "2022",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Disparities in pediatric clinical trials for acne vulgaris: A cross-sectional study",
+        "author": "Ding J, Haq AF, Joseph M, Khosa F",
+        "isPartOf": { "@type": "Periodical", "name": "Journal of the American Academy of Dermatology" },
+        "datePublished": "2022",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+      }
+    ]
   };
 
   return (
