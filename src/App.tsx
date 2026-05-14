@@ -232,6 +232,12 @@ const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
 const EndoliftSafety = lazy(() => import("./pages/endolift/EndoliftSafety"));
 const EndoliftRecovery = lazy(() => import("./pages/endolift/EndoliftRecovery"));
 const EndoliftDoubleChin = lazy(() => import("./pages/endolift/EndoliftDoubleChin"));
+const TearTroughAftercare = lazy(() => import("./pages/aftercare/TearTroughAftercare"));
+const TearTroughDissolving = lazy(() => import("./pages/aftercare/TearTroughDissolving"));
+const NoseFillerAftercare = lazy(() => import("./pages/aftercare/NoseFillerAftercare"));
+const NoseFillerDissolving = lazy(() => import("./pages/aftercare/NoseFillerDissolving"));
+const ChinFillerAftercare = lazy(() => import("./pages/aftercare/ChinFillerAftercare"));
+const ChinFillerDissolving = lazy(() => import("./pages/aftercare/ChinFillerDissolving"));
 const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
@@ -935,6 +941,18 @@ const App = () => {
                           <Route path="/treatments/endolift-london/recovery/" element={<EndoliftRecovery />} />
                           <Route path="/treatments/endolift-london/double-chin" element={<EndoliftDoubleChin />} />
                           <Route path="/treatments/endolift-london/double-chin/" element={<EndoliftDoubleChin />} />
+                          <Route path="/treatments/tear-trough-filler/aftercare" element={<TearTroughAftercare />} />
+                          <Route path="/treatments/tear-trough-filler/aftercare/" element={<TearTroughAftercare />} />
+                          <Route path="/treatments/tear-trough-filler/dissolving" element={<TearTroughDissolving />} />
+                          <Route path="/treatments/tear-trough-filler/dissolving/" element={<TearTroughDissolving />} />
+                          <Route path="/treatments/dermal-fillers/nose/aftercare" element={<NoseFillerAftercare />} />
+                          <Route path="/treatments/dermal-fillers/nose/aftercare/" element={<NoseFillerAftercare />} />
+                          <Route path="/treatments/dermal-fillers/nose/dissolving" element={<NoseFillerDissolving />} />
+                          <Route path="/treatments/dermal-fillers/nose/dissolving/" element={<NoseFillerDissolving />} />
+                          <Route path="/treatments/chin-filler/aftercare" element={<ChinFillerAftercare />} />
+                          <Route path="/treatments/chin-filler/aftercare/" element={<ChinFillerAftercare />} />
+                          <Route path="/treatments/chin-filler/dissolving" element={<ChinFillerDissolving />} />
+                          <Route path="/treatments/chin-filler/dissolving/" element={<ChinFillerDissolving />} />
                           <Route path="/botox-units-underarms-25-50-100" element={<UnderarmBotoxUnits />} />
                           <Route path="/botox-units-underarms-25-50-100/" element={<UnderarmBotoxUnits />} />
                           
