@@ -234,11 +234,18 @@ const categories: Category[] = [
         image: cosmeticUnitsImg,
         frontImage: cosmeticUnitsImg,
         flip: {
-          back: "The face is a mosaic of cosmetic units, forehead, temple, cheek, mid-face, jaw, lip, chin. Doctor-led aesthetics restores the bridge between units. Flow re-established. Architecture intact. Volume, returned, never bulk.",
+          back: "In youth, the skin flows seamlessly between each cosmetic unit — forehead, temple, cheek, mid-face, jaw, lip, chin — reading as one continuous surface. With time, volume loss, uneven tone and fine lines begin to break that flow, and the units start to show as separate islands. Doctor-led restoration, shown in the slides that follow, gently rebuilds the bridges between them. Continuity returned. Architecture intact. Never bulk.",
           imagePosition: "top",
           image: cosmeticUnitsImg,
           largeText: true,
           eyebrow: "Anatomy · The Map",
+          bullets: [
+            "Youth = seamless flow between units",
+            "Ageing = volume loss, tone shifts, lines fragment the face",
+            "Units start to read as separate, not one",
+            "Gentle restoration rebuilds the bridges (see next slides)",
+            "Continuity returned — never bulk, never overdone",
+          ],
         },
       },
       {
