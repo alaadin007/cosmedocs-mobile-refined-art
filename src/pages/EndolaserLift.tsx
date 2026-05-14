@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, AlertTriangle, Heart, ArrowRight, Zap } from "lucide-react";
+import { CheckCircle, AlertTriangle, Heart, ArrowRight, Zap, ShieldCheck, BadgeCheck, FileCheck } from "lucide-react";
 import endolaserHeroFace from "@/assets/endolaser-hero-face.jpg";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
