@@ -797,7 +797,7 @@ const EndolaserLift = () => {
                 className="md:col-span-5 md:col-start-1 mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none"
               >
                 <div className="relative rounded-2xl overflow-hidden ring-1 ring-[#C9A050]/20 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)] bg-black">
-                  <div className="aspect-[9/16] relative">
+                  <div className="aspect-video relative">
                     <video
                       src="/videos/endo-suisse.mp4"
                       autoPlay
