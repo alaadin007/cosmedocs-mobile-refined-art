@@ -59,7 +59,9 @@ type SubCard = {
   badge?: string;
   image?: string;
   frontImage?: string;
-  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string };
+  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: string[] };
+  /** When true, render `image` (or `flip.image`) as the card's front photo, suppressing the SVG mosaic. */
+  imageOnFront?: boolean;
   flipImages?: { src: string; alt: string }[];
   flipNote?: string;
 };
@@ -246,8 +248,17 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
         image: haMakeoverBaImg,
+        imageOnFront: true,
         flip: {
-          back: "A doctor-led architectural reset across cheeks, mid-face, jaw and chin, millimetre-by-millimetre, in a single signature appointment. Volume restored where time has taken it. Results that read as you, only rested.",
+          back: "Restoring continuity across the facial cosmetic units — forehead, temple, cheek, mid-face, jaw, chin and lip — in a single signature appointment. Architecture re-bridged, never bulked.",
+          largeText: true,
+          eyebrow: "The aim",
+          bullets: [
+            "Restore continuity between cosmetic units",
+            "Re-bridge volume lost to time, not add it",
+            "Doctor-led, millimetre-by-millimetre",
+            "Reads as you, only rested",
+          ],
         },
       },
       {
@@ -257,10 +268,18 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-amber-100 to-orange-200",
         ink: "text-zinc-900",
         image: cheekFillerBaImg,
+        imageOnFront: true,
         badge: "Mid-face",
         flip: {
-          back: "Architectural mid-face support, restoring the apex of the cheek to lift the lower face from above. Doctor-led millimetre placement on bone, never bulk. The result reads as restored youth, not added volume.",
-          imagePosition: "bottom",
+          back: "Architectural mid-face support — the apex of the cheek restored so the lower face lifts from above. The forward-projecting silhouette is what reads as youth, never volume.",
+          largeText: true,
+          eyebrow: "The aim",
+          bullets: [
+            "Re-establish a forward-projecting silhouette",
+            "Lift the lower face from above, not below",
+            "Bone-deep, on-periosteum placement",
+            "Restored youth, never added bulk",
+          ],
         },
       },
       {
@@ -269,10 +288,18 @@ const categories: Category[] = [
         href: "/treatments/jawline-filler/",
         bg: "bg-gradient-to-br from-zinc-800 to-zinc-950",
         badge: "Definition",
+        image: jowlJawlineBaImg,
+        imageOnFront: true,
         flip: {
-          back: "Doctor-led contouring along the mandibular border, softening the jowl, sharpening the angle and re-defining the chin-to-ear line. Bone-deep millimetre placement, never bulk.",
-          imagePosition: "top",
-          image: jowlJawlineBaImg,
+          back: "Doctor-led contouring along the mandibular border — softening the jowl, sharpening the angle and re-defining the chin-to-ear line. The lower face, lifted and re-drawn.",
+          largeText: true,
+          eyebrow: "The aim",
+          bullets: [
+            "Lift and soften the jowl",
+            "Sharpen the gonial angle",
+            "Re-draw the chin-to-ear line",
+            "Bone-deep placement, never bulk",
+          ],
         },
       },
       {
@@ -282,10 +309,18 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-rose-100 to-rose-300",
         ink: "text-zinc-900",
         badge: "Under-eye",
+        image: tearTroughBaImg,
+        imageOnFront: true,
         flip: {
-          back: "Doctor-led correction of the tear-trough hollow, softening shadows and restoring a rested, awake under-eye. Conservative dosing on the periosteum, never superficial. The result reads as sleep, not filler.",
-          imagePosition: "top",
-          image: tearTroughBaImg,
+          back: "Conservative correction of the tear-trough hollow — shadows softened, the eye reading rested rather than treated. On-bone dosing, never superficial.",
+          largeText: true,
+          eyebrow: "The aim",
+          bullets: [
+            "Soften under-eye shadow and hollow",
+            "Restore a rested, awake under-eye",
+            "On-periosteum, never superficial",
+            "Reads as sleep, not filler",
+          ],
         },
       },
       {
@@ -294,10 +329,18 @@ const categories: Category[] = [
         href: "/treatments/temple-filler/",
         bg: "bg-gradient-to-br from-neutral-200 to-neutral-400",
         ink: "text-zinc-900",
+        image: templeFillerBaImg,
+        imageOnFront: true,
         flip: {
-          back: "Doctor-led restoration of the temple hollow, re-establishing the upper-third scaffold that frames the brow and lifts the lateral face. Deep, on-bone placement with conservative volumes. The eye reads rested; the face reads structured, never filled.",
-          imagePosition: "top",
-          image: templeFillerBaImg,
+          back: "Re-establishing the upper-third scaffold — the temple hollow filled, the brow framed, the lateral face lifted. Deep, conservative volumes that read as structure, not filling.",
+          largeText: true,
+          eyebrow: "The aim",
+          bullets: [
+            "Re-establish the upper-third scaffold",
+            "Frame the brow, lift the lateral face",
+            "Deep, on-bone placement",
+            "Structured, never filled",
+          ],
         },
       },
       {
@@ -306,10 +349,18 @@ const categories: Category[] = [
         href: "/treatments/lip-fillers/",
         bg: "bg-gradient-to-br from-pink-200 to-rose-400",
         ink: "text-zinc-900",
+        image: lipAnatomyImg,
+        imageOnFront: true,
         flip: {
-          back: "Your choice, natural or bold. Doctor-led lip artistry mapped to anatomy: Cupid's bow, vermilion border, tubercles, Glogau-Klein points. Millimetre dosing for a result that reads as you, never overdone.",
-          imagePosition: "top",
-          image: lipAnatomyImg,
+          back: "Replace the volume time has taken, or shape the lip you've always wanted — natural or bold, all in your control. Doctor-led artistry mapped to the anatomy of your mouth.",
+          largeText: true,
+          eyebrow: "The aim",
+          bullets: [
+            "Replace volume lost to age",
+            "Or build size, shape and definition",
+            "Mapped to Cupid's bow, vermilion, tubercles",
+            "Natural or bold — all in your control",
+          ],
         },
       },
     ],
@@ -891,7 +942,20 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             </>
           )}
 
-          {!card.frontImage && <CardWatermark title={card.title} dark={!card.ink} />}
+          {!card.frontImage && card.imageOnFront && (card.image || card.flip?.image) && (
+            <>
+              <img
+                src={card.image ?? card.flip?.image}
+                alt={card.title}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+              <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
+            </>
+          )}
+
+          {!card.frontImage && !card.imageOnFront && <CardWatermark title={card.title} dark={!card.ink} />}
 
           {card.badge && (
             <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
@@ -900,7 +964,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           )}
 
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
-            {!card.frontImage && (
+            {!card.frontImage && !card.imageOnFront && (
               <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
                 {card.title === "HA Makeover"
                   ? <HADropletFace />
@@ -909,11 +973,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                     : <FaceMark area={card.title} />}
               </div>
             )}
-            {card.frontImage && <div className="flex-1" />}
+            {(card.frontImage || card.imageOnFront) && <div className="flex-1" />}
             <div>
-              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : "Signature"}</p>
-              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
-              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage || card.imageOnFront ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : (card.imageOnFront ? (card.badge ?? "Signature") : "Signature")}</p>
+              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage || card.imageOnFront ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
+              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage || card.imageOnFront ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
               <link itemProp="url" href={`https://www.cosmedocs.com${card.href}`} />
               {(card.image || card.frontImage) && <meta itemProp="image" content={card.frontImage ?? card.image ?? ""} />}
             </div>
@@ -967,8 +1031,18 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             {/* Caption */}
             <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
               <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
-              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-2xl sm:text-3xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
+              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
               <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>{card.flip?.back}</p>
+              {card.flip?.bullets && card.flip.bullets.length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {card.flip.bullets.map((b) => (
+                    <li key={b} className="flex gap-2.5 text-[13px] sm:text-[14px] text-white/90 leading-snug">
+                      <span aria-hidden className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#C9A050] shrink-0" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               <Link
                 to={card.href}
                 className={`mt-auto pt-3 inline-flex items-center gap-1.5 font-semibold text-[#C9A050] pointer-events-auto self-start ${card.flip?.largeText ? "text-sm" : "text-[13px]"}`}
