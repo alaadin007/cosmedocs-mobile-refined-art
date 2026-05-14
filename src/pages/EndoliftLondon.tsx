@@ -85,6 +85,22 @@ const EndoliftLondon = () => {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="flex-1 min-w-0 space-y-14">
 
+              {/* Sub-cluster nav */}
+              <div className="grid sm:grid-cols-3 gap-3">
+                {[
+                  { t: "Is Endolift safe?", d: "Risks, side effects, candidacy.", to: "/treatments/endolift-london/safety/" },
+                  { t: "Recovery & aftercare", d: "Day-by-day timeline + checklist.", to: "/treatments/endolift-london/recovery/" },
+                  { t: "Endolift for double chin", d: "Submental fat + skin in one session.", to: "/treatments/endolift-london/double-chin/" },
+                ].map((c) => (
+                  <Link key={c.t} to={c.to} className="group block border border-[#C9A050]/25 rounded-xl bg-[#C9A050]/[0.04] hover:border-[#C9A050]/60 transition-colors p-4">
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050]">In this cluster</div>
+                    <div className="mt-1 text-sm font-medium text-white">{c.t}</div>
+                    <div className="mt-1 text-xs text-white/55 leading-relaxed">{c.d}</div>
+                    <div className="mt-2 inline-flex items-center gap-1 text-xs text-[#C9A050]">Read <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></div>
+                  </Link>
+                ))}
+              </div>
+
               <div className="border border-[#C9A050]/30 rounded-2xl p-6 bg-[#C9A050]/[0.04]">
                 <h2 className="text-lg font-medium text-[#C9A050] mb-4">At a glance</h2>
                 <ul className="space-y-3 text-sm text-white/70">

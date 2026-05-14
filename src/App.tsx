@@ -229,6 +229,9 @@ const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymm
 const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
 const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
 const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
+const EndoliftSafety = lazy(() => import("./pages/endolift/EndoliftSafety"));
+const EndoliftRecovery = lazy(() => import("./pages/endolift/EndoliftRecovery"));
+const EndoliftDoubleChin = lazy(() => import("./pages/endolift/EndoliftDoubleChin"));
 const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
@@ -925,6 +928,13 @@ const App = () => {
                           <Route path="/russian-lips-vs-classic-lip-filler/" element={<RussianLipsVsClassic />} />
                           <Route path="/treatments/endolift-london" element={<EndoliftLondon />} />
                           <Route path="/treatments/endolift-london/" element={<EndoliftLondon />} />
+                          {/* Phase 3b — Endolift sub-cluster (Dr Hass response) */}
+                          <Route path="/treatments/endolift-london/safety" element={<EndoliftSafety />} />
+                          <Route path="/treatments/endolift-london/safety/" element={<EndoliftSafety />} />
+                          <Route path="/treatments/endolift-london/recovery" element={<EndoliftRecovery />} />
+                          <Route path="/treatments/endolift-london/recovery/" element={<EndoliftRecovery />} />
+                          <Route path="/treatments/endolift-london/double-chin" element={<EndoliftDoubleChin />} />
+                          <Route path="/treatments/endolift-london/double-chin/" element={<EndoliftDoubleChin />} />
                           <Route path="/botox-units-underarms-25-50-100" element={<UnderarmBotoxUnits />} />
                           <Route path="/botox-units-underarms-25-50-100/" element={<UnderarmBotoxUnits />} />
                           
