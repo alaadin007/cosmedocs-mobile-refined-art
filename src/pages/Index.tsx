@@ -12,6 +12,7 @@ import smartAestheticsHero from "@/assets/smart-aesthetics-hero.jpg";
 // Lazy load heavy components
 const PopularTreatments = lazy(() => import("@/components/PopularTreatments"));
 const BeforeAfterCarousel = lazy(() => import("@/components/BeforeAfterCarousel"));
+const EndolaserSpotlight = lazy(() => import("@/components/EndolaserSpotlight"));
 const AestheticAnalysisWizard = lazy(() => import("@/components/AestheticAnalysisWizard"));
 const RaffleChatbot = lazy(() => import("@/components/RaffleChatbot"));
 const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowledgeInitializer"));
@@ -279,6 +280,10 @@ const Index = () => {
           {/* Lazy loaded sections */}
           <Suspense fallback={<SectionPlaceholder />}>
             <PopularTreatments />
+          </Suspense>
+
+          <Suspense fallback={<SectionPlaceholder />}>
+            <EndolaserSpotlight />
           </Suspense>
 
           <Suspense fallback={<SectionPlaceholder />}>
