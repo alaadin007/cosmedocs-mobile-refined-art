@@ -217,6 +217,7 @@ const CheekFiller1vs2vs4ml = lazy(() => import("./pages/CheekFiller1vs2vs4ml"));
 const MasseterBotoxUnitsDosage = lazy(() => import("./pages/MasseterBotoxUnitsDosage"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
+const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
 const HowLongDoesBotoxLast = lazy(() => import("./pages/HowLongDoesBotoxLast"));
@@ -903,6 +904,8 @@ const App = () => {
                           <Route path="/russian-lips-vs-classic-lip-filler/" element={<RussianLipsVsClassic />} />
                           <Route path="/treatments/endolift-london" element={<EndoliftLondon />} />
                           <Route path="/treatments/endolift-london/" element={<EndoliftLondon />} />
+                          <Route path="/botox-units-underarms-25-50-100" element={<UnderarmBotoxUnits />} />
+                          <Route path="/botox-units-underarms-25-50-100/" element={<UnderarmBotoxUnits />} />
                           
 {/* ============================================= */}
                           {/* BEFORE & AFTER GALLERIES - New nested routes */}
