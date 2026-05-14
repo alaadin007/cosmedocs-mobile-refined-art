@@ -67,6 +67,8 @@ type SubCard = {
   badge?: string;
   image?: string;
   frontImage?: string;
+  /** How the front image should fit. Defaults to 'contain' (preserves ratio); use 'cover' for editorial face crops. */
+  frontImageFit?: "cover" | "contain";
   /** Multiple front images rendered as a collage, ratios preserved. Overrides single front image. */
   frontImages?: { src: string; alt?: string }[];
   flip?: { back: React.ReactNode; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: React.ReactNode[] };
