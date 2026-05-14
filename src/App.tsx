@@ -225,6 +225,10 @@ const CheekFiller1vs2vs4ml = lazy(() => import("./pages/CheekFiller1vs2vs4ml"));
 const MasseterBotoxUnitsDosage = lazy(() => import("./pages/MasseterBotoxUnitsDosage"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
+const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
+const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
+const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
+const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
 const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
@@ -558,6 +562,15 @@ const App = () => {
                           <Route path="/concerns/anti-ageing/" element={<NonSurgicalFacelift />} />
                           <Route path="/concerns/non-surgical-facelift" element={<NonSurgicalFacelift />} />
                           <Route path="/concerns/non-surgical-facelift/" element={<NonSurgicalFacelift />} />
+                          {/* Phase 3 — competitive concern pages (Dr Hass response) */}
+                          <Route path="/concerns/thin-lips-asymmetric-lips" element={<ThinLipsAsymmetricLips />} />
+                          <Route path="/concerns/thin-lips-asymmetric-lips/" element={<ThinLipsAsymmetricLips />} />
+                          <Route path="/concerns/square-jaw-wide-jaw" element={<SquareJawWideJaw />} />
+                          <Route path="/concerns/square-jaw-wide-jaw/" element={<SquareJawWideJaw />} />
+                          <Route path="/concerns/dark-circles-vs-eye-bags" element={<DarkCirclesVsEyeBags />} />
+                          <Route path="/concerns/dark-circles-vs-eye-bags/" element={<DarkCirclesVsEyeBags />} />
+                          <Route path="/blog/endolift-explained" element={<EndoliftExplained />} />
+                          <Route path="/blog/endolift-explained/" element={<EndoliftExplained />} />
                           <Route path="/medical" element={<MedicalHub />} />
                           <Route path="/medical/" element={<MedicalHub />} />
                           <Route path="/safety" element={<Safety />} />
