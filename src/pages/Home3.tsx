@@ -1077,9 +1077,9 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           </button>
 
           <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
-            {/* Image, hidden when flip.largeText so the back is text-led */}
-            {!card.flip?.largeText && (card.flip?.image ?? card.image) && (
-              <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
+            {/* Before/after image — always shown so the back proves the result */}
+            {(card.flip?.image ?? card.image) && (
+              <div className={`relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 flex ${card.flip?.largeText ? "basis-[34%] h-[34%]" : "basis-[44%] h-[44%]"}`}>
                 <div
                   aria-hidden
                   className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
