@@ -1292,6 +1292,19 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
 
   const columns: Column[] = [
     { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
+    {
+      kind: "philosophy",
+      eyebrow: "The Aim",
+      title: "Why we treat.",
+      intro: "Botox, the doctor-led way — preventative, not performative.",
+      bullets: [
+        { h: "Soften hyperkinetic expression", s: "Calm overactive muscles, never freeze the face." },
+        { h: "Stop the deep crease", s: "Prevent repeated folding that breaks collagen." },
+        { h: "Give skin time to heal", s: "Allow the dermis to repair between expressions." },
+        { h: "Preserve the natural you", s: "Neutral, unexaggerated, unmistakably yours." },
+      ],
+      footer: "Invisible art. Always your way.",
+    },
     { kind: "list", cards: otherAreas, eyebrow: "Refined Areas", title: "Every other detail" },
   ];
 
