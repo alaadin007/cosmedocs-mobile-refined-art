@@ -1415,18 +1415,26 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
   const frontInner = (
     <>
       {card.image && (
-        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 z-0 w-full h-full object-cover" />
+        <img
+          src={card.image}
+          alt={card.title}
+          loading="lazy"
+          className="absolute inset-0 z-0 w-full h-full object-cover [filter:brightness(0.86)_saturate(0.88)]"
+        />
       )}
       {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
+      {/* Softer top vignette + gentler bottom scrim for legibility without weight */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/25 via-black/0 to-black/40 pointer-events-none" />
+      {/* Subtle gold inset ring — quiet, in keeping with Volume Returned */}
+      <div className="absolute inset-0 z-[1] rounded-[28px] ring-1 ring-inset ring-[#C9A050]/10 pointer-events-none" />
       {card.badge && (
-        <span className={`absolute top-5 left-5 z-[2] text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/70 text-white"}`}>
+        <span className={`absolute top-5 left-5 z-[2] text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full backdrop-blur ${inkLight ? "bg-white/15 text-white" : "bg-black/55 text-white/90"}`}>
           {card.badge}
         </span>
       )}
       <div className="absolute inset-0 z-[2] p-7 sm:p-9 flex flex-col justify-end pointer-events-none">
-        <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%]">{card.title}</h3>
-        <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/80"} max-w-[88%]`}>{card.tagline}</p>
+        <h3 className="font-serif text-3xl sm:text-4xl leading-[1.05] tracking-tight max-w-[88%] text-white/95">{card.title}</h3>
+        <p className={`mt-2 text-sm sm:text-base ${card.ink ? "text-zinc-700" : "text-white/70"} max-w-[88%]`}>{card.tagline}</p>
       </div>
     </>
   );
