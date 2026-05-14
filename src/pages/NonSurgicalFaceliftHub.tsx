@@ -5,6 +5,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { ArrowRight, Shield, Award, Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ClientReviews from "@/components/ClientReviews";
+import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 
 const bookingUrl = "https://med.as.me/harleystreet";
 
@@ -215,6 +216,11 @@ const NonSurgicalFaceliftHub = () => {
               </Button>
             </motion.div>
           </div>
+        </section>
+
+        {/* ── ENDOLASER SPOTLIGHT ── */}
+        <section className="px-6 max-w-4xl mx-auto">
+          <EndolaserSpotlight variant="inline" />
         </section>
 
         {/* ── PHILOSOPHY ── */}

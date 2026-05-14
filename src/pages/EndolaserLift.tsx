@@ -244,7 +244,7 @@ const EndolaserLift = () => {
                 { label: 'Treatments', path: '/treatments/' },
                 { label: 'Mini Facelifts', path: '/treatments/non-surgical-facelift/' }
               ]}
-              currentPage="Laser Fibre Lift"
+              currentPage="Endolaser (Laser Fibre Lift)"
             />
 
             <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
@@ -256,8 +256,9 @@ const EndolaserLift = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white/90 leading-[1.1] tracking-tight mb-6">
-                    Laser Fibre Lift{" "}
-                    <span className="text-[#C9A050] font-light">London</span>
+                    Endolaser{" "}
+                    <span className="text-[#C9A050] font-light">(Laser Fibre Lift)</span>
+                    <span className="block text-white/60 text-2xl md:text-3xl font-extralight mt-2">London</span>
                   </h1>
                   <p className="text-lg md:text-xl text-white/40 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
                     Minimally invasive endolaser face lift, skin tightening & fat reduction — for the jawline, jowls, chin, eyes and brows. Also known as Endolaser. Performed by the Lead Trainer at the Harley Street Institute.
