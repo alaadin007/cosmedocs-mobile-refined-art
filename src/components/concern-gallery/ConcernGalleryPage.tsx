@@ -11,7 +11,7 @@ import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 export interface ConcernGalleryImage {
   src: string;
   alt: string;
-  caption: React.ReactNode;
+  caption: string | React.ReactElement;
 }
 
 export interface ConcernGalleryConfig {
