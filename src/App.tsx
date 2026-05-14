@@ -54,6 +54,14 @@ const BeforeAfterHub = lazy(() => import("./pages/BeforeAfterHub"));
 const BeforeAfterBotox = lazy(() => import("./pages/BeforeAfterBotox"));
 const BeforeAfterDermalFillers = lazy(() => import("./pages/BeforeAfterDermalFillers"));
 const BeforeAfterLipFiller = lazy(() => import("./pages/BeforeAfterLipFiller"));
+const ConcernLipFillerSubtle = lazy(() => import("./pages/concern-galleries/LipFillerSubtle"));
+const ConcernMarionetteLines = lazy(() => import("./pages/concern-galleries/MarionetteLinesFiller"));
+const ConcernCheekFillerMidFace = lazy(() => import("./pages/concern-galleries/CheekFillerMidFace"));
+const ConcernUnderEyeTearTrough = lazy(() => import("./pages/concern-galleries/UnderEyeTearTrough"));
+const ConcernJawlineMale = lazy(() => import("./pages/concern-galleries/JawlineFillerMale"));
+const ConcernNoseJobPhotoFAQ = lazy(() => import("./pages/concern-galleries/NonSurgicalNoseJobPhotoFAQ"));
+const ConcernChinProfileBalance = lazy(() => import("./pages/concern-galleries/ChinProfileBalance"));
+const ConcernFillerCorrection = lazy(() => import("./pages/concern-galleries/FillerCorrectionDissolved"));
 const BeforeAfterNoseFiller = lazy(() => import("./pages/BeforeAfterNoseFiller"));
 const BeforeAfterSkinRejuvenation = lazy(() => import("./pages/BeforeAfterSkinRejuvenation"));
 const BeforeAfterBotoxMasseter = lazy(() => import("./pages/BeforeAfterBotoxMasseter"));
@@ -955,6 +963,24 @@ const App = () => {
                           {/* Legacy redirect: ha-makeover → dermal-fillers/full-face-makeover */}
                           <Route path="/before-after/ha-makeover" element={<Navigate to="/before-after/dermal-fillers/full-face-makeover/" replace />} />
                           <Route path="/before-after/ha-makeover/" element={<Navigate to="/before-after/dermal-fillers/full-face-makeover/" replace />} />
+
+                          {/* Concern-Sliced Gallery Pages (YFIOH competitive response) */}
+                          <Route path="/before-after/lip-filler-subtle" element={<ConcernLipFillerSubtle />} />
+                          <Route path="/before-after/lip-filler-subtle/" element={<ConcernLipFillerSubtle />} />
+                          <Route path="/before-after/marionette-lines-filler" element={<ConcernMarionetteLines />} />
+                          <Route path="/before-after/marionette-lines-filler/" element={<ConcernMarionetteLines />} />
+                          <Route path="/before-after/cheek-filler-mid-face" element={<ConcernCheekFillerMidFace />} />
+                          <Route path="/before-after/cheek-filler-mid-face/" element={<ConcernCheekFillerMidFace />} />
+                          <Route path="/before-after/under-eye-tear-trough" element={<ConcernUnderEyeTearTrough />} />
+                          <Route path="/before-after/under-eye-tear-trough/" element={<ConcernUnderEyeTearTrough />} />
+                          <Route path="/before-after/jawline-filler-male" element={<ConcernJawlineMale />} />
+                          <Route path="/before-after/jawline-filler-male/" element={<ConcernJawlineMale />} />
+                          <Route path="/before-after/non-surgical-nose-job-photo-faq" element={<ConcernNoseJobPhotoFAQ />} />
+                          <Route path="/before-after/non-surgical-nose-job-photo-faq/" element={<ConcernNoseJobPhotoFAQ />} />
+                          <Route path="/before-after/chin-profile-balance" element={<ConcernChinProfileBalance />} />
+                          <Route path="/before-after/chin-profile-balance/" element={<ConcernChinProfileBalance />} />
+                          <Route path="/before-after/filler-correction-dissolved" element={<ConcernFillerCorrection />} />
+                          <Route path="/before-after/filler-correction-dissolved/" element={<ConcernFillerCorrection />} />
                           
                           {/* Blog & Content Routes */}
                           <Route path="/botox-faqs" element={<BotoxFAQs />} />
