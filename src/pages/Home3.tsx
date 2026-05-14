@@ -497,30 +497,7 @@ const categories: Category[] = [
           image: jawlineBaImg,
         },
       },
-      {
-        title: "Endolaser Lift",
-        tagline: "Laser fibre tightening",
-        href: "/treatments/laser-fibre-lift/",
-        bg: "bg-gradient-to-br from-[#C9A050] to-[#8a6d2c]",
-        badge: "New",
-        flip: {
-          back: "Doctor-led dual-wavelength endolaser, a fibre passed beneath the skin to tighten the lower face and neck from within. Mapped, marked and delivered millimetre by millimetre. Real lift, no scalpel, single session.",
-          imagePosition: "top",
-          image: endolaserBaImg,
-        },
-      },
-      {
-        title: "PDO Threads",
-        tagline: "Cog · Mono lifting",
-        href: "/treatments/pdo-threads/",
-        bg: "bg-gradient-to-br from-amber-50 to-amber-200",
-        ink: "text-zinc-900",
-        flip: {
-          back: "Doctor-led PDO thread lifting, Cog threads anchor and reposition lax tissue along the jaw and cheek; Mono threads scaffold the dermis to stimulate collagen. A measured, suture-grade lift that restores the line without surgery.",
-          imagePosition: "top",
-          image: pdoThreadsBaImg,
-        },
-      },
+      nonSurgicalFaceliftCard,
     ],
   },
   {
