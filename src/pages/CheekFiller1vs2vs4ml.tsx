@@ -17,6 +17,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import DosageSidebar from "@/components/dosage/DosageSidebar";
+import heroImg from "@/assets/dosage/cheek-volume-hero.jpg";
 
 const FAQ = [
   {
