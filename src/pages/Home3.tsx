@@ -40,6 +40,13 @@ import botoxForeheadBaImg from "@/assets/home3-botox-forehead-ba.jpg";
 import templeFillerBaImg from "@/assets/home3-temple-filler-ba.jpg";
 import lipFillerBaImg from "@/assets/home3-lip-filler-ba.jpg";
 import lipAnatomyImg from "@/assets/home3-lip-gallery.jpg";
+import frontHaImg from "@/assets/home3-front-ha-makeover.jpg";
+import frontCheekImg from "@/assets/home3-front-cheek.jpg";
+import frontJawImg from "@/assets/home3-front-jaw.jpg";
+import frontUndereyeImg from "@/assets/home3-front-undereye.jpg";
+import frontTempleImg from "@/assets/home3-front-temple.jpg";
+import frontLipsImg from "@/assets/home3-front-lips.jpg";
+import teoxaneAwardImg from "@/assets/teoxane-award-cosmedocs.png";
 import cosmeticUnitsImg from "@/assets/home3-cosmetic-units-gold.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
@@ -60,6 +67,8 @@ type SubCard = {
   badge?: string;
   image?: string;
   frontImage?: string;
+  /** How the front image should fit. Defaults to 'contain' (preserves ratio); use 'cover' for editorial face crops. */
+  frontImageFit?: "cover" | "contain";
   /** Multiple front images rendered as a collage, ratios preserved. Overrides single front image. */
   frontImages?: { src: string; alt?: string }[];
   flip?: { back: React.ReactNode; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: React.ReactNode[] };
@@ -253,14 +262,16 @@ const categories: Category[] = [
       },
       {
         title: "HA Makeover",
-        tagline: "Continuity, restored across every unit",
+        tagline: "Hyaluronic Acid Makeover — your skin's best friend",
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
         image: haMakeoverBaImg,
-        imageOnFront: true,
+        frontImage: frontHaImg,
+        frontImageFit: "cover",
         flip: {
           back: "When ageing fragments the face, the cosmetic units stop reading as one. The HA Makeover gently re-bridges every unit — forehead, temple, cheek, mid-face, jaw, chin, lip — so the face flows again as a single, continuous surface.",
+          image: haMakeoverBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           bullets: [
@@ -276,13 +287,14 @@ const categories: Category[] = [
         title: "Cheek Filler",
         tagline: "The keystone unit, re-bridged",
         href: "/treatments/cheek-filler/",
-        bg: "bg-gradient-to-br from-amber-100 to-orange-200",
-        ink: "text-zinc-900",
+        bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a1810] to-[#3a2010]",
         image: cheekFillerBaImg,
-        imageOnFront: true,
+        frontImage: frontCheekImg,
+        frontImageFit: "cover",
         badge: "Mid-face",
         flip: {
           back: "The cheek is the keystone unit — when it deflates, the mid-face collapses and the units below lose their bridge. Restoring its forward-projecting silhouette lifts the lower face from above and re-establishes continuity through the centre of the face.",
+          image: cheekFillerBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           bullets: [
@@ -298,12 +310,14 @@ const categories: Category[] = [
         title: "Jowl & Jawline",
         tagline: "The lower border, redrawn",
         href: "/treatments/jawline-filler/",
-        bg: "bg-gradient-to-br from-zinc-800 to-zinc-950",
+        bg: "bg-gradient-to-br from-[#0e0e0e] via-[#1a1410] to-[#2a1c10]",
         badge: "Definition",
         image: jowlJawlineBaImg,
-        imageOnFront: true,
+        frontImage: frontJawImg,
+        frontImageFit: "cover",
         flip: {
           back: "When the mandibular border softens, the jaw unit blurs into the neck and the lower face loses its frame. Doctor-led contouring re-draws the chin-to-ear line, lifts the jowl and restores continuity between the cheek, jaw and chin units.",
+          image: jowlJawlineBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           bullets: [
@@ -319,13 +333,14 @@ const categories: Category[] = [
         title: "Tear Trough",
         tagline: "The eye unit, re-flowed into the cheek",
         href: "/treatments/tear-trough-filler/",
-        bg: "bg-gradient-to-br from-rose-100 to-rose-300",
-        ink: "text-zinc-900",
+        bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a1810] to-[#3a2010]",
         badge: "Under-eye",
         image: tearTroughBaImg,
-        imageOnFront: true,
+        frontImage: frontUndereyeImg,
+        frontImageFit: "cover",
         flip: {
           back: "In youth, the eye unit transitions seamlessly into the cheek. Volume loss breaks that bridge into a shadow — the tear-trough hollow. Conservative on-bone correction softens the step so the eye reads rested, not treated.",
+          image: tearTroughBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           bullets: [
@@ -341,12 +356,13 @@ const categories: Category[] = [
         title: "Temple Filler",
         tagline: "The upper-third scaffold, restored",
         href: "/treatments/temple-filler/",
-        bg: "bg-gradient-to-br from-neutral-200 to-neutral-400",
-        ink: "text-zinc-900",
+        bg: "bg-gradient-to-br from-[#0e0e0e] via-[#1a1410] to-[#2a1c10]",
         image: templeFillerBaImg,
-        imageOnFront: true,
+        frontImage: frontTempleImg,
+        frontImageFit: "cover",
         flip: {
           back: "When the temple hollows, the upper-third unit collapses and the brow, cheek and lateral face lose their scaffold. Re-establishing temple volume rebuilds the bridge between forehead, brow and mid-face — continuity restored from the top down.",
+          image: templeFillerBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           bullets: [
@@ -362,12 +378,13 @@ const categories: Category[] = [
         title: "Lip Filler",
         tagline: "The lip unit, in your control",
         href: "/treatments/lip-fillers/",
-        bg: "bg-gradient-to-br from-pink-200 to-rose-400",
-        ink: "text-zinc-900",
+        bg: "bg-gradient-to-br from-[#1a0e10] via-[#2a1418] to-[#3a1c20]",
         image: lipAnatomyImg,
-        imageOnFront: true,
+        frontImage: frontLipsImg,
+        frontImageFit: "cover",
         flip: {
           back: "Lips lose volume and definition as the perioral unit ages, breaking the flow between nose, lip and chin. Doctor-led artistry replaces what time has taken — or builds the lip you've always wanted — restoring continuity through the lower face.",
+          image: lipAnatomyImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           bullets: [
@@ -984,7 +1001,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 src={card.frontImage}
                 alt={card.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-contain"
+                className={`absolute inset-0 w-full h-full ${card.frontImageFit === "cover" ? "object-cover" : "object-contain"}`}
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
               <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
@@ -1060,9 +1077,9 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           </button>
 
           <div className={`absolute inset-0 z-10 p-4 sm:p-5 flex flex-col min-h-0 gap-3 pointer-events-none ${card.flip?.imagePosition === "bottom" ? "flex-col-reverse" : ""}`}>
-            {/* Image, hidden when flip.largeText so the back is text-led */}
-            {!card.flip?.largeText && (card.flip?.image ?? card.image) && (
-              <div className="relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 basis-[44%] h-[44%] flex">
+            {/* Before/after image — always shown so the back proves the result */}
+            {(card.flip?.image ?? card.image) && (
+              <div className={`relative rounded-2xl p-[2px] overflow-hidden shadow-[0_20px_60px_-20px_rgba(201,160,80,0.55)] flex-shrink-0 flex ${card.flip?.largeText ? "basis-[34%] h-[34%]" : "basis-[44%] h-[44%]"}`}>
                 <div
                   aria-hidden
                   className="absolute -inset-[60%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,rgba(201,160,80,0.0)_25%,#C9A050_45%,#F0D78C_50%,#C9A050_55%,rgba(201,160,80,0.0)_75%,transparent_100%)]"
@@ -1183,6 +1200,44 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
           <p className="text-white/50 text-xs mt-1">View all</p>
         </Link>
       </div>
+
+      {category.id === "fillers-anti-ageing" && (
+        <div className="px-5 sm:px-8 max-w-7xl mx-auto mt-8">
+          <div className="rounded-[28px] border border-[#C9A050]/25 bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 shadow-[0_30px_80px_-40px_rgba(201,160,80,0.4)]">
+            <div className="shrink-0 w-32 h-40 sm:w-40 sm:h-52 rounded-2xl overflow-hidden bg-black/60 ring-1 ring-[#C9A050]/30 flex items-center justify-center">
+              <img
+                src={teoxaneAwardImg}
+                alt="Teoxane Outstanding Clinic Awards — Cosmedocs Winner Q2 2017"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex-1 min-w-0 text-center md:text-left">
+              <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#C9A050] mb-2">Pedigree · Product Story</p>
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#F0D78C] leading-tight">
+                Swiss science. French artistry. American innovation.
+              </h3>
+              <p className="mt-3 text-white/75 text-sm sm:text-[15px] leading-relaxed max-w-2xl">
+                We use only top-tier hyaluronic acid from regulated Swiss, French and US laboratories — Teoxane, Juvéderm, Restylane, Belotero, Filorga and Vivacy. Cosmedocs was awarded Teoxane's <span className="text-[#F0D78C] font-medium">Outstanding Clinic Award (Q2 2017)</span> for safety, results and ongoing training.
+              </p>
+              <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
+                {[
+                  { flag: "🇨🇭", label: "Teoxane · Swiss" },
+                  { flag: "🇨🇭", label: "Restylane · Swiss" },
+                  { flag: "🇫🇷", label: "Filorga · French" },
+                  { flag: "🇫🇷", label: "Vivacy · French" },
+                  { flag: "🇺🇸", label: "Juvéderm · USA" },
+                  { flag: "🇩🇪", label: "Belotero · German" },
+                ].map((b) => (
+                  <span key={b.label} className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-white/85 bg-white/5 border border-[#C9A050]/25 rounded-full px-3 py-1.5">
+                    <span aria-hidden>{b.flag}</span>{b.label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.section>
   );
 };
