@@ -10,7 +10,8 @@ const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 const rotatingTaglines = [
   "Harley Street Doctors • Since 2007",
   "Advanced Aesthetic Medicine",
-  "Doctor-Led, Regulated Care"
+  "Doctor-Led, Regulated Care",
+  "Free AI Face Scan ↗"
 ];
 
 const treatmentCategories = [
