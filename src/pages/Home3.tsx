@@ -174,6 +174,31 @@ const botoxAesthetic: SubCard[] = [
   },
 ];
 
+/* ---------- Shared: Non-Surgical Facelift journey card ----------------- */
+/* One card, multiple rows. Front tells the patient journey (relax → restore → tighten); back routes to each component treatment. */
+const nonSurgicalFaceliftCard: SubCard = {
+  title: "Non-Surgical Facelift",
+  tagline: "Relax · Restore · Tighten — your three-step lift",
+  href: "/treatments/non-surgical-facelift/",
+  bg: "bg-gradient-to-br from-[#1a1410] via-[#2a1d10] to-[#3a2810]",
+  badge: "Signature Journey",
+  image: artNonSurgicalFaceliftImg,
+  frontImage: artNonSurgicalFaceliftImg,
+  frontImageFit: "cover",
+  flip: {
+    eyebrow: "The Journey · Mild to lifted",
+    largeText: true,
+    back: "Rather than choosing one treatment, we sequence three. Botox Nefertiti relaxes the muscles pulling the lower face down. HA Makeover restores the volume that holds the architecture up — the keystone of the lift. Endolaser or PDO threads tighten the skin from within. Doctor-led, doctor-sequenced, in your time.",
+    bullets: [
+      <Link key="nef" to="/treatments/botox/" className="text-[#C9A050] underline-offset-4 hover:underline">1 · Relax — Nefertiti Botox →</Link>,
+      <Link key="ha" to="/treatments/ha-makeover/" className="text-[#C9A050] underline-offset-4 hover:underline">2 · Restore volume — HA Makeover →</Link>,
+      <Link key="endo" to="/treatments/laser-fibre-lift/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — Endolaser (Laser Fibre Lift) →</Link>,
+      <Link key="pdo" to="/treatments/pdo-threads/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — PDO Thread Lift →</Link>,
+      <Link key="hub" to="/treatments/non-surgical-facelift/" className="text-white/80 underline-offset-4 hover:underline">Mini Facelifts hub →</Link>,
+    ],
+  },
+};
+
 const categories: Category[] = [
   {
     id: "botox-aesthetic",
