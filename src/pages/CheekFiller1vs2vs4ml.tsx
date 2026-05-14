@@ -214,6 +214,40 @@ const CheekFiller1vs2vs4ml = () => {
                 </div>
               </div>
 
+              {/* Anatomy */}
+              <div>
+                <h2 className="text-2xl font-extralight text-white mb-4">The Anatomy Behind the Volume</h2>
+                <p className="text-sm text-white/60 leading-relaxed mb-4">
+                  Midface ageing is three processes at once: bony resorption (the maxilla and zygomatic bones quietly thin from the late 20s), fat-pad atrophy (the deep medial cheek fat shrinks while superficial fat descends), and skin laxity (collagen turnover slows from the mid-30s). Cheek filler addresses the first two directly and the third indirectly — by lifting overlying tissue.
+                </p>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  This is why "how much" is the wrong question alone. A 32-year-old with mild fat-pad atrophy needs 1ml in the deep medial fat compartment. A 52-year-old with significant bony resorption needs 3–4ml on the periosteum, placed in vectors that match what the maxilla once gave the face.
+                </p>
+              </div>
+
+              {/* When wrong answer */}
+              <div>
+                <h2 className="text-2xl font-extralight text-white mb-4">When Cheek Filler Is the Wrong Answer</h2>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  Patients with significant skin laxity get a poor return on investment from filler alone — they need lifting (PDO threads, <Link to="/treatments/endolift-london/" className="text-[#C9A050] hover:underline">Endolift</Link>, or surgical consideration) before or alongside volume. Patients with severe nasolabial folds driven by skin sag, not midface descent, will be disappointed if they expect filler to erase them. We would rather lose a one-off booking than treat a face badly.
+                </p>
+              </div>
+
+              {/* Pricing */}
+              <div>
+                <h2 className="text-2xl font-extralight text-white mb-4">Cheek Filler Pricing at CosmeDocs (UK)</h2>
+                <ul className="space-y-2 text-sm text-white/60 leading-relaxed list-disc list-inside mb-4">
+                  <li>1ml cheek filler — from £390</li>
+                  <li>2ml cheek filler — from £700</li>
+                  <li>3ml cheek filler — from £990</li>
+                  <li>4ml cheek filler — from £1,250</li>
+                  <li>Full HA Makeover (8 / 11-point lift) — from £2,400</li>
+                </ul>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  All cheek filler at CosmeDocs uses branded HA fillers (Juvéderm Voluma, RHA 4, Restylane Lyft). We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
+                </p>
+              </div>
+
               <div>
                 <h2 className="text-2xl font-extralight text-white mb-4">Common Questions</h2>
                 <Accordion type="single" collapsible className="border-t border-white/[0.06]">
