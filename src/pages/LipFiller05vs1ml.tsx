@@ -17,6 +17,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import DosageSidebar from "@/components/dosage/DosageSidebar";
+import heroImg from "@/assets/dosage/lip-volume-hero.jpg";
 
 const FAQ = [
   {
@@ -134,6 +135,20 @@ const LipFiller05vs1ml = () => {
           </div>
         </section>
 
+        {/* Editorial hero image */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
+            <img
+              src={heroImg}
+              alt="A single droplet of hyaluronic acid filler on polished black marble — CosmeDocs Harley Street lip filler precision dosing"
+              width={1536}
+              height={896}
+              className="w-full max-w-3xl rounded-2xl border border-white/10"
+            />
+            <p className="text-xs text-white/20 mt-2 italic">A single drop — the discipline of stopping at the right volume</p>
+          </motion.div>
+        </div>
+
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="flex-1 min-w-0 space-y-14">
@@ -226,6 +241,31 @@ const LipFiller05vs1ml = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/* Aftercare */}
+              <div>
+                <h2 className="text-2xl font-extralight text-white mb-4">What Happens in the First 14 Days</h2>
+                <p className="text-sm text-white/60 leading-relaxed mb-4">
+                  Lip filler swelling follows a predictable pattern that is largely independent of volume. Both 0.5ml and 1ml inflate visibly in the first 24–72 hours; the difference is degree. Half a millilitre often looks "like 1ml" for the first 48 hours; 1ml can briefly look closer to "1.5ml" before settling. This is why we ask patients to wait a full two weeks before judging the final result.
+                </p>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  Day 1–3: visible swelling, possible small bruises. Day 3–7: swelling resolves, lips feel slightly firm. Day 7–14: tissue softens and the final shape becomes apparent. Patients who panic at day three and book additional product almost always regret it at week three.
+                </p>
+              </div>
+
+              {/* Pricing */}
+              <div>
+                <h2 className="text-2xl font-extralight text-white mb-4">Lip Filler Pricing at CosmeDocs (UK)</h2>
+                <ul className="space-y-2 text-sm text-white/60 leading-relaxed list-disc list-inside mb-4">
+                  <li>0.5ml lip filler — from £290</li>
+                  <li>1ml lip filler — from £390</li>
+                  <li>Russian Lip technique (1ml) — from £450</li>
+                  <li>Lip dissolving (Hyalase) — from £180</li>
+                </ul>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  All treatments use branded HA fillers from Allergan, Galderma or Teoxane and are doctor-led. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
+                </p>
               </div>
 
               {/* FAQ */}
