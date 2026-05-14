@@ -1007,7 +1007,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           )}
 
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
-            {!card.frontImage && !card.imageOnFront && (
+            {!card.frontImage && !card.frontImages && !card.imageOnFront && (
               <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
                 {card.title === "HA Makeover"
                   ? <HADropletFace />
@@ -1016,11 +1016,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                     : <FaceMark area={card.title} />}
               </div>
             )}
-            {(card.frontImage || card.imageOnFront) && <div className="flex-1" />}
+            {(card.frontImage || card.frontImages || card.imageOnFront) && <div className="flex-1" />}
             <div>
-              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage || card.imageOnFront ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : (card.imageOnFront ? (card.badge ?? "Signature") : "Signature")}</p>
-              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage || card.imageOnFront ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
-              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage || card.imageOnFront ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage || card.frontImages || card.imageOnFront ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : ((card.frontImages || card.imageOnFront) ? (card.badge ?? "Signature") : "Signature")}</p>
+              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage || card.frontImages || card.imageOnFront ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
+              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage || card.frontImages || card.imageOnFront ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
               <link itemProp="url" href={`https://www.cosmedocs.com${card.href}`} />
               {(card.image || card.frontImage) && <meta itemProp="image" content={card.frontImage ?? card.image ?? ""} />}
             </div>
