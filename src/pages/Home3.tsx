@@ -1392,6 +1392,36 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
               </div>
             );
           }
+          if (col.kind === "philosophy") {
+            return (
+              <div
+                key={idx}
+                className={`shrink-0 ${widthStack} ${colHeight} rounded-[28px] bg-gradient-to-b from-[#F0D78C] via-[#E8C97A] to-[#C9A050] text-zinc-900 shadow-[0_30px_60px_-30px_rgba(201,160,80,0.6)] flex flex-col p-6 sm:p-7`}
+              >
+                <p className="text-[10px] uppercase tracking-[0.24em] text-zinc-900/70 mb-2">{col.eyebrow}</p>
+                <h3 className="font-serif text-2xl sm:text-[28px] leading-[1.05] tracking-tight">{col.title}</h3>
+                <p className="mt-2 text-[13px] text-zinc-900/75 leading-relaxed">{col.intro}</p>
+                <ul className="mt-5 space-y-3.5 flex-1 overflow-y-auto pr-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                  {col.bullets.map((b, i) => (
+                    <li key={b.h} className="flex gap-3">
+                      <span className="mt-[6px] w-6 h-6 rounded-full bg-zinc-900 text-[#F0D78C] text-[10px] font-medium flex items-center justify-center shrink-0">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div className="min-w-0">
+                        <p className="font-serif text-[15px] leading-snug text-zinc-900">{b.h}</p>
+                        <p className="text-[12px] text-zinc-900/70 leading-snug mt-0.5">{b.s}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                {col.footer && (
+                  <p className="mt-5 pt-4 border-t border-zinc-900/15 text-[11px] uppercase tracking-[0.22em] text-zinc-900/70">
+                    {col.footer}
+                  </p>
+                )}
+              </div>
+            );
+          }
           // 2x2 grid for the 4 minor areas
           return (
             <div key={idx} className={`shrink-0 ${widthGrid} ${colHeight} grid grid-cols-2 grid-rows-2 gap-4 sm:gap-5`}>
