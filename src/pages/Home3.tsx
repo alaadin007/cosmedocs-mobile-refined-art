@@ -1262,7 +1262,8 @@ type Column =
   | { kind: "big"; card: SubCard }
   | { kind: "stack"; cards: SubCard[] }
   | { kind: "grid"; cards: SubCard[] }
-  | { kind: "list"; cards: SubCard[]; title?: string; eyebrow?: string };
+  | { kind: "list"; cards: SubCard[]; title?: string; eyebrow?: string }
+  | { kind: "philosophy"; eyebrow: string; title: string; intro: string; bullets: { h: string; s: string }[]; footer?: string };
 
 const BotoxAestheticSection = ({ category }: { category: Category }) => {
   const scroller = useRef<HTMLDivElement>(null);
