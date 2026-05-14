@@ -2260,24 +2260,53 @@ const Home3 = () => {
           />
         </section>
 
-        {/* Quick Links moved to bottom of page */}
+        {/* Section navigator — sticky jump bar to each treatment row */}
+        <nav
+          aria-label="Treatment categories"
+          className="sticky top-16 z-30 border-y border-[#C9A050]/15 bg-black/80 backdrop-blur supports-[backdrop-filter]:bg-black/55"
+        >
+          <div className="max-w-7xl mx-auto px-3 sm:px-6">
+            <ul className="flex gap-1.5 sm:gap-2 overflow-x-auto py-2.5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+              {quickLinks.map((q) => (
+                <li key={q.id} className="shrink-0">
+                  <a
+                    href={`#${q.id}`}
+                    onClick={handleQuickJump(q.id)}
+                    className="inline-flex items-center text-[11px] sm:text-xs uppercase tracking-[0.18em] text-white/70 hover:text-[#F0D78C] border border-white/10 hover:border-[#C9A050]/50 bg-white/[0.03] hover:bg-[#C9A050]/10 rounded-full px-3.5 py-1.5 transition"
+                  >
+                    {q.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
 
-        {/* Category sections */}
-        <div className="border-t border-white/5 mt-8">
-          {categories.map((cat, i) => (
-            <div key={cat.id} className="border-b border-white/5">
-              {cat.id === "botox-aesthetic" ? (
-                <BotoxAestheticSection category={cat} />
-              ) : cat.id === "botox-medical" ? (
-                <MedicalBotoxSection category={cat} />
-              ) : cat.id === "flawless-skin" ? (
-                <FlawlessSkinSection category={cat} />
-              ) : (
-                <Row category={cat} index={i} />
-              )}
-              
-            </div>
-          ))}
+        {/* Category sections — alternating tonal bands break the visual rhythm */}
+        <div className="border-t border-white/5">
+          {categories.map((cat, i) => {
+            // Cycle: black → warm charcoal → near-black with gold sheen → cool slate
+            const bands = [
+              "bg-black",
+              "bg-[#0e0c0a] [background-image:radial-gradient(ellipse_at_top,rgba(201,160,80,0.05),transparent_60%)]",
+              "bg-[#111111]",
+              "bg-[#0a0d12] [background-image:radial-gradient(ellipse_at_bottom_right,rgba(201,160,80,0.04),transparent_55%)]",
+            ];
+            const band = bands[i % bands.length];
+            return (
+              <div key={cat.id} className={`${band} border-b border-white/5`}>
+                {cat.id === "botox-aesthetic" ? (
+                  <BotoxAestheticSection category={cat} />
+                ) : cat.id === "botox-medical" ? (
+                  <MedicalBotoxSection category={cat} />
+                ) : cat.id === "flawless-skin" ? (
+                  <FlawlessSkinSection category={cat} />
+                ) : (
+                  <Row category={cat} index={i} />
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* Closing motto */}
