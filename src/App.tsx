@@ -212,6 +212,11 @@ const CosmeDerm = lazy(() => import("./pages/CosmeDerm"));
 const BotoxCostLondon = lazy(() => import("./pages/BotoxCostLondon"));
 const BotoxCostUK = lazy(() => import("./pages/BotoxCostUK"));
 const BotoxUnitsExplained = lazy(() => import("./pages/BotoxUnitsExplained"));
+const LipFiller05vs1ml = lazy(() => import("./pages/LipFiller05vs1ml"));
+const CheekFiller1vs2vs4ml = lazy(() => import("./pages/CheekFiller1vs2vs4ml"));
+const MasseterBotoxUnitsDosage = lazy(() => import("./pages/MasseterBotoxUnitsDosage"));
+const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
+const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
 const HowLongDoesBotoxLast = lazy(() => import("./pages/HowLongDoesBotoxLast"));
@@ -887,6 +892,17 @@ const App = () => {
                           <Route path="/how-long-does-botox-last/" element={<HowLongDoesBotoxLast />} />
                           <Route path="/cheap-botox-vs-expensive" element={<CheapBotoxVsExpensive />} />
                           <Route path="/cheap-botox-vs-expensive/" element={<CheapBotoxVsExpensive />} />
+                          {/* Dosage & Volume Cluster — competitive response to Dr Hass Clinic */}
+                          <Route path="/lip-filler-0-5ml-vs-1ml" element={<LipFiller05vs1ml />} />
+                          <Route path="/lip-filler-0-5ml-vs-1ml/" element={<LipFiller05vs1ml />} />
+                          <Route path="/cheek-filler-1ml-vs-2ml-vs-4ml" element={<CheekFiller1vs2vs4ml />} />
+                          <Route path="/cheek-filler-1ml-vs-2ml-vs-4ml/" element={<CheekFiller1vs2vs4ml />} />
+                          <Route path="/masseter-botox-units-dosage" element={<MasseterBotoxUnitsDosage />} />
+                          <Route path="/masseter-botox-units-dosage/" element={<MasseterBotoxUnitsDosage />} />
+                          <Route path="/russian-lips-vs-classic-lip-filler" element={<RussianLipsVsClassic />} />
+                          <Route path="/russian-lips-vs-classic-lip-filler/" element={<RussianLipsVsClassic />} />
+                          <Route path="/treatments/endolift-london" element={<EndoliftLondon />} />
+                          <Route path="/treatments/endolift-london/" element={<EndoliftLondon />} />
                           
 {/* ============================================= */}
                           {/* BEFORE & AFTER GALLERIES - New nested routes */}
