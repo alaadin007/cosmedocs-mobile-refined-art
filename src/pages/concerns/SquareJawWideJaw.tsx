@@ -72,12 +72,12 @@ export default function SquareJawWideJaw() {
         <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
           <h2 className="text-3xl sm:text-4xl font-extralight">Your treatment options</h2>
           <div className="mt-8 grid md:grid-cols-2 gap-5">
-            <Link to="/treatments/botox/masseter/" className="group block border border-white/10 rounded-2xl p-6 hover:border-[#C9A050]/60 transition-colors">
+            <Link to="/treatments/masseter-botox/" className="group block border border-white/10 rounded-2xl p-6 hover:border-[#C9A050]/60 transition-colors">
               <h3 className="font-medium text-lg">Masseter Botox (Jaw Slimming)</h3>
               <p className="mt-2 text-sm text-white/60 leading-relaxed">25–50 units per side. Visible slimming at 3–8 weeks. Cosmetic primary intent.</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm text-[#C9A050] font-medium">See protocol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
             </Link>
-            <Link to="/treatments/bruxism/" className="group block border border-white/10 rounded-2xl p-6 hover:border-[#C9A050]/60 transition-colors">
+            <Link to="/treatments/bruxism-botox/" className="group block border border-white/10 rounded-2xl p-6 hover:border-[#C9A050]/60 transition-colors">
               <h3 className="font-medium text-lg">Bruxism (Clenching / Grinding)</h3>
               <p className="mt-2 text-sm text-white/60 leading-relaxed">Same injection, medical primary intent. For tooth chipping, jaw pain and tension headaches.</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm text-[#C9A050] font-medium">See protocol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
