@@ -1205,10 +1205,10 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 </div>
               </div>
             ) : (
-              <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
-                <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
-                <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
-                <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>
+              <div className="flex-1 min-h-0 flex flex-col justify-start overflow-y-auto overscroll-contain pointer-events-auto pr-1">
+                <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[10px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
+                <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-2xl sm:text-4xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
+                <p className={`mt-2 text-white/85 max-w-md ${card.flip?.largeText ? "text-[13px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>
                   {typeof card.flip?.back === "string" ? renderGlossaryText(card.flip.back) : card.flip?.back}
                 </p>
                 {card.flip?.bullets && card.flip.bullets.length > 0 && (
