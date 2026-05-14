@@ -778,6 +778,70 @@ const EndolaserLift = () => {
           </div>
         </div>
 
+        {/* ═══════════════════════════════════════════
+            PATIENT TESTIMONIAL — TREATMENT PROCESS
+        ═══════════════════════════════════════════ */}
+        <section className="relative py-16 md:py-24 px-4 sm:px-6 bg-black overflow-hidden">
+          {/* Subtle gold ambience */}
+          <div className="absolute -top-24 right-0 w-[420px] h-[420px] bg-[#C9A050]/[0.06] rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[320px] h-[320px] bg-[#C9A050]/[0.04] rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-6xl mx-auto relative">
+            <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+              {/* Video — contained, portrait-ish, offset (not full width) */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="md:col-span-5 md:col-start-1 mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none"
+              >
+                <div className="relative rounded-2xl overflow-hidden ring-1 ring-[#C9A050]/20 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)] bg-black">
+                  <div className="aspect-[9/16] relative">
+                    <video
+                      src="/videos/endo-suisse.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      controls
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/15 pointer-events-none rounded-2xl" />
+                  </div>
+                </div>
+                <p className="mt-3 text-[10px] tracking-[0.25em] uppercase text-[#C9A050]/80 text-center md:text-left">
+                  Verified patient · treatment day
+                </p>
+              </motion.div>
+
+              {/* Quote */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="md:col-span-7"
+              >
+                <p className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] mb-4">
+                  In her own words
+                </p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extralight text-white/90 leading-tight">
+                  "Honestly — <span className="text-[#C9A050] font-light">it was painless.</span>"
+                </h2>
+                <p className="mt-5 text-sm md:text-base text-white/65 font-light leading-relaxed max-w-xl">
+                  A patient describes the Endolaser treatment process — not the result, but the experience itself. Calm, controlled, comfortable from start to finish under local anaesthesia.
+                </p>
+                <div className="mt-6 flex items-center gap-3 text-xs text-white/40 uppercase tracking-wider">
+                  <div className="w-8 h-px bg-[#C9A050]/40" />
+                  <span>Treatment day · Harley Street</span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-20 px-6 bg-gradient-to-b from-black to-black/95">
           <div className="max-w-3xl mx-auto text-center">
