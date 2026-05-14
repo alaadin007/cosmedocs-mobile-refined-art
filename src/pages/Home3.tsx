@@ -71,7 +71,7 @@ type SubCard = {
   frontImageFit?: "cover" | "contain";
   /** Multiple front images rendered as a collage, ratios preserved. Overrides single front image. */
   frontImages?: { src: string; alt?: string }[];
-  flip?: { back: React.ReactNode; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: React.ReactNode[] };
+  flip?: { back: React.ReactNode; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: React.ReactNode[]; slides?: { eyebrow?: string; title?: string; body: string }[] };
   /** When true, render `image` (or `flip.image`) as the card's front photo, suppressing the SVG mosaic. */
   imageOnFront?: boolean;
   flipImages?: { src: string; alt: string }[];
