@@ -241,6 +241,7 @@ const EndoliftLondon = () => {
                 <h3 className="text-xs uppercase tracking-wider text-white/40 mb-4">Continue reading</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
+                    { label: "Endolaser Brow Lift (Non-Surgical)", path: "/treatments/eyebrow-lift-endolaser/" },
                     { label: "PDO Threads — Cogged & Mono", path: "/non-surgical-facelift/" },
                     { label: "HA Makeover (8/11-Point Lift)", path: "/ha-makeover/" },
                     { label: "Mini Facelifts Hub", path: "/non-surgical-facelift-hub/" },

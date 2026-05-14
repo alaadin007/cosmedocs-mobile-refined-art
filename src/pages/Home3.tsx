@@ -194,6 +194,7 @@ const nonSurgicalFaceliftCard: SubCard = {
       <Link key="ha" to="/treatments/ha-makeover/" className="text-[#C9A050] underline-offset-4 hover:underline">2 · Restore volume — HA Makeover →</Link>,
       <Link key="endo" to="/treatments/laser-fibre-lift/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — Endolaser (Laser Fibre Lift) →</Link>,
       <Link key="pdo" to="/treatments/pdo-threads/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — PDO Thread Lift →</Link>,
+      <Link key="brow" to="/treatments/eyebrow-lift-endolaser/" className="text-[#C9A050] underline-offset-4 hover:underline">+ Endolaser Brow Lift (non-surgical) →</Link>,
       <Link key="hub" to="/treatments/non-surgical-facelift/" className="text-white/80 underline-offset-4 hover:underline">Mini Facelifts hub →</Link>,
     ],
   },
@@ -482,6 +483,7 @@ const categories: Category[] = [
           back: "Doctor-led liquid rhinoplasty, straightening the bridge, refining the tip, rebalancing the profile in minutes, no surgery. This patient came to us after a surgical rhinoplasty had left an irregularity; we corrected it with millimetre filler placement.",
           imagePosition: "top",
           image: noseBaImg,
+          largeText: true,
         },
       },
       {
@@ -495,6 +497,7 @@ const categories: Category[] = [
           back: "Doctor-led mandibular contouring, sharpening the gonial angle, lengthening the ramus and lifting the lower face. Filler on bone for structure, PCL threads for soft-tissue support. Definition that reads as bone, never bulk.",
           imagePosition: "top",
           image: jawlineBaImg,
+          largeText: true,
         },
       },
       nonSurgicalFaceliftCard,
