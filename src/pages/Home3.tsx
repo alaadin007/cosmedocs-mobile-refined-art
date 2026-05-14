@@ -942,7 +942,20 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             </>
           )}
 
-          {!card.frontImage && <CardWatermark title={card.title} dark={!card.ink} />}
+          {!card.frontImage && card.imageOnFront && (card.image || card.flip?.image) && (
+            <>
+              <img
+                src={card.image ?? card.flip?.image}
+                alt={card.title}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+              <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
+            </>
+          )}
+
+          {!card.frontImage && !card.imageOnFront && <CardWatermark title={card.title} dark={!card.ink} />}
 
           {card.badge && (
             <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
@@ -951,7 +964,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           )}
 
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
-            {!card.frontImage && (
+            {!card.frontImage && !card.imageOnFront && (
               <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
                 {card.title === "HA Makeover"
                   ? <HADropletFace />
@@ -960,11 +973,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                     : <FaceMark area={card.title} />}
               </div>
             )}
-            {card.frontImage && <div className="flex-1" />}
+            {(card.frontImage || card.imageOnFront) && <div className="flex-1" />}
             <div>
-              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : "Signature"}</p>
-              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
-              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
+              <p className={`text-[10px] uppercase tracking-[0.24em] mb-2 ${card.frontImage || card.imageOnFront ? "text-[#C9A050]" : card.ink ? "text-zinc-900/70" : "text-white/80"}`}>{card.frontImage ? "Cosmetic Units" : (card.imageOnFront ? (card.badge ?? "Signature") : "Signature")}</p>
+              <h3 itemProp="name" className={`font-serif leading-[1.05] tracking-tight ${card.frontImage || card.imageOnFront ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-3xl sm:text-4xl"}`}>{card.title}</h3>
+              <p itemProp="description" className={`mt-2 text-sm ${card.frontImage || card.imageOnFront ? "text-white/80" : card.ink ? "text-zinc-700" : "text-white/75"}`}>{card.tagline}</p>
               <link itemProp="url" href={`https://www.cosmedocs.com${card.href}`} />
               {(card.image || card.frontImage) && <meta itemProp="image" content={card.frontImage ?? card.image ?? ""} />}
             </div>
