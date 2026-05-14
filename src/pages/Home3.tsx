@@ -59,6 +59,8 @@ type SubCard = {
   badge?: string;
   image?: string;
   frontImage?: string;
+  /** Multiple front images rendered as a collage, ratios preserved. Overrides single front image. */
+  frontImages?: { src: string; alt?: string }[];
   flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: string[] };
   /** When true, render `image` (or `flip.image`) as the card's front photo, suppressing the SVG mosaic. */
   imageOnFront?: boolean;
