@@ -289,8 +289,8 @@ const categories: Category[] = [
           ],
         },
       },
+      nonSurgicalFaceliftCard,
       {
-        title: "HA Makeover",
         tagline: "Hyaluronic Acid Makeover — your skin's best friend",
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
