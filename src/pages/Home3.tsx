@@ -1001,7 +1001,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 src={card.frontImage}
                 alt={card.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-contain"
+                className={`absolute inset-0 w-full h-full ${card.frontImageFit === "cover" ? "object-cover" : "object-contain"}`}
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
               <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
