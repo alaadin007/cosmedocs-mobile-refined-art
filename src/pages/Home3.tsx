@@ -1131,30 +1131,95 @@ const FlipCard = ({ card }: { card: SubCard }) => {
               </div>
             )}
 
-            {/* Caption */}
-            <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
-              <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
-              <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
-              <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>
-                {typeof card.flip?.back === "string" ? renderGlossaryText(card.flip.back) : card.flip?.back}
-              </p>
-              {card.flip?.bullets && card.flip.bullets.length > 0 && (
-                <ul className="mt-4 space-y-2">
-                  {card.flip.bullets.map((b) => (
-                    <li key={typeof b === "string" ? b : String(b)} className="flex gap-2.5 text-[13px] sm:text-[14px] text-white/90 leading-snug">
-                      <span aria-hidden className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#C9A050] shrink-0" />
-                      <span>{typeof b === "string" ? renderGlossaryText(b) : b}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <Link
-                to={card.href}
-                className={`mt-auto pt-3 inline-flex items-center gap-1.5 font-semibold text-[#C9A050] pointer-events-auto self-start ${card.flip?.largeText ? "text-sm" : "text-[13px]"}`}
+            {/* Caption: carousel mode if slides provided, otherwise static */}
+            {slides && slideCount > 0 ? (
+              <div
+                className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden pointer-events-auto"
+                onTouchStart={onTouchStart}
+                onTouchEnd={onTouchEnd}
               >
-                Discover {card.title} <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
+                <div className="flex items-center justify-between mb-1.5">
+                  <p className="uppercase tracking-[0.24em] text-[#C9A050] text-[11px] sm:text-xs">
+                    {slides[slideIdx].eyebrow ?? card.flip?.eyebrow}
+                  </p>
+                  <span className="text-[10px] tracking-[0.2em] text-white/50 font-mono">
+                    {String(slideIdx + 1).padStart(2, "0")} / {String(slideCount).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="font-serif leading-[1.05] tracking-tight text-2xl sm:text-3xl text-[#F0D78C]">
+                  {slides[slideIdx].title ?? card.title}
+                </h3>
+                <p className="mt-2 text-white/85 max-w-md text-[14px] sm:text-[15px] leading-relaxed flex-1 overflow-hidden">
+                  {renderGlossaryText(slides[slideIdx].body)}
+                </p>
+
+                {/* Controls */}
+                <div className="mt-3 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-1.5">
+                    {slides.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => setSlideIdx(i)}
+                        aria-label={`Go to step ${i + 1}`}
+                        className={`h-1.5 rounded-full transition-all ${i === slideIdx ? "w-6 bg-[#C9A050]" : "w-1.5 bg-white/30 hover:bg-white/50"}`}
+                      />
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={goPrev}
+                      aria-label="Previous step"
+                      className="w-8 h-8 rounded-full border border-[#C9A050]/40 text-[#C9A050] flex items-center justify-center hover:bg-[#C9A050]/10 transition"
+                    >
+                      <ArrowUpRight className="w-3.5 h-3.5 -rotate-[135deg]" />
+                    </button>
+                    {slideIdx === slideCount - 1 ? (
+                      <Link
+                        to={card.href}
+                        className="inline-flex items-center gap-1.5 px-3 h-8 rounded-full bg-[#C9A050] text-black text-[12px] font-semibold hover:scale-[1.03] transition"
+                      >
+                        Discover <ArrowUpRight className="w-3.5 h-3.5" />
+                      </Link>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={goNext}
+                        aria-label="Next step"
+                        className="w-8 h-8 rounded-full bg-[#C9A050] text-black flex items-center justify-center hover:scale-[1.03] transition"
+                      >
+                        <ArrowUpRight className="w-3.5 h-3.5 rotate-45" />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
+                <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
+                <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
+                <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>
+                  {typeof card.flip?.back === "string" ? renderGlossaryText(card.flip.back) : card.flip?.back}
+                </p>
+                {card.flip?.bullets && card.flip.bullets.length > 0 && (
+                  <ul className="mt-4 space-y-2">
+                    {card.flip.bullets.map((b) => (
+                      <li key={typeof b === "string" ? b : String(b)} className="flex gap-2.5 text-[13px] sm:text-[14px] text-white/90 leading-snug">
+                        <span aria-hidden className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#C9A050] shrink-0" />
+                        <span>{typeof b === "string" ? renderGlossaryText(b) : b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <Link
+                  to={card.href}
+                  className={`mt-auto pt-3 inline-flex items-center gap-1.5 font-semibold text-[#C9A050] pointer-events-auto self-start ${card.flip?.largeText ? "text-sm" : "text-[13px]"}`}
+                >
+                  Discover {card.title} <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
