@@ -1,70 +1,79 @@
-## Goal
 
-Rebuild **/concerns** to look and feel exactly like the Home3 page sections in the screenshot: dark luxury theme, gold accents, one horizontal-scrolling Apple-style card row per concern indication, with deeper SEO content hidden behind expandable sections / visually-suppressed prose blocks.
+# Competitive Response Plan — Dr Hass Clinic
 
-## What changes
+Goal: close a 3× UK organic traffic gap (987 → 3,000+/mo) in 3–6 months by attacking three content gaps. We do not touch backlinks (our 1,624 clean referring domains stay our moat).
 
-### 1. Extract shared card primitives (refactor)
-Currently `Row`, `FlipCard`, `TreatmentCard`, `TileCard`, `CardWatermark`, plus `Category` / `SubCard` types live inside `src/pages/Home3.tsx`. Move them into a new module so `/concerns` (and any future page) can reuse the exact same look:
+## Phase 1 — Dosage & Volume Cluster (Weeks 1–4)
 
-```
-src/components/cards/AppleCardRow.tsx       (Row + types)
-src/components/cards/TreatmentCard.tsx      (TreatmentCard + FlipCard + TileCard + watermark)
-src/components/cards/types.ts               (Category, SubCard, FlipSpec)
-```
+Patient-question long-form articles, doctor-led, luxury dark theme (matches `BotoxUnitsExplained.tsx` pattern). Each ~1,800–2,200 words, FAQSchema, MedicalWebPage JSON-LD, sidebar with quick-reference dosing tables.
 
-Home3.tsx is updated to import from these modules. No visual change to the homepage.
+| New page | Target query | Steals from |
+|---|---|---|
+| `/lip-filler-0-5ml-vs-1ml/` | "0.5ml vs 1ml lip filler" | 30.33% of his traffic |
+| `/cheek-filler-1ml-vs-2ml-vs-4ml/` | "how much cheek filler do I need" | 1.93% |
+| `/masseter-botox-units-dosage/` | "masseter botox how many units" | 0.67% |
+| `/russian-lips-vs-classic-lip-filler/` | "russian lip vs classic" | 0.58% |
+| `/tear-trough-filler-1ml-explained/` | "how much tear trough filler" | adjacent |
+| `/jaw-filler-how-much-ml/` | "jaw filler ml" | adjacent |
 
-### 2. New /concerns page architecture
+Editorial angle: doctor-led, "what we actually recommend at consultation", honest under-/over-treatment warnings, 3D anatomy callouts, before/after gallery cross-links, pricing pillar links. Differentiates from his thin blog by pairing dose with anatomy + outcome.
 
-`src/pages/ConcernsHub.tsx` is rewritten as a Home3-style page:
+Internal linking: each new article links bidirectionally to `/treatments/botox/`, `/treatments/dermal-fillers/`, the relevant before/after gallery, and the relevant concern page in `/concerns/`.
+
+## Phase 2 — Endolift Authority Page (Weeks 3–5)
+
+One conversion-grade page targeting the entire "endolift" category he currently owns (#1–#6, AS 15).
+
+- Route: `/treatments/endolift-london/`
+- Spec: follows Laser Fibre Lift memory (dual-wavelength "Endolaser" terminology) and partner-logic CQC strings
+- Layout: authority-page-layout-standard (2-column, sticky gold sidebar)
+- Modules: What it is · Wavelengths explained · Candidacy · Procedure walk-through · Recovery · Comparison vs PDO Threads / Mini-Facelift · Pricing · FAQ (10 Qs incl. "is endolift safe", "endolift vs hifu", "how long does endolift last") · Doctor bio · Real cases
+- Supporting blog (week 5): `/blog/endolift/is-endolift-safe/` — direct head-to-head with his #2.
+
+## Phase 3 — Aftercare & Timeline Pages (Weeks 4–8)
+
+Per-treatment recovery pages — cheap to write, high intent, strong dwell. Template-driven.
+
+- `/aftercare/lip-filler-swelling-timeline/`
+- `/aftercare/tear-trough-filler-swelling-timeline/`
+- `/aftercare/cheek-filler-recovery/`
+- `/aftercare/jaw-filler-recovery/`
+- `/aftercare/botox-aftercare-24-hours/`
+- `/aftercare/masseter-botox-recovery/`
+- `/aftercare/profhilo-aftercare/`
+- `/aftercare/polynucleotides-aftercare/`
+
+Each: day-by-day timeline graphic, do/don't checklist, "when to call us", FAQSchema, link back to treatment + before/after.
+
+## Technical Foundation (Week 1, parallel)
+
+1. New `DosageArticleLayout.tsx` component — reuses `BotoxUnitsSidebar` pattern with per-treatment quick-reference table.
+2. New `AftercareLayout.tsx` component — timeline + checklist primitives.
+3. Add all 18+ routes to `App.tsx` and `public/sitemap-blog.xml` / `sitemap-treatments.xml`.
+4. Add `_redirects` 301s if any older thin pages exist on these slugs.
+5. Update `mem://content/editorial-article-catalog` and create `mem://content/dosage-volume-cluster-strategy` memory leaf.
+
+## Sequencing
 
 ```text
-[ Hero ]           Black / gold. "Concerns. Read clinically."
-[ Row 1 ]          Facial Ageing & Volume Loss   (6–7 cards)
-[ Row 2 ]          Lines & Wrinkles              (5–6 cards)
-[ Row 3 ]          Skin Texture & Tone           (5–6 cards)
-[ Row 4 ]          Pigmentation & Melasma        (5 cards)
-[ Row 5 ]          Acne & Congestion             (5 cards)
-[ Row 6 ]          Eczema & Sensitive Skin       (4 cards)
-[ Row 7 ]          Hair Loss / Thinning          (4 cards)
-[ Row 8 ]          Skin Laxity & Sagging         (5 cards)
-[ Hidden SEO ]     ~600 words per concern in <ExpandableSection> + visually-condensed prose
-[ FAQ JSON-LD ]    expanded MedicalCondition + FAQPage schema
-[ Sidebar / CTA ]  consultation block (kept)
+Week 1: Tech foundation + lip 0.5ml vs 1ml (highest-value first)
+Week 2: Cheek 1/2/4ml + Masseter units
+Week 3: Russian vs Classic + Endolift London page
+Week 4: Tear trough ml + Jaw ml + Endolift safety blog
+Weeks 5–8: 8 aftercare pages, 2 per week
 ```
 
-Each card maps to an existing treatment route already in `concernsData`. Two "feature" cards per row use the `flip` variant (front photo, back clinical copy) — same as Masseter / Calf cards on the homepage.
+## Success Metrics
 
-### 3. SEO depth (visible + supplementary)
+- Rank top-5 on at least 4 of 6 dosage queries within 90 days
+- Endolift London page top-10 within 60 days
+- UK organic traffic 987 → 2,000+/mo within 90 days, 3,000+ within 180 days
 
-For each concern row the hero copy stays short (~40 words, AI-snippet-optimised). Below each row:
+## What we explicitly do NOT do
 
-- **Visible**: 60-word "what's happening" paragraph (already in `concernsData`)
-- **Expandable** (`<ExpandableSection>`): ~500–600 words of clinical depth — pathophysiology, treatment ladder, expected timelines, British-English doctor-led tone. Crawlable, collapsed by default.
-- Per-page `MedicalCondition` JSON-LD entries enriched with `signOrSymptom`, `possibleTreatment`, and `expectedPrognosis`.
-- Page-level `FAQPage` JSON-LD with 4–6 questions per concern.
-- Title / meta description / canonical via Helmet, unchanged URL `/concerns/`.
+- No Korean-style backlink farming.
+- No "injector"-style copy — all doctor-led, GMC-compliant, CQC strings on Harley Street pages.
+- No `sr-only` keyword stuffing — visible content only.
+- No new hubs — slot under existing `/treatments/botox/` and `/treatments/dermal-fillers/` clusters per service-consolidation memory.
 
-### 4. Imagery
-
-Reuse existing card imagery from Home3's botox/filler/skin sets where the treatment matches. Where a concern has no existing image (e.g. eczema, hair loss), use a single dark watermark card (`CardWatermark`) — no new image generation in this round to keep cost low. We can add bespoke imagery in a follow-up.
-
-## Out of scope
-
-- Translations (EN only this round).
-- Changing the underlying treatment routes or `concernsData` schema beyond adding image references.
-- Generating new AI imagery (can follow up).
-
-## Files touched
-
-- **New**: `src/components/cards/AppleCardRow.tsx`, `TreatmentCard.tsx`, `types.ts`
-- **Edited**: `src/pages/Home3.tsx` (imports only — zero visual change)
-- **Rewritten**: `src/pages/ConcernsHub.tsx`
-- **Edited**: `src/data/concernsData.ts` (add `image`, `tagline`, `flip` fields per treatment card)
-
-## Confirm before I build
-
-1. OK to refactor Home3 card components into shared modules (no visual change to homepage)?
-2. Reuse existing homepage imagery for now — generate bespoke concern imagery later?
-3. Should the page keep the existing right-hand `ConcernsHubSidebar` (treatments index) or drop it for the cleaner Home3-style single-column flow?
+Start with Phase 1, page 1 (lip 0.5ml vs 1ml) on approval.
