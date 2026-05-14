@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar, Users, CheckCircle, Heart, Gem } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import EndolaserSpotlight from '@/components/EndolaserSpotlight';
 
 export default function HAMakeover() {
   const seoData = generateSEOMetadata(
@@ -124,6 +125,11 @@ export default function HAMakeover() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Endolaser Spotlight */}
+        <section className="px-6 max-w-4xl mx-auto">
+          <EndolaserSpotlight variant="inline" />
         </section>
 
         {/* What Is an HA Makeover? */}
