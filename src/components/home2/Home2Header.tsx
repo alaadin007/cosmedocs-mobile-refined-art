@@ -61,7 +61,7 @@ const treatmentCategories = [
       { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
       { title: "HA Makeover", link: "/treatments/ha-makeover/" },
       { title: "PDO Thread Lift", link: "/treatments/pdo-threads/" },
-      { title: "Endolaser (Laser Fibre Lift)", link: "/treatments/endolaser/" },
+      { title: "Endolaser (Laser Fibre Lift)", link: "/treatments/endolaser/", isHighlight: true },
     ]
   },
   {
@@ -253,7 +253,7 @@ export default function Home2Header() {
                                 {category.label}
                               </span>
                               <div className="space-y-1">
-                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean }) => (
+                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                                   item.isOverview ? (
                                     <Link 
                                       key={item.link}
@@ -271,6 +271,16 @@ export default function Home2Header() {
                                       className="text-xs text-[#C9A050]/70 hover:text-[#C9A050] cursor-pointer pt-3 pb-1 block transition-colors font-medium tracking-wide"
                                     >
                                       {item.title} →
+                                    </Link>
+                                  ) : item.isHighlight ? (
+                                    <Link 
+                                      key={item.link}
+                                      to={item.link} 
+                                      onClick={() => setIsTreatmentsOpen(false)}
+                                      className="text-sm text-emerald-400 hover:text-emerald-300 cursor-pointer py-1.5 block transition-colors font-semibold inline-flex items-center gap-1.5"
+                                    >
+                                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                      {item.title}
                                     </Link>
                                   ) : (
                                     <Link 
@@ -475,7 +485,7 @@ export default function Home2Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden bg-white/5"
                       >
-                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean }) => (
+                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                           <Link
                             key={item.link}
                             to={item.link}
@@ -488,9 +498,12 @@ export default function Home2Header() {
                                 ? 'text-base text-white hover:text-[#C9A050] font-medium bg-white/5' 
                                 : item.isSubHeader 
                                   ? 'text-base text-[#C9A050]/80 hover:text-[#C9A050] font-medium' 
-                                  : 'text-base text-white/80 hover:text-white hover:bg-white/5'
+                                  : item.isHighlight
+                                    ? 'text-base text-emerald-400 hover:text-emerald-300 font-semibold'
+                                    : 'text-base text-white/80 hover:text-white hover:bg-white/5'
                             }`}
                           >
+                            {item.isHighlight && <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />}
                             {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
                           </Link>
                         ))}
