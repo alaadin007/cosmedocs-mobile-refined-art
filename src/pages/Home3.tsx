@@ -10,6 +10,7 @@ import DiscretionBadge from "@/components/DiscretionBadge";
 import { lazy, Suspense } from "react";
 const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowledgeInitializer"));
 import HADropletFace from "@/components/home3/HADropletFace";
+import { renderGlossaryText } from "@/components/home3/GlossaryTerm";
 const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
@@ -61,7 +62,7 @@ type SubCard = {
   frontImage?: string;
   /** Multiple front images rendered as a collage, ratios preserved. Overrides single front image. */
   frontImages?: { src: string; alt?: string }[];
-  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: string[] };
+  flip?: { back: React.ReactNode; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: React.ReactNode[] };
   /** When true, render `image` (or `flip.image`) as the card's front photo, suppressing the SVG mosaic. */
   imageOnFront?: boolean;
   flipImages?: { src: string; alt: string }[];
@@ -1081,13 +1082,15 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <div className="flex-1 min-h-0 flex flex-col justify-start overflow-hidden">
               <p className={`uppercase tracking-[0.24em] text-[#C9A050] mb-1.5 ${card.flip?.largeText ? "text-[11px] sm:text-xs" : "text-[9px]"}`}>{card.flip?.eyebrow ?? "Before · After"}</p>
               <h3 className={`font-serif leading-[1.05] tracking-tight ${card.flip?.largeText ? "text-3xl sm:text-4xl text-[#F0D78C]" : "text-xl sm:text-2xl"}`}>{card.title}</h3>
-              <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>{card.flip?.back}</p>
+              <p className={`mt-3 text-white/85 max-w-md ${card.flip?.largeText ? "text-[15px] sm:text-base leading-relaxed" : "text-[13px] leading-snug line-clamp-5 sm:line-clamp-6"}`}>
+                {typeof card.flip?.back === "string" ? renderGlossaryText(card.flip.back) : card.flip?.back}
+              </p>
               {card.flip?.bullets && card.flip.bullets.length > 0 && (
                 <ul className="mt-4 space-y-2">
                   {card.flip.bullets.map((b) => (
-                    <li key={b} className="flex gap-2.5 text-[13px] sm:text-[14px] text-white/90 leading-snug">
+                    <li key={typeof b === "string" ? b : String(b)} className="flex gap-2.5 text-[13px] sm:text-[14px] text-white/90 leading-snug">
                       <span aria-hidden className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#C9A050] shrink-0" />
-                      <span>{b}</span>
+                      <span>{typeof b === "string" ? renderGlossaryText(b) : b}</span>
                     </li>
                   ))}
                 </ul>
