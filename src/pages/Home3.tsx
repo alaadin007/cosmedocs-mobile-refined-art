@@ -902,7 +902,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
             {!card.frontImage && (
               <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
-                {card.title === "HA Makeover" ? <HADropletFace /> : <FaceMark area={card.title} />}
+                {card.title === "HA Makeover"
+                  ? <HADropletFace />
+                  : (card.title === "Volume, returned." || card.title === "Architecture of the face.")
+                    ? null
+                    : <FaceMark area={card.title} />}
               </div>
             )}
             {card.frontImage && <div className="flex-1" />}
