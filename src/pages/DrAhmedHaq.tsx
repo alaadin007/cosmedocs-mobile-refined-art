@@ -219,6 +219,55 @@ const DrAhmedHaq = () => {
           </div>
         </section>
 
+        {/* Published Research — E-E-A-T Authority */}
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-black/30 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Award className="h-6 w-6 text-yellow-400" />
+                  <h2 className="text-2xl font-semibold text-white">Peer-Reviewed Publications</h2>
+                </div>
+                <p className="text-gray-400 text-sm mb-6">
+                  Indexed on the U.S. National Library of Medicine (PubMed). A doctor-led clinic, anchored in published medical research.
+                </p>
+                <ul className="space-y-5">
+                  <li className="border-l-2 border-yellow-400/40 pl-5">
+                    <p className="text-white font-medium leading-snug">
+                      Investigating Gender Differences in Canadian Plastic Surgery Online Patient Education
+                    </p>
+                    <p className="text-gray-400 text-sm mt-1">
+                      Chawla S, Mazhar L, Ding J, Faheem S, <span className="text-yellow-400">Haq AF</span>, Khosa F. — <em>Aesthetic Surgery Journal</em>, 2022.
+                    </p>
+                  </li>
+                  <li className="border-l-2 border-yellow-400/40 pl-5">
+                    <p className="text-white font-medium leading-snug">
+                      Disparities in pediatric clinical trials for acne vulgaris: a cross-sectional study
+                    </p>
+                    <p className="text-gray-400 text-sm mt-1">
+                      Ding J, <span className="text-yellow-400">Haq AF</span>, Joseph M, Khosa F. — <em>Journal of the American Academy of Dermatology</em>, 2022.
+                    </p>
+                  </li>
+                </ul>
+                <a
+                  href="https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-7 text-yellow-400 hover:text-yellow-300 text-sm font-medium underline-offset-4 hover:underline"
+                >
+                  View publications on PubMed →
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Treatments Section */}
         <section className="py-16 bg-background">
           <div className="page-container">
