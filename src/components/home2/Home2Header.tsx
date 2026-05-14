@@ -485,7 +485,7 @@ export default function Home2Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden bg-white/5"
                       >
-                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean }) => (
+                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                           <Link
                             key={item.link}
                             to={item.link}
@@ -498,9 +498,12 @@ export default function Home2Header() {
                                 ? 'text-base text-white hover:text-[#C9A050] font-medium bg-white/5' 
                                 : item.isSubHeader 
                                   ? 'text-base text-[#C9A050]/80 hover:text-[#C9A050] font-medium' 
-                                  : 'text-base text-white/80 hover:text-white hover:bg-white/5'
+                                  : item.isHighlight
+                                    ? 'text-base text-emerald-400 hover:text-emerald-300 font-semibold'
+                                    : 'text-base text-white/80 hover:text-white hover:bg-white/5'
                             }`}
                           >
+                            {item.isHighlight && <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />}
                             {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
                           </Link>
                         ))}
