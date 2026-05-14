@@ -9,6 +9,7 @@ import Home2Header from "@/components/home2/Home2Header";
 import DiscretionBadge from "@/components/DiscretionBadge";
 import { lazy, Suspense } from "react";
 const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowledgeInitializer"));
+import HADropletFace from "@/components/home3/HADropletFace";
 const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
@@ -901,7 +902,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
             {!card.frontImage && (
               <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
-                <FaceMark area={card.title} />
+                {card.title === "HA Makeover" ? <HADropletFace /> : <FaceMark area={card.title} />}
               </div>
             )}
             {card.frontImage && <div className="flex-1" />}
