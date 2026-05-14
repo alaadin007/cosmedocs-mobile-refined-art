@@ -482,6 +482,7 @@ const categories: Category[] = [
           back: "Doctor-led liquid rhinoplasty, straightening the bridge, refining the tip, rebalancing the profile in minutes, no surgery. This patient came to us after a surgical rhinoplasty had left an irregularity; we corrected it with millimetre filler placement.",
           imagePosition: "top",
           image: noseBaImg,
+          largeText: true,
         },
       },
       {
@@ -495,6 +496,7 @@ const categories: Category[] = [
           back: "Doctor-led mandibular contouring, sharpening the gonial angle, lengthening the ramus and lifting the lower face. Filler on bone for structure, PCL threads for soft-tissue support. Definition that reads as bone, never bulk.",
           imagePosition: "top",
           image: jawlineBaImg,
+          largeText: true,
         },
       },
       nonSurgicalFaceliftCard,
