@@ -1,79 +1,52 @@
 
 # Competitive Response Plan — Dr Hass Clinic
 
-Goal: close a 3× UK organic traffic gap (987 → 3,000+/mo) in 3–6 months by attacking three content gaps. We do not touch backlinks (our 1,624 clean referring domains stay our moat).
+Goal: close a 3× UK organic traffic gap (987 → 3,000+/mo) by attacking three content gaps. Backlinks (1,624 referring domains) stay our moat.
 
-## Phase 1 — Dosage & Volume Cluster (Weeks 1–4)
+## ✅ Phase 1 — Dosage & Volume Cluster (shipped)
+- `/lip-filler-0-5ml-vs-1ml/` · `/cheek-filler-1ml-vs-2ml-vs-4ml/` · `/masseter-botox-units-dosage/` · `/russian-lips-vs-classic-lip-filler/`
 
-Patient-question long-form articles, doctor-led, luxury dark theme (matches `BotoxUnitsExplained.tsx` pattern). Each ~1,800–2,200 words, FAQSchema, MedicalWebPage JSON-LD, sidebar with quick-reference dosing tables.
+## ✅ Phase 2 — Endolift / Endolaser Authority (shipped)
+- `/treatments/endolift-london/` (authority hub)
+- `/treatments/endolaser/` renamed to **Endolaser (Laser Fibre Lift)** in nav, page H1 and breadcrumbs
+- `<EndolaserSpotlight />` placed on Home (full), `NonSurgicalFaceliftHub`, `HAMakeover` (inline)
+
+## ✅ Phase 3a — Concern pages + Endolift educational blog (this loop)
 
 | New page | Target query | Steals from |
 |---|---|---|
-| `/lip-filler-0-5ml-vs-1ml/` | "0.5ml vs 1ml lip filler" | 30.33% of his traffic |
-| `/cheek-filler-1ml-vs-2ml-vs-4ml/` | "how much cheek filler do I need" | 1.93% |
-| `/masseter-botox-units-dosage/` | "masseter botox how many units" | 0.67% |
-| `/russian-lips-vs-classic-lip-filler/` | "russian lip vs classic" | 0.58% |
-| `/tear-trough-filler-1ml-explained/` | "how much tear trough filler" | adjacent |
-| `/jaw-filler-how-much-ml/` | "jaw filler ml" | adjacent |
+| `/concerns/thin-lips-asymmetric-lips/` | "thin lips", "asymmetric lips" | 4.59% of his traffic |
+| `/concerns/square-jaw-wide-jaw/` | "square jaw", "wide jaw" | 3.05% |
+| `/concerns/dark-circles-vs-eye-bags/` | "dark circles vs eye bags", "eye bags" | 0.34%+ |
+| `/blog/endolift-explained/` | "endolift", "endo lift", "is endolift safe" | 1.31%+ — educational, routes intent into our `/treatments/endolaser/` |
 
-Editorial angle: doctor-led, "what we actually recommend at consultation", honest under-/over-treatment warnings, 3D anatomy callouts, before/after gallery cross-links, pricing pillar links. Differentiates from his thin blog by pairing dose with anatomy + outcome.
+Endolift blog rules: explicit editorial disclosure that **Endolift® is a trademarked Eufoton device**, Cosmedocs uses an equivalent UKCA & CE-marked dual-wavelength platform branded **Endolaser**. Pure information article; CTA card routes to `/treatments/endolaser/` and `/treatments/endolift-london/`.
 
-Internal linking: each new article links bidirectionally to `/treatments/botox/`, `/treatments/dermal-fillers/`, the relevant before/after gallery, and the relevant concern page in `/concerns/`.
+## Phase 3b — Endolift / Endolaser sub-cluster (next)
+Children of `/treatments/endolift-london/`:
+- `/treatments/endolift-london/safety/` — head-to-head with his "is endolift safe"
+- `/treatments/endolift-london/recovery/` — recovery & aftercare
+- `/treatments/endolift-london/double-chin/` — submental indication
 
-## Phase 2 — Endolift Authority Page (Weeks 3–5)
-
-One conversion-grade page targeting the entire "endolift" category he currently owns (#1–#6, AS 15).
-
-- Route: `/treatments/endolift-london/`
-- Spec: follows Laser Fibre Lift memory (dual-wavelength "Endolaser" terminology) and partner-logic CQC strings
-- Layout: authority-page-layout-standard (2-column, sticky gold sidebar)
-- Modules: What it is · Wavelengths explained · Candidacy · Procedure walk-through · Recovery · Comparison vs PDO Threads / Mini-Facelift · Pricing · FAQ (10 Qs incl. "is endolift safe", "endolift vs hifu", "how long does endolift last") · Doctor bio · Real cases
-- Supporting blog (week 5): `/blog/endolift/is-endolift-safe/` — direct head-to-head with his #2.
-
-## Phase 3 — Aftercare & Timeline Pages (Weeks 4–8)
-
-Per-treatment recovery pages — cheap to write, high intent, strong dwell. Template-driven.
-
-- `/aftercare/lip-filler-swelling-timeline/`
-- `/aftercare/tear-trough-filler-swelling-timeline/`
-- `/aftercare/cheek-filler-recovery/`
-- `/aftercare/jaw-filler-recovery/`
-- `/aftercare/botox-aftercare-24-hours/`
-- `/aftercare/masseter-botox-recovery/`
-- `/aftercare/profhilo-aftercare/`
-- `/aftercare/polynucleotides-aftercare/`
-
-Each: day-by-day timeline graphic, do/don't checklist, "when to call us", FAQSchema, link back to treatment + before/after.
-
-## Technical Foundation (Week 1, parallel)
-
-1. New `DosageArticleLayout.tsx` component — reuses `BotoxUnitsSidebar` pattern with per-treatment quick-reference table.
-2. New `AftercareLayout.tsx` component — timeline + checklist primitives.
-3. Add all 18+ routes to `App.tsx` and `public/sitemap-blog.xml` / `sitemap-treatments.xml`.
-4. Add `_redirects` 301s if any older thin pages exist on these slugs.
-5. Update `mem://content/editorial-article-catalog` and create `mem://content/dosage-volume-cluster-strategy` memory leaf.
+## Phase 3c — Aftercare & dissolving sub-pages
+- `/treatments/tear-trough-filler/aftercare/` (swelling timeline)
+- `/treatments/nose-filler/aftercare/` + `/treatments/nose-filler/dissolving/`
+- `/treatments/chin-filler/aftercare/` + `/treatments/chin-filler/safety/`
 
 ## Sequencing
 
 ```text
-Week 1: Tech foundation + lip 0.5ml vs 1ml (highest-value first)
-Week 2: Cheek 1/2/4ml + Masseter units
-Week 3: Russian vs Classic + Endolift London page
-Week 4: Tear trough ml + Jaw ml + Endolift safety blog
-Weeks 5–8: 8 aftercare pages, 2 per week
+Week 1 (done): Phase 3a — 3 concerns + Endolift blog
+Week 2: Phase 3b — 3 Endolift children
+Weeks 3–5: Phase 3c — aftercare/dissolving sub-pages, 2 per week
 ```
 
 ## Success Metrics
+- Top-5 on at least 3 of 4 Phase 3a queries within 90 days
+- `/blog/endolift-explained/` top-10 for "endolift" within 60 days, driving 30%+ click-through to `/treatments/endolaser/`
+- UK organic 987 → 2,000+/mo within 90 days, 3,000+ within 180 days
 
-- Rank top-5 on at least 4 of 6 dosage queries within 90 days
-- Endolift London page top-10 within 60 days
-- UK organic traffic 987 → 2,000+/mo within 90 days, 3,000+ within 180 days
+## Constraints
+- No backlink farming · doctor-led copy only · no "injector" · no `sr-only` keyword stuffing
+- Endolift® always trademarked; we never claim to perform Endolift® — only to perform an equivalent intra-tissue laser lifting treatment
 
-## What we explicitly do NOT do
-
-- No Korean-style backlink farming.
-- No "injector"-style copy — all doctor-led, GMC-compliant, CQC strings on Harley Street pages.
-- No `sr-only` keyword stuffing — visible content only.
-- No new hubs — slot under existing `/treatments/botox/` and `/treatments/dermal-fillers/` clusters per service-consolidation memory.
-
-Start with Phase 1, page 1 (lip 0.5ml vs 1ml) on approval.
