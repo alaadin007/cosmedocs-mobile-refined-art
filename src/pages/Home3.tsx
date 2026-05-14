@@ -938,33 +938,67 @@ const FlipCard = ({ card }: { card: SubCard }) => {
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-transparent to-black/15" />
 
-          {card.frontImage && (
+          {card.frontImages && card.frontImages.length > 0 && (
             <>
+              <div aria-hidden className="absolute inset-0 bg-black" />
+              <div
+                className={`absolute inset-0 grid gap-[2px] ${
+                  card.frontImages.length === 2 ? "grid-cols-2" :
+                  card.frontImages.length === 3 ? "grid-cols-2 grid-rows-2" :
+                  card.frontImages.length === 4 ? "grid-cols-2 grid-rows-2" :
+                  "grid-cols-3 grid-rows-2"
+                }`}
+              >
+                {card.frontImages.map((im, i) => (
+                  <div
+                    key={i}
+                    className={`relative overflow-hidden bg-black ${
+                      card.frontImages!.length === 3 && i === 0 ? "row-span-2" : ""
+                    }`}
+                  >
+                    <img
+                      src={im.src}
+                      alt={im.alt ?? card.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+              <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
+            </>
+          )}
+
+          {!card.frontImages && card.frontImage && (
+            <>
+              <div aria-hidden className="absolute inset-0 bg-black" />
               <img
                 src={card.frontImage}
                 alt={card.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
               <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
             </>
           )}
 
-          {!card.frontImage && card.imageOnFront && (card.image || card.flip?.image) && (
+          {!card.frontImages && !card.frontImage && card.imageOnFront && (card.image || card.flip?.image) && (
             <>
+              <div aria-hidden className="absolute inset-0 bg-black" />
               <img
                 src={card.image ?? card.flip?.image}
                 alt={card.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
               <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-[#C9A050]/30 rounded-[28px]" />
             </>
           )}
 
-          {!card.frontImage && !card.imageOnFront && <CardWatermark title={card.title} dark={!card.ink} />}
+          {!card.frontImages && !card.frontImage && !card.imageOnFront && <CardWatermark title={card.title} dark={!card.ink} />}
 
           {card.badge && (
             <span className={`absolute top-5 left-5 z-20 text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-semibold ${inkLight ? "bg-white/20 backdrop-blur text-white" : "bg-[#C9A050] text-black"}`}>
