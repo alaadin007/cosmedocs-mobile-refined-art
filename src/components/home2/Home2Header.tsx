@@ -253,7 +253,7 @@ export default function Home2Header() {
                                 {category.label}
                               </span>
                               <div className="space-y-1">
-                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean }) => (
+                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                                   item.isOverview ? (
                                     <Link 
                                       key={item.link}
@@ -271,6 +271,16 @@ export default function Home2Header() {
                                       className="text-xs text-[#C9A050]/70 hover:text-[#C9A050] cursor-pointer pt-3 pb-1 block transition-colors font-medium tracking-wide"
                                     >
                                       {item.title} →
+                                    </Link>
+                                  ) : item.isHighlight ? (
+                                    <Link 
+                                      key={item.link}
+                                      to={item.link} 
+                                      onClick={() => setIsTreatmentsOpen(false)}
+                                      className="text-sm text-emerald-400 hover:text-emerald-300 cursor-pointer py-1.5 block transition-colors font-semibold inline-flex items-center gap-1.5"
+                                    >
+                                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                      {item.title}
                                     </Link>
                                   ) : (
                                     <Link 
