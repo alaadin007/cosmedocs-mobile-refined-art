@@ -47,6 +47,10 @@ const ConcernGalleryPage: React.FC<{ config: ConcernGalleryConfig }> = ({ config
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
