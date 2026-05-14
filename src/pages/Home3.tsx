@@ -59,7 +59,9 @@ type SubCard = {
   badge?: string;
   image?: string;
   frontImage?: string;
-  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string };
+  flip?: { back: string; imagePosition?: "top" | "bottom"; image?: string; largeText?: boolean; eyebrow?: string; bullets?: string[] };
+  /** When true, render `image` (or `flip.image`) as the card's front photo, suppressing the SVG mosaic. */
+  imageOnFront?: boolean;
   flipImages?: { src: string; alt: string }[];
   flipNote?: string;
 };
