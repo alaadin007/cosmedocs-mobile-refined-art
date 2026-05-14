@@ -47,6 +47,10 @@ const ConcernGalleryPage: React.FC<{ config: ConcernGalleryConfig }> = ({ config
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -93,9 +97,18 @@ const ConcernGalleryPage: React.FC<{ config: ConcernGalleryConfig }> = ({ config
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
-        {/* Hero */}
-        <section className="relative pt-0 pb-16 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+      <div className="bg-[#080808] text-white relative">
+        {/* Decorative vertical typography */}
+        <div className="fixed right-6 bottom-32 hidden xl:block z-0 pointer-events-none">
+          <div className="rotate-90 origin-bottom-right translate-x-full">
+            <span className="text-[10px] tracking-[1em] uppercase text-white/10 whitespace-nowrap">
+              Invisible Artistry • Precision Aesthetics
+            </span>
+          </div>
+        </div>
+
+        {/* Hero — Asymmetric Editorial */}
+        <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
           <div className="page-container relative z-10">
             <Breadcrumb
               items={config.breadcrumbItems ?? [{ label: 'Before & After', path: '/before-after/' }]}
@@ -105,44 +118,72 @@ const ConcernGalleryPage: React.FC<{ config: ConcernGalleryConfig }> = ({ config
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center mt-8"
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-12 gap-8 mt-12 md:mt-20 border-b border-white/5 pb-16 md:pb-20"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                {config.h1}
-              </h1>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                {config.intro}
-              </p>
-              <p className="text-sm text-[#C9A050]/70 mt-4 italic font-light">
-                "Our aesthetics is invisible art — bold, natural, always your way."
-              </p>
+              <div className="col-span-12 lg:col-span-8">
+                <p className="text-[10px] md:text-[11px] tracking-[0.4em] uppercase text-[#C9A050] mb-6 md:mb-8">
+                  Cosmedocs · Clinical Gallery
+                </p>
+                <h1
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  className="text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.02] tracking-tight text-white mb-8 md:mb-10"
+                >
+                  {config.h1.split(' ').slice(0, -2).join(' ')}{' '}
+                  <span className="italic font-normal text-[#C9A050]">
+                    {config.h1.split(' ').slice(-2).join(' ')}
+                  </span>
+                </h1>
+                <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed max-w-xl">
+                  {config.intro}
+                </p>
+              </div>
+
+              <div className="col-span-12 lg:col-span-4 flex items-end justify-start lg:justify-end mt-4 lg:mt-0">
+                <div className="border-l-2 border-[#C9A050] pl-6 md:pl-8 py-3 max-w-xs">
+                  <p
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                    className="italic text-xl md:text-2xl text-[#C9A050] mb-3 leading-snug"
+                  >
+                    "Our aesthetics is invisible art"
+                  </p>
+                  <p className="text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-gray-500 font-medium">
+                    The Cosmedocs Standard
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Trust */}
-        <section className="py-5 border-y border-white/10 bg-black/50">
+        {/* Trust — gold hairlines */}
+        <section className="pb-16 md:pb-24">
           <div className="page-container">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-              <div className="flex items-center gap-3">
-                <Shield className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Unretouched Clinical Photos</span>
+            <div className="flex flex-wrap gap-y-6 gap-x-10 md:gap-x-16 justify-center md:justify-start">
+              <div className="flex items-center gap-4 md:gap-5">
+                <div className="w-8 md:w-10 h-px bg-[#C9A050]" />
+                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-gray-400">
+                  Unretouched Clinical Photos
+                </span>
               </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Harley Street, London</span>
+              <div className="flex items-center gap-4 md:gap-5">
+                <div className="w-8 md:w-10 h-px bg-[#C9A050]" />
+                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-gray-400">
+                  Harley Street, London
+                </span>
               </div>
-              <div className="flex items-center gap-3">
-                <Calendar className="w-5 h-5 text-[#C9A050]" />
-                <span className="text-sm text-gray-400">Consistent Lighting & Angles</span>
+              <div className="flex items-center gap-4 md:gap-5">
+                <div className="w-8 md:w-10 h-px bg-[#C9A050]" />
+                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-gray-400">
+                  Consistent Lighting & Angles
+                </span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Gallery */}
-        <section className="py-16">
+        <section className="pb-16 md:pb-24">
           <div className="page-container">
             <div className="max-w-5xl mx-auto">
               <BeforeAfterGrid images={config.images} initialDisplay={6} loadMoreIncrement={4} />
