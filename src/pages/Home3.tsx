@@ -32,6 +32,9 @@ import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import hyperhidrosisCardImg from "@/assets/home3-hyperhidrosis-card.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-front.png";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
+import artChinImg from "@/assets/home3-art-chin.jpg";
+import artNoseImg from "@/assets/home3-art-nose.jpg";
+import artJawlineImg from "@/assets/home3-art-jawline.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
 import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
 import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
@@ -434,6 +437,8 @@ const categories: Category[] = [
         bg: "bg-gradient-to-br from-stone-200 to-stone-400",
         ink: "text-zinc-900",
         image: chinFillerBaImg,
+        frontImage: artChinImg,
+        frontImageFit: "cover",
         badge: "Profile",
         flip: {
           back: "A measured chin projection that re-balances the lower face, softening a recessive jaw, refining the side profile and lifting the chin-neck line. Doctor-led, millimetre dosing for a result that reads as bone, not filler.",
@@ -444,6 +449,8 @@ const categories: Category[] = [
         tagline: "Liquid rhinoplasty",
         href: "/treatments/nose-filler/",
         bg: "bg-gradient-to-br from-zinc-900 to-zinc-700",
+        frontImage: artNoseImg,
+        frontImageFit: "cover",
         flip: {
           back: "Doctor-led liquid rhinoplasty, straightening the bridge, refining the tip, rebalancing the profile in minutes, no surgery. This patient came to us after a surgical rhinoplasty had left an irregularity; we corrected it with millimetre filler placement.",
           imagePosition: "top",
@@ -455,6 +462,8 @@ const categories: Category[] = [
         tagline: "Filler & PCL threads",
         href: "/treatments/jawline-filler/",
         bg: "bg-gradient-to-br from-[#1a1a1a] to-[#3a2f10]",
+        frontImage: artJawlineImg,
+        frontImageFit: "cover",
         flip: {
           back: "Doctor-led mandibular contouring, sharpening the gonial angle, lengthening the ramus and lifting the lower face. Filler on bone for structure, PCL threads for soft-tissue support. Definition that reads as bone, never bulk.",
           imagePosition: "top",
