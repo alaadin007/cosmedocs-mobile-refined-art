@@ -35,6 +35,7 @@ import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import artChinImg from "@/assets/home3-art-chin.jpg";
 import artNoseImg from "@/assets/home3-art-nose.jpg";
 import artJawlineImg from "@/assets/home3-art-jawline.jpg";
+import artNonSurgicalFaceliftImg from "@/assets/home3-art-non-surgical-facelift.jpg";
 import cheekFillerBaImg from "@/assets/home3-cheek-filler-ba.jpg";
 import jowlJawlineBaImg from "@/assets/home3-jowl-jawline-ba.jpg";
 import tearTroughBaImg from "@/assets/home3-tear-trough-ba.jpg";
