@@ -138,7 +138,7 @@ export default function Home2Header() {
   // Rotate taglines every 3.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setTaglineIndex((prev) => (prev + 1) % rotatingTaglines.length);
+      setTaglineIndex((prev) => (prev + 1) % rotatingHeadlines.length);
     }, 3500);
     return () => clearInterval(interval);
   }, []);
