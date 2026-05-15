@@ -246,8 +246,18 @@ const Prices = () => {
               link: "/jawline-filler"
             },
             {
-              title: "Cheek Filler",
-              price: "£350/ml",
+              title: "Cheek Filler — Swiss Teoxane Ultradeep (1.2ml)",
+              price: "£350",
+              link: "/cheek-filler"
+            },
+            {
+              title: "Cheek Filler — Swiss Teoxane Ultradeep (1.8ml)",
+              price: "£500",
+              link: "/cheek-filler"
+            },
+            {
+              title: "Cheek Filler — Swiss Teoxane Ultradeep (2.4ml)",
+              price: "£700",
               link: "/cheek-filler"
             },
             {
@@ -297,13 +307,14 @@ const Prices = () => {
               link: "/non-surgical-nose-job"
             },
             {
-              title: "Non Surgical Nose Job (PCL Threads)",
+              title: "Non-Surgical Nose Job Plan — by Dr Haq (PCL Threads + Filler)",
               price: "£950",
               link: "/non-surgical-nose-job"
             },
             {
-              title: "Nose Filler Maintenance",
-              price: "£400"
+              title: "Nose Job Repeat Visit (within 18 months)",
+              price: "£500",
+              link: "/non-surgical-nose-job"
             },
             {
               title: "Forehead Filler Bumps & Dips",
