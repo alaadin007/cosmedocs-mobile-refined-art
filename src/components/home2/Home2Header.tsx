@@ -7,12 +7,12 @@ import LanguageSelector from "@/components/LanguageSelector";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
-const rotatingTaglines = [
-  "Harley Street Doctors • Since 2007",
-  "Advanced Aesthetic Medicine",
-  "Doctor-Led, Regulated Care",
-  "Free AI Face Scan ↗"
-];
+const rotatingHeadlines = [
+  { key: "brand", text: "COSMEDOCS" },
+  { key: "ai", text: "Free AI Scan" },
+  { key: "heritage", text: "Harley Street Doctors since 2006" },
+] as const;
+
 
 const treatmentCategories = [
   {
