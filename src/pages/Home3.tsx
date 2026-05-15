@@ -172,6 +172,19 @@ const botoxAesthetic: SubCard[] = [
     bg: "bg-[#2a2a2a]",
     image: botoxNasalImg,
   },
+  {
+    title: "Masseter Botox",
+    tagline: "Slim jaw · Stop grinding",
+    href: "/treatments/masseter-botox/",
+    bg: "bg-[#0d1218]",
+    image: medMasseterImg,
+    badge: "Most asked",
+    flip: {
+      back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette, and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
+      imagePosition: "top",
+      image: masseterBaImg,
+    },
+  },
 ];
 
 /* ---------- Shared: Non-Surgical Facelift journey card ----------------- */
