@@ -8,10 +8,11 @@ import LanguageSelector from "@/components/LanguageSelector";
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
 const rotatingHeadlines = [
-  { key: "brand", text: "COSMEDOCS" },
-  { key: "ai", text: "Free AI Scan" },
-  { key: "heritage", text: "Harley Street Doctors since 2006" },
+  { key: "brand", text: "COSMEDOCS", subtitle: null },
+  { key: "ai", text: "Free AI Scan", subtitle: null },
+  { key: "heritage", text: "Harley Street Doctors", subtitle: "since 2006" },
 ] as const;
+
 
 
 const treatmentCategories = [
