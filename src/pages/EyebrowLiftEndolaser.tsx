@@ -89,8 +89,9 @@ const EyebrowLiftEndolaser = () => {
         <title>Non-Surgical Eyebrow Lift London | Endolaser Fibre Brow Lift | CosmeDocs</title>
         <meta
           name="description"
-          content="Non-surgical eyebrow lift in London using Endolaser fibre technology. A subtle, doctor-led brow elevation at Harley Street — no surgery, no scars, results lasting 18–24 months."
+          content="Doctor-led non-surgical eyebrow lift in London using Endolaser fibre technology. A subtle structural brow elevation at Harley Street — no surgery, no scars, results lasting 18–24 months. Book your consultation."
         />
+        <meta name="keywords" content="non surgical eyebrow lift London, Endolaser brow lift, fibre brow lift Harley Street, eyebrow lift without surgery, lateral brow lift, brow elevation no scars, doctor led brow lift" />
         <link
           rel="canonical"
           href="https://www.cosmedocs.com/treatments/eyebrow-lift-endolaser/"
@@ -99,13 +100,17 @@ const EyebrowLiftEndolaser = () => {
         <meta property="og:title" content="Non-Surgical Eyebrow Lift — Endolaser Fibre Lift London" />
         <meta
           property="og:description"
-          content="Doctor-led Endolaser brow lift at Harley Street. Subtle elevation, no surgery, 18–24 month results."
+          content="Doctor-led Endolaser brow lift at Harley Street. Structural elevation, no surgery, 18–24 month results."
         />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/eyebrow-lift-endolaser/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Non-Surgical Eyebrow Lift — Endolaser Fibre Lift London" />
+        <meta name="twitter:description" content="Doctor-led Endolaser brow lift at Harley Street. Structural elevation, no surgery, 18–24 month results." />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(procedureSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       <main className="min-h-screen bg-black">
