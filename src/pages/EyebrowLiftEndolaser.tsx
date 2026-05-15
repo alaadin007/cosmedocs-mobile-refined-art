@@ -61,15 +61,38 @@ const EyebrowLiftEndolaser = () => {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
     name: "Non-Surgical Eyebrow Lift (Endolaser Fibre Lift)",
+    description:
+      "A doctor-led non-surgical eyebrow lift using a fine 1470nm Endolaser optical fibre introduced through a single micro-entry point near the temporal hairline. Controlled thermal energy contracts existing collagen and triggers sustained collagen remodelling, lifting the lateral brow tail over 6–12 weeks with results lasting 18–24 months.",
     procedureType: "https://schema.org/TherapeuticProcedure",
     bodyLocation: "Lateral eyebrow, temple, upper periorbital region",
     howPerformed:
       "A fine 1470nm Endolaser optical fibre is introduced through a single micro-entry point near the temporal hairline under local anaesthesia. Pulsed laser energy contracts collagen and remodels the connective scaffold supporting the lateral brow, producing immediate elevation and a sustained 6–12 month collagen response.",
+    preparation: "Medical consultation, brow mapping, photography and vector planning. Local anaesthesia applied to the temporal entry point and lateral brow.",
+    followup: "Aftercare review included. Results visible from 4 weeks; full expression at 8–12 weeks. Maintenance typically every 18–24 months.",
     url: "https://www.cosmedocs.com/treatments/eyebrow-lift-endolaser/",
+    image: "https://www.cosmedocs.com/eyebrow-lift-hero.jpg",
     provider: {
       "@type": "MedicalBusiness",
+      "@id": "https://www.cosmedocs.com/#medicalbusiness",
       name: "CosmeDocs",
       url: "https://www.cosmedocs.com",
+      logo: "https://www.cosmedocs.com/logo.png",
+      description:
+        "Doctor-led aesthetic clinic on Harley Street, London. Established 2007. Specialising in invisible-art aesthetics — bold, natural, always your way.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "10 Harley Street",
+        addressLocality: "London",
+        postalCode: "W1G 9PF",
+        addressCountry: "GB",
+      },
+      telephone: "+443330551503",
+      priceRange: "£££",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "200",
+      },
     },
   };
 
@@ -83,14 +106,43 @@ const EyebrowLiftEndolaser = () => {
     ],
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: "Non-Surgical Eyebrow Lift London | Endolaser Fibre Brow Lift",
+    description:
+      "Doctor-led non-surgical eyebrow lift in London using Endolaser fibre technology. Subtle structural brow elevation at Harley Street — no surgery, no scars, results lasting 18–24 months.",
+    url: "https://www.cosmedocs.com/treatments/eyebrow-lift-endolaser/",
+    lastReviewed: "2025-05-15",
+    reviewedBy: {
+      "@type": "MedicalBusiness",
+      name: "CosmeDocs",
+      url: "https://www.cosmedocs.com",
+    },
+    about: {
+      "@type": "MedicalProcedure",
+      name: "Non-Surgical Eyebrow Lift (Endolaser Fibre Lift)",
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: "CosmeDocs",
+      url: "https://www.cosmedocs.com",
+    },
+    mainEntity: {
+      "@type": "MedicalProcedure",
+      name: "Non-Surgical Eyebrow Lift (Endolaser Fibre Lift)",
+    },
+  };
+
   return (
     <>
       <Helmet>
         <title>Non-Surgical Eyebrow Lift London | Endolaser Fibre Brow Lift | CosmeDocs</title>
         <meta
           name="description"
-          content="Non-surgical eyebrow lift in London using Endolaser fibre technology. A subtle, doctor-led brow elevation at Harley Street — no surgery, no scars, results lasting 18–24 months."
+          content="Doctor-led non-surgical eyebrow lift in London using Endolaser fibre technology. A subtle structural brow elevation at Harley Street — no surgery, no scars, results lasting 18–24 months. Book your consultation."
         />
+        <meta name="keywords" content="non surgical eyebrow lift London, Endolaser brow lift, fibre brow lift Harley Street, eyebrow lift without surgery, lateral brow lift, brow elevation no scars, doctor led brow lift" />
         <link
           rel="canonical"
           href="https://www.cosmedocs.com/treatments/eyebrow-lift-endolaser/"
@@ -99,13 +151,17 @@ const EyebrowLiftEndolaser = () => {
         <meta property="og:title" content="Non-Surgical Eyebrow Lift — Endolaser Fibre Lift London" />
         <meta
           property="og:description"
-          content="Doctor-led Endolaser brow lift at Harley Street. Subtle elevation, no surgery, 18–24 month results."
+          content="Doctor-led Endolaser brow lift at Harley Street. Structural elevation, no surgery, 18–24 month results."
         />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/eyebrow-lift-endolaser/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Non-Surgical Eyebrow Lift — Endolaser Fibre Lift London" />
+        <meta name="twitter:description" content="Doctor-led Endolaser brow lift at Harley Street. Structural elevation, no surgery, 18–24 month results." />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(procedureSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       <main className="min-h-screen bg-black">
@@ -389,6 +445,54 @@ const EyebrowLiftEndolaser = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/* Technology detail — SEO-rich visible content */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-extralight text-white mb-4">
+                  How the 1470nm Endolaser Works Around the Eye
+                </h2>
+                <p className="text-sm text-white/65 leading-relaxed mb-4">
+                  The 1470nm wavelength was selected specifically for soft-tissue contraction in delicate
+                  facial areas. Unlike ablative lasers that vaporise the surface, Endolaser works
+                  <em>inside</em> the tissue — beneath the skin — so the epidermis remains intact. Around the
+                  eye this matters profoundly: the skin here is the thinnest on the face, and any surface
+                  injury risks pigment change or prolonged redness.
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed mb-4">
+                  The fibre itself is 600 microns in diameter — approximately the width of six human hairs.
+                  It is introduced through a single puncture in the temporal hairline, advanced subcutaneously
+                  along the brow vector, and withdrawn slowly while firing. The laser energy is absorbed by
+                  water in the tissue, creating controlled zones of thermal contraction. Existing collagen
+                  fibres shorten immediately; fibroblasts are stimulated to lay down new type-I and type-III
+                  collagen over the following 8–12 weeks. The result is not a stretched brow — it is a
+                  structurally firmer brow, elevated by its own renewed scaffold.
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed">
+                  Because the entry point is inside the hairline and the procedure is performed under local
+                  anaesthesia, there is no general anaesthetic risk, no surgical scar, and no need for
+                  companion care after treatment. Patients travel to our Harley Street consulting rooms from
+                  across London, the Home Counties, and internationally — the brow lift is a discreet,
+                  same-day procedure that fits into a working week.
+                </p>
+              </div>
+
+              {/* E-E-A-T & motto */}
+              <div className="border border-white/10 rounded-2xl p-6 bg-white/[0.02]">
+                <p className="text-xs uppercase tracking-wider text-[#C9A050] mb-3">
+                  Our aesthetics is invisible art
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed mb-4">
+                  <strong className="text-white/85">Bold &middot; Natural &middot; Always Your Way</strong>
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed">
+                  Aesthetic medicine by CosmeDocs is minimal. Quiet, not loud. Invisible, not exaggerated.
+                  It is transformation that speaks — without saying a word. Every Endolaser brow lift is
+                  planned and performed by medically qualified doctors who understand orbital anatomy,
+                  vascular mapping, and the subtle architecture of facial expression. Since 2007 we have
+                  operated from 10 Harley Street, London W1G 9PF, and our clinicians hold active GMC
+                  registration with specialist training in aesthetic medicine.
+                </p>
               </div>
 
               {/* FAQ */}
