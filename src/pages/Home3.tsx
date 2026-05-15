@@ -1244,6 +1244,172 @@ const FlipCard = ({ card }: { card: SubCard }) => {
 };
 
 
+/* ---------- Tiny decorative SVG icon per treatment area --------------- */
+/* Minimal gold line glyphs that hint at the treatment area, helping users
+   scan the overview list at a glance. */
+const TreatmentGlyph = ({ title }: { title: string }) => {
+  const t = title.toLowerCase();
+  // common props
+  const p = "stroke-[#C9A050]";
+  if (/lip/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M3 12c2-3 5-3 9 0 4-3 7-3 9 0-2 3-5 4-9 4s-7-1-9-4z" />
+      </svg>
+    );
+  if (/cheek|mid-?face/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M5 14c2-6 12-6 14 0" />
+        <circle cx="12" cy="11" r="2.5" />
+      </svg>
+    );
+  if (/jaw|masseter/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M4 7v6c0 4 4 7 8 7s8-3 8-7V7" />
+      </svg>
+    );
+  if (/chin|profile|profilo/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M6 5v8c0 4 3 6 6 6s6-2 6-6" />
+      </svg>
+    );
+  if (/nose|nasal/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M12 4c0 5-2 7-3 10 0 1.5 1.5 2 3 2s3-.5 3-2c-1-3-3-5-3-10z" />
+      </svg>
+    );
+  if (/temple/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M4 8c4-4 12-4 16 0" />
+        <path d="M5 14c4-3 10-3 14 0" />
+      </svg>
+    );
+  if (/tear|under.?eye|eye/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M12 5c2 4 4 6 4 9a4 4 0 11-8 0c0-3 2-5 4-9z" />
+      </svg>
+    );
+  if (/brow|forehead|migraine/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M4 10c4-3 12-3 16 0" />
+      </svg>
+    );
+  if (/neck|trap|nefertiti/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M6 4c2 4 2 8 0 12M18 4c-2 4-2 8 0 12M6 16h12" />
+      </svg>
+    );
+  if (/calf|leg/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M10 3c-1 5 1 8 1 12s-2 5-2 6M14 3c1 5-1 8-1 12s2 5 2 6" />
+      </svg>
+    );
+  if (/sweat|hyperhidrosis|underarm|axilla/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <path d="M12 4c2 4 5 7 5 11a5 5 0 11-10 0c0-4 3-7 5-11z" />
+      </svg>
+    );
+  if (/bruxism|grind|tooth/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <rect x="5" y="9" width="3.5" height="6" rx="1" />
+        <rect x="10.25" y="9" width="3.5" height="6" rx="1" />
+        <rect x="15.5" y="9" width="3.5" height="6" rx="1" />
+      </svg>
+    );
+  if (/makeover|full.?face|ha\b/.test(t))
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={`w-4 h-4 ${p}`} strokeWidth="1.5">
+        <ellipse cx="12" cy="12" rx="6" ry="8" />
+        <circle cx="9.5" cy="11" r=".8" fill="currentColor" />
+        <circle cx="14.5" cy="11" r=".8" fill="currentColor" />
+        <path d="M9.5 15c1 1 4 1 5 0" />
+      </svg>
+    );
+  // default: small gold dot
+  return (
+    <svg viewBox="0 0 24 24" className={`w-4 h-4 ${p}`} fill="currentColor">
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+};
+
+/* Decorative face-map header used inside the overview card */
+const FaceMapHeader = () => (
+  <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" aria-hidden>
+    <ellipse cx="60" cy="60" rx="34" ry="44" stroke="#C9A050" strokeOpacity="0.45" strokeWidth="1.2" />
+    <path d="M40 50c5-3 10-3 15 0M65 50c5-3 10-3 15 0" stroke="#C9A050" strokeOpacity="0.55" strokeWidth="1" />
+    <path d="M60 58v10M54 76c2 2 10 2 12 0" stroke="#C9A050" strokeOpacity="0.5" strokeWidth="1" />
+    {[
+      [42, 46], [78, 46], [38, 64], [82, 64], [50, 78], [70, 78], [60, 90], [60, 38],
+    ].map(([cx, cy], i) => (
+      <g key={i}>
+        <circle cx={cx} cy={cy} r="2" fill="#C9A050" />
+        <circle cx={cx} cy={cy} r="5" stroke="#C9A050" strokeOpacity="0.35" />
+      </g>
+    ))}
+  </svg>
+);
+
+/* ---------- Overview card: full list of treatments in the row ---------- */
+const OverviewCard = ({
+  cards,
+  eyebrow,
+  title,
+  heightCls,
+  widthCls,
+}: {
+  cards: SubCard[];
+  eyebrow: string;
+  title: string;
+  heightCls: string;
+  widthCls: string;
+}) => (
+  <div
+    className={`shrink-0 ${widthCls} ${heightCls} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-[#C9A050]/20 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
+  >
+    <div className="px-5 sm:px-6 pt-6 pb-4 border-b border-white/8 flex items-start gap-3">
+      <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0">
+        <FaceMapHeader />
+      </div>
+      <div className="min-w-0">
+        <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-1.5">{eyebrow}</p>
+        <h3 className="font-serif text-xl sm:text-2xl text-white leading-tight tracking-tight">{title}</h3>
+        <p className="text-[11px] text-white/55 mt-1.5">Browse, then swipe right for each in detail →</p>
+      </div>
+    </div>
+    <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      {cards.map((c) => (
+        <li key={c.title}>
+          <Link
+            to={c.href}
+            className="group flex items-start gap-3 px-3 py-2.5 rounded-2xl hover:bg-white/5 transition"
+          >
+            <span className="mt-1 shrink-0">
+              <TreatmentGlyph title={c.title} />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="font-serif text-[14px] sm:text-[15px] text-white leading-snug truncate">{c.title}</p>
+              <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
+            </div>
+            <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1.5 shrink-0 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 /* ---------- Horizontal scroller (used by non-aesthetic rows) ----------- */
 
 const Row = ({ category, index }: { category: Category; index: number }) => {
@@ -1294,6 +1460,15 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
         ref={scroller}
         className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
+        {(category.id === "facial-contouring" || category.id === "fillers-anti-ageing") && (
+          <OverviewCard
+            cards={category.cards}
+            eyebrow={category.eyebrow}
+            title={category.id === "fillers-anti-ageing" ? "All volume & filler areas" : "All contouring areas"}
+            heightCls="h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]"
+            widthCls="w-[72vw] sm:w-[320px] md:w-[360px]"
+          />
+        )}
         {category.cards.map((card) => {
           const isBig = !!card.flip;
           const widthCls = isBig
@@ -1811,6 +1986,17 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
         ref={scroller}
         className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
+        {/* Overview list FIRST: every medical Botox area, scannable at a glance */}
+        {category.cards.length > 0 && (
+          <OverviewCard
+            cards={category.cards}
+            eyebrow="Therapeutic Botox"
+            title="All medical areas"
+            heightCls={colHeight}
+            widthCls="w-[72vw] sm:w-[320px] md:w-[360px]"
+          />
+        )}
+
         {/* Hero spotlight: first card (Masseter) */}
         {category.cards[0] && (
           <div className={`shrink-0 ${widthBig} ${colHeight}`}>
@@ -1837,32 +2023,6 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
             </div>
           ) : null;
         })()}
-
-        {/* Thin list column: every medical Botox treatment */}
-        {category.cards.length > 0 && (
-          <div className={`shrink-0 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}>
-            <div className="px-6 pt-7 pb-5 border-b border-white/8">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">Therapeutic Botox</p>
-              <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">All medical areas</h3>
-            </div>
-            <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              {category.cards.map((c) => (
-                <li key={c.title}>
-                  <Link
-                    to={c.href}
-                    className="group flex items-start justify-between gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition"
-                  >
-                    <div className="min-w-0">
-                      <p className="font-serif text-[15px] text-white leading-snug truncate">{c.title}</p>
-                      <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1 shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
         <Link
           to={category.cta.href}
