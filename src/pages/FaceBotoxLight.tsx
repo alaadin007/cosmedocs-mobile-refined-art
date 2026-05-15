@@ -109,6 +109,7 @@ export default function FaceBotoxLight() {
           <link key={link.hreflang} rel="alternate" hrefLang={link.hreflang} href={link.href} />
         ))}
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(botoxLondonFaqSchema)}</script>
       </Helmet>
 
       <div className={`${bg} overflow-x-hidden`}>
