@@ -749,6 +749,8 @@ const App = () => {
                           <Route path="/treatments/non-surgical-facelift/" element={<NonSurgicalFaceliftHub />} />
                           <Route path="/treatments/endolaser" element={<EndolaserLift />} />
                           <Route path="/treatments/endolaser/" element={<EndolaserLift />} />
+                          <Route path="/treatments/endolaser-body" element={<EndolaserBody />} />
+                          <Route path="/treatments/endolaser-body/" element={<EndolaserBody />} />
                           <Route path="/treatments/eyebrow-lift-endolaser" element={<EyebrowLiftEndolaser />} />
                           <Route path="/treatments/eyebrow-lift-endolaser/" element={<EyebrowLiftEndolaser />} />
                           <Route path="/treatments/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
