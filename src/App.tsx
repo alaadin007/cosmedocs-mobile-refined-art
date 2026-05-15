@@ -920,6 +920,14 @@ const App = () => {
                           <Route path="/treatments/skin-boosters/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
                           <Route path="/botox-price-london/" element={<BotoxPriceLondon />} />
+                          <Route path="/treatments/anti-wrinkle-treatment" element={<AntiWrinkleTreatment />} />
+                          <Route path="/treatments/anti-wrinkle-treatment/" element={<AntiWrinkleTreatment />} />
+                          <Route path="/anti-wrinkle-treatment" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
+                          <Route path="/anti-wrinkle-treatment/" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
+                          <Route path="/anti-wrinkle-injections" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
+                          <Route path="/anti-wrinkle-injections/" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
+                          <Route path="/harley-street-injectables" element={<HarleyStreetInjectables />} />
+                          <Route path="/harley-street-injectables/" element={<HarleyStreetInjectables />} />
                           <Route path="/botox-cost-uk" element={<BotoxCostUK />} />
                           <Route path="/botox-cost-uk/" element={<BotoxCostUK />} />
                           <Route path="/botox-units-explained" element={<BotoxUnitsExplained />} />
