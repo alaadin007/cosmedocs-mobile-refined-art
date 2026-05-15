@@ -243,6 +243,8 @@ const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
 const AntiWrinkleTreatment = lazy(() => import("./pages/AntiWrinkleTreatment"));
+const AntiWrinkleInjections = lazy(() => import("./pages/AntiWrinkleInjections"));
+const AntiAgeingInjections = lazy(() => import("./pages/AntiAgeingInjections"));
 const HarleyStreetInjectables = lazy(() => import("./pages/HarleyStreetInjectables"));
 const HowLongDoesBotoxLast = lazy(() => import("./pages/HowLongDoesBotoxLast"));
 const AestheticsAtGlance = lazy(() => import("./pages/AestheticsAtGlance"));
@@ -924,8 +926,16 @@ const App = () => {
                           <Route path="/treatments/anti-wrinkle-treatment/" element={<AntiWrinkleTreatment />} />
                           <Route path="/anti-wrinkle-treatment" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
                           <Route path="/anti-wrinkle-treatment/" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
-                          <Route path="/anti-wrinkle-injections" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
-                          <Route path="/anti-wrinkle-injections/" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
+                          <Route path="/treatments/anti-wrinkle-injections" element={<AntiWrinkleInjections />} />
+                          <Route path="/treatments/anti-wrinkle-injections/" element={<AntiWrinkleInjections />} />
+                          <Route path="/anti-wrinkle-injections" element={<Navigate to="/treatments/anti-wrinkle-injections/" replace />} />
+                          <Route path="/anti-wrinkle-injections/" element={<Navigate to="/treatments/anti-wrinkle-injections/" replace />} />
+                          <Route path="/treatments/anti-ageing-injections" element={<AntiAgeingInjections />} />
+                          <Route path="/treatments/anti-ageing-injections/" element={<AntiAgeingInjections />} />
+                          <Route path="/anti-ageing-injections" element={<Navigate to="/treatments/anti-ageing-injections/" replace />} />
+                          <Route path="/anti-ageing-injections/" element={<Navigate to="/treatments/anti-ageing-injections/" replace />} />
+                          <Route path="/anti-aging-injections" element={<Navigate to="/treatments/anti-ageing-injections/" replace />} />
+                          <Route path="/anti-aging-injections/" element={<Navigate to="/treatments/anti-ageing-injections/" replace />} />
                           <Route path="/harley-street-injectables" element={<HarleyStreetInjectables />} />
                           <Route path="/harley-street-injectables/" element={<HarleyStreetInjectables />} />
                           <Route path="/botox-cost-uk" element={<BotoxCostUK />} />
