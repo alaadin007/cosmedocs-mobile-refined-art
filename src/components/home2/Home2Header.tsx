@@ -150,6 +150,21 @@ export default function Home2Header() {
     return () => window.removeEventListener('open-chatbot', handleOpenChatbot);
   }, []);
 
+  // Open the full treatments menu from anywhere on the site (e.g. homepage overview card)
+  useEffect(() => {
+    const handleOpenTreatments = () => {
+      const isMobile = window.matchMedia('(max-width: 1023px)').matches;
+      if (isMobile) {
+        setIsMobileMenuOpen(true);
+        setExpandedCategory("Botox");
+      } else {
+        setIsTreatmentsOpen(true);
+      }
+    };
+    window.addEventListener('open-treatments-menu', handleOpenTreatments);
+    return () => window.removeEventListener('open-treatments-menu', handleOpenTreatments);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);

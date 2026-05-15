@@ -1374,52 +1374,43 @@ const OverviewCard = ({
   title: string;
   heightCls: string;
   widthCls: string;
-}) => {
-  const PREVIEW = 5;
-  const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? cards : cards.slice(0, PREVIEW);
-  const remaining = cards.length - PREVIEW;
-  return (
-    <div
-      className={`shrink-0 ${widthCls} ${heightCls} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-[#C9A050]/20 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
-    >
-      <div className="px-5 sm:px-6 pt-4 pb-3 border-b border-white/8">
-        <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-1">{eyebrow}</p>
-        <h3 className="font-serif text-lg sm:text-xl text-white leading-tight tracking-tight">{title}</h3>
-      </div>
-      <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-        {visible.map((c) => (
-          <li key={c.title}>
-            <Link
-              to={c.href}
-              className="group flex items-start gap-3 px-3 py-2.5 rounded-2xl hover:bg-white/5 transition"
-            >
-              <span className="mt-1 shrink-0">
-                <TreatmentGlyph title={c.title} />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-serif text-[14px] sm:text-[15px] text-white leading-snug truncate">{c.title}</p>
-                <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
-              </div>
-              <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1.5 shrink-0 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
-            </Link>
-          </li>
-        ))}
-      </ul>
-      {cards.length > PREVIEW && (
-        <button
-          type="button"
-          onClick={() => setExpanded((v) => !v)}
-          aria-expanded={expanded}
-          className="border-t border-white/8 px-5 sm:px-6 py-3 text-[11px] uppercase tracking-[0.22em] text-[#C9A050] hover:bg-white/5 transition flex items-center justify-center gap-2"
-        >
-          {expanded ? "Show less" : `Show all ${cards.length} treatments`}
-          <ChevronRight className={`w-3.5 h-3.5 transition-transform ${expanded ? "-rotate-90" : "rotate-90"}`} />
-        </button>
-      )}
+}) => (
+  <div
+    className={`shrink-0 ${widthCls} ${heightCls} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-[#C9A050]/20 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
+  >
+    <div className="px-5 sm:px-6 pt-4 pb-3 border-b border-white/8">
+      <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-1">{eyebrow}</p>
+      <h3 className="font-serif text-lg sm:text-xl text-white leading-tight tracking-tight">{title}</h3>
     </div>
-  );
-};
+    <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      {cards.map((c) => (
+        <li key={c.title}>
+          <Link
+            to={c.href}
+            className="group flex items-start gap-3 px-3 py-2.5 rounded-2xl hover:bg-white/5 transition"
+          >
+            <span className="mt-1 shrink-0">
+              <TreatmentGlyph title={c.title} />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="font-serif text-[14px] sm:text-[15px] text-white leading-snug truncate">{c.title}</p>
+              <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
+            </div>
+            <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1.5 shrink-0 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+    <button
+      type="button"
+      onClick={() => window.dispatchEvent(new CustomEvent('open-treatments-menu'))}
+      className="border-t border-white/8 px-5 sm:px-6 py-3 text-[11px] uppercase tracking-[0.22em] text-[#C9A050] hover:bg-white/5 transition flex items-center justify-center gap-2"
+    >
+      Open full treatments menu
+      <ArrowUpRight className="w-3.5 h-3.5" />
+    </button>
+  </div>
+);
 
 /* ---------- Horizontal scroller (used by non-aesthetic rows) ----------- */
 
