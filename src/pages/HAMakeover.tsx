@@ -484,7 +484,7 @@ export default function HAMakeover() {
           </p>
           <h3>Full-Face Filler Rejuvenation London</h3>
           <p>
-            A Liquid Facelift may address temples, cheeks, jawline, chin, tear troughs, and surrounding 
+            A Liquid Facelift may address temples, <Link to="/treatments/cheek-filler/" className="text-[#C9A050] underline-offset-4 hover:underline">cheeks</Link> (including structural <Link to="/treatments/cheekbone-filler/" className="text-[#C9A050] underline-offset-4 hover:underline">cheekbone filler</Link>), jawline, chin, tear troughs, and surrounding 
             structural points as part of a holistic treatment plan. Results are designed to look natural 
             and undetectable. Dr Ahmed Haq and Dr Hena provide conservative, considered care with a 
             philosophy of restoring what time has taken rather than changing identity.
