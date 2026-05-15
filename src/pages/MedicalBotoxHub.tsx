@@ -12,6 +12,26 @@ const MedicalBotoxHub = () => {
 
   const conditions = [
     {
+      id: "masseter",
+      title: "Masseter Botox",
+      subtitle: "Jaw Slimming & Bruxism Relief",
+      description: "The masseter is the primary muscle of mastication. When overactive — through habitual clenching, grinding, or hereditary hypertrophy — it widens the lower face and contributes to jaw pain, tooth wear, and tension headaches. Doctor-led dosing softens its bulk while preserving full chewing function.",
+      areas: ["Masseter (deep & superficial)", "Temporalis (when indicated)"],
+      mechanism: "Precisely placed botulinum toxin reduces the contractile force of the masseter. Over 6–10 weeks the muscle gently atrophies, the lower face slims into a softer oval, and the night-grinding behind it quietly resolves.",
+      duration: "Effects typically last 4–6 months. With repeated treatment, intervals can often be extended as the muscle remodels.",
+      path: "/treatments/masseter-botox/"
+    },
+    {
+      id: "trapezius",
+      title: "Trapezius & Trigger Point Botox",
+      subtitle: "Neck & Shoulder Tension Relief",
+      description: "The trapezius and surrounding cervical muscles carry the weight of modern life — desks, screens, stress. When chronically tight, they create visible bulk at the shoulder line, tension headaches, and painful trigger points along the neck and upper back. A medical-grade muscle-relaxation protocol addresses both the silhouette and the pain.",
+      areas: ["Upper trapezius", "Levator scapulae", "Cervical paraspinal trigger points", "Sternocleidomastoid (when indicated)"],
+      mechanism: "Botulinum toxin is mapped to the most overactive fibres and palpable trigger points. Tension releases within 1–2 weeks; the shoulder line lengthens and softens over 6–8 weeks as bulk gently reduces. Function and posture preserved.",
+      duration: "Results typically last 4–6 months. Many patients combine with posture work for compounding, longer-lasting relief.",
+      path: "/treatments/trap-botox/"
+    },
+    {
       id: "hyperhidrosis",
       title: "Hyperhidrosis",
       subtitle: "Excessive Sweating",
@@ -29,7 +49,7 @@ const MedicalBotoxHub = () => {
       areas: ["Masseter muscles", "Temporalis muscles"],
       mechanism: "By relaxing the masseter muscles, botulinum toxin reduces the force of clenching. This doesn't affect normal functions like chewing or speaking but limits the damaging grinding forces.",
       duration: "Effects typically last 3-6 months. Some patients find they can extend intervals between treatments over time.",
-      path: "/treatments/masseter-botox/"
+      path: "/treatments/bruxism-botox/"
     },
     {
       id: "migraine",
