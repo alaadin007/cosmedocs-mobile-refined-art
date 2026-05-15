@@ -1460,6 +1460,15 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
         ref={scroller}
         className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
+        {(category.id === "facial-contouring" || category.id === "fillers-anti-ageing") && (
+          <OverviewCard
+            cards={category.cards}
+            eyebrow={category.eyebrow}
+            title={category.id === "fillers-anti-ageing" ? "All volume & filler areas" : "All contouring areas"}
+            heightCls="h-[58vh] min-h-[440px] max-h-[680px] sm:h-[72vh] sm:min-h-[540px] sm:max-h-[760px]"
+            widthCls="w-[72vw] sm:w-[320px] md:w-[360px]"
+          />
+        )}
         {category.cards.map((card) => {
           const isBig = !!card.flip;
           const widthCls = isBig
