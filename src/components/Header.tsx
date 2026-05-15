@@ -1,8 +1,64 @@
 
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain, Calendar } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
+// Rotating logo component - cycles through brand, AI scan and heritage taglines
+const ROTATING_SLIDES = [
+  { key: "cosmedocs", text: "COSMEDOCS", className: "text-white" },
+  { key: "ai", text: "Free AI Scan", className: "text-amber-400", link: true },
+  { key: "harley", text: "Harley Street Doctors since 2006", className: "text-white" },
+] as const;
+
+function RotatingLogo() {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % ROTATING_SLIDES.length), 2800);
+    return () => clearInterval(id);
+  }, []);
+  const slide = ROTATING_SLIDES[index];
+  const isAI = slide.key === "ai";
+  return (
+    <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center pointer-events-none">
+      <div className="relative h-7 md:h-9 flex items-center justify-center min-w-[260px] md:min-w-[420px] overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slide.key}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className={`text-lg md:text-2xl font-bold whitespace-nowrap leading-none ${slide.className}`}
+          >
+            {slide.text}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+      <div className="h-4 mt-1 flex items-center justify-center">
+        <AnimatePresence>
+          {isAI && (
+            <motion.a
+              key="ai-link"
+              href="/aesthetic-intelligence"
+              target="_blank"
+              rel="noopener"
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="text-[10px] md:text-xs text-amber-400 underline underline-offset-2 whitespace-nowrap pointer-events-auto"
+              aria-label="Open Free AI Face Scan in a new tab"
+            >
+              click to scan ↗
+            </motion.a>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
 
 // Lazy load heavy modal components
 const LiquidGlassSearch = lazy(() => import("./LiquidGlassSearch"));
@@ -144,14 +200,9 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Logo - Center */}
-          <Link to="/aesthetic-intelligence" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2" aria-label="Free Face AI Scan by CosmeDocs">
-            <div className="text-lg md:text-2xl font-bold whitespace-nowrap leading-none flex items-baseline gap-1.5">
-              <span className="text-amber-400">Free Face AI Scan</span>
-              <span className="text-white">COSMEDOCS</span>
-            </div>
-            <p className="text-[10px] md:text-xs text-amber-400 mt-1 whitespace-nowrap">Harley St since 2007</p>
-          </Link>
+          {/* Logo - Center (rotating) */}
+          <RotatingLogo />
+
 
 
 
