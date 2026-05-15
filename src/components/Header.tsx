@@ -145,13 +145,15 @@ export default function Header() {
           </div>
 
           {/* Logo - Center */}
-          <Link to="/" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
-            <div className="text-2xl md:text-3xl font-bold">
-              <span className="text-white">COSME</span>
-              <span className="text-white">DOCS</span>
+          <Link to="/aesthetic-intelligence" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2" aria-label="Free Face AI Scan by CosmeDocs">
+            <div className="text-base md:text-xl font-bold whitespace-nowrap flex items-baseline gap-1.5">
+              <span className="text-amber-400">Free Face AI Scan</span>
+              <span className="text-white/70 text-[10px] md:text-xs tracking-widest uppercase">by</span>
+              <span className="text-white">CosmeDocs</span>
             </div>
-            <p className="text-[10px] md:text-xs text-amber-400 -mt-1 whitespace-nowrap">Harley Street Since 2007, 1M+ Injection</p>
+            <p className="text-[10px] md:text-xs text-amber-400/80 -mt-0.5 whitespace-nowrap">Harley Street ~2006</p>
           </Link>
+
 
           {/* Desktop Actions - Right */}
           <div className="hidden md:flex items-center space-x-3">
