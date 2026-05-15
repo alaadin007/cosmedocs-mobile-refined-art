@@ -7,13 +7,12 @@ import LanguageSelector from "@/components/LanguageSelector";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
-const rotatingHeadlines = [
-  { key: "brand", text: "COSMEDOCS", subtitle: null },
-  { key: "ai", text: "Free AI Scan", subtitle: null },
-  { key: "heritage", text: "Harley Street Doctors", subtitle: "since 2006" },
-] as const;
-
-
+const rotatingTaglines = [
+  "Harley Street Doctors • Since 2007",
+  "Advanced Aesthetic Medicine",
+  "Doctor-Led, Regulated Care",
+  "Free AI Face Scan ↗"
+];
 
 const treatmentCategories = [
   {
@@ -139,7 +138,7 @@ export default function Home2Header() {
   // Rotate taglines every 3.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setTaglineIndex((prev) => (prev + 1) % rotatingHeadlines.length);
+      setTaglineIndex((prev) => (prev + 1) % rotatingTaglines.length);
     }, 3500);
     return () => clearInterval(interval);
   }, []);
@@ -204,82 +203,31 @@ export default function Home2Header() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-18 sm:h-20 md:h-20">
-            {/* Logo - rotating headline (Brand / AI Scan / Heritage) */}
-            {(() => {
-              const current = rotatingHeadlines[taglineIndex];
-              const isAI = current.key === "ai";
-              const isHeritage = current.key === "heritage";
-              // Lighter weight & wider tracking for a more delicate, luxury feel
-              const baseHeadingClass =
-                "block whitespace-nowrap transition-colors duration-500 font-light tracking-[0.18em]";
-              const headingSize = isHeritage
-                ? "text-base sm:text-lg md:text-xl"
-                : "text-xl sm:text-2xl md:text-3xl";
-              const LogoInner = (
-                <div className="flex flex-col items-start py-3">
-                  <div className="h-7 sm:h-8 md:h-10 overflow-hidden flex items-end">
-                    <AnimatePresence mode="wait">
-                      <motion.span
-                        key={current.key}
-                        initial={{ y: 14, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -14, opacity: 0 }}
-                        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                        className={`${baseHeadingClass} ${headingSize} ${
-                          isScrolled ? 'text-gray-900' : 'text-white'
-                        }`}
-                      >
-                        {current.text}
-                      </motion.span>
-                    </AnimatePresence>
-                  </div>
-                  <div className="h-4 md:h-5 -mt-0.5">
-                    <AnimatePresence mode="wait">
-                      {isAI && (
-                        <motion.span
-                          key="click-to-scan"
-                          initial={{ opacity: 0, y: -4 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -4 }}
-                          transition={{ duration: 0.3 }}
-                          className="block text-[10px] sm:text-[11px] md:text-xs text-[#C9A050] underline underline-offset-2 tracking-[0.18em] font-light"
-                        >
-                          click to scan ↗
-                        </motion.span>
-                      )}
-                      {isHeritage && current.subtitle && (
-                        <motion.span
-                          key="heritage-sub"
-                          initial={{ opacity: 0, y: -4 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -4 }}
-                          transition={{ duration: 0.3 }}
-                          className="block text-[10px] sm:text-[11px] md:text-xs text-[#C9A050]/80 tracking-[0.32em] font-light uppercase"
-                        >
-                          {current.subtitle}
-                        </motion.span>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </div>
-              );
-
-              return isAI ? (
-                <a
-                  href="/aesthetic-intelligence"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Open Free AI Face Scan in a new tab"
-                >
-                  {LogoInner}
-                </a>
-              ) : (
-                <Link to="/home2" aria-label="CosmeDocs home">
-                  {LogoInner}
-                </Link>
-              );
-            })()}
-
+            {/* Logo - Bigger with animated subtitle */}
+            <Link to="/home2" className="flex flex-col items-start py-3">
+              <span className={`text-xl sm:text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
+                COSMEDOCS
+              </span>
+              <div className="h-4 md:h-5 overflow-hidden -mt-0.5">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={taglineIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      ease: "easeInOut"
+                    }}
+                    className="block text-[9px] sm:text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
+                  >
+                    {rotatingTaglines[taglineIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+          </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
