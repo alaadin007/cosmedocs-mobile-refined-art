@@ -7,12 +7,12 @@ import LanguageSelector from "@/components/LanguageSelector";
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
-const rotatingTaglines = [
-  "Harley Street Doctors • Since 2007",
-  "Advanced Aesthetic Medicine",
-  "Doctor-Led, Regulated Care",
-  "Free AI Face Scan ↗"
-];
+const rotatingHeadlines = [
+  { key: "brand", text: "COSMEDOCS" },
+  { key: "ai", text: "Free AI Scan" },
+  { key: "heritage", text: "Harley Street Doctors since 2006" },
+] as const;
+
 
 const treatmentCategories = [
   {
@@ -138,7 +138,7 @@ export default function Home2Header() {
   // Rotate taglines every 3.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setTaglineIndex((prev) => (prev + 1) % rotatingTaglines.length);
+      setTaglineIndex((prev) => (prev + 1) % rotatingHeadlines.length);
     }, 3500);
     return () => clearInterval(interval);
   }, []);
@@ -203,31 +203,64 @@ export default function Home2Header() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-18 sm:h-20 md:h-20">
-            {/* Logo - Bigger with animated subtitle */}
-            <Link to="/home2" className="flex flex-col items-start py-3">
-              <span className={`text-xl sm:text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                COSMEDOCS
-              </span>
-              <div className="h-4 md:h-5 overflow-hidden -mt-0.5">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={taglineIndex}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ 
-                      duration: 0.6, 
-                      ease: "easeInOut"
-                    }}
-                    className="block text-[9px] sm:text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
-                  >
-                    {rotatingTaglines[taglineIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </div>
-          </Link>
+            {/* Logo - rotating headline (Brand / AI Scan / Heritage) */}
+            {(() => {
+              const current = rotatingHeadlines[taglineIndex];
+              const isAI = current.key === "ai";
+              const LogoInner = (
+                <div className="flex flex-col items-start py-3">
+                  <div className="h-7 sm:h-8 md:h-10 overflow-hidden flex items-center">
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={current.key}
+                        initial={{ y: 14, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -14, opacity: 0 }}
+                        transition={{ duration: 0.45, ease: "easeOut" }}
+                        className={`block text-xl sm:text-2xl md:text-3xl font-bold tracking-tight whitespace-nowrap transition-colors duration-500 ${
+                          isAI
+                            ? 'text-[#C9A050]'
+                            : (isScrolled ? 'text-gray-900' : 'text-white')
+                        }`}
+                      >
+                        {current.text}
+                      </motion.span>
+                    </AnimatePresence>
+                  </div>
+                  <div className="h-4 md:h-5 -mt-0.5">
+                    <AnimatePresence>
+                      {isAI && (
+                        <motion.span
+                          key="click-to-scan"
+                          initial={{ opacity: 0, y: -4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          transition={{ duration: 0.3 }}
+                          className="block text-[10px] sm:text-[11px] md:text-xs text-[#C9A050] underline underline-offset-2 tracking-[0.04em]"
+                        >
+                          click to scan ↗
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </div>
+              );
+              return isAI ? (
+                <a
+                  href="/aesthetic-intelligence"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open Free AI Face Scan in a new tab"
+                >
+                  {LogoInner}
+                </a>
+              ) : (
+                <Link to="/home2" aria-label="CosmeDocs home">
+                  {LogoInner}
+                </Link>
+              );
+            })()}
+
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
