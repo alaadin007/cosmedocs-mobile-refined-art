@@ -530,7 +530,16 @@ const JawlineFiller = () => {
                 </motion.div>
               </section>
 
-              {/* Aftercare */}
+              {/* Endolaser cross-link — for patients who need lifting, not volume */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <p className="text-white/55 text-sm leading-relaxed font-light mb-2">
+                    If your concern is laxity rather than missing definition, lifting may serve you better than filler. Many patients arrive asking for jawline filler when, on assessment, the lower face is fully volumised — what's needed is a lift from within the tissue.
+                  </p>
+                  <EndolaserSpotlight variant="inline" />
+                </motion.div>
+              </section>
+
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
                   <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
