@@ -71,7 +71,7 @@ export function ThreadFaceLift() {
     },
     {
       question: "Can PDO threads be combined with other treatments?",
-      answer: "Yes. PDO threads are often combined with dermal fillers for volume restoration, Profhilo for skin quality, or Botox for dynamic lines. This combination approach — sometimes called an Liquid Facelift — provides comprehensive facial rejuvenation."
+      answer: "Yes. PDO threads are often combined with dermal fillers for volume restoration, Profhilo for skin quality, or Botox for dynamic lines. This combination approach — sometimes called a Liquid Facelift — provides comprehensive facial rejuvenation."
     },
     {
       question: "How much does a PDO thread lift cost?",
@@ -622,7 +622,7 @@ export function ThreadFaceLift() {
           </p>
           <h3>PDO Thread Lift Suitability and Safety</h3>
           <p>
-            PDO threads are suitable for patients aged 30–65 with mild to moderate skin laxity. Thread face lift procedures are performed under local anaesthetic with minimal downtime. Recovery typically takes 3–7 days. PDO threads can be combined with dermal fillers, Profhilo, and Botox for comprehensive facial rejuvenation — known as an Liquid Facelift. Thread lift cost starts from £350 for mono threads and £850 for cog threads. Our aesthetics is invisible art — bold, natural, always your way.
+            PDO threads are suitable for patients aged 30–65 with mild to moderate skin laxity. Thread face lift procedures are performed under local anaesthetic with minimal downtime. Recovery typically takes 3–7 days. PDO threads can be combined with dermal fillers, Profhilo, and Botox for comprehensive facial rejuvenation — known as a Liquid Facelift. Thread lift cost starts from £350 for mono threads and £850 for cog threads. Our aesthetics is invisible art — bold, natural, always your way.
           </p>
         </div>
       </div>

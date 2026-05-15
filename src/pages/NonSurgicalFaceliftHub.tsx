@@ -15,7 +15,7 @@ const treatments = [
     path: "/treatments/nefertiti-lift/",
     intensity: "Level 1 — Subtle Refinement",
     description:
-      "The lightest form of a non-surgical lift. Botox is placed along the jawline and platysmal bands to release downward-pulling muscles, creating a naturally sharper jaw and smoother neck contour. Ideal as a standalone refresher or the perfect complement to an Liquid Facelift for enhanced lower-face definition.",
+      "The lightest form of a non-surgical lift. Botox is placed along the jawline and platysmal bands to release downward-pulling muscles, creating a naturally sharper jaw and smoother neck contour. Ideal as a standalone refresher or the perfect complement to a Liquid Facelift for enhanced lower-face definition.",
     bestFor: "Early jowling, neck bands, jawline softening",
     downtime: "None — return to normal activities immediately",
     results: "Visible within 7–14 days, lasting 3–4 months",
@@ -59,11 +59,11 @@ const treatments = [
 const faqs = [
   {
     q: "What is the best non-surgical facelift treatment?",
-    a: "There is no single 'best' treatment — the ideal approach depends on your anatomy, degree of ageing, and goals. Mild early ageing may only need a Nefertiti Botox Lift, whilst moderate volume loss responds beautifully to an Liquid Facelift. For genuine tissue repositioning, PDO threads or the Laser Fibre Lift provide mechanical and thermal lifting respectively. Our doctors frequently combine modalities for optimal, natural results.",
+    a: "There is no single 'best' treatment — the ideal approach depends on your anatomy, degree of ageing, and goals. Mild early ageing may only need a Nefertiti Botox Lift, whilst moderate volume loss responds beautifully to a Liquid Facelift. For genuine tissue repositioning, PDO threads or the Laser Fibre Lift provide mechanical and thermal lifting respectively. Our doctors frequently combine modalities for optimal, natural results.",
   },
   {
     q: "Can non-surgical facelift treatments be combined?",
-    a: "Absolutely — and at Cosmedocs, combination is our preferred approach. The Nefertiti Lift pairs naturally with an Liquid Facelift. PDO threads are almost always combined with fillers for lower-face rejuvenation. The Laser Fibre Lift complements existing filler work without dissolving it. Your doctor will design a bespoke treatment plan during your consultation.",
+    a: "Absolutely — and at Cosmedocs, combination is our preferred approach. The Nefertiti Lift pairs naturally with a Liquid Facelift. PDO threads are almost always combined with fillers for lower-face rejuvenation. The Laser Fibre Lift complements existing filler work without dissolving it. Your doctor will design a bespoke treatment plan during your consultation.",
   },
   {
     q: "How long do non-surgical facelift results last?",
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     q: "How much does a non-surgical facelift cost in London?",
-    a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for an Liquid Facelift or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
+    a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for a Liquid Facelift or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
   },
   {
     q: "What is the Laser Fibre Lift and how does it differ from HIFU?",
@@ -528,7 +528,7 @@ const NonSurgicalFaceliftHub = () => {
             Cosmedocs offers the most comprehensive range of non-surgical facelift treatments in London, performed by GMC-registered doctors at our Harley Street clinic. Our multi-modality approach combines Nefertiti Botox lifting, hyaluronic acid dermal filler makeovers, PDO thread lifts, and Laser Fibre Lift technology to address every layer of facial ageing without surgery or general anaesthesia.
           </p>
           <p>
-            The Nefertiti Botox Lift is the lightest form of non-surgical facial lifting available. Named after the Egyptian queen famed for her elegant neck and jawline, this treatment uses botulinum toxin to relax the platysmal bands — the muscles that pull the lower face downward as we age. By releasing this downward tension, the jawline appears sharper, the neck smoother, and the overall facial contour more refined. The Nefertiti Lift is frequently combined with an Liquid Facelift for patients who want both muscle relaxation and volumetric restoration in a single appointment.
+            The Nefertiti Botox Lift is the lightest form of non-surgical facial lifting available. Named after the Egyptian queen famed for her elegant neck and jawline, this treatment uses botulinum toxin to relax the platysmal bands — the muscles that pull the lower face downward as we age. By releasing this downward tension, the jawline appears sharper, the neck smoother, and the overall facial contour more refined. The Nefertiti Lift is frequently combined with a Liquid Facelift for patients who want both muscle relaxation and volumetric restoration in a single appointment.
           </p>
           <p>
             The Liquid Facelift is our signature full-face rejuvenation treatment using hyaluronic acid dermal fillers strategically placed across 8 to 11 facial points. This technique restores lost volume in the temples, cheeks, chin, and jawline — recreating the scaffolding that supports youthful facial proportions. The Liquid Facelift addresses the fundamental cause of midface descent: volumetric depletion. When combined with Botox, the result is a comprehensive liquid facelift that treats both the volumetric and muscular components of facial ageing simultaneously.
@@ -543,13 +543,13 @@ const NonSurgicalFaceliftHub = () => {
             Our lead practitioner is the lead trainer for the Harley Street Institute, training doctors across the UK in advanced aesthetic techniques including the Laser Fibre Lift. With over 17 years of clinical experience and a philosophy rooted in natural, invisible results, Cosmedocs has established itself as one of London's leading non-surgical facelift clinics. We believe that a powerful treatment needs to be done in the right hands — it is not just the device that produces the results.
           </p>
           <p>
-            Non-surgical facelift alternatives to consider include HIFU (high-intensity focused ultrasound), Morpheus8 radiofrequency microneedling, and Ultherapy. While these treatments offer skin tightening benefits, they work from outside the skin rather than from within. The Laser Fibre Lift's subdermal delivery mechanism provides more targeted and precise results. When combined with the volumetric restoration of an Liquid Facelift and the mechanical lift of PDO threads, the multi-modality Cosmedocs approach delivers superior outcomes compared to any single-modality treatment.
+            Non-surgical facelift alternatives to consider include HIFU (high-intensity focused ultrasound), Morpheus8 radiofrequency microneedling, and Ultherapy. While these treatments offer skin tightening benefits, they work from outside the skin rather than from within. The Laser Fibre Lift's subdermal delivery mechanism provides more targeted and precise results. When combined with the volumetric restoration of a Liquid Facelift and the mechanical lift of PDO threads, the multi-modality Cosmedocs approach delivers superior outcomes compared to any single-modality treatment.
           </p>
           <p>
             Recovery from non-surgical facelift treatments at Cosmedocs varies by modality. The Nefertiti Botox Lift requires no downtime. The Liquid Facelift involves mild swelling for 2-3 days. PDO thread lifts require 3-5 days of recovery with mild swelling and tenderness. The Laser Fibre Lift treatment typically involves 4-5 days of swelling on average. All modalities are significantly less invasive than surgical facelift alternatives, with recovery measured in days rather than weeks.
           </p>
           <p>
-            Prices for non-surgical facelift treatments at our London Harley Street clinic start from £250 for a Nefertiti Botox Lift, from £800 for an Liquid Facelift or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment of specific zones including eyebrow lift, jawline and jowls, cheeks and nasolabial folds, and chin tightening for double chin reduction.
+            Prices for non-surgical facelift treatments at our London Harley Street clinic start from £250 for a Nefertiti Botox Lift, from £800 for a Liquid Facelift or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment of specific zones including eyebrow lift, jawline and jowls, cheeks and nasolabial folds, and chin tightening for double chin reduction.
           </p>
         </div>
       </div>

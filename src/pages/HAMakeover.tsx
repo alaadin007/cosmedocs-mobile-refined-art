@@ -132,7 +132,7 @@ export default function HAMakeover() {
           <EndolaserSpotlight variant="inline" />
         </section>
 
-        {/* What Is an Liquid Facelift? */}
+        {/* What Is a Liquid Facelift? */}
         <section className="py-20">
           <div className="page-container">
             <div className="max-w-3xl mx-auto">
@@ -143,11 +143,11 @@ export default function HAMakeover() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-extralight text-white mb-8">
-                  What Is an Liquid Facelift?
+                  What Is a Liquid Facelift?
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
-                    An Liquid Facelift is a personalised, full-face treatment plan that addresses ageing 
+                    A Liquid Facelift is a personalised, full-face treatment plan that addresses ageing 
                     holistically rather than in isolation. Rather than treating one area at a time, 
                     we assess the entire facial structure — temples, cheeks, jawline, chin, tear troughs, 
                     and surrounding support points — to create a cohesive, balanced result.
@@ -194,7 +194,7 @@ export default function HAMakeover() {
                     without surgery.
                   </p>
                   <p>
-                    At CosmeDocs, this technique often forms the foundation of an Liquid Facelift treatment. 
+                    At CosmeDocs, this technique often forms the foundation of a Liquid Facelift treatment. 
                     However, we never apply it rigidly. Every face is different: bone structure, fat pad 
                     distribution, skin quality, and ageing patterns all vary. Our doctors adapt the 
                     principles of the 8-Point technique to each individual patient, adding or modifying 
@@ -210,7 +210,7 @@ export default function HAMakeover() {
           </div>
         </section>
 
-        {/* How an Liquid Facelift Lifts the Face */}
+        {/* How a Liquid Facelift Lifts the Face */}
         <section className="py-20">
           <div className="page-container">
             <div className="max-w-3xl mx-auto">
@@ -221,7 +221,7 @@ export default function HAMakeover() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-extralight text-white mb-8">
-                  How an Liquid Facelift Lifts the Face
+                  How a Liquid Facelift Lifts the Face
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
@@ -230,7 +230,7 @@ export default function HAMakeover() {
                     create the visible signs of ageing — hollowing, sagging, and loss of definition.
                   </p>
                   <p>
-                    An Liquid Facelift addresses these changes by restoring support where it has been lost. 
+                    A Liquid Facelift addresses these changes by restoring support where it has been lost. 
                     Strategic placement of hyaluronic acid at deeper structural levels provides a scaffold 
                     that creates indirect lift. Mid-face support can improve the appearance of the lower 
                     face without directly treating it. Cheekbone augmentation can soften tear troughs. 
@@ -279,7 +279,7 @@ export default function HAMakeover() {
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
-                    An Liquid Facelift may be suitable for patients experiencing volume loss, facial 
+                    A Liquid Facelift may be suitable for patients experiencing volume loss, facial 
                     imbalance, or early to moderate signs of ageing who wish to restore a refreshed 
                     appearance without surgery. It is particularly effective for those who notice 
                     changes in multiple areas of the face rather than a single concern.
@@ -484,7 +484,7 @@ export default function HAMakeover() {
           </p>
           <h3>Full-Face Filler Rejuvenation London</h3>
           <p>
-            An Liquid Facelift may address temples, cheeks, jawline, chin, tear troughs, and surrounding 
+            A Liquid Facelift may address temples, cheeks, jawline, chin, tear troughs, and surrounding 
             structural points as part of a holistic treatment plan. Results are designed to look natural 
             and undetectable. Dr Ahmed Haq and Dr Hena provide conservative, considered care with a 
             philosophy of restoring what time has taken rather than changing identity.
