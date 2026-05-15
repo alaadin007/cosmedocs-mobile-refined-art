@@ -511,4 +511,22 @@
     <mobile:mobile/>
   </url>
 
+
+
+  <url>
+    <loc>https://www.cosmedocs.com/treatments/anti-wrinkle-treatment/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/harley-street-injectables/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
 </urlset>
