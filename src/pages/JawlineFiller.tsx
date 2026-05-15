@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import jawlineGallery2 from "@/assets/jawline-gallery-2.jpg";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 
 const JawlineFiller = () => {
   const faqs = [
