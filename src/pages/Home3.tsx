@@ -234,7 +234,7 @@ const categories: Category[] = [
       {
         title: "Hyperhidrosis",
         tagline: "Underarm sweat control",
-        href: "/treatments/hyperhidrosis/",
+        href: "/medical/botox-for-hyperhidrosis/",
         bg: "bg-[#0d1218]",
         image: hyperhidrosisCardImg,
         badge: "Most asked",
