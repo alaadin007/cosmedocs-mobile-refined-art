@@ -1986,6 +1986,17 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
         ref={scroller}
         className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
+        {/* Overview list FIRST: every medical Botox area, scannable at a glance */}
+        {category.cards.length > 0 && (
+          <OverviewCard
+            cards={category.cards}
+            eyebrow="Therapeutic Botox"
+            title="All medical areas"
+            heightCls={colHeight}
+            widthCls="w-[72vw] sm:w-[320px] md:w-[360px]"
+          />
+        )}
+
         {/* Hero spotlight: first card (Masseter) */}
         {category.cards[0] && (
           <div className={`shrink-0 ${widthBig} ${colHeight}`}>
@@ -2012,32 +2023,6 @@ const MedicalBotoxSection = ({ category }: { category: Category }) => {
             </div>
           ) : null;
         })()}
-
-        {/* Thin list column: every medical Botox treatment */}
-        {category.cards.length > 0 && (
-          <div className={`shrink-0 w-[58vw] sm:w-[300px] md:w-[330px] ${colHeight} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}>
-            <div className="px-6 pt-7 pb-5 border-b border-white/8">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-2">Therapeutic Botox</p>
-              <h3 className="font-serif text-2xl text-white leading-tight tracking-tight">All medical areas</h3>
-            </div>
-            <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              {category.cards.map((c) => (
-                <li key={c.title}>
-                  <Link
-                    to={c.href}
-                    className="group flex items-start justify-between gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition"
-                  >
-                    <div className="min-w-0">
-                      <p className="font-serif text-[15px] text-white leading-snug truncate">{c.title}</p>
-                      <p className="text-[11px] text-white/55 mt-0.5 truncate">{c.tagline}</p>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-[#C9A050] mt-1 shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
         <Link
           to={category.cta.href}
