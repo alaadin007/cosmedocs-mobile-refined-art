@@ -1378,15 +1378,9 @@ const OverviewCard = ({
   <div
     className={`shrink-0 ${widthCls} ${heightCls} rounded-[28px] bg-gradient-to-b from-[#171717] to-black border border-[#C9A050]/20 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col`}
   >
-    <div className="px-5 sm:px-6 pt-6 pb-4 border-b border-white/8 flex items-start gap-3">
-      <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0">
-        <FaceMapHeader />
-      </div>
-      <div className="min-w-0">
-        <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-1.5">{eyebrow}</p>
-        <h3 className="font-serif text-xl sm:text-2xl text-white leading-tight tracking-tight">{title}</h3>
-        <p className="text-[11px] text-white/55 mt-1.5">Browse, then swipe right for each in detail →</p>
-      </div>
+    <div className="px-5 sm:px-6 pt-4 pb-3 border-b border-white/8">
+      <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-1">{eyebrow}</p>
+      <h3 className="font-serif text-lg sm:text-xl text-white leading-tight tracking-tight">{title}</h3>
     </div>
     <ul className="flex-1 overflow-y-auto px-2 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
       {cards.map((c) => (
