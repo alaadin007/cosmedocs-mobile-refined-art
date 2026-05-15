@@ -96,6 +96,7 @@ const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
 const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
 const NonSurgicalFaceliftHub = lazy(() => import("./pages/NonSurgicalFaceliftHub"));
 const EndolaserLift = lazy(() => import("./pages/EndolaserLift"));
+const EndolaserBody = lazy(() => import("./pages/EndolaserBody"));
 const EyebrowLiftEndolaser = lazy(() => import("./pages/EyebrowLiftEndolaser"));
 const Sunekos = lazy(() => import("./pages/Sunekos"));
 const Jalupro = lazy(() => import("./pages/Jalupro"));
@@ -748,6 +749,8 @@ const App = () => {
                           <Route path="/treatments/non-surgical-facelift/" element={<NonSurgicalFaceliftHub />} />
                           <Route path="/treatments/endolaser" element={<EndolaserLift />} />
                           <Route path="/treatments/endolaser/" element={<EndolaserLift />} />
+                          <Route path="/treatments/endolaser-body" element={<EndolaserBody />} />
+                          <Route path="/treatments/endolaser-body/" element={<EndolaserBody />} />
                           <Route path="/treatments/eyebrow-lift-endolaser" element={<EyebrowLiftEndolaser />} />
                           <Route path="/treatments/eyebrow-lift-endolaser/" element={<EyebrowLiftEndolaser />} />
                           <Route path="/treatments/non-surgical-ponytail" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />

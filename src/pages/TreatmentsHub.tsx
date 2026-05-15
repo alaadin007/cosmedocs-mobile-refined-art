@@ -33,76 +33,91 @@ const treatmentCategories: TreatmentCategory[] = [
   {
     title: "Botox & Anti-Wrinkle",
     subtitle: "Muscle modulation & prevention",
-    description: "Precision anti-wrinkle injections for dynamic lines, facial contouring, and medical conditions. Administered by expert injectors since 2007.",
+    description: "Precision anti-wrinkle treatment for dynamic lines, facial contouring and prevention. Doctor-led since 2007.",
     link: "/treatments/botox/",
     image: calfSlimmingLuxury,
     imageAlt: "Sculpted calf — calf slimming Botox at Cosmedocs Harley Street",
     items: [
-      "Forehead, Frown & Crow's Feet",
+      "1, 2 or 3 Areas (Forehead · Frown · Crow's Feet)",
+      "Anti-Wrinkle Treatment",
+      "Anti-Wrinkle Injections",
+      "Anti-Ageing Injections",
       "Lip Flip & Gummy Smile",
-      "Masseter & Jawline Slimming",
-      "Nefertiti Lift",
-      "Calf Slimming & Trap Reduction",
-      "Medical Botox (Migraine, Sweating)",
+      "Bunny Lines · Mentalis · Marionette",
+      "Brow Lift & Nasal Flaring",
+      "Nefertiti Neck-Jaw Lift",
+      "Masseter Botox (Slimming)",
+      "Trapezius & Calf Slimming",
     ],
   },
   {
     title: "Dermal Fillers",
     subtitle: "Volume, structure & contouring",
-    description: "Hyaluronic acid dermal fillers for natural volume restoration, facial contouring, and age-reversal. Bespoke treatment plans for every face.",
+    description: "Hyaluronic acid from regulated Swiss, French and US laboratories — for natural volume restoration, facial contouring and re-balancing.",
     link: "/treatments/dermal-fillers/",
     items: [
-      "Lip Fillers (Natural to Bold)",
-      "Cheek, Chin & Jawline Filler",
+      "Lip Fillers (0.5ml · 1ml · Russian)",
+      "Cheek Filler (1ml · 2ml · 4ml)",
+      "Jawline & Jowl Filler",
+      "Chin Filler · Profile Balance",
       "Non-Surgical Nose Job",
       "Tear Trough & Under-Eye",
+      "Temple Filler",
       "HA Makeover (Full Face)",
+      "Harley Street Injectables Hub",
+    ],
+  },
+  {
+    title: "Non-Surgical Facelift & Body Contouring",
+    subtitle: "Lift · contour · redefine",
+    description: "Lift the face from within and refine the body — the Endo family, Nefertiti, PDO threads and HA Makeover, sequenced doctor-led.",
+    link: "/treatments/non-surgical-facelift/",
+    items: [
+      "Endolaser Fibre Lift ✦ Now featured",
+      "Endolaser Body — Fat & Tightening",
+      "Endolaser Brow Lift",
+      "PDO Thread Face Lift",
+      "Nefertiti Neck-Jaw Lift",
+      "HA Makeover (Lift from above)",
+      "Endolift London",
     ],
   },
   {
     title: "Skin Rejuvenation",
     subtitle: "Renewal, radiance & repair",
-    description: "Medical-grade skin treatments to restore hydration, stimulate collagen, and refine texture. From bio-remodelling to collagen induction therapy.",
+    description: "Medical-grade skin treatments to restore hydration, stimulate collagen and refine texture — from bio-remodelling to regenerative therapy.",
     link: "/treatments/skin-rejuvenation/",
     items: [
-      "Profhilo",
-      "Polynucleotides",
+      "Polynucleotides — Signature Course (Face & Eyes)",
+      "Profhilo Bio-Remodelling",
+      "Sunekos · Jalupro · Lumi Eyes",
+      "Exosomes",
+      "PRP & Microneedling",
+      "Chemical Peels (Glycolic · TCA · Salicylic)",
       "HydraFacial",
-      "Microneedling & PRP",
-      "Chemical Peels",
     ],
   },
   {
     title: "Laser Treatments",
     subtitle: "Precision light-based therapy",
-    description: "Advanced laser and light-based treatments for resurfacing, pigmentation correction, hair removal, and scar reduction.",
+    description: "Advanced laser and light-based treatments for resurfacing, pigmentation, hair removal and scar reduction.",
     link: "/treatments/laser/",
     items: [
+      "Endolaser Fibre Lift ✦ New",
+      "Pico Laser (Pigmentation · Tattoo)",
+      "Laser Hair Removal — Glow & Go",
       "CO₂ Laser Resurfacing",
-      "Pico Laser",
-      "Laser Hair Removal",
       "Scar Reduction",
-    ],
-  },
-  {
-    title: "PDO Threads",
-    subtitle: "Non-surgical lifting",
-    description: "Absorbable PDO threads for tissue lifting, skin tightening, and collagen stimulation — a non-surgical alternative to traditional facelifts.",
-    link: "/treatments/pdo-threads/",
-    items: [
-      "Thread Face Lift",
-      "Non-Surgical Nose Threads",
-      "Jawline Definition",
     ],
   },
   {
     title: "Medical Botox",
     subtitle: "Therapeutic applications",
-    description: "Evidence-based botulinum toxin treatments for medical conditions including chronic migraines, hyperhidrosis, bruxism, and trigger-point pain.",
+    description: "Evidence-based botulinum toxin for medical conditions — chronic migraine, hyperhidrosis, bruxism and trigger-point pain.",
     link: "/medical/",
     items: [
       "Migraine & Headache Relief",
-      "Excessive Sweating (Hyperhidrosis)",
+      "Hyperhidrosis (Excessive Sweating)",
       "Bruxism & Teeth Grinding",
       "Trigger Point Therapy",
     ],
@@ -110,25 +125,26 @@ const treatmentCategories: TreatmentCategory[] = [
   {
     title: "Plastic Surgery",
     subtitle: "Expert surgical procedures",
-    description: "Comprehensive cosmetic surgery performed by qualified plastic surgeons. From rhinoplasty to body contouring, with the highest standards of care.",
+    description: "Cosmetic surgery performed by qualified plastic surgeons — rhinoplasty, eyelid surgery, facelift and body contouring.",
     link: "/plastic-surgeon/",
     items: [
       "Rhinoplasty",
       "Blepharoplasty (Eyelid Surgery)",
       "Facelift Surgery",
       "Liposuction",
+      "Hair Transplant",
     ],
   },
   {
     title: "Dermatology",
     subtitle: "Medical & aesthetic skin health",
-    description: "Consultant dermatologist-led skin health services for medical conditions, screening, and advanced cosmetic dermatology.",
+    description: "Consultant dermatologist-led skin health for medical conditions, screening and advanced cosmetic dermatology.",
     link: "/dermatology/",
     items: [
-      "Acne & Rosacea Treatment",
+      "Acne & Rosacea",
       "Mole & Skin Tag Removal",
       "Psoriasis & Eczema",
-      "Pigmentation Correction",
+      "Pigmentation & Melasma",
     ],
   },
 ];
@@ -242,6 +258,55 @@ const TreatmentsHub = () => {
                 </Link>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ── Featured / Signature callouts ── */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Endolaser — Now featured */}
+            <Link
+              to="/treatments/endolaser/"
+              className="group relative overflow-hidden rounded-2xl border border-[#C9A050]/40 bg-gradient-to-br from-black via-[#1a140a] to-black p-6 sm:p-7 hover:border-[#C9A050]/70 transition-all"
+            >
+              <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-[#C9A050]/10 blur-3xl pointer-events-none" />
+              <div className="relative">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#C9A050] text-black text-[10px] font-bold uppercase tracking-[0.2em]">
+                  ✦ Now Featured
+                </span>
+                <h3 className="mt-4 text-xl sm:text-2xl font-light text-white">
+                  Endolaser <span className="text-[#C9A050]">(Laser Fibre Lift)</span>
+                </h3>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
+                  The only UKCA & CE-marked dual-wavelength Endolaser at Harley Street. Lifts, tightens and refines from inside the tissue — performed by the device's Lead Trainer at the Harley Street Institute.
+                </p>
+                <span className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-[#C9A050]">
+                  Discover Endolaser <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Polynucleotides Signature Course */}
+            <Link
+              to="/treatments/polynucleotides/"
+              className="group relative overflow-hidden rounded-2xl border border-[#C9A050]/40 bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a] p-6 sm:p-7 hover:border-[#C9A050]/70 transition-all"
+            >
+              <div className="absolute -bottom-12 -left-12 w-44 h-44 rounded-full bg-[#C9A050]/10 blur-3xl pointer-events-none" />
+              <div className="relative">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#C9A050]/60 text-[#C9A050] text-[10px] font-semibold uppercase tracking-[0.2em]">
+                  Signature Course
+                </span>
+                <h3 className="mt-4 text-xl sm:text-2xl font-light text-white">
+                  Polynucleotides <span className="text-[#C9A050]">— Face & Eyes</span>
+                </h3>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
+                  A considered three-session protocol of DNA-level repair across the periorbital and full-face zones. Investment <span className="text-[#F0D78C] font-medium">£950</span> — doctor-led, reserved for our signature patients.
+                </p>
+                <span className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-[#C9A050]">
+                  Discover the protocol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -373,25 +438,7 @@ const TreatmentsHub = () => {
           </motion.div>
         </section>
 
-        {/* ── Hidden SEO content ── */}
-        <div className="sr-only" aria-hidden="true">
-          <p>
-            Cosmedocs offers a comprehensive range of aesthetic treatments at our Harley Street clinic in London. 
-            Our treatment portfolio includes anti-wrinkle injections using botulinum toxin (Botox, Azzalure, Dysport) 
-            for dynamic facial lines including forehead lines, frown lines, and crow's feet. We specialise in advanced 
-            facial contouring with dermal fillers including lip fillers, cheek fillers, jawline fillers, chin fillers, 
-            temple fillers, tear trough fillers, and non-surgical nose jobs using hyaluronic acid. Our skin rejuvenation 
-            treatments include Profhilo bio-remodelling, polynucleotide therapy, HydraFacial, microneedling with PRP 
-            (platelet-rich plasma), and medical-grade chemical peels. We offer PDO thread lifts for non-surgical facial 
-            lifting and CO₂ laser resurfacing for scar reduction and skin renewal. Our medical botox services treat 
-            chronic migraines, hyperhidrosis (excessive sweating), bruxism (teeth grinding), and myofascial trigger 
-            points. Plastic surgery services include rhinoplasty, blepharoplasty, facelift surgery, and liposuction 
-            performed by qualified plastic surgeons. Our consultant dermatologists provide treatment for acne, eczema, 
-            psoriasis, rosacea, mole removal, skin tag removal, and hyperpigmentation. All treatments are administered 
-            by GMC-registered doctors with over 17 years of experience in aesthetic medicine. Consultations available 
-            from £50, redeemable against any treatment. Located at Harley Street, London W1G.
-          </p>
-        </div>
+        {/* sr-only stuffing removed per visible-content SEO policy */}
       </div>
     </>
   );

@@ -262,34 +262,11 @@ const categories: Category[] = [
   },
   {
     id: "fillers-anti-ageing",
-    eyebrow: "Dermal Fillers · Anti-ageing",
+    eyebrow: "Dermal Fillers · Anti-ageing & Facial Contouring",
     title: "Volume, returned.",
-    copy: "Where the face has lost structure, cheeks, jowls, mid-face, hyaluronic acid restores it. Quietly. Architecturally.",
+    copy: "Where the face has lost structure — cheeks, jowls, mid-face, chin, nose, jawline — hyaluronic acid restores it. Quietly. Architecturally.",
     cta: { label: "Mini Facelifts hub", href: "/treatments/non-surgical-facelift/" },
     cards: [
-      {
-        title: "Cosmetic Units of the Face",
-        tagline: "The anatomical map",
-        href: "/aesthetics-at-a-glance/",
-        bg: "bg-black",
-        badge: "Anatomy",
-        image: cosmeticUnitsImg,
-        frontImage: cosmeticUnitsImg,
-        flip: {
-          back: "In youth, the skin flows seamlessly between each cosmetic unit — forehead, temple, cheek, mid-face, jaw, lip, chin — reading as one continuous surface. With time, volume loss, uneven tone and fine lines begin to break that flow, and the units start to show as separate islands. Doctor-led restoration, shown in the slides that follow, gently rebuilds the bridges between them. Continuity returned. Architecture intact. Never bulk.",
-          imagePosition: "top",
-          image: cosmeticUnitsImg,
-          largeText: true,
-          eyebrow: "Anatomy · The Map",
-          bullets: [
-            "Youth = seamless flow between units",
-            "Ageing = volume loss, tone shifts, lines fragment the face",
-            "Units start to read as separate, not one",
-            "Gentle restoration rebuilds the bridges (see next slides)",
-            "Continuity returned — never bulk, never overdone",
-          ],
-        },
-      },
       nonSurgicalFaceliftCard,
       {
         title: "HA Makeover",
@@ -306,26 +283,10 @@ const categories: Category[] = [
           largeText: true,
           eyebrow: "Continuity · The aim",
           slides: [
-            {
-              eyebrow: "Step 1 · Diagnosis",
-              title: "Read the whole face",
-              body: "We map the cosmetic units — forehead, temple, cheek, mid-face, jaw, chin, lip — and identify where volume loss and tone shifts have fragmented continuity. The face is read as one architecture, never one wrinkle at a time.",
-            },
-            {
-              eyebrow: "Step 2 · Architecture",
-              title: "Rebuild from the bone",
-              body: "Deep, on-periosteum placement restores the structural scaffold first — temple, cheek and jaw — so the mid-face is lifted from above. Bone-deep support, never superficial bulk.",
-            },
-            {
-              eyebrow: "Step 3 · Continuity",
-              title: "Re-bridge every unit",
-              body: "Each cosmetic unit is gently re-bridged so the face reads as one continuous surface again. Tear trough into cheek, cheek into jaw, jaw into chin — the seams disappear.",
-            },
-            {
-              eyebrow: "Step 4 · The result",
-              title: "Reads as you, only rested",
-              body: "A single signature visit, doctor-led, millimetre by millimetre. Volume returned, architecture intact. Invisible art — bold, natural, always your way.",
-            },
+            { eyebrow: "Step 1 · Diagnosis", title: "Read the whole face", body: "We map the cosmetic units — forehead, temple, cheek, mid-face, jaw, chin, lip — and identify where volume loss and tone shifts have fragmented continuity. The face is read as one architecture, never one wrinkle at a time." },
+            { eyebrow: "Step 2 · Architecture", title: "Rebuild from the bone", body: "Deep, on-periosteum placement restores the structural scaffold first — temple, cheek and jaw — so the mid-face is lifted from above. Bone-deep support, never superficial bulk." },
+            { eyebrow: "Step 3 · Continuity", title: "Re-bridge every unit", body: "Each cosmetic unit is gently re-bridged so the face reads as one continuous surface again. Tear trough into cheek, cheek into jaw, jaw into chin — the seams disappear." },
+            { eyebrow: "Step 4 · The result", title: "Reads as you, only rested", body: "A single signature visit, doctor-led, millimetre by millimetre. Volume returned, architecture intact. Invisible art — bold, natural, always your way." },
           ],
           bullets: [
             "Youth = one continuous face; age fragments it",
@@ -449,34 +410,27 @@ const categories: Category[] = [
           ],
         },
       },
-    ],
-  },
-  {
-    id: "facial-contouring",
-    eyebrow: "Facial Contouring",
-    title: "Architecture of the face.",
-    copy: "Reshaping, not refilling. The chin, nose, jawline and profile, refined with millimetre precision.",
-    cta: { label: "Facial Contouring overview", href: "/treatments/dermal-fillers/" },
-    cards: [
       {
         title: "Chin Filler",
         tagline: "Profile-balancing dose",
         href: "/treatments/chin-filler/",
-        bg: "bg-gradient-to-br from-stone-200 to-stone-400",
-        ink: "text-zinc-900",
+        bg: "bg-gradient-to-br from-[#1a1410] via-[#2a1d10] to-[#3a2810]",
         image: chinFillerBaImg,
         frontImage: artChinImg,
         frontImageFit: "cover",
         badge: "Profile",
         flip: {
           back: "A measured chin projection that re-balances the lower face, softening a recessive jaw, refining the side profile and lifting the chin-neck line. Doctor-led, millimetre dosing for a result that reads as bone, not filler.",
+          imagePosition: "top",
+          image: chinFillerBaImg,
+          largeText: true,
         },
       },
       {
         title: "Non-Surgical Nose",
         tagline: "Liquid rhinoplasty",
         href: "/treatments/nose-filler/",
-        bg: "bg-gradient-to-br from-zinc-900 to-zinc-700",
+        bg: "bg-gradient-to-br from-[#0e0e0e] via-[#1a1410] to-[#2a1c10]",
         frontImage: artNoseImg,
         frontImageFit: "cover",
         flip: {
@@ -500,7 +454,108 @@ const categories: Category[] = [
           largeText: true,
         },
       },
+      {
+        title: "Swiss science. French artistry. American innovation.",
+        tagline: "Pedigree · Product Story",
+        href: "/treatments/dermal-fillers/",
+        bg: "bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a]",
+        badge: "Pedigree",
+        frontImage: teoxaneAwardImg,
+        frontImageFit: "contain",
+        flip: {
+          eyebrow: "Pedigree · Product Story",
+          largeText: true,
+          back: "We use only top-tier hyaluronic acid from regulated Swiss, French and US laboratories — Teoxane, Juvéderm, Restylane, Belotero, Filorga and Vivacy. Cosmedocs was awarded Teoxane's Outstanding Clinic Award (Q2 2017) for safety, results and ongoing training.",
+          image: teoxaneAwardImg,
+          bullets: [
+            "🇨🇭 Teoxane · Swiss",
+            "🇨🇭 Restylane · Swiss",
+            "🇫🇷 Filorga · French",
+            "🇫🇷 Vivacy · French",
+            "🇺🇸 Juvéderm · USA",
+            "🇩🇪 Belotero · German",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: "facial-contouring",
+    eyebrow: "Non-Surgical Facelift & Body Contouring",
+    title: "Lift. Contour. Redefine.",
+    copy: "Reshaping, not refilling. Lift the face from within and refine the body with the Endo family — no surgery, no scars.",
+    cta: { label: "Mini Facelifts hub", href: "/treatments/non-surgical-facelift/" },
+    cards: [
       nonSurgicalFaceliftCard,
+      {
+        title: "Nefertiti Lift",
+        tagline: "Botox neck-jaw lift",
+        href: "/treatments/nefertiti-lift/",
+        bg: "bg-gradient-to-br from-[#0e0e0e] via-[#1a1410] to-[#2a1c10]",
+        image: botoxNefertitiImg,
+        badge: "Lift",
+        flip: {
+          back: "Targeted micro-doses along the platysma release the downward pull on the lower face. The result is a softer neck-jaw line and a quietly lifted lower third — no scalpel, no downtime.",
+          imagePosition: "top",
+          image: botoxNefertitiImg,
+        },
+      },
+      {
+        title: "PDO Threads",
+        tagline: "Soft-tissue lift · scaffold",
+        href: "/treatments/pdo-threads/",
+        bg: "bg-gradient-to-br from-[#1a1410] via-[#2a1d10] to-[#3a2810]",
+        image: pdoThreadsBaImg,
+        badge: "Scaffold",
+        flip: {
+          back: "Absorbable PDO threads create an internal scaffold that lifts the cheek, jaw and brow tissues — and stimulates fresh collagen as they dissolve. A doctor-led mid-step between filler and surgery.",
+          imagePosition: "top",
+          image: pdoThreadsBaImg,
+        },
+      },
+      {
+        title: "HA Makeover",
+        tagline: "Lift the lower face from above",
+        href: "/treatments/ha-makeover/",
+        bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
+        badge: "Signature",
+        image: haMakeoverBaImg,
+        frontImage: frontHaImg,
+        frontImageFit: "cover",
+        flip: {
+          back: "Bone-deep hyaluronic acid placement at temple, cheek and jaw rebuilds the structural scaffold of the face — so the mid-face lifts from above, not below. The keystone of the non-surgical facelift.",
+          imagePosition: "top",
+          image: haMakeoverBaImg,
+        },
+      },
+      {
+        title: "Endolaser Fibre Lift",
+        tagline: "Dual-wavelength intra-tissue laser",
+        href: "/treatments/endolaser/",
+        bg: "bg-gradient-to-br from-black via-[#1a140a] to-black",
+        image: endolaserBaImg,
+        badge: "Now featured",
+        flip: {
+          back: "The only UKCA & CE-marked dual-wavelength Endolaser at Harley Street, performed by the Lead Trainer for this device at the Harley Street Institute. Lifts, tightens and refines from inside the tissue — single session, 18–24 month longevity.",
+          imagePosition: "top",
+          image: endolaserBaImg,
+          largeText: true,
+        },
+      },
+      {
+        title: "Endolaser Body",
+        tagline: "Fat reduction & skin tightening",
+        href: "/treatments/endolaser-body/",
+        bg: "bg-gradient-to-br from-[#0a0a0a] via-[#15110a] to-black",
+        image: endolaserBaImg,
+        badge: "New",
+        flip: {
+          back: "The same dual-wavelength fibre, applied to the body — sub-mental, flanks, inner thigh, knees, bra-line. The 1470 nm wavelength emulsifies stubborn adipose pockets while the 980 nm contracts the overlying skin. Doctor-led, single-session, walk-in walk-out.",
+          imagePosition: "top",
+          image: endolaserBaImg,
+          largeText: true,
+        },
+      },
     ],
   },
   {
@@ -1495,43 +1550,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
         </Link>
       </div>
 
-      {category.id === "fillers-anti-ageing" && (
-        <div className="px-5 sm:px-8 max-w-7xl mx-auto mt-8">
-          <div className="rounded-[28px] border border-[#C9A050]/25 bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 shadow-[0_30px_80px_-40px_rgba(201,160,80,0.4)]">
-            <div className="shrink-0 w-32 h-40 sm:w-40 sm:h-52 rounded-2xl overflow-hidden bg-black/60 ring-1 ring-[#C9A050]/30 flex items-center justify-center">
-              <img
-                src={teoxaneAwardImg}
-                alt="Teoxane Outstanding Clinic Awards — Cosmedocs Winner Q2 2017"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1 min-w-0 text-center md:text-left">
-              <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#C9A050] mb-2">Pedigree · Product Story</p>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#F0D78C] leading-tight">
-                Swiss science. French artistry. American innovation.
-              </h3>
-              <p className="mt-3 text-white/75 text-sm sm:text-[15px] leading-relaxed max-w-2xl">
-                We use only top-tier hyaluronic acid from regulated Swiss, French and US laboratories — Teoxane, Juvéderm, Restylane, Belotero, Filorga and Vivacy. Cosmedocs was awarded Teoxane's <span className="text-[#F0D78C] font-medium">Outstanding Clinic Award (Q2 2017)</span> for safety, results and ongoing training.
-              </p>
-              <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
-                {[
-                  { flag: "🇨🇭", label: "Teoxane · Swiss" },
-                  { flag: "🇨🇭", label: "Restylane · Swiss" },
-                  { flag: "🇫🇷", label: "Filorga · French" },
-                  { flag: "🇫🇷", label: "Vivacy · French" },
-                  { flag: "🇺🇸", label: "Juvéderm · USA" },
-                  { flag: "🇩🇪", label: "Belotero · German" },
-                ].map((b) => (
-                  <span key={b.label} className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-white/85 bg-white/5 border border-[#C9A050]/25 rounded-full px-3 py-1.5">
-                    <span aria-hidden>{b.flag}</span>{b.label}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Swiss · French · American pedigree now lives as the closing flip card in the anti-ageing carousel */}
     </motion.section>
   );
 };
