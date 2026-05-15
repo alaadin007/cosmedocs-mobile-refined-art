@@ -1795,6 +1795,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
     get("Nefertiti Neck Lift"),
     get("Marionette / DAO"),
     get("Nasal Flaring"),
+    get("Masseter Botox"),
   ].filter(Boolean);
 
   const columns: Column[] = [
