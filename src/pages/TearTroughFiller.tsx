@@ -46,7 +46,7 @@ const TearTroughFiller = () => {
     },
     {
       question: "What is the tear trough filler price?",
-      answer: "Tear trough filler starts from £425. We also offer polynucleotide treatments at £450 per session with package deals available."
+      answer: "Tear trough filler starts from £475. We also offer polynucleotide treatments at £450 per session with package deals available."
     }
   ];
 
@@ -97,12 +97,12 @@ const TearTroughFiller = () => {
         "@type": "Offer",
         name: "Tear Trough Filler Treatment",
         priceCurrency: "GBP",
-        price: "425",
+        price: "475",
         priceSpecification: {
           "@type": "PriceSpecification",
           priceCurrency: "GBP",
-          price: "425",
-          description: "Tear trough filler from £425; Polynucleotide from £450",
+          price: "475",
+          description: "Tear trough filler from £475 (under-eye restoration — may include tear trough, orbitomalar & upper-cheek support); Polynucleotide from £450",
         },
         availability: "https://schema.org/InStock",
         seller: { "@id": "https://www.cosmedocs.com/#clinic" },
@@ -131,10 +131,10 @@ const TearTroughFiller = () => {
     <>
       <Helmet>
         <title>Tear Trough Filler Treatment | Under Eye | Harley Street Doctors</title>
-        <meta name="description" content="Doctor-led tear trough filler from £425. Reduce dark circles, under-eye hollows, and eye bags at our Harley Street clinic. Natural results since 2007." />
+        <meta name="description" content="Doctor-led tear trough filler from £475. Reduce dark circles, under-eye hollows, and eye bags at our Harley Street clinic. Natural results since 2007." />
         <link rel="canonical" href="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
         <meta property="og:title" content="Tear Trough Filler Treatment | Under Eye | Harley Street Doctors" />
-        <meta property="og:description" content="Doctor-led tear trough filler from £425. Reduce dark circles and under-eye hollows at our Harley Street clinic." />
+        <meta property="og:description" content="Doctor-led tear trough filler from £475. Reduce dark circles and under-eye hollows at our Harley Street clinic." />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
