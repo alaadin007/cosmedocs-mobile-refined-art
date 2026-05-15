@@ -447,6 +447,54 @@ const EyebrowLiftEndolaser = () => {
                 </div>
               </div>
 
+              {/* Technology detail — SEO-rich visible content */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-extralight text-white mb-4">
+                  How the 1470nm Endolaser Works Around the Eye
+                </h2>
+                <p className="text-sm text-white/65 leading-relaxed mb-4">
+                  The 1470nm wavelength was selected specifically for soft-tissue contraction in delicate
+                  facial areas. Unlike ablative lasers that vaporise the surface, Endolaser works
+                  <em>inside</em> the tissue — beneath the skin — so the epidermis remains intact. Around the
+                  eye this matters profoundly: the skin here is the thinnest on the face, and any surface
+                  injury risks pigment change or prolonged redness.
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed mb-4">
+                  The fibre itself is 600 microns in diameter — approximately the width of six human hairs.
+                  It is introduced through a single puncture in the temporal hairline, advanced subcutaneously
+                  along the brow vector, and withdrawn slowly while firing. The laser energy is absorbed by
+                  water in the tissue, creating controlled zones of thermal contraction. Existing collagen
+                  fibres shorten immediately; fibroblasts are stimulated to lay down new type-I and type-III
+                  collagen over the following 8–12 weeks. The result is not a stretched brow — it is a
+                  structurally firmer brow, elevated by its own renewed scaffold.
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed">
+                  Because the entry point is inside the hairline and the procedure is performed under local
+                  anaesthesia, there is no general anaesthetic risk, no surgical scar, and no need for
+                  companion care after treatment. Patients travel to our Harley Street consulting rooms from
+                  across London, the Home Counties, and internationally — the brow lift is a discreet,
+                  same-day procedure that fits into a working week.
+                </p>
+              </div>
+
+              {/* E-E-A-T & motto */}
+              <div className="border border-white/10 rounded-2xl p-6 bg-white/[0.02]">
+                <p className="text-xs uppercase tracking-wider text-[#C9A050] mb-3">
+                  Our aesthetics is invisible art
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed mb-4">
+                  <strong className="text-white/85">Bold &middot; Natural &middot; Always Your Way</strong>
+                </p>
+                <p className="text-sm text-white/65 leading-relaxed">
+                  Aesthetic medicine by CosmeDocs is minimal. Quiet, not loud. Invisible, not exaggerated.
+                  It is transformation that speaks — without saying a word. Every Endolaser brow lift is
+                  planned and performed by medically qualified doctors who understand orbital anatomy,
+                  vascular mapping, and the subtle architecture of facial expression. Since 2007 we have
+                  operated from 10 Harley Street, London W1G 9PF, and our clinicians hold active GMC
+                  registration with specialist training in aesthetic medicine.
+                </p>
+              </div>
+
               {/* FAQ */}
               <div>
                 <h2 className="text-2xl md:text-3xl font-extralight text-white mb-4">
