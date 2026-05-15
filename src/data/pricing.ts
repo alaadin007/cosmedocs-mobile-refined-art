@@ -220,7 +220,7 @@ export const fillersAntiAgeingPricing: PricingSection = {
     { title: "Nasolabial Folds Filler", price: "£325/ml", link: "/treatments/dermal-fillers/" },
     { title: "Jawline Filler (High Def/Jowls)", price: "£350/ml", link: "/treatments/jawline-filler/" },
     { title: "Cheek Filler", price: "£350/ml", link: "/treatments/cheek-filler/" },
-    { title: "Tear Trough Filler / Under Eye Circles", price: "£425", link: "/treatments/tear-trough-filler/" },
+    { title: "Under Eye Restoration (may include tear trough, orbitomalar & upper-cheek support)", price: "£475", link: "/treatments/tear-trough-filler/" },
     { title: "Chin Filler", price: "£350/ml", link: "/treatments/chin-filler/" },
     { title: "Neck Filler", price: "£400/ml", link: "/treatments/dermal-fillers/" },
   ],

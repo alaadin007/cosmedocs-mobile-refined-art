@@ -251,8 +251,8 @@ const Prices = () => {
               link: "/cheek-filler"
             },
             {
-              title: "Tear Trough Filler / Under Eye Circles",
-              price: "£425",
+              title: "Under Eye Restoration (may include tear trough, orbitomalar & upper-cheek support)",
+              price: "£475",
               link: "/tear-trough-filler"
             },
             {
