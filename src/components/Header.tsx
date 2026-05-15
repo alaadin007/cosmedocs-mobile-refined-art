@@ -144,14 +144,9 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Logo - Center */}
-          <Link to="/aesthetic-intelligence" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2" aria-label="Free Face AI Scan by CosmeDocs">
-            <div className="text-lg md:text-2xl font-bold whitespace-nowrap leading-none flex items-baseline gap-1.5">
-              <span className="text-amber-400">Free Face AI Scan</span>
-              <span className="text-white">COSMEDOCS</span>
-            </div>
-            <p className="text-[10px] md:text-xs text-amber-400 mt-1 whitespace-nowrap">Harley St since 2007</p>
-          </Link>
+          {/* Logo - Center (rotating) */}
+          <RotatingLogo />
+
 
 
 
