@@ -1456,14 +1456,6 @@ const OverviewCard = ({
         </li>
       ))}
     </ul>
-    <button
-      type="button"
-      onClick={() => window.dispatchEvent(new CustomEvent('open-treatments-menu'))}
-      className="border-t border-white/8 px-5 sm:px-6 py-3 text-[11px] uppercase tracking-[0.22em] text-[#C9A050] hover:bg-white/5 transition flex items-center justify-center gap-2"
-    >
-      Open full treatments menu
-      <ArrowUpRight className="w-3.5 h-3.5" />
-    </button>
   </div>
 );
 
