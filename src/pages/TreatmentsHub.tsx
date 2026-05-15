@@ -438,25 +438,7 @@ const TreatmentsHub = () => {
           </motion.div>
         </section>
 
-        {/* ── Hidden SEO content ── */}
-        <div className="sr-only" aria-hidden="true">
-          <p>
-            Cosmedocs offers a comprehensive range of aesthetic treatments at our Harley Street clinic in London. 
-            Our treatment portfolio includes anti-wrinkle injections using botulinum toxin (Botox, Azzalure, Dysport) 
-            for dynamic facial lines including forehead lines, frown lines, and crow's feet. We specialise in advanced 
-            facial contouring with dermal fillers including lip fillers, cheek fillers, jawline fillers, chin fillers, 
-            temple fillers, tear trough fillers, and non-surgical nose jobs using hyaluronic acid. Our skin rejuvenation 
-            treatments include Profhilo bio-remodelling, polynucleotide therapy, HydraFacial, microneedling with PRP 
-            (platelet-rich plasma), and medical-grade chemical peels. We offer PDO thread lifts for non-surgical facial 
-            lifting and CO₂ laser resurfacing for scar reduction and skin renewal. Our medical botox services treat 
-            chronic migraines, hyperhidrosis (excessive sweating), bruxism (teeth grinding), and myofascial trigger 
-            points. Plastic surgery services include rhinoplasty, blepharoplasty, facelift surgery, and liposuction 
-            performed by qualified plastic surgeons. Our consultant dermatologists provide treatment for acne, eczema, 
-            psoriasis, rosacea, mole removal, skin tag removal, and hyperpigmentation. All treatments are administered 
-            by GMC-registered doctors with over 17 years of experience in aesthetic medicine. Consultations available 
-            from £50, redeemable against any treatment. Located at Harley Street, London W1G.
-          </p>
-        </div>
+        {/* sr-only stuffing removed per visible-content SEO policy */}
       </div>
     </>
   );
