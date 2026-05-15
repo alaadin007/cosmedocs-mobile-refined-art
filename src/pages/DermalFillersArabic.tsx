@@ -213,7 +213,7 @@ export default function DermalFillersArabic() {
                         { name: "فيلر الذقن 1.2 مل", price: "من £350" },
                         { name: "فيلر تحت العين", price: "من £425" },
                         { name: "فيلر الخدود", price: "من £350" },
-                        { name: "HA Makeover الشامل", price: "من £950" },
+                        { name: "Liquid Facelift الشامل", price: "من £950" },
                       ].map(item => (
                         <div key={item.name} className="flex justify-between items-center bg-white border border-gray-200 rounded-xl px-5 py-3">
                           <span className={`text-sm ${textH} font-light`}>{item.name}</span>

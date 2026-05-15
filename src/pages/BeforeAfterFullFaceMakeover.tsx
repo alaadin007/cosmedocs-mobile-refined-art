@@ -74,7 +74,7 @@ const galleryImages = [
 const BeforeAfterFullFaceMakeover = () => {
   const seoData = generateSEOMetadata(
     "Full Face Makeover Before & After Results | CosmeDocs Harley Street",
-    "Real before and after results showing full-face dermal filler rejuvenation. Doctor-led HA Makeover treatments on Harley Street.",
+    "Real before and after results showing full-face dermal filler rejuvenation. Doctor-led Liquid Facelift treatments on Harley Street.",
     "/before-after/dermal-fillers/full-face-makeover/"
   );
 
@@ -127,7 +127,7 @@ const BeforeAfterFullFaceMakeover = () => {
                   Full Face Makeover <span className="font-semibold text-[#C9A050]">Before & After</span>
                 </h1>
                 <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl font-light">
-                  Real patient results showing full-face rejuvenation through bespoke HA Makeover treatments. Each case reflects structural balance, natural proportion, and invisible results — planned and performed by our Harley Street doctors.
+                  Real patient results showing full-face rejuvenation through bespoke Liquid Facelift treatments. Each case reflects structural balance, natural proportion, and invisible results — planned and performed by our Harley Street doctors.
                 </p>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="mt-8 flex flex-wrap gap-8 text-sm text-white/40">
@@ -157,14 +157,14 @@ const BeforeAfterFullFaceMakeover = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-2xl">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-                <h2 className="text-2xl font-extralight text-white mb-4">Learn More About HA Makeover Treatment</h2>
+                <h2 className="text-2xl font-extralight text-white mb-4">Learn More About Liquid Facelift Treatment</h2>
                 <p className="text-white/50 text-base mb-8 leading-relaxed font-light">
                   A consultation is required to assess suitability and expected outcomes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/treatments/ha-makeover/">
                     <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 w-full sm:w-auto">
-                      HA Makeover Treatment <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      Liquid Facelift Treatment <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
                   <Link to="/before-after/dermal-fillers/">

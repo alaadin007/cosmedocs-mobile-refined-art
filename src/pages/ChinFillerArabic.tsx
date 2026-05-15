@@ -160,7 +160,7 @@ export default function ChinFillerArabic() {
                         { name: "فيلر الذقن 1.2 مل", price: "من £350" },
                         { name: "فيلر الذقن 2.4 مل", price: "من £650" },
                         { name: "فيلر الذقن 3.6 مل", price: "من £850" },
-                        { name: "HA Makeover الشامل", price: "من £950" },
+                        { name: "Liquid Facelift الشامل", price: "من £950" },
                       ].map(item => (
                         <div key={item.name} className="flex justify-between items-center bg-white border border-gray-200 rounded-xl px-5 py-3">
                           <span className={`text-sm ${textH} font-light`}>{item.name}</span>
@@ -180,7 +180,7 @@ export default function ChinFillerArabic() {
                         { q: "كم تكلفة فيلر الذقن؟", a: "يبدأ فيلر الذقن من £350 لـ 1.2 مل، £650 لـ 2.4 مل، و£850 لـ 3.6 مل. تعتمد التكلفة على الكمية المطلوبة." },
                         { q: "كم تدوم نتائج فيلر الذقن؟", a: "تدوم النتائج عادةً من 12 إلى 18 شهراً. فيلر الذقن يدوم أطول من فيلر الشفاه بسبب كثافة المادة." },
                         { q: "هل فيلر الذقن مؤلم؟", a: "الانزعاج بسيط جداً. نستخدم مخدراً موضعياً والفيلر يحتوي على ليدوكايين للراحة." },
-                        { q: "هل يمكن الجمع مع علاجات أخرى؟", a: "نعم، فيلر الذقن يعمل بشكل ممتاز مع فيلر الفك وفيلر الشفاه والبوتوكس. HA Makeover الشامل من أكثر تركيباتنا شيوعاً." },
+                        { q: "هل يمكن الجمع مع علاجات أخرى؟", a: "نعم، فيلر الذقن يعمل بشكل ممتاز مع فيلر الفك وفيلر الشفاه والبوتوكس. Liquid Facelift الشامل من أكثر تركيباتنا شيوعاً." },
                       ].map((faq, i) => (
                         <AccordionItem key={i} value={`faq-${i}`} className="bg-white border border-gray-200 rounded-xl px-5">
                           <AccordionTrigger className={`text-sm font-medium ${textH} hover:no-underline`}>{faq.q}</AccordionTrigger>

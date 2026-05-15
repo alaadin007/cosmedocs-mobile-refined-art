@@ -9,8 +9,8 @@ import EndolaserSpotlight from '@/components/EndolaserSpotlight';
 
 export default function HAMakeover() {
   const seoData = generateSEOMetadata(
-    "HA Makeover | Full-Face Rejuvenation | Cosmedocs",
-    "Bespoke HA Makeover — full-face dermal filler rejuvenation by GMC-registered doctors on Harley Street. Natural results since 2007.",
+    "Liquid Facelift | Full-Face Rejuvenation | Cosmedocs",
+    "Bespoke Liquid Facelift — full-face dermal filler rejuvenation by GMC-registered doctors on Harley Street. Natural results since 2007.",
     "/treatments/ha-makeover/"
   );
 
@@ -37,7 +37,7 @@ export default function HAMakeover() {
       },
       {
         "@type": "MedicalProcedure",
-        "name": "HA Makeover",
+        "name": "Liquid Facelift",
         "description": "Full-face dermal filler rejuvenation using hyaluronic acid for structural support, volume restoration, and natural facial balance.",
         "url": "https://www.cosmedocs.com/treatments/ha-makeover/",
         "procedureType": "Non-surgical",
@@ -48,7 +48,7 @@ export default function HAMakeover() {
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
           { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.cosmedocs.com/treatments/" },
-          { "@type": "ListItem", "position": 3, "name": "HA Makeover", "item": "https://www.cosmedocs.com/treatments/ha-makeover/" }
+          { "@type": "ListItem", "position": 3, "name": "Liquid Facelift", "item": "https://www.cosmedocs.com/treatments/ha-makeover/" }
         ]
       }
     ]
@@ -81,7 +81,7 @@ export default function HAMakeover() {
               <span>/</span>
               <Link to="/treatments/" className="hover:text-[#C9A050] transition-colors">Treatments</Link>
               <span>/</span>
-              <span className="text-gray-300">HA Makeover</span>
+              <span className="text-gray-300">Liquid Facelift</span>
             </nav>
 
             <motion.div
@@ -92,7 +92,7 @@ export default function HAMakeover() {
             >
               <p className="text-[#C9A050] text-sm tracking-[0.2em] uppercase mb-4 font-light">Full-Face Rejuvenation</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-8 leading-tight text-white">
-                HA Makeover
+                Liquid Facelift
                 <span className="block text-2xl md:text-3xl text-gray-400 mt-3 font-extralight">
                   Full-Face Dermal Filler Rejuvenation
                 </span>
@@ -100,7 +100,7 @@ export default function HAMakeover() {
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl font-light">
                 A bespoke, anatomy-led approach to full-face rejuvenation using hyaluronic acid dermal fillers. 
                 Designed to restore balance, structure, and natural proportion — never to change identity. 
-                Every HA Makeover is planned and performed by our GMC-registered doctors, Dr Ahmed Haq and Dr Hena, 
+                Every Liquid Facelift is planned and performed by our GMC-registered doctors, Dr Ahmed Haq and Dr Hena, 
                 at our Harley Street clinic. Our philosophy is restoring what time has taken — subtly, invisibly, 
                 and always with restraint.
               </p>
@@ -132,7 +132,7 @@ export default function HAMakeover() {
           <EndolaserSpotlight variant="inline" />
         </section>
 
-        {/* What Is an HA Makeover? */}
+        {/* What Is a Liquid Facelift? */}
         <section className="py-20">
           <div className="page-container">
             <div className="max-w-3xl mx-auto">
@@ -143,11 +143,11 @@ export default function HAMakeover() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-extralight text-white mb-8">
-                  What Is an HA Makeover?
+                  What Is a Liquid Facelift?
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
-                    An HA Makeover is a personalised, full-face treatment plan that addresses ageing 
+                    A Liquid Facelift is a personalised, full-face treatment plan that addresses ageing 
                     holistically rather than in isolation. Rather than treating one area at a time, 
                     we assess the entire facial structure — temples, cheeks, jawline, chin, tear troughs, 
                     and surrounding support points — to create a cohesive, balanced result.
@@ -194,14 +194,14 @@ export default function HAMakeover() {
                     without surgery.
                   </p>
                   <p>
-                    At CosmeDocs, this technique often forms the foundation of an HA Makeover treatment. 
+                    At CosmeDocs, this technique often forms the foundation of a Liquid Facelift treatment. 
                     However, we never apply it rigidly. Every face is different: bone structure, fat pad 
                     distribution, skin quality, and ageing patterns all vary. Our doctors adapt the 
                     principles of the 8-Point technique to each individual patient, adding or modifying 
                     support points as anatomy demands.
                   </p>
                   <p className="text-gray-400 italic border-l-2 border-[#C9A050]/40 pl-6">
-                    The 8-Point Facelift is a recognised technique that informs many HA Makeover treatments, 
+                    The 8-Point Facelift is a recognised technique that informs many Liquid Facelift treatments, 
                     but is always adapted rather than followed rigidly.
                   </p>
                 </div>
@@ -210,7 +210,7 @@ export default function HAMakeover() {
           </div>
         </section>
 
-        {/* How an HA Makeover Lifts the Face */}
+        {/* How a Liquid Facelift Lifts the Face */}
         <section className="py-20">
           <div className="page-container">
             <div className="max-w-3xl mx-auto">
@@ -221,7 +221,7 @@ export default function HAMakeover() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-extralight text-white mb-8">
-                  How an HA Makeover Lifts the Face
+                  How a Liquid Facelift Lifts the Face
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
@@ -230,7 +230,7 @@ export default function HAMakeover() {
                     create the visible signs of ageing — hollowing, sagging, and loss of definition.
                   </p>
                   <p>
-                    An HA Makeover addresses these changes by restoring support where it has been lost. 
+                    A Liquid Facelift addresses these changes by restoring support where it has been lost. 
                     Strategic placement of hyaluronic acid at deeper structural levels provides a scaffold 
                     that creates indirect lift. Mid-face support can improve the appearance of the lower 
                     face without directly treating it. Cheekbone augmentation can soften tear troughs. 
@@ -279,7 +279,7 @@ export default function HAMakeover() {
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
-                    An HA Makeover may be suitable for patients experiencing volume loss, facial 
+                    A Liquid Facelift may be suitable for patients experiencing volume loss, facial 
                     imbalance, or early to moderate signs of ageing who wish to restore a refreshed 
                     appearance without surgery. It is particularly effective for those who notice 
                     changes in multiple areas of the face rather than a single concern.
@@ -320,7 +320,7 @@ export default function HAMakeover() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-extralight text-white mb-6">
-                  HA Makeover Before &amp; After Results
+                  Liquid Facelift Before &amp; After Results
                 </h2>
                 <p className="text-gray-300 font-light leading-relaxed mb-6">
                   All images show real patients treated by our doctors at our Harley Street clinic. 
@@ -329,7 +329,7 @@ export default function HAMakeover() {
                 <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-6">
                   <img
                     src="/images/treatments/ha-makeover/ha-makeover-ba-preview.jpg"
-                    alt="Before and after HA Makeover showing full-face rejuvenation with anatomical planning"
+                    alt="Before and after Liquid Facelift showing full-face rejuvenation with anatomical planning"
                     loading="lazy"
                     className="w-full h-auto block"
                   />
@@ -341,7 +341,7 @@ export default function HAMakeover() {
                   to="/before-after/ha-makeover/"
                   className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#d4af5a] transition-colors text-sm tracking-wide"
                 >
-                  View full HA Makeover before &amp; after gallery
+                  View full Liquid Facelift before &amp; after gallery
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -420,7 +420,7 @@ export default function HAMakeover() {
                 </h2>
                 <div className="space-y-6 text-gray-300 font-light leading-relaxed">
                   <p>
-                    The HA Makeover is delivered through fine, blunt-tipped cannulas wherever anatomy allows — not sharp needles. This single change in technique is why our patients lift, contour and refresh the entire face yet leave the clinic without the bruises and tell-tale marks usually associated with full-face filler work.
+                    The Liquid Facelift is delivered through fine, blunt-tipped cannulas wherever anatomy allows — not sharp needles. This single change in technique is why our patients lift, contour and refresh the entire face yet leave the clinic without the bruises and tell-tale marks usually associated with full-face filler work.
                   </p>
                   <p>
                     The majority of patients walk straight back into their day — work, lunch, school pick-up — with nothing visible. We do ask for a little leeway: a touch of concealer to cover the occasional pinpoint entry mark or mild swelling is wise insurance, but extended downtime is not part of the plan.
@@ -472,19 +472,19 @@ export default function HAMakeover() {
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h2>HA Makeover Full-Face Dermal Filler Rejuvenation</h2>
+          <h2>Liquid Facelift Full-Face Dermal Filler Rejuvenation</h2>
           <p>
-            The HA Makeover at CosmeDocs is a bespoke, full-face dermal filler rejuvenation treatment 
+            The Liquid Facelift at CosmeDocs is a bespoke, full-face dermal filler rejuvenation treatment 
             performed by GMC-registered doctors on Harley Street, London. Using hyaluronic acid fillers, 
             the treatment addresses volume loss, structural decline, and facial imbalance through 
             anatomy-led planning and precise multi-point injection techniques. The 8-Point Facelift is 
-            a recognised technique that informs many HA Makeover treatments but is always adapted to 
+            a recognised technique that informs many Liquid Facelift treatments but is always adapted to 
             each patient's unique facial anatomy. CosmeDocs has been established since 2007 with over 
             one million injections performed. Our aesthetics is invisible art — bold, natural, always your way.
           </p>
           <h3>Full-Face Filler Rejuvenation London</h3>
           <p>
-            An HA Makeover may address temples, cheeks, jawline, chin, tear troughs, and surrounding 
+            A Liquid Facelift may address temples, cheeks, jawline, chin, tear troughs, and surrounding 
             structural points as part of a holistic treatment plan. Results are designed to look natural 
             and undetectable. Dr Ahmed Haq and Dr Hena provide conservative, considered care with a 
             philosophy of restoring what time has taken rather than changing identity.

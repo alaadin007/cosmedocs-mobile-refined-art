@@ -120,7 +120,7 @@ const PricesSpanish = () => {
                 <h2 className="text-2xl font-bold mb-2 text-amber-400">RELLENOS DÉRMICOS</h2>
                 <p className="text-gray-400 mb-6">Consulta £50 (descontado del tratamiento)</p>
                 {[
-                  { title: "HA Makeover (Transformación Hialurónica)", price: "Desde £800" },
+                  { title: "Liquid Facelift (Transformación Hialurónica)", price: "Desde £800" },
                   { title: "Lifting sin Cirugía", price: "Desde £800" },
                   { title: "Relleno Surcos Nasogenianos", price: "£325/ml" },
                   { title: "Relleno de Mandíbula", price: "£350/ml", link: "/es/tratamientos/relleno-mandibula/" },

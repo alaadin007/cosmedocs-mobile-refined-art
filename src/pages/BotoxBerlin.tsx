@@ -242,8 +242,8 @@ const BotoxBerlin = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { img: transformationBefore, title: "Vorher", desc: "Erstberatung - Personalisierte Gesichtsanalyse" },
-                { img: transformationAfterMild, title: "Nach 1. Sitzung", desc: "Leichtes HA Makeover - Sofort natürliches Ergebnis" },
-                { img: transformation1Year, title: "Nach 1 Jahr", desc: "2 HA Makeover Sitzungen + Hautverjüngung" },
+                { img: transformationAfterMild, title: "Nach 1. Sitzung", desc: "Leichtes Liquid Facelift - Sofort natürliches Ergebnis" },
+                { img: transformation1Year, title: "Nach 1 Jahr", desc: "2 Liquid Facelift Sitzungen + Hautverjüngung" },
                 { img: transformationCloseup, title: "Nahaufnahme", desc: "Verwandelte Hautqualität, verfeinerte Züge" }
               ].map((item, index) => (
                 <motion.div
@@ -301,7 +301,7 @@ const BotoxBerlin = () => {
 
                 <p className="text-gray-300 leading-relaxed mb-6">
                   <strong className="text-amber-400">Hyaluronsäure</strong> (HA) ist unsere Leidenschaft. Unsere 
-                  Fachärzte führen "HA Makeovers" durch — komplette Gesichtstransformationen ausschließlich mit 
+                  Fachärzte führen "Liquid Facelifts" durch — komplette Gesichtstransformationen ausschließlich mit 
                   Hyaluronsäure-Fillern. In 15 bis 20 Minuten können wir mehrere Bereiche behandeln: 
                   Lippen, Wangenknochen, Kinn, Kieferlinie, für ein harmonisches und natürliches Ergebnis.
                 </p>

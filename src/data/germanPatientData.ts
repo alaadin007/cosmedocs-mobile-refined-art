@@ -26,7 +26,7 @@ export const germanData: PatientPageData = {
     motto: "Natürliche Ergebnisse sind kein Versprechen – sie sind unser täglicher Standard.",
   },
   haMakeover: {
-    title: "Was ist HA Makeover?",
+    title: "Was ist Liquid Facelift?",
     subtitle: "(Hyaluronsäure-basierte Gesichtsverjüngung)",
     description: "Ein ganzheitlicher Behandlungsplan mit Hyaluronsäure zur Wiederherstellung von Balance, Volumen und Ausstrahlung – ohne Ihre Gesichtszüge zu verändern.",
     goal: "Ziel: Jünger und frischer aussehen, ohne dass es auffällt.",
@@ -77,7 +77,7 @@ export const germanData: PatientPageData = {
   },
   treatmentMenu: {
     title: "Behandlungsmenü",
-    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Dermal Filler", skin: "Hautverjüngung", contouring: "Konturierung", medical: "Medizinisches Botox", makeover: "HA Makeover" }),
+    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Dermal Filler", skin: "Hautverjüngung", contouring: "Konturierung", medical: "Medizinisches Botox", makeover: "Liquid Facelift" }),
   },
   aboutUs: {
     title: "Über Cosmedocs",
@@ -97,11 +97,11 @@ export const germanData: PatientPageData = {
       { q: "Ist es in London günstiger?", a: "Oft ja. Botox 3 Bereiche kostet £350 bei uns, verglichen mit 400–600 € in Deutschland." },
       { q: "Was ist Masseter Botox?", a: "Masseter Botox verschlankt das Gesicht durch Entspannung des Kiefermuskels. Wir legen Wert auf kontrollierte Dosierung." },
       { q: "Bieten Sie Wadenverschlankung an?", a: "Ja, wir gehören zu den ersten Londoner Kliniken. Die Behandlung reduziert den Wadenmuskel schrittweise ohne Beeinträchtigung der Gangfunktion." },
-      { q: "Was ist HA Makeover?", a: "Eine ganzheitliche Hyaluronsäure-Lösung zur Wiederherstellung von Volumen, Struktur und Hautqualität." },
+      { q: "Was ist Liquid Facelift?", a: "Eine ganzheitliche Hyaluronsäure-Lösung zur Wiederherstellung von Volumen, Struktur und Hautqualität." },
       { q: "Wie buche ich?", a: "Sie können über unsere Kontaktseite buchen oder unseren AI-Assistenten auf der Website nutzen." },
     ],
   },
   disclaimer: "Diese Seite wurde mit KI-Unterstützung erstellt. Wir empfehlen, unsere Fachärzte für die genauesten Informationen zu konsultieren.",
-  seoText: "Cosmedocs ästhetische Klinik Harley Street London für deutschsprachige Patienten seit 2007. Botox, Dermal Filler, Masseter Botox Kieferschlankung, Wadenverschlankung Calf Reduction, HA Makeover Gesichtsverjüngung. Über 1 Million Injektionen. Arztgeleitete ästhetische Medizin mit natürlichen Ergebnissen.",
-  keywords: "ästhetische klinik london, deutsche patienten london, botox london, masseter botox, wadenverschlankung, calf reduction, HA makeover, lippenfilter london, Harley Street, filler berlin london",
+  seoText: "Cosmedocs ästhetische Klinik Harley Street London für deutschsprachige Patienten seit 2007. Botox, Dermal Filler, Masseter Botox Kieferschlankung, Wadenverschlankung Calf Reduction, Liquid Facelift Gesichtsverjüngung. Über 1 Million Injektionen. Arztgeleitete ästhetische Medizin mit natürlichen Ergebnissen.",
+  keywords: "ästhetische klinik london, deutsche patienten london, botox london, masseter botox, wadenverschlankung, calf reduction, Liquid Facelift, lippenfilter london, Harley Street, filler berlin london",
 };

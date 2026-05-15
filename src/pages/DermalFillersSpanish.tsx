@@ -204,7 +204,7 @@ export default function DermalFillersSpanish() {
                         { name: "Relleno mentón 1,2 ml", price: "Desde £350" },
                         { name: "Ojeras", price: "Desde £425" },
                         { name: "Relleno pómulos", price: "Desde £350" },
-                        { name: "HA Makeover completo", price: "Desde £950" },
+                        { name: "Liquid Facelift completo", price: "Desde £950" },
                       ].map(item => (
                         <div key={item.name} className="flex justify-between items-center bg-white border border-gray-200 rounded-xl px-5 py-3">
                           <span className={`text-sm ${textH} font-light`}>{item.name}</span>

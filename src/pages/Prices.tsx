@@ -220,7 +220,7 @@ const Prices = () => {
           isSubcategory: true,
           subitems: [
             {
-              title: "HA Makeover",
+              title: "Liquid Facelift",
               price: "From £800",
               description: "Bespoke full-face dermal filler rejuvenation using multi-point structural support",
               link: "/treatments/ha-makeover"
@@ -673,7 +673,7 @@ const Prices = () => {
             <TabsList className="bg-accent mb-8 p-1 flex flex-nowrap min-w-max">
               <TabsTrigger value="botox">Botox</TabsTrigger>
               <TabsTrigger value="fillers">Dermal Fillers</TabsTrigger>
-              <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
+              <TabsTrigger value="hyaluronic">Liquid Facelift</TabsTrigger>
               <TabsTrigger value="skinBoosters">Skin Boosters</TabsTrigger>
               <TabsTrigger value="medspa">Skin & Hair Medicine</TabsTrigger>
               <TabsTrigger value="plasticsurgeon">Plastic Surgeon</TabsTrigger>
@@ -929,7 +929,7 @@ const Prices = () => {
                   <div className="rounded-lg overflow-hidden">
                     <img 
                       src="/lovable-uploads/08578c07-c2c7-43fd-a3c3-d44e6594913c.png" 
-                      alt="HA Makeover Before and After" 
+                      alt="Liquid Facelift Before and After" 
                       className="w-full h-auto"
                     />
                   </div>
@@ -943,7 +943,7 @@ const Prices = () => {
               {treatments.hyaluronic.link && (
                 <div className="mt-6 text-center">
                   <Button variant="link" className="text-white hover:text-gray-300">
-                    Learn more about HA Makeover →
+                    Learn more about Liquid Facelift →
                   </Button>
                 </div>
               )}

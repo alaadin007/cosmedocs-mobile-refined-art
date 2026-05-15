@@ -20,7 +20,7 @@ const treatmentCategories = [
     subtitle: "Volumen, estructura y contorno",
     description: "Rellenos de ácido hialurónico para restauración natural del volumen, contorno facial y rejuvenecimiento. Planes de tratamiento personalizados.",
     link: "/es/tratamientos/acido-hialuronico/",
-    items: ["Relleno de labios", "Pómulos, mentón y mandíbula", "Rinoplastia sin cirugía", "Ojeras y bolsas", "HA Makeover (rostro completo)"],
+    items: ["Relleno de labios", "Pómulos, mentón y mandíbula", "Rinoplastia sin cirugía", "Ojeras y bolsas", "Liquid Facelift (rostro completo)"],
   },
   {
     title: "Rejuvenecimiento de la Piel",

@@ -158,7 +158,7 @@ export default function ChinFillerSpanish() {
                         { name: "Relleno mentón 1,2 ml", price: "Desde £350" },
                         { name: "Relleno mentón 2,4 ml", price: "Desde £650" },
                         { name: "Relleno mentón 3,6 ml", price: "Desde £850" },
-                        { name: "HA Makeover completo", price: "Desde £950" },
+                        { name: "Liquid Facelift completo", price: "Desde £950" },
                       ].map(item => (
                         <div key={item.name} className="flex justify-between items-center bg-white border border-gray-200 rounded-xl px-5 py-3">
                           <span className={`text-sm ${textH} font-light`}>{item.name}</span>

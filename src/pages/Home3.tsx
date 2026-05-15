@@ -188,10 +188,10 @@ const nonSurgicalFaceliftCard: SubCard = {
   flip: {
     eyebrow: "The Journey · Mild to lifted",
     largeText: true,
-    back: "Rather than choosing one treatment, we sequence three. Botox Nefertiti relaxes the muscles pulling the lower face down. HA Makeover restores the volume that holds the architecture up — the keystone of the lift. Endolaser or PDO threads tighten the skin from within. Doctor-led, doctor-sequenced, in your time.",
+    back: "Rather than choosing one treatment, we sequence three. Botox Nefertiti relaxes the muscles pulling the lower face down. Liquid Facelift restores the volume that holds the architecture up — the keystone of the lift. Endolaser or PDO threads tighten the skin from within. Doctor-led, doctor-sequenced, in your time.",
     bullets: [
       <Link key="nef" to="/treatments/botox/" className="text-[#C9A050] underline-offset-4 hover:underline">1 · Relax — Nefertiti Botox →</Link>,
-      <Link key="ha" to="/treatments/ha-makeover/" className="text-[#C9A050] underline-offset-4 hover:underline">2 · Restore volume — HA Makeover →</Link>,
+      <Link key="ha" to="/treatments/ha-makeover/" className="text-[#C9A050] underline-offset-4 hover:underline">2 · Restore volume — Liquid Facelift →</Link>,
       <Link key="endo" to="/treatments/endolaser/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — Endolaser (Laser Fibre Lift) →</Link>,
       <Link key="pdo" to="/treatments/pdo-threads/" className="text-[#C9A050] underline-offset-4 hover:underline">3 · Tighten — PDO Thread Lift →</Link>,
       <Link key="brow" to="/treatments/eyebrow-lift-endolaser/" className="text-[#C9A050] underline-offset-4 hover:underline">+ Endolaser Brow Lift (non-surgical) →</Link>,
@@ -269,8 +269,8 @@ const categories: Category[] = [
     cards: [
       nonSurgicalFaceliftCard,
       {
-        title: "HA Makeover",
-        tagline: "Hyaluronic Acid Makeover — your skin's best friend",
+        title: "Liquid Facelift",
+        tagline: "Full-face hyaluronic acid rejuvenation",
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
@@ -278,7 +278,7 @@ const categories: Category[] = [
         frontImage: frontHaImg,
         frontImageFit: "cover",
         flip: {
-          back: "When ageing fragments the face, the cosmetic units stop reading as one. The HA Makeover gently re-bridges every unit — forehead, temple, cheek, mid-face, jaw, chin, lip — so the face flows again as a single, continuous surface.",
+          back: "When ageing fragments the face, the cosmetic units stop reading as one. The Liquid Facelift gently re-bridges every unit — forehead, temple, cheek, mid-face, jaw, chin, lip — so the face flows again as a single, continuous surface.",
           image: haMakeoverBaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
@@ -514,7 +514,7 @@ const categories: Category[] = [
         },
       },
       {
-        title: "HA Makeover",
+        title: "Liquid Facelift",
         tagline: "Lift the lower face from above",
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
@@ -895,8 +895,8 @@ const FaceMark = ({ area }: { area?: string }) => {
             <path d="M22 32h20M36 28l6 4-6 4" stroke="#C9A050" />
           </>
         );
-      // HA Makeover — 8-point compass
-      case "HA Makeover":
+      // Liquid Facelift — 8-point compass
+      case "Liquid Facelift":
         return (
           <>
             <circle cx="32" cy="32" r="20" />
@@ -989,7 +989,7 @@ const FaceMark = ({ area }: { area?: string }) => {
     if (!area) return "";
     const known = [
       "Lip Filler", "Chin Filler", "Cheek Filler", "Jowl & Jawline",
-      "Tear Trough", "Temple Filler", "HA Makeover",
+      "Tear Trough", "Temple Filler", "Liquid Facelift",
       "Non-Surgical Nose", "Nose Filler", "Nose",
       "Forehead", "Brow Lift",
       "PDO Threads", "Thread Lift",
@@ -1140,7 +1140,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
           <div className="absolute inset-0 p-7 sm:p-9 flex flex-col pointer-events-none">
             {!card.frontImage && !card.frontImages && !card.imageOnFront && (
               <div className={`flex-1 flex items-center justify-center ${card.ink ? "text-zinc-900/70" : "text-white/80"}`}>
-                {card.title === "HA Makeover"
+                {card.title === "Liquid Facelift"
                   ? <HADropletFace />
                   : (card.title === "Volume, returned." || card.title === "Architecture of the face.")
                     ? null

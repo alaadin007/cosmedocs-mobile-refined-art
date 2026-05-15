@@ -201,12 +201,12 @@ const wrinklesCard: BigTx = {
 
 const volumeCard: BigTx = {
   eyebrow: "03 · Volume Loss · Architecture",
-  title: "The HA Makeover.",
+  title: "The Liquid Facelift.",
   tagline: "8 / 11-point lifting with hyaluronic acid — the architecture restored.",
   image: haMakeoverBaImg,
-  back: "Time quietly takes structure from the cheeks, mid-face, jaw, temples and lips. The HA Makeover restores it — millimetre by millimetre, point by point — with hyaluronic acid placed deep against the bone. Quiet lift. No bulk. No surgery. The face you remember, returned.",
+  back: "Time quietly takes structure from the cheeks, mid-face, jaw, temples and lips. The Liquid Facelift restores it — millimetre by millimetre, point by point — with hyaluronic acid placed deep against the bone. Quiet lift. No bulk. No surgery. The face you remember, returned.",
   href: "/treatments/ha-makeover/",
-  cta: "HA Makeover",
+  cta: "Liquid Facelift",
 };
 
 /* -------------------- Section helpers -------------------- */

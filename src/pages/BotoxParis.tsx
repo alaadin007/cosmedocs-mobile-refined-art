@@ -242,8 +242,8 @@ const BotoxParis = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { img: transformationBefore, title: "Avant", desc: "Consultation initiale - Analyse personnalisée du visage" },
-                { img: transformationAfterMild, title: "Après 1ère Séance", desc: "HA Makeover léger - Résultat naturel immédiat" },
-                { img: transformation1Year, title: "Après 1 An", desc: "2 séances de HA Makeover + Skin Rejuvenation" },
+                { img: transformationAfterMild, title: "Après 1ère Séance", desc: "Liquid Facelift léger - Résultat naturel immédiat" },
+                { img: transformation1Year, title: "Après 1 An", desc: "2 séances de Liquid Facelift + Skin Rejuvenation" },
                 { img: transformationCloseup, title: "Gros Plan", desc: "Qualité de peau transformée, traits affinés" }
               ].map((item, index) => (
                 <motion.div
@@ -301,7 +301,7 @@ const BotoxParis = () => {
 
                 <p className="text-gray-300 leading-relaxed mb-6">
                   L'<strong className="text-amber-400">acide hyaluronique</strong> (HA) est notre passion. Nos médecins 
-                  experts réalisent des "HA Makeovers" — des transformations complètes du visage utilisant exclusivement 
+                  experts réalisent des "Liquid Facelifts" — des transformations complètes du visage utilisant exclusivement 
                   des fillers à base d'acide hyaluronique. En 15 à 20 minutes, nous pouvons traiter plusieurs zones : 
                   lèvres, pommettes, menton, mâchoire, pour un résultat harmonieux et naturel.
                 </p>

@@ -82,13 +82,13 @@ const JA: Record<TreatmentKey, TreatmentContent> = {
     glance: { duration: '30-45分', results: '12-18ヶ月', recovery: '最小限のダウンタイム', product: 'ヒアルロン酸フィラー' },
     faq: [
       { q: 'フィラーは安全ですか？', a: 'はい、GMC登録医師が施術し、FDAおよびCE認証を受けた製品のみ使用します。ヒアルロン酸は体内に自然に存在する成分です。' },
-      { q: '費用はいくらですか？', a: 'リップフィラー£350から。部位と使用量により異なります。HA Makeoverは£1,200からです。' },
+      { q: '費用はいくらですか？', a: 'リップフィラー£350から。部位と使用量により異なります。Liquid Faceliftは£1,200からです。' },
       { q: '溶かすことはできますか？', a: 'はい、ヒアルロン酸フィラーはヒアルロニダーゼで安全に溶解可能です。これはHA系フィラーの大きな利点です。' },
       { q: '結果に不満がある場合は？', a: '施術後2週間のフォローアップで結果を評価し、必要に応じて微調整を行います。' },
     ],
     extended: [
       'ヒアルロン酸フィラーは、加齢とともに失われるボリュームを自然に補う最も効果的な方法の一つです。30代以降、骨密度の低下と脂肪パッドの萎縮により、顔のボリュームが徐々に減少します。フィラーはこのプロセスを繊細に補正し、若々しい輪郭を取り戻します。',
-      'Cosmedocsでは、顔全体のバランスと調和を重視した治療を行っています。単一の部位だけを治療するのではなく、顔全体のプロポーションを考慮した総合的なアプローチを採用しています。HA Makeoverは、この哲学に基づく包括的な若返りプログラムです。',
+      'Cosmedocsでは、顔全体のバランスと調和を重視した治療を行っています。単一の部位だけを治療するのではなく、顔全体のプロポーションを考慮した総合的なアプローチを採用しています。Liquid Faceliftは、この哲学に基づく包括的な若返りプログラムです。',
       '使用する製品は、JuvedermやRestylaneなど世界的に信頼された医療用ヒアルロン酸フィラーです。各製品は異なる粘度と弾力を持ち、治療する部位に最適な製品を選択します。唇にはソフトな製品、顎ラインには構造的な硬さを持つ製品を使用するなど、精密なカスタマイズを行います。',
       '私たちの美学は見えない芸術。フィラー治療は、あなたの自然な美しさを引き出し、静かに、しかし確実に変化を実現します。過度な注入や不自然な結果は、Cosmedocsのフィロソフィーに反するものです。',
     ],
@@ -128,7 +128,7 @@ const JA: Record<TreatmentKey, TreatmentContent> = {
     extended: [
       '顎ラインフィラーは、非手術的に顔の下半分を劇的に改善できる治療です。加齢により皮膚のたるみや脂肪の下垂が進むと、顎ラインが不明瞭になります。フィラーで顎ラインを再定義することで、引き締まった若々しい印象を取り戻すことができます。',
       '治療では、硬度の高い構造的フィラーを使用し、骨格に沿って正確に注入します。これにより、自然な骨格構造を模倣した持続性の高い結果が得られます。施術は安全なカニューラ（鈍い先端の針）を使用して行うことが多く、内出血のリスクを最小限に抑えます。',
-      'Cosmedocsでは、顎ラインフィラーを単独で行うことも、HA Makeoverの一部として他の部位と組み合わせることも可能です。顎、頬、こめかみと併用することで、顔全体のリフトアップ効果を実現します。',
+      'Cosmedocsでは、顎ラインフィラーを単独で行うことも、Liquid Faceliftの一部として他の部位と組み合わせることも可能です。顎、頬、こめかみと併用することで、顔全体のリフトアップ効果を実現します。',
     ],
     cta: 'カウンセリングを予約', bookNow: '予約する',
   },
@@ -224,12 +224,12 @@ const DE: Record<TreatmentKey, TreatmentContent> = {
     glance: { duration: '30-45 Min.', results: '12-18 Monate', recovery: 'Minimale Ausfallzeit', product: 'Hyaluronsäure-Filler' },
     faq: [
       { q: 'Sind Filler sicher?', a: 'Ja, alle Behandlungen werden von GMC-registrierten Ärzten mit FDA/CE-zertifizierten Produkten durchgeführt.' },
-      { q: 'Was kosten Filler?', a: 'Lippenfiller ab £350, andere Bereiche variieren. HA Makeover ab £1.200.' },
+      { q: 'Was kosten Filler?', a: 'Lippenfiller ab £350, andere Bereiche variieren. Liquid Facelift ab £1.200.' },
       { q: 'Können Filler aufgelöst werden?', a: 'Ja, Hyaluronsäure-Filler können jederzeit mit Hyaluronidase sicher aufgelöst werden.' },
     ],
     extended: [
       'Ab dem 30. Lebensjahr verliert das Gesicht durch Knochenabbau und Fettgewebsschwund zunehmend an Volumen. Hyaluronsäure-Filler ersetzen dieses verlorene Volumen gezielt und stellen jugendliche Konturen wieder her — ohne chirurgischen Eingriff.',
-      'Cosmedocs verfolgt einen ganzheitlichen Ansatz: Statt einzelne Bereiche isoliert zu behandeln, analysieren wir das gesamte Gesicht und erstellen einen harmonischen Behandlungsplan. Das HA Makeover kombiniert mehrere Filler-Behandlungen in einer Sitzung für ein natürlich verjüngtes Gesamtergebnis.',
+      'Cosmedocs verfolgt einen ganzheitlichen Ansatz: Statt einzelne Bereiche isoliert zu behandeln, analysieren wir das gesamte Gesicht und erstellen einen harmonischen Behandlungsplan. Das Liquid Facelift kombiniert mehrere Filler-Behandlungen in einer Sitzung für ein natürlich verjüngtes Gesamtergebnis.',
       'Wir verwenden ausschließlich Premium-Produkte wie Juvederm und Restylane, die sich in ihrer Viskosität und Elastizität unterscheiden. Für jeden Behandlungsbereich wählen wir das optimale Produkt: weiche Filler für die Lippen, strukturelle Filler für die Kinnlinie.',
       'Unsere Ästhetik ist unsichtbare Kunst. Filler bei Cosmedocs verfeinern Ihre natürliche Schönheit subtil und elegant — niemals übertrieben.',
     ],
@@ -269,7 +269,7 @@ const DE: Record<TreatmentKey, TreatmentContent> = {
     extended: [
       'Die Kinnlinie ist einer der wichtigsten Indikatoren für ein jugendliches Gesicht. Mit zunehmendem Alter verliert die Kieferlinie an Definition durch Hautelastizitätsverlust und Fetteinlagerungen. Kinnlinie Filler stellt diese Definition nicht-chirurgisch wieder her und erzeugt eine straffe, jugendliche Kieferlinie.',
       'Für die Behandlung verwenden wir strukturelle Filler mit hoher Viskosität, die entlang des Kieferknochens präzise platziert werden. Häufig setzen wir Kanülen ein, um Hämatome zu minimieren. Die Ergebnisse sind sofort sichtbar und halten 12-18 Monate.',
-      'Bei Cosmedocs kann Kinnlinie Filler als Einzelbehandlung oder als Teil des HA Makeover durchgeführt werden. In Kombination mit Kinn- und Wangenfiller entsteht ein ganzheitlicher Lifting-Effekt, der das gesamte Gesicht harmonisch verjüngt.',
+      'Bei Cosmedocs kann Kinnlinie Filler als Einzelbehandlung oder als Teil des Liquid Facelift durchgeführt werden. In Kombination mit Kinn- und Wangenfiller entsteht ein ganzheitlicher Lifting-Effekt, der das gesamte Gesicht harmonisch verjüngt.',
     ],
     cta: 'Beratung buchen', bookNow: 'Jetzt buchen',
   },

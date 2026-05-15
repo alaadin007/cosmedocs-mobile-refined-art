@@ -70,7 +70,7 @@ const DermalFillersSidebar = () => {
         </Link>
       </motion.div>
 
-      {/* HA Makeover Link */}
+      {/* Liquid Facelift Link */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const DermalFillersSidebar = () => {
         className="bg-[#C9A050]/10 border border-[#C9A050]/40 rounded-2xl p-5"
       >
         <p className="text-sm text-gray-700 mb-2">
-          <span className="text-[#C9A050] font-semibold">HA Makeover</span> — Full-face rejuvenation packages with multiple syringes.
+          <span className="text-[#C9A050] font-semibold">Liquid Facelift</span> — Full-face rejuvenation packages with multiple syringes.
         </p>
         <Link
           to="/treatments/ha-makeover/"

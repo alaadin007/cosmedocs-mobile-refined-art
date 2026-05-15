@@ -31,7 +31,7 @@ export const concernsData = [
         heading: "Advanced Rejuvenation",
         treatments: [
           { name: "Full Face Rejuvenation", path: "/concerns/non-surgical-facelift/" },
-          { name: "HA Makeover", path: "/treatments/ha-makeover/" },
+          { name: "Liquid Facelift", path: "/treatments/ha-makeover/" },
           { name: "PDO Threads", path: "/treatments/pdo-threads/" },
         ],
         note: "Advanced procedures are recommended for selected cases following comprehensive assessment.",

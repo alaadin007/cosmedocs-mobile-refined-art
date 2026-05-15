@@ -423,7 +423,7 @@ const JawFillerResultsExplained = () => {
                         loading="lazy"
                       />
                       <figcaption className="px-5 py-3 border-t border-white/[0.06] text-white/40 text-xs leading-relaxed font-light">
-                        Comprehensive HA makeover: Chin &amp; Jawline 2.4ml (Swiss &amp; French product), 
+                        Comprehensive Liquid Facelift: Chin &amp; Jawline 2.4ml (Swiss &amp; French product), 
                         Lips 0.85ml, Tear Trough 1.0ml. Multiple areas treated in harmony — 
                         each supporting the other. This is how facial balancing works when 
                         proportion drives the plan, not trends. Unedited clinical photograph.

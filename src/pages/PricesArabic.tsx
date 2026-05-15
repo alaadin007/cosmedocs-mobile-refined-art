@@ -122,7 +122,7 @@ const PricesArabic = () => {
                   <h2 className="text-2xl font-bold mb-2 text-amber-400">الفيلر الجلدي</h2>
                   <p className="text-gray-400 mb-6">استشارة £50 (تُخصم من أي علاج)</p>
                   {[
-                    { title: "تجميل الوجه بالهيالورونيك (HA Makeover)", price: "من £800" },
+                    { title: "تجميل الوجه بالهيالورونيك (Liquid Facelift)", price: "من £800" },
                     { title: "شد الوجه بدون جراحة", price: "من £800" },
                     { title: "فيلر خطوط الماريونيت", price: "£325/مل" },
                     { title: "فيلر الطيات الأنفية الشفوية", price: "£325/مل" },

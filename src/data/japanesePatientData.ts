@@ -26,7 +26,7 @@ export const japaneseData: PatientPageData = {
     motto: "自然な結果は約束ではありません – 私たちの日常基準です。",
   },
   haMakeover: {
-    title: "HA Makeoverとは？",
+    title: "Liquid Faceliftとは？",
     subtitle: "（ヒアルロン酸による総合的な若返り）",
     description: "ヒアルロン酸を使用した包括的な治療プランで、バランス、ボリューム、輝きを回復します。顔の特徴を変えることなく。",
     goal: "目標：若々しくフレッシュに見える。でも「やった」とは気づかれない。",
@@ -77,7 +77,7 @@ export const japaneseData: PatientPageData = {
   },
   treatmentMenu: {
     title: "治療メニュー",
-    categories: sharedTreatmentMenu({ botox: "ボトックス", fillers: "ダーマルフィラー", skin: "肌の若返り", contouring: "輪郭整形", medical: "メディカルボトックス", makeover: "HA Makeover" }),
+    categories: sharedTreatmentMenu({ botox: "ボトックス", fillers: "ダーマルフィラー", skin: "肌の若返り", contouring: "輪郭整形", medical: "メディカルボトックス", makeover: "Liquid Facelift" }),
   },
   aboutUs: {
     title: "Cosmedocsについて",
@@ -97,11 +97,11 @@ export const japaneseData: PatientPageData = {
       { q: "ロンドンの方が安いですか？", a: "多くの場合はい。ボトックス3エリアは£350で、日本の5万〜8万円と比較して手頃です。" },
       { q: "咬筋ボトックスとは？", a: "咬筋ボトックスは顎の筋肉をリラックスさせて小顔効果を得る治療です。制御された投与量で自然な結果を重視しています。" },
       { q: "ふくらはぎ痩身はありますか？", a: "はい、ロンドンで最初に開始したクリニックの一つです。歩行機能を維持しながら段階的にふくらはぎの筋肉を細くします。" },
-      { q: "HA Makeoverとは？", a: "ヒアルロン酸を使用した包括的なソリューションで、ボリューム、構造、肌質を回復します。" },
+      { q: "Liquid Faceliftとは？", a: "ヒアルロン酸を使用した包括的なソリューションで、ボリューム、構造、肌質を回復します。" },
       { q: "予約方法は？", a: "コンタクトページから予約するか、ウェブサイトのAIアシスタントをご利用ください。" },
     ],
   },
   disclaimer: "このページはAIの支援により作成されました。最も正確な情報については、当院の専門医師にご相談ください。",
-  seoText: "Cosmedocs ロンドン ハーレーストリート 日本人患者 美容クリニック 2007年設立。ボトックス、ダーマルフィラー、咬筋ボトックス小顔治療、ふくらはぎ痩身、HA Makeover若返り。100万回以上の注入実績。医師主導の美容医療で自然な結果。",
-  keywords: "美容クリニック ロンドン, 日本人患者 ロンドン, ボトックス ロンドン, 咬筋ボトックス, ふくらはぎ痩身, calf reduction, HA makeover, リップフィラー ロンドン, ハーレーストリート",
+  seoText: "Cosmedocs ロンドン ハーレーストリート 日本人患者 美容クリニック 2007年設立。ボトックス、ダーマルフィラー、咬筋ボトックス小顔治療、ふくらはぎ痩身、Liquid Facelift若返り。100万回以上の注入実績。医師主導の美容医療で自然な結果。",
+  keywords: "美容クリニック ロンドン, 日本人患者 ロンドン, ボトックス ロンドン, 咬筋ボトックス, ふくらはぎ痩身, calf reduction, Liquid Facelift, リップフィラー ロンドン, ハーレーストリート",
 };

@@ -27,7 +27,7 @@ const treatmentLinks: Record<string, { title: string; link: string }[]> = {
     { title: "Lip Filler", link: "/lip-fillers" },
   ],
   "forties-lift": [
-    { title: "HA Makeover", link: "/treatments/ha-makeover" },
+    { title: "Liquid Facelift", link: "/treatments/ha-makeover" },
     { title: "PDO Threads", link: "/pdo-threads" },
     { title: "Profhilo", link: "/profhilo" },
   ],

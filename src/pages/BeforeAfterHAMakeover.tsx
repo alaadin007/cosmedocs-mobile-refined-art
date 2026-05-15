@@ -11,60 +11,60 @@ import BeforeAfterGrid from '@/components/BeforeAfterGrid';
 const galleryImages = [
   {
     src: "/images/before-after/ha-makeover/ha-makeover-anatomy-planning.jpg",
-    alt: "Before and after HA Makeover showing full-face rejuvenation with anatomical planning",
-    caption: "Full-face rejuvenation using a bespoke HA Makeover plan with anatomy-led support points."
+    alt: "Before and after Liquid Facelift showing full-face rejuvenation with anatomical planning",
+    caption: "Full-face rejuvenation using a bespoke Liquid Facelift plan with anatomy-led support points."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-structural-support.jpg",
-    alt: "Before and after HA Makeover showing structural facial support and lifted contours",
-    caption: "Structural facial support and balance following HA Makeover treatment."
+    alt: "Before and after Liquid Facelift showing structural facial support and lifted contours",
+    caption: "Structural facial support and balance following Liquid Facelift treatment."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-facial-balance.jpg",
-    alt: "Before and after HA Makeover showing restored facial balance and proportion",
+    alt: "Before and after Liquid Facelift showing restored facial balance and proportion",
     caption: "Restored facial balance and proportion through bespoke full-face filler placement."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-volume-restoration.jpg",
-    alt: "Before and after HA Makeover showing volume restoration over several months",
+    alt: "Before and after Liquid Facelift showing volume restoration over several months",
     caption: "Full-face volume restoration demonstrating natural, settled results over time."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-jawline-lift.jpg",
-    alt: "Before and after HA Makeover showing improved jawline definition and mid-face lift",
-    caption: "Improved jawline definition and mid-face support as part of a comprehensive HA Makeover."
+    alt: "Before and after Liquid Facelift showing improved jawline definition and mid-face lift",
+    caption: "Improved jawline definition and mid-face support as part of a comprehensive Liquid Facelift."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-profile-rejuvenation.jpg",
-    alt: "Before and after HA Makeover profile view showing chin and jawline enhancement",
+    alt: "Before and after Liquid Facelift profile view showing chin and jawline enhancement",
     caption: "Profile view demonstrating chin projection and jawline refinement within a full-face plan."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-full-face-front.jpg",
-    alt: "Before and after HA Makeover front view showing overall facial rejuvenation",
+    alt: "Before and after Liquid Facelift front view showing overall facial rejuvenation",
     caption: "Full-face rejuvenation with emphasis on structural support and natural contour restoration."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-natural-balance.jpg",
-    alt: "Before and after HA Makeover showing natural facial balance and harmonious results",
+    alt: "Before and after Liquid Facelift showing natural facial balance and harmonious results",
     caption: "Natural facial balance achieved through considered, multi-point dermal filler placement."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-male-rejuvenation.jpg",
-    alt: "Before and after HA Makeover showing male full-face rejuvenation",
+    alt: "Before and after Liquid Facelift showing male full-face rejuvenation",
     caption: "Male full-face rejuvenation — restoring structure and reducing visible signs of ageing."
   },
   {
     src: "/images/before-after/ha-makeover/ha-makeover-one-year-progression.jpg",
-    alt: "Before and after HA Makeover showing full-face rejuvenation progression over one year",
+    alt: "Before and after Liquid Facelift showing full-face rejuvenation progression over one year",
     caption: "Full-face rejuvenation progression over one year — demonstrating long-term structural improvement."
   }
 ];
 
 const BeforeAfterHAMakeover = () => {
   const seoData = generateSEOMetadata(
-    "HA Makeover Before & After Results | Harley Street Doctors",
-    "Real before and after results showing full-face rejuvenation with HA Makeover treatments performed by doctors on Harley Street.",
+    "Liquid Facelift Before & After Results | Harley Street Doctors",
+    "Real before and after results showing full-face rejuvenation with Liquid Facelift treatments performed by doctors on Harley Street.",
     "/before-after/ha-makeover/"
   );
 
@@ -98,7 +98,7 @@ const BeforeAfterHAMakeover = () => {
               },
               {
                 "@type": "ImageGallery",
-                "name": "HA Makeover Before & After Results",
+                "name": "Liquid Facelift Before & After Results",
                 "description": "Real full-face rejuvenation patient transformations from CosmeDocs Harley Street",
                 "url": "https://www.cosmedocs.com/before-after/ha-makeover/"
               }
@@ -115,7 +115,7 @@ const BeforeAfterHAMakeover = () => {
               items={[
                 { label: 'Before & After', path: '/before-after/' },
               ]}
-              currentPage="HA Makeover"
+              currentPage="Liquid Facelift"
             />
 
             <motion.div
@@ -125,10 +125,10 @@ const BeforeAfterHAMakeover = () => {
               className="max-w-4xl mx-auto text-center mt-8"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight text-white">
-                HA Makeover Before &amp; After Results
+                Liquid Facelift Before &amp; After Results
               </h1>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light">
-                Real patient results showing full-face rejuvenation through bespoke HA Makeover 
+                Real patient results showing full-face rejuvenation through bespoke Liquid Facelift 
                 treatments. Each case reflects our commitment to structural balance, natural proportion, 
                 and invisible results — planned and performed by our Harley Street doctors.
               </p>
@@ -188,14 +188,14 @@ const BeforeAfterHAMakeover = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-2xl font-extralight text-white mb-4">
-                  Learn More About HA Makeover Treatment
+                  Learn More About Liquid Facelift Treatment
                 </h2>
                 <p className="text-gray-400 font-light mb-6">
                   A consultation is required to assess suitability and expected outcomes.
                 </p>
                 <Link to="/treatments/ha-makeover/">
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-5 rounded-full">
-                    Learn more about HA Makeover treatment <ArrowRight className="w-4 h-4 ml-2" />
+                    Learn more about Liquid Facelift treatment <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </motion.div>
@@ -205,16 +205,16 @@ const BeforeAfterHAMakeover = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h2>HA Makeover Before and After Gallery</h2>
+          <h2>Liquid Facelift Before and After Gallery</h2>
           <p>
-            View authentic HA Makeover before and after results from CosmeDocs Harley Street. 
+            View authentic Liquid Facelift before and after results from CosmeDocs Harley Street. 
             Our gallery showcases full-face dermal filler rejuvenation including structural support, 
             volume restoration, and natural facial balance. Every result demonstrates our commitment 
             to invisible aesthetics that enhance rather than transform.
           </p>
           <h3>Full-Face Rejuvenation Results</h3>
           <p>
-            These images represent real patients treated using bespoke HA Makeover plans by our 
+            These images represent real patients treated using bespoke Liquid Facelift plans by our 
             GMC-registered doctors. Results include cases informed by the 8-Point Facelift technique, 
             adapted to each patient's unique facial anatomy. Our aesthetics is invisible art — 
             bold, natural, always your way.

@@ -15,18 +15,18 @@ const treatments = [
     path: "/treatments/nefertiti-lift/",
     intensity: "Level 1 — Subtle Refinement",
     description:
-      "The lightest form of a non-surgical lift. Botox is placed along the jawline and platysmal bands to release downward-pulling muscles, creating a naturally sharper jaw and smoother neck contour. Ideal as a standalone refresher or the perfect complement to an HA Makeover for enhanced lower-face definition.",
+      "The lightest form of a non-surgical lift. Botox is placed along the jawline and platysmal bands to release downward-pulling muscles, creating a naturally sharper jaw and smoother neck contour. Ideal as a standalone refresher or the perfect complement to a Liquid Facelift for enhanced lower-face definition.",
     bestFor: "Early jowling, neck bands, jawline softening",
     downtime: "None — return to normal activities immediately",
     results: "Visible within 7–14 days, lasting 3–4 months",
     price: "From £250",
   },
   {
-    title: "HA Makeover",
+    title: "Liquid Facelift",
     path: "/treatments/ha-makeover/",
     intensity: "Level 2 — Volumetric Restoration",
     description:
-      "Our signature full-face rejuvenation using hyaluronic acid dermal fillers strategically placed across 8 to 11 points. The HA Makeover restores lost volume in the temples, cheeks, jawline, and chin — creating a lifted, harmonious facial framework. Frequently combined with Botox for a comprehensive liquid facelift that addresses both volume loss and dynamic muscle pull.",
+      "Our signature full-face rejuvenation using hyaluronic acid dermal fillers strategically placed across 8 to 11 points. The Liquid Facelift restores lost volume in the temples, cheeks, jawline, and chin — creating a lifted, harmonious facial framework. Frequently combined with Botox for a comprehensive liquid facelift that addresses both volume loss and dynamic muscle pull.",
     bestFor: "Volume loss, midface descent, hollow temples, weak jawline",
     downtime: "Mild swelling for 2–3 days",
     results: "Immediate improvement, optimal at 2 weeks, lasting 12–18 months",
@@ -37,7 +37,7 @@ const treatments = [
     path: "/treatments/pdo-threads/",
     intensity: "Level 3 — Mechanical Lift",
     description:
-      "Polydioxanone absorbable sutures are placed beneath the skin to physically reposition sagging tissue. PDO threads provide a genuine mechanical lift of the midface, jowls, and brows — something neither Botox nor fillers can achieve alone. At Cosmedocs, threads are almost always combined with the HA Makeover to create a multi-modality approach: fillers restore volume while threads secure and elevate the lower face for a result that is greater than the sum of its parts.",
+      "Polydioxanone absorbable sutures are placed beneath the skin to physically reposition sagging tissue. PDO threads provide a genuine mechanical lift of the midface, jowls, and brows — something neither Botox nor fillers can achieve alone. At Cosmedocs, threads are almost always combined with the Liquid Facelift to create a multi-modality approach: fillers restore volume while threads secure and elevate the lower face for a result that is greater than the sum of its parts.",
     bestFor: "Moderate jowling, midface descent, brow ptosis, neck laxity",
     downtime: "3–5 days of mild swelling and tenderness",
     results: "Immediate lift with continued improvement over 3 months, lasting 12–18 months",
@@ -59,19 +59,19 @@ const treatments = [
 const faqs = [
   {
     q: "What is the best non-surgical facelift treatment?",
-    a: "There is no single 'best' treatment — the ideal approach depends on your anatomy, degree of ageing, and goals. Mild early ageing may only need a Nefertiti Botox Lift, whilst moderate volume loss responds beautifully to an HA Makeover. For genuine tissue repositioning, PDO threads or the Laser Fibre Lift provide mechanical and thermal lifting respectively. Our doctors frequently combine modalities for optimal, natural results.",
+    a: "There is no single 'best' treatment — the ideal approach depends on your anatomy, degree of ageing, and goals. Mild early ageing may only need a Nefertiti Botox Lift, whilst moderate volume loss responds beautifully to a Liquid Facelift. For genuine tissue repositioning, PDO threads or the Laser Fibre Lift provide mechanical and thermal lifting respectively. Our doctors frequently combine modalities for optimal, natural results.",
   },
   {
     q: "Can non-surgical facelift treatments be combined?",
-    a: "Absolutely — and at Cosmedocs, combination is our preferred approach. The Nefertiti Lift pairs naturally with an HA Makeover. PDO threads are almost always combined with fillers for lower-face rejuvenation. The Laser Fibre Lift complements existing filler work without dissolving it. Your doctor will design a bespoke treatment plan during your consultation.",
+    a: "Absolutely — and at Cosmedocs, combination is our preferred approach. The Nefertiti Lift pairs naturally with a Liquid Facelift. PDO threads are almost always combined with fillers for lower-face rejuvenation. The Laser Fibre Lift complements existing filler work without dissolving it. Your doctor will design a bespoke treatment plan during your consultation.",
   },
   {
     q: "How long do non-surgical facelift results last?",
-    a: "Results vary by modality: Botox-based lifts last 3–4 months, HA Makeover results last 12–18 months, PDO threads provide lift for 12–18 months, and Laser Fibre Lift results can last 2–3 years as collagen continues to remodel. Maintenance treatments extend longevity significantly.",
+    a: "Results vary by modality: Botox-based lifts last 3–4 months, Liquid Facelift results last 12–18 months, PDO threads provide lift for 12–18 months, and Laser Fibre Lift results can last 2–3 years as collagen continues to remodel. Maintenance treatments extend longevity significantly.",
   },
   {
     q: "Is there any downtime with a non-surgical facelift?",
-    a: "Downtime depends on the treatment chosen. The Nefertiti Lift has no downtime. HA Makeover involves mild swelling for 2–3 days. PDO threads require 3–5 days of recovery. The Laser Fibre Lift typically involves 4–5 days of swelling. All are significantly less invasive than surgical alternatives.",
+    a: "Downtime depends on the treatment chosen. The Nefertiti Lift has no downtime. Liquid Facelift involves mild swelling for 2–3 days. PDO threads require 3–5 days of recovery. The Laser Fibre Lift typically involves 4–5 days of swelling. All are significantly less invasive than surgical alternatives.",
   },
   {
     q: "Who performs non-surgical facelifts at Cosmedocs?",
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     q: "How much does a non-surgical facelift cost in London?",
-    a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
+    a: "Prices start from £250 for a Nefertiti Botox Lift, from £800 for a Liquid Facelift or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment. A full bespoke combination plan is discussed and priced during your consultation at our Harley Street clinic.",
   },
   {
     q: "What is the Laser Fibre Lift and how does it differ from HIFU?",
@@ -94,7 +94,7 @@ const faqs = [
 const NonSurgicalFaceliftHub = () => {
   const seoData = generateSEOMetadata(
     "Non-Surgical Facelift London | Laser Fibre Lift & Threads",
-    "Expert non-surgical facelift London. Nefertiti Botox, HA Makeover, PDO thread lift & Laser Fibre Lift. Doctor-led at Harley Street. Natural lifting results. Book today.",
+    "Expert non-surgical facelift London. Nefertiti Botox, Liquid Facelift, PDO thread lift & Laser Fibre Lift. Doctor-led at Harley Street. Natural lifting results. Book today.",
     "/treatments/non-surgical-facelift"
   );
 
@@ -318,13 +318,13 @@ const NonSurgicalFaceliftHub = () => {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-gray-900 font-light mb-3">Botox + HA Makeover</h3>
+                  <h3 className="text-gray-900 font-light mb-3">Botox + Liquid Facelift</h3>
                   <p className="text-gray-500 text-sm font-extralight leading-relaxed">
-                    The Nefertiti Lift relaxes downward-pulling platysmal muscles while the HA Makeover replaces lost volume in the midface, jawline, and temples. Together, they create a comprehensive liquid facelift that addresses both dynamic muscle pull and static volume loss — the two primary drivers of lower-face ageing.
+                    The Nefertiti Lift relaxes downward-pulling platysmal muscles while the Liquid Facelift replaces lost volume in the midface, jawline, and temples. Together, they create a comprehensive liquid facelift that addresses both dynamic muscle pull and static volume loss — the two primary drivers of lower-face ageing.
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-gray-900 font-light mb-3">PDO Threads + HA Makeover</h3>
+                  <h3 className="text-gray-900 font-light mb-3">PDO Threads + Liquid Facelift</h3>
                   <p className="text-gray-500 text-sm font-extralight leading-relaxed">
                     PDO threads provide genuine mechanical lift — physically repositioning sagging tissue — whilst fillers restore the volumetric scaffold that holds everything in place. This combination is our go-to for moderate-to-advanced lower-face ageing, particularly jowls and nasolabial depth.
                   </p>
@@ -528,13 +528,13 @@ const NonSurgicalFaceliftHub = () => {
             Cosmedocs offers the most comprehensive range of non-surgical facelift treatments in London, performed by GMC-registered doctors at our Harley Street clinic. Our multi-modality approach combines Nefertiti Botox lifting, hyaluronic acid dermal filler makeovers, PDO thread lifts, and Laser Fibre Lift technology to address every layer of facial ageing without surgery or general anaesthesia.
           </p>
           <p>
-            The Nefertiti Botox Lift is the lightest form of non-surgical facial lifting available. Named after the Egyptian queen famed for her elegant neck and jawline, this treatment uses botulinum toxin to relax the platysmal bands — the muscles that pull the lower face downward as we age. By releasing this downward tension, the jawline appears sharper, the neck smoother, and the overall facial contour more refined. The Nefertiti Lift is frequently combined with an HA Makeover for patients who want both muscle relaxation and volumetric restoration in a single appointment.
+            The Nefertiti Botox Lift is the lightest form of non-surgical facial lifting available. Named after the Egyptian queen famed for her elegant neck and jawline, this treatment uses botulinum toxin to relax the platysmal bands — the muscles that pull the lower face downward as we age. By releasing this downward tension, the jawline appears sharper, the neck smoother, and the overall facial contour more refined. The Nefertiti Lift is frequently combined with a Liquid Facelift for patients who want both muscle relaxation and volumetric restoration in a single appointment.
           </p>
           <p>
-            The HA Makeover is our signature full-face rejuvenation treatment using hyaluronic acid dermal fillers strategically placed across 8 to 11 facial points. This technique restores lost volume in the temples, cheeks, chin, and jawline — recreating the scaffolding that supports youthful facial proportions. The HA Makeover addresses the fundamental cause of midface descent: volumetric depletion. When combined with Botox, the result is a comprehensive liquid facelift that treats both the volumetric and muscular components of facial ageing simultaneously.
+            The Liquid Facelift is our signature full-face rejuvenation treatment using hyaluronic acid dermal fillers strategically placed across 8 to 11 facial points. This technique restores lost volume in the temples, cheeks, chin, and jawline — recreating the scaffolding that supports youthful facial proportions. The Liquid Facelift addresses the fundamental cause of midface descent: volumetric depletion. When combined with Botox, the result is a comprehensive liquid facelift that treats both the volumetric and muscular components of facial ageing simultaneously.
           </p>
           <p>
-            PDO thread lifts provide genuine mechanical lifting of sagging tissue — something that neither Botox nor dermal fillers can achieve alone. Polydioxanone absorbable sutures are inserted beneath the skin to physically reposition descended tissue in the midface, jowls, and brow area. At Cosmedocs, PDO threads are almost always combined with the HA Makeover for lower-face rejuvenation: the fillers restore volume while the threads secure and elevate the tissue, creating a result that is significantly more effective than either treatment alone.
+            PDO thread lifts provide genuine mechanical lifting of sagging tissue — something that neither Botox nor dermal fillers can achieve alone. Polydioxanone absorbable sutures are inserted beneath the skin to physically reposition descended tissue in the midface, jowls, and brow area. At Cosmedocs, PDO threads are almost always combined with the Liquid Facelift for lower-face rejuvenation: the fillers restore volume while the threads secure and elevate the tissue, creating a result that is significantly more effective than either treatment alone.
           </p>
           <p>
             The Laser Fibre Lift represents the most advanced non-surgical lifting technology in our portfolio. A micro-fibre optic laser cannula is inserted beneath the skin to deliver precise thermal energy that simultaneously tightens the skin, dissolves small pockets of stubborn fat, and stimulates deep collagen remodelling. At Cosmedocs, we have refined the Laser Fibre Lift technique to target specific facial zones — jowls, under-eye bags, eyebrow lifting, and double chin — rather than performing a general all-over treatment. This targeted approach complements existing filler work without dissolving it, and is performed in partnership with our specialist clinic Priva Dr.
@@ -543,13 +543,13 @@ const NonSurgicalFaceliftHub = () => {
             Our lead practitioner is the lead trainer for the Harley Street Institute, training doctors across the UK in advanced aesthetic techniques including the Laser Fibre Lift. With over 17 years of clinical experience and a philosophy rooted in natural, invisible results, Cosmedocs has established itself as one of London's leading non-surgical facelift clinics. We believe that a powerful treatment needs to be done in the right hands — it is not just the device that produces the results.
           </p>
           <p>
-            Non-surgical facelift alternatives to consider include HIFU (high-intensity focused ultrasound), Morpheus8 radiofrequency microneedling, and Ultherapy. While these treatments offer skin tightening benefits, they work from outside the skin rather than from within. The Laser Fibre Lift's subdermal delivery mechanism provides more targeted and precise results. When combined with the volumetric restoration of an HA Makeover and the mechanical lift of PDO threads, the multi-modality Cosmedocs approach delivers superior outcomes compared to any single-modality treatment.
+            Non-surgical facelift alternatives to consider include HIFU (high-intensity focused ultrasound), Morpheus8 radiofrequency microneedling, and Ultherapy. While these treatments offer skin tightening benefits, they work from outside the skin rather than from within. The Laser Fibre Lift's subdermal delivery mechanism provides more targeted and precise results. When combined with the volumetric restoration of a Liquid Facelift and the mechanical lift of PDO threads, the multi-modality Cosmedocs approach delivers superior outcomes compared to any single-modality treatment.
           </p>
           <p>
-            Recovery from non-surgical facelift treatments at Cosmedocs varies by modality. The Nefertiti Botox Lift requires no downtime. The HA Makeover involves mild swelling for 2-3 days. PDO thread lifts require 3-5 days of recovery with mild swelling and tenderness. The Laser Fibre Lift treatment typically involves 4-5 days of swelling on average. All modalities are significantly less invasive than surgical facelift alternatives, with recovery measured in days rather than weeks.
+            Recovery from non-surgical facelift treatments at Cosmedocs varies by modality. The Nefertiti Botox Lift requires no downtime. The Liquid Facelift involves mild swelling for 2-3 days. PDO thread lifts require 3-5 days of recovery with mild swelling and tenderness. The Laser Fibre Lift treatment typically involves 4-5 days of swelling on average. All modalities are significantly less invasive than surgical facelift alternatives, with recovery measured in days rather than weeks.
           </p>
           <p>
-            Prices for non-surgical facelift treatments at our London Harley Street clinic start from £250 for a Nefertiti Botox Lift, from £800 for an HA Makeover or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment of specific zones including eyebrow lift, jawline and jowls, cheeks and nasolabial folds, and chin tightening for double chin reduction.
+            Prices for non-surgical facelift treatments at our London Harley Street clinic start from £250 for a Nefertiti Botox Lift, from £800 for a Liquid Facelift or PDO Thread Lift, and from £450 for targeted Laser Fibre Lift treatment of specific zones including eyebrow lift, jawline and jowls, cheeks and nasolabial folds, and chin tightening for double chin reduction.
           </p>
         </div>
       </div>

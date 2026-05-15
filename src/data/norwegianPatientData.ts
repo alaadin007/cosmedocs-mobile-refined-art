@@ -26,7 +26,7 @@ export const norwegianData: PatientPageData = {
     motto: "Naturlige resultater er ikke et løfte – det er vår daglige standard.",
   },
   haMakeover: {
-    title: "Hva er HA Makeover?",
+    title: "Hva er Liquid Facelift?",
     subtitle: "(Hyaluronsyre-basert ansiktsforyngelse)",
     description: "En helhetlig plan med hyaluronsyre for å gjenopprette balanse, volum og glød – uten å endre trekkene dine.",
     goal: "Målet: Se yngre og friskere ut uten at det synes.",
@@ -77,7 +77,7 @@ export const norwegianData: PatientPageData = {
   },
   treatmentMenu: {
     title: "Behandlingsmeny",
-    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Dermal Fillers", skin: "Hudforyngelse", contouring: "Konturering", medical: "Medisinsk Botox", makeover: "HA Makeover" }),
+    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Dermal Fillers", skin: "Hudforyngelse", contouring: "Konturering", medical: "Medisinsk Botox", makeover: "Liquid Facelift" }),
   },
   aboutUs: {
     title: "Om Cosmedocs",
@@ -97,11 +97,11 @@ export const norwegianData: PatientPageData = {
       { q: "Er det billigere i London?", a: "Ofte ja. Botox 3 områder koster £350 hos oss, sammenlignet med 5 000–8 000 NOK i Norge." },
       { q: "Hva er Masseter Botox?", a: "Masseter Botox slanker ansiktet ved å avspenne kjevemuskelen. Vi vektlegger kontrollert dosering for naturlige resultater." },
       { q: "Tilbyr dere leggslanking?", a: "Ja, vi er en av Londons første klinikker med leggslanking. Behandlingen reduserer leggmuskelen gradvis uten å påvirke gangfunksjonen." },
-      { q: "Hva er HA Makeover?", a: "En helhetsløsning med hyaluronsyre som gjenoppretter volum, struktur og hudkvalitet – uten å endre trekkene dine." },
+      { q: "Hva er Liquid Facelift?", a: "En helhetsløsning med hyaluronsyre som gjenoppretter volum, struktur og hudkvalitet – uten å endre trekkene dine." },
       { q: "Hvordan bestiller jeg?", a: "Du kan bestille via kontaktsiden vår eller bruke AI-assistenten på nettsiden for å utforske behandlingsalternativer." },
     ],
   },
   disclaimer: "Denne siden er laget med AI-assistanse. Vi anbefaler at du konsulterer våre spesialistleger for mest nøyaktig informasjon.",
-  seoText: "Cosmedocs estetisk klinikk Harley Street London for norske pasienter siden 2007. Botox, dermal fillers, masseter botox kjeveslanking, leggslanking calf reduction, HA Makeover ansiktsforyngelse. Over 1 million injeksjoner. Legestyrt estetisk medisin med naturlige resultater.",
-  keywords: "estetisk klinikk london, norske pasienter london, botox london, masseter botox, leggslanking, calf reduction, HA makeover, leppefiller london, Harley Street",
+  seoText: "Cosmedocs estetisk klinikk Harley Street London for norske pasienter siden 2007. Botox, dermal fillers, masseter botox kjeveslanking, leggslanking calf reduction, Liquid Facelift ansiktsforyngelse. Over 1 million injeksjoner. Legestyrt estetisk medisin med naturlige resultater.",
+  keywords: "estetisk klinikk london, norske pasienter london, botox london, masseter botox, leggslanking, calf reduction, Liquid Facelift, leppefiller london, Harley Street",
 };

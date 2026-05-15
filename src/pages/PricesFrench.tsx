@@ -121,7 +121,7 @@ const PricesFrench = () => {
                 <h2 className="text-2xl font-bold mb-2 text-amber-400">ACIDE HYALURONIQUE</h2>
                 <p className="text-gray-400 mb-6">Consultation £50 (déduit du traitement)</p>
                 {[
-                  { title: "HA Makeover (Relooking Hyaluronique)", price: "À partir de £800" },
+                  { title: "Liquid Facelift (Relooking Hyaluronique)", price: "À partir de £800" },
                   { title: "Lifting sans Chirurgie", price: "À partir de £800" },
                   { title: "Filler Sillons Nasogéniens", price: "£325/ml" },
                   { title: "Filler Ligne de Mâchoire", price: "£350/ml", link: "/fr/traitements/filler-machoire/" },

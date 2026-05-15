@@ -158,7 +158,7 @@ export default function ChinFillerFrench() {
                         { name: "Filler menton 1,2 ml", price: "À partir de £350" },
                         { name: "Filler menton 2,4 ml", price: "À partir de £650" },
                         { name: "Filler menton 3,6 ml", price: "À partir de £850" },
-                        { name: "HA Makeover complet", price: "À partir de £950" },
+                        { name: "Liquid Facelift complet", price: "À partir de £950" },
                       ].map(item => (
                         <div key={item.name} className="flex justify-between items-center bg-white border border-gray-200 rounded-xl px-5 py-3">
                           <span className={`text-sm ${textH} font-light`}>{item.name}</span>

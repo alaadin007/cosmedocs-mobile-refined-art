@@ -34,7 +34,7 @@ const FAQ = [
   },
   {
     q: "When is 4ml of cheek filler appropriate?",
-    a: "4ml is appropriate when there is genuine bony resorption (typically 45+), as part of a full HA Makeover, or when treating a face that has lost considerable midface support. It is not a starting dose.",
+    a: "4ml is appropriate when there is genuine bony resorption (typically 45+), as part of a full Liquid Facelift, or when treating a face that has lost considerable midface support. It is not a starting dose.",
   },
   {
     q: "Will 4ml of cheek filler look 'pillow face'?",
@@ -137,7 +137,7 @@ const CheekFiller1vs2vs4ml = () => {
                     ["Subtle lift, early 30s:", "1ml total (0.5ml per side)"],
                     ["Visible lift, softens nasolabial folds:", "2ml total (1ml per side)"],
                     ["Volume restoration, 45+:", "3–4ml across one or two sessions"],
-                    ["Full HA Makeover candidate:", "4ml+ as part of a multi-area plan"],
+                    ["Full Liquid Facelift candidate:", "4ml+ as part of a multi-area plan"],
                   ].map(([k, v]) => (
                     <li key={k} className="flex items-start gap-3">
                       <CheckCircle className="w-4 h-4 text-[#C9A050] mt-0.5 flex-shrink-0" />
@@ -188,7 +188,7 @@ const CheekFiller1vs2vs4ml = () => {
                         ["1ml", "Late 20s–mid 30s, subtle definition", "12–15 months", "£390"],
                         ["2ml", "Mid 30s–mid 40s, visible lift", "12–18 months", "£700"],
                         ["3ml", "Mid 40s, structural support", "15–18 months", "£990"],
-                        ["4ml", "45+, full restoration / HA Makeover", "18+ months", "£1,250"],
+                        ["4ml", "45+, full restoration / Liquid Facelift", "18+ months", "£1,250"],
                       ].map(([a, b, c, d]) => (
                         <TableRow key={a} className="border-b border-white/[0.04]">
                           <TableCell className="text-sm text-white/70">{a}</TableCell>
@@ -241,7 +241,7 @@ const CheekFiller1vs2vs4ml = () => {
                   <li>2ml cheek filler — from £700</li>
                   <li>3ml cheek filler — from £990</li>
                   <li>4ml cheek filler — from £1,250</li>
-                  <li>Full HA Makeover (8 / 11-point lift) — from £2,400</li>
+                  <li>Full Liquid Facelift (8 / 11-point lift) — from £2,400</li>
                 </ul>
                 <p className="text-sm text-white/60 leading-relaxed">
                   All cheek filler at CosmeDocs uses branded HA fillers (Juvéderm Voluma, RHA 4, Restylane Lyft). We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
@@ -264,7 +264,7 @@ const CheekFiller1vs2vs4ml = () => {
                 <h3 className="text-xs uppercase tracking-wider text-white/40 mb-4">Continue reading</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    { label: "HA Makeover (8 / 11 Point Lift)", path: "/ha-makeover/" },
+                    { label: "Liquid Facelift (8 / 11 Point Lift)", path: "/ha-makeover/" },
                     { label: "Cheek Filler Treatment", path: "/cheek-filler/" },
                     { label: "Before & After Cheek Filler", path: "/before-after/cheek-filler/" },
                     { label: "0.5ml vs 1ml Lip Filler", path: "/lip-filler-0-5ml-vs-1ml/" },
@@ -287,7 +287,7 @@ const CheekFiller1vs2vs4ml = () => {
                     { area: "Lift (mid 30s)", value: "2ml" },
                     { area: "Structural support (40s)", value: "3ml" },
                     { area: "Restoration (45+)", value: "4ml" },
-                    { area: "Full HA Makeover", value: "4ml+" },
+                    { area: "Full Liquid Facelift", value: "4ml+" },
                   ]}
                   concepts={[
                     "Why placement beats volume",
@@ -297,7 +297,7 @@ const CheekFiller1vs2vs4ml = () => {
                     "When to combine cheek + tear-trough",
                   ]}
                   related={[
-                    { label: "HA Makeover (8/11-Point)", path: "/ha-makeover/" },
+                    { label: "Liquid Facelift (8/11-Point)", path: "/ha-makeover/" },
                     { label: "Cheek Filler Treatment", path: "/cheek-filler/" },
                     { label: "Before & After Cheek Filler", path: "/before-after/cheek-filler/" },
                     { label: "0.5ml vs 1ml Lip Filler", path: "/lip-filler-0-5ml-vs-1ml/" },
