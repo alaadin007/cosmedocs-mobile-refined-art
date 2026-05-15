@@ -21,8 +21,8 @@ export default function FaceBotoxLight() {
   const canonicalUrl = getCanonicalUrl(language, 'botox');
 
   const seoData = generateSEOMetadata(
-    "Botox | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
-    "Complete guide to Botox. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
+    "Botox London | Doctor-Led Anti-Wrinkle Treatment | Cosmedocs Harley Street",
+    "Botox London at Cosmedocs Harley Street. Doctor-led anti-wrinkle treatment since 2007 — natural, subtle, GMC-registered. Transparent pricing, free consultation.",
     "/treatments/botox/"
   );
 
@@ -32,7 +32,51 @@ export default function FaceBotoxLight() {
     "name": "Cosmedocs",
     "url": "https://www.cosmedocs.com",
     "telephone": "+44 20 3733 3227",
-    "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }
+    "areaServed": [
+      { "@type": "City", "name": "London" },
+      { "@type": "AdministrativeArea", "name": "Greater London" }
+    ],
+    "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1200" }
+  };
+
+  const botoxLondonFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does Botox cost in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox in London at Cosmedocs starts from £175 for a single area and £295 for three areas. As an add-on to a filler appointment the price drops to £50 per area. All treatments are doctor-led at our Harley Street clinic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is the best place to get Botox in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cosmedocs is a doctor-led aesthetic clinic on Harley Street, London W1G — practising since 2007 with GMC-registered doctors and over one million procedures performed across the group. Choose a clinic where a registered medical doctor — not a non-medical practitioner — performs every assessment and injection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Botox in London safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When administered by a GMC-registered doctor in a CQC-aligned clinical setting, Botox is one of the most studied and safest aesthetic treatments. Cosmedocs works with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does Botox last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most patients see results last between three and four months. With consistent maintenance, the muscle re-trains and intervals can extend to four to six months."
+        }
+      }
+    ]
   };
 
   const treatmentAreaCards = [
