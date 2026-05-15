@@ -106,7 +106,15 @@
 
   <url>
     <loc>https://www.cosmedocs.com/treatments/cheek-filler/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/treatments/cheekbone-filler/</loc>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>

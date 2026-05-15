@@ -192,6 +192,7 @@ const HydraFacial = lazy(() => import("./pages/HydraFacial"));
 const PRPTreatment = lazy(() => import("./pages/PRPTreatment"));
 const PeelToReveal = lazy(() => import("./pages/PeelToReveal"));
 const CheekFiller = lazy(() => import("./pages/CheekFiller"));
+const CheekboneFiller = lazy(() => import("./pages/CheekboneFiller"));
 const ChinFiller = lazy(() => import("./pages/ChinFiller"));
 const EarLobeRejuvenation = lazy(() => import("./pages/EarLobeRejuvenation"));
 const JawlineFiller = lazy(() => import("./pages/JawlineFiller"));
@@ -665,6 +666,10 @@ const App = () => {
                           <Route path="/treatments/jawline-filler/" element={<JawlineFiller />} />
                           <Route path="/treatments/cheek-filler" element={<CheekFiller />} />
                           <Route path="/treatments/cheek-filler/" element={<CheekFiller />} />
+                          <Route path="/treatments/cheekbone-filler" element={<CheekboneFiller />} />
+                          <Route path="/treatments/cheekbone-filler/" element={<CheekboneFiller />} />
+                          <Route path="/cheekbone-filler" element={<Navigate to="/treatments/cheekbone-filler/" replace />} />
+                          <Route path="/cheekbone-fillers" element={<Navigate to="/treatments/cheekbone-filler/" replace />} />
                           <Route path="/treatments/chin-filler" element={<ChinFiller />} />
                           <Route path="/treatments/chin-filler/" element={<ChinFiller />} />
                           <Route path="/treatments/tear-trough-filler" element={<TearTroughFiller />} />

@@ -76,15 +76,14 @@ const CheekFiller = () => {
       },
       {
         "@type": "Offer",
-        name: "Cheek Filler Treatment",
+        name: "Cheek Filler Treatment — Swiss Teoxane Ultradeep",
         priceCurrency: "GBP",
         price: "350",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "GBP",
-          price: "350",
-          description: "1ml cheek filler from £350; 2ml from £650; 3ml from £950",
-        },
+        priceSpecification: [
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "350", description: "1.2ml Swiss Teoxane Ultradeep" },
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "500", description: "1.8ml Swiss Teoxane Ultradeep" },
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "700", description: "2.4ml Swiss Teoxane Ultradeep" },
+        ],
         availability: "https://schema.org/InStock",
         seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
@@ -114,11 +113,11 @@ const CheekFiller = () => {
   return (
     <>
       <Helmet>
-        <title>Cheek Filler Treatment | Mid-Face Volume | Harley Street Doctors</title>
-        <meta name="description" content="Doctor-led cheek filler treatment for mid-face volume restoration and facial contouring. Natural, structural results at our Harley Street clinic. Since 2007." />
+        <title>Cheek Filler London — Swiss Teoxane Ultradeep from £350 | Cosmedocs Harley Street</title>
+        <meta name="description" content="Doctor-led cheek filler in London using Swiss Teoxane Ultradeep — 1.2ml £350, 1.8ml £500, 2.4ml £700. Lasts 12–18 months. Before & after photos, transparent pricing. Harley Street since 2007." />
         <link rel="canonical" href="https://www.cosmedocs.com/treatments/cheek-filler/" />
-        <meta property="og:title" content="Cheek Filler Treatment | Mid-Face Volume | Harley Street Doctors" />
-        <meta property="og:description" content="Doctor-led cheek filler treatment for mid-face volume restoration and facial contouring. Natural, structural results at our Harley Street clinic." />
+        <meta property="og:title" content="Cheek Filler London — Swiss Teoxane Ultradeep | Cosmedocs" />
+        <meta property="og:description" content="Doctor-led cheek filler from £350. Swiss Teoxane Ultradeep, 12–18 month longevity. Harley Street, since 2007." />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/cheek-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
@@ -243,6 +242,127 @@ const CheekFiller = () => {
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             {/* LEFT — Main Content */}
             <div className="space-y-14">
+
+              {/* ── TOP-ANSWER (AI Search / Featured Snippet) ── */}
+              <section aria-labelledby="cheek-top-answer">
+                <div className="bg-gradient-to-br from-[#C9A050]/[0.08] via-[#C9A050]/[0.03] to-transparent border border-[#C9A050]/20 rounded-2xl p-6 md:p-8">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/70 mb-3">The honest answer</p>
+                  <h2 id="cheek-top-answer" className="text-xl md:text-2xl font-light text-white leading-snug mb-4">
+                    How long does cheek filler last?
+                  </h2>
+                  <p className="text-white/70 text-base leading-relaxed font-light">
+                    Cheek filler typically lasts <span className="text-[#C9A050]">12–18 months</span>, and often longer
+                    when placed deep on the bone with a structural product like Swiss Teoxane Ultradeep. The mid-face has
+                    very little muscle movement, so once the filler integrates it metabolises slowly. Most patients top up
+                    once a year; some hold results for two.
+                  </p>
+                </div>
+              </section>
+
+              {/* ── BEFORE & AFTER PREVIEW ── */}
+              <section aria-labelledby="cheek-ba-preview">
+                <div className="flex items-end justify-between mb-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/70 mb-2">Real patients · Doctor-led</p>
+                    <h2 id="cheek-ba-preview" className="text-2xl md:text-3xl font-extralight text-white">
+                      Cheek filler <span className="text-[#C9A050] font-light">before & after</span>
+                    </h2>
+                  </div>
+                  <Link
+                    to="/before-after/dermal-fillers/cheeks/"
+                    className="hidden md:inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-[#C9A050] hover:text-[#C9A050]/80 transition-colors"
+                  >
+                    Full gallery <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+                <Link
+                  to="/before-after/dermal-fillers/cheeks/"
+                  className="block group rounded-2xl overflow-hidden border border-white/[0.06] hover:border-[#C9A050]/30 transition-all"
+                >
+                  <img
+                    src={cheekBaPreview}
+                    alt="Cheek filler before and after — 1ml Swiss Teoxane Ultradeep, doctor-led at Cosmedocs Harley Street"
+                    loading="lazy"
+                    className="w-full h-auto group-hover:scale-[1.01] transition-transform duration-700"
+                  />
+                </Link>
+                <p className="text-white/40 text-xs mt-3 text-center md:text-left">
+                  1ml cheek filler before & after · See the{" "}
+                  <Link to="/before-after/dermal-fillers/cheeks/" className="text-[#C9A050] underline-offset-4 hover:underline">full cheek-filler gallery</Link>{" "}
+                  or compare{" "}
+                  <Link to="/cheek-filler-1ml-vs-2ml-vs-4ml/" className="text-[#C9A050] underline-offset-4 hover:underline">1ml vs 2ml vs 4ml</Link>.
+                </p>
+              </section>
+
+              {/* ── TRANSPARENT PRICING (Swiss Teoxane Ultradeep) ── */}
+              <section aria-labelledby="cheek-pricing">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/70 mb-2">How much is cheek filler in the UK?</p>
+                <h2 id="cheek-pricing" className="text-2xl md:text-3xl font-extralight text-white mb-2">
+                  Honest <span className="text-[#C9A050] font-light">pricing</span>
+                </h2>
+                <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                <p className="text-white/55 text-sm font-light leading-relaxed mb-5">
+                  We use only <span className="text-white/80">Swiss Teoxane Ultradeep</span> — the structural HA designed
+                  for deep, on-bone placement in the cheek. No house brands, no surprises.
+                </p>
+                <div className="grid sm:grid-cols-3 gap-3">
+                  {[
+                    { vol: "1.2ml", price: "£350", note: "Subtle restoration" },
+                    { vol: "1.8ml", price: "£500", note: "Most common volume", featured: true },
+                    { vol: "2.4ml", price: "£700", note: "Full structural rebuild" },
+                  ].map((tier) => (
+                    <div
+                      key={tier.vol}
+                      className={`rounded-xl p-5 border ${
+                        tier.featured
+                          ? "border-[#C9A050]/40 bg-[#C9A050]/[0.06]"
+                          : "border-white/[0.08] bg-white/[0.02]"
+                      }`}
+                    >
+                      <p className="text-white/50 text-xs uppercase tracking-wider mb-1">{tier.vol}</p>
+                      <p className="text-2xl text-white font-extralight mb-1">{tier.price}</p>
+                      <p className="text-white/45 text-xs">{tier.note}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-white/35 text-xs mt-4 italic">
+                  Volume needed depends on bone projection, age and goals — your doctor decides at consultation.
+                </p>
+              </section>
+
+              {/* ── BAD CHEEK FILLER / DISSOLVING (truth-first) ── */}
+              <section aria-labelledby="cheek-correction">
+                <div className="bg-black/40 border border-white/[0.06] rounded-2xl p-6 md:p-8">
+                  <div className="flex items-start gap-3 mb-3">
+                    <AlertTriangle className="w-5 h-5 text-[#C9A050]/70 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/70 mb-1">Worried about bad cheek fillers?</p>
+                      <h2 id="cheek-correction" className="text-xl md:text-2xl font-light text-white leading-snug">
+                        Migration, pillow face, over-filled cheeks — and how we correct them
+                      </h2>
+                    </div>
+                  </div>
+                  <p className="text-white/55 text-sm font-light leading-relaxed mb-4">
+                    Most "bad cheek filler" cases we see are not a product failure — they are a placement failure: too
+                    superficial, too lateral, or too much volume in tissue that has lost its scaffold. Hyaluronic acid
+                    can be safely dissolved with Hyalase under doctor supervision, then rebuilt correctly on the bone.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      to="/treatments/filler-dissolving/"
+                      className="inline-flex items-center gap-1.5 text-sm text-[#C9A050] border border-[#C9A050]/40 hover:bg-[#C9A050]/10 px-4 py-2 rounded-full transition-all"
+                    >
+                      Filler dissolving (Hyalase) <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                    <Link
+                      to="/before-after/filler-correction-dissolved/"
+                      className="inline-flex items-center gap-1.5 text-sm text-white/70 border border-white/[0.1] hover:border-white/30 px-4 py-2 rounded-full transition-all"
+                    >
+                      Correction cases <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              </section>
 
               {/* Intro */}
               <section>
