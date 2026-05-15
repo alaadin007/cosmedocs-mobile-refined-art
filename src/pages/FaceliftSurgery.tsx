@@ -119,7 +119,7 @@ export default function FaceliftSurgery() {
                   </Button>
                   <Button asChild variant="outline" className="border-purple-500/30">
                     <Link to="/treatments/ha-makeover">
-                      HA Makeover
+                      Liquid Facelift
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-purple-500/30">

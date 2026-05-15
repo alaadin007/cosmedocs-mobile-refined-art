@@ -133,7 +133,7 @@ const InternationalPatientPage = ({ data, images }: Props) => {
           </div>
         </section>
 
-        {/* HA Makeover */}
+        {/* Liquid Facelift */}
         <section className="py-16 md:py-20 bg-accent">
           <div className="page-container max-w-5xl mx-auto">
             <motion.div {...fadeUp}>

@@ -205,7 +205,7 @@ export default function DermalFillersFrench() {
                         { name: "Filler menton 1,2 ml", price: "À partir de £350" },
                         { name: "Cernes creuses", price: "À partir de £425" },
                         { name: "Filler pommettes", price: "À partir de £350" },
-                        { name: "HA Makeover complet", price: "À partir de £950" },
+                        { name: "Liquid Facelift complet", price: "À partir de £950" },
                       ].map(item => (
                         <div key={item.name} className="flex justify-between items-center bg-white border border-gray-200 rounded-xl px-5 py-3">
                           <span className={`text-sm ${textH} font-light`}>{item.name}</span>

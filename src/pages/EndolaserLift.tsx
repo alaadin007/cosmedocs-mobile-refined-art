@@ -529,7 +529,7 @@ const EndolaserLift = () => {
                         Instead, we complement the Laser Fibre Lift with strategic filler placement, creating a multi-modality approach that addresses all dimensions of facial ageing: volume loss, skin laxity, and fat redistribution. This is the invisible art of aesthetic medicine — transformation that speaks without saying a word.
                       </p>
                       <p>
-                        The Laser Fibre Lift sits at the top of our four-level non-surgical facelift hierarchy. For patients who have progressed beyond Botox-based lifting (Nefertiti), volume-based lifting (HA Makeover), and mechanical lifting (PDO Threads), the Laser Fibre Lift represents the most advanced non-surgical intervention available — offering results that were previously only achievable through surgical facelifts.
+                        The Laser Fibre Lift sits at the top of our four-level non-surgical facelift hierarchy. For patients who have progressed beyond Botox-based lifting (Nefertiti), volume-based lifting (Liquid Facelift), and mechanical lifting (PDO Threads), the Laser Fibre Lift represents the most advanced non-surgical intervention available — offering results that were previously only achievable through surgical facelifts.
                       </p>
                     </div>
                   </ExpandableSection>

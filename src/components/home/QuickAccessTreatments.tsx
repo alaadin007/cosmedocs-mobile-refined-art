@@ -44,7 +44,7 @@ const categories: TreatmentCategory[] = [
     label: "Mini Facelifts",
     areas: [
       { label: "Nefertiti Botox Lift", path: "/treatments/nefertiti-lift/" },
-      { label: "HA Makeover", path: "/treatments/ha-makeover/" },
+      { label: "Liquid Facelift", path: "/treatments/ha-makeover/" },
       { label: "PDO Thread Lift", path: "/treatments/pdo-threads/" },
       { label: "Endolaser (Laser Fibre Lift)", path: "/treatments/endolaser/" },
     ],

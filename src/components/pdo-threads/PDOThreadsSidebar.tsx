@@ -121,7 +121,7 @@ const PDOThreadsSidebar = () => {
         className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-2xl p-5"
       >
         <p className="text-sm text-white/80 mb-2">
-          <span className="text-[#C9A050] font-medium">HA Makeover</span> — Combine threads with dermal fillers for comprehensive facial rejuvenation.
+          <span className="text-[#C9A050] font-medium">Liquid Facelift</span> — Combine threads with dermal fillers for comprehensive facial rejuvenation.
         </p>
         <Link
           to="/treatments/ha-makeover/"

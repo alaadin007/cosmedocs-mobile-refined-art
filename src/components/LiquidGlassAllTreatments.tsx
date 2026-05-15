@@ -80,7 +80,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       ]
     },
     {
-      name: "HA Makeover",
+      name: "Liquid Facelift",
       isPopular: true,
       treatments: [
         { name: "HAMA 1 (3 Syringes)", price: "£1,250" },

@@ -12,7 +12,7 @@ export const sharedPricingItems = [
   { name: "Cheek Filler", price: "£350/ml" },
   { name: "Jawline Filler", price: "£350/ml" },
   { name: "Tear Trough", price: "£425" },
-  { name: "HA Makeover", price: "From £1,250" },
+  { name: "Liquid Facelift", price: "From £1,250" },
   { name: "Profhilo", price: "£350" },
 ];
 
@@ -61,7 +61,7 @@ export const swedishData: PatientPageData = {
     motto: "Naturliga resultat är inte ett löfte – det är vår dagliga standard.",
   },
   haMakeover: {
-    title: "Vad är HA Makeover?",
+    title: "Vad är Liquid Facelift?",
     subtitle: "(Hyaluronsyra-baserad ansiktsföryngring)",
     description: "En helhetsplan med hyaluronsyra för att återställa balans, volym och lyster – utan att ändra dina drag.",
     goal: "Målet: Se yngre och fräschare ut utan att det syns att du gjort något.",
@@ -112,7 +112,7 @@ export const swedishData: PatientPageData = {
   },
   treatmentMenu: {
     title: "Behandlingsmeny",
-    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Dermal Fillers", skin: "Hudföryngring", contouring: "Konturering", medical: "Medicinsk Botox", makeover: "HA Makeover" }),
+    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Dermal Fillers", skin: "Hudföryngring", contouring: "Konturering", medical: "Medicinsk Botox", makeover: "Liquid Facelift" }),
   },
   aboutUs: {
     title: "Om Cosmedocs",
@@ -135,11 +135,11 @@ export const swedishData: PatientPageData = {
       { q: "Är det billigare i London?", a: "Ofta ja. Botox 3 områden kostar £350 hos oss, jämfört med 5 000–7 000 SEK i Sverige, och med högre expertis." },
       { q: "Vad är Masseter Botox?", a: "Masseter Botox smalnar av ansiktet genom att slappna av käkmuskeln. Vi betonar kontrollerad dosering för naturliga resultat." },
       { q: "Erbjuder ni vadslimming?", a: "Ja, vi är en av Londons första kliniker med vadslimming. Behandlingen minskar vadmuskeln gradvis utan att påverka gångfunktionen." },
-      { q: "Vad är HA Makeover?", a: "HA Makeover är en helhetslösning med hyaluronsyra som återställer volym, struktur och hudkvalitet – utan att förändra dina drag." },
+      { q: "Vad är Liquid Facelift?", a: "Liquid Facelift är en helhetslösning med hyaluronsyra som återställer volym, struktur och hudkvalitet – utan att förändra dina drag." },
       { q: "Hur bokar jag?", a: "Du kan boka via vår kontaktsida eller använda vår AI-assistent på hemsidan för att utforska behandlingsalternativ innan ditt besök." },
     ],
   },
   disclaimer: "Denna sida har skapats med AI-assistans. Vi rekommenderar att du konsulterar våra specialistläkare för den mest exakta informationen.",
-  seoText: "Cosmedocs estetisk klinik Harley Street London för svenska patienter sedan 2007. Botox, dermal fillers, masseter botox käkslimming, vadslimming calf reduction, HA Makeover ansiktsföryngring, näsfiller, läppfiller, kindfiller. Över 1 miljon injektioner. Läkarledd estetisk medicin med naturliga resultat. Ofta billigare än i Sverige med högre expertis.",
-  keywords: "estetisk klinik london, svenska patienter london, botox london, masseter botox, vadslimming, calf reduction, HA makeover, läppfiller london, dermal fillers london, Harley Street",
+  seoText: "Cosmedocs estetisk klinik Harley Street London för svenska patienter sedan 2007. Botox, dermal fillers, masseter botox käkslimming, vadslimming calf reduction, Liquid Facelift ansiktsföryngring, näsfiller, läppfiller, kindfiller. Över 1 miljon injektioner. Läkarledd estetisk medicin med naturliga resultat. Ofta billigare än i Sverige med högre expertis.",
+  keywords: "estetisk klinik london, svenska patienter london, botox london, masseter botox, vadslimming, calf reduction, Liquid Facelift, läppfiller london, dermal fillers london, Harley Street",
 };

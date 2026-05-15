@@ -26,7 +26,7 @@ export const finnishData: PatientPageData = {
     motto: "Luonnolliset tulokset eivät ole lupaus – ne ovat päivittäinen standardimme.",
   },
   haMakeover: {
-    title: "Mikä on HA Makeover?",
+    title: "Mikä on Liquid Facelift?",
     subtitle: "(Hyaluronihappo-pohjainen kasvojen nuorentaminen)",
     description: "Kokonaisvaltainen hoitosuunnitelma hyaluronihapolla tasapainon, volyymin ja hehkun palauttamiseksi – muuttamatta piirteitäsi.",
     goal: "Tavoite: Näytä nuoremmalta ja raikkaammalta ilman, että kukaan huomaa.",
@@ -77,7 +77,7 @@ export const finnishData: PatientPageData = {
   },
   treatmentMenu: {
     title: "Hoitovalikko",
-    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Täyteaineet", skin: "Ihon nuorentaminen", contouring: "Muotoilu", medical: "Lääketieteellinen Botox", makeover: "HA Makeover" }),
+    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Täyteaineet", skin: "Ihon nuorentaminen", contouring: "Muotoilu", medical: "Lääketieteellinen Botox", makeover: "Liquid Facelift" }),
   },
   aboutUs: {
     title: "Tietoa Cosmedocsista",
@@ -97,11 +97,11 @@ export const finnishData: PatientPageData = {
       { q: "Onko Lontoossa halvempaa?", a: "Usein kyllä. Botox 3 aluetta maksaa £350, verrattuna 500–700 € Suomessa." },
       { q: "Mikä on Masseter Botox?", a: "Masseter Botox kaventaa kasvoja rentouttamalla leukalihasta. Painotamme kontrolloitua annostelua." },
       { q: "Tarjoatteko pohkeen hoikentamista?", a: "Kyllä, olemme yksi Lontoon ensimmäisistä klinikoista. Hoito ohenentaa pohjelihasta asteittain." },
-      { q: "Mikä on HA Makeover?", a: "Kokonaisvaltainen hyaluronihapon hoitosuunnitelma volyymin, rakenteen ja ihon laadun palauttamiseksi." },
+      { q: "Mikä on Liquid Facelift?", a: "Kokonaisvaltainen hyaluronihapon hoitosuunnitelma volyymin, rakenteen ja ihon laadun palauttamiseksi." },
       { q: "Miten varaan ajan?", a: "Voit varata ajan yhteystietosivultamme tai käyttää AI-avustajaamme verkkosivuillamme." },
     ],
   },
   disclaimer: "Tämä sivu on luotu tekoälyn avustuksella. Suosittelemme konsultoimaan erikoislääkäreitämme tarkimman tiedon saamiseksi.",
-  seoText: "Cosmedocs esteettinen klinikka Harley Street Lontoo suomalaisille potilaille vuodesta 2007. Botox, täyteaineet, masseter botox leuan kaventaminen, pohkeen hoikentaminen, HA Makeover. Yli 1 miljoona injektiota. Lääkärijohtoinen esteettinen lääketiede luonnollisilla tuloksilla.",
-  keywords: "esteettinen klinikka lontoo, suomalaiset potilaat lontoo, botox lontoo, masseter botox, pohkeen hoikentaminen, calf reduction, HA makeover, huulitäyte lontoo, Harley Street",
+  seoText: "Cosmedocs esteettinen klinikka Harley Street Lontoo suomalaisille potilaille vuodesta 2007. Botox, täyteaineet, masseter botox leuan kaventaminen, pohkeen hoikentaminen, Liquid Facelift. Yli 1 miljoona injektiota. Lääkärijohtoinen esteettinen lääketiede luonnollisilla tuloksilla.",
+  keywords: "esteettinen klinikka lontoo, suomalaiset potilaat lontoo, botox lontoo, masseter botox, pohkeen hoikentaminen, calf reduction, Liquid Facelift, huulitäyte lontoo, Harley Street",
 };

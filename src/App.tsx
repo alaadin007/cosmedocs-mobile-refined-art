@@ -738,11 +738,11 @@ const App = () => {
                           <Route path="/treatments/fat-dissolving" element={<FatDissolve />} />
                           <Route path="/treatments/fat-dissolving/" element={<FatDissolve />} />
                           
-                          {/* HA Makeover */}
+                          {/* Liquid Facelift */}
                           <Route path="/treatments/ha-makeover" element={<HAMakeover />} />
                           <Route path="/treatments/ha-makeover/" element={<HAMakeover />} />
                           
-                          {/* 8-Point Facelift → HA Makeover redirect */}
+                          {/* 8-Point Facelift → Liquid Facelift redirect */}
                           <Route path="/treatments/8-point-facelift" element={<Navigate to="/treatments/ha-makeover/" replace />} />
                           <Route path="/treatments/8-point-facelift/" element={<Navigate to="/treatments/ha-makeover/" replace />} />
                           <Route path="/treatments/non-surgical-facelift" element={<NonSurgicalFaceliftHub />} />

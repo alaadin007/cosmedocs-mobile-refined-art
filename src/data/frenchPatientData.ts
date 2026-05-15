@@ -26,7 +26,7 @@ export const frenchData: PatientPageData = {
     motto: "Les résultats naturels ne sont pas une promesse – c'est notre standard quotidien.",
   },
   haMakeover: {
-    title: "Qu'est-ce que le HA Makeover ?",
+    title: "Qu'est-ce que le Liquid Facelift ?",
     subtitle: "(Rajeunissement facial à base d'acide hyaluronique)",
     description: "Un plan de traitement global à l'acide hyaluronique pour restaurer l'équilibre, le volume et l'éclat – sans changer vos traits.",
     goal: "Objectif : Paraître plus jeune et plus frais sans que cela se voie.",
@@ -77,7 +77,7 @@ export const frenchData: PatientPageData = {
   },
   treatmentMenu: {
     title: "Menu des traitements",
-    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Acide hyaluronique", skin: "Rajeunissement cutané", contouring: "Remodelage", medical: "Botox médical", makeover: "HA Makeover" }),
+    categories: sharedTreatmentMenu({ botox: "Botox", fillers: "Acide hyaluronique", skin: "Rajeunissement cutané", contouring: "Remodelage", medical: "Botox médical", makeover: "Liquid Facelift" }),
   },
   aboutUs: {
     title: "À propos de Cosmedocs",
@@ -97,11 +97,11 @@ export const frenchData: PatientPageData = {
       { q: "Est-ce moins cher à Londres ?", a: "Souvent oui. Le Botox 3 zones coûte £350 chez nous, contre 400–600 € en France." },
       { q: "Qu'est-ce que le Botox Masséter ?", a: "Le Botox Masséter affine le visage en relâchant le muscle de la mâchoire. Nous privilégions un dosage contrôlé pour des résultats naturels." },
       { q: "Proposez-vous l'affinement des mollets ?", a: "Oui, nous sommes parmi les premières cliniques londoniennes. Le traitement réduit progressivement le muscle du mollet sans affecter la marche." },
-      { q: "Qu'est-ce que le HA Makeover ?", a: "Une solution globale à l'acide hyaluronique qui restaure le volume, la structure et la qualité de la peau." },
+      { q: "Qu'est-ce que le Liquid Facelift ?", a: "Une solution globale à l'acide hyaluronique qui restaure le volume, la structure et la qualité de la peau." },
       { q: "Comment réserver ?", a: "Vous pouvez réserver via notre page de contact ou utiliser notre assistant IA sur le site." },
     ],
   },
   disclaimer: "Cette page a été créée avec l'assistance de l'IA. Nous recommandons de consulter nos médecins spécialistes pour les informations les plus précises.",
-  seoText: "Cosmedocs clinique esthétique Harley Street Londres pour patients francophones depuis 2007. Botox, acide hyaluronique, botox masséter affinement mâchoire, affinement mollets calf reduction, HA Makeover rajeunissement facial. Plus d'1 million d'injections. Médecine esthétique dirigée par des médecins avec résultats naturels.",
-  keywords: "clinique esthétique londres, patients français londres, botox londres, botox masséter, affinement mollets, calf reduction, HA makeover, filler lèvres londres, Harley Street, botox paris londres",
+  seoText: "Cosmedocs clinique esthétique Harley Street Londres pour patients francophones depuis 2007. Botox, acide hyaluronique, botox masséter affinement mâchoire, affinement mollets calf reduction, Liquid Facelift rajeunissement facial. Plus d'1 million d'injections. Médecine esthétique dirigée par des médecins avec résultats naturels.",
+  keywords: "clinique esthétique londres, patients français londres, botox londres, botox masséter, affinement mollets, calf reduction, Liquid Facelift, filler lèvres londres, Harley Street, botox paris londres",
 };

@@ -28,7 +28,7 @@ const treatmentCategories: TreatmentCategory[] = [
     subtitle: "Volume, structure & contour",
     description: "Injections d'acide hyaluronique pour une restauration naturelle du volume, le remodelage facial et le rajeunissement. Plans de traitement sur mesure.",
     link: "/fr/traitements/acide-hyaluronique/",
-    items: ["Injection lèvres (naturel à audacieux)", "Pommettes, menton & mâchoire", "Rhinoplastie médicale", "Cernes & sous les yeux", "HA Makeover (visage complet)"],
+    items: ["Injection lèvres (naturel à audacieux)", "Pommettes, menton & mâchoire", "Rhinoplastie médicale", "Cernes & sous les yeux", "Liquid Facelift (visage complet)"],
   },
   {
     title: "Rajeunissement Cutané",

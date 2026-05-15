@@ -243,7 +243,7 @@ const EndoliftLondon = () => {
                   {[
                     { label: "Endolaser Brow Lift (Non-Surgical)", path: "/treatments/eyebrow-lift-endolaser/" },
                     { label: "PDO Threads — Cogged & Mono", path: "/non-surgical-facelift/" },
-                    { label: "HA Makeover (8/11-Point Lift)", path: "/ha-makeover/" },
+                    { label: "Liquid Facelift (8/11-Point Lift)", path: "/ha-makeover/" },
                     { label: "Mini Facelifts Hub", path: "/non-surgical-facelift-hub/" },
                     { label: "Skin Rejuvenation Hub", path: "/skin-rejuvenation/" },
                   ].map((l) => (
@@ -279,7 +279,7 @@ const EndoliftLondon = () => {
                   related={[
                     { label: "PDO Threads / Non-Surgical Facelift", path: "/non-surgical-facelift/" },
                     { label: "Mini Facelifts Hub", path: "/non-surgical-facelift-hub/" },
-                    { label: "HA Makeover", path: "/ha-makeover/" },
+                    { label: "Liquid Facelift", path: "/ha-makeover/" },
                     { label: "Skin Rejuvenation", path: "/skin-rejuvenation/" },
                     { label: "About CosmeDocs", path: "/about-us/" },
                   ]}

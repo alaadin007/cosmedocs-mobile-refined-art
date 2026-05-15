@@ -120,7 +120,7 @@ const PricesChinese = () => {
                 <h2 className="text-2xl font-bold mb-2 text-amber-400">玻尿酸填充</h2>
                 <p className="text-gray-400 mb-6">咨询费 £50（可抵扣治疗费用）</p>
                 {[
-                  { title: "玻尿酸全脸焕新 (HA Makeover)", price: "£800起" },
+                  { title: "玻尿酸全脸焕新 (Liquid Facelift)", price: "£800起" },
                   { title: "非手术拉皮", price: "£800起" },
                   { title: "法令纹填充", price: "£325/毫升" },
                   { title: "下颌线填充", price: "£350/毫升", link: "/zh/treatments/jawline-filler/" },

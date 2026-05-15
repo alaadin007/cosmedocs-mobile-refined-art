@@ -135,7 +135,7 @@ export default function HomepageGerman() {
               Im Vergleich zu deutschen Preisen bieten unsere Behandlungen ein ausgezeichnetes Preis-Leistungs-Verhältnis. Botox-Behandlungen beginnen bei £275 (ca. €320), Lippenfiller bei £350 (ca. €410). Alle Behandlungen werden von GMC-registrierten Ärzten durchgeführt — dem britischen Äquivalent der deutschen Ärztekammer. Wir verwenden ausschließlich FDA- und CE-zertifizierte Produkte renommierter Hersteller.
             </p>
             <p className="text-sm text-white/60 leading-relaxed">
-              Masseter Botox zur Kieferschlankung ist besonders bei unseren DACH-Patienten beliebt, ebenso wie das HA Makeover — eine umfassende Gesichtsverjüngung mit Hyaluronsäure, die in einer einzigen Sitzung durchgeführt werden kann. Viele Patienten kombinieren ihre Behandlung mit einem London-Wochenende.
+              Masseter Botox zur Kieferschlankung ist besonders bei unseren DACH-Patienten beliebt, ebenso wie das Liquid Facelift — eine umfassende Gesichtsverjüngung mit Hyaluronsäure, die in einer einzigen Sitzung durchgeführt werden kann. Viele Patienten kombinieren ihre Behandlung mit einem London-Wochenende.
             </p>
           </div>
         </section>

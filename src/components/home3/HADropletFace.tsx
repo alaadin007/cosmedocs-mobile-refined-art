@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 /**
- * Animated hyaluronic acid droplet graphic for the HA Makeover card front.
+ * Animated hyaluronic acid droplet graphic for the Liquid Facelift card front.
  * Golden droplets fall onto cheek, mid-face, jaw and chin points of a face
  * silhouette and "penetrate" with an absorbing ripple.
  */

@@ -231,7 +231,7 @@ const KarachiLocation = () => {
                 </TabsTrigger>
                 <TabsTrigger value="ha-makeover" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
                   <Star className="h-4 w-4 mr-2" />
-                  <span className="hidden sm:inline">HA Makeover</span>
+                  <span className="hidden sm:inline">Liquid Facelift</span>
                 </TabsTrigger>
                 <TabsTrigger value="skin-boosters" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
                   <Zap className="h-4 w-4 mr-2" />

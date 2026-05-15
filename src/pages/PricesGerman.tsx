@@ -13,7 +13,7 @@ const fillerPrices = [
   { name: 'Lippenfiller 1ml', price: '£350' }, { name: 'Kinnlinie Filler', price: '£450' },
   { name: 'Kinn Filler', price: '£400' }, { name: 'Augenringe Filler', price: '£450' },
   { name: 'Nasen-Filler', price: '£450' }, { name: 'PCL-Fäden (Nase)', price: '£950' },
-  { name: 'HA Makeover', price: '£1.200+' },
+  { name: 'Liquid Facelift', price: '£1.200+' },
 ];
 const skinPrices = [
   { name: 'Profhilo', price: '£350' }, { name: 'Polynukleotide', price: '£300' },
@@ -63,7 +63,7 @@ export default function PricesGerman() {
               Die Kosten einer Behandlung hängen von der Menge des verwendeten Produkts, der Anzahl der behandelten Bereiche und Ihren individuellen Zielen ab. In der Beratung erstellen wir einen Behandlungsplan, der auch Ihr Budget berücksichtigt. Viele Patienten beginnen mit den wirkungsvollsten ein bis zwei Behandlungen und erweitern ihren Plan schrittweise.
             </p>
             <p className="text-sm text-white/60 leading-relaxed">
-              Das HA Makeover ist unser umfassendes Gesichtsverjüngungsprogramm mit Hyaluronsäure. Durch die gleichzeitige Behandlung mehrerer Bereiche erzielen wir harmonischere Ergebnisse als bei Einzelbehandlungen. Dieser ganzheitliche Ansatz ist besonders bei internationalen Patienten beliebt, die das Maximum aus einem einzigen Besuch herausholen möchten.
+              Das Liquid Facelift ist unser umfassendes Gesichtsverjüngungsprogramm mit Hyaluronsäure. Durch die gleichzeitige Behandlung mehrerer Bereiche erzielen wir harmonischere Ergebnisse als bei Einzelbehandlungen. Dieser ganzheitliche Ansatz ist besonders bei internationalen Patienten beliebt, die das Maximum aus einem einzigen Besuch herausholen möchten.
             </p>
             <p className="text-sm text-white/60 leading-relaxed">
               Masseter Botox zur Kieferschlankung und Profhilo zur Hautverjüngung gehören zu unseren beliebtesten Behandlungen bei deutschsprachigen Patienten. Beide Verfahren erfordern keine Ausfallzeit und liefern subtile, natürlich wirkende Ergebnisse — ganz im Sinne unserer Philosophie der unsichtbaren Kunst. Fragen zu Zahlungsmöglichkeiten und Kombinationsrabatten beantworten wir gerne in der Beratung.

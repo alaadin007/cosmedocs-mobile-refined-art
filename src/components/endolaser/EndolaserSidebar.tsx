@@ -78,7 +78,7 @@ const EndolaserSidebar = () => {
         <p className="text-sm font-medium text-white/70 mb-3">Mini Facelift Options</p>
         <div className="space-y-2">
           <Link to="/treatments/nefertiti-lift/" className="block text-xs text-[#C9A050] hover:underline">Nefertiti Botox Lift →</Link>
-          <Link to="/treatments/ha-makeover/" className="block text-xs text-[#C9A050] hover:underline">HA Makeover →</Link>
+          <Link to="/treatments/ha-makeover/" className="block text-xs text-[#C9A050] hover:underline">Liquid Facelift →</Link>
           <Link to="/treatments/pdo-threads/" className="block text-xs text-[#C9A050] hover:underline">PDO Thread Lift →</Link>
           <Link to="/treatments/non-surgical-facelift/" className="block text-xs text-[#C9A050] hover:underline">All Facelift Options →</Link>
         </div>

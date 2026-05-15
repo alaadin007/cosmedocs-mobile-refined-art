@@ -242,8 +242,8 @@ const BotoxDublin = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { img: transformationBefore, title: "Before", desc: "Initial consultation - Personalised facial analysis" },
-                { img: transformationAfterMild, title: "After 1st Session", desc: "Mild HA Makeover - Immediate natural result" },
-                { img: transformation1Year, title: "After 1 Year", desc: "2 HA Makeover sessions + Skin Rejuvenation" },
+                { img: transformationAfterMild, title: "After 1st Session", desc: "Mild Liquid Facelift - Immediate natural result" },
+                { img: transformation1Year, title: "After 1 Year", desc: "2 Liquid Facelift sessions + Skin Rejuvenation" },
                 { img: transformationCloseup, title: "Close-up", desc: "Transformed skin quality, refined features" }
               ].map((item, index) => (
                 <motion.div
@@ -300,7 +300,7 @@ const BotoxDublin = () => {
 
                 <p className="text-gray-300 leading-relaxed mb-6">
                   <strong className="text-amber-400">Hyaluronic acid</strong> (HA) is our passion. Our specialist 
-                  doctors perform "HA Makeovers" — complete facial transformations using exclusively hyaluronic acid 
+                  doctors perform "Liquid Facelifts" — complete facial transformations using exclusively hyaluronic acid 
                   fillers. In 15 to 20 minutes, we can treat multiple areas: lips, cheekbones, chin, jawline, 
                   for a harmonious and natural result.
                 </p>

@@ -6,7 +6,7 @@ const canonical = 'https://www.cosmedocs.com/ja/treatments/';
 
 const categories = [
   { title: 'ボトックスとアンチエイジング', subtitle: '筋肉調整と予防', desc: '動的なシワ、顔の輪郭形成、医療的適応のためのボトックス注射。2007年から専門医が実施。', link: '/ja/treatments/botox/', items: ['額・眉間・目尻のシワ', 'リップフリップ・ガミースマイル', '咬筋ボトックス（小顔治療）', 'ネフェルティティリフト', '医療ボトックス（偏頭痛・多汗症）'] },
-  { title: 'ダーマルフィラー', subtitle: 'ボリューム・構造・彫刻', desc: 'ヒアルロン酸フィラーで自然なボリューム回復と顔の輪郭形成。', link: '/ja/treatments/dermal-fillers/', items: ['リップフィラー', '頬・顎・顎ラインフィラー', '鼻フィラー（非手術鼻整形）', '涙袋フィラー', 'HA Makeover'] },
+  { title: 'ダーマルフィラー', subtitle: 'ボリューム・構造・彫刻', desc: 'ヒアルロン酸フィラーで自然なボリューム回復と顔の輪郭形成。', link: '/ja/treatments/dermal-fillers/', items: ['リップフィラー', '頬・顎・顎ラインフィラー', '鼻フィラー（非手術鼻整形）', '涙袋フィラー', 'Liquid Facelift'] },
   { title: '肌の若返り', subtitle: '再生・輝き・修復', desc: 'コラーゲン刺激と肌質改善のための先進医療治療。', link: '/ja/treatments/skin-rejuvenation/', items: ['プロファイロ', 'ポリヌクレオチド', 'ハイドラフェイシャル', 'マイクロニードリング・PRP', 'ケミカルピーリング'] },
   { title: 'レーザー治療', subtitle: '精密な光治療', desc: '肌のリサーフェシング、色素補正、脱毛のための先進レーザー。', link: '/treatments/laser/', items: ['CO₂レーザー', 'ピコレーザー', 'レーザー脱毛', '瘢痕軽減'] },
   { title: 'PDOスレッド', subtitle: '非手術リフト', desc: '組織のリフティング、肌の引き締め、コラーゲン刺激のための吸収性PDOスレッド。', link: '/treatments/pdo-threads/', items: ['ミニフェイスリフト', '顎ライン定義', '首の引き締め'] },

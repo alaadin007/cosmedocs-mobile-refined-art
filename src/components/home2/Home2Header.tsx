@@ -50,7 +50,7 @@ const treatmentCategories = [
       { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas/#prejowl" },
       { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas/#perioral" },
       { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas/#volume" },
-      { title: "HA Makeover", link: "/treatments/ha-makeover/" },
+      { title: "Liquid Facelift", link: "/treatments/ha-makeover/" },
     ]
   },
   {
@@ -59,7 +59,7 @@ const treatmentCategories = [
     items: [
       { title: "Mini Facelifts Overview", link: "/treatments/non-surgical-facelift/", isOverview: true },
       { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
-      { title: "HA Makeover", link: "/treatments/ha-makeover/" },
+      { title: "Liquid Facelift", link: "/treatments/ha-makeover/" },
       { title: "PDO Thread Lift", link: "/treatments/pdo-threads/" },
       { title: "Endolaser (Laser Fibre Lift)", link: "/treatments/endolaser/", isHighlight: true },
     ]
