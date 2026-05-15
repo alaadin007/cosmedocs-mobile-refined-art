@@ -76,15 +76,14 @@ const CheekFiller = () => {
       },
       {
         "@type": "Offer",
-        name: "Cheek Filler Treatment",
+        name: "Cheek Filler Treatment — Swiss Teoxane Ultradeep",
         priceCurrency: "GBP",
         price: "350",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "GBP",
-          price: "350",
-          description: "1ml cheek filler from £350; 2ml from £650; 3ml from £950",
-        },
+        priceSpecification: [
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "350", description: "1.2ml Swiss Teoxane Ultradeep" },
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "500", description: "1.8ml Swiss Teoxane Ultradeep" },
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "700", description: "2.4ml Swiss Teoxane Ultradeep" },
+        ],
         availability: "https://schema.org/InStock",
         seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
@@ -114,11 +113,11 @@ const CheekFiller = () => {
   return (
     <>
       <Helmet>
-        <title>Cheek Filler Treatment | Mid-Face Volume | Harley Street Doctors</title>
-        <meta name="description" content="Doctor-led cheek filler treatment for mid-face volume restoration and facial contouring. Natural, structural results at our Harley Street clinic. Since 2007." />
+        <title>Cheek Filler London — Swiss Teoxane Ultradeep from £350 | Cosmedocs Harley Street</title>
+        <meta name="description" content="Doctor-led cheek filler in London using Swiss Teoxane Ultradeep — 1.2ml £350, 1.8ml £500, 2.4ml £700. Lasts 12–18 months. Before & after photos, transparent pricing. Harley Street since 2007." />
         <link rel="canonical" href="https://www.cosmedocs.com/treatments/cheek-filler/" />
-        <meta property="og:title" content="Cheek Filler Treatment | Mid-Face Volume | Harley Street Doctors" />
-        <meta property="og:description" content="Doctor-led cheek filler treatment for mid-face volume restoration and facial contouring. Natural, structural results at our Harley Street clinic." />
+        <meta property="og:title" content="Cheek Filler London — Swiss Teoxane Ultradeep | Cosmedocs" />
+        <meta property="og:description" content="Doctor-led cheek filler from £350. Swiss Teoxane Ultradeep, 12–18 month longevity. Harley Street, since 2007." />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/cheek-filler/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
