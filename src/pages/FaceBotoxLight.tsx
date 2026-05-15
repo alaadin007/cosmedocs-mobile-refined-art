@@ -21,8 +21,8 @@ export default function FaceBotoxLight() {
   const canonicalUrl = getCanonicalUrl(language, 'botox');
 
   const seoData = generateSEOMetadata(
-    "Botox | Anti-Wrinkle Treatment Guide | Cosmedocs Harley Street",
-    "Complete guide to Botox. Learn what Botox is, how it works, treatment areas, results timeline, and how to choose the right clinic. Doctor-led care at Harley Street.",
+    "Botox London | Doctor-Led Anti-Wrinkle Treatment | Cosmedocs Harley Street",
+    "Botox London at Cosmedocs Harley Street. Doctor-led anti-wrinkle treatment since 2007 — natural, subtle, GMC-registered. Transparent pricing, free consultation.",
     "/treatments/botox/"
   );
 
@@ -32,7 +32,51 @@ export default function FaceBotoxLight() {
     "name": "Cosmedocs",
     "url": "https://www.cosmedocs.com",
     "telephone": "+44 20 3733 3227",
-    "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" }
+    "areaServed": [
+      { "@type": "City", "name": "London" },
+      { "@type": "AdministrativeArea", "name": "Greater London" }
+    ],
+    "address": { "@type": "PostalAddress", "streetAddress": "10 Harley Street", "addressLocality": "London", "postalCode": "W1G 9PF", "addressCountry": "GB" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1200" }
+  };
+
+  const botoxLondonFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does Botox cost in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox in London at Cosmedocs starts from £175 for a single area and £295 for three areas. As an add-on to a filler appointment the price drops to £50 per area. All treatments are doctor-led at our Harley Street clinic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is the best place to get Botox in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cosmedocs is a doctor-led aesthetic clinic on Harley Street, London W1G — practising since 2007 with GMC-registered doctors and over one million procedures performed across the group. Choose a clinic where a registered medical doctor — not a non-medical practitioner — performs every assessment and injection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Botox in London safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When administered by a GMC-registered doctor in a CQC-aligned clinical setting, Botox is one of the most studied and safest aesthetic treatments. Cosmedocs works with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does Botox last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most patients see results last between three and four months. With consistent maintenance, the muscle re-trains and intervals can extend to four to six months."
+        }
+      }
+    ]
   };
 
   const treatmentAreaCards = [
@@ -65,6 +109,7 @@ export default function FaceBotoxLight() {
           <link key={link.hreflang} rel="alternate" hrefLang={link.hreflang} href={link.href} />
         ))}
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(botoxLondonFaqSchema)}</script>
       </Helmet>
 
       <div className={`${bg} overflow-x-hidden`}>
@@ -827,16 +872,83 @@ export default function FaceBotoxLight() {
           <BotoxSidebarLight />
         </section>
 
-        {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Botox London - Complete Guide to Anti-Wrinkle Treatment</h2>
-          <p>
-            Botox London is the most popular non-surgical cosmetic treatment in the UK. This comprehensive guide covers
-            everything you need to know about anti-wrinkle injections. Cosmedocs on Harley Street has been providing
-            doctor-led Botox treatments since 2007, with over 1 million procedures performed.
-            Our aesthetics is invisible art. Bold, natural, always your way.
-          </p>
-        </div>
+        {/* ═══════════════════════════════════════════
+            BOTOX LONDON — VISIBLE SEO CONTENT
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 px-4 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#C9A050] mb-4 font-light">Harley Street · London W1G</p>
+            <h2 className={`text-3xl md:text-4xl font-extralight ${textH} mb-6 leading-tight`}>
+              Botox in London — Harley Street since 2007
+            </h2>
+            <p className={`text-lg ${textBody} font-light leading-relaxed mb-6`}>
+              Cosmedocs is a doctor-led aesthetic clinic on Harley Street, the UK's most established address for medical aesthetics. Our London team — all GMC-registered doctors — has delivered anti-wrinkle treatment to discerning patients since 2007. Across the wider group we have performed over one million procedures, refining a quiet, restrained approach that prizes natural movement over a frozen finish.
+            </p>
+            <p className={`text-base ${textBody} font-light leading-relaxed mb-10`}>
+              For Londoners weighing up where to have Botox, the question is rarely about the molecule — every UK clinic uses the same regulated botulinum toxin. The variable is the hand, the eye, and the medical training behind the syringe. Our doctors assess your facial anatomy, expression patterns and skin quality before deciding dose, depth and dilution. The result is anti-wrinkle treatment so subtle it is invisible — exactly as our motto intends.
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-6 mb-12">
+              <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
+                <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">From</p>
+                <p className="text-3xl font-light text-gray-900 mb-1">£175</p>
+                <p className="text-sm text-gray-600 font-light">Single area, doctor-led</p>
+              </div>
+              <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
+                <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Three areas</p>
+                <p className="text-3xl font-light text-gray-900 mb-1">£295</p>
+                <p className="text-sm text-gray-600 font-light">Most popular package</p>
+              </div>
+              <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
+                <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Add-on</p>
+                <p className="text-3xl font-light text-gray-900 mb-1">£50</p>
+                <p className="text-sm text-gray-600 font-light">Per area with filler appointment</p>
+              </div>
+            </div>
+
+            <h3 className={`text-2xl font-light ${textH} mb-6`}>Frequently asked questions about Botox in London</h3>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="cost">
+                <AccordionTrigger className="text-left text-base font-light">How much does Botox cost in London?</AccordionTrigger>
+                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+                  At Cosmedocs Harley Street, Botox in London starts from £175 for a single area and £295 for three areas. Booked alongside a filler appointment, additional Botox areas are £50 each. All pricing is doctor-led — there is no upcharge for seeing a registered doctor rather than a non-medical practitioner.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="best">
+                <AccordionTrigger className="text-left text-base font-light">Where is the best place to get Botox in London?</AccordionTrigger>
+                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+                  Look for three things: a GMC-registered medical doctor performing the assessment and injection, a clinic with a long track record on Harley Street or another established medical address, and a transparent pricing structure with no hidden consultation fees. Cosmedocs has practised on Harley Street since 2007 and offers complimentary doctor consultations.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="safe">
+                <AccordionTrigger className="text-left text-base font-light">Is Botox in London safe?</AccordionTrigger>
+                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+                  Botox is one of the most extensively studied medications in modern medicine. Safety in London hinges on practitioner training and clinic standards. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments. Every patient is assessed by a GMC-registered doctor before any product is drawn.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="duration">
+                <AccordionTrigger className="text-left text-base font-light">How long does Botox last?</AccordionTrigger>
+                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+                  Most patients enjoy results for three to four months. With consistent maintenance, the treated muscle re-trains and intervals can extend comfortably to four to six months — a quieter, more economical maintenance pattern.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="natural">
+                <AccordionTrigger className="text-left text-base font-light">Will my Botox look natural?</AccordionTrigger>
+                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+                  Our aesthetics is invisible art — bold, natural, always your way. Cosmedocs doctors are trained to dose conservatively, preserve expression and place product with anatomical precision. The intent is refreshment, not a frozen brow. If you prefer a more pronounced result, that is a conversation, not a default.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-3">
+              <Link to="/treatments/anti-wrinkle-treatment/" className="text-sm text-[#C9A050] hover:underline">Anti-wrinkle treatment explained →</Link>
+              <span className="text-gray-300">·</span>
+              <Link to="/harley-street-injectables/" className="text-sm text-[#C9A050] hover:underline">Harley Street injectables →</Link>
+              <span className="text-gray-300">·</span>
+              <Link to="/treatments/botox/cost/" className="text-sm text-[#C9A050] hover:underline">Full pricing →</Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
