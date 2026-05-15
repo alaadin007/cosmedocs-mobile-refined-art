@@ -1550,43 +1550,7 @@ const Row = ({ category, index }: { category: Category; index: number }) => {
         </Link>
       </div>
 
-      {category.id === "fillers-anti-ageing" && (
-        <div className="px-5 sm:px-8 max-w-7xl mx-auto mt-8">
-          <div className="rounded-[28px] border border-[#C9A050]/25 bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 shadow-[0_30px_80px_-40px_rgba(201,160,80,0.4)]">
-            <div className="shrink-0 w-32 h-40 sm:w-40 sm:h-52 rounded-2xl overflow-hidden bg-black/60 ring-1 ring-[#C9A050]/30 flex items-center justify-center">
-              <img
-                src={teoxaneAwardImg}
-                alt="Teoxane Outstanding Clinic Awards — Cosmedocs Winner Q2 2017"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1 min-w-0 text-center md:text-left">
-              <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#C9A050] mb-2">Pedigree · Product Story</p>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#F0D78C] leading-tight">
-                Swiss science. French artistry. American innovation.
-              </h3>
-              <p className="mt-3 text-white/75 text-sm sm:text-[15px] leading-relaxed max-w-2xl">
-                We use only top-tier hyaluronic acid from regulated Swiss, French and US laboratories — Teoxane, Juvéderm, Restylane, Belotero, Filorga and Vivacy. Cosmedocs was awarded Teoxane's <span className="text-[#F0D78C] font-medium">Outstanding Clinic Award (Q2 2017)</span> for safety, results and ongoing training.
-              </p>
-              <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
-                {[
-                  { flag: "🇨🇭", label: "Teoxane · Swiss" },
-                  { flag: "🇨🇭", label: "Restylane · Swiss" },
-                  { flag: "🇫🇷", label: "Filorga · French" },
-                  { flag: "🇫🇷", label: "Vivacy · French" },
-                  { flag: "🇺🇸", label: "Juvéderm · USA" },
-                  { flag: "🇩🇪", label: "Belotero · German" },
-                ].map((b) => (
-                  <span key={b.label} className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-white/85 bg-white/5 border border-[#C9A050]/25 rounded-full px-3 py-1.5">
-                    <span aria-hidden>{b.flag}</span>{b.label}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Swiss · French · American pedigree now lives as the closing flip card in the anti-ageing carousel */}
     </motion.section>
   );
 };
