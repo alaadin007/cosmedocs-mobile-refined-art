@@ -164,7 +164,7 @@ const JawlineFiller = () => {
               currentPage="Jawline Filler"
             />
 
-            <div className="flex items-center justify-between pt-12 pb-4">
+            <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-8 pt-12 pb-4">
               <div className="max-w-2xl">
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}
@@ -205,9 +205,9 @@ const JawlineFiller = () => {
                 </motion.div>
               </div>
 
-              {/* Jaw illustration */}
+              {/* Jaw illustration — visible on every breakpoint */}
               <motion.div
-                className="hidden lg:block flex-shrink-0 w-[280px] h-[320px] relative"
+                className="flex-shrink-0 w-[220px] h-[240px] sm:w-[260px] sm:h-[280px] lg:w-[280px] lg:h-[320px] relative mx-auto lg:mx-0"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
