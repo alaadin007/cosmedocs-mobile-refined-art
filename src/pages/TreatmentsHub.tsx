@@ -261,6 +261,55 @@ const TreatmentsHub = () => {
           </div>
         </section>
 
+        {/* ── Featured / Signature callouts ── */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Endolaser — Now featured */}
+            <Link
+              to="/treatments/endolaser/"
+              className="group relative overflow-hidden rounded-2xl border border-[#C9A050]/40 bg-gradient-to-br from-black via-[#1a140a] to-black p-6 sm:p-7 hover:border-[#C9A050]/70 transition-all"
+            >
+              <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-[#C9A050]/10 blur-3xl pointer-events-none" />
+              <div className="relative">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#C9A050] text-black text-[10px] font-bold uppercase tracking-[0.2em]">
+                  ✦ Now Featured
+                </span>
+                <h3 className="mt-4 text-xl sm:text-2xl font-light text-white">
+                  Endolaser <span className="text-[#C9A050]">(Laser Fibre Lift)</span>
+                </h3>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
+                  The only UKCA & CE-marked dual-wavelength Endolaser at Harley Street. Lifts, tightens and refines from inside the tissue — performed by the device's Lead Trainer at the Harley Street Institute.
+                </p>
+                <span className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-[#C9A050]">
+                  Discover Endolaser <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Polynucleotides Signature Course */}
+            <Link
+              to="/treatments/polynucleotides/"
+              className="group relative overflow-hidden rounded-2xl border border-[#C9A050]/40 bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a] p-6 sm:p-7 hover:border-[#C9A050]/70 transition-all"
+            >
+              <div className="absolute -bottom-12 -left-12 w-44 h-44 rounded-full bg-[#C9A050]/10 blur-3xl pointer-events-none" />
+              <div className="relative">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#C9A050]/60 text-[#C9A050] text-[10px] font-semibold uppercase tracking-[0.2em]">
+                  Signature Course
+                </span>
+                <h3 className="mt-4 text-xl sm:text-2xl font-light text-white">
+                  Polynucleotides <span className="text-[#C9A050]">— Face & Eyes</span>
+                </h3>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
+                  A considered three-session protocol of DNA-level repair across the periorbital and full-face zones. Investment <span className="text-[#F0D78C] font-medium">£950</span> — doctor-led, reserved for our signature patients.
+                </p>
+                <span className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-[#C9A050]">
+                  Discover the protocol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* ── Treatment Categories Grid ── */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
