@@ -1,72 +1,93 @@
-# Capture 3 Botox SEO opportunities
+# Plan — Homepage carousels, Jawline page, Treatments hub
 
-Semrush surfaced three winnable UK keywords. Audit shows:
-- `/treatments/botox/` already exists (canonical target for "botox London" — already redirected in)
-- `/anti-wrinkle-treatment/` does **not** exist as a dedicated page
-- `/harley-street-injectables/` does **not** exist (zero competition for our exact location)
+## 1. Homepage (`src/pages/Home3.tsx`) — card edits
 
-Plan respects two project rules: **one-intent = one-page** (no cannibalising `/treatments/botox/`) and **Service Consolidation** (new pages must funnel into existing canonical hubs).
+### 1a. Remove "Cosmetic Units of the Face" first card from the anti-ageing fillers row
+- Delete the first card object (lines ~270–292) inside the `fillers-anti-ageing` category. The "Anatomy / All volume & filler areas" `OverviewCard` (auto-prepended at line 1465) already covers that intro, so the row will now lead with **Non-Surgical Facelift → HA Makeover → Cheek → Jowl/Jawline …** as requested.
 
----
+### 1b. "Swiss science. French artistry. American innovation." — convert to a flippable end-of-row slide
+- The block currently rendered as a separate banner under the row (lines 1498–1534) will be removed.
+- Append a new card object to the **end** of `fillers-anti-ageing.cards` array, sized identically to the other flip cards (it will pick up the same `widthCls`/`heightCls` from line 1477–1479 because it has a `flip` prop).
+- Front of card: serif heading "Swiss science. French artistry. American innovation.", small Teoxane award thumbnail, eyebrow "Pedigree · Product Story".
+- Back of card (flip): the existing copy ("We use only top-tier hyaluronic acid…"), the 6 brand chips (Teoxane / Restylane / Filorga / Vivacy / Juvéderm / Belotero) and the Q2 2017 Outstanding Clinic Award line.
+- Result: it lives in the carousel as the closing slide, flippable like the others.
 
-## Step 1 — Retarget `/treatments/botox/` for "Botox London" (3,600/mo, KD 28)
+### 1c. Rename and re-scope the "Facial Contouring" row → "Non-Surgical Facelift & Body Contouring"
+- Update the `facial-contouring` category (line 454):
+  - `eyebrow`: `"Non-Surgical Facelift & Body Contouring"`
+  - `title`: `"Lift. Contour. Redefine."`
+  - `copy`: short line about lifting and re-shaping without surgery — facelift options + body sculpting under the Endo family.
+  - `cta`: keep "Mini Facelifts hub" → `/treatments/non-surgical-facelift/`.
 
-The page exists and already pulls in `/botox-london` via 301. We just need to make the on-page SEO explicitly target the geo-modified phrase.
+### 1d. Move Chin / Non-Surgical Nose / Jawline Definition into the anti-ageing fillers row
+- Cut the three cards (Chin Filler, Non-Surgical Nose, Jawline Definition — lines 461–502) out of `facial-contouring.cards` and append them to `fillers-anti-ageing.cards` (after Lip Filler, before the new Swiss/French/American flip card from 1b).
+- Result: the anti-ageing fillers row now covers both "anti-ageing" and "facial contouring" intent in one carousel.
 
-- Helmet `<title>`: `Botox London | Doctor-Led Anti-Wrinkle Treatment | CosmeDocs Harley Street`
-- Helmet `<meta description>`: lead with "Botox in London…" and "Harley Street since 2007"
-- Add an H2 "Botox in London — Harley Street since 2007" near the top of the body
-- Add a dedicated FAQ block answering: *How much is Botox in London?*, *Where to get Botox in London?*, *Best Botox London?* — these are the exact question variants Semrush returned (volumes 10–20/mo each but they aggregate)
-- Add `MedicalBusiness` schema with `areaServed: "London"` if not already present
+### 1e. Repopulate the freed Non-Surgical Facelift & Body Contouring row
+The new `facial-contouring.cards` becomes a curated lift/contouring set (all flippable, same card pattern):
+1. **Nefertiti Lift** → `/treatments/nefertiti-lift/`
+2. **PDO Threads** → `/treatments/pdo-threads/`
+3. **HA Makeover** → `/treatments/ha-makeover/` (re-used; lifts the lower face from above)
+4. **Endolaser Fibre Lift** → `/treatments/endolaser/` (new badge "Now featured")
+5. **Endolaser Fat Reduction & Skin Tightening** → `/treatments/endolaser-body/` *(new page — see §4)*
+6. **Non-Surgical Facelift overview** (existing `nonSurgicalFaceliftCard`) — keep as anchor.
 
-## Step 2 — Build `/anti-wrinkle-treatment/` (1,300/mo, KD 0)
-
-This is the easiest win on the entire list. Footer already says "Anti-Wrinkle Treatment" (per memory rule) — we just need a destination behind the link.
-
-- New page: `src/pages/AntiWrinkleTreatment.tsx`
-- Route added in `App.tsx`
-- Sitemap entry added
-- **Position it as the doctor-led terminology page** — explains why we say "anti-wrinkle treatment" (medical) instead of "Botox" (trade name), then funnels users into `/treatments/botox/` for the booking decision
-- Target related cluster: "anti wrinkle injections" (2,900/mo), "anti ageing injections" (2,400/mo) — covered by H2s and FAQ
-- Page word count: ~1,200 (per Page Type Content System memory for treatment pages)
-- Light luxury theme (per Lip Filler Authority precedent for non-medical-coded pages)
-- Internal links: → `/treatments/botox/`, → `/medical/`, → `/about/`
-
-## Step 3 — Build `/harley-street-injectables/` (2,400/mo, KD low)
-
-Pure-play geo + service authority page. CosmeDocs literally is on Harley Street since 2007 — strongest possible E-E-A-T signal for this exact term.
-
-- New page: `src/pages/HarleyStreetInjectables.tsx`
-- Route added in `App.tsx`
-- Sitemap entry added
-- CQC disclaimer block (per memory rule for Harley Street pages): *"We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments."*
-- Hub-style layout linking to all three injectable pillars: Botox, Dermal Fillers, Polynucleotides
-- `MedicalBusiness` JSON-LD with full Harley Street address + `areaServed: London`
-- Target cluster: "harley street injectables" (2,400/mo), "harley street dermal" (1,000/mo), "dermal fillers london" (1,600/mo)
-- Awards block (Teosyal Outstanding Clinic Award, per memory)
-- Doctor credentials block (Dr Haq PubMed publications, per memory)
+Each card gets a short flip back written in the same minimal voice as the existing cards.
 
 ---
 
-## Technical implementation notes
+## 2. Jawline Filler page (`src/pages/JawlineFiller.tsx`)
 
-- **No new redirects needed** for Step 1 — the existing `/botox-london → /treatments/botox/` 301 stays.
-- **Two new entries** in `public/sitemap-pages.xml` for Steps 2 & 3.
-- **Two new routes** in `src/App.tsx`.
-- All three pages get React Helmet `<link rel="canonical" data-rh="true">` (per Canonical Tag Management memory).
-- All three get `BreadcrumbList` + `MedicalWebPage` + `MedicalProcedure` JSON-LD (per Medical Business Schema standard).
-- British English throughout.
+### 2a. Mobile hero image
+- The jaw illustration block (lines 209–229) is `hidden lg:block`, so on mobile the hero is text-only and reads flat.
+- Restructure the hero `flex` row into a responsive 2-column layout: text on top on mobile, illustration below it, both visible. Use `flex-col lg:flex-row` and remove `hidden lg:block` from the illustration (smaller size on mobile, e.g. `w-[200px] h-[220px] mx-auto lg:w-[280px] lg:h-[320px]`).
+- Keep the gold radial glow + float animation; just unhide it on small screens.
 
-## Why this order
-
-| Step | Effort | Time-to-rank | Expected monthly visits |
-|------|--------|--------------|--------------------------|
-| 1 (retarget Botox page) | Low (1 file) | 2–4 weeks | +200–400 |
-| 2 (anti-wrinkle page) | Medium (new page) | 4–8 weeks | +100–200 |
-| 3 (Harley St injectables) | Medium (new page) | 6–12 weeks | +150–300 |
-
-Step 1 ships fastest, Steps 2 & 3 in parallel afterwards.
+### 2b. Endolaser cross-link block
+- Add an `<EndolaserSpotlight variant="inline" />` (component already exists at `src/components/EndolaserSpotlight.tsx`) inside the main column, positioned just after the "How Long Do Results Last?" or "Suitable Candidates" section.
+- Wrap it with one short paragraph framing the intent: *"If your concern is laxity rather than missing definition, lifting may serve you better than filler — see the Laser Fibre Lift."* This guides patients who don't actually need volume.
 
 ---
 
-**Approve this plan and I'll start with Step 1 (retargeting `/treatments/botox/`), then build out Steps 2 and 3.**
+## 3. `/treatments` hub (`src/pages/TreatmentsHub.tsx`)
+
+### 3a. Refresh the right-side accordions
+- Audit the `categories` data (line 20) so every current treatment route is represented in the correct accordion (Botox Aesthetic, Botox Medical, Dermal Fillers, Skin Rejuvenation, Lasers, Surgical, etc.) — add any missing routes (Endolaser, Endolift, Anti-Wrinkle Treatment, Anti-Wrinkle Injections, Anti-Ageing Injections, Harley Street Injectables, HA Makeover, Polynucleotides, Profhilo, Exosomes, PDO Threads, Nefertiti, Bruxism, etc.).
+
+### 3b. Endolaser highlight
+- Add a small "Now featured" gold ring + Sparkles icon next to the **Endolaser** entry inside the Lasers accordion (and at the top of the Dermal Fillers / Mini Facelifts accordion as a cross-promo row).
+
+### 3c. Polynucleotides "Signature Course" callout (not a discount badge)
+- Inside the Skin Rejuvenation accordion, add a refined gold-bordered card under the Polynucleotides entry:
+  - Heading: **"Polynucleotides — Signature Course"**
+  - Body: "A considered three-session protocol for face & eyes — DNA-level repair across the periorbital and full-face zones. Investment £950."
+  - Tone is editorial / luxury, never "deal" or "offer". CTA → `/treatments/polynucleotides/`.
+
+---
+
+## 4. New page: Endolaser Body (Fat Reduction & Skin Tightening)
+
+- Create `src/pages/EndolaserBody.tsx` styled like the existing Endolaser dark-luxury template (gold #C9A050 on black).
+- Helmet: title, description, canonical `/treatments/endolaser-body/`, MedicalProcedure JSON-LD, BreadcrumbList, FAQPage.
+- Content sections: how the 1470 nm fibre tightens skin and emulsifies adipose tissue, suitable areas (jowls, sub-mental, flanks, inner thigh, knees, bra-line), candidacy, downtime, lead-trainer doctor-led positioning, CQC partner disclaimer, pricing tier, FAQs.
+- Wire route in `src/App.tsx` (lazy import + route entry) and add URL to `public/sitemap-treatments.xml`.
+
+---
+
+## 5. SEO / data integrity
+
+- Update `<Helmet>` titles/descriptions on Home3, JawlineFiller and TreatmentsHub if changed copy materially affects the H1/intro.
+- Re-check the `Mini Facelifts` link strategy in memory (`mem://content/mini-facelifts-strategy-hub`) — the new "Non-Surgical Facelift & Body Contouring" row should funnel into `/treatments/non-surgical-facelift/`.
+- Keep all copy in British English; preserve the Cosmedocs voice ("invisible art", "bold, natural, always your way").
+- No keyword stuffing. No hidden `sr-only` blocks (per visible-content SEO policy).
+
+---
+
+## Files touched
+- **Edited**: `src/pages/Home3.tsx`, `src/pages/JawlineFiller.tsx`, `src/pages/TreatmentsHub.tsx`, `src/App.tsx`, `public/sitemap-treatments.xml`
+- **Created**: `src/pages/EndolaserBody.tsx`
+
+## Open questions (low-impact, can default if unanswered)
+1. **Endolaser Body URL** — confirm `/treatments/endolaser-body/` is fine (alternatives: `/treatments/endolaser-fat-tightening/`).
+2. **Polynucleotides £950 course** — should the price show on the `/treatments/polynucleotides/` page itself too, or only on the hub? Default: add a discreet "Signature Course · £950" line on the Polynucleotides page.
+3. **Nefertiti Lift card** — `/treatments/nefertiti-lift/` route doesn't yet exist; should I create it as a new page or temporarily link it to the existing Trap Botox page? Default: create a small dedicated page in the same dark-luxury style.
