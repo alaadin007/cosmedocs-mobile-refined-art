@@ -267,7 +267,6 @@ const categories: Category[] = [
     copy: "Where the face has lost structure — cheeks, jowls, mid-face, chin, nose, jawline — hyaluronic acid restores it. Quietly. Architecturally.",
     cta: { label: "Mini Facelifts hub", href: "/treatments/non-surgical-facelift/" },
     cards: [
-      nonSurgicalFaceliftCard,
       {
         title: "Liquid Facelift",
         tagline: "Full-face hyaluronic acid rejuvenation",
@@ -477,6 +476,7 @@ const categories: Category[] = [
           ],
         },
       },
+      nonSurgicalFaceliftCard,
     ],
   },
   {
