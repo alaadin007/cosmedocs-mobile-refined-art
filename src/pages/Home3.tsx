@@ -55,6 +55,8 @@ import cosmeticUnitsImg from "@/assets/home3-cosmetic-units-gold.jpg";
 import noseBaImg from "@/assets/home3-nose-ba.jpg";
 import jawlineBaImg from "@/assets/home3-jawline-ba.jpg";
 import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
+import endolaserFaceGoldImg from "@/assets/home3-endolaser-face-gold.jpg";
+import endolaserBodyGoldImg from "@/assets/home3-endolaser-body-gold.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 
@@ -533,12 +535,14 @@ const categories: Category[] = [
         tagline: "Dual-wavelength intra-tissue laser",
         href: "/treatments/endolaser/",
         bg: "bg-gradient-to-br from-black via-[#1a140a] to-black",
-        image: endolaserBaImg,
+        image: endolaserFaceGoldImg,
+        frontImage: endolaserFaceGoldImg,
+        frontImageFit: "cover",
         badge: "Now featured",
         flip: {
           back: "The only UKCA & CE-marked dual-wavelength Endolaser at Harley Street, performed by the Lead Trainer for this device at the Harley Street Institute. Lifts, tightens and refines from inside the tissue — single session, 18–24 month longevity.",
           imagePosition: "top",
-          image: endolaserBaImg,
+          image: endolaserFaceGoldImg,
           largeText: true,
         },
       },
@@ -547,12 +551,14 @@ const categories: Category[] = [
         tagline: "Fat reduction & skin tightening",
         href: "/treatments/endolaser-body/",
         bg: "bg-gradient-to-br from-[#0a0a0a] via-[#15110a] to-black",
-        image: endolaserBaImg,
+        image: endolaserBodyGoldImg,
+        frontImage: endolaserBodyGoldImg,
+        frontImageFit: "cover",
         badge: "New",
         flip: {
           back: "The same dual-wavelength fibre, applied to the body — sub-mental, flanks, inner thigh, knees, bra-line. The 1470 nm wavelength emulsifies stubborn adipose pockets while the 980 nm contracts the overlying skin. Doctor-led, single-session, walk-in walk-out.",
           imagePosition: "top",
-          image: endolaserBaImg,
+          image: endolaserBodyGoldImg,
           largeText: true,
         },
       },
