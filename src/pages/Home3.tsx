@@ -476,6 +476,7 @@ const categories: Category[] = [
           ],
         },
       },
+      nonSurgicalFaceliftCard,
     ],
   },
   {
