@@ -459,10 +459,9 @@ const categories: Category[] = [
         title: "Swiss science. French artistry. American innovation.",
         tagline: "Pedigree · Product Story",
         href: "/treatments/dermal-fillers/",
-        bg: "bg-gradient-to-br from-[#0e0e0e] via-[#15110a] to-[#0a0a0a]",
+        bg: "bg-gradient-to-b from-[#F0D78C] via-[#E8C97A] to-[#C9A050]",
+        ink: "text-zinc-900",
         badge: "Pedigree",
-        frontImage: teoxaneAwardImg,
-        frontImageFit: "contain",
         flip: {
           eyebrow: "Pedigree · Product Story",
           largeText: true,
