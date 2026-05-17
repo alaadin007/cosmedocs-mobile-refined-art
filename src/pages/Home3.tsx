@@ -282,7 +282,7 @@ const categories: Category[] = [
         flip: {
           back: "One of the first UK clinics to offer non-surgical calf slimming — refined since 2010. Partial-dose Botox into the gastrocnemius softens athletic bulk into a longer, leaner silhouette. Soleus untouched, function preserved. Results emerge over 6–12 weeks.",
           imagePosition: "top",
-          image: calfSlimmingCardImg,
+          image: calfSlimmingBaImg,
         },
       },
     ],
