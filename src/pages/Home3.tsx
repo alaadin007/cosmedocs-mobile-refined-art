@@ -58,6 +58,7 @@ import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
 import endolaserFaceGoldImg from "@/assets/home3-endolaser-face-gold.jpg";
 import endolaserBodyGoldImg from "@/assets/home3-endolaser-body-gold.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
+import pdoThreadsFlipImg from "@/assets/pdo-thread-lift-profile-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 
 /* -------------------------------------------------------------------------- */
@@ -511,7 +512,7 @@ const categories: Category[] = [
         flip: {
           back: "Absorbable PDO threads create an internal scaffold that lifts the cheek, jaw and brow tissues — and stimulates fresh collagen as they dissolve. A doctor-led mid-step between filler and surgery.",
           imagePosition: "top",
-          image: pdoThreadsBaImg,
+          image: pdoThreadsFlipImg,
         },
       },
       {
