@@ -512,7 +512,7 @@ const categories: Category[] = [
         flip: {
           back: "Absorbable PDO threads create an internal scaffold that lifts the cheek, jaw and brow tissues — and stimulates fresh collagen as they dissolve. A doctor-led mid-step between filler and surgery.",
           imagePosition: "top",
-          image: pdoThreadsBaImg,
+          image: pdoThreadsFlipImg,
         },
       },
       {
