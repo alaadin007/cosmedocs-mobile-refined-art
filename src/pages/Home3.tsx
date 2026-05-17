@@ -22,7 +22,8 @@ import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 import medMasseterImg from "@/assets/home3-medical-masseter.jpg";
-import masseterBaImg from "@/assets/home3-masseter-botox-ba.jpg";
+import masseterBaImg from "@/assets/before-after/masseter-ba-3.jpg";
+import calfSlimmingBaImg from "@/assets/before-after/calf-slimming-ba.jpg";
 import medBruxismImg from "@/assets/home3-medical-bruxism.jpg";
 import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
 import medHyperhidrosisImg from "@/assets/home3-medical-hyperhidrosis.jpg";
@@ -281,7 +282,7 @@ const categories: Category[] = [
         flip: {
           back: "One of the first UK clinics to offer non-surgical calf slimming — refined since 2010. Partial-dose Botox into the gastrocnemius softens athletic bulk into a longer, leaner silhouette. Soleus untouched, function preserved. Results emerge over 6–12 weeks.",
           imagePosition: "top",
-          image: calfSlimmingCardImg,
+          image: calfSlimmingBaImg,
         },
       },
     ],
