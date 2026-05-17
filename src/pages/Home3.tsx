@@ -58,6 +58,7 @@ import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
 import endolaserFaceGoldImg from "@/assets/home3-endolaser-face-gold.jpg";
 import endolaserBodyGoldImg from "@/assets/home3-endolaser-body-gold.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
+import pdoThreadsFlipImg from "@/assets/pdo-thread-lift-profile-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 
 /* -------------------------------------------------------------------------- */
