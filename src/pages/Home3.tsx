@@ -60,6 +60,7 @@ import endolaserBodyGoldImg from "@/assets/home3-endolaser-body-gold.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
 import pdoThreadsFlipImg from "@/assets/pdo-thread-lift-profile-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
+import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
@@ -96,6 +97,28 @@ type Category = {
 
 /* ---------- Aesthetic Botox, full treatment list ----------------------- */
 const botoxAesthetic: SubCard[] = [
+  {
+    title: "BroTox",
+    tagline: "Men-tox · The male face, treated as male",
+    href: "/treatments/botox/",
+    bg: "bg-gradient-to-br from-[#0a0a0a] via-[#15110a] to-[#1f1810]",
+    image: brotoxImg,
+    badge: "For Men",
+    flip: {
+      eyebrow: "Why men need a different Botox",
+      back: "Male muscles are bigger, denser and pull harder. Wrong dose, wrong placement and the brow drops, the face feminises, the look is flat and frozen — the giveaway every man wants to avoid. Our lead doctors are male, have treated male faces for 17+ years, and dose for male anatomy: stronger units where the muscle is, lighter where it shouldn't lift, brow kept low and masculine, expression preserved. Refreshed, never feminised.",
+      largeText: true,
+      bullets: [
+        "Male muscle = up to 2× stronger pull",
+        "Higher units, mapped to male anatomy",
+        "Brow kept low — never feminised",
+        "Forehead, glabella, crow's feet · tailored",
+        "17+ years treating male faces",
+      ],
+      image: brotoxImg,
+      imagePosition: "top",
+    },
+  },
   {
     title: "The Finest Needle",
     tagline: "We don't cut corners — only needle gauge. 32G micro-needles, barely a whisper on the skin.",
