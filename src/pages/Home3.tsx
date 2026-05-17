@@ -1815,7 +1815,8 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
     get("Nasal Flaring"),
   ].filter(Boolean);
 
-  const columns: Column[] = [
+  const rawColumns: (Column | null)[] = [
+    get("BroTox") ? { kind: "big", card: get("BroTox") } : null,
     { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
     {
       kind: "philosophy",
@@ -1832,6 +1833,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
     },
     { kind: "list", cards: otherAreas, eyebrow: "Refined Areas", title: "Every other detail" },
   ];
+  const columns: Column[] = rawColumns.filter((c): c is Column => c !== null);
 
   // Column widths, keep big card narrow enough on mobile so the next column peeks in
   const widthBig   = "w-[72vw] sm:w-[380px] md:w-[420px]";
