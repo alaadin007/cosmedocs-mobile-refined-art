@@ -59,7 +59,8 @@ import endolaserBaImg from "@/assets/home3-endolaser-diagram.jpg";
 import endolaserFaceGoldImg from "@/assets/home3-endolaser-face-gold.jpg";
 import endolaserBodyGoldImg from "@/assets/home3-endolaser-body-gold.jpg";
 import pdoThreadsBaImg from "@/assets/pdo-thread-lift-before-after.jpg";
-import pdoThreadsFlipImg from "@/assets/pdo-thread-lift-profile-ba.jpg";
+import pdoThreadsFlipImg from "@/assets/before-after/pdo-thread-lift-ba.jpg";
+import nefertitiBaImg from "@/assets/before-after/nefertiti-lift-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 
@@ -523,7 +524,7 @@ const categories: Category[] = [
         flip: {
           back: "Targeted micro-doses along the platysma release the downward pull on the lower face. The result is a softer neck-jaw line and a quietly lifted lower third — no scalpel, no downtime.",
           imagePosition: "top",
-          image: botoxNefertitiImg,
+          image: nefertitiBaImg,
         },
       },
       {
