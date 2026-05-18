@@ -253,6 +253,107 @@ export default function FaceBotoxLight() {
         </section>
 
         {/* ═══════════════════════════════════════════
+            BOTOX LONDON — Local Authority Block
+        ═══════════════════════════════════════════ */}
+        <section id="botox-london" aria-labelledby="botox-london-heading" className="relative py-16 px-4 sm:px-6 border-y border-[#C9A050]/15 bg-gradient-to-b from-white via-[#FAF7F0]/40 to-white">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <p className={`text-xs ${goldText}/70 tracking-[0.25em] uppercase mb-3 font-light`}>Harley Street · W1G</p>
+              <h2 id="botox-london-heading" className={`text-3xl md:text-5xl font-extralight ${textH} mb-4 leading-tight max-w-3xl`}>
+                <span className={`${goldText} font-light`}>Botox London</span> — doctor-led on Harley Street since 2007
+              </h2>
+              <div className="w-12 h-px bg-[#C9A050]/50 mb-8" />
+              <p className={`${textBody} text-base md:text-lg leading-relaxed font-light max-w-3xl mb-10`}>
+                London has more aesthetic clinics than any other city in the UK — and the largest gap in quality between them. CosmeDocs sits at the medical end of that spectrum: a doctor-led practice on Harley Street, where every Botox consultation, assessment and injection is performed by a GMC-registered doctor — never a nurse-led franchise or non-medical practitioner. The result is the quietest kind of anti-wrinkle treatment in the capital: refined, restrained, invisible.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  icon: <MapPin className="w-5 h-5 text-[#C9A050]" />,
+                  title: "Where we are",
+                  body: <>8–10 Harley Street, London W1G 9PF — the historic medical mile in Marylebone, a four-minute walk from Oxford Circus, Bond Street and Regent's Park stations. Easily reached from Mayfair, Soho, Knightsbridge, Chelsea, Kensington, the City and Canary Wharf.</>
+                },
+                {
+                  icon: <Stethoscope className="w-5 h-5 text-[#C9A050]" />,
+                  title: "Who treats you",
+                  body: <>Every appointment is led by a GMC-registered doctor with aesthetic surgical training. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments — the standard most London Botox clinics never meet.</>
+                },
+                {
+                  icon: <Award className="w-5 h-5 text-[#C9A050]" />,
+                  title: "The Harley Street standard",
+                  body: <>Botox London prices vary wildly — from £99 high-street rooms to £600 boutique injectors. We sit deliberately in the middle: transparent pricing, doctor-led care, and the same protocols used across more than one million procedures group-wide since 2007.</>
+                }
+              ].map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className={`${cardBg} border ${cardBorder} rounded-2xl p-6 shadow-sm`}
+                >
+                  <div className="flex items-center gap-2 mb-3">{item.icon}<p className={`text-sm font-medium ${textH}`}>{item.title}</p></div>
+                  <p className={`${textBody} text-sm leading-relaxed font-light`}>{item.body}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* London pricing strip */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="bg-white border border-[#C9A050]/20 rounded-3xl p-8 md:p-10 shadow-sm mb-12">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                  <p className={`text-xs ${goldText}/70 tracking-widest uppercase mb-2`}>How much does Botox cost in London?</p>
+                  <h3 className={`text-2xl md:text-3xl font-extralight ${textH}`}>Transparent <span className={`${goldText} font-light`}>Botox London prices</span></h3>
+                </div>
+                <Link to="/botox-price-london/" className={`text-sm ${goldText} hover:underline inline-flex items-center gap-1 self-start md:self-auto`}>Full London pricing guide <ArrowRight className="w-3 h-3" /></Link>
+              </div>
+              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { area: "1 Area (Women)", price: "£275" },
+                  { area: "2 Areas (Women)", price: "£325" },
+                  { area: "3 Areas (Women)", price: "£395" },
+                  { area: "3 Areas (Men) — BroTox", price: "£425" }
+                ].map((p) => (
+                  <div key={p.area} className="border border-gray-200 rounded-2xl p-5">
+                    <p className={`text-xs ${textMuted} mb-1`}>{p.area}</p>
+                    <p className={`text-2xl font-light ${goldText}`}>{p.price}</p>
+                  </div>
+                ))}
+              </div>
+              <p className={`text-xs ${textMuted} mt-6 leading-relaxed font-light`}>
+                Add-on Botox from £50 per area when combined with a filler or skin treatment. All prices include the doctor's consultation, follow-up review and any micro-adjustment in the first three weeks.
+              </p>
+            </motion.div>
+
+            {/* London cluster anchors */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <p className={`text-xs ${goldText}/70 tracking-widest uppercase mb-4`}>Botox London — explore the hub</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "Botox prices London", to: "/botox-price-london/" },
+                  { label: "Botox cost UK", to: "/botox-cost-uk/" },
+                  { label: "Masseter Botox London", to: "/treatments/masseter-botox/" },
+                  { label: "Nefertiti Lift London", to: "/treatments/nefertiti-botox-facelift/" },
+                  { label: "Bruxism & TMJ Botox", to: "/treatments/bruxism-botox/" },
+                  { label: "Trap Tox London", to: "/treatments/trap-botox/" },
+                  { label: "Harley Street Injectables", to: "/harley-street-injectables/" },
+                  { label: "Botox units explained", to: "/botox-units-explained/" },
+                  { label: "How long does Botox last", to: "/how-long-does-botox-last/" },
+                  { label: "Cheap vs expensive Botox", to: "/cheap-botox-vs-expensive/" },
+                  { label: "Before & after gallery", to: "/before-after/botox/" }
+                ].map((link) => (
+                  <Link key={link.to} to={link.to} className={`px-4 py-2 bg-white border border-[#C9A050]/20 rounded-full text-xs ${textBody} hover:${goldText} hover:border-[#C9A050]/50 transition-all font-light`}>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
             MAIN CONTENT — Two-column layout
         ═══════════════════════════════════════════ */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lazy-section">
