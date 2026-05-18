@@ -17,6 +17,8 @@ import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
 import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
 import botoxBunnyImg from "@/assets/home3-botox-bunny-lines.jpg";
 import botoxNefertitiImg from "@/assets/home3-botox-nefertiti.jpg";
+import nefertitiDesignImg from "@/assets/home3-nefertiti-design.jpg";
+import pdoThreadsDesignImg from "@/assets/home3-pdo-threads-design.jpg";
 import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
 import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
