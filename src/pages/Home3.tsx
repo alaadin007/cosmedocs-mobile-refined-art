@@ -611,22 +611,6 @@ const categories: Category[] = [
       },
     ],
   },
-  {
-    id: "flawless-skin",
-    eyebrow: "Flawless Skin Concepts",
-    title: "Skin, undone.",
-    copy: "Resurfacing, regeneration and barrier care, the medical-aesthetic foundation behind a lit-from-within finish.",
-    cta: { label: "Skin Rejuvenation hub", href: "/treatments/skin-rejuvenation/" },
-    cards: [
-      { title: "Polynucleotides", tagline: "DNA-level repair", href: "/treatments/polynucleotides/", bg: "bg-gradient-to-br from-rose-200 to-pink-400", ink: "text-zinc-900", badge: "Regenerative" },
-      { title: "Profhilo", tagline: "Bio-remodelling HA", href: "/treatments/profhilo/", bg: "bg-gradient-to-br from-sky-100 to-sky-300", ink: "text-zinc-900" },
-      { title: "Exosomes", tagline: "Next-gen messengers", href: "/treatments/exosomes/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
-      { title: "PRP", tagline: "Your own plasma", href: "/treatments/prp/", bg: "bg-gradient-to-br from-[#C9A050] to-[#7a5e25]" },
-      { title: "Chemical Peels", tagline: "Glycolic · TCA · Salicylic", href: "/treatments/chemical-peels/", bg: "bg-gradient-to-br from-amber-100 to-orange-300", ink: "text-zinc-900" },
-      { title: "Microneedling", tagline: "Collagen induction therapy", href: "/treatments/microneedling/", bg: "bg-gradient-to-br from-stone-700 to-stone-900" },
-      { title: "HydraFacial", tagline: "Cleanse · extract · hydrate", href: "/treatments/hydrafacial/", bg: "bg-gradient-to-br from-cyan-100 to-cyan-300", ink: "text-zinc-900" },
-    ],
-  },
 ];
 
 /* ---------- Card primitive --------------------------------------------- */
