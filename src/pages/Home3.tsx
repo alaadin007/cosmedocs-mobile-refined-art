@@ -104,7 +104,7 @@ const botoxAesthetic: SubCard[] = [
   {
     title: "BroTox",
     tagline: "Men-tox · The male face, treated as male",
-    href: "/treatments/botox/",
+    href: "/treatments/brotox/",
     bg: "bg-gradient-to-br from-[#0a0a0a] via-[#15110a] to-[#1f1810]",
     image: brotoxImg,
     badge: "For Men",

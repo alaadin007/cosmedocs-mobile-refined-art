@@ -91,6 +91,7 @@ const SkinEducationGuide = lazy(() => import("./pages/SkinEducationGuide"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
 const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
+const BroTox = lazy(() => import("./pages/BroTox"));
 const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
 const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
 const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
@@ -634,6 +635,10 @@ const App = () => {
                           {/* Botox standalone pages (kept active) */}
                           <Route path="/treatments/masseter-botox" element={<MasseterBotox />} />
                           <Route path="/treatments/masseter-botox/" element={<MasseterBotox />} />
+                          <Route path="/treatments/brotox" element={<BroTox />} />
+                          <Route path="/treatments/brotox/" element={<BroTox />} />
+                          <Route path="/brotox" element={<Navigate to="/treatments/brotox/" replace />} />
+                          <Route path="/brotox/" element={<Navigate to="/treatments/brotox/" replace />} />
                           <Route path="/treatments/lip-flip" element={<LipFlip />} />
                           <Route path="/treatments/lip-flip/" element={<LipFlip />} />
                           <Route path="/treatments/oily-skin-botox" element={<OilySkinBotox />} />
