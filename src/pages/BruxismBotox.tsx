@@ -183,6 +183,7 @@ const BruxismBotox = () => {
                 { label: 'Medical', path: '/medical/' }
               ]}
               currentPage="Bruxism / TMJ Botox"
+            />
             <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-xs text-[#C9A050]/80 hover:text-[#C9A050] tracking-widest uppercase mt-4 transition-colors">
               ← Part of <span className="underline underline-offset-4">Botox London</span> · Cosmedocs Harley Street
             </Link>
