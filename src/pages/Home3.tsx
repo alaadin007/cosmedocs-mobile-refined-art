@@ -17,6 +17,8 @@ import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
 import botoxBrowLiftImg from "@/assets/home3-botox-brow-lift.jpg";
 import botoxBunnyImg from "@/assets/home3-botox-bunny-lines.jpg";
 import botoxNefertitiImg from "@/assets/home3-botox-nefertiti.jpg";
+import nefertitiDesignImg from "@/assets/home3-nefertiti-design.jpg";
+import pdoThreadsDesignImg from "@/assets/home3-pdo-threads-design.jpg";
 import botoxGummyImg from "@/assets/home3-botox-gummy-smile.jpg";
 import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
@@ -519,7 +521,9 @@ const categories: Category[] = [
         tagline: "Botox neck-jaw lift",
         href: "/treatments/nefertiti-lift/",
         bg: "bg-gradient-to-br from-[#0e0e0e] via-[#1a1410] to-[#2a1c10]",
-        image: botoxNefertitiImg,
+        image: nefertitiDesignImg,
+        frontImage: nefertitiDesignImg,
+        frontImageFit: "cover",
         badge: "Lift",
         flip: {
           back: "Targeted micro-doses along the platysma release the downward pull on the lower face. The result is a softer neck-jaw line and a quietly lifted lower third — no scalpel, no downtime.",
@@ -532,7 +536,9 @@ const categories: Category[] = [
         tagline: "Soft-tissue lift · scaffold",
         href: "/treatments/pdo-threads/",
         bg: "bg-gradient-to-br from-[#1a1410] via-[#2a1d10] to-[#3a2810]",
-        image: pdoThreadsBaImg,
+        image: pdoThreadsDesignImg,
+        frontImage: pdoThreadsDesignImg,
+        frontImageFit: "cover",
         badge: "Scaffold",
         flip: {
           back: "Absorbable PDO threads create an internal scaffold that lifts the cheek, jaw and brow tissues — and stimulates fresh collagen as they dissolve. A doctor-led mid-step between filler and surgery.",
