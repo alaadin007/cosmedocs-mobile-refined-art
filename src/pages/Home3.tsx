@@ -1816,7 +1816,6 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   ].filter(Boolean);
 
   const rawColumns: (Column | null)[] = [
-    get("BroTox") ? { kind: "big", card: get("BroTox") } : null,
     { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
     {
       kind: "philosophy",
@@ -1831,6 +1830,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
       ],
       footer: "Invisible art. Always your way.",
     },
+    get("BroTox") ? { kind: "big", card: get("BroTox") } : null,
     { kind: "list", cards: otherAreas, eyebrow: "Refined Areas", title: "Every other detail" },
   ];
   const columns: Column[] = rawColumns.filter((c): c is Column => c !== null);
