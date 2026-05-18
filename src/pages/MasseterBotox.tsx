@@ -152,7 +152,7 @@ const MasseterBotox = () => {
               currentPage="Masseter Botox"
             />
             <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-xs text-[#C9A050]/80 hover:text-[#C9A050] tracking-widest uppercase mt-4 transition-colors">
-              ← Part of <span className="underline underline-offset-4">Botox London</span> · Cosmedocs Harley Street
+              <ArrowRight className="w-3 h-3 rotate-180" /> Botox London — view all treatments
             </Link>
 
             <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">

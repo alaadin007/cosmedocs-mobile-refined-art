@@ -36,7 +36,7 @@ export default function NefertitiBotoxFacelift() {
   ];
 
   const relatedTreatments = [
-    { name: "Face Botox Areas", price: "£200-400", link: "/treatments/botox/" },
+    { name: "Botox London", price: "£200-400", link: "/treatments/botox/" },
     { name: "Lower Face Botox", price: "£250-350", link: "/treatments/botox/" },
     { name: "Chin Botox", price: "£200-300", link: "/treatments/botox/" },
     { name: "Non-Surgical Facelift", price: "£800-1200", link: "/concerns/non-surgical-facelift/" }
@@ -256,6 +256,9 @@ export default function NefertitiBotoxFacelift() {
                   <span className="block text-sm mt-4">Invisible art - non-surgical jawline & neck contouring</span>
                 </h1>
                 <p className="text-sm text-purple-300/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
+                <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-xs text-purple-300/80 hover:text-purple-300 tracking-widest uppercase mb-6 transition-colors">
+                  <ChevronLeft className="w-3 h-3" /> Botox London — view all treatments
+                </Link>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Jawline Definition</p>
                   <p className="text-sm text-gray-300">#nefertitilift - See our transformations for precise neck and jawline contouring</p>
