@@ -162,6 +162,16 @@ const EyebrowLiftEndolaser = () => {
         <script type="application/ld+json">{JSON.stringify(procedureSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: "Endolaser Eyebrow Lift by Cosmedocs",
+          description: "The Endolaser eyebrow lift — a doctor-led, non-surgical brow elevation performed at Cosmedocs, Harley Street London.",
+          thumbnailUrl: "https://cosmedocs-mobile-refined-art.lovable.app/videos/endo-eye-thumb.jpg",
+          contentUrl: "https://cosmedocs-mobile-refined-art.lovable.app/videos/endo-eye.mp4",
+          uploadDate: "2026-05-01",
+          publisher: { "@type": "Organization", name: "Cosmedocs", url: "https://cosmedocs-mobile-refined-art.lovable.app/" }
+        })}</script>
       </Helmet>
 
       <main className="min-h-screen bg-black">

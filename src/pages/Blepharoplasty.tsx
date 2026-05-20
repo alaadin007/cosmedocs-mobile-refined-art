@@ -20,6 +20,16 @@ export default function Blepharoplasty() {
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
         <link rel="canonical" href={seoData.canonical} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: "Endolaser Eyebrow Lift by Cosmedocs",
+          description: "Doctor-led non-surgical alternative to blepharoplasty — the Endolaser eyebrow lift performed at Cosmedocs, Harley Street London.",
+          thumbnailUrl: "https://cosmedocs-mobile-refined-art.lovable.app/videos/endo-eye-thumb.jpg",
+          contentUrl: "https://cosmedocs-mobile-refined-art.lovable.app/videos/endo-eye.mp4",
+          uploadDate: "2026-05-01",
+          publisher: { "@type": "Organization", name: "Cosmedocs", url: "https://cosmedocs-mobile-refined-art.lovable.app/" }
+        })}</script>
       </Helmet>
 
       <main className="min-h-screen bg-background">
