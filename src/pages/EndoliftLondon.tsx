@@ -17,6 +17,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import DosageSidebar from "@/components/dosage/DosageSidebar";
+import endolaserBaJawline from "@/assets/endolaser-ba-jawline-neck.jpg";
 
 const FAQ = [
   { q: "Is Endolift safe?", a: "Endolift is a CE-marked, minimally invasive laser fibre lift that has been performed safely worldwide for over a decade. The optical fibre is so fine it leaves no scar. The most common side effects are mild swelling and bruising for 5–10 days. As with any laser procedure, results and safety depend heavily on the operator's training." },
