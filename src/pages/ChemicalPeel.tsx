@@ -1,5 +1,6 @@
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import peelLevel1MayJune from "@/assets/before-after/peel-level-1-may-june.jpeg";
+import peelPlusFillerCase from "@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
