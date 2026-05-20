@@ -44,6 +44,19 @@ const EndoliftLondon = () => {
         <link rel="canonical" href="https://www.cosmedocs.com/treatments/endolift-london/" data-rh="true" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          name: "Before and after Endolift laser fibre lift — jawline and neck, London",
+          description: "Clinical before-and-after photograph showing jawline and neck tightening following Endolift (1470nm Endolaser) treatment at Cosmedocs Harley Street London. Published with patient consent; individual results vary.",
+          contentUrl: "https://www.cosmedocs.com/assets/endolaser-ba-jawline-neck.jpg",
+          representativeOfPage: false,
+          creditText: "Cosmedocs · Harley Street",
+          copyrightNotice: "© Cosmedocs",
+          acquireLicensePage: "https://www.cosmedocs.com/contact/",
+          creator: { "@type": "Organization", name: "Cosmedocs" },
+          copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-black">

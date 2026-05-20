@@ -225,6 +225,19 @@ const EndolaserLift = () => {
           uploadDate: "2026-05-01",
           publisher: { "@type": "Organization", name: "Cosmedocs", url: "https://cosmedocs-mobile-refined-art.lovable.app/" }
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          name: "Before and after Endolaser Laser Fibre Lift — jawline and neck",
+          description: "Clinical before-and-after photograph showing jawline and neck tightening following Endolaser (1470nm laser fibre) treatment at Cosmedocs Harley Street. Published with patient consent; individual results vary.",
+          contentUrl: "https://cosmedocs-mobile-refined-art.lovable.app/assets/endolaser-ba-jawline-neck.jpg",
+          representativeOfPage: false,
+          creditText: "Cosmedocs · Harley Street",
+          copyrightNotice: "© Cosmedocs",
+          acquireLicensePage: "https://cosmedocs-mobile-refined-art.lovable.app/contact/",
+          creator: { "@type": "Organization", name: "Cosmedocs" },
+          copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-black overflow-x-hidden">
