@@ -327,19 +327,52 @@ export default function HAMakeover() {
                   All images show real patients treated by our doctors at our Harley Street clinic. 
                   Individual results vary depending on facial anatomy, ageing patterns, and treatment plan.
                 </p>
-                <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-6">
-                  <img
-                    src="/images/treatments/ha-makeover/ha-makeover-ba-preview.jpg"
-                    alt="Before and after Liquid Facelift showing full-face rejuvenation with anatomical planning"
-                    loading="lazy"
-                    className="w-full h-auto block"
-                  />
-                </div>
+                <Link
+                  to="/before-after/dermal-fillers/full-face-makeover/"
+                  aria-label="Open full Liquid Facelift before and after gallery"
+                  className="group relative block rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-6 ring-1 ring-transparent hover:ring-[#C9A050]/40 focus-visible:ring-[#C9A050]/60 focus:outline-none transition-all"
+                >
+                  <figure className="m-0">
+                    <img
+                      src={liquidFaceliftBA}
+                      alt="Liquid Facelift before and after — non-surgical nose refinement and cheek volume restoration on a female patient at Cosmedocs Harley Street London"
+                      loading="lazy"
+                      width={1600}
+                      height={900}
+                      className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.015]"
+                    />
+                  </figure>
+
+                  {/* Click-prompt pulse badge (top-right) */}
+                  <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 bg-[#C9A050] text-black text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full font-medium shadow-lg shadow-[#C9A050]/30 animate-pulse">
+                    <Images className="w-3 h-3" /> View full gallery
+                  </span>
+
+                  {/* Small thumbnail strip hint (top-left) */}
+                  <span className="absolute top-3 left-3 hidden sm:flex items-center gap-1 bg-black/70 backdrop-blur border border-[#C9A050]/30 rounded-full px-2 py-1.5">
+                    {[0, 1, 2].map((i) => (
+                      <span
+                        key={i}
+                        className="block w-5 h-5 rounded-sm bg-gradient-to-br from-[#C9A050]/40 to-[#C9A050]/10 border border-[#C9A050]/30"
+                        aria-hidden="true"
+                      />
+                    ))}
+                    <span className="text-[10px] tracking-widest uppercase text-[#C9A050] ml-1">+ more</span>
+                  </span>
+
+                  {/* Click guide overlay (bottom) */}
+                  <span className="absolute inset-x-0 bottom-0 flex items-center justify-center gap-2 bg-gradient-to-t from-black/85 via-black/40 to-transparent px-4 py-3 text-xs text-white/85 tracking-wide">
+                    <MousePointerClick className="w-4 h-4 text-[#C9A050] animate-pulse" />
+                    <span>Tap the image to open the full Liquid Facelift before &amp; after gallery</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#C9A050] transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+
                 <p className="text-xs text-white/30 italic mb-4">
-                  Images show real patients treated by our doctors at our Harley Street clinic. Individual results vary depending on facial anatomy, ageing patterns, and treatment plan.
+                  Real Cosmedocs patient treated at Harley Street — non-surgical nose refinement and mid-face volume restoration with dermal fillers. Published with patient consent. Individual results vary depending on facial anatomy, ageing patterns and treatment plan.
                 </p>
                 <Link
-                  to="/before-after/ha-makeover/"
+                  to="/before-after/dermal-fillers/full-face-makeover/"
                   className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#d4af5a] transition-colors text-sm tracking-wide"
                 >
                   View full Liquid Facelift before &amp; after gallery
