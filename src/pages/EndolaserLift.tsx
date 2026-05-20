@@ -584,6 +584,33 @@ const EndolaserLift = () => {
                 </motion.div>
               </section>
 
+              {/* Before & After */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Before & <span className="text-[#C9A050] font-light">After</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Jawline and submental tightening following Laser Fibre Lift — quiet, natural redefinition without surgery. Individual results vary.
+                  </p>
+                  <figure className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+                    <img
+                      src={endolaserBaJawline}
+                      alt="Before and after Endolaser Laser Fibre Lift — jawline and neck tightening, Cosmedocs Harley Street"
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
+                    <figcaption className="px-5 py-3 text-xs text-white/50 font-light flex items-center justify-between">
+                      <span>Left: before · Right: after Laser Fibre Lift</span>
+                      <span className="text-[#C9A050]/70">Cosmedocs · Harley Street</span>
+                    </figcaption>
+                  </figure>
+                </motion.div>
+              </section>
+
+
+
               {/* Recovery & Swelling */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
