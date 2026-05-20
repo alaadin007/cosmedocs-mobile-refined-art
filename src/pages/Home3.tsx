@@ -321,12 +321,12 @@ const categories: Category[] = [
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
-        image: haMakeoverBaImg,
+        image: liquidFaceliftBdaImg,
         frontImage: frontHaImg,
         frontImageFit: "cover",
         flip: {
           back: "When ageing fragments the face, the cosmetic units stop reading as one. The Liquid Facelift gently re-bridges every unit — forehead, temple, cheek, mid-face, jaw, chin, lip — so the face flows again as a single, continuous surface.",
-          image: haMakeoverBaImg,
+          image: liquidFaceliftBdaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           slides: [
