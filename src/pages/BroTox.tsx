@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
-  CheckCircle, ArrowRight, Shield, Clock, Star, Award, MapPin, Activity, Syringe, Stethoscope, Users
+  CheckCircle, ArrowRight, Shield, Clock, Star, Award, MapPin, Activity, Syringe, Stethoscope, Users, RotateCw
 } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
+import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 
 const BroTox = () => {
   const seoData = generateSEOMetadata(
