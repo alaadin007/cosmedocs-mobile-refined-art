@@ -168,8 +168,8 @@ const EyebrowLiftEndolaser = () => {
         {/* Hero */}
         <section className="relative pt-28 pb-16 overflow-hidden">
           <video
-            className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
-            src="/videos/endoeyes.mp4"
+            className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+            src="/videos/endo-eye.mp4"
             autoPlay
             loop
             muted

@@ -415,6 +415,28 @@ const EndolaserLift = () => {
                 </motion.div>
               </section>
 
+              {/* Endo Eye Lift video break + internal link */}
+              <section className="relative rounded-2xl overflow-hidden ring-1 ring-[#C9A050]/20 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)]">
+                <video
+                  className="w-full h-auto block"
+                  src="/videos/endo-eye.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Endolaser eyebrow lift fibre demonstration"
+                />
+                <div className="p-6 bg-black/80 border-t border-[#C9A050]/15">
+                  <p className="text-white/70 text-sm leading-relaxed font-light">
+                    The same fibre principle, refined for the upper face: see our dedicated{" "}
+                    <Link to="/treatments/eyebrow-lift-endolaser/" className="text-[#C9A050] underline underline-offset-4 hover:text-[#E2BE6E]">
+                      non-surgical eyebrow lift with Endolaser
+                    </Link>{" "}
+                    — a structural lift of the lateral brow tail, performed in our Harley Street rooms under local anaesthesia.
+                  </p>
+                </div>
+              </section>
+
               {/* Why It's Different */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
