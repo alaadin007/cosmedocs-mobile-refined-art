@@ -147,6 +147,19 @@ const CalfSlimmingBotox = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          name: "Calf reduction Botox before and after — Cosmedocs Harley Street London",
+          description: "Clinical before-and-after photograph showing slimmer, leaner calves following non-surgical Calf Slimming Botox into the gastrocnemius at Cosmedocs Harley Street. Published with patient consent; individual results vary.",
+          contentUrl: BA_IMAGE_URL,
+          representativeOfPage: false,
+          creditText: "Cosmedocs · Harley Street",
+          copyrightNotice: "© Cosmedocs",
+          acquireLicensePage: "https://www.cosmedocs.com/contact/",
+          creator: { "@type": "Organization", name: "Cosmedocs" },
+          copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
