@@ -11,29 +11,9 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import CalfBotoxSidebar from "@/components/calf-botox/CalfBotoxSidebar";
 import CalfReductionGraph from "@/components/calf-botox/CalfReductionGraph";
 import calfHeroGold from "@/assets/calf-hero-gold.jpg";
+import calfSlimmingBA from "@/assets/before-after/calf-slimming-ba.jpg";
 
-const beforeAfterImages = [
-  {
-    src: "/images/treatments/calf-botox/calf-botox-result-1.jpg",
-    alt: "Calf reduction Botox before and after showing slimmer calf contours",
-  },
-  {
-    src: "/images/treatments/calf-botox/calf-botox-result-2.jpg",
-    alt: "Calf Botox results comparison — reduced gastrocnemius bulk",
-  },
-  {
-    src: "/images/treatments/calf-botox/calf-botox-result-3.jpg",
-    alt: "Calf slimming Botox before and after showing proportionate lower legs",
-  },
-  {
-    src: "/images/treatments/calf-botox/calf-botox-result-4.jpg",
-    alt: "Calf reduction treatment results showing refined leg silhouette",
-  },
-  {
-    src: "/images/treatments/calf-botox/calf-botox-result-5.jpg",
-    alt: "Non-surgical calf slimming results with Botox treatment",
-  },
-];
+const BA_IMAGE_URL = "https://www.cosmedocs.com/assets/before-after/calf-slimming-ba.jpg";
 
 const CalfSlimmingBotox = () => {
   const seoData = generateSEOMetadata(
