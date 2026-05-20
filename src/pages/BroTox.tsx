@@ -80,6 +80,19 @@ const BroTox = () => {
         <meta property="og:image" content={brotoxImg} />
         <meta name="keywords" content="brotox, men's botox london, male botox, mens anti wrinkle treatment, harley street brotox, botox for men" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          name: "BroTox before and after — forehead lines & frown (glabella) anti-wrinkle treatment for men",
+          description: "Clinical before-and-after photograph of a male patient showing softened forehead and frown (glabella) lines after BroTox men's anti-wrinkle treatment at Cosmedocs Harley Street, London. Brow kept low and masculine. Published with patient consent; individual results vary.",
+          contentUrl: baImageUrl,
+          representativeOfPage: false,
+          creditText: "Cosmedocs · Harley Street",
+          copyrightNotice: "© Cosmedocs",
+          acquireLicensePage: "https://www.cosmedocs.com/contact/",
+          creator: { "@type": "Organization", name: "Cosmedocs" },
+          copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-black overflow-x-hidden text-white">
