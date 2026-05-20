@@ -40,7 +40,7 @@ const BruxismBotox = () => {
     },
     {
       question: "How much does bruxism botox cost?",
-      answer: "Treatment at CosmeDocs costs £350–£450 depending on severity and muscle size. This includes consultation and follow-up care."
+      answer: "Treatment at CosmeDocs costs £350 for females and £400 for males depending on severity and muscle size. This includes consultation and follow-up care."
     },
     {
       question: "Can bruxism botox be combined with other treatments?",

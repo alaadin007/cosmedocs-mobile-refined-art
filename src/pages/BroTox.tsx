@@ -23,7 +23,7 @@ const BroTox = () => {
   const baImageUrl = "https://www.cosmedocs.com/assets/brotox-ba-forehead-frown.jpg";
   const seoData = generateSEOMetadata(
     "BroTox London | Men's Botox & Anti-Wrinkle Treatment | Harley Street",
-    "BroTox London — doctor-led men's Botox on Harley Street. Higher dosing for stronger male muscles, brow kept low and masculine. From £275 at Cosmedocs since 2007.",
+    "BroTox London — doctor-led men's Botox on Harley Street. Higher dosing for stronger male muscles, brow kept low and masculine. From £225 at Cosmedocs since 2007.",
     "/treatments/brotox/"
   );
 
@@ -34,7 +34,7 @@ const BroTox = () => {
     },
     {
       question: "How much does BroTox cost in London?",
-      answer: "BroTox at Cosmedocs starts from £275 for one area, £325 for two areas and £425 for three areas (the standard men's package). When combined with another treatment, additional areas are £50 each. All prices include doctor consultation, follow-up review and any micro-adjustment in the first three weeks."
+      answer: "BroTox at Cosmedocs starts from £225 for one area, £275 for two areas and £325 for three areas (the standard men's package). When combined with another treatment, additional areas are £50 each. All prices include doctor consultation, follow-up review and any micro-adjustment in the first three weeks."
     },
     {
       question: "How is men's Botox different from women's Botox?",
@@ -263,7 +263,7 @@ const BroTox = () => {
                 </button>
                 <div className="absolute -bottom-4 -left-4 bg-black border border-[#C9A050]/30 rounded-2xl px-5 py-4 shadow-xl">
                   <p className="text-[10px] text-[#C9A050]/70 tracking-widest uppercase mb-1">From</p>
-                  <p className="text-2xl font-light text-[#C9A050]">£275</p>
+                  <p className="text-2xl font-light text-[#C9A050]">£225</p>
                   <p className="text-[10px] text-white/40 tracking-wider">single area</p>
                 </div>
               </motion.div>
@@ -422,10 +422,10 @@ const BroTox = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
-                { area: "1 Area", price: "£275" },
-                { area: "2 Areas", price: "£325" },
-                { area: "3 Areas (Men)", price: "£425" },
-                { area: "Masseter (Jaw)", price: "From £350" }
+                { area: "1 Area", price: "£225" },
+                { area: "2 Areas", price: "£275" },
+                { area: "3 Areas (Men)", price: "£325" },
+                { area: "Masseter (Jaw)", price: "From £400" }
               ].map((p) => (
                 <div key={p.area} className="bg-white/[0.03] border border-[#C9A050]/15 rounded-2xl p-5">
                   <p className="text-xs text-white/45 mb-1 tracking-wider uppercase">{p.area}</p>

@@ -205,7 +205,7 @@ const BotoxPriceLondon = () => {
                         ["1 Area", "£275", "£295"],
                         ["2 Areas", "£325", "£375"],
                         ["3 Areas", "£395", "£425"],
-                        ["Masseter (jawline)", "From £350", "From £350"],
+                        ["Masseter (jawline)", "From £350", "From £400"],
                         ["Hyperhidrosis", "From £450", "From £450"],
                       ].map(([treatment, women, men], i) => (
                         <TableRow key={i} className="border-[#C9A050]/5">

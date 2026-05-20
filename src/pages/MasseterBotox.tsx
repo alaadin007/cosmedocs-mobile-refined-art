@@ -16,7 +16,7 @@ import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 const MasseterBotox = () => {
   const seoData = generateSEOMetadata(
     "Masseter Botox | Jaw Slimming & Bruxism | Harley St",
-    "Doctor-led masseter botox for jaw slimming, teeth grinding relief & facial contouring. Dual cosmetic and medical benefits from £350 at our Harley Street clinic.",
+    "Doctor-led masseter botox for jaw slimming, teeth grinding relief & facial contouring. Dual cosmetic and medical benefits from £350 (females) and £400 (males) at our Harley Street clinic.",
     "/treatments/masseter-botox/"
   );
 
@@ -51,7 +51,7 @@ const MasseterBotox = () => {
     },
     {
       question: "How much is masseter botox?",
-      answer: "Masseter botox at CosmeDocs is £350 for both sides. This includes consultation, precise dosing (25–45 units per side depending on muscle mass), premium products, and aftercare. Consultation fee is redeemable against treatment."
+      answer: "Masseter botox at CosmeDocs is £350 for females and £400 for males. This includes consultation, precise dosing (25–45 units per side depending on muscle mass), premium products, and aftercare. Consultation fee is redeemable against treatment."
     }
   ];
 
@@ -207,7 +207,7 @@ const MasseterBotox = () => {
                   <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
                   <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />15–20 Min</span>
                   <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Since 2007</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £350</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £350 (females), £400 (males)</span>
                 </motion.div>
               </div>
 
@@ -626,7 +626,7 @@ const MasseterBotox = () => {
           </p>
           <h3>Masseter Botox Cost and Pricing</h3>
           <p>
-            Masseter botox cost at CosmeDocs is £350 for both sides. Our masseter botox price includes comprehensive consultation, precise dosing, premium botox products, and aftercare support. How much is masseter botox UK? At £350, our masseter botox pricing represents excellent value with no hidden fees. Consultation fee is redeemable against treatment if you proceed on the same day.
+            Masseter botox cost at CosmeDocs is £350 for females and £400 for males. Our masseter botox price includes comprehensive consultation, precise dosing, premium botox products, and aftercare support. How much is masseter botox UK? At £350 for females and £400 for males, our masseter botox pricing represents excellent value with no hidden fees. Consultation fee is redeemable against treatment if you proceed on the same day.
           </p>
           <h4>Masseter Botox Side Effects and Aftercare</h4>
           <p>
