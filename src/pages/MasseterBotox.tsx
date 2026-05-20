@@ -11,6 +11,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import MasseterSidebar from "@/components/masseter/MasseterSidebar";
+import MasseterProgressionSeries, { masseterProgressionStages } from "@/components/masseter/MasseterProgressionSeries";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const MasseterBotox = () => {
