@@ -17,6 +17,7 @@ import baForeheadBrow from "@/assets/before-after/brotox-forehead-brow-male.jpg"
 import baGummy from "@/assets/before-after/brotox-gummy-smile-male.jpg";
 import baFrown2 from "@/assets/before-after/brotox-glabella-frown-male-2.jpg";
 import baMasseter from "@/assets/before-after/brotox-masseter-jaw-slimming-male.jpg";
+import MasseterProgressionSeries from "@/components/masseter/MasseterProgressionSeries";
 
 const BroTox = () => {
   const [flipped, setFlipped] = useState(false);
@@ -407,6 +408,25 @@ const BroTox = () => {
             </p>
           </div>
         </section>
+
+        {/* BROMASSETER EDUCATIVE PROGRESSION SERIES */}
+        <MasseterProgressionSeries
+          headline="BroMasseter — the educative four-stage progression"
+          intro="BroMasseter is the most technically demanding men's Botox treatment we deliver. Below is the real four-stage journey of a male patient at Cosmedocs Harley Street — from baseline asymmetric hypertrophy graded on the HSI Masseter Scale, through three carefully spaced sessions, to a maintained, refined, masculine jawline. Read more about full BroMasseter treatment in the link below."
+          showBroTeaser
+        />
+        <div className="bg-black px-4 sm:px-6 pb-12 -mt-4">
+          <div className="max-w-6xl mx-auto">
+            <Link
+              to="/treatments/masseter-botox/"
+              className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#D4AF6A] text-sm font-medium transition-colors"
+            >
+              Read more about full BroMasseter treatment
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
 
 
         {/* PRICING */}
