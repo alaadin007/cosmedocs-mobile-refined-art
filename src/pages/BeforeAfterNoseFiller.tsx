@@ -506,7 +506,7 @@ const BeforeAfterNoseFiller = () => {
                   <div className="relative rounded-xl overflow-hidden border border-white/[0.08] aspect-[9/16] sm:aspect-[9/14]">
                     <video
                       className="w-full h-full object-cover"
-                      src="/images/before-after/dermal-fillers/nose/happy-client-nose-filler.mov"
+                      src="/images/before-after/dermal-fillers/nose/happy-client-nose-filler.mp4"
                       autoPlay
                       muted
                       loop
