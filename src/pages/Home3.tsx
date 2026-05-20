@@ -67,6 +67,7 @@ import nefertitiBaImg from "@/assets/before-after/nefertiti-lift-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
+import HeroBackToBackSlideshow from "@/components/HeroBackToBackSlideshow";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
@@ -2427,47 +2428,58 @@ const Home3 = () => {
 
         {/* Hero */}
         <section className="relative px-5 sm:px-8 pt-24 pb-10 sm:pt-28 sm:pb-16 max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-tight mb-6">
-              Our aesthetics
-              <br />
-              <span className="text-[#C9A050]">is invisible art.</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/70 max-w-2xl">
-              Bold. Natural. Always your way. Browse our medical-aesthetic treatments, quiet, not loud. Transformation that speaks without saying a word.
-            </p>
+          <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+              <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-tight mb-6">
+                Our aesthetics
+                <br />
+                <span className="text-[#C9A050]">is invisible art.</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-white/70 max-w-2xl">
+                Bold. Natural. Always your way. Browse our medical-aesthetic treatments, quiet, not loud. Transformation that speaks without saying a word.
+              </p>
 
-            <div className="mt-8 flex flex-col items-start gap-3">
-              <Button asChild className="rounded-full bg-[#C9A050] hover:bg-[#b78f44] text-black font-semibold h-12 px-7">
-                <Link to="/contact/">Book a consultation</Link>
-              </Button>
-              <Link
-                to="/aesthetic-intelligence"
-                className="group inline-flex items-center gap-2.5 pl-2 pr-4 py-2 rounded-full bg-gradient-to-r from-[#C9A050]/20 to-[#C9A050]/5 border border-[#C9A050]/40 text-[12px] font-medium text-[#F0D78C] hover:from-[#C9A050]/30 hover:to-[#C9A050]/10 transition shadow-[0_0_24px_-4px_rgba(201,160,80,0.5)]"
-              >
-                <span className="relative inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#C9A050] text-black">
-                  <ScanFace className="w-4 h-4 animate-pulse" />
-                  <span className="absolute inset-0 rounded-full ring-2 ring-[#C9A050]/60 animate-ping" />
-                </span>
-                <span className="tracking-wide">Free AI Face Scan</span>
-                <ArrowUpRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
+              <div className="mt-8 flex flex-col items-start gap-3">
+                <Button asChild className="rounded-full bg-[#C9A050] hover:bg-[#b78f44] text-black font-semibold h-12 px-7">
+                  <Link to="/contact/">Book a consultation</Link>
+                </Button>
+                <Link
+                  to="/aesthetic-intelligence"
+                  className="group inline-flex items-center gap-2.5 pl-2 pr-4 py-2 rounded-full bg-gradient-to-r from-[#C9A050]/20 to-[#C9A050]/5 border border-[#C9A050]/40 text-[12px] font-medium text-[#F0D78C] hover:from-[#C9A050]/30 hover:to-[#C9A050]/10 transition shadow-[0_0_24px_-4px_rgba(201,160,80,0.5)]"
+                >
+                  <span className="relative inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#C9A050] text-black">
+                    <ScanFace className="w-4 h-4 animate-pulse" />
+                    <span className="absolute inset-0 rounded-full ring-2 ring-[#C9A050]/60 animate-ping" />
+                  </span>
+                  <span className="tracking-wide">Free AI Face Scan</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
+              </div>
 
-            {/* Quiet trust row — Discretion + Instagram */}
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-white/55">
-              <DiscretionBadge />
-              <a
-                href="https://www.instagram.com/cosmedocs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#C9A050]/80 hover:text-[#C9A050] transition"
-              >
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                @cosmedocs
-              </a>
-            </div>
-          </motion.div>
+              {/* Quiet trust row — Discretion + Instagram */}
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-white/55">
+                <DiscretionBadge />
+                <a
+                  href="https://www.instagram.com/cosmedocs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[#C9A050]/80 hover:text-[#C9A050] transition"
+                >
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                  @cosmedocs
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+              className="relative"
+            >
+              <HeroBackToBackSlideshow />
+            </motion.div>
+          </div>
 
           <div
             aria-hidden
@@ -2475,6 +2487,7 @@ const Home3 = () => {
             style={{ background: "radial-gradient(closest-side, rgba(201,160,80,0.45), transparent)" }}
           />
         </section>
+
 
         {/* Section navigator — sticky jump bar to each treatment row */}
         <nav
