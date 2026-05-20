@@ -1303,7 +1303,7 @@ const Prices = () => {
             psoriasis management, eczema treatment, and prescription skincare consultations.
           </p>
           <p>
-            Advanced Botox treatments available include masseter botox for jaw slimming from £350, hyperhidrosis 
+            Advanced Botox treatments available include masseter botox for jaw slimming from £350 (females) and £400 (males), hyperhidrosis 
             treatment for excessive sweating from £450, calf slimming botox from £400, and specialist treatments 
             for gummy smile, bunny lines, lip flip, chin dimpling, and neck bands. Men's Botox pricing reflects 
             additional product required for stronger facial muscles.
