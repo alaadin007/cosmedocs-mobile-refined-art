@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet-async";
+import LazyVideo from "@/components/LazyVideo";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -136,14 +137,10 @@ export default function Blepharoplasty() {
               </div>
 
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-amber-500/20 shadow-2xl">
-                <video
-                  className="w-full h-auto block"
+                <LazyVideo
                   src="/videos/endo-eye.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  aria-label="Endolaser eyebrow lift fibre demonstration"
+                  aspectRatio="16/9"
+                  ariaLabel="Endolaser eyebrow lift fibre demonstration"
                 />
               </div>
 

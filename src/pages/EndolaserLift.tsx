@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyVideo from "@/components/LazyVideo";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -427,14 +428,10 @@ const EndolaserLift = () => {
 
               {/* Endo Eye Lift video break + internal link */}
               <section className="relative rounded-2xl overflow-hidden ring-1 ring-[#C9A050]/20 shadow-[0_30px_80px_-20px_rgba(201,160,80,0.35)]">
-                <video
-                  className="w-full h-auto block"
+                <LazyVideo
                   src="/videos/endo-eye.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  aria-label="Endolaser eyebrow lift fibre demonstration"
+                  aspectRatio="16/9"
+                  ariaLabel="Endolaser eyebrow lift fibre demonstration"
                 />
                 <div className="p-6 bg-black/80 border-t border-[#C9A050]/15">
                   <p className="text-white/70 text-sm leading-relaxed font-light">
