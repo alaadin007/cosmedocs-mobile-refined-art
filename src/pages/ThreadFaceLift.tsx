@@ -415,6 +415,53 @@ export function ThreadFaceLift() {
                 </motion.div>
               </section>
 
+              {/* Educational Video — Harley Street Institute */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <p className="text-[11px] text-[#C9A050]/80 tracking-[0.25em] uppercase mb-3">Educational · Doctor-Led</p>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    PDO Thread Lift <span className="text-[#C9A050] font-light">— how it works</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    A clinical training demonstration of PDO thread lifting, produced by the{" "}
+                    <a
+                      href="https://www.harleystreetinstitute.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#C9A050] hover:text-[#D4AF6A] underline-offset-4 hover:underline"
+                    >
+                      Harley Street Institute
+                    </a>{" "}
+                    — our training wing, where Cosmedocs doctors teach advanced thread techniques to medical professionals across the UK and internationally.
+                  </p>
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-[#C9A050]/20 bg-black shadow-[0_0_40px_-15px_rgba(201,160,80,0.3)]">
+                    <iframe
+                      src="https://www.youtube.com/embed/mHn0TARBHik?si=LASw0KrHTiPmLI29"
+                      title="PDO Thread Lift demonstration by Harley Street Institute — Cosmedocs training wing"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                  <p className="text-white/30 text-xs mt-4 font-light italic">
+                    Video credit:{" "}
+                    <a
+                      href="https://www.harleystreetinstitute.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#C9A050]/80 hover:text-[#C9A050] underline-offset-4 hover:underline"
+                    >
+                      Harley Street Institute
+                    </a>
+                    {" "}— the training and education wing of Cosmedocs.
+                  </p>
+                </motion.div>
+              </section>
+
+
               {/* Results & Expectations */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
