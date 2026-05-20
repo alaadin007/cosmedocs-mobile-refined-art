@@ -66,6 +66,19 @@ export default function HAMakeover() {
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/ha-makeover/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          name: "Liquid Facelift before and after — non-surgical nose refinement and cheek volume restoration",
+          description: "Clinical before-and-after photograph of a female patient showing non-surgical nose refinement and mid-face cheek volume restoration with hyaluronic acid dermal fillers as part of a Liquid Facelift at Cosmedocs Harley Street, London. Published with patient consent; individual results vary.",
+          contentUrl: "https://www.cosmedocs.com/assets/before-after/liquid-facelift-nose-cheek-ba.jpg",
+          representativeOfPage: false,
+          creditText: "Cosmedocs · Harley Street",
+          copyrightNotice: "© Cosmedocs",
+          acquireLicensePage: "https://www.cosmedocs.com/contact/",
+          creator: { "@type": "Organization", name: "Cosmedocs" },
+          copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+        })}</script>
       </Helmet>
 
       
