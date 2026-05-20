@@ -3,9 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, MapPin, Calendar, Users, CheckCircle, Heart, Gem } from 'lucide-react';
+import { ArrowRight, Shield, MapPin, Calendar, Users, CheckCircle, Heart, Gem, MousePointerClick, Images } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EndolaserSpotlight from '@/components/EndolaserSpotlight';
+import liquidFaceliftBA from '@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg';
 
 export default function HAMakeover() {
   const seoData = generateSEOMetadata(
