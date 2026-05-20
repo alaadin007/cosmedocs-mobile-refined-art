@@ -16,6 +16,7 @@ import baForeheadH from "@/assets/before-after/brotox-forehead-horizontal-lines-
 import baForeheadBrow from "@/assets/before-after/brotox-forehead-brow-male.jpg";
 import baGummy from "@/assets/before-after/brotox-gummy-smile-male.jpg";
 import baFrown2 from "@/assets/before-after/brotox-glabella-frown-male-2.jpg";
+import baMasseter from "@/assets/before-after/brotox-masseter-jaw-slimming-male.jpg";
 
 const BroTox = () => {
   const [flipped, setFlipped] = useState(false);
