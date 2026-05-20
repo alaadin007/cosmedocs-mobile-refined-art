@@ -1297,9 +1297,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                         type="button"
                         onClick={goNext}
                         aria-label="Next step"
-                        className="w-8 h-8 rounded-full bg-[#C9A050] text-black flex items-center justify-center hover:scale-[1.03] transition"
+                        className="relative w-9 h-9 rounded-full bg-[#C9A050] text-black flex items-center justify-center hover:scale-[1.06] transition shadow-[0_0_0_0_rgba(201,160,80,0.7)] animate-[pulse-glow_1.8s_ease-in-out_infinite]"
+                        style={{ animation: "pulse-glow 1.8s ease-in-out infinite" }}
                       >
-                        <ArrowUpRight className="w-3.5 h-3.5 rotate-45" />
+                        <span aria-hidden className="absolute inset-0 rounded-full bg-[#C9A050]/60 animate-ping" />
+                        <ArrowUpRight className="relative w-4 h-4 rotate-45" />
                       </button>
                     )}
                   </div>
