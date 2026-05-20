@@ -67,6 +67,7 @@ import nefertitiBaImg from "@/assets/before-after/nefertiti-lift-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
+import HeroBackToBackSlideshow from "@/components/HeroBackToBackSlideshow";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
