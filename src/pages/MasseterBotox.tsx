@@ -340,34 +340,42 @@ const MasseterBotox = () => {
                     Dual <span className="text-[#C9A050] font-light">Benefits</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                        <p className="text-sm font-medium text-white">Cosmetic Benefits</p>
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/55 text-sm leading-relaxed font-light">
+                        One treatment, two outcomes — a slimmer, more balanced jawline and clinical relief from bruxism, TMJ tension and jaw-origin headaches.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-5">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                          <p className="text-sm font-medium text-white">Cosmetic Benefits</p>
+                        </div>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Slims a wide or square jawline</li>
+                          <li>• Creates a V-shaped facial contour</li>
+                          <li>• Corrects facial asymmetry</li>
+                          <li>• Softens masculine jawline features</li>
+                          <li>• Enhances overall facial balance</li>
+                        </ul>
                       </div>
-                      <ul className="space-y-2 text-white/45 text-xs font-light">
-                        <li>• Slims a wide or square jawline</li>
-                        <li>• Creates a V-shaped facial contour</li>
-                        <li>• Corrects facial asymmetry</li>
-                        <li>• Softens masculine jawline features</li>
-                        <li>• Enhances overall facial balance</li>
-                      </ul>
-                    </div>
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        <Heart className="w-5 h-5 text-[#C9A050]" />
-                        <p className="text-sm font-medium text-white">Medical Benefits</p>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <Heart className="w-5 h-5 text-[#C9A050]" />
+                          <p className="text-sm font-medium text-white">Medical Benefits</p>
+                        </div>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Relieves bruxism (teeth grinding)</li>
+                          <li>• Reduces TMJ-related jaw pain</li>
+                          <li>• Alleviates tension headaches</li>
+                          <li>• Prevents dental damage from clenching</li>
+                          <li>• Reduces jaw muscle spasms</li>
+                        </ul>
                       </div>
-                      <ul className="space-y-2 text-white/45 text-xs font-light">
-                        <li>• Relieves bruxism (teeth grinding)</li>
-                        <li>• Reduces TMJ-related jaw pain</li>
-                        <li>• Alleviates tension headaches</li>
-                        <li>• Prevents dental damage from clenching</li>
-                        <li>• Reduces jaw muscle spasms</li>
-                      </ul>
                     </div>
-                  </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
@@ -378,36 +386,45 @@ const MasseterBotox = () => {
                     Am I <span className="text-[#C9A050] font-light">Suitable?</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                        <p className="text-sm font-medium text-white">May Be Suitable</p>
+                  <ExpandableSection
+                    preview={
+                      <p className="text-white/55 text-sm leading-relaxed font-light">
+                        Best suited to patients with muscular jaw width, bruxism or TMJ tension — and not appropriate in pregnancy, neuromuscular disorders or where width is bony, not muscular.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-5">
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <CheckCircle className="w-5 h-5 text-[#C9A050]" />
+                          <p className="text-sm font-medium text-white">May Be Suitable</p>
+                        </div>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Wide or square jawline you wish to slim</li>
+                          <li>• Teeth grinding or jaw clenching (bruxism)</li>
+                          <li>• TMJ pain or jaw tension</li>
+                          <li>• Facial asymmetry from muscle imbalance</li>
+                          <li>• Tension headaches originating from jaw</li>
+                        </ul>
                       </div>
-                      <ul className="space-y-2 text-white/45 text-xs font-light">
-                        <li>• Wide or square jawline you wish to slim</li>
-                        <li>• Teeth grinding or jaw clenching (bruxism)</li>
-                        <li>• TMJ pain or jaw tension</li>
-                        <li>• Facial asymmetry from muscle imbalance</li>
-                        <li>• Tension headaches originating from jaw</li>
-                      </ul>
-                    </div>
-                    <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        <AlertTriangle className="w-5 h-5 text-white/40" />
-                        <p className="text-sm font-medium text-white">May Not Be Suitable</p>
+                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <AlertTriangle className="w-5 h-5 text-white/40" />
+                          <p className="text-sm font-medium text-white">May Not Be Suitable</p>
+                        </div>
+                        <ul className="space-y-2 text-white/45 text-xs font-light">
+                          <li>• Jaw width caused by bone structure, not muscle</li>
+                          <li>• Active skin infection at injection site</li>
+                          <li>• Pregnancy or breastfeeding</li>
+                          <li>• Allergy to botulinum toxin</li>
+                          <li>• Neuromuscular disorders</li>
+                        </ul>
                       </div>
-                      <ul className="space-y-2 text-white/45 text-xs font-light">
-                        <li>• Jaw width caused by bone structure, not muscle</li>
-                        <li>• Active skin infection at injection site</li>
-                        <li>• Pregnancy or breastfeeding</li>
-                        <li>• Allergy to botulinum toxin</li>
-                        <li>• Neuromuscular disorders</li>
-                      </ul>
                     </div>
-                  </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
+
 
               {/* Results & Expectations */}
               <section>
