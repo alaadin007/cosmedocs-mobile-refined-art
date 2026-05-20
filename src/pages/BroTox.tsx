@@ -72,6 +72,27 @@ const BroTox = () => {
     { title: "Underarms (Hyperhidrosis)", desc: "Stops excessive underarm sweating — a quiet life-changer for suit-wearing professionals." }
   ];
 
+  const baseUrl = "https://www.cosmedocs.com";
+  const gallery = [
+    { src: baFrown1, file: "brotox-frown-glabella-male-1.jpg", area: "Glabella · Frown lines (11s)", caption: "Deep '11s' between the brows softened — corrugator dosed for male muscle bulk. Brow line kept low and horizontal.", alt: "BroTox before and after — deep glabella '11' frown lines softened in male patient, doctor-led men's anti-wrinkle treatment Cosmedocs Harley Street London" },
+    { src: baForeheadH, file: "brotox-forehead-horizontal-lines-male.jpg", area: "Forehead · Horizontal lines", caption: "Stacked horizontal forehead lines smoothed without dropping the brow — frontalis lightly treated to preserve a masculine expression.", alt: "BroTox before and after — horizontal forehead lines smoothed in male patient with brow position preserved, men's Botox Cosmedocs Harley Street London" },
+    { src: baForeheadBrow, file: "brotox-forehead-brow-male.jpg", area: "Forehead & brow", caption: "Forehead refreshed, brow kept strong and flat — no feminising lift, no frozen look, natural micro-movement retained.", alt: "BroTox before and after — male forehead refreshed with flat masculine brow preserved, anti-wrinkle treatment Cosmedocs Harley Street London" },
+    { src: baGummy, file: "brotox-gummy-smile-male.jpg", area: "Gummy smile · Lip elevators", caption: "Excessive gum show on smiling reduced with micro-dosing of the lip elevators — natural smile dynamics preserved.", alt: "BroTox before and after — gummy smile reduced in male patient with natural smile dynamics retained, Cosmedocs Harley Street London" },
+    { src: baFrown2, file: "brotox-glabella-frown-male-2.jpg", area: "Glabella · Second case", caption: "Heavy resting frown released — patient looks approachable rather than tense, with full brow movement retained.", alt: "BroTox before and after — heavy resting frown released in second male patient case, doctor-led men's Botox Cosmedocs Harley Street London" }
+  ];
+  const galleryImageSchema = gallery.map((g) => ({
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    name: `BroTox before and after — ${g.area}`,
+    description: `${g.caption} Published with patient consent; individual results vary.`,
+    contentUrl: `${baseUrl}/assets/before-after/${g.file}`,
+    creditText: "Cosmedocs · Harley Street",
+    copyrightNotice: "© Cosmedocs",
+    acquireLicensePage: `${baseUrl}/contact/`,
+    creator: { "@type": "Organization", name: "Cosmedocs" },
+    copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+  }));
+
   return (
     <>
       <Helmet>
