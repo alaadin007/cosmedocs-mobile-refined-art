@@ -9,6 +9,7 @@ import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
 import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
 import cheekBaPreview from "@/assets/1ml-cheek-fillers-before-after.png";
+import liquidFaceliftCheekBA from "@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
@@ -538,17 +539,28 @@ const CheekFiller = () => {
                     support. Strategic placement enhances contour and lift while maintaining natural 
                     proportions and facial harmony.
                   </p>
-                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
-                    <img
-                      src={cheekBaPreview}
-                      alt="Before and after cheek filler showing mid-face volume restoration"
-                      loading="lazy"
-                      className="w-full h-auto block"
-                    />
+                  <div className="grid sm:grid-cols-2 gap-3 mb-3">
+                    <figure className="m-0 rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                      <img
+                        src={cheekBaPreview}
+                        alt="Cheek filler before and after — 1ml hyaluronic acid filler for mid-face volume restoration at Cosmedocs Harley Street"
+                        loading="lazy"
+                        className="w-full h-auto block"
+                      />
+                      <figcaption className="px-3 py-2 text-[10px] tracking-widest uppercase text-[#C9A050]/80">1ml · Mid-face support</figcaption>
+                    </figure>
+                    <figure className="m-0 rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                      <img
+                        src={liquidFaceliftCheekBA}
+                        alt="Cheek filler before and after — anterior cheek and mid-face volume restoration on a female patient at Cosmedocs Harley Street London"
+                        loading="lazy"
+                        className="w-full h-auto block"
+                      />
+                      <figcaption className="px-3 py-2 text-[10px] tracking-widest uppercase text-[#C9A050]/80">Anterior cheek · Liquid Facelift case</figcaption>
+                    </figure>
                   </div>
                   <p className="text-white/30 text-xs font-light italic mb-6">
-                    All images show real patients treated by our doctors at our Harley Street clinic. Results 
-                    vary depending on facial structure and treatment plan.
+                    All images show real Cosmedocs patients treated by our doctors at our Harley Street clinic, published with patient consent. Results vary depending on facial structure and treatment plan.
                   </p>
                   <Link
                     to="/before-after/dermal-fillers/cheeks/"

@@ -1,5 +1,6 @@
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import peelLevel1MayJune from "@/assets/before-after/peel-level-1-may-june.jpeg";
+import peelPlusFillerCase from "@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
@@ -381,7 +382,25 @@ const ChemicalPeel = () => {
                       <div key={i} className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900"><img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" /></div>
                     ))}
                   </div>
-                  <p className="text-xs text-white/30 italic mt-3">Individual results vary. Images show real patients treated at our Harley Street clinic.</p>
+
+                  {/* Combination case — peel + dermal fillers */}
+                  <figure className="mt-4 rounded-xl overflow-hidden border border-[#C9A050]/20 bg-neutral-900">
+                    <img
+                      src={peelPlusFillerCase}
+                      alt="Skin peel and dermal filler combination before and after — medical chemical peel for skin clarity with hyaluronic acid filler for nose refinement and cheek volume replacement at Cosmedocs Harley Street London"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                    <figcaption className="px-4 py-3 space-y-1 border-t border-white/[0.06]">
+                      <p className="text-[11px] tracking-widest uppercase text-[#C9A050]/90 font-medium">Combination case · Peel + Volume Replacement</p>
+                      <p className="text-xs text-white/55 font-light leading-relaxed">
+                        This patient received a medical chemical peel to refresh skin clarity and texture, alongside hyaluronic acid <strong className="text-white/80">dermal fillers for volume replacement</strong> to the cheeks and nose. The skin is treated; the structural volume loss is restored — the two work together.
+                      </p>
+                      <p className="text-[10px] text-white/35 italic">Real Cosmedocs patient, published with consent. Individual results vary.</p>
+                    </figcaption>
+                  </figure>
+
+                  <p className="text-xs text-white/30 italic mt-3">Individual results vary. Images show real Cosmedocs patients treated at our Harley Street clinic, published with patient consent.</p>
                 </motion.div>
               </section>
 
