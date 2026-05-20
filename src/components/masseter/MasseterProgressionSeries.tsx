@@ -130,12 +130,16 @@ const MasseterProgressionSeries = ({
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px] rounded-2xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-b from-[#0a0a0a] to-black flex flex-col"
               >
-                <div className="relative">
+                <div className={`relative ${i === 0 ? "bg-black" : ""}`}>
                   <img
                     src={s.src}
                     alt={s.alt}
                     loading="lazy"
-                    className="w-full h-[460px] sm:h-[500px] object-cover object-top"
+                    className={
+                      i === 0
+                        ? "w-full h-[460px] sm:h-[500px] object-contain bg-black"
+                        : "w-full h-[460px] sm:h-[500px] object-cover object-top"
+                    }
                   />
                   <span className="absolute top-3 left-3 bg-[#C9A050]/95 text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-medium">
                     {s.badge}
