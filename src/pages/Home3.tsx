@@ -67,7 +67,7 @@ import nefertitiBaImg from "@/assets/before-after/nefertiti-lift-ba.jpg";
 import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
-import HeroBackToBackSlideshow from "@/components/HeroBackToBackSlideshow";
+import heroHarleyStreet from "@/assets/hero/harley-street-cosmedocs.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
@@ -2475,7 +2475,24 @@ const Home3 = () => {
               transition={{ duration: 0.9, delay: 0.2 }}
               className="relative"
             >
-              <HeroBackToBackSlideshow />
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#C9A050]/20">
+                <img
+                  src={heroHarleyStreet}
+                  alt="Cosmedocs doctor on Harley Street, City of Westminster, London W1"
+                  width={1920}
+                  height={1280}
+                  loading="eager"
+                  fetchPriority="high"
+                  className="w-full h-full object-cover aspect-[4/5] md:aspect-[5/6]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+                  <div className="text-white">
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-[#C9A050]">Harley Street · W1</p>
+                    <p className="text-sm md:text-base font-light">Doctor-led aesthetic medicine, since 2007</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
 
