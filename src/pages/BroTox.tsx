@@ -351,6 +351,62 @@ const BroTox = () => {
           </div>
         </section>
 
+        {/* BEFORE & AFTER GALLERY */}
+        <section className="relative py-20 px-4 sm:px-6 border-t border-white/5 bg-black">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <p className="text-xs text-[#C9A050]/70 tracking-[0.25em] uppercase mb-3">Real Male Patients</p>
+              <h2 className="text-3xl md:text-5xl font-extralight text-white/90 leading-tight mb-4 max-w-3xl">
+                BroTox <span className="text-[#C9A050] font-light">before &amp; after</span>
+              </h2>
+              <div className="w-12 h-px bg-[#C9A050]/50 mb-6" />
+              <p className="text-sm text-white/50 leading-relaxed font-light max-w-2xl mb-12">
+                Doctor-led men's Botox at Cosmedocs Harley Street. Every case below is a real Cosmedocs male patient — never stock,
+                never AI, never a model. Published with written, informed patient consent.
+              </p>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {gallery.map((g, i) => (
+                <motion.figure
+                  key={g.file}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className="rounded-2xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-b from-[#0a0a0a] to-black flex flex-col"
+                >
+                  <div className="relative aspect-square">
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                    <span className="absolute top-3 left-3 bg-[#C9A050]/95 text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-medium">Before</span>
+                    <span className="absolute bottom-1/2 left-3 translate-y-2 bg-[#C9A050]/95 text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-medium">After</span>
+                  </div>
+                  <figcaption className="p-4 space-y-2 flex-1 flex flex-col">
+                    <p className="text-[11px] text-[#C9A050]/90 tracking-widest uppercase font-medium">{g.area}</p>
+                    <p className="text-sm text-white/65 font-light leading-relaxed">{g.caption}</p>
+                    <p className="text-[10px] text-white/40 leading-relaxed font-light pt-2 mt-auto border-t border-white/5">
+                      <strong className="text-white/60">Individual results disclaimer:</strong> results vary between patients. Image shown is of a single male patient and is not a guarantee of outcome.
+                      <span className="block mt-1"><strong className="text-white/60">Patient consent:</strong> published with the patient's written, informed consent. Cosmedocs · Harley Street.</span>
+                    </p>
+                  </figcaption>
+                </motion.figure>
+              ))}
+            </div>
+
+            <p className="text-xs text-white/40 leading-relaxed font-light max-w-3xl mt-10">
+              Our aesthetics is invisible art — bold, natural, always your way. Every BroTox case is dosed for male anatomy:
+              stronger units where the muscle is, lighter where it shouldn't lift, brow kept low and masculine. We work with
+              PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
+            </p>
+          </div>
+        </section>
+
+
         {/* PRICING */}
         <section className="relative py-20 px-4 sm:px-6 border-t border-white/5">
           <div className="max-w-5xl mx-auto">
