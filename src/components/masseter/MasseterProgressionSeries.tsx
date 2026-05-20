@@ -163,6 +163,19 @@ const MasseterProgressionSeries = ({
           </div>
         </div>
 
+        <div className="mt-8 pt-6 border-t border-[#C9A050]/15 max-w-3xl">
+          <a
+            href="/before-after/botox/masseter/"
+            className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#e3c074] text-sm font-medium tracking-wide group"
+          >
+            View full masseter Botox before &amp; after gallery
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+          <p className="text-xs text-white/45 font-light mt-1.5">
+            Includes mild to severe jaw muscle hypertrophy cases.
+          </p>
+        </div>
+
         <p className="text-[11px] text-white/35 leading-relaxed font-light max-w-3xl mt-6">
           <strong className="text-white/55">Maintenance protocol:</strong> twice
           yearly for the first two years to lock in atrophy, then once yearly
