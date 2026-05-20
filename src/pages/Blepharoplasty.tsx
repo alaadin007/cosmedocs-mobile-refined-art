@@ -107,6 +107,48 @@ export default function Blepharoplasty() {
           </div>
         </section>
 
+        {/* Non-Surgical Alternative — Endolaser Brow Lift video break */}
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-8">
+                <span className="inline-block text-xs uppercase tracking-[0.2em] text-amber-400 mb-3">
+                  Considering a non-surgical alternative?
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Endolaser Eyebrow Lift — by Cosmedocs
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  For early-to-moderate brow descent and hooding caused by skin laxity rather than excess fat,
+                  a fine 1470nm laser fibre can lift the lateral brow without incisions, sutures or two weeks off.
+                  Invisible art — bold, natural, always your way.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden ring-1 ring-amber-500/20 shadow-2xl">
+                <video
+                  className="w-full h-auto block"
+                  src="/videos/endo-eye.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Endolaser eyebrow lift fibre demonstration"
+                />
+              </div>
+
+              <div className="text-center mt-8">
+                <Button asChild size="lg" variant="outline" className="border-amber-500/40 hover:bg-amber-500/10">
+                  <Link to="/treatments/eyebrow-lift-endolaser/">
+                    Explore the non-surgical eyebrow lift with Endolaser
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700">
           <div className="container mx-auto px-4 text-center">
