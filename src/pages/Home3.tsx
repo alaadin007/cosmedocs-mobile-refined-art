@@ -570,13 +570,13 @@ const categories: Category[] = [
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
-        image: haMakeoverBaImg,
+        image: liquidFaceliftBdaImg,
         frontImage: frontHaImg,
         frontImageFit: "cover",
         flip: {
           back: "Bone-deep hyaluronic acid placement at temple, cheek and jaw rebuilds the structural scaffold of the face — so the mid-face lifts from above, not below. The keystone of the non-surgical facelift.",
           imagePosition: "top",
-          image: haMakeoverBaImg,
+          image: liquidFaceliftBdaImg,
         },
       },
       {
