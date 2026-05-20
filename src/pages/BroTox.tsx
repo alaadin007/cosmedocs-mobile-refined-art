@@ -119,6 +119,13 @@ const BroTox = () => {
           creator: { "@type": "Organization", name: "Cosmedocs" },
           copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          name: "BroTox before & after gallery — men's Botox at Cosmedocs Harley Street, London",
+          description: "Clinical before-and-after photographs of male patients treated with BroTox (men's anti-wrinkle treatment) at Cosmedocs Harley Street, London. All images published with written patient consent; individual results vary.",
+          image: galleryImageSchema
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-black overflow-x-hidden text-white">
