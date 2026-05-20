@@ -121,7 +121,6 @@ const botoxAesthetic: SubCard[] = [
         "17+ years treating male faces",
       ],
       image: brotoxBA,
-      imageAlt: "BroTox before and after — forehead lines and glabella frown softened in a male patient, men's anti-wrinkle treatment at Cosmedocs Harley Street London",
       imagePosition: "top",
     },
   },
