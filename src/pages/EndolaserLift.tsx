@@ -601,9 +601,15 @@ const EndolaserLift = () => {
                       loading="lazy"
                       className="w-full h-auto"
                     />
-                    <figcaption className="px-5 py-3 text-xs text-white/50 font-light flex items-center justify-between">
-                      <span>Left: before · Right: after Laser Fibre Lift</span>
-                      <span className="text-[#C9A050]/70">Cosmedocs · Harley Street</span>
+                    <figcaption className="px-5 py-3 text-xs text-white/50 font-light space-y-2">
+                      <div className="flex items-center justify-between gap-3">
+                        <span>Left: before · Right: after Laser Fibre Lift</span>
+                        <span className="text-[#C9A050]/70">Cosmedocs · Harley Street</span>
+                      </div>
+                      <p className="text-[11px] text-white/40 leading-relaxed border-t border-white/[0.06] pt-2">
+                        <strong className="text-white/60">Individual results disclaimer:</strong> results vary between patients and depend on anatomy, age, lifestyle and aftercare. Images shown are of a single patient and are not a guarantee of outcome.
+                        <span className="block mt-1"><strong className="text-white/60">Patient consent:</strong> these clinical photographs are published with the patient's written, informed consent for educational and marketing purposes. No images are shared without explicit consent.</span>
+                      </p>
                     </figcaption>
                   </figure>
                 </motion.div>
