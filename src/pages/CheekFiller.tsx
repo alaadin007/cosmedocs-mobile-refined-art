@@ -9,6 +9,7 @@ import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
 import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
 import cheekBaPreview from "@/assets/1ml-cheek-fillers-before-after.png";
+import liquidFaceliftCheekBA from "@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
