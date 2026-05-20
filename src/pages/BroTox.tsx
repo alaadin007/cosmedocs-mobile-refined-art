@@ -13,6 +13,8 @@ import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 
 const BroTox = () => {
+  const [flipped, setFlipped] = useState(false);
+  const baImageUrl = "https://www.cosmedocs.com/assets/brotox-ba-forehead-frown.jpg";
   const seoData = generateSEOMetadata(
     "BroTox London | Men's Botox & Anti-Wrinkle Treatment | Harley Street",
     "BroTox London — doctor-led men's Botox on Harley Street. Higher dosing for stronger male muscles, brow kept low and masculine. From £275 at Cosmedocs since 2007.",
