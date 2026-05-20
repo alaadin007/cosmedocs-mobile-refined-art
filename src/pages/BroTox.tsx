@@ -11,6 +11,11 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
+import baFrown1 from "@/assets/before-after/brotox-frown-glabella-male-1.jpg";
+import baForeheadH from "@/assets/before-after/brotox-forehead-horizontal-lines-male.jpg";
+import baForeheadBrow from "@/assets/before-after/brotox-forehead-brow-male.jpg";
+import baGummy from "@/assets/before-after/brotox-gummy-smile-male.jpg";
+import baFrown2 from "@/assets/before-after/brotox-glabella-frown-male-2.jpg";
 
 const BroTox = () => {
   const [flipped, setFlipped] = useState(false);
