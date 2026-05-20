@@ -329,27 +329,33 @@ const CalfSlimmingBotox = () => {
                   <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
                     Because calf Botox works by gradually reducing muscle activity, results develop over time rather than instantly. Early softening occurs at 2–4 weeks, visible slimming at 6–10 weeks, with peak results around 3 months.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {beforeAfterImages.map((image, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 16 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden"
-                      >
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-auto object-contain"
-                          loading="lazy"
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
+                  <motion.figure
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden"
+                  >
+                    <img
+                      src={calfSlimmingBA}
+                      alt="Calf reduction Botox before and after — bulky gastrocnemius softened into a slimmer, leaner lower-leg silhouette at Cosmedocs Harley Street London"
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
+                      width={880}
+                      height={880}
+                    />
+                    <figcaption className="px-5 py-4 border-t border-white/[0.06] space-y-1.5">
+                      <p className="text-[11px] text-[#C9A050]/90 tracking-widest uppercase font-medium">
+                        Calf Slimming Botox · ~12 weeks post-treatment
+                      </p>
+                      <p className="text-[10px] text-white/45 leading-relaxed font-light">
+                        <strong className="text-white/65">Individual results disclaimer:</strong> results vary between patients and depend on calf anatomy, muscle dominance, dose and time since treatment. Image shown is of a single Cosmedocs patient and is not a guarantee of outcome.
+                        <span className="block mt-1"><strong className="text-white/65">Patient consent:</strong> published with the patient's written, informed consent. Cosmedocs · Harley Street.</span>
+                      </p>
+                    </figcaption>
+                  </motion.figure>
                   <p className="text-white/25 text-xs mt-4 font-light italic">
-                    Limited image sets are normal for body Botox treatments due to positioning and muscle variability. Results shown with consistent stance and lighting.
+                    We publish only real Cosmedocs patient results — no stock or AI-generated images. Limited image sets are normal for body Botox due to positioning and muscle variability; results shown with consistent stance and lighting.
                   </p>
                 </motion.div>
               </section>
