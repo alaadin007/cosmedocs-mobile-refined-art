@@ -24,7 +24,7 @@ import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 import medMasseterImg from "@/assets/home3-medical-masseter.jpg";
-import masseterBaImg from "@/assets/before-after/masseter-ba-3.jpg";
+
 import calfSlimmingBaImg from "@/assets/before-after/calf-slimming-ba.jpg";
 import medBruxismImg from "@/assets/home3-medical-bruxism.jpg";
 import medMigraineImg from "@/assets/home3-medical-migraine.jpg";
@@ -274,8 +274,6 @@ const categories: Category[] = [
         badge: "Most asked",
         flip: {
           back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette, and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
-          imagePosition: "top",
-          image: masseterBaImg,
         },
       },
       { title: "Bruxism Botox", tagline: "Night clenching, treated", href: "/treatments/bruxism-botox/", bg: "bg-[#0d1218]", image: medBruxismImg },

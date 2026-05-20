@@ -15,7 +15,7 @@ export type ProgressionStage = {
 
 export const masseterProgressionStages: ProgressionStage[] = [
   {
-    src: pic1,
+    src: pic2,
     badge: "Stage 1 · Baseline",
     title: "Before treatment — asymmetric masseter hypertrophy",
     caption:
@@ -24,7 +24,7 @@ export const masseterProgressionStages: ProgressionStage[] = [
     note: "HSI Masseter Scale · R: XL · L: L",
   },
   {
-    src: pic2,
+    src: pic3,
     badge: "Stage 2 · 3 months post 1st session",
     title: "3 months after first treatment",
     caption:
@@ -32,7 +32,7 @@ export const masseterProgressionStages: ProgressionStage[] = [
     alt: "Masseter Botox progression — 3 months after first treatment, male patient with softer jawline and reduced muscle bulk, Cosmedocs Harley Street London",
   },
   {
-    src: pic3,
+    src: pic1,
     badge: "Stage 3 · 3 months post 2nd session",
     title: "3 months after second treatment",
     caption:
@@ -130,12 +130,16 @@ const MasseterProgressionSeries = ({
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px] rounded-2xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-b from-[#0a0a0a] to-black flex flex-col"
               >
-                <div className="relative">
+                <div className={`relative ${i === 0 ? "bg-black" : ""}`}>
                   <img
                     src={s.src}
                     alt={s.alt}
                     loading="lazy"
-                    className="w-full h-[460px] sm:h-[500px] object-cover object-top"
+                    className={
+                      i === 0
+                        ? "w-full h-[460px] sm:h-[500px] object-contain bg-black"
+                        : "w-full h-[460px] sm:h-[500px] object-cover object-top"
+                    }
                   />
                   <span className="absolute top-3 left-3 bg-[#C9A050]/95 text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-medium">
                     {s.badge}
@@ -157,6 +161,19 @@ const MasseterProgressionSeries = ({
               </motion.figure>
             ))}
           </div>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-[#C9A050]/15 max-w-3xl">
+          <a
+            href="/before-after/botox/masseter/"
+            className="inline-flex items-center gap-2 text-[#C9A050] hover:text-[#e3c074] text-sm font-medium tracking-wide group"
+          >
+            View full masseter Botox before &amp; after gallery
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+          <p className="text-xs text-white/45 font-light mt-1.5">
+            Includes mild to severe jaw muscle hypertrophy cases.
+          </p>
         </div>
 
         <p className="text-[11px] text-white/35 leading-relaxed font-light max-w-3xl mt-6">
