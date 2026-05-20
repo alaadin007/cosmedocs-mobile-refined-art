@@ -224,8 +224,29 @@ const EndoliftLondon = () => {
                 </div>
               </div>
 
+              {/* Before & After */}
+              <div>
+                <h2 className="text-2xl font-extralight text-white mb-3">Before & After</h2>
+                <p className="text-sm text-white/50 font-light leading-relaxed mb-4">
+                  Jawline and neck tightening following Endolift — subtle, natural redefinition. Individual results vary.
+                </p>
+                <figure className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+                  <img
+                    src={endolaserBaJawline}
+                    alt="Before and after Endolift laser fibre lift — jawline and neck, Cosmedocs Harley Street London"
+                    loading="lazy"
+                    className="w-full h-auto"
+                  />
+                  <figcaption className="px-5 py-3 text-xs text-white/50 font-light flex items-center justify-between">
+                    <span>Left: before · Right: after Endolift</span>
+                    <span className="text-[#C9A050]/70">Cosmedocs · Harley Street</span>
+                  </figcaption>
+                </figure>
+              </div>
+
               {/* FAQ */}
               <div>
+
                 <h2 className="text-2xl font-extralight text-white mb-4">Common Questions</h2>
                 <Accordion type="single" collapsible className="border-t border-white/[0.06]">
                   {FAQ.map((f, i) => (
