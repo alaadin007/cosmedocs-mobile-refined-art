@@ -126,7 +126,26 @@ const MasseterBotox = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            name: "Masseter Botox progression — educative four-stage case series",
+            description: "Four-stage clinical progression of a real male patient at Cosmedocs Harley Street, London — baseline asymmetric masseter hypertrophy graded on the HSI Masseter Scale, through three doctor-led treatments, to a maintained refined jawline. Published with written, informed patient consent.",
+            image: masseterProgressionStages.map((s, idx) => ({
+              "@type": "ImageObject",
+              name: `Masseter Botox progression — Stage ${idx + 1}: ${s.title}`,
+              description: s.caption,
+              creditText: "Cosmedocs · Harley Street",
+              copyrightNotice: "© Cosmedocs",
+              acquireLicensePage: "https://www.cosmedocs.com/contact/",
+              creator: { "@type": "Organization", name: "Cosmedocs" },
+              copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+            }))
+          })}
+        </script>
       </Helmet>
+
 
       <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
         {/* ═══════════════════════════════════════════
