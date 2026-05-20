@@ -235,7 +235,7 @@ export default function Home2Header() {
               to="/about"
               aria-label="Teosyal Outstanding Clinic Award winner — view recognition"
               title="Teosyal Outstanding Clinic Award"
-              className="hidden xs:flex items-center gap-2 ml-2 sm:ml-3 group shrink-0"
+              className="flex items-center gap-2 ml-2 sm:ml-3 group shrink-0"
             >
               <span className={`relative inline-flex items-center justify-center rounded-full transition-all duration-500 ${
                 isScrolled ? 'ring-1 ring-[#C9A050]/40 bg-white' : 'ring-1 ring-[#C9A050]/60 bg-white/95'
