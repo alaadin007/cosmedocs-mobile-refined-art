@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import LazyVideo from "@/components/LazyVideo";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Sparkles, AlertTriangle } from "lucide-react";
