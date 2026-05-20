@@ -177,14 +177,12 @@ const EyebrowLiftEndolaser = () => {
       <main className="min-h-screen bg-black">
         {/* Hero */}
         <section className="relative pt-28 pb-16 overflow-hidden">
-          <video
-            className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+          <LazyVideo
             src="/videos/endo-eye.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            aria-hidden="true"
+            fill
+            className="opacity-40 pointer-events-none"
+            ariaLabel=""
+            rootMargin="0px"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black pointer-events-none" />
           <div className="absolute inset-0 pointer-events-none">
