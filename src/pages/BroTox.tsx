@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
-  CheckCircle, ArrowRight, Shield, Clock, Star, Award, MapPin, Activity, Syringe, Stethoscope, Users
+  CheckCircle, ArrowRight, Shield, Clock, Star, Award, MapPin, Activity, Syringe, Stethoscope, Users, RotateCw
 } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
+import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 
 const BroTox = () => {
+  const [flipped, setFlipped] = useState(false);
+  const baImageUrl = "https://www.cosmedocs.com/assets/brotox-ba-forehead-frown.jpg";
   const seoData = generateSEOMetadata(
     "BroTox London | Men's Botox & Anti-Wrinkle Treatment | Harley Street",
     "BroTox London — doctor-led men's Botox on Harley Street. Higher dosing for stronger male muscles, brow kept low and masculine. From £275 at Cosmedocs since 2007.",
@@ -77,6 +80,19 @@ const BroTox = () => {
         <meta property="og:image" content={brotoxImg} />
         <meta name="keywords" content="brotox, men's botox london, male botox, mens anti wrinkle treatment, harley street brotox, botox for men" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          name: "BroTox before and after — forehead lines & frown (glabella) anti-wrinkle treatment for men",
+          description: "Clinical before-and-after photograph of a male patient showing softened forehead and frown (glabella) lines after BroTox men's anti-wrinkle treatment at Cosmedocs Harley Street, London. Brow kept low and masculine. Published with patient consent; individual results vary.",
+          contentUrl: baImageUrl,
+          representativeOfPage: false,
+          creditText: "Cosmedocs · Harley Street",
+          copyrightNotice: "© Cosmedocs",
+          acquireLicensePage: "https://www.cosmedocs.com/contact/",
+          creator: { "@type": "Organization", name: "Cosmedocs" },
+          copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-black overflow-x-hidden text-white">
@@ -159,9 +175,57 @@ const BroTox = () => {
                 transition={{ duration: 1, delay: 0.2 }}
                 className="relative"
               >
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-br from-[#0a0a0a] via-[#15110a] to-[#1f1810]">
-                  <img src={brotoxImg} alt="BroTox London — men's Botox treatment at Cosmedocs Harley Street" className="w-full h-full object-cover opacity-90" loading="eager" />
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setFlipped((v) => !v)}
+                  aria-pressed={flipped}
+                  aria-label={flipped ? "Show BroTox portrait" : "Show BroTox before and after"}
+                  className="group relative block w-full aspect-[4/5] [perspective:1400px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A050]/60 rounded-3xl"
+                >
+                  <div
+                    className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]"
+                    style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
+                  >
+                    {/* FRONT */}
+                    <div className="absolute inset-0 rounded-3xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-br from-[#0a0a0a] via-[#15110a] to-[#1f1810] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                      <img
+                        src={brotoxImg}
+                        alt="BroTox London — men's Botox treatment at Cosmedocs Harley Street"
+                        className="w-full h-full object-cover opacity-90"
+                        loading="eager"
+                      />
+                      <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 bg-black/70 backdrop-blur border border-[#C9A050]/40 text-[10px] text-[#C9A050] tracking-widest uppercase px-3 py-1.5 rounded-full">
+                        <RotateCw className="w-3 h-3" /> Tap for before / after
+                      </span>
+                    </div>
+
+                    {/* BACK — Before & After */}
+                    <figure className="absolute inset-0 rounded-3xl overflow-hidden border border-[#C9A050]/30 bg-black [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] flex flex-col">
+                      <div className="relative flex-1 min-h-0">
+                        <img
+                          src={brotoxBA}
+                          alt="BroTox before and after — forehead lines and frown (glabella) softened in a male patient, anti-wrinkle treatment at Cosmedocs Harley Street London"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                        <span className="absolute top-3 left-3 bg-[#C9A050]/95 text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-medium">Before</span>
+                        <span className="absolute bottom-1/2 left-3 translate-y-2 bg-[#C9A050]/95 text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-medium">After</span>
+                        <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 bg-black/70 backdrop-blur border border-[#C9A050]/40 text-[10px] text-[#C9A050] tracking-widest uppercase px-3 py-1.5 rounded-full">
+                          <RotateCw className="w-3 h-3" /> Flip back
+                        </span>
+                      </div>
+                      <figcaption className="bg-black/90 border-t border-[#C9A050]/20 px-4 py-3 text-left space-y-1.5">
+                        <p className="text-[11px] text-[#C9A050]/90 tracking-widest uppercase font-medium">
+                          BroTox · Forehead &amp; Frown · 2 weeks post-treatment
+                        </p>
+                        <p className="text-[10px] text-white/45 leading-relaxed font-light">
+                          <strong className="text-white/65">Individual results disclaimer:</strong> results vary between patients and depend on anatomy, muscle bulk and dosing. Image shown is of a single male patient and is not a guarantee of outcome.
+                          <span className="block mt-1"><strong className="text-white/65">Patient consent:</strong> published with the patient's written, informed consent. Cosmedocs · Harley Street.</span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </button>
                 <div className="absolute -bottom-4 -left-4 bg-black border border-[#C9A050]/30 rounded-2xl px-5 py-4 shadow-xl">
                   <p className="text-[10px] text-[#C9A050]/70 tracking-widest uppercase mb-1">From</p>
                   <p className="text-2xl font-light text-[#C9A050]">£275</p>
