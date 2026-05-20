@@ -34,6 +34,7 @@ import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import hyperhidrosisCardImg from "@/assets/home3-hyperhidrosis-card.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-front.png";
+import liquidFaceliftBdaImg from "@/assets/before-after/liquid-facelift-before-during-after.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import artChinImg from "@/assets/home3-art-chin.jpg";
 import artNoseImg from "@/assets/home3-art-nose.jpg";
