@@ -34,6 +34,7 @@ import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import hyperhidrosisCardImg from "@/assets/home3-hyperhidrosis-card.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-front.png";
+import liquidFaceliftBdaImg from "@/assets/before-after/liquid-facelift-before-during-after.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
 import artChinImg from "@/assets/home3-art-chin.jpg";
 import artNoseImg from "@/assets/home3-art-nose.jpg";
@@ -320,12 +321,12 @@ const categories: Category[] = [
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
-        image: haMakeoverBaImg,
+        image: liquidFaceliftBdaImg,
         frontImage: frontHaImg,
         frontImageFit: "cover",
         flip: {
           back: "When ageing fragments the face, the cosmetic units stop reading as one. The Liquid Facelift gently re-bridges every unit — forehead, temple, cheek, mid-face, jaw, chin, lip — so the face flows again as a single, continuous surface.",
-          image: haMakeoverBaImg,
+          image: liquidFaceliftBdaImg,
           largeText: true,
           eyebrow: "Continuity · The aim",
           slides: [
@@ -569,13 +570,13 @@ const categories: Category[] = [
         href: "/treatments/ha-makeover/",
         bg: "bg-gradient-to-br from-[#1a1a1a] via-[#2a2010] to-[#3a2d10]",
         badge: "Signature",
-        image: haMakeoverBaImg,
+        image: liquidFaceliftBdaImg,
         frontImage: frontHaImg,
         frontImageFit: "cover",
         flip: {
           back: "Bone-deep hyaluronic acid placement at temple, cheek and jaw rebuilds the structural scaffold of the face — so the mid-face lifts from above, not below. The keystone of the non-surgical facelift.",
           imagePosition: "top",
-          image: haMakeoverBaImg,
+          image: liquidFaceliftBdaImg,
         },
       },
       {
@@ -1296,9 +1297,11 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                         type="button"
                         onClick={goNext}
                         aria-label="Next step"
-                        className="w-8 h-8 rounded-full bg-[#C9A050] text-black flex items-center justify-center hover:scale-[1.03] transition"
+                        className="relative w-9 h-9 rounded-full bg-[#C9A050] text-black flex items-center justify-center hover:scale-[1.06] transition shadow-[0_0_0_0_rgba(201,160,80,0.7)] animate-[pulse-glow_1.8s_ease-in-out_infinite]"
+                        style={{ animation: "pulse-glow 1.8s ease-in-out infinite" }}
                       >
-                        <ArrowUpRight className="w-3.5 h-3.5 rotate-45" />
+                        <span aria-hidden className="absolute inset-0 rounded-full bg-[#C9A050]/60 animate-ping" />
+                        <ArrowUpRight className="relative w-4 h-4 rotate-45" />
                       </button>
                     )}
                   </div>
