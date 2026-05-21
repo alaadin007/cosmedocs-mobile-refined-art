@@ -86,13 +86,16 @@ const TearTroughFiller = () => {
       {
         "@type": "MedicalProcedure",
         name: "Tear Trough Filler Treatment",
-        alternateName: "Under Eye Filler",
+        alternateName: ["Under Eye Filler", "Under-Eye Dermal Filler", "Tear Trough Rejuvenation"],
         description: "Minimally invasive under-eye treatment using premium hyaluronic acid to restore volume, reduce dark circles, and minimise puffiness.",
         url: "https://www.cosmedocs.com/treatments/tear-trough-filler/",
-        procedureType: "NoninvasiveProcedure",
+        image: `https://www.cosmedocs.com${tearTroughHeroTrio}`,
+        procedureType: "https://schema.org/NoninvasiveProcedure",
         bodyLocation: "Under eye, tear trough region",
         followup: "Review appointment recommended at 2 weeks post-treatment.",
         howPerformed: "Premium hyaluronic acid filler carefully injected into the tear trough area using cannula or needle technique, with topical anaesthetic for comfort.",
+        preparation: "Avoid blood-thinning medications, alcohol, and intense exercise 24–48 hours before treatment where clinically appropriate.",
+        expectedPrognosis: "Immediate brightening of the under-eye area with settled results visible at 2 weeks. Longevity typically 12–18 months.",
       },
       {
         "@type": "Offer",
@@ -131,13 +134,25 @@ const TearTroughFiller = () => {
   return (
     <>
       <Helmet>
-        <title>Tear Trough Filler Treatment | Under Eye | Harley Street Doctors</title>
-        <meta name="description" content="Doctor-led tear trough filler from £475. Reduce dark circles, under-eye hollows, and eye bags at our Harley Street clinic. Natural results since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
-        <meta property="og:title" content="Tear Trough Filler Treatment | Under Eye | Harley Street Doctors" />
-        <meta property="og:description" content="Doctor-led tear trough filler from £475. Reduce dark circles and under-eye hollows at our Harley Street clinic." />
+        <title>Tear Trough Filler London from £475 | Under-Eye | Harley Street</title>
+        <meta name="description" content="Doctor-led tear trough filler in London from £475. Reduce dark circles, under-eye hollows & eye bags at our Harley Street clinic. Natural, invisible results since 2007. Book a consultation." />
+        <meta name="keywords" content="tear trough filler London, under eye filler, dark circles treatment, under-eye hollows, tear trough cannula, Harley Street tear trough, eye bag filler, hyaluronic acid under eye" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/tear-trough-filler/" data-rh="true" />
+        <meta property="og:title" content="Tear Trough Filler London from £475 | Harley Street Doctors" />
+        <meta property="og:description" content="Doctor-led under-eye filler at Harley Street. Reduce dark circles & hollows — natural, invisible results since 2007." />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/tear-trough-filler/" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Cosmedocs" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:image" content={`https://www.cosmedocs.com${tearTroughHeroTrio}`} />
+        <meta property="og:image:alt" content="Tear trough filler patient assessment trio at Cosmedocs Harley Street" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tear Trough Filler London from £475 | Cosmedocs Harley Street" />
+        <meta name="twitter:description" content="Doctor-led under-eye filler. Natural, invisible correction of dark circles & hollows." />
+        <meta name="twitter:image" content={`https://www.cosmedocs.com${tearTroughHeroTrio}`} />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="Harley Street, London" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>
 
