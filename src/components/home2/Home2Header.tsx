@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Calendar, Search, X, ChevronRight } from "lucide-react";
+import { ChevronDown, Calendar, Search, X, ChevronRight, Instagram, Facebook, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "@/components/LanguageSelector";
