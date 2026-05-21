@@ -2497,20 +2497,37 @@ const Home3 = () => {
               className="relative"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#C9A050]/20">
-                <img
-                  src={heroHarleyStreet}
-                  alt="Cosmedocs doctor on Harley Street, City of Westminster, London W1"
-                  width={1920}
-                  height={1280}
-                  loading="eager"
-                  fetchPriority="high"
-                  className="w-full h-full object-cover aspect-[4/5] md:aspect-[5/6]"
-                />
+                <div className="relative aspect-[4/5] md:aspect-[5/6] w-full">
+                  {HERO_SLIDES.map((slide, i) => (
+                    <img
+                      key={slide.src}
+                      src={slide.src}
+                      alt={slide.alt}
+                      width={1920}
+                      height={1280}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      fetchPriority={i === 0 ? "high" : "low"}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
+                        i === heroIdx ? "opacity-100" : "opacity-0"
+                      }`}
+                    />
+                  ))}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
                   <div className="text-white">
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-[#C9A050]">Harley Street · W1</p>
-                    <p className="text-sm md:text-base font-light">Doctor-led aesthetic medicine, since 2007</p>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-[#C9A050]">{HERO_SLIDES[heroIdx].eyebrow}</p>
+                    <p className="text-sm md:text-base font-light">{HERO_SLIDES[heroIdx].caption}</p>
+                  </div>
+                  <div className="flex gap-1.5" aria-hidden="true">
+                    {HERO_SLIDES.map((_, i) => (
+                      <span
+                        key={i}
+                        className={`h-1 rounded-full transition-all duration-500 ${
+                          i === heroIdx ? "w-6 bg-[#C9A050]" : "w-2 bg-white/40"
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
