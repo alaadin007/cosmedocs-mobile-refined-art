@@ -8,6 +8,7 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import TearTroughFillerSidebar from "@/components/tear-trough/TearTroughFillerSidebar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import tearTroughPreview from "@/assets/tear-trough-gallery-2.jpeg";
+import tearTroughHeroTrio from "@/assets/tear-trough-hero-trio.jpg";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 
 const TearTroughFiller = () => {
@@ -162,7 +163,7 @@ const TearTroughFiller = () => {
               currentPage="Tear Trough Filler"
             />
 
-            <div className="flex items-center justify-between pt-12 pb-4">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center pt-12 pb-4">
               <div className="max-w-2xl">
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}
@@ -202,6 +203,24 @@ const TearTroughFiller = () => {
                   </span>
                 </motion.div>
               </div>
+
+              <motion.figure
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                className="relative rounded-2xl overflow-hidden border border-[#C9A050]/20 bg-neutral-950 shadow-[0_30px_80px_-30px_rgba(201,160,80,0.35)]"
+              >
+                <img
+                  src={tearTroughHeroTrio}
+                  alt="Real patient under-eye assessment trio — front, frontal close-up, and three-quarter view — tear trough filler consultation at Cosmedocs Harley Street"
+                  loading="eager"
+                  className="w-full h-auto block"
+                />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <figcaption className="absolute left-4 bottom-3 text-[10px] tracking-[0.3em] uppercase text-white/70">
+                  Cosmedocs · Patient assessment
+                </figcaption>
+              </motion.figure>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
