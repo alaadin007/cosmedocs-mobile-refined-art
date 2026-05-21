@@ -457,7 +457,7 @@ export default function FaceBotoxLight() {
                   <div className="grid md:grid-cols-2 gap-4 mb-6">
                     {treatmentAreaCards.map((card) => (
                       <div key={card.title} className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
-                        <p className={`text-sm font-medium ${textH}/70 mb-2`}>{card.title}</p>
+                        <p className={`text-base font-semibold ${textH} mb-2`}>{card.title}</p>
                         <p className={`${textMuted} text-xs font-light mb-3`}>{card.description}</p>
                         <ul className="space-y-1.5">
                           {card.areas.map((area) => (
