@@ -143,6 +143,53 @@ const sectionReveal = {
   transition: { duration: 0.65, ease: "easeOut" as const },
 };
 
+const ProcessStepper = ({ steps }: { steps: { title: string; body: string }[] }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  return (
+    <ol className="space-y-3">
+      {steps.map((step, index) => {
+        const isOpen = openIndex === index;
+        return (
+          <li
+            key={step.title}
+            className={`rounded-2xl border bg-card transition-colors ${isOpen ? "border-luxury-gold/60 border-l-4 border-l-luxury-gold" : "border-border"}`}
+          >
+            <button
+              type="button"
+              onClick={() => setOpenIndex(isOpen ? null : index)}
+              className="flex w-full items-center gap-4 p-4 text-left min-h-[52px]"
+              aria-expanded={isOpen}
+            >
+              <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm transition-colors ${isOpen ? "bg-luxury-gold text-background" : "bg-secondary text-luxury-gold"}`}>
+                {index + 1}
+              </span>
+              <span className={`flex-1 text-sm font-medium ${isOpen ? "text-luxury-gold" : "text-card-foreground"}`}>
+                {step.title}
+              </span>
+              <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? "rotate-180" : ""}`} />
+            </button>
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="px-4 pb-4 pl-[4.5rem] text-sm leading-relaxed text-muted-foreground">
+                    {step.body}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </li>
+        );
+      })}
+    </ol>
+  );
+};
+
 const MasseterBotox = () => {
   const pageTitle = "Masseter Botox London | Jaw Slimming & Bruxism";
   const pageDescription =
