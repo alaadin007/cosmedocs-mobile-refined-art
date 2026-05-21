@@ -2290,7 +2290,27 @@ const handleQuickJump = (id: string) => (e: React.MouseEvent) => {
 
 /* ---------- Page -------------------------------------------------------- */
 
+const HERO_SLIDES = [
+  {
+    src: heroHarleyStreet,
+    alt: "Cosmedocs doctor on Harley Street, City of Westminster, London W1",
+    eyebrow: "Harley Street · W1",
+    caption: "Doctor-led aesthetic medicine, since 2007",
+  },
+  {
+    src: heroMaleTreatment,
+    alt: "Cosmedocs doctor performing a precise injectable treatment on a male patient",
+    eyebrow: "Bold · Natural · Always Your Way",
+    caption: "Aesthetics for men — invisible, never exaggerated",
+  },
+];
+
 const Home3 = () => {
+  const [heroIdx, setHeroIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setHeroIdx((i) => (i + 1) % HERO_SLIDES.length), 5000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <>
       <Helmet>
