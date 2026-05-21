@@ -117,8 +117,8 @@ const MasseterProgressionSeries = ({
 
         {/* Horizontal scrolling series */}
         <div
-          className="-mx-4 sm:-mx-6 px-4 sm:px-6 overflow-x-auto overflow-y-hidden pb-4 snap-x scrollbar-hide touch-pan-x overscroll-x-contain"
-          style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch", touchAction: "pan-x" }}
+          className="-mx-4 sm:-mx-6 px-4 sm:px-6 overflow-x-auto overflow-y-hidden pb-4 snap-x scrollbar-hide touch-auto overscroll-x-contain"
+          style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch", touchAction: "pan-x pan-y" }}
         >
           <div className="flex gap-5 min-w-min">
             {masseterProgressionStages.map((s, i) => (
