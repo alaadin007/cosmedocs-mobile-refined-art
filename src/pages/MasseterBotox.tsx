@@ -655,7 +655,7 @@ const MasseterBotox = () => {
           </div>
         </section>
 
-        <section className="border-y border-border bg-secondary px-4 py-14 sm:px-6 lg:py-20">
+        <section className="border-y border-border bg-secondary px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.24em] text-luxury-gold">Your consultation begins here</p>
             <h2 className="mt-4 text-3xl font-light leading-tight text-foreground sm:text-4xl">
