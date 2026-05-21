@@ -1009,35 +1009,69 @@ export default function FaceBotoxLight() {
               </div>
             </div>
 
+            {/* Deep static lines clinical note */}
+            <div className="mb-12 p-6 bg-[#FAFAF8] border border-gray-200 rounded-2xl flex flex-col sm:flex-row gap-5 items-start">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button
+                    type="button"
+                    aria-label="Enlarge clinical image — deep static line treatment"
+                    className="shrink-0 group relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden border border-gray-200 hover:border-[#C9A050]/60 transition-all"
+                  >
+                    <img
+                      src={deepStaticLinesImg}
+                      alt="Cosmedocs Botox patient — deep static forehead lines combined with skin needling, before and after"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <span className="absolute bottom-1 right-1 text-[9px] uppercase tracking-widest bg-black/60 text-white px-1.5 py-0.5 rounded">Tap to enlarge</span>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-3xl p-0 bg-black border-none">
+                  <img
+                    src={deepStaticLinesImg}
+                    alt="Cosmedocs Botox patient — deep static forehead lines, combined treatment, before and after"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </DialogContent>
+              </Dialog>
+              <div className="flex-1">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-2 font-light">A note on deep static lines</p>
+                <p className="text-sm text-gray-700 leading-relaxed font-light">
+                  Deep static lines — those etched into the skin even at rest — may require additional treatment alongside Botox for quicker resolution. The patient pictured had been having Botox for some time; combining anti-wrinkle treatment with skin needling, polynucleotides or resurfacing accelerates softening of the line itself. Botox quiets the muscle; the etched line above it often needs its own course of work.
+                </p>
+              </div>
+            </div>
+
             <h3 className={`text-2xl font-light ${textH} mb-6`}>Frequently asked questions about Botox in London</h3>
             <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="cost">
-                <AccordionTrigger className="text-left text-base font-light">How much does Botox cost in London?</AccordionTrigger>
-                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+              <AccordionItem value="cost" className="border-gray-200">
+                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">How much does Botox cost in London?</AccordionTrigger>
+                <AccordionContent className="text-gray-700 font-light leading-relaxed">
                   At Cosmedocs Harley Street, Botox in London starts from £175 for a single area and £295 for three areas. Booked alongside a filler appointment, additional Botox areas are £50 each. All pricing is doctor-led — there is no upcharge for seeing a registered doctor rather than a non-medical practitioner.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="best">
-                <AccordionTrigger className="text-left text-base font-light">Where is the best place to get Botox in London?</AccordionTrigger>
-                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+              <AccordionItem value="best" className="border-gray-200">
+                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Where is the best place to get Botox in London?</AccordionTrigger>
+                <AccordionContent className="text-gray-700 font-light leading-relaxed">
                   Look for three things: a GMC-registered medical doctor performing the assessment and injection, a clinic with a long track record on Harley Street or another established medical address, and a transparent pricing structure with no hidden consultation fees. Cosmedocs has practised on Harley Street since 2007 and offers complimentary doctor consultations.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="safe">
-                <AccordionTrigger className="text-left text-base font-light">Is Botox in London safe?</AccordionTrigger>
-                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+              <AccordionItem value="safe" className="border-gray-200">
+                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Is Botox in London safe?</AccordionTrigger>
+                <AccordionContent className="text-gray-700 font-light leading-relaxed">
                   Botox is one of the most extensively studied medications in modern medicine. Safety in London hinges on practitioner training and clinic standards. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments. Every patient is assessed by a GMC-registered doctor before any product is drawn.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="duration">
-                <AccordionTrigger className="text-left text-base font-light">How long does Botox last?</AccordionTrigger>
-                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+              <AccordionItem value="duration" className="border-gray-200">
+                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">How long does Botox last?</AccordionTrigger>
+                <AccordionContent className="text-gray-700 font-light leading-relaxed">
                   Most patients enjoy results for three to four months. With consistent maintenance, the treated muscle re-trains and intervals can extend comfortably to four to six months — a quieter, more economical maintenance pattern.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="natural">
-                <AccordionTrigger className="text-left text-base font-light">Will my Botox look natural?</AccordionTrigger>
-                <AccordionContent className={`${textBody} font-light leading-relaxed`}>
+              <AccordionItem value="natural" className="border-gray-200">
+                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Will my Botox look natural?</AccordionTrigger>
+                <AccordionContent className="text-gray-700 font-light leading-relaxed">
                   Our aesthetics is invisible art — bold, natural, always your way. Cosmedocs doctors are trained to dose conservatively, preserve expression and place product with anatomical precision. The intent is refreshment, not a frozen brow. If you prefer a more pronounced result, that is a conversation, not a default.
                 </AccordionContent>
               </AccordionItem>
