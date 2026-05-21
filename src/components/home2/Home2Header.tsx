@@ -440,6 +440,45 @@ export default function Home2Header() {
               </Button>
             </div>
           </div>
+
+          {/* Secondary row — smaller links + social icons */}
+          <div className="hidden lg:flex items-center justify-end gap-4 h-5 -mt-1">
+            {secondaryNavItems.map((item) => (
+              <Link
+                key={item.link}
+                to={item.link}
+                className={`text-[11px] font-light tracking-[0.08em] uppercase transition-colors duration-500 ${
+                  isScrolled
+                    ? 'text-gray-500 hover:text-gray-900'
+                    : 'text-white/55 hover:text-white'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <span className={`h-3 w-px ${isScrolled ? 'bg-gray-300' : 'bg-white/20'}`} aria-hidden="true" />
+            <div className="flex items-center gap-2.5">
+              {socialLinks.map((s) => {
+                const Icon = s.icon === 'instagram' ? Instagram : s.icon === 'facebook' ? Facebook : Youtube;
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    aria-label={`Cosmedocs on ${s.label}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`transition-colors duration-500 ${
+                      isScrolled
+                        ? 'text-gray-500 hover:text-[#C9A050]'
+                        : 'text-white/55 hover:text-[#C9A050]'
+                    }`}
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </header>
 
