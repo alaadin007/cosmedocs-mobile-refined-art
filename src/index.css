@@ -143,3 +143,61 @@
   50%, 90% { transform: rotateY(180deg); }
   100% { transform: rotateY(360deg); }
 }
+
+/* ============================================================
+   Botox hub — mobile refinement pass
+   Typography, spacing, contrast, CTA prominence (≤768px)
+   ============================================================ */
+.botox-mobile-refine {
+  /* Uppercase tracking site-pattern for labels */
+}
+
+@media (max-width: 768px) {
+  .botox-mobile-refine p,
+  .botox-mobile-refine li {
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
+  /* Darken mid-grey body for WCAG AA */
+  .botox-mobile-refine .text-gray-600,
+  .botox-mobile-refine .text-gray-500,
+  .botox-mobile-refine .text-muted-foreground {
+    color: #2a2a2a !important;
+  }
+  /* Slightly more letter-spacing on uppercase labels & buttons */
+  .botox-mobile-refine .uppercase,
+  .botox-mobile-refine button,
+  .botox-mobile-refine .btn,
+  .botox-mobile-refine [class*="tracking-"] {
+    letter-spacing: 0.01em;
+  }
+  /* More breathing room between stacked sections */
+  .botox-mobile-refine section {
+    padding-top: clamp(2.5rem, 8vw, 4rem);
+    padding-bottom: clamp(2.5rem, 8vw, 4rem);
+  }
+  /* Subtle divider before FAQ-like sections */
+  .botox-mobile-refine section[id*="faq" i],
+  .botox-mobile-refine section[aria-label*="faq" i],
+  .botox-mobile-refine section[aria-labelledby*="faq" i] {
+    border-top: 1px solid rgba(0,0,0,0.06);
+    margin-top: 1.25rem;
+  }
+  /* Lift CTAs: full-width primary buttons on mobile */
+  .botox-mobile-refine a[href*="med.as.me"] > button,
+  .botox-mobile-refine a[href*="book"] > button,
+  .botox-mobile-refine button[data-cta="book"] {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+  }
+  /* Heading hierarchy: sharpen h2 weight contrast vs body */
+  .botox-mobile-refine h2 {
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+  .botox-mobile-refine h3 {
+    font-weight: 500;
+  }
+}

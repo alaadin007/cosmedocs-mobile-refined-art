@@ -114,7 +114,7 @@ export default function FaceBotoxLight() {
         <script type="application/ld+json">{JSON.stringify(botoxLondonFaqSchema)}</script>
       </Helmet>
 
-      <div className={`${bg} overflow-x-hidden`}>
+      <div className={`${bg} overflow-x-hidden botox-mobile-refine`}>
         {/* Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Breadcrumb items={[{ label: t('breadcrumbTreatments', 'Treatments'), path: '/treatments' }]} currentPage={t('breadcrumbBotox', 'Botox')} variant="light" />
