@@ -402,13 +402,34 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   );
 };
 
-// Helper function to clean markdown from AI responses
+// Helper function to strip markdown from AI responses for clean chat rendering
 const formatMessage = (text: string): string => {
-  let formatted = text.replace(/\*\*(.*?)\*\*/g, "$1");
-  formatted = formatted.replace(/__(.*?)__/g, "$1");
-  formatted = formatted.replace(/\*(.*?)\*/g, "$1");
-  formatted = formatted.replace(/_(.*?)_/g, "$1");
-  return formatted;
+  let f = text;
+  // Code fences and inline code
+  f = f.replace(/```[\s\S]*?```/g, (m) => m.replace(/```\w*\n?/g, "").replace(/```/g, "").trim());
+  f = f.replace(/`([^`]+)`/g, "$1");
+  // Headings (###, ##, #) at line start
+  f = f.replace(/^\s{0,3}#{1,6}\s+/gm, "");
+  // Blockquotes
+  f = f.replace(/^\s{0,3}>\s?/gm, "");
+  // Horizontal rules
+  f = f.replace(/^\s*([-*_])\1{2,}\s*$/gm, "");
+  // Bullet markers (*, -, +) -> clean bullet
+  f = f.replace(/^\s*[\*\-\+]\s+/gm, "• ");
+  // Numbered lists tidy
+  f = f.replace(/^\s*(\d+)\.\s+/gm, "$1. ");
+  // Bold/italic
+  f = f.replace(/\*\*([^\*]+)\*\*/g, "$1");
+  f = f.replace(/__([^_]+)__/g, "$1");
+  f = f.replace(/\*([^\*\n]+)\*/g, "$1");
+  f = f.replace(/(^|[^a-zA-Z0-9])_([^_\n]+)_/g, "$1$2");
+  // Links [text](url) -> text
+  f = f.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+  // Stray remaining # or * at line start
+  f = f.replace(/^[#\*]+\s*/gm, "");
+  // Collapse 3+ blank lines
+  f = f.replace(/\n{3,}/g, "\n\n");
+  return f.trim();
 };
 
 export default FloatingChatBot;
