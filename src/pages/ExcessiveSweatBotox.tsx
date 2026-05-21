@@ -162,10 +162,28 @@ const ExcessiveSweatBotox = () => {
         ═══════════════════════════════════════════ */}
         <section className="relative overflow-hidden bg-black pt-0 pb-20">
           {/* Subtle gold accent line */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent z-10" />
+
+          {/* Background video — sits behind content, low opacity for a quiet ambient feel */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <video
+              src="/videos/underarm-botox-hero.mp4"
+              poster="/images/underarm-botox-hero-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover opacity-25"
+            />
+            {/* Tint to keep text legible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
+          </div>
 
           {/* Flowing background orb */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
             <motion.div
               className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
               style={{
