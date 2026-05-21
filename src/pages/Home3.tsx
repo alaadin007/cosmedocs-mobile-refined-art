@@ -68,6 +68,7 @@ import botoxFineNeedleImg from "@/assets/botox-fine-needle-card.jpg";
 import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 import heroHarleyStreet from "@/assets/hero/harley-street-cosmedocs.jpg";
+import heroMaleTreatment from "@/assets/hero/cosmedocs-male-treatment.jpg";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
