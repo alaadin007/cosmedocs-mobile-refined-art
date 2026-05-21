@@ -775,12 +775,12 @@ export default function FaceBotoxLight() {
                     Real Patient <span className={`${goldText} font-light`}>Results</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <div className="grid grid-cols-2 gap-4 mb-5">
+                  <div className="grid grid-cols-1 gap-4 mb-5">
                     <div className={`rounded-xl overflow-hidden border ${cardBorder}`}>
-                      <img src="/images/before-after/botox/frown-lines-before-after-preview.jpg" alt="Frown lines before and after Botox treatment" className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                      <img src="/images/before-after/botox/frown-lines-before-after-preview.jpg" alt="Frown lines before and after Botox treatment" className="w-full aspect-square object-cover" loading="lazy" />
                     </div>
                     <div className={`rounded-xl overflow-hidden border ${cardBorder}`}>
-                      <img src="/images/before-after/botox/forehead-lines-before-after-preview.jpg" alt="Forehead lines before and after Botox treatment" className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                      <img src="/images/before-after/botox/forehead-lines-before-after-preview.jpg" alt="Forehead lines before and after Botox treatment" className="w-full aspect-square object-cover" loading="lazy" />
                     </div>
                   </div>
                   <p className={`${textMuted} text-xs mb-5 font-light`}>
