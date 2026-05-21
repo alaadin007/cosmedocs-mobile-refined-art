@@ -122,10 +122,19 @@ const navItems = [
   { label: "Pricing", link: "/treatments/" },
   { label: "Concerns", link: "/concerns/" },
   { label: "Gallery", link: "/before-after/" },
-  { label: "Smart Aesthetics", link: "/aesthetic-treatments-made-easy/" },
-  { label: "Blog", link: "/blog/" },
   { label: "About", link: "/about/" },
   { label: "Contact", link: "/contact/" },
+];
+
+const secondaryNavItems = [
+  { label: "Smart Aesthetics", link: "/aesthetic-treatments-made-easy/" },
+  { label: "Blog", link: "/blog/" },
+];
+
+const socialLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/cosmedocs/", icon: "instagram" as const },
+  { label: "Facebook", href: "https://www.facebook.com/cosmedocs", icon: "facebook" as const },
+  { label: "YouTube", href: "https://www.youtube.com/@cosmedocs", icon: "youtube" as const },
 ];
 
 export default function Home2Header() {
