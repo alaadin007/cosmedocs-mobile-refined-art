@@ -116,11 +116,8 @@ const MasseterProgressionSeries = ({
         </motion.div>
 
         {/* Horizontal scrolling series */}
-        <div
-          className="-mx-4 sm:-mx-6 px-4 sm:px-6 overflow-x-auto overflow-y-hidden pb-4 snap-x scrollbar-hide touch-auto overscroll-x-contain"
-          style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch", touchAction: "pan-x pan-y" }}
-        >
-          <div className="flex gap-5 min-w-min">
+        <div className="-mx-4 sm:-mx-6">
+          <div className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-4 sm:px-6 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {masseterProgressionStages.map((s, i) => (
               <motion.figure
                 key={s.src}
@@ -128,7 +125,7 @@ const MasseterProgressionSeries = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="snap-start shrink-0 w-[78vw] xs:w-[72vw] sm:w-[60vw] md:w-[44vw] lg:w-[420px] xl:w-[460px] max-w-[460px] rounded-2xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-b from-[#0a0a0a] to-black flex flex-col"
+                className="shrink-0 w-[72vw] sm:w-[380px] md:w-[420px] max-w-[460px] rounded-2xl overflow-hidden border border-[#C9A050]/15 bg-gradient-to-b from-[#0a0a0a] to-black flex flex-col"
               >
                 <div className={`relative w-full ${i === 0 ? "bg-black" : ""}`}>
                   <img
