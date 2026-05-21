@@ -13,7 +13,7 @@ import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
 import SocialMetaSync from "./components/SocialMetaSync";
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary, { RouteResetErrorBoundary } from "./components/ErrorBoundary";
 
 // Eager load critical pages only
 import Index from "./pages/Index";
