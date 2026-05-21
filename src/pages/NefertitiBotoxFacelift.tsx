@@ -12,6 +12,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import LiquidGlassRelatedTreatments from "@/components/LiquidGlassRelatedTreatments";
 import { Link } from "react-router-dom";
 import nefertitiPlatysmaCordsBA from "@/assets/nefertiti-lift-platysma-cords-before-after.jpg";
+import strongPlatysmalCordExample from "@/assets/nefertiti-strong-platysmal-cord-example.jpg";
 
 export default function NefertitiBotoxFacelift() {
   const [isRelatedTreatmentsOpen, setIsRelatedTreatmentsOpen] = useState(false);
@@ -946,6 +947,19 @@ export default function NefertitiBotoxFacelift() {
                 <p>
                   The platysma is a broad, thin sheet of muscle that runs from the upper chest and clavicle, fans up over the front of the neck and inserts into the lower border of the mandible, the modiolus and the lower face. With age, repeated activation, weight change or genetic predominance, its medial fibres can hypertrophy into two visible vertical bands — the <strong>platysmal cords</strong> you see standing out in our before-and-after image above. When the platysma over-contracts it also pulls the corners of the mouth and jawline down (a "<em>down-pulling muscle</em>"), erodes the cervico-mental angle and blunts what surgeons call the mandibular border. Botox injected at multiple low-dose points along the cord and at the marginal mandibular trajectory chemically denervates those fibres for 12–16 weeks, lifting the jawline by subtraction rather than addition.
                 </p>
+
+                <figure className="my-8">
+                  <img
+                    src={strongPlatysmalCordExample}
+                    alt="Clinical example of very strong vertical platysmal cords (bands) standing out on the anterior neck of a female patient — a textbook indication for the Nefertiti Lift"
+                    loading="lazy"
+                    className="w-full rounded-lg shadow-lg"
+                  />
+                  <figcaption className="text-sm text-muted-foreground mt-3 italic">
+                    Example of a <strong>very strong platysmal cord</strong>: note the prominent vertical band descending from the jawline down the anterior neck, with deep shadowing along the cervico-mental angle. This degree of dynamic banding is precisely the presentation the Nefertiti Lift was designed to address — micro-dosed Botox along the cord and inferior mandibular border softens the band without compromising natural neck movement.
+                  </figcaption>
+                </figure>
+
 
                 <h3>What our before-and-after image actually shows</h3>
                 <p>
