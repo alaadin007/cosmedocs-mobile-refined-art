@@ -747,24 +747,32 @@ export default function FaceBotoxLight() {
                     Preparation & <span className={`${goldText} font-light`}>Aftercare</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
-                      <p className={`text-xs font-medium ${textH}/60 mb-3`}>Before Treatment</p>
-                      <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
-                        {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Arrive with clean, makeup-free skin", "Inform practitioner of all medications"].map((t) => (
-                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
-                        ))}
-                      </ul>
+                  <ExpandableSection
+                    preview={
+                      <p className={`${textBody} text-sm leading-relaxed font-light`}>
+                        A few simple steps before and after your appointment keep results clean and recovery quick. Tap below to read the full checklist.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-4 mt-4">
+                      <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
+                        <p className={`text-xs font-medium ${textH}/60 mb-3`}>Before Treatment</p>
+                        <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
+                          {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Arrive with clean, makeup-free skin", "Inform practitioner of all medications"].map((t) => (
+                            <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
+                        <p className={`text-xs font-medium ${textH}/60 mb-3`}>After Treatment</p>
+                        <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
+                          {["Stay upright for 4 hours post-treatment", "Avoid touching or rubbing treated areas", "Skip exercise, saunas, and alcohol for 24 hours", "Avoid facials and massages for 2 weeks"].map((t) => (
+                            <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
-                      <p className={`text-xs font-medium ${textH}/60 mb-3`}>After Treatment</p>
-                      <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
-                        {["Stay upright for 4 hours post-treatment", "Avoid touching or rubbing treated areas", "Skip exercise, saunas, and alcohol for 24 hours", "Avoid facials and massages for 2 weeks"].map((t) => (
-                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
