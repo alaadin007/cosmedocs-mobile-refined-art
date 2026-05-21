@@ -919,45 +919,97 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Hidden SEO content for search engines - naturally incorporating target keywords */}
-        <div className="sr-only" aria-hidden="true">
-          <article>
-            <h2>Comprehensive Guide to Nefertiti Lift and Neck Botox Treatments</h2>
-            
-            <section>
-              <h3>Understanding Botox on Wrinkles and Neck Treatments</h3>
-              <p>The nefertiti lift has revolutionised how we approach neck botox treatments for facial contouring. This sophisticated procedure uses botox on wrinkles and neck bands to create a lifted, more youthful appearance. When considering botox neck before and after results, patients consistently report remarkable improvements in jawline definition and reduced turkey neck appearance.</p>
-              
-              <p>Botox turkey neck treatment specifically targets the platysma muscle bands that create vertical lines and contribute to neck sagging. The botox for neck sagging before and after transformations demonstrate how strategic injections can dramatically improve the lower face and neck contour. The nefertiti lift technique precisely addresses these concerns through carefully placed injections.</p>
-            </section>
-            
-            <section>
-              <h3>The Nefertiti Neck Lift Procedure</h3>
-              <p>The nefertiti neck lift before and after results speak volumes about the effectiveness of this treatment. Unlike traditional surgical procedures, nefertiti botox offers a non-invasive solution for those seeking neck lift botox alternatives. The jowl nefertiti lift specifically targets the lower face, creating a subtle yet noticeable improvement in facial contours.</p>
-              
-              <p>During a botox nefertiti lift session, our practitioners use precise nefertiti lift injection points along the jawline and neck. The nefertiti neck lift botox technique involves strategic placement to relax the downward-pulling platysma muscle, allowing the natural lifting muscles to create better definition. This botox for turkey neck approach delivers natural-looking results without surgery.</p>
-            </section>
-            
-            <section>
-              <h3>Before and After: Real Results</h3>
-              <p>Examining botox on neck before and after photos reveals the transformative power of this treatment. Turkey neck botox has become increasingly popular for addressing age-related changes in the neck area. The botox for neck sagging before and after comparisons consistently show smoother neck contours and improved jawline definition.</p>
-              
-              <p>The jowls botox for neck sagging technique specifically targets the transition zone between the face and neck. Our nefertiti lift botox approach creates a harmonious improvement that looks completely natural. Patients seeking nefertiti botox treatments appreciate the minimal downtime and immediate return to daily activities.</p>
-            </section>
-            
-            <section>
-              <h4>Treatment Benefits and Injection Technique</h4>
-              <p>The jowl nefertiti lift addresses multiple concerns simultaneously, making it an efficient treatment option. The nefertiti neck lift utilises precise botox neck lift techniques that have been refined over years of practice. Understanding the botox nefertiti lift injection points is crucial for achieving optimal results.</p>
-              
-              <p>Our practitioners specialise in the nefertiti lift injection points that deliver the most natural and effective outcomes. The treatment typically takes 15-20 minutes, with results visible within 3-5 days. The neck lift botox procedure requires minimal discomfort and offers maximum impact for those seeking jawline enhancement and neck smoothing.</p>
-            </section>
-            
-            <section>
-              <h4>Why Choose Cosmedocs for Your Treatment</h4>
-              <p>At Cosmedocs, our aesthetics philosophy embodies invisible art – treatments that are bold, natural, and always your way. Our approach to aesthetic medicine is minimal, quiet not loud, invisible not exaggerated. We believe in transformation that speaks without saying a word, delivering results that enhance your natural beauty whilst maintaining complete authenticity.</p>
-            </section>
-          </article>
-        </div>
+        {/* Long-form clinical & competitive briefing — visible, indexable, no sr-only */}
+        <section className="py-20 bg-black">
+          <div className="page-container max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-xs uppercase tracking-[0.3em] text-purple-300/70 mb-3">A clinical &amp; competitive briefing</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
+                The Nefertiti Lift, properly explained — a doctor-led guide to Botox facelift and platysmal cord reduction in London
+              </h2>
+
+              <article className="prose prose-invert prose-lg max-w-none text-gray-300 space-y-6
+                                  prose-headings:text-white prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4
+                                  prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
+                                  prose-a:text-purple-300 prose-strong:text-white prose-li:my-1">
+
+                <p>
+                  The Nefertiti Lift is the most-searched non-surgical neck-and-jaw treatment in the UK, and also the most commonly misrepresented. Named after the sculpted profile of Queen Nefertiti, the procedure was first described by Dr Philippe Levy in 2007 in <em>Aesthetic Surgery Journal</em>, and uses precisely targeted botulinum toxin type-A injections along the inferior border of the mandible and into the upper fibres of the platysma to release the downward pull of that muscle on the lower face. The brief is simple: silence the depressor, let the elevators win, and the jawline reads sharper while the vertical neck cords soften. At Cosmedocs in London — a doctor-led Harley Street clinic that has performed over one million injections since 2007 — we treat the Nefertiti Lift as a careful piece of anatomy, not a marketing line.
+                </p>
+
+                <h3>Why the platysma matters: anatomy in plain English</h3>
+                <p>
+                  The platysma is a broad, thin sheet of muscle that runs from the upper chest and clavicle, fans up over the front of the neck and inserts into the lower border of the mandible, the modiolus and the lower face. With age, repeated activation, weight change or genetic predominance, its medial fibres can hypertrophy into two visible vertical bands — the <strong>platysmal cords</strong> you see standing out in our before-and-after image above. When the platysma over-contracts it also pulls the corners of the mouth and jawline down (a "<em>down-pulling muscle</em>"), erodes the cervico-mental angle and blunts what surgeons call the mandibular border. Botox injected at multiple low-dose points along the cord and at the marginal mandibular trajectory chemically denervates those fibres for 12–16 weeks, lifting the jawline by subtraction rather than addition.
+                </p>
+
+                <h3>What our before-and-after image actually shows</h3>
+                <p>
+                  The two-panel image at the top of this page is a real Cosmedocs patient photographed before and approximately four weeks after a single Nefertiti session. The upper panel shows two strong vertical platysmal cords descending from the angle of the mandible to the sternal notch, with shadowing across the supraclavicular hollow. In the lower panel the cords are visibly softer, the medial neck reads smoother, and the décolletage no longer pulls the eye away from the face. Crucially the patient still moves naturally — this is platysmal <em>relaxation</em>, not paralysis. That distinction is the entire art of the Nefertiti Lift.
+                </p>
+
+                <h3>Technique: how Cosmedocs delivers a Nefertiti Lift</h3>
+                <p>
+                  We use 15–30 units of <strong>premium FDA- and MHRA-approved botulinum toxin</strong> (most commonly Botox® / Vistabel®, occasionally Bocouture® or Azzalure® on patient request) delivered through ultra-fine 32G needles. Injection points include 4–6 micro-doses along each visible platysmal cord, 5–7 points along the inferior mandibular border roughly 1 cm below the jaw, and conservative dosing into the depressor anguli oris where the corners of the mouth are being pulled down. Depth is intentionally superficial — sub-dermal to intra-muscular — to avoid diffusion into the deep cervical strap muscles, which is the safety boundary every responsible practitioner respects.
+                </p>
+                <p>
+                  The session takes <strong>15–20 minutes</strong>, requires no anaesthesia beyond optional topical cream, and produces no meaningful downtime. Onset is visible at day 3–5 and peaks by day 14. We see patients back at two weeks to fine-tune any asymmetry at no extra charge. Results last <strong>3–4 months</strong> on a first treatment and typically extend to <strong>4–6 months</strong> once the platysma has been retrained over two or three cycles, which is consistent with published clinical data in <em>Aesthetic Surgery Journal</em> and PMC-indexed dermatology literature.
+                </p>
+
+                <h3>Who is — and isn't — a candidate</h3>
+                <p>
+                  The Nefertiti Lift works best on patients with <strong>dynamic platysmal cords</strong> and an early loss of jawline definition, typically from the mid-thirties onwards. It is excellent for the patient who looks fine at rest but whose neck cords "jump" on talking, smiling or looking down at a phone. It is also strong as a maintenance step for patients who have previously had a deep-plane facelift or thread lift and want to keep the neck quiet between surgical refreshes.
+                </p>
+                <p>
+                  It is the wrong tool — and we will tell you so — for heavy submental fat, true skin redundancy ("crepe" skin with no muscle component), advanced jowling driven by bone resorption, or grade III–IV platysmal banding on the Pitanguy classification where the cord persists at rest. Those patients are better served by combination plans involving <Link to="/treatments/profhilo/">Profhilo bio-remodelling</Link>, polynucleotides, an <Link to="/treatments/endolaser-lift/">Endolaser fibre lift</Link>, deoxycholic-acid fat dissolving, or, beyond a certain threshold, surgical platysmaplasty performed at our affiliated hospitals.
+                </p>
+
+                <h3>How Cosmedocs compares to other London Nefertiti providers</h3>
+                <p>
+                  Search "Nefertiti Lift London" and you will see the same handful of clinics: large chain providers in Marylebone, single-practitioner nurse-led clinics across Mayfair and Chelsea, and a smaller number of doctor-led Harley Street practices. We have audited the public-facing pages of those providers and three patterns stand out.
+                </p>
+                <p>
+                  First, <strong>pricing in London ranges from £250 to £650</strong> for a Nefertiti Lift, with the lower end almost universally driven by trainee nurse injectors and the upper end by surgeon-led aesthetic clinics. Our £300 fee deliberately sits inside the doctor-led band without inflating to brand-premium pricing — the patient is paying for the practitioner, not the postcode.
+                </p>
+                <p>
+                  Second, almost no competitor publishes a real photograph of platysmal cord reduction; most rely on stock images, computer renderings or one-sided "after-only" photography. Our editorial standard is the opposite: every Nefertiti image on this page is a real Cosmedocs patient with documented consent, lit on the same black backdrop in the same neutral pose, with no software smoothing. This matters because the Nefertiti Lift is a treatment whose success is judged in millimetres of band relief, not in dramatic Instagram filters.
+                </p>
+                <p>
+                  Third, competitors frequently conflate the Nefertiti Lift with masseter Botox for jaw <em>slimming</em>, a different anatomical target. Cosmedocs maintains separate pages for each — see our <Link to="/treatments/masseter-botox/">Masseter Botox / jaw slimming</Link> and <Link to="/treatments/botox/">all Botox indications</Link> — and we routinely combine the two when a patient presents with both bruxism-driven jaw width and platysmal cord visibility. The honest answer is that the two treatments solve adjacent problems and should not be marketed as interchangeable.
+                </p>
+
+                <h3>The Nefertiti Lift vs surgical alternatives</h3>
+                <p>
+                  Patients often arrive having priced a deep-plane facelift, a MACS lift or a submental platysmaplasty between £8,000 and £25,000 in central London. The Nefertiti Lift is not a surgical equivalent. What it does well is buy a patient five to ten years of meaningful neck and jaw quietness before — or instead of — committing to surgery, particularly when paired with regenerative skin work such as Profhilo or Polynucleotides on the neck, or with a non-invasive <Link to="/treatments/endolaser-lift/">Laser Fibre Lift</Link> for skin tightening at the same anatomical zone. For a structured overview of the entire spectrum, see our <Link to="/concerns/non-surgical-facelift/">non-surgical facelift hub</Link>.
+                </p>
+
+                <h3>Safety, evidence base and the boundaries of good practice</h3>
+                <p>
+                  The Nefertiti Lift is supported by a now-substantial evidence base. Levy's original cohort, subsequent <em>Aesthetic Surgery Journal</em> series and PMC-indexed clinical reviews report high patient-satisfaction scores, durable cord softening at four months, and a very low rate of adverse events when injection depth and dosing are respected. The two complications worth naming honestly are <strong>transient dysphagia</strong> if toxin diffuses into the deeper neck strap muscles, and <strong>asymmetric smile</strong> if marginal mandibular branch territory is over-dosed. Both are dose- and technique-dependent and both resolve as the toxin wears off. At Cosmedocs every Nefertiti Lift is performed by a GMC-registered doctor trained at the Harley Street Institute — never delegated to a non-medical injector — because the margin for error along the marginal mandibular nerve is the entire reason this treatment is considered an advanced indication.
+                </p>
+
+                <h3>What recovery actually looks like</h3>
+                <p>
+                  Most patients return to work the same hour. We ask you to avoid lying flat, vigorous exercise, hot yoga, saunas and facial massage for 24 hours, and to keep the head upright while the toxin binds. Minor pinpoint bruising can occur along the platysma and resolves in 3–5 days; mineral concealer is fine immediately. There is no swelling pattern that would be obvious to a colleague at lunch the next day, which is precisely why the Nefertiti Lift has become the preferred pre-event treatment for clients in front of cameras and boardrooms.
+                </p>
+
+                <h3>Pricing, packages and the honest economics</h3>
+                <p>
+                  A standalone Nefertiti Lift at Cosmedocs is <strong>£300</strong>, including consultation, treatment and a two-week review. When combined with upper-face Botox (forehead, frown and crow's feet) in the same session, the Nefertiti element is offered at a reduced add-on rate of £50 in line with our published <Link to="/prices/">Botox pricing pillar</Link>. We do not run flash discounts on toxin treatments — a position we maintain for patient-safety reasons and because price competition tends to compress dosing rather than improve outcomes.
+                </p>
+
+                <h3>Booking and next steps</h3>
+                <p>
+                  If you recognise yourself in the upper panel of our before-and-after image — strong vertical cords, a jawline that has lost its edge, a neck that no longer matches the face — a consultation is the right next step. We will photograph you under standardised lighting, classify your platysmal anatomy, and tell you honestly whether a Nefertiti Lift will deliver the result you want, whether it should be combined with regenerative or laser work, or whether surgery is the more honest recommendation. Our aesthetics is invisible art. Bold, natural, always your way.
+                </p>
+              </article>
+            </motion.div>
+          </div>
+        </section>
       </div>
 
       <LiquidGlassRelatedTreatments
