@@ -285,7 +285,7 @@ export default function FaceBotoxLight() {
                 {
                   icon: <Award className="w-5 h-5 text-[#C9A050]" />,
                   title: "The Harley Street standard",
-                  body: <>Botox London prices vary wildly — from £99 high-street rooms to £600 boutique injectors. We sit deliberately in the middle: transparent pricing, doctor-led care, and the same protocols used across more than one million procedures group-wide since 2007.</>
+                  body: <>A doctor-led practice on London's medical mile since 2007 — GMC-registered, CQC-aligned, and shaped by protocols refined across more than one million procedures group-wide. Quiet, restrained, repeatable results — never overdone.</>
                 }
               ].map((item, i) => (
                 <motion.div
@@ -747,24 +747,32 @@ export default function FaceBotoxLight() {
                     Preparation & <span className={`${goldText} font-light`}>Aftercare</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
-                      <p className={`text-xs font-medium ${textH}/60 mb-3`}>Before Treatment</p>
-                      <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
-                        {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Arrive with clean, makeup-free skin", "Inform practitioner of all medications"].map((t) => (
-                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
-                        ))}
-                      </ul>
+                  <ExpandableSection
+                    preview={
+                      <p className={`${textBody} text-sm leading-relaxed font-light`}>
+                        A few simple steps before and after your appointment keep results clean and recovery quick. Tap below to read the full checklist.
+                      </p>
+                    }
+                  >
+                    <div className="grid md:grid-cols-2 gap-4 mt-4">
+                      <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
+                        <p className={`text-xs font-medium ${textH}/60 mb-3`}>Before Treatment</p>
+                        <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
+                          {["Avoid blood thinners (aspirin, ibuprofen) for 7 days", "Limit alcohol 24–48 hours before", "Arrive with clean, makeup-free skin", "Inform practitioner of all medications"].map((t) => (
+                            <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
+                        <p className={`text-xs font-medium ${textH}/60 mb-3`}>After Treatment</p>
+                        <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
+                          {["Stay upright for 4 hours post-treatment", "Avoid touching or rubbing treated areas", "Skip exercise, saunas, and alcohol for 24 hours", "Avoid facials and massages for 2 weeks"].map((t) => (
+                            <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <div className={`${cardBg} border ${cardBorder} rounded-2xl p-5 shadow-sm`}>
-                      <p className={`text-xs font-medium ${textH}/60 mb-3`}>After Treatment</p>
-                      <ul className={`space-y-2 ${textMuted} text-xs font-light`}>
-                        {["Stay upright for 4 hours post-treatment", "Avoid touching or rubbing treated areas", "Skip exercise, saunas, and alcohol for 24 hours", "Avoid facials and massages for 2 weeks"].map((t) => (
-                          <li key={t} className="flex items-start gap-2"><Check className="w-3 h-3 text-[#C9A050]/60 mt-0.5" /><span>{t}</span></li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  </ExpandableSection>
                 </motion.div>
               </section>
 
@@ -984,106 +992,123 @@ export default function FaceBotoxLight() {
             <h2 className={`text-3xl md:text-4xl font-extralight ${textH} mb-6 leading-tight`}>
               Botox in London — Harley Street since 2007
             </h2>
-            <p className={`text-lg ${textBody} font-light leading-relaxed mb-6`}>
-              Cosmedocs is a doctor-led aesthetic clinic on Harley Street, the UK's most established address for medical aesthetics. Our London team — all GMC-registered doctors — has delivered anti-wrinkle treatment to discerning patients since 2007. Across the wider group we have performed over one million procedures, refining a quiet, restrained approach that prizes natural movement over a frozen finish.
-            </p>
-            <p className={`text-base ${textBody} font-light leading-relaxed mb-10`}>
-              For Londoners weighing up where to have Botox, the question is rarely about the molecule — every UK clinic uses the same regulated botulinum toxin. The variable is the hand, the eye, and the medical training behind the syringe. Our doctors assess your facial anatomy, expression patterns and skin quality before deciding dose, depth and dilution. The result is anti-wrinkle treatment so subtle it is invisible — exactly as our motto intends.
+            <p className={`text-base ${textBody} font-light leading-relaxed mb-6`}>
+              A doctor-led practice on the UK's most established medical address. GMC-registered doctors, a quiet and restrained approach, and protocols refined across more than one million procedures group-wide.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-6 mb-12">
-              <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
-                <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">From</p>
-                <p className="text-3xl font-light text-gray-900 mb-1">£175</p>
-                <p className="text-sm text-gray-600 font-light">Single area, doctor-led</p>
-              </div>
-              <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
-                <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Three areas</p>
-                <p className="text-3xl font-light text-gray-900 mb-1">£295</p>
-                <p className="text-sm text-gray-600 font-light">Most popular package</p>
-              </div>
-              <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
-                <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Add-on</p>
-                <p className="text-3xl font-light text-gray-900 mb-1">£50</p>
-                <p className="text-sm text-gray-600 font-light">Per area with filler appointment</p>
-              </div>
-            </div>
-
-            {/* Deep static lines clinical note */}
-            <div className="mb-12 p-6 bg-[#FAFAF8] border border-gray-200 rounded-2xl flex flex-col sm:flex-row gap-5 items-start">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button
-                    type="button"
-                    aria-label="Enlarge clinical image — deep static line treatment"
-                    className="shrink-0 group relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden border border-gray-200 hover:border-[#C9A050]/60 transition-all"
-                  >
-                    <img
-                      src={deepStaticLinesImg}
-                      alt="Cosmedocs Botox patient — deep static forehead lines combined with skin needling, before and after"
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <span className="absolute bottom-1 right-1 text-[9px] uppercase tracking-widest bg-black/60 text-white px-1.5 py-0.5 rounded">Tap to enlarge</span>
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-3xl p-0 bg-black border-none">
-                  <img
-                    src={deepStaticLinesImg}
-                    alt="Cosmedocs Botox patient — deep static forehead lines, combined treatment, before and after"
-                    className="w-full h-auto rounded-lg"
-                  />
-                </DialogContent>
-              </Dialog>
-              <div className="flex-1">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-2 font-light">A note on deep static lines</p>
-                <p className="text-sm text-gray-700 leading-relaxed font-light">
-                  Deep static lines — those etched into the skin even at rest — may require additional treatment alongside Botox for quicker resolution. The patient pictured had been having Botox for some time; combining anti-wrinkle treatment with skin needling, polynucleotides or resurfacing accelerates softening of the line itself. Botox quiets the muscle; the etched line above it often needs its own course of work.
+            <ExpandableSection
+              preview={
+                <p className={`text-sm ${textMuted} font-light leading-relaxed`}>
+                  Read the full London Botox guide — what to expect, pricing context, deep-line clinical notes and the most asked questions.
                 </p>
+              }
+            >
+              <div className="mt-6 space-y-6">
+                <p className={`text-base ${textBody} font-light leading-relaxed`}>
+                  Cosmedocs is a doctor-led aesthetic clinic on Harley Street, the UK's most established address for medical aesthetics. Our London team — all GMC-registered doctors — has delivered anti-wrinkle treatment to discerning patients since 2007. Across the wider group we have performed over one million procedures, refining a quiet, restrained approach that prizes natural movement over a frozen finish.
+                </p>
+                <p className={`text-base ${textBody} font-light leading-relaxed`}>
+                  For Londoners weighing up where to have Botox, the question is rarely about the molecule — every UK clinic uses the same regulated botulinum toxin. The variable is the hand, the eye, and the medical training behind the syringe. Our doctors assess your facial anatomy, expression patterns and skin quality before deciding dose, depth and dilution. The result is anti-wrinkle treatment so subtle it is invisible — exactly as our motto intends.
+                </p>
+                <p className={`text-sm ${textMuted} font-light leading-relaxed`}>
+                  London Botox prices vary widely — from £99 high-street rooms to £600 boutique injectors. Cosmedocs sits deliberately in the middle, with transparent doctor-led pricing and no consultation fee. The aim is value through expertise, not the lowest possible headline.
+                </p>
+
+                <div className="grid sm:grid-cols-3 gap-6">
+                  <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">From</p>
+                    <p className="text-3xl font-light text-gray-900 mb-1">£175</p>
+                    <p className="text-sm text-gray-600 font-light">Single area, doctor-led</p>
+                  </div>
+                  <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Three areas</p>
+                    <p className="text-3xl font-light text-gray-900 mb-1">£295</p>
+                    <p className="text-sm text-gray-600 font-light">Most popular package</p>
+                  </div>
+                  <div className="bg-[#F5F5F3] p-6 rounded-2xl border border-gray-100">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Add-on</p>
+                    <p className="text-3xl font-light text-gray-900 mb-1">£50</p>
+                    <p className="text-sm text-gray-600 font-light">Per area with filler appointment</p>
+                  </div>
+                </div>
+
+                {/* Deep static lines clinical note */}
+                <div className="p-6 bg-[#FAFAF8] border border-gray-200 rounded-2xl flex flex-col sm:flex-row gap-5 items-start">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button
+                        type="button"
+                        aria-label="Enlarge clinical image — deep static line treatment"
+                        className="shrink-0 group relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden border border-gray-200 hover:border-[#C9A050]/60 transition-all"
+                      >
+                        <img
+                          src={deepStaticLinesImg}
+                          alt="Cosmedocs Botox patient — deep static forehead lines combined with skin needling, before and after"
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className="absolute bottom-1 right-1 text-[9px] uppercase tracking-widest bg-black/60 text-white px-1.5 py-0.5 rounded">Tap to enlarge</span>
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl p-0 bg-black border-none">
+                      <img
+                        src={deepStaticLinesImg}
+                        alt="Cosmedocs Botox patient — deep static forehead lines, combined treatment, before and after"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </DialogContent>
+                  </Dialog>
+                  <div className="flex-1">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-2 font-light">A note on deep static lines</p>
+                    <p className="text-sm text-gray-700 leading-relaxed font-light">
+                      Deep static lines — those etched into the skin even at rest — may require additional treatment alongside Botox for quicker resolution. The patient pictured had been having Botox for some time; combining anti-wrinkle treatment with skin needling, polynucleotides or resurfacing accelerates softening of the line itself. Botox quiets the muscle; the etched line above it often needs its own course of work.
+                    </p>
+                  </div>
+                </div>
+
+                <h3 className={`text-2xl font-light ${textH} pt-2`}>Frequently asked questions about Botox in London</h3>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="cost" className="border-gray-200">
+                    <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">How much does Botox cost in London?</AccordionTrigger>
+                    <AccordionContent className="text-gray-700 font-light leading-relaxed">
+                      At Cosmedocs Harley Street, Botox in London starts from £175 for a single area and £295 for three areas. Booked alongside a filler appointment, additional Botox areas are £50 each. All pricing is doctor-led — there is no upcharge for seeing a registered doctor rather than a non-medical practitioner.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="best" className="border-gray-200">
+                    <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Where is the best place to get Botox in London?</AccordionTrigger>
+                    <AccordionContent className="text-gray-700 font-light leading-relaxed">
+                      Look for three things: a GMC-registered medical doctor performing the assessment and injection, a clinic with a long track record on Harley Street or another established medical address, and a transparent pricing structure with no hidden consultation fees. Cosmedocs has practised on Harley Street since 2007 and offers complimentary doctor consultations.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="safe" className="border-gray-200">
+                    <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Is Botox in London safe?</AccordionTrigger>
+                    <AccordionContent className="text-gray-700 font-light leading-relaxed">
+                      Botox is one of the most extensively studied medications in modern medicine. Safety in London hinges on practitioner training and clinic standards. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments. Every patient is assessed by a GMC-registered doctor before any product is drawn.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="duration" className="border-gray-200">
+                    <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">How long does Botox last?</AccordionTrigger>
+                    <AccordionContent className="text-gray-700 font-light leading-relaxed">
+                      Most patients enjoy results for three to four months. With consistent maintenance, the treated muscle re-trains and intervals can extend comfortably to four to six months — a quieter, more economical maintenance pattern.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="natural" className="border-gray-200">
+                    <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Will my Botox look natural?</AccordionTrigger>
+                    <AccordionContent className="text-gray-700 font-light leading-relaxed">
+                      Our aesthetics is invisible art — bold, natural, always your way. Cosmedocs doctors are trained to dose conservatively, preserve expression and place product with anatomical precision. The intent is refreshment, not a frozen brow. If you prefer a more pronounced result, that is a conversation, not a default.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <div className="pt-8 border-t border-gray-100 flex flex-wrap gap-3">
+                  <Link to="/treatments/anti-wrinkle-treatment/" className="text-sm text-[#C9A050] hover:underline">Anti-wrinkle treatment explained →</Link>
+                  <span className="text-gray-300">·</span>
+                  <Link to="/harley-street-injectables/" className="text-sm text-[#C9A050] hover:underline">Harley Street injectables →</Link>
+                  <span className="text-gray-300">·</span>
+                  <Link to="/treatments/botox/cost/" className="text-sm text-[#C9A050] hover:underline">Full pricing →</Link>
+                </div>
               </div>
-            </div>
-
-            <h3 className={`text-2xl font-light ${textH} mb-6`}>Frequently asked questions about Botox in London</h3>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="cost" className="border-gray-200">
-                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">How much does Botox cost in London?</AccordionTrigger>
-                <AccordionContent className="text-gray-700 font-light leading-relaxed">
-                  At Cosmedocs Harley Street, Botox in London starts from £175 for a single area and £295 for three areas. Booked alongside a filler appointment, additional Botox areas are £50 each. All pricing is doctor-led — there is no upcharge for seeing a registered doctor rather than a non-medical practitioner.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="best" className="border-gray-200">
-                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Where is the best place to get Botox in London?</AccordionTrigger>
-                <AccordionContent className="text-gray-700 font-light leading-relaxed">
-                  Look for three things: a GMC-registered medical doctor performing the assessment and injection, a clinic with a long track record on Harley Street or another established medical address, and a transparent pricing structure with no hidden consultation fees. Cosmedocs has practised on Harley Street since 2007 and offers complimentary doctor consultations.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="safe" className="border-gray-200">
-                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Is Botox in London safe?</AccordionTrigger>
-                <AccordionContent className="text-gray-700 font-light leading-relaxed">
-                  Botox is one of the most extensively studied medications in modern medicine. Safety in London hinges on practitioner training and clinic standards. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments. Every patient is assessed by a GMC-registered doctor before any product is drawn.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="duration" className="border-gray-200">
-                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">How long does Botox last?</AccordionTrigger>
-                <AccordionContent className="text-gray-700 font-light leading-relaxed">
-                  Most patients enjoy results for three to four months. With consistent maintenance, the treated muscle re-trains and intervals can extend comfortably to four to six months — a quieter, more economical maintenance pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="natural" className="border-gray-200">
-                <AccordionTrigger className="text-left text-base font-light text-gray-900 hover:text-[#C9A050]">Will my Botox look natural?</AccordionTrigger>
-                <AccordionContent className="text-gray-700 font-light leading-relaxed">
-                  Our aesthetics is invisible art — bold, natural, always your way. Cosmedocs doctors are trained to dose conservatively, preserve expression and place product with anatomical precision. The intent is refreshment, not a frozen brow. If you prefer a more pronounced result, that is a conversation, not a default.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-3">
-              <Link to="/treatments/anti-wrinkle-treatment/" className="text-sm text-[#C9A050] hover:underline">Anti-wrinkle treatment explained →</Link>
-              <span className="text-gray-300">·</span>
-              <Link to="/harley-street-injectables/" className="text-sm text-[#C9A050] hover:underline">Harley Street injectables →</Link>
-              <span className="text-gray-300">·</span>
-              <Link to="/treatments/botox/cost/" className="text-sm text-[#C9A050] hover:underline">Full pricing →</Link>
-            </div>
+            </ExpandableSection>
           </div>
         </section>
       </div>
