@@ -123,10 +123,10 @@ const benefits = [
 ];
 
 const processSteps = [
-  "Your doctor palpates the masseter while you clench to map the strongest muscle belly and any right-left imbalance.",
-  "Dose is planned according to size, gender, bite force, symptoms and whether the aim is slimming, bruxism relief or both.",
-  "Tiny injections are placed into the safe body of the muscle, avoiding superficial smile muscles and the parotid region.",
-  "You return to normal life immediately, with simple aftercare: no rubbing, heavy exercise or excessive chewing for 24–48 hours.",
+  { title: "Doctor assessment", body: "Your doctor palpates the masseter while you clench to map the strongest muscle belly and any right-left imbalance." },
+  { title: "Dose planning", body: "Dose is planned according to size, gender, bite force, symptoms and whether the aim is slimming, bruxism relief or both." },
+  { title: "Precise injection", body: "Tiny injections are placed into the safe body of the muscle, avoiding superficial smile muscles and the parotid region." },
+  { title: "Return to life", body: "You return to normal life immediately, with simple aftercare: no rubbing, heavy exercise or excessive chewing for 24–48 hours." },
 ];
 
 const comparisonRows = [
