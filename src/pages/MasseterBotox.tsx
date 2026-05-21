@@ -349,17 +349,21 @@ const MasseterBotox = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6 snap-x snap-mandatory md:snap-none">
+                <div
+                  className="flex gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
+                  style={{ touchAction: "pan-x", overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
+                >
                   {caseStages.map((stage, index) => (
-                    <figure key={stage.title} className="group flex-shrink-0 snap-center w-[82vw] max-w-[470px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[420px] md:w-[450px]">
+                    <figure key={stage.title} className="group flex-shrink-0 w-[78vw] max-w-[440px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[380px] md:w-[420px]">
                       <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-background">
                         <img
                           src={stage.src}
                           alt={stage.alt}
                           loading={index === 0 ? "eager" : "lazy"}
+                          draggable={false}
                           className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.025] ${stage.imageClass}`}
                         />
-                        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/80 via-background/20 to-transparent" />
+                        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/80 via-background/20 to-transparent pointer-events-none" />
                         <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background shadow-lg">
                           {stage.badge}
                         </span>
