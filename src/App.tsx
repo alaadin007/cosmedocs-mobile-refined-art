@@ -353,6 +353,7 @@ const App = () => {
             <Toaster />
             <Sonner />
             <BrowserRouter>
+              <RouteResetErrorBoundary>
               <AuthProvider>
                 <LanguageProvider>
                 <ScrollToTop />
