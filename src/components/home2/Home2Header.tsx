@@ -211,7 +211,7 @@ export default function Home2Header() {
               }`}>
                 COSMEDOCS
               </span>
-              <div className="h-4 md:h-5 overflow-hidden -mt-0.5">
+              <div className="h-5 md:h-6 overflow-hidden -mt-0.5">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={taglineIndex}
@@ -222,7 +222,7 @@ export default function Home2Header() {
                       duration: 0.6, 
                       ease: "easeInOut"
                     }}
-                    className="block text-[9px] sm:text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
+                    className="block whitespace-nowrap text-[9px] sm:text-[10px] md:text-xs text-[#C9A050]/80 tracking-[0.04em] font-light"
                   >
                     {rotatingTaglines[taglineIndex]}
                   </motion.span>
