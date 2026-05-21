@@ -24,6 +24,7 @@ import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 import medMasseterImg from "@/assets/home3-medical-masseter.jpg";
+import masseterBeforeAfterImg from "@/assets/before-after/masseter-botox-female-asian.jpg";
 
 import calfSlimmingBaImg from "@/assets/before-after/calf-slimming-ba.jpg";
 import medBruxismImg from "@/assets/home3-medical-bruxism.jpg";
@@ -274,6 +275,7 @@ const categories: Category[] = [
         image: medMasseterImg,
         badge: "Most asked",
         flip: {
+          image: masseterBeforeAfterImg,
           back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette, and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
         },
       },
