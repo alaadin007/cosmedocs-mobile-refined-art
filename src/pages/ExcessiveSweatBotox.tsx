@@ -331,6 +331,71 @@ const ExcessiveSweatBotox = () => {
                 </motion.div>
               </section>
 
+              {/* HDSS Scale Table */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    The HDSS <span className="text-[#C9A050] font-light">Scale</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    The Hyperhidrosis Disease Severity Scale (HDSS) is a four-point clinical benchmark we use during
+                    consultation to grade how much excessive sweating interferes with daily life — and to personalise
+                    your dosage and review schedule.
+                  </p>
+
+                  <div className="overflow-x-auto border border-white/10 rounded-sm">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-white/[0.03] border-b border-white/10">
+                        <tr className="text-white/70 font-light">
+                          <th className="px-4 py-3 w-16">Grade</th>
+                          <th className="px-4 py-3">How your sweating affects you</th>
+                          <th className="px-4 py-3 hidden sm:table-cell">Clinical interpretation</th>
+                          <th className="px-4 py-3">Typical review</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-white/55 font-light">
+                        <tr className="border-b border-white/5">
+                          <td className="px-4 py-4 text-[#C9A050] font-light">1</td>
+                          <td className="px-4 py-4">Sweating is never noticeable and never interferes with activity.</td>
+                          <td className="px-4 py-4 hidden sm:table-cell">Normal / mild — treatment rarely indicated.</td>
+                          <td className="px-4 py-4">Monitor only</td>
+                        </tr>
+                        <tr className="border-b border-white/5">
+                          <td className="px-4 py-4 text-[#C9A050] font-light">2</td>
+                          <td className="px-4 py-4">Sweating is tolerable but sometimes interferes with activity.</td>
+                          <td className="px-4 py-4 hidden sm:table-cell">Mild–moderate. Treatment optional.</td>
+                          <td className="px-4 py-4">1–2 × year</td>
+                        </tr>
+                        <tr className="border-b border-white/5 bg-[#C9A050]/[0.04]">
+                          <td className="px-4 py-4 text-[#C9A050] font-light">3</td>
+                          <td className="px-4 py-4">Sweating is barely tolerable and frequently interferes with activity.</td>
+                          <td className="px-4 py-4 hidden sm:table-cell">Moderate–severe. Treatment clinically indicated.</td>
+                          <td className="px-4 py-4 text-white/75">~3 × year</td>
+                        </tr>
+                        <tr className="bg-[#C9A050]/[0.04]">
+                          <td className="px-4 py-4 text-[#C9A050] font-light">4</td>
+                          <td className="px-4 py-4">Sweating is intolerable and always interferes with activity.</td>
+                          <td className="px-4 py-4 hidden sm:table-cell">Severe. Higher dose / off-label protocol considered.</td>
+                          <td className="px-4 py-4 text-white/75">~3 × year</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <p className="text-white/40 text-xs leading-relaxed font-light mt-4 italic">
+                    In our clinical experience, roughly three in four patients we treat present at HDSS grade 3 or 4,
+                    and typically require treatment around three times per year to maintain comfort. Patients at
+                    grade 2 often achieve longer intervals between sessions.
+                  </p>
+                </motion.div>
+              </section>
+
               {/* Treatment Areas */}
               <section>
                 <motion.div
