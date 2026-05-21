@@ -45,6 +45,7 @@ const treatmentCategories = [
       { title: "Under Eye", link: "/treatments/tear-trough-filler/" },
       { title: "Nose Filler", link: "/treatments/nose-filler/" },
       { title: "Temple Filler", link: "/treatments/temple-filler/" },
+      { title: "Forehead Filler", link: "/treatments/forehead-filler/" },
       { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas/", isSubHeader: true },
       { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas/#nasolabial" },
       { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas/#marionette" },
