@@ -11,27 +11,33 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
 import LiquidGlassRelatedTreatments from "@/components/LiquidGlassRelatedTreatments";
 import { Link } from "react-router-dom";
+import nefertitiPlatysmaCordsBA from "@/assets/nefertiti-lift-platysma-cords-before-after.jpg";
 
 export default function NefertitiBotoxFacelift() {
   const [isRelatedTreatmentsOpen, setIsRelatedTreatmentsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const seoData = generateSEOMetadata(
-    "Nefertiti Lift - Non-Surgical Jawline & Neck Contouring | Cosmedocs",
-    "Define jawline & smooth neck bands with Nefertiti Lift. Non-surgical botox for sharp contours & reduced platysmal bands.",
-    "/nefertiti-botox-face-jaw-lift"
+    "Nefertiti Lift London — Botox Facelift & Platysmal Cord Reduction | Cosmedocs",
+    "Doctor-led Nefertiti Lift on Harley Street. Botox facelift to relax the platysma, soften neck cords and redefine the jawline. From £300, 15 minutes, no downtime.",
+    "/treatments/nefertiti-lift/"
   );
 
   const beforeAfterImages = [
     {
+      src: nefertitiPlatysmaCordsBA,
+      alt: "Nefertiti Lift before and after — visible reduction in the strength of vertical platysmal cords and a softer neck-décolletage junction",
+      caption: "Before & After: clear softening of vertical platysmal cords and a smoother neck-décolletage line after a Nefertiti Lift"
+    },
+    {
       src: "/lovable-uploads/9c7fac37-e442-4d67-bb1b-f3f79c67e279.png",
-      alt: "Nefertiti Lift before and after results showing improved neck contour",
-      caption: "Before & After: Significant improvement in neck bands and jawline definition"
+      alt: "Nefertiti Lift before and after results showing improved neck contour and jawline definition",
+      caption: "Before & After: improved neck-band relaxation and a more defined mandibular border"
     },
     {
       src: "/lovable-uploads/e09a9811-f63b-493e-9c69-78f715481f5c.png", 
-      alt: "Nefertiti Lift side profile showing enhanced jawline definition",
-      caption: "Side Profile: Enhanced jawline definition and smoother neck contour"
+      alt: "Nefertiti Lift side profile showing enhanced jawline definition after Botox to the platysma",
+      caption: "Side profile: sharper mandibular line and a quieter neck after platysma micro-dosing"
     }
   ];
 
@@ -155,8 +161,14 @@ export default function NefertitiBotoxFacelift() {
           {
             "@type": "ListItem",
             "position": 3,
+            "name": "Botox",
+            "item": "https://www.cosmedocs.com/treatments/botox/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
             "name": "Nefertiti Lift",
-            "item": "https://www.cosmedocs.com/nefertiti-botox-face-jaw-lift"
+            "item": "https://www.cosmedocs.com/treatments/nefertiti-lift/"
           }
         ]
       },
@@ -180,8 +192,8 @@ export default function NefertitiBotoxFacelift() {
         "price": "300",
         "priceCurrency": "GBP",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cosmedocs.com/nefertiti-botox-face-jaw-lift",
-        "priceValidUntil": "2025-12-31"
+        "url": "https://www.cosmedocs.com/treatments/nefertiti-lift/",
+        "priceValidUntil": "2026-12-31"
       }
     ]
   };
