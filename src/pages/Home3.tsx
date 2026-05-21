@@ -275,6 +275,7 @@ const categories: Category[] = [
         image: medMasseterImg,
         badge: "Most asked",
         flip: {
+          image: masseterBeforeAfterImg,
           back: "Doctor-led masseter dosing softens a square jaw into an oval silhouette, and quietly resolves the night grinding behind it. A dual-intent treatment: cosmetic refinement above, medical relief below.",
         },
       },
