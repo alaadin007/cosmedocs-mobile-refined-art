@@ -247,6 +247,12 @@ export default function NefertitiBotoxFacelift() {
               </li>
               <li className="flex items-center">
                 <BreadcrumbChevron className="w-4 h-4 text-gray-600 mx-2" />
+                <Link to="/treatments/botox/" className="text-gray-400 hover:text-white transition-colors">
+                  Botox
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <BreadcrumbChevron className="w-4 h-4 text-gray-600 mx-2" />
                 <span className="text-purple-300 font-medium">Nefertiti Lift</span>
               </li>
             </ol>
