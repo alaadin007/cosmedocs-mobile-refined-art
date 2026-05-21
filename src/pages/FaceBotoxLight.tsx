@@ -285,7 +285,7 @@ export default function FaceBotoxLight() {
                 {
                   icon: <Award className="w-5 h-5 text-[#C9A050]" />,
                   title: "The Harley Street standard",
-                  body: <>Botox London prices vary wildly — from £99 high-street rooms to £600 boutique injectors. We sit deliberately in the middle: transparent pricing, doctor-led care, and the same protocols used across more than one million procedures group-wide since 2007.</>
+                  body: <>A doctor-led practice on London's medical mile since 2007 — GMC-registered, CQC-aligned, and shaped by protocols refined across more than one million procedures group-wide. Quiet, restrained, repeatable results — never overdone.</>
                 }
               ].map((item, i) => (
                 <motion.div
