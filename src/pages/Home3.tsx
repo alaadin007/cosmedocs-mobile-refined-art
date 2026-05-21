@@ -34,6 +34,7 @@ import medTrapeziusImg from "@/assets/home3-medical-trapezius.jpg";
 import medCalfImg from "@/assets/home3-medical-calf.jpg";
 import calfSlimmingCardImg from "@/assets/home3-calf-slimming-card.jpg";
 import hyperhidrosisCardImg from "@/assets/home3-hyperhidrosis-card.jpg";
+import hyperhidrosisCardBackImg from "@/assets/home3-hyperhidrosis-card-back.jpg";
 import haMakeoverBaImg from "@/assets/home3-ha-makeover-front.png";
 import liquidFaceliftBdaImg from "@/assets/before-after/liquid-facelift-before-during-after.jpg";
 import chinFillerBaImg from "@/assets/home3-chin-filler-ba.jpg";
@@ -291,7 +292,7 @@ const categories: Category[] = [
         flip: {
           back: "Targeted micro-doses neutralise the sweat glands of the underarm — silk shirts, summer suits and stage lights, without the second-guessing. Results settle in under a week and hold for 6–9 months.",
           imagePosition: "top",
-          image: hyperhidrosisCardImg,
+          image: hyperhidrosisCardBackImg,
         },
       },
       { title: "Trapezius Botox", tagline: "Shoulder slimming · pain", href: "/treatments/trap-botox/", bg: "bg-[#0d1218]", image: medTrapeziusImg },
