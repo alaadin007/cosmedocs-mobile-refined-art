@@ -217,8 +217,8 @@ const TearTroughFiller = () => {
                   className="w-full h-auto block"
                 />
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                <figcaption className="absolute left-4 bottom-3 text-[10px] tracking-[0.3em] uppercase text-white/70">
-                  Cosmedocs · Patient assessment
+                <figcaption className="absolute left-4 right-4 bottom-3 text-[10px] tracking-[0.15em] uppercase text-white/60 leading-relaxed">
+                  Tear troughs arise from descent of the upper cheek fat pads — correction often addresses both the tear trough and the cheek beneath
                 </figcaption>
               </motion.figure>
             </div>
