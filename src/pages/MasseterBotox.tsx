@@ -684,6 +684,20 @@ const MasseterBotox = () => {
             <SkinFoundationCTA variant="general" />
           </div>
         </section>
+        {/* Sticky mobile booking bar */}
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-luxury-gold/30 bg-background/95 px-4 py-3 backdrop-blur-md shadow-[0_-10px_30px_-15px_hsl(var(--luxury-gold)/0.6)] lg:hidden">
+          <div className="mx-auto flex max-w-md items-center justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-gold">Masseter Botox</p>
+              <p className="truncate text-sm font-medium text-foreground">From £350 · 15 min</p>
+            </div>
+            <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer" className="shrink-0">
+              <Button className="rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground hover:bg-primary/90">
+                Book consultation
+              </Button>
+            </a>
+          </div>
+        </div>
       </main>
     </>
   );
