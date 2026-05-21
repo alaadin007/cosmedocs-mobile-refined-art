@@ -1163,7 +1163,7 @@ const App = () => {
                 </Routes>
                 </LanguageProvider>
               </AuthProvider>
-              
+              </RouteResetErrorBoundary>
             </BrowserRouter>
           </TooltipProvider>
         </HelmetProvider>
