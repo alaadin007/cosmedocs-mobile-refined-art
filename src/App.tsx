@@ -207,6 +207,7 @@ const BotoxCalfsClinical = lazy(() => import("./pages/BotoxCalfsClinical"));
 const VideoUpload = lazy(() => import("./pages/VideoUpload"));
 const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
 const TempleFiller = lazy(() => import("./pages/TempleFiller"));
+const ForeheadFiller = lazy(() => import("./pages/ForeheadFiller"));
 const NeckFillers = lazy(() => import("./pages/NeckFillers"));
 const HarleyStreetConsultingRooms = lazy(() => import("./pages/HarleyStreetConsultingRooms"));
 const PlasticSurgeon = lazy(() => import("./pages/PlasticSurgeon"));
@@ -681,6 +682,11 @@ const App = () => {
                           <Route path="/treatments/tear-trough-filler/" element={<TearTroughFiller />} />
                           <Route path="/treatments/temple-filler" element={<TempleFiller />} />
                           <Route path="/treatments/temple-filler/" element={<TempleFiller />} />
+                          <Route path="/treatments/forehead-filler" element={<ForeheadFiller />} />
+                          <Route path="/treatments/forehead-filler/" element={<ForeheadFiller />} />
+                          <Route path="/forehead-fillers" element={<Navigate to="/treatments/forehead-filler/" replace />} />
+                          <Route path="/forehead-filler" element={<Navigate to="/treatments/forehead-filler/" replace />} />
+                          <Route path="/treatments/forehead-fillers" element={<Navigate to="/treatments/forehead-filler/" replace />} />
                           
                           {/* Nose Filler Treatment Page */}
                           <Route path="/treatments/dermal-fillers/nose" element={<NoseFillerTreatment />} />
