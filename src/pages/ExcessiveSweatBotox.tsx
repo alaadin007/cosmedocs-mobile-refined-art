@@ -175,11 +175,11 @@ const ExcessiveSweatBotox = () => {
               playsInline
               preload="metadata"
               aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover opacity-25"
+              className="absolute inset-0 w-full h-full object-cover opacity-60"
             />
-            {/* Tint to keep text legible */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
+            {/* Lighter tint so the video remains visible while keeping copy legible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
           </div>
 
           {/* Flowing background orb */}
