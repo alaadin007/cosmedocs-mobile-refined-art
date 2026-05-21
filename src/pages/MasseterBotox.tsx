@@ -459,14 +459,8 @@ const MasseterBotox = () => {
                     A careful appointment is brief, but the planning matters. The safest results come from understanding the muscle’s size, depth and direction before deciding dose.
                   </p>
                 </div>
-                <ol className="space-y-4">
-                  {processSteps.map((step, index) => (
-                    <li key={step} className="grid grid-cols-[44px_1fr] gap-4 rounded-3xl border border-border bg-card p-5">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-sm text-luxury-gold">{index + 1}</span>
-                      <p className="text-sm leading-7 text-muted-foreground">{step}</p>
-                    </li>
-                  ))}
-                </ol>
+                <ProcessStepper steps={processSteps} />
+
               </motion.section>
 
               <motion.section {...sectionReveal} className="space-y-6">
