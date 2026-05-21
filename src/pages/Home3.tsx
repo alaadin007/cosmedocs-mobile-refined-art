@@ -24,6 +24,7 @@ import botoxMentalisImg from "@/assets/home3-botox-mentalis.jpg";
 import botoxMarionetteImg from "@/assets/home3-botox-marionette.jpg";
 import botoxNasalImg from "@/assets/home3-botox-nasal-flaring.jpg";
 import medMasseterImg from "@/assets/home3-medical-masseter.jpg";
+import masseterBeforeAfterImg from "@/assets/before-after/masseter-botox-female-asian.jpg";
 
 import calfSlimmingBaImg from "@/assets/before-after/calf-slimming-ba.jpg";
 import medBruxismImg from "@/assets/home3-medical-bruxism.jpg";
