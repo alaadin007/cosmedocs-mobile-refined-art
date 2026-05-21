@@ -1,651 +1,530 @@
-import React from 'react';
-import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {
+  AlertTriangle,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Gauge,
+  Heart,
+  ShieldCheck,
+  Sparkles,
+  Stethoscope,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
-import jawIllustration from "@/assets/jaw-profile-illustration.png";
-const masseterBaPreview = "/images/treatments/masseter/masseter-ba-replacement.jpg";
-import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
-import ExpandableSection from "@/components/ui/expandable-section";
-import MasseterSidebar from "@/components/masseter/MasseterSidebar";
-import MasseterProgressionSeries, { masseterProgressionStages } from "@/components/masseter/MasseterProgressionSeries";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import jawIllustration from "@/assets/jaw-profile-illustration.png";
+import stageBaseline from "@/assets/before-after/masseter-series/2-after-first-treatment.jpg";
+import stageFirstTreatment from "@/assets/before-after/masseter-series/3-after-second-treatment.jpg";
+import stageSecondTreatment from "@/assets/before-after/masseter-series/1-before-hsi-xl-right.jpg";
+import stageMaintained from "@/assets/before-after/masseter-series/4-final-maintained-result.jpg";
+
+const faqs = [
+  {
+    question: "How long does masseter Botox last?",
+    answer:
+      "Masseter Botox usually lasts 4–6 months. In larger or very active masseter muscles, the first year may need closer maintenance because the muscle is strong and used every day for chewing and clenching. Once cumulative atrophy is achieved, many patients move to two sessions a year, then annual review depending on symptoms and muscle return.",
+  },
+  {
+    question: "Is masseter Botox for jaw slimming or teeth grinding?",
+    answer:
+      "It can be both. Cosmetically, it reduces bulky masseter muscle to soften a square lower face. Medically, it reduces excessive bite force, clenching, jaw tension, TMJ strain and bruxism-related headaches. The same muscle is being treated; the treatment plan is adjusted according to whether your main concern is shape, symptoms, or both.",
+  },
+  {
+    question: "How much does masseter Botox cost at CosmeDocs?",
+    answer:
+      "Masseter Botox is £350 for female patients and £400 for male patients. Male or very strong masseters often require higher dosing because the muscle is denser and stronger. Your doctor confirms the dose after palpating the muscle at rest and during clenching.",
+  },
+  {
+    question: "Will it affect chewing?",
+    answer:
+      "The aim is partial relaxation, not paralysis. Some patients notice temporary chewing fatigue with tough foods for a few days, especially after their first treatment, but normal eating, speech and expression are preserved when dosing is placed correctly inside the muscle body.",
+  },
+  {
+    question: "When will I see jaw slimming?",
+    answer:
+      "Jaw tension may start easing within 7–14 days. Visible slimming is slower because the muscle has to reduce in bulk. Most patients see early contour change by weeks 3–4 and a clearer reduction by weeks 6–12, especially after repeat treatment cycles.",
+  },
+  {
+    question: "What are the side effects?",
+    answer:
+      "Common effects are mild tenderness, small bruises or temporary chewing fatigue. Uncommon risks include smile asymmetry, under-treatment, over-softening, or paradoxical bulging if the strongest part of the muscle is missed. This is why CosmeDocs uses doctor-led assessment and conservative anatomical dosing.",
+  },
+];
+
+const caseStages = [
+  {
+    src: stageBaseline,
+    badge: "Stage 1 · Baseline",
+    title: "Before treatment — asymmetric masseter hypertrophy",
+    note: "HSI Masseter Scale · R: XL · L: L",
+    caption:
+      "The right masseter is graded XL and the left Large on the HSI Masseter Scale. The lower face is broad, square and heavy, with right-sided dominance from chronic clenching and grinding.",
+    alt: "Before masseter Botox showing asymmetric male masseter hypertrophy, right XL and left large, CosmeDocs Harley Street London",
+  },
+  {
+    src: stageFirstTreatment,
+    badge: "Stage 2 · 3 months post 1st session",
+    title: "3 months after first treatment",
+    caption:
+      "The first cycle has started visible atrophy. Bulk is softer on both sides and asymmetry begins to settle, whilst the patient reports less morning jaw tension and less grinding.",
+    alt: "Masseter Botox three months after first treatment showing softer jaw muscle bulk and improved symmetry",
+  },
+  {
+    src: stageSecondTreatment,
+    badge: "Stage 3 · 3 months post 2nd session",
+    title: "3 months after second treatment",
+    caption:
+      "Cumulative atrophy is now clearer. The lower face looks leaner, the jaw angle is less dominant and the right-left imbalance has improved without hollowing the face.",
+    alt: "Masseter Botox three months after second treatment showing cumulative jaw slimming and improved facial balance",
+  },
+  {
+    src: stageMaintained,
+    badge: "Stage 4 · Final maintained result",
+    title: "3 months after third treatment",
+    caption:
+      "A stable maintained result: refined, natural and still masculine. Maintenance was planned twice yearly initially, then annually once the muscle bulk had been controlled.",
+    alt: "Final maintained result after masseter Botox showing refined male jawline at CosmeDocs London",
+  },
+];
+
+const benefits = [
+  {
+    icon: Sparkles,
+    title: "Jaw slimming",
+    text: "Reduces muscle-driven width at the jaw angle for a softer, more balanced lower face.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Bruxism relief",
+    text: "Lowers excessive bite force that contributes to grinding, dental wear and morning jaw ache.",
+  },
+  {
+    icon: Gauge,
+    title: "TMJ tension support",
+    text: "Helps reduce overactivity in the chewing muscle that can overload the jaw joint.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Doctor-led dosing",
+    text: "Dose and placement are matched to muscle size, asymmetry and functional strength.",
+  },
+];
+
+const processSteps = [
+  "Your doctor palpates the masseter while you clench to map the strongest muscle belly and any right-left imbalance.",
+  "Dose is planned according to size, gender, bite force, symptoms and whether the aim is slimming, bruxism relief or both.",
+  "Tiny injections are placed into the safe body of the muscle, avoiding superficial smile muscles and the parotid region.",
+  "You return to normal life immediately, with simple aftercare: no rubbing, heavy exercise or excessive chewing for 24–48 hours.",
+];
+
+const comparisonRows = [
+  ["Best for", "Muscular square jaw, clenching, grinding", "Weak chin, soft jaw border, structural contour"],
+  ["Mechanism", "Relaxes and shrinks overactive muscle", "Adds definition and projection with dermal filler"],
+  ["Timeline", "Tension improves first; slimming over 4–12 weeks", "Shape is visible immediately"],
+  ["Often combined?", "Yes — when both muscle bulk and bone support matter", "Yes — especially chin and jawline balancing"],
+];
 
 const MasseterBotox = () => {
-  const seoData = generateSEOMetadata(
-    "Masseter Botox | Jaw Slimming & Bruxism | Harley St",
-    "Doctor-led masseter botox for jaw slimming, teeth grinding relief & facial contouring. Dual cosmetic and medical benefits from £350 (females) and £400 (males) at our Harley Street clinic.",
-    "/treatments/masseter-botox/"
-  );
+  const pageTitle = "Masseter Botox London | Jaw Slimming & Bruxism";
+  const pageDescription =
+    "Doctor-led masseter Botox in London for jaw slimming, bruxism, teeth grinding and TMJ tension. Harley Street treatment from £350 female / £400 male.";
 
-  const faqs = [
-    {
-      question: "How long does masseter botox last?",
-      answer: "Masseter botox typically lasts 4–6 months. Larger masseter muscles may need three sessions in the first year, two in the second, and fewer afterwards. Results appear within 1–2 weeks. We recommend maintenance 2–3 times per year for sustained jaw slimming."
-    },
-    {
-      question: "What are masseter botox side effects?",
-      answer: "Side effects are generally minimal — slight bruising, redness, or temporary muscle weakness during chewing. Serious complications like asymmetry are rare (less than 0.5%). Proper aftercare includes avoiding strenuous exercise for 24 hours."
-    },
-    {
-      question: "Am I the right candidate for jaw reduction botox?",
-      answer: "You may benefit if you have masseter hypertrophy from teeth grinding, desire jawline slimming, want to reduce jaw pain and tension, need TMJ symptom relief, or experience frequent tension headaches. A consultation will confirm suitability."
-    },
-    {
-      question: "Does jawline botox hurt?",
-      answer: "Most patients describe a mild pinch. We apply skin-numbing agents before injecting and use very fine needles. Slight soreness immediately after usually subsides quickly, with or without icing."
-    },
-    {
-      question: "What if I do not like the results?",
-      answer: "Masseter botox naturally wears off within 4–6 months, and your jawline will gradually return to its previous shape. There is no instant reversal, but the temporary nature ensures you can reassess before further treatment."
-    },
-    {
-      question: "Will I have problems chewing after jaw botox?",
-      answer: "No. The treatment partially relaxes the masseter muscle — it does not eliminate function. You may notice slight fatigue when chewing for the first week, but this subsides. Speech and eating are not affected."
-    },
-    {
-      question: "What is the difference between jaw botox and jawline fillers?",
-      answer: "Jaw botox relaxes overactive chewing muscles to slim the jaw. Jawline fillers add volume and definition to the bone contour. Botox slims, fillers sculpt. Many patients benefit from combining both for optimal facial balance."
-    },
-    {
-      question: "How much is masseter botox?",
-      answer: "Masseter botox at CosmeDocs is £350 for females and £400 for males. This includes consultation, precise dosing (25–45 units per side depending on muscle mass), premium products, and aftercare. Consultation fee is redeemable against treatment."
-    }
-  ];
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        name: "CosmeDocs",
+        url: "https://www.cosmedocs.com/",
+        description: "Doctor-led aesthetic medicine clinic on Harley Street, London.",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "10 Harley Street",
+          addressLocality: "London",
+          postalCode: "W1G 9PF",
+          addressCountry: "GB",
+        },
+        medicalSpecialty: "Aesthetic Medicine",
+        priceRange: "££",
+      },
+      {
+        "@type": "MedicalProcedure",
+        name: "Masseter Botox",
+        url: "https://www.cosmedocs.com/treatments/masseter-botox/",
+        procedureType: "NoninvasiveProcedure",
+        bodyLocation: "Masseter muscle",
+        description:
+          "Botulinum toxin treatment into the masseter muscles for jaw slimming, bruxism relief, jaw clenching and TMJ-related muscle tension.",
+        howPerformed:
+          "A doctor assesses masseter size and bite strength, then places precise botulinum toxin doses into the safe muscle body on each side of the jaw.",
+        followup: "Results are reviewed according to symptom relief and visible muscle reduction over 4–12 weeks.",
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "ImageGallery",
+        name: "Masseter Botox progression case series",
+        description:
+          "Four-stage clinical progression of a real CosmeDocs patient showing cumulative masseter reduction after doctor-led treatment.",
+        image: caseStages.map((stage, index) => ({
+          "@type": "ImageObject",
+          name: `Masseter Botox Stage ${index + 1}: ${stage.title}`,
+          description: stage.caption,
+          creator: { "@type": "Organization", name: "CosmeDocs" },
+          creditText: "CosmeDocs Harley Street",
+        })),
+      },
+    ],
+  };
 
   return (
     <>
       <Helmet>
-        <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.com/treatments/masseter-botox/" />
-        <meta property="og:title" content={seoData.title} />
-        <meta property="og:description" content={seoData.description} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/masseter-botox/" data-rh="true" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/masseter-botox/" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "MedicalBusiness",
-                "name": "CosmeDocs",
-                "description": "Doctor-led aesthetic medicine clinic on Harley Street",
-                "url": "https://www.cosmedocs.com/",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "10 Harley Street",
-                  "addressLocality": "London",
-                  "postalCode": "W1G 9PF",
-                  "addressCountry": "GB"
-                },
-                
-                "openingHoursSpecification": [
-                  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-                  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00" }
-                ]
-              },
-              {
-                "@type": "MedicalProcedure",
-                "name": "Masseter Botox Treatment",
-                "description": "Botulinum toxin injection into the masseter muscles for jaw slimming and bruxism relief. Dual cosmetic and medical benefits.",
-                "url": "https://www.cosmedocs.com/treatments/masseter-botox/",
-                "procedureType": "NoninvasiveProcedure",
-                "bodyLocation": "Masseter Muscle (Jaw)",
-                "followup": "Results visible in 1–2 weeks, lasting 4–6 months. Follow-up assessment included.",
-                "howPerformed": "Botulinum toxin injected into the masseter muscles at strategic points to reduce muscle size and activity."
-              },
-              {
-                "@type": "ScholarlyArticle",
-                "name": "Bruxism & Masseter Hypertrophy: A Comprehensive Botox Review",
-                "url": "https://www.harleystreetinstitute.com/journal/bruxism-masseter-hypertrophy-botox-review",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Harley Street Institute",
-                  "url": "https://www.harleystreetinstitute.com"
-                },
-                "about": "Comprehensive review of bruxism pathophysiology, masseter hypertrophy assessment, and evidence-based botulinum toxin treatment protocols.",
-                "citation": [
-                  "Zieliński G, et al. Global Prevalence of Sleep Bruxism and Awake Bruxism. J Clin Med. 2024;13(14):4259",
-                  "Chen Y, et al. Effectiveness of Botulinum Toxin Injection on Bruxism. Aesthetic Plast Surg. 2023;47(2):775-790",
-                  "Nobre BBS, et al. Exploring botulinum toxin's impact on masseter hypertrophy. Sci Rep. 2024;14:14522"
-                ]
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": faqs.map(faq => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-                }))
-              }
-            ]
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ImageGallery",
-            name: "Masseter Botox progression — educative four-stage case series",
-            description: "Four-stage clinical progression of a real male patient at Cosmedocs Harley Street, London — baseline asymmetric masseter hypertrophy graded on the HSI Masseter Scale, through three doctor-led treatments, to a maintained refined jawline. Published with written, informed patient consent.",
-            image: masseterProgressionStages.map((s, idx) => ({
-              "@type": "ImageObject",
-              name: `Masseter Botox progression — Stage ${idx + 1}: ${s.title}`,
-              description: s.caption,
-              creditText: "Cosmedocs · Harley Street",
-              copyrightNotice: "© Cosmedocs",
-              acquireLicensePage: "https://www.cosmedocs.com/contact/",
-              creator: { "@type": "Organization", name: "Cosmedocs" },
-              copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
-            }))
-          })}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
 
-
-      <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
-        {/* ═══════════════════════════════════════════
-            HERO — Minimal, text-light
-        ═══════════════════════════════════════════ */}
-        <section className="relative overflow-hidden bg-black pt-0 pb-20">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A050]/30 to-transparent" />
-
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
-              className="absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(201, 160, 80, 0.06) 0%, transparent 60%)' }}
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
+        <section className="relative border-b border-border bg-background px-4 pb-14 pt-4 sm:px-6 lg:pb-20">
+          <div className="mx-auto max-w-7xl">
             <Breadcrumb
               items={[
-                { label: 'Treatments', path: '/treatments/' },
-                { label: 'Botox Treatments', path: '/treatments/botox/' }
+                { label: "Treatments", path: "/treatments/" },
+                { label: "Botox Treatments", path: "/treatments/botox/" },
               ]}
               currentPage="Masseter Botox"
             />
-            <Link to="/treatments/botox/" className="inline-flex items-center gap-2 text-xs text-[#C9A050]/80 hover:text-[#C9A050] tracking-widest uppercase mt-4 transition-colors">
-              <ArrowRight className="w-3 h-3 rotate-180" /> Botox London — view all treatments
-            </Link>
 
-            <div className="flex flex-col lg:flex-row items-center justify-between pt-12 pb-4 gap-8">
-              {/* Mobile: Jaw illustration above text */}
-              <motion.div
-                className="lg:hidden w-[180px] h-[180px] relative mx-auto"
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-              >
-                <motion.div
-                  className="absolute inset-0 rounded-full"
-                  style={{
-                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.12) 0%, transparent 60%)',
-                  }}
-                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                />
-                <motion.img
-                  src={jawIllustration}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(201,160,80,0.15)]"
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                />
-              </motion.div>
-
-              {/* Left: Text */}
-              <div className="max-w-2xl text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+            <div className="grid gap-10 pt-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center lg:pt-16">
+              <div className="max-w-3xl">
+                <Link
+                  to="/treatments/botox/"
+                  className="mb-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-[hsl(40_50%_55%)] hover:text-[hsl(40_65%_70%)]"
                 >
-                  <h1 className="text-4xl md:text-[3.5rem] font-extralight text-white leading-[1.1] tracking-tight mb-6">
-                    Masseter{" "}
-                    <span className="text-[#C9A050] font-light">Botox</span>
-                  </h1>
-                  <p className="text-sm text-[#C9A050]/60 tracking-widest uppercase mb-4 font-light">Natural · Longer Lasting Results</p>
-                  <p className="text-lg md:text-xl text-white/35 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
-                    Jaw slimming and bruxism relief through precise muscle reduction — dual cosmetic and medical benefits in one treatment.
-                  </p>
-                </motion.div>
+                  <ArrowRight className="h-3 w-3 rotate-180" /> Botox treatment hub
+                </Link>
+                <h1 className="text-4xl font-light leading-tight tracking-normal text-foreground sm:text-5xl lg:text-6xl">
+                  Masseter Botox for jaw slimming and bruxism
+                </h1>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
+                  Doctor-led treatment for patients whose lower-face width, jaw tension or teeth grinding is driven by an overactive masseter muscle. The aim is controlled reduction: quieter function, softer bulk and a result that still looks like you.
+                </p>
 
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/25 tracking-wide uppercase"
-                >
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Doctor-Led</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />15–20 Min</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />Since 2007</span>
-                  <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-[#C9A050]/50" />From £350 (females), £400 (males)</span>
-                </motion.div>
+                <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  {[
+                    ["From", "£350 / £400"],
+                    ["Time", "15–20 min"],
+                    ["Effect", "1–2 weeks"],
+                    ["Slimming", "4–12 weeks"],
+                  ].map(([label, value]) => (
+                    <div key={label} className="border border-border bg-card p-4">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-[hsl(40_50%_55%)]">{label}</p>
+                      <p className="mt-2 text-sm font-medium text-card-foreground">{value}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                  <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full rounded-none bg-primary px-7 py-6 text-base text-primary-foreground hover:bg-primary/90 sm:w-auto">
+                      Book consultation <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                  <Link to="/before-after/botox/masseter/">
+                    <Button variant="outline" className="w-full rounded-none border-border bg-transparent px-7 py-6 text-base text-foreground hover:bg-accent sm:w-auto">
+                      View real results
+                    </Button>
+                  </Link>
+                </div>
               </div>
 
-              {/* Right: Jaw illustration — desktop */}
-              <motion.div
-                className="hidden lg:block flex-shrink-0 w-[280px] h-[320px] relative"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-              >
-                <motion.div
-                  className="absolute inset-0 rounded-full"
-                  style={{
-                    background: 'radial-gradient(circle at 50% 45%, rgba(201, 160, 80, 0.1) 0%, transparent 60%)',
-                  }}
-                  animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                />
-                <motion.img
-                  src={jawIllustration}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_30px_rgba(201,160,80,0.15)]"
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                />
-              </motion.div>
+              <figure className="relative mx-auto w-full max-w-sm lg:max-w-md">
+                <div className="absolute inset-8 bg-[hsl(40_50%_55%/0.08)] blur-3xl" />
+                <div className="relative border border-border bg-card p-6">
+                  <img
+                    src={jawIllustration}
+                    alt="Clinical jaw profile illustration showing the masseter area treated for jaw slimming and bruxism"
+                    className="mx-auto aspect-square w-full object-contain"
+                  />
+                  <figcaption className="border-t border-border pt-5 text-sm leading-7 text-muted-foreground">
+                    The masseter is a chewing muscle. If it becomes bulky through clenching or grinding, it can widen the lower face and overload the jaw joint.
+                  </figcaption>
+                </div>
+              </figure>
             </div>
           </div>
-
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
         </section>
 
-        {/* ═══════════════════════════════════════════
-            TWO-COLUMN LAYOUT — Content + Sidebar
-        ═══════════════════════════════════════════ */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
-            {/* LEFT — Main Content */}
-            <div className="space-y-14">
-
-              {/* What Is Masseter Botox */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    What Is <span className="text-[#C9A050] font-light">Masseter Botox?</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
-                        Masseter botox — also known as jawline slimming botox — uses botulinum toxin to relax the masseter muscles on each side of the jaw. This reduces muscle bulk, slimming a square jawline whilst simultaneously relieving teeth grinding, TMJ pain, and jaw tension.
-                      </p>
-                    }
-                  >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                      <p>
-                        The masseter is the powerful muscle responsible for chewing — and one of the strongest in the body. When overworked through bruxism (teeth grinding), stress clenching, or habitual gum chewing, it can hypertrophy (enlarge), creating a wide, square jawline and causing chronic pain.
-                      </p>
-                      <p>
-                        By injecting small doses of botulinum toxin into the enlarged muscle, we interrupt the nerve signals driving overactivity. The muscle gradually reduces in size over 2–6 weeks, producing both cosmetic jaw slimming and medical relief from grinding-related symptoms.
-                      </p>
-                      <p>
-                        Clinical studies, including research published in the <a href="https://academic.oup.com/asj/advance-article/doi/10.1093/asj/sjaf167/8239609" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Aesthetic Surgery Journal</a>, confirm that masseter botox is generally safe with no significant effect on bone density after repeated treatments.
-                      </p>
-                      <p>
-                        Treatment can be combined with <Link to="/treatments/dermal-fillers/jawline/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">jawline fillers</Link> or <Link to="/treatments/dermal-fillers/chin/" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">chin filler</Link> for comprehensive lower-face contouring.
-                      </p>
-                    </div>
-                  </ExpandableSection>
-                </motion.div>
+        <section className="px-4 py-14 sm:px-6 lg:py-20">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+            <article className="space-y-16">
+              <section className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {benefits.map(({ icon: Icon, title, text }) => (
+                  <div key={title} className="border border-border bg-card p-6">
+                    <Icon className="h-5 w-5 text-[hsl(40_50%_55%)]" />
+                    <h2 className="mt-5 text-lg font-medium text-card-foreground">{title}</h2>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
+                  </div>
+                ))}
               </section>
 
-              {/* How It Works */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    How the Procedure <span className="text-[#C9A050] font-light">Works</span>
+              <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">Clinical anatomy</p>
+                  <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
+                    What masseter Botox actually changes
                   </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
-                        The procedure takes 15–20 minutes. Your doctor assesses your masseter muscle size by palpation, then administers precise doses of botulinum toxin — typically 25–45 units per side — into strategic points within the muscle.
-                      </p>
-                    }
-                  >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                      <p>
-                        During consultation, your doctor evaluates your jaw anatomy, muscle bulk, bite function, and aesthetic goals. The masseter is assessed while you clench — you should feel it contract prominently at the jaw angle.
-                      </p>
-                      <p>
-                        A muscle graded as 'XL' typically presents with the lower face appearing wider than the upper face — the opposite of the 'triangle of youth'. Treatment dosage is calibrated to your individual muscle mass.
-                      </p>
-                      <p>
-                        Fine needles deliver the toxin at multiple injection points within the muscle body. Topical numbing cream is applied if preferred. You can return to normal activities immediately — there is no downtime.
-                      </p>
-                      <p>
-                        Results develop over 1–2 weeks as the muscle gradually relaxes, with peak slimming visible at 4–6 weeks. The jawline transitions from square to more oval or V-shaped.
-                      </p>
-                    </div>
-                  </ExpandableSection>
-                </motion.div>
+                </div>
+                <div className="space-y-5 text-sm leading-8 text-muted-foreground sm:text-base">
+                  <p>
+                    Masseter Botox, also called jaw Botox or jawline slimming Botox, uses botulinum toxin to reduce excessive contraction in the masseter muscle. This is not a filler treatment and it does not carve the jaw bone. It works by calming a powerful chewing muscle so that over time the muscle becomes less bulky.
+                  </p>
+                  <p>
+                    The treatment is useful when lower-face width is muscular rather than skeletal. Patients often describe a square jaw, heavy jaw angle, morning jaw ache, tooth chipping, tension headaches, clenching, grinding or a feeling that the jaw is always switched on. In these cases, the medical and cosmetic aims are linked: reduce the muscle’s force and the face can look softer whilst symptoms settle.
+                  </p>
+                  <p>
+                    At CosmeDocs, assessment is doctor-led. We ask you to clench, palpate the strongest part of the muscle, compare both sides and judge whether the target is slimming, bruxism control, TMJ tension support, or a combination. Our aesthetics is invisible art — bold, natural, always your way.
+                  </p>
+                </div>
               </section>
 
-              {/* Cosmetic vs Medical Benefits */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Dual <span className="text-[#C9A050] font-light">Benefits</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/55 text-sm leading-relaxed font-light">
-                        One treatment, two outcomes — a slimmer, more balanced jawline and clinical relief from bruxism, TMJ tension and jaw-origin headaches.
-                      </p>
-                    }
-                  >
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <div className="flex items-center gap-2 mb-4">
-                          <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                          <p className="text-sm font-medium text-white">Cosmetic Benefits</p>
-                        </div>
-                        <ul className="space-y-2 text-white/45 text-xs font-light">
-                          <li>• Slims a wide or square jawline</li>
-                          <li>• Creates a V-shaped facial contour</li>
-                          <li>• Corrects facial asymmetry</li>
-                          <li>• Softens masculine jawline features</li>
-                          <li>• Enhances overall facial balance</li>
-                        </ul>
+              <section className="border-y border-border py-12">
+                <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">Real patient progression</p>
+                    <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
+                      A stable vertical case series — no trapped scrolling
+                    </h2>
+                  </div>
+                  <Link to="/before-after/botox/masseter/" className="inline-flex items-center gap-2 text-sm text-[hsl(40_50%_55%)] hover:text-[hsl(40_65%_70%)]">
+                    Full gallery <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-2">
+                  {caseStages.map((stage, index) => (
+                    <figure key={stage.title} className="overflow-hidden border border-border bg-card">
+                      <div className="relative bg-secondary">
+                        <img
+                          src={stage.src}
+                          alt={stage.alt}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          className="aspect-[4/5] w-full object-cover object-top"
+                        />
+                        <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] bg-[hsl(40_50%_55%)] px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background">
+                          {stage.badge}
+                        </span>
+                        {stage.note && (
+                          <span className="absolute bottom-3 left-3 right-3 border border-[hsl(40_50%_55%/0.45)] bg-background/80 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-[hsl(40_50%_55%)] backdrop-blur">
+                            {stage.note}
+                          </span>
+                        )}
                       </div>
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <div className="flex items-center gap-2 mb-4">
-                          <Heart className="w-5 h-5 text-[#C9A050]" />
-                          <p className="text-sm font-medium text-white">Medical Benefits</p>
-                        </div>
-                        <ul className="space-y-2 text-white/45 text-xs font-light">
-                          <li>• Relieves bruxism (teeth grinding)</li>
-                          <li>• Reduces TMJ-related jaw pain</li>
-                          <li>• Alleviates tension headaches</li>
-                          <li>• Prevents dental damage from clenching</li>
-                          <li>• Reduces jaw muscle spasms</li>
-                        </ul>
-                      </div>
+                      <figcaption className="p-5 sm:p-6">
+                        <p className="text-sm font-medium uppercase tracking-[0.16em] text-[hsl(40_50%_55%)]">{stage.title}</p>
+                        <p className="mt-4 text-sm leading-7 text-muted-foreground">{stage.caption}</p>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+
+                <p className="mt-6 text-xs leading-6 text-muted-foreground">
+                  Published with written informed consent. Real CosmeDocs patient imagery only — never stock, never AI, never exaggerated. Individual treatment plans and results vary.
+                </p>
+              </section>
+
+              <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">Treatment process</p>
+                  <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
+                    How the procedure works
+                  </h2>
+                  <p className="mt-5 text-sm leading-8 text-muted-foreground">
+                    A careful appointment is brief, but the planning matters. The safest results come from understanding the muscle’s size, depth and direction before deciding dose.
+                  </p>
+                </div>
+                <ol className="space-y-4">
+                  {processSteps.map((step, index) => (
+                    <li key={step} className="grid grid-cols-[44px_1fr] gap-4 border border-border bg-card p-5">
+                      <span className="flex h-11 w-11 items-center justify-center bg-secondary text-sm text-[hsl(40_50%_55%)]">{index + 1}</span>
+                      <p className="text-sm leading-7 text-muted-foreground">{step}</p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+
+              <section className="space-y-6">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">Decision clarity</p>
+                  <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
+                    Masseter Botox vs jawline filler
+                  </h2>
+                </div>
+                <div className="overflow-hidden border border-border">
+                  <div className="grid grid-cols-3 bg-secondary text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                    <div className="p-4">Question</div>
+                    <div className="border-l border-border p-4">Masseter Botox</div>
+                    <div className="border-l border-border p-4">Jawline filler</div>
+                  </div>
+                  {comparisonRows.map(([label, botox, filler]) => (
+                    <div key={label} className="grid grid-cols-1 border-t border-border text-sm leading-7 text-muted-foreground sm:grid-cols-3">
+                      <div className="bg-card p-4 font-medium text-foreground">{label}</div>
+                      <div className="border-t border-border p-4 sm:border-l sm:border-t-0">{botox}</div>
+                      <div className="border-t border-border p-4 sm:border-l sm:border-t-0">{filler}</div>
                     </div>
-                  </ExpandableSection>
-                </motion.div>
+                  ))}
+                </div>
               </section>
 
-              {/* Am I Suitable */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Am I <span className="text-[#C9A050] font-light">Suitable?</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/55 text-sm leading-relaxed font-light">
-                        Best suited to patients with muscular jaw width, bruxism or TMJ tension — and not appropriate in pregnancy, neuromuscular disorders or where width is bony, not muscular.
-                      </p>
-                    }
-                  >
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <div className="flex items-center gap-2 mb-4">
-                          <CheckCircle className="w-5 h-5 text-[#C9A050]" />
-                          <p className="text-sm font-medium text-white">May Be Suitable</p>
-                        </div>
-                        <ul className="space-y-2 text-white/45 text-xs font-light">
-                          <li>• Wide or square jawline you wish to slim</li>
-                          <li>• Teeth grinding or jaw clenching (bruxism)</li>
-                          <li>• TMJ pain or jaw tension</li>
-                          <li>• Facial asymmetry from muscle imbalance</li>
-                          <li>• Tension headaches originating from jaw</li>
-                        </ul>
-                      </div>
-                      <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
-                        <div className="flex items-center gap-2 mb-4">
-                          <AlertTriangle className="w-5 h-5 text-white/40" />
-                          <p className="text-sm font-medium text-white">May Not Be Suitable</p>
-                        </div>
-                        <ul className="space-y-2 text-white/45 text-xs font-light">
-                          <li>• Jaw width caused by bone structure, not muscle</li>
-                          <li>• Active skin infection at injection site</li>
-                          <li>• Pregnancy or breastfeeding</li>
-                          <li>• Allergy to botulinum toxin</li>
-                          <li>• Neuromuscular disorders</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </ExpandableSection>
-                </motion.div>
-              </section>
-
-
-              {/* Results & Expectations */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Results & <span className="text-[#C9A050] font-light">Expectations</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
-                        Jaw slimming results appear within 1–2 weeks, with peak effect at 4–6 weeks as the muscle gradually atrophies. Results last 4–6 months, with many patients needing fewer sessions over time.
-                      </p>
-                    }
-                  >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                      <p>
-                        Most patients notice three stages: initial relaxation (week 1–2), visible slimming (week 3–4), and peak contour (week 4–6). The jawline transitions from a square or wide shape to a softer, more oval silhouette.
-                      </p>
-                      <p>
-                        With regular maintenance (2–3 treatments per year), many patients find the muscle adapts and requires progressively lower doses. Some report lasting results of 6+ months after 2–3 years of treatment.
-                      </p>
-                      <p>
-                        Teeth grinding relief and pain reduction may be noticed even earlier — often within 7–10 days of treatment.
-                      </p>
-                    </div>
-                  </ExpandableSection>
-                </motion.div>
-              </section>
-
-
-              {/* Educative Progression Series */}
-              <MasseterProgressionSeries />
-
-
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Aftercare & <span className="text-[#C9A050] font-light">Recovery</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
-                        No downtime required. You can return to work and normal activities immediately. A few simple precautions help ensure optimal results.
-                      </p>
-                    }
-                  >
-                    <ul className="space-y-3 text-white/45 text-sm font-light">
-                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid strenuous exercise for 24 hours</li>
-                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Do not massage or rub the treated area</li>
-                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Avoid excessive chewing (e.g. gum) for 48 hours</li>
-                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Stay upright for 4 hours post-treatment</li>
-                      <li className="flex items-start gap-3"><Heart className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />Apply ice if mild bruising or swelling occurs</li>
-                    </ul>
-                  </ExpandableSection>
-                </motion.div>
-              </section>
-
-              {/* Clinical Evidence — HSI Cross-Link */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Clinical Evidence: <span className="text-[#C9A050] font-light">Bruxism & Masseter Hypertrophy</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ExpandableSection
-                    preview={
-                      <p className="text-white/45 text-sm leading-relaxed font-light">
-                        Bruxism affects approximately 22% of adults globally, with sleep bruxism at ~21% and awake bruxism at ~23%. A comprehensive review published by the <a href="https://www.harleystreetinstitute.com/journal/bruxism-masseter-hypertrophy-botox-review" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/70 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Harley Street Institute</a> synthesises current evidence on botulinum toxin's role in managing this prevalent condition.
-                      </p>
-                    }
-                  >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
-                      <p>
-                        The review details how chronic bruxism drives masseter hypertrophy — the muscle enlarges through repetitive overactivity, much like skeletal muscle responds to exercise. Ultrasonographic studies confirm increased masseter thickness in bruxism patients, and the resulting square jawline represents what clinicians term "pseudo-ageing": the lower face widens relative to the upper and middle thirds, disrupting the youthful V-shaped contour.
-                      </p>
-                      <p>
-                        A 2023 systematic review and meta-analysis (Chen Y, et al., <em>Aesthetic Plast Surg</em>) found that botulinum toxin injections led to significant reduction in bite force as early as one month compared to placebo. Pain severity also decreased in a dose-dependent manner, with benefits lasting 3–4 months per treatment cycle.
-                      </p>
-                      <p>
-                        The Harley Street Institute's clinical grading system classifies masseter bulk from Small (normal — lower face clearly narrower than cheekbones) through Medium, Large, to Extra-Large (jaw wider than cheekbones with extremely bulky masseters). This standardised assessment guides precise dosing: 20–30 units per side for average hypertrophy, up to 40–50+ units for very large muscles.
-                      </p>
-                      <p>
-                        Studies demonstrate an average cross-sectional area reduction of approximately 30% after a single injection, with cumulative improvement after repeat treatments. Importantly, sleep bruxism is now understood as a centrally mediated phenomenon tied to micro-arousals, explaining why peripheral treatments like mouthguards protect teeth but do not address the underlying neuromuscular driver.
-                      </p>
-                      <p className="text-white/30 text-xs italic">
-                        Source: Harley Street Institute Journal — <a href="https://www.harleystreetinstitute.com/journal/bruxism-masseter-hypertrophy-botox-review" target="_blank" rel="noopener noreferrer" className="text-[#C9A050]/50 hover:text-[#C9A050] underline underline-offset-2 transition-colors">Bruxism & Masseter Hypertrophy: A Comprehensive Botox Review</a>. Key references: Zieliński G, et al. (2024) J Clin Med; Chen Y, et al. (2023) Aesthetic Plast Surg; Nobre BBS, et al. (2024) Sci Rep.
-                      </p>
-                    </div>
-                  </ExpandableSection>
-                </motion.div>
-              </section>
-
-              {/* Why CosmeDocs */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Why <span className="text-[#C9A050] font-light">CosmeDocs?</span>
-                  </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <ul className="space-y-3">
-                    {[
-                      "Doctor-led — all treatments by GMC-registered doctors",
-                      "Harley Street, London — established 2007",
-                      "Over 1 million treatments performed",
-                      "Lead trainer for masseter botox at the Harley Street Institute",
-                      "Conservative philosophy — safety and subtlety first",
-                      "Personalised dosing based on muscle assessment",
-                      "Our aesthetics is invisible art"
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-white/50 font-light">
-                        <CheckCircle className="w-4 h-4 text-[#C9A050]/70 flex-shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
+              <section className="grid gap-6 md:grid-cols-2">
+                <div className="border border-border bg-card p-6 sm:p-8">
+                  <CheckCircle className="h-5 w-5 text-[hsl(40_50%_55%)]" />
+                  <h2 className="mt-5 text-2xl font-light text-card-foreground">May be suitable</h2>
+                  <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
+                    <li>Wide or square jaw caused by muscle bulk</li>
+                    <li>Teeth grinding, clenching or jaw ache</li>
+                    <li>TMJ tension with masseter overactivity</li>
+                    <li>Asymmetry where one masseter is stronger</li>
+                    <li>Patients wanting subtle facial narrowing, not a hollow look</li>
                   </ul>
-                </motion.div>
+                </div>
+                <div className="border border-border bg-card p-6 sm:p-8">
+                  <AlertTriangle className="h-5 w-5 text-muted-foreground" />
+                  <h2 className="mt-5 text-2xl font-light text-card-foreground">May not be suitable</h2>
+                  <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
+                    <li>Jaw width is mostly bone, not muscle</li>
+                    <li>Pregnancy or breastfeeding</li>
+                    <li>Active infection at the treatment site</li>
+                    <li>Relevant neuromuscular conditions</li>
+                    <li>Expecting instant slimming rather than gradual muscle reduction</li>
+                  </ul>
+                </div>
               </section>
 
-              {/* FAQs */}
-              <section>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
-                    Frequently Asked <span className="text-[#C9A050] font-light">Questions</span>
+              <section className="space-y-6">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">Evidence and expectations</p>
+                  <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
+                    What good treatment should feel like
                   </h2>
-                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <Accordion type="single" collapsible className="space-y-3">
-                    {faqs.map((faq, index) => (
-                      <AccordionItem
-                        key={index}
-                        value={`item-${index}`}
-                        className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5"
-                      >
-                        <AccordionTrigger className="text-white/70 hover:text-[#C9A050] text-left text-sm font-light py-4">
-                          {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-white/40 text-sm font-light pb-4">
-                          {faq.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </motion.div>
+                </div>
+                <div className="space-y-5 text-sm leading-8 text-muted-foreground sm:text-base">
+                  <p>
+                    Good masseter Botox is not judged only by a slimmer photograph. Patients often report fewer headaches, reduced morning jaw fatigue, less tooth pressure and a calmer bite. Cosmetically, the change should be progressive enough that people notice you look fresher or less heavy in the lower face, not that a treatment has been done.
+                  </p>
+                  <p>
+                    Research on botulinum toxin for bruxism shows reduced bite force and symptom relief in selected patients. For hypertrophy, repeated cycles can reduce the cross-sectional size of the muscle. The clinical skill is knowing when to treat, how much to treat, and when not to over-treat, because a natural jaw still needs function and structure.
+                  </p>
+                  <p>
+                    CosmeDocs links masseter assessment with facial balance. Some patients need Botox only. Others need a combination with <Link to="/treatments/dermal-fillers/chin/" className="text-[hsl(40_50%_55%)] underline underline-offset-4">chin filler</Link>, <Link to="/treatments/dermal-fillers/jawline/" className="text-[hsl(40_50%_55%)] underline underline-offset-4"> jawline filler</Link> or a wider <Link to="/treatments/non-surgical-facelift/" className="text-[hsl(40_50%_55%)] underline underline-offset-4"> lower-face balancing plan</Link>. The consultation separates muscle problems from structure problems.
+                  </p>
+                </div>
               </section>
-            </div>
 
-            {/* RIGHT — Sticky Sidebar */}
-            <aside className="hidden lg:block">
-              <div className="sticky top-24">
-                <MasseterSidebar />
+              <section className="border border-border bg-card p-6 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <Clock className="mt-1 h-5 w-5 shrink-0 text-[hsl(40_50%_55%)]" />
+                  <div>
+                    <h2 className="text-2xl font-light text-card-foreground">Aftercare and recovery</h2>
+                    <p className="mt-4 text-sm leading-8 text-muted-foreground">
+                      You can return to normal activity immediately. For the first 24 hours, avoid strenuous exercise, rubbing the jaw, lying flat straight after treatment, saunas and heavy alcohol. Avoid gum or excessive chewing for 48 hours. If bruising occurs, it is usually small and short-lived.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-light leading-tight text-foreground sm:text-4xl">Frequently asked questions</h2>
+                <Accordion type="single" collapsible className="mt-6 space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem key={faq.question} value={`faq-${index}`} className="border border-border bg-card px-5">
+                      <AccordionTrigger className="text-left text-sm font-medium text-card-foreground hover:text-[hsl(40_50%_55%)]">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-sm leading-7 text-muted-foreground">{faq.answer}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </section>
+            </article>
+
+            <aside className="lg:sticky lg:top-24 lg:h-fit">
+              <div className="border border-border bg-card p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">At a glance</p>
+                <h2 className="mt-3 text-2xl font-light text-card-foreground">Masseter Botox</h2>
+                <dl className="mt-6 space-y-4 text-sm">
+                  {[
+                    ["Price", "£350 female / £400 male"],
+                    ["Best for", "Jaw slimming, bruxism, clenching"],
+                    ["Downtime", "None"],
+                    ["Maintenance", "Usually 2–3 times yearly at first"],
+                  ].map(([label, value]) => (
+                    <div key={label} className="border-t border-border pt-4">
+                      <dt className="text-muted-foreground">{label}</dt>
+                      <dd className="mt-1 text-card-foreground">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer" className="mt-7 block">
+                  <Button className="w-full rounded-none bg-primary text-primary-foreground hover:bg-primary/90">Book consultation</Button>
+                </a>
+                <p className="mt-5 text-xs leading-6 text-muted-foreground">
+                  We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
+                </p>
               </div>
             </aside>
           </div>
-        </div>
+        </section>
 
-        {/* ═══════════════════════════════════════════
-            FULL-WIDTH CTA
-        ═══════════════════════════════════════════ */}
-        <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-light mb-4 text-white">
-                Ready for a Slimmer <span className="text-[#C9A050]">Jawline?</span>
-              </h2>
-              <p className="text-white/60 mb-8 font-light">
-                A consultation with our doctors will assess your jaw anatomy, discuss your goals, and recommend the optimal treatment plan.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
-                  <Button className="group bg-[#C9A050] hover:bg-[#B8924A] text-black font-medium px-8 py-5 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A050]/20 w-full sm:w-auto">
-                    Book Consultation
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </a>
-                <Link to="/contact">
-                  <Button variant="ghost" className="border border-white/20 text-white/70 hover:text-white hover:bg-white/10 px-8 py-5 rounded-full text-base w-full sm:w-auto">
-                    Speak to a Doctor
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
+        <section className="border-y border-border bg-secondary px-4 py-14 sm:px-6 lg:py-20">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs uppercase tracking-[0.24em] text-[hsl(40_50%_55%)]">Your consultation begins here</p>
+            <h2 className="mt-4 text-3xl font-light leading-tight text-foreground sm:text-4xl">
+              A calmer jaw. A softer lower face. Still completely you.
+            </h2>
+            <p className="mt-5 text-sm leading-8 text-muted-foreground sm:text-base">
+              Book a doctor-led assessment for masseter size, bite force, bruxism symptoms and facial balance.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full rounded-none bg-primary px-7 py-6 text-primary-foreground hover:bg-primary/90 sm:w-auto">
+                  Book consultation <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
+              <Link to="/contact/">
+                <Button variant="outline" className="w-full rounded-none border-border bg-transparent px-7 py-6 text-foreground hover:bg-accent sm:w-auto">
+                  Ask a question
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* Mobile Sidebar */}
-        <section className="lg:hidden py-12 px-4 bg-black">
-          <MasseterSidebar />
+        <section className="px-4 py-12 sm:px-6">
+          <div className="mx-auto max-w-5xl">
+            <SkinFoundationCTA variant="general" />
+          </div>
         </section>
-
-        {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Masseter Botox — Expert Jaw Slimming & Bruxism Treatment at Harley Street</h2>
-          <p>
-            CosmeDocs offers doctor-led masseter botox treatments for jaw slimming and bruxism relief at our Harley Street clinic in London. Masseter botox, also known as jawline slimming botox, jaw botox, or jawline botox, uses precise botulinum toxin injections to reduce the masseter muscle size. This creates a slimmer, more V-shaped facial contour whilst simultaneously relieving teeth grinding, TMJ pain, and jaw tension. Our GMC-registered doctors have been performing masseter botox treatments since 2007, with over 1 million injections performed.
-          </p>
-          <h3>How Does Masseter Botox Work for Jaw Slimming?</h3>
-          <p>
-            Masseter botox works by temporarily relaxing the masseter muscle through chemodenervation. The botulinum toxin blocks nerve signals to the overactive jaw muscle, causing it to gradually reduce in size over 2–6 weeks. This botox facial slimming technique reshapes the jawline from square to oval. Botox for masseter muscle uses 25–45 units per side depending on muscle mass. Masseter botox before and after results show dramatic jaw contouring and facial slimming within 4–6 weeks.
-          </p>
-          <h3>Masseter Botox for Bruxism and TMJ Relief</h3>
-          <p>
-            Masseter botox for bruxism effectively treats teeth grinding by relaxing the overactive jaw muscle. Masseter botox for TMJ symptoms reduces jaw pain, tension headaches, and prevents dental damage from chronic clenching. Many patients seek masseter botox for teeth grinding relief alongside cosmetic jaw slimming benefits. Our doctors assess each patient's grinding patterns and muscle tension to determine optimal dosing.
-          </p>
-          <h3>Masseter Botox Cost and Pricing</h3>
-          <p>
-            Masseter botox cost at CosmeDocs is £350 for females and £400 for males. Our masseter botox price includes comprehensive consultation, precise dosing, premium botox products, and aftercare support. How much is masseter botox UK? At £350 for females and £400 for males, our masseter botox pricing represents excellent value with no hidden fees. Consultation fee is redeemable against treatment if you proceed on the same day.
-          </p>
-          <h4>Masseter Botox Side Effects and Aftercare</h4>
-          <p>
-            Masseter botox side effects are generally minimal. Common masseter botox aftercare concerns include slight bruising, redness, or temporary chewing fatigue. Serious side effects are rare. Proper masseter botox aftercare includes avoiding exercise for 24 hours and not massaging the area. Our aesthetics is invisible art — bold, natural, always your way.
-          </p>
-        </div>
-      </div>
-
-      {/* Skin Foundation CTA */}
-      <section className="py-12 px-4">
-        <div className="max-w-5xl mx-auto">
-          <SkinFoundationCTA variant="general" />
-        </div>
-      </section>
+      </main>
     </>
   );
 };
