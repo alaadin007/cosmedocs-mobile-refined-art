@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import {
   AlertTriangle,
   ArrowRight,
@@ -12,6 +13,7 @@ import {
   Stethoscope,
   Images,
   ChevronRight,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -121,10 +123,10 @@ const benefits = [
 ];
 
 const processSteps = [
-  "Your doctor palpates the masseter while you clench to map the strongest muscle belly and any right-left imbalance.",
-  "Dose is planned according to size, gender, bite force, symptoms and whether the aim is slimming, bruxism relief or both.",
-  "Tiny injections are placed into the safe body of the muscle, avoiding superficial smile muscles and the parotid region.",
-  "You return to normal life immediately, with simple aftercare: no rubbing, heavy exercise or excessive chewing for 24–48 hours.",
+  { title: "Doctor assessment", body: "Your doctor palpates the masseter while you clench to map the strongest muscle belly and any right-left imbalance." },
+  { title: "Dose planning", body: "Dose is planned according to size, gender, bite force, symptoms and whether the aim is slimming, bruxism relief or both." },
+  { title: "Precise injection", body: "Tiny injections are placed into the safe body of the muscle, avoiding superficial smile muscles and the parotid region." },
+  { title: "Return to life", body: "You return to normal life immediately, with simple aftercare: no rubbing, heavy exercise or excessive chewing for 24–48 hours." },
 ];
 
 const comparisonRows = [
@@ -139,6 +141,53 @@ const sectionReveal = {
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
   transition: { duration: 0.65, ease: "easeOut" as const },
+};
+
+const ProcessStepper = ({ steps }: { steps: { title: string; body: string }[] }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  return (
+    <ol className="space-y-3">
+      {steps.map((step, index) => {
+        const isOpen = openIndex === index;
+        return (
+          <li
+            key={step.title}
+            className={`rounded-2xl border bg-card transition-colors ${isOpen ? "border-luxury-gold/60 border-l-4 border-l-luxury-gold" : "border-border"}`}
+          >
+            <button
+              type="button"
+              onClick={() => setOpenIndex(isOpen ? null : index)}
+              className="flex w-full items-center gap-4 p-4 text-left min-h-[52px]"
+              aria-expanded={isOpen}
+            >
+              <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm transition-colors ${isOpen ? "bg-luxury-gold text-background" : "bg-secondary text-luxury-gold"}`}>
+                {index + 1}
+              </span>
+              <span className={`flex-1 text-sm font-medium ${isOpen ? "text-luxury-gold" : "text-card-foreground"}`}>
+                {step.title}
+              </span>
+              <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? "rotate-180" : ""}`} />
+            </button>
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="px-4 pb-4 pl-[4.5rem] text-sm leading-relaxed text-muted-foreground">
+                    {step.body}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </li>
+        );
+      })}
+    </ol>
+  );
 };
 
 const MasseterBotox = () => {
@@ -217,8 +266,8 @@ const MasseterBotox = () => {
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
 
-      <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-        <section className="relative overflow-hidden border-b border-border bg-background px-4 pb-14 pt-4 sm:px-6 lg:pb-20">
+      <main className="min-h-screen overflow-x-hidden bg-background text-foreground pb-24 lg:pb-0">
+        <section className="relative overflow-hidden border-b border-border bg-background px-4 pb-8 pt-4 sm:px-6 sm:pb-14 lg:pb-20">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_70%_10%,hsl(var(--luxury-gold)/0.14),transparent_34%),linear-gradient(180deg,hsl(var(--secondary))_0%,hsl(var(--background))_54%)]" />
           <div className="relative mx-auto max-w-7xl">
             <Breadcrumb
@@ -229,25 +278,25 @@ const MasseterBotox = () => {
               currentPage="Masseter Botox"
             />
 
-            <div className="grid gap-10 pt-10 lg:grid-cols-[minmax(0,1fr)_430px] lg:items-center lg:pt-16">
+            <div className="grid gap-6 pt-4 sm:gap-10 sm:pt-10 lg:grid-cols-[minmax(0,1fr)_430px] lg:items-center lg:pt-16">
               <motion.div {...sectionReveal} className="max-w-3xl">
                 <Link
                   to="/treatments/botox/"
-                  className="mb-5 inline-flex items-center gap-2 rounded-full border border-luxury-gold/25 bg-luxury-gold/10 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-luxury-gold transition-colors hover:text-luxury-gold-bright"
+                  className="mb-4 inline-flex items-center gap-2 rounded-full border border-luxury-gold/25 bg-luxury-gold/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-luxury-gold transition-colors hover:text-luxury-gold-bright sm:mb-5 sm:px-4 sm:py-2 sm:text-[11px]"
                 >
                   <ArrowRight className="h-3 w-3 rotate-180" /> Botox treatment hub
                 </Link>
-                <h1 className="text-4xl font-light leading-tight tracking-normal text-foreground sm:text-5xl lg:text-7xl">
+                <h1 className="text-3xl font-light leading-tight tracking-normal text-foreground sm:text-5xl lg:text-7xl">
                   Masseter Botox for jaw slimming and bruxism
                 </h1>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-                  Doctor-led treatment for patients whose lower-face width, jaw tension or teeth grinding is driven by an overactive masseter muscle. The aim is controlled reduction: quieter function, softer bulk and a result that still looks like you.
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8">
+                  Doctor-led treatment for patients whose lower-face width, jaw tension or teeth grinding is driven by an overactive masseter muscle.
                 </p>
-                <p className="mt-5 max-w-xl text-sm italic leading-7 text-luxury-gold/85">
+                <p className="mt-5 hidden max-w-xl text-sm italic leading-7 text-luxury-gold/85 sm:block">
                   Our aesthetics is invisible art — bold, natural, always your way.
                 </p>
 
-                <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <div className="mt-5 hidden grid-cols-2 gap-3 sm:mt-8 sm:grid sm:grid-cols-4">
                   {[
                     ["From", "£350 / £400"],
                     ["Time", "15–20 min"],
@@ -261,24 +310,21 @@ const MasseterBotox = () => {
                   ))}
                 </div>
 
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <div className="mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
                   <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full rounded-full bg-primary px-7 py-6 text-base text-primary-foreground hover:bg-primary/90 sm:w-auto">
+                    <Button className="w-full rounded-full bg-primary px-7 py-5 text-base text-primary-foreground hover:bg-primary/90 sm:w-auto sm:py-6">
                       Book consultation <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
-                  <Link to="/before-after/botox/masseter/">
+                  <Link to="/before-after/botox/masseter/" className="hidden sm:inline-block">
                     <Button variant="outline" className="w-full rounded-full border-luxury-gold/35 bg-transparent px-7 py-6 text-base text-foreground hover:bg-luxury-gold/10 sm:w-auto">
                       View masseter results
                     </Button>
                   </Link>
-                  <Link to="/before-after/" className="inline-flex items-center justify-center gap-2 rounded-full px-2 py-3 text-sm text-luxury-gold transition-colors hover:text-luxury-gold-bright sm:px-4">
-                    All before & afters <ChevronRight className="h-4 w-4" />
-                  </Link>
                 </div>
               </motion.div>
 
-              <motion.figure {...sectionReveal} transition={{ duration: 0.7, delay: 0.12, ease: "easeOut" }} className="relative mx-auto w-full max-w-sm lg:max-w-md">
+              <motion.figure {...sectionReveal} transition={{ duration: 0.7, delay: 0.12, ease: "easeOut" }} className="relative mx-auto hidden w-full max-w-sm sm:block lg:max-w-md">
                 <div className="absolute inset-8 rounded-full bg-luxury-gold/10 blur-3xl" />
                 <div className="relative overflow-hidden rounded-[2rem] border border-luxury-gold/20 bg-card/85 p-6 shadow-[0_35px_90px_-45px_hsl(var(--luxury-gold)/0.7)] backdrop-blur">
                   <img
@@ -295,18 +341,37 @@ const MasseterBotox = () => {
           </div>
         </section>
 
-        <section className="px-4 py-14 sm:px-6 lg:py-20">
+
+        <section className="px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <article className="space-y-16">
-              <motion.section {...sectionReveal} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                {benefits.map(({ icon: Icon, title, text }) => (
-                  <div key={title} className="rounded-[1.5rem] border border-border bg-card p-6 shadow-[0_24px_70px_-52px_hsl(var(--luxury-gold)/0.8)]">
-                    <Icon className="h-5 w-5 text-luxury-gold" />
-                    <h2 className="mt-5 text-lg font-medium text-card-foreground">{title}</h2>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
-                  </div>
-                ))}
+            <article className="space-y-10 sm:space-y-16">
+              <motion.section {...sectionReveal}>
+                <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+                  {benefits.map(({ icon: Icon, title, text }) => (
+                    <div key={title} className="rounded-2xl border border-border bg-card p-4 shadow-[0_24px_70px_-52px_hsl(var(--luxury-gold)/0.8)] sm:rounded-[1.5rem] sm:p-6">
+                      <Icon className="h-5 w-5 text-luxury-gold" />
+                      <h2 className="mt-3 text-sm font-medium leading-snug text-card-foreground sm:mt-5 sm:text-lg">{title}</h2>
+                      <p className="mt-2 hidden text-sm leading-7 text-muted-foreground sm:mt-3 sm:block">{text}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 sm:hidden">
+                  <ExpandableSection label="See full benefit details" collapseLabel="Hide benefit details" preview={null}>
+                    <div className="space-y-3 rounded-2xl border border-border bg-card p-4">
+                      {benefits.map(({ icon: Icon, title, text }) => (
+                        <div key={title} className="flex gap-3">
+                          <Icon className="mt-0.5 h-4 w-4 shrink-0 text-luxury-gold" />
+                          <div>
+                            <p className="text-sm font-medium text-card-foreground">{title}</p>
+                            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </ExpandableSection>
+                </div>
               </motion.section>
+
 
               <motion.section {...sectionReveal} className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
                 <div>
@@ -441,14 +506,8 @@ const MasseterBotox = () => {
                     A careful appointment is brief, but the planning matters. The safest results come from understanding the muscle’s size, depth and direction before deciding dose.
                   </p>
                 </div>
-                <ol className="space-y-4">
-                  {processSteps.map((step, index) => (
-                    <li key={step} className="grid grid-cols-[44px_1fr] gap-4 rounded-3xl border border-border bg-card p-5">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-sm text-luxury-gold">{index + 1}</span>
-                      <p className="text-sm leading-7 text-muted-foreground">{step}</p>
-                    </li>
-                  ))}
-                </ol>
+                <ProcessStepper steps={processSteps} />
+
               </motion.section>
 
               <motion.section {...sectionReveal} className="space-y-6">
@@ -596,7 +655,7 @@ const MasseterBotox = () => {
           </div>
         </section>
 
-        <section className="border-y border-border bg-secondary px-4 py-14 sm:px-6 lg:py-20">
+        <section className="border-y border-border bg-secondary px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.24em] text-luxury-gold">Your consultation begins here</p>
             <h2 className="mt-4 text-3xl font-light leading-tight text-foreground sm:text-4xl">
@@ -625,6 +684,20 @@ const MasseterBotox = () => {
             <SkinFoundationCTA variant="general" />
           </div>
         </section>
+        {/* Sticky mobile booking bar */}
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-luxury-gold/30 bg-background/95 px-4 py-3 backdrop-blur-md shadow-[0_-10px_30px_-15px_hsl(var(--luxury-gold)/0.6)] lg:hidden">
+          <div className="mx-auto flex max-w-md items-center justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-gold">Masseter Botox</p>
+              <p className="truncate text-sm font-medium text-foreground">From £350 · 15 min</p>
+            </div>
+            <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer" className="shrink-0">
+              <Button className="rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground hover:bg-primary/90">
+                Book consultation
+              </Button>
+            </a>
+          </div>
+        </div>
       </main>
     </>
   );
