@@ -295,18 +295,36 @@ const MasseterBotox = () => {
         </section>
 
 
-        <section className="px-4 py-14 sm:px-6 lg:py-20">
+        <section className="px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <article className="space-y-16">
-              <motion.section {...sectionReveal} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                {benefits.map(({ icon: Icon, title, text }) => (
-                  <div key={title} className="rounded-[1.5rem] border border-border bg-card p-6 shadow-[0_24px_70px_-52px_hsl(var(--luxury-gold)/0.8)]">
-                    <Icon className="h-5 w-5 text-luxury-gold" />
-                    <h2 className="mt-5 text-lg font-medium text-card-foreground">{title}</h2>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
-                  </div>
-                ))}
+            <article className="space-y-10 sm:space-y-16">
+              <motion.section {...sectionReveal}>
+                <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+                  {benefits.map(({ icon: Icon, title, text }) => (
+                    <div key={title} className="rounded-2xl border border-border bg-card p-4 shadow-[0_24px_70px_-52px_hsl(var(--luxury-gold)/0.8)] sm:rounded-[1.5rem] sm:p-6">
+                      <Icon className="h-5 w-5 text-luxury-gold" />
+                      <h2 className="mt-3 text-sm font-medium leading-snug text-card-foreground sm:mt-5 sm:text-lg">{title}</h2>
+                      <p className="mt-2 hidden text-sm leading-7 text-muted-foreground sm:mt-3 sm:block">{text}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 sm:hidden">
+                  <ExpandableSection label="See full benefit details" collapseLabel="Hide benefit details" preview={null}>
+                    <div className="space-y-3 rounded-2xl border border-border bg-card p-4">
+                      {benefits.map(({ icon: Icon, title, text }) => (
+                        <div key={title} className="flex gap-3">
+                          <Icon className="mt-0.5 h-4 w-4 shrink-0 text-luxury-gold" />
+                          <div>
+                            <p className="text-sm font-medium text-card-foreground">{title}</p>
+                            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </ExpandableSection>
+                </div>
               </motion.section>
+
 
               <motion.section {...sectionReveal} className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
                 <div>
