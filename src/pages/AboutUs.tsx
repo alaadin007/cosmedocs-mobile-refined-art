@@ -10,6 +10,7 @@ import AboutBrands from '@/components/about/AboutBrands';
 import AboutTrustSignals from '@/components/about/AboutTrustSignals';
 import AboutHospitalAffiliations from '@/components/about/AboutHospitalAffiliations';
 import AboutCTA from '@/components/about/AboutCTA';
+import AboutAward from '@/components/about/AboutAward';
 
 const AboutUs = () => {
   const seoData = generateSEOMetadata(
@@ -152,6 +153,7 @@ const AboutUs = () => {
           <AboutBrands />
           <AboutTrustSignals />
           <AboutHospitalAffiliations />
+          <AboutAward />
           <AboutCTA />
         </div>
 
