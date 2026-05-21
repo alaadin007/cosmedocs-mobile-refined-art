@@ -17,17 +17,277 @@ import {
   Microscope,
   ExternalLink,
   Star,
+  Play,
+  Clock,
+  PoundSterling,
+  Calendar,
+  MapPin,
+  Shield,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const HSI = "https://www.harleystreetinstitute.com";
 
+/* ─── course data pulled from HSI ─── */
+const beginnerCourses = [
+  {
+    title: "Foundation Botox & Dermal Fillers",
+    price: "£1,190 + VAT",
+    duration: "1 day",
+    detail: "Combined Botox + filler foundation. Max 4 delegates. Hands-on with real patients.",
+    href: `${HSI}/foundation-botox-and-dermal-fillers-training-course/`,
+    featured: true,
+  },
+  {
+    title: "Foundation Botox Course",
+    price: "£650 + VAT",
+    duration: "1 day",
+    detail: "Upper face: glabella, frontalis, crow's feet. Anatomy, technique, complication prevention.",
+    href: `${HSI}/botox-course-for-medical-professionals/`,
+  },
+  {
+    title: "Foundation Dermal Fillers",
+    price: "£650 + VAT",
+    duration: "1 day",
+    detail: "Lips, nasolabial folds, marionettes. Core cannula and needle techniques.",
+    href: `${HSI}/filler-course-for-medical-professionals/`,
+  },
+  {
+    title: "Oro-Facial Pain Botox",
+    price: "£1,950 + VAT",
+    duration: "1 day",
+    detail: "Upper-face Botox + migraine + bruxism/TMJ + trapezius/trigger points integrated.",
+    href: `${HSI}/oro-facial-pain-botox-course/`,
+    featured: true,
+  },
+  {
+    title: "Masseter Botox",
+    price: "£650 + VAT",
+    duration: "½ day",
+    detail: "Jawline slimming and bruxism. Practical training with live models.",
+    href: `${HSI}/botox-masseter-practical-course/`,
+  },
+  {
+    title: "Botox for Headaches & Migraines",
+    price: "£650 + VAT",
+    duration: "½ day",
+    detail: "Chronic migraine and tension headache protocols. Pattern mapping and dosing.",
+    href: `${HSI}/botox-headaches-migraines-practical-course/`,
+  },
+  {
+    title: "Trapezius & Trigger Points Botox",
+    price: "£650 + VAT",
+    duration: "½ day",
+    detail: "Barbie neck (trapezius slimming) and myofascial trigger point injection.",
+    href: `${HSI}/botox-trapezius-trigger-points-practical-course/`,
+  },
+  {
+    title: "Calf Reduction Botox",
+    price: "£650 + VAT",
+    duration: "½ day",
+    detail: "Calf slimming Botox for aesthetic leg contouring. Muscle selection and dosing.",
+    href: `${HSI}/botox-calf-reduction-practical-course/`,
+  },
+];
+
+const skinCourses = [
+  {
+    title: "PRP & Vampire Facial",
+    price: "£575 + VAT",
+    duration: "½ day",
+    detail: "Blood processing, Vampire Facial technique, and hair restoration protocols.",
+    href: `${HSI}/prp-vampire-facial-course/`,
+  },
+  {
+    title: "Skin Peeling Course",
+    price: "£575 + VAT",
+    duration: "½ day",
+    detail: "Chemical peel protocols from superficial to medium-depth treatments.",
+    href: `${HSI}/skin-peeling-course/`,
+  },
+  {
+    title: "Microneedling Course",
+    price: "£575 + VAT",
+    duration: "½ day",
+    detail: "Collagen induction therapy with device selection and treatment protocols.",
+    href: `${HSI}/microneedling-course/`,
+  },
+  {
+    title: "Polynucleotides Course",
+    price: "£575 + VAT",
+    duration: "½ day",
+    detail: "Bio-revitalisation with polynucleotide injections for skin regeneration.",
+    href: `${HSI}/polynucleotides-course/`,
+  },
+  {
+    title: "Profhilo Training",
+    price: "£575 + VAT",
+    duration: "½ day",
+    detail: "Bio-remodelling with Profhilo using the 5-point BAP technique.",
+    href: `${HSI}/profhilo-course/`,
+  },
+  {
+    title: "Skin Rejuvenation Certificate",
+    price: "£1,190 + VAT",
+    duration: "Combine 3 skin modules",
+    detail: "Structured certificate combining peels, microneedling and polynucleotides into one credential.",
+    href: `${HSI}/skin-certificate-programme/`,
+    featured: true,
+  },
+];
+
+const advancedMasterclasses = [
+  { title: "Cheeks Filler Masterclass", detail: "Midface volumisation, structural support, and lifting vectors.", href: `${HSI}/cheeks-filler-masterclass/` },
+  { title: "Tear Trough Training", detail: "Periorbital filler placement, patient selection and cannula technique.", href: `${HSI}/tear-trough-filler-training/` },
+  { title: "Jawline & Chin Masterclass", detail: "Mandibular contouring, chin projection and masculinisation/feminisation.", href: `${HSI}/jawline-chin-filler-masterclass/` },
+  { title: "Lip Filler Masterclass", detail: "Vermillion border, volume, philtral columns and Cupid's bow refinement.", href: `${HSI}/lip-filler-masterclass/` },
+  { title: "Non-Surgical Rhinoplasty", detail: "Dorsal hump camouflage, tip rotation and bridge augmentation.", href: `${HSI}/non-surgical-rhinoplasty-course/` },
+  { title: "PDO Thread Lifting", detail: "Mono, screw and cog thread techniques for facial lifting.", href: `${HSI}/pdo-thread-lifting-course/` },
+  { title: "Advanced Botox Techniques", detail: "Brow lifting, bunny lines, DAO, mentalis, platysma and hyperhidrosis.", href: `${HSI}/advanced-botox-course/` },
+  { title: "Complication Management", detail: "Vascular occlusion recognition, hyalase protocols and emergency algorithms.", href: `${HSI}/complication-management-course/` },
+];
+
+const structuredProgrammes = [
+  {
+    title: "Certificate in Aesthetic Medicine (CAM)",
+    price: "£3,200 + VAT",
+    duration: "3 days",
+    detail: "Foundation Botox & Fillers + Advanced techniques + Skin essentials. 48 CPD points. Open to beginners.",
+    href: `${HSI}/certificate-aesthetic-medicine/`,
+    level: "Step 2",
+  },
+  {
+    title: "Fellowship in Aesthetic Medicine (FAM)",
+    price: "£14,400 + VAT",
+    duration: "11 clinical days over 3 months",
+    detail: "CAM + Face module. 70+ live models. 1:2 mentor ratio. Two certificates awarded. Weekend-friendly cadence.",
+    href: `${HSI}/fellowship-aesthetic-medicine/`,
+    level: "Step 3",
+    featured: true,
+  },
+  {
+    title: "Internship in Aesthetic Medicine",
+    price: "Contact HSI",
+    duration: "Extended clinical immersion",
+    detail: "Everything in Fellowship plus additional weeks of supervised clinic time. Maximum hands-on exposure.",
+    href: `${HSI}/internship-aesthetic-medicine/`,
+    level: "Highest",
+  },
+];
+
+const fellowshipModules = [
+  "Aesthetic Facial Assessment, Emergency Situations, Complications and Complaints Handling, Aesthetic Medicine Photography",
+  "Botulinum Toxin Basic to Expert Level",
+  "Understanding the Biophysical Skin Changes With Ageing, Facial Ageing & Aesthetic Treatments",
+  "Developing the Aesthetic Eye, Mid Facial Rejuvenation and Contouring",
+  "Peri-Oral Restoration and Rejuvenation",
+  "Non-Surgical Rhinoplasty",
+  "Business Strategy, Social Media Marketing and Content Building, Starting a Clinic",
+];
+
+const eligibleProfessions = [
+  "Doctors (GMC registered)",
+  "Dentists (GDC registered)",
+  "Nurses & Midwives (NMC registered)",
+  "Pharmacists (GPhC registered)",
+  "Dental Therapists",
+  "Paramedics",
+  "Physiotherapists",
+  "Physician Associates",
+  "Operating Department Practitioners (ODP)",
+  "International healthcare professionals (equivalent registration)",
+];
+
+const studentReviews = [
+  { name: "Rachael Cotham", text: "I attended the foundation Botox and fillers course with no previous experience in aesthetics. The course was well presented with an online package followed by practical training. Would highly recommend." },
+  { name: "Dr Addai", text: "Great experience from start to finish! All staff were so kind and helpful. The trainer, Dr Hena, was very skilled and knowledgeable, she supported the group throughout the day to ensure we all felt confident." },
+  { name: "Dr Sarah Khan", text: "Fantastic foundation course. Very hands-on with live models. The ratio of delegates to trainers was excellent. Left feeling confident and ready to start treating patients." },
+  { name: "Dr Priya Sharma", text: "Exceptional training quality. The hands-on experience with real patients gave me the confidence I needed. Highly recommend for any healthcare professional looking to enter aesthetics." },
+  { name: "James Mitchell", text: "Outstanding course content and delivery. The trainers are experienced professionals who genuinely care about student success." },
+  { name: "Dr Fatima Khan", text: "The best investment in my medical career. Comprehensive curriculum, excellent mentorship, and fantastic support throughout." },
+];
+
+const trainingFeatures = [
+  {
+    icon: Users,
+    title: "Live Patient Clinics",
+    description: "Real patient treatments — not models, not theory. Fellows treat actual patients on Harley Street under expert supervision.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Expert Mentorship",
+    description: "One-to-one training with Dr Ahmed Haq and the senior Cosmedocs faculty — published, GMC-registered aesthetic physicians.",
+  },
+  {
+    icon: Award,
+    title: "Sister Company Pedigree",
+    description: "Cosmedocs is the clinical sister of Harley Street Institute — the postgraduate education arm running Foundation through Fellowship pathways since 2014.",
+  },
+  {
+    icon: Target,
+    title: "Comprehensive Curriculum",
+    description: "From your first toxin to advanced full-face contouring, threads, biostimulators and complication management — all anchored in peer-reviewed protocols.",
+  },
+];
+
+const faqData = [
+  {
+    question: "How is Cosmedocs related to Harley Street Institute?",
+    answer:
+      "Cosmedocs is the clinical sister company of Harley Street Institute. The Institute is the postgraduate education arm — it designs and accredits the curricula (Foundation, CAM, Fellowship, Skin Certificate). Cosmedocs provides the live Harley Street clinic where students treat real patients under our faculty. The two organisations share founders, premises and clinical standards.",
+  },
+  {
+    question: "How does this training differ from other aesthetic courses?",
+    answer:
+      "Most courses rely on theory and models. Our students treat real patients in live clinical settings under expert supervision. Ask other providers how many actual patients their students treat — the difference is remarkable. Combined with the academic rigour of Harley Street Institute (literature reviews, evidence-based protocols, peer-reviewed journal), this is postgraduate training, not a weekend workshop.",
+  },
+  {
+    question: "Which course should I start with?",
+    answer:
+      "Most beginners start with the one-day Foundation course, then progress to the CAM Certificate or add the Skin Rejuvenation Certificate alongside. Doctors and dentists targeting mastery enrol directly into the Fellowship (FAM). The Institute publishes the full pathway and entry requirements.",
+  },
+  {
+    question: "Who can apply?",
+    answer:
+      "Doctors (GMC), dentists (GDC), nurses (NMC) and pharmacists (GPhC), plus equivalent international healthcare professionals. Dental therapists, paramedics, physiotherapists, physician associates and ODPs are also eligible. Foundation and CAM accept complete beginners. The Fellowship is best suited to practitioners committed to aesthetic medicine as a long-term career.",
+  },
+  {
+    question: "Are the courses CPD accredited?",
+    answer:
+      "Yes. All Harley Street Institute pathways are CPD-accredited. AiCE points maintain a 1:1 ratio with CPD/CME hours. The Foundation and Advanced courses award 7 AiCE points, Masterclasses award 4–7 points, and the Fellowship awards 100+ AiCE points.",
+  },
+  {
+    question: "Will I get insurance after training?",
+    answer:
+      "All training certificates are endorsed by Hamilton Fraser Cosmetic Insurance. Foundation graduates are typically insurance-ready for basic Botox and dermal filler treatments. We advise confirming directly with your preferred insurer.",
+  },
+  {
+    question: "Is the Fellowship better than a university MSc?",
+    answer:
+      "The Fellowship in Aesthetic Medicine is designed to be more practical than many university Master's programmes, which often lack hands-on experience in actual aesthetic clinics. Our fellowship provides direct, mentorship-style training in live patient settings — essential for developing genuine aesthetic medicine proficiency.",
+  },
+  {
+    question: "Is there career support after the Fellowship?",
+    answer:
+      "Yes. Fellows receive ongoing mentorship, access to the Harley Street Institute Aesthetic Intelligence library, business and pricing tools, and an invitation to become a recognised CosmeDocs Partner — a national network of trusted graduates with brand, marketing and educator rights in their region.",
+  },
+  {
+    question: "Can I pay in instalments?",
+    answer:
+      "Yes. A 25% deposit secures your place. The remainder is due at least 1 month before your Fellowship commences. For other courses, contact Harley Street Institute directly to discuss payment options.",
+  },
+  {
+    question: "How do I enquire or apply?",
+    answer:
+      "All course enrolment, scheduling, brochures and dates are handled directly by Harley Street Institute. Visit harleystreetinstitute.com to browse the full course catalogue, request brochures and apply.",
+  },
+];
+
 const AestheticTraining = () => {
   const seoData = generateSEOMetadata(
     "Aesthetic Medicine Training London | Cosmedocs × Harley Street Institute",
-    "Sister company of Harley Street Institute. Foundation, Certificate (CAM), Fellowship (FAM) and Skin Rejuvenation training — doctor-led, Harley Street, live patient clinics since 2014.",
+    "Sister company of Harley Street Institute. Foundation, Certificate (CAM), Fellowship (FAM), Skin Rejuvenation, Masterclasses and specialist Botox training — doctor-led, Harley Street, live patient clinics since 2014.",
     "/training/"
   );
 
@@ -69,128 +329,33 @@ const AestheticTraining = () => {
       {
         "@type": "Course",
         "name": "Certificate in Aesthetic Medicine (CAM)",
-        "description": "Structured multi-day certification combining foundation, advanced and skin training. Open to complete beginners.",
+        "description": "Three-day comprehensive certification combining foundation, advanced and skin training. 48 CPD points. Open to complete beginners.",
         "provider": { "@type": "Organization", "name": "Harley Street Institute", "url": HSI },
-        "url": `${HSI}/certificate-in-aesthetic-medicine/`,
+        "url": `${HSI}/certificate-aesthetic-medicine/`,
       },
       {
         "@type": "Course",
         "name": "Fellowship in Aesthetic Medicine (FAM)",
-        "description": "The highest-level pathway. 84+ clinical hours, one-to-one mentorship, live patient immersion at Cosmedocs Harley Street.",
+        "description": "The highest-level pathway. 11 clinical days, CAM + Face, 70+ live models, 1:2 mentor ratio. Two certificates awarded.",
         "provider": { "@type": "Organization", "name": "Harley Street Institute", "url": HSI },
         "url": `${HSI}/fellowship-aesthetic-medicine/`,
       },
       {
         "@type": "Course",
         "name": "Skin Rejuvenation Certificate",
-        "description": "Skin-focused certificate covering peels, polynucleotides, biostimulators, microneedling and protocols. Low side-effect profile, high patient satisfaction.",
+        "description": "Skin-focused certificate covering peels, polynucleotides, biostimulators, microneedling and protocols.",
         "provider": { "@type": "Organization", "name": "Harley Street Institute", "url": HSI },
         "url": `${HSI}/skin-certificate-programme/`,
       },
     ],
   };
 
-  const trainingFeatures = [
-    {
-      icon: Users,
-      title: "Live Patient Clinics",
-      description: "Real patient treatments — not models, not theory. Fellows treat actual patients on Harley Street under expert supervision.",
-    },
-    {
-      icon: Stethoscope,
-      title: "Expert Mentorship",
-      description: "One-to-one training with Dr Ahmed Haq and the senior Cosmedocs faculty — published, GMC-registered aesthetic physicians.",
-    },
-    {
-      icon: Award,
-      title: "Sister Company Pedigree",
-      description: "Cosmedocs is the clinical sister of Harley Street Institute — the postgraduate education arm running Foundation through Fellowship pathways since 2014.",
-    },
-    {
-      icon: Target,
-      title: "Comprehensive Curriculum",
-      description: "From your first toxin to advanced full-face contouring, threads, biostimulators and complication management — all anchored in peer-reviewed protocols.",
-    },
-  ];
-
-  const courses = [
-    {
-      step: "Step 1 — Start Here",
-      title: "Foundation Botox & Dermal Fillers",
-      summary:
-        "A one-day intensive for complete beginners. Dip your feet in — core injection technique, facial anatomy, patient consultation, in a safe and supportive environment with real patients.",
-      bullets: ["No prior experience required", "One-day intensive", "Hands-on with real patients"],
-      href: `${HSI}/foundation-botox-and-dermal-fillers-training-course/`,
-      icon: BookOpen,
-    },
-    {
-      step: "Step 2 — For the Serious",
-      title: "Certificate in Aesthetic Medicine (CAM)",
-      summary:
-        "A structured multi-day programme combining foundation, advanced and skin training. The natural next step for practitioners who want a recognised certification pathway in aesthetic medicine.",
-      bullets: ["Comprehensive certification pathway", "Advanced techniques & full face", "Accepts complete beginners"],
-      href: `${HSI}/certificate-in-aesthetic-medicine/`,
-      icon: GraduationCap,
-    },
-    {
-      step: "Step 3 — Mastery",
-      title: "Fellowship in Aesthetic Medicine (FAM)",
-      summary:
-        "The highest level. Clinical immersion at our Harley Street clinic, 84+ live patient hours, one-to-one mentorship with the faculty, logbook completion and ongoing post-Fellowship support.",
-      bullets: ["84+ clinical hours with real patients", "One-to-one faculty mentorship", "Logbook & post-Fellowship career support"],
-      href: `${HSI}/fellowship-aesthetic-medicine/`,
-      icon: Trophy,
-    },
-    {
-      step: "For Everyone",
-      title: "Skin Rejuvenation Certificate",
-      summary:
-        "Who doesn't need skin treatments? Simple, effective, low-risk and highly satisfying. Low startup cost with high returns — both financial and in patient gratitude.",
-      bullets: ["Low side-effect profile", "Affordable entry point", "High patient satisfaction"],
-      href: `${HSI}/skin-certificate-programme/`,
-      icon: Microscope,
-    },
-  ];
-
-  const faqData = [
-    {
-      question: "How is Cosmedocs related to Harley Street Institute?",
-      answer:
-        "Cosmedocs is the clinical sister company of Harley Street Institute. The Institute is the postgraduate education arm — it designs and accredits the curricula (Foundation, CAM, Fellowship, Skin Certificate). Cosmedocs provides the live Harley Street clinic where students treat real patients under our faculty. The two organisations share founders, premises and clinical standards.",
-    },
-    {
-      question: "How does this training differ from other aesthetic courses?",
-      answer:
-        "Most courses rely on theory and models. Our students treat real patients in live clinical settings under expert supervision. Ask other providers how many actual patients their students treat — the difference is remarkable. Combined with the academic rigour of Harley Street Institute (literature reviews, evidence-based protocols, peer-reviewed journal), this is postgraduate training, not a weekend workshop.",
-    },
-    {
-      question: "Which course should I start with?",
-      answer:
-        "Most beginners start with the one-day Foundation course, then progress to the CAM Certificate or add the Skin Rejuvenation Certificate alongside. Doctors and dentists targeting mastery enrol directly into the Fellowship (FAM). The Institute publishes the full pathway and entry requirements.",
-    },
-    {
-      question: "Who can apply?",
-      answer:
-        "Doctors (GMC), dentists (GDC), nurses (NMC) and pharmacists (GPhC), plus equivalent international healthcare professionals. Foundation and CAM accept complete beginners. The Fellowship is best suited to practitioners committed to aesthetic medicine as a long-term career.",
-    },
-    {
-      question: "Is there career support after the Fellowship?",
-      answer:
-        "Yes. Fellows receive ongoing mentorship, access to the Harley Street Institute Aesthetic Intelligence library, business and pricing tools, and an invitation to become a recognised CosmeDocs Partner — a national network of trusted graduates with brand, marketing and educator rights in their region.",
-    },
-    {
-      question: "How do I enquire or apply?",
-      answer:
-        "All course enrolment, scheduling, brochures and dates are handled directly by Harley Street Institute. Visit harleystreetinstitute.com to browse the full course catalogue, request brochures and apply.",
-    },
-  ];
-
   return (
     <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="aesthetic medicine training London, Harley Street Institute, Cosmedocs faculty, fellowship aesthetic medicine, CAM certificate, foundation botox course, dermal filler training, skin certificate" />
+        <meta name="keywords" content="aesthetic medicine training London, Harley Street Institute, Cosmedocs faculty, fellowship aesthetic medicine, CAM certificate, foundation botox course, dermal filler training, skin certificate, advanced masterclasses, oro-facial pain botox, masseter botox, PRP training, polynucleotides course" />
         <link rel="canonical" href={seoData.canonical} data-rh="true" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
@@ -233,21 +398,21 @@ const AestheticTraining = () => {
                   <span className="block text-[#C9A050]">Training</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-4 max-w-xl font-light">
-                  Postgraduate education delivered with Harley Street Institute — Foundation, Certificate (CAM), Fellowship (FAM) and Skin Rejuvenation pathways, taught in our live Harley Street clinic since 2014.
+                  Postgraduate education delivered with Harley Street Institute — Foundation, Certificate (CAM), Fellowship (FAM), Skin Rejuvenation and Advanced Masterclasses, taught in our live Harley Street clinic since 2014.
                 </p>
                 <p className="text-base text-[#C9A050]/90 mb-8 italic font-light">
                   Our aesthetics is invisible art • Bold • Natural • Always Your Way
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={HSI} target="_blank" rel="noopener noreferrer">
+                  <a href={`${HSI}/aesthetic-courses/`} target="_blank" rel="noopener noreferrer">
                     <Button className="bg-[#C9A050] text-black hover:bg-[#B8924A] rounded-full px-8 py-6 text-base font-semibold shadow-2xl w-full sm:w-auto">
-                      Explore Courses at Harley Street Institute
+                      Browse All Courses
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
-                  <a href={`${HSI}/aesthetic-courses/`} target="_blank" rel="noopener noreferrer">
+                  <a href={`${HSI}/fellowship-aesthetic-medicine/`} target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-white/40 text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-base font-light backdrop-blur-sm w-full sm:w-auto">
-                      View Training Pathways
+                      Explore the Fellowship
                     </Button>
                   </a>
                 </div>
@@ -306,7 +471,28 @@ const AestheticTraining = () => {
           </div>
         </section>
 
-        {/* ════════ COURSE CATALOGUE FROM HSI ════════ */}
+        {/* ════════ BIG HSI CTA BANNER ════════ */}
+        <section className="py-10 bg-[#C9A050]/10 border-y border-[#C9A050]/20">
+          <div className="page-container">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-1">All course details, dates & enrolment</p>
+                <h3 className="text-2xl font-light">Everything you need is on harleystreetinstitute.com</h3>
+              </div>
+              <a
+                href={HSI}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-8 py-4 font-semibold transition-all shadow-lg whitespace-nowrap"
+              >
+                Go to Harley Street Institute
+                <ExternalLink className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════ STRUCTURED PROGRAMMES ════════ */}
         <section className="py-20 bg-background">
           <div className="page-container">
             <motion.div
@@ -316,63 +502,502 @@ const AestheticTraining = () => {
               viewport={{ once: true }}
               className="max-w-3xl mx-auto text-center mb-16"
             >
-              <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Course catalogue</p>
-              <h2 className="text-3xl md:text-4xl font-light mb-4">Your Aesthetic Training Journey</h2>
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Certification pathways</p>
+              <h2 className="text-3xl md:text-4xl font-light mb-4">Structured Training Programmes</h2>
               <p className="text-lg text-muted-foreground font-light">
-                A typical roadmap for practitioners entering aesthetic medicine — accredited and run by Harley Street Institute, taught in the Cosmedocs Harley Street clinic.
+                The flagship certification pathways that transform beginners into confident, advanced aesthetic practitioners.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              {courses.map((c, i) => {
-                const Icon = c.icon;
-                return (
-                  <motion.a
-                    key={c.title}
-                    href={c.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.08 }}
-                    viewport={{ once: true }}
-                    className="group bg-white border border-border rounded-2xl p-7 hover:border-[#C9A050]/60 hover:shadow-xl transition-all"
-                  >
-                    <p className="text-xs uppercase tracking-[0.15em] text-[#C9A050] mb-3">{c.step}</p>
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="bg-[#C9A050]/10 rounded-xl p-3 flex-shrink-0">
-                        <Icon className="h-6 w-6 text-[#C9A050]" />
-                      </div>
-                      <h3 className="text-xl font-medium leading-snug">{c.title}</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {structuredProgrammes.map((c, i) => (
+                <motion.a
+                  key={c.title}
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`group relative bg-white border rounded-2xl p-7 hover:border-[#C9A050]/60 hover:shadow-xl transition-all ${c.featured ? "border-[#C9A050]/40 ring-1 ring-[#C9A050]/20" : "border-border"}`}
+                >
+                  {c.featured && (
+                    <div className="absolute -top-3 left-6 bg-[#C9A050] text-black text-[10px] uppercase tracking-wider font-semibold px-3 py-1 rounded-full">
+                      Most Popular
                     </div>
-                    <p className="text-muted-foreground font-light leading-relaxed mb-4 text-sm">{c.summary}</p>
-                    <ul className="space-y-1.5 mb-5">
-                      {c.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2 text-sm text-foreground/80">
-                          <CheckCircle className="h-4 w-4 text-[#C9A050] mt-0.5 flex-shrink-0" />
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <span className="inline-flex items-center gap-1.5 text-sm text-[#C9A050] font-medium group-hover:gap-2.5 transition-all">
-                      View on Harley Street Institute
-                      <ExternalLink className="h-3.5 w-3.5" />
+                  )}
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#C9A050] mb-3">{c.level}</p>
+                  <h3 className="text-xl font-medium leading-snug mb-3">{c.title}</h3>
+                  <div className="flex flex-wrap gap-3 mb-4 text-sm">
+                    <span className="inline-flex items-center gap-1 text-muted-foreground">
+                      <Clock className="h-3.5 w-3.5 text-[#C9A050]" /> {c.duration}
                     </span>
-                  </motion.a>
-                );
-              })}
+                    <span className="inline-flex items-center gap-1 text-muted-foreground">
+                      <PoundSterling className="h-3.5 w-3.5 text-[#C9A050]" /> {c.price}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground font-light text-sm leading-relaxed mb-5">{c.detail}</p>
+                  <span className="inline-flex items-center gap-1.5 text-sm text-[#C9A050] font-medium group-hover:gap-2.5 transition-all">
+                    View on Harley Street Institute
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </span>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════ BEGINNER COURSES ════════ */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto text-center mb-16"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Beginner & injectable</p>
+              <h2 className="text-3xl md:text-4xl font-light mb-4">Botox & Dermal Filler Courses</h2>
+              <p className="text-lg text-muted-foreground font-light">
+                Entry-level and specialist injectable training for healthcare professionals new to aesthetics or targeting specific indications.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+              {beginnerCourses.map((c, i) => (
+                <motion.a
+                  key={c.title}
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  viewport={{ once: true }}
+                  className={`group bg-white border rounded-xl p-5 hover:border-[#C9A050]/60 hover:shadow-lg transition-all ${c.featured ? "border-[#C9A050]/40" : "border-border"}`}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] uppercase tracking-wider text-[#C9A050] font-medium">{c.duration}</span>
+                    {c.featured && <Star className="h-3.5 w-3.5 text-[#C9A050]" />}
+                  </div>
+                  <h3 className="text-base font-medium leading-snug mb-2">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">{c.detail}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-foreground">{c.price}</span>
+                    <ExternalLink className="h-3.5 w-3.5 text-[#C9A050] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════ SKIN COURSES ════════ */}
+        <section className="py-20 bg-background">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto text-center mb-16"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Skin & regeneration</p>
+              <h2 className="text-3xl md:text-4xl font-light mb-4">Skin Rejuvenation Training</h2>
+              <p className="text-lg text-muted-foreground font-light">
+                Low-risk, high-satisfaction skin treatments — an affordable entry point with excellent returns for your practice.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+              {skinCourses.map((c, i) => (
+                <motion.a
+                  key={c.title}
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  viewport={{ once: true }}
+                  className={`group bg-white border rounded-xl p-5 hover:border-[#C9A050]/60 hover:shadow-lg transition-all ${c.featured ? "border-[#C9A050]/40" : "border-border"}`}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] uppercase tracking-wider text-[#C9A050] font-medium">{c.duration}</span>
+                    {c.featured && <Star className="h-3.5 w-3.5 text-[#C9A050]" />}
+                  </div>
+                  <h3 className="text-base font-medium leading-snug mb-2">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">{c.detail}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-foreground">{c.price}</span>
+                    <ExternalLink className="h-3.5 w-3.5 text-[#C9A050] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════ ADVANCED MASTERCLASSES ════════ */}
+        <section className="py-20 bg-gradient-to-br from-neutral-50 via-white to-amber-50/40">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto text-center mb-16"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Advanced & specialist</p>
+              <h2 className="text-3xl md:text-4xl font-light mb-4">Advanced Masterclasses</h2>
+              <p className="text-lg text-muted-foreground font-light">
+                Half-day to full-day specialist training for experienced practitioners targeting specific facial regions and techniques.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+              {advancedMasterclasses.map((c, i) => (
+                <motion.a
+                  key={c.title}
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  viewport={{ once: true }}
+                  className="group bg-white border border-border rounded-xl p-5 hover:border-[#C9A050]/60 hover:shadow-lg transition-all"
+                >
+                  <h3 className="text-base font-medium leading-snug mb-2">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">{c.detail}</p>
+                  <span className="inline-flex items-center gap-1.5 text-xs text-[#C9A050] font-medium group-hover:gap-2 transition-all">
+                    View Course <ExternalLink className="h-3 w-3" />
+                  </span>
+                </motion.a>
+              ))}
             </div>
 
-            <div className="text-center mt-12">
+            <div className="text-center mt-10">
               <a
                 href={`${HSI}/aesthetic-courses/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-black hover:bg-neutral-800 text-white rounded-full px-8 py-4 font-medium text-base transition-all"
+                className="inline-flex items-center gap-2 text-[#C9A050] hover:text-black transition-colors font-medium"
               >
-                Browse All Courses at Harley Street Institute
-                <ExternalLink className="h-4 w-4" />
+                View complete course catalogue on harleystreetinstitute.com
+                <ArrowRight className="h-4 w-4" />
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════ PATHWAY COMPARISON TABLE ════════ */}
+        <section className="py-20 bg-black text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-5xl mx-auto"
+            >
+              <div className="text-center mb-12">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Compare pathways</p>
+                <h2 className="text-3xl md:text-4xl font-light mb-4">Foundation · Advanced · Masterclass · CAM · Fellowship</h2>
+                <p className="text-lg text-gray-300 font-light max-w-3xl mx-auto">
+                  Every Harley Street Institute pathway at a glance — duration, audience, AiCE points, accreditation and outcome.
+                </p>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-white/20">
+                      <th className="py-4 pr-6 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Pathway</th>
+                      <th className="py-4 pr-6 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Best For</th>
+                      <th className="py-4 pr-6 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Duration</th>
+                      <th className="py-4 pr-6 text-xs uppercase tracking-wider text-[#C9A050] font-medium">AiCE / CPD</th>
+                      <th className="py-4 pr-6 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Outcome</th>
+                      <th className="py-4 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm font-light">
+                    <tr className="border-b border-white/10">
+                      <td className="py-4 pr-6 font-medium">Foundation</td>
+                      <td className="py-4 pr-6 text-gray-300">Doctors, dentists, nurses new to aesthetics</td>
+                      <td className="py-4 pr-6 text-gray-300">1 day</td>
+                      <td className="py-4 pr-6 text-gray-300">7 AiCE pts</td>
+                      <td className="py-4 pr-6 text-gray-300">Insurance-ready Botox + filler</td>
+                      <td className="py-4"><a href={`${HSI}/foundation-botox-and-dermal-fillers-training-course/`} target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">Course →</a></td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-4 pr-6 font-medium">Advanced</td>
+                      <td className="py-4 pr-6 text-gray-300">Practitioners with foundation experience</td>
+                      <td className="py-4 pr-6 text-gray-300">1 day</td>
+                      <td className="py-4 pr-6 text-gray-300">7 AiCE pts</td>
+                      <td className="py-4 pr-6 text-gray-300">Cannula + advanced regions</td>
+                      <td className="py-4"><a href={`${HSI}/advanced-botox-fillers/`} target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">Course →</a></td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-4 pr-6 font-medium">Masterclass</td>
+                      <td className="py-4 pr-6 text-gray-300">HCPs targeting one indication</td>
+                      <td className="py-4 pr-6 text-gray-300">½–1 day</td>
+                      <td className="py-4 pr-6 text-gray-300">4–7 AiCE pts</td>
+                      <td className="py-4 pr-6 text-gray-300">Single-indication mastery</td>
+                      <td className="py-4"><a href={`${HSI}/aesthetic-masterclasses/`} target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">View →</a></td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-4 pr-6 font-medium">CAM Certificate</td>
+                      <td className="py-4 pr-6 text-gray-300">HCPs building a structured skillset</td>
+                      <td className="py-4 pr-6 text-gray-300">3 days</td>
+                      <td className="py-4 pr-6 text-gray-300">35+ AiCE pts</td>
+                      <td className="py-4 pr-6 text-gray-300">Certificate in Aesthetic Medicine</td>
+                      <td className="py-4"><a href={`${HSI}/certificate-aesthetic-medicine/`} target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">CAM →</a></td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 pr-6 font-medium text-[#C9A050]">Fellowship (FAM)</td>
+                      <td className="py-4 pr-6 text-gray-300">Doctors / dentists pursuing the highest credential</td>
+                      <td className="py-4 pr-6 text-gray-300">11 days / 3 months</td>
+                      <td className="py-4 pr-6 text-gray-300">100+ AiCE pts</td>
+                      <td className="py-4 pr-6 text-gray-300">Fellowship in Aesthetic Medicine</td>
+                      <td className="py-4"><a href={`${HSI}/fellowship-aesthetic-medicine/`} target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">Apply →</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-500 mt-4 text-center">All pathways are CPD-accredited. AiCE points maintain a 1:1 ratio with CPD/CME hours.</p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ════════ FELLOWSHIP DEEP-DIVE ════════ */}
+        <section className="py-20 bg-gradient-to-b from-background to-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-5xl mx-auto"
+            >
+              <div className="text-center mb-12">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">The highest credential</p>
+                <h2 className="text-3xl md:text-4xl font-light mb-4">Fellowship in Aesthetic Medicine</h2>
+                <p className="text-lg text-muted-foreground font-light max-w-3xl mx-auto">
+                  Established in 2014, the world's first and only live clinical fellowship designed to transform beginners and intermediate injectors into confident, advanced practitioners.
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg mb-6">
+                    <iframe
+                      src="https://www.youtube.com/embed/xg0g-GOZMjc"
+                      title="Inside the World's First Fellowship in Aesthetic Medicine - Harley Street Institute"
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <img
+                      src="/lovable-uploads/76a0e857-ddad-41fd-965b-459a41edaed7.png"
+                      alt="Fellowship graduates receiving aesthetic medicine certification from Harley Street Institute"
+                      className="rounded-lg shadow-md w-full h-40 object-cover"
+                    />
+                    <img
+                      src="/lovable-uploads/ea1c7290-2824-4fe9-9b4b-f7b4a8dca917.png"
+                      alt="Aesthetic medicine fellowship certificate presentation ceremony with medical professionals"
+                      className="rounded-lg shadow-md w-full h-40 object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="space-y-6"
+                >
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white border border-border rounded-xl p-4 text-center">
+                      <div className="text-2xl font-light text-[#C9A050]">11</div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Clinical days</p>
+                    </div>
+                    <div className="bg-white border border-border rounded-xl p-4 text-center">
+                      <div className="text-2xl font-light text-[#C9A050]">70+</div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Live models</p>
+                    </div>
+                    <div className="bg-white border border-border rounded-xl p-4 text-center">
+                      <div className="text-2xl font-light text-[#C9A050]">1:2</div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Mentor ratio</p>
+                    </div>
+                    <div className="bg-white border border-border rounded-xl p-4 text-center">
+                      <div className="text-2xl font-light text-[#C9A050]">2</div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Certificates</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-medium mb-4">How the 11 Days Are Structured</h3>
+                    <div className="space-y-4 text-sm text-muted-foreground font-light">
+                      <div className="flex gap-4">
+                        <div className="w-16 shrink-0 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Month 1</div>
+                        <div>
+                          <p className="font-medium text-foreground">CAM — Certificate in Aesthetic Medicine</p>
+                          <p>3 consecutive days covering Foundation Botox & Fillers, Advanced techniques, and Skin essentials.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        <div className="w-16 shrink-0 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Months 2–3</div>
+                        <div>
+                          <p className="font-medium text-foreground">Face Module — 8 days over 4 weekends</p>
+                          <p>Saturdays: full hands-on model days. Sundays: clinic shadowing followed by post-clinic model sessions.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        <div className="w-16 shrink-0 text-xs uppercase tracking-wider text-[#C9A050] font-medium">Throughout</div>
+                        <div>
+                          <p className="font-medium text-foreground">Optional weekday clinic shadowing</p>
+                          <p>Fellows are welcome to drop in for clinic observation on any weekday they are free. A minimum of two sessions is recommended.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-medium mb-4">7-Module Curriculum</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground font-light">
+                      {fellowshipModules.map((m, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-6 h-6 rounded-full bg-[#C9A050]/10 text-[#C9A050] text-xs font-medium flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
+                          <span>{m}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+
+                  <div className="bg-[#C9A050]/10 border border-[#C9A050]/30 rounded-xl p-5">
+                    <p className="text-sm text-foreground font-light italic">
+                      "Many new practitioners begin taking 20–30 minutes for a single lip filler treatment. By the end of the Fellowship, our fellows perform the same treatment in under 5 minutes, with fewer than 8–12 total injections across both lips — with accuracy, symmetry, and confidence."
+                    </p>
+                  </div>
+
+                  <a
+                    href={`${HSI}/fellowship-aesthetic-medicine/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#C9A050] hover:bg-[#B8924A] text-black rounded-full px-6 py-3 font-semibold transition-all"
+                  >
+                    Apply for Fellowship
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ════════ WHO WE TRAIN ════════ */}
+        <section className="py-16 bg-background">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="text-center mb-10">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Admissions</p>
+                <h2 className="text-3xl md:text-4xl font-light mb-4">Who We Train</h2>
+                <p className="text-lg text-muted-foreground font-light">
+                  Our courses are open to registered healthcare professionals from a range of clinical backgrounds.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                {eligibleProfessions.map((prof) => (
+                  <div
+                    key={prof}
+                    className="flex items-center gap-2 bg-white border border-border rounded-lg px-4 py-3 text-sm font-light"
+                  >
+                    <Shield className="h-4 w-4 text-[#C9A050] shrink-0" />
+                    <span>{prof}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 bg-accent rounded-xl p-6 text-center">
+                <p className="text-sm text-muted-foreground font-light">
+                  International healthcare professionals with equivalent registration in their home country are also eligible. Please contact Harley Street Institute to verify your qualifications.
+                </p>
+                <a
+                  href={`${HSI}/contact-us/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-3 text-[#C9A050] hover:text-foreground font-medium text-sm transition-colors"
+                >
+                  Contact HSI Admissions
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ════════ STUDENT REVIEWS ════════ */}
+        <section className="py-16 bg-gradient-to-br from-neutral-50 via-white to-amber-50/40">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050] mb-3">Testimonials</p>
+              <h2 className="text-3xl font-light mb-4">What Our Students Say</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+                Verified reviews from healthcare professionals who have trained with Harley Street Institute at Cosmedocs.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {studentReviews.map((review, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-all"
+                >
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="h-3.5 w-3.5 fill-[#C9A050] text-[#C9A050]" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">"{review.text}"</p>
+                  <p className="text-sm font-medium">{review.name}</p>
+                  <p className="text-xs text-muted-foreground">Verified HSI Student</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-sm text-muted-foreground font-light">
+                Excellent — Based on <span className="font-medium">103 reviews</span> on Google
+              </p>
             </div>
           </div>
         </section>
