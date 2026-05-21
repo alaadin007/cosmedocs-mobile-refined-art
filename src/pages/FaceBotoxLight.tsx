@@ -10,6 +10,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxSidebarLight from '@/components/botox/BotoxSidebarLight';
 import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
+import deepStaticLinesImg from '@/assets/botox-deep-static-lines-before-after.jpg';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useT, useLanguage } from '@/i18n/LanguageContext';
 import { generateHreflangLinks, getCanonicalUrl } from '@/i18n/config';
 import type { SupportedLanguage } from '@/i18n/types';
