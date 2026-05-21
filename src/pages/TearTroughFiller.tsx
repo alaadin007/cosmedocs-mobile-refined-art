@@ -86,13 +86,16 @@ const TearTroughFiller = () => {
       {
         "@type": "MedicalProcedure",
         name: "Tear Trough Filler Treatment",
-        alternateName: "Under Eye Filler",
+        alternateName: ["Under Eye Filler", "Under-Eye Dermal Filler", "Tear Trough Rejuvenation"],
         description: "Minimally invasive under-eye treatment using premium hyaluronic acid to restore volume, reduce dark circles, and minimise puffiness.",
         url: "https://www.cosmedocs.com/treatments/tear-trough-filler/",
-        procedureType: "NoninvasiveProcedure",
+        image: `https://www.cosmedocs.com${tearTroughHeroTrio}`,
+        procedureType: "https://schema.org/NoninvasiveProcedure",
         bodyLocation: "Under eye, tear trough region",
         followup: "Review appointment recommended at 2 weeks post-treatment.",
         howPerformed: "Premium hyaluronic acid filler carefully injected into the tear trough area using cannula or needle technique, with topical anaesthetic for comfort.",
+        preparation: "Avoid blood-thinning medications, alcohol, and intense exercise 24–48 hours before treatment where clinically appropriate.",
+        expectedPrognosis: "Immediate brightening of the under-eye area with settled results visible at 2 weeks. Longevity typically 12–18 months.",
       },
       {
         "@type": "Offer",
