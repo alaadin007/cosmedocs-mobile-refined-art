@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Calendar, Search, X, ChevronRight } from "lucide-react";
+import { ChevronDown, Calendar, Search, X, ChevronRight, Instagram, Facebook, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "@/components/LanguageSelector";
@@ -122,10 +122,19 @@ const navItems = [
   { label: "Pricing", link: "/treatments/" },
   { label: "Concerns", link: "/concerns/" },
   { label: "Gallery", link: "/before-after/" },
-  { label: "Smart Aesthetics", link: "/aesthetic-treatments-made-easy/" },
-  { label: "Blog", link: "/blog/" },
   { label: "About", link: "/about/" },
   { label: "Contact", link: "/contact/" },
+];
+
+const secondaryNavItems = [
+  { label: "Smart Aesthetics", link: "/aesthetic-treatments-made-easy/" },
+  { label: "Blog", link: "/blog/" },
+];
+
+const socialLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/cosmedocs/", icon: "instagram" as const },
+  { label: "Facebook", href: "https://www.facebook.com/cosmedocs", icon: "facebook" as const },
+  { label: "YouTube", href: "https://www.youtube.com/@cosmedocs", icon: "youtube" as const },
 ];
 
 export default function Home2Header() {
@@ -203,7 +212,7 @@ export default function Home2Header() {
         }`} />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-18 sm:h-20 md:h-20">
+          <div className="flex items-center justify-between h-14 sm:h-[60px] md:h-[60px]">
             {/* Logo - Bigger with animated subtitle */}
             <Link to="/home2" className="flex flex-col items-start py-3">
               <span className={`text-xl sm:text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
@@ -429,6 +438,45 @@ export default function Home2Header() {
                 <Calendar className="h-4 w-4 sm:mr-2" />
                 <span className="hidden sm:inline">Book</span>
               </Button>
+            </div>
+          </div>
+
+          {/* Secondary row — smaller links + social icons */}
+          <div className="hidden lg:flex items-center justify-end gap-4 h-5 -mt-1">
+            {secondaryNavItems.map((item) => (
+              <Link
+                key={item.link}
+                to={item.link}
+                className={`text-[11px] font-light tracking-[0.08em] uppercase transition-colors duration-500 ${
+                  isScrolled
+                    ? 'text-gray-500 hover:text-gray-900'
+                    : 'text-white/55 hover:text-white'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <span className={`h-3 w-px ${isScrolled ? 'bg-gray-300' : 'bg-white/20'}`} aria-hidden="true" />
+            <div className="flex items-center gap-2.5">
+              {socialLinks.map((s) => {
+                const Icon = s.icon === 'instagram' ? Instagram : s.icon === 'facebook' ? Facebook : Youtube;
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    aria-label={`Cosmedocs on ${s.label}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`transition-colors duration-500 ${
+                      isScrolled
+                        ? 'text-gray-500 hover:text-[#C9A050]'
+                        : 'text-white/55 hover:text-[#C9A050]'
+                    }`}
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
