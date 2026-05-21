@@ -153,6 +153,7 @@ const AboutUs = () => {
           <AboutBrands />
           <AboutTrustSignals />
           <AboutHospitalAffiliations />
+          <AboutAward />
           <AboutCTA />
         </div>
 
