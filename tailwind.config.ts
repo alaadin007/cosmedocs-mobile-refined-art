@@ -23,6 +23,11 @@ export default {
 		},
 		extend: {
 			colors: {
+				luxury: {
+					gold: 'hsl(var(--luxury-gold))',
+					'gold-bright': 'hsl(var(--luxury-gold-bright))',
+					cream: 'hsl(var(--luxury-cream))',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
