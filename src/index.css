@@ -201,3 +201,23 @@
     font-weight: 500;
   }
 }
+
+/* ============================================================
+   Tailwind JIT cannot detect dynamically-composed opacity
+   classes like `${textH}/70` → `text-gray-900/70`.
+   Define them explicitly so light-on-light text renders properly.
+   ============================================================ */
+.text-gray-900\/40 { color: rgb(17 24 39 / 0.4); }
+.text-gray-900\/50 { color: rgb(17 24 39 / 0.5); }
+.text-gray-900\/60 { color: rgb(17 24 39 / 0.6); }
+.text-gray-900\/70 { color: rgb(17 24 39 / 0.7); }
+.text-gray-900\/80 { color: rgb(17 24 39 / 0.8); }
+.text-gray-600\/70 { color: rgb(75 85 99 / 0.7); }
+.text-gray-400\/70 { color: rgb(156 163 175 / 0.7); }
+
+.text-\[\#C9A050\]\/40 { color: rgb(201 160 80 / 0.4); }
+.text-\[\#C9A050\]\/50 { color: rgb(201 160 80 / 0.5); }
+.text-\[\#C9A050\]\/60 { color: rgb(201 160 80 / 0.6); }
+.text-\[\#C9A050\]\/70 { color: rgb(201 160 80 / 0.7); }
+.text-\[\#C9A050\]\/80 { color: rgb(201 160 80 / 0.8); }
+.hover\:text-\[\#C9A050\]\/70:hover { color: rgb(201 160 80 / 0.7); }
