@@ -22,7 +22,7 @@ function isChunkLoadError(error: unknown): boolean {
   );
 }
 
-class ErrorBoundaryInner extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -47,8 +47,8 @@ class ErrorBoundaryInner extends Component<Props, State> {
   }
 
   componentDidUpdate(prevProps: Props) {
-    // Reset the error state when the user navigates to a new route, so
-    // a single broken page never blocks the rest of the app.
+    // Reset error state on route change so a single broken page doesn't
+    // block the rest of the app for the whole session.
     if (this.state.hasError && prevProps.resetKey !== this.props.resetKey) {
       this.setState({ hasError: false, error: undefined });
     }
@@ -56,8 +56,8 @@ class ErrorBoundaryInner extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      // For chunk errors we're already reloading — keep the screen blank
-      // rather than flashing the scary fallback.
+      // Chunk failure — we're already reloading; keep the screen blank
+      // instead of flashing the scary fallback.
       if (isChunkLoadError(this.state.error)) {
         return null;
       }
@@ -92,14 +92,17 @@ class ErrorBoundaryInner extends Component<Props, State> {
   }
 }
 
-// Wrapper that subscribes to route changes and feeds them in as a resetKey,
-// so a stale error from one page can't persist after the user navigates.
-export function ErrorBoundary({ children, fallback }: Omit<Props, 'resetKey'>) {
+/**
+ * Route-aware inner boundary. Must be rendered INSIDE <BrowserRouter>.
+ * Resets itself whenever the user navigates to a different pathname, so a
+ * broken page never persists across navigation.
+ */
+export function RouteResetErrorBoundary({ children, fallback }: Omit<Props, 'resetKey'>) {
   const location = useLocation();
   return (
-    <ErrorBoundaryInner resetKey={location.pathname} fallback={fallback}>
+    <ErrorBoundary resetKey={location.pathname} fallback={fallback}>
       {children}
-    </ErrorBoundaryInner>
+    </ErrorBoundary>
   );
 }
 
