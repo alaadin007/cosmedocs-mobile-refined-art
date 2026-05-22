@@ -411,6 +411,7 @@ const MasseterBotox = () => {
                   Published with written informed consent. Real CosmeDocs patient imagery only — never stock, never AI, never exaggerated. Individual treatment plans and results vary.
                 </p>
               </motion.section>
+              )}
 
               <motion.section {...sectionReveal}>
                 <ExpandableSection
