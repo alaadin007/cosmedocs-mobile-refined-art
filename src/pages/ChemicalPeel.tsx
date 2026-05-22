@@ -13,6 +13,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSidebar";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const ChemicalPeel = () => {
   const seoData = generateSEOMetadata(
