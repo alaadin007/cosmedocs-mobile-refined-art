@@ -116,6 +116,24 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
   },
 ];
 
+// Quick-pick concerns shown when user taps "Start my plan"
+type Concern = {
+  id: string;
+  label: string;
+  emoji: string;
+  bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox";
+  asksAge?: boolean;
+};
+const QUICK_CONCERNS: Concern[] = [
+  { id: "lines",   label: "Lines & wrinkles",            emoji: "〰️", bucket: "Anti-ageing",       asksAge: true },
+  { id: "volume",  label: "Volume loss / cheeks",        emoji: "🍑", bucket: "Facial contouring", asksAge: true },
+  { id: "lips",    label: "Lips",                        emoji: "💋", bucket: "Facial contouring" },
+  { id: "jowls",   label: "Jowls / sagging skin",        emoji: "⬇️", bucket: "Anti-ageing",       asksAge: true },
+  { id: "skin",    label: "Skin tone, texture, pigment", emoji: "🌿", bucket: "Skin health" },
+  { id: "medical", label: "Medical Botox (jaw, sweating, migraines)", emoji: "🩺", bucket: "Medical Botox" },
+];
+const AGE_BANDS = ["Under 25", "25–34", "35–44", "45–54", "55+"];
+
 const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBotProps = {}) => {
   const location = useLocation();
   const [internalIsOpen, setInternalIsOpen] = useState(false);
@@ -123,6 +141,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [showTeaser, setShowTeaser] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
+  const [planConcern, setPlanConcern] = useState<Concern | null>(null);
   const { toast } = useToast();
 
   const pageConfig = useMemo(
