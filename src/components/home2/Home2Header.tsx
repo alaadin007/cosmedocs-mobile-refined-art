@@ -4,7 +4,7 @@ import { ChevronDown, Calendar, Search, X, ChevronRight, Instagram, Facebook, Yo
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "@/components/LanguageSelector";
-import teosyalAward from "@/assets/awards/teosyal-outstanding-clinic-award.png";
+
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
