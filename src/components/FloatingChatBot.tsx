@@ -768,6 +768,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                   </button>
                 </div>
               )}
+              </div>
 
               {/* iOS-style composer */}
               <div
