@@ -627,50 +627,130 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
               )}
 
-              {/* Photo previews — up to 5 */}
+              {/* Angle checklist — front / left / right / close-up / detail */}
               {attachedImages.length > 0 && (
                 <div className="px-5 pt-3">
                   <div className="p-3 rounded-2xl bg-white/[0.05] border border-amber-400/30">
-                    <div className="flex items-center justify-between mb-2">
-                      <p className="text-[13px] text-white font-medium">
-                        {attachedImages.length} of {MAX_IMAGES} photo{attachedImages.length > 1 ? "s" : ""} ready
-                        {attachedImages.length >= 3 && <span className="text-amber-400"> · high accuracy</span>}
-                      </p>
+                    <div className="flex items-center justify-between mb-2.5">
+                      <div>
+                        <p className="text-[13px] text-white font-medium leading-tight">
+                          {attachedImages.length} of {MAX_IMAGES} angles captured
+                          {attachedImages.length >= MIN_REQUIRED_ANGLES && (
+                            <span className="text-amber-400"> · high accuracy</span>
+                          )}
+                        </p>
+                        <p className="text-[11px] text-white/55 mt-0.5">
+                          Tap a tile to add or replace that angle
+                        </p>
+                      </div>
                       <button
-                        onClick={() => setAttachedImages([])}
+                        onClick={() => { setAttachedImages([]); setImageAngles([]); }}
                         className="text-white/50 hover:text-white text-[12px]"
                       >
                         Clear all
                       </button>
                     </div>
-                    <div className="flex gap-2 overflow-x-auto pb-1">
-                      {attachedImages.map((img, i) => (
-                        <div key={i} className="relative shrink-0">
-                          <img src={img} alt={`Attached ${i + 1}`} className="h-16 w-16 rounded-xl object-cover" />
-                          <button
-                            onClick={() => setAttachedImages((prev) => prev.filter((_, idx) => idx !== i))}
-                            className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-black/80 border border-white/20 flex items-center justify-center text-white"
-                            aria-label={`Remove photo ${i + 1}`}
-                          >
-                            <X className="h-3 w-3" />
-                          </button>
-                        </div>
-                      ))}
-                      {attachedImages.length < MAX_IMAGES && (
-                        <button
-                          onClick={() => fileInputRef.current?.click()}
-                          className="shrink-0 h-16 w-16 rounded-xl border border-dashed border-amber-400/40 text-amber-400 flex items-center justify-center text-[24px]"
-                          aria-label="Add another photo"
-                        >
-                          +
-                        </button>
-                      )}
+
+                    {/* Progress bar */}
+                    <div className="h-1 w-full rounded-full bg-white/10 overflow-hidden mb-3">
+                      <div
+                        className="h-full bg-gradient-to-r from-amber-300 to-amber-500 transition-all"
+                        style={{ width: `${Math.min(100, (attachedImages.length / MAX_IMAGES) * 100)}%` }}
+                      />
                     </div>
-                    <p className="text-[11px] text-white/55 flex items-center gap-1 mt-2">
-                      <Shield className="h-3 w-3 text-amber-400" />
-                      Add 3–5 angles (front, left, right, close-up) for the most accurate plan. Discarded after this reply — never stored.
+
+                    {/* Angle tiles */}
+                    <div className="grid grid-cols-5 gap-2">
+                      {PHOTO_ANGLES.map((angle) => {
+                        const idx = imageAngles.indexOf(angle.id);
+                        const imgUrl = idx >= 0 ? attachedImages[idx] : null;
+                        const Icon = angle.icon;
+                        return (
+                          <div key={angle.id} className="flex flex-col items-center text-center">
+                            <button
+                              onClick={() => openPickerForAngle(angle.id)}
+                              className={`relative h-16 w-16 rounded-xl overflow-hidden flex items-center justify-center transition-all ${
+                                imgUrl
+                                  ? "border-2 border-amber-400 shadow-md shadow-amber-500/20"
+                                  : angle.required
+                                    ? "border border-dashed border-amber-400/60 bg-white/[0.04] active:bg-amber-400/10"
+                                    : "border border-dashed border-white/15 bg-white/[0.02] active:bg-white/[0.06]"
+                              }`}
+                              aria-label={imgUrl ? `Replace ${angle.label} photo` : `Add ${angle.label} photo`}
+                              title={angle.hint}
+                            >
+                              {imgUrl ? (
+                                <>
+                                  <img src={imgUrl} alt={`${angle.label} angle`} className="h-full w-full object-cover" />
+                                  <span className="absolute top-1 right-1 h-4 w-4 rounded-full bg-amber-400 flex items-center justify-center">
+                                    <Check className="h-2.5 w-2.5 text-black" strokeWidth={3} />
+                                  </span>
+                                </>
+                              ) : (
+                                <Icon className={`h-5 w-5 ${angle.required ? "text-amber-400" : "text-white/40"}`} />
+                              )}
+                            </button>
+                            <span className={`mt-1 text-[10px] leading-tight ${imgUrl ? "text-amber-400" : angle.required ? "text-white/80" : "text-white/45"}`}>
+                              {angle.label}
+                            </span>
+                            {imgUrl && (
+                              <button
+                                onClick={() => removeAngle(angle.id)}
+                                className="mt-0.5 text-[9px] text-white/40 hover:text-white"
+                              >
+                                Remove
+                              </button>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    <p className="text-[11px] text-white/55 flex items-start gap-1 mt-3">
+                      <Shield className="h-3 w-3 text-amber-400 shrink-0 mt-0.5" />
+                      <span>
+                        {attachedImages.length < MIN_REQUIRED_ANGLES
+                          ? `Add at least ${MIN_REQUIRED_ANGLES} angles (front, left, right) for an accurate plan.`
+                          : "Discarded after this reply — never stored."}
+                      </span>
                     </p>
                   </div>
+                </div>
+              )}
+
+              {/* Empty-state angle checklist — invites first capture */}
+              {attachedImages.length === 0 && (
+                <div className="px-5 pt-3">
+                  <button
+                    onClick={() => openPickerForAngle("front")}
+                    className="w-full p-3 rounded-2xl bg-white/[0.04] border border-dashed border-amber-400/30 active:bg-white/[0.06] text-left"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Camera className="h-4 w-4 text-amber-400" />
+                      <p className="text-[13px] text-white font-medium">Photo angles for accuracy</p>
+                      <span className="ml-auto text-[10px] text-white/45">optional</span>
+                    </div>
+                    <div className="grid grid-cols-5 gap-2">
+                      {PHOTO_ANGLES.map((angle) => {
+                        const Icon = angle.icon;
+                        return (
+                          <div key={angle.id} className="flex flex-col items-center text-center">
+                            <div className={`h-12 w-12 rounded-xl border border-dashed flex items-center justify-center ${
+                              angle.required ? "border-amber-400/50 bg-white/[0.03]" : "border-white/15 bg-white/[0.02]"
+                            }`}>
+                              <Icon className={`h-4 w-4 ${angle.required ? "text-amber-400" : "text-white/35"}`} />
+                            </div>
+                            <span className={`mt-1 text-[10px] leading-tight ${angle.required ? "text-white/70" : "text-white/40"}`}>
+                              {angle.label}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[11px] text-white/50 mt-2">
+                      Add 3–5 angles for the most accurate plan · front, left, right are key
+                    </p>
+                  </button>
                 </div>
               )}
 
