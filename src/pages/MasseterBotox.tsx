@@ -445,72 +445,75 @@ const MasseterBotox = () => {
                 </div>
               </motion.section>
 
-              {caseStages.length > 0 && (
-              <motion.section {...sectionReveal} className="overflow-hidden rounded-[2rem] border border-border bg-secondary/40 py-10">
+              {resultCards.length > 0 && (
+              <motion.section {...sectionReveal} className="overflow-hidden rounded-[1.5rem] border border-border bg-secondary/40 py-7 sm:rounded-[2rem] sm:py-10">
 
-                <div className="mb-8 flex flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between">
+                <div className="mb-5 flex flex-col gap-4 px-4 sm:mb-8 sm:px-6 lg:flex-row lg:items-end lg:justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-luxury-gold">Real patient progression</p>
-                    <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                      The full masseter Botox before-and-after journey
+                    <h2 className="mt-2 text-2xl font-light leading-tight text-foreground sm:mt-3 sm:text-4xl">
+                      Masseter Botox before-and-after results
                     </h2>
-                    <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-                      Swipe through the series. The first image is shown with a looser crop so the original jaw width and asymmetry can be seen clearly.
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:mt-4 sm:leading-7">
+                      Swipe or use the arrows to view real CosmeDocs patient results. Each card opens the dedicated masseter gallery for the full before-and-after set.
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-3">
-                    <Link to="/before-after/botox/masseter/" className="inline-flex items-center gap-2 rounded-full border border-luxury-gold/30 px-4 py-2 text-sm text-luxury-gold hover:bg-luxury-gold/10">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <Link to="/before-after/botox/masseter/" className="inline-flex items-center justify-center gap-2 rounded-full border border-luxury-gold/30 px-4 py-2 text-sm text-luxury-gold hover:bg-luxury-gold/10">
                       Masseter gallery <ArrowRight className="h-4 w-4" />
                     </Link>
-                    <Link to="/before-after/" className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">
+                    <Link to="/before-after/" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">
                       All before & afters <Images className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
 
-                {/* Swipe affordance — mobile only */}
                 <div className="mb-3 flex items-center justify-between px-4 sm:hidden">
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-luxury-gold/30 bg-luxury-gold/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-luxury-gold">
                     Swipe <ArrowRight className="h-3 w-3 animate-pulse" />
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    {caseStages.length} stages
+                    {resultCards.length} cases
                   </span>
                 </div>
 
-                <div className="relative">
-                  <div
-                    className="flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
-                    style={{ overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
-                  >
-                    {caseStages.map((stage, index) => (
-                      <figure key={stage.title} className="group flex-shrink-0 snap-center w-[82vw] max-w-[440px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[380px] md:w-[420px]">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-background">
-                          <img
-                            src={stage.src}
-                            alt={stage.alt}
-                            loading={index === 0 ? "eager" : "lazy"}
-                            draggable={false}
-                            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.025] ${stage.imageClass}`}
-                          />
-                          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/80 via-background/20 to-transparent pointer-events-none" />
-                          <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background shadow-lg">
-                            {stage.badge}
-                          </span>
-                        </div>
-                        <figcaption className="p-5 sm:p-6">
-                          <p className="text-sm font-medium uppercase tracking-[0.16em] text-luxury-gold">{stage.title}</p>
-                          {stage.note && (
-                            <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-luxury-gold/80">{stage.note}</p>
-                          )}
-                          <p className="mt-4 text-sm leading-7 text-muted-foreground">{stage.caption}</p>
-                        </figcaption>
-                      </figure>
+                <Carousel
+                  opts={{ align: "start", containScroll: "trimSnaps", dragFree: false }}
+                  className="mx-auto w-full px-4 sm:px-6"
+                >
+                  <CarouselContent className="-ml-3 sm:-ml-5">
+                    {resultCards.map((stage, index) => (
+                      <CarouselItem key={`${stage.title}-${index}`} className="basis-[88%] pl-3 sm:basis-1/2 sm:pl-5 lg:basis-1/3">
+                        <Link to="/before-after/botox/masseter/" className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold/70 rounded-[1.5rem]">
+                          <figure className="flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:rounded-[2rem]">
+                            <div className="relative aspect-square overflow-hidden bg-background">
+                              <img
+                                src={stage.src}
+                                alt={stage.alt}
+                                loading={index < 2 ? "eager" : "lazy"}
+                                draggable={false}
+                                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.025]"
+                              />
+                              <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/85 via-background/25 to-transparent" />
+                              <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-background shadow-lg sm:left-4 sm:top-4">
+                                {stage.badge}
+                              </span>
+                            </div>
+                            <figcaption className="flex flex-1 flex-col p-4 sm:p-5">
+                              <p className="text-xs font-medium uppercase tracking-[0.16em] text-luxury-gold sm:text-sm">{stage.title}</p>
+                              <p className="mt-3 text-sm leading-6 text-muted-foreground sm:leading-7">{stage.caption}</p>
+                              <span className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-luxury-gold">
+                                View full gallery <ChevronRight className="h-3.5 w-3.5" />
+                              </span>
+                            </figcaption>
+                          </figure>
+                        </Link>
+                      </CarouselItem>
                     ))}
-                  </div>
-                  {/* Right edge fade hint — indicates more content */}
-                  <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-secondary/80 to-transparent sm:w-16" />
-                </div>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-5 top-[43%] hidden border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background sm:flex" />
+                  <CarouselNext className="right-5 top-[43%] hidden border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background sm:flex" />
+                </Carousel>
 
                 <p className="px-4 pt-2 text-xs leading-6 text-muted-foreground sm:px-6">
                   Published with written informed consent. Real CosmeDocs patient imagery only — never stock, never AI, never exaggerated. Individual treatment plans and results vary.
