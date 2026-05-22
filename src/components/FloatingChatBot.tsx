@@ -116,6 +116,24 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
   },
 ];
 
+// Quick-pick concerns shown when user taps "Start my plan"
+type Concern = {
+  id: string;
+  label: string;
+  emoji: string;
+  bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox";
+  asksAge?: boolean;
+};
+const QUICK_CONCERNS: Concern[] = [
+  { id: "lines",   label: "Lines & wrinkles",            emoji: "〰️", bucket: "Anti-ageing",       asksAge: true },
+  { id: "volume",  label: "Volume loss / cheeks",        emoji: "🍑", bucket: "Facial contouring", asksAge: true },
+  { id: "lips",    label: "Lips",                        emoji: "💋", bucket: "Facial contouring" },
+  { id: "jowls",   label: "Jowls / sagging skin",        emoji: "⬇️", bucket: "Anti-ageing",       asksAge: true },
+  { id: "skin",    label: "Skin tone, texture, pigment", emoji: "🌿", bucket: "Skin health" },
+  { id: "medical", label: "Medical Botox (jaw, sweating, migraines)", emoji: "🩺", bucket: "Medical Botox" },
+];
+const AGE_BANDS = ["Under 25", "25–34", "35–44", "45–54", "55+"];
+
 const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBotProps = {}) => {
   const location = useLocation();
   const [internalIsOpen, setInternalIsOpen] = useState(false);
@@ -123,6 +141,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [showTeaser, setShowTeaser] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
+  const [planConcern, setPlanConcern] = useState<Concern | null>(null);
   const { toast } = useToast();
 
   const pageConfig = useMemo(
@@ -183,7 +203,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
         body: {
           question: text,
           includeWebSearch: true,
-          context: `User is currently on page: ${location.pathname} (topic: ${pageConfig.topic}). Be warm, concise, conversion-focused. Always quote prices when known, recommend a clear next step (book consultation or WhatsApp +44 7735 606447), and ask one qualifying question per reply.`,
+          context: `User is currently on page: ${location.pathname} (topic: ${pageConfig.topic}). Be warm, concise, conversion-focused. Keep replies under 60 words. No long monologues, no headings, no bullet lists unless explicitly asked. Always quote prices when known, recommend a clear next step (book consultation or WhatsApp +44 7735 606447), and ask one short qualifying question per reply.`,
         },
       });
       if (error) throw error;
@@ -203,11 +223,27 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
-  const openWithCta = () => {
+  const openPlanPicker = () => {
     setIsOpen(true);
     setShowTeaser(false);
-    setTimeout(() => sendMessage(pageConfig.cta), 250);
+    setPlanConcern(null);
+    setPlanStep("concern");
   };
+
+  const submitPlan = (concern: Concern, age?: string) => {
+    setPlanStep("closed");
+    const lines = [
+      `Concern: ${concern.label} (${concern.bucket}).`,
+      age ? `Age: ${age}.` : null,
+      "Please reply in 3 short lines only:",
+      "1) one-line empathy,",
+      "2) two best doctor-led options with price,",
+      "3) one-line next step (book or WhatsApp +44 7735 606447).",
+      "No long paragraphs, no bullet lists, under 60 words total.",
+    ].filter(Boolean).join(" ");
+    sendMessage(lines);
+  };
+
 
   return (
     <>
@@ -236,7 +272,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
               <p className="mt-2 text-sm leading-snug">{pageConfig.teaser}</p>
               <div className="mt-3 flex gap-2">
                 <button
-                  onClick={openWithCta}
+                  onClick={openPlanPicker}
                   className="flex-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-2 text-xs font-medium text-black hover:opacity-95"
                 >
                   {pageConfig.cta}
@@ -364,16 +400,78 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
               </div>
             </ScrollArea>
 
-            {/* Quick reply */}
-            <div className="px-4 pt-2 bg-black">
-              <button
-                onClick={() => sendMessage(pageConfig.cta)}
-                disabled={isLoading}
-                className="w-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-2 text-xs font-medium text-black hover:opacity-95 disabled:opacity-60"
-              >
-                {pageConfig.cta}
-              </button>
-            </div>
+            {/* Plan picker — quick concern + age */}
+            {planStep !== "closed" && (
+              <div className="px-4 pt-3 pb-1 bg-black border-t border-white/10">
+                {planStep === "concern" && (
+                  <>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-amber-400 mb-2">
+                      What's bothering you?
+                    </p>
+                    <div className="grid grid-cols-1 gap-1.5 max-h-[42vh] overflow-y-auto pr-1">
+                      {QUICK_CONCERNS.map((c) => (
+                        <button
+                          key={c.id}
+                          onClick={() => {
+                            setPlanConcern(c);
+                            if (c.asksAge) setPlanStep("age");
+                            else submitPlan(c);
+                          }}
+                          className="flex items-center gap-2.5 text-left px-3 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-amber-400/40 hover:bg-amber-400/[0.06] text-white text-sm transition-colors"
+                        >
+                          <span className="text-base leading-none">{c.emoji}</span>
+                          <span className="flex-1">{c.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => setPlanStep("closed")}
+                      className="mt-2 text-[11px] text-white/40 hover:text-white/70"
+                    >
+                      Skip — just chat
+                    </button>
+                  </>
+                )}
+                {planStep === "age" && planConcern && (
+                  <>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-amber-400 mb-2">
+                      Roughly how old are you?
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {AGE_BANDS.map((a) => (
+                        <button
+                          key={a}
+                          onClick={() => submitPlan(planConcern, a)}
+                          className="px-3 py-2 rounded-full bg-white/[0.04] border border-white/10 hover:border-amber-400/40 hover:bg-amber-400/[0.06] text-white text-xs"
+                        >
+                          {a}
+                        </button>
+                      ))}
+                      <button
+                        onClick={() => submitPlan(planConcern)}
+                        className="px-3 py-2 rounded-full text-white/50 text-xs hover:text-white"
+                      >
+                        Prefer not to say
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
+
+            {/* Quick reply — open the structured picker */}
+            {planStep === "closed" && (
+              <div className="px-4 pt-2 bg-black">
+                <button
+                  onClick={openPlanPicker}
+                  disabled={isLoading}
+                  className="w-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-2 text-xs font-medium text-black hover:opacity-95 disabled:opacity-60"
+                >
+                  Start my plan
+                </button>
+              </div>
+            )}
+
 
             {/* Input */}
             <div className="p-4 border-t border-white/10 bg-black">
