@@ -260,11 +260,67 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
+  const openPickerForAngle = (angle: AngleId | null) => {
+    pendingAngleRef.current = angle;
+    if (fileInputRef.current) {
+      // single-file mode when targeting an angle, multi otherwise
+      fileInputRef.current.multiple = angle === null;
+      fileInputRef.current.click();
+    }
+  };
+
+  const removeAngle = (angle: AngleId) => {
+    setAttachedImages((prev) => prev.filter((_, i) => imageAngles[i] !== angle));
+    setImageAngles((prev) => prev.filter((a) => a !== angle));
+  };
+
+  const nextOpenAngle = (): AngleId | null => {
+    const filled = new Set(imageAngles);
+    const next = PHOTO_ANGLES.find((a) => !filled.has(a.id));
+    return next ? next.id : null;
+  };
+
   const handleImagesSelected = (files: FileList | null) => {
     if (!files || files.length === 0) return;
+    const targetAngle = pendingAngleRef.current;
+    pendingAngleRef.current = null;
+
+    if (targetAngle) {
+      // Single-slot replace mode
+      const file = files[0];
+      if (file.size > 8 * 1024 * 1024) {
+        toast({ title: "Photo too large", description: `${file.name} is over 8 MB.`, variant: "destructive" });
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const url = e.target?.result as string;
+        setAttachedImages((prevImgs) => {
+          setImageAngles((prevAng) => {
+            const idx = prevAng.indexOf(targetAngle);
+            if (idx >= 0) {
+              const a = [...prevAng];
+              return a; // angle stays in same slot
+            }
+            return [...prevAng, targetAngle];
+          });
+          const idx = imageAngles.indexOf(targetAngle);
+          if (idx >= 0) {
+            const next = [...prevImgs];
+            next[idx] = url;
+            return next;
+          }
+          return prevImgs.length >= MAX_IMAGES ? prevImgs : [...prevImgs, url];
+        });
+      };
+      reader.readAsDataURL(file);
+      return;
+    }
+
+    // Multi/untagged fallback — assign to next open angle in sequence
     const remaining = MAX_IMAGES - attachedImages.length;
     if (remaining <= 0) {
-      toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos per message.`, variant: "destructive" });
+      toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos.`, variant: "destructive" });
       return;
     }
     const list = Array.from(files).slice(0, remaining);
@@ -276,7 +332,15 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
       const reader = new FileReader();
       reader.onload = (e) => {
         const url = e.target?.result as string;
-        setAttachedImages((prev) => (prev.length >= MAX_IMAGES ? prev : [...prev, url]));
+        setAttachedImages((prev) => {
+          if (prev.length >= MAX_IMAGES) return prev;
+          setImageAngles((prevAng) => {
+            const filled = new Set(prevAng);
+            const next = PHOTO_ANGLES.find((a) => !filled.has(a.id));
+            return [...prevAng, next ? next.id : "detail"];
+          });
+          return [...prev, url];
+        });
       };
       reader.readAsDataURL(file);
     });
