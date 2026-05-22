@@ -14,6 +14,7 @@ import aiAssessmentIcon from "@/assets/icons/ai-assessment-icon.png";
 import smartAestheticsIcon from "@/assets/icons/smart-aesthetics-icon.png";
 import aiDoctorChatIcon from "@/assets/icons/ai-doctor-chat-icon.png";
 import heroFacialHarmony from "@/assets/hero-facial-harmony.jpg";
+import teosyalAward from "@/assets/awards/teosyal-outstanding-clinic-award.png";
 
 const popularTreatments = [
   {
