@@ -30,7 +30,10 @@ const pageRoutes = [
   '/safety/',
   '/testimonials/',
   '/contact/',
-  '/book-consultation/'
+  '/book-consultation/',
+  '/research/',
+  '/research/why-patients-choose-aesthetic-treatments/',
+  '/research/digital-face-study-2026/'
 ];
 
 const treatmentRoutes = [
