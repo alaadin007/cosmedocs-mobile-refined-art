@@ -15,7 +15,7 @@ export type ProgressionStage = {
 
 export const masseterProgressionStages: ProgressionStage[] = [
   {
-    src: pic2,
+    src: pic1,
     badge: "Stage 1 · Baseline",
     title: "Before treatment — asymmetric masseter hypertrophy",
     caption:
@@ -24,7 +24,7 @@ export const masseterProgressionStages: ProgressionStage[] = [
     note: "HSI Masseter Scale · R: XL · L: L",
   },
   {
-    src: pic3,
+    src: pic2,
     badge: "Stage 2 · 3 months post 1st session",
     title: "3 months after first treatment",
     caption:
@@ -32,7 +32,7 @@ export const masseterProgressionStages: ProgressionStage[] = [
     alt: "Masseter Botox progression — 3 months after first treatment, male patient with softer jawline and reduced muscle bulk, Cosmedocs Harley Street London",
   },
   {
-    src: pic1,
+    src: pic3,
     badge: "Stage 3 · 3 months post 2nd session",
     title: "3 months after second treatment",
     caption:
