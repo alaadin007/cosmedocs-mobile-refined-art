@@ -221,3 +221,239 @@
 .text-\[\#C9A050\]\/70 { color: rgb(201 160 80 / 0.7); }
 .text-\[\#C9A050\]\/80 { color: rgb(201 160 80 / 0.8); }
 .hover\:text-\[\#C9A050\]\/70:hover { color: rgb(201 160 80 / 0.7); }
+
+/* ============================================================
+   COSMEDOCS GLOBAL TREATMENT PAGE SYSTEM
+   Add `treatment-page` to the outermost <div> of any treatment
+   page and it inherits consistent mobile spacing, typography,
+   image sizing, CTA prominence, and accordion/stepper styling.
+   Bold • Natural • Always Your Way.
+   ============================================================ */
+.treatment-page {
+  --tp-gold: #C9A050;
+  --tp-ink: #0a0a0a;
+  --tp-body: #2a2a2a;
+  --tp-muted: #555;
+  --tp-rule: rgba(201,160,80,0.18);
+}
+
+/* Vertical rhythm — every <section> inherits the same scale */
+.treatment-page section {
+  padding-top: clamp(2.25rem, 7vw, 4.5rem);
+  padding-bottom: clamp(2.25rem, 7vw, 4.5rem);
+}
+.treatment-page section + section {
+  border-top: 1px solid var(--tp-rule);
+}
+
+/* Typography hierarchy — mobile-first, fluid */
+.treatment-page h1 {
+  font-size: clamp(1.85rem, 7vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  font-weight: 300;
+}
+.treatment-page h2 {
+  font-size: clamp(1.45rem, 5vw, 2.25rem);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+.treatment-page h3 {
+  font-size: clamp(1.15rem, 3.6vw, 1.5rem);
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.treatment-page p,
+.treatment-page li {
+  font-size: clamp(15.5px, 4vw, 17px);
+  line-height: 1.65;
+}
+.treatment-page .eyebrow,
+.treatment-page [data-eyebrow] {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--tp-gold);
+  margin-bottom: 0.75rem;
+}
+
+/* Standard content container */
+.treatment-page .tp-container {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 2rem);
+}
+.treatment-page .tp-prose {
+  max-width: 38rem;
+  margin-inline: auto;
+}
+
+/* Images — full-width square on mobile, contained on desktop */
+.treatment-page .tp-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0;
+}
+@media (min-width: 768px) {
+  .treatment-page .tp-media {
+    aspect-ratio: 4 / 5;
+    border-radius: 4px;
+  }
+}
+
+/* CTA prominence — primary gold pill */
+.treatment-page .tp-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--tp-gold);
+  color: #000;
+  font-weight: 500;
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  min-height: 48px;
+}
+.treatment-page .tp-cta:hover { background: #B8913F; transform: translateY(-1px); }
+@media (max-width: 640px) {
+  .treatment-page .tp-cta { width: 100%; }
+}
+
+/* Sticky mobile booking bar — opt-in via .tp-sticky-cta */
+.treatment-page .tp-sticky-cta {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(201,160,80,0.25);
+  color: #fff;
+}
+@media (min-width: 768px) { .treatment-page .tp-sticky-cta { display: none; } }
+
+/* ---------- TreatmentAccordion ---------- */
+.tp-accordion { border-top: 1px solid var(--tp-rule, rgba(201,160,80,0.18)); }
+.tp-accordion__item { border-bottom: 1px solid var(--tp-rule, rgba(201,160,80,0.18)); }
+.tp-accordion__trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1.05rem 0;
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  gap: 1rem;
+}
+.tp-accordion__icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.65;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.tp-accordion__item[data-open="true"] .tp-accordion__icon {
+  transform: rotate(45deg);
+  opacity: 1;
+  color: var(--tp-gold);
+}
+.tp-accordion__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.tp-accordion__item[data-open="true"] .tp-accordion__panel { max-height: 60rem; }
+.tp-accordion__content {
+  padding: 0 0 1.25rem;
+  color: var(--tp-muted, #555);
+  font-size: clamp(14.5px, 3.8vw, 16px);
+  line-height: 1.65;
+}
+
+/* ---------- TreatmentStepper ---------- */
+.tp-stepper { display: flex; flex-direction: column; gap: 0; }
+.tp-stepper__item {
+  position: relative;
+  border-left: 2px solid var(--tp-rule, rgba(201,160,80,0.18));
+  padding: 0.25rem 0 1.5rem 1.5rem;
+}
+.tp-stepper__item[data-active="true"] {
+  border-left-color: var(--tp-gold, #C9A050);
+}
+.tp-stepper__dot {
+  position: absolute;
+  left: -10px;
+  top: 0.1rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid var(--tp-rule, rgba(201,160,80,0.18));
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--tp-gold, #C9A050);
+}
+.tp-stepper__item[data-active="true"] .tp-stepper__dot {
+  border-color: var(--tp-gold, #C9A050);
+  background: var(--tp-gold, #C9A050);
+  color: #000;
+}
+.tp-stepper__title {
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 1.35;
+}
+.tp-stepper__body {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.2s ease, margin-top 0.2s ease;
+  margin-top: 0;
+  font-size: clamp(14.5px, 3.8vw, 16px);
+  line-height: 1.65;
+  color: var(--tp-muted, #555);
+}
+.tp-stepper__item[data-active="true"] .tp-stepper__body {
+  max-height: 40rem;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+/* Dark variant — for luxury black treatment pages */
+.treatment-page.is-dark {
+  --tp-ink: #fff;
+  --tp-body: rgba(255,255,255,0.85);
+  --tp-muted: rgba(255,255,255,0.6);
+  --tp-rule: rgba(201,160,80,0.25);
+  color: var(--tp-body);
+  background: #000;
+}
+.treatment-page.is-dark .tp-stepper__dot { background: #000; }
+
