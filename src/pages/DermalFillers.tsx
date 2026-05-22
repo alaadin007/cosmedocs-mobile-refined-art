@@ -861,6 +861,8 @@ export default function DermalFillers() {
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
 
+        <TreatmentPaymentInfo variant="light" />
+
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
           <h2>Dermal Fillers London — Complete Guide to Facial Enhancement</h2>
