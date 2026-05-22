@@ -409,12 +409,7 @@ const BroTox = () => {
           </div>
         </section>
 
-        {/* BROMASSETER EDUCATIVE PROGRESSION SERIES */}
-        <MasseterProgressionSeries
-          headline="BroMasseter — the educative four-stage progression"
-          intro="BroMasseter is the most technically demanding men's Botox treatment we deliver. Below is the real four-stage journey of a male patient at Cosmedocs Harley Street — from baseline asymmetric hypertrophy graded on the HSI Masseter Scale, through three carefully spaced sessions, to a maintained, refined, masculine jawline. Read more about full BroMasseter treatment in the link below."
-          showBroTeaser
-        />
+        {/* Progression series to be re-added */}
         <div className="bg-black px-4 sm:px-6 pb-12 -mt-4">
           <div className="max-w-6xl mx-auto">
             <Link
