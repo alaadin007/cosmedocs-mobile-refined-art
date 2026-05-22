@@ -143,8 +143,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [isLoading, setIsLoading] = useState(false);
   const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
   const [planConcern, setPlanConcern] = useState<Concern | null>(null);
-  const [attachedImage, setAttachedImage] = useState<string | null>(null); // data URL
+  const [attachedImages, setAttachedImages] = useState<string[]>([]); // data URLs, up to 5
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const MAX_IMAGES = 5;
   const { toast } = useToast();
 
   const pageConfig = useMemo(
