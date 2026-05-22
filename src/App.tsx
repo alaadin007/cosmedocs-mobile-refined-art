@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
 import SocialMetaSync from "./components/SocialMetaSync";
 import ErrorBoundary, { RouteResetErrorBoundary } from "./components/ErrorBoundary";
+import ResearchSurveyGate from "./components/ResearchSurveyGate";
 
 // Eager load critical pages only
 import Index from "./pages/Index";
@@ -206,6 +207,7 @@ const TrapBotox = lazy(() => import("./pages/TrapBotox"));
 const CalfSlimmingBotox = lazy(() => import("./pages/CalfSlimmingBotox"));
 const BotoxCalfsClinical = lazy(() => import("./pages/BotoxCalfsClinical"));
 const VideoUpload = lazy(() => import("./pages/VideoUpload"));
+const AdminResearchSurvey = lazy(() => import("./pages/AdminResearchSurvey"));
 const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
 const TempleFiller = lazy(() => import("./pages/TempleFiller"));
 const ForeheadFiller = lazy(() => import("./pages/ForeheadFiller"));
@@ -358,7 +360,8 @@ const App = () => {
                 <LanguageProvider>
                 <ScrollToTop />
                 <TrailingSlashRedirect />
-                <SocialMetaSync />
+                 <SocialMetaSync />
+                 <ResearchSurveyGate />
                 <Routes>
                   {/* Home3 is now the canonical root homepage */}
                   <Route path="/" element={
@@ -564,6 +567,7 @@ const App = () => {
                           <Route path="/auth" element={<Auth />} />
                           <Route path="/dashboard" element={<Dashboard />} />
                           <Route path="/admin/video-upload" element={<VideoUpload />} />
+                          <Route path="/admin/research-survey" element={<AdminResearchSurvey />} />
                           <Route path="/popup-offer" element={<PopupOffer />} />
                           <Route path="/spin-to-win" element={<SpinToWin />} />
                           
