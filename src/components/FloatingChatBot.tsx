@@ -223,11 +223,27 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
-  const openWithCta = () => {
+  const openPlanPicker = () => {
     setIsOpen(true);
     setShowTeaser(false);
-    setTimeout(() => sendMessage(pageConfig.cta), 250);
+    setPlanConcern(null);
+    setPlanStep("concern");
   };
+
+  const submitPlan = (concern: Concern, age?: string) => {
+    setPlanStep("closed");
+    const lines = [
+      `Concern: ${concern.label} (${concern.bucket}).`,
+      age ? `Age: ${age}.` : null,
+      "Please reply in 3 short lines only:",
+      "1) one-line empathy,",
+      "2) two best doctor-led options with price,",
+      "3) one-line next step (book or WhatsApp +44 7735 606447).",
+      "No long paragraphs, no bullet lists, under 60 words total.",
+    ].filter(Boolean).join(" ");
+    sendMessage(lines);
+  };
+
 
   return (
     <>
