@@ -4,7 +4,7 @@ import { ChevronDown, Calendar, Search, X, ChevronRight, Instagram, Facebook, Yo
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "@/components/LanguageSelector";
-import teosyalAward from "@/assets/awards/teosyal-outstanding-clinic-award.png";
+
 
 const LiquidGlassSearch = lazy(() => import("@/components/LiquidGlassSearch"));
 
@@ -240,33 +240,6 @@ export default function Home2Header() {
               </div>
           </Link>
 
-            {/* Teosyal Outstanding Clinic Award - always visible */}
-            <Link
-              to="/about"
-              aria-label="Teosyal Outstanding Clinic Award winner — view recognition"
-              title="Teosyal Outstanding Clinic Award"
-              className="flex items-center gap-2 ml-2 sm:ml-3 group shrink-0"
-            >
-              <span className={`relative inline-flex items-center justify-center rounded-full transition-all duration-500 ${
-                isScrolled ? 'ring-1 ring-[#C9A050]/40 bg-white' : 'ring-1 ring-[#C9A050]/60 bg-white/95'
-              } p-0.5 shadow-[0_0_0_0_rgba(201,160,80,0)] group-hover:shadow-[0_0_18px_2px_rgba(201,160,80,0.45)]`}>
-                <img
-                  src={teosyalAward}
-                  alt="Teosyal Outstanding Clinic Award"
-                  width={40}
-                  height={40}
-                  loading="eager"
-                  className="h-9 w-9 sm:h-10 sm:w-10 object-contain rounded-full"
-                />
-                <span className="absolute inset-0 rounded-full ring-1 ring-[#C9A050]/30 animate-pulse pointer-events-none" aria-hidden="true" />
-              </span>
-              <span className={`hidden xl:flex flex-col leading-tight transition-colors duration-500 ${
-                isScrolled ? 'text-gray-700' : 'text-white/85'
-              }`}>
-                <span className="text-[9px] uppercase tracking-[0.14em] text-[#C9A050]">Award Winning</span>
-                <span className="text-[10px] font-light">Teosyal Outstanding Clinic</span>
-              </span>
-            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
