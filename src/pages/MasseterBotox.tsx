@@ -12,6 +12,7 @@ import {
   Sparkles,
   Stethoscope,
   Images,
+  ChevronLeft,
   ChevronRight,
   ChevronDown,
 } from "lucide-react";
@@ -21,13 +22,6 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import Breadcrumb from "@/components/Breadcrumb";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import masseterAfter2Treatments from "@/assets/before-after/masseter-series/after-2-treatments.jpg";
 import masseterOneYearAfter3rd from "@/assets/before-after/masseter-series/one-year-after-3rd.jpg";
