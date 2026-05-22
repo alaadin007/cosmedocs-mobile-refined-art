@@ -789,7 +789,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                     }}
                   />
                   <button
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={() => openPickerForAngle(nextOpenAngle())}
                     aria-label="Attach photos"
                     disabled={attachedImages.length >= MAX_IMAGES}
                     className="shrink-0 h-12 w-12 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-amber-400 active:bg-amber-400/10 disabled:opacity-40"
