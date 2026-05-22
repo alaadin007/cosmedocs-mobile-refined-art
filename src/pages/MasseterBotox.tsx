@@ -479,7 +479,7 @@ const MasseterBotox = () => {
 
                 <Carousel
                   opts={{ align: "start", containScroll: "trimSnaps", dragFree: false }}
-                  className="mx-auto w-full px-4 sm:px-6"
+                  className="mx-auto w-full max-w-full overflow-hidden px-4 sm:px-6"
                 >
                   <CarouselContent className="-ml-3 sm:-ml-5">
                     {resultCards.map((stage, index) => (
