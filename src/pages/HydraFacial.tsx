@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import HydraFacialSidebar from "@/components/skin-rejuvenation/HydraFacialSidebar";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const HydraFacial = () => {
   const seoData = generateSEOMetadata("HydraFacial London | Cosmedocs Harley Street", "Deep cleanse, exfoliate & hydrate with HydraFacial. Vortex technology for instantly glowing skin. Doctor-led treatments on Harley Street.", "/treatments/hydrafacial/");
