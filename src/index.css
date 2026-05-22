@@ -457,3 +457,92 @@
 }
 .treatment-page.is-dark .tp-stepper__dot { background: #000; }
 
+/* ============================================================
+   iOS-STYLE MOBILE LAYER — apply with `.ios-mobile` alongside
+   `treatment-page`. Mirrors the questionnaire iOS standard:
+   Apple system font, larger touch typography, generous spacing,
+   rounded-2xl cards, big tap targets. Mobile-only — desktop
+   inherits the existing treatment-page styling untouched.
+   ============================================================ */
+.ios-mobile {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (max-width: 767px) {
+  .ios-mobile,
+  .ios-mobile h1,
+  .ios-mobile h2,
+  .ios-mobile h3,
+  .ios-mobile h4,
+  .ios-mobile p,
+  .ios-mobile li,
+  .ios-mobile a,
+  .ios-mobile button,
+  .ios-mobile input,
+  .ios-mobile textarea,
+  .ios-mobile label {
+    font-family: -apple-system, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  }
+  .ios-mobile h1 {
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  .ios-mobile h2 {
+    font-size: 24px;
+    line-height: 1.18;
+    letter-spacing: -0.018em;
+    font-weight: 600;
+  }
+  .ios-mobile h3 {
+    font-size: 19px;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .ios-mobile p,
+  .ios-mobile li {
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -0.003em;
+    color: var(--tp-body, #2a2a2a);
+  }
+  .ios-mobile .text-muted-foreground { font-size: 16px; line-height: 1.5; }
+  .ios-mobile .eyebrow,
+  .ios-mobile [data-eyebrow],
+  .ios-mobile .uppercase {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+  }
+
+  /* Cards & containers: softer corners, more breathing room */
+  .ios-mobile .rounded-xl,
+  .ios-mobile .rounded-\[1\.5rem\] { border-radius: 1rem; }
+  .ios-mobile .rounded-2xl,
+  .ios-mobile .rounded-\[2rem\] { border-radius: 1.25rem; }
+
+  /* Buttons & links — generous tap targets, full-width pills */
+  .ios-mobile button,
+  .ios-mobile a > button,
+  .ios-mobile .tp-cta {
+    min-height: 52px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border-radius: 999px;
+  }
+  .ios-mobile a > button { width: 100%; }
+
+  /* Section rhythm — tighter top, more generous between blocks */
+  .ios-mobile section {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .ios-mobile section + section { border-top-color: rgba(201,160,80,0.16); }
+
+  /* Disable any horizontal scroll quirks */
+  .ios-mobile { overflow-x: hidden; }
+}
+
+

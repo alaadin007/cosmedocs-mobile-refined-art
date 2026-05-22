@@ -317,7 +317,7 @@ const MasseterBotox = () => {
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
 
-      <main className="min-h-screen overflow-x-hidden bg-background text-foreground pb-24 lg:pb-0">
+      <main className="treatment-page ios-mobile min-h-screen overflow-x-hidden bg-background text-foreground pb-24 lg:pb-0">
         <section className="relative overflow-hidden border-b border-border bg-background px-4 pb-8 pt-4 sm:px-6 sm:pb-14 lg:pb-20">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_70%_10%,hsl(var(--luxury-gold)/0.14),transparent_34%),linear-gradient(180deg,hsl(var(--secondary))_0%,hsl(var(--background))_54%)]" />
           <div className="relative mx-auto max-w-7xl">
