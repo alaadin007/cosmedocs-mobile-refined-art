@@ -192,9 +192,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     { icon: MessageSquare, label: "Chat", action: () => { setIsOpen(true); setIsExpanded(false); }, color: "from-purple-400 to-purple-500" },
   ];
 
-  const sendMessage = async (text: string) => {
+  const sendMessage = async (text: string, displayText?: string) => {
     if (!text.trim() || isLoading) return;
-    const userMessage: Message = { id: Date.now().toString(), text, isUser: true, timestamp: new Date() };
+    const userMessage: Message = { id: Date.now().toString(), text: displayText || text, isUser: true, timestamp: new Date() };
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     setIsLoading(true);
