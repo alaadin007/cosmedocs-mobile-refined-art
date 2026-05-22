@@ -201,6 +201,8 @@ const HydraFacial = () => {
         </div>
       </div>
 
+      <TreatmentPaymentInfo variant="dark" />
+
       {/* Skin Foundation CTA */}
       <section className="py-12 px-4">
         <div className="max-w-5xl mx-auto">
