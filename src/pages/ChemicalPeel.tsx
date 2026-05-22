@@ -481,6 +481,8 @@ const ChemicalPeel = () => {
           <SkinFoundationCTA variant="oily-barrier" />
         </div>
 
+        <TreatmentPaymentInfo variant="dark" />
+
         <section className="py-16 px-4 bg-black border-t border-white/[0.04]">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-extralight text-white/30 mb-6">Chemical Peels at Harley Street — What You Need to Know</h2>
