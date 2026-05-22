@@ -146,11 +146,10 @@ export default function Header() {
 
           {/* Logo - Center */}
           <Link to="/" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
-            <div className="text-2xl md:text-3xl font-bold">
+            <div className="text-2xl md:text-3xl font-bold logo-shimmer">
               <span className="text-white">COSME</span>
               <span className="text-white">DOCS</span>
             </div>
-            <p className="text-[10px] md:text-xs text-amber-400 -mt-1 whitespace-nowrap">Harley St | ~ 2007</p>
           </Link>
 
           {/* Desktop Actions - Right */}
