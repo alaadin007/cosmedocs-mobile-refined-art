@@ -396,7 +396,7 @@ const MasseterBotox = () => {
 
         <section className="px-4 py-6 sm:px-6 sm:py-14 lg:py-20">
           <div className="mx-auto grid max-w-7xl gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <article className="space-y-6 sm:space-y-16">
+            <article className="min-w-0 space-y-6 sm:space-y-16">
               <motion.section {...sectionReveal}>
                 <div className="grid grid-cols-2 gap-2 sm:gap-5 lg:grid-cols-4">
                   {benefits.map(({ icon: Icon, title, text }) => (
@@ -446,13 +446,13 @@ const MasseterBotox = () => {
               </motion.section>
 
               {resultCards.length > 0 && (
-              <motion.section {...sectionReveal} className="overflow-hidden rounded-[1.5rem] border border-border bg-secondary/40 py-7 sm:rounded-[2rem] sm:py-10">
+              <motion.section {...sectionReveal} className="min-w-0 overflow-hidden rounded-[1.5rem] border border-border bg-secondary/40 py-7 sm:rounded-[2rem] sm:py-10">
 
                 <div className="mb-5 flex flex-col gap-4 px-4 sm:mb-8 sm:px-6 lg:flex-row lg:items-end lg:justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-luxury-gold">Real patient progression</p>
-                    <h2 className="mt-2 text-2xl font-light leading-tight text-foreground sm:mt-3 sm:text-4xl">
-                      Masseter Botox before-and-after results
+                    <h2 className="mt-2 max-w-full text-2xl font-light leading-tight text-foreground sm:mt-3 sm:text-4xl">
+                      Masseter Botox before & after results
                     </h2>
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:mt-4 sm:leading-7">
                       Swipe or use the arrows to view real CosmeDocs patient results. Each card opens the dedicated masseter gallery for the full before-and-after set.
@@ -511,8 +511,8 @@ const MasseterBotox = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="left-5 top-[43%] hidden border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background sm:flex" />
-                  <CarouselNext className="right-5 top-[43%] hidden border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background sm:flex" />
+                  <CarouselPrevious className="left-5 top-[43%] flex border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background disabled:opacity-30 sm:left-5" />
+                  <CarouselNext className="right-5 top-[43%] flex border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background disabled:opacity-30 sm:right-5" />
                 </Carousel>
 
                 <p className="px-4 pt-2 text-xs leading-6 text-muted-foreground sm:px-6">
