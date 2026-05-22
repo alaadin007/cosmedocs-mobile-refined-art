@@ -240,6 +240,11 @@ const MasseterBotox = () => {
   const pageTitle = "Masseter Botox London | Jaw Slimming & Bruxism";
   const pageDescription =
     "Doctor-led masseter Botox in London for jaw slimming, bruxism, teeth grinding and TMJ tension. Harley Street treatment from £350 female / £400 male.";
+  const [activeResultIndex, setActiveResultIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const activeResult = resultCards[activeResultIndex];
+  const showPreviousResult = () => setActiveResultIndex((index) => (index === 0 ? resultCards.length - 1 : index - 1));
+  const showNextResult = () => setActiveResultIndex((index) => (index + 1) % resultCards.length);
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
@@ -471,43 +476,54 @@ const MasseterBotox = () => {
                   </span>
                 </div>
 
-                <Carousel
-                  opts={{ align: "start", containScroll: "trimSnaps", dragFree: false }}
-                  className="mx-auto w-full max-w-full overflow-hidden px-4 sm:px-6"
-                >
-                  <CarouselContent className="-ml-3 sm:-ml-5">
+                <div className="px-4 sm:px-6">
+                  <div
+                    className="relative mx-auto max-w-md sm:max-w-2xl lg:max-w-3xl"
+                    onTouchStart={(event) => setTouchStartX(event.touches[0]?.clientX ?? null)}
+                    onTouchEnd={(event) => {
+                      if (touchStartX === null) return;
+                      const delta = touchStartX - (event.changedTouches[0]?.clientX ?? touchStartX);
+                      if (Math.abs(delta) > 44) delta > 0 ? showNextResult() : showPreviousResult();
+                      setTouchStartX(null);
+                    }}
+                  >
+                    <Link to="/before-after/botox/masseter/" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold/70 rounded-[1.5rem]">
+                      <figure className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:grid sm:grid-cols-[0.95fr_1fr] sm:rounded-[2rem]">
+                        <div className="relative aspect-square overflow-hidden bg-background">
+                          <img
+                            src={activeResult.src}
+                            alt={activeResult.alt}
+                            loading="eager"
+                            draggable={false}
+                            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.025]"
+                          />
+                          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/85 via-background/25 to-transparent" />
+                          <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-background shadow-lg sm:left-4 sm:top-4">
+                            {activeResult.badge}
+                          </span>
+                        </div>
+                        <figcaption className="flex flex-col justify-center p-4 sm:p-6">
+                          <p className="text-xs font-medium uppercase tracking-[0.16em] text-luxury-gold sm:text-sm">{activeResult.title}</p>
+                          <p className="mt-3 text-sm leading-6 text-muted-foreground sm:leading-7">{activeResult.caption}</p>
+                          <span className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-luxury-gold">
+                            View full gallery <ChevronRight className="h-3.5 w-3.5" />
+                          </span>
+                        </figcaption>
+                      </figure>
+                    </Link>
+                    <button type="button" onClick={showPreviousResult} aria-label="Previous masseter result" className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-luxury-gold/35 bg-background/90 text-luxury-gold shadow-lg">
+                      <ChevronLeft className="h-4 w-4" />
+                    </button>
+                    <button type="button" onClick={showNextResult} aria-label="Next masseter result" className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-luxury-gold/35 bg-background/90 text-luxury-gold shadow-lg">
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+                  </div>
+                  <div className="mt-4 flex items-center justify-center gap-2">
                     {resultCards.map((stage, index) => (
-                      <CarouselItem key={`${stage.title}-${index}`} className="basis-[88%] pl-3 sm:basis-1/2 sm:pl-5 lg:basis-1/3">
-                        <Link to="/before-after/botox/masseter/" className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold/70 rounded-[1.5rem]">
-                          <figure className="flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:rounded-[2rem]">
-                            <div className="relative aspect-square overflow-hidden bg-background">
-                              <img
-                                src={stage.src}
-                                alt={stage.alt}
-                                loading={index < 2 ? "eager" : "lazy"}
-                                draggable={false}
-                                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.025]"
-                              />
-                              <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/85 via-background/25 to-transparent" />
-                              <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-background shadow-lg sm:left-4 sm:top-4">
-                                {stage.badge}
-                              </span>
-                            </div>
-                            <figcaption className="flex flex-1 flex-col p-4 sm:p-5">
-                              <p className="text-xs font-medium uppercase tracking-[0.16em] text-luxury-gold sm:text-sm">{stage.title}</p>
-                              <p className="mt-3 text-sm leading-6 text-muted-foreground sm:leading-7">{stage.caption}</p>
-                              <span className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-luxury-gold">
-                                View full gallery <ChevronRight className="h-3.5 w-3.5" />
-                              </span>
-                            </figcaption>
-                          </figure>
-                        </Link>
-                      </CarouselItem>
+                      <button key={stage.title} type="button" onClick={() => setActiveResultIndex(index)} aria-label={`Show result ${index + 1}`} className={`h-2 rounded-full transition-all ${index === activeResultIndex ? "w-6 bg-luxury-gold" : "w-2 bg-muted-foreground/35"}`} />
                     ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-5 top-[43%] flex border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background disabled:opacity-30 sm:left-5" />
-                  <CarouselNext className="right-5 top-[43%] flex border-luxury-gold/35 bg-background/90 text-luxury-gold hover:bg-luxury-gold hover:text-background disabled:opacity-30 sm:right-5" />
-                </Carousel>
+                  </div>
+                </div>
 
                 <p className="px-4 pt-2 text-xs leading-6 text-muted-foreground sm:px-6">
                   Published with written informed consent. Real CosmeDocs patient imagery only — never stock, never AI, never exaggerated. Individual treatment plans and results vary.
