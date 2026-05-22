@@ -143,6 +143,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [isLoading, setIsLoading] = useState(false);
   const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
   const [planConcern, setPlanConcern] = useState<Concern | null>(null);
+  const [attachedImage, setAttachedImage] = useState<string | null>(null); // data URL
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const pageConfig = useMemo(
