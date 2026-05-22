@@ -396,34 +396,48 @@ const MasseterBotox = () => {
                   </div>
                 </div>
 
-                <div
-                  className="flex gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
-                  style={{ touchAction: "pan-x", overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
-                >
-                  {caseStages.map((stage, index) => (
-                    <figure key={stage.title} className="group flex-shrink-0 w-[78vw] max-w-[440px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[380px] md:w-[420px]">
-                      <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-background">
-                        <img
-                          src={stage.src}
-                          alt={stage.alt}
-                          loading={index === 0 ? "eager" : "lazy"}
-                          draggable={false}
-                          className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.025] ${stage.imageClass}`}
-                        />
-                        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/80 via-background/20 to-transparent pointer-events-none" />
-                        <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background shadow-lg">
-                          {stage.badge}
-                        </span>
-                      </div>
-                      <figcaption className="p-5 sm:p-6">
-                        <p className="text-sm font-medium uppercase tracking-[0.16em] text-luxury-gold">{stage.title}</p>
-                        {stage.note && (
-                          <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-luxury-gold/80">{stage.note}</p>
-                        )}
-                        <p className="mt-4 text-sm leading-7 text-muted-foreground">{stage.caption}</p>
-                      </figcaption>
-                    </figure>
-                  ))}
+                {/* Swipe affordance — mobile only */}
+                <div className="mb-3 flex items-center justify-between px-4 sm:hidden">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-luxury-gold/30 bg-luxury-gold/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-luxury-gold">
+                    Swipe <ArrowRight className="h-3 w-3 animate-pulse" />
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    {caseStages.length} stages
+                  </span>
+                </div>
+
+                <div className="relative">
+                  <div
+                    className="flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
+                    style={{ touchAction: "pan-x", overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
+                  >
+                    {caseStages.map((stage, index) => (
+                      <figure key={stage.title} className="group flex-shrink-0 snap-center w-[82vw] max-w-[440px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[380px] md:w-[420px]">
+                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-background">
+                          <img
+                            src={stage.src}
+                            alt={stage.alt}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            draggable={false}
+                            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.025] ${stage.imageClass}`}
+                          />
+                          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/80 via-background/20 to-transparent pointer-events-none" />
+                          <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background shadow-lg">
+                            {stage.badge}
+                          </span>
+                        </div>
+                        <figcaption className="p-5 sm:p-6">
+                          <p className="text-sm font-medium uppercase tracking-[0.16em] text-luxury-gold">{stage.title}</p>
+                          {stage.note && (
+                            <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-luxury-gold/80">{stage.note}</p>
+                          )}
+                          <p className="mt-4 text-sm leading-7 text-muted-foreground">{stage.caption}</p>
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                  {/* Right edge fade hint — indicates more content */}
+                  <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-secondary/80 to-transparent sm:w-16" />
                 </div>
 
                 <p className="px-4 pt-2 text-xs leading-6 text-muted-foreground sm:px-6">
