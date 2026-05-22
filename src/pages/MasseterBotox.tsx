@@ -352,7 +352,9 @@ const MasseterBotox = () => {
                 </div>
               </motion.section>
 
+              {caseStages.length > 0 && (
               <motion.section {...sectionReveal} className="overflow-hidden rounded-[2rem] border border-border bg-secondary/40 py-10">
+
                 <div className="mb-8 flex flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-luxury-gold">Real patient progression</p>
