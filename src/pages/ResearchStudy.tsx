@@ -63,7 +63,7 @@ const ResearchStudy = () => {
         .select("*")
         .eq("study_id", s.id)
         .order("question_order", { ascending: true });
-      setQuestions((qs as Question[]) || []);
+      setQuestions(((qs as any[]) || []) as Question[]);
       setLoading(false);
     })();
   }, [slug]);
