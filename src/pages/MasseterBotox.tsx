@@ -22,10 +22,6 @@ import Breadcrumb from "@/components/Breadcrumb";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
-import stageBaseline from "@/assets/before-after/masseter-series/1-before-hsi-xl-right.jpg";
-import stageFirstTreatment from "@/assets/before-after/masseter-series/2-after-first-treatment.jpg";
-import stageSecondTreatment from "@/assets/before-after/masseter-series/3-after-second-treatment.jpg";
-import stageMaintained from "@/assets/before-after/masseter-series/4-final-maintained-result.jpg";
 
 const faqs = [
   {
