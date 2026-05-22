@@ -52,7 +52,7 @@ export const sitemapData: SitemapData = {
     { loc: `${baseUrl}/blog`, lastmod: currentDate, changefreq: 'weekly', priority: 0.7 },
     { loc: `${baseUrl}/research`, lastmod: currentDate, changefreq: 'weekly', priority: 0.7 },
     { loc: `${baseUrl}/research/why-patients-choose-aesthetic-treatments`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
-    { loc: `${baseUrl}/research/digital-face-study-2026`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
+    { loc: `${baseUrl}/research/filtered-face-project`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
     { loc: `${baseUrl}/botox-faqs`, lastmod: currentDate, changefreq: 'monthly', priority: 0.8 }
   ],
   treatments: [
