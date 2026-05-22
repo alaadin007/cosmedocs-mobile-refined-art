@@ -699,6 +699,8 @@ const MasseterBotox = () => {
             </a>
           </div>
         </div>
+
+        <TreatmentPaymentInfo variant="dark" />
       </main>
     </>
   );
