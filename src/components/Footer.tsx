@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
+import teosyalAward from "@/assets/awards/teosyal-outstanding-clinic-award.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
