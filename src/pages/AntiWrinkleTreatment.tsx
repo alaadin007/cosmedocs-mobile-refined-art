@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Button } from '@/components/ui/button';
 import { Shield, Award, Stethoscope, ArrowRight, MapPin } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const CANONICAL = 'https://www.cosmedocs.com/treatments/anti-wrinkle-treatment/';
 
