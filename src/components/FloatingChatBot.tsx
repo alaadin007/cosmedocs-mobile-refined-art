@@ -195,21 +195,41 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   ];
 
   const sendMessage = async (text: string, displayText?: string) => {
-    if (!text.trim() || isLoading) return;
-    const userMessage: Message = { id: Date.now().toString(), text: displayText || text, isUser: true, timestamp: new Date() };
+    const hasImage = !!attachedImage;
+    if ((!text.trim() && !hasImage) || isLoading) return;
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: displayText || text || (hasImage ? "📸 Photo shared for assessment" : ""),
+      isUser: true,
+      timestamp: new Date(),
+    };
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
+    const imageToSend = attachedImage;
+    setAttachedImage(null);
     setIsLoading(true);
+
+    // Build prior history for the model (everything before the brand-new user turn)
+    const history = messages
+      .filter((m) => m.id !== "1") // skip the initial canned opener
+      .map((m) => ({ role: m.isUser ? "user" as const : "assistant" as const, content: m.text }));
+
     try {
       const { data, error } = await supabase.functions.invoke("ai-knowledge-chat", {
         body: {
-          question: text,
-          includeWebSearch: true,
-          context: `User is currently on page: ${location.pathname} (topic: ${pageConfig.topic}). Be warm, concise, conversion-focused. Keep replies under 60 words. No long monologues, no headings, no bullet lists unless explicitly asked. Always quote prices when known, recommend a clear next step (book consultation or WhatsApp +44 7735 606447), and ask one short qualifying question per reply.`,
+          messages: history,
+          question: text || "Please assess this photo and recommend a doctor-led plan.",
+          imageBase64: imageToSend || undefined,
+          context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).`,
         },
       });
       if (error) throw error;
-      const aiMessage: Message = { id: (Date.now() + 1).toString(), text: data.answer || "I apologise, I couldn't process that request.", isUser: false, timestamp: new Date() };
+      const aiMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: data.answer || "I apologise, I couldn't process that request.",
+        isUser: false,
+        timestamp: new Date(),
+      };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error: any) {
       console.error("Chat error:", error);
@@ -225,6 +245,17 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
+  const handleImageSelected = (file: File | null) => {
+    if (!file) return;
+    if (file.size > 8 * 1024 * 1024) {
+      toast({ title: "Photo too large", description: "Please choose a photo under 8 MB.", variant: "destructive" });
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => setAttachedImage(e.target?.result as string);
+    reader.readAsDataURL(file);
+  };
+
   const openPlanPicker = () => {
     setIsOpen(true);
     setShowTeaser(false);
@@ -237,11 +268,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     const lines = [
       `Concern: ${concern.label} (${concern.bucket}).`,
       age ? `Age: ${age}.` : null,
-      "Please reply in 3 short lines only:",
-      "1) one-line empathy,",
-      "2) two best doctor-led options with price,",
-      "3) one-line next step (book or WhatsApp +44 7735 606447).",
-      "No long paragraphs, no bullet lists, under 60 words total.",
+      "Reply as Zephra — empathic, zone-based reasoning, 1–2 doctor-led options with price and rationale, one next step. Under 90 words.",
     ].filter(Boolean).join(" ");
     const display = age ? `My concern: ${concern.label} · Age ${age}` : `My concern: ${concern.label}`;
     sendMessage(lines, display);
