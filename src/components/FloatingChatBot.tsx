@@ -219,7 +219,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     const imagesToSend = attachedImages;
+    const anglesToSend = imageAngles;
     setAttachedImages([]);
+    setImageAngles([]);
     setIsLoading(true);
 
     // Build prior history for the model (everything before the brand-new user turn)
