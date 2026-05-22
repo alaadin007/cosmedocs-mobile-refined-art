@@ -235,7 +235,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
           messages: history,
           question: text || undefined,
           images: imagesToSend.length > 0 ? imagesToSend : undefined,
-          context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).`,
+          context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).${anglesToSend.length ? ` Photo angles supplied: ${anglesToSend.join(", ")}.` : ""}`,
         },
       });
       if (error) throw error;
