@@ -414,14 +414,12 @@ const MasseterBotox = () => {
                         <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background shadow-lg">
                           {stage.badge}
                         </span>
-                        {stage.note && (
-                          <span className="absolute bottom-4 left-4 right-4 rounded-2xl border border-luxury-gold/35 bg-background/80 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-luxury-gold backdrop-blur">
-                            {stage.note}
-                          </span>
-                        )}
                       </div>
                       <figcaption className="p-5 sm:p-6">
                         <p className="text-sm font-medium uppercase tracking-[0.16em] text-luxury-gold">{stage.title}</p>
+                        {stage.note && (
+                          <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-luxury-gold/80">{stage.note}</p>
+                        )}
                         <p className="mt-4 text-sm leading-7 text-muted-foreground">{stage.caption}</p>
                       </figcaption>
                     </figure>
