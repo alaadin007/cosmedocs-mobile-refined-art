@@ -143,8 +143,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [isLoading, setIsLoading] = useState(false);
   const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
   const [planConcern, setPlanConcern] = useState<Concern | null>(null);
-  const [attachedImage, setAttachedImage] = useState<string | null>(null); // data URL
+  const [attachedImages, setAttachedImages] = useState<string[]>([]); // data URLs, up to 5
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const MAX_IMAGES = 5;
   const { toast } = useToast();
 
   const pageConfig = useMemo(
@@ -195,18 +196,18 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   ];
 
   const sendMessage = async (text: string, displayText?: string) => {
-    const hasImage = !!attachedImage;
-    if ((!text.trim() && !hasImage) || isLoading) return;
+    const hasImages = attachedImages.length > 0;
+    if ((!text.trim() && !hasImages) || isLoading) return;
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: displayText || text || (hasImage ? "📸 Photo shared for assessment" : ""),
+      text: displayText || text || (hasImages ? `📸 ${attachedImages.length} photo${attachedImages.length > 1 ? "s" : ""} shared for assessment` : ""),
       isUser: true,
       timestamp: new Date(),
     };
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
-    const imageToSend = attachedImage;
-    setAttachedImage(null);
+    const imagesToSend = attachedImages;
+    setAttachedImages([]);
     setIsLoading(true);
 
     // Build prior history for the model (everything before the brand-new user turn)
@@ -218,8 +219,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
       const { data, error } = await supabase.functions.invoke("ai-knowledge-chat", {
         body: {
           messages: history,
-          question: text || "Please assess this photo and recommend a doctor-led plan.",
-          imageBase64: imageToSend || undefined,
+          question: text || undefined,
+          images: imagesToSend.length > 0 ? imagesToSend : undefined,
           context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).`,
         },
       });
@@ -245,15 +246,26 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
-  const handleImageSelected = (file: File | null) => {
-    if (!file) return;
-    if (file.size > 8 * 1024 * 1024) {
-      toast({ title: "Photo too large", description: "Please choose a photo under 8 MB.", variant: "destructive" });
+  const handleImagesSelected = (files: FileList | null) => {
+    if (!files || files.length === 0) return;
+    const remaining = MAX_IMAGES - attachedImages.length;
+    if (remaining <= 0) {
+      toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos per message.`, variant: "destructive" });
       return;
     }
-    const reader = new FileReader();
-    reader.onload = (e) => setAttachedImage(e.target?.result as string);
-    reader.readAsDataURL(file);
+    const list = Array.from(files).slice(0, remaining);
+    list.forEach((file) => {
+      if (file.size > 8 * 1024 * 1024) {
+        toast({ title: "Photo too large", description: `${file.name} is over 8 MB — skipped.`, variant: "destructive" });
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const url = e.target?.result as string;
+        setAttachedImages((prev) => (prev.length >= MAX_IMAGES ? prev : [...prev, url]));
+      };
+      reader.readAsDataURL(file);
+    });
   };
 
   const openPlanPicker = () => {
@@ -538,31 +550,55 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
               )}
 
-              {/* Photo preview */}
-              {attachedImage && (
+              {/* Photo previews — up to 5 */}
+              {attachedImages.length > 0 && (
                 <div className="px-5 pt-3">
-                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-white/[0.05] border border-amber-400/30">
-                    <img src={attachedImage} alt="Attached" className="h-14 w-14 rounded-xl object-cover" />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-[14px] text-white font-medium">Photo ready to send</p>
-                      <p className="text-[12px] text-white/55 flex items-center gap-1">
-                        <Shield className="h-3 w-3 text-amber-400" />
-                        Discarded after this reply — never stored.
+                  <div className="p-3 rounded-2xl bg-white/[0.05] border border-amber-400/30">
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-[13px] text-white font-medium">
+                        {attachedImages.length} of {MAX_IMAGES} photo{attachedImages.length > 1 ? "s" : ""} ready
+                        {attachedImages.length >= 3 && <span className="text-amber-400"> · high accuracy</span>}
                       </p>
+                      <button
+                        onClick={() => setAttachedImages([])}
+                        className="text-white/50 hover:text-white text-[12px]"
+                      >
+                        Clear all
+                      </button>
                     </div>
-                    <button
-                      onClick={() => setAttachedImage(null)}
-                      className="text-white/50 hover:text-white p-1"
-                      aria-label="Remove photo"
-                    >
-                      <X className="h-5 w-5" />
-                    </button>
+                    <div className="flex gap-2 overflow-x-auto pb-1">
+                      {attachedImages.map((img, i) => (
+                        <div key={i} className="relative shrink-0">
+                          <img src={img} alt={`Attached ${i + 1}`} className="h-16 w-16 rounded-xl object-cover" />
+                          <button
+                            onClick={() => setAttachedImages((prev) => prev.filter((_, idx) => idx !== i))}
+                            className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-black/80 border border-white/20 flex items-center justify-center text-white"
+                            aria-label={`Remove photo ${i + 1}`}
+                          >
+                            <X className="h-3 w-3" />
+                          </button>
+                        </div>
+                      ))}
+                      {attachedImages.length < MAX_IMAGES && (
+                        <button
+                          onClick={() => fileInputRef.current?.click()}
+                          className="shrink-0 h-16 w-16 rounded-xl border border-dashed border-amber-400/40 text-amber-400 flex items-center justify-center text-[24px]"
+                          aria-label="Add another photo"
+                        >
+                          +
+                        </button>
+                      )}
+                    </div>
+                    <p className="text-[11px] text-white/55 flex items-center gap-1 mt-2">
+                      <Shield className="h-3 w-3 text-amber-400" />
+                      Add 3–5 angles (front, left, right, close-up) for the most accurate plan. Discarded after this reply — never stored.
+                    </p>
                   </div>
                 </div>
               )}
 
               {/* Start-plan CTA */}
-              {planStep === "closed" && messages.length <= 2 && !attachedImage && (
+              {planStep === "closed" && messages.length <= 2 && attachedImages.length === 0 && (
                 <div className="px-5 pt-3">
                   <button
                     onClick={openPlanPicker}
@@ -588,17 +624,18 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                     ref={fileInputRef}
                     type="file"
                     accept="image/*"
-                    capture="environment"
+                    multiple
                     className="hidden"
                     onChange={(e) => {
-                      handleImageSelected(e.target.files?.[0] || null);
+                      handleImagesSelected(e.target.files);
                       if (fileInputRef.current) fileInputRef.current.value = "";
                     }}
                   />
                   <button
                     onClick={() => fileInputRef.current?.click()}
-                    aria-label="Attach photo"
-                    className="shrink-0 h-12 w-12 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-amber-400 active:bg-amber-400/10"
+                    aria-label="Attach photos"
+                    disabled={attachedImages.length >= MAX_IMAGES}
+                    className="shrink-0 h-12 w-12 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-amber-400 active:bg-amber-400/10 disabled:opacity-40"
                   >
                     <Camera className="h-5 w-5" />
                   </button>
@@ -607,14 +644,14 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                       value={inputMessage}
                       onChange={(e) => setInputMessage(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
-                      placeholder={attachedImage ? "Add a note (optional)…" : "Ask Zephra anything…"}
+                      placeholder={attachedImages.length > 0 ? "Add a note (optional)…" : "Ask Zephra anything…"}
                       className="flex-1 bg-transparent outline-none text-[17px] text-white placeholder:text-white/40 py-2"
                       disabled={isLoading}
                     />
                   </div>
                   <button
                     onClick={handleSendMessage}
-                    disabled={isLoading || (!inputMessage.trim() && !attachedImage)}
+                    disabled={isLoading || (!inputMessage.trim() && attachedImages.length === 0)}
                     aria-label="Send"
                     className="shrink-0 h-12 w-12 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 text-black flex items-center justify-center active:opacity-90 disabled:opacity-40 shadow-md shadow-amber-500/30"
                   >
@@ -623,7 +660,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
                 <p className="mt-2 text-center text-[11px] text-white/35 flex items-center justify-center gap-1">
                   <Shield className="h-3 w-3" />
-                  Photos are analysed in-session and never stored.
+                  Tap the camera to add up to {MAX_IMAGES} photos — analysed in-session, never stored.
                 </p>
               </div>
             </motion.div>
