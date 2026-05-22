@@ -19,6 +19,8 @@ interface Study {
   status: string;
   seo_title: string | null;
   seo_description: string | null;
+  created_at?: string;
+  updated_at?: string;
 }
 
 interface Question {
@@ -143,12 +145,88 @@ const ResearchStudy = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ResearchProject",
-            name: study.title,
-            description: study.description,
-            url: `https://cosmedocs.com/research/${study.slug}`,
-            funder: { "@type": "MedicalOrganization", name: "Cosmedocs" },
-            status: study.status === "active" ? "Active" : "Completed",
+            "@graph": [
+              {
+                "@type": "Article",
+                "@id": `https://cosmedocs.com/research/${study.slug}`,
+                "url": `https://cosmedocs.com/research/${study.slug}`,
+                "headline": study.title,
+                "description": study.seo_description || study.description || `Take part in ${study.title}, a doctor-led research study by Cosmedocs.`,
+                "inLanguage": "en-GB",
+                "datePublished": study.created_at ? new Date(study.created_at).toISOString().split("T")[0] : "2026-05-22",
+                "dateModified": study.updated_at ? new Date(study.updated_at).toISOString().split("T")[0] : "2026-05-22",
+                "author": {
+                  "@id": "https://cosmedocs.com/#medical-org",
+                },
+                "publisher": {
+                  "@id": "https://cosmedocs.com/#medical-org",
+                },
+                "about": {
+                  "@type": "MedicalBusiness",
+                  "name": "Cosmedocs Aesthetic Research",
+                  "medicalSpecialty": "Aesthetic Medicine",
+                },
+                "isPartOf": {
+                  "@type": "CollectionPage",
+                  "@id": "https://cosmedocs.com/research",
+                  "name": "Cosmedocs Research Studies",
+                },
+                "speakable": {
+                  "@type": "SpeakableSpecification",
+                  "cssSelector": ["h1", ".text-white\\/70"],
+                },
+                "mainEntity": {
+                  "@type": "Survey",
+                  "name": study.title,
+                  "description": study.description,
+                  "url": `https://cosmedocs.com/research/${study.slug}`,
+                  "publisher": { "@id": "https://cosmedocs.com/#medical-org" },
+                  "inLanguage": "en-GB",
+                  "numberOfQuestions": questions.length,
+                },
+              },
+              {
+                "@type": "MedicalOrganization",
+                "@id": "https://cosmedocs.com/#medical-org",
+                "name": "Cosmedocs",
+                "url": "https://cosmedocs.com",
+                "logo": "https://cosmedocs.com/logo.png",
+                "sameAs": [
+                  "https://www.instagram.com/cosmedocs",
+                ],
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB",
+                },
+                "description": "Doctor-led aesthetic clinic in London. Our aesthetics is invisible art. Bold · Natural · Always Your Way.",
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://cosmedocs.com",
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Research",
+                    "item": "https://cosmedocs.com/research",
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": study.title,
+                    "item": `https://cosmedocs.com/research/${study.slug}`,
+                  },
+                ],
+              },
+            ],
           })}
         </script>
       </Helmet>

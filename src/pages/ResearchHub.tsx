@@ -50,10 +50,58 @@ const ResearchHub = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "Cosmedocs Research Studies",
-            url: "https://cosmedocs.com/research",
-            description: "Anonymous research studies by Cosmedocs, a doctor-led aesthetic clinic in London.",
+            "@graph": [
+              {
+                "@type": "CollectionPage",
+                "@id": "https://cosmedocs.com/research",
+                "url": "https://cosmedocs.com/research",
+                "name": "Cosmedocs Research Studies",
+                "headline": "Doctor-led Research, Shaping Aesthetic Medicine",
+                "description": "Anonymous research studies by Cosmedocs, a doctor-led aesthetic clinic in London. Contribute to clinical research shaping the future of aesthetic medicine.",
+                "inLanguage": "en-GB",
+                "publisher": {
+                  "@id": "https://cosmedocs.com/#medical-org",
+                },
+                "speakable": {
+                  "@type": "SpeakableSpecification",
+                  "cssSelector": ["h1", ".text-white\/70"],
+                },
+              },
+              {
+                "@type": "ItemList",
+                "itemListElement": studies.map((s, idx) => ({
+                  "@type": "ListItem",
+                  "position": idx + 1,
+                  "url": `https://cosmedocs.com/research/${s.slug}`,
+                  "name": s.title,
+                  "item": {
+                    "@type": "Article",
+                    "headline": s.title,
+                    "description": s.description,
+                    "url": `https://cosmedocs.com/research/${s.slug}`,
+                    "publisher": { "@id": "https://cosmedocs.com/#medical-org" },
+                  },
+                })),
+              },
+              {
+                "@type": "MedicalOrganization",
+                "@id": "https://cosmedocs.com/#medical-org",
+                "name": "Cosmedocs",
+                "url": "https://cosmedocs.com",
+                "logo": "https://cosmedocs.com/logo.png",
+                "sameAs": [
+                  "https://www.instagram.com/cosmedocs",
+                ],
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB",
+                },
+                "description": "Doctor-led aesthetic clinic in London. Our aesthetics is invisible art. Bold · Natural · Always Your Way.",
+              },
+            ],
           })}
         </script>
       </Helmet>
