@@ -408,8 +408,8 @@ const MasseterBotox = () => {
 
                 <div className="relative">
                   <div
-                    className="flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
-                    style={{ touchAction: "pan-x", overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
+                    className="flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
+                    style={{ overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
                   >
                     {caseStages.map((stage, index) => (
                       <figure key={stage.title} className="group flex-shrink-0 snap-center w-[82vw] max-w-[440px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[380px] md:w-[420px]">
