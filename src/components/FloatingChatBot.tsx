@@ -196,18 +196,18 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   ];
 
   const sendMessage = async (text: string, displayText?: string) => {
-    const hasImage = !!attachedImage;
-    if ((!text.trim() && !hasImage) || isLoading) return;
+    const hasImages = attachedImages.length > 0;
+    if ((!text.trim() && !hasImages) || isLoading) return;
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: displayText || text || (hasImage ? "📸 Photo shared for assessment" : ""),
+      text: displayText || text || (hasImages ? `📸 ${attachedImages.length} photo${attachedImages.length > 1 ? "s" : ""} shared for assessment` : ""),
       isUser: true,
       timestamp: new Date(),
     };
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
-    const imageToSend = attachedImage;
-    setAttachedImage(null);
+    const imagesToSend = attachedImages;
+    setAttachedImages([]);
     setIsLoading(true);
 
     // Build prior history for the model (everything before the brand-new user turn)
@@ -219,8 +219,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
       const { data, error } = await supabase.functions.invoke("ai-knowledge-chat", {
         body: {
           messages: history,
-          question: text || "Please assess this photo and recommend a doctor-led plan.",
-          imageBase64: imageToSend || undefined,
+          question: text || undefined,
+          images: imagesToSend.length > 0 ? imagesToSend : undefined,
           context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).`,
         },
       });
@@ -246,15 +246,26 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
-  const handleImageSelected = (file: File | null) => {
-    if (!file) return;
-    if (file.size > 8 * 1024 * 1024) {
-      toast({ title: "Photo too large", description: "Please choose a photo under 8 MB.", variant: "destructive" });
+  const handleImagesSelected = (files: FileList | null) => {
+    if (!files || files.length === 0) return;
+    const remaining = MAX_IMAGES - attachedImages.length;
+    if (remaining <= 0) {
+      toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos per message.`, variant: "destructive" });
       return;
     }
-    const reader = new FileReader();
-    reader.onload = (e) => setAttachedImage(e.target?.result as string);
-    reader.readAsDataURL(file);
+    const list = Array.from(files).slice(0, remaining);
+    list.forEach((file) => {
+      if (file.size > 8 * 1024 * 1024) {
+        toast({ title: "Photo too large", description: `${file.name} is over 8 MB — skipped.`, variant: "destructive" });
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const url = e.target?.result as string;
+        setAttachedImages((prev) => (prev.length >= MAX_IMAGES ? prev : [...prev, url]));
+      };
+      reader.readAsDataURL(file);
+    });
   };
 
   const openPlanPicker = () => {
