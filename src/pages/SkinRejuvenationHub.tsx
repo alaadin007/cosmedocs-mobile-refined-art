@@ -262,6 +262,8 @@ const SkinRejuvenationHub = () => {
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
 
+        <TreatmentPaymentInfo variant="light" />
+
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
           <p>Skin rejuvenation treatments at CosmeDocs Harley Street London include Profhilo bio-remodelling, Polynucleotide therapy, PRP Vampire Facial, medical-grade microneedling, chemical peels, HydraFacial, PDO thread lifting, and fat dissolving injections. Our experienced doctors specialise in non-surgical skin quality improvement using clinically proven techniques. Whether you seek deep hydration, collagen stimulation, skin tightening, or texture refinement, our consultation-led approach ensures you receive the most appropriate treatment for your skin concerns. CosmeDocs has performed over one million treatments since 2007, establishing our clinic as one of the most experienced aesthetic practices in the United Kingdom. All treatments are carried out by GMC-registered medical professionals in our CQC-registered Harley Street clinic.</p>
