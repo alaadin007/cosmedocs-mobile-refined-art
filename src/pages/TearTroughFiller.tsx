@@ -10,6 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import tearTroughPreview from "@/assets/tear-trough-gallery-2.jpeg";
 import tearTroughHeroTrio from "@/assets/tear-trough-hero-trio.jpg";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const TearTroughFiller = () => {
   const faqs = [
