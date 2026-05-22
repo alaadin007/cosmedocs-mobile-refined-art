@@ -291,6 +291,8 @@ const ProfhiloTreatment = () => {
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
 
+        <TreatmentPaymentInfo variant="dark" />
+
         {/* Hidden SEO */}
         <div className="sr-only">
           <h2>Profhilo Treatment London — Expert Bio-Remodelling at Harley Street</h2>
