@@ -203,7 +203,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
         body: {
           question: text,
           includeWebSearch: true,
-          context: `User is currently on page: ${location.pathname} (topic: ${pageConfig.topic}). Be warm, concise, conversion-focused. Always quote prices when known, recommend a clear next step (book consultation or WhatsApp +44 7735 606447), and ask one qualifying question per reply.`,
+          context: `User is currently on page: ${location.pathname} (topic: ${pageConfig.topic}). Be warm, concise, conversion-focused. Keep replies under 60 words. No long monologues, no headings, no bullet lists unless explicitly asked. Always quote prices when known, recommend a clear next step (book consultation or WhatsApp +44 7735 606447), and ask one short qualifying question per reply.`,
         },
       });
       if (error) throw error;
