@@ -837,6 +837,8 @@ const BotoxCostLondon = () => {
           </p>
         </div>
       </div>
+
+      <TreatmentPaymentInfo variant="dark" />
     </>
   );
 };
