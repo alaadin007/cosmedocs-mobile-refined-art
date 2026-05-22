@@ -518,6 +518,8 @@ export default function HAMakeover() {
           </div>
         </section>
 
+        <TreatmentPaymentInfo variant="dark" />
+
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Liquid Facelift Full-Face Dermal Filler Rejuvenation</h2>
