@@ -296,8 +296,8 @@ const MasseterBotox = () => {
                       Book consultation <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
-                  <Link to="/before-after/botox/masseter/" className="hidden sm:inline-block">
-                    <Button variant="outline" className="w-full rounded-full border-luxury-gold/35 bg-transparent px-7 py-6 text-base text-foreground hover:bg-luxury-gold/10 sm:w-auto">
+                  <Link to="/before-after/botox/masseter/" className="inline-block">
+                    <Button variant="outline" className="w-full rounded-full border-luxury-gold/35 bg-transparent px-6 py-3 text-sm text-foreground hover:bg-luxury-gold/10 sm:w-auto sm:px-7 sm:py-6 sm:text-base">
                       View masseter results
                     </Button>
                   </Link>
