@@ -12,6 +12,7 @@ import {
   Sparkles,
   Stethoscope,
   Images,
+  ChevronLeft,
   ChevronRight,
   ChevronDown,
 } from "lucide-react";
@@ -24,6 +25,12 @@ import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import masseterAfter2Treatments from "@/assets/before-after/masseter-series/after-2-treatments.jpg";
 import masseterOneYearAfter3rd from "@/assets/before-after/masseter-series/one-year-after-3rd.jpg";
+import masseterBa1 from "@/assets/before-after/masseter-ba-1.png";
+import masseterBa2 from "@/assets/before-after/masseter-ba-2.jpg";
+import masseterBa3 from "@/assets/before-after/masseter-ba-3.jpg";
+import masseterBa4 from "@/assets/before-after/masseter-ba-4.jpg";
+import masseterBa5 from "@/assets/before-after/masseter-ba-5.jpg";
+import masseterBa6 from "@/assets/before-after/masseter-ba-6.jpg";
 
 const faqs = [
   {
@@ -76,6 +83,65 @@ const caseStages: Array<{ src: string; badge: string; title: string; note?: stri
     caption: "One year on, following a third maintenance session. The masseter has settled into a refined, naturally slimmer jaw line — the cumulative effect of staged, doctor-led dosing rather than a single oversized treatment.",
     alt: "Same male patient one year after third masseter Botox treatment at CosmeDocs, showing maintained slimmer jaw and refined lower face",
     imageClass: "object-cover object-center",
+  },
+];
+
+const resultCards: Array<{ src: string; badge: string; title: string; caption: string; alt: string }> = [
+  {
+    src: masseterAfter2Treatments,
+    badge: "2 treatments",
+    title: "Two-session progression",
+    caption: "Baseline to staged masseter reduction with natural lower-face balance preserved.",
+    alt: "Before and after two sessions of masseter Botox showing reduced jaw width",
+  },
+  {
+    src: masseterOneYearAfter3rd,
+    badge: "One year on",
+    title: "Maintained result",
+    caption: "Cumulative muscle softening after maintenance treatment, without changing expression.",
+    alt: "One year after third masseter Botox treatment showing maintained slimmer jaw",
+  },
+  {
+    src: masseterBa1,
+    badge: "Real result",
+    title: "Lower-face contour",
+    caption: "A softer jaw angle where masseter bulk was contributing to lower-face width.",
+    alt: "Masseter Botox before and after showing reduced jaw muscle bulk from angled view",
+  },
+  {
+    src: masseterBa2,
+    badge: "Jaw slimming",
+    title: "Profile refinement",
+    caption: "Gradual facial slimming with proportions kept quiet, natural and patient-specific.",
+    alt: "Masseter Botox before and after comparison from side and front profile",
+  },
+  {
+    src: masseterBa3,
+    badge: "Split view",
+    title: "Tapered balance",
+    caption: "A wider lower face transitions towards a more balanced, tapered contour.",
+    alt: "Before and after split view showing jawline slimming with masseter Botox",
+  },
+  {
+    src: masseterBa4,
+    badge: "Progression",
+    title: "Subtle narrowing",
+    caption: "Visible muscle refinement over time, avoiding an over-treated hollow look.",
+    alt: "Masseter Botox progressive results showing facial slimming over time",
+  },
+  {
+    src: masseterBa5,
+    badge: "Long term",
+    title: "Natural contour",
+    caption: "Longer-term masseter reduction with the patient’s own facial structure maintained.",
+    alt: "Long-term masseter Botox results with facial contouring improvement",
+  },
+  {
+    src: masseterBa6,
+    badge: "Face shape",
+    title: "Square to softer",
+    caption: "A square lower-face profile softens into a quieter, more oval contour.",
+    alt: "Before and after masseter Botox showing face shape transition from square to oval",
   },
 ];
 
@@ -174,6 +240,11 @@ const MasseterBotox = () => {
   const pageTitle = "Masseter Botox London | Jaw Slimming & Bruxism";
   const pageDescription =
     "Doctor-led masseter Botox in London for jaw slimming, bruxism, teeth grinding and TMJ tension. Harley Street treatment from £350 female / £400 male.";
+  const [activeResultIndex, setActiveResultIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const activeResult = resultCards[activeResultIndex];
+  const showPreviousResult = () => setActiveResultIndex((index) => (index === 0 ? resultCards.length - 1 : index - 1));
+  const showNextResult = () => setActiveResultIndex((index) => (index + 1) % resultCards.length);
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
@@ -324,7 +395,7 @@ const MasseterBotox = () => {
 
         <section className="px-4 py-6 sm:px-6 sm:py-14 lg:py-20">
           <div className="mx-auto grid max-w-7xl gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <article className="space-y-6 sm:space-y-16">
+            <article className="min-w-0 space-y-6 sm:space-y-16">
               <motion.section {...sectionReveal}>
                 <div className="grid grid-cols-2 gap-2 sm:gap-5 lg:grid-cols-4">
                   {benefits.map(({ icon: Icon, title, text }) => (
@@ -373,71 +444,85 @@ const MasseterBotox = () => {
                 </div>
               </motion.section>
 
-              {caseStages.length > 0 && (
-              <motion.section {...sectionReveal} className="overflow-hidden rounded-[2rem] border border-border bg-secondary/40 py-10">
+              {resultCards.length > 0 && (
+              <motion.section {...sectionReveal} className="min-w-0 overflow-hidden rounded-[1.5rem] border border-border bg-secondary/40 py-7 sm:rounded-[2rem] sm:py-10">
 
-                <div className="mb-8 flex flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between">
+                <div className="mb-5 flex flex-col gap-4 px-4 sm:mb-8 sm:px-6 lg:flex-row lg:items-end lg:justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-luxury-gold">Real patient progression</p>
-                    <h2 className="mt-3 text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                      The full masseter Botox before-and-after journey
+                    <h2 className="mt-2 max-w-full text-2xl font-light leading-tight text-foreground sm:mt-3 sm:text-4xl">
+                      Masseter Botox before & after results
                     </h2>
-                    <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-                      Swipe through the series. The first image is shown with a looser crop so the original jaw width and asymmetry can be seen clearly.
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:mt-4 sm:leading-7">
+                      Swipe or use the arrows to view real CosmeDocs patient results. Each card opens the dedicated masseter gallery for the full before-and-after set.
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-3">
-                    <Link to="/before-after/botox/masseter/" className="inline-flex items-center gap-2 rounded-full border border-luxury-gold/30 px-4 py-2 text-sm text-luxury-gold hover:bg-luxury-gold/10">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <Link to="/before-after/botox/masseter/" className="inline-flex items-center justify-center gap-2 rounded-full border border-luxury-gold/30 px-4 py-2 text-sm text-luxury-gold hover:bg-luxury-gold/10">
                       Masseter gallery <ArrowRight className="h-4 w-4" />
                     </Link>
-                    <Link to="/before-after/" className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">
+                    <Link to="/before-after/" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">
                       All before & afters <Images className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
 
-                {/* Swipe affordance — mobile only */}
                 <div className="mb-3 flex items-center justify-between px-4 sm:hidden">
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-luxury-gold/30 bg-luxury-gold/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-luxury-gold">
                     Swipe <ArrowRight className="h-3 w-3 animate-pulse" />
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    {caseStages.length} stages
+                    {resultCards.length} cases
                   </span>
                 </div>
 
-                <div className="relative">
+                <div className="px-4 sm:px-6">
                   <div
-                    className="flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scrollbar-hide pb-4 pl-4 pr-4 sm:gap-5 sm:pl-6 sm:pr-6 lg:gap-6"
-                    style={{ overscrollBehaviorX: "contain", WebkitOverflowScrolling: "touch" }}
+                    className="relative mx-auto max-w-md sm:max-w-2xl lg:max-w-3xl"
+                    onTouchStart={(event) => setTouchStartX(event.touches[0]?.clientX ?? null)}
+                    onTouchEnd={(event) => {
+                      if (touchStartX === null) return;
+                      const delta = touchStartX - (event.changedTouches[0]?.clientX ?? touchStartX);
+                      if (Math.abs(delta) > 44) delta > 0 ? showNextResult() : showPreviousResult();
+                      setTouchStartX(null);
+                    }}
                   >
-                    {caseStages.map((stage, index) => (
-                      <figure key={stage.title} className="group flex-shrink-0 snap-center w-[82vw] max-w-[440px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:w-[380px] md:w-[420px]">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-background">
+                    <Link to="/before-after/botox/masseter/" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold/70 rounded-[1.5rem]">
+                      <figure className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-[0_35px_90px_-55px_hsl(var(--luxury-gold)/0.65)] sm:grid sm:grid-cols-[0.95fr_1fr] sm:rounded-[2rem]">
+                        <div className="relative aspect-square overflow-hidden bg-background">
                           <img
-                            src={stage.src}
-                            alt={stage.alt}
-                            loading={index === 0 ? "eager" : "lazy"}
+                            src={activeResult.src}
+                            alt={activeResult.alt}
+                            loading="eager"
                             draggable={false}
-                            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.025] ${stage.imageClass}`}
+                            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.025]"
                           />
-                          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/80 via-background/20 to-transparent pointer-events-none" />
-                          <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-background shadow-lg">
-                            {stage.badge}
+                          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/85 via-background/25 to-transparent" />
+                          <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] rounded-full bg-luxury-gold px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-background shadow-lg sm:left-4 sm:top-4">
+                            {activeResult.badge}
                           </span>
                         </div>
-                        <figcaption className="p-5 sm:p-6">
-                          <p className="text-sm font-medium uppercase tracking-[0.16em] text-luxury-gold">{stage.title}</p>
-                          {stage.note && (
-                            <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-luxury-gold/80">{stage.note}</p>
-                          )}
-                          <p className="mt-4 text-sm leading-7 text-muted-foreground">{stage.caption}</p>
+                        <figcaption className="flex flex-col justify-center p-4 sm:p-6">
+                          <p className="text-xs font-medium uppercase tracking-[0.16em] text-luxury-gold sm:text-sm">{activeResult.title}</p>
+                          <p className="mt-3 text-sm leading-6 text-muted-foreground sm:leading-7">{activeResult.caption}</p>
+                          <span className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-luxury-gold">
+                            View full gallery <ChevronRight className="h-3.5 w-3.5" />
+                          </span>
                         </figcaption>
                       </figure>
+                    </Link>
+                    <button type="button" onClick={showPreviousResult} aria-label="Previous masseter result" className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-luxury-gold/35 bg-background/90 text-luxury-gold shadow-lg">
+                      <ChevronLeft className="h-4 w-4" />
+                    </button>
+                    <button type="button" onClick={showNextResult} aria-label="Next masseter result" className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-luxury-gold/35 bg-background/90 text-luxury-gold shadow-lg">
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+                  </div>
+                  <div className="mt-4 flex items-center justify-center gap-2">
+                    {resultCards.map((stage, index) => (
+                      <button key={stage.title} type="button" onClick={() => setActiveResultIndex(index)} aria-label={`Show result ${index + 1}`} className={`h-2 rounded-full transition-all ${index === activeResultIndex ? "w-6 bg-luxury-gold" : "w-2 bg-muted-foreground/35"}`} />
                     ))}
                   </div>
-                  {/* Right edge fade hint — indicates more content */}
-                  <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-secondary/80 to-transparent sm:w-16" />
                 </div>
 
                 <p className="px-4 pt-2 text-xs leading-6 text-muted-foreground sm:px-6">

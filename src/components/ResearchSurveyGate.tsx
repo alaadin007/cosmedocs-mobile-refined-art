@@ -101,14 +101,14 @@ const ResearchSurveyGate = () => {
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
-            className="fixed bottom-4 right-3 z-[60] sm:hidden flex items-center bg-black border border-[#C9A050]/40 rounded-full shadow-lg"
+            className="fixed bottom-4 right-3 z-[60] flex max-w-[calc(100vw-1.5rem)] items-center overflow-hidden rounded-full border border-[#C9A050]/40 bg-black shadow-lg sm:hidden"
           >
-            <button onClick={dismiss} aria-label="Dismiss" className="pl-3 pr-2 py-2 text-white/60">
+            <button onClick={dismiss} aria-label="Dismiss" className="shrink-0 pl-3 pr-2 py-2 text-white/60">
               <X className="h-4 w-4" />
             </button>
-            <button onClick={expand} className="flex items-center gap-2 pr-4 py-2 text-white text-sm">
-              <Microscope className="h-4 w-4 text-[#C9A050]" />
-              <span className="font-light">Research — contribute</span>
+            <button onClick={expand} className="flex min-w-0 items-center gap-2 pr-4 py-2 text-sm text-white">
+              <Microscope className="h-4 w-4 shrink-0 text-[#C9A050]" />
+              <span className="truncate font-light">Research — contribute</span>
             </button>
           </motion.div>
         )}
