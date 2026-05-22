@@ -11,6 +11,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import LipFillersSidebar from "@/components/lip-fillers/LipFillersSidebar";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
