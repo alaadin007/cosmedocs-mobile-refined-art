@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus, Sparkles, Camera, ImagePlus, Shield, ChevronLeft } from "lucide-react";
+import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus, Sparkles, Camera, ImagePlus, Shield, ChevronLeft, Check, User, ArrowLeft, ArrowRight, ZoomIn, Sparkle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -134,6 +134,16 @@ const QUICK_CONCERNS: Concern[] = [
 ];
 const AGE_BANDS = ["Under 25", "25–34", "35–44", "45–54", "55+"];
 
+type AngleId = "front" | "left" | "right" | "closeup" | "detail";
+const PHOTO_ANGLES: Array<{ id: AngleId; label: string; hint: string; icon: typeof User; required: boolean }> = [
+  { id: "front",   label: "Front",     hint: "Eyes level, neutral expression",      icon: User,      required: true },
+  { id: "left",    label: "Left 45°",  hint: "Turn head gently to your right",      icon: ArrowLeft, required: true },
+  { id: "right",   label: "Right 45°", hint: "Turn head gently to your left",       icon: ArrowRight,required: true },
+  { id: "closeup", label: "Close-up",  hint: "The area you'd like assessed",        icon: ZoomIn,    required: false },
+  { id: "detail",  label: "Detail",    hint: "Optional — any extra concern",        icon: Sparkle,   required: false },
+];
+const MIN_REQUIRED_ANGLES = 3;
+
 const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBotProps = {}) => {
   const location = useLocation();
   const [internalIsOpen, setInternalIsOpen] = useState(false);
@@ -144,7 +154,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
   const [planConcern, setPlanConcern] = useState<Concern | null>(null);
   const [attachedImages, setAttachedImages] = useState<string[]>([]); // data URLs, up to 5
+  const [imageAngles, setImageAngles] = useState<string[]>([]); // angle id parallel to attachedImages
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const pendingAngleRef = useRef<string | null>(null);
   const MAX_IMAGES = 5;
   const { toast } = useToast();
 
@@ -207,7 +219,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     const imagesToSend = attachedImages;
+    const anglesToSend = imageAngles;
     setAttachedImages([]);
+    setImageAngles([]);
     setIsLoading(true);
 
     // Build prior history for the model (everything before the brand-new user turn)
@@ -221,7 +235,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
           messages: history,
           question: text || undefined,
           images: imagesToSend.length > 0 ? imagesToSend : undefined,
-          context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).`,
+          context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).${anglesToSend.length ? ` Photo angles supplied: ${anglesToSend.join(", ")}.` : ""}`,
         },
       });
       if (error) throw error;
@@ -246,25 +260,88 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
+  const openPickerForAngle = (angle: AngleId | null) => {
+    pendingAngleRef.current = angle;
+    if (fileInputRef.current) {
+      // single-file mode when targeting an angle, multi otherwise
+      fileInputRef.current.multiple = angle === null;
+      fileInputRef.current.click();
+    }
+  };
+
+  const removeAngle = (angle: AngleId) => {
+    setAttachedImages((prev) => prev.filter((_, i) => imageAngles[i] !== angle));
+    setImageAngles((prev) => prev.filter((a) => a !== angle));
+  };
+
+  const nextOpenAngle = (): AngleId | null => {
+    const filled = new Set(imageAngles);
+    const next = PHOTO_ANGLES.find((a) => !filled.has(a.id));
+    return next ? next.id : null;
+  };
+
   const handleImagesSelected = (files: FileList | null) => {
     if (!files || files.length === 0) return;
+    const targetAngle = pendingAngleRef.current;
+    pendingAngleRef.current = null;
+
+    const readAsDataURL = (file: File): Promise<string | null> =>
+      new Promise((resolve) => {
+        if (file.size > 8 * 1024 * 1024) {
+          toast({ title: "Photo too large", description: `${file.name} is over 8 MB — skipped.`, variant: "destructive" });
+          resolve(null);
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = (e) => resolve((e.target?.result as string) || null);
+        reader.onerror = () => resolve(null);
+        reader.readAsDataURL(file);
+      });
+
+    if (targetAngle) {
+      readAsDataURL(files[0]).then((url) => {
+        if (!url) return;
+        setAttachedImages((prevImgs) => {
+          setImageAngles((prevAng) => {
+            const idx = prevAng.indexOf(targetAngle);
+            if (idx >= 0) return prevAng;
+            if (prevAng.length >= MAX_IMAGES) return prevAng;
+            return [...prevAng, targetAngle];
+          });
+          const idx = prevImgs.findIndex((_, i) => imageAngles[i] === targetAngle);
+          if (idx >= 0) {
+            const next = [...prevImgs];
+            next[idx] = url;
+            return next;
+          }
+          return prevImgs.length >= MAX_IMAGES ? prevImgs : [...prevImgs, url];
+        });
+      });
+      return;
+    }
+
+    // Multi/untagged fallback — assign each to the next open angle in sequence
     const remaining = MAX_IMAGES - attachedImages.length;
     if (remaining <= 0) {
-      toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos per message.`, variant: "destructive" });
+      toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos.`, variant: "destructive" });
       return;
     }
     const list = Array.from(files).slice(0, remaining);
-    list.forEach((file) => {
-      if (file.size > 8 * 1024 * 1024) {
-        toast({ title: "Photo too large", description: `${file.name} is over 8 MB — skipped.`, variant: "destructive" });
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const url = e.target?.result as string;
-        setAttachedImages((prev) => (prev.length >= MAX_IMAGES ? prev : [...prev, url]));
-      };
-      reader.readAsDataURL(file);
+    Promise.all(list.map(readAsDataURL)).then((urls) => {
+      const validUrls = urls.filter((u): u is string => !!u);
+      if (validUrls.length === 0) return;
+      setImageAngles((prevAng) => {
+        const filled = new Set(prevAng);
+        const assigned: string[] = [];
+        for (const _ of validUrls) {
+          const next = PHOTO_ANGLES.find((a) => !filled.has(a.id));
+          const id = next ? next.id : "detail";
+          assigned.push(id);
+          filled.add(id);
+        }
+        return [...prevAng, ...assigned].slice(0, MAX_IMAGES);
+      });
+      setAttachedImages((prev) => [...prev, ...validUrls].slice(0, MAX_IMAGES));
     });
   };
 
@@ -550,50 +627,130 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
               )}
 
-              {/* Photo previews — up to 5 */}
+              {/* Angle checklist — front / left / right / close-up / detail */}
               {attachedImages.length > 0 && (
                 <div className="px-5 pt-3">
                   <div className="p-3 rounded-2xl bg-white/[0.05] border border-amber-400/30">
-                    <div className="flex items-center justify-between mb-2">
-                      <p className="text-[13px] text-white font-medium">
-                        {attachedImages.length} of {MAX_IMAGES} photo{attachedImages.length > 1 ? "s" : ""} ready
-                        {attachedImages.length >= 3 && <span className="text-amber-400"> · high accuracy</span>}
-                      </p>
+                    <div className="flex items-center justify-between mb-2.5">
+                      <div>
+                        <p className="text-[13px] text-white font-medium leading-tight">
+                          {attachedImages.length} of {MAX_IMAGES} angles captured
+                          {attachedImages.length >= MIN_REQUIRED_ANGLES && (
+                            <span className="text-amber-400"> · high accuracy</span>
+                          )}
+                        </p>
+                        <p className="text-[11px] text-white/55 mt-0.5">
+                          Tap a tile to add or replace that angle
+                        </p>
+                      </div>
                       <button
-                        onClick={() => setAttachedImages([])}
+                        onClick={() => { setAttachedImages([]); setImageAngles([]); }}
                         className="text-white/50 hover:text-white text-[12px]"
                       >
                         Clear all
                       </button>
                     </div>
-                    <div className="flex gap-2 overflow-x-auto pb-1">
-                      {attachedImages.map((img, i) => (
-                        <div key={i} className="relative shrink-0">
-                          <img src={img} alt={`Attached ${i + 1}`} className="h-16 w-16 rounded-xl object-cover" />
-                          <button
-                            onClick={() => setAttachedImages((prev) => prev.filter((_, idx) => idx !== i))}
-                            className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-black/80 border border-white/20 flex items-center justify-center text-white"
-                            aria-label={`Remove photo ${i + 1}`}
-                          >
-                            <X className="h-3 w-3" />
-                          </button>
-                        </div>
-                      ))}
-                      {attachedImages.length < MAX_IMAGES && (
-                        <button
-                          onClick={() => fileInputRef.current?.click()}
-                          className="shrink-0 h-16 w-16 rounded-xl border border-dashed border-amber-400/40 text-amber-400 flex items-center justify-center text-[24px]"
-                          aria-label="Add another photo"
-                        >
-                          +
-                        </button>
-                      )}
+
+                    {/* Progress bar */}
+                    <div className="h-1 w-full rounded-full bg-white/10 overflow-hidden mb-3">
+                      <div
+                        className="h-full bg-gradient-to-r from-amber-300 to-amber-500 transition-all"
+                        style={{ width: `${Math.min(100, (attachedImages.length / MAX_IMAGES) * 100)}%` }}
+                      />
                     </div>
-                    <p className="text-[11px] text-white/55 flex items-center gap-1 mt-2">
-                      <Shield className="h-3 w-3 text-amber-400" />
-                      Add 3–5 angles (front, left, right, close-up) for the most accurate plan. Discarded after this reply — never stored.
+
+                    {/* Angle tiles */}
+                    <div className="grid grid-cols-5 gap-2">
+                      {PHOTO_ANGLES.map((angle) => {
+                        const idx = imageAngles.indexOf(angle.id);
+                        const imgUrl = idx >= 0 ? attachedImages[idx] : null;
+                        const Icon = angle.icon;
+                        return (
+                          <div key={angle.id} className="flex flex-col items-center text-center">
+                            <button
+                              onClick={() => openPickerForAngle(angle.id)}
+                              className={`relative h-16 w-16 rounded-xl overflow-hidden flex items-center justify-center transition-all ${
+                                imgUrl
+                                  ? "border-2 border-amber-400 shadow-md shadow-amber-500/20"
+                                  : angle.required
+                                    ? "border border-dashed border-amber-400/60 bg-white/[0.04] active:bg-amber-400/10"
+                                    : "border border-dashed border-white/15 bg-white/[0.02] active:bg-white/[0.06]"
+                              }`}
+                              aria-label={imgUrl ? `Replace ${angle.label} photo` : `Add ${angle.label} photo`}
+                              title={angle.hint}
+                            >
+                              {imgUrl ? (
+                                <>
+                                  <img src={imgUrl} alt={`${angle.label} angle`} className="h-full w-full object-cover" />
+                                  <span className="absolute top-1 right-1 h-4 w-4 rounded-full bg-amber-400 flex items-center justify-center">
+                                    <Check className="h-2.5 w-2.5 text-black" strokeWidth={3} />
+                                  </span>
+                                </>
+                              ) : (
+                                <Icon className={`h-5 w-5 ${angle.required ? "text-amber-400" : "text-white/40"}`} />
+                              )}
+                            </button>
+                            <span className={`mt-1 text-[10px] leading-tight ${imgUrl ? "text-amber-400" : angle.required ? "text-white/80" : "text-white/45"}`}>
+                              {angle.label}
+                            </span>
+                            {imgUrl && (
+                              <button
+                                onClick={() => removeAngle(angle.id)}
+                                className="mt-0.5 text-[9px] text-white/40 hover:text-white"
+                              >
+                                Remove
+                              </button>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    <p className="text-[11px] text-white/55 flex items-start gap-1 mt-3">
+                      <Shield className="h-3 w-3 text-amber-400 shrink-0 mt-0.5" />
+                      <span>
+                        {attachedImages.length < MIN_REQUIRED_ANGLES
+                          ? `Add at least ${MIN_REQUIRED_ANGLES} angles (front, left, right) for an accurate plan.`
+                          : "Discarded after this reply — never stored."}
+                      </span>
                     </p>
                   </div>
+                </div>
+              )}
+
+              {/* Empty-state angle checklist — invites first capture */}
+              {attachedImages.length === 0 && (
+                <div className="px-5 pt-3">
+                  <button
+                    onClick={() => openPickerForAngle("front")}
+                    className="w-full p-3 rounded-2xl bg-white/[0.04] border border-dashed border-amber-400/30 active:bg-white/[0.06] text-left"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Camera className="h-4 w-4 text-amber-400" />
+                      <p className="text-[13px] text-white font-medium">Photo angles for accuracy</p>
+                      <span className="ml-auto text-[10px] text-white/45">optional</span>
+                    </div>
+                    <div className="grid grid-cols-5 gap-2">
+                      {PHOTO_ANGLES.map((angle) => {
+                        const Icon = angle.icon;
+                        return (
+                          <div key={angle.id} className="flex flex-col items-center text-center">
+                            <div className={`h-12 w-12 rounded-xl border border-dashed flex items-center justify-center ${
+                              angle.required ? "border-amber-400/50 bg-white/[0.03]" : "border-white/15 bg-white/[0.02]"
+                            }`}>
+                              <Icon className={`h-4 w-4 ${angle.required ? "text-amber-400" : "text-white/35"}`} />
+                            </div>
+                            <span className={`mt-1 text-[10px] leading-tight ${angle.required ? "text-white/70" : "text-white/40"}`}>
+                              {angle.label}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[11px] text-white/50 mt-2">
+                      Add 3–5 angles for the most accurate plan · front, left, right are key
+                    </p>
+                  </button>
                 </div>
               )}
 
@@ -632,7 +789,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                     }}
                   />
                   <button
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={() => openPickerForAngle(nextOpenAngle())}
                     aria-label="Attach photos"
                     disabled={attachedImages.length >= MAX_IMAGES}
                     className="shrink-0 h-12 w-12 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-amber-400 active:bg-amber-400/10 disabled:opacity-40"
