@@ -208,6 +208,7 @@ const CalfSlimmingBotox = lazy(() => import("./pages/CalfSlimmingBotox"));
 const BotoxCalfsClinical = lazy(() => import("./pages/BotoxCalfsClinical"));
 const VideoUpload = lazy(() => import("./pages/VideoUpload"));
 const AdminResearchSurvey = lazy(() => import("./pages/AdminResearchSurvey"));
+const ResearchSurvey = lazy(() => import("./pages/ResearchSurvey"));
 const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
 const TempleFiller = lazy(() => import("./pages/TempleFiller"));
 const ForeheadFiller = lazy(() => import("./pages/ForeheadFiller"));
