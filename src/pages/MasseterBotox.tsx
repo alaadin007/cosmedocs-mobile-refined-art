@@ -21,9 +21,22 @@ import ExpandableSection from "@/components/ui/expandable-section";
 import Breadcrumb from "@/components/Breadcrumb";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import masseterAfter2Treatments from "@/assets/before-after/masseter-series/after-2-treatments.jpg";
 import masseterOneYearAfter3rd from "@/assets/before-after/masseter-series/one-year-after-3rd.jpg";
+import masseterBa1 from "@/assets/before-after/masseter-ba-1.png";
+import masseterBa2 from "@/assets/before-after/masseter-ba-2.jpg";
+import masseterBa3 from "@/assets/before-after/masseter-ba-3.jpg";
+import masseterBa4 from "@/assets/before-after/masseter-ba-4.jpg";
+import masseterBa5 from "@/assets/before-after/masseter-ba-5.jpg";
+import masseterBa6 from "@/assets/before-after/masseter-ba-6.jpg";
 
 const faqs = [
   {
@@ -76,6 +89,65 @@ const caseStages: Array<{ src: string; badge: string; title: string; note?: stri
     caption: "One year on, following a third maintenance session. The masseter has settled into a refined, naturally slimmer jaw line — the cumulative effect of staged, doctor-led dosing rather than a single oversized treatment.",
     alt: "Same male patient one year after third masseter Botox treatment at CosmeDocs, showing maintained slimmer jaw and refined lower face",
     imageClass: "object-cover object-center",
+  },
+];
+
+const resultCards: Array<{ src: string; badge: string; title: string; caption: string; alt: string }> = [
+  {
+    src: masseterAfter2Treatments,
+    badge: "2 treatments",
+    title: "Two-session progression",
+    caption: "Baseline to staged masseter reduction with natural lower-face balance preserved.",
+    alt: "Before and after two sessions of masseter Botox showing reduced jaw width",
+  },
+  {
+    src: masseterOneYearAfter3rd,
+    badge: "One year on",
+    title: "Maintained result",
+    caption: "Cumulative muscle softening after maintenance treatment, without changing expression.",
+    alt: "One year after third masseter Botox treatment showing maintained slimmer jaw",
+  },
+  {
+    src: masseterBa1,
+    badge: "Real result",
+    title: "Lower-face contour",
+    caption: "A softer jaw angle where masseter bulk was contributing to lower-face width.",
+    alt: "Masseter Botox before and after showing reduced jaw muscle bulk from angled view",
+  },
+  {
+    src: masseterBa2,
+    badge: "Jaw slimming",
+    title: "Profile refinement",
+    caption: "Gradual facial slimming with proportions kept quiet, natural and patient-specific.",
+    alt: "Masseter Botox before and after comparison from side and front profile",
+  },
+  {
+    src: masseterBa3,
+    badge: "Split view",
+    title: "Tapered balance",
+    caption: "A wider lower face transitions towards a more balanced, tapered contour.",
+    alt: "Before and after split view showing jawline slimming with masseter Botox",
+  },
+  {
+    src: masseterBa4,
+    badge: "Progression",
+    title: "Subtle narrowing",
+    caption: "Visible muscle refinement over time, avoiding an over-treated hollow look.",
+    alt: "Masseter Botox progressive results showing facial slimming over time",
+  },
+  {
+    src: masseterBa5,
+    badge: "Long term",
+    title: "Natural contour",
+    caption: "Longer-term masseter reduction with the patient’s own facial structure maintained.",
+    alt: "Long-term masseter Botox results with facial contouring improvement",
+  },
+  {
+    src: masseterBa6,
+    badge: "Face shape",
+    title: "Square to softer",
+    caption: "A square lower-face profile softens into a quieter, more oval contour.",
+    alt: "Before and after masseter Botox showing face shape transition from square to oval",
   },
 ];
 
