@@ -272,7 +272,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
               <p className="mt-2 text-sm leading-snug">{pageConfig.teaser}</p>
               <div className="mt-3 flex gap-2">
                 <button
-                  onClick={openWithCta}
+                  onClick={openPlanPicker}
                   className="flex-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-2 text-xs font-medium text-black hover:opacity-95"
                 >
                   {pageConfig.cta}
