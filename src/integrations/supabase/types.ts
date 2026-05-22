@@ -218,6 +218,39 @@ export type Database = {
         }
         Relationships: []
       }
+      patient_research_survey: {
+        Row: {
+          age_group: string | null
+          created_at: string
+          desired_outcome: string | null
+          ethnicity: string | null
+          gender: string | null
+          id: string
+          motivation: string
+          motivation_detail: string | null
+        }
+        Insert: {
+          age_group?: string | null
+          created_at?: string
+          desired_outcome?: string | null
+          ethnicity?: string | null
+          gender?: string | null
+          id?: string
+          motivation: string
+          motivation_detail?: string | null
+        }
+        Update: {
+          age_group?: string | null
+          created_at?: string
+          desired_outcome?: string | null
+          ethnicity?: string | null
+          gender?: string | null
+          id?: string
+          motivation?: string
+          motivation_detail?: string | null
+        }
+        Relationships: []
+      }
       pricing_content: {
         Row: {
           area: string | null
