@@ -33,7 +33,7 @@ const pageRoutes = [
   '/book-consultation/',
   '/research/',
   '/research/why-patients-choose-aesthetic-treatments/',
-  '/research/digital-face-study-2026/'
+  '/research/filtered-face-project/'
 ];
 
 const treatmentRoutes = [

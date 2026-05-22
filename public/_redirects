@@ -896,6 +896,10 @@
 /ar/london-summer-aesthetics    /ar/london-summer-aesthetics/   301
 /ar/london-summer-aesthetics/   /index.html                     200
 
+# Research study slug rename
+/research/digital-face-study-2026   /research/filtered-face-project   301
+/research/digital-face-study-2026/  /research/filtered-face-project   301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
