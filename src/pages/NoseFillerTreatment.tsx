@@ -10,6 +10,7 @@ import NoseFillerSidebar from '@/components/nose-filler/NoseFillerSidebar';
 import ExpandableSection from '@/components/ui/expandable-section';
 import noseIllustration from '@/assets/nose-profile-illustration.png';
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const NoseFillerTreatment = () => {
   const seoData = generateSEOMetadata(
