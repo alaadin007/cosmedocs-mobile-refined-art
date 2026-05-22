@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import PRPSidebar from "@/components/skin-rejuvenation/PRPSidebar";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Cosmedocs Harley Street", "Doctor-led PRP treatments for skin rejuvenation, hair restoration, and natural healing. Vampire facial using your own growth factors on Harley Street.", "/treatments/prp-vampire-facial/");
