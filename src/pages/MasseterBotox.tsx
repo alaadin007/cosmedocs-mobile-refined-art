@@ -22,6 +22,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
+import masseterAfter2Treatments from "@/assets/before-after/masseter-series/after-2-treatments.jpg";
+import masseterOneYearAfter3rd from "@/assets/before-after/masseter-series/one-year-after-3rd.jpg";
 
 const faqs = [
   {
@@ -56,7 +58,26 @@ const faqs = [
   },
 ];
 
-const caseStages: Array<{ src: string; badge: string; title: string; note?: string; caption: string; alt: string; imageClass: string }> = [];
+const caseStages: Array<{ src: string; badge: string; title: string; note?: string; caption: string; alt: string; imageClass: string }> = [
+  {
+    src: masseterAfter2Treatments,
+    badge: "Before & After · 2 Treatments",
+    title: "Two-session progression",
+    note: "Real CosmeDocs patient",
+    caption: "Top: baseline showing fuller lower face from masseter hypertrophy. Bottom: outcome after two masseter Botox sessions — softer jaw width and a more balanced lower face, with natural expression preserved.",
+    alt: "Male patient before and after two sessions of masseter Botox at CosmeDocs Harley Street, showing reduced jaw width and softer lower face contour",
+    imageClass: "object-cover object-center",
+  },
+  {
+    src: masseterOneYearAfter3rd,
+    badge: "One Year On · After 3rd Session",
+    title: "Maintained result",
+    note: "Cumulative atrophy",
+    caption: "One year on, following a third maintenance session. The masseter has settled into a refined, naturally slimmer jaw line — the cumulative effect of staged, doctor-led dosing rather than a single oversized treatment.",
+    alt: "Same male patient one year after third masseter Botox treatment at CosmeDocs, showing maintained slimmer jaw and refined lower face",
+    imageClass: "object-cover object-center",
+  },
+];
 
 const benefits = [
   {
