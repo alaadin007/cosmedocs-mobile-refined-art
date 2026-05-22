@@ -56,45 +56,7 @@ const faqs = [
   },
 ];
 
-const caseStages = [
-  {
-    src: stageBaseline,
-    badge: "Stage 1 · Baseline",
-    title: "Before treatment — asymmetric masseter hypertrophy",
-    note: "HSI Masseter Scale · R: XL · L: L",
-    caption:
-      "The right masseter is graded XL and the left Large on the HSI Masseter Scale. The lower face is broad, square and heavy, with right-sided dominance from chronic clenching and grinding.",
-    alt: "Before masseter Botox showing asymmetric male masseter hypertrophy, right XL and left large, CosmeDocs Harley Street London",
-    imageClass: "object-contain p-2",
-  },
-  {
-    src: stageFirstTreatment,
-    badge: "Stage 2 · 3 months post 1st session",
-    title: "3 months after first treatment",
-    caption:
-      "The first cycle has started visible atrophy. Bulk is softer on both sides and asymmetry begins to settle, whilst the patient reports less morning jaw tension and less grinding.",
-    alt: "Masseter Botox three months after first treatment showing softer jaw muscle bulk and improved symmetry",
-    imageClass: "object-cover object-center",
-  },
-  {
-    src: stageSecondTreatment,
-    badge: "Stage 3 · 3 months post 2nd session",
-    title: "3 months after second treatment",
-    caption:
-      "Cumulative atrophy is now clearer. The lower face looks leaner, the jaw angle is less dominant and the right-left imbalance has improved without hollowing the face.",
-    alt: "Masseter Botox three months after second treatment showing cumulative jaw slimming and improved facial balance",
-    imageClass: "object-cover object-center",
-  },
-  {
-    src: stageMaintained,
-    badge: "Stage 4 · Final maintained result",
-    title: "3 months after third treatment",
-    caption:
-      "A stable maintained result: refined, natural and still masculine. Maintenance was planned twice yearly initially, then annually once the muscle bulk had been controlled.",
-    alt: "Final maintained result after masseter Botox showing refined male jawline at CosmeDocs London",
-    imageClass: "object-cover object-center",
-  },
-];
+const caseStages: Array<{ src: string; badge: string; title: string; note?: string; caption: string; alt: string; imageClass: string }> = [];
 
 const benefits = [
   {
