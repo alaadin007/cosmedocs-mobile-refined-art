@@ -50,10 +50,10 @@ const ResearchSurveyGate = () => {
         {visible && !open && (
           <motion.div
             initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: "50%", opacity: 1 }}
+            animate={{ x: "0%", opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ type: "spring", stiffness: 220, damping: 28, delay: 0.05 }}
-            whileHover={{ x: "0%" }}
+            whileHover={{ x: "-4px" }}
             className="fixed top-1/2 right-0 -translate-y-1/2 z-[60] hidden sm:flex"
             style={{ filter: "drop-shadow(0 10px 30px rgba(201,160,80,0.25))" }}
           >
