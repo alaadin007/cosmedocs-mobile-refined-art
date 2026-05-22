@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import DermalFillersSidebar from '@/components/dermal-fillers/DermalFillersSidebar';
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 export default function DermalFillers() {
   const seoData = generateSEOMetadata(
