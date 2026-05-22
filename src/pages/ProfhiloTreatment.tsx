@@ -10,6 +10,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import ProfhiloSidebar from "@/components/skin-rejuvenation/ProfhiloSidebar";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 import profhiloFaceBeforeAfter from "@/assets/profhilo-face-before-after.jpg";
 import profhiloNeckBeforeAfter03 from "@/assets/profhilo-neck-before-after-03.jpg";
