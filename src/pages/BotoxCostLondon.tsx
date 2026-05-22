@@ -7,6 +7,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, CheckCircle, Award, Shield, Heart, TrendingUp } from "lucide-react";
 import ClientReviews from '@/components/ClientReviews';
 import { Link } from "react-router-dom";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 import {
   Carousel,
   CarouselContent,
@@ -836,6 +837,8 @@ const BotoxCostLondon = () => {
           </p>
         </div>
       </div>
+
+      <TreatmentPaymentInfo variant="dark" />
     </>
   );
 };

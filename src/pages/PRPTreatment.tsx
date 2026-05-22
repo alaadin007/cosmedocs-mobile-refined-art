@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import PRPSidebar from "@/components/skin-rejuvenation/PRPSidebar";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Cosmedocs Harley Street", "Doctor-led PRP treatments for skin rejuvenation, hair restoration, and natural healing. Vampire facial using your own growth factors on Harley Street.", "/treatments/prp-vampire-facial/");
@@ -204,6 +205,8 @@ const PRPTreatment = () => {
           <p>PRP treatment at Cosmedocs Harley Street is available from £450 per session. Our GMC-registered doctors perform all PRP procedures, ensuring the highest standards of safety and efficacy. Book your consultation to discuss whether PRP therapy is suitable for your skin concerns or hair loss. Cosmedocs has been delivering exceptional aesthetic results since 2007 with over one million treatments performed.</p>
         </div>
       </div>
+
+      <TreatmentPaymentInfo variant="dark" />
 
       {/* Skin Foundation CTA */}
       <section className="py-12 px-4">

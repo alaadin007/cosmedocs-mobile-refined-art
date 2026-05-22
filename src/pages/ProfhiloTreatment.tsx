@@ -10,6 +10,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import ProfhiloSidebar from "@/components/skin-rejuvenation/ProfhiloSidebar";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 import profhiloFaceBeforeAfter from "@/assets/profhilo-face-before-after.jpg";
 import profhiloNeckBeforeAfter03 from "@/assets/profhilo-neck-before-after-03.jpg";
@@ -289,6 +290,8 @@ const ProfhiloTreatment = () => {
         <div className="max-w-4xl mx-auto px-4">
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
+
+        <TreatmentPaymentInfo variant="dark" />
 
         {/* Hidden SEO */}
         <div className="sr-only">

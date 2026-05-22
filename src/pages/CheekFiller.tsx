@@ -12,6 +12,7 @@ import cheekBaPreview from "@/assets/1ml-cheek-fillers-before-after.png";
 import liquidFaceliftCheekBA from "@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const CheekFiller = () => {
   const faqs = [
@@ -776,6 +777,8 @@ const CheekFiller = () => {
           </p>
         </div>
       </div>
+
+      <TreatmentPaymentInfo variant="dark" />
 
       {/* Skin Foundation CTA */}
       <section className="py-12 px-4">

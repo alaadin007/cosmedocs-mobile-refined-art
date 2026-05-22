@@ -12,6 +12,7 @@ import jawlineGallery2 from "@/assets/jawline-gallery-2.jpg";
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import EndolaserSpotlight from "@/components/EndolaserSpotlight";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const JawlineFiller = () => {
   const faqs = [
@@ -707,6 +708,8 @@ const JawlineFiller = () => {
           </article>
         </div>
       </div>
+
+      <TreatmentPaymentInfo variant="dark" />
 
       {/* Skin Foundation CTA */}
       <section className="py-12 px-4">

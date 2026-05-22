@@ -13,6 +13,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import ChemicalPeelSidebar from "@/components/skin-rejuvenation/ChemicalPeelSidebar";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const ChemicalPeel = () => {
   const seoData = generateSEOMetadata(
@@ -479,6 +480,8 @@ const ChemicalPeel = () => {
         <div className="max-w-4xl mx-auto px-4">
           <SkinFoundationCTA variant="oily-barrier" />
         </div>
+
+        <TreatmentPaymentInfo variant="dark" />
 
         <section className="py-16 px-4 bg-black border-t border-white/[0.04]">
           <div className="max-w-4xl mx-auto">

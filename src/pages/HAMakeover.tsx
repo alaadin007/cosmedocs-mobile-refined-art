@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Calendar, Users, CheckCircle, Heart, Gem, MousePointerClick, Images } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EndolaserSpotlight from '@/components/EndolaserSpotlight';
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 import liquidFaceliftBA from '@/assets/before-after/liquid-facelift-nose-cheek-ba.jpg';
 
 export default function HAMakeover() {
@@ -516,6 +517,8 @@ export default function HAMakeover() {
             </div>
           </div>
         </section>
+
+        <TreatmentPaymentInfo variant="dark" />
 
         {/* Hidden SEO Content */}
         <div className="sr-only">

@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from 'react-router-dom';
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const SkinRejuvenationHub = () => {
   const seoData = generateSEOMetadata(
@@ -260,6 +261,8 @@ const SkinRejuvenationHub = () => {
         <div className="max-w-4xl mx-auto px-4">
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
+
+        <TreatmentPaymentInfo variant="light" />
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">

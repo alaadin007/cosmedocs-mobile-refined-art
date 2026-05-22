@@ -20,6 +20,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import ExpandableSection from "@/components/ui/expandable-section";
 import Breadcrumb from "@/components/Breadcrumb";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 import jawIllustration from "@/assets/jaw-profile-illustration.png";
 import stageBaseline from "@/assets/before-after/masseter-series/1-before-hsi-xl-right.jpg";
 import stageFirstTreatment from "@/assets/before-after/masseter-series/2-after-first-treatment.jpg";
@@ -698,6 +699,8 @@ const MasseterBotox = () => {
             </a>
           </div>
         </div>
+
+        <TreatmentPaymentInfo variant="dark" />
       </main>
     </>
   );

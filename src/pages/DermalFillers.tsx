@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import DermalFillersSidebar from '@/components/dermal-fillers/DermalFillersSidebar';
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 export default function DermalFillers() {
   const seoData = generateSEOMetadata(
@@ -859,6 +860,8 @@ export default function DermalFillers() {
         <div className="max-w-4xl mx-auto px-4">
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
+
+        <TreatmentPaymentInfo variant="light" />
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
