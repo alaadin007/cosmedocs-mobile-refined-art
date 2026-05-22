@@ -568,6 +568,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
               </ScrollArea>
 
+              {/* Scrollable bottom region — keeps pickers, angle checklist and CTAs visible above composer */}
+              <div className="flex-shrink-0 max-h-[55dvh] overflow-y-auto overscroll-contain pb-2">
               {/* Plan picker — iOS-sized cards */}
               {planStep !== "closed" && (
                 <div className="px-5 pt-3 pb-2 border-t border-white/[0.06]">
