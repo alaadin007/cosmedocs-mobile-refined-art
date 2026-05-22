@@ -241,7 +241,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
       "3) one-line next step (book or WhatsApp +44 7735 606447).",
       "No long paragraphs, no bullet lists, under 60 words total.",
     ].filter(Boolean).join(" ");
-    sendMessage(lines);
+    const display = age ? `My concern: ${concern.label} · Age ${age}` : `My concern: ${concern.label}`;
+    sendMessage(lines, display);
   };
 
 
