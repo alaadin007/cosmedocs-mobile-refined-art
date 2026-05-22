@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from 'react-router-dom';
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
+import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
 
 const SkinRejuvenationHub = () => {
   const seoData = generateSEOMetadata(
