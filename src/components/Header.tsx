@@ -1,4 +1,3 @@
-
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ const LiquidGlassSearch = lazy(() => import("./LiquidGlassSearch"));
 const LiquidGlassContactMenu = lazy(() => import("./LiquidGlassContactMenu"));
 const AestheticAnalysisWizard = lazy(() => import("./AestheticAnalysisWizard"));
 const FloatingChatBot = lazy(() => import("./FloatingChatBot"));
-const TreatmentCategoryNav = lazy(() => import("./TreatmentCategoryNav"));
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -221,13 +219,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-        
-        {/* Treatment Category Navigation - Desktop only */}
-        <Suspense fallback={null}>
-          <div className="hidden md:block">
-            <TreatmentCategoryNav />
-          </div>
-        </Suspense>
       </header>
 
       {/* Search Modal - only render when needed */}

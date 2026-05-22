@@ -136,6 +136,41 @@
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
   }
+
+  /* Logo shimmer — subtle periodic gold sweep across COSMEDOCS */
+  @keyframes logo-shimmer {
+    0% { background-position: -200% center; }
+    40% { background-position: 200% center; }
+    100% { background-position: 200% center; }
+  }
+  .logo-shimmer {
+    position: relative;
+    display: inline-block;
+  }
+  .logo-shimmer span {
+    background: linear-gradient(
+      90deg,
+      #fff 0%,
+      #fff 40%,
+      #C9A050 50%,
+      #fff 60%,
+      #fff 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logo-shimmer 4s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  /* Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .logo-shimmer span {
+      animation: none;
+      -webkit-text-fill-color: #fff;
+      background: none;
+    }
+  }
 }
 
 @keyframes flipPill {
