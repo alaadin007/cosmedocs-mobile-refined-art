@@ -16,7 +16,7 @@ const ResearchSurveyGate = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (/^\/(admin|auth|dashboard|spin-to-win|popup-offer|thank-you)/.test(pathname)) return;
+    if (/^\/(admin|auth|dashboard|spin-to-win|popup-offer|thank-you|research)/.test(pathname)) return;
     const now = Date.now();
     if (now < SURVEY_START || now > SURVEY_END) return;
     if (localStorage.getItem(STORAGE_KEY)) return;

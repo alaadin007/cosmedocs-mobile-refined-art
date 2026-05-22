@@ -105,7 +105,12 @@ export const ResearchSurveyPopup = ({ open, onOpenChange }: Props) => {
                   {MOTIVATIONS.map(m => (
                     <button
                       key={m.value}
-                      onClick={() => setMotivation(m.value)}
+                      onClick={() => {
+                        setMotivation(m.value);
+                        if (m.value !== "other") {
+                          setTimeout(() => setStep(1), 220);
+                        }
+                      }}
                       className={`w-full text-left px-3.5 py-2.5 rounded-lg border text-sm transition-all flex items-center gap-3 ${
                         motivation === m.value
                           ? "bg-[#C9A050]/15 border-[#C9A050]/60 text-white"
