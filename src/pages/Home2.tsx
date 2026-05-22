@@ -328,22 +328,22 @@ export default function Home2() {
                   <Link
                     to="/about"
                     aria-label="Teosyal Outstanding Clinic Award winner — view recognition"
-                    className="group inline-flex items-center gap-4 pl-2 pr-5 py-2 rounded-full bg-white/[0.04] border border-[#C9A050]/30 hover:border-[#C9A050]/60 hover:bg-white/[0.07] transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(201,160,80,0.4)]"
+                    className="group flex w-full sm:inline-flex sm:w-auto max-w-full items-center gap-3 sm:gap-4 pl-2 pr-4 sm:pr-5 py-2 rounded-3xl sm:rounded-full bg-white/[0.04] border border-[#C9A050]/30 hover:border-[#C9A050]/60 hover:bg-white/[0.07] transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(201,160,80,0.4)]"
                   >
-                    <span className="relative inline-flex items-center justify-center rounded-full bg-white/95 ring-1 ring-[#C9A050]/50 p-1">
+                    <span className="relative shrink-0 inline-flex items-center justify-center rounded-full bg-white/95 ring-1 ring-[#C9A050]/50 p-1">
                       <img
                         src={teosyalAward}
                         alt="Teosyal Outstanding Clinic Award"
                         width={64}
                         height={64}
                         loading="eager"
-                        className="h-14 w-14 sm:h-16 sm:w-16 object-contain rounded-full"
+                        className="h-12 w-12 sm:h-16 sm:w-16 object-contain rounded-full"
                       />
                     </span>
-                    <span className="flex flex-col leading-tight text-left">
+                    <span className="flex min-w-0 flex-1 flex-col leading-tight text-left">
                       <span className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] font-medium">Award Winning</span>
-                      <span className="text-sm sm:text-base font-light text-white">Teosyal Outstanding Clinic</span>
-                      <span className="text-[11px] text-white/50 mt-0.5">Recognised by Teoxane — Swiss aesthetic excellence</span>
+                      <span className="text-sm sm:text-base font-light text-white break-words">Teosyal Outstanding Clinic</span>
+                      <span className="text-[11px] text-white/50 mt-0.5 break-words">Recognised by Teoxane — Swiss aesthetic excellence</span>
                     </span>
                   </Link>
                 </motion.div>
