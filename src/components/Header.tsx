@@ -1,4 +1,3 @@
-
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ const LiquidGlassSearch = lazy(() => import("./LiquidGlassSearch"));
 const LiquidGlassContactMenu = lazy(() => import("./LiquidGlassContactMenu"));
 const AestheticAnalysisWizard = lazy(() => import("./AestheticAnalysisWizard"));
 const FloatingChatBot = lazy(() => import("./FloatingChatBot"));
-const TreatmentCategoryNav = lazy(() => import("./TreatmentCategoryNav"));
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -146,11 +144,10 @@ export default function Header() {
 
           {/* Logo - Center */}
           <Link to="/" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
-            <div className="text-2xl md:text-3xl font-bold">
+            <div className="text-2xl md:text-3xl font-bold logo-shimmer">
               <span className="text-white">COSME</span>
               <span className="text-white">DOCS</span>
             </div>
-            <p className="text-[10px] md:text-xs text-amber-400 -mt-1 whitespace-nowrap">Harley St | ~ 2007</p>
           </Link>
 
           {/* Desktop Actions - Right */}
@@ -222,13 +219,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-        
-        {/* Treatment Category Navigation - Desktop only */}
-        <Suspense fallback={null}>
-          <div className="hidden md:block">
-            <TreatmentCategoryNav />
-          </div>
-        </Suspense>
       </header>
 
       {/* Search Modal - only render when needed */}
