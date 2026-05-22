@@ -79,35 +79,38 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    // Backward-compat: support both legacy { question } and new { messages, imageBase64 }
+    // Backward-compat: support legacy { question }, { imageBase64 } and new { images: string[] }
     const legacyQuestion: string | undefined = body.question;
     const history: Array<{ role: 'user' | 'assistant'; content: string }> = body.messages || [];
-    const imageBase64: string | undefined = body.imageBase64; // data URL or raw base64
+    const singleImage: string | undefined = body.imageBase64;
+    const multiImages: string[] = Array.isArray(body.images) ? body.images.slice(0, 5) : [];
+    const images: string[] = multiImages.length > 0
+      ? multiImages
+      : (singleImage ? [singleImage] : []);
     const extraContext: string = body.context || '';
 
     if (!LOVABLE_API_KEY) throw new Error('LOVABLE_API_KEY is not configured');
 
-    // Build OpenAI-compatible messages with vision support
     const aiMessages: any[] = [
       { role: 'system', content: DOCTOR_SYSTEM_PROMPT + (extraContext ? `\n\nSESSION CONTEXT: ${extraContext}` : '') },
     ];
 
-    // Prior turns
     for (const m of history) {
       aiMessages.push({ role: m.role, content: m.content });
     }
 
-    // Current user turn — multimodal if image present
-    if (legacyQuestion || imageBase64) {
-      if (imageBase64) {
-        const imageUrl = imageBase64.startsWith('data:') ? imageBase64 : `data:image/jpeg;base64,${imageBase64}`;
-        aiMessages.push({
-          role: 'user',
-          content: [
-            { type: 'text', text: legacyQuestion || 'Please assess my face from this photo and recommend a doctor-led plan.' },
-            { type: 'image_url', image_url: { url: imageUrl } },
-          ],
-        });
+    if (legacyQuestion || images.length > 0) {
+      if (images.length > 0) {
+        const promptText = legacyQuestion
+          || (images.length > 1
+            ? `Please assess my face from these ${images.length} photos (multiple angles — front, sides, close-ups). Cross-reference them carefully: the more angles, the more accurate the assessment. Note any asymmetry visible only across views, comment on each zone (upper, mid, lower, skin quality), then recommend a doctor-led plan.`
+            : 'Please assess my face from this photo and recommend a doctor-led plan.');
+        const content: any[] = [{ type: 'text', text: promptText }];
+        for (const img of images) {
+          const url = img.startsWith('data:') ? img : `data:image/jpeg;base64,${img}`;
+          content.push({ type: 'image_url', image_url: { url } });
+        }
+        aiMessages.push({ role: 'user', content });
       } else if (legacyQuestion) {
         aiMessages.push({ role: 'user', content: legacyQuestion });
       }
