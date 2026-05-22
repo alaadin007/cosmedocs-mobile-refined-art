@@ -285,26 +285,30 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     const targetAngle = pendingAngleRef.current;
     pendingAngleRef.current = null;
 
+    const readAsDataURL = (file: File): Promise<string | null> =>
+      new Promise((resolve) => {
+        if (file.size > 8 * 1024 * 1024) {
+          toast({ title: "Photo too large", description: `${file.name} is over 8 MB — skipped.`, variant: "destructive" });
+          resolve(null);
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = (e) => resolve((e.target?.result as string) || null);
+        reader.onerror = () => resolve(null);
+        reader.readAsDataURL(file);
+      });
+
     if (targetAngle) {
-      // Single-slot replace mode
-      const file = files[0];
-      if (file.size > 8 * 1024 * 1024) {
-        toast({ title: "Photo too large", description: `${file.name} is over 8 MB.`, variant: "destructive" });
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const url = e.target?.result as string;
+      readAsDataURL(files[0]).then((url) => {
+        if (!url) return;
         setAttachedImages((prevImgs) => {
           setImageAngles((prevAng) => {
             const idx = prevAng.indexOf(targetAngle);
-            if (idx >= 0) {
-              const a = [...prevAng];
-              return a; // angle stays in same slot
-            }
+            if (idx >= 0) return prevAng;
+            if (prevAng.length >= MAX_IMAGES) return prevAng;
             return [...prevAng, targetAngle];
           });
-          const idx = imageAngles.indexOf(targetAngle);
+          const idx = prevImgs.findIndex((_, i) => imageAngles[i] === targetAngle);
           if (idx >= 0) {
             const next = [...prevImgs];
             next[idx] = url;
@@ -312,37 +316,32 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
           }
           return prevImgs.length >= MAX_IMAGES ? prevImgs : [...prevImgs, url];
         });
-      };
-      reader.readAsDataURL(file);
+      });
       return;
     }
 
-    // Multi/untagged fallback — assign to next open angle in sequence
+    // Multi/untagged fallback — assign each to the next open angle in sequence
     const remaining = MAX_IMAGES - attachedImages.length;
     if (remaining <= 0) {
       toast({ title: "Maximum photos reached", description: `You can attach up to ${MAX_IMAGES} photos.`, variant: "destructive" });
       return;
     }
     const list = Array.from(files).slice(0, remaining);
-    list.forEach((file) => {
-      if (file.size > 8 * 1024 * 1024) {
-        toast({ title: "Photo too large", description: `${file.name} is over 8 MB — skipped.`, variant: "destructive" });
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const url = e.target?.result as string;
-        setAttachedImages((prev) => {
-          if (prev.length >= MAX_IMAGES) return prev;
-          setImageAngles((prevAng) => {
-            const filled = new Set(prevAng);
-            const next = PHOTO_ANGLES.find((a) => !filled.has(a.id));
-            return [...prevAng, next ? next.id : "detail"];
-          });
-          return [...prev, url];
-        });
-      };
-      reader.readAsDataURL(file);
+    Promise.all(list.map(readAsDataURL)).then((urls) => {
+      const validUrls = urls.filter((u): u is string => !!u);
+      if (validUrls.length === 0) return;
+      setImageAngles((prevAng) => {
+        const filled = new Set(prevAng);
+        const assigned: string[] = [];
+        for (const _ of validUrls) {
+          const next = PHOTO_ANGLES.find((a) => !filled.has(a.id));
+          const id = next ? next.id : "detail";
+          assigned.push(id);
+          filled.add(id);
+        }
+        return [...prevAng, ...assigned].slice(0, MAX_IMAGES);
+      });
+      setAttachedImages((prev) => [...prev, ...validUrls].slice(0, MAX_IMAGES));
     });
   };
 
