@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus, Sparkles, Camera, ImagePlus, Shield, ChevronLeft } from "lucide-react";
+import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus, Sparkles, Camera, ImagePlus, Shield, ChevronLeft, Check, User, ArrowLeft, ArrowRight, ZoomIn, Sparkle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
