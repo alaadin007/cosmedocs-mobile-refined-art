@@ -257,6 +257,8 @@ export default function AntiWrinkleTreatment() {
             </div>
           </div>
         </section>
+
+        <TreatmentPaymentInfo variant="light" />
       </div>
     </>
   );
