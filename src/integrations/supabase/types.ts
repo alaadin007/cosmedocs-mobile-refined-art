@@ -499,6 +499,130 @@ export type Database = {
           },
         ]
       }
+      research_questions: {
+        Row: {
+          allow_other: boolean
+          created_at: string
+          id: string
+          options: Json
+          question_order: number
+          question_text: string
+          question_type: string
+          required: boolean
+          study_id: string
+        }
+        Insert: {
+          allow_other?: boolean
+          created_at?: string
+          id?: string
+          options?: Json
+          question_order?: number
+          question_text: string
+          question_type?: string
+          required?: boolean
+          study_id: string
+        }
+        Update: {
+          allow_other?: boolean
+          created_at?: string
+          id?: string
+          options?: Json
+          question_order?: number
+          question_text?: string
+          question_type?: string
+          required?: boolean
+          study_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "research_questions_study_id_fkey"
+            columns: ["study_id"]
+            isOneToOne: false
+            referencedRelation: "research_studies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      research_responses: {
+        Row: {
+          answers: Json
+          created_at: string
+          demographics: Json
+          id: string
+          study_id: string
+        }
+        Insert: {
+          answers?: Json
+          created_at?: string
+          demographics?: Json
+          id?: string
+          study_id: string
+        }
+        Update: {
+          answers?: Json
+          created_at?: string
+          demographics?: Json
+          id?: string
+          study_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "research_responses_study_id_fkey"
+            columns: ["study_id"]
+            isOneToOne: false
+            referencedRelation: "research_studies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      research_studies: {
+        Row: {
+          created_at: string
+          description: string | null
+          display_order: number
+          hero_image_url: string | null
+          id: string
+          intro: string | null
+          seo_description: string | null
+          seo_title: string | null
+          slug: string
+          status: string
+          subtitle: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          hero_image_url?: string | null
+          id?: string
+          intro?: string | null
+          seo_description?: string | null
+          seo_title?: string | null
+          slug: string
+          status?: string
+          subtitle?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          hero_image_url?: string | null
+          id?: string
+          intro?: string | null
+          seo_description?: string | null
+          seo_title?: string | null
+          slug?: string
+          status?: string
+          subtitle?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       search_bar_ai_configs: {
         Row: {
           created_at: string

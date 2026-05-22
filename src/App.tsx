@@ -208,7 +208,9 @@ const CalfSlimmingBotox = lazy(() => import("./pages/CalfSlimmingBotox"));
 const BotoxCalfsClinical = lazy(() => import("./pages/BotoxCalfsClinical"));
 const VideoUpload = lazy(() => import("./pages/VideoUpload"));
 const AdminResearchSurvey = lazy(() => import("./pages/AdminResearchSurvey"));
-const ResearchSurvey = lazy(() => import("./pages/ResearchSurvey"));
+const AdminResearch = lazy(() => import("./pages/AdminResearch"));
+const ResearchHub = lazy(() => import("./pages/ResearchHub"));
+const ResearchStudy = lazy(() => import("./pages/ResearchStudy"));
 const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
 const TempleFiller = lazy(() => import("./pages/TempleFiller"));
 const ForeheadFiller = lazy(() => import("./pages/ForeheadFiller"));
@@ -569,8 +571,10 @@ const App = () => {
                           <Route path="/dashboard" element={<Dashboard />} />
                           <Route path="/admin/video-upload" element={<VideoUpload />} />
                           <Route path="/admin/research-survey" element={<AdminResearchSurvey />} />
-                          <Route path="/research" element={<ResearchSurvey />} />
-                          <Route path="/research/" element={<ResearchSurvey />} />
+                          <Route path="/admin/research" element={<AdminResearch />} />
+                          <Route path="/research" element={<ResearchHub />} />
+                          <Route path="/research/" element={<ResearchHub />} />
+                          <Route path="/research/:slug" element={<ResearchStudy />} />
                           <Route path="/popup-offer" element={<PopupOffer />} />
                           <Route path="/spin-to-win" element={<SpinToWin />} />
                           
