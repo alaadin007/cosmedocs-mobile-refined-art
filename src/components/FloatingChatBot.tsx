@@ -1,6 +1,6 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus, Sparkles } from "lucide-react";
+import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus, Sparkles, Camera, ImagePlus, Shield, ChevronLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -143,6 +143,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const [isLoading, setIsLoading] = useState(false);
   const [planStep, setPlanStep] = useState<"closed" | "concern" | "age">("closed");
   const [planConcern, setPlanConcern] = useState<Concern | null>(null);
+  const [attachedImage, setAttachedImage] = useState<string | null>(null); // data URL
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const pageConfig = useMemo(
@@ -193,21 +195,41 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   ];
 
   const sendMessage = async (text: string, displayText?: string) => {
-    if (!text.trim() || isLoading) return;
-    const userMessage: Message = { id: Date.now().toString(), text: displayText || text, isUser: true, timestamp: new Date() };
+    const hasImage = !!attachedImage;
+    if ((!text.trim() && !hasImage) || isLoading) return;
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: displayText || text || (hasImage ? "📸 Photo shared for assessment" : ""),
+      isUser: true,
+      timestamp: new Date(),
+    };
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
+    const imageToSend = attachedImage;
+    setAttachedImage(null);
     setIsLoading(true);
+
+    // Build prior history for the model (everything before the brand-new user turn)
+    const history = messages
+      .filter((m) => m.id !== "1") // skip the initial canned opener
+      .map((m) => ({ role: m.isUser ? "user" as const : "assistant" as const, content: m.text }));
+
     try {
       const { data, error } = await supabase.functions.invoke("ai-knowledge-chat", {
         body: {
-          question: text,
-          includeWebSearch: true,
-          context: `User is currently on page: ${location.pathname} (topic: ${pageConfig.topic}). Be warm, concise, conversion-focused. Keep replies under 60 words. No long monologues, no headings, no bullet lists unless explicitly asked. Always quote prices when known, recommend a clear next step (book consultation or WhatsApp +44 7735 606447), and ask one short qualifying question per reply.`,
+          messages: history,
+          question: text || "Please assess this photo and recommend a doctor-led plan.",
+          imageBase64: imageToSend || undefined,
+          context: `Patient is on page ${location.pathname} (topic: ${pageConfig.topic}).`,
         },
       });
       if (error) throw error;
-      const aiMessage: Message = { id: (Date.now() + 1).toString(), text: data.answer || "I apologise, I couldn't process that request.", isUser: false, timestamp: new Date() };
+      const aiMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: data.answer || "I apologise, I couldn't process that request.",
+        isUser: false,
+        timestamp: new Date(),
+      };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error: any) {
       console.error("Chat error:", error);
@@ -223,6 +245,17 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   const handleSendMessage = () => sendMessage(inputMessage);
 
+  const handleImageSelected = (file: File | null) => {
+    if (!file) return;
+    if (file.size > 8 * 1024 * 1024) {
+      toast({ title: "Photo too large", description: "Please choose a photo under 8 MB.", variant: "destructive" });
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => setAttachedImage(e.target?.result as string);
+    reader.readAsDataURL(file);
+  };
+
   const openPlanPicker = () => {
     setIsOpen(true);
     setShowTeaser(false);
@@ -235,11 +268,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     const lines = [
       `Concern: ${concern.label} (${concern.bucket}).`,
       age ? `Age: ${age}.` : null,
-      "Please reply in 3 short lines only:",
-      "1) one-line empathy,",
-      "2) two best doctor-led options with price,",
-      "3) one-line next step (book or WhatsApp +44 7735 606447).",
-      "No long paragraphs, no bullet lists, under 60 words total.",
+      "Reply as Zephra — empathic, zone-based reasoning, 1–2 doctor-led options with price and rationale, one next step. Under 90 words.",
     ].filter(Boolean).join(" ");
     const display = age ? `My concern: ${concern.label} · Age ${age}` : `My concern: ${concern.label}`;
     sendMessage(lines, display);
@@ -334,166 +363,270 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
         </motion.button>
       </div>
 
-      {/* Chat Window */}
+      {/* Immersive iOS-style full-screen chat layer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="fixed bottom-4 right-4 w-[min(96vw,24rem)] h-[min(86vh,600px)] bg-black rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-white/10"
+            key="ai-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-[100] flex items-stretch justify-center bg-black/55 backdrop-blur-2xl"
+            style={{
+              fontFamily:
+                '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif',
+              WebkitFontSmoothing: "antialiased",
+            }}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setIsOpen(false);
+            }}
           >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-black via-gray-900 to-black p-4 text-white flex justify-between items-center border-b border-white/10">
-              <div>
-                <h3 className="font-bold text-lg">Aesthetic <span className="text-primary">Intelligence</span></h3>
-                <p className="text-sm text-gray-400">Cosmedocs • Harley Street · {pageConfig.topic}</p>
+            <motion.div
+              initial={{ y: 24, opacity: 0, scale: 0.98 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: 24, opacity: 0, scale: 0.98 }}
+              transition={{ type: "spring", damping: 28, stiffness: 280 }}
+              className="relative flex h-[100dvh] w-full max-w-xl flex-col overflow-hidden bg-[#0a0a0a]/90 backdrop-saturate-150 sm:my-6 sm:h-[min(92dvh,820px)] sm:rounded-[2.25rem] sm:border sm:border-amber-300/15 sm:shadow-[0_30px_120px_-20px_rgba(201,160,80,0.35)]"
+            >
+              {/* iOS-style top bar */}
+              <div
+                className="flex items-center justify-between px-5 pt-[max(env(safe-area-inset-top),1rem)] pb-3 border-b border-white/[0.06]"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(20,16,10,0.85) 0%, rgba(10,10,10,0.6) 100%)",
+                  backdropFilter: "blur(20px)",
+                }}
+              >
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-1 text-amber-400 active:opacity-60 -ml-1 px-1 py-2"
+                  aria-label="Close"
+                >
+                  <ChevronLeft className="h-6 w-6" strokeWidth={2.5} />
+                  <span className="text-[17px]">Done</span>
+                </button>
+                <div className="text-center">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-amber-400/80">Cosmedocs</p>
+                  <p className="text-[13px] font-medium text-white/70">Harley Street</p>
+                </div>
+                <div className="w-[60px]" />
               </div>
-              <Button onClick={() => setIsOpen(false)} variant="ghost" size="icon" className="text-white hover:bg-white/10">
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
 
-            {/* Messages */}
-            <ScrollArea className="flex-1 p-4 bg-black">
-              <div className="space-y-4">
-                {messages.map((message) => (
-                  <motion.div
-                    key={message.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
-                  >
-                    <div
-                      className={`max-w-[80%] rounded-2xl p-3 ${
-                        message.isUser
-                          ? "bg-gradient-to-r from-primary to-amber-600 text-black"
-                          : "bg-white/5 border border-white/10 text-gray-100"
-                      }`}
+              {/* Hero title */}
+              <div className="px-6 pt-5 pb-4">
+                <h2 className="text-[28px] leading-[1.1] font-semibold text-white tracking-tight">
+                  Aesthetic <span className="text-amber-400">Intelligence</span>
+                </h2>
+                <p className="mt-1 text-[15px] text-white/55 leading-snug">
+                  A doctor-led plan, in plain English. {pageConfig.topic}.
+                </p>
+              </div>
+
+              {/* Messages */}
+              <ScrollArea className="flex-1 px-5">
+                <div className="space-y-4 pb-4">
+                  {messages.map((message) => (
+                    <motion.div
+                      key={message.id}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
                     >
-                      {message.isUser ? (
-                        <p className="text-sm whitespace-pre-wrap">{formatMessage(message.text)}</p>
-                      ) : (
-                        <TypewriterText
-                          className="text-sm whitespace-pre-wrap block"
-                          text={formatMessage(message.text)}
-                          enabled={message.id === messages[messages.length - 1]?.id && messages[messages.length - 1]?.isUser === false && message.id !== "1"}
-                        />
-                      )}
-                      <span className={`text-xs mt-1 block ${message.isUser ? "text-black/70" : "text-gray-500"}`}>
-                        {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-                      </span>
-                    </div>
-                  </motion.div>
-                ))}
-                {isLoading && (
-                  <div className="flex justify-start">
-                    <div className="bg-white/5 border border-white/10 rounded-2xl p-3">
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                        <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                        <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                      <div
+                        className={`max-w-[88%] rounded-[1.6rem] px-5 py-3.5 shadow-sm ${
+                          message.isUser
+                            ? "bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 text-black"
+                            : "bg-white/[0.06] border border-white/10 text-white"
+                        }`}
+                      >
+                        {message.isUser ? (
+                          <p className="text-[17px] leading-[1.4] whitespace-pre-wrap font-normal">
+                            {formatMessage(message.text)}
+                          </p>
+                        ) : (
+                          <TypewriterText
+                            className="text-[17px] leading-[1.45] whitespace-pre-wrap block font-normal"
+                            text={formatMessage(message.text)}
+                            enabled={
+                              message.id === messages[messages.length - 1]?.id &&
+                              messages[messages.length - 1]?.isUser === false &&
+                              message.id !== "1"
+                            }
+                          />
+                        )}
+                        <span
+                          className={`mt-1.5 block text-[11px] tracking-wide ${
+                            message.isUser ? "text-black/55" : "text-white/35"
+                          }`}
+                        >
+                          {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
+                  {isLoading && (
+                    <div className="flex justify-start">
+                      <div className="bg-white/[0.06] border border-white/10 rounded-[1.6rem] px-5 py-4">
+                        <div className="flex gap-1.5">
+                          <div className="w-2.5 h-2.5 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                          <div className="w-2.5 h-2.5 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                          <div className="w-2.5 h-2.5 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            </ScrollArea>
+                  )}
+                </div>
+              </ScrollArea>
 
-            {/* Plan picker — quick concern + age */}
-            {planStep !== "closed" && (
-              <div className="px-4 pt-3 pb-1 bg-black border-t border-white/10">
-                {planStep === "concern" && (
-                  <>
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-amber-400 mb-2">
-                      What's bothering you?
-                    </p>
-                    <div className="grid grid-cols-1 gap-1.5 max-h-[42vh] overflow-y-auto pr-1">
-                      {QUICK_CONCERNS.map((c) => (
+              {/* Plan picker — iOS-sized cards */}
+              {planStep !== "closed" && (
+                <div className="px-5 pt-3 pb-2 border-t border-white/[0.06]">
+                  {planStep === "concern" && (
+                    <>
+                      <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
+                        What's bothering you?
+                      </p>
+                      <div className="grid grid-cols-1 gap-2 max-h-[45vh] overflow-y-auto pr-1 -mr-1">
+                        {QUICK_CONCERNS.map((c) => (
+                          <button
+                            key={c.id}
+                            onClick={() => {
+                              setPlanConcern(c);
+                              if (c.asksAge) setPlanStep("age");
+                              else submitPlan(c);
+                            }}
+                            className="flex items-center gap-3 text-left px-4 py-4 min-h-[56px] rounded-2xl bg-white/[0.05] border border-white/10 active:bg-amber-400/[0.12] active:border-amber-400/50 hover:border-amber-400/40 text-white text-[17px] font-normal transition-colors"
+                          >
+                            <span className="text-2xl leading-none">{c.emoji}</span>
+                            <span className="flex-1">{c.label}</span>
+                          </button>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() => setPlanStep("closed")}
+                        className="mt-3 w-full text-center text-[15px] text-white/50 hover:text-white/80 py-2"
+                      >
+                        Skip — just chat
+                      </button>
+                    </>
+                  )}
+                  {planStep === "age" && planConcern && (
+                    <>
+                      <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
+                        Roughly how old are you?
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {AGE_BANDS.map((a) => (
+                          <button
+                            key={a}
+                            onClick={() => submitPlan(planConcern, a)}
+                            className="px-5 py-3 min-h-[48px] rounded-full bg-white/[0.05] border border-white/10 active:bg-amber-400/[0.12] active:border-amber-400/50 text-white text-[16px]"
+                          >
+                            {a}
+                          </button>
+                        ))}
                         <button
-                          key={c.id}
-                          onClick={() => {
-                            setPlanConcern(c);
-                            if (c.asksAge) setPlanStep("age");
-                            else submitPlan(c);
-                          }}
-                          className="flex items-center gap-2.5 text-left px-3 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-amber-400/40 hover:bg-amber-400/[0.06] text-white text-sm transition-colors"
+                          onClick={() => submitPlan(planConcern)}
+                          className="px-5 py-3 rounded-full text-white/50 text-[15px] hover:text-white"
                         >
-                          <span className="text-base leading-none">{c.emoji}</span>
-                          <span className="flex-1">{c.label}</span>
+                          Prefer not to say
                         </button>
-                      ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Photo preview */}
+              {attachedImage && (
+                <div className="px-5 pt-3">
+                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-white/[0.05] border border-amber-400/30">
+                    <img src={attachedImage} alt="Attached" className="h-14 w-14 rounded-xl object-cover" />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[14px] text-white font-medium">Photo ready to send</p>
+                      <p className="text-[12px] text-white/55 flex items-center gap-1">
+                        <Shield className="h-3 w-3 text-amber-400" />
+                        Discarded after this reply — never stored.
+                      </p>
                     </div>
                     <button
-                      onClick={() => setPlanStep("closed")}
-                      className="mt-2 text-[11px] text-white/40 hover:text-white/70"
+                      onClick={() => setAttachedImage(null)}
+                      className="text-white/50 hover:text-white p-1"
+                      aria-label="Remove photo"
                     >
-                      Skip — just chat
+                      <X className="h-5 w-5" />
                     </button>
-                  </>
-                )}
-                {planStep === "age" && planConcern && (
-                  <>
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-amber-400 mb-2">
-                      Roughly how old are you?
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {AGE_BANDS.map((a) => (
-                        <button
-                          key={a}
-                          onClick={() => submitPlan(planConcern, a)}
-                          className="px-3 py-2 rounded-full bg-white/[0.04] border border-white/10 hover:border-amber-400/40 hover:bg-amber-400/[0.06] text-white text-xs"
-                        >
-                          {a}
-                        </button>
-                      ))}
-                      <button
-                        onClick={() => submitPlan(planConcern)}
-                        className="px-3 py-2 rounded-full text-white/50 text-xs hover:text-white"
-                      >
-                        Prefer not to say
-                      </button>
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
+                  </div>
+                </div>
+              )}
 
-            {/* Quick reply — open the structured picker */}
-            {planStep === "closed" && (
-              <div className="px-4 pt-2 bg-black">
-                <button
-                  onClick={openPlanPicker}
-                  disabled={isLoading}
-                  className="w-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-2 text-xs font-medium text-black hover:opacity-95 disabled:opacity-60"
-                >
-                  Start my plan
-                </button>
-              </div>
-            )}
+              {/* Start-plan CTA */}
+              {planStep === "closed" && messages.length <= 2 && !attachedImage && (
+                <div className="px-5 pt-3">
+                  <button
+                    onClick={openPlanPicker}
+                    disabled={isLoading}
+                    className="w-full rounded-full bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 py-4 min-h-[54px] text-[17px] font-semibold text-black active:opacity-90 disabled:opacity-60 shadow-lg shadow-amber-500/20"
+                  >
+                    Build my treatment plan
+                  </button>
+                </div>
+              )}
 
-
-            {/* Input */}
-            <div className="p-4 border-t border-white/10 bg-black">
-              <div className="flex gap-2">
-                <Input
-                  value={inputMessage}
-                  onChange={(e) => setInputMessage(e.target.value)}
-                  onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-                  placeholder="Type your message..."
-                  className="flex-1 bg-white/5 border-white/10 text-white placeholder:text-gray-500"
-                  disabled={isLoading}
-                />
-                <Button
-                  onClick={handleSendMessage}
-                  disabled={isLoading || !inputMessage.trim()}
-                  className="bg-gradient-to-r from-primary to-amber-600 hover:from-amber-600 hover:to-primary text-black"
-                >
-                  <Send className="h-4 w-4" />
-                </Button>
+              {/* iOS-style composer */}
+              <div
+                className="px-4 pt-3 pb-[max(env(safe-area-inset-bottom),1rem)] border-t border-white/[0.06]"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.9) 100%)",
+                  backdropFilter: "blur(20px)",
+                }}
+              >
+                <div className="flex items-end gap-2">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    capture="environment"
+                    className="hidden"
+                    onChange={(e) => {
+                      handleImageSelected(e.target.files?.[0] || null);
+                      if (fileInputRef.current) fileInputRef.current.value = "";
+                    }}
+                  />
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    aria-label="Attach photo"
+                    className="shrink-0 h-12 w-12 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-amber-400 active:bg-amber-400/10"
+                  >
+                    <Camera className="h-5 w-5" />
+                  </button>
+                  <div className="flex-1 flex items-center rounded-3xl bg-white/[0.06] border border-white/10 px-4 py-2">
+                    <input
+                      value={inputMessage}
+                      onChange={(e) => setInputMessage(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
+                      placeholder={attachedImage ? "Add a note (optional)…" : "Ask Zephra anything…"}
+                      className="flex-1 bg-transparent outline-none text-[17px] text-white placeholder:text-white/40 py-2"
+                      disabled={isLoading}
+                    />
+                  </div>
+                  <button
+                    onClick={handleSendMessage}
+                    disabled={isLoading || (!inputMessage.trim() && !attachedImage)}
+                    aria-label="Send"
+                    className="shrink-0 h-12 w-12 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 text-black flex items-center justify-center active:opacity-90 disabled:opacity-40 shadow-md shadow-amber-500/30"
+                  >
+                    <Send className="h-5 w-5" />
+                  </button>
+                </div>
+                <p className="mt-2 text-center text-[11px] text-white/35 flex items-center justify-center gap-1">
+                  <Shield className="h-3 w-3" />
+                  Photos are analysed in-session and never stored.
+                </p>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
