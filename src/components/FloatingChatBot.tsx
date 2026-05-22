@@ -134,6 +134,16 @@ const QUICK_CONCERNS: Concern[] = [
 ];
 const AGE_BANDS = ["Under 25", "25–34", "35–44", "45–54", "55+"];
 
+type AngleId = "front" | "left" | "right" | "closeup" | "detail";
+const PHOTO_ANGLES: Array<{ id: AngleId; label: string; hint: string; icon: typeof User; required: boolean }> = [
+  { id: "front",   label: "Front",     hint: "Eyes level, neutral expression",      icon: User,      required: true },
+  { id: "left",    label: "Left 45°",  hint: "Turn head gently to your right",      icon: ArrowLeft, required: true },
+  { id: "right",   label: "Right 45°", hint: "Turn head gently to your left",       icon: ArrowRight,required: true },
+  { id: "closeup", label: "Close-up",  hint: "The area you'd like assessed",        icon: ZoomIn,    required: false },
+  { id: "detail",  label: "Detail",    hint: "Optional — any extra concern",        icon: Sparkle,   required: false },
+];
+const MIN_REQUIRED_ANGLES = 3;
+
 const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBotProps = {}) => {
   const location = useLocation();
   const [internalIsOpen, setInternalIsOpen] = useState(false);
