@@ -49,6 +49,28 @@ export default function Footer() {
             <p className="text-xs text-[#C9A050]/70 italic mt-4 leading-relaxed max-w-xs tracking-wide font-light">
               The art of invisible beauty — restored, refined, never revealed.
             </p>
+
+            {/* Teosyal Outstanding Clinic Award */}
+            <Link
+              to="/about"
+              aria-label="Teosyal Outstanding Clinic Award winner — view recognition"
+              className="group mt-6 inline-flex items-center gap-3 pl-1 pr-4 py-1.5 rounded-full bg-white/[0.04] border border-[#C9A050]/30 hover:border-[#C9A050]/60 hover:bg-white/[0.07] transition-all duration-300"
+            >
+              <span className="relative inline-flex items-center justify-center rounded-full bg-white/95 ring-1 ring-[#C9A050]/50 p-0.5">
+                <img
+                  src={teosyalAward}
+                  alt="Teosyal Outstanding Clinic Award"
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  className="h-11 w-11 object-contain rounded-full"
+                />
+              </span>
+              <span className="flex flex-col leading-tight text-left">
+                <span className="text-[9px] uppercase tracking-[0.2em] text-[#C9A050]">Award Winning</span>
+                <span className="text-[11px] font-light text-white/85">Teosyal Outstanding Clinic</span>
+              </span>
+            </Link>
           </div>
 
           {/* Treatments Navigation */}
