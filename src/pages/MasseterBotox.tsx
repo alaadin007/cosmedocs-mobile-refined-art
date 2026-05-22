@@ -290,9 +290,9 @@ const MasseterBotox = () => {
                   ))}
                 </div>
 
-                <div className="mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
+                <div className="mt-5 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
                   <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full rounded-full bg-primary px-7 py-5 text-base text-primary-foreground hover:bg-primary/90 sm:w-auto sm:py-6">
+                    <Button className="w-full rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 sm:w-auto sm:px-7 sm:py-6 sm:text-base">
                       Book consultation <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
@@ -322,15 +322,15 @@ const MasseterBotox = () => {
         </section>
 
 
-        <section className="px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <article className="space-y-10 sm:space-y-16">
+        <section className="px-4 py-6 sm:px-6 sm:py-14 lg:py-20">
+          <div className="mx-auto grid max-w-7xl gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+            <article className="space-y-6 sm:space-y-16">
               <motion.section {...sectionReveal}>
-                <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+                <div className="grid grid-cols-2 gap-2 sm:gap-5 lg:grid-cols-4">
                   {benefits.map(({ icon: Icon, title, text }) => (
-                    <div key={title} className="rounded-2xl border border-border bg-card p-4 shadow-[0_24px_70px_-52px_hsl(var(--luxury-gold)/0.8)] sm:rounded-[1.5rem] sm:p-6">
-                      <Icon className="h-5 w-5 text-luxury-gold" />
-                      <h2 className="mt-3 text-sm font-medium leading-snug text-card-foreground sm:mt-5 sm:text-lg">{title}</h2>
+                    <div key={title} className="rounded-xl border border-border bg-card p-2.5 shadow-[0_24px_70px_-52px_hsl(var(--luxury-gold)/0.8)] sm:rounded-[1.5rem] sm:p-6">
+                      <Icon className="h-4 w-4 text-luxury-gold sm:h-5 sm:w-5" />
+                      <h2 className="mt-1.5 text-[12px] font-medium leading-tight text-card-foreground sm:mt-5 sm:text-lg">{title}</h2>
                       <p className="mt-2 hidden text-sm leading-7 text-muted-foreground sm:mt-3 sm:block">{text}</p>
                     </div>
                   ))}
