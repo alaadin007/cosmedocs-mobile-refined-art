@@ -118,10 +118,12 @@ const MasseterBotoxM2 = () => {
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
-        <link rel="canonical" href={seo.canonical} data-rh="true" />
+        {/* M2 is a design preview — canonical points to the live masseter page, noindex prevents duplicate-content competition */}
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/masseter-botox/" data-rh="true" />
         <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.description} />
-        <meta property="og:url" content={seo.canonical} />
+        <meta property="og:url" content="https://www.cosmedocs.com/treatments/masseter-botox/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
