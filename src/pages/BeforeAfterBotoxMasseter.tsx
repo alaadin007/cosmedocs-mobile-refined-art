@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, RotateCw } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight, RotateCw, X, ZoomIn } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import masseterFrontSlimming from "@/assets/before-after/masseter-front-slimming.jpg";
 import masseterFrontAugOct from "@/assets/before-after/masseter-front-aug-oct.png";
