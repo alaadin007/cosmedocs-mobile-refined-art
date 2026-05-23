@@ -453,7 +453,7 @@ const SlideFlow = (p: SlideFlowProps) => {
       </section>
 
       {/* Footer CTA */}
-      {!isClosed && !p.done && p.questions.length > 0 && (
+      {!p.isClosed && !p.done && p.questions.length > 0 && (
         <footer className="px-5 md:px-8 pb-6 md:pb-8 pt-2 max-w-[640px] w-full mx-auto">
           {current.kind === "demographics" ? (
             <Button
