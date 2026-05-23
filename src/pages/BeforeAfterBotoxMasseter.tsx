@@ -372,38 +372,9 @@ const BeforeAfterBotoxMasseter = () => {
 
         <FlipReveal />
 
-        {/* Gallery Section */}
-        <section className="pb-16 md:pb-24">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {galleryImages.map((image, index) => (
-                <motion.figure
-                  key={index}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <div className="relative rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading={index < 2 ? "eager" : "lazy"}
-                      className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                    />
-                    {/* Caption overlay */}
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-16 pb-4 px-5">
-                      <figcaption className="text-white/60 text-sm leading-relaxed font-light">
-                        {image.caption}
-                      </figcaption>
-                    </div>
-                  </div>
-                </motion.figure>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Gallery Section — Responsive Thumbnail Grid + Lightbox + Infinite Scroll */}
+        <MasseterGallery />
+
 
         {/* What These Results Demonstrate */}
         <section className="pb-16 md:pb-20">
