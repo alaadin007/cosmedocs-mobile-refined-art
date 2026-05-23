@@ -281,7 +281,7 @@ export default function Home2Header() {
                                 {category.label}
                               </span>
                               <div className="space-y-1">
-                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
+                                {category.items.map((item: { title: string; link: string; subtitle?: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                                   item.isOverview ? (
                                     <Link 
                                       key={item.link}
