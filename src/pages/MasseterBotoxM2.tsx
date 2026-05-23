@@ -11,6 +11,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
 import { generateSEOMetadata } from "@/utils/seo";
 import masseterAfter2Treatments from "@/assets/before-after/masseter-series/after-2-treatments.jpg";
 import masseterOneYearAfter3rd from "@/assets/before-after/masseter-series/one-year-after-3rd.jpg";
@@ -301,17 +302,27 @@ const MasseterBotoxM2 = () => {
             <h2 id="anatomy-heading">
               What masseter Botox <span className="text-[#C9A050]">actually changes</span>
             </h2>
-            <div className="mt-6 space-y-5 text-[16px] leading-8 text-[#2a2a2a]">
-              <p>
-                Masseter Botox, also called jaw Botox or jawline slimming Botox, uses botulinum toxin to reduce excessive contraction in the masseter muscle. This is not a filler treatment and it does not carve the jaw bone. It works by calming a powerful chewing muscle so that over time the muscle becomes less bulky.
-              </p>
-              <p>
-                The treatment is useful when lower-face width is muscular rather than skeletal. Patients often describe a square jaw, heavy jaw angle, morning jaw ache, tooth chipping, tension headaches, clenching, grinding or a feeling that the jaw is always switched on. In these cases, the medical and cosmetic aims are linked: reduce the muscle's force and the face can look softer whilst symptoms settle.
-              </p>
-              <p>
-                At CosmeDocs, assessment is doctor-led. We ask you to clench, palpate the strongest part of the muscle, compare both sides and judge whether the target is slimming, bruxism control, TMJ tension support, or a combination.
-              </p>
+            <div className="mt-6 text-[16px] leading-8 text-[#2a2a2a]">
+              <ExpandableSection
+                label="Read more"
+                collapseLabel="Show less"
+                preview={
+                  <p>
+                    Masseter Botox, also called jaw Botox or jawline slimming Botox, uses botulinum toxin to reduce excessive contraction in the masseter muscle. This is not a filler treatment and it does not carve the jaw bone. It works by calming a powerful chewing muscle so that over time the muscle becomes less bulky.
+                  </p>
+                }
+              >
+                <div className="space-y-5">
+                  <p>
+                    The treatment is useful when lower-face width is muscular rather than skeletal. Patients often describe a square jaw, heavy jaw angle, morning jaw ache, tooth chipping, tension headaches, clenching, grinding or a feeling that the jaw is always switched on. In these cases, the medical and cosmetic aims are linked: reduce the muscle's force and the face can look softer whilst symptoms settle.
+                  </p>
+                  <p>
+                    At CosmeDocs, assessment is doctor-led. We ask you to clench, palpate the strongest part of the muscle, compare both sides and judge whether the target is slimming, bruxism control, TMJ tension support, or a combination.
+                  </p>
+                </div>
+              </ExpandableSection>
             </div>
+
           </div>
         </section>
 
@@ -456,20 +467,30 @@ const MasseterBotoxM2 = () => {
             <h2 id="evidence-heading">
               What good treatment <span className="text-[#C9A050]">should feel like</span>
             </h2>
-            <div className="mt-6 space-y-5 text-[16px] leading-8 text-[#2a2a2a]">
-              <p>
-                Good masseter Botox is not judged only by a slimmer photograph. Patients often report fewer headaches, reduced morning jaw fatigue, less tooth pressure and a calmer bite. Cosmetically, the change should be progressive enough that people notice you look fresher or less heavy in the lower face, not that a treatment has been done.
-              </p>
-              <p>
-                Research on botulinum toxin for bruxism shows reduced bite force and symptom relief in selected patients. For hypertrophy, repeated cycles can reduce the cross-sectional size of the muscle. The clinical skill is knowing when to treat, how much to treat, and when not to over-treat, because a natural jaw still needs function and structure.
-              </p>
-              <p>
-                CosmeDocs links masseter assessment with facial balance. Some patients need Botox only. Others need a combination with{" "}
-                <Link to="/treatments/dermal-fillers/chin/" className="text-[#C9A050] underline underline-offset-4">chin filler</Link>,{" "}
-                <Link to="/treatments/dermal-fillers/jawline/" className="text-[#C9A050] underline underline-offset-4">jawline filler</Link>, or a wider{" "}
-                <Link to="/treatments/non-surgical-facelift/" className="text-[#C9A050] underline underline-offset-4">lower-face balancing plan</Link>.
-              </p>
+            <div className="mt-6 text-[16px] leading-8 text-[#2a2a2a]">
+              <ExpandableSection
+                label="Read more"
+                collapseLabel="Show less"
+                preview={
+                  <p>
+                    Good masseter Botox is not judged only by a slimmer photograph. Patients often report fewer headaches, reduced morning jaw fatigue, less tooth pressure and a calmer bite. Cosmetically, the change should be progressive enough that people notice you look fresher or less heavy in the lower face, not that a treatment has been done.
+                  </p>
+                }
+              >
+                <div className="space-y-5">
+                  <p>
+                    Research on botulinum toxin for bruxism shows reduced bite force and symptom relief in selected patients. For hypertrophy, repeated cycles can reduce the cross-sectional size of the muscle. The clinical skill is knowing when to treat, how much to treat, and when not to over-treat, because a natural jaw still needs function and structure.
+                  </p>
+                  <p>
+                    CosmeDocs links masseter assessment with facial balance. Some patients need Botox only. Others need a combination with{" "}
+                    <Link to="/treatments/dermal-fillers/chin/" className="text-[#C9A050] underline underline-offset-4">chin filler</Link>,{" "}
+                    <Link to="/treatments/dermal-fillers/jawline/" className="text-[#C9A050] underline underline-offset-4">jawline filler</Link>, or a wider{" "}
+                    <Link to="/treatments/non-surgical-facelift/" className="text-[#C9A050] underline underline-offset-4">lower-face balancing plan</Link>.
+                  </p>
+                </div>
+              </ExpandableSection>
             </div>
+
           </div>
         </section>
 
