@@ -303,7 +303,203 @@ const FlipReveal = () => {
   );
 };
 
+const PAGE_SIZE = 4;
+
+const MasseterGallery = () => {
+  const [visible, setVisible] = useState(PAGE_SIZE);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  const loadMore = useCallback(() => {
+    setVisible((v) => Math.min(v + PAGE_SIZE, galleryImages.length));
+  }, []);
+
+  // Infinite scroll via IntersectionObserver
+  useEffect(() => {
+    if (visible >= galleryImages.length) return;
+    const el = sentinelRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) loadMore();
+      },
+      { rootMargin: "400px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [visible, loadMore]);
+
+  // Lightbox keyboard nav
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxIndex(null);
+      if (e.key === "ArrowRight")
+        setLightboxIndex((i) => (i === null ? i : (i + 1) % galleryImages.length));
+      if (e.key === "ArrowLeft")
+        setLightboxIndex((i) =>
+          i === null ? i : (i - 1 + galleryImages.length) % galleryImages.length
+        );
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxIndex]);
+
+  const shown = galleryImages.slice(0, visible);
+  const hasMore = visible < galleryImages.length;
+
+  return (
+    <section className="pb-16 md:pb-24" aria-labelledby="masseter-gallery-heading">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex items-end justify-between mb-6 md:mb-8">
+          <div>
+            <p className="text-[#C9A050] text-[11px] uppercase tracking-[0.3em] mb-2">
+              Real patient gallery
+            </p>
+            <h2 id="masseter-gallery-heading" className="text-2xl md:text-3xl font-light text-white">
+              Masseter Botox — <span className="text-[#C9A050]">Before &amp; After</span>
+            </h2>
+          </div>
+          <p className="hidden sm:block text-white/40 text-xs">
+            {Math.min(visible, galleryImages.length)} of {galleryImages.length}
+          </p>
+        </div>
+
+        {/* Responsive thumbnail grid */}
+        <ul
+          role="list"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5"
+        >
+          {shown.map((image, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: (index % PAGE_SIZE) * 0.05 }}
+            >
+              <button
+                type="button"
+                onClick={() => setLightboxIndex(index)}
+                aria-label={`Open image ${index + 1}: ${image.alt}`}
+                className="group block w-full text-left rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A050]/60"
+              >
+                <figure className="relative">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading={index < 4 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/60 backdrop-blur-sm border border-[#C9A050]/30 text-[#C9A050]">
+                      <ZoomIn className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                  <figcaption className="sr-only">{image.caption}</figcaption>
+                </figure>
+              </button>
+            </motion.li>
+          ))}
+        </ul>
+
+        {/* Sentinel + Load more button */}
+        {hasMore && (
+          <>
+            <div ref={sentinelRef} aria-hidden="true" className="h-px w-full mt-10" />
+            <div className="text-center mt-6">
+              <button
+                type="button"
+                onClick={loadMore}
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#C9A050]/40 text-[#C9A050] hover:bg-[#C9A050] hover:text-black text-xs uppercase tracking-[0.25em] transition-all duration-300"
+              >
+                Load more results
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Lightbox */}
+      <Dialog
+        open={lightboxIndex !== null}
+        onOpenChange={(open) => !open && setLightboxIndex(null)}
+      >
+        <DialogContent className="bg-black border-[#C9A050]/20 p-0 sm:max-w-5xl w-[96vw] max-h-[92vh]">
+          {lightboxIndex !== null && (
+            <div className="relative flex flex-col">
+              <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
+                <span className="bg-black/60 border border-white/10 text-white/80 text-xs px-3 py-1 rounded-full">
+                  {lightboxIndex + 1} / {galleryImages.length}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setLightboxIndex(null)}
+                  aria-label="Close gallery"
+                  className="w-9 h-9 rounded-full bg-black/60 border border-white/10 text-white hover:bg-black/80 inline-flex items-center justify-center"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="relative h-[70vh] bg-black flex items-center justify-center overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={lightboxIndex}
+                    src={galleryImages[lightboxIndex].src}
+                    alt={galleryImages[lightboxIndex].alt}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </AnimatePresence>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setLightboxIndex((i) =>
+                      i === null ? i : (i - 1 + galleryImages.length) % galleryImages.length
+                    )
+                  }
+                  aria-label="Previous image"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/10 text-white hover:bg-black/80 inline-flex items-center justify-center"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setLightboxIndex((i) =>
+                      i === null ? i : (i + 1) % galleryImages.length
+                    )
+                  }
+                  aria-label="Next image"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/10 text-white hover:bg-black/80 inline-flex items-center justify-center"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="p-5 md:p-6 border-t border-white/[0.06] text-center">
+                <p className="text-white/70 text-sm md:text-[15px] leading-relaxed max-w-2xl mx-auto">
+                  {galleryImages[lightboxIndex].caption}
+                </p>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+    </section>
+  );
+};
+
 const BeforeAfterBotoxMasseter = () => {
+
   return (
     <>
       <Helmet>
