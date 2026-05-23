@@ -107,11 +107,11 @@ const planningCards = [
   },
 ];
 
-const MasseterBotoxM2 = () => {
+const MasseterBotox = () => {
   const seo = generateSEOMetadata(
     "Masseter Botox London | Jaw Slimming & Bruxism | Harley Street",
     "Doctor-led masseter Botox in London for jaw slimming, teeth grinding and TMJ tension. £350 female / £400 male. Harley Street clinic, since 2007.",
-    "/m2/"
+    "/treatments/masseter-botox/"
   );
 
   return (
@@ -119,8 +119,6 @@ const MasseterBotoxM2 = () => {
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
-        {/* M2 is a design preview — canonical points to the live masseter page, noindex prevents duplicate-content competition */}
-        <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://www.cosmedocs.com/treatments/masseter-botox/" data-rh="true" />
         <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.description} />
