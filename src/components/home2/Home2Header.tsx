@@ -555,7 +555,7 @@ export default function Home2Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden bg-white/5"
                       >
-                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
+                        {category.items.map((item: { title: string; link: string; subtitle?: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                           <Link
                             key={item.link}
                             to={item.link}
@@ -563,7 +563,7 @@ export default function Home2Header() {
                               setIsMobileMenuOpen(false);
                               setExpandedCategory(null);
                             }}
-                            className={`block px-6 py-4 transition-colors border-b border-white/5 min-h-[52px] flex items-center ${
+                            className={`block px-6 py-3.5 transition-colors border-b border-white/5 min-h-[52px] flex flex-col justify-center ${
                               item.isOverview 
                                 ? 'text-base text-white hover:text-[#C9A050] font-medium bg-white/5' 
                                 : item.isSubHeader 
@@ -573,8 +573,13 @@ export default function Home2Header() {
                                     : 'text-base text-white/80 hover:text-white hover:bg-white/5'
                             }`}
                           >
-                            {item.isHighlight && <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />}
-                            {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
+                            <span className="flex items-center">
+                              {item.isHighlight && <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />}
+                              {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
+                            </span>
+                            {item.subtitle && !item.isOverview && !item.isSubHeader && !item.isHighlight && (
+                              <span className="italic font-serif text-[12px] text-[#C9A050]/75 mt-0.5 leading-tight">{item.subtitle}</span>
+                            )}
                           </Link>
                         ))}
                       </motion.div>
