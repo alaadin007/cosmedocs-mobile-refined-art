@@ -22,7 +22,7 @@ interface FloatingChatBotProps {
 }
 
 // Page-specific sales prompts. First match wins.
-const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string }> = [
+const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
     topic: "non-surgical nose reshaping",
