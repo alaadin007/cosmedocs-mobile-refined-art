@@ -632,13 +632,43 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
               {/* Plan picker — iOS-sized cards */}
               {planStep !== "closed" && (
                 <div className="px-5 pt-3 pb-2 border-t border-white/[0.06]">
-                  {planStep === "concern" && (
+                  {planStep === "concern" && (() => {
+                    const pageConcerns = pageConfig.concerns ?? [];
+                    const seenIds = new Set(pageConcerns.map((c) => c.id));
+                    const generalConcerns = QUICK_CONCERNS.filter((c) => !seenIds.has(c.id));
+                    return (
                     <>
-                      <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
-                        What's bothering you?
-                      </p>
+                      {pageConcerns.length > 0 && (
+                        <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
+                          About {pageConfig.topic} — what fits you?
+                        </p>
+                      )}
+                      {pageConcerns.length === 0 && (
+                        <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
+                          What's bothering you?
+                        </p>
+                      )}
                       <div className="grid grid-cols-1 gap-2 max-h-[45vh] overflow-y-auto pr-1 -mr-1">
-                        {QUICK_CONCERNS.map((c) => (
+                        {pageConcerns.map((c) => (
+                          <button
+                            key={c.id}
+                            onClick={() => {
+                              setPlanConcern(c);
+                              if (c.asksAge) setPlanStep("age");
+                              else submitPlan(c);
+                            }}
+                            className="flex items-center gap-3 text-left px-4 py-4 min-h-[56px] rounded-2xl bg-amber-400/[0.08] border border-amber-400/40 active:bg-amber-400/[0.16] hover:border-amber-400/60 text-white text-[17px] font-normal transition-colors"
+                          >
+                            <span className="text-2xl leading-none">{c.emoji}</span>
+                            <span className="flex-1">{c.label}</span>
+                          </button>
+                        ))}
+                        {pageConcerns.length > 0 && generalConcerns.length > 0 && (
+                          <p className="text-[11px] uppercase tracking-[0.22em] text-white/40 mt-3 mb-1 px-1">
+                            Or something else
+                          </p>
+                        )}
+                        {generalConcerns.map((c) => (
                           <button
                             key={c.id}
                             onClick={() => {
@@ -653,6 +683,10 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                           </button>
                         ))}
                       </div>
+                    </>
+                    );
+                  })()}
+
                       <button
                         onClick={() => setPlanStep("closed")}
                         className="mt-3 w-full text-center text-[15px] text-white/50 hover:text-white/80 py-2"
