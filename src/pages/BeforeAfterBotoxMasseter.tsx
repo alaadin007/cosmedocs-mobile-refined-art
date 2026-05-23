@@ -75,8 +75,9 @@ const schemaMarkup = {
       "@type": "ImageGallery",
       "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#gallery",
       name: "Masseter Botox Before and After Results",
+      headline: "Masseter Botox Before & After Gallery | Real Jawline Slimming Results",
       description:
-        "Real patient before and after photographs demonstrating jawline slimming and facial contouring achieved through masseter Botox treatment at CosmeDocs Harley Street.",
+        "Real patient before and after photographs demonstrating jawline slimming, square jaw reduction and facial contouring achieved through doctor-led masseter Botox treatment at CosmeDocs Harley Street, London.",
       url: "https://www.cosmedocs.com/before-after/botox/masseter/",
       numberOfItems: 6,
       isPartOf: {
@@ -87,16 +88,24 @@ const schemaMarkup = {
         "@type": "MedicalProcedure",
         name: "Masseter Botox",
         procedureType: "https://schema.org/NoninvasiveProcedure",
-        bodyLocation: "Masseter muscle, lower face",
-        followup: "Review appointment recommended",
+        bodyLocation: "Masseter muscle, lower face, jawline",
+        followup: "Review appointment recommended at 4–6 weeks",
       },
+      image: galleryImages.map((img, i) => ({
+        "@type": "ImageObject",
+        "@id": `https://www.cosmedocs.com/before-after/botox/masseter/#image-${i + 1}`,
+        url: `https://www.cosmedocs.com${typeof img.src === "string" ? img.src : ""}`,
+        caption: img.caption,
+        description: img.alt,
+      })),
     },
     {
       "@type": "WebPage",
       "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#page",
-      name: "Masseter Botox Before & After Results | Harley Street Clinic",
+      name: "Masseter Botox Before & After Gallery | Real Jawline Slimming Results | Harley Street",
+      headline: "Masseter Botox Before & After Gallery | Real Jawline Slimming Results",
       description:
-        "Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street.",
+        "Real patient before and after photos showing jawline slimming, square jaw reduction and facial contouring with masseter Botox. Doctor-led treatment at CosmeDocs Harley Street, London.",
       url: "https://www.cosmedocs.com/before-after/botox/masseter/",
       isPartOf: {
         "@type": "WebSite",
@@ -105,6 +114,10 @@ const schemaMarkup = {
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: "https://www.cosmedocs.com/og-masseter-ba.jpg",
+      },
+      mainEntity: {
+        "@type": "ImageGallery",
+        "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#gallery",
       },
       breadcrumb: {
         "@type": "BreadcrumbList",
@@ -293,19 +306,35 @@ const BeforeAfterBotoxMasseter = () => {
   return (
     <>
       <Helmet>
-        <title>Masseter Botox Before &amp; After Results | Harley Street Clinic</title>
+        <title>Masseter Botox Before &amp; After Gallery | Real Jawline Slimming Results | Harley Street</title>
         <meta
           name="description"
-          content="Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street."
+          content="View real masseter Botox before and after photos from CosmeDocs Harley Street. See genuine jawline slimming, square jaw reduction & facial contouring results from doctor-led treatment."
         />
+        <meta name="keywords" content="masseter Botox before and after, jawline slimming results, square jaw reduction, masseter reduction gallery, facial slimming before after, Botox jawline London, masseter Botox photos, jaw contouring results Harley Street" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.cosmedocs.com/before-after/botox/masseter/" />
-        <meta property="og:title" content="Masseter Botox Before & After Results | Harley Street Clinic" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Masseter Botox Before & After Gallery | Real Jawline Slimming Results | Harley Street" />
         <meta
           property="og:description"
-          content="Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street."
+          content="View real masseter Botox before and after photos from CosmeDocs Harley Street. See genuine jawline slimming, square jaw reduction & facial contouring results from doctor-led treatment."
         />
         <meta property="og:url" content="https://www.cosmedocs.com/before-after/botox/masseter/" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.cosmedocs.com/og-masseter-ba.jpg" />
+        <meta property="og:image:alt" content="Masseter Botox before and after jawline slimming results at CosmeDocs Harley Street" />
+        <meta property="og:site_name" content="CosmeDocs" />
+        <meta property="og:locale" content="en_GB" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Masseter Botox Before & After Gallery | Real Jawline Slimming Results | Harley Street" />
+        <meta name="twitter:description" content="View real masseter Botox before and after photos. Genuine jawline slimming & square jaw reduction results from doctor-led Harley Street treatment." />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/og-masseter-ba.jpg" />
+        <meta name="twitter:image:alt" content="Masseter Botox before and after jawline slimming results at CosmeDocs Harley Street" />
+        
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>
 
