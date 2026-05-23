@@ -93,7 +93,7 @@ const SkinEducationGuide = lazy(() => import("./pages/SkinEducationGuide"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
 const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
-const MasseterBotoxM2 = lazy(() => import("./pages/MasseterBotoxM2"));
+
 const BroTox = lazy(() => import("./pages/BroTox"));
 const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
 const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
