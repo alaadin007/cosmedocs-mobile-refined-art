@@ -643,4 +643,4 @@ const MasseterBotox = () => {
   );
 };
 
-export default MasseterBotoxM2;
+export default MasseterBotox;
