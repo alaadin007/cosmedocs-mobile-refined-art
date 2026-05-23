@@ -242,224 +242,477 @@ const ResearchStudy = () => {
         </script>
       </Helmet>
 
-      <main
-        className="min-h-screen bg-black text-white"
-        style={{
-          fontFamily: IOS_FONT,
-          paddingLeft: "env(safe-area-inset-left)",
-          paddingRight: "env(safe-area-inset-right)",
-          paddingTop: "env(safe-area-inset-top)",
-          paddingBottom: "env(safe-area-inset-bottom)",
-        }}
-      >
-        {/* Reading width: phone full, tablet ~620, iPad-pro ~720 */}
-        <section className="max-w-[620px] xl:max-w-[720px] mx-auto px-6 md:px-10 lg:px-12 pt-16 md:pt-20 lg:pt-24 pb-16 md:pb-24">
-          <Link
-            to="/research"
-            className="inline-flex items-center gap-2 text-white/50 hover:text-[#C9A050] text-[11px] md:text-xs uppercase tracking-[0.28em] mb-8 md:mb-10"
-          >
-            <ArrowLeft className="h-3.5 w-3.5 md:h-4 md:w-4" /> All studies
-          </Link>
-
-          <div className="text-center mb-10 md:mb-14">
-            {/* New icon: refined dual-ring flask badge */}
-            <div className="relative mx-auto mb-6 md:mb-7 h-16 w-16 md:h-20 md:w-20 flex items-center justify-center">
-              <span className="absolute inset-0 rounded-full border border-[#C9A050]/25" />
-              <span className="absolute inset-1.5 rounded-full border border-[#C9A050]/45 bg-gradient-to-br from-[#C9A050]/20 to-transparent" />
-              <FlaskConical
-                className="relative h-7 w-7 md:h-8 md:w-8 text-[#C9A050]"
-                strokeWidth={1.4}
-              />
-            </div>
-            {study.subtitle && (
-              <p className="text-[11px] md:text-[12px] tracking-[0.32em] uppercase text-[#C9A050] mb-3 md:mb-4">
-                {study.subtitle}
-              </p>
-            )}
-            <h1
-              className="text-[28px] md:text-[40px] lg:text-[44px] font-light leading-[1.12] mb-4 md:mb-5"
-              style={{ letterSpacing: "-0.022em" }}
-            >
-              {study.title}
-            </h1>
-            {study.intro && (
-              <p className="text-white/70 text-[16px] md:text-[18px] leading-[1.55] max-w-[58ch] mx-auto font-normal">
-                {study.intro}
-              </p>
-            )}
-          </div>
-
-          {isClosed ? (
-            <div className="text-center py-14 md:py-16 border border-white/10 rounded-2xl">
-              <p className="text-white/60 text-[16px] md:text-[17px]">This study is now closed. Thank you to everyone who took part.</p>
-            </div>
-          ) : done ? (
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center py-14 md:py-16 border border-[#C9A050]/30 rounded-3xl bg-[#C9A050]/5">
-              <div className="mx-auto h-16 w-16 md:h-18 md:w-18 rounded-full bg-[#C9A050]/20 border border-[#C9A050]/50 flex items-center justify-center mb-5">
-                <Check className="h-7 w-7 text-[#C9A050]" strokeWidth={2.2} />
-              </div>
-              <p className="text-white text-[20px] md:text-[22px] font-semibold" style={{ letterSpacing: "-0.02em" }}>
-                Thank you — truly.
-              </p>
-              <p className="text-white/55 text-[15px] md:text-[16px] mt-2">Your voice shapes our research.</p>
-              <button onClick={copy} className="mt-7 inline-flex items-center gap-2 text-[13px] md:text-[14px] text-[#C9A050] border border-[#C9A050]/40 rounded-full px-5 py-2.5 hover:bg-[#C9A050]/10 transition-colors">
-                {copied ? <><Check className="h-4 w-4" /> Link copied</> : <><Share2 className="h-4 w-4" /> Share this study</>}
-              </button>
-            </motion.div>
-          ) : questions.length === 0 ? (
-            <p className="text-white/50 text-center py-14 text-[16px]">Questions are being prepared. Please check back soon.</p>
-          ) : (
-            <div className="space-y-6 md:space-y-8">
-              {questions.map((q, idx) => (
-                <div key={q.id} className="border border-white/10 rounded-3xl p-6 md:p-8 bg-white/[0.025]">
-                  <p className="text-[10px] md:text-[11px] tracking-[0.26em] uppercase text-[#C9A050] mb-2.5">
-                    Question {idx + 1}{q.required && " · required"}
-                  </p>
-                  <p
-                    className="text-white text-[20px] md:text-[24px] font-semibold mb-5 md:mb-6 leading-[1.25]"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    {q.question_text}
-                  </p>
-
-                  {q.question_type === "single" && (
-                    <div className="space-y-2.5">
-                      {q.options.map(o => {
-                        const active = answers[q.id] === o.value;
-                        return (
-                          <button
-                            key={o.value}
-                            onClick={() => setSingle(q.id, o.value)}
-                            className={`w-full text-left px-4 md:px-5 rounded-2xl border transition-all flex items-center gap-3.5 active:scale-[0.99] ${
-                              active
-                                ? "bg-[#C9A050]/12 border-[#C9A050]/70 text-white"
-                                : "bg-white/[0.035] border-white/10 text-white/90 hover:border-[#C9A050]/30"
-                            }`}
-                            style={{ minHeight: 64 }}
-                          >
-                            {o.emoji && <span className="text-[22px] md:text-[24px] leading-none">{o.emoji}</span>}
-                            <span className="text-[17px] md:text-[18px] font-medium flex-1" style={{ letterSpacing: "-0.01em" }}>{o.label}</span>
-                            {active && <Check className="h-5 w-5 text-[#C9A050]" />}
-                          </button>
-                        );
-                      })}
-                      {q.allow_other && (
-                        <button
-                          onClick={() => setSingle(q.id, "__other__")}
-                          className={`w-full text-left px-4 md:px-5 rounded-2xl border flex items-center gap-3.5 ${
-                            answers[q.id] === "__other__" ? "bg-[#C9A050]/12 border-[#C9A050]/70 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
-                          }`}
-                          style={{ minHeight: 64 }}
-                        >
-                          <span className="text-[22px] leading-none">💭</span>
-                          <span className="text-[17px] md:text-[18px] font-medium">Something else</span>
-                        </button>
-                      )}
-                      {answers[q.id] === "__other__" && (
-                        <Input
-                          value={otherText[q.id] || ""}
-                          onChange={e => setOtherText(t => ({ ...t, [q.id]: e.target.value }))}
-                          placeholder="Tell us in a few words…"
-                          maxLength={200}
-                          className="h-14 text-[17px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
-                        />
-                      )}
-                    </div>
-                  )}
-
-                  {q.question_type === "multi" && (
-                    <div className="space-y-2.5">
-                      {q.options.map(o => {
-                        const checked = Array.isArray(answers[q.id]) && answers[q.id].includes(o.value);
-                        return (
-                          <button
-                            key={o.value}
-                            onClick={() => toggleMulti(q.id, o.value)}
-                            className={`w-full text-left px-4 md:px-5 rounded-2xl border flex items-center gap-3.5 active:scale-[0.99] ${
-                              checked ? "bg-[#C9A050]/12 border-[#C9A050]/70 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
-                            }`}
-                            style={{ minHeight: 64 }}
-                          >
-                            <span className={`h-6 w-6 rounded-md border flex items-center justify-center shrink-0 ${checked ? "bg-[#C9A050] border-[#C9A050]" : "border-white/30"}`}>
-                              {checked && <Check className="h-4 w-4 text-black" strokeWidth={2.5} />}
-                            </span>
-                            {o.emoji && <span className="text-[22px] leading-none">{o.emoji}</span>}
-                            <span className="text-[17px] md:text-[18px] font-medium flex-1">{o.label}</span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  )}
-
-                  {q.question_type === "text" && (
-                    <Textarea
-                      value={answers[q.id] || ""}
-                      onChange={e => setAnswers(a => ({ ...a, [q.id]: e.target.value }))}
-                      placeholder="Your answer…"
-                      maxLength={600}
-                      className="text-[17px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 min-h-[120px] px-4 py-3.5"
-                    />
-                  )}
-
-                  {q.question_type === "demographics" && (
-                    <div className="space-y-5 md:space-y-6">
-                      <DemoSection title="Age group">
-                        <Chips options={AGE_GROUPS} value={demographics.age_group} onChange={v => setDemographics(d => ({ ...d, age_group: v }))} />
-                      </DemoSection>
-                      <DemoSection title="Gender">
-                        <Chips options={GENDERS} value={demographics.gender} onChange={v => setDemographics(d => ({ ...d, gender: v }))} />
-                        {demographics.gender === "Non-binary / Other" && (
-                          <Input
-                            value={demographics.gender_other}
-                            onChange={e => setDemographics(d => ({ ...d, gender_other: e.target.value }))}
-                            placeholder="If you'd like to specify"
-                            maxLength={60}
-                            className="mt-3 h-12 text-[16px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
-                          />
-                        )}
-                      </DemoSection>
-                      <DemoSection title="Ethnicity">
-                        <Input
-                          value={demographics.ethnicity}
-                          onChange={e => setDemographics(d => ({ ...d, ethnicity: e.target.value }))}
-                          placeholder="e.g. South Asian, White British…"
-                          maxLength={80}
-                          className="h-12 text-[16px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
-                        />
-                      </DemoSection>
-                      <DemoSection title="Anything else?">
-                        <Textarea
-                          value={demographics.notes}
-                          onChange={e => setDemographics(d => ({ ...d, notes: e.target.value }))}
-                          placeholder="Optional…"
-                          maxLength={400}
-                          className="text-[16px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 min-h-[96px] px-4 py-3"
-                        />
-                      </DemoSection>
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              <Button
-                disabled={!canSubmit() || submitting}
-                onClick={submit}
-                className="w-full bg-[#C9A050] hover:bg-[#B8913F] text-black rounded-full h-[60px] md:h-[64px] text-[17px] md:text-[18px] font-semibold active:scale-[0.99] transition-transform"
-                style={{ letterSpacing: "-0.01em" }}
-              >
-                {submitting ? "Sending…" : (<><Sparkles className="h-5 w-5 mr-2" /> Submit anonymously</>)}
-              </Button>
-
-              <p className="text-[12px] md:text-[13px] text-white/35 text-center leading-relaxed pt-1">
-                Anonymous · No personal data stored · Internal clinical research only
-              </p>
-            </div>
-          )}
-        </section>
-      </main>
+      <SlideFlow
+        study={study}
+        questions={questions}
+        isClosed={isClosed}
+        done={done}
+        copied={copied}
+        copy={copy}
+        answers={answers}
+        otherText={otherText}
+        setOtherText={setOtherText}
+        setSingle={setSingle}
+        toggleMulti={toggleMulti}
+        setAnswers={setAnswers}
+        demographics={demographics}
+        setDemographics={setDemographics}
+        submit={submit}
+        submitting={submitting}
+        canSubmit={canSubmit()}
+      />
     </>
   );
 };
+
+/* ---------- Slide flow (one question per screen, demographics at end) ---------- */
+
+interface SlideFlowProps {
+  study: Study;
+  questions: Question[];
+  isClosed: boolean;
+  done: boolean;
+  copied: boolean;
+  copy: () => void;
+  answers: Record<string, any>;
+  otherText: Record<string, string>;
+  setOtherText: React.Dispatch<React.SetStateAction<Record<string, string>>>;
+  setSingle: (qid: string, value: string) => void;
+  toggleMulti: (qid: string, value: string) => void;
+  setAnswers: React.Dispatch<React.SetStateAction<Record<string, any>>>;
+  demographics: { age_group: string; gender: string; gender_other: string; ethnicity: string; notes: string };
+  setDemographics: React.Dispatch<React.SetStateAction<{ age_group: string; gender: string; gender_other: string; ethnicity: string; notes: string }>>;
+  submit: () => void;
+  submitting: boolean;
+  canSubmit: boolean;
+}
+
+const SlideFlow = (p: SlideFlowProps) => {
+  // Build the deck: intro + question slides (skipping any 'demographics' typed question — handled at end) + demographics slide
+  // If the questionnaire already includes a 'demographics' question, we surface it as the dedicated end slide
+  // (only one demographics slide ever appears, always last before submit).
+  const orderedQuestions = useMemo(
+    () => p.questions.filter(q => q.question_type !== "demographics"),
+    [p.questions]
+  );
+
+  const slides = useMemo(() => {
+    const arr: Array<{ key: string; kind: "intro" | "question" | "demographics"; question?: Question; index?: number }> = [];
+    arr.push({ key: "intro", kind: "intro" });
+    orderedQuestions.forEach((q, i) => arr.push({ key: q.id, kind: "question", question: q, index: i }));
+    arr.push({ key: "demographics", kind: "demographics" });
+    return arr;
+  }, [orderedQuestions]);
+
+  const [idx, setIdx] = useState(0);
+  const [dir, setDir] = useState<1 | -1>(1);
+
+  const total = slides.length;
+  const current = slides[idx];
+
+  const goNext = () => {
+    if (idx < total - 1) {
+      setDir(1);
+      setIdx(idx + 1);
+    }
+  };
+  const goBack = () => {
+    if (idx > 0) {
+      setDir(-1);
+      setIdx(idx - 1);
+    }
+  };
+
+  const onDragEnd = (_: any, info: PanInfo) => {
+    const swipe = info.offset.x;
+    const velocity = info.velocity.x;
+    if (swipe < -60 || velocity < -400) {
+      // forward only allowed if current slide is valid
+      if (canAdvance()) goNext();
+    } else if (swipe > 60 || velocity > 400) {
+      goBack();
+    }
+  };
+
+  const canAdvance = (): boolean => {
+    if (current.kind === "intro" || current.kind === "demographics") return true;
+    const q = current.question!;
+    if (!q.required) return true;
+    const v = p.answers[q.id];
+    if (q.question_type === "multi") return Array.isArray(v) && v.length > 0;
+    if (q.question_type === "text") return typeof v === "string" && v.trim().length > 0;
+    if (v === "__other__") return (p.otherText[q.id] || "").trim().length > 0;
+    return v !== undefined && v !== "";
+  };
+
+  // Auto-advance on single-choice select (240ms tactile pause)
+  const handleSingle = (qid: string, value: string) => {
+    p.setSingle(qid, value);
+    if (value !== "__other__") {
+      setTimeout(() => {
+        setDir(1);
+        setIdx(i => Math.min(i + 1, total - 1));
+      }, 260);
+    }
+  };
+
+  const progressPct = ((idx) / (total - 1)) * 100;
+
+  /* ---- Render ---- */
+  return (
+    <main
+      className="min-h-[100dvh] bg-black text-white flex flex-col"
+      style={{
+        fontFamily: IOS_FONT,
+        paddingLeft: "env(safe-area-inset-left)",
+        paddingRight: "env(safe-area-inset-right)",
+        paddingTop: "env(safe-area-inset-top)",
+        paddingBottom: "env(safe-area-inset-bottom)",
+      }}
+    >
+      {/* Top bar: progress + back */}
+      <header className="px-5 md:px-8 pt-4 md:pt-6 pb-3 md:pb-4 flex items-center gap-3 md:gap-4 max-w-[720px] w-full mx-auto">
+        <button
+          onClick={goBack}
+          disabled={idx === 0}
+          className="h-10 w-10 -ml-2 inline-flex items-center justify-center rounded-full text-white/60 hover:text-white disabled:opacity-25 transition-colors"
+          aria-label="Back"
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </button>
+        <div className="flex-1 h-[3px] bg-white/10 rounded-full overflow-hidden">
+          <motion.div
+            initial={false}
+            animate={{ width: `${progressPct}%` }}
+            transition={{ type: "spring", stiffness: 200, damping: 28 }}
+            className="h-full bg-[#C9A050] rounded-full"
+          />
+        </div>
+        <span className="text-[11px] tracking-[0.22em] uppercase text-white/40 tabular-nums">
+          {Math.min(idx + 1, total)}/{total}
+        </span>
+      </header>
+
+      {/* Slide stage */}
+      <section className="flex-1 flex items-stretch overflow-hidden">
+        <div className="relative w-full max-w-[640px] xl:max-w-[720px] mx-auto px-5 md:px-10 lg:px-12 py-6 md:py-10">
+          {isClosed ? (
+            <div className="h-full flex items-center justify-center">
+              <div className="text-center py-14 md:py-16 border border-white/10 rounded-3xl px-8">
+                <p className="text-white/60 text-[16px] md:text-[17px]">This study is now closed. Thank you to everyone who took part.</p>
+                <Link to="/research" className="inline-flex items-center gap-2 mt-6 text-[#C9A050] text-[14px]">
+                  <ArrowLeft className="h-4 w-4" /> All studies
+                </Link>
+              </div>
+            </div>
+          ) : p.questions.length === 0 ? (
+            <p className="text-white/50 text-center py-14 text-[16px]">Questions are being prepared. Please check back soon.</p>
+          ) : p.done ? (
+            <ThankYouSlide copied={p.copied} copy={p.copy} />
+          ) : (
+            <AnimatePresence mode="wait" custom={dir}>
+              <motion.div
+                key={current.key}
+                custom={dir}
+                initial={{ opacity: 0, x: dir * 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: dir * -40 }}
+                transition={{ duration: 0.28, ease: [0.32, 0.72, 0, 1] }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.18}
+                onDragEnd={onDragEnd}
+                className="h-full"
+              >
+                {current.kind === "intro" && (
+                  <IntroSlide study={p.study} onStart={goNext} />
+                )}
+                {current.kind === "question" && current.question && (
+                  <QuestionSlide
+                    q={current.question}
+                    index={current.index!}
+                    totalQuestions={orderedQuestions.length}
+                    answers={p.answers}
+                    otherText={p.otherText}
+                    setOtherText={p.setOtherText}
+                    onSingle={handleSingle}
+                    onToggleMulti={p.toggleMulti}
+                    onSetText={(qid, v) => p.setAnswers(a => ({ ...a, [qid]: v }))}
+                  />
+                )}
+                {current.kind === "demographics" && (
+                  <DemographicsSlide
+                    demographics={p.demographics}
+                    setDemographics={p.setDemographics}
+                  />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          )}
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      {!isClosed && !p.done && p.questions.length > 0 && (
+        <footer className="px-5 md:px-8 pb-6 md:pb-8 pt-2 max-w-[640px] w-full mx-auto">
+          {current.kind === "demographics" ? (
+            <Button
+              disabled={!p.canSubmit || p.submitting}
+              onClick={p.submit}
+              className="w-full bg-[#C9A050] hover:bg-[#B8913F] text-black rounded-full h-[60px] text-[17px] font-semibold active:scale-[0.99] transition-transform disabled:opacity-50"
+              style={{ letterSpacing: "-0.01em" }}
+            >
+              {p.submitting ? "Sending…" : (<><Sparkles className="h-5 w-5 mr-2" /> Submit anonymously</>)}
+            </Button>
+          ) : current.kind === "question" && (current.question?.question_type === "multi" || current.question?.question_type === "text" || (current.question?.allow_other && p.answers[current.question.id] === "__other__")) ? (
+            <button
+              disabled={!canAdvance()}
+              onClick={goNext}
+              className="w-full h-[56px] rounded-full bg-[#C9A050] hover:bg-[#B8913F] disabled:opacity-30 text-black text-[17px] font-semibold transition-colors active:scale-[0.99] inline-flex items-center justify-center gap-2"
+              style={{ letterSpacing: "-0.01em" }}
+            >
+              Continue <ArrowRight className="h-4 w-4" />
+            </button>
+          ) : current.kind === "question" ? (
+            <p className="text-center text-[12px] text-white/30 tracking-wide">
+              Tap an answer to continue · swipe to go back
+            </p>
+          ) : null}
+          <p className="text-[11px] text-white/30 text-center mt-3 leading-relaxed">
+            Anonymous · No personal data stored · Internal clinical research only
+          </p>
+        </footer>
+      )}
+    </main>
+  );
+};
+
+/* ---------- Individual slides ---------- */
+
+const IntroSlide = ({ study, onStart }: { study: Study; onStart: () => void }) => (
+  <div className="h-full flex flex-col items-center justify-center text-center py-6 md:py-10">
+    <Link
+      to="/research"
+      className="inline-flex items-center gap-2 text-white/45 hover:text-[#C9A050] text-[11px] uppercase tracking-[0.28em] mb-10"
+    >
+      <ArrowLeft className="h-3.5 w-3.5" /> All studies
+    </Link>
+    <div className="relative mx-auto mb-7 h-20 w-20 flex items-center justify-center">
+      <span className="absolute inset-0 rounded-full border border-[#C9A050]/25" />
+      <span className="absolute inset-1.5 rounded-full border border-[#C9A050]/45 bg-gradient-to-br from-[#C9A050]/20 to-transparent" />
+      <FlaskConical className="relative h-8 w-8 text-[#C9A050]" strokeWidth={1.4} />
+    </div>
+    {study.subtitle && (
+      <p className="text-[11px] md:text-[12px] tracking-[0.32em] uppercase text-[#C9A050] mb-3">
+        {study.subtitle}
+      </p>
+    )}
+    <h1
+      className="text-[30px] md:text-[40px] font-light leading-[1.1] mb-5 max-w-[20ch]"
+      style={{ letterSpacing: "-0.022em" }}
+    >
+      {study.title}
+    </h1>
+    {study.intro && (
+      <p className="text-white/65 text-[16px] md:text-[18px] leading-[1.55] max-w-[44ch] mx-auto font-normal mb-10">
+        {study.intro}
+      </p>
+    )}
+    <button
+      onClick={onStart}
+      className="inline-flex items-center justify-center gap-2 bg-[#C9A050] hover:bg-[#B8913F] text-black rounded-full px-9 h-[56px] text-[17px] font-semibold active:scale-[0.98] transition-transform"
+      style={{ letterSpacing: "-0.01em" }}
+    >
+      Begin <ArrowRight className="h-4 w-4" />
+    </button>
+    <p className="text-[11px] text-white/35 mt-5 tracking-wide">Takes under 60 seconds · fully anonymous</p>
+  </div>
+);
+
+const QuestionSlide = ({
+  q, index, totalQuestions, answers, otherText, setOtherText, onSingle, onToggleMulti, onSetText,
+}: {
+  q: Question;
+  index: number;
+  totalQuestions: number;
+  answers: Record<string, any>;
+  otherText: Record<string, string>;
+  setOtherText: React.Dispatch<React.SetStateAction<Record<string, string>>>;
+  onSingle: (qid: string, value: string) => void;
+  onToggleMulti: (qid: string, value: string) => void;
+  onSetText: (qid: string, v: string) => void;
+}) => (
+  <div className="h-full flex flex-col">
+    <p className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-[#C9A050] mb-3">
+      Question {index + 1} of {totalQuestions}{q.required && " · required"}
+    </p>
+    <h2
+      className="text-white text-[24px] md:text-[30px] font-semibold leading-[1.2] mb-7 md:mb-9"
+      style={{ letterSpacing: "-0.022em" }}
+    >
+      {q.question_text}
+    </h2>
+
+    {q.question_type === "single" && (
+      <div className="space-y-2.5">
+        {q.options.map(o => {
+          const active = answers[q.id] === o.value;
+          return (
+            <button
+              key={o.value}
+              onClick={() => onSingle(q.id, o.value)}
+              className={`w-full text-left px-4 md:px-5 rounded-2xl border transition-all flex items-center gap-3.5 active:scale-[0.985] ${
+                active
+                  ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white"
+                  : "bg-white/[0.035] border-white/10 text-white/90 hover:border-[#C9A050]/30"
+              }`}
+              style={{ minHeight: 64 }}
+            >
+              {o.emoji && <span className="text-[22px] leading-none">{o.emoji}</span>}
+              <span className="text-[17px] md:text-[18px] font-medium flex-1" style={{ letterSpacing: "-0.01em" }}>{o.label}</span>
+              {active && <Check className="h-5 w-5 text-[#C9A050]" />}
+            </button>
+          );
+        })}
+        {q.allow_other && (
+          <button
+            onClick={() => onSingle(q.id, "__other__")}
+            className={`w-full text-left px-4 md:px-5 rounded-2xl border flex items-center gap-3.5 ${
+              answers[q.id] === "__other__" ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
+            }`}
+            style={{ minHeight: 64 }}
+          >
+            <span className="text-[22px] leading-none">💭</span>
+            <span className="text-[17px] md:text-[18px] font-medium">Something else</span>
+          </button>
+        )}
+        {answers[q.id] === "__other__" && (
+          <Input
+            value={otherText[q.id] || ""}
+            onChange={e => setOtherText(t => ({ ...t, [q.id]: e.target.value }))}
+            placeholder="Tell us in a few words…"
+            maxLength={200}
+            className="h-14 text-[17px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
+          />
+        )}
+      </div>
+    )}
+
+    {q.question_type === "multi" && (
+      <div className="space-y-2.5">
+        {q.options.map(o => {
+          const checked = Array.isArray(answers[q.id]) && answers[q.id].includes(o.value);
+          return (
+            <button
+              key={o.value}
+              onClick={() => onToggleMulti(q.id, o.value)}
+              className={`w-full text-left px-4 md:px-5 rounded-2xl border flex items-center gap-3.5 active:scale-[0.985] ${
+                checked ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
+              }`}
+              style={{ minHeight: 64 }}
+            >
+              <span className={`h-6 w-6 rounded-md border flex items-center justify-center shrink-0 ${checked ? "bg-[#C9A050] border-[#C9A050]" : "border-white/30"}`}>
+                {checked && <Check className="h-4 w-4 text-black" strokeWidth={2.5} />}
+              </span>
+              {o.emoji && <span className="text-[22px] leading-none">{o.emoji}</span>}
+              <span className="text-[17px] md:text-[18px] font-medium flex-1">{o.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    )}
+
+    {q.question_type === "text" && (
+      <Textarea
+        value={answers[q.id] || ""}
+        onChange={e => onSetText(q.id, e.target.value)}
+        placeholder="Your answer…"
+        maxLength={600}
+        className="text-[17px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 min-h-[160px] px-4 py-3.5"
+      />
+    )}
+  </div>
+);
+
+const DemographicsSlide = ({
+  demographics, setDemographics,
+}: {
+  demographics: SlideFlowProps["demographics"];
+  setDemographics: SlideFlowProps["setDemographics"];
+}) => (
+  <div className="h-full flex flex-col">
+    <p className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-[#C9A050] mb-3">
+      Final step · about you
+    </p>
+    <h2
+      className="text-white text-[24px] md:text-[30px] font-semibold leading-[1.2] mb-2"
+      style={{ letterSpacing: "-0.022em" }}
+    >
+      A few quiet details.
+    </h2>
+    <p className="text-white/55 text-[15px] md:text-[16px] mb-7 leading-[1.5]">
+      All optional. Helps us understand who took part — nothing is linked to you.
+    </p>
+
+    <div className="space-y-5">
+      <DemoSection title="Age group">
+        <Chips options={AGE_GROUPS} value={demographics.age_group} onChange={v => setDemographics(d => ({ ...d, age_group: v }))} />
+      </DemoSection>
+      <DemoSection title="Gender">
+        <Chips options={GENDERS} value={demographics.gender} onChange={v => setDemographics(d => ({ ...d, gender: v }))} />
+        {demographics.gender === "Non-binary / Other" && (
+          <Input
+            value={demographics.gender_other}
+            onChange={e => setDemographics(d => ({ ...d, gender_other: e.target.value }))}
+            placeholder="If you'd like to specify"
+            maxLength={60}
+            className="mt-3 h-12 text-[16px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
+          />
+        )}
+      </DemoSection>
+      <DemoSection title="Ethnicity">
+        <Input
+          value={demographics.ethnicity}
+          onChange={e => setDemographics(d => ({ ...d, ethnicity: e.target.value }))}
+          placeholder="e.g. South Asian, White British…"
+          maxLength={80}
+          className="h-12 text-[16px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
+        />
+      </DemoSection>
+      <DemoSection title="Anything else?">
+        <Textarea
+          value={demographics.notes}
+          onChange={e => setDemographics(d => ({ ...d, notes: e.target.value }))}
+          placeholder="Optional…"
+          maxLength={400}
+          className="text-[16px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 min-h-[88px] px-4 py-3"
+        />
+      </DemoSection>
+    </div>
+  </div>
+);
+
+const ThankYouSlide = ({ copied, copy }: { copied: boolean; copy: () => void }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 14 }}
+    animate={{ opacity: 1, y: 0 }}
+    className="h-full flex flex-col items-center justify-center text-center py-14"
+  >
+    <div className="mx-auto h-18 w-18 md:h-20 md:w-20 rounded-full bg-[#C9A050]/15 border border-[#C9A050]/50 flex items-center justify-center mb-6">
+      <Check className="h-8 w-8 text-[#C9A050]" strokeWidth={2.2} />
+    </div>
+    <p className="text-white text-[24px] md:text-[28px] font-semibold" style={{ letterSpacing: "-0.022em" }}>
+      Thank you — truly.
+    </p>
+    <p className="text-white/55 text-[16px] mt-2 max-w-[36ch]">Your voice shapes our research.</p>
+    <button onClick={copy} className="mt-8 inline-flex items-center gap-2 text-[14px] text-[#C9A050] border border-[#C9A050]/40 rounded-full px-6 py-3 hover:bg-[#C9A050]/10 transition-colors">
+      {copied ? <><Check className="h-4 w-4" /> Link copied</> : <><Share2 className="h-4 w-4" /> Share this study</>}
+    </button>
+    <Link to="/research" className="mt-6 text-white/45 hover:text-white text-[13px] uppercase tracking-[0.22em]">
+      All studies
+    </Link>
+  </motion.div>
+);
 
 const DemoSection = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div>
