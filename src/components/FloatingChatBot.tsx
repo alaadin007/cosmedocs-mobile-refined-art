@@ -683,10 +683,6 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                           </button>
                         ))}
                       </div>
-                    </>
-                    );
-                  })()}
-
                       <button
                         onClick={() => setPlanStep("closed")}
                         className="mt-3 w-full text-center text-[15px] text-white/50 hover:text-white/80 py-2"
@@ -694,7 +690,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                         Skip — just chat
                       </button>
                     </>
-                  )}
+                    );
+                  })()}
+
                   {planStep === "age" && planConcern && (
                     <>
                       <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
