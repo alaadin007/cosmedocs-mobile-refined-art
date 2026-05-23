@@ -236,6 +236,17 @@ const MasseterBotoxM2 = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Gallery quick link */}
+              <div className="mt-5 flex justify-center">
+                <Link
+                  to="/before-after/botox/masseter/"
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 bg-[#C9A050]/10 border border-[#C9A050]/30 text-[#C9A050] text-[14px] font-semibold hover:bg-[#C9A050]/20 transition"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  Masseter gallery
+                </Link>
+              </div>
             </div>
           </section>
         </header>
