@@ -236,6 +236,17 @@ const MasseterBotoxM2 = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Gallery quick link */}
+              <div className="mt-5 flex justify-center">
+                <Link
+                  to="/before-after/botox/masseter/"
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 bg-[#C9A050]/10 border border-[#C9A050]/30 text-[#C9A050] text-[14px] font-semibold hover:bg-[#C9A050]/20 transition"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  Masseter gallery
+                </Link>
+              </div>
             </div>
           </section>
         </header>
@@ -562,6 +573,47 @@ const MasseterBotoxM2 = () => {
                   <p className="mt-3 text-[15px] text-[#2a2a2a]">{f.a}</p>
                 </details>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ───── Gallery CTA ───── */}
+        <section aria-labelledby="gallery-heading">
+          <div className="tp-container">
+            <div className="rounded-3xl border border-[#C9A050]/30 bg-[#C9A050]/[0.06] p-8 md:p-10 text-center">
+              <Sparkles className="w-6 h-6 text-[#C9A050] mx-auto mb-4" />
+              <h2 id="gallery-heading" className="!mb-3">
+                See the <span className="text-[#C9A050]">full gallery</span>
+              </h2>
+              <p className="text-[15px] text-[#2a2a2a] max-w-xl mx-auto">
+                Browse real patient before-and-after photographs from our masseter Botox treatments at Harley Street.
+              </p>
+              <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+                <img
+                  src={masseterAfter2Treatments}
+                  alt="Male masseter Botox after two treatments"
+                  className="rounded-2xl aspect-[4/5] object-cover w-full"
+                  loading="lazy"
+                />
+                <img
+                  src={masseterOneYearAfter3rd}
+                  alt="Male masseter Botox one year after third session"
+                  className="rounded-2xl aspect-[4/5] object-cover w-full"
+                  loading="lazy"
+                />
+                <div className="rounded-2xl aspect-[4/5] bg-[#0a0a0a] text-white grid place-items-center p-4">
+                  <p className="text-[13px] text-white/70 text-center">View female and male cases in the complete gallery.</p>
+                </div>
+                <Link
+                  to="/before-after/botox/masseter/"
+                  className="rounded-2xl aspect-[4/5] bg-[#C9A050] text-black grid place-items-center p-4 font-semibold text-[15px] hover:bg-[#b89345] transition"
+                >
+                  <span className="flex flex-col items-center gap-2">
+                    <ArrowRight className="w-6 h-6" />
+                    View all
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
