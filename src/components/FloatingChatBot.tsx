@@ -21,7 +21,59 @@ interface FloatingChatBotProps {
   onExternalOpenChange?: (open: boolean) => void;
 }
 
-// Page-specific sales prompts. First match wins.
+type ConcernSeed = { id: string; label: string; emoji: string; bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox"; asksAge?: boolean };
+
+// Page-specific concern chips. Shown ABOVE the default global concerns when set.
+const MASSETER_CONCERNS: ConcernSeed[] = [
+  { id: "jaw-slim",     label: "Slim a wide/square jaw",         emoji: "📐", bucket: "Facial contouring" },
+  { id: "jaw-grind",    label: "Stop teeth grinding (bruxism)",  emoji: "🦷", bucket: "Medical Botox" },
+  { id: "jaw-tmj",      label: "TMJ pain / jaw clicking",        emoji: "🩺", bucket: "Medical Botox" },
+  { id: "jaw-headache", label: "Tension headaches from clenching", emoji: "💢", bucket: "Medical Botox" },
+  { id: "jaw-units",    label: "How many units do I need?",      emoji: "💉", bucket: "Medical Botox" },
+];
+
+const NOSE_CONCERNS: ConcernSeed[] = [
+  { id: "nose-bump",    label: "Smooth a dorsal bump",           emoji: "📏", bucket: "Facial contouring" },
+  { id: "nose-tip",     label: "Lift a drooping tip",            emoji: "⬆️", bucket: "Facial contouring" },
+  { id: "nose-profile", label: "Refine my side profile",         emoji: "🪞", bucket: "Facial contouring" },
+  { id: "nose-fill-vs-thread", label: "Filler vs PCL threads?",  emoji: "❓", bucket: "Facial contouring" },
+];
+
+const LIP_CONCERNS: ConcernSeed[] = [
+  { id: "lip-subtle",   label: "Subtle natural hydration (0.5ml)", emoji: "💧", bucket: "Facial contouring" },
+  { id: "lip-shape",    label: "Define shape & cupid's bow",     emoji: "💋", bucket: "Facial contouring" },
+  { id: "lip-volume",   label: "More volume (1ml)",              emoji: "🌹", bucket: "Facial contouring" },
+  { id: "lip-russian",  label: "Russian lift vs classic?",       emoji: "❓", bucket: "Facial contouring" },
+  { id: "lip-asym",     label: "Fix asymmetric / thin lips",     emoji: "⚖️", bucket: "Facial contouring" },
+];
+
+const ANTIWRINKLE_CONCERNS: ConcernSeed[] = [
+  { id: "aw-forehead",  label: "Forehead lines",                 emoji: "〰️", bucket: "Anti-ageing", asksAge: true },
+  { id: "aw-frown",     label: "Frown / 11 lines",               emoji: "😠", bucket: "Anti-ageing", asksAge: true },
+  { id: "aw-crows",     label: "Crow's feet",                    emoji: "👁️", bucket: "Anti-ageing", asksAge: true },
+  { id: "aw-bunny",     label: "Bunny lines on nose",            emoji: "🐰", bucket: "Anti-ageing" },
+  { id: "aw-all",       label: "All three areas (£175 +)",       emoji: "✨", bucket: "Anti-ageing", asksAge: true },
+];
+
+const CHEEK_CONCERNS: ConcernSeed[] = [
+  { id: "cheek-flat",   label: "Flat / hollow cheeks (1ml)",     emoji: "🍑", bucket: "Facial contouring", asksAge: true },
+  { id: "cheek-lift",   label: "Midface lift (2ml)",             emoji: "⬆️", bucket: "Facial contouring", asksAge: true },
+  { id: "cheek-restore",label: "Full restoration (4ml)",         emoji: "✨", bucket: "Facial contouring", asksAge: true },
+];
+
+const SKIN_CONCERNS: ConcernSeed[] = [
+  { id: "skin-glow",    label: "Glow & hydration (Profhilo)",    emoji: "💧", bucket: "Skin health" },
+  { id: "skin-poly",    label: "Repair with polynucleotides",    emoji: "🧬", bucket: "Skin health" },
+  { id: "skin-eyes",    label: "Under-eye dark circles",         emoji: "👁️", bucket: "Skin health" },
+  { id: "skin-tone",    label: "Pigmentation / melasma",         emoji: "🌿", bucket: "Skin health" },
+];
+
+const THREADS_CONCERNS: ConcernSeed[] = [
+  { id: "th-jowls",     label: "Lift jowls",                     emoji: "⬆️", bucket: "Anti-ageing", asksAge: true },
+  { id: "th-eyebrow",   label: "Brow lift",                      emoji: "👁️", bucket: "Anti-ageing", asksAge: true },
+  { id: "th-ha",        label: "8/11-point HA makeover",         emoji: "✨", bucket: "Facial contouring", asksAge: true },
+  { id: "th-cog-mono",  label: "Cog vs Mono threads?",           emoji: "❓", bucket: "Anti-ageing" },
+];
 const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
