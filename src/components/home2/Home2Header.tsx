@@ -21,16 +21,17 @@ const treatmentCategories = [
     hubLink: "/treatments/botox/",
     items: [
       { title: "Botox Overview", link: "/treatments/botox/", isOverview: true },
-      { title: "Face Botox", link: "/treatments/botox/" },
-      { title: "Lip Flip", link: "/treatments/lip-flip/" },
-      { title: "Masseter", link: "/treatments/masseter-botox/" },
-      { title: "Trap Botox", link: "/treatments/trap-botox/" },
-      { title: "Calf Reduction", link: "/treatments/calf-slimming-botox/" },
-      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
+      { title: "Face Botox", link: "/treatments/botox/", subtitle: "Wrinkles & anti-ageing" },
+      { title: "Lip Flip", link: "/treatments/lip-flip/", subtitle: "Subtle upper-lip lift" },
+      { title: "Masseter", link: "/treatments/masseter-botox/", subtitle: "Jawline slimming & square jaw" },
+      { title: "TMJ Botox", link: "/treatments/tmj-botox/", subtitle: "Jaw joint pain, clicking & headaches" },
+      { title: "Trap Botox", link: "/treatments/trap-botox/", subtitle: "Shoulder slimming & neck length" },
+      { title: "Calf Reduction", link: "/treatments/calf-slimming-botox/", subtitle: "Slimmer calves, refined silhouette" },
+      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/", subtitle: "Lifted jawline & smoother neck" },
       { title: "Medical Botox", link: "/treatments/botox/medical/", isSubHeader: true },
-      { title: "Hyperhidrosis", link: "/treatments/hyperhidrosis-botox/" },
-      { title: "Bruxism / TMJ", link: "/treatments/bruxism-botox/" },
-      { title: "Chronic Migraine", link: "/treatments/migraine-botox/" },
+      { title: "Hyperhidrosis", link: "/treatments/hyperhidrosis-botox/", subtitle: "Excessive sweating control" },
+      { title: "Bruxism / TMJ", link: "/treatments/bruxism-botox/", subtitle: "Teeth grinding & clenching" },
+      { title: "Chronic Migraine", link: "/treatments/migraine-botox/", subtitle: "NICE-approved PREEMPT protocol" },
     ]
   },
   {
@@ -38,21 +39,21 @@ const treatmentCategories = [
     hubLink: "/treatments/dermal-fillers/",
     items: [
       { title: "Dermal Fillers Overview", link: "/treatments/dermal-fillers/", isOverview: true },
-      { title: "Lip Filler", link: "/treatments/lip-fillers/" },
-      { title: "Cheek Filler", link: "/treatments/cheek-filler/" },
-      { title: "Jawline Filler", link: "/treatments/jawline-filler/" },
-      { title: "Chin Filler", link: "/treatments/chin-filler/" },
-      { title: "Under Eye", link: "/treatments/tear-trough-filler/" },
-      { title: "Nose Filler", link: "/treatments/nose-filler/" },
-      { title: "Temple Filler", link: "/treatments/temple-filler/" },
-      { title: "Forehead Filler", link: "/treatments/forehead-filler/" },
+      { title: "Lip Filler", link: "/treatments/lip-fillers/", subtitle: "Natural shape & volume" },
+      { title: "Cheek Filler", link: "/treatments/cheek-filler/", subtitle: "Mid-face lift & contour" },
+      { title: "Jawline Filler", link: "/treatments/jawline-filler/", subtitle: "Definition & sharper angle" },
+      { title: "Chin Filler", link: "/treatments/chin-filler/", subtitle: "Profile balance & projection" },
+      { title: "Under Eye", link: "/treatments/tear-trough-filler/", subtitle: "Tear-trough hollows & dark circles" },
+      { title: "Nose Filler", link: "/treatments/nose-filler/", subtitle: "Non-surgical nose reshaping" },
+      { title: "Temple Filler", link: "/treatments/temple-filler/", subtitle: "Restores hollow temples" },
+      { title: "Forehead Filler", link: "/treatments/forehead-filler/", subtitle: "Smooths bumps & dips" },
       { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas/", isSubHeader: true },
-      { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas/#nasolabial" },
-      { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas/#marionette" },
-      { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas/#prejowl" },
-      { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas/#perioral" },
-      { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas/#volume" },
-      { title: "Liquid Facelift", link: "/treatments/ha-makeover/" },
+      { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas/#nasolabial", subtitle: "Softens nose-to-mouth lines" },
+      { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas/#marionette", subtitle: "Lifts downturned mouth corners" },
+      { title: "Pre-Jowl Sulcus", link: "/treatments/dermal-fillers/areas/#prejowl", subtitle: "Restores jawline continuity" },
+      { title: "Perioral Lines", link: "/treatments/dermal-fillers/areas/#perioral", subtitle: "Smooths smoker's lines" },
+      { title: "Facial Volume Loss", link: "/treatments/dermal-fillers/areas/#volume", subtitle: "Replaces age-related volume" },
+      { title: "Liquid Facelift", link: "/treatments/ha-makeover/", subtitle: "Full-face HA makeover" },
     ]
   },
   {
@@ -60,9 +61,9 @@ const treatmentCategories = [
     hubLink: "/treatments/non-surgical-facelift/",
     items: [
       { title: "Mini Facelifts Overview", link: "/treatments/non-surgical-facelift/", isOverview: true },
-      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/" },
-      { title: "Liquid Facelift", link: "/treatments/ha-makeover/" },
-      { title: "PDO Thread Lift", link: "/treatments/pdo-threads/" },
+      { title: "Nefertiti Botox Lift", link: "/treatments/nefertiti-lift/", subtitle: "Lifts jawline with Botox" },
+      { title: "Liquid Facelift", link: "/treatments/ha-makeover/", subtitle: "Full-face filler rejuvenation" },
+      { title: "PDO Thread Lift", link: "/treatments/pdo-threads/", subtitle: "Lifts & stimulates collagen" },
       { title: "Endolaser (Laser Fibre Lift)", link: "/treatments/endolaser/", isHighlight: true },
     ]
   },
@@ -71,16 +72,16 @@ const treatmentCategories = [
     hubLink: "/treatments/skin-rejuvenation/",
     items: [
       { title: "Skin Boosters Overview", link: "/treatments/skin-rejuvenation/", isOverview: true },
-      { title: "Profhilo", link: "/treatments/profhilo/" },
-      { title: "Polynucleotides", link: "/treatments/polynucleotides/" },
-      { title: "Sunekos 200", link: "/treatments/sunekos/" },
-      { title: "Jalupro", link: "/treatments/jalupro/" },
-      { title: "Lumi Eyes", link: "/treatments/lumi-eyes/" },
-      { title: "Exosomes", link: "/treatments/exosomes/" },
-      { title: "Microneedling", link: "/treatments/microneedling/" },
-      { title: "HydraFacial", link: "/treatments/hydrafacial/" },
-      { title: "PRP Treatment", link: "/treatments/prp/" },
-      { title: "Skin Peel (Chemical)", link: "/treatments/chemical-peels/" },
+      { title: "Profhilo", link: "/treatments/profhilo/", subtitle: "Bio-remodelling hydration" },
+      { title: "Polynucleotides", link: "/treatments/polynucleotides/", subtitle: "DNA-based skin repair" },
+      { title: "Sunekos 200", link: "/treatments/sunekos/", subtitle: "Amino acids for fine lines" },
+      { title: "Jalupro", link: "/treatments/jalupro/", subtitle: "Boosts collagen & elasticity" },
+      { title: "Lumi Eyes", link: "/treatments/lumi-eyes/", subtitle: "Brightens the eye area" },
+      { title: "Exosomes", link: "/treatments/exosomes/", subtitle: "Advanced cellular regeneration" },
+      { title: "Microneedling", link: "/treatments/microneedling/", subtitle: "Texture, scarring & glow" },
+      { title: "HydraFacial", link: "/treatments/hydrafacial/", subtitle: "Deep cleanse & hydration" },
+      { title: "PRP Treatment", link: "/treatments/prp/", subtitle: "Your own growth factors" },
+      { title: "Skin Peel (Chemical)", link: "/treatments/chemical-peels/", subtitle: "Resurfacing for tone & texture" },
     ]
   },
   {
@@ -88,11 +89,11 @@ const treatmentCategories = [
     hubLink: "/treatments/skin-hair/",
     items: [
       { title: "Skin & Hair Overview", link: "/treatments/skin-hair/", isOverview: true },
-      { title: "Laser Hair Removal", link: "/treatments/laser-hair-removal/" },
-      { title: "Microneedling", link: "/treatments/microneedling/" },
-      { title: "Fat Dissolving", link: "/treatments/fat-dissolving/" },
-      { title: "Hair Transplant", link: "/treatments/hair-transplant/" },
-      { title: "Scar Reduction", link: "/treatments/scar-reduction/" },
+      { title: "Laser Hair Removal", link: "/treatments/laser-hair-removal/", subtitle: "Permanent reduction, all tones" },
+      { title: "Microneedling", link: "/treatments/microneedling/", subtitle: "Texture, scarring & glow" },
+      { title: "Fat Dissolving", link: "/treatments/fat-dissolving/", subtitle: "Targeted small-area slimming" },
+      { title: "Hair Transplant", link: "/treatments/hair-transplant/", subtitle: "FUE surgical hair restoration" },
+      { title: "Scar Reduction", link: "/treatments/scar-reduction/", subtitle: "Softens & smooths scars" },
     ]
   },
   {
@@ -100,11 +101,11 @@ const treatmentCategories = [
     hubLink: "/treatments/plastic-surgery/",
     items: [
       { title: "Plastic Surgery Overview", link: "/treatments/plastic-surgery/", isOverview: true },
-      { title: "Blepharoplasty", link: "/treatments/blepharoplasty/" },
-      { title: "Rhinoplasty", link: "/treatments/rhinoplasty/" },
-      { title: "Facelift Surgery", link: "/treatments/facelift-surgery/" },
-      { title: "Liposuction", link: "/treatments/liposuction/" },
-      { title: "CO2 Laser", link: "/treatments/co2-laser/" },
+      { title: "Blepharoplasty", link: "/treatments/blepharoplasty/", subtitle: "Eyelid lift surgery" },
+      { title: "Rhinoplasty", link: "/treatments/rhinoplasty/", subtitle: "Surgical nose reshaping" },
+      { title: "Facelift Surgery", link: "/treatments/facelift-surgery/", subtitle: "Surgical facial rejuvenation" },
+      { title: "Liposuction", link: "/treatments/liposuction/", subtitle: "Targeted fat removal" },
+      { title: "CO2 Laser", link: "/treatments/co2-laser/", subtitle: "Deep resurfacing for ageing skin" },
     ]
   },
   {
@@ -112,9 +113,9 @@ const treatmentCategories = [
     hubLink: "/treatments/dermatology/",
     items: [
       { title: "Dermatology Overview", link: "/treatments/dermatology/", isOverview: true },
-      { title: "Mole Removal", link: "/treatments/mole-removal/" },
-      { title: "Skin Tag Removal", link: "/treatments/skin-tag-removal/" },
-      { title: "Acne Treatment", link: "/treatments/acne/" },
+      { title: "Mole Removal", link: "/treatments/mole-removal/", subtitle: "Doctor-led excision & biopsy" },
+      { title: "Skin Tag Removal", link: "/treatments/skin-tag-removal/", subtitle: "Quick, scar-aware removal" },
+      { title: "Acne Treatment", link: "/treatments/acne/", subtitle: "Medical-grade clearance plans" },
     ]
   }
 ];
@@ -280,7 +281,7 @@ export default function Home2Header() {
                                 {category.label}
                               </span>
                               <div className="space-y-1">
-                                {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
+                                {category.items.map((item: { title: string; link: string; subtitle?: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                                   item.isOverview ? (
                                     <Link 
                                       key={item.link}
@@ -314,9 +315,12 @@ export default function Home2Header() {
                                       key={item.link}
                                       to={item.link} 
                                       onClick={() => setIsTreatmentsOpen(false)}
-                                      className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
+                                      className="block py-1.5 cursor-pointer transition-colors group"
                                     >
-                                      {item.title}
+                                      <span className="text-sm text-white/80 group-hover:text-white transition-colors">{item.title}</span>
+                                      {item.subtitle && (
+                                        <span className="block italic font-serif text-[11px] text-[#C9A050]/75 mt-0.5 leading-tight">{item.subtitle}</span>
+                                      )}
                                     </Link>
                                   )
                                 ))}
@@ -551,7 +555,7 @@ export default function Home2Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden bg-white/5"
                       >
-                        {category.items.map((item: { title: string; link: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
+                        {category.items.map((item: { title: string; link: string; subtitle?: string; isSubHeader?: boolean; isOverview?: boolean; isHighlight?: boolean }) => (
                           <Link
                             key={item.link}
                             to={item.link}
@@ -559,7 +563,7 @@ export default function Home2Header() {
                               setIsMobileMenuOpen(false);
                               setExpandedCategory(null);
                             }}
-                            className={`block px-6 py-4 transition-colors border-b border-white/5 min-h-[52px] flex items-center ${
+                            className={`block px-6 py-3.5 transition-colors border-b border-white/5 min-h-[52px] flex flex-col justify-center ${
                               item.isOverview 
                                 ? 'text-base text-white hover:text-[#C9A050] font-medium bg-white/5' 
                                 : item.isSubHeader 
@@ -569,8 +573,13 @@ export default function Home2Header() {
                                     : 'text-base text-white/80 hover:text-white hover:bg-white/5'
                             }`}
                           >
-                            {item.isHighlight && <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />}
-                            {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
+                            <span className="flex items-center">
+                              {item.isHighlight && <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />}
+                              {item.title}{(item.isSubHeader || item.isOverview) ? ' →' : ''}
+                            </span>
+                            {item.subtitle && !item.isOverview && !item.isSubHeader && !item.isHighlight && (
+                              <span className="italic font-serif text-[12px] text-[#C9A050]/75 mt-0.5 leading-tight">{item.subtitle}</span>
+                            )}
                           </Link>
                         ))}
                       </motion.div>
