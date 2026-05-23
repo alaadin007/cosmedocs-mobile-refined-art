@@ -904,3 +904,6 @@
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
+
+/m2  /treatments/masseter-botox/  301
+/m2/  /treatments/masseter-botox/  301
