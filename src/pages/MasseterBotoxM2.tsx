@@ -467,20 +467,30 @@ const MasseterBotoxM2 = () => {
             <h2 id="evidence-heading">
               What good treatment <span className="text-[#C9A050]">should feel like</span>
             </h2>
-            <div className="mt-6 space-y-5 text-[16px] leading-8 text-[#2a2a2a]">
-              <p>
-                Good masseter Botox is not judged only by a slimmer photograph. Patients often report fewer headaches, reduced morning jaw fatigue, less tooth pressure and a calmer bite. Cosmetically, the change should be progressive enough that people notice you look fresher or less heavy in the lower face, not that a treatment has been done.
-              </p>
-              <p>
-                Research on botulinum toxin for bruxism shows reduced bite force and symptom relief in selected patients. For hypertrophy, repeated cycles can reduce the cross-sectional size of the muscle. The clinical skill is knowing when to treat, how much to treat, and when not to over-treat, because a natural jaw still needs function and structure.
-              </p>
-              <p>
-                CosmeDocs links masseter assessment with facial balance. Some patients need Botox only. Others need a combination with{" "}
-                <Link to="/treatments/dermal-fillers/chin/" className="text-[#C9A050] underline underline-offset-4">chin filler</Link>,{" "}
-                <Link to="/treatments/dermal-fillers/jawline/" className="text-[#C9A050] underline underline-offset-4">jawline filler</Link>, or a wider{" "}
-                <Link to="/treatments/non-surgical-facelift/" className="text-[#C9A050] underline underline-offset-4">lower-face balancing plan</Link>.
-              </p>
+            <div className="mt-6 text-[16px] leading-8 text-[#2a2a2a]">
+              <ExpandableSection
+                label="Read more"
+                collapseLabel="Show less"
+                preview={
+                  <p>
+                    Good masseter Botox is not judged only by a slimmer photograph. Patients often report fewer headaches, reduced morning jaw fatigue, less tooth pressure and a calmer bite. Cosmetically, the change should be progressive enough that people notice you look fresher or less heavy in the lower face, not that a treatment has been done.
+                  </p>
+                }
+              >
+                <div className="space-y-5">
+                  <p>
+                    Research on botulinum toxin for bruxism shows reduced bite force and symptom relief in selected patients. For hypertrophy, repeated cycles can reduce the cross-sectional size of the muscle. The clinical skill is knowing when to treat, how much to treat, and when not to over-treat, because a natural jaw still needs function and structure.
+                  </p>
+                  <p>
+                    CosmeDocs links masseter assessment with facial balance. Some patients need Botox only. Others need a combination with{" "}
+                    <Link to="/treatments/dermal-fillers/chin/" className="text-[#C9A050] underline underline-offset-4">chin filler</Link>,{" "}
+                    <Link to="/treatments/dermal-fillers/jawline/" className="text-[#C9A050] underline underline-offset-4">jawline filler</Link>, or a wider{" "}
+                    <Link to="/treatments/non-surgical-facelift/" className="text-[#C9A050] underline underline-offset-4">lower-face balancing plan</Link>.
+                  </p>
+                </div>
+              </ExpandableSection>
             </div>
+
           </div>
         </section>
 
