@@ -396,7 +396,7 @@ const SlideFlow = (p: SlideFlowProps) => {
       {/* Slide stage */}
       <section className="flex-1 flex items-stretch overflow-hidden">
         <div className="relative w-full max-w-[640px] xl:max-w-[720px] mx-auto px-5 md:px-10 lg:px-12 py-6 md:py-10">
-          {isClosed ? (
+          {p.isClosed ? (
             <div className="h-full flex items-center justify-center">
               <div className="text-center py-14 md:py-16 border border-white/10 rounded-3xl px-8">
                 <p className="text-white/60 text-[16px] md:text-[17px]">This study is now closed. Thank you to everyone who took part.</p>
