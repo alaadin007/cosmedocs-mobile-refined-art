@@ -97,6 +97,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Want lips that look like yours, only better? Ask me anything.",
     opener: "Hi — our doctor-led lip filler starts from £250 for 0.5ml. Are you after subtle hydration, definition, or a fuller shape? I'll match you to the right plan.",
     cta: "Find my perfect lip plan",
+    concerns: LIP_CONCERNS,
   },
   {
     match: /\/treatments\/dermal-fillers\/cheek|cheek-filler|midface/i,
@@ -104,6 +105,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Lifted cheeks without surgery — see if you're a candidate.",
     opener: "Hi — cheek filler is the #1 way to lift the midface without surgery. Would you like to know how much volume you'd need (1ml, 2ml or 4ml)?",
     cta: "Check my cheek plan",
+    concerns: CHEEK_CONCERNS,
   },
   {
     match: /\/treatments\/botox|anti-wrinkle/i,
@@ -111,6 +113,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Doctor-led Anti-Wrinkle from £175. Quick question?",
     opener: "Hi — our doctor-led Anti-Wrinkle Treatment starts at £175. Tell me your main concern (forehead, frown, crow's feet, or all three) and I'll suggest the best package.",
     cta: "Build my Botox plan",
+    concerns: ANTIWRINKLE_CONCERNS,
   },
   {
     match: /endolift|endolaser|laser-fibre/i,
@@ -125,6 +128,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Glassy, hydrated skin — without filler. Ask me about it.",
     opener: "Hi — Profhilo and polynucleotides regenerate skin from the inside. Would you like to know which suits your skin and the price difference?",
     cta: "Recommend my treatment",
+    concerns: SKIN_CONCERNS,
   },
   {
     match: /thread-lift|pdo-threads|mini-facelift|non-surgical-facelift/i,
@@ -132,6 +136,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Lift without surgery — see what's possible in 60 seconds.",
     opener: "Hi — thread lifts and HA makeovers give a real lift without surgery. Tell me your age and the area that bothers you most and I'll match you to the right protocol.",
     cta: "Plan my lift",
+    concerns: THREADS_CONCERNS,
   },
   {
     match: /chemical-peel|skin-specialist|facial/i,
