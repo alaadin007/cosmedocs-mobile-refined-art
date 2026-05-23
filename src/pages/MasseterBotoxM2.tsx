@@ -11,6 +11,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import ExpandableSection from "@/components/ui/expandable-section";
 import { generateSEOMetadata } from "@/utils/seo";
 import masseterAfter2Treatments from "@/assets/before-after/masseter-series/after-2-treatments.jpg";
 import masseterOneYearAfter3rd from "@/assets/before-after/masseter-series/one-year-after-3rd.jpg";
