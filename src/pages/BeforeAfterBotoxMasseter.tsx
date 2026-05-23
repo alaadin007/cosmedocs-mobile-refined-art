@@ -75,8 +75,9 @@ const schemaMarkup = {
       "@type": "ImageGallery",
       "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#gallery",
       name: "Masseter Botox Before and After Results",
+      headline: "Masseter Botox Before & After Gallery | Real Jawline Slimming Results",
       description:
-        "Real patient before and after photographs demonstrating jawline slimming and facial contouring achieved through masseter Botox treatment at CosmeDocs Harley Street.",
+        "Real patient before and after photographs demonstrating jawline slimming, square jaw reduction and facial contouring achieved through doctor-led masseter Botox treatment at CosmeDocs Harley Street, London.",
       url: "https://www.cosmedocs.com/before-after/botox/masseter/",
       numberOfItems: 6,
       isPartOf: {
@@ -87,16 +88,24 @@ const schemaMarkup = {
         "@type": "MedicalProcedure",
         name: "Masseter Botox",
         procedureType: "https://schema.org/NoninvasiveProcedure",
-        bodyLocation: "Masseter muscle, lower face",
-        followup: "Review appointment recommended",
+        bodyLocation: "Masseter muscle, lower face, jawline",
+        followup: "Review appointment recommended at 4–6 weeks",
       },
+      image: galleryImages.map((img, i) => ({
+        "@type": "ImageObject",
+        "@id": `https://www.cosmedocs.com/before-after/botox/masseter/#image-${i + 1}`,
+        url: `https://www.cosmedocs.com${typeof img.src === "string" ? img.src : ""}`,
+        caption: img.caption,
+        description: img.alt,
+      })),
     },
     {
       "@type": "WebPage",
       "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#page",
-      name: "Masseter Botox Before & After Results | Harley Street Clinic",
+      name: "Masseter Botox Before & After Gallery | Real Jawline Slimming Results | Harley Street",
+      headline: "Masseter Botox Before & After Gallery | Real Jawline Slimming Results",
       description:
-        "Real patient before and after results showing facial slimming with masseter Botox. Subtle, doctor-led treatment on Harley Street.",
+        "Real patient before and after photos showing jawline slimming, square jaw reduction and facial contouring with masseter Botox. Doctor-led treatment at CosmeDocs Harley Street, London.",
       url: "https://www.cosmedocs.com/before-after/botox/masseter/",
       isPartOf: {
         "@type": "WebSite",
@@ -105,6 +114,10 @@ const schemaMarkup = {
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: "https://www.cosmedocs.com/og-masseter-ba.jpg",
+      },
+      mainEntity: {
+        "@type": "ImageGallery",
+        "@id": "https://www.cosmedocs.com/before-after/botox/masseter/#gallery",
       },
       breadcrumb: {
         "@type": "BreadcrumbList",
