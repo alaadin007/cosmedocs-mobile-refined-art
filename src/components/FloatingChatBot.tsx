@@ -21,21 +21,75 @@ interface FloatingChatBotProps {
   onExternalOpenChange?: (open: boolean) => void;
 }
 
-// Page-specific sales prompts. First match wins.
-const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string }> = [
+type ConcernSeed = { id: string; label: string; emoji: string; bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox"; asksAge?: boolean };
+
+// Page-specific concern chips. Shown ABOVE the default global concerns when set.
+const MASSETER_CONCERNS: ConcernSeed[] = [
+  { id: "jaw-slim",     label: "Slim a wide/square jaw",         emoji: "📐", bucket: "Facial contouring" },
+  { id: "jaw-grind",    label: "Stop teeth grinding (bruxism)",  emoji: "🦷", bucket: "Medical Botox" },
+  { id: "jaw-tmj",      label: "TMJ pain / jaw clicking",        emoji: "🩺", bucket: "Medical Botox" },
+  { id: "jaw-headache", label: "Tension headaches from clenching", emoji: "💢", bucket: "Medical Botox" },
+  { id: "jaw-units",    label: "How many units do I need?",      emoji: "💉", bucket: "Medical Botox" },
+];
+
+const NOSE_CONCERNS: ConcernSeed[] = [
+  { id: "nose-bump",    label: "Smooth a dorsal bump",           emoji: "📏", bucket: "Facial contouring" },
+  { id: "nose-tip",     label: "Lift a drooping tip",            emoji: "⬆️", bucket: "Facial contouring" },
+  { id: "nose-profile", label: "Refine my side profile",         emoji: "🪞", bucket: "Facial contouring" },
+  { id: "nose-fill-vs-thread", label: "Filler vs PCL threads?",  emoji: "❓", bucket: "Facial contouring" },
+];
+
+const LIP_CONCERNS: ConcernSeed[] = [
+  { id: "lip-subtle",   label: "Subtle natural hydration (0.5ml)", emoji: "💧", bucket: "Facial contouring" },
+  { id: "lip-shape",    label: "Define shape & cupid's bow",     emoji: "💋", bucket: "Facial contouring" },
+  { id: "lip-volume",   label: "More volume (1ml)",              emoji: "🌹", bucket: "Facial contouring" },
+  { id: "lip-russian",  label: "Russian lift vs classic?",       emoji: "❓", bucket: "Facial contouring" },
+  { id: "lip-asym",     label: "Fix asymmetric / thin lips",     emoji: "⚖️", bucket: "Facial contouring" },
+];
+
+const ANTIWRINKLE_CONCERNS: ConcernSeed[] = [
+  { id: "aw-forehead",  label: "Forehead lines",                 emoji: "〰️", bucket: "Anti-ageing", asksAge: true },
+  { id: "aw-frown",     label: "Frown / 11 lines",               emoji: "😠", bucket: "Anti-ageing", asksAge: true },
+  { id: "aw-crows",     label: "Crow's feet",                    emoji: "👁️", bucket: "Anti-ageing", asksAge: true },
+  { id: "aw-bunny",     label: "Bunny lines on nose",            emoji: "🐰", bucket: "Anti-ageing" },
+  { id: "aw-all",       label: "All three areas (£175 +)",       emoji: "✨", bucket: "Anti-ageing", asksAge: true },
+];
+
+const CHEEK_CONCERNS: ConcernSeed[] = [
+  { id: "cheek-flat",   label: "Flat / hollow cheeks (1ml)",     emoji: "🍑", bucket: "Facial contouring", asksAge: true },
+  { id: "cheek-lift",   label: "Midface lift (2ml)",             emoji: "⬆️", bucket: "Facial contouring", asksAge: true },
+  { id: "cheek-restore",label: "Full restoration (4ml)",         emoji: "✨", bucket: "Facial contouring", asksAge: true },
+];
+
+const SKIN_CONCERNS: ConcernSeed[] = [
+  { id: "skin-glow",    label: "Glow & hydration (Profhilo)",    emoji: "💧", bucket: "Skin health" },
+  { id: "skin-poly",    label: "Repair with polynucleotides",    emoji: "🧬", bucket: "Skin health" },
+  { id: "skin-eyes",    label: "Under-eye dark circles",         emoji: "👁️", bucket: "Skin health" },
+  { id: "skin-tone",    label: "Pigmentation / melasma",         emoji: "🌿", bucket: "Skin health" },
+];
+
+const THREADS_CONCERNS: ConcernSeed[] = [
+  { id: "th-jowls",     label: "Lift jowls",                     emoji: "⬆️", bucket: "Anti-ageing", asksAge: true },
+  { id: "th-eyebrow",   label: "Brow lift",                      emoji: "👁️", bucket: "Anti-ageing", asksAge: true },
+  { id: "th-ha",        label: "8/11-point HA makeover",         emoji: "✨", bucket: "Facial contouring", asksAge: true },
+  { id: "th-cog-mono",  label: "Cog vs Mono threads?",           emoji: "❓", bucket: "Anti-ageing" },
+];
+const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
     topic: "non-surgical nose reshaping",
     teaser: "Curious how a 15-minute nose tweak could look on you?",
     opener: "Hi — I see you're exploring our non-surgical nose reshaping. Would you like a quick price guide, or shall I tell you whether you're better suited to filler (£450) or PCL threads (£950)?",
     cta: "Get my nose plan",
+    concerns: NOSE_CONCERNS,
   },
   {
-    match: /masseter|jaw-botox|teeth-grinding|bruxism/i,
+    match: /masseter|jaw-botox|teeth-grinding|bruxism|tmj/i,
     topic: "masseter Botox",
     teaser: "Jaw tension or a wider jaw? Two minutes and I can guide you.",
     opener: "Hi — masseter Botox is one of our most-requested treatments (£350 female / £400 male). Tell me: is your priority jaw slimming, teeth grinding, or both?",
     cta: "Tell me what I need",
+    concerns: MASSETER_CONCERNS,
   },
   {
     match: /\/treatments\/dermal-fillers\/lip|lip-filler/i,
@@ -43,6 +97,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Want lips that look like yours, only better? Ask me anything.",
     opener: "Hi — our doctor-led lip filler starts from £250 for 0.5ml. Are you after subtle hydration, definition, or a fuller shape? I'll match you to the right plan.",
     cta: "Find my perfect lip plan",
+    concerns: LIP_CONCERNS,
   },
   {
     match: /\/treatments\/dermal-fillers\/cheek|cheek-filler|midface/i,
@@ -50,6 +105,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Lifted cheeks without surgery — see if you're a candidate.",
     opener: "Hi — cheek filler is the #1 way to lift the midface without surgery. Would you like to know how much volume you'd need (1ml, 2ml or 4ml)?",
     cta: "Check my cheek plan",
+    concerns: CHEEK_CONCERNS,
   },
   {
     match: /\/treatments\/botox|anti-wrinkle/i,
@@ -57,6 +113,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Doctor-led Anti-Wrinkle from £175. Quick question?",
     opener: "Hi — our doctor-led Anti-Wrinkle Treatment starts at £175. Tell me your main concern (forehead, frown, crow's feet, or all three) and I'll suggest the best package.",
     cta: "Build my Botox plan",
+    concerns: ANTIWRINKLE_CONCERNS,
   },
   {
     match: /endolift|endolaser|laser-fibre/i,
@@ -71,6 +128,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Glassy, hydrated skin — without filler. Ask me about it.",
     opener: "Hi — Profhilo and polynucleotides regenerate skin from the inside. Would you like to know which suits your skin and the price difference?",
     cta: "Recommend my treatment",
+    concerns: SKIN_CONCERNS,
   },
   {
     match: /thread-lift|pdo-threads|mini-facelift|non-surgical-facelift/i,
@@ -78,6 +136,7 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Lift without surgery — see what's possible in 60 seconds.",
     opener: "Hi — thread lifts and HA makeovers give a real lift without surgery. Tell me your age and the area that bothers you most and I'll match you to the right protocol.",
     cta: "Plan my lift",
+    concerns: THREADS_CONCERNS,
   },
   {
     match: /chemical-peel|skin-specialist|facial/i,
@@ -573,13 +632,43 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
               {/* Plan picker — iOS-sized cards */}
               {planStep !== "closed" && (
                 <div className="px-5 pt-3 pb-2 border-t border-white/[0.06]">
-                  {planStep === "concern" && (
+                  {planStep === "concern" && (() => {
+                    const pageConcerns = pageConfig.concerns ?? [];
+                    const seenIds = new Set(pageConcerns.map((c) => c.id));
+                    const generalConcerns = QUICK_CONCERNS.filter((c) => !seenIds.has(c.id));
+                    return (
                     <>
-                      <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
-                        What's bothering you?
-                      </p>
+                      {pageConcerns.length > 0 && (
+                        <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
+                          About {pageConfig.topic} — what fits you?
+                        </p>
+                      )}
+                      {pageConcerns.length === 0 && (
+                        <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
+                          What's bothering you?
+                        </p>
+                      )}
                       <div className="grid grid-cols-1 gap-2 max-h-[45vh] overflow-y-auto pr-1 -mr-1">
-                        {QUICK_CONCERNS.map((c) => (
+                        {pageConcerns.map((c) => (
+                          <button
+                            key={c.id}
+                            onClick={() => {
+                              setPlanConcern(c);
+                              if (c.asksAge) setPlanStep("age");
+                              else submitPlan(c);
+                            }}
+                            className="flex items-center gap-3 text-left px-4 py-4 min-h-[56px] rounded-2xl bg-amber-400/[0.08] border border-amber-400/40 active:bg-amber-400/[0.16] hover:border-amber-400/60 text-white text-[17px] font-normal transition-colors"
+                          >
+                            <span className="text-2xl leading-none">{c.emoji}</span>
+                            <span className="flex-1">{c.label}</span>
+                          </button>
+                        ))}
+                        {pageConcerns.length > 0 && generalConcerns.length > 0 && (
+                          <p className="text-[11px] uppercase tracking-[0.22em] text-white/40 mt-3 mb-1 px-1">
+                            Or something else
+                          </p>
+                        )}
+                        {generalConcerns.map((c) => (
                           <button
                             key={c.id}
                             onClick={() => {
@@ -601,7 +690,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                         Skip — just chat
                       </button>
                     </>
-                  )}
+                    );
+                  })()}
+
                   {planStep === "age" && planConcern && (
                     <>
                       <p className="text-[12px] uppercase tracking-[0.22em] text-amber-400 mb-3 font-medium">
