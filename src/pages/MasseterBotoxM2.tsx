@@ -302,17 +302,27 @@ const MasseterBotoxM2 = () => {
             <h2 id="anatomy-heading">
               What masseter Botox <span className="text-[#C9A050]">actually changes</span>
             </h2>
-            <div className="mt-6 space-y-5 text-[16px] leading-8 text-[#2a2a2a]">
-              <p>
-                Masseter Botox, also called jaw Botox or jawline slimming Botox, uses botulinum toxin to reduce excessive contraction in the masseter muscle. This is not a filler treatment and it does not carve the jaw bone. It works by calming a powerful chewing muscle so that over time the muscle becomes less bulky.
-              </p>
-              <p>
-                The treatment is useful when lower-face width is muscular rather than skeletal. Patients often describe a square jaw, heavy jaw angle, morning jaw ache, tooth chipping, tension headaches, clenching, grinding or a feeling that the jaw is always switched on. In these cases, the medical and cosmetic aims are linked: reduce the muscle's force and the face can look softer whilst symptoms settle.
-              </p>
-              <p>
-                At CosmeDocs, assessment is doctor-led. We ask you to clench, palpate the strongest part of the muscle, compare both sides and judge whether the target is slimming, bruxism control, TMJ tension support, or a combination.
-              </p>
+            <div className="mt-6 text-[16px] leading-8 text-[#2a2a2a]">
+              <ExpandableSection
+                label="Read more"
+                collapseLabel="Show less"
+                preview={
+                  <p>
+                    Masseter Botox, also called jaw Botox or jawline slimming Botox, uses botulinum toxin to reduce excessive contraction in the masseter muscle. This is not a filler treatment and it does not carve the jaw bone. It works by calming a powerful chewing muscle so that over time the muscle becomes less bulky.
+                  </p>
+                }
+              >
+                <div className="space-y-5">
+                  <p>
+                    The treatment is useful when lower-face width is muscular rather than skeletal. Patients often describe a square jaw, heavy jaw angle, morning jaw ache, tooth chipping, tension headaches, clenching, grinding or a feeling that the jaw is always switched on. In these cases, the medical and cosmetic aims are linked: reduce the muscle's force and the face can look softer whilst symptoms settle.
+                  </p>
+                  <p>
+                    At CosmeDocs, assessment is doctor-led. We ask you to clench, palpate the strongest part of the muscle, compare both sides and judge whether the target is slimming, bruxism control, TMJ tension support, or a combination.
+                  </p>
+                </div>
+              </ExpandableSection>
             </div>
+
           </div>
         </section>
 
