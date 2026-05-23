@@ -98,19 +98,22 @@ const ResearchSurveyGate = () => {
       <AnimatePresence>
         {visible && !open && (
           <motion.div
-            initial={{ y: 80, opacity: 0 }}
+            initial={{ y: -60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 80, opacity: 0 }}
-            className="fixed bottom-4 right-3 z-[60] flex max-w-[calc(100vw-1.5rem)] items-center overflow-hidden rounded-full border border-[#C9A050]/40 bg-black shadow-lg sm:hidden"
+            exit={{ y: -60, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 240, damping: 26 }}
+            className="fixed left-1/2 -translate-x-1/2 z-[60] flex max-w-[calc(100vw-1.5rem)] items-center overflow-hidden rounded-full border border-[#C9A050]/40 bg-black shadow-lg sm:hidden"
+            style={{ top: "calc(env(safe-area-inset-top, 0px) + 68px)" }}
           >
-            <button onClick={dismiss} aria-label="Dismiss" className="shrink-0 pl-3 pr-2 py-2 text-white/60">
+            <button onClick={expand} className="flex min-w-0 items-center gap-2 pl-4 pr-2 py-2 text-sm text-white">
+              <Microscope className="h-4 w-4 shrink-0 text-[#C9A050]" />
+              <span className="truncate font-light">Research — please contribute</span>
+            </button>
+            <button onClick={dismiss} aria-label="Dismiss" className="shrink-0 pl-2 pr-3 py-2 text-white/60">
               <X className="h-4 w-4" />
             </button>
-            <button onClick={expand} className="flex min-w-0 items-center gap-2 pr-4 py-2 text-sm text-white">
-              <Microscope className="h-4 w-4 shrink-0 text-[#C9A050]" />
-              <span className="truncate font-light">Research — contribute</span>
-            </button>
           </motion.div>
+
         )}
       </AnimatePresence>
 
