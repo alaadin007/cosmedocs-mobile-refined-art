@@ -651,6 +651,8 @@ const App = () => {
                           {/* Botox standalone pages (kept active) */}
                           <Route path="/treatments/masseter-botox" element={<MasseterBotox />} />
                           <Route path="/treatments/masseter-botox/" element={<MasseterBotox />} />
+                          <Route path="/treatments/tmj-botox" element={<TMJBotox />} />
+                          <Route path="/treatments/tmj-botox/" element={<TMJBotox />} />
                           <Route path="/m2" element={<Navigate to="/treatments/masseter-botox/" replace />} />
                           <Route path="/m2/" element={<Navigate to="/treatments/masseter-botox/" replace />} />
                           <Route path="/treatments/brotox" element={<BroTox />} />
