@@ -81,13 +81,15 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     teaser: "Curious how a 15-minute nose tweak could look on you?",
     opener: "Hi — I see you're exploring our non-surgical nose reshaping. Would you like a quick price guide, or shall I tell you whether you're better suited to filler (£450) or PCL threads (£950)?",
     cta: "Get my nose plan",
+    concerns: NOSE_CONCERNS,
   },
   {
-    match: /masseter|jaw-botox|teeth-grinding|bruxism/i,
+    match: /masseter|jaw-botox|teeth-grinding|bruxism|tmj/i,
     topic: "masseter Botox",
     teaser: "Jaw tension or a wider jaw? Two minutes and I can guide you.",
     opener: "Hi — masseter Botox is one of our most-requested treatments (£350 female / £400 male). Tell me: is your priority jaw slimming, teeth grinding, or both?",
     cta: "Tell me what I need",
+    concerns: MASSETER_CONCERNS,
   },
   {
     match: /\/treatments\/dermal-fillers\/lip|lip-filler/i,
