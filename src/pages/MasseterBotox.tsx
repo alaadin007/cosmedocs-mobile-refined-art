@@ -147,7 +147,7 @@ const MasseterBotox = () => {
                 alternateName: ["Jaw Slimming Botox", "Masseter Reduction"],
                 description:
                   "Doctor-led masseter Botox for jaw slimming, bruxism, teeth grinding and TMJ tension at CosmeDocs Harley Street.",
-                url: "https://www.cosmedocs.com/m2/",
+                url: "https://www.cosmedocs.com/treatments/masseter-botox/",
                 procedureType: "NoninvasiveProcedure",
                 bodyLocation: "Masseter muscle, lower face",
                 howPerformed:
