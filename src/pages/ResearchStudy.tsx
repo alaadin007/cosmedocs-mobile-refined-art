@@ -69,7 +69,18 @@ const ResearchStudy = () => {
         .select("*")
         .eq("study_id", s.id)
         .order("question_order", { ascending: true });
-      setQuestions(((qs as any[]) || []) as Question[]);
+      // Normalise options: DB may store either string[] or {value,label,emoji}[]
+      const normalised = ((qs as any[]) || []).map(q => ({
+        ...q,
+        options: Array.isArray(q.options)
+          ? q.options.map((o: any) =>
+              typeof o === "string"
+                ? { value: o, label: o }
+                : { value: o.value ?? o.label, label: o.label ?? o.value, emoji: o.emoji }
+            )
+          : [],
+      })) as Question[];
+      setQuestions(normalised);
       setLoading(false);
     })();
   }, [slug]);
