@@ -315,9 +315,12 @@ export default function Home2Header() {
                                       key={item.link}
                                       to={item.link} 
                                       onClick={() => setIsTreatmentsOpen(false)}
-                                      className="text-sm text-white/80 hover:text-white cursor-pointer py-1.5 block transition-colors"
+                                      className="block py-1.5 cursor-pointer transition-colors group"
                                     >
-                                      {item.title}
+                                      <span className="text-sm text-white/80 group-hover:text-white transition-colors">{item.title}</span>
+                                      {item.subtitle && (
+                                        <span className="block italic font-serif text-[11px] text-[#C9A050]/75 mt-0.5 leading-tight">{item.subtitle}</span>
+                                      )}
                                     </Link>
                                   )
                                 ))}
