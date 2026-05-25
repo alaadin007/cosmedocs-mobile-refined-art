@@ -414,12 +414,29 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const submitPlan = (concern: Concern, age?: string) => {
     setPlanStep("closed");
     const lines = [
-      `Concern: ${concern.label} (${concern.bucket}).`,
+      `Patient is on the ${pageConfig.topic} page. Their concern: ${concern.label} (${concern.bucket}).`,
       age ? `Age: ${age}.` : null,
-      "Reply as Zephra — empathic, zone-based reasoning, 1–2 doctor-led options with price and rationale, one next step. Under 90 words.",
+      `Reply as Zephra — stay strictly on-topic for ${pageConfig.topic}. Empathic, doctor-led, 1–2 options with price and rationale, one next step. Under 80 words.`,
     ].filter(Boolean).join(" ");
-    const display = age ? `My concern: ${concern.label} · Age ${age}` : `My concern: ${concern.label}`;
+    const display = age ? `${concern.label} · ${age}` : concern.label;
     sendMessage(lines, display);
+  };
+
+  // Page-relevant follow-up chips shown after each AI reply.
+  const followUpChips = useMemo(() => {
+    if (isLoading) return [];
+    const last = messages[messages.length - 1];
+    if (!last || last.isUser || last.id === "1") return [];
+    const asked = new Set(messages.filter((m) => m.isUser).map((m) => m.text.toLowerCase()));
+    const pool = (pageConfig.concerns ?? []).filter((c) => !asked.has(c.label.toLowerCase()));
+    return pool.slice(0, 3);
+  }, [messages, pageConfig.concerns, isLoading]);
+
+  const sendChipMessage = (label: string) => {
+    sendMessage(
+      `Patient is on the ${pageConfig.topic} page. They asked: "${label}". Stay strictly on-topic. Under 80 words, doctor-led, include price if relevant, one next step.`,
+      label
+    );
   };
 
 
