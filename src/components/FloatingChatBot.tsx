@@ -797,54 +797,6 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
               )}
 
-              {/* Empty-state angle checklist — invites first capture */}
-              {attachedImages.length === 0 && (
-                <div className="px-5 pt-3">
-                  <button
-                    onClick={() => openPickerForAngle("front")}
-                    className="w-full p-3 rounded-2xl bg-white/[0.04] border border-dashed border-amber-400/30 active:bg-white/[0.06] text-left"
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <Camera className="h-4 w-4 text-amber-400" />
-                      <p className="text-[13px] text-white font-medium">Photo angles for accuracy</p>
-                      <span className="ml-auto text-[10px] text-white/45">optional</span>
-                    </div>
-                    <div className="grid grid-cols-5 gap-2">
-                      {PHOTO_ANGLES.map((angle) => {
-                        const Icon = angle.icon;
-                        return (
-                          <div key={angle.id} className="flex flex-col items-center text-center">
-                            <div className={`h-12 w-12 rounded-xl border border-dashed flex items-center justify-center ${
-                              angle.required ? "border-amber-400/50 bg-white/[0.03]" : "border-white/15 bg-white/[0.02]"
-                            }`}>
-                              <Icon className={`h-4 w-4 ${angle.required ? "text-amber-400" : "text-white/35"}`} />
-                            </div>
-                            <span className={`mt-1 text-[10px] leading-tight ${angle.required ? "text-white/70" : "text-white/40"}`}>
-                              {angle.label}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <p className="text-[11px] text-white/50 mt-2">
-                      Add 3–5 angles for the most accurate plan · front, left, right are key
-                    </p>
-                  </button>
-                </div>
-              )}
-
-              {/* Start-plan CTA */}
-              {planStep === "closed" && messages.length <= 2 && attachedImages.length === 0 && (
-                <div className="px-5 pt-3">
-                  <button
-                    onClick={openPlanPicker}
-                    disabled={isLoading}
-                    className="w-full rounded-full bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 py-4 min-h-[54px] text-[17px] font-semibold text-black active:opacity-90 disabled:opacity-60 shadow-lg shadow-amber-500/20"
-                  >
-                    Build my treatment plan
-                  </button>
-                </div>
-              )}
               </div>
 
               {/* iOS-style composer */}
