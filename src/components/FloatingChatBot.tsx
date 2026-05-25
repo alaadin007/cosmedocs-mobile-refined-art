@@ -630,6 +630,34 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                       </div>
                     </motion.div>
                   ))}
+                  {/* Inline page-relevant chips — shown under the opener and after each AI reply */}
+                  {!isLoading && (() => {
+                    const last = messages[messages.length - 1];
+                    const showOpenerChips = messages.length === 1 && (pageConfig.concerns?.length ?? 0) > 0;
+                    const chips = showOpenerChips ? (pageConfig.concerns ?? []) : followUpChips;
+                    if (chips.length === 0) return null;
+                    return (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex flex-wrap gap-2 pl-1"
+                      >
+                        {chips.map((c) => (
+                          <button
+                            key={c.id}
+                            onClick={() => {
+                              if (c.asksAge) { setPlanConcern(c); setPlanStep("age"); }
+                              else sendChipMessage(c.label);
+                            }}
+                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-amber-400/[0.08] border border-amber-400/40 active:bg-amber-400/20 text-white text-[14px] leading-tight"
+                          >
+                            <span>{c.emoji}</span>
+                            <span>{c.label}</span>
+                          </button>
+                        ))}
+                      </motion.div>
+                    );
+                  })()}
                   {isLoading && (
                     <div className="flex justify-start">
                       <div className="bg-white/[0.06] border border-white/10 rounded-[1.6rem] px-5 py-4">
