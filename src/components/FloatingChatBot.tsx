@@ -126,6 +126,14 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     concerns: ANTIWRINKLE_CONCERNS,
   },
   {
+    match: /endolaser-cellulite|cellulite/i,
+    topic: "Endolaser for cellulite & body contouring",
+    teaser: "Dimpling on thighs or arms? See how Endolaser smooths skin in one session.",
+    opener: "Hi — our dual-wavelength Endolaser melts fibrous bands under cellulite and tightens loose skin in a single doctor-led session. Tell me which area bothers you most — thighs, buttocks, arms, tummy or knees — and I'll outline expected results, sessions and price.",
+    cta: "Plan my Endolaser session",
+    concerns: CELLULITE_CONCERNS,
+  },
+  {
     match: /endolift|endolaser|laser-fibre/i,
     topic: "Endolift / Endolaser",
     teaser: "One-session lift, no scars — want the details?",
