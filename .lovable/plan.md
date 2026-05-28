@@ -1,93 +1,90 @@
-# Plan — Homepage carousels, Jawline page, Treatments hub
+## 1. Fix the unreadable black gallery box (Masseter page)
 
-## 1. Homepage (`src/pages/Home3.tsx`) — card edits
+In `src/pages/MasseterBotox.tsx` (line 602–604) the "View female and male cases in the complete gallery" copy sits on a `bg-[#0a0a0a]` tile with `text-white/70` at only 13px — on a light surrounding card it visually disappears.
 
-### 1a. Remove "Cosmetic Units of the Face" first card from the anti-ageing fillers row
-- Delete the first card object (lines ~270–292) inside the `fillers-anti-ageing` category. The "Anatomy / All volume & filler areas" `OverviewCard` (auto-prepended at line 1465) already covers that intro, so the row will now lead with **Non-Surgical Facelift → HA Makeover → Cheek → Jowl/Jawline …** as requested.
+Fix:
+- Bump text to `text-white` (full opacity), size to `text-[14px]` / `font-medium`, add a small gold `Sparkles` or `Images` icon above.
+- Make the tile a **link** to `/before-after/botox/masseter/` so it is tappable (currently it's a dead div), with subtle gold border `border border-[#C9A050]/40` and hover lift.
 
-### 1b. "Swiss science. French artistry. American innovation." — convert to a flippable end-of-row slide
-- The block currently rendered as a separate banner under the row (lines 1498–1534) will be removed.
-- Append a new card object to the **end** of `fillers-anti-ageing.cards` array, sized identically to the other flip cards (it will pick up the same `widthCls`/`heightCls` from line 1477–1479 because it has a `flip` prop).
-- Front of card: serif heading "Swiss science. French artistry. American innovation.", small Teoxane award thumbnail, eyebrow "Pedigree · Product Story".
-- Back of card (flip): the existing copy ("We use only top-tier hyaluronic acid…"), the 6 brand chips (Teoxane / Restylane / Filorga / Vivacy / Juvéderm / Belotero) and the Q2 2017 Outstanding Clinic Award line.
-- Result: it lives in the carousel as the closing slide, flippable like the others.
+No other content changes on the desktop/main page.
 
-### 1c. Rename and re-scope the "Facial Contouring" row → "Non-Surgical Facelift & Body Contouring"
-- Update the `facial-contouring` category (line 454):
-  - `eyebrow`: `"Non-Surgical Facelift & Body Contouring"`
-  - `title`: `"Lift. Contour. Redefine."`
-  - `copy`: short line about lifting and re-shaping without surgery — facelift options + body sculpting under the Endo family.
-  - `cta`: keep "Mini Facelifts hub" → `/treatments/non-surgical-facelift/`.
+## 2. New `/m2` — iOS-app-style Masseter mobile page
 
-### 1d. Move Chin / Non-Surgical Nose / Jawline Definition into the anti-ageing fillers row
-- Cut the three cards (Chin Filler, Non-Surgical Nose, Jawline Definition — lines 461–502) out of `facial-contouring.cards` and append them to `fillers-anti-ageing.cards` (after Lip Filler, before the new Swiss/French/American flip card from 1b).
-- Result: the anti-ageing fillers row now covers both "anti-ageing" and "facial contouring" intent in one carousel.
+A brand-new route, **mobile only**, that re-presents *every* section of `MasseterBotox.tsx` as a single-screen "app shell" with deep-link sections. Nothing from the source page is dropped — only re-organised.
 
-### 1e. Repopulate the freed Non-Surgical Facelift & Body Contouring row
-The new `facial-contouring.cards` becomes a curated lift/contouring set (all flippable, same card pattern):
-1. **Nefertiti Lift** → `/treatments/nefertiti-lift/`
-2. **PDO Threads** → `/treatments/pdo-threads/`
-3. **HA Makeover** → `/treatments/ha-makeover/` (re-used; lifts the lower face from above)
-4. **Endolaser Fibre Lift** → `/treatments/endolaser/` (new badge "Now featured")
-5. **Endolaser Fat Reduction & Skin Tightening** → `/treatments/endolaser-body/` *(new page — see §4)*
-6. **Non-Surgical Facelift overview** (existing `nonSurgicalFaceliftCard`) — keep as anchor.
+### Route & file
+- Route: `/m2` (staging) added in `src/App.tsx`.
+- File: `src/pages/MasseterM2.tsx`.
+- Desktop visitors see a polite "Open on your phone" notice + QR/link — page is designed exclusively for ≤768px.
+- Hides global Header/Footer for a true app feel (wrapper class `app-shell` + conditional in `App.tsx` based on route, same pattern already used for other minimal pages).
 
-Each card gets a short flip back written in the same minimal voice as the existing cards.
+### Visual concept — "Face Compass"
+A single hero canvas with a **centred portrait of a sculpted lower face** (AI-generated, dark luxury, gold rim-light, on `#0a0a0a`). Around it, **8 circular gold-rimmed icon nodes** orbit the face like an iOS home screen / Apple Watch app launcher. Each node = a section of the original page. Tapping a node slides up a full-screen sheet (iOS modal style) containing that section's content; a chevron-down or swipe dismisses back to the compass.
 
----
+```text
+        ┌───────────────────────────┐
+        │   COSMEDOCS · Masseter    │  ← slim status bar (gold dot, time)
+        │                           │
+        │   ◐  ◐         ◐  ◐       │  ← orbiting nodes
+        │      ╲   ╱               │
+        │       FACE               │  ← centred portrait, gold ring
+        │      ╱   ╲               │
+        │   ◐  ◐         ◐  ◐       │
+        │                           │
+        │  ●●●●●● segmented dots   │  ← progress / "currently viewing"
+        │  [ Book consultation ]    │  ← sticky gold CTA pill
+        └───────────────────────────┘
+```
 
-## 2. Jawline Filler page (`src/pages/JawlineFiller.tsx`)
+### Nodes (sections mapped from MasseterBotox.tsx)
+1. **Overview** — hero intro + "At a glance" stats (duration, lasts, recovery).
+2. **Why** — cosmetic + medical dual-intent explainer.
+3. **Bruxism** — clinical/medical framing (square-jaw, grinding, headaches).
+4. **Procedure** — `TreatmentStepper` steps, condensed.
+5. **Results** — timeline accordion (week 1 / 2 / 4–6 months).
+6. **Before & After** — swipeable gallery of real patient photos (links into `/before-after/botox/masseter/`).
+7. **Pricing** — £350 + complex cases card, "includes consultation".
+8. **Reviews** — Amara T + carousel of testimonials.
+9. **FAQ** — accordion.
+10. **Book** — sticky always-visible gold CTA opening Acuity link.
 
-### 2a. Mobile hero image
-- The jaw illustration block (lines 209–229) is `hidden lg:block`, so on mobile the hero is text-only and reads flat.
-- Restructure the hero `flex` row into a responsive 2-column layout: text on top on mobile, illustration below it, both visible. Use `flex-col lg:flex-row` and remove `hidden lg:block` from the illustration (smaller size on mobile, e.g. `w-[200px] h-[220px] mx-auto lg:w-[280px] lg:h-[320px]`).
-- Keep the gold radial glow + float animation; just unhide it on small screens.
+(10 nodes — render as 4 around top of face, 4 around bottom, plus Overview pinned top-centre and Book as sticky bar.)
 
-### 2b. Endolaser cross-link block
-- Add an `<EndolaserSpotlight variant="inline" />` (component already exists at `src/components/EndolaserSpotlight.tsx`) inside the main column, positioned just after the "How Long Do Results Last?" or "Suitable Candidates" section.
-- Wrap it with one short paragraph framing the intent: *"If your concern is laxity rather than missing definition, lifting may serve you better than filler — see the Laser Fibre Lift."* This guides patients who don't actually need volume.
+### Interaction & motion (Framer Motion)
+- Nodes fade + scale in on mount with a 60ms stagger, gentle float loop.
+- Tap → node morphs into the sheet's header dot (`layoutId`), sheet slides up from bottom with spring (damping 28, stiffness 320), background portrait blurs + dims.
+- Swipe down or tap chevron → reverse animation back to compass.
+- Light haptic-style scale press (`whileTap: 0.94`).
+- Section progress dots highlight which sheet was last viewed.
 
----
+### Style tokens (locked to brand)
+- Background `#0a0a0a` with subtle radial gold glow behind portrait.
+- Gold `#C9A050`, rings `border-[#C9A050]/60`, sheet surface `bg-[#111]/95 backdrop-blur-xl`.
+- Typography: existing site stack; section titles in serif display, body in sans.
+- System-font feel: rounded-3xl tiles, generous safe-area padding (`env(safe-area-inset-*)`).
 
-## 3. `/treatments` hub (`src/pages/TreatmentsHub.tsx`)
+### Components (new, all in `src/pages/m2/`)
+- `MasseterM2.tsx` — page shell + state for active sheet.
+- `FaceCompass.tsx` — portrait + orbiting nodes (uses CSS transforms for radial placement).
+- `AppSheet.tsx` — reusable bottom-sheet with drag-to-dismiss.
+- `sections/` — one file per section pulling copy/data from the same constants currently inline in `MasseterBotox.tsx` (extract to `src/data/masseterContent.ts` so both pages share one source of truth; no copy loss).
 
-### 3a. Refresh the right-side accordions
-- Audit the `categories` data (line 20) so every current treatment route is represented in the correct accordion (Botox Aesthetic, Botox Medical, Dermal Fillers, Skin Rejuvenation, Lasers, Surgical, etc.) — add any missing routes (Endolaser, Endolift, Anti-Wrinkle Treatment, Anti-Wrinkle Injections, Anti-Ageing Injections, Harley Street Injectables, HA Makeover, Polynucleotides, Profhilo, Exosomes, PDO Threads, Nefertiti, Bruxism, etc.).
+### Assets
+- One new AI-generated portrait `src/assets/m2-masseter-portrait.jpg` (1024×1280, dark luxury, no text).
+- Reuses existing before/after images already imported in MasseterBotox.
 
-### 3b. Endolaser highlight
-- Add a small "Now featured" gold ring + Sparkles icon next to the **Endolaser** entry inside the Lasers accordion (and at the top of the Dermal Fillers / Mini Facelifts accordion as a cross-promo row).
+### SEO / safety
+- `<meta name="robots" content="noindex">` on `/m2` while staging.
+- Canonical points to `/treatments/botox/masseter/` so it doesn't compete.
+- No sitemap entry.
 
-### 3c. Polynucleotides "Signature Course" callout (not a discount badge)
-- Inside the Skin Rejuvenation accordion, add a refined gold-bordered card under the Polynucleotides entry:
-  - Heading: **"Polynucleotides — Signature Course"**
-  - Body: "A considered three-session protocol for face & eyes — DNA-level repair across the periorbital and full-face zones. Investment £950."
-  - Tone is editorial / luxury, never "deal" or "offer". CTA → `/treatments/polynucleotides/`.
-
----
-
-## 4. New page: Endolaser Body (Fat Reduction & Skin Tightening)
-
-- Create `src/pages/EndolaserBody.tsx` styled like the existing Endolaser dark-luxury template (gold #C9A050 on black).
-- Helmet: title, description, canonical `/treatments/endolaser-body/`, MedicalProcedure JSON-LD, BreadcrumbList, FAQPage.
-- Content sections: how the 1470 nm fibre tightens skin and emulsifies adipose tissue, suitable areas (jowls, sub-mental, flanks, inner thigh, knees, bra-line), candidacy, downtime, lead-trainer doctor-led positioning, CQC partner disclaimer, pricing tier, FAQs.
-- Wire route in `src/App.tsx` (lazy import + route entry) and add URL to `public/sitemap-treatments.xml`.
-
----
-
-## 5. SEO / data integrity
-
-- Update `<Helmet>` titles/descriptions on Home3, JawlineFiller and TreatmentsHub if changed copy materially affects the H1/intro.
-- Re-check the `Mini Facelifts` link strategy in memory (`mem://content/mini-facelifts-strategy-hub`) — the new "Non-Surgical Facelift & Body Contouring" row should funnel into `/treatments/non-surgical-facelift/`.
-- Keep all copy in British English; preserve the Cosmedocs voice ("invisible art", "bold, natural, always your way").
-- No keyword stuffing. No hidden `sr-only` blocks (per visible-content SEO policy).
-
----
+### Out of scope
+- No changes to the main masseter page beyond the black-box readability fix.
+- No backend, no new data tables, no language variants.
 
 ## Files touched
-- **Edited**: `src/pages/Home3.tsx`, `src/pages/JawlineFiller.tsx`, `src/pages/TreatmentsHub.tsx`, `src/App.tsx`, `public/sitemap-treatments.xml`
-- **Created**: `src/pages/EndolaserBody.tsx`
-
-## Open questions (low-impact, can default if unanswered)
-1. **Endolaser Body URL** — confirm `/treatments/endolaser-body/` is fine (alternatives: `/treatments/endolaser-fat-tightening/`).
-2. **Polynucleotides £950 course** — should the price show on the `/treatments/polynucleotides/` page itself too, or only on the hub? Default: add a discreet "Signature Course · £950" line on the Polynucleotides page.
-3. **Nefertiti Lift card** — `/treatments/nefertiti-lift/` route doesn't yet exist; should I create it as a new page or temporarily link it to the existing Trap Botox page? Default: create a small dedicated page in the same dark-luxury style.
+- `src/pages/MasseterBotox.tsx` — readability fix only (lines 602–604).
+- `src/App.tsx` — register `/m2` route, suppress global chrome for it.
+- `src/data/masseterContent.ts` — new, shared content constants.
+- `src/pages/MasseterM2.tsx` + `src/pages/m2/FaceCompass.tsx`, `AppSheet.tsx`, `sections/*.tsx` — new.
+- `src/assets/m2-masseter-portrait.jpg` — new generated asset.
