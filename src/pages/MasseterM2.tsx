@@ -212,8 +212,9 @@ function Compass({ onPick }: { onPick: (id: SectionId) => void }) {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden border border-[#C9A050]/40"
-        style={{
-          width: "52%",
+          width: "56%",
+          height: "56%",
+
           height: "52%",
           boxShadow: "0 0 60px rgba(201,160,80,0.25), inset 0 0 30px rgba(0,0,0,0.6)",
         }}
