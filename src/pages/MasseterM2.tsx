@@ -259,9 +259,10 @@ function Compass({ onPick }: { onPick: (id: SectionId) => void }) {
               >
                 <Icon className="w-[18px] h-[18px] text-[#C9A050]" />
               </span>
-              <span className="text-[9.5px] uppercase tracking-[0.14em] text-white/65">
+              <span className="text-[9px] uppercase tracking-[0.12em] text-white/65 whitespace-nowrap">
                 {n.label}
               </span>
+
             </span>
           </motion.button>
         );
