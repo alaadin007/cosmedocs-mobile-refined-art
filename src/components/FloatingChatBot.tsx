@@ -21,7 +21,7 @@ interface FloatingChatBotProps {
   onExternalOpenChange?: (open: boolean) => void;
 }
 
-type ConcernSeed = { id: string; label: string; emoji: string; bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox"; asksAge?: boolean };
+type ConcernSeed = { id: string; label: string; emoji: string; bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox" | "Body contouring"; asksAge?: boolean };
 
 // Page-specific concern chips. Shown ABOVE the default global concerns when set.
 const MASSETER_CONCERNS: ConcernSeed[] = [
