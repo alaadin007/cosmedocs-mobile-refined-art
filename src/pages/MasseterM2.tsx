@@ -96,9 +96,9 @@ const RING = NODES.map((n, i) => ({
 
 const BOOK_URL = "https://med.as.me/harleystreet";
 
-const BOOK_URL = "https://med.as.me/harleystreet";
-
 const SECTION_IDS: SectionId[] = NODES.map((n) => n.id);
+
+export default function MasseterM2() {
 
   const [active, setActive] = useState<SectionId | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
