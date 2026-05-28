@@ -190,7 +190,7 @@ type Concern = {
   id: string;
   label: string;
   emoji: string;
-  bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox";
+  bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox" | "Body contouring";
   asksAge?: boolean;
 };
 const QUICK_CONCERNS: Concern[] = [
