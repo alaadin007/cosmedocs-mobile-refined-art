@@ -599,9 +599,17 @@ const MasseterBotox = () => {
                   className="rounded-2xl aspect-[4/5] object-cover w-full"
                   loading="lazy"
                 />
-                <div className="rounded-2xl aspect-[4/5] bg-[#0a0a0a] text-white grid place-items-center p-4">
-                  <p className="text-[13px] text-white/70 text-center">View female and male cases in the complete gallery.</p>
-                </div>
+                <Link
+                  to="/before-after/botox/masseter/"
+                  className="rounded-2xl aspect-[4/5] bg-[#0a0a0a] border border-[#C9A050]/40 text-white grid place-items-center p-4 hover:border-[#C9A050] hover:-translate-y-0.5 transition"
+                >
+                  <span className="flex flex-col items-center gap-2 text-center">
+                    <Sparkles className="w-5 h-5 text-[#C9A050]" />
+                    <span className="text-[14px] font-medium text-white leading-snug">
+                      View female & male cases in the complete gallery.
+                    </span>
+                  </span>
+                </Link>
                 <Link
                   to="/before-after/botox/masseter/"
                   className="rounded-2xl aspect-[4/5] bg-[#C9A050] text-black grid place-items-center p-4 font-semibold text-[15px] hover:bg-[#b89345] transition"
