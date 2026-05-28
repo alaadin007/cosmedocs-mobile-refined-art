@@ -74,6 +74,16 @@ const THREADS_CONCERNS: ConcernSeed[] = [
   { id: "th-ha",        label: "8/11-point HA makeover",         emoji: "✨", bucket: "Facial contouring", asksAge: true },
   { id: "th-cog-mono",  label: "Cog vs Mono threads?",           emoji: "❓", bucket: "Anti-ageing" },
 ];
+
+const CELLULITE_CONCERNS: ConcernSeed[] = [
+  { id: "cell-thighs",   label: "Dimpling on thighs",             emoji: "🦵", bucket: "Body contouring" },
+  { id: "cell-buttocks", label: "Cellulite on buttocks",          emoji: "🍑", bucket: "Body contouring" },
+  { id: "cell-arms",     label: "Loose skin on upper arms",       emoji: "💪", bucket: "Body contouring" },
+  { id: "cell-tummy",    label: "Tummy laxity post-pregnancy",    emoji: "🤱", bucket: "Body contouring" },
+  { id: "cell-knees",    label: "Crepey skin above knees",        emoji: "🦴", bucket: "Body contouring" },
+  { id: "cell-sessions", label: "How many sessions will I need?", emoji: "📅", bucket: "Body contouring" },
+  { id: "cell-vs",       label: "Endolaser vs radiofrequency?",   emoji: "❓", bucket: "Body contouring" },
+];
 const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
