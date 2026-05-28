@@ -233,7 +233,8 @@ function Compass({ onPick }: { onPick: (id: SectionId) => void }) {
         aria-hidden
       />
 
-      {/* nodes */}
+        const r = 41; // % from centre
+
       {RING.map((n, i) => {
         const rad = (n.angle * Math.PI) / 180;
         const r = 46; // % from centre
