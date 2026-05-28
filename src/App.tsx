@@ -37,6 +37,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
 const Home3 = lazy(() => import("./pages/Home3"));
 const TestApp = lazy(() => import("./pages/TestApp"));
+const MasseterM2 = lazy(() => import("./pages/MasseterM2"));
 
 const Prices = lazy(() => import("./pages/Prices"));
 const TreatmentsHub = lazy(() => import("./pages/TreatmentsHub"));
