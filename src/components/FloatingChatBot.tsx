@@ -21,7 +21,7 @@ interface FloatingChatBotProps {
   onExternalOpenChange?: (open: boolean) => void;
 }
 
-type ConcernSeed = { id: string; label: string; emoji: string; bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox"; asksAge?: boolean };
+type ConcernSeed = { id: string; label: string; emoji: string; bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox" | "Body contouring"; asksAge?: boolean };
 
 // Page-specific concern chips. Shown ABOVE the default global concerns when set.
 const MASSETER_CONCERNS: ConcernSeed[] = [
@@ -74,6 +74,16 @@ const THREADS_CONCERNS: ConcernSeed[] = [
   { id: "th-ha",        label: "8/11-point HA makeover",         emoji: "✨", bucket: "Facial contouring", asksAge: true },
   { id: "th-cog-mono",  label: "Cog vs Mono threads?",           emoji: "❓", bucket: "Anti-ageing" },
 ];
+
+const CELLULITE_CONCERNS: ConcernSeed[] = [
+  { id: "cell-thighs",   label: "Dimpling on thighs",             emoji: "🦵", bucket: "Body contouring" },
+  { id: "cell-buttocks", label: "Cellulite on buttocks",          emoji: "🍑", bucket: "Body contouring" },
+  { id: "cell-arms",     label: "Loose skin on upper arms",       emoji: "💪", bucket: "Body contouring" },
+  { id: "cell-tummy",    label: "Tummy laxity post-pregnancy",    emoji: "🤱", bucket: "Body contouring" },
+  { id: "cell-knees",    label: "Crepey skin above knees",        emoji: "🦴", bucket: "Body contouring" },
+  { id: "cell-sessions", label: "How many sessions will I need?", emoji: "📅", bucket: "Body contouring" },
+  { id: "cell-vs",       label: "Endolaser vs radiofrequency?",   emoji: "❓", bucket: "Body contouring" },
+];
 const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
@@ -114,6 +124,14 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
     opener: "Hi — our doctor-led Anti-Wrinkle Treatment starts at £175. Tell me your main concern (forehead, frown, crow's feet, or all three) and I'll suggest the best package.",
     cta: "Build my Botox plan",
     concerns: ANTIWRINKLE_CONCERNS,
+  },
+  {
+    match: /endolaser-cellulite|cellulite/i,
+    topic: "Endolaser for cellulite & body contouring",
+    teaser: "Dimpling on thighs or arms? See how Endolaser smooths skin in one session.",
+    opener: "Hi — our dual-wavelength Endolaser melts fibrous bands under cellulite and tightens loose skin in a single doctor-led session. Tell me which area bothers you most — thighs, buttocks, arms, tummy or knees — and I'll outline expected results, sessions and price.",
+    cta: "Plan my Endolaser session",
+    concerns: CELLULITE_CONCERNS,
   },
   {
     match: /endolift|endolaser|laser-fibre/i,
@@ -180,7 +198,7 @@ type Concern = {
   id: string;
   label: string;
   emoji: string;
-  bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox";
+  bucket: "Anti-ageing" | "Facial contouring" | "Skin health" | "Medical Botox" | "Body contouring";
   asksAge?: boolean;
 };
 const QUICK_CONCERNS: Concern[] = [
