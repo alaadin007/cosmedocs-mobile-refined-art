@@ -390,6 +390,11 @@ const App = () => {
                       <TestApp />
                     </Suspense>
                   } />
+                  <Route path="/m2" element={
+                    <Suspense fallback={<div className="fixed inset-0 bg-[#0a0a0a]" />}>
+                      <MasseterM2 />
+                    </Suspense>
+                  } />
                   <Route path="/botox2" element={<Navigate to="/treatments/botox/" replace />} />
                   <Route path="/botox-paris" element={
                     <Suspense fallback={<PageLoader />}>
