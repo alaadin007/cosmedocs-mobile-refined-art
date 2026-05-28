@@ -1,90 +1,42 @@
-## 1. Fix the unreadable black gallery box (Masseter page)
+## What's wrong now
 
-In `src/pages/MasseterBotox.tsx` (line 602–604) the "View female and male cases in the complete gallery" copy sits on a `bg-[#0a0a0a]` tile with `text-white/70` at only 13px — on a light surrounding card it visually disappears.
+Looking at your screenshot, two alignment issues on `/m2`:
 
-Fix:
-- Bump text to `text-white` (full opacity), size to `text-[14px]` / `font-medium`, add a small gold `Sparkles` or `Images` icon above.
-- Make the tile a **link** to `/before-after/botox/masseter/` so it is tappable (currently it's a dead div), with subtle gold border `border border-[#C9A050]/40` and hover lift.
+1. **Portrait sits off-centre** — it's pushed down-right and overlaps the Procedure / Stethoscope nodes, while Reviews/FAQ float in empty space on the left.
+2. **Right-side nodes get clipped** — "Procedure" and the stethoscope icon are cut by the screen edge because the orbit radius (`r = 46%`) is too large for a 92vw container on a 402px viewport.
 
-No other content changes on the desktop/main page.
+Root cause: the compass container is `min(92vw, 420px)` but nodes are absolutely positioned at 46% from centre with a 48px icon + label, so the icon's right edge lands beyond the container on narrow phones. The portrait is fine geometrically — it just *looks* off because the clipped right nodes break visual symmetry.
 
-## 2. New `/m2` — iOS-app-style Masseter mobile page
+## Fix 1 — Alignment
 
-A brand-new route, **mobile only**, that re-presents *every* section of `MasseterBotox.tsx` as a single-screen "app shell" with deep-link sections. Nothing from the source page is dropped — only re-organised.
+- Shrink container to `min(86vw, 380px)` and **reduce orbit radius** from `46%` → `41%` so all 9 nodes sit fully inside the visible canvas with breathing room.
+- Slightly enlarge portrait from `52%` → `56%` so it reads as the clear centre of gravity.
+- Add `overflow-visible` safety + ensure labels use `whitespace-nowrap` with `text-align:center` and a fixed `min-width` so "BEFORE/AFTER" and "PROCEDURE" don't wrap or shove.
+- Pull the whole compass up slightly (`mt-2` → `mt-1`) and tighten title spacing so nothing collides with the sticky Book CTA at the bottom on 716px-tall viewports.
 
-### Route & file
-- Route: `/m2` (staging) added in `src/App.tsx`.
-- File: `src/pages/MasseterM2.tsx`.
-- Desktop visitors see a polite "Open on your phone" notice + QR/link — page is designed exclusively for ≤768px.
-- Hides global Header/Footer for a true app feel (wrapper class `app-shell` + conditional in `App.tsx` based on route, same pattern already used for other minimal pages).
+## Fix 2 — Glide through sections (Next / Previous)
 
-### Visual concept — "Face Compass"
-A single hero canvas with a **centred portrait of a sculpted lower face** (AI-generated, dark luxury, gold rim-light, on `#0a0a0a`). Around it, **8 circular gold-rimmed icon nodes** orbit the face like an iOS home screen / Apple Watch app launcher. Each node = a section of the original page. Tapping a node slides up a full-screen sheet (iOS modal style) containing that section's content; a chevron-down or swipe dismisses back to the compass.
+Add a **persistent navigation bar inside every sheet** so once a user opens any section they can swipe through all 9 without returning to the compass.
 
-```text
-        ┌───────────────────────────┐
-        │   COSMEDOCS · Masseter    │  ← slim status bar (gold dot, time)
-        │                           │
-        │   ◐  ◐         ◐  ◐       │  ← orbiting nodes
-        │      ╲   ╱               │
-        │       FACE               │  ← centred portrait, gold ring
-        │      ╱   ╲               │
-        │   ◐  ◐         ◐  ◐       │
-        │                           │
-        │  ●●●●●● segmented dots   │  ← progress / "currently viewing"
-        │  [ Book consultation ]    │  ← sticky gold CTA pill
-        └───────────────────────────┘
+Inside `Sheet.tsx`, above the Book CTA footer, add a thin row:
+
+```
+[ ‹ Previous · Why ]              [ Procedure · Next › ]
 ```
 
-### Nodes (sections mapped from MasseterBotox.tsx)
-1. **Overview** — hero intro + "At a glance" stats (duration, lasts, recovery).
-2. **Why** — cosmetic + medical dual-intent explainer.
-3. **Bruxism** — clinical/medical framing (square-jaw, grinding, headaches).
-4. **Procedure** — `TreatmentStepper` steps, condensed.
-5. **Results** — timeline accordion (week 1 / 2 / 4–6 months).
-6. **Before & After** — swipeable gallery of real patient photos (links into `/before-after/botox/masseter/`).
-7. **Pricing** — £350 + complex cases card, "includes consultation".
-8. **Reviews** — Amara T + carousel of testimonials.
-9. **FAQ** — accordion.
-10. **Book** — sticky always-visible gold CTA opening Acuity link.
+- Both buttons are gold-outlined pills, full-width split 50/50.
+- Tapping advances `active` to the next/prev `SectionId` in the `NODES` array (wrap-around: FAQ → Overview, Overview → FAQ).
+- The sheet content **cross-fades + slides horizontally** (40px) using framer-motion `AnimatePresence mode="wait"` keyed on `id`, so it feels like swiping through app cards rather than closing/reopening.
+- Also enable **horizontal drag-to-next** on the sheet body: `drag="x"`, threshold 80px → triggers same next/prev handler. Vertical drag-to-close stays as-is.
+- Keep the existing top-right `X` so users can still return to the compass at any time.
+- A tiny **progress dots row** (9 dots, current in gold) sits just under the sheet header so users know where they are in the journey.
 
-(10 nodes — render as 4 around top of face, 4 around bottom, plus Overview pinned top-centre and Book as sticky bar.)
+### State change
 
-### Interaction & motion (Framer Motion)
-- Nodes fade + scale in on mount with a 60ms stagger, gentle float loop.
-- Tap → node morphs into the sheet's header dot (`layoutId`), sheet slides up from bottom with spring (damping 28, stiffness 320), background portrait blurs + dims.
-- Swipe down or tap chevron → reverse animation back to compass.
-- Light haptic-style scale press (`whileTap: 0.94`).
-- Section progress dots highlight which sheet was last viewed.
-
-### Style tokens (locked to brand)
-- Background `#0a0a0a` with subtle radial gold glow behind portrait.
-- Gold `#C9A050`, rings `border-[#C9A050]/60`, sheet surface `bg-[#111]/95 backdrop-blur-xl`.
-- Typography: existing site stack; section titles in serif display, body in sans.
-- System-font feel: rounded-3xl tiles, generous safe-area padding (`env(safe-area-inset-*)`).
-
-### Components (new, all in `src/pages/m2/`)
-- `MasseterM2.tsx` — page shell + state for active sheet.
-- `FaceCompass.tsx` — portrait + orbiting nodes (uses CSS transforms for radial placement).
-- `AppSheet.tsx` — reusable bottom-sheet with drag-to-dismiss.
-- `sections/` — one file per section pulling copy/data from the same constants currently inline in `MasseterBotox.tsx` (extract to `src/data/masseterContent.ts` so both pages share one source of truth; no copy loss).
-
-### Assets
-- One new AI-generated portrait `src/assets/m2-masseter-portrait.jpg` (1024×1280, dark luxury, no text).
-- Reuses existing before/after images already imported in MasseterBotox.
-
-### SEO / safety
-- `<meta name="robots" content="noindex">` on `/m2` while staging.
-- Canonical points to `/treatments/botox/masseter/` so it doesn't compete.
-- No sitemap entry.
-
-### Out of scope
-- No changes to the main masseter page beyond the black-box readability fix.
-- No backend, no new data tables, no language variants.
+Lift the next/prev handlers into `MasseterM2` (parent owns `active`), pass `onNext` / `onPrev` / `index` / `total` into `Sheet`. No new files.
 
 ## Files touched
-- `src/pages/MasseterBotox.tsx` — readability fix only (lines 602–604).
-- `src/App.tsx` — register `/m2` route, suppress global chrome for it.
-- `src/data/masseterContent.ts` — new, shared content constants.
-- `src/pages/MasseterM2.tsx` + `src/pages/m2/FaceCompass.tsx`, `AppSheet.tsx`, `sections/*.tsx` — new.
-- `src/assets/m2-masseter-portrait.jpg` — new generated asset.
+
+- `src/pages/MasseterM2.tsx` — only file. Container sizing, radius, portrait size, label styling, plus the Sheet nav bar, progress dots, horizontal swipe, and AnimatePresence wrapper around `SheetBody`.
+
+No content changes, no SEO impact, still `/m2` mobile-only.
