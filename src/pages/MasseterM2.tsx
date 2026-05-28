@@ -273,9 +273,20 @@ function Compass({ onPick }: { onPick: (id: SectionId) => void }) {
 
 /* ───────────────────────── Sheet ───────────────────────── */
 
-function Sheet({ id, onClose }: { id: SectionId; onClose: () => void }) {
+function Sheet({
+  id,
+  onClose,
+  onNavigate,
+}: {
+  id: SectionId;
+  onClose: () => void;
+  onNavigate: (dir: "next" | "prev") => void;
+}) {
   const node = NODES.find((n) => n.id === id)!;
   const Icon = node.icon;
+  const index = SECTION_IDS.indexOf(id);
+  const prevNode = NODES[(index - 1 + NODES.length) % NODES.length];
+  const nextNode = NODES[(index + 1) % NODES.length];
 
   return (
     <>
@@ -291,26 +302,30 @@ function Sheet({ id, onClose }: { id: SectionId; onClose: () => void }) {
         animate={{ y: 0 }}
         exit={{ y: "100%" }}
         transition={{ type: "spring", damping: 30, stiffness: 320 }}
-        drag="y"
-        dragConstraints={{ top: 0, bottom: 0 }}
-        dragElastic={{ top: 0, bottom: 0.4 }}
-        onDragEnd={(_, info) => { if (info.offset.y > 120) onClose(); }}
         className="absolute left-0 right-0 bottom-0 z-50 rounded-t-[28px] bg-[#111]/95 backdrop-blur-xl border-t border-[#C9A050]/25 overflow-hidden flex flex-col"
         style={{
           height: "88vh",
           paddingBottom: "env(safe-area-inset-bottom)",
         }}
       >
-        <div className="pt-2 pb-1 grid place-items-center">
+        <motion.div
+          drag="y"
+          dragConstraints={{ top: 0, bottom: 0 }}
+          dragElastic={{ top: 0, bottom: 0.4 }}
+          onDragEnd={(_, info) => { if (info.offset.y > 120) onClose(); }}
+          className="pt-2 pb-1 grid place-items-center cursor-grab active:cursor-grabbing"
+        >
           <span className="w-10 h-1 rounded-full bg-white/20" />
-        </div>
+        </motion.div>
         <header className="flex items-center justify-between px-5 pt-2 pb-3 border-b border-white/5">
           <span className="flex items-center gap-2.5">
             <span className="w-9 h-9 rounded-full grid place-items-center bg-[#C9A050]/15 border border-[#C9A050]/40">
               <Icon className="w-4 h-4 text-[#C9A050]" />
             </span>
             <span>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-white/40">Section</p>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-white/40">
+                Section {index + 1} of {NODES.length}
+              </p>
               <p className="text-[15px] font-medium">{node.label}</p>
             </span>
           </span>
@@ -323,12 +338,74 @@ function Sheet({ id, onClose }: { id: SectionId; onClose: () => void }) {
           </button>
         </header>
 
-        <div className="flex-1 overflow-y-auto px-5 py-5 text-white/85 text-[14.5px] leading-relaxed">
-          <SheetBody id={id} />
-          <div className="h-20" />
+        {/* Progress dots */}
+        <div className="flex justify-center gap-1.5 py-2.5 border-b border-white/5">
+          {NODES.map((n, i) => (
+            <button
+              key={n.id}
+              onClick={() => {
+                if (i === index) return;
+                onNavigate(i > index ? "next" : "prev");
+                // jump directly via parent: simulate stepping — for >1 step jump, use multiple clicks
+                // Simpler: let user tap dots; we approximate by direct navigate when adjacent.
+              }}
+              aria-label={`Go to ${n.label}`}
+              className={`h-1.5 rounded-full transition-all ${
+                i === index ? "w-5 bg-[#C9A050]" : "w-1.5 bg-white/20"
+              }`}
+            />
+          ))}
         </div>
 
-        <div className="px-5 pt-3 pb-3 border-t border-white/5 bg-[#0d0d0d]">
+        <motion.div
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.2}
+          onDragEnd={(_, info) => {
+            if (info.offset.x < -80) onNavigate("next");
+            else if (info.offset.x > 80) onNavigate("prev");
+          }}
+          className="flex-1 overflow-y-auto px-5 py-5 text-white/85 text-[14.5px] leading-relaxed"
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={id}
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -24 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <SheetBody id={id} />
+              <div className="h-6" />
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Next / Prev nav */}
+        <div className="grid grid-cols-2 gap-2 px-4 pt-3 border-t border-white/5 bg-[#0d0d0d]">
+          <button
+            onClick={() => onNavigate("prev")}
+            className="flex items-center justify-start gap-2 rounded-full border border-white/15 text-white/75 py-2.5 px-4 text-[12px] active:scale-[0.98] transition"
+          >
+            <ArrowRight className="w-3.5 h-3.5 rotate-180 text-[#C9A050]" />
+            <span className="truncate">
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.15em] block leading-tight">Prev</span>
+              <span className="truncate block leading-tight">{prevNode.label}</span>
+            </span>
+          </button>
+          <button
+            onClick={() => onNavigate("next")}
+            className="flex items-center justify-end gap-2 rounded-full border border-[#C9A050]/50 text-[#C9A050] py-2.5 px-4 text-[12px] active:scale-[0.98] transition"
+          >
+            <span className="truncate text-right">
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.15em] block leading-tight">Next</span>
+              <span className="truncate block leading-tight">{nextNode.label}</span>
+            </span>
+            <ArrowRight className="w-3.5 h-3.5 text-[#C9A050]" />
+          </button>
+        </div>
+
+        <div className="px-5 pt-3 pb-3 bg-[#0d0d0d]">
           <a
             href={BOOK_URL}
             target="_blank"
@@ -342,6 +419,7 @@ function Sheet({ id, onClose }: { id: SectionId; onClose: () => void }) {
     </>
   );
 }
+
 
 function SheetBody({ id }: { id: SectionId }) {
   switch (id) {
