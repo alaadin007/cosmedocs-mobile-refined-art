@@ -204,7 +204,8 @@ export default function MasseterM2() {
 
 function Compass({ onPick }: { onPick: (id: SectionId) => void }) {
   return (
-    <div className="relative mx-auto mt-2" style={{ width: "min(92vw, 420px)", aspectRatio: "1 / 1" }}>
+    <div className="relative mx-auto mt-1" style={{ width: "min(86vw, 380px)", aspectRatio: "1 / 1" }}>
+
       {/* portrait */}
       <motion.div
         initial={{ scale: 0.85, opacity: 0 }}
