@@ -177,14 +177,27 @@ export default function MasseterM2() {
             Our aesthetics is invisible art · Tap a node to explore
           </p>
         </div>
-
         {/* Sheets */}
         <AnimatePresence>
           {active && (
-            <Sheet id={active} onClose={() => setActive(null)} />
+            <Sheet
+              id={active}
+              onClose={() => setActive(null)}
+              onNavigate={(dir) => {
+                const i = SECTION_IDS.indexOf(active);
+                const next = dir === "next"
+                  ? SECTION_IDS[(i + 1) % SECTION_IDS.length]
+                  : SECTION_IDS[(i - 1 + SECTION_IDS.length) % SECTION_IDS.length];
+                setActive(next);
+              }}
+            />
           )}
         </AnimatePresence>
       </main>
+    </>
+  );
+}
+
     </>
   );
 }
