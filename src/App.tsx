@@ -581,7 +581,9 @@ const App = () => {
                           <Route path="/dashboard" element={<Dashboard />} />
                           <Route path="/admin/video-upload" element={<VideoUpload />} />
                           <Route path="/admin/research-survey" element={<AdminResearchSurvey />} />
+                          <Route path="/admin/research-survey/" element={<AdminResearchSurvey />} />
                           <Route path="/admin/research" element={<AdminResearch />} />
+                          <Route path="/admin/research/" element={<AdminResearch />} />
                           <Route path="/research" element={<ResearchHub />} />
                           <Route path="/research/" element={<ResearchHub />} />
                           <Route path="/research/:slug" element={<ResearchStudy />} />
