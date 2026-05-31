@@ -499,6 +499,27 @@ export type Database = {
           },
         ]
       }
+      research_email_subscribers: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          study_id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          study_id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          study_id?: string
+        }
+        Relationships: []
+      }
       research_questions: {
         Row: {
           allow_other: boolean
@@ -549,6 +570,7 @@ export type Database = {
           created_at: string
           demographics: Json
           id: string
+          profile: Json | null
           study_id: string
         }
         Insert: {
@@ -556,6 +578,7 @@ export type Database = {
           created_at?: string
           demographics?: Json
           id?: string
+          profile?: Json | null
           study_id: string
         }
         Update: {
@@ -563,6 +586,7 @@ export type Database = {
           created_at?: string
           demographics?: Json
           id?: string
+          profile?: Json | null
           study_id?: string
         }
         Relationships: [
