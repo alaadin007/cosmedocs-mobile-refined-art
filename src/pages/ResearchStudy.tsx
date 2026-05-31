@@ -100,11 +100,13 @@ const ResearchStudy = () => {
     });
   };
 
-  const canSubmit = () => questions.filter(q => q.required).every(q => {
-    const v = answers[q.id];
-    if (q.question_type === "multi") return Array.isArray(v) && v.length > 0;
-    return v !== undefined && v !== "";
-  });
+  const canSubmit = () => questions
+    .filter(q => q.required && q.question_type !== "demographics")
+    .every(q => {
+      const v = answers[q.id];
+      if (q.question_type === "multi") return Array.isArray(v) && v.length > 0;
+      return v !== undefined && v !== "";
+    });
 
   const submit = async () => {
     if (!study) return;
