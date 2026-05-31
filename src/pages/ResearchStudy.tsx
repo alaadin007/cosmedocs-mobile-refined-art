@@ -531,7 +531,7 @@ const SlideFlow = (p: SlideFlowProps) => {
 
 /* ---------- Individual slides ---------- */
 
-const IntroSlide = ({ study, onStart }: { study: Study; onStart: () => void }) => (
+const IntroSlide = ({ study, onStart, showProfilePitch }: { study: Study; onStart: () => void; showProfilePitch?: boolean }) => (
   <div className="h-full flex flex-col items-center justify-center text-center py-6 md:py-10">
     <Link
       to="/research"
