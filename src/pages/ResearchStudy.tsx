@@ -568,6 +568,7 @@ const IntroSlide = ({ study, onStart, showProfilePitch }: { study: Study; onStar
       Begin <ArrowRight className="h-4 w-4" />
     </button>
     <p className="text-[11px] text-white/35 mt-5 tracking-wide">Takes under 60 seconds · fully anonymous</p>
+    {showProfilePitch && <ProfilePrePitch />}
   </div>
 );
 
