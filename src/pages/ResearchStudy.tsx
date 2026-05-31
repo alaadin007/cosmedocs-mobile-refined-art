@@ -8,6 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import {
+  DigitalFaceProfileView,
+  GeneratingProfile,
+  ProfilePrePitch,
+  type ProfileData,
+} from "@/components/research/DigitalFaceProfile";
 
 interface Study {
   id: string;
@@ -53,6 +59,11 @@ const ResearchStudy = () => {
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [generatingProfile, setGeneratingProfile] = useState(false);
+  const [profile, setProfile] = useState<ProfileData | null>(null);
+  const [profileFailed, setProfileFailed] = useState(false);
+
+  const isFilteredFace = slug === "filtered-face-project";
 
   useEffect(() => {
     if (!slug) return;
@@ -125,17 +136,34 @@ const ResearchStudy = () => {
       ethnicity: demographics.ethnicity || null,
       notes: demographics.notes || null,
     };
-    const { error } = await supabase.from("research_responses").insert({
+    const { data: inserted, error } = await supabase.from("research_responses").insert({
       study_id: study.id,
       answers: finalAnswers,
       demographics: demo,
-    });
+    }).select("id").single();
     setSubmitting(false);
     if (error) {
       toast({ title: "Could not save", description: "Please try again in a moment.", variant: "destructive" });
       return;
     }
     setDone(true);
+
+    if (isFilteredFace && inserted?.id) {
+      setGeneratingProfile(true);
+      try {
+        const { data, error: fnErr } = await supabase.functions.invoke(
+          "generate-digital-face-profile",
+          { body: { response_id: inserted.id } },
+        );
+        if (fnErr || !data) throw fnErr || new Error("no data");
+        setProfile(data as ProfileData);
+      } catch (e) {
+        console.error("profile generation failed", e);
+        setProfileFailed(true);
+      } finally {
+        setGeneratingProfile(false);
+      }
+    }
   };
 
   if (loading || !study) {
@@ -262,6 +290,10 @@ const ResearchStudy = () => {
         submit={submit}
         submitting={submitting}
         canSubmit={canSubmit()}
+        isFilteredFace={isFilteredFace}
+        generatingProfile={generatingProfile}
+        profile={profile}
+        profileFailed={profileFailed}
       />
     </>
   );
@@ -287,6 +319,10 @@ interface SlideFlowProps {
   submit: () => void;
   submitting: boolean;
   canSubmit: boolean;
+  isFilteredFace: boolean;
+  generatingProfile: boolean;
+  profile: ProfileData | null;
+  profileFailed: boolean;
 }
 
 const QUESTIONS_PER_PAGE = 3;
@@ -410,7 +446,19 @@ const SlideFlow = (p: SlideFlowProps) => {
           ) : p.questions.length === 0 ? (
             <p className="text-white/50 text-center py-14 text-[16px]">Questions are being prepared. Please check back soon.</p>
           ) : p.done ? (
-            <ThankYouSlide copied={p.copied} copy={p.copy} />
+            p.isFilteredFace && !p.profileFailed ? (
+              p.generatingProfile || !p.profile ? (
+                <GeneratingProfile />
+              ) : (
+                <DigitalFaceProfileView
+                  profile={p.profile}
+                  studyId={p.study.id}
+                  shareUrl={typeof window !== "undefined" ? window.location.href : ""}
+                />
+              )
+            ) : (
+              <ThankYouSlide copied={p.copied} copy={p.copy} />
+            )
           ) : (
             <AnimatePresence mode="wait" custom={dir}>
               <motion.div
@@ -427,7 +475,7 @@ const SlideFlow = (p: SlideFlowProps) => {
                 className="h-full"
               >
                 {current.kind === "intro" && (
-                  <IntroSlide study={p.study} onStart={goNext} />
+                  <IntroSlide study={p.study} onStart={goNext} showProfilePitch={p.isFilteredFace} />
                 )}
                 {current.kind === "questions" && current.questions && (
                   <QuestionGroupSlide
@@ -487,7 +535,7 @@ const SlideFlow = (p: SlideFlowProps) => {
 
 /* ---------- Individual slides ---------- */
 
-const IntroSlide = ({ study, onStart }: { study: Study; onStart: () => void }) => (
+const IntroSlide = ({ study, onStart, showProfilePitch }: { study: Study; onStart: () => void; showProfilePitch?: boolean }) => (
   <div className="h-full flex flex-col items-center justify-center text-center py-6 md:py-10">
     <Link
       to="/research"
@@ -524,6 +572,7 @@ const IntroSlide = ({ study, onStart }: { study: Study; onStart: () => void }) =
       Begin <ArrowRight className="h-4 w-4" />
     </button>
     <p className="text-[11px] text-white/35 mt-5 tracking-wide">Takes under 60 seconds · fully anonymous</p>
+    {showProfilePitch && <ProfilePrePitch />}
   </div>
 );
 
