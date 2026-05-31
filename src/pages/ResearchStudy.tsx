@@ -61,6 +61,7 @@ const ResearchStudy = () => {
   const [copied, setCopied] = useState(false);
   const [generatingProfile, setGeneratingProfile] = useState(false);
   const [profile, setProfile] = useState<ProfileData | null>(null);
+  const [profileFailed, setProfileFailed] = useState(false);
 
   const isFilteredFace = slug === "filtered-face-project";
 
