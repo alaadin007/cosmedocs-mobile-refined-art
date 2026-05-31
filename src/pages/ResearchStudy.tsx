@@ -287,19 +287,27 @@ interface SlideFlowProps {
   canSubmit: boolean;
 }
 
+const QUESTIONS_PER_PAGE = 3;
+
 const SlideFlow = (p: SlideFlowProps) => {
-  // Build the deck: intro + question slides (skipping any 'demographics' typed question — handled at end) + demographics slide
-  // If the questionnaire already includes a 'demographics' question, we surface it as the dedicated end slide
-  // (only one demographics slide ever appears, always last before submit).
+  // Build the deck: intro + grouped question slides (3 per page) + demographics slide.
+  // Any DB-stored 'demographics' typed question is filtered out — demographics is the
+  // dedicated final slide.
   const orderedQuestions = useMemo(
     () => p.questions.filter(q => q.question_type !== "demographics"),
     [p.questions]
   );
 
   const slides = useMemo(() => {
-    const arr: Array<{ key: string; kind: "intro" | "question" | "demographics"; question?: Question; index?: number }> = [];
+    const arr: Array<{ key: string; kind: "intro" | "questions" | "demographics"; questions?: Question[]; pageIndex?: number; totalPages?: number }> = [];
     arr.push({ key: "intro", kind: "intro" });
-    orderedQuestions.forEach((q, i) => arr.push({ key: q.id, kind: "question", question: q, index: i }));
+    const groups: Question[][] = [];
+    for (let i = 0; i < orderedQuestions.length; i += QUESTIONS_PER_PAGE) {
+      groups.push(orderedQuestions.slice(i, i + QUESTIONS_PER_PAGE));
+    }
+    groups.forEach((grp, i) =>
+      arr.push({ key: `g-${i}`, kind: "questions", questions: grp, pageIndex: i, totalPages: groups.length })
+    );
     arr.push({ key: "demographics", kind: "demographics" });
     return arr;
   }, [orderedQuestions]);
@@ -314,30 +322,18 @@ const SlideFlow = (p: SlideFlowProps) => {
     if (idx < total - 1) {
       setDir(1);
       setIdx(idx + 1);
+      if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
   const goBack = () => {
     if (idx > 0) {
       setDir(-1);
       setIdx(idx - 1);
+      if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
-  const onDragEnd = (_: any, info: PanInfo) => {
-    const swipe = info.offset.x;
-    const velocity = info.velocity.x;
-    if (swipe < -60 || velocity < -400) {
-      // forward only allowed if current slide is valid
-      if (canAdvance()) goNext();
-    } else if (swipe > 60 || velocity > 400) {
-      goBack();
-    }
-  };
-
-  const canAdvance = (): boolean => {
-    if (current.kind === "intro" || current.kind === "demographics") return true;
-    const q = current.question!;
-    if (!q.required) return true;
+  const isQuestionAnswered = (q: Question): boolean => {
     const v = p.answers[q.id];
     if (q.question_type === "multi") return Array.isArray(v) && v.length > 0;
     if (q.question_type === "text") return typeof v === "string" && v.trim().length > 0;
@@ -345,14 +341,18 @@ const SlideFlow = (p: SlideFlowProps) => {
     return v !== undefined && v !== "";
   };
 
-  // Auto-advance on single-choice select (240ms tactile pause)
-  const handleSingle = (qid: string, value: string) => {
-    p.setSingle(qid, value);
-    if (value !== "__other__") {
-      setTimeout(() => {
-        setDir(1);
-        setIdx(i => Math.min(i + 1, total - 1));
-      }, 260);
+  const canAdvance = (): boolean => {
+    if (current.kind === "intro" || current.kind === "demographics") return true;
+    return (current.questions || []).every(q => (q.required ? isQuestionAnswered(q) : true));
+  };
+
+  const onDragEnd = (_: any, info: PanInfo) => {
+    const swipe = info.offset.x;
+    const velocity = info.velocity.x;
+    if (swipe < -60 || velocity < -400) {
+      if (canAdvance()) goNext();
+    } else if (swipe > 60 || velocity > 400) {
+      goBack();
     }
   };
 
@@ -427,15 +427,15 @@ const SlideFlow = (p: SlideFlowProps) => {
                 {current.kind === "intro" && (
                   <IntroSlide study={p.study} onStart={goNext} />
                 )}
-                {current.kind === "question" && current.question && (
-                  <QuestionSlide
-                    q={current.question}
-                    index={current.index!}
-                    totalQuestions={orderedQuestions.length}
+                {current.kind === "questions" && current.questions && (
+                  <QuestionGroupSlide
+                    questions={current.questions}
+                    pageIndex={current.pageIndex!}
+                    totalPages={current.totalPages!}
                     answers={p.answers}
                     otherText={p.otherText}
                     setOtherText={p.setOtherText}
-                    onSingle={handleSingle}
+                    onSingle={p.setSingle}
                     onToggleMulti={p.toggleMulti}
                     onSetText={(qid, v) => p.setAnswers(a => ({ ...a, [qid]: v }))}
                   />
@@ -464,7 +464,7 @@ const SlideFlow = (p: SlideFlowProps) => {
             >
               {p.submitting ? "Sending…" : (<><Sparkles className="h-5 w-5 mr-2" /> Submit anonymously</>)}
             </Button>
-          ) : current.kind === "question" && (current.question?.question_type === "multi" || current.question?.question_type === "text" || (current.question?.allow_other && p.answers[current.question.id] === "__other__")) ? (
+          ) : current.kind === "questions" ? (
             <button
               disabled={!canAdvance()}
               onClick={goNext}
@@ -473,10 +473,6 @@ const SlideFlow = (p: SlideFlowProps) => {
             >
               Continue <ArrowRight className="h-4 w-4" />
             </button>
-          ) : current.kind === "question" ? (
-            <p className="text-center text-[12px] text-white/30 tracking-wide">
-              Tap an answer to continue · swipe to go back
-            </p>
           ) : null}
           <p className="text-[11px] text-white/30 text-center mt-3 leading-relaxed">
             Anonymous · No personal data stored · Internal clinical research only
