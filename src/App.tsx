@@ -289,6 +289,7 @@ const SocialMediaGallery = lazy(() => import("./pages/SocialMediaGallery"));
 const SpinToWin = lazy(() => import("./pages/SpinToWin"));
 const OrofacialNeckPainBlog = lazy(() => import("./pages/OrofacialNeckPainBlog"));
 const Partnerships = lazy(() => import("./pages/Partnerships"));
+const HarleyStreetClinicPartnership = lazy(() => import("./pages/HarleyStreetClinicPartnership"));
 const Auth = lazy(() => import("./pages/Auth"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const HowToGetRidOfBruises = lazy(() => import("./pages/HowToGetRidOfBruises"));
@@ -567,6 +568,8 @@ const App = () => {
                           <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
                           <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
                           <Route path="/partnerships" element={<Partnerships />} />
+                          <Route path="/harley-street-clinic-partnership" element={<HarleyStreetClinicPartnership />} />
+                          <Route path="/harley-street-clinic-partnership/" element={<HarleyStreetClinicPartnership />} />
                           <Route path="/media-news" element={<MediaNews />} />
                           <Route path="/media-news/" element={<MediaNews />} />
                           <Route path="/shop" element={<Shop />} />
