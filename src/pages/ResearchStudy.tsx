@@ -525,12 +525,12 @@ const IntroSlide = ({ study, onStart }: { study: Study; onStart: () => void }) =
   </div>
 );
 
-const QuestionSlide = ({
-  q, index, totalQuestions, answers, otherText, setOtherText, onSingle, onToggleMulti, onSetText,
+const QuestionGroupSlide = ({
+  questions, pageIndex, totalPages, answers, otherText, setOtherText, onSingle, onToggleMulti, onSetText,
 }: {
-  q: Question;
-  index: number;
-  totalQuestions: number;
+  questions: Question[];
+  pageIndex: number;
+  totalPages: number;
   answers: Record<string, any>;
   otherText: Record<string, string>;
   setOtherText: React.Dispatch<React.SetStateAction<Record<string, string>>>;
@@ -539,47 +539,77 @@ const QuestionSlide = ({
   onSetText: (qid: string, v: string) => void;
 }) => (
   <div className="h-full flex flex-col">
-    <p className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-[#C9A050] mb-3">
-      Question {index + 1} of {totalQuestions}{q.required && " · required"}
+    <p className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-[#C9A050] mb-6">
+      Page {pageIndex + 1} of {totalPages}
     </p>
+    <div className="space-y-10 md:space-y-12">
+      {questions.map(q => (
+        <QuestionBlock
+          key={q.id}
+          q={q}
+          answers={answers}
+          otherText={otherText}
+          setOtherText={setOtherText}
+          onSingle={onSingle}
+          onToggleMulti={onToggleMulti}
+          onSetText={onSetText}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+const QuestionBlock = ({
+  q, answers, otherText, setOtherText, onSingle, onToggleMulti, onSetText,
+}: {
+  q: Question;
+  answers: Record<string, any>;
+  otherText: Record<string, string>;
+  setOtherText: React.Dispatch<React.SetStateAction<Record<string, string>>>;
+  onSingle: (qid: string, value: string) => void;
+  onToggleMulti: (qid: string, value: string) => void;
+  onSetText: (qid: string, v: string) => void;
+}) => (
+  <div>
     <h2
-      className="text-white text-[24px] md:text-[30px] font-semibold leading-[1.2] mb-7 md:mb-9"
-      style={{ letterSpacing: "-0.022em" }}
+      className="text-white text-[20px] md:text-[24px] font-semibold leading-[1.25] mb-4 md:mb-5"
+      style={{ letterSpacing: "-0.02em" }}
     >
       {q.question_text}
+      {!q.required && <span className="text-white/35 text-[12px] md:text-[13px] font-normal ml-2 align-middle">Optional</span>}
     </h2>
 
     {q.question_type === "single" && (
-      <div className="space-y-2.5">
+      <div className="space-y-2">
         {q.options.map(o => {
           const active = answers[q.id] === o.value;
           return (
             <button
               key={o.value}
               onClick={() => onSingle(q.id, o.value)}
-              className={`w-full text-left px-4 md:px-5 rounded-2xl border transition-all flex items-center gap-3.5 active:scale-[0.985] ${
+              className={`w-full text-left px-4 md:px-5 rounded-xl border transition-all flex items-center gap-3 active:scale-[0.985] ${
                 active
                   ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white"
                   : "bg-white/[0.035] border-white/10 text-white/90 hover:border-[#C9A050]/30"
               }`}
-              style={{ minHeight: 64 }}
+              style={{ minHeight: 52 }}
             >
-              {o.emoji && <span className="text-[22px] leading-none">{o.emoji}</span>}
-              <span className="text-[17px] md:text-[18px] font-medium flex-1" style={{ letterSpacing: "-0.01em" }}>{o.label}</span>
-              {active && <Check className="h-5 w-5 text-[#C9A050]" />}
+              {o.emoji && <span className="text-[20px] leading-none">{o.emoji}</span>}
+              <span className="text-[15px] md:text-[16px] font-medium flex-1" style={{ letterSpacing: "-0.01em" }}>{o.label}</span>
+              {active && <Check className="h-4 w-4 text-[#C9A050]" />}
             </button>
           );
         })}
         {q.allow_other && (
           <button
             onClick={() => onSingle(q.id, "__other__")}
-            className={`w-full text-left px-4 md:px-5 rounded-2xl border flex items-center gap-3.5 ${
+            className={`w-full text-left px-4 md:px-5 rounded-xl border flex items-center gap-3 ${
               answers[q.id] === "__other__" ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
             }`}
-            style={{ minHeight: 64 }}
+            style={{ minHeight: 52 }}
           >
-            <span className="text-[22px] leading-none">💭</span>
-            <span className="text-[17px] md:text-[18px] font-medium">Something else</span>
+            <span className="text-[20px] leading-none">💭</span>
+            <span className="text-[15px] md:text-[16px] font-medium">Something else</span>
           </button>
         )}
         {answers[q.id] === "__other__" && (
@@ -588,34 +618,62 @@ const QuestionSlide = ({
             onChange={e => setOtherText(t => ({ ...t, [q.id]: e.target.value }))}
             placeholder="Tell us in a few words…"
             maxLength={200}
-            className="h-14 text-[17px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
+            className="h-12 text-[15px] rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
           />
         )}
       </div>
     )}
 
     {q.question_type === "multi" && (
-      <div className="space-y-2.5">
-        {q.options.map(o => {
-          const checked = Array.isArray(answers[q.id]) && answers[q.id].includes(o.value);
-          return (
+      <>
+        <div className="space-y-2">
+          {q.options.map(o => {
+            const checked = Array.isArray(answers[q.id]) && answers[q.id].includes(o.value);
+            return (
+              <button
+                key={o.value}
+                onClick={() => onToggleMulti(q.id, o.value)}
+                className={`w-full text-left px-4 md:px-5 rounded-xl border flex items-center gap-3 active:scale-[0.985] ${
+                  checked ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
+                }`}
+                style={{ minHeight: 52 }}
+              >
+                <span className={`h-5 w-5 rounded-md border flex items-center justify-center shrink-0 ${checked ? "bg-[#C9A050] border-[#C9A050]" : "border-white/30"}`}>
+                  {checked && <Check className="h-3.5 w-3.5 text-black" strokeWidth={2.5} />}
+                </span>
+                {o.emoji && <span className="text-[20px] leading-none">{o.emoji}</span>}
+                <span className="text-[15px] md:text-[16px] font-medium flex-1">{o.label}</span>
+              </button>
+            );
+          })}
+          {q.allow_other && (
             <button
-              key={o.value}
-              onClick={() => onToggleMulti(q.id, o.value)}
-              className={`w-full text-left px-4 md:px-5 rounded-2xl border flex items-center gap-3.5 active:scale-[0.985] ${
-                checked ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white" : "bg-white/[0.035] border-white/10 text-white/90"
+              onClick={() => onToggleMulti(q.id, "__other__")}
+              className={`w-full text-left px-4 md:px-5 rounded-xl border flex items-center gap-3 ${
+                Array.isArray(answers[q.id]) && answers[q.id].includes("__other__")
+                  ? "bg-[#C9A050]/15 border-[#C9A050]/75 text-white"
+                  : "bg-white/[0.035] border-white/10 text-white/90"
               }`}
-              style={{ minHeight: 64 }}
+              style={{ minHeight: 52 }}
             >
-              <span className={`h-6 w-6 rounded-md border flex items-center justify-center shrink-0 ${checked ? "bg-[#C9A050] border-[#C9A050]" : "border-white/30"}`}>
-                {checked && <Check className="h-4 w-4 text-black" strokeWidth={2.5} />}
+              <span className={`h-5 w-5 rounded-md border flex items-center justify-center shrink-0 ${Array.isArray(answers[q.id]) && answers[q.id].includes("__other__") ? "bg-[#C9A050] border-[#C9A050]" : "border-white/30"}`}>
+                {Array.isArray(answers[q.id]) && answers[q.id].includes("__other__") && <Check className="h-3.5 w-3.5 text-black" strokeWidth={2.5} />}
               </span>
-              {o.emoji && <span className="text-[22px] leading-none">{o.emoji}</span>}
-              <span className="text-[17px] md:text-[18px] font-medium flex-1">{o.label}</span>
+              <span className="text-[20px] leading-none">💭</span>
+              <span className="text-[15px] md:text-[16px] font-medium">Something else</span>
             </button>
-          );
-        })}
-      </div>
+          )}
+        </div>
+        {Array.isArray(answers[q.id]) && answers[q.id].includes("__other__") && (
+          <Input
+            value={otherText[q.id] || ""}
+            onChange={e => setOtherText(t => ({ ...t, [q.id]: e.target.value }))}
+            placeholder="Tell us in a few words…"
+            maxLength={200}
+            className="mt-2 h-12 text-[15px] rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/30 px-4"
+          />
+        )}
+      </>
     )}
 
     {q.question_type === "text" && (
@@ -624,7 +682,7 @@ const QuestionSlide = ({
         onChange={e => onSetText(q.id, e.target.value)}
         placeholder="Your answer…"
         maxLength={600}
-        className="text-[17px] rounded-2xl bg-white/5 border-white/10 text-white placeholder:text-white/30 min-h-[160px] px-4 py-3.5"
+        className="text-[15px] rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/30 min-h-[110px] px-4 py-3"
       />
     )}
   </div>
