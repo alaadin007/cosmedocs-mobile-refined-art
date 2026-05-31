@@ -75,6 +75,44 @@ const partnershipFaqs = [
   },
 ];
 
+const aestheticDoctorFaqs = [
+  {
+    question: "What does an aesthetic doctor partnership at Cosmedocs actually look like day-to-day?",
+    answer:
+      "You arrive at 8–10 Harley Street to a prepared consulting room, a diary already populated by our patient acquisition team, a nurse on hand for assistance, and reception managing rebookings and aftercare. You consult, treat, and leave — the marketing, compliance, stock, sharps, and follow-up calls are handled by the shared team. Most partner doctors describe the shift as moving from running a small business to simply practising medicine again.",
+  },
+  {
+    question: "Is this an aesthetic doctor partnership or a room rental?",
+    answer:
+      "It is a partnership, not a rental. We do not let rooms by the hour. Partner aesthetic doctors join the Cosmedocs clinical platform — sharing patients, protocols, reputation and overhead — under a commercial structure that is meaningfully more favourable than carrying a Harley Street lease alone. The arrangement is built around shared growth, not square footage.",
+  },
+  {
+    question: "What experience do you expect from an aesthetic doctor partner?",
+    answer:
+      "GMC registration, an established independent practice, fluency in injectables and regenerative protocols, and a doctor-led philosophy — conservative dosing, natural results, and patients who value discretion. We are not the right home for high-volume, filter-driven aesthetics. We are the right home for clinicians whose patients return for years.",
+  },
+  {
+    question: "Will I keep my own patients and my own clinical identity?",
+    answer:
+      "Yes. Your patients remain your patients, your clinical decisions remain yours, and your professional identity stays intact. The partnership adds Cosmedocs patients to your diary and the Cosmedocs team to your day — it does not absorb your practice.",
+  },
+  {
+    question: "How does Cosmedocs generate the patient flow for partner doctors?",
+    answer:
+      "Through a ranking website, a 124K+ Instagram audience, long-standing media presence, returning patients, and the Harley Street Institute network. Partner aesthetic doctors plug into an already-warm pipeline rather than building one from scratch — which is usually the most expensive and slowest part of independent practice.",
+  },
+  {
+    question: "Can I also teach through the Harley Street Institute as a partner?",
+    answer:
+      "Yes — and many of our partner doctors do. The Harley Street Institute offers a faculty route into aesthetic and increasingly non-aesthetic medical training. Teaching is treated as a serious part of a clinician's career here, not an afterthought.",
+  },
+  {
+    question: "How quickly can an aesthetic doctor partnership begin?",
+    answer:
+      "After a private conversation with our medical director and a clinic walk-through, onboarding is typically possible within four to eight weeks — enough time to complete diligence, align diaries, and brief the team on your protocols. We deliberately do not rush this stage.",
+  },
+];
+
 const HarleyStreetClinicPartnership = () => {
   const jsonLd = {
     "@context": "https://schema.org",
