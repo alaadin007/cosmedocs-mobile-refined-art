@@ -159,6 +159,7 @@ const ResearchStudy = () => {
         setProfile(data as ProfileData);
       } catch (e) {
         console.error("profile generation failed", e);
+        setProfileFailed(true);
       } finally {
         setGeneratingProfile(false);
       }
