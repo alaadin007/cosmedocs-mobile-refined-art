@@ -75,6 +75,44 @@ const partnershipFaqs = [
   },
 ];
 
+const aestheticDoctorFaqs = [
+  {
+    question: "What does an aesthetic doctor partnership at Cosmedocs actually look like day-to-day?",
+    answer:
+      "You arrive at 8–10 Harley Street to a prepared consulting room, a diary already populated by our patient acquisition team, a nurse on hand for assistance, and reception managing rebookings and aftercare. You consult, treat, and leave — the marketing, compliance, stock, sharps, and follow-up calls are handled by the shared team. Most partner doctors describe the shift as moving from running a small business to simply practising medicine again.",
+  },
+  {
+    question: "Is this an aesthetic doctor partnership or a room rental?",
+    answer:
+      "It is a partnership, not a rental. We do not let rooms by the hour. Partner aesthetic doctors join the Cosmedocs clinical platform — sharing patients, protocols, reputation and overhead — under a commercial structure that is meaningfully more favourable than carrying a Harley Street lease alone. The arrangement is built around shared growth, not square footage.",
+  },
+  {
+    question: "What experience do you expect from an aesthetic doctor partner?",
+    answer:
+      "GMC registration, an established independent practice, fluency in injectables and regenerative protocols, and a doctor-led philosophy — conservative dosing, natural results, and patients who value discretion. We are not the right home for high-volume, filter-driven aesthetics. We are the right home for clinicians whose patients return for years.",
+  },
+  {
+    question: "Will I keep my own patients and my own clinical identity?",
+    answer:
+      "Yes. Your patients remain your patients, your clinical decisions remain yours, and your professional identity stays intact. The partnership adds Cosmedocs patients to your diary and the Cosmedocs team to your day — it does not absorb your practice.",
+  },
+  {
+    question: "How does Cosmedocs generate the patient flow for partner doctors?",
+    answer:
+      "Through a ranking website, a 124K+ Instagram audience, long-standing media presence, returning patients, and the Harley Street Institute network. Partner aesthetic doctors plug into an already-warm pipeline rather than building one from scratch — which is usually the most expensive and slowest part of independent practice.",
+  },
+  {
+    question: "Can I also teach through the Harley Street Institute as a partner?",
+    answer:
+      "Yes — and many of our partner doctors do. The Harley Street Institute offers a faculty route into aesthetic and increasingly non-aesthetic medical training. Teaching is treated as a serious part of a clinician's career here, not an afterthought.",
+  },
+  {
+    question: "How quickly can an aesthetic doctor partnership begin?",
+    answer:
+      "After a private conversation with our medical director and a clinic walk-through, onboarding is typically possible within four to eight weeks — enough time to complete diligence, align diaries, and brief the team on your protocols. We deliberately do not rush this stage.",
+  },
+];
+
 const HarleyStreetClinicPartnership = () => {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -449,7 +487,208 @@ const HarleyStreetClinicPartnership = () => {
         </div>
       </section>
 
-      <FAQSchema faqs={partnershipFaqs} />
+      {/* AESTHETIC DOCTOR PARTNERSHIP — dedicated landing section */}
+      <section
+        id="aesthetic-doctor-partnership"
+        className="relative border-t border-[#C9A050]/20 bg-gradient-to-b from-[#0a0a0a] via-[#0d0a05] to-[#0a0a0a] overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,160,80,0.12),_transparent_65%)]" />
+        <div className="container max-w-5xl mx-auto px-6 py-24 md:py-28 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <Badge
+              variant="outline"
+              className="border-[#C9A050]/50 text-[#C9A050] mb-6 tracking-widest text-xs uppercase"
+            >
+              For Aesthetic Doctors
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-6">
+              An{" "}
+              <span className="text-[#C9A050]">
+                aesthetic doctor partnership
+              </span>{" "}
+              built around the medicine, not the overhead
+            </h2>
+            <p className="text-base md:text-lg text-[#f5f0e1]/75 leading-relaxed">
+              For established Aesthetic Doctors who are quietly tired of being
+              clinician, marketer, receptionist and landlord all at once. A
+              partnership at Cosmedocs returns the day to medicine — and the
+              evenings to you.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-5 mt-14">
+            {[
+              {
+                icon: Handshake,
+                title: "A real team, not a corridor",
+                copy: "Peer aesthetic doctors, plastic surgeons and a private GP under one Harley Street roof. Cases discussed, second opinions easy, lunch a thing again.",
+              },
+              {
+                icon: Users,
+                title: "Patients already arriving",
+                copy: "Our marketing, SEO and 124K Instagram audience supply a warm diary. You inherit demand instead of building it from zero.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Compliance handled",
+                copy: "CQC framework via PrivaDr Ltd, insurance scaffolding, SOPs, sharps and stock — the back office is built so you do not have to.",
+              },
+              {
+                icon: Sparkles,
+                title: "Doctor-led aesthetics",
+                copy: "Conservative dosing, regenerative protocols, natural results. The Cosmedocs philosophy attracts patients who value discretion over volume.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Faculty route",
+                copy: "Teach through the Harley Street Institute — aesthetic and broader medical training — as a serious chapter of your career.",
+              },
+              {
+                icon: Crown,
+                title: "Materially lighter economics",
+                copy: "Partnering with us is meaningfully less expensive than carrying independent Harley Street overheads. Shared overhead, shared upside.",
+              },
+            ].map((b) => (
+              <motion.div
+                key={b.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="border border-[#C9A050]/20 rounded-2xl p-6 bg-[#0a0a0a]/80 backdrop-blur hover:border-[#C9A050]/60 hover:bg-[#0d0d0d] transition-all"
+              >
+                <b.icon className="w-7 h-7 text-[#C9A050] mb-4" />
+                <h3 className="text-lg font-serif mb-2">{b.title}</h3>
+                <p className="text-sm text-[#f5f0e1]/70 leading-relaxed">
+                  {b.copy}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-14">
+            <div className="border border-[#C9A050]/30 rounded-2xl p-8 bg-[#0a0a0a]/80">
+              <h3 className="text-xl font-serif text-[#C9A050] mb-5">
+                This partnership is for you if
+              </h3>
+              <ul className="space-y-3 text-[#f5f0e1]/80 text-sm">
+                {[
+                  "You are GMC-registered with an established aesthetic practice.",
+                  "Your patients return for years, not seasons.",
+                  "You prefer conservative dosing and regenerative protocols.",
+                  "You are quietly outgrowing running everything alone.",
+                  "You would value a peer group of doctors at the same level.",
+                ].map((t) => (
+                  <li key={t} className="flex gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-[#C9A050] mt-1 shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="border border-[#C9A050]/10 rounded-2xl p-8 bg-[#0a0a0a]/60">
+              <h3 className="text-xl font-serif text-[#f5f0e1]/80 mb-5">
+                It is probably not for you if
+              </h3>
+              <ul className="space-y-3 text-[#f5f0e1]/60 text-sm">
+                <li>You are early-career and still building injectable hours.</li>
+                <li>You run a high-volume, filter-driven aesthetics model.</li>
+                <li>You are looking for an hourly room rental, not a clinical home.</li>
+                <li>You would rather work in isolation than within a team.</li>
+              </ul>
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 relative rounded-3xl border border-[#C9A050]/40 bg-gradient-to-br from-[#1a1305] via-[#0d0a05] to-[#0a0a0a] p-10 md:p-14 text-center overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,160,80,0.18),_transparent_70%)]" />
+            <div className="relative">
+              <Stethoscope className="w-10 h-10 text-[#C9A050] mx-auto mb-5" />
+              <h3 className="text-2xl md:text-4xl font-serif mb-4">
+                Begin a private conversation about an{" "}
+                <span className="text-[#C9A050]">
+                  aesthetic doctor partnership
+                </span>
+              </h3>
+              <p className="text-[#f5f0e1]/70 max-w-2xl mx-auto mb-8">
+                One paragraph about you, one about what you would like to
+                build. Read personally by Pashma, our partnerships lead. Every
+                enquiry is confidential.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#C9A050] text-[#0a0a0a] hover:bg-[#d9b060] px-8"
+                >
+                  <a href="mailto:pashma@cosmedocs.com?subject=Aesthetic%20Doctor%20Partnership%20Enquiry%20%E2%80%94%20Harley%20Street">
+                    Enquire privately
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-[#C9A050]/50 text-[#C9A050] hover:bg-[#C9A050]/10 hover:text-[#C9A050]"
+                >
+                  <a href="https://wa.me/447818291084?text=Hello%20Cosmedocs%2C%20I%27d%20like%20to%20learn%20about%20the%20aesthetic%20doctor%20partnership.">
+                    WhatsApp Pashma
+                  </a>
+                </Button>
+              </div>
+              <p className="text-xs text-[#f5f0e1]/40 mt-6">
+                By invitation · GMC-registered Aesthetic Doctors only
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="mt-20">
+            <div className="text-center mb-10">
+              <Badge
+                variant="outline"
+                className="border-[#C9A050]/50 text-[#C9A050] mb-4 tracking-widest text-xs uppercase"
+              >
+                Aesthetic Doctor FAQs
+              </Badge>
+              <h3 className="text-2xl md:text-3xl font-serif">
+                Questions from{" "}
+                <span className="text-[#C9A050]">aesthetic doctors</span>{" "}
+                considering us
+              </h3>
+            </div>
+            <Accordion type="single" collapsible className="space-y-3 max-w-3xl mx-auto">
+              {aestheticDoctorFaqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`adfaq-${i}`}
+                  className="border border-[#C9A050]/20 rounded-xl px-6 bg-[#0a0a0a] data-[state=open]:border-[#C9A050]/50"
+                >
+                  <AccordionTrigger className="text-left text-[#f5f0e1] hover:text-[#C9A050] py-5 text-base font-medium no-underline hover:no-underline [&>svg]:text-[#C9A050]">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#f5f0e1]/70 leading-relaxed pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      <FAQSchema faqs={[...partnershipFaqs, ...aestheticDoctorFaqs]} />
 
       {/* ROUTES IN */}
       <section className="border-t border-[#C9A050]/20 bg-[#0d0d0d]">
