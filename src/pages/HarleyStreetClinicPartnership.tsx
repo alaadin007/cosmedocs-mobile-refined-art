@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import FAQSchema from "@/components/seo/FAQSchema";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import {
   Building2,
   Users,
@@ -25,6 +32,49 @@ import {
  * "consulting room collaboration Harley Street".
  * Discretion: avoids "rent / rental / lease" language per brand policy.
  */
+const partnershipFaqs = [
+  {
+    question: "What is a clinic partnership on Harley Street?",
+    answer:
+      "A clinic partnership on Harley Street is a structured clinical collaboration where established practitioners share premises, patients, and operational support rather than operating in isolation. At Cosmedocs, partnership means you work within a fully staffed clinic at 8–10 Harley Street with reception, nursing cover, marketing, and compliance already in place — so you can focus on medicine while the infrastructure is handled collectively.",
+  },
+  {
+    question: "How does shared premises work at Cosmedocs?",
+    answer:
+      "Shared premises at Cosmedocs means consulting rooms, treatment spaces, reception, and clinical support are all provided under one roof. You book the rooms you need, arrive to a prepared environment, and leave the patient bookings, aftercare calls, and marketing to the shared team. It is the opposite of carrying your own lease, insurance, and staff — everything is pooled, which makes the economics calmer and the days more sociable.",
+  },
+  {
+    question: "Who can join an aesthetic doctor partnership at Cosmedocs?",
+    answer:
+      "We invite established Aesthetic Doctors who are doctor-led in their philosophy — comfortable with conservative dosing, regenerative protocols, and patients who value discretion over volume. You should be GMC-registered, already running your own practice, and genuinely interested in contributing to a team rather than simply using a room. The aesthetic doctor partnership is selective and invitation-led.",
+  },
+  {
+    question: "What is included in a Harley Street clinic partnership?",
+    answer:
+      "The partnership covers premises and consulting rooms at 8–10 Harley Street, reception and nursing support, CQC framework through PrivaDr Ltd where required, marketing and patient acquisition via our ranking website and 124K+ Instagram audience, and — importantly — a team of peers. The financial structure is discussed privately, but partnering with us is meaningfully less expensive than carrying independent Harley Street overheads.",
+  },
+  {
+    question: "How is this different from independent practice?",
+    answer:
+      "Independent practice on Harley Street means your own premises, separate insurance, separate marketing, separate compliance, and often a quiet diary. A Cosmedocs partnership replaces all of that with a shared platform: patients are already flowing in, the team already knows your preferences, and the administrative burden sits with the clinic, not with you. Most partners describe the same shift — the diary fills, the load lifts, and the work becomes enjoyable again.",
+  },
+  {
+    question: "Can Plastic Surgeons partner at Cosmedocs too?",
+    answer:
+      "Yes. We actively invite established Plastic Surgeons — GMC specialist register, hospital affiliations, an existing practice — who would benefit from a refined non-surgical and consultation home in central London. For Plastic Surgeons, the partnership is a natural base for pre-operative consultations, post-operative reviews, and non-surgical adjuncts, all within a clinic that patients already trust.",
+  },
+  {
+    question: "What is the Harley Street Institute and how do partners use it?",
+    answer:
+      "The Harley Street Institute is our training and education arm, historically focused on aesthetic medicine and now broadening into non-aesthetic medical training. Partners can lead courses, sit on faculty, or co-author curricula — making teaching a genuine part of their career rather than an afterthought. It is one of several ways to be involved at Cosmedocs beyond clinical sessions alone.",
+  },
+  {
+    question: "How do I start a conversation about partnership?",
+    answer:
+      "The first step is a short, private enquiry to pashma@cosmedocs.com — one paragraph about you, and one about what you would like to build. We read every message personally. If the fit feels right, we arrange a confidential conversation with our medical director, followed by a walk-through of the clinic, the patient pathway, and the commercial structure. The decision is mutual and unhurried.",
+  },
+];
+
 const HarleyStreetClinicPartnership = () => {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -359,6 +409,47 @@ const HarleyStreetClinicPartnership = () => {
           below is read personally.
         </p>
       </article>
+
+      {/* FAQ SECTION */}
+      <section className="border-t border-[#C9A050]/20 bg-[#0d0d0d]">
+        <div className="container max-w-3xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge
+              variant="outline"
+              className="border-[#C9A050]/50 text-[#C9A050] mb-6 tracking-widest text-xs uppercase"
+            >
+              Frequently Asked Questions
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-serif mb-10">
+              Questions about{" "}
+              <span className="text-[#C9A050]">clinic partnership</span>
+            </h2>
+            <Accordion type="single" collapsible className="space-y-4">
+              {partnershipFaqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="border border-[#C9A050]/20 rounded-xl px-6 bg-[#0a0a0a] data-[state=open]:border-[#C9A050]/50"
+                >
+                  <AccordionTrigger className="text-left text-[#f5f0e1] hover:text-[#C9A050] py-5 text-base md:text-lg font-medium no-underline hover:no-underline [&>svg]:text-[#C9A050]">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#f5f0e1]/70 leading-relaxed pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
+      <FAQSchema faqs={partnershipFaqs} />
 
       {/* ROUTES IN */}
       <section className="border-t border-[#C9A050]/20 bg-[#0d0d0d]">
