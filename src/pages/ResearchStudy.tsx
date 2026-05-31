@@ -288,6 +288,9 @@ const ResearchStudy = () => {
         submit={submit}
         submitting={submitting}
         canSubmit={canSubmit()}
+        isFilteredFace={isFilteredFace}
+        generatingProfile={generatingProfile}
+        profile={profile}
       />
     </>
   );
@@ -313,6 +316,9 @@ interface SlideFlowProps {
   submit: () => void;
   submitting: boolean;
   canSubmit: boolean;
+  isFilteredFace: boolean;
+  generatingProfile: boolean;
+  profile: ProfileData | null;
 }
 
 const QUESTIONS_PER_PAGE = 3;
