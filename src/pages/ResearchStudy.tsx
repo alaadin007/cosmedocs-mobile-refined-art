@@ -8,6 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import {
+  DigitalFaceProfileView,
+  GeneratingProfile,
+  ProfilePrePitch,
+  type ProfileData,
+} from "@/components/research/DigitalFaceProfile";
 
 interface Study {
   id: string;
@@ -53,6 +59,10 @@ const ResearchStudy = () => {
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [generatingProfile, setGeneratingProfile] = useState(false);
+  const [profile, setProfile] = useState<ProfileData | null>(null);
+
+  const isFilteredFace = slug === "filtered-face-project";
 
   useEffect(() => {
     if (!slug) return;
@@ -125,17 +135,33 @@ const ResearchStudy = () => {
       ethnicity: demographics.ethnicity || null,
       notes: demographics.notes || null,
     };
-    const { error } = await supabase.from("research_responses").insert({
+    const { data: inserted, error } = await supabase.from("research_responses").insert({
       study_id: study.id,
       answers: finalAnswers,
       demographics: demo,
-    });
+    }).select("id").single();
     setSubmitting(false);
     if (error) {
       toast({ title: "Could not save", description: "Please try again in a moment.", variant: "destructive" });
       return;
     }
     setDone(true);
+
+    if (isFilteredFace && inserted?.id) {
+      setGeneratingProfile(true);
+      try {
+        const { data, error: fnErr } = await supabase.functions.invoke(
+          "generate-digital-face-profile",
+          { body: { response_id: inserted.id } },
+        );
+        if (fnErr || !data) throw fnErr || new Error("no data");
+        setProfile(data as ProfileData);
+      } catch (e) {
+        console.error("profile generation failed", e);
+      } finally {
+        setGeneratingProfile(false);
+      }
+    }
   };
 
   if (loading || !study) {
