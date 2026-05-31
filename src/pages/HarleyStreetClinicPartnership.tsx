@@ -410,6 +410,47 @@ const HarleyStreetClinicPartnership = () => {
         </p>
       </article>
 
+      {/* FAQ SECTION */}
+      <section className="border-t border-[#C9A050]/20 bg-[#0d0d0d]">
+        <div className="container max-w-3xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge
+              variant="outline"
+              className="border-[#C9A050]/50 text-[#C9A050] mb-6 tracking-widest text-xs uppercase"
+            >
+              Frequently Asked Questions
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-serif mb-10">
+              Questions about{" "}
+              <span className="text-[#C9A050]">clinic partnership</span>
+            </h2>
+            <Accordion type="single" collapsible className="space-y-4">
+              {partnershipFaqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="border border-[#C9A050]/20 rounded-xl px-6 bg-[#0a0a0a] data-[state=open]:border-[#C9A050]/50"
+                >
+                  <AccordionTrigger className="text-left text-[#f5f0e1] hover:text-[#C9A050] py-5 text-base md:text-lg font-medium no-underline hover:no-underline [&>svg]:text-[#C9A050]">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#f5f0e1]/70 leading-relaxed pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
+      <FAQSchema faqs={partnershipFaqs} />
+
       {/* ROUTES IN */}
       <section className="border-t border-[#C9A050]/20 bg-[#0d0d0d]">
         <div className="container max-w-5xl mx-auto px-6 py-20">
