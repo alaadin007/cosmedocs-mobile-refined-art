@@ -319,7 +319,7 @@ export default function Home2Header() {
                                     >
                                       <span className="text-sm text-white/80 group-hover:text-white transition-colors">{item.title}</span>
                                       {item.subtitle && (
-                                        <span className="block italic font-serif text-[11px] text-[#C9A050]/75 mt-0.5 leading-tight">{item.subtitle}</span>
+                                        <span className="block italic font-serif text-[11px] text-[#C9A050]/85 leading-tight max-h-0 opacity-0 overflow-hidden group-hover:max-h-8 group-hover:opacity-100 group-hover:mt-0.5 transition-all duration-200">{item.subtitle}</span>
                                       )}
                                     </Link>
                                   )
