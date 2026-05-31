@@ -293,6 +293,7 @@ const ResearchStudy = () => {
         isFilteredFace={isFilteredFace}
         generatingProfile={generatingProfile}
         profile={profile}
+        profileFailed={profileFailed}
       />
     </>
   );
@@ -321,6 +322,7 @@ interface SlideFlowProps {
   isFilteredFace: boolean;
   generatingProfile: boolean;
   profile: ProfileData | null;
+  profileFailed: boolean;
 }
 
 const QUESTIONS_PER_PAGE = 3;
@@ -444,7 +446,7 @@ const SlideFlow = (p: SlideFlowProps) => {
           ) : p.questions.length === 0 ? (
             <p className="text-white/50 text-center py-14 text-[16px]">Questions are being prepared. Please check back soon.</p>
           ) : p.done ? (
-            p.isFilteredFace ? (
+            p.isFilteredFace && !p.profileFailed ? (
               p.generatingProfile || !p.profile ? (
                 <GeneratingProfile />
               ) : (
