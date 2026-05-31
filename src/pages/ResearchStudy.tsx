@@ -442,7 +442,19 @@ const SlideFlow = (p: SlideFlowProps) => {
           ) : p.questions.length === 0 ? (
             <p className="text-white/50 text-center py-14 text-[16px]">Questions are being prepared. Please check back soon.</p>
           ) : p.done ? (
-            <ThankYouSlide copied={p.copied} copy={p.copy} />
+            p.isFilteredFace ? (
+              p.generatingProfile || !p.profile ? (
+                <GeneratingProfile />
+              ) : (
+                <DigitalFaceProfileView
+                  profile={p.profile}
+                  studyId={p.study.id}
+                  shareUrl={typeof window !== "undefined" ? window.location.href : ""}
+                />
+              )
+            ) : (
+              <ThankYouSlide copied={p.copied} copy={p.copy} />
+            )
           ) : (
             <AnimatePresence mode="wait" custom={dir}>
               <motion.div
@@ -459,7 +471,7 @@ const SlideFlow = (p: SlideFlowProps) => {
                 className="h-full"
               >
                 {current.kind === "intro" && (
-                  <IntroSlide study={p.study} onStart={goNext} />
+                  <IntroSlide study={p.study} onStart={goNext} showProfilePitch={p.isFilteredFace} />
                 )}
                 {current.kind === "questions" && current.questions && (
                   <QuestionGroupSlide
