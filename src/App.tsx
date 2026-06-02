@@ -239,6 +239,7 @@ const BotoxUnitsExplained = lazy(() => import("./pages/BotoxUnitsExplained"));
 const LipFiller05vs1ml = lazy(() => import("./pages/LipFiller05vs1ml"));
 const CheekFiller1vs2vs4ml = lazy(() => import("./pages/CheekFiller1vs2vs4ml"));
 const MasseterBotoxUnitsDosage = lazy(() => import("./pages/MasseterBotoxUnitsDosage"));
+const MasseterBotoxNearMe = lazy(() => import("./pages/MasseterBotoxNearMe"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
 const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
@@ -1008,6 +1009,10 @@ const App = () => {
                           <Route path="/cheek-filler-1ml-vs-2ml-vs-4ml/" element={<CheekFiller1vs2vs4ml />} />
                           <Route path="/masseter-botox-units-dosage" element={<MasseterBotoxUnitsDosage />} />
                           <Route path="/masseter-botox-units-dosage/" element={<MasseterBotoxUnitsDosage />} />
+                          <Route path="/treatments/masseter-botox-near-me" element={<MasseterBotoxNearMe />} />
+                          <Route path="/treatments/masseter-botox-near-me/" element={<MasseterBotoxNearMe />} />
+                          <Route path="/masseter-botox-near-me" element={<Navigate to="/treatments/masseter-botox-near-me/" replace />} />
+                          <Route path="/masseter-botox-near-me/" element={<Navigate to="/treatments/masseter-botox-near-me/" replace />} />
                           <Route path="/russian-lips-vs-classic-lip-filler" element={<RussianLipsVsClassic />} />
                           <Route path="/russian-lips-vs-classic-lip-filler/" element={<RussianLipsVsClassic />} />
                           <Route path="/treatments/endolift-london" element={<EndoliftLondon />} />
