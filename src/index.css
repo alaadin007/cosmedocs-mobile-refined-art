@@ -179,6 +179,33 @@
   100% { transform: rotateY(360deg); }
 }
 
+/* Chatbot FAB — persistent pulse glow to draw attention */
+@keyframes chatbot-pulse-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(139, 92, 246, 0.45),
+      0 0 40px rgba(236, 72, 153, 0.25),
+      0 0 0 0 rgba(139, 92, 246, 0);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(139, 92, 246, 0.7),
+      0 0 56px rgba(236, 72, 153, 0.45),
+      0 0 0 8px rgba(139, 92, 246, 0);
+  }
+}
+
+.chatbot-glow {
+  animation: chatbot-pulse-glow 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chatbot-glow {
+    animation: none;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.45), 0 0 40px rgba(236, 72, 153, 0.25);
+  }
+}
+
 /* ============================================================
    Botox hub — mobile refinement pass
    Typography, spacing, contrast, CTA prominence (≤768px)
