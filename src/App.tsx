@@ -239,6 +239,7 @@ const BotoxUnitsExplained = lazy(() => import("./pages/BotoxUnitsExplained"));
 const LipFiller05vs1ml = lazy(() => import("./pages/LipFiller05vs1ml"));
 const CheekFiller1vs2vs4ml = lazy(() => import("./pages/CheekFiller1vs2vs4ml"));
 const MasseterBotoxUnitsDosage = lazy(() => import("./pages/MasseterBotoxUnitsDosage"));
+const MasseterBotoxNearMe = lazy(() => import("./pages/MasseterBotoxNearMe"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
 const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
