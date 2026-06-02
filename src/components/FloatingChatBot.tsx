@@ -225,6 +225,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const location = useLocation();
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [peekExpanded, setPeekExpanded] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -460,6 +461,76 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   return (
     <>
+      {/* Left-wall peek tab — vivid violet/pink, faster pulse, just a sliver sticking out */}
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.div
+            initial={{ x: "-110%", opacity: 0 }}
+            animate={{ x: "0%", opacity: 1 }}
+            exit={{ x: "-110%", opacity: 0 }}
+            transition={{ type: "spring", stiffness: 260, damping: 24, delay: 0.4 }}
+            className="fixed left-0 top-1/2 -translate-y-1/2 z-[60]"
+            style={{ filter: "drop-shadow(0 10px 30px rgba(236,72,153,0.55))" }}
+          >
+            <motion.button
+              onClick={() => setIsOpen(true)}
+              onMouseEnter={() => setPeekExpanded(true)}
+              onMouseLeave={() => setPeekExpanded(false)}
+              aria-label="Open Cosmedocs AI chat"
+              animate={{
+                width: peekExpanded ? 210 : 44,
+                x: peekExpanded ? 0 : [0, 6, 0],
+              }}
+              transition={{
+                width: { type: "spring", stiffness: 260, damping: 28 },
+                x: peekExpanded
+                  ? { duration: 0.2 }
+                  : { duration: 1.4, repeat: Infinity, ease: "easeInOut" },
+              }}
+              className="relative flex items-center gap-3 bg-gradient-to-br from-violet-600 via-fuchsia-500 to-rose-500 border border-white/30 rounded-r-2xl overflow-hidden h-14 pl-2 pr-3 text-left"
+            >
+              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
+                <motion.span
+                  aria-hidden
+                  className="absolute inset-0 rounded-full bg-white/40"
+                  animate={{ scale: [1, 1.6, 1], opacity: [0.7, 0, 0.7] }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.span
+                  aria-hidden
+                  className="absolute inset-0 rounded-full border border-white/80"
+                  animate={{
+                    boxShadow: [
+                      "0 0 0px rgba(236,72,153,0.5)",
+                      "0 0 22px rgba(236,72,153,1)",
+                      "0 0 0px rgba(236,72,153,0.5)",
+                    ],
+                  }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <MessageCircle className="relative h-4 w-4 text-white" />
+              </span>
+              <AnimatePresence initial={false}>
+                {peekExpanded && (
+                  <motion.span
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -8 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex flex-col min-w-0"
+                  >
+                    <span className="text-[10px] tracking-[0.28em] uppercase text-white/80">Ask Cosmedocs</span>
+                    <span className="text-white text-sm font-light leading-tight truncate">
+                      Chat with us
+                    </span>
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="fixed bottom-4 right-4 z-50">
         {/* Auto teaser bubble */}
         <AnimatePresence>
