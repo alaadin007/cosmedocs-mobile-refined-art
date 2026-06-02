@@ -950,6 +950,43 @@ const EndolaserLift = () => {
           </div>
         </section>
 
+        {/* Practitioner Training Band — Sister Organisation */}
+        <section aria-labelledby="endolaser-training-band" className="relative overflow-hidden bg-black py-14 md:py-20 border-t border-[#C9A050]/20">
+          <div aria-hidden className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-[#C9A050]/10 blur-3xl" />
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C9A050] text-black text-[10px] font-bold uppercase tracking-[0.24em] mb-5">
+              For Medical Practitioners
+            </div>
+            <h2 id="endolaser-training-band" className="text-3xl sm:text-4xl md:text-5xl font-extralight text-white leading-[1.05] tracking-tight">
+              Train on the Endolaser <span className="text-[#C9A050] font-light">Fibre Lift</span>
+            </h2>
+            <p className="mt-5 text-base sm:text-lg text-white/60 font-light leading-relaxed max-w-2xl mx-auto">
+              Endolaser training for GMC, GDC, NMC and GPhC registrants is delivered by our sister organisation, the <strong className="text-white/80 font-normal">Harley Street Institute</strong>. Dr Ahmed Haq is the appointed Lead Trainer for this device — the same clinician performing every Endolaser procedure at Cosmedocs.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://www.harleystreetinstitute.com/endolaser-fibre-lift-course/"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 bg-[#C9A050] text-black font-semibold px-6 py-3 rounded-full hover:scale-[1.03] transition-transform"
+              >
+                View the Endolaser Fibre Lift Course
+              </a>
+              <a
+                href="https://www.harleystreetinstitute.com/"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-[#C9A050] transition-colors"
+              >
+                About Harley Street Institute →
+              </a>
+            </div>
+            <p className="mt-6 text-xs text-white/35 max-w-xl mx-auto">
+              Patient bookings remain with Cosmedocs. The training programme is a separate professional education service operated by Harley Street Institute.
+            </p>
+          </div>
+        </section>
+
         {/* Mobile Sidebar */}
         <section className="lg:hidden py-12 px-4 bg-black/95">
           <EndolaserSidebar />
