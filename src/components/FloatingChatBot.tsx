@@ -532,14 +532,14 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
           )}
         </AnimatePresence>
 
-        {/* Main Gold Toggle Button */}
+        {/* Main Chat Toggle Button — vivid violet-pink with persistent pulse glow */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => { setIsExpanded(!isExpanded); setShowTeaser(false); }}
-          className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 text-white p-5 rounded-full shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 relative overflow-hidden group border-2 border-amber-300/50"
+          className="chatbot-glow bg-gradient-to-br from-violet-500 via-fuchsia-500 to-rose-500 text-white p-5 rounded-full transition-all duration-300 relative overflow-hidden group border-2 border-white/30"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-300 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-400 to-rose-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <motion.div animate={{ rotate: isExpanded ? 45 : 0 }} transition={{ duration: 0.3 }} className="relative z-10">
             <Plus className="h-7 w-7" />
           </motion.div>
