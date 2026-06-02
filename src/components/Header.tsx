@@ -232,15 +232,13 @@ export default function Header() {
         </Suspense>
       )}
 
-      {/* Floating Chatbot - only render when needed */}
-      {isChatbotOpen && (
-        <Suspense fallback={null}>
-          <FloatingChatBot 
-            externalOpen={isChatbotOpen}
-            onExternalOpenChange={setIsChatbotOpen}
-          />
-        </Suspense>
-      )}
+      {/* Floating Chatbot - always mounted so its launcher button is visible site-wide */}
+      <Suspense fallback={null}>
+        <FloatingChatBot
+          externalOpen={isChatbotOpen}
+          onExternalOpenChange={setIsChatbotOpen}
+        />
+      </Suspense>
 
       {/* Contact Menu Modal - only render when needed */}
       {isContactMenuOpen && (
