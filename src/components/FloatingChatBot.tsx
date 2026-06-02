@@ -225,6 +225,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
   const location = useLocation();
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [peekExpanded, setPeekExpanded] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
