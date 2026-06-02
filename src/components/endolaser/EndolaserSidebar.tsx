@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Star, Clock, Calendar, Activity, Zap, ShieldCheck, ArrowRight } from "lucide-react";
+import { Star, Clock, Calendar, Activity, Zap, ShieldCheck, ArrowRight, GraduationCap } from "lucide-react";
 
 const EndolaserSidebar = () => {
   return (
@@ -66,6 +66,34 @@ const EndolaserSidebar = () => {
         <p className="text-xs text-white/40 leading-relaxed mb-3">
           Laser Fibre Lift treatments are performed in association with our partner clinic PrivaDr, ensuring access to dedicated surgical-grade facilities and specialist nursing support.
         </p>
+      </motion.div>
+
+      {/* Practitioner Training (Sister Organisation) */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.37 }}
+        className="bg-gradient-to-br from-[#C9A050]/[0.08] to-transparent border border-[#C9A050]/30 rounded-2xl p-5"
+      >
+        <div className="flex items-center gap-2 mb-2">
+          <GraduationCap className="w-4 h-4 text-[#C9A050]" />
+          <p className="text-xs font-semibold text-[#C9A050] uppercase tracking-wider">For Practitioners</p>
+        </div>
+        <p className="text-sm text-white/80 font-light leading-snug mb-2">
+          Endolaser Fibre Lift Course
+        </p>
+        <p className="text-xs text-white/45 leading-relaxed mb-3">
+          Hands-on training for GMC, GDC, NMC and GPhC registrants — delivered by our sister organisation, Harley Street Institute. Dr Ahmed Haq is the Lead Trainer for this device.
+        </p>
+        <a
+          href="https://www.harleystreetinstitute.com/endolaser-fibre-lift-course/"
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-1 text-xs font-medium text-[#C9A050] hover:underline"
+        >
+          View course details
+          <ArrowRight className="w-3 h-3" />
+        </a>
       </motion.div>
 
       {/* Related Treatments */}
