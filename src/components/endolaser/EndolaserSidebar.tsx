@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Star, Clock, Calendar, Activity, Zap, ShieldCheck, ArrowRight } from "lucide-react";
+import { Star, Clock, Calendar, Activity, Zap, ShieldCheck, ArrowRight, GraduationCap } from "lucide-react";
 
 const EndolaserSidebar = () => {
   return (
