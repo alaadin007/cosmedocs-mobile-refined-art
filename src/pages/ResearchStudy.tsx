@@ -136,11 +136,11 @@ const ResearchStudy = () => {
       ethnicity: demographics.ethnicity || null,
       notes: demographics.notes || null,
     };
-    const { data: inserted, error } = await supabase.from("research_responses").insert({
-      study_id: study.id,
-      answers: finalAnswers,
-      demographics: demo,
-    }).select("id").single();
+    const { data: responseId, error } = await (supabase as any).rpc("submit_research_response", {
+      _study_id: study.id,
+      _answers: finalAnswers,
+      _demographics: demo,
+    });
     setSubmitting(false);
     if (error) {
       toast({ title: "Could not save", description: "Please try again in a moment.", variant: "destructive" });
@@ -148,12 +148,12 @@ const ResearchStudy = () => {
     }
     setDone(true);
 
-    if (isFilteredFace && inserted?.id) {
+    if (isFilteredFace && responseId) {
       setGeneratingProfile(true);
       try {
         const { data, error: fnErr } = await supabase.functions.invoke(
           "generate-digital-face-profile",
-          { body: { response_id: inserted.id } },
+          { body: { response_id: responseId } },
         );
         if (fnErr || !data) throw fnErr || new Error("no data");
         setProfile(data as ProfileData);
