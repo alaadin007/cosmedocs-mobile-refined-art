@@ -1362,6 +1362,10 @@ export type Database = {
         }
         Returns: boolean
       }
+      submit_research_response: {
+        Args: { _answers?: Json; _demographics?: Json; _study_id: string }
+        Returns: string
+      }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
