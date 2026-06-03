@@ -48,7 +48,8 @@ const treatmentCategories = [
       { name: "Chin Filler", link: "/chin-filler" },
       { name: "Cheek Fillers", link: "/cheek-filler" },
       { name: "Jawline Filler", link: "/jawline-filler" },
-      { name: "Mini Facelift - Long Lasting Using Lifting Sutures and Volumising", link: "/non-surgical-facelift" }
+      { name: "Mini Facelift - Long Lasting Using Lifting Sutures and Volumising", link: "/non-surgical-facelift" },
+      { name: "Earlobe Rejuvenation", link: "/treatments/earlobe-rejuvenation/" }
     ],
     viewAllLink: "/treatments",
     color: "from-pink-400 to-red-500"
