@@ -47,6 +47,7 @@ const treatmentCategories = [
       { title: "Nose Filler", link: "/treatments/nose-filler/", subtitle: "Non-surgical nose reshaping" },
       { title: "Temple Filler", link: "/treatments/temple-filler/", subtitle: "Restores hollow temples" },
       { title: "Forehead Filler", link: "/treatments/forehead-filler/", subtitle: "Smooths bumps & dips" },
+      { title: "Earlobe Rejuvenation", link: "/treatments/earlobe-rejuvenation/", subtitle: "Restores plumpness to stretched lobes" },
       { title: "Filler Areas & Concerns", link: "/treatments/dermal-fillers/areas/", isSubHeader: true },
       { title: "Nasolabial Folds", link: "/treatments/dermal-fillers/areas/#nasolabial", subtitle: "Softens nose-to-mouth lines" },
       { title: "Marionette Lines", link: "/treatments/dermal-fillers/areas/#marionette", subtitle: "Lifts downturned mouth corners" },
