@@ -1013,6 +1013,10 @@ const App = () => {
                           <Route path="/treatments/masseter-botox-near-me/" element={<MasseterBotoxNearMe />} />
                           <Route path="/masseter-botox-near-me" element={<Navigate to="/treatments/masseter-botox-near-me/" replace />} />
                           <Route path="/masseter-botox-near-me/" element={<Navigate to="/treatments/masseter-botox-near-me/" replace />} />
+                          <Route path="/treatments/earlobe-rejuvenation" element={<EarLobeRejuvenation />} />
+                          <Route path="/treatments/earlobe-rejuvenation/" element={<EarLobeRejuvenation />} />
+                          <Route path="/treatments/earlobe-filler" element={<Navigate to="/treatments/earlobe-rejuvenation/" replace />} />
+                          <Route path="/treatments/earlobe-filler/" element={<Navigate to="/treatments/earlobe-rejuvenation/" replace />} />
                           <Route path="/russian-lips-vs-classic-lip-filler" element={<RussianLipsVsClassic />} />
                           <Route path="/russian-lips-vs-classic-lip-filler/" element={<RussianLipsVsClassic />} />
                           <Route path="/treatments/endolift-london" element={<EndoliftLondon />} />
