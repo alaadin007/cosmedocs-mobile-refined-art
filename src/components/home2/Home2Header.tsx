@@ -217,7 +217,7 @@ export default function Home2Header() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-14 sm:h-[60px] md:h-[60px]">
             {/* Logo - Bigger with animated subtitle */}
-            <Link to="/home2" className="flex flex-col items-start py-3">
+            <Link to="/home2" className="flex flex-col items-start justify-center">
               <span className={`text-xl sm:text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-500 ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
