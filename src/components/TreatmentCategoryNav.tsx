@@ -55,6 +55,7 @@ const categories: Category[] = [
       { title: "Non-Surgical Rhinoplasty", link: "/non-surgical-nose-job" },
       { title: "Temple Filler", link: "/temple-filler-london" },
       { title: "Neck Fillers", link: "/neck-fillers" },
+      { title: "Earlobe Rejuvenation", link: "/treatments/earlobe-rejuvenation/" },
     ]
   },
   {
