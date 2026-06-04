@@ -435,7 +435,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     const lines = [
       `Patient is on the ${pageConfig.topic} page. Their concern: ${concern.label} (${concern.bucket}).`,
       age ? `Age: ${age}.` : null,
-      `Reply as Zephra — stay strictly on-topic for ${pageConfig.topic}. Empathic, doctor-led, 1–2 options with price and rationale, one next step. Under 80 words.`,
+      `Reply as the Cosmedocs AI assistant — stay strictly on-topic for ${pageConfig.topic}. Empathic, doctor-led, 1–2 options with price and rationale, one next step. Under 80 words.`,
     ].filter(Boolean).join(" ");
     const display = age ? `${concern.label} · ${age}` : concern.label;
     sendMessage(lines, display);
