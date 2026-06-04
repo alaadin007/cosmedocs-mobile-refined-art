@@ -936,9 +936,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                     <Send className="h-5 w-5" />
                   </button>
                 </div>
-                <p className="mt-2 text-center text-[11px] text-white/35 flex items-center justify-center gap-1">
+                <p className="mt-2 text-center text-[10.5px] text-white/35 flex items-center justify-center gap-1">
                   <Shield className="h-3 w-3" />
-                  Tap the camera to add up to {MAX_IMAGES} photos — analysed in-session, never stored.
+                  Add up to {MAX_IMAGES} photos — analysed in-session, never stored.
                 </p>
               </div>
             </motion.div>
