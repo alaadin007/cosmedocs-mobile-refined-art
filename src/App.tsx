@@ -732,6 +732,8 @@ const App = () => {
                           <Route path="/treatments/cupid-bow-lips/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/nose-filler" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
                           <Route path="/treatments/nose-filler/" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
+                          <Route path="/treatments/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
+                          <Route path="/treatments/non-surgical-nose-job/" element={<NonSurgicalNoseJob />} />
                           <Route path="/treatments/forehead-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/forehead-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/neck-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />

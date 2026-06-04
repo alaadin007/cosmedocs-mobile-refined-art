@@ -119,10 +119,10 @@
 /jawline-filler/                  /treatments/jawline-filler/         301
 /jawline-fillers                  /treatments/jawline-filler/         301
 /jawline-fillers/                 /treatments/jawline-filler/         301
-/non-surgical-nose-job            /treatments/nose-filler/            301
-/non-surgical-nose-job/           /treatments/nose-filler/            301
-/nose-filler                      /treatments/nose-filler/            301
-/nose-filler/                     /treatments/nose-filler/            301
+/non-surgical-nose-job            /treatments/non-surgical-nose-job/  301
+/non-surgical-nose-job/           /treatments/non-surgical-nose-job/  301
+/nose-filler                      /treatments/dermal-fillers/nose/    301
+/nose-filler/                     /treatments/dermal-fillers/nose/    301
 /tear-trough-filler               /treatments/tear-trough-filler/     301
 /tear-trough-filler/              /treatments/tear-trough-filler/     301
 /tear-trough-fillers              /treatments/tear-trough-filler/     301
@@ -721,9 +721,7 @@
 /treatments/necklines-wrinkles-and-cords   /treatments/botox/          301
 /treatments/necklines-wrinkles-and-cords/  /treatments/botox/          301
 
-# Non-surgical nose job
-/treatments/non-surgical-nose-job          /treatments/nose-filler/    301
-/treatments/non-surgical-nose-job/         /treatments/nose-filler/    301
+# Non-surgical nose job — dedicated head-term page (do NOT redirect away)
 
 # Oily skin botox → consolidated into main Botox page
 /treatments/oily-skin-botox               /treatments/botox/          301

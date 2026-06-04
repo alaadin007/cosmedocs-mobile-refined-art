@@ -160,6 +160,14 @@
     <mobile:mobile/>
   </url>
 
+  <url>
+    <loc>https://www.cosmedocs.com/treatments/non-surgical-nose-job/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
   <!-- ===== SKIN REJUVENATION ===== -->
 
   <url>

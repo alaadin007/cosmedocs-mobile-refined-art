@@ -18,9 +18,9 @@ import {
 
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
-    "Non-Surgical Nose Job London | Nose Botox & Fillers | From £450 | Harley Street",
-    "Reshape your nose without surgery. Dermal fillers £450 or PCL Threads £950 (lasts up to 3 years). Liquid rhinoplasty at Harley Street.",
-    "/non-surgical-nose-job"
+    "Non-Surgical Nose Job London | Liquid Rhinoplasty | From £450 | Harley Street",
+    "Non-surgical nose job in London. Reshape your nose without surgery — dermal fillers from £450 or PCL threads £950 (up to 3 years). Doctor-led at Harley Street.",
+    "/treatments/non-surgical-nose-job"
   );
 
   const bookingUrl = "https://med.as.me/harleystreet";
