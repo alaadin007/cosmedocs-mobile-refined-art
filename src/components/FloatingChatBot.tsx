@@ -922,7 +922,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                       value={inputMessage}
                       onChange={(e) => setInputMessage(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
-                      placeholder={attachedImages.length > 0 ? "Add a note (optional)…" : "Ask Zephra anything…"}
+                      placeholder={attachedImages.length > 0 ? "Add a note (optional)…" : "Ask AI anything…"}
                       className="flex-1 bg-transparent outline-none text-[17px] text-white placeholder:text-white/40 py-2"
                       disabled={isLoading}
                     />
