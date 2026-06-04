@@ -667,13 +667,13 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 <div className="w-[60px]" />
               </div>
 
-              {/* Hero title */}
-              <div className="px-6 pt-5 pb-4">
-                <h2 className="text-[28px] leading-[1.1] font-semibold text-white tracking-tight">
+              {/* Hero title — compact */}
+              <div className="px-6 pt-4 pb-3">
+                <h2 className="text-[22px] leading-[1.15] font-semibold text-white tracking-tight">
                   Aesthetic <span className="text-amber-400">Intelligence</span>
                 </h2>
-                <p className="mt-1 text-[15px] text-white/55 leading-snug">
-                  A doctor-led plan, in plain English. {pageConfig.topic}.
+                <p className="mt-0.5 text-[13px] text-white/55 leading-snug">
+                  A doctor-led plan, in plain English · {pageConfig.topic}
                 </p>
               </div>
 
