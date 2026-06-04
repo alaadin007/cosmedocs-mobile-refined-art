@@ -435,7 +435,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
     const lines = [
       `Patient is on the ${pageConfig.topic} page. Their concern: ${concern.label} (${concern.bucket}).`,
       age ? `Age: ${age}.` : null,
-      `Reply as Zephra — stay strictly on-topic for ${pageConfig.topic}. Empathic, doctor-led, 1–2 options with price and rationale, one next step. Under 80 words.`,
+      `Reply as the Cosmedocs AI assistant — stay strictly on-topic for ${pageConfig.topic}. Empathic, doctor-led, 1–2 options with price and rationale, one next step. Under 80 words.`,
     ].filter(Boolean).join(" ");
     const display = age ? `${concern.label} · ${age}` : concern.label;
     sendMessage(lines, display);
@@ -667,13 +667,13 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 <div className="w-[60px]" />
               </div>
 
-              {/* Hero title */}
-              <div className="px-6 pt-5 pb-4">
-                <h2 className="text-[28px] leading-[1.1] font-semibold text-white tracking-tight">
+              {/* Hero title — compact */}
+              <div className="px-6 pt-4 pb-3">
+                <h2 className="text-[22px] leading-[1.15] font-semibold text-white tracking-tight">
                   Aesthetic <span className="text-amber-400">Intelligence</span>
                 </h2>
-                <p className="mt-1 text-[15px] text-white/55 leading-snug">
-                  A doctor-led plan, in plain English. {pageConfig.topic}.
+                <p className="mt-0.5 text-[13px] text-white/55 leading-snug">
+                  A doctor-led plan, in plain English · {pageConfig.topic}
                 </p>
               </div>
 
@@ -729,7 +729,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                       <motion.div
                         initial={{ opacity: 0, y: 6 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="flex flex-wrap gap-2 pl-1"
+                        className="grid grid-cols-2 gap-2 pt-1"
                       >
                         {chips.map((c) => (
                           <button
@@ -738,10 +738,10 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                               if (c.asksAge) { setPlanConcern(c); setPlanStep("age"); }
                               else sendChipMessage(c.label);
                             }}
-                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-amber-400/[0.08] border border-amber-400/40 active:bg-amber-400/20 text-white text-[14px] leading-tight"
+                            className="flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-amber-400/[0.08] border border-amber-400/30 active:bg-amber-400/20 text-white text-[13.5px] leading-tight text-left"
                           >
-                            <span>{c.emoji}</span>
-                            <span>{c.label}</span>
+                            <span className="text-[15px] shrink-0">{c.emoji}</span>
+                            <span className="truncate">{c.label}</span>
                           </button>
                         ))}
                       </motion.div>
@@ -922,7 +922,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                       value={inputMessage}
                       onChange={(e) => setInputMessage(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
-                      placeholder={attachedImages.length > 0 ? "Add a note (optional)…" : "Ask Zephra anything…"}
+                      placeholder={attachedImages.length > 0 ? "Add a note (optional)…" : "Ask AI anything…"}
                       className="flex-1 bg-transparent outline-none text-[17px] text-white placeholder:text-white/40 py-2"
                       disabled={isLoading}
                     />
@@ -936,9 +936,9 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                     <Send className="h-5 w-5" />
                   </button>
                 </div>
-                <p className="mt-2 text-center text-[11px] text-white/35 flex items-center justify-center gap-1">
+                <p className="mt-2 text-center text-[10.5px] text-white/35 flex items-center justify-center gap-1">
                   <Shield className="h-3 w-3" />
-                  Tap the camera to add up to {MAX_IMAGES} photos — analysed in-session, never stored.
+                  Add up to {MAX_IMAGES} photos — analysed in-session, never stored.
                 </p>
               </div>
             </motion.div>
