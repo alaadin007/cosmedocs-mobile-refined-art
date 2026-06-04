@@ -729,7 +729,7 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                       <motion.div
                         initial={{ opacity: 0, y: 6 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="flex flex-wrap gap-2 pl-1"
+                        className="grid grid-cols-2 gap-2 pt-1"
                       >
                         {chips.map((c) => (
                           <button
@@ -738,10 +738,10 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                               if (c.asksAge) { setPlanConcern(c); setPlanStep("age"); }
                               else sendChipMessage(c.label);
                             }}
-                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-amber-400/[0.08] border border-amber-400/40 active:bg-amber-400/20 text-white text-[14px] leading-tight"
+                            className="flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-amber-400/[0.08] border border-amber-400/30 active:bg-amber-400/20 text-white text-[13.5px] leading-tight text-left"
                           >
-                            <span>{c.emoji}</span>
-                            <span>{c.label}</span>
+                            <span className="text-[15px] shrink-0">{c.emoji}</span>
+                            <span className="truncate">{c.label}</span>
                           </button>
                         ))}
                       </motion.div>
