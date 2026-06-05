@@ -103,6 +103,14 @@ const NonSurgicalNoseJob = () => {
     {
       question: "Can you make a wide nose slimmer without surgery?",
       answer: "Absolutely. Our slim nose procedure uses strategic placement techniques to create the appearance of nose reduction without surgery. Using nose fillers for wide nose, we can refine proportions and achieve nose slimming botox before and after transformations. This non invasive nose surgery alternative is ideal for patients seeking subtle changes without downtime."
+    },
+    {
+      question: "Is liquid rhinoplasty better than surgical rhinoplasty?",
+      answer: "For the right candidate, liquid rhinoplasty offers significant advantages over surgical rhinoplasty: no general anaesthetic, no broken bones, no cast, no two-week downtime, and fully reversible results within 15 minutes using hyaluronidase. Surgical rhinoplasty remains the gold standard for nose reduction or major structural change, but a liquid nose job at Harley Street can correct dorsal humps, tip droop, asymmetry and bridge profile with same-day results from £450 — invisible art, not exaggerated change."
+    },
+    {
+      question: "How long does a Harley Street liquid rhinoplasty appointment take?",
+      answer: "Your liquid rhinoplasty at our 10 Harley Street clinic typically takes 30–45 minutes including numbing, mapping and injection. Dr Ahmed Haq uses ultrasound-guided #cosmenose technique for predictable, natural results. You can return to work the same day — quiet, not loud, exactly as Cosmedocs intended."
     }
   ];
 
@@ -126,8 +134,17 @@ const NonSurgicalNoseJob = () => {
     {
       question: "Are the results reversible?",
       answer: "Yes, one major advantage of non-surgical nose jobs is that nose job dermal fillers can be dissolved with hyaluronidase if needed. This makes filler tip of nose and other nose injection treatments much safer than permanent procedures. Whether it's botox on tip of nose or dermal filler nose tip treatments, we ensure you feel confident about your nose lift no surgery approach."
+    },
+    {
+      question: "Non-surgical vs surgical rhinoplasty — which is right for me?",
+      answer: "Choose non-surgical (liquid) rhinoplasty if you want to smooth a bump, lift the tip, refine asymmetry or balance the profile with zero downtime, reversible results and a £450–£950 investment. Choose surgical rhinoplasty if you need to physically reduce the size of the nose, narrow the bony bridge, or correct significant breathing issues — expect £6,000–£10,000, general anaesthetic, and 2 weeks of recovery. Most Cosmedocs patients start with a liquid rhinoplasty consultation to see what's achievable before considering surgery."
+    },
+    {
+      question: "Is Harley Street the best place for a non-surgical nose job in London?",
+      answer: "Harley Street has been the home of British medical excellence since 1860 and remains the benchmark for nose treatments in London. Our 10 Harley Street clinic combines that heritage with modern liquid rhinoplasty technique — doctor-led, GMC-registered, and CQC-aligned through PrivaDr Ltd. For patients seeking discretion, expertise and natural results, a Harley Street nose job is the considered choice."
     }
   ];
+
 
   return (
     <>
@@ -1199,7 +1216,114 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
+        {/* SEO Section: Liquid Rhinoplasty Authority */}
+        <section className="py-20 bg-black" aria-labelledby="liquid-rhinoplasty-heading">
+          <div className="page-container">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-[#C9A050] uppercase tracking-[0.3em] text-xs mb-4 block">Liquid Rhinoplasty London</span>
+              <h2 id="liquid-rhinoplasty-heading" className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Liquid Rhinoplasty — Invisible Art, Instant Results
+              </h2>
+              <p className="text-gray-300 text-lg leading-relaxed mb-5">
+                Liquid rhinoplasty is a 30-minute, doctor-led nose reshaping procedure that uses precision dermal fillers — and, where indicated, a small dose of botox — to refine the profile of the nose without surgery. At Cosmedocs, every liquid rhinoplasty is performed using our signature #cosmenose technique: ultrasound-aware mapping, micro-droplet placement and a deliberately conservative philosophy. Bold. Natural. Always your way.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed mb-5">
+                A liquid nose job can smooth a dorsal hump, lift a drooping tip, straighten a deviation, lengthen a short nose, or rebalance the bridge after trauma. Results are visible immediately, last 12–18 months with hyaluronic acid filler, and up to 3 years with our PCL thread option. Crucially, a liquid rhinoplasty is fully reversible within minutes using hyaluronidase — the safety net that surgical rhinoplasty simply cannot offer.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                From £450, liquid rhinoplasty at our 10 Harley Street clinic is the most considered way to test, refine and live with a new profile before committing to anything permanent. Quiet, not loud. Invisible, not exaggerated.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SEO Section: Harley Street Nose Job Authority */}
+        <section className="py-20 bg-accent" aria-labelledby="harley-street-nose-heading">
+          <div className="page-container">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-[#C9A050] uppercase tracking-[0.3em] text-xs mb-4 block">Harley Street Nose Job</span>
+              <h2 id="harley-street-nose-heading" className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why a Harley Street Nose Job Sets the Standard
+              </h2>
+              <p className="text-gray-300 text-lg leading-relaxed mb-5">
+                Harley Street has been the address of British medical excellence since 1860. A Harley Street nose job carries the weight of that heritage — and at 10 Harley Street, Cosmedocs continues that tradition with doctor-led, GMC-registered aesthetic medicine. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments, so every nose consultation, plan and review meets the standards expected of a Harley Street clinic.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed mb-5">
+                Dr Ahmed Haq has been refining noses on Harley Street since 2010. His Harley Street nose job patients include professionals, performers and international visitors who choose the clinic for three reasons: discretion, expertise, and natural results. There is no front-desk theatre, no overselling and no pressure — just considered medical opinion, transparent pricing from £450, and a treatment plan you can read in plain English.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                If you are searching for a Harley Street nose job, a non-surgical rhinoplasty in London, or a liquid nose job near Marylebone, Mayfair, Fitzrovia or the West End, our Harley Street clinic is the considered choice — aesthetic medicine that speaks without saying a word.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SEO Section: Non-Surgical vs Surgical Rhinoplasty */}
+        <section className="py-20 bg-black" aria-labelledby="vs-surgical-heading">
+          <div className="page-container">
+            <motion.div
+              className="max-w-5xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-[#C9A050] uppercase tracking-[0.3em] text-xs mb-4 block">Non-Surgical vs Surgical Rhinoplasty</span>
+              <h2 id="vs-surgical-heading" className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Non-Surgical vs Surgical Rhinoplasty — An Honest Comparison
+              </h2>
+              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                Surgical rhinoplasty and non-surgical (liquid) rhinoplasty solve different problems. Surgery physically reduces or restructures the nose; liquid rhinoplasty refines, balances and camouflages. Most Cosmedocs patients start here — with a liquid rhinoplasty consultation — to see what is achievable before considering anything permanent.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="border border-[#C9A050]/30 rounded-2xl p-6 bg-black/40">
+                  <h3 className="text-xl font-semibold text-[#C9A050] mb-4">Non-Surgical (Liquid) Rhinoplasty</h3>
+                  <ul className="text-gray-300 space-y-3 text-base">
+                    <li><strong className="text-white">Cost:</strong> From £450 (filler) / £950 (PCL threads)</li>
+                    <li><strong className="text-white">Time:</strong> 30–45 minutes</li>
+                    <li><strong className="text-white">Anaesthetic:</strong> Topical numbing only</li>
+                    <li><strong className="text-white">Downtime:</strong> None — back to work same day</li>
+                    <li><strong className="text-white">Results:</strong> Immediate, lasting 12–18 months (filler) or up to 3 years (threads)</li>
+                    <li><strong className="text-white">Reversible:</strong> Yes — dissolved in 15 minutes if needed</li>
+                    <li><strong className="text-white">Best for:</strong> Bumps, tip droop, asymmetry, bridge profile, post-trauma camouflage</li>
+                  </ul>
+                </div>
+                <div className="border border-white/20 rounded-2xl p-6 bg-black/40">
+                  <h3 className="text-xl font-semibold text-white mb-4">Surgical Rhinoplasty</h3>
+                  <ul className="text-gray-300 space-y-3 text-base">
+                    <li><strong className="text-white">Cost:</strong> £6,000–£10,000+</li>
+                    <li><strong className="text-white">Time:</strong> 2–4 hour operation</li>
+                    <li><strong className="text-white">Anaesthetic:</strong> General anaesthetic</li>
+                    <li><strong className="text-white">Downtime:</strong> 2 weeks off work; full result at 12 months</li>
+                    <li><strong className="text-white">Results:</strong> Permanent</li>
+                    <li><strong className="text-white">Reversible:</strong> No — revision surgery only</li>
+                    <li><strong className="text-white">Best for:</strong> Reducing nose size, narrowing bony bridge, correcting breathing</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p className="text-gray-300 text-lg leading-relaxed">
+                The honest truth: if your concern is a hump, a heavy tip, or a profile imbalance, non-surgical rhinoplasty will deliver the result you want — faster, safer, and reversibly. If you genuinely need a smaller nose or have a functional breathing issue, surgical rhinoplasty is the right path. We will tell you which you need — even when it is not us.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* FAQ Section - Two Columns Apple Style */}
+
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
