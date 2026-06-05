@@ -721,19 +721,19 @@ const App = () => {
                           <Route path="/forehead-filler" element={<Navigate to="/treatments/forehead-filler/" replace />} />
                           <Route path="/treatments/forehead-fillers" element={<Navigate to="/treatments/forehead-filler/" replace />} />
                           
-                          {/* Nose Filler Treatment Page */}
-                          <Route path="/treatments/dermal-fillers/nose" element={<NoseFillerTreatment />} />
-                          <Route path="/treatments/dermal-fillers/nose/" element={<NoseFillerTreatment />} />
+                          {/* Non-Surgical Nose Job — canonical destination */}
+                          <Route path="/treatments/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
+                          <Route path="/treatments/non-surgical-nose-job/" element={<NonSurgicalNoseJob />} />
+                          <Route path="/treatments/dermal-fillers/nose" element={<Navigate to="/treatments/non-surgical-nose-job/" replace />} />
+                          <Route path="/treatments/dermal-fillers/nose/" element={<Navigate to="/treatments/non-surgical-nose-job/" replace />} />
                           
                           {/* Filler pages redirected to hub */}
                           <Route path="/treatments/dermal-fillers/areas" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/dermal-fillers/areas/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/cupid-bow-lips" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/cupid-bow-lips/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
-                          <Route path="/treatments/nose-filler" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
-                          <Route path="/treatments/nose-filler/" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
-                          <Route path="/treatments/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
-                          <Route path="/treatments/non-surgical-nose-job/" element={<NonSurgicalNoseJob />} />
+                          <Route path="/treatments/nose-filler" element={<Navigate to="/treatments/non-surgical-nose-job/" replace />} />
+                          <Route path="/treatments/nose-filler/" element={<Navigate to="/treatments/non-surgical-nose-job/" replace />} />
                           <Route path="/treatments/forehead-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/forehead-filler/" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
                           <Route path="/treatments/neck-filler" element={<Navigate to="/treatments/dermal-fillers/" replace />} />
@@ -904,8 +904,8 @@ const App = () => {
                           <Route path="/chin-filler" element={<Navigate to="/treatments/chin-filler/" replace />} />
                           <Route path="/jawline-filler" element={<Navigate to="/treatments/jawline-filler/" replace />} />
                           <Route path="/jawline-fillers" element={<Navigate to="/treatments/jawline-filler/" replace />} />
-                          <Route path="/non-surgical-nose-job" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
-                          <Route path="/nose-filler" element={<Navigate to="/treatments/dermal-fillers/nose/" replace />} />
+                          <Route path="/non-surgical-nose-job" element={<Navigate to="/treatments/non-surgical-nose-job/" replace />} />
+                          <Route path="/nose-filler" element={<Navigate to="/treatments/non-surgical-nose-job/" replace />} />
                           <Route path="/tear-trough-filler" element={<Navigate to="/treatments/tear-trough-filler/" replace />} />
                           <Route path="/tear-trough-fillers" element={<Navigate to="/treatments/tear-trough-filler/" replace />} />
                           <Route path="/temple-filler-london" element={<Navigate to="/treatments/temple-filler/" replace />} />
