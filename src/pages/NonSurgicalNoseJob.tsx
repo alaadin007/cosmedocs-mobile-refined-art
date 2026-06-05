@@ -103,6 +103,14 @@ const NonSurgicalNoseJob = () => {
     {
       question: "Can you make a wide nose slimmer without surgery?",
       answer: "Absolutely. Our slim nose procedure uses strategic placement techniques to create the appearance of nose reduction without surgery. Using nose fillers for wide nose, we can refine proportions and achieve nose slimming botox before and after transformations. This non invasive nose surgery alternative is ideal for patients seeking subtle changes without downtime."
+    },
+    {
+      question: "Is liquid rhinoplasty better than surgical rhinoplasty?",
+      answer: "For the right candidate, liquid rhinoplasty offers significant advantages over surgical rhinoplasty: no general anaesthetic, no broken bones, no cast, no two-week downtime, and fully reversible results within 15 minutes using hyaluronidase. Surgical rhinoplasty remains the gold standard for nose reduction or major structural change, but a liquid nose job at Harley Street can correct dorsal humps, tip droop, asymmetry and bridge profile with same-day results from £450 — invisible art, not exaggerated change."
+    },
+    {
+      question: "How long does a Harley Street liquid rhinoplasty appointment take?",
+      answer: "Your liquid rhinoplasty at our 10 Harley Street clinic typically takes 30–45 minutes including numbing, mapping and injection. Dr Ahmed Haq uses ultrasound-guided #cosmenose technique for predictable, natural results. You can return to work the same day — quiet, not loud, exactly as Cosmedocs intended."
     }
   ];
 
@@ -126,8 +134,17 @@ const NonSurgicalNoseJob = () => {
     {
       question: "Are the results reversible?",
       answer: "Yes, one major advantage of non-surgical nose jobs is that nose job dermal fillers can be dissolved with hyaluronidase if needed. This makes filler tip of nose and other nose injection treatments much safer than permanent procedures. Whether it's botox on tip of nose or dermal filler nose tip treatments, we ensure you feel confident about your nose lift no surgery approach."
+    },
+    {
+      question: "Non-surgical vs surgical rhinoplasty — which is right for me?",
+      answer: "Choose non-surgical (liquid) rhinoplasty if you want to smooth a bump, lift the tip, refine asymmetry or balance the profile with zero downtime, reversible results and a £450–£950 investment. Choose surgical rhinoplasty if you need to physically reduce the size of the nose, narrow the bony bridge, or correct significant breathing issues — expect £6,000–£10,000, general anaesthetic, and 2 weeks of recovery. Most Cosmedocs patients start with a liquid rhinoplasty consultation to see what's achievable before considering surgery."
+    },
+    {
+      question: "Is Harley Street the best place for a non-surgical nose job in London?",
+      answer: "Harley Street has been the home of British medical excellence since 1860 and remains the benchmark for nose treatments in London. Our 10 Harley Street clinic combines that heritage with modern liquid rhinoplasty technique — doctor-led, GMC-registered, and CQC-aligned through PrivaDr Ltd. For patients seeking discretion, expertise and natural results, a Harley Street nose job is the considered choice."
     }
   ];
+
 
   return (
     <>
