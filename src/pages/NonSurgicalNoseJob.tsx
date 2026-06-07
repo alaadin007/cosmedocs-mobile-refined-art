@@ -143,6 +143,10 @@ const NonSurgicalNoseJob = () => {
       question: "Is Harley Street the best place for a non-surgical nose job in London?",
       answer: "Harley Street has been the home of British medical excellence since 1860 and remains the benchmark for nose treatments in London. Our 10 Harley Street clinic combines that heritage with modern liquid rhinoplasty technique — doctor-led, GMC-registered, and CQC-aligned through PrivaDr Ltd. For patients seeking discretion, expertise and natural results, a Harley Street nose job is the considered choice."
     }
+    {
+      question: "What can a liquid rhinoplasty correct?",
+      answer: "A liquid nose job can smooth a dorsal hump, lift a drooping tip, straighten a deviation, lengthen a short nose, or rebalance the bridge after trauma. Using our signature #cosmenose technique — ultrasound-aware mapping with micro-droplet placement — every treatment is performed with a deliberately conservative philosophy. Results are visible immediately and last 12–18 months with hyaluronic acid filler, or up to 3 years with our PCL thread option. The procedure is fully reversible within minutes using hyaluronidase, making it the most considered way to test and refine your profile before committing to anything permanent. From £450. Quiet, not loud. Invisible, not exaggerated."
+    }
   ];
 
 
