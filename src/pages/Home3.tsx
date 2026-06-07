@@ -1237,7 +1237,7 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                   <img
                     src={card.flip?.image ?? card.image}
                     alt={`${card.title} before and after, Cosmedocs`}
-                    className="block w-full h-full object-contain"
+                    className="block max-w-full max-h-full w-auto h-auto object-contain"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0)_65%,rgba(201,160,80,0.10)_100%)]" />
                 </div>
