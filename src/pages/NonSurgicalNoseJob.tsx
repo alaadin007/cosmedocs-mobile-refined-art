@@ -111,6 +111,14 @@ const NonSurgicalNoseJob = () => {
     {
       question: "How long does a Harley Street liquid rhinoplasty appointment take?",
       answer: "Your liquid rhinoplasty at our 10 Harley Street clinic typically takes 30–45 minutes including numbing, mapping and injection. Dr Ahmed Haq uses ultrasound-guided #cosmenose technique for predictable, natural results. You can return to work the same day — quiet, not loud, exactly as Cosmedocs intended."
+    },
+    {
+      question: "What makes a Harley Street nose job different?",
+      answer: "Harley Street has been the address of British medical excellence since 1860. At 10 Harley Street, Cosmedocs continues that tradition with doctor-led, GMC-registered aesthetic medicine. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments. Dr Ahmed Haq has been refining noses here since 2010. Patients choose us for discretion, expertise and natural results — no front-desk theatre, no overselling, no pressure. Just considered medical opinion, transparent pricing from £450, and a treatment plan you can read in plain English."
+    },
+    {
+      question: "Should I choose non-surgical or surgical rhinoplasty?",
+      answer: "It depends on your concern. If you have a hump, heavy tip or profile imbalance, non-surgical (liquid) rhinoplasty will deliver the result you want — faster, safer and reversibly — from £450 with no downtime. If you genuinely need a smaller nose, narrower bony bridge or have a functional breathing issue, surgical rhinoplasty is the right path at £6,000–£10,000+ with 2 weeks' recovery. Most Cosmedocs patients start with a liquid rhinoplasty consultation to see what is achievable before considering anything permanent. We will tell you which you need — even when it is not us."
     }
   ];
 
