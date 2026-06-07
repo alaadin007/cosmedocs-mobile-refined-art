@@ -43,7 +43,7 @@ const EndolaserLift = () => {
     },
     {
       question: "How much does the Laser Fibre Lift cost?",
-      answer: "Laser Fibre Lift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,250, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
+      answer: "Laser Fibre Lift pricing at CosmeDocs Harley Street, London: Eyebrow Lift from £450, Jawline/Jowls from £1,500, Cheeks/Nasolabial Folds from £950, and Chin Tightening/Double Chin from £950. A consultation (£50, redeemable against treatment) is required to assess your suitability and create a personalised treatment plan."
     },
     {
       question: "Is the Endolaser (Laser Fibre Lift) better than HIFU or Morpheus8?",
@@ -195,7 +195,7 @@ const EndolaserLift = () => {
                       "@type": "Offer",
                       "name": "Laser Fibre Lift Jawline & Jowls",
                       "priceCurrency": "GBP",
-                      "price": "1250"
+                      "price": "1500"
                     },
                     {
                       "@type": "Offer",
@@ -500,7 +500,7 @@ const EndolaserLift = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
                       { area: "Eyebrow Lift", desc: "Elevates drooping brows for a refreshed, open-eyed appearance without surgery. Ideal for hooded upper lids.", price: "£450" },
-                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Laser Fibre Lift zone.", price: "£1,250" },
+                      { area: "Jawline & Jowls", desc: "Tightens sagging jowl tissue and redefines the jawline contour. Our most requested Laser Fibre Lift zone.", price: "£1,500" },
                       { area: "Cheeks & Nasolabial Folds", desc: "Lifts mid-face tissue and softens deep nasolabial fold lines from within.", price: "£950" },
                       { area: "Chin & Double Chin", desc: "Reduces submental fat and tightens chin skin for a sharper, more defined profile.", price: "£950" },
                       { area: "Under-Eye Bags", desc: "Treats lower eyelid puffiness by tightening tissue and reducing fat herniation.", price: "POC" },
@@ -998,7 +998,7 @@ const EndolaserLift = () => {
           <p>CosmeDocs is a leading provider of Endolaser Laser Fibre Lift treatment in London, located at 10 Harley Street, W1G 9PF. Our Endolaser procedure — also known as the Laser Fibre Lift — uses dual-wavelength 980nm and 1470nm laser fibre technology for face lifting, jowl tightening, jawline contouring, eyebrow elevation, and double chin reduction. The Endolaser is led by Dr Ahmed Haq, the Lead Trainer for this device at the Harley Street Institute. CosmeDocs has performed over 1 million aesthetic treatments since 2007. Endolaser results last 2–3+ years with minimal downtime. CQC-registered partner clinic. Our aesthetics is invisible art — bold, natural, always your way.</p>
 
           <h3>Endolaser Cost London — Laser Fibre Lift Pricing 2025</h3>
-          <p>How much does the Endolaser Laser Fibre Lift cost in London? At CosmeDocs Harley Street, Endolaser pricing starts from £450 for an Eyebrow Lift. Jawline and Jowl tightening costs £1,250, Cheek and Nasolabial Fold lifting from £950, and Chin tightening or double chin reduction from £950. Endolaser consultation costs £50, fully redeemable against treatment. Our pricing includes local anaesthetic, the procedure, and comprehensive aftercare. Repeat Endolaser sessions after 6 months receive a 50% discount.</p>
+          <p>How much does the Endolaser Laser Fibre Lift cost in London? At CosmeDocs Harley Street, Endolaser pricing starts from £450 for an Eyebrow Lift. Jawline and Jowl tightening costs £1,500, Cheek and Nasolabial Fold lifting from £950, and Chin tightening or double chin reduction from £950. Endolaser consultation costs £50, fully redeemable against treatment. Our pricing includes local anaesthetic, the procedure, and comprehensive aftercare. Repeat Endolaser sessions after 6 months receive a 50% discount.</p>
 
           <h3>Endolaser vs HIFU vs Morpheus8 — Which Is Best in London?</h3>
           <p>The Endolaser Laser Fibre Lift delivers laser energy directly beneath the skin via a micro-fibre, achieving more precise and controlled results compared to external devices like HIFU, Morpheus8, and radiofrequency treatments. Key advantages of the Endolaser over HIFU in London: subdermal energy delivery (not transcutaneous), dual-wavelength fat reduction and skin tightening in one session, does not dissolve existing dermal fillers, Endolaser results lasting 2–3+ years versus 6–12 months with HIFU. The Endolaser is considered the gold standard for non-surgical face lifting among London aesthetic clinics.</p>
