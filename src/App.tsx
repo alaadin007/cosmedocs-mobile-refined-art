@@ -102,6 +102,7 @@ const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
 const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
 const NonSurgicalFaceliftHub = lazy(() => import("./pages/NonSurgicalFaceliftHub"));
 const EndolaserLift = lazy(() => import("./pages/EndolaserLift"));
+const EndolaserJawlineAd = lazy(() => import("./pages/ads/EndolaserJawlineAd"));
 const EndolaserBody = lazy(() => import("./pages/EndolaserBody"));
 const EndolaserCellulite = lazy(() => import("./pages/EndolaserCellulite"));
 const EndoFibreLiftDuration = lazy(() => import("./pages/EndoFibreLiftDuration"));
@@ -800,6 +801,8 @@ const App = () => {
                           <Route path="/treatments/non-surgical-facelift/" element={<NonSurgicalFaceliftHub />} />
                           <Route path="/treatments/endolaser" element={<EndolaserLift />} />
                           <Route path="/treatments/endolaser/" element={<EndolaserLift />} />
+                          <Route path="/ads/endolaser-jawline" element={<EndolaserJawlineAd />} />
+                          <Route path="/ads/endolaser-jawline/" element={<EndolaserJawlineAd />} />
                           <Route path="/treatments/endolaser-body" element={<EndolaserBody />} />
                           <Route path="/treatments/endolaser-body/" element={<EndolaserBody />} />
                           <Route path="/treatments/endolaser-cellulite" element={<EndolaserCellulite />} />
