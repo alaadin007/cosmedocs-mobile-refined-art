@@ -69,6 +69,10 @@ export default function JawlineTighteningOver30() {
         <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.description} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content={HERO_OG} />
+        <meta property="og:image:alt" content="Sculpted female jawline profile, gold rim light — Cosmedocs Harley Street" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={HERO_OG} />
         <meta name="keywords" content="jawline tightening, jowl treatment, jawline filler, PDO cog threads, Endolaser, non-surgical facelift, Harley Street, jawline over 30" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
