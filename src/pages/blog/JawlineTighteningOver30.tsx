@@ -10,7 +10,7 @@ import pdoThreadVideo from "@/assets/pdo-thread-insertion.mov.asset.json";
 /**
  * Long-form editorial blog (~2,500 words) targeting
  * "jawline tightening over 30 — filler, threads, or laser"
- * High commercial intent — funnels into the £950 Endolaser Jawline ad page.
+ * High commercial intent — funnels into the main Endolaser treatment page.
  */
 export default function JawlineTighteningOver30() {
   const seo = generateSEOMetadata(
