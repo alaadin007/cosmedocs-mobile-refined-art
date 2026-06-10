@@ -6,6 +6,7 @@ import BlogSidebar from "@/components/blog/BlogSidebar";
 import harleyStreetImg from "@/assets/blog-clinic-harley-street.jpg";
 import phoneSearchImg from "@/assets/blog-clinic-phone-search.jpg";
 import receptionImg from "@/assets/blog-clinic-reception.jpg";
+import originalLogoAsset from "@/assets/cosmedocs-original-logo-2006.jpg.asset.json";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
