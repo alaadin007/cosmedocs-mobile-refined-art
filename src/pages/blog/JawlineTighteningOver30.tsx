@@ -8,6 +8,7 @@ import pdoThreadVideo from "@/assets/pdo-thread-insertion.mov.asset.json";
 import femaleCaseAsset from "@/assets/jawline-over30-female-volume-restore.jpg.asset.json";
 import maleCaseAsset from "@/assets/jawline-over30-male-volume-loss.jpg.asset.json";
 import femaleProfileAsset from "@/assets/jawline-over30-female-profile-bone-resorption.jpg.asset.json";
+import combinedCaseAsset from "@/assets/jawline-over30-filler-cog-threads-endolaser.jpg.asset.json";
 
 
 /**
@@ -427,6 +428,37 @@ export default function JawlineTighteningOver30() {
                 over-30 playbook.
               </figcaption>
             </figure>
+
+            {/* Case 4 — advanced volume loss, filler + cog threads + endolaser */}
+            <figure className="mt-6 rounded-2xl overflow-hidden border border-[#C9A050]/25 bg-white/[0.02]">
+              <img
+                src={combinedCaseAsset.url}
+                alt="Female patient in her 40s — before and after combined treatment at Cosmedocs: dermal filler volume replacement, PDO cog threads for structural lift and Endolaser skin tightening along the jawline"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <figcaption className="px-5 py-4 text-sm text-white/65 leading-relaxed">
+                <strong className="text-white">Case four — combined approach · filler + cog threads + Endolaser.</strong>{" "}
+                When volume loss is more advanced and the skin envelope has begun to descend, replacing
+                volume alone is rarely enough. Here the plan is sequenced: first,{" "}
+                <Link to="/treatments/dermal-fillers/" className="underline text-[#C9A050] hover:text-[#B8913F]">
+                  dermal filler
+                </Link>{" "}
+                to restore the deep mid-face and jaw-angle scaffold; second,{" "}
+                <Link to="/treatments/pdo-cog-threads/" className="underline text-[#C9A050] hover:text-[#B8913F]">
+                  PDO cog threads
+                </Link>{" "}
+                to physically re-suspend the softened jawline and reposition the cheek tissue; and
+                third,{" "}
+                <Link to="/treatments/laser-fibre-lift/" className="underline text-[#C9A050] hover:text-[#B8913F]">
+                  Endolaser
+                </Link>{" "}
+                sub-dermally to tighten the skin envelope itself and stimulate long-term collagen
+                remodelling. Volume in. Structure held. Skin shrunk. The jawline returns — quietly,
+                without surgery.
+              </figcaption>
+            </figure>
+
 
             <p className="mt-6 text-xs italic text-white/45 leading-relaxed">
               Real Cosmedocs patients, photographed with consent under standardised lighting.
