@@ -400,11 +400,48 @@ export default function JawlineTighteningOver30() {
               </figcaption>
             </figure>
 
+            {/* Case 3 — female profile, bone resorption / L-to-I jaw angle */}
+            <figure className="mt-6 rounded-2xl overflow-hidden border border-[#C9A050]/25 bg-white/[0.02]">
+              <img
+                src={femaleProfileAsset.url}
+                alt="Female patient profile in her 30s — before and after 1ml of dermal filler per side at Cosmedocs, restoring the mandibular jaw angle from a softened 'I' shape back to a defined 'L' shape"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <figcaption className="px-5 py-4 text-sm text-white/65 leading-relaxed">
+                <strong className="text-white">Case three — female, 30s · the L-to-I jaw angle.</strong>{" "}
+                In the female face from the early thirties onward, the mandible quietly loses bone
+                volume — a well-documented age-related change in mandibular morphology
+                (<a
+                  href="https://pubmed.ncbi.nlm.nih.gov/22301236/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-[#C9A050] hover:text-[#B8913F]"
+                >peer-reviewed evidence on age-related mandibular bone resorption</a>).
+                As the jawbone resorbs, the angle of the jaw softens from a sharp <em>L</em> into a
+                rounder <em>I</em>, and the overlying skin slides forward — the first whisper of a
+                jowl. Replacing just <strong className="text-white">1ml of filler per side</strong> at
+                the jaw angle and lateral mid-face rebuilds the lost scaffold, the skin re-drapes,
+                and the <em>L</em> returns. No threads. No laser. No downtime. One short,
+                conservative appointment — and one of the most cost-effective interventions in the
+                over-30 playbook.
+              </figcaption>
+            </figure>
+
             <p className="mt-6 text-xs italic text-white/45 leading-relaxed">
               Real Cosmedocs patients, photographed with consent under standardised lighting.
               Individual results vary. Photographs are clinical records, not retouched marketing imagery.
+              See more outcomes on our{" "}
+              <Link to="/before-after/dermal-fillers/" className="underline text-[#C9A050] hover:text-[#B8913F]">
+                dermal filler before &amp; after gallery
+              </Link>
+              {" "}or read the{" "}
+              <Link to="/treatments/jawline-filler/" className="underline text-[#C9A050] hover:text-[#B8913F]">
+                jawline filler treatment page
+              </Link>.
             </p>
           </section>
+
 
           {/* CTA — main Endolaser page */}
           <section className="mt-14 rounded-2xl border border-[#C9A050]/40 bg-gradient-to-br from-black via-[#1a140a] to-black p-6 sm:p-8">
