@@ -311,10 +311,10 @@ export default function JawlineTighteningOver30() {
               <Stat label="Lasts" value="18–24 months+" />
             </div>
             <p className="mt-4">
-              This is the treatment behind our flat-fee <strong className="text-white">£950 Endolaser
-              Jawline</strong> offer below. It is performed by our medical doctors on Harley Street
-              and is the single most efficient treatment we offer for patients in their late 30s
-              through 50s who want jawline definition without surgery.
+              This is the treatment behind our <Link to="/treatments/endolaser/" className="text-[#C9A050] underline underline-offset-2">Endolaser Laser Fibre Lift</Link>.
+              It is performed by our medical doctors on Harley Street and is the single most efficient
+              treatment we offer for patients in their late 30s through 50s who want jawline definition
+              without surgery.
             </p>
 
             <h2 className="text-2xl font-light text-white">6. The decision, in plain English</h2>
