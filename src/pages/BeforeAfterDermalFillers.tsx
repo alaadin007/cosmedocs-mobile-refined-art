@@ -80,13 +80,23 @@ const facialLinesConcerns = [
   "Nasolabial folds",
   "Marionette lines",
   "Pre-jowl sulcus",
-  "Perioral lines"
+  "Perioral lines",
+  "Neck lines (Venus rings)"
+];
+
+const neckLineTags = [
+  "Neck lines",
+  "Venus rings",
+  "Necklace lines",
+  "Horizontal neck creases",
+  "Hyaluronic acid filler",
+  "Doctor-led",
 ];
 
 const BeforeAfterDermalFillers = () => {
   const seoData = generateSEOMetadata(
-    "Dermal Filler Before & After Results | CosmeDocs",
-    "View real dermal filler before and after results from our London clinic. Doctor-led treatments for lips, cheeks, jawline, and facial rejuvenation.",
+    "Dermal Filler Before & After: Lips, Cheeks, Jawline & Neck Lines | CosmeDocs",
+    "Real dermal filler before and after results from our Harley Street clinic — including neck lines (Venus rings), lips, cheeks, jawline and full-face rejuvenation. Doctor-led, unedited photos.",
     "/before-after/dermal-fillers/"
   );
 
