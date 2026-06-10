@@ -247,6 +247,8 @@ const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymm
 const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
 const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
 const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
+const JawlineTighteningOver30 = lazy(() => import("./pages/blog/JawlineTighteningOver30"));
+const AdminPageViews = lazy(() => import("./pages/AdminPageViews"));
 const EndoliftSafety = lazy(() => import("./pages/endolift/EndoliftSafety"));
 const EndoliftRecovery = lazy(() => import("./pages/endolift/EndoliftRecovery"));
 const EndoliftDoubleChin = lazy(() => import("./pages/endolift/EndoliftDoubleChin"));
@@ -619,6 +621,10 @@ const App = () => {
                           <Route path="/concerns/dark-circles-vs-eye-bags/" element={<DarkCirclesVsEyeBags />} />
                           <Route path="/blog/endolift-explained" element={<EndoliftExplained />} />
                           <Route path="/blog/endolift-explained/" element={<EndoliftExplained />} />
+                          <Route path="/blog/jawline-tightening-over-30" element={<JawlineTighteningOver30 />} />
+                          <Route path="/blog/jawline-tightening-over-30/" element={<JawlineTighteningOver30 />} />
+                          <Route path="/admin/page-views" element={<AdminPageViews />} />
+                          <Route path="/admin/page-views/" element={<AdminPageViews />} />
                           <Route path="/medical" element={<MedicalHub />} />
                           <Route path="/medical/" element={<MedicalHub />} />
                           <Route path="/safety" element={<Safety />} />
