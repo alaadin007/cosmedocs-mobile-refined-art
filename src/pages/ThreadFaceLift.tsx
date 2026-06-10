@@ -13,6 +13,9 @@ import threadLiftImage1 from '@/assets/thread-lift-before-after-1.jpg';
 import pdoThreadsImage from '@/assets/pdo-threads-before-after.jpg';
 import threadLiftImage2 from '@/assets/thread-lift-before-after-2.png';
 import pdoThreadLiftImage from '@/assets/pdo-thread-lift-before-after.jpg';
+import monoAbdomenAsset from '@/assets/pdo-mono-threads-abdomen.jpg.asset.json';
+import monoTorsoAsset from '@/assets/pdo-mono-threads-torso.jpg.asset.json';
+import monoNeckAsset from '@/assets/pdo-mono-threads-neck.jpg.asset.json';
 
 const beforeAfterImages = [
   {
