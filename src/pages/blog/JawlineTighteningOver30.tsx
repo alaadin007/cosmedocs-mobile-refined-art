@@ -5,6 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 import { ArrowRight, Sparkles, ShieldCheck, Info, CheckCircle2, AlertTriangle, Clock } from "lucide-react";
 import pdoThreadVideo from "@/assets/pdo-thread-insertion.mov.asset.json";
+import femaleCaseAsset from "@/assets/jawline-over30-female-volume-restore.jpg.asset.json";
+import maleCaseAsset from "@/assets/jawline-over30-male-volume-loss.jpg.asset.json";
 
 
 /**
@@ -341,6 +343,65 @@ export default function JawlineTighteningOver30() {
               Sometimes it's one Endolaser session. Occasionally it's all three modalities,
               sequenced over six months. Whatever it is, you will leave the consultation knowing
               exactly why.
+            </p>
+          </section>
+
+          {/* Real cases — early-phase volume loss */}
+          <section className="mt-14">
+            <div className="flex items-center gap-2 mb-3">
+              <Sparkles className="w-4 h-4 text-[#C9A050]" />
+              <span className="text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
+                Real Cosmedocs cases · Phase one
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extralight">
+              The first phase: volume loss, before sag sets in
+            </h2>
+            <p className="mt-3 text-white/65 font-light leading-relaxed">
+              The over-30 face does not sag first — it <em>sinks</em> first. Mid-face fat pads deflate,
+              the cheek loses projection, and the skin envelope that used to sit over a fuller scaffold
+              starts to drift downward. Caught at this phase, a small, precisely-placed volume
+              restoration arrests the descent and keeps the jawline crisp — no threads, no laser, no
+              downtime. Below are two real Cosmedocs patients photographed at this exact stage.
+            </p>
+
+            {/* Case 1 — female */}
+            <figure className="mt-8 rounded-2xl overflow-hidden border border-[#C9A050]/25 bg-white/[0.02]">
+              <img
+                src={femaleCaseAsset.url}
+                alt="Female patient in her thirties — before and after small-volume mid-face and cheek filler at Cosmedocs, restoring projection and lifting the lower face without changing identity"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <figcaption className="px-5 py-4 text-sm text-white/65 leading-relaxed">
+                <strong className="text-white">Case one — female, early 30s.</strong> Early mid-face
+                volume loss with the beginning of a soft jowl shadow. A conservative volume
+                restoration to the cheek and lateral mid-face re-projects the upper structure;
+                the lower face lifts <em>as a consequence</em>, not as a target. No filler placed in
+                the jawline itself. Identity preserved entirely.
+              </figcaption>
+            </figure>
+
+            {/* Case 2 — male */}
+            <figure className="mt-6 rounded-2xl overflow-hidden border border-[#C9A050]/25 bg-white/[0.02]">
+              <img
+                src={maleCaseAsset.url}
+                alt="Male patient profile — before and after volume restoration at Cosmedocs, demonstrating reduction of lower-face heaviness and improved chin and jawline definition"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <figcaption className="px-5 py-4 text-sm text-white/65 leading-relaxed">
+                <strong className="text-white">Case two — male, 30s.</strong> Volume loss in the
+                mid-face with compensatory heaviness accumulating in the front of the lower face —
+                a typical male presentation. Re-projection of the chin and angle of the jaw, with
+                support to the deflated mid-face, sharpens the profile and reduces the
+                pre-jowl fullness. Same face. Better scaffold.
+              </figcaption>
+            </figure>
+
+            <p className="mt-6 text-xs italic text-white/45 leading-relaxed">
+              Real Cosmedocs patients, photographed with consent under standardised lighting.
+              Individual results vary. Photographs are clinical records, not retouched marketing imagery.
             </p>
           </section>
 
