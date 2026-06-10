@@ -391,6 +391,91 @@ const BeforeAfterDermalFillers = () => {
           </div>
         </section>
 
+        {/* Neck Lines (Venus Rings) — case study */}
+        <section id="neck-lines" className="relative py-20 scroll-mt-20 bg-gradient-to-b from-neutral-900 to-black">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mb-10"
+            >
+              <p className="text-[#C9A050]/80 text-[11px] uppercase tracking-[0.25em] mb-3">
+                Neck · Case study
+              </p>
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
+                Neck Lines (Venus Rings){" "}
+                <span className="font-semibold text-[#C9A050]">with Dermal Filler</span>
+              </h2>
+              <p className="text-white/45 font-light leading-relaxed">
+                Horizontal neck creases — known as Venus rings or necklace lines — softened with a soft,
+                hydrophilic hyaluronic acid filler placed directly along each line. Photos taken before
+                and immediately after treatment at our Harley Street clinic.
+              </p>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 gap-4 max-w-4xl">
+              {[
+                {
+                  src: neckBeforeAsset.url,
+                  label: "Before",
+                  alt: "Before dermal filler — prominent horizontal neck lines (Venus rings) across the front of the neck",
+                  caption: "Before — established horizontal neck lines",
+                },
+                {
+                  src: neckAfterAsset.url,
+                  label: "Immediately After",
+                  alt: "Immediately after hyaluronic acid filler placed along each horizontal neck line — small entry points visible, lines visibly softened",
+                  caption: "Immediately after — HA filler placed along each line",
+                },
+              ].map((img) => (
+                <figure
+                  key={img.label}
+                  className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden"
+                >
+                  <div className="relative">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-64 sm:h-72 object-cover"
+                    />
+                    <span className="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-[10px] tracking-[0.2em] uppercase text-white/80 px-2.5 py-1 rounded-full border border-white/10">
+                      {img.label}
+                    </span>
+                  </div>
+                  <figcaption className="px-4 py-3 border-t border-white/[0.06] text-white/45 text-xs font-light">
+                    {img.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap gap-2 mt-8 max-w-4xl"
+            >
+              {neckLineTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3.5 py-1.5 text-xs text-white/55 bg-white/[0.04] border border-white/[0.08] rounded-full"
+                >
+                  #{tag.replace(/\s+/g, "")}
+                </span>
+              ))}
+            </motion.div>
+
+            <p className="text-white/30 text-xs font-light mt-6 max-w-3xl italic">
+              Immediately-after photo shows small needle entry points and mild redness — these settle within 24–48 hours. Final smoothing refines over 2–4 weeks as the filler integrates.
+            </p>
+          </div>
+        </section>
+
         {/* Disclaimer */}
         <section className="py-8 border-t border-white/[0.06] bg-neutral-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
