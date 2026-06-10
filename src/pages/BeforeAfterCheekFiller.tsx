@@ -6,8 +6,14 @@ import { ArrowRight } from "lucide-react";
 import oneMLImage from "@/assets/1ml-cheek-fillers-before-after.png";
 import twoMLImage from "@/assets/2ml-cheek-fillers-before-after.png";
 import menCheekImage from "@/assets/cheek-filler-treatment-man.png";
+import subtleCheekboneImage from "@/assets/subtle-cheekbone-enhancement-before-after.jpg.asset.json";
 
 const galleryImages = [
+  {
+    src: subtleCheekboneImage.url,
+    alt: "Before and after subtle cheekbone enhancement with a small amount of dermal filler at Cosmedocs Harley Street",
+    caption: "Slight cheekbone enhancement — a conservative micro-volume placed precisely over the zygomatic arch to lift light onto the upper cheek. Truth-first, almost imperceptible, entirely her own face.",
+  },
   {
     src: oneMLImage,
     alt: "Before and after 1ml cheek filler showing subtle mid-face volume restoration",
@@ -70,7 +76,7 @@ const schemaMarkup = {
       description:
         "Real patient before and after photographs demonstrating mid-face volume restoration and cheek contouring achieved through dermal filler treatment at CosmeDocs Harley Street.",
       url: "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/",
-      numberOfItems: 6,
+      numberOfItems: 7,
       about: {
         "@type": "MedicalProcedure",
         name: "Cheek Filler",
