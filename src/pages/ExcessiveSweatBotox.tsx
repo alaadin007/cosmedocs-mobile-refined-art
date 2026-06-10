@@ -9,6 +9,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import HyperhidrosisSidebar from "@/components/hyperhidrosis/HyperhidrosisSidebar";
+import hyperhidrosisVideoAsset from "@/assets/hyperhidrosis-treatment.mov.asset.json";
 
 const ExcessiveSweatBotox = () => {
   const seoData = generateSEOMetadata(
@@ -167,8 +168,7 @@ const ExcessiveSweatBotox = () => {
           {/* Background video — sits behind content, low opacity for a quiet ambient feel */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <video
-              src="/videos/underarm-botox-hero.mp4"
-              poster="/images/underarm-botox-hero-poster.jpg"
+              src={hyperhidrosisVideoAsset.url}
               autoPlay
               muted
               loop
@@ -176,7 +176,10 @@ const ExcessiveSweatBotox = () => {
               preload="metadata"
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover opacity-60"
-            />
+            >
+              <source src={hyperhidrosisVideoAsset.url} type="video/mp4" />
+              <source src={hyperhidrosisVideoAsset.url} type="video/quicktime" />
+            </video>
             {/* Lighter tint so the video remains visible while keeping copy legible */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
