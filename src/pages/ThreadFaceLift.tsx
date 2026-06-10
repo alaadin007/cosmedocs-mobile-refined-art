@@ -265,6 +265,29 @@ export function ThreadFaceLift() {
                       <p>
                         Most thread lift treatments combine both types strategically — cog threads for structural lifting in areas like the jawline and cheeks, and mono threads for overall skin tightening and texture refinement.
                       </p>
+
+                      {/* Mono threads in practice — real clinical photos */}
+                      <div className="space-y-3">
+                        <p className="text-white/55 text-xs uppercase tracking-[0.2em]">Mono threads in practice</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                          {[
+                            { src: monoNeckAsset.url, alt: "Multiple PDO mono threads inserted along the neck for skin tightening at our London clinic", caption: "Neck — mono threads for crepey skin" },
+                            { src: monoAbdomenAsset.url, alt: "PDO mono thread insertion into the lower abdomen for skin tightening and collagen stimulation", caption: "Abdomen — collagen stimulation" },
+                            { src: monoTorsoAsset.url, alt: "Full torso treated with a dense fan of PDO mono threads for body skin tightening", caption: "Torso — full body skin tightening" },
+                          ].map((img) => (
+                            <figure key={img.src} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden">
+                              <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-48 object-cover" />
+                              <figcaption className="px-4 py-2 border-t border-white/[0.06] text-white/40 text-[11px] font-light">
+                                {img.caption}
+                              </figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                        <p className="text-white/35 text-xs italic">
+                          Real Cosmedocs clinical photographs — PDO mono threads inserted using fine needles to stimulate collagen and tighten the skin.
+                        </p>
+                      </div>
+
                       {/* Cog thread close-up image */}
                       <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden">
                         <img
