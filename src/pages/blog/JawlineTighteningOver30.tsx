@@ -7,6 +7,7 @@ import { ArrowRight, Sparkles, ShieldCheck, Info, CheckCircle2, AlertTriangle, C
 import pdoThreadVideo from "@/assets/pdo-thread-insertion.mov.asset.json";
 import femaleCaseAsset from "@/assets/jawline-over30-female-volume-restore.jpg.asset.json";
 import maleCaseAsset from "@/assets/jawline-over30-male-volume-loss.jpg.asset.json";
+import femaleProfileAsset from "@/assets/jawline-over30-female-profile-bone-resorption.jpg.asset.json";
 
 
 /**
@@ -16,8 +17,8 @@ import maleCaseAsset from "@/assets/jawline-over30-male-volume-loss.jpg.asset.js
  */
 export default function JawlineTighteningOver30() {
   const seo = generateSEOMetadata(
-    "Jawline Tightening Over 30: Filler, Threads or Laser? | Cosmedocs",
-    "Doctor's guide to jawline tightening after 30. When filler works, when PDO cog threads are right, and when Endolaser is the better fix. Honest, evidence-based, Harley Street.",
+    "Jawline Tightening Over 30: Filler, Threads or Laser? Doctor's Guide | Cosmedocs",
+    "Why the female jawline softens in your 30s — bone resorption, mid-face volume loss, the L-to-I jaw angle change — and exactly when 1ml of filler, PDO cog threads, or Endolaser is the right fix. Harley Street, doctor-led.",
     "/blog/jawline-tightening-over-30/"
   );
 
