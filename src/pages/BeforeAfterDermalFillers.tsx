@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, MapPin, Camera, Star, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
+import neckBeforeAsset from '@/assets/neck-lines-filler-before.jpg.asset.json';
+import neckAfterAsset from '@/assets/neck-lines-filler-after.jpg.asset.json';
 
 const areaCards = [
   {
