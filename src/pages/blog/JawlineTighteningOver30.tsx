@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Breadcrumb from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 import { ArrowRight, Sparkles, ShieldCheck, Info, CheckCircle2, AlertTriangle, Clock } from "lucide-react";
+import pdoThreadVideo from "@/assets/pdo-thread-insertion.mov.asset.json";
+
 
 /**
  * Long-form editorial blog (~2,500 words) targeting
@@ -254,6 +256,22 @@ export default function JawlineTighteningOver30() {
                 </ul>
               </Bullet>
             </div>
+
+            {/* PDO cog thread insertion — clinic footage */}
+            <figure className="mt-8 rounded-2xl overflow-hidden border border-[#C9A050]/30 bg-black/60">
+              <video
+                src={pdoThreadVideo.url}
+                controls
+                muted
+                playsInline
+                preload="metadata"
+                className="w-full h-auto block"
+                aria-label="PDO cog thread insertion procedure at Cosmedocs Harley Street"
+              />
+              <figcaption className="px-4 py-3 text-xs text-white/60 border-t border-white/10">
+                Clinic footage — PDO cog thread insertion along the jawline. Performed under local anaesthetic at Cosmedocs, Harley Street. Bold • Natural • Always Your Way.
+              </figcaption>
+            </figure>
             <p className="mt-5">
               We almost always combine PDO cogs with one or both of the other two modalities. Threads
               reposition the tissue; filler stabilises the new position; Endolaser tightens the skin
