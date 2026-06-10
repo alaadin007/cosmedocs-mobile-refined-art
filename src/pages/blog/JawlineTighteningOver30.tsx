@@ -41,8 +41,8 @@ export default function JawlineTighteningOver30() {
       a: "Filler — 24–72 hours of mild swelling, occasional bruising. PDO cogs — 5–10 days of tightness and possible bruising at insertion points. Endolaser — 3–7 days of mild swelling, sometimes light bruising along the treated lines. None require time off work for most patients.",
     },
     {
-      q: "What is the £950 Endolaser Jawline offer?",
-      a: "A flat-fee jawline-defining Endolaser treatment performed by our medical doctors on Harley Street. Includes consultation, treatment and review. You book and pay a deposit, send photos, and attend your appointment. If you're not clinically suitable, the deposit is returned in full.",
+      q: "How much does Endolaser for the jawline cost?",
+      a: "Pricing depends on the area treated and whether it is combined with other modalities. A typical single-area Endolaser session for jawline tightening starts from £950, performed by our medical doctors on Harley Street. Every treatment includes consultation, the procedure itself, and a review. An exact quote is given after your clinical assessment.",
     },
   ];
 
