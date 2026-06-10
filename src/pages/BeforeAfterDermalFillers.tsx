@@ -132,8 +132,43 @@ const BeforeAfterDermalFillers = () => {
               {
                 "@type": "ImageGallery",
                 "name": "Dermal Filler Before & After Results",
-                "description": "Real patient transformations from CosmeDocs Harley Street clinic",
-                "url": "https://www.cosmedocs.com/before-after/dermal-fillers/"
+                "description": "Real patient transformations from CosmeDocs Harley Street clinic, including neck lines (Venus rings) treated with hyaluronic acid filler.",
+                "url": "https://www.cosmedocs.com/before-after/dermal-fillers/",
+                "image": [
+                  {
+                    "@type": "ImageObject",
+                    "contentUrl": `https://www.cosmedocs.com${neckBeforeAsset.url}`,
+                    "name": "Neck lines before dermal filler — Venus rings (horizontal necklace lines)",
+                    "caption": "Before: prominent horizontal neck lines (Venus rings) prior to dermal filler treatment"
+                  },
+                  {
+                    "@type": "ImageObject",
+                    "contentUrl": `https://www.cosmedocs.com${neckAfterAsset.url}`,
+                    "name": "Neck lines immediately after dermal filler treatment",
+                    "caption": "Immediately after: hyaluronic acid filler placed along each horizontal neck line — small entry points visible, lines visibly softened"
+                  }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Can dermal fillers treat neck lines or Venus rings?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. Horizontal neck lines — often called Venus rings or necklace lines — can be softened with a soft, hydrophilic hyaluronic acid filler placed directly along each crease. Results are visible immediately and refine over 2–4 weeks as swelling settles."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How long do neck-line fillers last?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Typically 9–12 months for the dedicated soft filler used in the neck. We usually recommend a light top-up at 6–9 months to maintain the smoothing effect."
+                    }
+                  }
+                ]
               }
             ]
           })}
