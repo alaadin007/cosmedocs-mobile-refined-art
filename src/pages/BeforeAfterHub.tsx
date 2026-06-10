@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, MapPin, Award, Star, Camera } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Breadcrumb from '@/components/Breadcrumb';
+import originalLogoAsset from '@/assets/cosmedocs-original-logo-2006.jpg.asset.json';
 
 // Featured transformations with captions
 const featuredTransformations = [
