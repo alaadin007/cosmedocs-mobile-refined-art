@@ -9,6 +9,9 @@ import femaleCaseAsset from "@/assets/jawline-over30-female-volume-restore.jpg.a
 import maleCaseAsset from "@/assets/jawline-over30-male-volume-loss.jpg.asset.json";
 import femaleProfileAsset from "@/assets/jawline-over30-female-profile-bone-resorption.jpg.asset.json";
 import combinedCaseAsset from "@/assets/jawline-over30-filler-cog-threads-endolaser.jpg.asset.json";
+import heroAsset from "@/assets/jawline-over30-hero.jpg.asset.json";
+
+const HERO_OG = `https://www.cosmedocs.com${heroAsset.url}`;
 
 
 /**
