@@ -104,6 +104,25 @@ export default function JawlineTighteningOver30() {
         </div>
 
         <article className="max-w-3xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+          {/* Hero image */}
+          <motion.figure
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative -mx-4 sm:-mx-6 md:mx-0 md:rounded-3xl overflow-hidden mb-10 aspect-[16/9] bg-black"
+          >
+            <img
+              src={heroAsset.url}
+              alt="Editorial profile of a refined female jawline lit with warm gold rim light against black — Cosmedocs Harley Street"
+              width={1792}
+              height={1024}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+          </motion.figure>
+
           {/* Header */}
           <motion.header initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
