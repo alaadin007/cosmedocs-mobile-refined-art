@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import SmartAestheticsSidebar from "@/components/smart-aesthetics/SmartAestheticsSidebar";
 import PauseAndThink from "@/components/smart-aesthetics/PauseAndThink";
 import RelatedTreatments from "@/components/smart-aesthetics/RelatedTreatments";
+import { usePageView } from "@/hooks/usePageView";
 
 const principles = [
   { id: "why-treatments-fail", title: "Why Most Treatments Fail", subtitle: "The truth about wasted money" },
@@ -77,6 +78,7 @@ const P = ({ children }: { children: React.ReactNode }) => (
 export default function SmartAesthetics() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [currentPrincipleIndex, setCurrentPrincipleIndex] = useState(-1);
+  usePageView("/aesthetic-treatments-made-easy");
 
   useEffect(() => {
     const handleResize = () => {
