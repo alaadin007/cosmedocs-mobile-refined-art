@@ -422,19 +422,25 @@ export default function Home2Header() {
 
           {/* Secondary row — smaller links + social icons */}
           <div className="hidden lg:flex items-center justify-end gap-4 h-5 -mt-1">
-            {secondaryNavItems.map((item) => (
-              <Link
-                key={item.link}
-                to={item.link}
-                className={`text-[11px] font-light tracking-[0.08em] uppercase transition-colors duration-500 ${
-                  isScrolled
-                    ? 'text-gray-500 hover:text-gray-900'
-                    : 'text-white/55 hover:text-white'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {secondaryNavItems.map((item) => {
+              const isSmart = item.link === "/aesthetic-treatments-made-easy/";
+              return (
+                <Link
+                  key={item.link}
+                  to={item.link}
+                  className={`text-[11px] font-light tracking-[0.08em] uppercase transition-colors duration-500 ${
+                    isSmart
+                      ? 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-[#C9A050]/50 text-[#C9A050] hover:bg-[#C9A050] hover:text-black'
+                      : isScrolled
+                        ? 'text-gray-500 hover:text-gray-900'
+                        : 'text-white/55 hover:text-white'
+                  }`}
+                >
+                  {isSmart && <span className="w-1 h-1 rounded-full bg-[#C9A050] animate-pulse" aria-hidden="true" />}
+                  {item.label}
+                </Link>
+              );
+            })}
             <span className={`h-3 w-px ${isScrolled ? 'bg-gray-300' : 'bg-white/20'}`} aria-hidden="true" />
             <div className="flex items-center gap-2.5">
               {socialLinks.map((s) => {
