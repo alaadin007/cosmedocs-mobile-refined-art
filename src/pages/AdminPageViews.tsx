@@ -21,7 +21,7 @@ export default function AdminPageViews() {
   const load = async () => {
     setLoading(true);
     const since = new Date(Date.now() - days * 86400000).toISOString();
-    const { data, error } = await supabase
+    const { data, error } = await (supabase as any)
       .from("page_views")
       .select("path, created_at")
       .gte("created_at", since)

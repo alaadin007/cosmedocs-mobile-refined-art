@@ -11,8 +11,8 @@ export function usePageView(path: string) {
     const referrer = typeof document !== "undefined" ? document.referrer || null : null;
     const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : null;
 
-    // Fire and forget
-    supabase
+    // Fire and forget — types regenerate async so cast through any
+    (supabase as any)
       .from("page_views")
       .insert({ path, referrer, user_agent: userAgent })
       .then(() => {}, () => {});
