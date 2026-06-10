@@ -174,6 +174,7 @@ const Home = () => {
         </section>
 
         {/* Quick Access Treatments */}
+        <SmartAestheticsBanner variant="dark" />
         <QuickAccessTreatments />
 
         {/* Trust Section */}
