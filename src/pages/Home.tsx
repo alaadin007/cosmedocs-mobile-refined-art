@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Sparkles, Search, Brain } from "lucide-react";
 import QuickAccessTreatments from "@/components/home/QuickAccessTreatments";
+import SmartAestheticsBanner from "@/components/home/SmartAestheticsBanner";
 
 // Lazy load heavy components
 const LiquidGlassFacialAssessment = lazy(() => import("@/components/LiquidGlassFacialAssessment"));
