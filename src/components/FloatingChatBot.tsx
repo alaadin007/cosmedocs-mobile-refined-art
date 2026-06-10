@@ -461,161 +461,147 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   return (
     <>
-      {/* Left-wall peek tab — vivid violet/pink, faster pulse, just a sliver sticking out */}
+      {/* Unified right-edge rail — Chat · Research · Contact */}
       <AnimatePresence>
         {!isOpen && (
-          <motion.div
-            initial={{ x: "-110%", opacity: 0 }}
+          <motion.aside
+            initial={{ x: "110%", opacity: 0 }}
             animate={{ x: "0%", opacity: 1 }}
-            exit={{ x: "-110%", opacity: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 24, delay: 0.4 }}
-            className="fixed left-0 top-1/2 -translate-y-1/2 z-[60]"
-            style={{ filter: "drop-shadow(0 10px 30px rgba(236,72,153,0.55))" }}
+            exit={{ x: "110%", opacity: 0 }}
+            transition={{ type: "spring", stiffness: 240, damping: 28, delay: 0.3 }}
+            aria-label="Quick actions"
+            className="fixed right-0 top-1/2 -translate-y-1/2 z-[60] flex flex-col rounded-l-2xl overflow-hidden border border-[#C9A050]/30 border-r-0 bg-black/90 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.6)]"
           >
-            <motion.button
-              onClick={() => setIsOpen(true)}
-              onMouseEnter={() => setPeekExpanded(true)}
-              onMouseLeave={() => setPeekExpanded(false)}
+            {/* Chat */}
+            <button
+              onClick={() => { setIsOpen(true); setShowTeaser(false); setIsExpanded(false); }}
               aria-label="Open Cosmedocs AI chat"
-              animate={{
-                width: peekExpanded ? 210 : 44,
-                x: peekExpanded ? 0 : [0, 6, 0],
-              }}
-              transition={{
-                width: { type: "spring", stiffness: 260, damping: 28 },
-                x: peekExpanded
-                  ? { duration: 0.2 }
-                  : { duration: 1.4, repeat: Infinity, ease: "easeInOut" },
-              }}
-              className="relative flex items-center gap-3 bg-gradient-to-br from-violet-600 via-fuchsia-500 to-rose-500 border border-white/30 rounded-r-2xl overflow-hidden h-14 pl-2 pr-3 text-left"
+              className="group flex items-center gap-3 pl-3 pr-4 py-3 text-left border-b border-white/10 hover:bg-white/[0.04] transition-colors"
             >
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
+              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 via-fuchsia-500 to-rose-500 border border-white/20">
                 <motion.span
                   aria-hidden
-                  className="absolute inset-0 rounded-full bg-white/40"
-                  animate={{ scale: [1, 1.6, 1], opacity: [0.7, 0, 0.7] }}
-                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-                />
-                <motion.span
-                  aria-hidden
-                  className="absolute inset-0 rounded-full border border-white/80"
-                  animate={{
-                    boxShadow: [
-                      "0 0 0px rgba(236,72,153,0.5)",
-                      "0 0 22px rgba(236,72,153,1)",
-                      "0 0 0px rgba(236,72,153,0.5)",
-                    ],
-                  }}
-                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 rounded-full border border-white/60"
+                  animate={{ boxShadow: [
+                    "0 0 0px rgba(236,72,153,0.4)",
+                    "0 0 14px rgba(236,72,153,0.9)",
+                    "0 0 0px rgba(236,72,153,0.4)",
+                  ] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
                 />
                 <MessageCircle className="relative h-4 w-4 text-white" />
               </span>
-              <AnimatePresence initial={false}>
-                {peekExpanded && (
-                  <motion.span
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -8 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex flex-col min-w-0"
-                  >
-                    <span className="text-[10px] tracking-[0.28em] uppercase text-white/80">Ask Cosmedocs</span>
-                    <span className="text-white text-sm font-light leading-tight truncate">
-                      Chat with us
-                    </span>
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </motion.button>
-          </motion.div>
+              <span className="hidden sm:flex flex-col min-w-0">
+                <span className="text-[9px] tracking-[0.24em] uppercase text-white/55">Ask Cosmedocs</span>
+                <span className="text-white text-xs font-light leading-tight">Chat with us</span>
+              </span>
+            </button>
+
+            {/* Research */}
+            <button
+              onClick={() => window.dispatchEvent(new Event("open-research-survey"))}
+              aria-label="Contribute to research"
+              className="group flex items-center gap-3 pl-3 pr-4 py-3 text-left border-b border-white/10 hover:bg-white/[0.04] transition-colors"
+            >
+              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#C9A050]/60 bg-black">
+                <motion.span
+                  aria-hidden
+                  className="absolute inset-0 rounded-full bg-[#C9A050]/20"
+                  animate={{ scale: [1, 1.35, 1], opacity: [0.6, 0, 0.6] }}
+                  transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <Sparkles className="relative h-4 w-4 text-[#C9A050]" />
+              </span>
+              <span className="hidden sm:flex flex-col min-w-0">
+                <span className="text-[9px] tracking-[0.24em] uppercase text-[#C9A050]">Research</span>
+                <span className="text-white text-xs font-light leading-tight">Please contribute</span>
+              </span>
+            </button>
+
+            {/* Contact (expands the contact options to the LEFT) */}
+            <button
+              onClick={() => setIsExpanded((v) => !v)}
+              aria-label="Contact options"
+              aria-expanded={isExpanded}
+              className="group flex items-center gap-3 pl-3 pr-4 py-3 text-left hover:bg-white/[0.04] transition-colors"
+            >
+              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 border border-white/20">
+                <motion.div animate={{ rotate: isExpanded ? 45 : 0 }} transition={{ duration: 0.25 }}>
+                  <Plus className="h-4 w-4 text-black" />
+                </motion.div>
+              </span>
+              <span className="hidden sm:flex flex-col min-w-0">
+                <span className="text-[9px] tracking-[0.24em] uppercase text-amber-300/80">Contact</span>
+                <span className="text-white text-xs font-light leading-tight">Call · WhatsApp · Book</span>
+              </span>
+            </button>
+
+            {/* Expanded contact options slide out to the LEFT of the rail */}
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute right-full mr-3 bottom-2 flex flex-col gap-2"
+                >
+                  {contactOptions.map((option, index) => (
+                    <motion.button
+                      key={option.label}
+                      initial={{ opacity: 0, x: 10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.04 }}
+                      onClick={option.action}
+                      aria-label={option.label}
+                      className={`bg-gradient-to-br ${option.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative`}
+                      whileHover={{ scale: 1.08 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <option.icon className="h-5 w-5" />
+                      <span className="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-black/90 text-white text-[11px] px-2.5 py-1.5 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
+                        {option.label}
+                      </span>
+                    </motion.button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.aside>
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-4 right-4 z-50">
-        {/* Auto teaser bubble */}
+      {/* Auto teaser bubble (positioned bottom-right, independent of rail) */}
+      <div className="fixed bottom-4 right-4 z-50 pointer-events-none">
         <AnimatePresence>
           {showTeaser && !isOpen && (
             <motion.div
               initial={{ opacity: 0, y: 10, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
-              transition={{ duration: 0.25 }}
-              className="absolute bottom-20 right-0 mb-2 w-[min(86vw,320px)] rounded-2xl border border-amber-300/40 bg-black/95 p-4 text-white shadow-2xl backdrop-blur"
+              className="pointer-events-auto mb-2 max-w-[260px] rounded-2xl bg-black/90 border border-amber-300/30 p-3 text-xs text-white shadow-2xl backdrop-blur-md"
             >
               <button
+                onClick={() => setShowTeaser(false)}
+                className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-black border border-white/20 flex items-center justify-center"
                 aria-label="Dismiss"
-                onClick={(e) => { e.stopPropagation(); setShowTeaser(false); }}
-                className="absolute right-2 top-2 rounded-full p-1 text-gray-400 hover:bg-white/10 hover:text-white"
               >
-                <X className="h-3.5 w-3.5" />
+                <X className="h-3 w-3 text-white/70" />
               </button>
-              <div className="flex items-center gap-2 text-amber-400">
-                <Sparkles className="h-4 w-4" />
-                <span className="text-[10px] uppercase tracking-[0.2em]">Cosmedocs · live</span>
-              </div>
-              <p className="mt-2 text-sm leading-snug">{pageConfig.teaser}</p>
-              <div className="mt-3 flex gap-2">
+              <p className="leading-snug text-white/90">{pageConfig.teaser}</p>
+              <div className="mt-2 flex gap-2">
                 <button
-                  onClick={openPlanPicker}
-                  className="flex-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-2 text-xs font-medium text-black hover:opacity-95"
+                  onClick={() => { setIsOpen(true); setShowTeaser(false); }}
+                  className="flex-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-1.5 text-[11px] font-medium text-black hover:opacity-95"
                 >
                   {pageConfig.cta}
                 </button>
-                <button
-                  onClick={() => setIsOpen(true)}
-                  className="rounded-full border border-white/15 px-3 py-2 text-xs text-white hover:bg-white/10"
-                >
-                  Ask anything
-                </button>
               </div>
-              <div className="absolute -bottom-1.5 right-7 h-3 w-3 rotate-45 border-b border-r border-amber-300/40 bg-black/95" />
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Expanded Contact Options */}
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 20 }}
-              className="absolute bottom-20 right-0 flex flex-col gap-3 mb-2"
-            >
-              {contactOptions.map((option, index) => (
-                <motion.button
-                  key={option.label}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  onClick={option.action}
-                  className={`bg-gradient-to-br ${option.color} text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <option.icon className="h-6 w-6" />
-                  <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/90 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
-                    {option.label}
-                  </span>
-                </motion.button>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Main Chat Toggle Button — vivid violet-pink with persistent pulse glow */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => { setIsExpanded(!isExpanded); setShowTeaser(false); }}
-          className="chatbot-glow bg-gradient-to-br from-violet-500 via-fuchsia-500 to-rose-500 text-white p-5 rounded-full transition-all duration-300 relative overflow-hidden group border-2 border-white/30"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-400 to-rose-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <motion.div animate={{ rotate: isExpanded ? 45 : 0 }} transition={{ duration: 0.3 }} className="relative z-10">
-            <Plus className="h-7 w-7" />
-          </motion.div>
-        </motion.button>
       </div>
+
 
       {/* Immersive iOS-style full-screen chat layer */}
       <AnimatePresence>
