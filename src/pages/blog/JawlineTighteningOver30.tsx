@@ -9,6 +9,9 @@ import femaleCaseAsset from "@/assets/jawline-over30-female-volume-restore.jpg.a
 import maleCaseAsset from "@/assets/jawline-over30-male-volume-loss.jpg.asset.json";
 import femaleProfileAsset from "@/assets/jawline-over30-female-profile-bone-resorption.jpg.asset.json";
 import combinedCaseAsset from "@/assets/jawline-over30-filler-cog-threads-endolaser.jpg.asset.json";
+import heroAsset from "@/assets/jawline-over30-hero.jpg.asset.json";
+
+const HERO_OG = `https://www.cosmedocs.com${heroAsset.url}`;
 
 
 /**
@@ -66,6 +69,10 @@ export default function JawlineTighteningOver30() {
         <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.description} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content={HERO_OG} />
+        <meta property="og:image:alt" content="Sculpted female jawline profile, gold rim light — Cosmedocs Harley Street" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={HERO_OG} />
         <meta name="keywords" content="jawline tightening, jowl treatment, jawline filler, PDO cog threads, Endolaser, non-surgical facelift, Harley Street, jawline over 30" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -97,6 +104,25 @@ export default function JawlineTighteningOver30() {
         </div>
 
         <article className="max-w-3xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+          {/* Hero image */}
+          <motion.figure
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative -mx-4 sm:-mx-6 md:mx-0 md:rounded-3xl overflow-hidden mb-10 aspect-[16/9] bg-black"
+          >
+            <img
+              src={heroAsset.url}
+              alt="Editorial profile of a refined female jawline lit with warm gold rim light against black — Cosmedocs Harley Street"
+              width={1792}
+              height={1024}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+          </motion.figure>
+
           {/* Header */}
           <motion.header initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
