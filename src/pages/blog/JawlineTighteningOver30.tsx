@@ -10,7 +10,7 @@ import pdoThreadVideo from "@/assets/pdo-thread-insertion.mov.asset.json";
 /**
  * Long-form editorial blog (~2,500 words) targeting
  * "jawline tightening over 30 — filler, threads, or laser"
- * High commercial intent — funnels into the £950 Endolaser Jawline ad page.
+ * High commercial intent — funnels into the main Endolaser treatment page.
  */
 export default function JawlineTighteningOver30() {
   const seo = generateSEOMetadata(
@@ -41,8 +41,8 @@ export default function JawlineTighteningOver30() {
       a: "Filler — 24–72 hours of mild swelling, occasional bruising. PDO cogs — 5–10 days of tightness and possible bruising at insertion points. Endolaser — 3–7 days of mild swelling, sometimes light bruising along the treated lines. None require time off work for most patients.",
     },
     {
-      q: "What is the £950 Endolaser Jawline offer?",
-      a: "A flat-fee jawline-defining Endolaser treatment performed by our medical doctors on Harley Street. Includes consultation, treatment and review. You book and pay a deposit, send photos, and attend your appointment. If you're not clinically suitable, the deposit is returned in full.",
+      q: "How much does Endolaser for the jawline cost?",
+      a: "Pricing depends on the area treated and whether it is combined with other modalities. A typical single-area Endolaser session for jawline tightening starts from £950, performed by our medical doctors on Harley Street. Every treatment includes consultation, the procedure itself, and a review. An exact quote is given after your clinical assessment.",
     },
   ];
 
@@ -311,10 +311,10 @@ export default function JawlineTighteningOver30() {
               <Stat label="Lasts" value="18–24 months+" />
             </div>
             <p className="mt-4">
-              This is the treatment behind our flat-fee <strong className="text-white">£950 Endolaser
-              Jawline</strong> offer below. It is performed by our medical doctors on Harley Street
-              and is the single most efficient treatment we offer for patients in their late 30s
-              through 50s who want jawline definition without surgery.
+              This is the treatment behind our <Link to="/treatments/endolaser/" className="text-[#C9A050] underline underline-offset-2">Endolaser Laser Fibre Lift</Link>.
+              It is performed by our medical doctors on Harley Street and is the single most efficient
+              treatment we offer for patients in their late 30s through 50s who want jawline definition
+              without surgery.
             </p>
 
             <h2 className="text-2xl font-light text-white">6. The decision, in plain English</h2>
@@ -344,31 +344,31 @@ export default function JawlineTighteningOver30() {
             </p>
           </section>
 
-          {/* CTA — £950 offer */}
+          {/* CTA — main Endolaser page */}
           <section className="mt-14 rounded-2xl border border-[#C9A050]/40 bg-gradient-to-br from-black via-[#1a140a] to-black p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-4 h-4 text-[#C9A050]" />
               <span className="text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
-                Flat offer · Harley Street
+                Doctor-led · Harley Street
               </span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extralight">
-              Endolaser Jawline — <span className="text-[#C9A050]">£950</span>
+              Endolaser Jawline Tightening
             </h3>
             <p className="mt-3 text-white/65 font-light leading-relaxed text-sm sm:text-base">
-              Doctor-led, dual-wavelength Endolaser performed by our medical team on Harley Street.
-              Book and pay a deposit, send photos, attend your appointment. If you're not clinically
-              suitable, the deposit is returned in full.
+              Dual-wavelength Endolaser performed by our medical team on Harley Street.
+              The structural fix for established jowls and jawline laxity — more tightening per session
+              than HIFU or radiofrequency, with 3–7 days downtime.
             </p>
             <div className="mt-5 flex flex-wrap gap-3 items-center">
               <Link
-                to="/ads/endolaser-jawline/"
+                to="/treatments/endolaser/"
                 className="inline-flex items-center gap-2 bg-[#C9A050] text-black font-semibold px-5 py-3 rounded-full hover:scale-[1.03] transition-transform"
               >
-                Book the £950 Jawline offer <ArrowRight className="w-4 h-4" />
+                Read the full Endolaser page <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/treatments/endolaser/" className="text-sm text-white/70 hover:text-[#C9A050]">
-                Or read the full Endolaser page →
+              <Link to="/contact/" className="text-sm text-white/70 hover:text-[#C9A050]">
+                Or book a consultation →
               </Link>
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-wider">
@@ -379,7 +379,7 @@ export default function JawlineTighteningOver30() {
                 <Clock className="w-3 h-3" /> 3–7 days downtime
               </span>
               <span className="inline-flex items-center gap-1.5 bg-white/[0.04] border border-white/15 rounded-full px-3 py-1 text-white/70">
-                Deposit returned if unsuitable
+                18–24 months+ results
               </span>
             </div>
           </section>
