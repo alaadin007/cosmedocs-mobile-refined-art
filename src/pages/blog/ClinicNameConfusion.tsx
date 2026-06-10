@@ -6,6 +6,7 @@ import BlogSidebar from "@/components/blog/BlogSidebar";
 import harleyStreetImg from "@/assets/blog-clinic-harley-street.jpg";
 import phoneSearchImg from "@/assets/blog-clinic-phone-search.jpg";
 import receptionImg from "@/assets/blog-clinic-reception.jpg";
+import originalLogoAsset from "@/assets/cosmedocs-original-logo-2006.jpg.asset.json";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -167,6 +168,29 @@ const ClinicNameConfusion = () => {
                 alt="Georgian entrance on Harley Street, London — home to CosmeDocs since 2007"
                 caption="Our home on Harley Street — where we've practised since 2007."
               />
+
+              {/* Heritage: Original 2006 logo */}
+              <motion.figure
+                variants={fade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="my-10 flex flex-col items-center"
+              >
+                <div className="bg-white rounded-xl p-8 max-w-md w-full flex items-center justify-center">
+                  <img
+                    src={originalLogoAsset.url}
+                    alt="Original CosmeDocs Cosmetic Doctors logo from 2006 — the founding identity of the Harley Street clinic"
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-white/40 font-light italic text-center max-w-md">
+                  Our original 2006 identity — the founding CosmeDocs ‘Cosmetic Doctors’ logo, kept on record as part of nearly two decades of doctor-led practice on Harley Street.
+                </figcaption>
+              </motion.figure>
 
               {/* Why Confusion Happens */}
               <motion.div

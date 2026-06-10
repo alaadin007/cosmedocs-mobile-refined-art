@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, MapPin, Award, Star, Camera } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Breadcrumb from '@/components/Breadcrumb';
+import originalLogoAsset from '@/assets/cosmedocs-original-logo-2006.jpg.asset.json';
 
 // Featured transformations with captions
 const featuredTransformations = [
@@ -489,6 +490,29 @@ const BeforeAfterHub = () => {
                 </Link>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Heritage strip — original 2006 logo */}
+        <section className="py-12 bg-black border-t border-white/[0.06]">
+          <div className="max-w-3xl mx-auto px-6 flex flex-col items-center text-center">
+            <p className="text-[#C9A050]/80 text-[11px] uppercase tracking-[0.25em] mb-5">
+              On record · Established 2006–2007
+            </p>
+            <figure className="flex flex-col items-center">
+              <div className="bg-white rounded-xl p-6 sm:p-8 max-w-xs w-full flex items-center justify-center shadow-lg shadow-black/40">
+                <img
+                  src={originalLogoAsset.url}
+                  alt="Original CosmeDocs Cosmetic Doctors logo from 2006 — the founding identity of the Harley Street clinic"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption className="mt-4 text-white/40 text-xs sm:text-sm font-light italic max-w-md">
+                Our original 2006 ‘CosmeDocs — Cosmetic Doctors’ identity. Kept on record alongside nearly two decades of real patient results.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
