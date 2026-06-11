@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Activity, Syringe, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
@@ -163,7 +164,7 @@ const NonSurgicalNoseJob = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href={seoData.canonical} />
+        <link rel="canonical" href={seoData.canonical} data-rh="true" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
@@ -1497,6 +1498,34 @@ const NonSurgicalNoseJob = () => {
         </article>
         </main>
       </div>
+
+      {/* Related Reading — topical cluster wiring for non-surgical nose authority */}
+      <section className="py-16 px-4 bg-black border-t border-white/[0.06]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extralight text-white/85 mb-2">
+            Continue reading on <span className="text-purple-300 font-light">nose & profile</span>
+          </h2>
+          <p className="text-white/45 text-sm font-light mb-8 max-w-2xl">
+            A nose rarely sits in isolation — these are the adjacent treatments and decisions our doctors most often discuss in a non-surgical rhinoplasty consultation.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { to: "/before-after/dermal-fillers/nose/", tag: "Gallery", title: "Non-Surgical Nose Job Before & After", desc: "Verified profile-view patient photographs from our Harley Street clinic." },
+              { to: "/treatments/nasal-flaring-botox/", tag: "Botox", title: "Nasal Flaring Botox", desc: "Soften wide nostril flaring with targeted muscle-relaxant — a common pairing with liquid rhinoplasty." },
+              { to: "/treatments/cheek-filler/", tag: "Profile balance", title: "Cheek Filler", desc: "A defined upper midface reframes how the nose is read — often the missing half of a profile fix." },
+              { to: "/treatments/chin-filler/", tag: "Profile balance", title: "Chin Filler", desc: "Projection at the chin re-balances a strong dorsal hump without touching the nose itself." },
+              { to: "/treatments/rhinoplasty/", tag: "Surgical comparison", title: "Surgical Rhinoplasty", desc: "When non-surgical is not the right answer — honest comparison and referral pathway." },
+              { to: "/non-surgical-nose-job-blog/", tag: "Editorial", title: "Liquid Rhinoplasty — Doctor's Guide", desc: "Long-form editorial on the #cosmenose technique, candidacy and longevity." },
+            ].map((l) => (
+              <Link key={l.to} to={l.to} className="block border border-white/[0.06] rounded-2xl p-5 hover:border-purple-300/30 hover:bg-white/[0.02] transition-all group">
+                <div className="text-[10px] uppercase tracking-wider text-purple-300/70 mb-2">{l.tag}</div>
+                <div className="text-base font-light text-white/85 group-hover:text-purple-300 mb-1.5">{l.title}</div>
+                <div className="text-xs text-white/45 leading-relaxed font-light">{l.desc}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Skin Foundation CTA */}
       <section className="py-12 px-4">
