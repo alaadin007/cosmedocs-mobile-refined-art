@@ -1039,6 +1039,112 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Warum der pH-Wert bei Vitamin-C-Seren wichtig ist | Cosmedocs',
     description: 'Der pH-Wert bestimmt, ob Ihr Vitamin-C-Serum wirkt. Erfahren Sie, warum pH 3,0-3,5 der klinisch optimale Punkt ist.'
   },
+
+  // ===== Pages previously missing inject-meta (bleeding rankings — fixed batch) =====
+  '/treatments/anti-wrinkle-treatment/': {
+    title: 'Anti-Wrinkle Treatment London | Doctor-Led | Cosmedocs Harley Street',
+    description: 'Smooth fine lines and prevent wrinkles with doctor-led anti-wrinkle treatment from £275. Forehead, frown & crow\'s feet. Harley Street since 2007.'
+  },
+  '/treatments/anti-wrinkle-injections/': {
+    title: 'Anti-Wrinkle Injections London | From £275 | Cosmedocs Harley Street',
+    description: 'Expert anti-wrinkle injections by doctors. Natural, predictable smoothing of forehead, frown lines & crow\'s feet. Harley Street clinic since 2007.'
+  },
+  '/treatments/anti-ageing-injections/': {
+    title: 'Anti-Ageing Injections London | Doctor-Led | Cosmedocs',
+    description: 'Anti-ageing injections that prevent and soften lines naturally. Doctor-led anti-wrinkle treatment from £275 on Harley Street.'
+  },
+  '/treatments/brotox/': {
+    title: 'Brotox London | Men\'s Botox | Cosmedocs Harley Street',
+    description: 'Discreet Botox for men. Natural-looking anti-wrinkle treatment tailored to the male face. Doctor-led on Harley Street since 2007.'
+  },
+  '/treatments/cheekbone-filler/': {
+    title: 'Cheekbone Filler London | High Cheekbone Definition | Cosmedocs',
+    description: 'Sculpt high, defined cheekbones with expert dermal filler. Doctor-led cheekbone enhancement on Harley Street.'
+  },
+  '/treatments/masseter-botox-near-me/': {
+    title: 'Masseter Botox Near Me | London Harley Street | Cosmedocs',
+    description: 'Looking for masseter Botox near you? Doctor-led jawline slimming & bruxism relief on Harley Street. Same-week appointments.'
+  },
+  '/treatments/earlobe-rejuvenation/': {
+    title: 'Earlobe Rejuvenation London | Filler for Earlobes | Cosmedocs',
+    description: 'Restore stretched, sagging or thinning earlobes with dermal filler. Doctor-led earlobe rejuvenation on Harley Street.'
+  },
+
+  // Endolift / Endolaser cluster
+  '/treatments/endolift-london/': {
+    title: 'Endolift London | Laser Fibre Lift | Cosmedocs Harley Street',
+    description: 'Endolift in London — sub-dermal laser fibre lift for jawline, neck & double chin. No surgery, no scars. Doctor-led on Harley Street.'
+  },
+  '/treatments/endolift-london/double-chin/': {
+    title: 'Endolift for Double Chin London | Cosmedocs',
+    description: 'Dissolve a double chin with Endolift sub-dermal laser. Permanent fat reduction & skin tightening without surgery. Harley Street.'
+  },
+  '/treatments/endolift-london/recovery/': {
+    title: 'Endolift Recovery & Downtime | What to Expect | Cosmedocs',
+    description: 'Endolift recovery explained day-by-day: swelling, bruising, downtime & full results timeline. Doctor-led guidance from Harley Street.'
+  },
+  '/treatments/endolift-london/safety/': {
+    title: 'Is Endolift Safe? Risks, Side Effects & Doctor Guidance | Cosmedocs',
+    description: 'Endolift safety, risks & side effects explained by doctors. Why provider experience matters for sub-dermal laser. Harley Street.'
+  },
+  '/treatments/endolaser-body/': {
+    title: 'Endolaser Body London | Body Laser Fibre Tightening | Cosmedocs',
+    description: 'Endolaser for the body — laser fibre skin tightening for arms, abdomen, knees & thighs. No surgery. Doctor-led on Harley Street.'
+  },
+  '/treatments/eyebrow-lift-endolaser/': {
+    title: 'Eyebrow Lift with Endolaser London | Non-Surgical Brow Lift | Cosmedocs',
+    description: 'Non-surgical eyebrow lift using Endolaser sub-dermal fibre. Subtle, natural brow elevation without surgery. Harley Street.'
+  },
+
+  // Aftercare / dissolving long-tail
+  '/treatments/chin-filler/aftercare/': {
+    title: 'Chin Filler Aftercare | Recovery Guide | Cosmedocs',
+    description: 'Chin filler aftercare from Harley Street doctors. Day-by-day recovery, dos & don\'ts, swelling & bruising guidance.'
+  },
+  '/treatments/chin-filler/dissolving/': {
+    title: 'Chin Filler Dissolving London | Hyalase | Cosmedocs',
+    description: 'Dissolve unwanted chin filler safely with hyaluronidase. Doctor-led elective and emergency dissolving on Harley Street.'
+  },
+  '/treatments/tear-trough-filler/aftercare/': {
+    title: 'Tear Trough Filler Aftercare | Recovery | Cosmedocs',
+    description: 'Tear trough filler aftercare from Harley Street doctors. Recovery timeline, swelling, bruising & dos and don\'ts.'
+  },
+  '/treatments/tear-trough-filler/dissolving/': {
+    title: 'Tear Trough Filler Dissolving London | Hyalase | Cosmedocs',
+    description: 'Dissolve under-eye filler safely with hyaluronidase. Expert correction of migrated or overfilled tear troughs. Harley Street.'
+  },
+  '/treatments/dermal-fillers/nose/aftercare/': {
+    title: 'Non-Surgical Nose Job Aftercare | Recovery Guide | Cosmedocs',
+    description: 'Non-surgical nose job aftercare from Harley Street doctors. Recovery timeline, swelling, bruising & post-treatment dos and don\'ts.'
+  },
+  '/treatments/dermal-fillers/nose/dissolving/': {
+    title: 'Nose Filler Dissolving London | Hyalase | Cosmedocs',
+    description: 'Dissolve nose filler safely with hyaluronidase. Doctor-led correction of vascular events or unwanted results. Harley Street.'
+  },
+
+  // Dosage / comparison cluster
+  '/botox-units-underarms-25-50-100/': {
+    title: 'Botox Units for Underarms: 25 vs 50 vs 100 | Hyperhidrosis Guide',
+    description: 'How many units of Botox for underarm sweating? 25, 50 or 100 units compared. Doctor-led hyperhidrosis dosing guide from Harley Street.'
+  },
+  '/cheek-filler-1ml-vs-2ml-vs-4ml/': {
+    title: 'Cheek Filler: 1ml vs 2ml vs 4ml | How Much Do You Need? | Cosmedocs',
+    description: '1ml vs 2ml vs 4ml of cheek filler compared. Volume-by-volume results, photos & doctor guidance from Harley Street.'
+  },
+  '/lip-filler-0-5ml-vs-1ml/': {
+    title: 'Lip Filler: 0.5ml vs 1ml | Which Is Right for You? | Cosmedocs',
+    description: '0.5ml vs 1ml of lip filler — natural enhancement compared. Photos, volume guidance & doctor-led lip filler on Harley Street.'
+  },
+  '/masseter-botox-units-dosage/': {
+    title: 'Masseter Botox Units & Dosage Guide | Cosmedocs',
+    description: 'How many units of masseter Botox do you need? Dosing by face shape, gender & goals. Doctor-led jawline slimming on Harley Street.'
+  },
+
+  // Hub
+  '/harley-street-injectables/': {
+    title: 'Harley Street Injectables London | Botox, Fillers & PDO | Cosmedocs',
+    description: 'Doctor-led Harley Street injectables — Botox, dermal fillers, PDO threads & polynucleotides. Premium injectable medicine since 2007.'
+  },
 };
 
 // Normalise path: ensure trailing slash
