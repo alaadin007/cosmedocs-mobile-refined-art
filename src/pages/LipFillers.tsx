@@ -8,7 +8,10 @@ import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import lipIllustration from "@/assets/lip-profile-illustration.png";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
-import ExpandableSection from "@/components/ui/expandable-section";
+// Lip Fillers page renders all content visible by default (SEO: avoid hiding primary copy behind toggles)
+const ExpandableSection = ({ preview, children }: { preview: React.ReactNode; children: React.ReactNode; label?: string; collapseLabel?: string }) => (
+  <div className="space-y-4">{preview}<div>{children}</div></div>
+);
 import LipFillersSidebar from "@/components/lip-fillers/LipFillersSidebar";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
@@ -112,13 +115,32 @@ const LipFillers = () => {
               {
                 "@type": "MedicalProcedure",
                 "name": "Lip Filler Treatment",
-                "alternateName": "Lip Augmentation",
+                "alternateName": ["Lip Augmentation", "Natural Lip Job", "Lip Injections"],
                 "description": "Doctor-led lip augmentation using premium hyaluronic acid dermal fillers to enhance lip volume, shape, and definition with natural-looking results.",
                 "url": "https://www.cosmedocs.com/treatments/lip-fillers/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Lips",
                 "followup": "Results visible immediately, final outcome at 2 weeks. Lasts 6–12 months.",
-                "howPerformed": "Premium hyaluronic acid filler injected into strategic points of the lips using fine needles or cannula, with topical anaesthetic and lidocaine for comfort."
+                "howPerformed": "Premium hyaluronic acid filler injected into strategic points of the lips using fine needles or cannula, with topical anaesthetic and lidocaine for comfort.",
+                "author": {
+                  "@type": "Person",
+                  "name": "Dr Ahmed Haq",
+                  "jobTitle": "Medical Director, Cosmetic Doctor",
+                  "url": "https://www.cosmedocs.com/team/dr-ahmed-haq/",
+                  "identifier": "GMC 6151301"
+                },
+                "reviewedBy": {
+                  "@type": "Person",
+                  "name": "Dr Hena Haq",
+                  "jobTitle": "Aesthetic Doctor",
+                  "url": "https://www.cosmedocs.com/team/dr-hena-haq/",
+                  "identifier": "GMC 7034321"
+                },
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "CosmeDocs",
+                  "url": "https://www.cosmedocs.com/"
+                }
               },
               {
                 "@type": "FAQPage",
@@ -136,6 +158,8 @@ const LipFillers = () => {
                 "name": "Lip Filler Treatment",
                 "priceCurrency": "GBP",
                 "price": "300",
+                "url": "https://www.cosmedocs.com/treatments/lip-fillers/",
+                "priceValidUntil": "2026-12-31",
                 "priceSpecification": {
                   "@type": "PriceSpecification",
                   "priceCurrency": "GBP",
@@ -721,29 +745,39 @@ const LipFillers = () => {
           <LipFillersSidebar />
         </section>
 
-        {/* Hidden SEO Content */}
-        <div className="sr-only" aria-hidden="true">
-          <h2>Lip Fillers London | Expert Lip Augmentation Harley Street</h2>
-          <p>CosmeDocs offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialise in natural-looking lip augmentation at our Harley Street clinic. We offer 0.5ml lip filler for subtle enhancement (£300) and 1ml lip filler for bold enhancement (£350), both using FDA-approved products from leading manufacturers including Juvederm, Restylane, and Teoxane. Our aesthetics is invisible art — bold, natural, always your way.</p>
+        {/* Related Treatments — internal cluster linking */}
+        <section className="py-16 px-4 bg-black border-t border-white/[0.06]">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/70 mb-3">Explore the lip cluster</p>
+            <h2 className="text-2xl md:text-3xl font-extralight text-white/85 mb-8">
+              Continue reading on <span className="text-[#C9A050] font-light">lip enhancement</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                { to: "/treatments/lip-filler-0-5ml-vs-1ml/", tag: "Volume guide", title: "0.5ml vs 1ml Lip Filler", desc: "Which volume suits your lip anatomy — and how long each lasts." },
+                { to: "/treatments/russian-lips-vs-classic/", tag: "Technique", title: "Russian Lips vs Classic Technique", desc: "The vertical-lift approach explained by our doctors." },
+                { to: "/treatments/lip-filler-dissolve/", tag: "Correction", title: "Lip Filler Dissolving", desc: "Hyalase protocols for unhappy or migrated lip filler." },
+                { to: "/treatments/lip-flip/", tag: "Alternative", title: "Lip Flip (Botox)", desc: "Subtle muscle-relaxant alternative — or combination partner." },
+                { to: "/blog/lip-filler-results-explained", tag: "Editorial", title: "Lip Filler Results, Explained", desc: "Doctor-written guide to timelines, swelling and longevity." },
+                { to: "/before-after/dermal-fillers/lips/", tag: "Gallery", title: "Real Lip Filler Before & After", desc: "Verified patient photographs from our Harley Street clinic." },
+              ].map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  className="group flex items-start gap-4 p-5 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-[#C9A050]/30 hover:bg-white/[0.05] transition-all"
+                >
+                  <div className="flex-1">
+                    <p className="text-[10px] uppercase tracking-wider text-[#C9A050]/70 mb-1">{l.tag}</p>
+                    <p className="text-white/85 text-sm font-medium mb-1">{l.title}</p>
+                    <p className="text-white/45 text-xs font-light">{l.desc}</p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#C9A050]/50 group-hover:text-[#C9A050] group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
-          <h3>Before and After 0.5ml Lip Filler vs 1ml Lip Filler</h3>
-          <p>Understanding the difference between before and after 0.5ml lip filler and before and after 1ml lip filler is essential for choosing your treatment. 0.5ml lip filler provides subtle enhancement ideal for thin lips with dense elastin, lasting 6–9 months. 1ml lip filler creates more visible enhancement with defined shape, lasting 9–12 months. Our gallery showcases authentic before and after lip filler results from real patients demonstrating the natural, beautiful enhancement achievable with expert technique.</p>
-
-          <h3>Lip Filler Swelling Stages and Recovery</h3>
-          <p>Understanding lip filler swelling stages helps you plan your treatment effectively. Initial swelling peaks at 24–48 hours, then gradually reduces over 1–2 weeks. How to reduce lip injection swelling: apply ice packs carefully, avoid strenuous exercise for 24 hours, sleep elevated, and stay hydrated. Most patients return to normal activities immediately after their lip filler treatment.</p>
-
-          <h3>Lip Filler Cost London | How Much Are Lip Fillers?</h3>
-          <p>Lip filler cost at CosmeDocs starts from £300 for 0.5ml and £350 for 1ml. How much is lip filler in London varies between clinics — at CosmeDocs, our transparent pricing includes premium hyaluronic acid filler, consultation, and aftercare support. The consultation fee (£50) is deducted from your treatment cost if you proceed on the same day. We use only premium FDA-approved dermal fillers from Swiss, French, and USA manufacturers for the safest, most natural-looking results.</p>
-
-          <h3>Comprehensive Lip Enhancement Areas</h3>
-          <p>Our advanced lip filler treatments target multiple areas: vermilion border definition, Cupid's bow enhancement, upper and lower lip body volume, oral commissure treatment, philtrum ridge definition, and lip symmetry correction. Each treatment area receives precise attention from our GMC-registered doctors who have performed over one million aesthetic injections since 2007.</p>
-
-          <h3>Lip Filler Aftercare and Lip Filler Pain</h3>
-          <p>Lip filler pain is minimal with topical anaesthetic and lidocaine-containing filler. Lip filler aftercare includes avoiding touching lips for 24 hours, applying ice packs, daily massage for 7–14 days, and avoiding strenuous exercise. Our comprehensive aftercare guide ensures optimal healing and the best possible results from your lip augmentation treatment. How long lip fillers take to dissolve naturally depends on your metabolism — typically 6–12 months for premium hyaluronic acid products.</p>
-
-          <h3>Natural Looking Lip Enhancement London</h3>
-          <p>Our invisible art philosophy ensures natural-looking lip enhancement that complements your facial features. Doctor-led lip filler treatment at our Harley Street clinic uses expert technique for subtle, sophisticated results. Whether you choose 0.5ml for a gentle enhancement or 1ml for more visible transformation, your lips will look naturally beautiful. We also offer lip flip Botox treatment which can be combined with fillers for comprehensive lip enhancement. Book your lip filler consultation today at our Harley Street clinic.</p>
-        </div>
       </div>
 
       <TreatmentPaymentInfo variant="dark" />
