@@ -619,13 +619,16 @@ const LipFillers = () => {
                     Street clinic. Results vary depending on lip anatomy, technique, and desired enhancement 
                     — with a focus on balance, proportion, and natural movement.
                   </p>
-                  <div className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900 mb-3">
-                    <img
-                      src="/images/before-after/dermal-fillers/lips/lip-filler-natural-enhancement.jpg"
-                      alt="Before and after lip filler showing natural volume enhancement"
-                      loading="lazy"
-                      className="w-full h-auto block"
-                    />
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+                    {[
+                      { src: "/images/before-after/dermal-fillers/lips/lip-filler-natural-enhancement.jpg", alt: "Before and after lip filler showing natural volume enhancement" },
+                      { src: "/images/before-after/dermal-fillers/lips/lip-augmentation-profile.jpg", alt: "Lip augmentation before and after — profile view showing balanced projection" },
+                      { src: "/images/before-after/dermal-fillers/lips/lip-filler-side-profile.jpg", alt: "Lip filler side profile before and after — natural lip shape" },
+                    ].map((img) => (
+                      <div key={img.src} className="rounded-xl overflow-hidden border border-white/[0.06] bg-neutral-900">
+                        <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
+                      </div>
+                    ))}
                   </div>
                   <p className="text-white/30 text-xs font-light italic mb-6">
                     All images show real patients treated by our doctors at our Harley Street clinic. Individual results vary.
