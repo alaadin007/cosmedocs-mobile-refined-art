@@ -133,6 +133,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Temple Filler London | Temporal Hollowing Treatment | Cosmedocs',
     description: 'Restore youthful temple volume with expert temple filler. Reduce hollowing and lift brows. Doctor-led on Harley Street.'
   },
+  '/treatments/non-surgical-nose-job/': {
+    title: 'Non-Surgical Nose Job London | Liquid Rhinoplasty | From £450 | Harley Street',
+    description: 'Non-surgical nose job in London from £450. Reshape your nose without surgery — dermal fillers or PCL threads (up to 3 years). Doctor-led at Cosmedocs Harley Street since 2010.'
+  },
   '/treatments/dermal-fillers/nose/': {
     title: 'Non-Surgical Nose Job London | Nose Filler | Cosmedocs',
     description: 'Reshape your nose without surgery. Expert non-surgical rhinoplasty with dermal filler on Harley Street since 2010.'
