@@ -1198,17 +1198,18 @@ export default async function handler(request: Request, context: any) {
   const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" data-rh="true" />`;
 
   // Single-pass replacements using pre-compiled patterns
-  html = html.replace(/<title>.*?<\/title>/i, titleTag);
-  html = html.replace(
-    /<meta\s+name=["']description["']\s+content=["'].*?["']\s*\/?>/i,
-    descTag
-  );
+  html = html.replace(/<title>[\s\S]*?<\/title>/i, titleTag);
 
-  if (/<link\s+rel=["']canonical["'].*?\/?>/i.test(html)) {
-    html = html.replace(/<link\s+rel=["']canonical["'].*?\/?>/i, canonicalTag);
-  } else {
-    html = html.replace('</head>', `  ${canonicalTag}\n</head>`);
-  }
+  // Strip ALL existing description meta tags (handles self-closing, no-slash,
+  // single/double quotes, and any stray copies) — then inject the canonical one
+  // immediately after the title to guarantee Google sees it first.
+  html = html.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/gi, '');
+  html = html.replace(titleTag, `${titleTag}\n    ${descTag}`);
+
+  // Same for canonical — strip then insert (prevents duplicate canonicals
+  // when Helmet also ships one client-side)
+  html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>/gi, '');
+  html = html.replace('</head>', `  ${canonicalTag}\n</head>`);
 
   const headers = new Headers(response.headers);
   headers.set('x-edge-meta', '1');
