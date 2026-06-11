@@ -46,7 +46,7 @@ const FAQ = [
   },
   {
     q: "What if I want bigger lips — should I just start with 1ml?",
-    a: "For dramatic enlargement, 1ml is appropriate — but only after a consultation that confirms your lip anatomy can carry it. We will sometimes recommend a Russian Lip technique with 1ml for height and definition rather than projection.",
+    a: "For dramatic enlargement, 1ml is appropriate — but only after a consultation that confirms your lip anatomy can carry it. We often stage 1ml across two sessions rather than placing it all at once.",
   },
 ];
 
@@ -260,7 +260,6 @@ const LipFiller05vs1ml = () => {
                 <ul className="space-y-2 text-sm text-white/60 leading-relaxed list-disc list-inside mb-4">
                   <li>0.5ml lip filler — from £290</li>
                   <li>1ml lip filler — from £390</li>
-                  <li>Russian Lip technique (1ml) — from £450</li>
                   <li>Lip dissolving (Hyalase) — from £180</li>
                 </ul>
                 <p className="text-sm text-white/60 leading-relaxed">
@@ -290,8 +289,8 @@ const LipFiller05vs1ml = () => {
                 <h3 className="text-xs uppercase tracking-wider text-white/40 mb-4">Continue reading</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    { label: "Russian Lips vs Classic Lip Filler", path: "/russian-lips-vs-classic-lip-filler/" },
                     { label: "Lip Filler Treatment", path: "/treatments/dermal-fillers/lip-fillers/" },
+                    { label: "Lip Flip (Botox)", path: "/treatments/lip-flip/" },
                     { label: "Before & After Lip Filler", path: "/before-after/lip-filler/" },
                     { label: "Lip Filler Results Explained", path: "/blog/lip-filler-results-explained/" },
                   ].map((l) => (
@@ -314,7 +313,6 @@ const LipFiller05vs1ml = () => {
                     { area: "Definition only", value: "0.5ml" },
                     { area: "Subtle plump", value: "0.5–1ml" },
                     { area: "Visible enlargement", value: "1ml" },
-                    { area: "Russian technique", value: "1ml" },
                     { area: "Maintenance", value: "0.5ml / 9 mo" },
                   ]}
                   concepts={[
@@ -325,8 +323,8 @@ const LipFiller05vs1ml = () => {
                     "How to spot an over-filled lip",
                   ]}
                   related={[
-                    { label: "Russian Lips vs Classic", path: "/russian-lips-vs-classic-lip-filler/" },
                     { label: "Lip Filler Treatment", path: "/treatments/dermal-fillers/lip-fillers/" },
+                    { label: "Lip Flip (Botox)", path: "/treatments/lip-flip/" },
                     { label: "Before & After Lip Filler", path: "/before-after/lip-filler/" },
                     { label: "Lip Filler Results Explained", path: "/blog/lip-filler-results-explained/" },
                     { label: "Cheek Filler 1ml vs 2ml vs 4ml", path: "/cheek-filler-1ml-vs-2ml-vs-4ml/" },
