@@ -139,7 +139,7 @@ const MasseterBotox = () => {
                   postalCode: "W1G 9PF",
                   addressCountry: "GB",
                 },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "243" },
+                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "2387", bestRating: "5" },
               },
               {
                 "@type": "MedicalProcedure",
