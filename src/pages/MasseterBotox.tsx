@@ -624,6 +624,61 @@ const MasseterBotox = () => {
           </div>
         </section>
 
+        {/* ───── Related Reading (internal linking for topical authority) ───── */}
+        <section className="!pt-6 !pb-10">
+          <div className="tp-container">
+            <h2 className="!mb-6 text-center">Related <span className="text-[#C9A050]">reading</span></h2>
+            <p className="text-center text-[15px] text-black/60 max-w-2xl mx-auto !mb-8">
+              Doctor-written guides on jawline shape, bite force and the clinical detail behind masseter Botox.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5">
+              {[
+                {
+                  href: "/blog/jawline-tightening-over-30",
+                  title: "Jawline Tightening After 30",
+                  desc: "Where masseter Botox fits alongside skin tightening and structural support as the lower face changes.",
+                  tag: "Editorial",
+                },
+                {
+                  href: "/blog/tooth-chipping-grinding-masseter",
+                  title: "Tooth Chipping, Grinding & The Masseter",
+                  desc: "The medical case for masseter Botox in bruxism — why dentists are now referring patients for it.",
+                  tag: "Clinical",
+                },
+                {
+                  href: "/blog/jaw-filler-results-explained",
+                  title: "Jaw Filler Results, Explained",
+                  desc: "When the jaw needs slimming (Botox) vs definition (filler) — and how the two are combined for balance.",
+                  tag: "Comparison",
+                },
+                {
+                  href: "/blog/botox-placement-guide-london",
+                  title: "Botox Placement Guide (London)",
+                  desc: "Why injection point, depth and dosing matter more than units — applied to the masseter muscle.",
+                  tag: "Technique",
+                },
+              ].map((b) => (
+                <Link
+                  key={b.href}
+                  to={b.href}
+                  className="group block rounded-2xl border border-black/10 bg-white p-6 hover:border-[#C9A050] hover:shadow-md transition-all"
+                >
+                  <span className="inline-block text-[11px] tracking-[0.18em] uppercase text-[#C9A050] font-medium !mb-2">
+                    {b.tag}
+                  </span>
+                  <h3 className="text-lg md:text-xl !mb-2 group-hover:text-[#C9A050] transition-colors">
+                    {b.title}
+                  </h3>
+                  <p className="text-[14px] text-black/65 leading-relaxed !mb-3">{b.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-[13px] font-medium text-black group-hover:text-[#C9A050]">
+                    Read article <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ───── Final CTA ───── */}
         <section className="!pt-6 !pb-16">
           <div className="tp-container">
@@ -646,6 +701,7 @@ const MasseterBotox = () => {
             </div>
           </div>
         </section>
+
       </div>
     </>
   );
