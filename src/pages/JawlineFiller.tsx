@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, ArrowRight, Heart } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
-import ExpandableSection from "@/components/ui/expandable-section";
+// SEO: ExpandableSection replaced with always-visible pass-through (visible-content-seo-policy)
+const ExpandableSection = ({ children }: { title?: string; children: React.ReactNode; defaultOpen?: boolean }) => (
+  <div className="space-y-3">{children}</div>
+);
 import JawlineFillerSidebar from "@/components/jawline/JawlineFillerSidebar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -88,26 +91,68 @@ const JawlineFiller = () => {
       },
       {
         "@type": "MedicalProcedure",
+        "@id": "https://www.cosmedocs.com/treatments/jawline-filler/#procedure",
         name: "Jawline Filler Treatment",
-        alternateName: "Jaw Filler",
-        description: "Non-surgical jawline enhancement using premium hyaluronic acid dermal fillers for definition, contouring, and jowl correction.",
+        alternateName: ["Jaw Filler", "Jawline Contouring", "Liquid Jawline"],
+        description: "Non-surgical jawline enhancement using premium hyaluronic acid dermal fillers for definition, contouring, and jowl correction. Doctor-led on Harley Street since 2007.",
         url: "https://www.cosmedocs.com/treatments/jawline-filler/",
-        procedureType: "NoninvasiveProcedure",
+        procedureType: "https://schema.org/NoninvasiveProcedure",
         bodyLocation: "Jawline, mandibular border",
-        followup: "Results last 15–18 months. Review appointment recommended at 2 weeks.",
-        howPerformed: "Premium hyaluronic acid filler strategically placed along the mandibular border using needle or cannula technique for precise definition and structural support.",
+        followup: "Results last 15–18 months. Complimentary two-week review appointment included.",
+        howPerformed: "Premium hyaluronic acid filler strategically placed along the mandibular border, gonial angle and pre-jowl sulcus using needle or cannula technique for precise definition and structural support.",
+        cost: {
+          "@type": "MonetaryAmount",
+          currency: "GBP",
+          value: { "@type": "QuantitativeValue", minValue: 350, maxValue: 950 }
+        },
+        author: {
+          "@type": "Person",
+          "@id": "https://www.cosmedocs.com/team/dr-ahmed-haq#person",
+          name: "Dr A. Farhan Haq",
+          jobTitle: "Cosmetic Physician & Medical Director",
+          url: "https://www.cosmedocs.com/team/dr-ahmed-haq"
+        },
+        reviewedBy: {
+          "@type": "Person",
+          "@id": "https://www.cosmedocs.com/team/dr-hena-haq#person",
+          name: "Dr Hena Haq",
+          jobTitle: "Cosmetic Physician",
+          url: "https://www.cosmedocs.com/team/dr-hena-haq"
+        }
+      },
+      {
+        "@type": "HowTo",
+        name: "How a Jawline Filler Treatment Is Performed at CosmeDocs",
+        totalTime: "PT45M",
+        step: [
+          { "@type": "HowToStep", position: 1, name: "Consultation & facial mapping", text: "GMC-registered doctor assesses bone structure, soft-tissue support and asymmetry, then maps injection zones along the mandibular border and gonial angle." },
+          { "@type": "HowToStep", position: 2, name: "Cleansing & topical anaesthetic", text: "Skin is cleansed with antiseptic and a topical anaesthetic is applied; chosen filler contains lidocaine for additional comfort." },
+          { "@type": "HowToStep", position: 3, name: "Structural placement", text: "Dense, structural-grade HA filler is placed deep onto bone at the angle of the jaw, mandibular border and pre-jowl sulcus using needle or cannula technique." },
+          { "@type": "HowToStep", position: 4, name: "Sculpting & symmetry check", text: "Filler is moulded and the jawline is reassessed from front, side and three-quarter views to confirm symmetry and definition." },
+          { "@type": "HowToStep", position: 5, name: "Aftercare & two-week review", text: "Aftercare instructions provided; complimentary review at two weeks to refine if needed." }
+        ]
+      },
+      {
+        "@type": "ImageGallery",
+        name: "Jawline Filler Before & After — Cosmedocs Patients",
+        url: "https://www.cosmedocs.com/before-after/dermal-fillers/jawline/",
+        image: [
+          "https://www.cosmedocs.com/images/before-after/dermal-fillers/jawline/jawline-filler-new-1.jpg",
+          "https://www.cosmedocs.com/images/before-after/dermal-fillers/jawline/jawline-filler-new-2.jpg",
+          "https://www.cosmedocs.com/images/before-after/dermal-fillers/jawline/jawline-filler-new-3.jpg"
+        ]
       },
       {
         "@type": "Offer",
         name: "Jawline Filler Treatment",
         priceCurrency: "GBP",
         price: "350",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "GBP",
-          price: "350",
-          description: "1ml jawline filler from £350; Natural HD Package £950",
-        },
+        priceValidUntil: "2026-12-31",
+        priceSpecification: [
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "350", description: "1ml jawline filler" },
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "650", description: "2ml jawline filler" },
+          { "@type": "PriceSpecification", priceCurrency: "GBP", price: "950", description: "Natural HD Jawline Package" }
+        ],
         availability: "https://schema.org/InStock",
         seller: { "@id": "https://www.cosmedocs.com/#clinic" },
       },
@@ -134,13 +179,21 @@ const JawlineFiller = () => {
   return (
     <>
       <Helmet>
-        <title>Jawline Filler Treatment | Harley Street Doctors</title>
-        <meta name="description" content="Doctor-led jawline filler from £350. Define, contour, and sculpt your jawline at our Harley Street clinic. Natural results since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.com/treatments/jawline-filler/" />
-        <meta property="og:title" content="Jawline Filler Treatment | Harley Street Doctors" />
-        <meta property="og:description" content="Doctor-led jawline filler from £350. Define, contour, and sculpt your jawline at our Harley Street clinic." />
+        <title>Jawline Filler London | From £350 | Cosmedocs Harley Street</title>
+        <meta name="description" content="Doctor-led jawline filler from £350 in London. Define, sharpen and sculpt your jawline with premium HA fillers at Cosmedocs Harley Street. Results last 15–18 months." />
+        <meta name="keywords" content="jawline filler london, jaw filler harley street, jawline contouring, liquid jawline, jaw enhancement, mandibular filler, pre-jowl filler" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/jawline-filler/" data-rh="true" />
+        <meta property="og:title" content="Jawline Filler London | From £350 | Cosmedocs Harley Street" />
+        <meta property="og:description" content="Doctor-led jawline filler from £350. Define, sharpen and sculpt your jawline at our Harley Street clinic. Natural results since 2007." />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/jawline-filler/" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.cosmedocs.com/images/before-after/dermal-fillers/jawline/jawline-filler-new-1.jpg" />
+        <meta property="og:site_name" content="Cosmedocs" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Jawline Filler London | From £350 | Cosmedocs Harley Street" />
+        <meta name="twitter:description" content="Doctor-led jawline filler from £350 at our Harley Street clinic. Sculpt a defined, balanced jawline." />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/images/before-after/dermal-fillers/jawline/jawline-filler-new-1.jpg" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       </Helmet>
 
@@ -694,19 +747,77 @@ const JawlineFiller = () => {
           <JawlineFillerSidebar />
         </section>
 
-        {/* Hidden SEO Content */}
-        <div className="sr-only" aria-hidden="true">
-          <article>
-            <h2>Jawline Filler Treatment London — Harley Street Doctors</h2>
-            <p>
-              CosmeDocs offers doctor-led jawline filler treatment at our Harley Street clinic in London. Using premium hyaluronic acid dermal fillers, our GMC-registered doctors create natural-looking jawline definition, contour enhancement, and jowl correction. Jawline filler is one of the most impactful non-surgical facial treatments, addressing age-related volume loss, weak jaw structure, and facial asymmetry. Our doctors — Dr Ahmed Haq and Dr Hena — have been performing jawline enhancement treatments since 2007, with over one million aesthetic procedures performed. The treatment takes 30–45 minutes, results last 15–18 months, and recovery is minimal. Our invisible art philosophy ensures subtle, natural enhancement that speaks without saying a word.
+        {/* Visible Cost & Positioning Sections (replaces sr-only block per visible-content-seo-policy) */}
+        <section className="py-16 px-4 bg-black border-t border-white/[0.06]">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extralight text-white mb-3 leading-tight">
+              Jawline Filler <span className="text-[#C9A050] font-light">Cost in London</span>
+            </h2>
+            <p className="text-white/45 text-sm leading-relaxed font-light max-w-2xl mb-10">
+              Transparent doctor-led pricing at our Harley Street clinic. All treatments include consultation, premium FDA-approved HA filler, topical anaesthetic and a complimentary two-week review.
             </p>
-            <h3>Jawline Filler Pricing at CosmeDocs</h3>
-            <p>
-              1ml jawline filler from £350 for subtle definition. 2ml jawline filler from £650 for pronounced sculpting. Natural HD Jawline Package at £950 for comprehensive jawline transformation. All prices include consultation and aftercare support. The consultation fee of £50 is deducted from treatment cost if you proceed.
+            <div className="grid sm:grid-cols-3 gap-4 mb-6">
+              {[
+                { vol: "1ml", price: "£350", desc: "Subtle definition — ideal for first-time patients seeking natural enhancement." },
+                { vol: "2ml", price: "£650", desc: "Pronounced sculpting — sharper jaw angles and stronger lower-face structure." },
+                { vol: "HD Package", price: "£950", desc: "Natural HD Jawline — comprehensive transformation across angle, border and pre-jowl." },
+              ].map((tier) => (
+                <div key={tier.vol} className="border border-white/[0.08] rounded-2xl p-6 hover:border-[#C9A050]/30 transition-all">
+                  <div className="text-xs uppercase tracking-wider text-white/35 mb-2">{tier.vol}</div>
+                  <div className="text-3xl font-extralight text-[#C9A050] mb-3">{tier.price}</div>
+                  <p className="text-xs text-white/50 leading-relaxed font-light">{tier.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-white/45 text-xs leading-relaxed font-light">
+              <strong className="text-[#C9A050]/80">What's included:</strong> doctor consultation (£50, deducted from treatment), premium HA filler from Allergan, Galderma or Teoxane, topical anaesthetic and a complimentary two-week review. We work with PrivaDr Ltd, 10 Harley Street, London W1G 9PF for all CQC required treatments.
             </p>
-          </article>
-        </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 bg-neutral-950 border-t border-white/[0.06]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extralight text-white mb-3 leading-tight">
+              The <span className="text-[#C9A050] font-light">Liquid Jawline</span>
+            </h2>
+            <p className="text-white/40 text-sm uppercase tracking-wider mb-8">A doctor-led approach to lower-face structure</p>
+            <div className="text-white/55 text-base leading-relaxed font-light space-y-5">
+              <p>
+                The phrase "liquid jawline" gets used loosely. At Cosmedocs it means something specific: a structural rebuild of the lower face using dense, bone-supportive HA filler placed deep onto the mandible — not surface volume. The result is a sharper angle, a cleaner border, and a softer pre-jowl shadow, all without surgery.
+              </p>
+              <p>
+                Our doctors work along three zones: the <strong className="text-white/70">gonial angle</strong> (for definition and projection), the <strong className="text-white/70">mandibular border</strong> (for a continuous, clean edge), and the <strong className="text-white/70">pre-jowl sulcus</strong> (to soften early jowl shadowing). Filler is placed deep on bone, where it provides architecture rather than surface puffiness.
+              </p>
+              <p>
+                Most patients benefit from being treated as a triangle, not a line — pairing jawline with <Link to="/treatments/chin-filler/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">chin filler</Link> for projection or with <Link to="/treatments/masseter-botox/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">masseter Botox</Link> to slim a square jaw. For comprehensive multi-point lifting, our <Link to="/treatments/ha-makeover/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">HA Makeover</Link> protocol is often a better starting point than jawline alone.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 bg-black border-t border-white/[0.06]">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-extralight text-white/85 mb-8">
+              Continue reading on <span className="text-[#C9A050] font-light">jawline & lower face</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                { to: "/treatments/chin-filler/", tag: "Combination", title: "Chin Filler", desc: "Projection and balance — the natural partner to jawline filler." },
+                { to: "/treatments/masseter-botox/", tag: "Slimming", title: "Masseter Botox", desc: "Soften a square jaw and relieve bruxism with muscle-relaxant injections." },
+                { to: "/treatments/ha-makeover/", tag: "Full face", title: "HA Makeover (8-point lift)", desc: "Multi-point filler lifting for comprehensive lower-face rebalance." },
+                { to: "/treatments/cheek-filler/", tag: "Companion", title: "Cheek Filler", desc: "Restore the upper structural triangle that holds the jawline." },
+                { to: "/ads/endolaser-jawline/", tag: "Tightening", title: "Endolaser Jawline", desc: "Dual-wavelength laser fibre lift for skin laxity along the jaw." },
+                { to: "/before-after/dermal-fillers/jawline/", tag: "Gallery", title: "Real Jawline Filler Before & After", desc: "Verified patient photographs from our Harley Street clinic." },
+              ].map((l) => (
+                <Link key={l.to} to={l.to} className="block border border-white/[0.06] rounded-2xl p-5 hover:border-[#C9A050]/30 hover:bg-white/[0.02] transition-all group">
+                  <div className="text-[10px] uppercase tracking-wider text-[#C9A050]/70 mb-2">{l.tag}</div>
+                  <div className="text-base font-light text-white/85 group-hover:text-[#C9A050] mb-1.5">{l.title}</div>
+                  <div className="text-xs text-white/45 leading-relaxed font-light">{l.desc}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
 
       <TreatmentPaymentInfo variant="dark" />
