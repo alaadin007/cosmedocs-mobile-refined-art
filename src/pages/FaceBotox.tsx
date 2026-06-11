@@ -887,6 +887,20 @@ export default function FaceBotox() {
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
 
+        {/* Related authority pages */}
+        <section className="py-10 px-4 border-t border-white/5">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-white/40 mb-4">Continue in this cluster</p>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#C9A050]/80 tracking-widest uppercase">
+              <Link to="/treatments/anti-wrinkle-treatment/" className="hover:text-[#C9A050] transition-colors">Anti-Wrinkle Treatment</Link>
+              <Link to="/treatments/lip-flip/" className="hover:text-[#C9A050] transition-colors">Lip Flip</Link>
+              <Link to="/treatments/brotox/" className="hover:text-[#C9A050] transition-colors">BroTox (Male)</Link>
+              <Link to="/treatments/masseter-botox/" className="hover:text-[#C9A050] transition-colors">Masseter Botox</Link>
+              <Link to="/treatments/ultimate-botox-guide/" className="hover:text-[#C9A050] transition-colors">Ultimate Botox Guide</Link>
+            </div>
+          </div>
+        </section>
+
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Botox London - Complete Guide to Anti-Wrinkle Treatment</h2>
