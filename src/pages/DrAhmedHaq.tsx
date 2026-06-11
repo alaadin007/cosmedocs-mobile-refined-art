@@ -59,7 +59,7 @@ const DrAhmedHaq = () => {
       "Anti-Wrinkle Injections",
       "Non-Surgical Rhinoplasty",
       "Tear Trough Filler",
-      "Russian Lips Technique",
+      "Tear Trough Filler",
       "Hyaluronic Acid Dermal Fillers",
       "Facial Anatomy",
       "Filler Dissolving (Hyalase)"
