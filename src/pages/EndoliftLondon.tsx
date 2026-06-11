@@ -100,11 +100,14 @@ const EndoliftLondon = () => {
             <div className="flex-1 min-w-0 space-y-14">
 
               {/* Sub-cluster nav */}
-              <div className="grid sm:grid-cols-3 gap-3">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {[
                   { t: "Is Endolift safe?", d: "Risks, side effects, candidacy.", to: "/treatments/endolift-london/safety/" },
                   { t: "Recovery & aftercare", d: "Day-by-day timeline + checklist.", to: "/treatments/endolift-london/recovery/" },
                   { t: "Endolift for double chin", d: "Submental fat + skin in one session.", to: "/treatments/endolift-london/double-chin/" },
+                  { t: "How long does Endolift last?", d: "Duration, maintenance & longevity.", to: "/treatments/endolift-london/duration/" },
+                  { t: "Endolaser for the body", d: "Arms, abdomen, knees & inner thighs.", to: "/treatments/endolaser-body/" },
+                  { t: "Endolaser for cellulite", d: "Subdermal smoothing on thighs & buttocks.", to: "/treatments/endolaser-cellulite/" },
                 ].map((c) => (
                   <Link key={c.t} to={c.to} className="group block border border-[#C9A050]/25 rounded-xl bg-[#C9A050]/[0.04] hover:border-[#C9A050]/60 transition-colors p-4">
                     <div className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050]">In this cluster</div>

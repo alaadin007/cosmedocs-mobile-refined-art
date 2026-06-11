@@ -499,10 +499,11 @@ const BroTox = () => {
               >
                 Book BroTox at Harley Street <ArrowRight className="w-4 h-4" />
               </a>
-              <div className="mt-8">
-                <Link to="/treatments/botox/" className="text-xs text-[#C9A050]/70 hover:text-[#C9A050] tracking-widest uppercase transition-colors">
-                  ← Explore all Botox London treatments
-                </Link>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#C9A050]/70 tracking-widest uppercase">
+                <Link to="/treatments/botox/" className="hover:text-[#C9A050] transition-colors">← All Botox London</Link>
+                <Link to="/treatments/anti-wrinkle-treatment/" className="hover:text-[#C9A050] transition-colors">Anti-Wrinkle Treatment</Link>
+                <Link to="/treatments/lip-flip/" className="hover:text-[#C9A050] transition-colors">Lip Flip</Link>
+                <Link to="/treatments/masseter-botox/" className="hover:text-[#C9A050] transition-colors">Masseter Botox</Link>
               </div>
             </motion.div>
           </div>
