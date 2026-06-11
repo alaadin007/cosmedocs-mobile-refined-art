@@ -115,13 +115,19 @@ const LipFillers = () => {
               {
                 "@type": "MedicalProcedure",
                 "name": "Lip Filler Treatment",
-                "alternateName": ["Lip Augmentation", "Natural Lip Job", "Lip Injections"],
+                "alternateName": ["Lip Augmentation", "Natural Lip Job", "Lip Injections", "Lip Enlargement"],
                 "description": "Doctor-led lip augmentation using premium hyaluronic acid dermal fillers to enhance lip volume, shape, and definition with natural-looking results.",
                 "url": "https://www.cosmedocs.com/treatments/lip-fillers/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Lips",
                 "followup": "Results visible immediately, final outcome at 2 weeks. Lasts 6–12 months.",
                 "howPerformed": "Premium hyaluronic acid filler injected into strategic points of the lips using fine needles or cannula, with topical anaesthetic and lidocaine for comfort.",
+                "cost": {
+                  "@type": "MonetaryAmount",
+                  "currency": "GBP",
+                  "minValue": 300,
+                  "maxValue": 350
+                },
                 "author": {
                   "@type": "Person",
                   "name": "Dr Ahmed Haq",
@@ -141,6 +147,38 @@ const LipFillers = () => {
                   "name": "CosmeDocs",
                   "url": "https://www.cosmedocs.com/"
                 }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cosmedocs.com/" },
+                  { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.cosmedocs.com/treatments/" },
+                  { "@type": "ListItem", "position": 3, "name": "Dermal Fillers", "item": "https://www.cosmedocs.com/treatments/dermal-fillers/" },
+                  { "@type": "ListItem", "position": 4, "name": "Lip Fillers", "item": "https://www.cosmedocs.com/treatments/lip-fillers/" }
+                ]
+              },
+              {
+                "@type": "HowTo",
+                "name": "How Lip Filler Treatment Is Performed",
+                "description": "Step-by-step doctor-led lip filler treatment at CosmeDocs Harley Street.",
+                "totalTime": "PT45M",
+                "step": [
+                  { "@type": "HowToStep", "position": 1, "name": "Consultation & assessment", "text": "Your doctor reviews lip anatomy, medical history and aesthetic goals to recommend volume and product." },
+                  { "@type": "HowToStep", "position": 2, "name": "Topical anaesthesia", "text": "Numbing cream is applied for 15 minutes; lidocaine in the filler adds further comfort." },
+                  { "@type": "HowToStep", "position": 3, "name": "Layered injection", "text": "Premium HA filler is placed via fine needle or cannula across vermilion border, body, philtrum ridges and Cupid's bow." },
+                  { "@type": "HowToStep", "position": 4, "name": "Shape & review", "text": "Doctor sculpts in real time, reviews symmetry and finalises the shape with the patient." },
+                  { "@type": "HowToStep", "position": 5, "name": "Aftercare & two-week review", "text": "Aftercare guidance issued; complimentary 2-week review to assess final settled result." }
+                ]
+              },
+              {
+                "@type": "ImageGallery",
+                "name": "Lip Filler Before & After — Real Patients",
+                "url": "https://www.cosmedocs.com/before-after/dermal-fillers/lips/",
+                "image": [
+                  "https://www.cosmedocs.com/images/before-after/dermal-fillers/lips/lip-filler-natural-enhancement.jpg",
+                  "https://www.cosmedocs.com/images/before-after/dermal-fillers/lips/lip-augmentation-profile.jpg",
+                  "https://www.cosmedocs.com/images/before-after/dermal-fillers/lips/lip-filler-side-profile.jpg"
+                ]
               },
               {
                 "@type": "FAQPage",
