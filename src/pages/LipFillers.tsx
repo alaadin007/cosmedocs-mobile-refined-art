@@ -457,6 +457,61 @@ const LipFillers = () => {
                 </motion.div>
               </section>
 
+              {/* Natural Lip Job */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    The <span className="text-[#C9A050] font-light">Natural Lip Job</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="space-y-4 text-white/55 text-sm leading-relaxed font-light">
+                    <p>
+                      A <strong className="text-white/75">natural lip job</strong> isn't a single product or trend — it's a philosophy. At CosmeDocs it means honouring your existing lip ratio, respecting the lower-third proportions of your face, and refusing the over-projected, top-heavy look that has dominated the past decade. The goal is lips that look like <em>better-rested versions of your own</em>, not someone else's.
+                    </p>
+                    <p>
+                      Our doctors achieve this through three principles: <strong className="text-white/75">conservative dosing</strong> (often starting at 0.5ml), <strong className="text-white/75">multi-product layering</strong> (soft HA for hydration, structural HA only where projection is genuinely needed), and <strong className="text-white/75">profile-first injection</strong> — assessing the lip from the side, not just front-on, to keep forward projection in check.
+                    </p>
+                    <p>
+                      If you've been told elsewhere that you "need 1ml" before any assessment, that's a red flag. A natural lip job is doctor-led, anatomy-led, and almost always begins quieter than patients expect.
+                    </p>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Lip Enlargement Cost — Transparent Pricing */}
+              <section>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white/85 mb-2 leading-tight">
+                    Lip Enlargement <span className="text-[#C9A050] font-light">Cost in London</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Transparent, all-inclusive pricing — no hidden top-up fees, no pressure to upsize. Lip injections price reflects product, doctor time, and your complimentary two-week review.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {[
+                      { tier: "0.5ml Lip Filler", price: "£300", note: "First-time / subtle enhancement" },
+                      { tier: "1ml Lip Filler", price: "£350", note: "Full volume restoration" },
+                      { tier: "Lip Flip (Botox)", price: "£175", note: "Muscle-based, no volume added" },
+                    ].map((item) => (
+                      <div key={item.tier} className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5">
+                        <p className="text-sm text-white/70 font-medium mb-1">{item.tier}</p>
+                        <p className="text-2xl text-[#C9A050] font-light mb-2">{item.price}</p>
+                        <p className="text-xs text-white/40 font-light">{item.note}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 p-5 bg-white/[0.03] border border-white/[0.06] rounded-xl">
+                    <p className="text-white/45 text-xs leading-relaxed font-light">
+                      <strong className="text-[#C9A050]/80">What's included:</strong> doctor consultation (£50, deducted from treatment), premium FDA-approved HA filler, topical anaesthetic, and a complimentary two-week review. Compare with our{" "}
+                      <Link to="/treatments/lip-filler-0-5ml-vs-1ml/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">0.5ml vs 1ml breakdown</Link>{" "}
+                      and{" "}
+                      <Link to="/treatments/russian-lips-vs-classic/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">Russian Lips vs classic technique</Link>.
+                    </p>
+                  </div>
+                </motion.div>
+              </section>
+
               {/* 0.5ml vs 1ml */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
