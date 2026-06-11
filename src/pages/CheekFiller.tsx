@@ -4,7 +4,15 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
-import ExpandableSection from "@/components/ui/expandable-section";
+import ExpandableSectionOriginal from "@/components/ui/expandable-section";
+
+// Local pass-through: render all content always-visible (visible-content-seo-policy).
+const ExpandableSection = ({ preview, children }: { preview: React.ReactNode; children: React.ReactNode; label?: string; collapseLabel?: string }) => (
+  <div>
+    {preview}
+    <div className="pt-4">{children}</div>
+  </div>
+);
 import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
 import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
