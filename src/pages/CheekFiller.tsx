@@ -4,7 +4,15 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
-import ExpandableSection from "@/components/ui/expandable-section";
+import ExpandableSectionOriginal from "@/components/ui/expandable-section";
+
+// Local pass-through: render all content always-visible (visible-content-seo-policy).
+const ExpandableSection = ({ preview, children }: { preview: React.ReactNode; children: React.ReactNode; label?: string; collapseLabel?: string }) => (
+  <div>
+    {preview}
+    <div className="pt-4">{children}</div>
+  </div>
+);
 import CheekFillerSidebar from "@/components/cheek-filler/CheekFillerSidebar";
 import EndolaserSpotlight from "@/components/EndolaserSpotlight";
 import cheekIllustration from "@/assets/cheek-profile-illustration.png";
@@ -69,18 +77,60 @@ const CheekFiller = () => {
       {
         "@type": "MedicalProcedure",
         name: "Cheek Filler Treatment",
+        alternateName: ["Cheek Augmentation", "Mid-Face Filler", "Non-Surgical Cheek Lift", "Liquid Cheek Lift"],
         description: "Non-surgical cheek augmentation and mid-face volume restoration using premium hyaluronic acid dermal fillers. Doctor-led treatment at Harley Street for natural facial contouring.",
         url: "https://www.cosmedocs.com/treatments/cheek-filler/",
         procedureType: "NoninvasiveProcedure",
         bodyLocation: "Cheeks, mid-face, zygomatic region",
         followup: "Review appointment recommended at 2–3 weeks post-treatment.",
         howPerformed: "Hyaluronic acid dermal filler injected into the mid-face using microcannula or needle technique, targeting the zygomatic and submalar regions.",
+        cost: {
+          "@type": "MonetaryAmount",
+          currency: "GBP",
+          minValue: 350,
+          maxValue: 700,
+        },
+        author: {
+          "@type": "Person",
+          name: "Dr Ahmed Haq",
+          jobTitle: "Medical Director, Cosmetic Doctor",
+          url: "https://www.cosmedocs.com/team/dr-ahmed-haq/",
+          identifier: "GMC 6151301",
+        },
+        reviewedBy: {
+          "@type": "Person",
+          name: "Dr Hena Haq",
+          jobTitle: "Aesthetic Doctor",
+          url: "https://www.cosmedocs.com/team/dr-hena-haq/",
+          identifier: "GMC 7034321",
+        },
+        provider: { "@id": "https://www.cosmedocs.com/#clinic" },
+      },
+      {
+        "@type": "HowTo",
+        name: "How Cheek Filler Treatment Is Performed",
+        description: "Doctor-led mid-face cheek augmentation using Swiss Teoxane Ultradeep at CosmeDocs Harley Street.",
+        totalTime: "PT45M",
+        step: [
+          { "@type": "HowToStep", position: 1, name: "Mid-face assessment", text: "Doctor evaluates bone structure, fat compartments and volume loss across the zygomatic and submalar regions." },
+          { "@type": "HowToStep", position: 2, name: "Topical anaesthesia", text: "Numbing cream applied for 15 minutes; lidocaine within the filler adds further comfort." },
+          { "@type": "HowToStep", position: 3, name: "Layered placement", text: "Swiss Teoxane Ultradeep injected deep onto bone via microcannula or fine needle, targeting zygomatic arch and submalar hollow." },
+          { "@type": "HowToStep", position: 4, name: "Sculpt & review", text: "Doctor moulds product and assesses lift, projection and symmetry in real time." },
+          { "@type": "HowToStep", position: 5, name: "Aftercare & 2-week review", text: "Aftercare guidance issued; complimentary review at 2 weeks to assess settled outcome." },
+        ],
+      },
+      {
+        "@type": "ImageGallery",
+        name: "Cheek Filler Before & After — Real Patients",
+        url: "https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/",
       },
       {
         "@type": "Offer",
         name: "Cheek Filler Treatment — Swiss Teoxane Ultradeep",
         priceCurrency: "GBP",
         price: "350",
+        url: "https://www.cosmedocs.com/treatments/cheek-filler/",
+        priceValidUntil: "2026-12-31",
         priceSpecification: [
           { "@type": "PriceSpecification", priceCurrency: "GBP", price: "350", description: "1.2ml Swiss Teoxane Ultradeep" },
           { "@type": "PriceSpecification", priceCurrency: "GBP", price: "500", description: "1.8ml Swiss Teoxane Ultradeep" },
@@ -117,7 +167,7 @@ const CheekFiller = () => {
       <Helmet>
         <title>Cheek Filler London — Swiss Teoxane Ultradeep from £350 | Cosmedocs Harley Street</title>
         <meta name="description" content="Doctor-led cheek filler in London using Swiss Teoxane Ultradeep — 1.2ml £350, 1.8ml £500, 2.4ml £700. Lasts 12–18 months. Before & after photos, transparent pricing. Harley Street since 2007." />
-        <link rel="canonical" href="https://www.cosmedocs.com/treatments/cheek-filler/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/treatments/cheek-filler/" data-rh="true" />
         <meta property="og:title" content="Cheek Filler London — Swiss Teoxane Ultradeep | Cosmedocs" />
         <meta property="og:description" content="Doctor-led cheek filler from £350. Swiss Teoxane Ultradeep, 12–18 month longevity. Harley Street, since 2007." />
         <meta property="og:url" content="https://www.cosmedocs.com/treatments/cheek-filler/" />
@@ -762,20 +812,70 @@ const CheekFiller = () => {
           </div>
         </div>
 
-        {/* Hidden SEO content */}
-        <div aria-hidden="true" role="complementary" aria-label="Additional context for search engines" className="sr-only">
-          <p>
-            Cheek filler treatment at CosmeDocs Harley Street uses premium hyaluronic acid dermal fillers 
-            for mid-face volume restoration and cheek augmentation. Our doctor-led approach ensures safe, 
-            natural-looking results tailored to individual facial anatomy. The mid-face is a critical area 
-            for facial structure — volume loss here affects not only cheek appearance but also the support 
-            structure for the lower face, including nasolabial folds and jowl formation. CosmeDocs has 
-            performed over one million aesthetic procedures since 2007, with all treatments administered 
-            by GMC-registered doctors at 55 Harley Street, London W1G 8QR. Cheek filler treatments are 
-            available from £350 for 1ml, with volumes and products tailored to each patient's needs during 
-            consultation. Our invisible art philosophy ensures transformation that speaks without saying a word.
-          </p>
-        </div>
+        {/* ═══════ COST & NON-SURGICAL LIFT (visible SEO copy) ═══════ */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 border-t border-white/[0.06]">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extralight text-white mb-2 leading-tight">
+                Cheek Filler <span className="text-[#C9A050] font-light">Cost in London</span>
+              </h2>
+              <div className="w-10 h-px bg-[#C9A050]/40 mb-5" />
+              <p className="text-white/55 text-sm leading-relaxed font-light mb-5">
+                Cheek augmentation cost at CosmeDocs starts at <strong className="text-white/75">£350</strong> for 1.2ml of Swiss Teoxane Ultradeep — the gold-standard volumising filler for the mid-face. Full mid-face restoration typically requires 2.4–3.6ml across both sides, often staged over two appointments.
+              </p>
+              <ul className="space-y-2 text-white/55 text-sm font-light">
+                <li className="flex justify-between border-b border-white/[0.06] pb-2"><span>1.2ml Teoxane Ultradeep</span><span className="text-[#C9A050]">£350</span></li>
+                <li className="flex justify-between border-b border-white/[0.06] pb-2"><span>1.8ml Teoxane Ultradeep</span><span className="text-[#C9A050]">£500</span></li>
+                <li className="flex justify-between"><span>2.4ml Teoxane Ultradeep</span><span className="text-[#C9A050]">£700</span></li>
+              </ul>
+              <p className="text-white/35 text-xs font-light mt-4">
+                See our full <Link to="/treatments/cheek-filler-1ml-vs-2ml-vs-4ml/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">1ml vs 2ml vs 4ml volume guide</Link>.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extralight text-white mb-2 leading-tight">
+                The <span className="text-[#C9A050] font-light">Non-Surgical Cheek Lift</span>
+              </h2>
+              <div className="w-10 h-px bg-[#C9A050]/40 mb-5" />
+              <p className="text-white/55 text-sm leading-relaxed font-light mb-4">
+                A liquid facelift uses cheek filler as its structural anchor. Restoring lost volume on the zygomatic bone lifts the overlying tissues — softening nasolabial folds, supporting the jowl, and giving the lower face a quiet, undone lift without surgery.
+              </p>
+              <p className="text-white/45 text-xs leading-relaxed font-light">
+                The mid-face is the support column for the lower third. When volume is replaced precisely on bone, the result reads as <em className="text-white/70">rested</em> — never overdone, never "filled". That's the invisible art.
+              </p>
+              <p className="text-white/35 text-xs font-light mt-4">
+                Pair with <Link to="/treatments/jawline-filler/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">jawline filler</Link> or <Link to="/treatments/endolift-london/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">Endolift laser tightening</Link> for full lower-face balance.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════ RELATED READING ═══════ */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
+          <h2 className="text-2xl md:text-3xl font-extralight text-white mb-8">
+            Continue reading on <span className="text-[#C9A050] font-light">mid-face enhancement</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { to: "/treatments/cheek-filler-1ml-vs-2ml-vs-4ml/", tag: "Volume guide", title: "1ml vs 2ml vs 4ml Cheek Filler", desc: "Doctor's breakdown of how much filler each anatomy genuinely needs." },
+              { to: "/treatments/cheekbone-filler/", tag: "Definition", title: "Cheekbone Filler", desc: "Targeted zygomatic projection for sculpted, defined cheekbones." },
+              { to: "/treatments/ha-makeover/", tag: "Full-face", title: "8/11-Point HA Makeover", desc: "Cheek filler as the structural anchor of the full-face lift." },
+              { to: "/treatments/jawline-filler/", tag: "Lower face", title: "Jawline Filler", desc: "Pairs with cheek filler for balanced facial architecture." },
+              { to: "/treatments/endolift-london/", tag: "Tightening", title: "Endolift Laser Lift", desc: "Adjunct skin-tightening when laxity needs more than volume alone." },
+              { to: "/before-after/dermal-fillers/cheeks/", tag: "Gallery", title: "Real Cheek Filler Before & After", desc: "Verified patient photographs from our Harley Street clinic." },
+            ].map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="group block bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.08] rounded-2xl p-5 transition-colors"
+              >
+                <p className="text-[10px] tracking-widest uppercase text-[#C9A050]/80 mb-2">{l.tag}</p>
+                <p className="text-white/85 text-base font-light mb-1 group-hover:text-[#C9A050] transition-colors">{l.title}</p>
+                <p className="text-white/45 text-xs font-light leading-relaxed">{l.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
 
       <TreatmentPaymentInfo variant="dark" />
