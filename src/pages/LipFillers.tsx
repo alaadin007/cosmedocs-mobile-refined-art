@@ -504,9 +504,7 @@ const LipFillers = () => {
                   <div className="mt-5 p-5 bg-white/[0.03] border border-white/[0.06] rounded-xl">
                     <p className="text-white/45 text-xs leading-relaxed font-light">
                       <strong className="text-[#C9A050]/80">What's included:</strong> doctor consultation (£50, deducted from treatment), premium FDA-approved HA filler, topical anaesthetic, and a complimentary two-week review. Compare with our{" "}
-                      <Link to="/treatments/lip-filler-0-5ml-vs-1ml/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">0.5ml vs 1ml breakdown</Link>{" "}
-                      and{" "}
-                      <Link to="/treatments/russian-lips-vs-classic/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">Russian Lips vs classic technique</Link>.
+                      <Link to="/treatments/lip-filler-0-5ml-vs-1ml/" className="text-[#C9A050]/80 hover:text-[#C9A050] underline underline-offset-2">0.5ml vs 1ml breakdown</Link>.
                     </p>
                   </div>
                 </motion.div>
@@ -851,9 +849,8 @@ const LipFillers = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { to: "/treatments/lip-filler-0-5ml-vs-1ml/", tag: "Volume guide", title: "0.5ml vs 1ml Lip Filler", desc: "Which volume suits your lip anatomy — and how long each lasts." },
-                { to: "/treatments/russian-lips-vs-classic/", tag: "Technique", title: "Russian Lips vs Classic Technique", desc: "The vertical-lift approach explained by our doctors." },
-                { to: "/treatments/lip-filler-dissolve/", tag: "Correction", title: "Lip Filler Dissolving", desc: "Hyalase protocols for unhappy or migrated lip filler." },
                 { to: "/treatments/lip-flip/", tag: "Alternative", title: "Lip Flip (Botox)", desc: "Subtle muscle-relaxant alternative — or combination partner." },
+                { to: "/treatments/lip-filler-dissolve/", tag: "Correction", title: "Lip Filler Dissolving", desc: "Hyalase protocols for unhappy or migrated lip filler." },
                 { to: "/blog/lip-filler-results-explained", tag: "Editorial", title: "Lip Filler Results, Explained", desc: "Doctor-written guide to timelines, swelling and longevity." },
                 { to: "/before-after/dermal-fillers/lips/", tag: "Gallery", title: "Real Lip Filler Before & After", desc: "Verified patient photographs from our Harley Street clinic." },
               ].map((l) => (

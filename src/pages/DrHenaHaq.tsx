@@ -53,7 +53,7 @@ const DrHenaHaq = () => {
     ],
     "knowsAbout": [
       "Lip Filler",
-      "Russian Lips",
+      "Lip Flip",
       "Anti-Wrinkle Injections",
       "Tear Trough Filler",
       "Profhilo",
