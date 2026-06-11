@@ -53,13 +53,61 @@ export default function AntiWrinkleTreatment() {
   const procedureSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
+    '@id': `${CANONICAL}#procedure`,
     name: 'Anti-Wrinkle Treatment',
-    alternateName: ['Anti-Wrinkle Injections', 'Anti-Ageing Injections', 'Botulinum Toxin Treatment'],
-    procedureType: 'Therapeutic',
+    alternateName: ['Anti-Wrinkle Injections', 'Anti-Ageing Injections', 'Botulinum Toxin Treatment', 'Botox'],
+    description: 'Doctor-led anti-wrinkle treatment in London — regulated botulinum toxin for forehead, frown and crow\'s feet lines. From £175 single area at Cosmedocs Harley Street.',
+    url: CANONICAL,
+    procedureType: 'https://schema.org/TherapeuticProcedure',
     bodyLocation: 'Face',
     howPerformed: 'Micro-doses of regulated botulinum toxin are injected by a GMC-registered doctor into specific facial muscles to soften dynamic expression lines.',
     preparation: 'Avoid blood-thinning supplements for 48 hours. No alcohol on the day of treatment.',
-    followup: 'Avoid lying flat or strenuous exercise for four hours. Review at two weeks if requested.'
+    followup: 'Avoid lying flat or strenuous exercise for four hours. Review at two weeks if requested.',
+    author: {
+      '@type': 'Physician',
+      '@id': 'https://www.cosmedocs.com/team/dr-ahmed-haq/#person',
+      name: 'Dr Ahmed Haq',
+      medicalSpecialty: 'https://schema.org/CosmeticProcedure',
+      url: 'https://www.cosmedocs.com/team/dr-ahmed-haq/'
+    },
+    reviewedBy: {
+      '@type': 'Physician',
+      name: 'Dr Hena Haq',
+      url: 'https://www.cosmedocs.com/team/dr-hena-haq/'
+    },
+    performer: {
+      '@type': 'MedicalBusiness',
+      name: 'Cosmedocs Harley Street',
+      url: 'https://www.cosmedocs.com/'
+    }
+  };
+
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Anti-Wrinkle Treatment at Cosmedocs Harley Street',
+    description: 'Doctor-led anti-wrinkle injections — single area, three areas, or add-on pricing.',
+    brand: { '@type': 'Brand', name: 'Cosmedocs' },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '847', bestRating: '5' },
+    offers: [
+      { '@type': 'Offer', name: 'Single area', priceCurrency: 'GBP', price: '175', availability: 'https://schema.org/InStock', url: CANONICAL },
+      { '@type': 'Offer', name: 'Three areas', priceCurrency: 'GBP', price: '295', availability: 'https://schema.org/InStock', url: CANONICAL },
+      { '@type': 'Offer', name: 'Add-on per area (with filler appointment)', priceCurrency: 'GBP', price: '50', availability: 'https://schema.org/InStock', url: CANONICAL }
+    ]
+  };
+
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How anti-wrinkle treatment is performed at Cosmedocs Harley Street',
+    description: 'Doctor-led 5-step protocol for upper-face anti-wrinkle injections.',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Doctor consultation', text: 'GMC-registered doctor reviews medical history, assesses dynamic and static lines, and plans dosing across forehead, glabella and crow\'s feet.' },
+      { '@type': 'HowToStep', position: 2, name: 'Antisepsis & marking', text: 'Skin is cleansed; injection points are marked for symmetry across the frontalis, corrugator and orbicularis oculi muscles.' },
+      { '@type': 'HowToStep', position: 3, name: 'Precision injection', text: 'Micro-doses of regulated botulinum toxin are placed via 32G needle; the appointment takes 10–15 minutes.' },
+      { '@type': 'HowToStep', position: 4, name: 'Post-treatment guidance', text: 'Written aftercare issued: no lying flat for 4 hours, no strenuous exercise that day, no facial massage for 24 hours.' },
+      { '@type': 'HowToStep', position: 5, name: 'Two-week review', text: 'Optional review at 14 days to top up any asymmetry — included.' }
+    ]
   };
 
   const breadcrumbSchema = {
@@ -86,6 +134,8 @@ export default function AntiWrinkleTreatment() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" data-rh="true" href={CANONICAL} />
         <script type="application/ld+json">{JSON.stringify(procedureSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>

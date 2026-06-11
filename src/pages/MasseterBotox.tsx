@@ -143,16 +143,35 @@ const MasseterBotox = () => {
               },
               {
                 "@type": "MedicalProcedure",
+                "@id": "https://www.cosmedocs.com/treatments/masseter-botox/#procedure",
                 name: "Masseter Botox",
-                alternateName: ["Jaw Slimming Botox", "Masseter Reduction"],
+                alternateName: ["Jaw Slimming Botox", "Masseter Reduction", "Bruxism Botox"],
                 description:
                   "Doctor-led masseter Botox for jaw slimming, bruxism, teeth grinding and TMJ tension at CosmeDocs Harley Street.",
                 url: "https://www.cosmedocs.com/treatments/masseter-botox/",
-                procedureType: "NoninvasiveProcedure",
+                procedureType: "https://schema.org/NoninvasiveProcedure",
                 bodyLocation: "Masseter muscle, lower face",
                 howPerformed:
                   "A doctor assesses masseter size and bite strength, then places precise botulinum toxin doses into the safe muscle body on each side of the jaw.",
+                preparation: "Avoid blood-thinning supplements 48h before; no alcohol on day of treatment.",
                 followup: "Review at 4–6 weeks; maintenance every 4–6 months.",
+                author: {
+                  "@type": "Physician",
+                  "@id": "https://www.cosmedocs.com/team/dr-ahmed-haq/#person",
+                  name: "Dr Ahmed Haq",
+                  medicalSpecialty: "https://schema.org/CosmeticProcedure",
+                  url: "https://www.cosmedocs.com/team/dr-ahmed-haq/"
+                },
+                reviewedBy: {
+                  "@type": "Physician",
+                  name: "Dr Hena Haq",
+                  url: "https://www.cosmedocs.com/team/dr-hena-haq/"
+                },
+                performer: {
+                  "@type": "MedicalBusiness",
+                  name: "Cosmedocs Harley Street",
+                  url: "https://www.cosmedocs.com/"
+                }
               },
               {
                 "@type": "FAQPage",
@@ -163,17 +182,38 @@ const MasseterBotox = () => {
                 })),
               },
               {
-                "@type": "Offer",
-                name: "Masseter Botox",
-                priceCurrency: "GBP",
-                price: "350",
-                priceSpecification: {
-                  "@type": "PriceSpecification",
+                "@type": "HowTo",
+                name: "How Masseter Botox is performed at Cosmedocs Harley Street",
+                description: "Doctor-led 5-step protocol for jaw-slimming and bruxism relief.",
+                step: [
+                  { "@type": "HowToStep", position: 1, name: "Clinical assessment", text: "Doctor palpates the masseter at clench, grades hypertrophy, screens for TMJ involvement and reviews aesthetic goals (slimming vs bruxism vs both)." },
+                  { "@type": "HowToStep", position: 2, name: "Mapping & marking", text: "The safe injection zone within the inferior-posterior masseter body is marked to avoid the risorius, parotid duct and facial vessels." },
+                  { "@type": "HowToStep", position: 3, name: "Precision dosing", text: "20–40 units of botulinum toxin per side are placed across 3–4 deep intramuscular points using a fine 32G needle." },
+                  { "@type": "HowToStep", position: 4, name: "Symmetry check", text: "Doctor reassesses at rest and on clench, balancing dose between sides for symmetrical narrowing." },
+                  { "@type": "HowToStep", position: 5, name: "Aftercare & review", text: "Written aftercare issued; review at 4–6 weeks for peak effect; maintenance every 4–6 months." }
+                ]
+              },
+              {
+                "@type": "Product",
+                name: "Masseter Botox at Cosmedocs Harley Street",
+                description: "Doctor-led masseter botulinum toxin for jaw slimming, bruxism and TMJ tension.",
+                brand: { "@type": "Brand", name: "Cosmedocs" },
+                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "847", bestRating: "5" },
+                offers: {
+                  "@type": "Offer",
+                  name: "Masseter Botox",
                   priceCurrency: "GBP",
-                  minPrice: "350",
-                  maxPrice: "400",
-                },
-                availability: "https://schema.org/InStock",
+                  price: "350",
+                  priceSpecification: {
+                    "@type": "PriceSpecification",
+                    priceCurrency: "GBP",
+                    minPrice: "350",
+                    maxPrice: "400",
+                  },
+                  availability: "https://schema.org/InStock",
+                  url: "https://www.cosmedocs.com/treatments/masseter-botox/",
+                  seller: { "@type": "MedicalBusiness", name: "Cosmedocs", url: "https://www.cosmedocs.com/" }
+                }
               },
             ],
           })}
