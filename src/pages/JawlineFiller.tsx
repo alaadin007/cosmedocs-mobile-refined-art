@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, ArrowRight, Heart } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 // SEO: ExpandableSection replaced with always-visible pass-through (visible-content-seo-policy)
-const ExpandableSection = ({ children }: { title?: string; children: React.ReactNode; defaultOpen?: boolean }) => (
-  <div className="space-y-3">{children}</div>
+const ExpandableSection = ({ preview, children }: { title?: string; preview?: React.ReactNode; children: React.ReactNode; defaultOpen?: boolean }) => (
+  <div className="space-y-3">{preview}{children}</div>
 );
 import JawlineFillerSidebar from "@/components/jawline/JawlineFillerSidebar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
