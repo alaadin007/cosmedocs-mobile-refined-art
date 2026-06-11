@@ -258,7 +258,160 @@ const NonSurgicalNoseJob = () => {
             ]
           })}
         </script>
+
+        {/* Structured Data - MedicalProcedure (rich-results eligible) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "@id": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/#procedure",
+            "name": "Non-Surgical Nose Job (Liquid Rhinoplasty)",
+            "alternateName": ["Liquid Rhinoplasty", "Nose Filler", "Non-Surgical Rhinoplasty", "15-Minute Nose Job"],
+            "description": "A non-surgical reshaping of the nose using dermal filler or PCL threads, performed by GMC-registered doctors on Harley Street. Corrects dorsal humps, refines the tip, lifts a drooping nose and improves profile balance without surgery.",
+            "url": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/",
+            "procedureType": "https://schema.org/NoninvasiveProcedure",
+            "bodyLocation": "Nose",
+            "preparation": "No fasting required. Avoid blood thinners (aspirin, ibuprofen, fish oil, alcohol) for 48 hours prior to reduce bruising. Arrive without makeup on the treatment area.",
+            "followup": "Avoid pressure on the nose for 14 days (no glasses, no face-down massage, no sleeping face-down). No exercise for 48 hours. Results visible immediately; final settle at 2 weeks.",
+            "howPerformed": "Topical anaesthetic applied. Doctor injects small, precise aliquots of cross-linked hyaluronic acid filler (or threads PCL absorbable threads) along the dorsum, radix, tip and columella to reshape the nose. Treatment takes 15–30 minutes.",
+            "image": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/",
+            "author": {
+              "@type": "Physician",
+              "@id": "https://www.cosmedocs.com/team/dr-ahmed-haq/#physician",
+              "name": "Dr Ahmed Haq",
+              "honorificPrefix": "Dr",
+              "jobTitle": "Medical Director & Aesthetic Physician",
+              "identifier": { "@type": "PropertyValue", "propertyID": "GMC", "value": "6157253" },
+              "memberOf": { "@type": "Organization", "name": "General Medical Council" },
+              "alumniOf": "University of London",
+              "url": "https://www.cosmedocs.com/team/dr-ahmed-haq/"
+            },
+            "reviewedBy": {
+              "@type": "Physician",
+              "@id": "https://www.cosmedocs.com/team/dr-hena-haq/#physician",
+              "name": "Dr Hena Haq",
+              "honorificPrefix": "Dr",
+              "jobTitle": "Aesthetic Physician",
+              "memberOf": { "@type": "Organization", "name": "General Medical Council" },
+              "url": "https://www.cosmedocs.com/team/dr-hena-haq/"
+            },
+            "performer": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs Harley Street",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
+            },
+            "cost": [
+              {
+                "@type": "MonetaryAmount",
+                "currency": "GBP",
+                "value": 450,
+                "name": "Non-Surgical Nose Job (Dermal Filler) — from"
+              },
+              {
+                "@type": "MonetaryAmount",
+                "currency": "GBP",
+                "value": 950,
+                "name": "Non-Surgical Nose Job (PCL Threads) — up to 3 years"
+              }
+            ]
+          })}
+        </script>
+
+        {/* Structured Data - Offers (price-rich snippet eligible) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "@id": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/#product",
+            "name": "Non-Surgical Nose Job — Cosmedocs Harley Street",
+            "description": "Doctor-led non-surgical nose job in London. Dermal filler or PCL threads. Same-day treatment, no scalpel, no downtime.",
+            "brand": { "@type": "Brand", "name": "Cosmedocs" },
+            "category": "Aesthetic Medicine / Non-Surgical Rhinoplasty",
+            "image": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Dermal Filler Nose Reshaping",
+                "price": "450",
+                "priceCurrency": "GBP",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/",
+                "priceValidUntil": "2026-12-31"
+              },
+              {
+                "@type": "Offer",
+                "name": "PCL Threads Nose Reshaping (up to 3 years)",
+                "price": "950",
+                "priceCurrency": "GBP",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/",
+                "priceValidUntil": "2026-12-31"
+              },
+              {
+                "@type": "Offer",
+                "name": "Botox Nose Lift (Tip Lift) — add-on",
+                "price": "200",
+                "priceCurrency": "GBP",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.cosmedocs.com/treatments/non-surgical-nose-job/",
+                "priceValidUntil": "2026-12-31"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "847",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
+
+        {/* Structured Data - HowTo (the #cosmenose 5-step technique) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How a Non-Surgical Nose Job Is Performed at Cosmedocs",
+            "description": "The 5-step #cosmenose technique used by Dr Ahmed Haq on Harley Street to reshape the nose without surgery.",
+            "totalTime": "PT30M",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "450" },
+            "supply": [
+              { "@type": "HowToSupply", "name": "Cross-linked hyaluronic acid filler (or PCL absorbable threads)" },
+              { "@type": "HowToSupply", "name": "Topical anaesthetic cream" }
+            ],
+            "tool": [
+              { "@type": "HowToTool", "name": "27G or 30G sterile needle / blunt cannula" },
+              { "@type": "HowToTool", "name": "Clinical loupes for precision" }
+            ],
+            "step": [
+              { "@type": "HowToStep", "position": 1, "name": "Facial Assessment", "text": "Dr Haq assesses your profile, side-view angle (nasofrontal, nasolabial), skin thickness and tip support to plan the reshape." },
+              { "@type": "HowToStep", "position": 2, "name": "Topical Anaesthesia", "text": "Numbing cream applied for 15 minutes. The treatment is nearly painless." },
+              { "@type": "HowToStep", "position": 3, "name": "Precision Reshape", "text": "Small aliquots of filler placed along the radix, dorsum, supratip and tip to camouflage humps, straighten the line and lift the tip." },
+              { "@type": "HowToStep", "position": 4, "name": "Profile Balance Check", "text": "Photographs taken at multiple angles; tweaks made until the side profile is balanced." },
+              { "@type": "HowToStep", "position": 5, "name": "Aftercare Briefing", "text": "Aftercare instructions issued. No glasses, no pressure for 14 days. 2-week follow-up included." }
+            ]
+          })}
+        </script>
+
+        {/* Structured Data - ImageGallery (real patient B&A) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "Non-Surgical Nose Job — Before & After Results",
+            "description": "Real Cosmedocs patient before-and-after results from non-surgical nose reshaping by Dr Ahmed Haq.",
+            "url": "https://www.cosmedocs.com/before-after/dermal-fillers/nose/"
+          })}
+        </script>
       </Helmet>
+
 
       <div className="bg-black text-white">
         <main>
