@@ -112,13 +112,32 @@ const LipFillers = () => {
               {
                 "@type": "MedicalProcedure",
                 "name": "Lip Filler Treatment",
-                "alternateName": "Lip Augmentation",
+                "alternateName": ["Lip Augmentation", "Natural Lip Job", "Lip Injections"],
                 "description": "Doctor-led lip augmentation using premium hyaluronic acid dermal fillers to enhance lip volume, shape, and definition with natural-looking results.",
                 "url": "https://www.cosmedocs.com/treatments/lip-fillers/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Lips",
                 "followup": "Results visible immediately, final outcome at 2 weeks. Lasts 6–12 months.",
-                "howPerformed": "Premium hyaluronic acid filler injected into strategic points of the lips using fine needles or cannula, with topical anaesthetic and lidocaine for comfort."
+                "howPerformed": "Premium hyaluronic acid filler injected into strategic points of the lips using fine needles or cannula, with topical anaesthetic and lidocaine for comfort.",
+                "author": {
+                  "@type": "Person",
+                  "name": "Dr Ahmed Haq",
+                  "jobTitle": "Medical Director, Cosmetic Doctor",
+                  "url": "https://www.cosmedocs.com/team/dr-ahmed-haq/",
+                  "identifier": "GMC 6151301"
+                },
+                "reviewedBy": {
+                  "@type": "Person",
+                  "name": "Dr Hena Haq",
+                  "jobTitle": "Aesthetic Doctor",
+                  "url": "https://www.cosmedocs.com/team/dr-hena-haq/",
+                  "identifier": "GMC 7034321"
+                },
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "CosmeDocs",
+                  "url": "https://www.cosmedocs.com/"
+                }
               },
               {
                 "@type": "FAQPage",
@@ -136,6 +155,8 @@ const LipFillers = () => {
                 "name": "Lip Filler Treatment",
                 "priceCurrency": "GBP",
                 "price": "300",
+                "url": "https://www.cosmedocs.com/treatments/lip-fillers/",
+                "priceValidUntil": "2026-12-31",
                 "priceSpecification": {
                   "@type": "PriceSpecification",
                   "priceCurrency": "GBP",
