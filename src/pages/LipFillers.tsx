@@ -8,7 +8,10 @@ import { CheckCircle, AlertTriangle, Heart, ArrowRight } from "lucide-react";
 import lipIllustration from "@/assets/lip-profile-illustration.png";
 import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
-import ExpandableSection from "@/components/ui/expandable-section";
+// Lip Fillers page renders all content visible by default (SEO: avoid hiding primary copy behind toggles)
+const ExpandableSection = ({ preview, children }: { preview: React.ReactNode; children: React.ReactNode; label?: string; collapseLabel?: string }) => (
+  <div className="space-y-4">{preview}<div>{children}</div></div>
+);
 import LipFillersSidebar from "@/components/lip-fillers/LipFillersSidebar";
 import SkinFoundationCTA from "@/components/SkinFoundationCTA";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
