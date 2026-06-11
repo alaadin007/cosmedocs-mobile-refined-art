@@ -32,11 +32,41 @@ const DrAhmedHaq = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": ["Person", "Physician"],
+    "@id": "https://www.cosmedocs.com/team/dr-ahmed-haq#person",
     "name": "Dr A. Farhan Haq",
-    "jobTitle": "Cosmetic Physician",
+    "alternateName": "Dr Ahmed Haq",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic Physician & Medical Director",
+    "description": "GMC-registered cosmetic physician and Medical Director at Cosmedocs Harley Street. Specialist in advanced injectables, facial contouring and non-surgical rejuvenation, with peer-reviewed publications in Aesthetic Surgery Journal and JAAD.",
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "GMC",
+        "name": "General Medical Council Registration",
+        "value": "6151301",
+        "url": "https://www.gmc-uk.org/doctors/6151301"
+      }
+    ],
+    "medicalSpecialty": [
+      "https://schema.org/PlasticSurgery",
+      "Aesthetic Medicine",
+      "Cosmetic Dermatology"
+    ],
+    "knowsAbout": [
+      "Lip Filler",
+      "Cheek Filler",
+      "Anti-Wrinkle Injections",
+      "Non-Surgical Rhinoplasty",
+      "Tear Trough Filler",
+      "Russian Lips Technique",
+      "Hyaluronic Acid Dermal Fillers",
+      "Facial Anatomy",
+      "Filler Dissolving (Hyalase)"
+    ],
     "worksFor": {
       "@type": "MedicalClinic",
+      "@id": "https://www.cosmedocs.com#organization",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.com",
       "telephone": "+44 20 3733 3227",
@@ -53,17 +83,32 @@ const DrAhmedHaq = () => {
       "@type": "EducationalOrganization",
       "name": "The Royal College of Surgeons Medical School"
     },
-    "memberOf": {
-      "@type": "Organization",
-      "name": "British Association of Cosmetic Doctors"
-    },
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "British Association of Cosmetic Doctors"
+      },
+      {
+        "@type": "Organization",
+        "name": "General Medical Council",
+        "url": "https://www.gmc-uk.org"
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "GMC Full Registration with Licence to Practise",
+        "identifier": "6151301"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "MBBS"
+      }
+    ],
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Cosmetic Physician",
-      "occupationLocation": {
-        "@type": "Place",
-        "name": "London, UK"
-      },
+      "occupationLocation": { "@type": "Place", "name": "London, UK" },
       "skills": [
         "Anti-Wrinkle Treatments",
         "Facial Contouring",
@@ -76,7 +121,8 @@ const DrAhmedHaq = () => {
     "url": "https://www.cosmedocs.com/team/dr-ahmed-haq",
     "image": "https://www.cosmedocs.com/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png",
     "sameAs": [
-      "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+      "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq",
+      "https://www.gmc-uk.org/doctors/6151301"
     ],
     "subjectOf": [
       {
