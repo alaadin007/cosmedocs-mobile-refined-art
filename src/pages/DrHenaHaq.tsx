@@ -32,11 +32,38 @@ const DrHenaHaq = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": ["Person", "Physician"],
+    "@id": "https://www.cosmedocs.com/team/dr-hena-haq#person",
     "name": "Dr Hena Haq",
-    "jobTitle": "Cosmetic Physician",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Cosmetic Physician & Clinical Reviewer",
+    "description": "GMC-registered cosmetic physician at Cosmedocs Harley Street, trained at Oxford University Medical School. Known for subtle, natural-looking results and serves as clinical reviewer for Cosmedocs treatment content.",
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "GMC",
+        "name": "General Medical Council Registration",
+        "value": "7034321",
+        "url": "https://www.gmc-uk.org/doctors/7034321"
+      }
+    ],
+    "medicalSpecialty": [
+      "Aesthetic Medicine",
+      "Cosmetic Dermatology"
+    ],
+    "knowsAbout": [
+      "Lip Filler",
+      "Russian Lips",
+      "Anti-Wrinkle Injections",
+      "Tear Trough Filler",
+      "Profhilo",
+      "Polynucleotides",
+      "Hyaluronic Acid Dermal Fillers",
+      "Subtle Tweakments"
+    ],
     "worksFor": {
       "@type": "MedicalClinic",
+      "@id": "https://www.cosmedocs.com#organization",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.com",
       "telephone": "+44 20 3733 3227",
@@ -53,17 +80,32 @@ const DrHenaHaq = () => {
       "@type": "EducationalOrganization",
       "name": "Oxford University Medical School"
     },
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Harley Street Institute"
-    },
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "Harley Street Institute"
+      },
+      {
+        "@type": "Organization",
+        "name": "General Medical Council",
+        "url": "https://www.gmc-uk.org"
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "GMC Full Registration with Licence to Practise",
+        "identifier": "7034321"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "MBBS (Oxford)"
+      }
+    ],
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Cosmetic Physician",
-      "occupationLocation": {
-        "@type": "Place",
-        "name": "London, UK"
-      },
+      "occupationLocation": { "@type": "Place", "name": "London, UK" },
       "skills": [
         "Anti-Wrinkle Treatments",
         "Facial Contouring",
@@ -74,7 +116,10 @@ const DrHenaHaq = () => {
       ]
     },
     "url": "https://www.cosmedocs.com/team/dr-hena-haq",
-    "image": "https://www.cosmedocs.com/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png"
+    "image": "https://www.cosmedocs.com/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png",
+    "sameAs": [
+      "https://www.gmc-uk.org/doctors/7034321"
+    ]
   };
 
   return (
