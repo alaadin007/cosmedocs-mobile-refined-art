@@ -332,13 +332,23 @@ export default function Home2Header() {
                       </div>
                       <div className="border-t border-white/10">
                         <div className="max-w-7xl mx-auto px-8 py-4">
-                          <Link 
-                            to="/treatments" 
-                            onClick={() => setIsTreatmentsOpen(false)}
-                            className="block text-center text-sm font-medium text-[#C9A050] hover:text-[#D4AF61] transition-colors"
-                          >
-                            View All Treatments & Pricing →
-                          </Link>
+                          <div className="flex items-center justify-center gap-6 text-sm font-medium">
+                            <Link
+                              to="/treatments/"
+                              onClick={() => setIsTreatmentsOpen(false)}
+                              className="text-white/70 hover:text-white transition-colors"
+                            >
+                              All Treatments →
+                            </Link>
+                            <span className="text-white/20">|</span>
+                            <Link
+                              to="/prices/"
+                              onClick={() => setIsTreatmentsOpen(false)}
+                              className="text-[#C9A050] hover:text-[#D4AF61] transition-colors"
+                            >
+                              View Full Price List →
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </motion.div>
@@ -598,11 +608,18 @@ export default function Home2Header() {
               {/* Footer Links */}
               <div className="px-6 py-6 space-y-3 border-t border-white/10 mt-4">
                 <Link
-                  to="/treatments"
+                  to="/treatments/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-3 text-lg font-medium text-white/80"
+                >
+                  All Treatments →
+                </Link>
+                <Link
+                  to="/prices/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block py-3 text-lg font-medium text-[#C9A050]"
                 >
-                  View All Treatments & Pricing →
+                  View Full Price List →
                 </Link>
                 {navItems.map((item) => (
                   <Link
