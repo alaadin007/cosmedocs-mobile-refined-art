@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
+import PricingWidget from '@/components/PricingWidget';
 
 const SkinRejuvenationHub = () => {
   const seoData = generateSEOMetadata(
@@ -231,7 +232,21 @@ const SkinRejuvenationHub = () => {
           </div>
         </section>
 
-        {/* CTA */}
+
+        {/* Pricing */}
+        <section className="py-16 bg-[#F5F5F3]">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-2">
+              Skin Rejuvenation <span className="text-[#C9A050] font-light">Pricing</span>
+            </h2>
+            <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+            <p className="text-gray-500 text-sm font-light mb-6">
+              Transparent, doctor-led pricing. Personalised plan confirmed at consultation.
+            </p>
+            <PricingWidget categories={["skin-boosters", "hyaluronic-makeover"]} variant="light" />
+          </div>
+        </section>
+
         <section className="py-20 px-6 bg-gradient-to-b from-gray-100 to-white">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

@@ -16,6 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
@@ -415,6 +416,18 @@ const NonSurgicalNoseJob = () => {
 
       <div className="bg-black text-white">
         <main>
+        {/* Hub Breadcrumb */}
+        <div className="page-container pt-28 pb-2">
+          <Breadcrumb
+            items={[
+              { label: "Home", path: "/" },
+              { label: "Treatments", path: "/treatments/" },
+              { label: "Dermal Fillers", path: "/treatments/dermal-fillers/" },
+            ]}
+            currentPage="Non-Surgical Nose Job"
+            variant="dark"
+          />
+        </div>
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">

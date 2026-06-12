@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Stethoscope, ShieldCheck, FileText, UserCheck } from 'lucide-react';
+import PricingWidget from '@/components/PricingWidget';
 
 const MedicalHub = () => {
   const seoData = generateSEOMetadata(
@@ -211,6 +212,20 @@ const MedicalHub = () => {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+
+        {/* Pricing */}
+        <section className="relative py-16 px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
+              Medical Treatment <span className="text-[#C9A050]">Pricing</span>
+            </h2>
+            <p className="text-white/50 text-sm mb-6">
+              All medical treatments include a clinical consultation. Final fees confirmed after assessment.
+            </p>
+            <PricingWidget categories={["botox-sweattox"]} title="Medical Pricing" variant="dark" />
           </div>
         </section>
 
