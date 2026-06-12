@@ -299,7 +299,7 @@ const Auth = lazy(() => import("./pages/Auth"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const HowToGetRidOfBruises = lazy(() => import("./pages/HowToGetRidOfBruises"));
 const ForeheadWrinklesMythsTips = lazy(() => import("./pages/ForeheadWrinklesMythsTips"));
-const LipWrinklesTreatments = lazy(() => import("./pages/LipWrinklesTreatments"));
+// LipWrinklesTreatments removed — not a hub; lip wrinkles are handled by Lip Flip / Anti-Wrinkle pages
 const SkinTagsRemoval = lazy(() => import("./pages/SkinTagsRemoval"));
 const MedicalBrandTrustBlog = lazy(() => import("./pages/blog/MedicalBrandTrustBlog"));
 const ClinicNameConfusion = lazy(() => import("./pages/blog/ClinicNameConfusion"));
@@ -324,7 +324,7 @@ const ConcernsHub = lazy(() => import("./pages/ConcernsHub"));
 const MedicalHub = lazy(() => import("./pages/MedicalHub"));
 const HAMakeover = lazy(() => import("./pages/HAMakeover"));
 const BeforeAfterHAMakeover = lazy(() => import("./pages/BeforeAfterHAMakeover"));
-const MedicalBotoxHub = lazy(() => import("./pages/MedicalBotoxHub"));
+// MedicalBotoxHub removed — duplicate of MedicalHub; /treatments/botox/medical/ now 301s to /medical/
 const Safety = lazy(() => import("./pages/Safety"));
 const SalicylicAcidPeel = lazy(() => import("./pages/SalicylicAcidPeel"));
 const GlycolicAcidPeel = lazy(() => import("./pages/GlycolicAcidPeel"));
