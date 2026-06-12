@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Sun, Sparkles } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from 'react-router-dom';
+import PricingWidget from '@/components/PricingWidget';
 
 const LaserTreatmentsHub = () => {
   const seoData = generateSEOMetadata(
@@ -274,6 +275,18 @@ const LaserTreatmentsHub = () => {
                 ))}
               </Accordion>
             </div>
+          </div>
+        </section>
+
+
+        {/* Pricing */}
+        <section className="py-16 bg-black border-y border-white/10">
+          <div className="page-container max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Laser Treatment Pricing</h2>
+            <p className="text-gray-400 text-sm mb-6">
+              Course pricing and per-session rates for our laser treatments. Final plan confirmed at consultation.
+            </p>
+            <PricingWidget categories={["skin-medicine"]} variant="dark" />
           </div>
         </section>
 

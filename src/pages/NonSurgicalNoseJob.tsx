@@ -16,6 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
