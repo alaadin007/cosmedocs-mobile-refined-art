@@ -608,11 +608,18 @@ export default function Home2Header() {
               {/* Footer Links */}
               <div className="px-6 py-6 space-y-3 border-t border-white/10 mt-4">
                 <Link
-                  to="/treatments"
+                  to="/treatments/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-3 text-lg font-medium text-white/80"
+                >
+                  All Treatments →
+                </Link>
+                <Link
+                  to="/prices/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block py-3 text-lg font-medium text-[#C9A050]"
                 >
-                  View All Treatments & Pricing →
+                  View Full Price List →
                 </Link>
                 {navItems.map((item) => (
                   <Link
