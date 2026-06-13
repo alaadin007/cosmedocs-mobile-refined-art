@@ -725,19 +725,8 @@ const JawlineFiller = () => {
                         <a href="https://www.harleystreetinstitute.com" target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">
                           Harley Street Institute
                         </a>. Our doctors take a conservative, anatomy-led approach to every treatment.
-                      </p>
-
-                        All jawline treatments at CosmeDocs are performed exclusively by GMC-registered doctors with advanced anatomical knowledge — established on Harley Street since 2007.
-                      </p>
-                    }
-                  >
-                    <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
-                        Dr Ahmed Haq, Founder and Medical Director, has contributed to technique development in aesthetic medicine and is an active educator at the{" "}
-                        <a href="https://www.harleystreetinstitute.com" target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">
-                          Harley Street Institute
-                        </a>. Our doctors take a conservative, anatomy-led approach to every treatment.
-                      </p>
+
                       <p>
                         We use only premium, CE-marked hyaluronic acid fillers from established manufacturers. The jawline area requires specialist knowledge of the facial vasculature and mandibular anatomy for safe, effective results.
                       </p>
