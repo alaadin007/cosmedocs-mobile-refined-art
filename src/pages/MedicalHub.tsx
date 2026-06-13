@@ -167,9 +167,12 @@ const MedicalHub = () => {
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
+                      <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <span className="text-[#C9A050] text-xs uppercase tracking-wider bg-[#C9A050]/10 px-3 py-1 rounded-full">
                           Medical
+                        </span>
+                        <span className="text-[#C9A050] text-sm font-medium">
+                          {service.price}
                         </span>
                       </div>
                       <h3 className="text-xl font-medium text-white mb-1">{service.title}</h3>
