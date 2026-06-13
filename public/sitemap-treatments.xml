@@ -615,4 +615,30 @@
     <mobile:mobile/>
   </url>
 
+  <!-- ===== HYPERHIDROSIS SATELLITES ===== -->
+
+  <url>
+    <loc>https://www.cosmedocs.com/hyperhidrosis-treatment-london/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/underarm-sweating-treatment/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/sweaty-palms-treatment/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
 </urlset>
