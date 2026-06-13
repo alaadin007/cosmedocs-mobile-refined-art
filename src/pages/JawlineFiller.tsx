@@ -146,6 +146,18 @@ const JawlineFiller = () => {
         ]
       },
       {
+        "@type": "VideoObject",
+        "@id": "https://www.cosmedocs.com/treatments/jawline-filler/#video",
+        name: "Jawline Filler Treatment at CosmeDocs Harley Street",
+        description: "Watch the jawline filler treatment process at CosmeDocs Harley Street: doctor-led consultation, structural HA filler placement along the mandibular border and gonial angle, and the final sculpted result.",
+        thumbnailUrl: "https://i.ytimg.com/vi/Y3gCG1n2ioo/maxresdefault.jpg",
+        uploadDate: "2023-06-15T10:00:00+01:00",
+        contentUrl: "https://www.youtube.com/watch?v=Y3gCG1n2ioo",
+        embedUrl: "https://www.youtube.com/embed/Y3gCG1n2ioo",
+        publisher: { "@id": "https://www.cosmedocs.com/#clinic" }
+      },
+      {
+
         "@type": "Offer",
         name: "Jawline Filler Treatment",
         priceCurrency: "GBP",
