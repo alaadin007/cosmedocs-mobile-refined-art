@@ -16,6 +16,7 @@ const MedicalHub = () => {
     {
       title: "Hyperhidrosis Treatment",
       subtitle: "Excessive Sweating",
+      price: "From £550",
       description: "Botulinum toxin injections can effectively reduce excessive sweating in the underarms, palms, and feet. This medical treatment blocks the nerve signals that trigger sweat glands, providing relief for several months.",
       path: "/medical/botox-for-hyperhidrosis/",
       clinical: true
@@ -23,6 +24,7 @@ const MedicalHub = () => {
     {
       title: "Bruxism & TMJ Management",
       subtitle: "Jaw Clenching & Tension",
+      price: "£350 women · £400 men",
       description: "Chronic jaw clenching and teeth grinding can cause significant pain and dental damage. Targeted muscle relaxation using botulinum toxin can reduce the force of clenching and alleviate associated symptoms.",
       path: "/treatments/masseter-botox/",
       clinical: true
@@ -30,6 +32,7 @@ const MedicalHub = () => {
     {
       title: "Chronic Migraine",
       subtitle: "Preventive Treatment",
+      price: "£450–£550",
       description: "For patients experiencing 15 or more headache days per month, botulinum toxin is a licensed preventive treatment. Multiple injection sites around the head and neck can reduce migraine frequency and severity.",
       path: "/medical/botox-for-migraines/",
       clinical: true
@@ -37,6 +40,7 @@ const MedicalHub = () => {
     {
       title: "Private GP Services",
       subtitle: "General Medical Care",
+      price: "Consultation from £150",
       description: "Access to experienced private doctors for general health concerns, health screenings, referrals, and ongoing medical management in a comfortable Harley Street setting.",
       path: "/treatments/private-gp/",
       clinical: true
