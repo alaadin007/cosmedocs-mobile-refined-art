@@ -123,7 +123,7 @@ export const botoxFacePricing: PricingSection = {
     },
     {
       title: "Bruxism Botox (Teeth Grinding)",
-      price: "£350",
+      price: "£350 women / £400 men",
       link: "/treatments/masseter-botox/",
     },
     {
@@ -151,7 +151,7 @@ export const botoxContouringPricing: PricingSection = {
   items: [
     {
       title: "Masseter (Jawline Slimming, Bruxism Teeth Grinding)",
-      price: "£350",
+      price: "£350 women / £400 men",
       link: "/treatments/masseter-botox/",
     },
     {
