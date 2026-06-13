@@ -151,6 +151,20 @@ const ExcessiveSweatBotox = () => {
                   }
                 },
                 "epidemiology": "Affects approximately 1–3% of the population globally"
+              },
+              {
+                "@type": "VideoObject",
+                "name": "Hyperhidrosis Botox Treatment at Cosmedocs",
+                "description": "Doctor-led botulinum toxin treatment for hyperhidrosis (excessive sweating) demonstrated at Cosmedocs, 10 Harley Street, London.",
+                "thumbnailUrl": "https://www.cosmedocs.com/og-hyperhidrosis.jpg",
+                "uploadDate": "2026-06-10",
+                "contentUrl": `https://www.cosmedocs.com${hyperhidrosisVideoAsset.url}`,
+                "embedUrl": "https://www.cosmedocs.com/medical/botox-for-hyperhidrosis/",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "CosmeDocs",
+                  "logo": { "@type": "ImageObject", "url": "https://www.cosmedocs.com/logo.png" }
+                }
               }
             ]
           })}
