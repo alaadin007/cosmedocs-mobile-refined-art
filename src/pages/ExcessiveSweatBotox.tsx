@@ -716,6 +716,56 @@ const ExcessiveSweatBotox = () => {
                   </Accordion>
                 </motion.div>
               </section>
+
+              {/* Related Treatment Guides */}
+              <section>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Related <span className="text-[#C9A050] font-light">Guides</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <Link
+                      to="/hyperhidrosis-treatment-london/"
+                      className="group bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 hover:border-[#C9A050]/30 transition-colors"
+                    >
+                      <p className="text-sm font-medium text-[#C9A050] mb-2 group-hover:text-[#C9A050] transition-colors">
+                        Hyperhidrosis Treatment London
+                      </p>
+                      <p className="text-white/40 text-xs font-light leading-relaxed">
+                        Complete guide to doctor-led excessive sweating treatment at our Harley Street clinic, including pricing and what to expect.
+                      </p>
+                    </Link>
+                    <Link
+                      to="/underarm-sweating-treatment/"
+                      className="group bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 hover:border-[#C9A050]/30 transition-colors"
+                    >
+                      <p className="text-sm font-medium text-[#C9A050] mb-2 group-hover:text-[#C9A050] transition-colors">
+                        Underarm Sweating Treatment
+                      </p>
+                      <p className="text-white/40 text-xs font-light leading-relaxed">
+                        Specialist botox protocol for axillary hyperhidrosis — precise grid injections for lasting dryness and confidence.
+                      </p>
+                    </Link>
+                    <Link
+                      to="/sweaty-palms-treatment/"
+                      className="group bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 hover:border-[#C9A050]/30 transition-colors"
+                    >
+                      <p className="text-sm font-medium text-[#C9A050] mb-2 group-hover:text-[#C9A050] transition-colors">
+                        Sweaty Palms Treatment
+                      </p>
+                      <p className="text-white/40 text-xs font-light leading-relaxed">
+                        Palmar hyperhidrosis botox with comfort protocol — targeted nerve block for professional and social confidence.
+                      </p>
+                    </Link>
+                  </div>
+                </motion.div>
+              </section>
             </div>
 
             {/* RIGHT — Sticky Sidebar */}
@@ -822,6 +872,14 @@ const ExcessiveSweatBotox = () => {
             the duration of effectiveness may increase slightly. Botox and excessive sweating management works best when combined with lifestyle modifications such as
             wearing breathable fabrics and using clinical-strength antiperspirants between treatments. CosmeDocs provides comprehensive aftercare and follow-up
             appointments to maximise treatment longevity.
+          </p>
+
+          <h3>Related Hyperhidrosis Treatment Guides</h3>
+          <p>
+            Explore our dedicated treatment guides for specific concerns:
+            <a href="/hyperhidrosis-treatment-london/">Hyperhidrosis Treatment London</a> for a complete overview of doctor-led excessive sweating care at our Harley Street clinic;
+            <a href="/underarm-sweating-treatment/">Underarm Sweating Treatment</a> for our specialised axillary botox protocol; and
+            <a href="/sweaty-palms-treatment/">Sweaty Palms Treatment</a> for palmar hyperhidrosis with targeted comfort techniques.
           </p>
 
           <h3>Why Choose CosmeDocs for Your Excessive Sweating Treatment</h3>
