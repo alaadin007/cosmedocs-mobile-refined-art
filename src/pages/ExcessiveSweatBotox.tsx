@@ -96,7 +96,7 @@ const ExcessiveSweatBotox = () => {
                 "name": "Hyperhidrosis Botox Treatment",
                 "alternateName": "Excessive Sweating Botox Treatment",
                 "description": "FDA-approved botulinum toxin treatment that blocks nerve signals to sweat glands, dramatically reducing excessive perspiration in underarms, palms, feet, and facial areas.",
-                "url": "https://www.cosmedocs.com/treatments/hyperhidrosis-botox/",
+                "url": "https://www.cosmedocs.com/medical/botox-for-hyperhidrosis/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Underarms, Palms, Feet, Face",
                 "followup": "Results begin within 1–2 weeks, lasting 6–12 months. Follow-up assessment available.",
