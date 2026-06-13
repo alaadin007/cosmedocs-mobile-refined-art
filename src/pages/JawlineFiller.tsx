@@ -106,19 +106,22 @@ const JawlineFiller = () => {
           value: { "@type": "QuantitativeValue", minValue: 350, maxValue: 950 }
         },
         author: {
-          "@type": "Person",
+          "@type": "Physician",
           "@id": "https://www.cosmedocs.com/team/dr-ahmed-haq#person",
           name: "Dr A. Farhan Haq",
           jobTitle: "Cosmetic Physician & Medical Director",
-          url: "https://www.cosmedocs.com/team/dr-ahmed-haq"
+          url: "https://www.cosmedocs.com/team/dr-ahmed-haq",
+          identifier: { "@type": "PropertyValue", propertyID: "GMC", value: "6078057" },
+          memberOf: { "@type": "Organization", name: "General Medical Council (UK)" }
         },
         reviewedBy: {
-          "@type": "Person",
+          "@type": "Physician",
           "@id": "https://www.cosmedocs.com/team/dr-hena-haq#person",
           name: "Dr Hena Haq",
           jobTitle: "Cosmetic Physician",
           url: "https://www.cosmedocs.com/team/dr-hena-haq"
         }
+
       },
       {
         "@type": "HowTo",
@@ -143,6 +146,18 @@ const JawlineFiller = () => {
         ]
       },
       {
+        "@type": "VideoObject",
+        "@id": "https://www.cosmedocs.com/treatments/jawline-filler/#video",
+        name: "Jawline Filler Treatment at CosmeDocs Harley Street",
+        description: "Watch the jawline filler treatment process at CosmeDocs Harley Street: doctor-led consultation, structural HA filler placement along the mandibular border and gonial angle, and the final sculpted result.",
+        thumbnailUrl: "https://i.ytimg.com/vi/Y3gCG1n2ioo/maxresdefault.jpg",
+        uploadDate: "2023-06-15T10:00:00+01:00",
+        contentUrl: "https://www.youtube.com/watch?v=Y3gCG1n2ioo",
+        embedUrl: "https://www.youtube.com/embed/Y3gCG1n2ioo",
+        publisher: { "@id": "https://www.cosmedocs.com/#clinic" }
+      },
+      {
+
         "@type": "Offer",
         name: "Jawline Filler Treatment",
         priceCurrency: "GBP",
@@ -684,6 +699,19 @@ const JawlineFiller = () => {
                     Safety & <span className="text-[#C9A050] font-light">Expertise</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="bg-gradient-to-br from-[#C9A050]/[0.08] to-transparent border border-[#C9A050]/20 rounded-2xl p-5 mb-6">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050]/80 mb-3">Treatment performed by</p>
+                    <p className="text-white font-light text-lg mb-1">Dr A. Farhan Haq</p>
+                    <p className="text-white/50 text-xs font-light mb-3">Founder & Medical Director · Cosmetic Physician</p>
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-white/60 font-light mb-3">
+                      <span>GMC <strong className="text-[#C9A050]/90">6078057</strong></span>
+                      <span>Harley Street, since 2007</span>
+                      <span>Published in Aesthet Surg J &amp; JAAD (2022)</span>
+                    </div>
+                    <Link to="/team/dr-ahmed-haq" className="inline-flex items-center gap-1.5 text-[#C9A050] hover:underline text-xs font-medium">
+                      View full credentials <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
                   <ExpandableSection
                     preview={
                       <p className="text-white/45 text-sm leading-relaxed font-light">
@@ -693,12 +721,13 @@ const JawlineFiller = () => {
                   >
                     <div className="space-y-4 text-white/45 text-sm leading-relaxed font-light">
                       <p>
-                        Dr Ahmed Haq, Founder and Medical Director, has contributed to technique development in aesthetic medicine and is an active educator at the{" "}
+                        Dr Ahmed Haq, Founder and Medical Director (GMC 6078057), has contributed to technique development in aesthetic medicine and is an active educator at the{" "}
                         <a href="https://www.harleystreetinstitute.com" target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">
                           Harley Street Institute
                         </a>. Our doctors take a conservative, anatomy-led approach to every treatment.
                       </p>
                       <p>
+
                         We use only premium, CE-marked hyaluronic acid fillers from established manufacturers. The jawline area requires specialist knowledge of the facial vasculature and mandibular anatomy for safe, effective results.
                       </p>
                     </div>
