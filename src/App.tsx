@@ -205,6 +205,11 @@ const CheekboneFiller = lazy(() => import("./pages/CheekboneFiller"));
 const ChinFiller = lazy(() => import("./pages/ChinFiller"));
 const EarLobeRejuvenation = lazy(() => import("./pages/EarLobeRejuvenation"));
 const JawlineFiller = lazy(() => import("./pages/JawlineFiller"));
+const JowlFiller = lazy(() => import("./pages/satellite/JowlFiller"));
+const JawlineFillerMaleSatellite = lazy(() => import("./pages/satellite/JawlineFillerMaleSatellite"));
+const JawlineFillerCostLondon = lazy(() => import("./pages/satellite/JawlineFillerCostLondon"));
+const PreJowlFiller = lazy(() => import("./pages/satellite/PreJowlFiller"));
+const JawlineVsChinFiller = lazy(() => import("./pages/satellite/JawlineVsChinFiller"));
 const ChemicalPeel = lazy(() => import("./pages/ChemicalPeel"));
 const PrescriptionSkincare = lazy(() => import("./pages/PrescriptionSkincare"));
 const Microneedling = lazy(() => import("./pages/Microneedling"));
@@ -713,6 +718,17 @@ const App = () => {
                           <Route path="/treatments/lip-fillers/" element={<LipFillers />} />
                           <Route path="/treatments/jawline-filler" element={<JawlineFiller />} />
                           <Route path="/treatments/jawline-filler/" element={<JawlineFiller />} />
+                          {/* Jawline satellite SEO pages */}
+                          <Route path="/jowl-filler" element={<JowlFiller />} />
+                          <Route path="/jowl-filler/" element={<JowlFiller />} />
+                          <Route path="/jawline-filler-male" element={<JawlineFillerMaleSatellite />} />
+                          <Route path="/jawline-filler-male/" element={<JawlineFillerMaleSatellite />} />
+                          <Route path="/jawline-filler-cost-london" element={<JawlineFillerCostLondon />} />
+                          <Route path="/jawline-filler-cost-london/" element={<JawlineFillerCostLondon />} />
+                          <Route path="/pre-jowl-filler" element={<PreJowlFiller />} />
+                          <Route path="/pre-jowl-filler/" element={<PreJowlFiller />} />
+                          <Route path="/jawline-filler-vs-chin-filler" element={<JawlineVsChinFiller />} />
+                          <Route path="/jawline-filler-vs-chin-filler/" element={<JawlineVsChinFiller />} />
                           <Route path="/treatments/cheek-filler" element={<CheekFiller />} />
                           <Route path="/treatments/cheek-filler/" element={<CheekFiller />} />
                           <Route path="/treatments/cheekbone-filler" element={<CheekboneFiller />} />

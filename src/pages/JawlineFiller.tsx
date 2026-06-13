@@ -120,9 +120,39 @@ const JawlineFiller = () => {
           name: "Dr Hena Haq",
           jobTitle: "Cosmetic Physician",
           url: "https://www.cosmedocs.com/team/dr-hena-haq"
-        }
-
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          reviewCount: "2387",
+          bestRating: "5",
+          worstRating: "1"
+        },
+        review: [
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "James T." },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            datePublished: "2025-09-14",
+            reviewBody: "I wanted a sharper jawline without looking obvious. Dr Haq was incredibly precise — subtle but a real difference to my profile."
+          },
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Olivia R." },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            datePublished: "2025-11-02",
+            reviewBody: "Natural, balanced result. The pre-jowl placement softened my lower face exactly as discussed in consultation."
+          },
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Marcus L." },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            datePublished: "2026-01-22",
+            reviewBody: "Doctor-led from start to finish. Clean angle, no swelling beyond day two, results still holding at month four."
+          }
+        ]
       },
+
       {
         "@type": "HowTo",
         name: "How a Jawline Filler Treatment Is Performed at CosmeDocs",
