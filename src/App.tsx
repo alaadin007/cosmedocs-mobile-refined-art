@@ -718,6 +718,17 @@ const App = () => {
                           <Route path="/treatments/lip-fillers/" element={<LipFillers />} />
                           <Route path="/treatments/jawline-filler" element={<JawlineFiller />} />
                           <Route path="/treatments/jawline-filler/" element={<JawlineFiller />} />
+                          {/* Jawline satellite SEO pages */}
+                          <Route path="/jowl-filler" element={<JowlFiller />} />
+                          <Route path="/jowl-filler/" element={<JowlFiller />} />
+                          <Route path="/jawline-filler-male" element={<JawlineFillerMaleSatellite />} />
+                          <Route path="/jawline-filler-male/" element={<JawlineFillerMaleSatellite />} />
+                          <Route path="/jawline-filler-cost-london" element={<JawlineFillerCostLondon />} />
+                          <Route path="/jawline-filler-cost-london/" element={<JawlineFillerCostLondon />} />
+                          <Route path="/pre-jowl-filler" element={<PreJowlFiller />} />
+                          <Route path="/pre-jowl-filler/" element={<PreJowlFiller />} />
+                          <Route path="/jawline-filler-vs-chin-filler" element={<JawlineVsChinFiller />} />
+                          <Route path="/jawline-filler-vs-chin-filler/" element={<JawlineVsChinFiller />} />
                           <Route path="/treatments/cheek-filler" element={<CheekFiller />} />
                           <Route path="/treatments/cheek-filler/" element={<CheekFiller />} />
                           <Route path="/treatments/cheekbone-filler" element={<CheekboneFiller />} />

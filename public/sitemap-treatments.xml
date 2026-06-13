@@ -106,9 +106,46 @@
 
   <url>
     <loc>https://www.cosmedocs.com/treatments/jawline-filler/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Jawline cluster — satellite SEO pages -->
+  <url>
+    <loc>https://www.cosmedocs.com/jowl-filler/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/pre-jowl-filler/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/jawline-filler-male/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/jawline-filler-cost-london/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/jawline-filler-vs-chin-filler/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <mobile:mobile/>
   </url>
 
