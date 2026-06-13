@@ -874,6 +874,14 @@ const ExcessiveSweatBotox = () => {
             appointments to maximise treatment longevity.
           </p>
 
+          <h3>Related Hyperhidrosis Treatment Guides</h3>
+          <p>
+            Explore our dedicated treatment guides for specific concerns:
+            <a href="/hyperhidrosis-treatment-london/">Hyperhidrosis Treatment London</a> for a complete overview of doctor-led excessive sweating care at our Harley Street clinic;
+            <a href="/underarm-sweating-treatment/">Underarm Sweating Treatment</a> for our specialised axillary botox protocol; and
+            <a href="/sweaty-palms-treatment/">Sweaty Palms Treatment</a> for palmar hyperhidrosis with targeted comfort techniques.
+          </p>
+
           <h3>Why Choose CosmeDocs for Your Excessive Sweating Treatment</h3>
           <p>
             At CosmeDocs, located on Harley Street, we've performed over 1 million injections since 2007. Our practitioners are members of the International Hyperhidrosis Society
