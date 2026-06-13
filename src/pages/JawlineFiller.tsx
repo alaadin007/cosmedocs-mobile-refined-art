@@ -106,19 +106,22 @@ const JawlineFiller = () => {
           value: { "@type": "QuantitativeValue", minValue: 350, maxValue: 950 }
         },
         author: {
-          "@type": "Person",
+          "@type": "Physician",
           "@id": "https://www.cosmedocs.com/team/dr-ahmed-haq#person",
           name: "Dr A. Farhan Haq",
           jobTitle: "Cosmetic Physician & Medical Director",
-          url: "https://www.cosmedocs.com/team/dr-ahmed-haq"
+          url: "https://www.cosmedocs.com/team/dr-ahmed-haq",
+          identifier: { "@type": "PropertyValue", propertyID: "GMC", value: "6078057" },
+          memberOf: { "@type": "Organization", name: "General Medical Council (UK)" }
         },
         reviewedBy: {
-          "@type": "Person",
+          "@type": "Physician",
           "@id": "https://www.cosmedocs.com/team/dr-hena-haq#person",
           name: "Dr Hena Haq",
           jobTitle: "Cosmetic Physician",
           url: "https://www.cosmedocs.com/team/dr-hena-haq"
         }
+
       },
       {
         "@type": "HowTo",
