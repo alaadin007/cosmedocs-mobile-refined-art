@@ -35,7 +35,8 @@ const MasseterSidebar = () => {
         <p className="text-sm font-medium text-white/70 mb-3">Treatment Pricing</p>
         <div className="space-y-2">
           {[
-            { tier: "Both Sides", price: "£350" },
+            { tier: "Women (Both Sides)", price: "£350" },
+            { tier: "Men (Both Sides)", price: "£400" },
             { tier: "Complex Cases", price: "from £450" },
           ].map((item) => (
             <div key={item.tier} className="flex items-center justify-between text-sm">
