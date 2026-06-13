@@ -725,9 +725,9 @@ const JawlineFiller = () => {
                         <a href="https://www.harleystreetinstitute.com" target="_blank" rel="noopener noreferrer" className="text-[#C9A050] hover:underline">
                           Harley Street Institute
                         </a>. Our doctors take a conservative, anatomy-led approach to every treatment.
+                      </p>
                       <p>
 
-                      <p>
                         We use only premium, CE-marked hyaluronic acid fillers from established manufacturers. The jawline area requires specialist knowledge of the facial vasculature and mandibular anatomy for safe, effective results.
                       </p>
                     </div>
