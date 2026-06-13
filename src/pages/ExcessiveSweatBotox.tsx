@@ -54,10 +54,10 @@ const ExcessiveSweatBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <link rel="canonical" href="https://www.cosmedocs.com/treatments/hyperhidrosis-botox/" />
+        <link rel="canonical" href="https://www.cosmedocs.com/medical/botox-for-hyperhidrosis/" data-rh="true" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content="https://www.cosmedocs.com/treatments/hyperhidrosis-botox/" />
+        <meta property="og:url" content="https://www.cosmedocs.com/medical/botox-for-hyperhidrosis/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
