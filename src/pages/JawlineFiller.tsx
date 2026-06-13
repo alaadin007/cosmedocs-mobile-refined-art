@@ -306,6 +306,57 @@ const JawlineFiller = () => {
                 </motion.div>
               </section>
 
+              {/* Jawline Filler Cost — SEO: jawline filler cost / price */}
+              <section id="jawline-filler-cost">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Jawline Filler <span className="text-[#C9A050] font-light">Cost in London</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <p className="text-white/45 text-sm leading-relaxed font-light mb-6">
+                    Transparent, doctor-led pricing at our Harley Street clinic. The price of jawline filler depends on the volume required to achieve your desired definition — assessed individually during consultation.
+                  </p>
+                  <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                    {[
+                      { tier: "1ml Jawline Filler", price: "£350", note: "Subtle definition" },
+                      { tier: "2ml Jawline Filler", price: "£650", note: "Defined sculpting" },
+                      { tier: "HD Jawline Package", price: "£950", note: "Comprehensive contour" },
+                    ].map((item) => (
+                      <div key={item.tier} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+                        <p className="text-white/50 text-xs uppercase tracking-wider mb-2">{item.tier}</p>
+                        <p className="text-2xl font-light text-[#C9A050] mb-1">{item.price}</p>
+                        <p className="text-white/35 text-xs font-light">{item.note}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-white/40 text-xs font-light italic">
+                    All prices include consultation, treatment and a complimentary two-week review. £50 consultation fee is deducted from treatment if you proceed.
+                  </p>
+                </motion.div>
+              </section>
+
+              {/* Jowl & Pre-jowl Filler — SEO: jowl filler / pre jowl filler */}
+              <section id="jowl-filler">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+                  <h2 className="text-3xl md:text-4xl font-extralight text-white mb-2 leading-tight">
+                    Jowl & Pre-Jowl <span className="text-[#C9A050] font-light">Filler</span>
+                  </h2>
+                  <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
+                  <div className="text-white/45 text-sm leading-relaxed font-light space-y-4">
+                    <p>
+                      Early jowls form when soft tissue along the jawline descends and a shadow appears just in front of the jowl — known as the <strong className="text-white/65">pre-jowl sulcus</strong>. Filling this sulcus restores a continuous jaw border and visually erases the jowl without surgery.
+                    </p>
+                    <p>
+                      At CosmeDocs, pre-jowl filler is placed deep on bone to rebuild structural support along the mandibular border. The result is a smoother, more defined jawline and a noticeably lifted lower face — a quiet, natural correction rather than an obvious change.
+                    </p>
+                    <p>
+                      Jowl filler works best when the skin still has good elasticity. If laxity is the dominant concern, a lifting treatment may serve you better than volume — your doctor will guide you during consultation.
+                    </p>
+                  </div>
+                </motion.div>
+              </section>
+
+
               {/* What Can It Improve */}
               <section>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
