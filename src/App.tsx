@@ -254,6 +254,8 @@ const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
 const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
 const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
 const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
+const DarkCircles = lazy(() => import("./pages/concerns/DarkCircles"));
+const UnderEyeReset = lazy(() => import("./pages/UnderEyeReset"));
 const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
 const JawlineTighteningOver30 = lazy(() => import("./pages/blog/JawlineTighteningOver30"));
 const HarleyStreetSince2007 = lazy(() => import("./pages/blog/HarleyStreetSince2007"));
@@ -628,6 +630,10 @@ const App = () => {
                           <Route path="/concerns/square-jaw-wide-jaw/" element={<SquareJawWideJaw />} />
                           <Route path="/concerns/dark-circles-vs-eye-bags" element={<DarkCirclesVsEyeBags />} />
                           <Route path="/concerns/dark-circles-vs-eye-bags/" element={<DarkCirclesVsEyeBags />} />
+                          <Route path="/concerns/dark-circles" element={<DarkCircles />} />
+                          <Route path="/concerns/dark-circles/" element={<DarkCircles />} />
+                          <Route path="/treatments/under-eye-reset" element={<UnderEyeReset />} />
+                          <Route path="/treatments/under-eye-reset/" element={<UnderEyeReset />} />
                           <Route path="/blog/endolift-explained" element={<EndoliftExplained />} />
                           <Route path="/blog/endolift-explained/" element={<EndoliftExplained />} />
                           <Route path="/blog/jawline-tightening-over-30" element={<JawlineTighteningOver30 />} />
