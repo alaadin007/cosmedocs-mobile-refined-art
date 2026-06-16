@@ -260,6 +260,11 @@ const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
 const JawlineTighteningOver30 = lazy(() => import("./pages/blog/JawlineTighteningOver30"));
 const HarleyStreetSince2007 = lazy(() => import("./pages/blog/HarleyStreetSince2007"));
 const AdminPageViews = lazy(() => import("./pages/AdminPageViews"));
+const AdminHub = lazy(() => import("./pages/AdminHub"));
+const AdminMessages = lazy(() => import("./pages/AdminMessages"));
+const AdminLeads = lazy(() => import("./pages/AdminLeads"));
+const AdminTrainingEnquiries = lazy(() => import("./pages/AdminTrainingEnquiries"));
+const AdminSpinWinners = lazy(() => import("./pages/AdminSpinWinners"));
 const EndoliftSafety = lazy(() => import("./pages/endolift/EndoliftSafety"));
 const EndoliftRecovery = lazy(() => import("./pages/endolift/EndoliftRecovery"));
 const EndoliftDoubleChin = lazy(() => import("./pages/endolift/EndoliftDoubleChin"));
@@ -642,6 +647,16 @@ const App = () => {
                           <Route path="/blog/harley-street-since-2007/" element={<HarleyStreetSince2007 />} />
                           <Route path="/admin/page-views" element={<AdminPageViews />} />
                           <Route path="/admin/page-views/" element={<AdminPageViews />} />
+                          <Route path="/admin" element={<AdminHub />} />
+                          <Route path="/admin/" element={<AdminHub />} />
+                          <Route path="/admin/messages" element={<AdminMessages />} />
+                          <Route path="/admin/messages/" element={<AdminMessages />} />
+                          <Route path="/admin/leads" element={<AdminLeads />} />
+                          <Route path="/admin/leads/" element={<AdminLeads />} />
+                          <Route path="/admin/training-enquiries" element={<AdminTrainingEnquiries />} />
+                          <Route path="/admin/training-enquiries/" element={<AdminTrainingEnquiries />} />
+                          <Route path="/admin/spin-winners" element={<AdminSpinWinners />} />
+                          <Route path="/admin/spin-winners/" element={<AdminSpinWinners />} />
                           <Route path="/medical" element={<MedicalHub />} />
                           <Route path="/medical/" element={<MedicalHub />} />
                           <Route path="/safety" element={<Safety />} />
