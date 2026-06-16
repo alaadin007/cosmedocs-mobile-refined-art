@@ -170,6 +170,7 @@ const ClinicalConceptsToFlawlessSkin = lazy(() => import("./pages/ClinicalConcep
 const ChineseLondonAestheticsBlog = lazy(() => import("./pages/ChineseLondonAestheticsBlog"));
 const VitaminCSerumBenefitsBlog = lazy(() => import("./pages/VitaminCSerumBenefitsBlog"));
 const CosmetalkBlog = lazy(() => import("./pages/CosmetalkBlog"));
+const DoesMorpheus8TightenSkin = lazy(() => import("./pages/blog/DoesMorpheus8TightenSkin"));
 const InsideMindAestheticDoctorBlog = lazy(() => import("./pages/InsideMindAestheticDoctorBlog"));
 const SmokersLinesWomen = lazy(() => import("./pages/SmokersLinesWomen"));
 const FlawlessSkin = lazy(() => import("./pages/FlawlessSkin"));
