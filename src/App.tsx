@@ -170,6 +170,7 @@ const ClinicalConceptsToFlawlessSkin = lazy(() => import("./pages/ClinicalConcep
 const ChineseLondonAestheticsBlog = lazy(() => import("./pages/ChineseLondonAestheticsBlog"));
 const VitaminCSerumBenefitsBlog = lazy(() => import("./pages/VitaminCSerumBenefitsBlog"));
 const CosmetalkBlog = lazy(() => import("./pages/CosmetalkBlog"));
+const DoesMorpheus8TightenSkin = lazy(() => import("./pages/blog/DoesMorpheus8TightenSkin"));
 const InsideMindAestheticDoctorBlog = lazy(() => import("./pages/InsideMindAestheticDoctorBlog"));
 const SmokersLinesWomen = lazy(() => import("./pages/SmokersLinesWomen"));
 const FlawlessSkin = lazy(() => import("./pages/FlawlessSkin"));
@@ -1201,6 +1202,8 @@ const App = () => {
                           <Route path="/blog/tooth-chipping-grinding-masseter/" element={<ToothChippingGrindingMasseter />} />
                           <Route path="/blog/botox-placement-guide-london" element={<BotoxPlacementGuideLondon />} />
                           <Route path="/blog/botox-placement-guide-london/" element={<BotoxPlacementGuideLondon />} />
+                          <Route path="/blog/cosmetalk/does-morpheus8-tighten-skin" element={<DoesMorpheus8TightenSkin />} />
+                          <Route path="/blog/cosmetalk/does-morpheus8-tighten-skin/" element={<DoesMorpheus8TightenSkin />} />
 
                           {/* Blog hub — lists only the 4 permitted blogs */}
                           <Route path="/journal" element={<BlogHome />} />
