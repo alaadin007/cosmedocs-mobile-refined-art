@@ -1201,6 +1201,8 @@ const App = () => {
                           <Route path="/blog/tooth-chipping-grinding-masseter/" element={<ToothChippingGrindingMasseter />} />
                           <Route path="/blog/botox-placement-guide-london" element={<BotoxPlacementGuideLondon />} />
                           <Route path="/blog/botox-placement-guide-london/" element={<BotoxPlacementGuideLondon />} />
+                          <Route path="/blog/cosmetalk/does-morpheus8-tighten-skin" element={<DoesMorpheus8TightenSkin />} />
+                          <Route path="/blog/cosmetalk/does-morpheus8-tighten-skin/" element={<DoesMorpheus8TightenSkin />} />
 
                           {/* Blog hub — lists only the 4 permitted blogs */}
                           <Route path="/journal" element={<BlogHome />} />
