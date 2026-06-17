@@ -49,7 +49,7 @@ export default function DoesMorpheus8TightenSkin() {
           author: { "@type": "Organization", name: "Cosmedocs" },
           publisher: { "@type": "MedicalOrganization", name: "Cosmedocs", url: "https://www.cosmedocs.com" },
           datePublished: "2026-06-16",
-          dateModified: "2026-06-16",
+          dateModified: "2026-06-17",
           mainEntityOfPage: seo.canonical,
           articleSection: "CosmeTalk",
         })}</script>
@@ -106,7 +106,22 @@ export default function DoesMorpheus8TightenSkin() {
               A note on accuracy: the depth and temperature ranges above reflect manufacturer specifications and published clinical literature on bipolar RF microneedling. Settings used in clinic are always individualised to skin type, area and indication.
             </p>
 
-            <h2 className="text-2xl font-light text-white">3. What it tightens well</h2>
+            <h2 className="text-2xl font-light text-white">3. Depths by zone: where the needles actually belong</h2>
+            <p>
+              Not all areas of the face are treated at the same depth. The operator must choose a depth that matches the tissue thickness and the underlying anatomy. A one-depth-fits-all protocol is a red flag.
+            </p>
+            <ul className="space-y-2 list-disc pl-5">
+              <li><strong className="text-white">Thin areas (forehead, periorbital, upper cheeks):</strong> 1–1.5mm. The dermis is thin here; anything deeper risks unnecessary trauma and slower healing.</li>
+              <li><strong className="text-white">Mid-face (cheeks, nasolabial region):</strong> 2mm is the typical working depth. This reaches the dermal reticular layer where the bulk of collagen remodelling happens.</li>
+              <li><strong className="text-white">Lower face and jawline:</strong> 2.5–3mm, only where soft-tissue depth is adequate. This is where the fibrous septae begin to stretch, so deeper energy here can improve the anchor.</li>
+              <li><strong className="text-white">Submental triangle and lateral jawline:</strong> 4mm <em>only</em> where a true subcutaneous fat pad exists — the area under the chin and the lateral neck. This is the only facial zone where 4mm is anatomically appropriate. It is <strong className="text-white">never</strong> used on the mid-face, near the orbital rim, or over the zygomatic arch: the facial nerve branches, parotid gland and bone are too close, and the tissue is too thin.</li>
+              <li><strong className="text-white">Deeper 4–8mm configurations:</strong> these are body-only (abdomen, flanks, knees, upper arms, bra-line). Using a 4–8mm tip on the face would be a clinical error.</li>
+            </ul>
+            <p className="text-sm text-white/55 italic">
+              If a clinic cannot tell you which depth they will use for each zone and why, that is a signal to ask more questions — or to walk away.
+            </p>
+
+            <h2 className="text-2xl font-light text-white">4. What it tightens well</h2>
             <ul className="space-y-2 list-disc pl-5">
               <li>Mild-to-moderate lower-face laxity and early jowling</li>
               <li>Submental fullness ("double chin") with skin laxity</li>
@@ -115,7 +130,7 @@ export default function DoesMorpheus8TightenSkin() {
               <li>Décolletage texture and crepe</li>
             </ul>
 
-            <h2 className="text-2xl font-light text-white">4. What it will <em>not</em> tighten</h2>
+            <h2 className="text-2xl font-light text-white">5. What it will <em>not</em> tighten</h2>
             <ul className="space-y-2 list-disc pl-5">
               <li>Severe jowls or platysmal banding — these need surgery</li>
               <li>Volume loss in cheeks or temples — that is a filler problem, not a tightening one</li>
@@ -123,12 +138,12 @@ export default function DoesMorpheus8TightenSkin() {
               <li>Deep static lines from animation — botulinum toxin first, then resurfacing</li>
             </ul>
 
-            <h2 className="text-2xl font-light text-white">5. How it compares to sub-surface laser (Endolaser / Endolift)</h2>
+            <h2 className="text-2xl font-light text-white">6. How it compares to sub-surface laser (Endolaser / Endolift)</h2>
             <p>
               RF microneedling and intra-tissue laser are cousins, not competitors. RF microneedling is excellent for <em>skin-level</em> tightening across a broad area. Sub-surface laser fibres deliver more focal, deeper energy along the jawline and submentum, with stronger structural lift. In practice many patients get the best result from <strong className="text-white">a combination</strong> — RF microneedling for skin quality, Endolaser for the lift.
             </p>
 
-            <h2 className="text-2xl font-light text-white">6. The questions to ask any clinic</h2>
+            <h2 className="text-2xl font-light text-white">7. The questions to ask any clinic</h2>
             <ol className="space-y-2 list-decimal pl-5">
               <li>Is the device UKCA &amp; CE marked? (Yes is the only acceptable answer.)</li>
               <li>Will a doctor perform the treatment, or a non-medical practitioner?</li>
