@@ -130,7 +130,7 @@ export default function DoesMorpheus8TightenSkin() {
               <li>Décolletage texture and crepe</li>
             </ul>
 
-            <h2 className="text-2xl font-light text-white">4. What it will <em>not</em> tighten</h2>
+            <h2 className="text-2xl font-light text-white">5. What it will <em>not</em> tighten</h2>
             <ul className="space-y-2 list-disc pl-5">
               <li>Severe jowls or platysmal banding — these need surgery</li>
               <li>Volume loss in cheeks or temples — that is a filler problem, not a tightening one</li>
