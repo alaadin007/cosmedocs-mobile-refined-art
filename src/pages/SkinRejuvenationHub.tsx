@@ -126,6 +126,81 @@ const SkinRejuvenationHub = () => {
               </p>
             </motion.div>
 
+            {/* Featured combo offer */}
+            <motion.aside
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              aria-label="Special offer: PP combo"
+              className="mb-8 rounded-2xl overflow-hidden border border-[#C9A050]/40 bg-gradient-to-br from-[#0b0b0b] via-[#161616] to-[#0b0b0b] text-white"
+            >
+              <div className="grid md:grid-cols-[1.2fr_1fr]">
+                <div className="p-8 md:p-10">
+                  <span className="inline-block text-[10px] tracking-[0.25em] uppercase text-[#C9A050] border border-[#C9A050]/40 rounded-full px-3 py-1 mb-5">
+                    Limited Time · Combo Deal
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-extralight mb-3">
+                    PP — <span className="text-[#C9A050] font-light">Polynucleotides + Peel</span>
+                  </h3>
+                  <p className="text-white/70 text-sm leading-relaxed font-light mb-5 max-w-xl">
+                    The Cosmedocs way to skin glow. Think of your skin like a wall: the <strong className="text-white font-medium">peel</strong> strips away the tired, dead surface — like removing old paint. The <strong className="text-white font-medium">polynucleotides</strong> rebuild the plaster underneath, giving you a smoother, healthier canvas so the finish — your natural radiance — looks effortlessly better.
+                  </p>
+                  <div className="flex flex-wrap items-end gap-4 mb-6">
+                    <div>
+                      <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 mb-1">3 Sessions</p>
+                      <p className="text-4xl font-extralight text-[#C9A050]">£1,250</p>
+                    </div>
+                    <p className="text-sm text-white/50 line-through pb-2">Normally £1,500+</p>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      to="/contact/"
+                      className="inline-flex items-center gap-2 bg-[#C9A050] text-black text-sm font-medium px-5 py-3 rounded-full hover:bg-[#b8924a] transition-colors"
+                    >
+                      Book PP Combo <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link
+                      to="/treatments/polynucleotides/"
+                      className="inline-flex items-center gap-2 border border-white/20 text-white/80 text-sm px-5 py-3 rounded-full hover:border-[#C9A050]/60 hover:text-white transition-colors"
+                    >
+                      Learn about Polynucleotides
+                    </Link>
+                  </div>
+                </div>
+                <div className="hidden md:flex items-center justify-center bg-[#0a0a0a] p-10 border-l border-white/5">
+                  <div className="space-y-4 w-full max-w-xs">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-[#C9A050]/10 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                        <FlaskConical className="w-4 h-4 text-[#C9A050]" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-white font-medium">Step 1 · Peel</p>
+                        <p className="text-xs text-white/50 font-light">Resurface and lift away dull, dead skin.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-[#C9A050]/10 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                        <Sparkles className="w-4 h-4 text-[#C9A050]" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-white font-medium">Step 2 · Polynucleotides</p>
+                        <p className="text-xs text-white/50 font-light">Rebuild the plaster — repair, hydrate, regenerate.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-[#C9A050]/10 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                        <Sun className="w-4 h-4 text-[#C9A050]" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-white font-medium">Result · The Glow</p>
+                        <p className="text-xs text-white/50 font-light">A finer finish, naturally — invisible art.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.aside>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               {treatments.map((treatment, index) => (
                 <motion.div key={treatment.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }}>
