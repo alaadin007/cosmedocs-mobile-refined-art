@@ -18,7 +18,7 @@ export default function DoesMorpheus8TightenSkin() {
   const seo = generateSEOMetadata(
     "Does Morpheus8 Tighten Skin? A Doctor's Honest Answer | CosmeTalk",
     "Plain-English doctor's guide to Morpheus8 and RF microneedling. What it actually tightens, what it doesn't, who it suits, and the alternatives we offer at Cosmedocs.",
-    "/blog/cosmetalk/does-morpheus8-tighten-skin/"
+    "/blog/does-morpheus8-tighten-skin/"
   );
 
   const faqs = [
@@ -64,8 +64,7 @@ export default function DoesMorpheus8TightenSkin() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-6">
           <Breadcrumb items={[
             { label: "Home", href: "/" },
-            { label: "Blog", href: "/blog/" },
-            { label: "CosmeTalk", href: "/blog/cosmetalk/" },
+            { label: "CosmeTalk", href: "/blog/" },
             { label: "Does Morpheus8 Tighten Skin?" },
           ]} />
         </div>
@@ -202,12 +201,12 @@ export default function DoesMorpheus8TightenSkin() {
           <section className="mt-16 border-t border-white/10 pt-10">
             <div className="flex items-baseline justify-between mb-6">
               <h2 className="text-2xl font-light">Related <span className="text-[#C9A050]">CosmeTalk</span></h2>
-              <Link to="/blog/cosmetalk/" className="text-xs text-white/50 hover:text-[#C9A050] uppercase tracking-wider">All posts →</Link>
+              <Link to="/blog/" className="text-xs text-white/50 hover:text-[#C9A050] uppercase tracking-wider">All posts →</Link>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { href: "/blog/cosmetalk/jawline-tightening-over-30/", tag: "Tightening", title: "Jawline tightening after 30: what actually works", blurb: "Where RF microneedling stops and where lasers, threads or filler take over." },
-                { href: "/blog/cosmetalk/endolift-explained/", tag: "Sub-surface laser", title: "Endolift explained: the lift RF can't deliver", blurb: "Intra-tissue laser fibres for structural lift along the jawline and submentum." },
+                { href: "/blog/jawline-tightening-over-30/", tag: "Tightening", title: "Jawline tightening after 30: what actually works", blurb: "Where RF microneedling stops and where lasers, threads or filler take over." },
+                { href: "/blog/endolift-explained/", tag: "Sub-surface laser", title: "Endolift explained: the lift RF can't deliver", blurb: "Intra-tissue laser fibres for structural lift along the jawline and submentum." },
                 { href: "/treatments/endolaser/", tag: "Treatment", title: "Endolaser (Laser Fibre Lift)", blurb: "Our doctor-led sub-surface dual-wavelength platform — paired well with RF microneedling." },
                 { href: "/microneedling/", tag: "Treatment", title: "Microneedling Rx", blurb: "Doctor-led RF microneedling on a UKCA & CE-marked platform. Skin quality, redensified." },
               ].map(c => (
