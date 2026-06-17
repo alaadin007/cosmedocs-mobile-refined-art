@@ -366,10 +366,10 @@
 # Only 4 blogs exist. Everything else redirects away.
 # =====================================================
 
-# --- Cosmetalk legacy → /treatments/ (no individual blogs exist) ---
-/cosmetalk                        /blog/                        301
-/cosmetalk/                       /blog/                        301
-/cosmetalk/*                      /blog/                        301
+# --- CosmeTalk: top-level path → branded hub under /blog/cosmetalk/ ---
+# (Hub lives under /blog/ so SEO authority compounds; vanity path forwards in)
+/cosmetalk                        /blog/cosmetalk/              301
+/cosmetalk/                       /blog/cosmetalk/              301
 
 # --- Semrush-confirmed: Tear Trough blog redirect ---
 /blog/tear-trough-filler-before-and-after     /before-after/dermal-fillers/tear-trough/   301
