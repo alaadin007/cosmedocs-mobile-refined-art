@@ -249,6 +249,7 @@ const categories: Category[] = [
       { title: "Exosomes", tagline: "Next-gen messengers", href: "/treatments/exosomes/", bg: "bg-gradient-to-br from-neutral-200 to-neutral-400", ink: "text-zinc-900" },
       { title: "PRP", tagline: "Your own plasma", href: "/treatments/prp/", bg: "bg-gradient-to-br from-[#C9A050] to-[#7a5e25]" },
       { title: "Chemical Peels", tagline: "Glycolic · TCA · Salicylic", href: "/treatments/chemical-peels/", bg: "bg-gradient-to-br from-amber-100 to-orange-300", ink: "text-zinc-900" },
+      { title: "PP Glow", tagline: "Polynucleotides + Peel — 3 sessions for £1,250. Normally over £1,500. Think of your skin like a wall: the peel strips away old paint, then polynucleotides improve the plaster so the finish looks its best. Limited time.", href: "/treatments/skin-rejuvenation/", bg: "bg-gradient-to-br from-[#C9A050] via-[#B8924A] to-[#2a1d10]", badge: "Special Offer" },
       { title: "Microneedling", tagline: "Collagen induction therapy", href: "/treatments/microneedling/", bg: "bg-gradient-to-br from-stone-700 to-stone-900" },
       { title: "HydraFacial", tagline: "Cleanse · extract · hydrate", href: "/treatments/hydrafacial/", bg: "bg-gradient-to-br from-cyan-100 to-cyan-300", ink: "text-zinc-900" },
     ],
