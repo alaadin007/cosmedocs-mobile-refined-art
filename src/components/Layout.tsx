@@ -2,6 +2,7 @@ import { ReactNode, useEffect, lazy, Suspense, memo } from "react";
 import { Helmet } from "react-helmet-async";
 import Home2Header from "./home2/Home2Header";
 import LanguageSelector from "./LanguageSelector";
+import SpecialOffersSlider from "./SpecialOffersSlider";
 
 // Lazy load heavy components with preload hints
 const Footer = lazy(() => import("./Footer"));
@@ -42,6 +43,7 @@ const Layout = memo(function Layout({ children }: LayoutProps) {
       <div className="flex flex-col min-h-screen w-full">
         <Home2Header />
         <main className="flex-grow pt-24 md:pt-32">{children}</main>
+        <SpecialOffersSlider />
         <Suspense fallback={<div className="h-48 bg-background" aria-hidden="true" />}>
           <Footer />
         </Suspense>
