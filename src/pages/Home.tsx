@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star, Sparkles, Search, Brain } from "lucide-react";
 import QuickAccessTreatments from "@/components/home/QuickAccessTreatments";
 import SmartAestheticsBanner from "@/components/home/SmartAestheticsBanner";
+import cosmetalkJawline from "@/assets/cosmetalk-jawline.jpg.asset.json";
+import cosmetalkEye from "@/assets/cosmetalk-eye.jpg.asset.json";
+import cosmetalkSerum from "@/assets/cosmetalk-serum.jpg.asset.json";
 
 // Lazy load heavy components
 const LiquidGlassFacialAssessment = lazy(() => import("@/components/LiquidGlassFacialAssessment"));
