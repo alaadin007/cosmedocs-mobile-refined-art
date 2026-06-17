@@ -83,8 +83,16 @@
   </url>
 
   <url>
+    <loc>https://www.cosmedocs.com/blog/cosmetalk/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
     <loc>https://www.cosmedocs.com/blog/cosmetalk/does-morpheus8-tighten-skin/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>

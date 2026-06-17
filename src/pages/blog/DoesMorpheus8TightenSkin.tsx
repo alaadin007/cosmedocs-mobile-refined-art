@@ -98,9 +98,12 @@ export default function DoesMorpheus8TightenSkin() {
               Skin laxity has two parts: the dermis loses collagen and elastin (the skin itself becomes thinner and less springy), and the fibrous septae anchoring the deep tissues stretch (everything starts to droop). True tightening has to address both. Surface treatments — peels, fractional lasers, vitamin-C serums — improve the first part. Surgery addresses the second. <strong className="text-white">RF microneedling sits in between</strong>, and that is exactly the gap it is designed to occupy.
             </p>
 
-            <h2 className="text-2xl font-light text-white">2. How Morpheus8 actually works</h2>
+            <h2 className="text-2xl font-light text-white">2. How RF microneedling actually works</h2>
             <p>
-              Insulated micro-needles pierce the epidermis and deliver bipolar radiofrequency at a chosen depth — typically 1mm, 2mm, 3mm or 4mm. The RF heats a precise zone of dermis and superficial fat to roughly 65–70°C, which (a) immediately contracts existing collagen fibres and (b) triggers a wound-healing cascade that lays down new collagen and elastin over the next 3–6 months. The needles themselves are largely a delivery system; the work is done by the heat.
+              Insulated micro-needles pierce the epidermis and deliver bipolar radiofrequency at a chosen depth. Standard handpieces operate from approximately <strong className="text-white">1mm to 4mm</strong>; deeper-tip configurations (the Morpheus8 "Prime" and "Body" tips, and equivalent platforms) can reach into the <strong className="text-white">subdermal adipose layer at around 4–8mm</strong>. The RF heats a precise zone of dermis — and, with deeper passes, the superficial fat compartment — to roughly 65–75°C. That does two things: it immediately contracts existing collagen fibres, and it triggers a wound-healing cascade that lays down new collagen and elastin over the next 3–6 months. With subdermal passes there is also a measurable degree of <strong className="text-white">adipose remodelling</strong> in the superficial fat, which is part of why the device gets credit for jawline definition that older RF tools didn't deliver. The needles are largely a delivery system; the work is done by the heat.
+            </p>
+            <p className="text-sm text-white/55 italic">
+              A note on accuracy: the depth and temperature ranges above reflect manufacturer specifications and published clinical literature on bipolar RF microneedling. Settings used in clinic are always individualised to skin type, area and indication.
             </p>
 
             <h2 className="text-2xl font-light text-white">3. What it tightens well</h2>
