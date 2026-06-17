@@ -194,6 +194,105 @@ const Home = () => {
         <SmartAestheticsBanner variant="dark" />
         <QuickAccessTreatments />
 
+        {/* CosmeTalk — Editorial Teaser */}
+        <section className="relative py-20 md:py-28 px-6 border-t border-white/5">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="flex items-end justify-between mb-12 flex-wrap gap-6"
+            >
+              <div className="max-w-2xl">
+                <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] font-medium">
+                  CosmeTalk
+                </span>
+                <h2 className="mt-3 text-3xl md:text-5xl font-extralight leading-tight">
+                  The truth-first edit.
+                  <span className="block text-white/50">Aesthetic medicine, decoded.</span>
+                </h2>
+                <p className="mt-5 text-white/60 font-light leading-relaxed">
+                  Doctor-written essays on what works, what doesn't, and what every clinic should have told you before you booked. No hype. No sales pitch. Just the version we'd give a patient in the consulting room.
+                </p>
+              </div>
+              <Link
+                to="/blog/cosmetalk/"
+                className="group inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-white transition-colors border-b border-[#C9A050]/40 hover:border-white pb-1"
+              >
+                Read CosmeTalk
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {[
+                {
+                  img: cosmetalkJawline.url,
+                  tag: "RF Microneedling",
+                  title: "Does Morpheus8 actually tighten skin?",
+                  blurb: "Yes — modestly, predictably, only for the right candidate. The honest version.",
+                  href: "/blog/cosmetalk/does-morpheus8-tighten-skin/",
+                  span: "md:col-span-2 md:row-span-2",
+                  ratio: "aspect-[16/10] md:aspect-[16/11]",
+                  featured: true,
+                },
+                {
+                  img: cosmetalkEye.url,
+                  tag: "Coming Soon",
+                  title: "Tear troughs: when filler is the wrong answer.",
+                  blurb: "Skin quality, fat repositioning, surgery — read before you book.",
+                  href: "/blog/cosmetalk/",
+                  ratio: "aspect-[4/5]",
+                },
+                {
+                  img: cosmetalkSerum.url,
+                  tag: "Coming Soon",
+                  title: "Decoding the 'glow' serum claim.",
+                  blurb: "What active ingredients earn the word, and what's marketing.",
+                  href: "/blog/cosmetalk/",
+                  ratio: "aspect-[4/5]",
+                },
+              ].map((post, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.08 }}
+                  className={post.span || ""}
+                >
+                  <Link
+                    to={post.href}
+                    className="group block relative overflow-hidden rounded-2xl border border-white/10 hover:border-[#C9A050]/40 transition-all h-full"
+                  >
+                    <div className={`relative ${post.ratio} overflow-hidden bg-black`}>
+                      <img
+                        src={post.img}
+                        alt={post.title}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-6">
+                        <span className="text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
+                          {post.tag}
+                        </span>
+                        <h3 className={`mt-2 font-light text-white leading-tight ${post.featured ? "text-2xl md:text-3xl" : "text-lg"}`}>
+                          {post.title}
+                        </h3>
+                        <p className="mt-2 text-sm text-white/65 font-light leading-relaxed line-clamp-2">
+                          {post.blurb}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Trust Section */}
         <section className="relative py-12 px-6 bg-white/[0.02]">
           <div className="max-w-4xl mx-auto">
