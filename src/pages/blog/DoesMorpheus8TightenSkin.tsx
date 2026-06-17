@@ -138,7 +138,7 @@ export default function DoesMorpheus8TightenSkin() {
               <li>Deep static lines from animation — botulinum toxin first, then resurfacing</li>
             </ul>
 
-            <h2 className="text-2xl font-light text-white">5. How it compares to sub-surface laser (Endolaser / Endolift)</h2>
+            <h2 className="text-2xl font-light text-white">6. How it compares to sub-surface laser (Endolaser / Endolift)</h2>
             <p>
               RF microneedling and intra-tissue laser are cousins, not competitors. RF microneedling is excellent for <em>skin-level</em> tightening across a broad area. Sub-surface laser fibres deliver more focal, deeper energy along the jawline and submentum, with stronger structural lift. In practice many patients get the best result from <strong className="text-white">a combination</strong> — RF microneedling for skin quality, Endolaser for the lift.
             </p>
