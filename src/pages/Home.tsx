@@ -133,6 +133,23 @@ const Home = () => {
                 ))}
               </div>
 
+              {/* CosmeTalk — editorial line */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="mb-10"
+              >
+                <Link
+                  to="/blog/cosmetalk/"
+                  className="inline-flex items-center gap-2 text-xs tracking-[0.24em] uppercase text-white/50 hover:text-[#C9A050] transition-colors"
+                >
+                  <span className="h-px w-6 bg-[#C9A050]/60" />
+                  CosmeTalk · The truth-first edit
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
+              </motion.div>
+
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
