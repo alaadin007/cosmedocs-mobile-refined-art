@@ -49,7 +49,7 @@ export default function DoesMorpheus8TightenSkin() {
           author: { "@type": "Organization", name: "Cosmedocs" },
           publisher: { "@type": "MedicalOrganization", name: "Cosmedocs", url: "https://www.cosmedocs.com" },
           datePublished: "2026-06-16",
-          dateModified: "2026-06-16",
+          dateModified: "2026-06-17",
           mainEntityOfPage: seo.canonical,
           articleSection: "CosmeTalk",
         })}</script>
