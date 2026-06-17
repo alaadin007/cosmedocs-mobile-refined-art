@@ -228,70 +228,91 @@ const Home = () => {
               </Link>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-5">
-              {[
-                {
-                  img: cosmetalkJawline.url,
-                  tag: "RF Microneedling",
-                  title: "Does Morpheus8 actually tighten skin?",
-                  blurb: "Yes — modestly, predictably, only for the right candidate. The honest version.",
-                  href: "/blog/cosmetalk/does-morpheus8-tighten-skin/",
-                  span: "md:col-span-2 md:row-span-2",
-                  ratio: "aspect-[16/10] md:aspect-[16/11]",
-                  featured: true,
-                },
-                {
-                  img: cosmetalkEye.url,
-                  tag: "Coming Soon",
-                  title: "Tear troughs: when filler is the wrong answer.",
-                  blurb: "Skin quality, fat repositioning, surgery — read before you book.",
-                  href: "/blog/cosmetalk/",
-                  ratio: "aspect-[4/5]",
-                },
-                {
-                  img: cosmetalkSerum.url,
-                  tag: "Coming Soon",
-                  title: "Decoding the 'glow' serum claim.",
-                  blurb: "What active ingredients earn the word, and what's marketing.",
-                  href: "/blog/cosmetalk/",
-                  ratio: "aspect-[4/5]",
-                },
-              ].map((post, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.08 }}
-                  className={post.span || ""}
-                >
-                  <Link
-                    to={post.href}
-                    className="group block relative overflow-hidden rounded-2xl border border-white/10 hover:border-[#C9A050]/40 transition-all h-full"
+            <div className="relative -mx-6">
+              <div className="flex gap-5 overflow-x-auto pb-6 px-6 snap-x snap-mandatory scroll-smooth [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-white/5 [&::-webkit-scrollbar-thumb]:bg-[#C9A050]/40 [&::-webkit-scrollbar-thumb]:rounded-full">
+                {[
+                  {
+                    img: cosmetalkJawline.url,
+                    tag: "RF Microneedling",
+                    title: "Does Morpheus8 actually tighten skin?",
+                    blurb: "Yes — modestly, predictably, only for the right candidate. The honest version.",
+                    href: "/blog/cosmetalk/does-morpheus8-tighten-skin/",
+                  },
+                  {
+                    img: cosmetalkJawline.url,
+                    tag: "Jawline",
+                    title: "Jawline tightening after 30: what actually works.",
+                    blurb: "Bone resorption, fat repositioning, and the realistic order of operations.",
+                    href: "/blog/cosmetalk/jawline-tightening-over-30/",
+                  },
+                  {
+                    img: cosmetalkEye.url,
+                    tag: "Endolift",
+                    title: "Endolift, explained without the marketing.",
+                    blurb: "Where laser fibre lifts genuinely shine — and where they don't.",
+                    href: "/blog/cosmetalk/endolift-explained/",
+                  },
+                  {
+                    img: cosmetalkSerum.url,
+                    tag: "Skincare",
+                    title: "Vitamin C vs Retinol: which earns its shelf space?",
+                    blurb: "Pairing, layering, and the actives that justify the price tag.",
+                    href: "/blog/cosmetalk/vitamin-c-vs-retinol/",
+                  },
+                  {
+                    img: cosmetalkEye.url,
+                    tag: "Coming Soon",
+                    title: "Tear troughs: when filler is the wrong answer.",
+                    blurb: "Skin quality, fat repositioning, surgery — read before you book.",
+                    href: "/blog/cosmetalk/",
+                  },
+                  {
+                    img: cosmetalkSerum.url,
+                    tag: "Coming Soon",
+                    title: "Decoding the 'glow' serum claim.",
+                    blurb: "What active ingredients earn the word, and what's marketing.",
+                    href: "/blog/cosmetalk/",
+                  },
+                ].map((post, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    className="snap-start shrink-0 w-[78vw] sm:w-[340px] md:w-[380px]"
                   >
-                    <div className={`relative ${post.ratio} overflow-hidden bg-black`}>
-                      <img
-                        src={post.img}
-                        alt={post.title}
-                        loading="lazy"
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                      <div className="absolute inset-x-0 bottom-0 p-6">
-                        <span className="text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
-                          {post.tag}
-                        </span>
-                        <h3 className={`mt-2 font-light text-white leading-tight ${post.featured ? "text-2xl md:text-3xl" : "text-lg"}`}>
-                          {post.title}
-                        </h3>
-                        <p className="mt-2 text-sm text-white/65 font-light leading-relaxed line-clamp-2">
-                          {post.blurb}
-                        </p>
+                    <Link
+                      to={post.href}
+                      className="group block relative overflow-hidden rounded-2xl border border-white/10 hover:border-[#C9A050]/40 transition-all h-full"
+                    >
+                      <div className="relative aspect-[4/5] overflow-hidden bg-black">
+                        <img
+                          src={post.img}
+                          alt={post.title}
+                          loading="lazy"
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 p-6">
+                          <span className="text-[10px] tracking-[0.24em] uppercase text-[#C9A050] font-medium">
+                            {post.tag}
+                          </span>
+                          <h3 className="mt-2 font-light text-white leading-tight text-lg md:text-xl">
+                            {post.title}
+                          </h3>
+                          <p className="mt-2 text-sm text-white/65 font-light leading-relaxed line-clamp-2">
+                            {post.blurb}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+              <p className="mt-3 px-6 text-[10px] tracking-[0.24em] uppercase text-white/30">
+                Swipe to browse →
+              </p>
             </div>
           </div>
         </section>
