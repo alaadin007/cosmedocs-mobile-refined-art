@@ -19,8 +19,8 @@ import edMaintenance from "@/assets/blog/ed-maintenance.jpg";
 
 const BlogHome = () => {
   const seoData = generateSEOMetadata(
-    "CosmeDocs Blog | Aesthetic Medicine Insights & Skin Science",
-    "Expert articles on aesthetic medicine, skin science, treatment guides and patient education from Harley Street doctors. Evidence-based insights since 2007.",
+    "CosmeTalk by Cosmedocs | The Truth-First Aesthetic Medicine Edit",
+    "CosmeTalk is the Cosmedocs editorial — doctor-written, evidence-based essays on aesthetic medicine. No hype, no sales pitch. The version we'd give a patient in the consulting room.",
     "/blog"
   );
 
@@ -131,9 +131,10 @@ const BlogHome = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "CosmeDocs Blog — Aesthetic Medicine Insights",
+    name: "CosmeTalk by Cosmedocs",
+    alternateName: "CosmeTalk",
     description:
-      "Expert articles on aesthetic medicine, skin science, and patient education from Harley Street doctors.",
+      "The truth-first edit from Cosmedocs. Doctor-written essays on aesthetic medicine — what works, what doesn't, and what every clinic should have told you before you booked.",
     url: "https://www.cosmedocs.com/blog/",
     publisher: {
       "@type": "MedicalBusiness",
@@ -161,24 +162,18 @@ const BlogHome = () => {
         {/* Hero Slider */}
         <BlogHeroSlider />
 
-        {/* CosmeTalk — Truth-first edit strip */}
+        {/* CosmeTalk — masthead / manifesto strip (the blog IS CosmeTalk) */}
         <section className="relative border-y border-[#C9A050]/20 bg-gradient-to-r from-[#C9A050]/[0.08] via-transparent to-[#C9A050]/[0.08]">
-          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] font-medium">
-                New · CosmeTalk
-              </span>
-              <p className="text-sm md:text-base text-white/80 font-light">
-                The truth-first edit. Aesthetic medicine, decoded — no hype, no sales pitch.
-              </p>
-            </div>
-            <Link
-              to="/blog/cosmetalk/"
-              className="group inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-white transition-colors border-b border-[#C9A050]/40 hover:border-white pb-1"
-            >
-              Explore CosmeTalk
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] font-medium">
+              Cosme<span className="text-white">Talk</span> · An editorial by Cosmedocs
+            </span>
+            <h1 className="mt-3 text-3xl md:text-5xl font-extralight leading-tight text-white">
+              The truth-first edit. <span className="text-white/50">Aesthetic medicine, decoded.</span>
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm md:text-base text-white/70 font-light leading-relaxed">
+              Doctor-written essays on what works, what doesn't, and what every clinic should have told you before you booked. No hype. No sales pitch — just the version we'd give a patient in the consulting room. Our aesthetics is invisible art: bold, natural, always your way.
+            </p>
           </div>
         </section>
 
@@ -327,21 +322,22 @@ const BlogHome = () => {
           className="sr-only"
           aria-hidden="true"
           role="complementary"
-          aria-label="Extended blog information for search engines"
+          aria-label="Extended editorial information for search engines"
         >
-          <h2>CosmeDocs Blog: Expert Aesthetic Medicine Articles</h2>
+          <h2>CosmeTalk by Cosmedocs: The Truth-First Aesthetic Edit</h2>
           <p>
-            The CosmeDocs Blog features expert articles on aesthetic medicine,
-            skin science, and patient education from Harley Street
-            doctors. Topics include botox treatment guides, dermal filler
-            insights, skincare science, non-surgical procedures, clinical
-            research and evidence-based aesthetic practice. Our doctors share
-            their clinical expertise covering anti-wrinkle treatments, lip
-            fillers, non-surgical rhinoplasty, thread lifts, skin boosters and
-            facial rejuvenation. Patient education articles explain treatment
-            processes, expected outcomes, recovery timelines and aftercare
-            guidance. Our aesthetics is invisible art — bold, natural, always
-            your way.
+            CosmeTalk is the editorial voice of Cosmedocs — doctor-written,
+            evidence-based articles on aesthetic medicine from a Harley Street
+            practice. Topics span anti-wrinkle treatment, dermal fillers, lip
+            filler, tear-trough filler, jawline contouring, non-surgical
+            rhinoplasty, PDO threads, RF microneedling, Endolift, Profhilo,
+            polynucleotides, chemical peels, prescription skincare and
+            long-term aesthetic continuity. Every article is written to
+            inform, not to sell: where a device has a ceiling, we name it;
+            where a before-and-after is doing more work than the treatment,
+            we say so; where the right answer is "don't do this", that's the
+            answer we publish. Our aesthetics is invisible art — bold,
+            natural, always your way.
           </p>
         </div>
       </div>
