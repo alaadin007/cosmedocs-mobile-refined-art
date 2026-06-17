@@ -31,6 +31,8 @@ type Offer = {
   ctaHref: string;
 };
 
+const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+
 const offers: Offer[] = [
   {
     id: "pp-glow",
@@ -41,8 +43,8 @@ const offers: Offer[] = [
     priceNow: "£1,250",
     priceWas: "£1,500+",
     badge: "3 sessions · Limited time",
-    ctaLabel: "Enquire about PP",
-    ctaHref: "/contact/?offer=pp-glow",
+    ctaLabel: "Book a Consultation",
+    ctaHref: ACUITY_URL,
   },
 ];
 

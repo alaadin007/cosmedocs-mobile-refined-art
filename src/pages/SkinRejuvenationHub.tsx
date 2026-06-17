@@ -153,12 +153,14 @@ const SkinRejuvenationHub = () => {
                     <p className="text-sm text-white/50 line-through pb-2">Normally £1,500+</p>
                   </div>
                   <div className="flex flex-wrap gap-3">
-                    <Link
-                      to="/contact/"
-                      className="inline-flex items-center gap-2 bg-[#C9A050] text-black text-sm font-medium px-5 py-3 rounded-full hover:bg-[#b8924a] transition-colors"
-                    >
-                      Book PP Combo <ArrowRight className="w-4 h-4" />
-                    </Link>
+                  <a
+                    href="https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#C9A050] text-black text-sm font-medium px-5 py-3 rounded-full hover:bg-[#b8924a] transition-colors"
+                  >
+                    Book PP Combo <ArrowRight className="w-4 h-4" />
+                  </a>
                     <Link
                       to="/treatments/polynucleotides/"
                       className="inline-flex items-center gap-2 border border-white/20 text-white/80 text-sm px-5 py-3 rounded-full hover:border-[#C9A050]/60 hover:text-white transition-colors"
