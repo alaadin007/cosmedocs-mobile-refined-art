@@ -197,6 +197,29 @@ export default function DoesMorpheus8TightenSkin() {
               ))}
             </div>
           </section>
+
+          {/* Related CosmeTalk */}
+          <section className="mt-16 border-t border-white/10 pt-10">
+            <div className="flex items-baseline justify-between mb-6">
+              <h2 className="text-2xl font-light">Related <span className="text-[#C9A050]">CosmeTalk</span></h2>
+              <Link to="/blog/cosmetalk/" className="text-xs text-white/50 hover:text-[#C9A050] uppercase tracking-wider">All posts →</Link>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { href: "/blog/cosmetalk/jawline-tightening-over-30/", tag: "Tightening", title: "Jawline tightening after 30: what actually works", blurb: "Where RF microneedling stops and where lasers, threads or filler take over." },
+                { href: "/blog/cosmetalk/endolift-explained/", tag: "Sub-surface laser", title: "Endolift explained: the lift RF can't deliver", blurb: "Intra-tissue laser fibres for structural lift along the jawline and submentum." },
+                { href: "/treatments/endolaser/", tag: "Treatment", title: "Endolaser (Laser Fibre Lift)", blurb: "Our doctor-led sub-surface dual-wavelength platform — paired well with RF microneedling." },
+                { href: "/microneedling/", tag: "Treatment", title: "Microneedling Rx", blurb: "Doctor-led RF microneedling on a UKCA & CE-marked platform. Skin quality, redensified." },
+              ].map(c => (
+                <Link key={c.href} to={c.href} className="group block rounded-2xl border border-white/10 hover:border-[#C9A050]/40 bg-white/[0.02] hover:bg-white/[0.04] p-5 transition-all">
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A050]">{c.tag}</span>
+                  <h3 className="mt-2 text-lg font-light text-white group-hover:text-[#C9A050] transition-colors">{c.title}</h3>
+                  <p className="mt-2 text-sm text-white/55 font-light leading-relaxed">{c.blurb}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs text-white/40 group-hover:text-[#C9A050]">Read <ArrowRight className="w-3 h-3" /></span>
+                </Link>
+              ))}
+            </div>
+          </section>
         </article>
       </main>
     </>
