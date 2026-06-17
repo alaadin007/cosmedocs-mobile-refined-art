@@ -366,10 +366,15 @@
 # Only 4 blogs exist. Everything else redirects away.
 # =====================================================
 
-# --- CosmeTalk: top-level path → branded hub under /blog/cosmetalk/ ---
-# (Hub lives under /blog/ so SEO authority compounds; vanity path forwards in)
-/cosmetalk                        /blog/cosmetalk/              301
-/cosmetalk/                       /blog/cosmetalk/              301
+# --- CosmeTalk rebrand: the blog IS CosmeTalk ---
+# Vanity path → /blog/. Legacy hub & nested article paths flatten to /blog/*.
+/cosmetalk                                              /blog/                                          301
+/cosmetalk/                                             /blog/                                          301
+/blog/cosmetalk                                         /blog/                                          301
+/blog/cosmetalk/                                        /blog/                                          301
+/blog/cosmetalk/does-morpheus8-tighten-skin             /blog/does-morpheus8-tighten-skin/              301
+/blog/cosmetalk/does-morpheus8-tighten-skin/            /blog/does-morpheus8-tighten-skin/              301
+/blog/cosmetalk/*                                       /blog/:splat                                    301
 
 # --- Semrush-confirmed: Tear Trough blog redirect ---
 /blog/tear-trough-filler-before-and-after     /before-after/dermal-fillers/tear-trough/   301

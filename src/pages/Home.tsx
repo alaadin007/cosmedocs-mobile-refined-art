@@ -144,7 +144,7 @@ const Home = () => {
                 className="mb-10"
               >
                 <Link
-                  to="/blog/cosmetalk/"
+                  to="/blog/"
                   className="inline-flex items-center gap-2 text-xs tracking-[0.24em] uppercase text-white/50 hover:text-[#C9A050] transition-colors"
                 >
                   <span className="h-px w-6 bg-[#C9A050]/60" />
@@ -220,7 +220,7 @@ const Home = () => {
                 </p>
               </div>
               <Link
-                to="/blog/cosmetalk/"
+                to="/blog/"
                 className="group inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-white transition-colors border-b border-[#C9A050]/40 hover:border-white pb-1"
               >
                 Read CosmeTalk
@@ -236,42 +236,42 @@ const Home = () => {
                     tag: "RF Microneedling",
                     title: "Does Morpheus8 actually tighten skin?",
                     blurb: "Yes — modestly, predictably, only for the right candidate. The honest version.",
-                    href: "/blog/cosmetalk/does-morpheus8-tighten-skin/",
+                    href: "/blog/does-morpheus8-tighten-skin/",
                   },
                   {
                     img: cosmetalkJawline.url,
                     tag: "Jawline",
                     title: "Jawline tightening after 30: what actually works.",
                     blurb: "Bone resorption, fat repositioning, and the realistic order of operations.",
-                    href: "/blog/cosmetalk/jawline-tightening-over-30/",
+                    href: "/blog/jawline-tightening-over-30/",
                   },
                   {
                     img: cosmetalkEye.url,
                     tag: "Endolift",
                     title: "Endolift, explained without the marketing.",
                     blurb: "Where laser fibre lifts genuinely shine — and where they don't.",
-                    href: "/blog/cosmetalk/endolift-explained/",
+                    href: "/blog/endolift-explained/",
                   },
                   {
                     img: cosmetalkSerum.url,
                     tag: "Skincare",
                     title: "Vitamin C vs Retinol: which earns its shelf space?",
                     blurb: "Pairing, layering, and the actives that justify the price tag.",
-                    href: "/blog/cosmetalk/vitamin-c-vs-retinol/",
+                    href: "/blog/vitamin-c-vs-retinol/",
                   },
                   {
                     img: cosmetalkEye.url,
                     tag: "Coming Soon",
                     title: "Tear troughs: when filler is the wrong answer.",
                     blurb: "Skin quality, fat repositioning, surgery — read before you book.",
-                    href: "/blog/cosmetalk/",
+                    href: "/blog/",
                   },
                   {
                     img: cosmetalkSerum.url,
                     tag: "Coming Soon",
                     title: "Decoding the 'glow' serum claim.",
                     blurb: "What active ingredients earn the word, and what's marketing.",
-                    href: "/blog/cosmetalk/",
+                    href: "/blog/",
                   },
                 ].map((post, i) => (
                   <motion.div
