@@ -161,6 +161,28 @@ const BlogHome = () => {
         {/* Hero Slider */}
         <BlogHeroSlider />
 
+        {/* CosmeTalk — Truth-first edit strip */}
+        <section className="relative border-y border-[#C9A050]/20 bg-gradient-to-r from-[#C9A050]/[0.08] via-transparent to-[#C9A050]/[0.08]">
+          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] font-medium">
+                New · CosmeTalk
+              </span>
+              <p className="text-sm md:text-base text-white/80 font-light">
+                The truth-first edit. Aesthetic medicine, decoded — no hype, no sales pitch.
+              </p>
+            </div>
+            <Link
+              to="/blog/cosmetalk/"
+              className="group inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-white transition-colors border-b border-[#C9A050]/40 hover:border-white pb-1"
+            >
+              Explore CosmeTalk
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </section>
+
+
         {/* Featured + Results Explained + Sidebar */}
         <section className="max-w-7xl mx-auto px-4 py-10">
           <div className="grid lg:grid-cols-[1fr_300px_240px] gap-8">
