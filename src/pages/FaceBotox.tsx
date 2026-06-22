@@ -10,6 +10,7 @@ import { Clock, Award, Calendar, MapPin, CheckCircle, Star, ArrowRight, Shield, 
 import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxSidebar from '@/components/botox/BotoxSidebar';
+import BotoxPriceBuilder from '@/components/botox/BotoxPriceBuilder';
 import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
 
 export default function FaceBotox() {
