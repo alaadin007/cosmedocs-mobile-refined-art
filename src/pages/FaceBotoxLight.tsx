@@ -9,6 +9,8 @@ import { Clock, Award, Calendar, MapPin, CheckCircle, Star, ArrowRight, Shield, 
 import Breadcrumb from '@/components/Breadcrumb';
 import ExpandableSection from "@/components/ui/expandable-section";
 import BotoxSidebarLight from '@/components/botox/BotoxSidebarLight';
+import BotoxPriceBuilder from '@/components/botox/BotoxPriceBuilder';
+
 import crowsFeetThumb from '@/assets/crows-feet-filler-thumb.jpg';
 import deepStaticLinesImg from '@/assets/botox-deep-static-lines-before-after.jpg';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
