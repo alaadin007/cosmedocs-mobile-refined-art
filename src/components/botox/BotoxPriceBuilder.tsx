@@ -91,8 +91,7 @@ const BotoxPriceBuilder = () => {
           </DialogTrigger>
 
           <DialogContent
-            className="max-w-lg w-[calc(100%-2rem)] p-0 gap-0 bg-white border-0 rounded-2xl overflow-hidden shadow-2xl"
-            hideClose
+            className="max-w-lg w-[calc(100%-2rem)] p-0 gap-0 bg-white border-0 rounded-2xl overflow-hidden shadow-2xl [&>button.absolute]:hidden"
           >
             {/* Header */}
             <div className="px-6 pt-6 pb-4 border-b border-neutral-200">
