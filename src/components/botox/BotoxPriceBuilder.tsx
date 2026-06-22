@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+
 import { Calculator, X } from "lucide-react";
 
 /**
@@ -94,6 +96,11 @@ const BotoxPriceBuilder = () => {
             className="max-w-lg w-[calc(100%-2rem)] p-0 gap-0 bg-white border-0 rounded-2xl overflow-hidden shadow-2xl [&>button.absolute]:hidden"
           >
             {/* Header */}
+            <VisuallyHidden>
+              <DialogTitle>Botox price calculator</DialogTitle>
+              <DialogDescription>Select treatment areas to see an indicative price.</DialogDescription>
+            </VisuallyHidden>
+
             <div className="px-6 pt-6 pb-4 border-b border-neutral-200">
               <div className="flex items-start justify-between gap-4">
                 <div>
