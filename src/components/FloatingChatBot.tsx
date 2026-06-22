@@ -461,115 +461,126 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
 
   return (
     <>
-      {/* Unified right-edge rail — Chat · Research · Contact */}
+      {/* Slim right-edge tab — opens a full contact sidebar */}
       <AnimatePresence>
-        {!isOpen && (
-          <motion.aside
-            initial={{ x: "110%", opacity: 0 }}
-            animate={{ x: "0%", opacity: 1 }}
-            exit={{ x: "110%", opacity: 0 }}
+        {!isOpen && !isExpanded && (
+          <motion.button
+            key="rail-tab"
+            initial={{ x: 60, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 60, opacity: 0 }}
             transition={{ type: "spring", stiffness: 240, damping: 28, delay: 0.3 }}
-            aria-label="Quick actions"
-            className="fixed right-0 top-1/2 -translate-y-1/2 z-[60] flex flex-col rounded-l-2xl overflow-hidden border border-[#C9A050]/30 border-r-0 bg-black/90 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.6)]"
+            onClick={() => setIsExpanded(true)}
+            aria-label="Open contact options"
+            className="fixed right-0 top-1/2 -translate-y-1/2 z-[60] flex items-center gap-2 pl-2 pr-2.5 py-4 rounded-l-2xl bg-black/90 backdrop-blur-md border border-r-0 border-[#C9A050]/40 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:bg-black transition-colors"
           >
-            {/* Chat */}
-            <button
-              onClick={() => { setIsOpen(true); setShowTeaser(false); setIsExpanded(false); }}
-              aria-label="Open Cosmedocs AI chat"
-              className="group flex items-center gap-3 pl-3 pr-4 py-3 text-left border-b border-white/10 hover:bg-white/[0.04] transition-colors"
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600">
+              <Plus className="h-4 w-4 text-black" />
+            </span>
+            <span
+              className="text-[10px] tracking-[0.32em] uppercase text-[#C9A050] font-medium"
+              style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
             >
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 via-fuchsia-500 to-rose-500 border border-white/20">
-                <motion.span
-                  aria-hidden
-                  className="absolute inset-0 rounded-full border border-white/60"
-                  animate={{ boxShadow: [
-                    "0 0 0px rgba(236,72,153,0.4)",
-                    "0 0 14px rgba(236,72,153,0.9)",
-                    "0 0 0px rgba(236,72,153,0.4)",
-                  ] }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                />
-                <MessageCircle className="relative h-4 w-4 text-white" />
-              </span>
-              <span className="hidden sm:flex flex-col min-w-0">
-                <span className="text-[9px] tracking-[0.24em] uppercase text-white/55">Ask Cosmedocs</span>
-                <span className="text-white text-xs font-light leading-tight">Chat with us</span>
-              </span>
-            </button>
-
-            {/* Research */}
-            <button
-              onClick={() => window.dispatchEvent(new Event("open-research-survey"))}
-              aria-label="Contribute to research"
-              className="group flex items-center gap-3 pl-3 pr-4 py-3 text-left border-b border-white/10 hover:bg-white/[0.04] transition-colors"
-            >
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#C9A050]/60 bg-black">
-                <motion.span
-                  aria-hidden
-                  className="absolute inset-0 rounded-full bg-[#C9A050]/20"
-                  animate={{ scale: [1, 1.35, 1], opacity: [0.6, 0, 0.6] }}
-                  transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-                />
-                <Sparkles className="relative h-4 w-4 text-[#C9A050]" />
-              </span>
-              <span className="hidden sm:flex flex-col min-w-0">
-                <span className="text-[9px] tracking-[0.24em] uppercase text-[#C9A050]">Research</span>
-                <span className="text-white text-xs font-light leading-tight">Please contribute</span>
-              </span>
-            </button>
-
-            {/* Contact (expands the contact options to the LEFT) */}
-            <button
-              onClick={() => setIsExpanded((v) => !v)}
-              aria-label="Contact options"
-              aria-expanded={isExpanded}
-              className="group flex items-center gap-3 pl-3 pr-4 py-3 text-left hover:bg-white/[0.04] transition-colors"
-            >
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 border border-white/20">
-                <motion.div animate={{ rotate: isExpanded ? 45 : 0 }} transition={{ duration: 0.25 }}>
-                  <Plus className="h-4 w-4 text-black" />
-                </motion.div>
-              </span>
-              <span className="hidden sm:flex flex-col min-w-0">
-                <span className="text-[9px] tracking-[0.24em] uppercase text-amber-300/80">Contact</span>
-                <span className="text-white text-xs font-light leading-tight">Call · WhatsApp · Book</span>
-              </span>
-            </button>
-
-            {/* Expanded contact options slide out to the LEFT of the rail */}
-            <AnimatePresence>
-              {isExpanded && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute right-full mr-3 bottom-2 flex flex-col gap-2"
-                >
-                  {contactOptions.map((option, index) => (
-                    <motion.button
-                      key={option.label}
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.04 }}
-                      onClick={option.action}
-                      aria-label={option.label}
-                      className={`bg-gradient-to-br ${option.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative`}
-                      whileHover={{ scale: 1.08 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <option.icon className="h-5 w-5" />
-                      <span className="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-black/90 text-white text-[11px] px-2.5 py-1.5 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
-                        {option.label}
-                      </span>
-                    </motion.button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.aside>
+              Contact
+            </span>
+          </motion.button>
         )}
       </AnimatePresence>
+
+      {/* Full contact sidebar */}
+      <AnimatePresence>
+        {isExpanded && !isOpen && (
+          <>
+            <motion.div
+              key="contact-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsExpanded(false)}
+              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm"
+            />
+            <motion.aside
+              key="contact-panel"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 260, damping: 30 }}
+              aria-label="Contact Cosmedocs"
+              className="fixed right-0 top-0 h-full w-[88%] max-w-sm z-[61] bg-gradient-to-b from-zinc-950 to-black border-l border-[#C9A050]/30 shadow-2xl overflow-y-auto"
+            >
+              <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+                <div>
+                  <p className="text-[10px] tracking-[0.28em] uppercase text-[#C9A050]">Cosmedocs</p>
+                  <h2 className="text-white text-lg font-light mt-0.5">Get in touch</h2>
+                </div>
+                <button
+                  onClick={() => setIsExpanded(false)}
+                  aria-label="Close"
+                  className="h-9 w-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/80"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+
+              <div className="px-5 py-5 space-y-2">
+                {/* Chat with AI — primary */}
+                <button
+                  onClick={() => { setIsOpen(true); setIsExpanded(false); setShowTeaser(false); }}
+                  className="w-full flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-violet-600/20 via-fuchsia-500/15 to-rose-500/20 border border-fuchsia-400/30 hover:border-fuchsia-300/60 transition-colors text-left"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 via-fuchsia-500 to-rose-500">
+                    <MessageCircle className="h-5 w-5 text-white" />
+                  </span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-white text-sm font-medium">Ask Cosmedocs AI</span>
+                    <span className="block text-white/60 text-xs mt-0.5">Instant doctor-led answers</span>
+                  </span>
+                </button>
+
+                {/* Research */}
+                <button
+                  onClick={() => { window.dispatchEvent(new Event("open-research-survey")); setIsExpanded(false); }}
+                  className="w-full flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-[#C9A050]/30 hover:border-[#C9A050]/60 transition-colors text-left"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#C9A050]/60 bg-black">
+                    <Sparkles className="h-5 w-5 text-[#C9A050]" />
+                  </span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-white text-sm font-medium">Contribute to research</span>
+                    <span className="block text-white/60 text-xs mt-0.5">Shape aesthetic medicine</span>
+                  </span>
+                </button>
+
+                <div className="pt-3 pb-1">
+                  <p className="text-[10px] tracking-[0.24em] uppercase text-white/40 px-1">Direct contact</p>
+                </div>
+
+                {contactOptions
+                  .filter((o) => o.label !== "Chat")
+                  .map((option) => (
+                    <button
+                      key={option.label}
+                      onClick={option.action}
+                      className="w-full flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-left"
+                    >
+                      <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${option.color}`}>
+                        <option.icon className="h-5 w-5 text-white" />
+                      </span>
+                      <span className="text-white text-sm font-light">{option.label}</span>
+                    </button>
+                  ))}
+              </div>
+
+              <div className="px-5 pb-6 pt-2 text-center">
+                <p className="text-[10px] text-white/30 tracking-wide">
+                  Invisible art. Quiet, never loud.
+                </p>
+              </div>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
+
 
       {/* Auto teaser bubble (positioned bottom-right, independent of rail) */}
       <div className="fixed bottom-4 right-4 z-50 pointer-events-none">
