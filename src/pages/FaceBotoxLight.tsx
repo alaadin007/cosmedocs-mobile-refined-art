@@ -1113,7 +1113,10 @@ export default function FaceBotoxLight() {
             </ExpandableSection>
           </div>
         </section>
+
+        <BotoxPriceBuilder />
       </div>
     </>
   );
 }
+
