@@ -843,6 +843,11 @@ export default function FaceBotox() {
         </div>
 
         {/* ═══════════════════════════════════════════
+            INTERACTIVE PRICE BUILDER
+        ═══════════════════════════════════════════ */}
+        <BotoxPriceBuilder />
+
+        {/* ═══════════════════════════════════════════
             FULL-WIDTH CTA
         ═══════════════════════════════════════════ */}
         <section className="py-20 px-6 bg-gradient-to-b from-neutral-900 to-black">
