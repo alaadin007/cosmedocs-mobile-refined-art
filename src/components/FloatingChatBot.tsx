@@ -84,7 +84,7 @@ const CELLULITE_CONCERNS: ConcernSeed[] = [
   { id: "cell-sessions", label: "How many sessions will I need?", emoji: "📅", bucket: "Body contouring" },
   { id: "cell-vs",       label: "Endolaser vs radiofrequency?",   emoji: "❓", bucket: "Body contouring" },
 ];
-const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
+const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[]; bento?: "antiwrinkle" }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
     topic: "non-surgical nose reshaping",
