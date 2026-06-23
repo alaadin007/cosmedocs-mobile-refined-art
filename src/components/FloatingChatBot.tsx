@@ -8,6 +8,7 @@ import { ScrollArea } from "./ui/scroll-area";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "./ui/use-toast";
 import TypewriterText from "./TypewriterText";
+import BotoxBentoPanel from "./botox/BotoxBentoPanel";
 
 interface Message {
   id: string;
@@ -84,7 +85,7 @@ const CELLULITE_CONCERNS: ConcernSeed[] = [
   { id: "cell-sessions", label: "How many sessions will I need?", emoji: "📅", bucket: "Body contouring" },
   { id: "cell-vs",       label: "Endolaser vs radiofrequency?",   emoji: "❓", bucket: "Body contouring" },
 ];
-const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[] }> = [
+const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener: string; cta: string; concerns?: ConcernSeed[]; bento?: "antiwrinkle" }> = [
   {
     match: /\/treatments\/dermal-fillers\/nose|nose-filler|non-surgical-rhinoplasty/i,
     topic: "non-surgical nose reshaping",
@@ -120,10 +121,11 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
   {
     match: /\/treatments\/botox|anti-wrinkle/i,
     topic: "anti-wrinkle treatment",
-    teaser: "Doctor-led Anti-Wrinkle from £175. Quick question?",
+    teaser: "Doctor-led Anti-Wrinkle from £175. Build your plan.",
     opener: "Hi — our doctor-led Anti-Wrinkle Treatment starts at £175. Tell me your main concern (forehead, frown, crow's feet, or all three) and I'll suggest the best package.",
     cta: "Build my Botox plan",
     concerns: ANTIWRINKLE_CONCERNS,
+    bento: "antiwrinkle" as const,
   },
   {
     match: /endolaser-cellulite|cellulite/i,
@@ -663,7 +665,10 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
                 <div className="w-[60px]" />
               </div>
-
+              {pageConfig.bento === "antiwrinkle" ? (
+                <BotoxBentoPanel compact />
+              ) : (
+              <>
               {/* Hero title — compact */}
               <div className="px-6 pt-4 pb-3">
                 <h2 className="text-[22px] leading-[1.15] font-semibold text-white tracking-tight">
@@ -938,6 +943,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                   Add up to {MAX_IMAGES} photos — analysed in-session, never stored.
                 </p>
               </div>
+              </>
+              )}
             </motion.div>
           </motion.div>
         )}
