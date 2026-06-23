@@ -942,6 +942,8 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                   Add up to {MAX_IMAGES} photos — analysed in-session, never stored.
                 </p>
               </div>
+              </>
+              )}
             </motion.div>
           </motion.div>
         )}
