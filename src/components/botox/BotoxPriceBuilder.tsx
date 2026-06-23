@@ -29,7 +29,6 @@ const SMALL_ADDONS: Area[] = [
 const LARGE_ADDONS: Area[] = [
   { id: "nefertiti", label: "Nefertiti Neck Lift" },
   { id: "turkey", label: "Turkey Neck Bands" },
-  { id: "masseter", label: "Masseter (Jaw Slim)" },
 ];
 
 const MAIN_TIERS: Record<number, number> = { 0: 0, 1: 175, 2: 275, 3: 350 };
