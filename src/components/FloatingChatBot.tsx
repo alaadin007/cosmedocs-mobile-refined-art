@@ -120,10 +120,11 @@ const PAGE_PROMPTS: Array<{ match: RegExp; topic: string; teaser: string; opener
   {
     match: /\/treatments\/botox|anti-wrinkle/i,
     topic: "anti-wrinkle treatment",
-    teaser: "Doctor-led Anti-Wrinkle from £175. Quick question?",
+    teaser: "Doctor-led Anti-Wrinkle from £175. Build your plan.",
     opener: "Hi — our doctor-led Anti-Wrinkle Treatment starts at £175. Tell me your main concern (forehead, frown, crow's feet, or all three) and I'll suggest the best package.",
     cta: "Build my Botox plan",
     concerns: ANTIWRINKLE_CONCERNS,
+    bento: "antiwrinkle" as const,
   },
   {
     match: /endolaser-cellulite|cellulite/i,
