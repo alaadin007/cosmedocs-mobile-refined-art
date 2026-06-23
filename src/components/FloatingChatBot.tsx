@@ -664,7 +664,10 @@ const FloatingChatBot = ({ externalOpen, onExternalOpenChange }: FloatingChatBot
                 </div>
                 <div className="w-[60px]" />
               </div>
-
+              {pageConfig.bento === "antiwrinkle" ? (
+                <BotoxBentoPanel compact />
+              ) : (
+              <>
               {/* Hero title — compact */}
               <div className="px-6 pt-4 pb-3">
                 <h2 className="text-[22px] leading-[1.15] font-semibold text-white tracking-tight">
