@@ -8,6 +8,7 @@ import { ScrollArea } from "./ui/scroll-area";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "./ui/use-toast";
 import TypewriterText from "./TypewriterText";
+import BotoxBentoPanel from "./botox/BotoxBentoPanel";
 
 interface Message {
   id: string;
