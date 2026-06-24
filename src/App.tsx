@@ -95,6 +95,11 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
 const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
 const TMJBotox = lazy(() => import("./pages/TMJBotox"));
+const BotoxVsDysport = lazy(() => import("./pages/comparisons/BotoxVsDysport"));
+const ProfhiloVsSunekos = lazy(() => import("./pages/comparisons/ProfhiloVsSunekos"));
+const PdoThreadsVsHifu = lazy(() => import("./pages/comparisons/PdoThreadsVsHifu"));
+const AskDrHaq = lazy(() => import("./pages/AskDrHaq"));
+const TransparentPricing = lazy(() => import("./pages/TransparentPricing"));
 
 const BroTox = lazy(() => import("./pages/BroTox"));
 const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
