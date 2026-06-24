@@ -95,6 +95,11 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
 const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
 const TMJBotox = lazy(() => import("./pages/TMJBotox"));
+const BotoxVsDysport = lazy(() => import("./pages/comparisons/BotoxVsDysport"));
+const ProfhiloVsSunekos = lazy(() => import("./pages/comparisons/ProfhiloVsSunekos"));
+const PdoThreadsVsHifu = lazy(() => import("./pages/comparisons/PdoThreadsVsHifu"));
+const AskDrHaq = lazy(() => import("./pages/AskDrHaq"));
+const TransparentPricing = lazy(() => import("./pages/TransparentPricing"));
 
 const BroTox = lazy(() => import("./pages/BroTox"));
 const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
@@ -563,6 +568,16 @@ const App = () => {
                           <Route path="/treatments" element={<TreatmentsHub />} />
                           <Route path="/prices" element={<Prices />} />
                           <Route path="/prices/" element={<Prices />} />
+                          <Route path="/botox-vs-dysport" element={<BotoxVsDysport />} />
+                          <Route path="/botox-vs-dysport/" element={<BotoxVsDysport />} />
+                          <Route path="/profhilo-vs-sunekos" element={<ProfhiloVsSunekos />} />
+                          <Route path="/profhilo-vs-sunekos/" element={<ProfhiloVsSunekos />} />
+                          <Route path="/pdo-threads-vs-hifu" element={<PdoThreadsVsHifu />} />
+                          <Route path="/pdo-threads-vs-hifu/" element={<PdoThreadsVsHifu />} />
+                          <Route path="/ask-dr-haq" element={<AskDrHaq />} />
+                          <Route path="/ask-dr-haq/" element={<AskDrHaq />} />
+                          <Route path="/transparent-pricing" element={<TransparentPricing />} />
+                          <Route path="/transparent-pricing/" element={<TransparentPricing />} />
                           <Route path="/our-team" element={<Team />} />
                           <Route path="/our-team/" element={<Team />} />
                           <Route path="/about" element={<Navigate to="/about-us/" replace />} />
