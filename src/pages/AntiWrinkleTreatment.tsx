@@ -141,6 +141,15 @@ export default function AntiWrinkleTreatment() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/treatments/anti-wrinkle-treatment/"
+        headline="Anti-Wrinkle Treatment London — Doctor-Led Botox at Harley Street"
+        description="The proper medical term for Botox. Doctor-led anti-wrinkle treatment at Harley Street since 2007. From £175 single area."
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
+
 
       <div className="bg-[#F5F5F3] overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
