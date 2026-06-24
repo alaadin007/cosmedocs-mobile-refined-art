@@ -80,6 +80,17 @@ export default function HAMakeover() {
           creator: { "@type": "Organization", name: "Cosmedocs" },
           copyrightHolder: { "@type": "Organization", name: "Cosmedocs" }
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is the HA Makeover at Cosmedocs?", "acceptedAnswer": { "@type": "Answer", "text": "The HA Makeover is our signature multi-point hyaluronic acid filler treatment that rebalances the face in a single session — typically combining cheek, jawline, chin, tear-trough and lip areas for a lifted, refreshed result." } },
+            { "@type": "Question", "name": "How long does the HA Makeover last?", "acceptedAnswer": { "@type": "Answer", "text": "Results typically last 12-18 months depending on the filler used, areas treated and individual metabolism. Annual top-ups maintain the result." } },
+            { "@type": "Question", "name": "How much does a Full Face HA Makeover cost in London?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on the number of syringes used. The 8-point lift starts from £1,200 and the full 11-point Makeover from £1,800 at our Harley Street clinic." } },
+            { "@type": "Question", "name": "Is the HA Makeover painful?", "acceptedAnswer": { "@type": "Answer", "text": "Discomfort is minimal. We use topical anaesthetic and fillers containing lidocaine. Most patients describe it as a brief pinch or pressure." } },
+            { "@type": "Question", "name": "Who performs the HA Makeover?", "acceptedAnswer": { "@type": "Answer", "text": "All HA Makeovers at Cosmedocs are performed by GMC-registered doctors led by Dr Ahmed Haq, with over 17 years of facial-balancing experience." } }
+          ]
+        })}</script>
       </Helmet>
 
       

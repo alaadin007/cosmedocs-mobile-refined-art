@@ -173,6 +173,17 @@ const DermalFillerAreas = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Which areas can be treated with dermal fillers at Cosmedocs?", "acceptedAnswer": { "@type": "Answer", "text": "We treat lips, cheeks, jawline, chin, tear troughs, temples, nose (non-surgical rhinoplasty), nasolabial folds, marionette lines, smile lines and earlobes using premium hyaluronic acid fillers." } },
+            { "@type": "Question", "name": "How long do dermal fillers last?", "acceptedAnswer": { "@type": "Answer", "text": "Lip fillers typically last 6-12 months; cheek, jawline and chin fillers last 12-24 months. Longevity depends on the product, area treated and individual metabolism." } },
+            { "@type": "Question", "name": "Are dermal fillers safe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, when administered by GMC-registered doctors. At Cosmedocs all fillers are performed by qualified medical practitioners and are fully reversible using hyaluronidase if required." } },
+            { "@type": "Question", "name": "How much do dermal fillers cost in London?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing starts from £250 per ml at our Harley Street clinic, with multi-area packages and the HA Makeover offering better value for full-face rebalancing." } },
+            { "@type": "Question", "name": "Is there any downtime after dermal filler treatment?", "acceptedAnswer": { "@type": "Answer", "text": "Downtime is minimal. Mild swelling or bruising can occur for 24-72 hours. Most patients return to normal activities the same day." } }
+          ]
+        })}</script>
       </Helmet>
 
       <div className="bg-black text-white">
