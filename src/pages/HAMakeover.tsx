@@ -93,6 +93,14 @@ export default function HAMakeover() {
           ]
         })}</script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/ha-makeover/"
+        headline={`HA Makeover — Full-Face Hyaluronic Acid Rejuvenation`}
+        description={`8 to 11-point HA makeover by Cosmedocs — invisible, natural full-face rejuvenation by GMC-registered doctors on Harley Street.`}
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
 
       
 

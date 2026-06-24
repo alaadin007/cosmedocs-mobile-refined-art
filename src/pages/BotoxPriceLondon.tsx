@@ -87,6 +87,14 @@ const BotoxPriceLondon = () => {
           })}
         </script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/botox-price-london/"
+        headline={`Botox Prices London — Transparent Pricing from £175`}
+        description={`Honest Botox pricing across London — Harley Street, Central & outer boroughs compared. Doctor-led from £175.`}
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
 
       <div className="min-h-screen bg-[#0A0A0A]">
         <Breadcrumb items={[

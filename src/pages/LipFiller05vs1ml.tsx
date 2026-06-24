@@ -95,6 +95,14 @@ const LipFiller05vs1ml = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/lip-filler-0-5ml-vs-1ml/"
+        headline={`Lip Filler: 0.5ml vs 1ml — Which Is Right for You?`}
+        description={`0.5ml vs 1ml of lip filler — natural enhancement compared. Photos, volume guidance & doctor-led lip filler on Harley Street.`}
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
 
       <div className="min-h-screen bg-black">
         {/* Hero */}
