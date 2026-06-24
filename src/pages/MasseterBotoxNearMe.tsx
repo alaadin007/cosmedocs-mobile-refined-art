@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import MedicalArticleSchema from '@/components/seo/MedicalArticleSchema';
 import { Link } from "react-router-dom";
 import { AlertTriangle, MapPin, Syringe, ShieldCheck, Stethoscope, Award, ArrowRight, CheckCircle2, XCircle, Train } from "lucide-react";
 
