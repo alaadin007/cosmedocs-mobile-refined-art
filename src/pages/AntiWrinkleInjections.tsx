@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import MedicalArticleSchema from '@/components/seo/MedicalArticleSchema';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -56,6 +57,14 @@ export default function AntiWrinkleInjections() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/treatments/anti-wrinkle-injections/"
+        headline={`Anti-Wrinkle Injections London — Doctor-Led Botox at Harley Street`}
+        description={`Anti-wrinkle injections in London by GMC-registered doctors. From £175 — natural, expressive results since 2007.`}
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
 
       <div className="bg-[#F5F5F3] overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

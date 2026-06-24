@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import MedicalArticleSchema from '@/components/seo/MedicalArticleSchema';
 import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -185,6 +186,14 @@ const DermalFillerAreas = () => {
           ]
         })}</script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/dermal-filler-areas/"
+        headline={`Dermal Filler Areas — Where Filler Works (and Where It Doesn't)`}
+        description={`An honest guide to dermal filler treatment areas — lips, cheeks, jawline, chin, tear troughs. Doctor-led, ethical filler medicine.`}
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
 
       <div className="bg-black text-white">
         {/* Hero Banner Section */}

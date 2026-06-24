@@ -1154,6 +1154,58 @@ function normalisePath(path: string): string {
   return path.endsWith('/') ? path : path + '/';
 }
 
+// AI crawler / LLM user-agents — when detected we inject a rich content block
+// directly inside the HTML body so they see real text instead of an empty
+// React root. Real users still get the full JS app.
+const AI_BOT_UA = /(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|CCBot|cohere-ai|Bytespider|Meta-ExternalAgent|YouBot|Diffbot|DuckAssistBot|MistralAI-User)/i;
+
+function escapeHtml(s: string): string {
+  return s.replace(/[&<>"']/g, (c) => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string
+  ));
+}
+
+function buildBotContent(path: string, meta: { title: string; description: string }): string {
+  const h1 = escapeHtml(meta.title.split('|')[0].trim());
+  const desc = escapeHtml(meta.description);
+  const canonical = `https://www.cosmedocs.com${path}`;
+  return `
+<section id="ai-crawler-content" style="font-family:Georgia,serif;max-width:760px;margin:2rem auto;padding:1rem;color:#111">
+  <nav aria-label="Breadcrumb" style="font-size:0.85rem;color:#555;margin-bottom:1rem">
+    <a href="/">Cosmedocs</a> · <a href="/treatments/">Treatments</a> · <span>${h1}</span>
+  </nav>
+  <h1 style="font-size:2rem;line-height:1.2;margin:0 0 1rem">${h1}</h1>
+  <p style="font-size:1.05rem;line-height:1.6;margin:0 0 1.25rem">${desc}</p>
+  <p style="font-size:1rem;line-height:1.6;margin:0 0 1.25rem">
+    Cosmedocs is a doctor-led aesthetic medicine clinic at 8–10 Harley Street, London W1G 9PF.
+    Founded in 2007 by Dr Ahmed Haq (GMC registered), the practice is recognised for invisible,
+    natural-result injectables, regenerative skin medicine and combination facial rejuvenation.
+    All injectable and prescription treatments are performed by GMC-registered medical doctors
+    in partnership with PrivaDr Ltd, 10 Harley Street (CQC registered) for CQC-required care.
+  </p>
+  <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem">Useful starting points</h2>
+  <ul style="line-height:1.8;margin:0 0 1.25rem;padding-left:1.25rem">
+    <li><a href="/about-us/">About Cosmedocs &amp; Dr Ahmed Haq</a></li>
+    <li><a href="/treatments/">All treatments</a></li>
+    <li><a href="/treatments/botox/">Anti-wrinkle treatment (Botox)</a></li>
+    <li><a href="/dermal-fillers/">Dermal fillers</a></li>
+    <li><a href="/skin-rejuvenation/">Skin rejuvenation</a></li>
+    <li><a href="/before-after-gallery/">Before &amp; after gallery</a></li>
+    <li><a href="/prices/">Pricing</a></li>
+    <li><a href="/contact/">Contact &amp; Harley Street directions</a></li>
+  </ul>
+  <p style="font-size:0.9rem;color:#555;margin:1.5rem 0 0">
+    Canonical URL: <a href="${canonical}">${canonical}</a> · Telephone: 0333 0551 503 ·
+    Email: info@cosmedocs.com
+  </p>
+  <blockquote style="font-style:italic;border-left:3px solid #C9A050;padding:0.5rem 1rem;margin:1.5rem 0;color:#333">
+    "The most successful cosmetic treatment isn't the one that changes a face the most.
+    It's the one that helps a person feel more aligned with the image they already had of themselves."
+    <footer style="font-style:normal;font-size:0.85rem;margin-top:0.5rem">— Dr Ahmed Haq, Medical Director, Cosmedocs</footer>
+  </blockquote>
+</section>`;
+}
+
 export default async function handler(request: Request, context: any) {
   const url = new URL(request.url);
   const rawPath = url.pathname;
@@ -1174,10 +1226,12 @@ export default async function handler(request: Request, context: any) {
   }
 
   const path = normalisePath(rawPath);
-
-  // Check meta BEFORE fetching origin — if no match, pass through without buffering
   const meta = PAGE_META[path];
-  if (!meta) {
+  const ua = request.headers.get('user-agent') || '';
+  const isBot = AI_BOT_UA.test(ua);
+
+  // Fast pass-through: no meta entry AND not a bot — nothing to do.
+  if (!meta && !isBot) {
     return context.next();
   }
 
@@ -1191,32 +1245,38 @@ export default async function handler(request: Request, context: any) {
 
   let html = await response.text();
 
-  // Build replacement strings once
-  const titleTag = `<title>${meta.title}</title>`;
-  const descTag = `<meta name="description" content="${meta.description}" />`;
-  const canonicalUrl = `https://www.cosmedocs.com${path}`;
-  const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" data-rh="true" />`;
+  if (meta) {
+    // Build replacement strings once
+    const titleTag = `<title>${meta.title}</title>`;
+    const descTag = `<meta name="description" content="${meta.description}" />`;
+    const canonicalUrl = `https://www.cosmedocs.com${path}`;
+    const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" data-rh="true" />`;
 
-  // Single-pass replacements using pre-compiled patterns
-  html = html.replace(/<title>[\s\S]*?<\/title>/i, titleTag);
+    html = html.replace(/<title>[\s\S]*?<\/title>/i, titleTag);
+    html = html.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/gi, '');
+    html = html.replace(titleTag, `${titleTag}\n    ${descTag}`);
+    html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>/gi, '');
+    html = html.replace('</head>', `  ${canonicalTag}\n</head>`);
+  }
 
-  // Strip ALL existing description meta tags (handles self-closing, no-slash,
-  // single/double quotes, and any stray copies) — then inject the canonical one
-  // immediately after the title to guarantee Google sees it first.
-  html = html.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/gi, '');
-  html = html.replace(titleTag, `${titleTag}\n    ${descTag}`);
-
-  // Same for canonical — strip then insert (prevents duplicate canonicals
-  // when Helmet also ships one client-side)
-  html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>/gi, '');
-  html = html.replace('</head>', `  ${canonicalTag}\n</head>`);
+  // Inject prerendered content block for AI crawlers — gives GPTBot/ClaudeBot/
+  // PerplexityBot real, citeable copy without affecting the live React app for
+  // human users (the block sits before #root and is overwritten on hydration).
+  if (isBot && meta) {
+    const botBlock = buildBotContent(path, meta);
+    html = html.replace('<div id="root">', `${botBlock}\n<div id="root">`);
+  }
 
   const headers = new Headers(response.headers);
-  headers.set('x-edge-meta', '1');
+  headers.set('x-edge-meta', meta ? '1' : '0');
+  if (isBot) headers.set('x-edge-bot-content', '1');
   // Cache HTML for 60s at CDN level, revalidate in background
   if (!headers.has('cache-control')) {
     headers.set('cache-control', 'public, s-maxage=60, stale-while-revalidate=300');
   }
+  // Vary on UA so bot HTML doesn't get served to humans (and vice-versa)
+  const existingVary = headers.get('vary');
+  headers.set('vary', existingVary ? `${existingVary}, User-Agent` : 'User-Agent');
 
   return new Response(html, {
     status: response.status,

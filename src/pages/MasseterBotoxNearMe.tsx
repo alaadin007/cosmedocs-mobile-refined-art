@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import MedicalArticleSchema from '@/components/seo/MedicalArticleSchema';
 import { Link } from "react-router-dom";
 import { AlertTriangle, MapPin, Syringe, ShieldCheck, Stethoscope, Award, ArrowRight, CheckCircle2, XCircle, Train } from "lucide-react";
 
@@ -75,6 +76,14 @@ export default function MasseterBotoxNearMe() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(medicalSchema)}</script>
       </Helmet>
+      <MedicalArticleSchema
+        path="/treatments/masseter-botox-near-me/"
+        headline={`Masseter Botox Near Me — Jawline Slimming & Bruxism Relief`}
+        description={`Masseter botox at Harley Street — slim the jawline and stop teeth grinding. Doctor-led, GMC-registered, from £350.`}
+        datePublished="2024-01-15"
+        dateModified="2026-06-24"
+        speakableSelectors={["h1", ".speakable", "[data-speakable]"]}
+      />
 
       {/* HERO */}
       <section className="relative overflow-hidden py-20 md:py-28 px-4 sm:px-6">
