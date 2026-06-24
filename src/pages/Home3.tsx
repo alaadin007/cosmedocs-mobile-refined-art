@@ -71,6 +71,7 @@ import brotoxImg from "@/assets/brotox-mens-botox.jpg";
 import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 import heroHarleyStreet from "@/assets/hero/harley-street-cosmedocs.jpg";
 import heroMaleTreatment from "@/assets/hero/cosmedocs-male-treatment.jpg";
+import DrAhmedQuote from "@/components/DrAhmedQuote";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
@@ -2665,6 +2666,10 @@ const Home3 = () => {
               Book consultation
             </Link>
           </div>
+        </section>
+
+        <section className="px-5 sm:px-8 py-12 border-t border-white/[0.06]">
+          <DrAhmedQuote />
         </section>
 
         <footer className="border-t border-white/10 py-10 px-5 sm:px-8">

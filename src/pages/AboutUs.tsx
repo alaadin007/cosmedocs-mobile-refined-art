@@ -11,6 +11,7 @@ import AboutTrustSignals from '@/components/about/AboutTrustSignals';
 import AboutHospitalAffiliations from '@/components/about/AboutHospitalAffiliations';
 import AboutCTA from '@/components/about/AboutCTA';
 import AboutAward from '@/components/about/AboutAward';
+import DrAhmedQuote from '@/components/DrAhmedQuote';
 
 const AboutUs = () => {
   const seoData = generateSEOMetadata(
@@ -192,6 +193,10 @@ const AboutUs = () => {
             is meticulously evaluated for safety and efficacy, with minimally invasive procedures 
             like dermal fillers and Botox ensuring remarkable results with minimal downtime.
           </p>
+
+          <div className="mt-10 pt-8 border-t border-neutral-200">
+            <DrAhmedQuote tone="light" />
+          </div>
 
       </div>
       </div>

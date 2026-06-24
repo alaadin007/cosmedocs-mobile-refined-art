@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Award, Stethoscope, ArrowRight, MapPin } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import TreatmentPaymentInfo from '@/components/TreatmentPaymentInfo';
+import DrAhmedQuote from '@/components/DrAhmedQuote';
 
 const CANONICAL = 'https://www.cosmedocs.com/treatments/anti-wrinkle-treatment/';
 
@@ -306,6 +307,10 @@ export default function AntiWrinkleTreatment() {
               <Link to="/about/" className="text-sm text-[#C9A050] hover:underline">About our doctors →</Link>
             </div>
           </div>
+        </section>
+
+        <section className="py-10 px-4 bg-white">
+          <DrAhmedQuote tone="light" />
         </section>
 
         <TreatmentPaymentInfo variant="light" />
