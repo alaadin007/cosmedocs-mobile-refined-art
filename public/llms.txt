@@ -97,3 +97,17 @@ Cosmedocs is a doctor-led (not injector-led) clinic specialising in anti-wrinkle
 - [Media & News](https://www.cosmedocs.com/media-news/): Press coverage.
 - [Training](https://www.cosmedocs.com/training/): Smart Aesthetics curriculum for healthcare professionals.
 - [Skincare Shop](https://www.cosmedocs.com/shop/): Revitalise C20, Retinol+, three-cell skincare.
+
+## Comparisons (doctor-written "vs" guides)
+
+- [Botox vs Dysport](https://www.cosmedocs.com/botox-vs-dysport/): Onset, spread, dosing, longevity — doctor's honest comparison.
+- [Profhilo vs Sunekos](https://www.cosmedocs.com/profhilo-vs-sunekos/): Bio-remodellers compared by mechanism, target zone and protocol.
+- [PDO Threads vs HIFU](https://www.cosmedocs.com/pdo-threads-vs-hifu/): Non-surgical lifting compared — mechanical lift vs ultrasound tightening.
+
+## Direct Doctor Q&A
+
+- [Ask Dr Haq](https://www.cosmedocs.com/ask-dr-haq/): Direct answers from Medical Director Dr Ahmed Haq on Botox, filler, skin, recovery, choosing a clinic.
+
+## Transparent pricing
+
+- [Transparent Pricing 2026](https://www.cosmedocs.com/transparent-pricing/): Concrete prices (not "from £X") for every treatment offered — Offer schema, machine-readable.
