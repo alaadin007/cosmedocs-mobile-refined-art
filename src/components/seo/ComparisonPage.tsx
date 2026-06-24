@@ -68,7 +68,7 @@ const ComparisonPage = ({
           <Breadcrumb
             items={[{ label: "Education", path: "/treatments" }]}
             currentPage={`${optionA} vs ${optionB}`}
-            variant="light"
+           
           />
         </div>
 
@@ -148,7 +148,7 @@ const ComparisonPage = ({
             <p className="text-gray-700 leading-relaxed">{bottomLine}</p>
           </section>
 
-          <DrAhmedQuote variant="light" />
+          <DrAhmedQuote />
 
           {/* FAQs */}
           <section className="mb-12">
