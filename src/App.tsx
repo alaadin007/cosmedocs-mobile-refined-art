@@ -568,6 +568,16 @@ const App = () => {
                           <Route path="/treatments" element={<TreatmentsHub />} />
                           <Route path="/prices" element={<Prices />} />
                           <Route path="/prices/" element={<Prices />} />
+                          <Route path="/botox-vs-dysport" element={<BotoxVsDysport />} />
+                          <Route path="/botox-vs-dysport/" element={<BotoxVsDysport />} />
+                          <Route path="/profhilo-vs-sunekos" element={<ProfhiloVsSunekos />} />
+                          <Route path="/profhilo-vs-sunekos/" element={<ProfhiloVsSunekos />} />
+                          <Route path="/pdo-threads-vs-hifu" element={<PdoThreadsVsHifu />} />
+                          <Route path="/pdo-threads-vs-hifu/" element={<PdoThreadsVsHifu />} />
+                          <Route path="/ask-dr-haq" element={<AskDrHaq />} />
+                          <Route path="/ask-dr-haq/" element={<AskDrHaq />} />
+                          <Route path="/transparent-pricing" element={<TransparentPricing />} />
+                          <Route path="/transparent-pricing/" element={<TransparentPricing />} />
                           <Route path="/our-team" element={<Team />} />
                           <Route path="/our-team/" element={<Team />} />
                           <Route path="/about" element={<Navigate to="/about-us/" replace />} />
