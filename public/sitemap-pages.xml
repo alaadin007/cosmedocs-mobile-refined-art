@@ -4,87 +4,63 @@
 
   <url>
     <loc>https://www.cosmedocs.com/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.com/treatments/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/prices/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/about-us/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.cosmedocs.com/about/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/contact/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/our-team/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/our-team/dr-ahmed-haq/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/our-team/dr-hena-haq/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/our-team/laerta-aesthetician/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.com/our-team/dr-hassan-mirza/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.cosmedocs.com/medical-skincare/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.com/our-team/dr-noor-hotaki/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.cosmedocs.com/safety/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -92,328 +68,39 @@
 
   <url>
     <loc>https://www.cosmedocs.com/testimonials/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.com/harley-street-consulting-rooms/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/private-gp-doctor/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.cosmedocs.com/contact/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.com/membership/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/partners/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/partnerships/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/fellowship-invitation/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/training/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.cosmedocs.com/book-consultation/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/aesthetics-at-a-glance/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/aesthetic-intelligence/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/aesthetic-treatments-made-easy/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/medical-student-work-experience/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/arabic-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/chinese-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/japanese-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/swedish-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/norwegian-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/finnish-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/german-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/french-patients/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/concerns/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/medical/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/safety/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/botox-faqs/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/ultimate-botox-guide/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/media-news/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/botox-cost-uk/</loc>
-    <lastmod>2026-03-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/botox-units-explained/</loc>
-    <lastmod>2026-03-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/how-long-does-botox-last/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/cheap-botox-vs-expensive/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/botox-price-london/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/botox-vs-dysport/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/profhilo-vs-sunekos/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/pdo-threads-vs-hifu/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/ask-dr-haq/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/transparent-pricing/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <mobile:mobile/>
-  </url>
-
-
-  <url>
-    <loc>https://www.cosmedocs.com/shop/</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/shop/vitamin-c-serum/</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/shop/retinol-cream/</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/research/</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/research/why-patients-choose-aesthetic-treatments/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -421,10 +108,9 @@
 
   <url>
     <loc>https://www.cosmedocs.com/research/filtered-face-project/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
-
 </urlset>

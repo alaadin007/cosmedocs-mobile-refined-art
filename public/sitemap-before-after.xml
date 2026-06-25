@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
@@ -12,15 +12,7 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/botox/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/botox/masseter/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -28,31 +20,15 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/dermal-fillers/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/dermal-fillers/lips/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/dermal-fillers/nose/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -60,15 +36,15 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/dermal-fillers/jawline/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
 
   <url>
-    <loc>https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.cosmedocs.com/before-after/dermal-fillers/cheeks/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -76,7 +52,7 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/dermal-fillers/chin/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -84,7 +60,23 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/dermal-fillers/temples/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/before-after/dermal-fillers/tear-trough/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/before-after/dermal-fillers/nose/</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -92,7 +84,7 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/dermal-fillers/full-face-makeover/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -100,7 +92,7 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/skin-rejuvenation/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -108,7 +100,7 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/skin-rejuvenation/polynucleotides/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -116,74 +108,9 @@
 
   <url>
     <loc>https://www.cosmedocs.com/before-after/laser-hair-removal/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/lip-filler-subtle/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/marionette-lines-filler/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/cheek-filler-mid-face/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/under-eye-tear-trough/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/jawline-filler-male/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/non-surgical-nose-job-photo-faq/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/chin-profile-balance/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://www.cosmedocs.com/before-after/filler-correction-dissolved/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile/>
-  </url>
-
 </urlset>
