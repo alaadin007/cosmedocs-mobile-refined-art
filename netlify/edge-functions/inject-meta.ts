@@ -1283,6 +1283,17 @@ export default async function handler(request: Request, context: any) {
   const existingVary = headers.get('vary');
   headers.set('vary', existingVary ? `${existingVary}, User-Agent` : 'User-Agent');
 
+  // Preview / non-canonical hosts: hard noindex via header AND meta tag so
+  // Google never indexes lovable.app or netlify.app mirrors of the site.
+  if (isNonCanonicalHost) {
+    headers.set('x-robots-tag', 'noindex, nofollow');
+    if (!/<meta\s+name=["']robots["']/i.test(html)) {
+      html = html.replace('</head>', '  <meta name="robots" content="noindex, nofollow" />\n</head>');
+    } else {
+      html = html.replace(/<meta\s+name=["']robots["'][^>]*>/i, '<meta name="robots" content="noindex, nofollow" />');
+    }
+  }
+
   return new Response(html, {
     status: response.status,
     headers,
