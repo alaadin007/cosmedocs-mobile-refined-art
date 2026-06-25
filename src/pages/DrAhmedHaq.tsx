@@ -128,18 +128,68 @@ const DrAhmedHaq = () => {
       {
         "@type": "ScholarlyArticle",
         "name": "Investigating Gender Differences in Canadian Plastic Surgery Online Patient Education",
-        "author": "Chawla S, Mazhar L, Ding J, Faheem S, Haq AF, Khosa F",
-        "isPartOf": { "@type": "Periodical", "name": "Aesthetic Surgery Journal" },
-        "datePublished": "2022",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+        "author": [
+          { "@type": "Person", "name": "Chawla S" },
+          { "@type": "Person", "name": "Mazhar L" },
+          { "@type": "Person", "name": "Ding J" },
+          { "@type": "Person", "name": "Faheem S" },
+          { "@type": "Person", "name": "Haq AF" },
+          { "@type": "Person", "name": "Khosa F" }
+        ],
+        "isPartOf": {
+          "@type": "PublicationIssue",
+          "issueNumber": "9",
+          "datePublished": "2022-08-24",
+          "isPartOf": {
+            "@type": "PublicationVolume",
+            "volumeNumber": "42",
+            "isPartOf": { "@type": "Periodical", "name": "Aesthetic Surgery Journal", "issn": ["1090-820X", "1527-330X"] }
+          }
+        },
+        "pageStart": "1097",
+        "pageEnd": "1102",
+        "datePublished": "2022-08-24",
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "PMID", "value": "35429383" },
+          { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1093/asj/sjac094" }
+        ],
+        "sameAs": [
+          "https://pubmed.ncbi.nlm.nih.gov/35429383/",
+          "https://doi.org/10.1093/asj/sjac094"
+        ],
+        "url": "https://doi.org/10.1093/asj/sjac094"
       },
       {
         "@type": "ScholarlyArticle",
         "name": "Disparities in pediatric clinical trials for acne vulgaris: A cross-sectional study",
-        "author": "Ding J, Haq AF, Joseph M, Khosa F",
-        "isPartOf": { "@type": "Periodical", "name": "Journal of the American Academy of Dermatology" },
-        "datePublished": "2022",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=khosa+f%2C+haq"
+        "author": [
+          { "@type": "Person", "name": "Ding J" },
+          { "@type": "Person", "name": "Haq AF" },
+          { "@type": "Person", "name": "Joseph M" },
+          { "@type": "Person", "name": "Khosa F" }
+        ],
+        "isPartOf": {
+          "@type": "PublicationIssue",
+          "issueNumber": "2",
+          "datePublished": "2022-08",
+          "isPartOf": {
+            "@type": "PublicationVolume",
+            "volumeNumber": "87",
+            "isPartOf": { "@type": "Periodical", "name": "Journal of the American Academy of Dermatology", "issn": ["0190-9622", "1097-6787"] }
+          }
+        },
+        "pageStart": "464",
+        "pageEnd": "466",
+        "datePublished": "2022-08",
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "PMID", "value": "34678233" },
+          { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.jaad.2021.10.013" }
+        ],
+        "sameAs": [
+          "https://pubmed.ncbi.nlm.nih.gov/34678233/",
+          "https://doi.org/10.1016/j.jaad.2021.10.013"
+        ],
+        "url": "https://doi.org/10.1016/j.jaad.2021.10.013"
       }
     ]
   };
