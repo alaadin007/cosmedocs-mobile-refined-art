@@ -1209,6 +1209,11 @@ function buildBotContent(path: string, meta: { title: string; description: strin
 export default async function handler(request: Request, context: any) {
   const url = new URL(request.url);
   const rawPath = url.pathname;
+  const host = url.hostname;
+  // Anything that isn't our canonical apex/www host is a preview/staging
+  // surface (lovable.app, netlify.app, deploy-preview-*). Block indexing
+  // to prevent duplicate-content dilution on the real domain.
+  const isNonCanonicalHost = host !== 'www.cosmedocs.com' && host !== 'cosmedocs.com';
 
   // Skip asset requests entirely — fast path, no context.next()
   if (/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|otf|json|xml|txt|mp4|webm|webp)$/i.test(rawPath)) {
