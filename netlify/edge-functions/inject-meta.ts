@@ -1209,6 +1209,11 @@ function buildBotContent(path: string, meta: { title: string; description: strin
 export default async function handler(request: Request, context: any) {
   const url = new URL(request.url);
   const rawPath = url.pathname;
+  const host = url.hostname;
+  // Anything that isn't our canonical apex/www host is a preview/staging
+  // surface (lovable.app, netlify.app, deploy-preview-*). Block indexing
+  // to prevent duplicate-content dilution on the real domain.
+  const isNonCanonicalHost = host !== 'www.cosmedocs.com' && host !== 'cosmedocs.com';
 
   // Skip asset requests entirely — fast path, no context.next()
   if (/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|otf|json|xml|txt|mp4|webm|webp)$/i.test(rawPath)) {
@@ -1230,8 +1235,8 @@ export default async function handler(request: Request, context: any) {
   const ua = request.headers.get('user-agent') || '';
   const isBot = AI_BOT_UA.test(ua);
 
-  // Fast pass-through: no meta entry AND not a bot — nothing to do.
-  if (!meta && !isBot) {
+  // Fast pass-through: no meta entry, not a bot, and canonical host — nothing to do.
+  if (!meta && !isBot && !isNonCanonicalHost) {
     return context.next();
   }
 
@@ -1277,6 +1282,17 @@ export default async function handler(request: Request, context: any) {
   // Vary on UA so bot HTML doesn't get served to humans (and vice-versa)
   const existingVary = headers.get('vary');
   headers.set('vary', existingVary ? `${existingVary}, User-Agent` : 'User-Agent');
+
+  // Preview / non-canonical hosts: hard noindex via header AND meta tag so
+  // Google never indexes lovable.app or netlify.app mirrors of the site.
+  if (isNonCanonicalHost) {
+    headers.set('x-robots-tag', 'noindex, nofollow');
+    if (!/<meta\s+name=["']robots["']/i.test(html)) {
+      html = html.replace('</head>', '  <meta name="robots" content="noindex, nofollow" />\n</head>');
+    } else {
+      html = html.replace(/<meta\s+name=["']robots["'][^>]*>/i, '<meta name="robots" content="noindex, nofollow" />');
+    }
+  }
 
   return new Response(html, {
     status: response.status,
