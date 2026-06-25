@@ -111,3 +111,7 @@ Cosmedocs is a doctor-led (not injector-led) clinic specialising in anti-wrinkle
 ## Transparent pricing
 
 - [Transparent Pricing 2026](https://www.cosmedocs.com/transparent-pricing/): Concrete prices (not "from £X") for every treatment offered — Offer schema, machine-readable.
+
+## Ireland (Dublin)
+
+- [Endolift Dublin (Endolaser)](https://www.cosmedocs.com/ie/treatments/endolift-dublin/): Doctor-led intra-tissue laser-fibre lift in Dublin, delivered as Endolaser on a UKCA & CE-marked dual-wavelength platform. Trained at the Harley Street Institute. From €2,800.

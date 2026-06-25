@@ -258,6 +258,7 @@ const MasseterBotoxUnitsDosage = lazy(() => import("./pages/MasseterBotoxUnitsDo
 const MasseterBotoxNearMe = lazy(() => import("./pages/MasseterBotoxNearMe"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
+const EndoliftDublin = lazy(() => import("./pages/ie/EndoliftDublin"));
 const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
 const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
 const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
@@ -1099,6 +1100,10 @@ const App = () => {
                           <Route path="/russian-lips-vs-classic-lip-filler/" element={<RussianLipsVsClassic />} />
                           <Route path="/treatments/endolift-london" element={<EndoliftLondon />} />
                           <Route path="/treatments/endolift-london/" element={<EndoliftLondon />} />
+                          <Route path="/ie/treatments/endolift-dublin" element={<EndoliftDublin />} />
+                          <Route path="/ie/treatments/endolift-dublin/" element={<EndoliftDublin />} />
+                          <Route path="/ie/treatments/endolaser-dublin" element={<EndoliftDublin />} />
+                          <Route path="/ie/treatments/endolaser-dublin/" element={<EndoliftDublin />} />
                           {/* Phase 3b — Endolift sub-cluster (Dr Hass response) */}
                           <Route path="/treatments/endolift-london/safety" element={<EndoliftSafety />} />
                           <Route path="/treatments/endolift-london/safety/" element={<EndoliftSafety />} />
