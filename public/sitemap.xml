@@ -16,4 +16,8 @@
     <loc>https://www.cosmedocs.com/sitemap-blog.xml</loc>
     <lastmod>2026-06-25</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-ie.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
 </sitemapindex>
