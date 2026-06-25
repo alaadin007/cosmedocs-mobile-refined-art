@@ -1235,8 +1235,8 @@ export default async function handler(request: Request, context: any) {
   const ua = request.headers.get('user-agent') || '';
   const isBot = AI_BOT_UA.test(ua);
 
-  // Fast pass-through: no meta entry AND not a bot — nothing to do.
-  if (!meta && !isBot) {
+  // Fast pass-through: no meta entry, not a bot, and canonical host — nothing to do.
+  if (!meta && !isBot && !isNonCanonicalHost) {
     return context.next();
   }
 
