@@ -36,6 +36,7 @@ const AboutUsGerman = lazy(() => import("./pages/AboutUsGerman"));
 const Home = lazy(() => import("./pages/Home"));
 const Home2 = lazy(() => import("./pages/Home2"));
 const Home3 = lazy(() => import("./pages/Home3"));
+const Home10 = lazy(() => import("./pages/Home10"));
 const TestApp = lazy(() => import("./pages/TestApp"));
 const MasseterM2 = lazy(() => import("./pages/MasseterM2"));
 
@@ -414,8 +415,13 @@ const App = () => {
                     <Suspense fallback={<PageLoader />}>
                       <Home2 />
                     </Suspense>
-                  } />
-                  <Route path="/testapp" element={
+                   } />
+                   <Route path="/home10" element={
+                     <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+                       <Home10 />
+                     </Suspense>
+                   } />
+                   <Route path="/testapp" element={
                     <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
                       <TestApp />
                     </Suspense>
