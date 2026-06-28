@@ -68,7 +68,7 @@ const decades: Record<
     subline:
       "Volume migrates, skin loosens, the jawline softens. This decade is about rebuilding architecture — not chasing wrinkles.",
     satellites: [
-      { label: "Cheek Filler", href: "/treatments/cheek-filler/", icon: Smile, blurb: "2–4ml zygomatic rebuild to lift the midface and soften nasolabial." },
+      { label: "Cheek Filler", href: "/treatments/cheek-filler/", icon: Smile, blurb: "In your 40s the zygomatic bone quietly resorbs and the deep medial cheek fat shrinks — the midface flattens, the nasolabial fold deepens, and the lower lid looks tired. We replace that lost architecture with soft hyaluronic acid filler placed deep on bone. It feels natural, lasts 12–18 months, and is completely safe and dissolvable should you ever wish to reverse it." },
       { label: "Tear Trough", href: "/treatments/tear-trough-filler/", icon: Eye, blurb: "Often combined with cheek support for a true under-eye reset." },
       { label: "RF Microneedling", href: "/treatments/morpheus8/", icon: Zap, blurb: "Morpheus8 for skin tightening at 2–3mm on cheeks and lower face." },
       { label: "Profhilo", href: "/treatments/profhilo/", icon: Droplets, blurb: "Maintains hydration and bounce as natural HA production drops." },
