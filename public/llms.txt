@@ -49,6 +49,7 @@ Cosmedocs is a doctor-led (not injector-led) clinic specialising in anti-wrinkle
 - [Microneedling](https://www.cosmedocs.com/treatments/microneedling/): Collagen induction therapy.
 - [Chemical Peels](https://www.cosmedocs.com/treatments/chemical-peels/): Skin-specialist-led medical peels.
 - [PDO Threads](https://www.cosmedocs.com/treatments/pdo-threads/): Cog and mono thread lifting.
+- [Scar Repair — ScarTox](https://www.cosmedocs.com/treatments/scar-repair-scartox/): Multi-modality scar softening (botulinum, microneedling, polynucleotides) for tummy tuck, C-section, mommy makeover and breast scars. From £250.
 
 ## Treatments — Lasers
 
