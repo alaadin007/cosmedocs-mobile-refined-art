@@ -260,6 +260,7 @@ const MasseterBotoxNearMe = lazy(() => import("./pages/MasseterBotoxNearMe"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
 const EndoliftDublin = lazy(() => import("./pages/ie/EndoliftDublin"));
+const ScarRepairScarTox = lazy(() => import("./pages/ScarRepairScarTox"));
 const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
 const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
 const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
