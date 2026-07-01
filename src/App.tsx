@@ -260,6 +260,7 @@ const MasseterBotoxNearMe = lazy(() => import("./pages/MasseterBotoxNearMe"));
 const RussianLipsVsClassic = lazy(() => import("./pages/RussianLipsVsClassic"));
 const EndoliftLondon = lazy(() => import("./pages/EndoliftLondon"));
 const EndoliftDublin = lazy(() => import("./pages/ie/EndoliftDublin"));
+const ScarRepairScarTox = lazy(() => import("./pages/ScarRepairScarTox"));
 const ThinLipsAsymmetricLips = lazy(() => import("./pages/concerns/ThinLipsAsymmetricLips"));
 const SquareJawWideJaw = lazy(() => import("./pages/concerns/SquareJawWideJaw"));
 const DarkCirclesVsEyeBags = lazy(() => import("./pages/concerns/DarkCirclesVsEyeBags"));
@@ -1110,6 +1111,16 @@ const App = () => {
                           <Route path="/ie/treatments/endolift-dublin/" element={<EndoliftDublin />} />
                           <Route path="/ie/treatments/endolaser-dublin" element={<EndoliftDublin />} />
                           <Route path="/ie/treatments/endolaser-dublin/" element={<EndoliftDublin />} />
+                          <Route path="/treatments/scar-repair-scartox" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/scar-repair-scartox/" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/scartox" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/scartox/" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/tummy-tuck-scar-treatment" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/tummy-tuck-scar-treatment/" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/c-section-scar-treatment" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/c-section-scar-treatment/" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/mommy-makeover-scar-repair" element={<ScarRepairScarTox />} />
+                          <Route path="/treatments/mommy-makeover-scar-repair/" element={<ScarRepairScarTox />} />
                           {/* Phase 3b — Endolift sub-cluster (Dr Hass response) */}
                           <Route path="/treatments/endolift-london/safety" element={<EndoliftSafety />} />
                           <Route path="/treatments/endolift-london/safety/" element={<EndoliftSafety />} />

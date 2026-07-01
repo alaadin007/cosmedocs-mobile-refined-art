@@ -3,6 +3,16 @@
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ===== SCAR REPAIR — SCARTOX ===== -->
+  <url>
+    <loc>https://www.cosmedocs.com/treatments/scar-repair-scartox/</loc>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.cosmedocs.com/treatments/scar-repair-scartox/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cosmedocs.com/treatments/scar-repair-scartox/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== BOTOX ===== -->
 
   <url>
