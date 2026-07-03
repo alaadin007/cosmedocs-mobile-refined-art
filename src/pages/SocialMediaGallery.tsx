@@ -9,6 +9,12 @@ import thumbDrHena from "@/assets/social/thumb-3-drhena.jpg";
 import thumbEyeLift from "@/assets/social/thumb-4-eyelift.jpg";
 import thumbMicroTox from "@/assets/social/thumb-5-microtox.jpg";
 import thumbPaint from "@/assets/social/thumb-6-paint.jpg";
+import thumbV2Restraint from "@/assets/social/thumb-v2-1-restraint.jpg";
+import thumbV2Sweat from "@/assets/social/thumb-v2-2-sweat.jpg";
+import thumbV2DrHena from "@/assets/social/thumb-v2-3-drhena.jpg";
+import thumbV2EyeLift from "@/assets/social/thumb-v2-4-eyelift.jpg";
+import thumbV2MicroTox from "@/assets/social/thumb-v2-5-microtox.jpg";
+import thumbV2Paint from "@/assets/social/thumb-v2-6-paint.jpg";
 
 interface SocialMediaAsset {
   id: string;
