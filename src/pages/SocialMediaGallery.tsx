@@ -9,6 +9,12 @@ import thumbDrHena from "@/assets/social/thumb-3-drhena.jpg";
 import thumbEyeLift from "@/assets/social/thumb-4-eyelift.jpg";
 import thumbMicroTox from "@/assets/social/thumb-5-microtox.jpg";
 import thumbPaint from "@/assets/social/thumb-6-paint.jpg";
+import thumbV2Restraint from "@/assets/social/thumb-v2-1-restraint.jpg";
+import thumbV2Sweat from "@/assets/social/thumb-v2-2-sweat.jpg";
+import thumbV2DrHena from "@/assets/social/thumb-v2-3-drhena.jpg";
+import thumbV2EyeLift from "@/assets/social/thumb-v2-4-eyelift.jpg";
+import thumbV2MicroTox from "@/assets/social/thumb-v2-5-microtox.jpg";
+import thumbV2Paint from "@/assets/social/thumb-v2-6-paint.jpg";
 
 interface SocialMediaAsset {
   id: string;
@@ -91,6 +97,66 @@ const assets: SocialMediaAsset[] = [
     type: "reel",
     treatment: "Profiloplasty",
     tags: ["#profiloplasty", "#nosefiller", "#chinfiller", "#cosmedocs", "#invisibleart", "#harleystreet"],
+  },
+  {
+    id: "restraint-v2",
+    title: "Knowing When To Stop — Casual Edition",
+    description: "The art of restraint, doodled. Less is more — a quick scribble on why invisible art wins every time.",
+    imageSrc: thumbV2Restraint,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Philosophy",
+    tags: ["#invisibleart", "#cosmedocs", "#harleystreet", "#lessismore", "#restraint"],
+  },
+  {
+    id: "sweat-tox-v2",
+    title: "Sweat, Sorted — Doodle Edition",
+    description: "One appointment. All summer. Hand-drawn energy for the Sweat-Tox story — quick, minimal downtime, long-lasting.",
+    imageSrc: thumbV2Sweat,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Sweat-Tox",
+    tags: ["#sweattox", "#hyperhidrosis", "#summerready", "#cosmedocs", "#harleystreet"],
+  },
+  {
+    id: "dr-hena-v2",
+    title: "She Does It All — BTS Doodle",
+    description: "Teaching. Treating. Running the clinic — before lunch. A day with Dr Hena, sketched out.",
+    imageSrc: thumbV2DrHena,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Behind The Scenes",
+    tags: ["#drhena", "#womeninmedicine", "#cosmedocs", "#harleystreet", "#dayinthelife"],
+  },
+  {
+    id: "eyes-lifted-v2",
+    title: "Eyes, Lifted — Doodle Edition",
+    description: "One fibre. No surgery. Real lift. Upper eye lift with Endolaser, scribbled and scroll-stopping.",
+    imageSrc: thumbV2EyeLift,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Endolaser Fibre Lift",
+    tags: ["#endolaser", "#fiberlift", "#eyelift", "#nonsurgical", "#cosmedocs"],
+  },
+  {
+    id: "micro-tox-v2",
+    title: "Not Frozen. Just Refreshed — Doodle Edition",
+    description: "Micro-dosing for men who still want to raise an eyebrow. Natural, expressive, refined — with a hand-drawn twist.",
+    imageSrc: thumbV2MicroTox,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Micro-Tox",
+    tags: ["#microtox", "#botoxformen", "#naturalbotox", "#cosmedocs", "#harleystreet"],
+  },
+  {
+    id: "paint-analogy-v2",
+    title: "Your Skin. Your Walls — Doodle Edition",
+    description: "When the room looks tired, you repaint. Same rule applies. Dr Haq on rejuvenation, sketched out.",
+    imageSrc: thumbV2Paint,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Skin Rejuvenation",
+    tags: ["#skinrejuvenation", "#drahmedhaq", "#invisibleart", "#cosmedocs", "#harleystreet"],
   },
 ];
 
