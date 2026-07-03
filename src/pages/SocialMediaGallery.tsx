@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import { Download, Instagram, ExternalLink } from "lucide-react";
 import { generateSEOMetadata } from "../utils/seo";
 import profiloplastyThumb from "@/assets/social/profiloplasty-reel-thumbnail.jpg";
+import thumbRestraint from "@/assets/social/thumb-1-restraint.jpg";
+import thumbSweat from "@/assets/social/thumb-2-sweat.jpg";
+import thumbDrHena from "@/assets/social/thumb-3-drhena.jpg";
+import thumbEyeLift from "@/assets/social/thumb-4-eyelift.jpg";
+import thumbMicroTox from "@/assets/social/thumb-5-microtox.jpg";
+import thumbPaint from "@/assets/social/thumb-6-paint.jpg";
 
 interface SocialMediaAsset {
   id: string;
@@ -16,6 +22,66 @@ interface SocialMediaAsset {
 }
 
 const assets: SocialMediaAsset[] = [
+  {
+    id: "restraint",
+    title: "Knowing When To Stop",
+    description: "The art of restraint — aesthetics isn't adding more, it's knowing exactly when to stop. Invisible art by Dr Ahmed Haq.",
+    imageSrc: thumbRestraint,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Philosophy",
+    tags: ["#invisibleart", "#cosmedocs", "#harleystreet", "#drahmedhaq", "#lessismore"],
+  },
+  {
+    id: "sweat-tox",
+    title: "Sweat, Sorted.",
+    description: "One appointment. All summer. Advanced hyperhidrosis treatment — quick, minimal downtime, long-lasting.",
+    imageSrc: thumbSweat,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Sweat-Tox",
+    tags: ["#sweattox", "#hyperhidrosis", "#summerready", "#cosmedocs", "#harleystreet"],
+  },
+  {
+    id: "dr-hena",
+    title: "She Does It All",
+    description: "Teaching. Treating. Running the clinic — before lunch. A day with Dr Hena.",
+    imageSrc: thumbDrHena,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Behind The Scenes",
+    tags: ["#drhena", "#womeninmedicine", "#cosmedocs", "#harleystreet", "#dayinthelife"],
+  },
+  {
+    id: "eyes-lifted",
+    title: "Eyes, Lifted.",
+    description: "One fibre. No surgery. Real lift. Upper eye lift with Endolaser Fibre Lift.",
+    imageSrc: thumbEyeLift,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Endolaser Fibre Lift",
+    tags: ["#endolaser", "#fiberlift", "#eyelift", "#nonsurgical", "#cosmedocs"],
+  },
+  {
+    id: "micro-tox",
+    title: "Not Frozen. Just Refreshed.",
+    description: "Micro-dosing for men who still want to raise an eyebrow. Natural, expressive, refined.",
+    imageSrc: thumbMicroTox,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Micro-Tox",
+    tags: ["#microtox", "#botoxformen", "#naturalbotox", "#cosmedocs", "#harleystreet"],
+  },
+  {
+    id: "paint-analogy",
+    title: "Your Skin. Your Walls.",
+    description: "When the room looks tired, you repaint. Same rule applies. Dr Haq on rejuvenation.",
+    imageSrc: thumbPaint,
+    platform: "instagram",
+    type: "reel",
+    treatment: "Skin Rejuvenation",
+    tags: ["#skinrejuvenation", "#drahmedhaq", "#invisibleart", "#cosmedocs", "#harleystreet"],
+  },
   {
     id: "profiloplasty-reel-1",
     title: "Profiloplasty — Nose & Chin Harmony",
