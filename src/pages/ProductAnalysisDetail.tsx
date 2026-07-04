@@ -172,64 +172,43 @@ const ProductAnalysisDetail = () => {
         <meta property="og:type" content="article" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
-        <div className="container mx-auto px-4 py-8 max-w-6xl">
-          {/* Header */}
+      <div className="min-h-screen bg-black text-white">
+        <div className="container mx-auto px-4 py-6 max-w-4xl">
+          {/* Slim header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
+            transition={{ duration: 0.4 }}
+            className="mb-6"
           >
-            <Button 
-              variant="ghost" 
+            <button
               onClick={() => navigate('/product-intelligence')}
-              className="mb-6"
+              className="inline-flex items-center gap-1.5 text-xs text-white/50 hover:text-white/80 transition mb-4"
             >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Aesthetic Intelligence
-            </Button>
+              <ArrowLeft className="h-3.5 w-3.5" />
+              Back to Product Intelligence
+            </button>
 
-            <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <Beaker className="h-8 w-8 text-primary" />
-                  <div>
-                    <h1 className="text-3xl lg:text-4xl font-bold">{productName}</h1>
-                    <div className="flex items-center gap-2 mt-2">
-                      <Badge variant="secondary" className="text-sm">
-                        {brand}
-                      </Badge>
-                      <Badge variant="outline" className="text-sm">
-                        <Calendar className="h-3 w-3 mr-1" />
-                        Analysed {analysisDate}
-                      </Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:text-right">
-                <div className="flex lg:flex-col items-center lg:items-end gap-4">
-                  <div className="text-center lg:text-right">
-                    <div className="flex items-center justify-center lg:justify-end gap-2 mb-2">
-                      <Star className="h-6 w-6 text-yellow-500" />
-                      <span className="text-3xl font-bold text-primary">
-                        {actualScore.toFixed(1)}
-                      </span>
-                      <span className="text-xl text-muted-foreground">/10</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">CosmeDocs Score</p>
-                  </div>
-                  
-                  <Button 
-                    variant="outline" 
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="min-w-0">
+                <h1 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
+                  {productName}
+                </h1>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs text-white/50">
+                  <span className="uppercase tracking-wide">{brand}</span>
+                  <span className="text-white/20">·</span>
+                  <span className="inline-flex items-center gap-1">
+                    <Calendar className="h-3 w-3" />
+                    {analysisDate}
+                  </span>
+                  <span className="text-white/20">·</span>
+                  <button
                     onClick={() => window.open(analysis.product_url, '_blank')}
-                    className="whitespace-nowrap"
+                    className="inline-flex items-center gap-1 hover:text-white/80 transition"
                   >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    View Original Product
-                  </Button>
+                    <ExternalLink className="h-3 w-3" />
+                    Original product
+                  </button>
                 </div>
               </div>
             </div>
@@ -237,9 +216,9 @@ const ProductAnalysisDetail = () => {
 
           {/* Analysis Results */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             <CosmeticAnalysisResults analysis={analysis.analysis_data} />
           </motion.div>
