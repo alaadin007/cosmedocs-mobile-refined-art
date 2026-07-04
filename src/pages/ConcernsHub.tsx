@@ -559,7 +559,7 @@ const ConcernsHub = () => {
                   Book a doctor-led assessment <ArrowUpRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/aesthetic-intelligence/"
+                  to="/testapp"
                   className="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition"
                 >
                   Try the AI face scan

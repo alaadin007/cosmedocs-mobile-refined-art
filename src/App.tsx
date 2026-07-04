@@ -1284,7 +1284,10 @@ const App = () => {
                           {/* Other pages */}
                           <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
                           <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
-                          <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
+                          <Route path="/product-intelligence" element={<AestheticIntelligence />} />
+                          <Route path="/product-intelligence/" element={<AestheticIntelligence />} />
+                          <Route path="/aesthetic-intelligence" element={<Navigate to="/product-intelligence" replace />} />
+                          <Route path="/aesthetic-intelligence/" element={<Navigate to="/product-intelligence" replace />} />
                           <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
                           <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
                           <Route path="/aesthetic-treatments-made-easy" element={<SmartAesthetics />} />

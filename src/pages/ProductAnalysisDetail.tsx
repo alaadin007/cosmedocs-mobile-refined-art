@@ -64,7 +64,7 @@ const ProductAnalysisDetail = () => {
         description: "Failed to load product analysis",
         variant: "destructive",
       });
-      navigate('/aesthetic-intelligence');
+      navigate('/product-intelligence');
     } finally {
       setLoading(false);
     }
@@ -141,7 +141,7 @@ const ProductAnalysisDetail = () => {
       <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Product Analysis Not Found</h1>
-          <Button onClick={() => navigate('/aesthetic-intelligence')}>
+          <Button onClick={() => navigate('/product-intelligence')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Aesthetic Intelligence
           </Button>
@@ -183,7 +183,7 @@ const ProductAnalysisDetail = () => {
           >
             <Button 
               variant="ghost" 
-              onClick={() => navigate('/aesthetic-intelligence')}
+              onClick={() => navigate('/product-intelligence')}
               className="mb-6"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />

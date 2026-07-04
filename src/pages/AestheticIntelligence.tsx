@@ -279,21 +279,21 @@ const AestheticIntelligence = () => {
   return (
     <>
       <Helmet>
-        <title>Aesthetic Intelligence - AI-Powered Skincare Product Analysis | CosmeDocs</title>
+        <title>Product Intelligence - AI-Powered Skincare Product Analysis | CosmeDocs</title>
         <meta name="description" content="AI skincare analysis: detect harmful chemicals & ingredients. Professional insights on product efficacy for your skin." />
         <meta name="keywords" content="skincare analysis, cosmetic ingredients, product review, AI beauty tool, ingredient checker, skincare ingredients, cosmetic chemistry, dermatology analysis" />
-        <link rel="canonical" href="https://www.cosmedocs.com/aesthetic-intelligence" />
-        <meta property="og:title" content="Aesthetic Intelligence - AI-Powered Skincare Product Analysis | CosmeDocs" />
+        <link rel="canonical" href="https://www.cosmedocs.com/product-intelligence" />
+        <meta property="og:title" content="Product Intelligence - AI-Powered Skincare Product Analysis | CosmeDocs" />
         <meta property="og:description" content="Discover the truth about your skincare products with our AI-powered analysis tool. Uncover hidden chemicals and get professional insights." />
-        <meta property="og:url" content="https://www.cosmedocs.com/aesthetic-intelligence" />
+        <meta property="og:url" content="https://www.cosmedocs.com/product-intelligence" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Aesthetic Intelligence - Product Analyzer",
+            "name": "Product Intelligence - Product Analyzer",
             "description": "AI-powered skincare product analysis tool that reveals ingredient effectiveness and safety",
-            "url": "https://cosmedocs.com/aesthetic-intelligence",
+            "url": "https://cosmedocs.com/product-intelligence",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Web Browser",
             "offers": {
@@ -330,7 +330,7 @@ const AestheticIntelligence = () => {
             <div className="flex items-center justify-center mb-6">
               <Beaker className="h-10 w-10 text-primary mr-4" />
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Aesthetic Intelligence
+                Product Intelligence
               </h1>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -571,7 +571,7 @@ const AestheticIntelligence = () => {
           <div className="sr-only">
             <h2>Skincare Ingredient Analysis and Chemical Safety</h2>
             <p>
-              Modern cosmetics and skincare products contain an average of 168 chemicals per person daily use. The majority of these ingredients serve as fillers, preservatives, and texture enhancers rather than providing active benefits to skin health. Our Aesthetic Intelligence tool uses advanced AI analysis to evaluate each ingredient's contribution to keratinocyte function, melanocyte regulation, and fibroblast activity. Understanding the difference between marketing claims and scientific evidence is crucial for effective skincare. Many products rely on temporary hydration effects rather than addressing underlying skin barrier function, often leading to compromised acid mantle and increased sensitivity. Professional dermatological analysis reveals that most commercial formulations prioritize shelf stability and aesthetic appeal over therapeutic efficacy. The cumulative effect of daily chemical exposure through foundations, moisturizers, serums, and cleansers can disrupt natural skin processes and barrier integrity. Evidence-based ingredient evaluation considers molecular weight, pH compatibility, concentration effectiveness, and synergistic interactions within formulations. Identifying truly active ingredients versus inactive components helps consumers make informed decisions about their skincare investments and avoid products that may contribute to skin sensitization or barrier disruption.
+              Modern cosmetics and skincare products contain an average of 168 chemicals per person daily use. The majority of these ingredients serve as fillers, preservatives, and texture enhancers rather than providing active benefits to skin health. Our Product Intelligence tool uses advanced AI analysis to evaluate each ingredient's contribution to keratinocyte function, melanocyte regulation, and fibroblast activity. Understanding the difference between marketing claims and scientific evidence is crucial for effective skincare. Many products rely on temporary hydration effects rather than addressing underlying skin barrier function, often leading to compromised acid mantle and increased sensitivity. Professional dermatological analysis reveals that most commercial formulations prioritize shelf stability and aesthetic appeal over therapeutic efficacy. The cumulative effect of daily chemical exposure through foundations, moisturizers, serums, and cleansers can disrupt natural skin processes and barrier integrity. Evidence-based ingredient evaluation considers molecular weight, pH compatibility, concentration effectiveness, and synergistic interactions within formulations. Identifying truly active ingredients versus inactive components helps consumers make informed decisions about their skincare investments and avoid products that may contribute to skin sensitization or barrier disruption.
             </p>
           </div>
         </div>
