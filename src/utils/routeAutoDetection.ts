@@ -80,7 +80,7 @@ export function parseAppRoutes(): DetectedRoute[] {
   const actualAppRoutes = [
     // Root-level educational pages (NOT blogs)
     '/ultimate-botox-guide/', '/aesthetic-training/', '/aesthetics-at-a-glance/',
-    '/aesthetic-intelligence/', '/aesthetic-treatments-made-easy/',
+    '/product-intelligence/', '/aesthetic-treatments-made-easy/',
   ];
   
   actualAppRoutes.forEach(path => {

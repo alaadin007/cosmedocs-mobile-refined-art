@@ -2469,7 +2469,7 @@ const Home3 = () => {
                   <Link to="/contact/">Book a consultation</Link>
                 </Button>
                 <Link
-                  to="/aesthetic-intelligence"
+                  to="/testapp"
                   className="group inline-flex items-center gap-2.5 pl-2 pr-4 py-2 rounded-full bg-gradient-to-r from-[#C9A050]/20 to-[#C9A050]/5 border border-[#C9A050]/40 text-[12px] font-medium text-[#F0D78C] hover:from-[#C9A050]/30 hover:to-[#C9A050]/10 transition shadow-[0_0_24px_-4px_rgba(201,160,80,0.5)]"
                 >
                   <span className="relative inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#C9A050] text-black">

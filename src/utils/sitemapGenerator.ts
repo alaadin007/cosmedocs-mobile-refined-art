@@ -41,7 +41,7 @@ export const sitemapData: SitemapData = {
     { loc: `${baseUrl}/hair-transplant-surgeon`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
     { loc: `${baseUrl}/private-gp-doctor`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
     { loc: `${baseUrl}/aesthetics-at-a-glance`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
-    { loc: `${baseUrl}/aesthetic-intelligence`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
+    { loc: `${baseUrl}/product-intelligence`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
     { loc: `${baseUrl}/aesthetic-treatments-made-easy`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 },
     { loc: `${baseUrl}/medical-student-work-experience`, lastmod: currentDate, changefreq: 'monthly', priority: 0.5 },
     { loc: `${baseUrl}/treatments-summary-arabic`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 },
