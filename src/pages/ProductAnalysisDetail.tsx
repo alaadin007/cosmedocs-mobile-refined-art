@@ -143,7 +143,7 @@ const ProductAnalysisDetail = () => {
           <h1 className="text-2xl font-bold mb-4">Product Analysis Not Found</h1>
           <Button onClick={() => navigate('/product-intelligence')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Aesthetic Intelligence
+            Back to Product Intelligence
           </Button>
         </div>
       </div>
