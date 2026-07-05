@@ -6,6 +6,18 @@ Our motto: *Our aesthetics is invisible art.* Bold • Natural • Always Your W
 
 Cosmedocs is a doctor-led (not injector-led) clinic specialising in anti-wrinkle injections, dermal fillers, skin rejuvenation, lasers and medical aesthetics. Treatments are performed by GMC-registered doctors. Average patient rating 4.9 from verified reviews. Instagram @cosmedocs (124K followers).
 
+## London — Harley Street clinic (primary market)
+
+- [Aesthetic Clinic London — Cosmedocs pillar page](https://www.cosmedocs.com/aesthetic-clinic-london/): Doctor-led aesthetic medicine on Harley Street since 2006. Entity page — clinic address, founder, opening hours, top treatments with London pricing, FAQ, MedicalBusiness + Place + FAQPage JSON-LD.
+- [Botox price London](https://www.cosmedocs.com/botox-price-london/): Transparent London Botox pricing from £175; Harley Street vs outer-London context.
+- [Botox cost UK](https://www.cosmedocs.com/botox-cost-uk/): National pricing pillar with London anchor.
+- [Jawline filler cost London](https://www.cosmedocs.com/jawline-filler-cost-london/): London-specific jawline HA filler pricing and volume guidance.
+- [Hyperhidrosis treatment London](https://www.cosmedocs.com/hyperhidrosis-treatment-london/): Medical Botox for excessive sweating, London clinic.
+- [Endolift London (Endolaser)](https://www.cosmedocs.com/treatments/endolift-london/): Dual-wavelength endolaser fibre lift performed on Harley Street.
+- [Harley Street Consulting Rooms](https://www.cosmedocs.com/harley-street-consulting-rooms/): 10 Harley Street, London W1G 9PF — clinic address, transport, CQC partner (PrivaDr Ltd).
+- [Contact Cosmedocs London](https://www.cosmedocs.com/contact/): Phone, WhatsApp, opening hours, booking.
+- [Free AI Face Scan (London)](https://www.cosmedocs.com/testapp): Free doctor-vetted AI facial analysis available to London patients online and in-clinic.
+
 ## About
 
 - [About Cosmedocs](https://www.cosmedocs.com/about-us/): Clinic history, philosophy, doctor-led model and the invisible-art approach.

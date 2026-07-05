@@ -287,6 +287,7 @@ const ChinFillerDissolving = lazy(() => import("./pages/aftercare/ChinFillerDiss
 const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
+const AestheticClinicLondon = lazy(() => import("./pages/AestheticClinicLondon"));
 const AntiWrinkleTreatment = lazy(() => import("./pages/AntiWrinkleTreatment"));
 const AntiWrinkleInjections = lazy(() => import("./pages/AntiWrinkleInjections"));
 const AntiAgeingInjections = lazy(() => import("./pages/AntiAgeingInjections"));
@@ -1064,6 +1065,8 @@ const App = () => {
                           <Route path="/treatments/skin-boosters/" element={<Navigate to="/treatments/skin-rejuvenation/" replace />} />
                           <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
                           <Route path="/botox-price-london/" element={<BotoxPriceLondon />} />
+                          <Route path="/aesthetic-clinic-london" element={<AestheticClinicLondon />} />
+                          <Route path="/aesthetic-clinic-london/" element={<AestheticClinicLondon />} />
                           <Route path="/treatments/anti-wrinkle-treatment" element={<AntiWrinkleTreatment />} />
                           <Route path="/treatments/anti-wrinkle-treatment/" element={<AntiWrinkleTreatment />} />
                           <Route path="/anti-wrinkle-treatment" element={<Navigate to="/treatments/anti-wrinkle-treatment/" replace />} />
