@@ -287,6 +287,7 @@ const ChinFillerDissolving = lazy(() => import("./pages/aftercare/ChinFillerDiss
 const UnderarmBotoxUnits = lazy(() => import("./pages/UnderarmBotoxUnits"));
 const CheapBotoxVsExpensive = lazy(() => import("./pages/CheapBotoxVsExpensive"));
 const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
+const AestheticClinicLondon = lazy(() => import("./pages/AestheticClinicLondon"));
 const AntiWrinkleTreatment = lazy(() => import("./pages/AntiWrinkleTreatment"));
 const AntiWrinkleInjections = lazy(() => import("./pages/AntiWrinkleInjections"));
 const AntiAgeingInjections = lazy(() => import("./pages/AntiAgeingInjections"));
