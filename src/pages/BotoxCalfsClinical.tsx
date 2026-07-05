@@ -253,22 +253,26 @@ const BotoxCalfsClinical: React.FC = () => {
               </span>
               <h2 className="text-3xl font-light mb-3">Before & after — calf reduction</h2>
               <p className="text-zinc-400 max-w-xl mx-auto">
-                Truth-first results, published progressively at 6, 10 and 14 weeks. Full
-                gallery on the canonical treatment page.
+                Truth-first results. We publish only real Cosmedocs patient photographs, taken with consent — no stock or AI-generated images. Body Botox image sets are intentionally limited because positioning, stance and lighting must be identical for an honest comparison.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((n) => (
-                <div
-                  key={n}
-                  className="aspect-[4/5] rounded-lg border border-[#C9A050]/30 bg-zinc-900 flex flex-col items-center justify-center text-zinc-500"
-                >
-                  <ImageIcon className="w-10 h-10 mb-3 opacity-60" />
-                  <span className="text-xs tracking-widest uppercase">
-                    Case {n} · coming soon
-                  </span>
-                </div>
-              ))}
+            <div className="max-w-xl mx-auto">
+              <figure className="rounded-2xl overflow-hidden border border-[#C9A050]/25 bg-zinc-900">
+                <img
+                  src="/assets/before-after/calf-slimming-ba.jpg"
+                  alt="Calf reduction Botox before and after — Cosmedocs Harley Street London"
+                  loading="lazy"
+                  className="w-full h-auto object-contain"
+                />
+                <figcaption className="px-5 py-4 border-t border-white/10">
+                  <p className="text-[11px] tracking-widest uppercase text-[#C9A050]/90 mb-1">
+                    Calf Slimming Botox · ~12 weeks post-treatment
+                  </p>
+                  <p className="text-[11px] text-zinc-400 leading-relaxed">
+                    Real Cosmedocs patient, published with written consent. Individual results vary. Additional cases will be added here as consent is granted.
+                  </p>
+                </figcaption>
+              </figure>
             </div>
             <div className="text-center mt-10">
               <Button
@@ -276,7 +280,7 @@ const BotoxCalfsClinical: React.FC = () => {
                 className="bg-[#C9A050] hover:bg-[#b08c3f] text-black"
               >
                 <Link to="/treatments/calf-slimming-botox/">
-                  View full calf gallery <ArrowRight className="w-4 h-4 ml-2" />
+                  Calf slimming Botox — pricing & booking <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
             </div>
