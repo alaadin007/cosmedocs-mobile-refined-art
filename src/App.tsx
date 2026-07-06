@@ -1234,6 +1234,8 @@ const App = () => {
                           <Route path="/blog/chin-filler-results-explained/" element={<ChinFillerResultsExplained />} />
                           <Route path="/blog/lip-filler-results-explained" element={<LipFillerResultsExplained />} />
                           <Route path="/blog/lip-filler-results-explained/" element={<LipFillerResultsExplained />} />
+                          <Route path="/blog/lip-issues-dry-cracked-cheilitis" element={<LipIssuesDryCrackedCheilitis />} />
+                          <Route path="/blog/lip-issues-dry-cracked-cheilitis/" element={<LipIssuesDryCrackedCheilitis />} />
                           <Route path="/blog/vitamin-c-vs-retinol" element={<VitaminCvsRetinol />} />
                           <Route path="/blog/vitamin-c-vs-retinol/" element={<VitaminCvsRetinol />} />
                           <Route path="/blog/three-cell-skin-philosophy" element={<ThreeCellPhilosophy />} />
