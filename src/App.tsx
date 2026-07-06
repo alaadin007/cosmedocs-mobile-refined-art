@@ -333,6 +333,7 @@ const TearTroughFillerResultsExplained = lazy(() => import("./pages/blog/TearTro
 const JawFillerResultsExplained = lazy(() => import("./pages/blog/JawFillerResultsExplained"));
 const ChinFillerResultsExplained = lazy(() => import("./pages/blog/ChinFillerResultsExplained"));
 const LipFillerResultsExplained = lazy(() => import("./pages/blog/LipFillerResultsExplained"));
+const LipIssuesDryCrackedCheilitis = lazy(() => import("./pages/blog/LipIssuesDryCrackedCheilitis"));
 const BotoxPlacementGuideLondon = lazy(() => import("./pages/blog/BotoxPlacementGuideLondon"));
 const VitaminCvsRetinol = lazy(() => import("./pages/blog/VitaminCvsRetinol"));
 const ThreeCellPhilosophy = lazy(() => import("./pages/blog/ThreeCellPhilosophy"));
