@@ -352,25 +352,159 @@ const DaxxifyVsBotoxUK = () => {
               </p>
             </motion.section>
 
-            {/* Clinical trial context */}
+            {/* Clinical trial context — with bar chart */}
             <motion.section {...fadeIn}>
               <h2 className="text-2xl md:text-3xl font-extralight mb-6">
                 What The Trials Actually Show
               </h2>
-              <p className="text-white/60 text-lg font-light leading-relaxed mb-6">
-                For glabellar (frown) lines, US pivotal trial data reports:
+              <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
+                For glabellar (frown) lines, pooled clinical trial data reports the
+                following median durations. Bars are drawn to scale — six months is
+                exactly twice the length of three.
               </p>
-              <ul className="space-y-4 text-white/60 text-lg font-light leading-relaxed">
-                <li className="flex gap-4"><span className="text-[#C9A050]">—</span><span><strong className="text-white/90">Onabotulinumtoxin A (Botox):</strong> typical duration 3–4 months.</span></li>
-                <li className="flex gap-4"><span className="text-[#C9A050]">—</span><span><strong className="text-white/90">DaxibotulinumtoxinA-lanm (Daxxify):</strong> median duration around 24 weeks; some patients maintain benefit for up to nine months.</span></li>
-              </ul>
-              <p className="text-white/60 text-lg font-light leading-relaxed mt-6">
+
+              {/* Duration bar chart */}
+              <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
+                <div className="space-y-5">
+                  {[
+                    { name: "Botox (onaA)", weeks: 14, label: "≈ 3–4 months", tone: "bg-white/40" },
+                    { name: "Dysport (aboA)", weeks: 16, label: "≈ 3–4 months", tone: "bg-white/40" },
+                    { name: "Xeomin (incoA)", weeks: 14, label: "≈ 3–4 months", tone: "bg-white/40" },
+                    { name: "Jeuveau (praboA)", weeks: 15, label: "≈ 3–4 months", tone: "bg-white/40" },
+                    { name: "Daxxify (daxiA)", weeks: 24, label: "≈ 6 months (US only)", tone: "bg-[#C9A050]" },
+                  ].map((row) => (
+                    <div key={row.name}>
+                      <div className="flex justify-between text-sm mb-1.5">
+                        <span className="text-white/80 font-light">{row.name}</span>
+                        <span className="text-white/40 font-light">{row.label}</span>
+                      </div>
+                      <div className="h-2.5 w-full bg-white/[0.04] rounded-full overflow-hidden">
+                        <div
+                          className={`h-full ${row.tone} rounded-full`}
+                          style={{ width: `${(row.weeks / 28) * 100}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-between mt-4 text-[10px] uppercase tracking-wider text-white/25">
+                  <span>0 wks</span>
+                  <span>7</span>
+                  <span>14</span>
+                  <span>21</span>
+                  <span>28 wks</span>
+                </div>
+                <p className="text-white/40 text-xs font-light mt-4">
+                  Median glabellar-line duration from pooled US pivotal trial data.
+                  Real-world duration varies with dose, placement and patient physiology.
+                </p>
+              </div>
+
+              <p className="text-white/60 text-lg font-light leading-relaxed mt-8">
                 Even review articles concede that the precise mechanism responsible for
-                the longer clinical duration is not fully characterised. The prolonged
-                effect is real and documented; the biological explanation is still
-                partly theoretical.
+                the longer clinical duration of Daxxify is not fully characterised. The
+                prolonged effect is real and documented; the biological explanation is
+                still partly theoretical.
               </p>
             </motion.section>
+
+            {/* Side-by-side comparison table */}
+            <motion.section {...fadeIn}>
+              <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                The Six Toxins, Side by Side
+              </h2>
+              <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
+                A quick reference on the six botulinum toxin type A products relevant
+                to the UK and US aesthetic market. All share the same 150 kDa neurotoxin
+                core; the differences sit in the accessory proteins, stabiliser, and
+                licensing status.
+              </p>
+
+              <div className="overflow-x-auto rounded-xl border border-white/[0.08]">
+                <table className="w-full text-sm text-left">
+                  <thead className="bg-white/[0.04] text-[#C9A050] text-[11px] uppercase tracking-wider font-medium">
+                    <tr>
+                      <th className="px-4 py-3 font-medium">Brand</th>
+                      <th className="px-4 py-3 font-medium">Molecule</th>
+                      <th className="px-4 py-3 font-medium">Stabiliser</th>
+                      <th className="px-4 py-3 font-medium">Onset</th>
+                      <th className="px-4 py-3 font-medium">Duration</th>
+                      <th className="px-4 py-3 font-medium">UK (MHRA)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-white/70 font-light divide-y divide-white/[0.06]">
+                    {[
+                      ["Botox", "onabotulinumtoxinA", "Human serum albumin", "3–5 days", "3–4 mo", "✓ Licensed"],
+                      ["Dysport", "abobotulinumtoxinA", "Human serum albumin", "2–3 days", "3–4 mo", "✓ Licensed"],
+                      ["Xeomin", "incobotulinumtoxinA", "Human serum albumin (no accessory proteins)", "3–5 days", "3–4 mo", "✓ Licensed"],
+                      ["Jeuveau", "prabotulinumtoxinA", "Human serum albumin", "3–5 days", "3–4 mo", "✗ Not licensed"],
+                      ["Letybo", "letibotulinumtoxinA", "Human serum albumin", "3–5 days", "3–4 mo", "✓ Licensed"],
+                      ["Daxxify", "daxibotulinumtoxinA-lanm", "RTP004 peptide (no HSA)", "1–2 days", "≈ 6 mo", "✗ Not licensed"],
+                    ].map((row, i) => {
+                      const isDax = row[0] === "Daxxify";
+                      return (
+                        <tr key={row[0]} className={isDax ? "bg-[#C9A050]/[0.06]" : ""}>
+                          <td className={`px-4 py-3 ${isDax ? "text-[#C9A050]" : "text-white/90"} font-medium whitespace-nowrap`}>{row[0]}</td>
+                          <td className="px-4 py-3 whitespace-nowrap text-white/60">{row[1]}</td>
+                          <td className="px-4 py-3 text-white/60">{row[2]}</td>
+                          <td className="px-4 py-3 whitespace-nowrap text-white/60">{row[3]}</td>
+                          <td className="px-4 py-3 whitespace-nowrap text-white/60">{row[4]}</td>
+                          <td className={`px-4 py-3 whitespace-nowrap ${row[5].startsWith("✓") ? "text-white/80" : "text-[#C9A050]/80"}`}>{row[5]}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-white/35 text-xs font-light mt-3">
+                Onset and duration are median clinical estimates for glabellar-line
+                treatment in healthy adults. Individual response varies.
+              </p>
+            </motion.section>
+
+            {/* Mechanism flow diagram */}
+            <motion.section {...fadeIn}>
+              <h2 className="text-2xl md:text-3xl font-extralight mb-6">
+                The Recovery Timeline, Visualised
+              </h2>
+              <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
+                Every botulinum toxin follows the same five-stage arc. Daxxify does not
+                skip or shorten any of these stages — it starts from a deeper baseline
+                at Stage&nbsp;3, which pushes Stages&nbsp;4 and&nbsp;5 further out in time.
+              </p>
+
+              <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                  {[
+                    { n: "01", t: "Binding", d: "Toxin latches onto the motor nerve terminal." },
+                    { n: "02", t: "Uptake", d: "Receptor-mediated endocytosis into the nerve." },
+                    { n: "03", t: "SNAP-25 cleavage", d: "Acetylcholine release blocked. Nerve silenced.", accent: true },
+                    { n: "04", t: "Sprouting", d: "New axonal terminals slowly regrow." },
+                    { n: "05", t: "Recovery", d: "Original junction remodels. Movement returns." },
+                  ].map((s, i, arr) => (
+                    <div key={s.n} className="relative">
+                      <div className={`rounded-lg p-4 h-full border ${s.accent ? "border-[#C9A050]/40 bg-[#C9A050]/[0.06]" : "border-white/[0.08] bg-white/[0.02]"}`}>
+                        <div className={`text-[10px] uppercase tracking-wider font-medium mb-2 ${s.accent ? "text-[#C9A050]" : "text-white/40"}`}>{s.n}</div>
+                        <div className="text-white/90 text-sm font-light mb-1">{s.t}</div>
+                        <div className="text-white/50 text-xs font-light leading-relaxed">{s.d}</div>
+                      </div>
+                      {i < arr.length - 1 && (
+                        <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-px bg-white/20 z-10" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <p className="text-[#C9A050] text-xs uppercase tracking-wider font-medium mt-6">
+                  Where Daxxify differs
+                </p>
+                <p className="text-white/60 text-sm font-light leading-relaxed mt-2">
+                  The RTP004 peptide is thought to increase how much toxin reaches
+                  Stage&nbsp;3 — producing a deeper initial silencing. Stages&nbsp;4 and&nbsp;5
+                  still occur, they simply take longer to complete.
+                </p>
+              </div>
+            </motion.section>
+
 
             {/* Should UK patients panic */}
             <motion.section {...fadeIn}>
