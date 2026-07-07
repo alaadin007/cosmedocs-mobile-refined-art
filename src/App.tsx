@@ -334,6 +334,7 @@ const JawFillerResultsExplained = lazy(() => import("./pages/blog/JawFillerResul
 const ChinFillerResultsExplained = lazy(() => import("./pages/blog/ChinFillerResultsExplained"));
 const LipFillerResultsExplained = lazy(() => import("./pages/blog/LipFillerResultsExplained"));
 const LipIssuesDryCrackedCheilitis = lazy(() => import("./pages/blog/LipIssuesDryCrackedCheilitis"));
+const DaxxifyVsBotoxUK = lazy(() => import("./pages/blog/DaxxifyVsBotoxUK"));
 const BotoxPlacementGuideLondon = lazy(() => import("./pages/blog/BotoxPlacementGuideLondon"));
 const VitaminCvsRetinol = lazy(() => import("./pages/blog/VitaminCvsRetinol"));
 const ThreeCellPhilosophy = lazy(() => import("./pages/blog/ThreeCellPhilosophy"));
@@ -1236,6 +1237,8 @@ const App = () => {
                           <Route path="/blog/lip-filler-results-explained/" element={<LipFillerResultsExplained />} />
                           <Route path="/blog/lip-issues-dry-cracked-cheilitis" element={<LipIssuesDryCrackedCheilitis />} />
                           <Route path="/blog/lip-issues-dry-cracked-cheilitis/" element={<LipIssuesDryCrackedCheilitis />} />
+                          <Route path="/blog/daxxify-vs-botox-uk" element={<DaxxifyVsBotoxUK />} />
+                          <Route path="/blog/daxxify-vs-botox-uk/" element={<DaxxifyVsBotoxUK />} />
                           <Route path="/blog/vitamin-c-vs-retinol" element={<VitaminCvsRetinol />} />
                           <Route path="/blog/vitamin-c-vs-retinol/" element={<VitaminCvsRetinol />} />
                           <Route path="/blog/three-cell-skin-philosophy" element={<ThreeCellPhilosophy />} />
