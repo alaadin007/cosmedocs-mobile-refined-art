@@ -17,7 +17,18 @@ import {
   Inbox,
   Mail,
   Phone,
+  AlertTriangle,
 } from "lucide-react";
+
+interface Counts {
+  messages: number;
+  leads: number;
+  training: number;
+  spinWinners: number;
+  views7d: number;
+  surveys: number;
+  webhookFailures: number;
+}
 
 interface Counts {
   messages: number;
