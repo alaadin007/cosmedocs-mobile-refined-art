@@ -61,13 +61,19 @@ const Dashboard = () => {
     const sevenDays = new Date(Date.now() - 7 * 86400000).toISOString();
     (async () => {
       const sb = supabase as any;
-      const [m, l, t, s, pv, rs, recentM, recentL, recentT] = await Promise.all([
+      // Auto-scan for new webhook delivery failures (last 24h)
+      try {
+        await sb.rpc("reconcile_webhook_failures", { _lookback_minutes: 1440 });
+      } catch { /* non-fatal */ }
+
+      const [m, l, t, s, pv, rs, wf, recentM, recentL, recentT] = await Promise.all([
         sb.from("contact_us").select("id", { count: "exact", head: true }),
         sb.from("visitor_leads").select("id", { count: "exact", head: true }),
         sb.from("training_enquiries").select("id", { count: "exact", head: true }),
         sb.from("spin_winners").select("id", { count: "exact", head: true }),
         sb.from("page_views").select("id", { count: "exact", head: true }).gte("created_at", sevenDays),
         sb.from("patient_research_survey").select("id", { count: "exact", head: true }),
+        sb.from("webhook_failures").select("id", { count: "exact", head: true }).is("resolved_at", null),
         sb.from("contact_us").select("id,name,email,phone,message,created_at").order("created_at", { ascending: false }).limit(15),
         sb.from("visitor_leads").select("id,name,email,phone,skin_concerns,created_at").order("created_at", { ascending: false }).limit(15),
         sb.from("training_enquiries").select("id,full_name,email,phone,course_interest,created_at").order("created_at", { ascending: false }).limit(15),
@@ -80,6 +86,7 @@ const Dashboard = () => {
         spinWinners: s.count || 0,
         views7d: pv.count || 0,
         surveys: rs.count || 0,
+        webhookFailures: wf.count || 0,
       });
 
       const items: FeedItem[] = [
