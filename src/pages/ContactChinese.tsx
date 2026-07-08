@@ -26,7 +26,7 @@ const ContactChinese = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from('contact_us').insert([{ name: formData.name, email: formData.email, phone: formData.phone || null, message: formData.message }]);
+      const { error } = await supabase.from('contact_us').insert([{ name: formData.name, email: formData.email, phone: formData.phone || null, message: formData.message, page_url: (typeof window !== 'undefined' ? window.location.href : null), referrer: (typeof document !== 'undefined' ? (document.referrer || null) : null) }]);
       if (error) { toast({ title: "错误", description: "提交时出错，请重试。", variant: "destructive" }); }
       else { navigate('/thank-you'); }
     } catch { toast({ title: "错误", description: "发生意外错误。", variant: "destructive" }); }

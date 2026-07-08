@@ -22,7 +22,7 @@ export default function ContactJapanese() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from('contact_us').insert([{ name: formData.name, email: formData.email, phone: formData.phone || null, message: formData.message }]);
+      const { error } = await supabase.from('contact_us').insert([{ name: formData.name, email: formData.email, phone: formData.phone || null, message: formData.message, page_url: (typeof window !== 'undefined' ? window.location.href : null), referrer: (typeof document !== 'undefined' ? (document.referrer || null) : null) }]);
       if (error) toast({ title: 'エラー', description: 'メッセージの送信に失敗しました。', variant: 'destructive' });
       else navigate('/thank-you');
     } catch { toast({ title: 'エラー', description: '予期しないエラーが発生しました。', variant: 'destructive' }); }
