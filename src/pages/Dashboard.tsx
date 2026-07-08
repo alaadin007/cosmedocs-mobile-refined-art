@@ -17,6 +17,7 @@ import {
   Inbox,
   Mail,
   Phone,
+  AlertTriangle,
 } from "lucide-react";
 
 interface Counts {
@@ -26,6 +27,7 @@ interface Counts {
   spinWinners: number;
   views7d: number;
   surveys: number;
+  webhookFailures: number;
 }
 
 interface FeedItem {
@@ -48,6 +50,7 @@ const Dashboard = () => {
     spinWinners: 0,
     views7d: 0,
     surveys: 0,
+    webhookFailures: 0,
   });
   const [feed, setFeed] = useState<FeedItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -58,13 +61,19 @@ const Dashboard = () => {
     const sevenDays = new Date(Date.now() - 7 * 86400000).toISOString();
     (async () => {
       const sb = supabase as any;
-      const [m, l, t, s, pv, rs, recentM, recentL, recentT] = await Promise.all([
+      // Auto-scan for new webhook delivery failures (last 24h)
+      try {
+        await sb.rpc("reconcile_webhook_failures", { _lookback_minutes: 1440 });
+      } catch { /* non-fatal */ }
+
+      const [m, l, t, s, pv, rs, wf, recentM, recentL, recentT] = await Promise.all([
         sb.from("contact_us").select("id", { count: "exact", head: true }),
         sb.from("visitor_leads").select("id", { count: "exact", head: true }),
         sb.from("training_enquiries").select("id", { count: "exact", head: true }),
         sb.from("spin_winners").select("id", { count: "exact", head: true }),
         sb.from("page_views").select("id", { count: "exact", head: true }).gte("created_at", sevenDays),
         sb.from("patient_research_survey").select("id", { count: "exact", head: true }),
+        sb.from("webhook_failures").select("id", { count: "exact", head: true }).is("resolved_at", null),
         sb.from("contact_us").select("id,name,email,phone,message,created_at").order("created_at", { ascending: false }).limit(15),
         sb.from("visitor_leads").select("id,name,email,phone,skin_concerns,created_at").order("created_at", { ascending: false }).limit(15),
         sb.from("training_enquiries").select("id,full_name,email,phone,course_interest,created_at").order("created_at", { ascending: false }).limit(15),
@@ -77,6 +86,7 @@ const Dashboard = () => {
         spinWinners: s.count || 0,
         views7d: pv.count || 0,
         surveys: rs.count || 0,
+        webhookFailures: wf.count || 0,
       });
 
       const items: FeedItem[] = [
@@ -129,6 +139,7 @@ const Dashboard = () => {
     { label: "Research Survey", desc: "Patient psychology responses", icon: FlaskConical, to: "/admin/research-survey", count: counts.surveys, highlight: false },
     { label: "Research Studies", desc: "Manage active research", icon: Eye, to: "/admin/research", count: null, highlight: false },
     { label: "Video Upload", desc: "Treatment video library", icon: Video, to: "/admin/video-upload", count: null, highlight: false },
+    { label: "Webhook Health", desc: "Contact form → email delivery", icon: AlertTriangle, to: "/admin/webhook-failures", count: counts.webhookFailures, highlight: false },
   ];
 
   const filteredFeed = filter === "all" ? feed : feed.filter((f) => f.kind === filter);
@@ -168,7 +179,27 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Tiles */}
+          {/* Webhook failure alert */}
+          {counts.webhookFailures > 0 && (
+            <Link
+              to="/admin/webhook-failures"
+              className="flex items-center justify-between gap-4 rounded-2xl border border-red-500/40 bg-red-500/[0.08] px-5 py-4 mb-6 hover:bg-red-500/[0.12] transition-colors"
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <AlertTriangle className="h-5 w-5 text-red-400 shrink-0" />
+                <div className="min-w-0">
+                  <div className="text-red-100 text-sm font-light">
+                    {counts.webhookFailures} contact form email{counts.webhookFailures === 1 ? "" : "s"} failed to forward to Cosmedocs
+                  </div>
+                  <div className="text-red-200/60 text-[11px] mt-0.5 truncate">
+                    n8n webhook returned an error — enquiries may not have reached the inbox. Review and resolve.
+                  </div>
+                </div>
+              </div>
+              <ArrowRight className="h-4 w-4 text-red-300 shrink-0" />
+            </Link>
+          )}
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-10">
             {tiles.map((t) => (
               <Link
