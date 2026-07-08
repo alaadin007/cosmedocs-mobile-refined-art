@@ -104,6 +104,8 @@ const Contact = () => {
             email: validData.email,
             phone: validData.phone || null,
             message: validData.message,
+            page_url: typeof window !== 'undefined' ? window.location.href : null,
+            referrer: typeof document !== 'undefined' ? (document.referrer || null) : null,
           }
         ]);
 
