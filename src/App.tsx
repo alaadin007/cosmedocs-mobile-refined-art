@@ -11,6 +11,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
+import PageViewTracker from "./components/PageViewTracker";
 import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
 import SocialMetaSync from "./components/SocialMetaSync";
 import ErrorBoundary, { RouteResetErrorBoundary } from "./components/ErrorBoundary";
@@ -401,6 +402,7 @@ const App = () => {
               <AuthProvider>
                 <LanguageProvider>
                 <ScrollToTop />
+                <PageViewTracker />
                 <TrailingSlashRedirect />
                  <SocialMetaSync />
                  <ResearchSurveyGate />
