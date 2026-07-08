@@ -178,7 +178,27 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Tiles */}
+          {/* Webhook failure alert */}
+          {counts.webhookFailures > 0 && (
+            <Link
+              to="/admin/webhook-failures"
+              className="flex items-center justify-between gap-4 rounded-2xl border border-red-500/40 bg-red-500/[0.08] px-5 py-4 mb-6 hover:bg-red-500/[0.12] transition-colors"
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <AlertTriangle className="h-5 w-5 text-red-400 shrink-0" />
+                <div className="min-w-0">
+                  <div className="text-red-100 text-sm font-light">
+                    {counts.webhookFailures} contact form email{counts.webhookFailures === 1 ? "" : "s"} failed to forward to Cosmedocs
+                  </div>
+                  <div className="text-red-200/60 text-[11px] mt-0.5 truncate">
+                    n8n webhook returned an error — enquiries may not have reached the inbox. Review and resolve.
+                  </div>
+                </div>
+              </div>
+              <ArrowRight className="h-4 w-4 text-red-300 shrink-0" />
+            </Link>
+          )}
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-10">
             {tiles.map((t) => (
               <Link
