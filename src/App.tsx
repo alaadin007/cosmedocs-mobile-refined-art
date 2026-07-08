@@ -271,6 +271,7 @@ const EndoliftExplained = lazy(() => import("./pages/blog/EndoliftExplained"));
 const JawlineTighteningOver30 = lazy(() => import("./pages/blog/JawlineTighteningOver30"));
 const HarleyStreetSince2007 = lazy(() => import("./pages/blog/HarleyStreetSince2007"));
 const AdminPageViews = lazy(() => import("./pages/AdminPageViews"));
+const AdminWebhookFailures = lazy(() => import("./pages/AdminWebhookFailures"));
 const AdminHub = lazy(() => import("./pages/AdminHub"));
 const AdminMessages = lazy(() => import("./pages/AdminMessages"));
 const AdminLeads = lazy(() => import("./pages/AdminLeads"));
