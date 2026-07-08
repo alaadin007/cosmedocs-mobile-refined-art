@@ -678,6 +678,8 @@ const App = () => {
                           <Route path="/blog/harley-street-since-2007/" element={<HarleyStreetSince2007 />} />
                           <Route path="/admin/page-views" element={<AdminPageViews />} />
                           <Route path="/admin/page-views/" element={<AdminPageViews />} />
+                          <Route path="/admin/webhook-failures" element={<AdminWebhookFailures />} />
+                          <Route path="/admin/webhook-failures/" element={<AdminWebhookFailures />} />
                           <Route path="/admin" element={<AdminHub />} />
                           <Route path="/admin/" element={<AdminHub />} />
                           <Route path="/admin/messages" element={<AdminMessages />} />
