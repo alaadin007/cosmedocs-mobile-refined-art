@@ -1157,6 +1157,48 @@ export type Database = {
         }
         Relationships: []
       }
+      webhook_failures: {
+        Row: {
+          contact_id: string | null
+          created_at: string
+          error_message: string | null
+          hook_name: string
+          id: string
+          payload: Json | null
+          request_id: number | null
+          resolved_at: string | null
+          resolved_by: string | null
+          response_body: string | null
+          status_code: number | null
+        }
+        Insert: {
+          contact_id?: string | null
+          created_at?: string
+          error_message?: string | null
+          hook_name: string
+          id?: string
+          payload?: Json | null
+          request_id?: number | null
+          resolved_at?: string | null
+          resolved_by?: string | null
+          response_body?: string | null
+          status_code?: number | null
+        }
+        Update: {
+          contact_id?: string | null
+          created_at?: string
+          error_message?: string | null
+          hook_name?: string
+          id?: string
+          payload?: Json | null
+          request_id?: number | null
+          resolved_at?: string | null
+          resolved_by?: string | null
+          response_body?: string | null
+          status_code?: number | null
+        }
+        Relationships: []
+      }
       website_content: {
         Row: {
           content: string | null
@@ -1392,6 +1434,11 @@ export type Database = {
         }
         Returns: boolean
       }
+      reconcile_webhook_failures: {
+        Args: { _lookback_minutes?: number }
+        Returns: number
+      }
+      resolve_webhook_failure: { Args: { _id: string }; Returns: undefined }
       submit_research_response: {
         Args: { _answers?: Json; _demographics?: Json; _study_id: string }
         Returns: string
