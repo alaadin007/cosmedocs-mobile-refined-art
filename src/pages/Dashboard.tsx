@@ -139,6 +139,7 @@ const Dashboard = () => {
     { label: "Research Survey", desc: "Patient psychology responses", icon: FlaskConical, to: "/admin/research-survey", count: counts.surveys, highlight: false },
     { label: "Research Studies", desc: "Manage active research", icon: Eye, to: "/admin/research", count: null, highlight: false },
     { label: "Video Upload", desc: "Treatment video library", icon: Video, to: "/admin/video-upload", count: null, highlight: false },
+    { label: "Webhook Health", desc: "Contact form → email delivery", icon: AlertTriangle, to: "/admin/webhook-failures", count: counts.webhookFailures, highlight: false },
   ];
 
   const filteredFeed = filter === "all" ? feed : feed.filter((f) => f.kind === filter);
