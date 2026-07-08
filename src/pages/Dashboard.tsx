@@ -30,15 +30,6 @@ interface Counts {
   webhookFailures: number;
 }
 
-interface Counts {
-  messages: number;
-  leads: number;
-  training: number;
-  spinWinners: number;
-  views7d: number;
-  surveys: number;
-}
-
 interface FeedItem {
   id: string;
   kind: "message" | "lead" | "training";
@@ -59,6 +50,7 @@ const Dashboard = () => {
     spinWinners: 0,
     views7d: 0,
     surveys: 0,
+    webhookFailures: 0,
   });
   const [feed, setFeed] = useState<FeedItem[]>([]);
   const [loading, setLoading] = useState(true);
