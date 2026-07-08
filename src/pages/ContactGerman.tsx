@@ -22,7 +22,7 @@ export default function ContactGerman() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from('contact_us').insert([{ name: formData.name, email: formData.email, phone: formData.phone || null, message: formData.message }]);
+      const { error } = await supabase.from('contact_us').insert([{ name: formData.name, email: formData.email, phone: formData.phone || null, message: formData.message, page_url: (typeof window !== 'undefined' ? window.location.href : null), referrer: (typeof document !== 'undefined' ? (document.referrer || null) : null) }]);
       if (error) toast({ title: 'Fehler', description: 'Nachricht konnte nicht gesendet werden.', variant: 'destructive' });
       else navigate('/thank-you');
     } catch { toast({ title: 'Fehler', description: 'Ein unerwarteter Fehler ist aufgetreten.', variant: 'destructive' }); }
