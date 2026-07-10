@@ -912,6 +912,11 @@
 /research/digital-face-study-2026/  /research/filtered-face-project   301
 
 # =====================================================
+# Legacy WordPress .php URLs
+# =====================================================
+/*.php    /   301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
