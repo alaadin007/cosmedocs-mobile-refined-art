@@ -914,7 +914,18 @@
 # =====================================================
 # Legacy WordPress .php URLs
 # =====================================================
-/*.php    /   301
+/locations/derby-clinic.php              /   301
+/our-clinics/manchester-clinic.php       /   301
+/privacy-policy.php                      /   301
+/media-news.php                          /   301
+/team/dr-a-farhan-haq.php                /   301
+/treatments/med-spa-facials.php          /   301
+/cosmedocs-franchise.php                 /   301
+/product-package.php                     /   301
+/treatments/black-heads-and-white-spots.php   /   301
+/training-courses.php                    /   301
+/treatments/facial-volume-loss.php       /   301
+/treatments/botox-excessive-sweating.php /   301
 
 # =====================================================
 # SPA fallback - React handles remaining routing
