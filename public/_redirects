@@ -928,6 +928,23 @@
 /treatments/botox-excessive-sweating.php /   301
 
 # =====================================================
+# Additional treatment redirects
+# =====================================================
+/treatments/botox-london                      /treatments/botox/                    301
+/treatments/hydrafacial-london                 /treatments/hydrafacial/              301
+/treatments/prescription-skin-care             /treatments/prescription-skincare/    301
+/treatments/private-gp-doctor-london           /private-gp-doctor                    301
+/treatments/botox-calf-reduction               /treatments/calf-slimming-botox/      301
+/treatments/chemical-peel-london               /treatments/chemical-peel/            301
+/treatments/chemical-peel-treatment            /treatments/chemical-peel/            301
+/treatments/masseter-botox-002                 /treatments/masseter-botox/           301
+/treatments/botox-for-bruxism-teeth-grinding   /treatments/bruxism-botox/            301
+/treatments/non-surgical-nose-jobs             /treatments/non-surgical-nose-job/    301
+/treatments/trigger-point-injections           /treatments/botox/                    301
+/treatments/lines-and-wrinkles                 /treatments/anti-wrinkle-injections/  301
+/treatments/jawline-botox                      /treatments/masseter-botox/           301
+
+# =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
