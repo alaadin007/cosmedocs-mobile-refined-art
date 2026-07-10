@@ -564,33 +564,34 @@ const NonSurgicalNoseJob = () => {
               </p>
             </motion.div>
 
-            <Carousel className="w-full max-w-5xl mx-auto">
+            <Carousel className="w-full max-w-6xl mx-auto" opts={{ align: "start", loop: true }}>
               <CarouselContent>
                 {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                     <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
+                  <CarouselItem key={index} className="md:basis-1/2">
+                    <motion.figure
+                      initial={{ opacity: 0, scale: 0.96 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      transition={{ duration: 0.5, delay: index * 0.08 }}
                       viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
+                      className="relative group p-2"
                     >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        loading="lazy"
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      <div className="relative w-full bg-neutral-950 rounded-xl overflow-hidden border border-white/10 flex items-center justify-center" style={{ minHeight: '520px' }}>
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          loading="lazy"
+                          className="w-full h-auto max-h-[560px] object-contain"
+                        />
                       </div>
-                    </motion.div>
+                      <figcaption className="mt-3 px-1 text-white/85 text-sm leading-relaxed">
+                        {image.caption}
+                      </figcaption>
+                    </motion.figure>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black -left-4 md:-left-6" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black -right-4 md:-right-6" />
             </Carousel>
 
           </div>
