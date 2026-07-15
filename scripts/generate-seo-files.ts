@@ -180,27 +180,27 @@ function main() {
   const routes = parseRoutes();
   const { text: redirectsText, leftSides } = loadRedirects();
 
-  // Group routes by category
-  const byCat: Record<Category, string[]> = {
-    treatments: [], blog: [], 'before-after': [], locations: [], pages: [],
+  // Group routes by category — always sitemap the trailing-slash canonical form.
+  const byCat: Record<Category, Set<string>> = {
+    treatments: new Set(), blog: new Set(), 'before-after': new Set(),
+    locations: new Set(), pages: new Set(),
+    ar: new Set(), de: new Set(), es: new Set(), fr: new Set(), ja: new Set(), zh: new Set(),
   };
   for (const p of routes) {
-    // Only sitemap the canonical (trailing-slash) form; skip non-slash if the
-    // slash version also exists in routes.
-    const canonical = p.endsWith('/') || p === '/' ? p : (routes.includes(p + '/') ? null : p);
-    if (canonical === null) continue;
-    byCat[categorize(canonical)].push(canonical);
+    const canonical = canonicalise(p);
+    byCat[categorize(canonical)].add(canonical);
   }
 
   const sitemapAdds: Record<Category, string[]> = {
     treatments: [], blog: [], 'before-after': [], locations: [], pages: [],
+    ar: [], de: [], es: [], fr: [], ja: [], zh: [],
   };
   const changedSitemaps: Category[] = [];
 
   for (const cat of Object.keys(byCat) as Category[]) {
     const sm = loadSitemap(cat);
     const toAdd: string[] = [];
-    for (const p of byCat[cat]) {
+    for (const p of [...byCat[cat]].sort()) {
       const loc = `https://www.cosmedocs.com${p}`;
       if (sm.urls.has(loc)) continue;
       toAdd.push(urlBlock(p));
