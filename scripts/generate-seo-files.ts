@@ -264,6 +264,8 @@ function main() {
   const totalSitemap = Object.values(sitemapAdds).reduce((n, a) => n + a.length, 0);
   console.log(`\n[generate-seo-files] ${DRY_RUN ? 'DRY RUN — no files written' : 'wrote changes'}`);
   console.log(`  Routes parsed from App.tsx: ${routes.length}`);
+  console.log(`  Noindex routes skipped from sitemaps: ${noindexSkipped.length}`);
+  for (const p of noindexSkipped) console.log(`    - ${p}`);
   console.log(`  Sitemap entries added:      ${totalSitemap}`);
   for (const cat of Object.keys(sitemapAdds) as Category[]) {
     if (sitemapAdds[cat].length === 0) continue;
