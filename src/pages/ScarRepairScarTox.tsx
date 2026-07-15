@@ -640,6 +640,9 @@ const FAQS = [
 ];
 
 const RELATED = [
+  { label: "C-Section Scar Treatment", path: "/treatments/c-section-scar-treatment/" },
+  { label: "Mommy Makeover Scar Repair", path: "/treatments/mommy-makeover-scar-repair/" },
+  { label: "Tummy Tuck Scar Treatment", path: "/treatments/tummy-tuck-scar-treatment/" },
   { label: "Polynucleotides", path: "/treatments/polynucleotides/" },
   { label: "RF Microneedling (Morpheus8-class)", path: "/treatments/skin-rejuvenation/" },
   { label: "Anti-Wrinkle Treatment", path: "/treatments/anti-wrinkle-treatment/" },

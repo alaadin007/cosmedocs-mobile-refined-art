@@ -958,6 +958,10 @@
 /m2              /treatments/masseter-botox/        301
 /m2/             /treatments/masseter-botox/        301
 
+# Retired dark-theme experimental Botox route → main Botox hub
+/treatments/botox-dark     /treatments/botox/        301
+/treatments/botox-dark/    /treatments/botox/        301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================

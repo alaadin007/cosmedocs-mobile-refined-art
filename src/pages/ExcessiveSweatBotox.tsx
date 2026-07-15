@@ -729,7 +729,7 @@ const ExcessiveSweatBotox = () => {
                     Related <span className="text-[#C9A050] font-light">Guides</span>
                   </h2>
                   <div className="w-10 h-px bg-[#C9A050]/40 mb-6" />
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <Link
                       to="/hyperhidrosis-treatment-london/"
                       className="group bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 hover:border-[#C9A050]/30 transition-colors"
@@ -750,6 +750,17 @@ const ExcessiveSweatBotox = () => {
                       </p>
                       <p className="text-white/40 text-xs font-light leading-relaxed">
                         Specialist botox protocol for axillary hyperhidrosis — precise grid injections for lasting dryness and confidence.
+                      </p>
+                    </Link>
+                    <Link
+                      to="/botox-units-underarms-25-50-100/"
+                      className="group bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 hover:border-[#C9A050]/30 transition-colors"
+                    >
+                      <p className="text-sm font-medium text-[#C9A050] mb-2 group-hover:text-[#C9A050] transition-colors">
+                        Underarm Botox Units: 25 · 50 · 100
+                      </p>
+                      <p className="text-white/40 text-xs font-light leading-relaxed">
+                        Dosage guide — how many units your underarms actually need for reliable, long-lasting dryness.
                       </p>
                     </Link>
                     <Link

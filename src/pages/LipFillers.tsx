@@ -849,6 +849,7 @@ const LipFillers = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { to: "/treatments/lip-filler-0-5ml-vs-1ml/", tag: "Volume guide", title: "0.5ml vs 1ml Lip Filler", desc: "Which volume suits your lip anatomy — and how long each lasts." },
+                { to: "/russian-lips-vs-classic-lip-filler/", tag: "Technique", title: "Russian Lips vs Classic Lip Filler", desc: "Vertical lift vs horizontal projection — which technique flatters your lip shape." },
                 { to: "/treatments/lip-flip/", tag: "Alternative", title: "Lip Flip (Botox)", desc: "Subtle muscle-relaxant alternative — or combination partner." },
                 { to: "/treatments/lip-filler-dissolve/", tag: "Correction", title: "Lip Filler Dissolving", desc: "Hyalase protocols for unhappy or migrated lip filler." },
                 { to: "/blog/lip-filler-results-explained", tag: "Editorial", title: "Lip Filler Results, Explained", desc: "Doctor-written guide to timelines, swelling and longevity." },
