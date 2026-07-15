@@ -1,129 +1,105 @@
-# Digital Face Profile™ — Filtered Face Project
+## Endolift Alternative Cluster — Growth Plan v2
 
-## Goal
-Boost completion + sharing by giving every participant a personalized, anonymous, AI-generated Digital Face Profile immediately after submitting the survey. Strictly non-clinical, research/self-reflection framing.
-
----
-
-## 1. Pre-Survey Screen (Intro slide)
-Inserted into `IntroSlide` in `src/pages/ResearchStudy.tsx` for the `filtered-face-project` study only.
-
-- New section above "Begin Survey":
-  - Title: **Discover Your Digital Face Profile™**
-  - Gold checklist of what they'll receive (5 scores + archetype + comparison + insights)
-  - Compliance notice card ("research & educational purposes only, not medical/psychological")
-  - Example profile card: *The Reflective Observer · Digital Confidence Index 74/100 · less filter-dependent than 83% of respondents*
-- CTA stays **Begin Survey**
-
-Slug-gated so other studies are unaffected.
+Goal: take the 5 fresh pages from "shipped" to "ranking + converting" within 90 days, and expand the cluster to capture adjacent intent (double chin, jowls, London local, LLM answers).
 
 ---
 
-## 2. Post-Submit Loading Screen
-After the existing `submit()` succeeds, instead of jumping straight to `ThankYouSlide`:
+### Phase 1 — Harden what's live (Week 1)
 
-- Show **Generating Your Digital Face Profile™** with subtitle + animated gold progress ring
-- In parallel, call new edge function `generate-digital-face-profile` with the survey response id
-- On result → render the Profile screen
-- On error → graceful fallback that still thanks them + shows aggregate score only
+**1.1 Real proof, not just copy**
+- Add 3–5 real Endolaser Excel before/afters to `EndoliftAlternative.tsx` and `EndoliftAlternativeLondon.tsx` (jowl, sub-mental, neck). Reuse the `BeforeAfterGallery` component with 5-week progression captions.
+- Add a `<VideoEmbed>` slot for one 30-sec treatment clip (fibre insertion). Video dwell-time is the single biggest ranking lever for medical queries.
+- Add Dr Ahmed Haq author box with GMC + Lead Trainer credentials (E-E-A-T signal for YMYL).
 
----
+**1.2 Trust modules**
+- Insert `ReviewsStrip` (4.9 verified) below hero on all 5 pages.
+- Add "As featured in" strip (Tatler, Vogue, etc. per existing brand assets) on the two treatment pages.
+- Add CQC/PrivaDr compliance line per the Harley Street mandate.
 
-## 3. Profile Output (5 components)
-
-Computed deterministically in the edge function from the participant's answers (so scores are stable & reproducible), then the AI writes only the prose insight.
-
-### Scoring engine (server-side, in edge function)
-Maps each answer option to a 0–100 contribution, then averages weighted:
-
-- **Digital Confidence Index** = 100 − weighted(self-comparison + filter dependence + camera concerns + delete-photo behaviour + video-call influence)
-- **Social Comparison Score** = derived from "beauty standards", "perceive your own face", motivations
-- **Filter Awareness Score** = filter usage + photos-before-posting
-- **Camera Sensitivity Score** = video-call awareness + camera view question + delete-photo
-- **Digital Influence Score** = social-media time + beauty standards + AI app trust
-
-### Archetype assignment
-Rules-based from the 4 scores → one of: Reflective Observer, Confidence Explorer, Social Mirror, Camera Critic, Filter Optimiser, Naturalist, Digital Perfectionist.
-
-### Population comparison
-Edge function runs aggregate queries against `research_responses` for the same study and computes percentiles for: filter usage, camera awareness, confidence index, photos before posting.
-
-### Personalized AI insight (150–250 words)
-Lovable AI Gateway, model `google/gemini-3-flash-preview`. System prompt enforces:
-- Supportive · educational · non-judgmental
-- No diagnosis, no mental-health labels, no medical advice
-- Frame as "Your responses suggest…" / "Compared with other participants…"
+**1.3 Schema depth**
+- Add `MedicalProcedure` schema (not just MedicalArticle) to the 2 treatment pages — includes `bodyLocation`, `preparation`, `procedureType`, `howPerformed`.
+- Add `HowTo` schema to the science blog (patient journey steps).
+- Add `Review` aggregate + individual `Review` objects to the London page.
 
 ---
 
-## 4. Profile UI
-New component `DigitalFaceProfileSlide.tsx` (dark luxury theme, gold #C9A050, iOS typography per memory):
+### Phase 2 — Internal linking web (Week 1–2)
 
-- Archetype hero (large serif title + one-line description)
-- Circular gauge for Digital Confidence Index
-- 4 horizontal score bars
-- Population comparison list (4 dynamic lines)
-- AI insight body (prose)
-- Compliance footnote always visible
-- Share row: native Web Share API + WhatsApp / Instagram (download image) / Copy Link
-- Optional email capture card (stored in a separate table, not joined to response)
+Currently the 5 pages only cross-link to each other. They need entry points from high-authority existing pages.
 
----
+- `EndolaserSpotlight.tsx` → add "Comparing to Endolift?" CTA linking to hub.
+- `EndoliftLondon.tsx` (1G authority) → add gold-callout linking to 2G alternative page. Do not remove existing content — additive only.
+- `EndoliftDoubleChin.tsx` → weave 2G language + link to `/blog/endolift-second-generation/`.
+- `TreatmentsHub.tsx` + `MediHub` mega-menu → surface "Laser Fibre Lift" as a top-level entry.
+- `Home3.tsx` "flawless skin" row → add Endolaser Excel card.
+- `Footer.tsx` → add Laser Fibre Lift to treatments column.
+- `BlogHome.tsx` → feature the 2 new blog posts in the "Science" section.
 
-## 5. Final Thank-You
-Update existing `ThankYouSlide` (or new section under profile) with:
-- "Thank you for contributing to The Filtered Face Project™"
-- Mention Aesthetic Intelligence Journal · Harley Street Institute · CosmeDocs Harley Street
-- Share buttons + email capture
+Target: 12+ contextual inbound links to the hub within 2 weeks.
 
 ---
 
-## Technical Details
+### Phase 3 — Expand the cluster (Week 2–4)
 
-### Database (migration)
-1. Add column `research_responses.profile jsonb` to cache the generated profile (so refresh shows same result, and we can aggregate later).
-2. New table `research_email_subscribers` (id, study_id, email, created_at) — separate from `research_responses`, RLS: public insert, admin select.
+Add 4 more pages to close obvious intent gaps we haven't covered:
 
-### Edge function: `generate-digital-face-profile`
-Input: `{ response_id }`
-Steps:
-1. Fetch response answers from `research_responses`
-2. Map answer text → numeric scores (lookup table inside function based on the known question set for this study)
-3. Compute 4 scores + archetype
-4. Run 4 aggregate `count(*)` queries vs other responses for percentiles
-5. Call Lovable AI Gateway for the prose insight
-6. Persist `profile` JSON back to the row
-7. Return profile JSON
-CORS enabled; uses service role; no auth required (responses are anonymous).
+| New page | URL | Intent | Est. UK vol |
+|---|---|---|---|
+| Endolift Cost UK comparison | `/treatments/endolift-cost-uk/` | *endolift cost / endolift price uk* | 720/mo |
+| Double Chin Laser Lift (2G) | `/treatments/double-chin-laser-fibre-lift/` | *double chin treatment london* | 1,300/mo |
+| Jowl Lift without Surgery | `/treatments/jowl-lift-non-surgical/` | *jowl lift / jawline lift non-surgical* | 890/mo |
+| Endolift Recovery — What Actually Happens | `/blog/endolift-recovery-day-by-day/` | *endolift recovery / downtime* | 480/mo |
 
-### Frontend changes
-- `src/pages/ResearchStudy.tsx`
-  - Extend intro slide (slug-gated)
-  - Add `generating` + `profile` states; after submit, set `generating=true`, invoke edge function, then `profile=data`
-  - Replace `ThankYouSlide` with `DigitalFaceProfileSlide` for this study
-- New files:
-  - `src/components/research/DigitalFaceProfileSlide.tsx`
-  - `src/components/research/ProfileGauge.tsx` (circular svg)
-  - `src/components/research/ScoreBar.tsx`
-  - `src/components/research/ShareProfileCard.tsx`
-- Reuse existing `IOS_FONT`, gold tokens, motion patterns.
-
-### Compliance guardrails (enforced in code + prompt)
-- Banned word list filter on AI output (BDD, anxiety, depression, disorder, diagnose, illness) → if matched, regenerate once, otherwise fall back to a safe templated paragraph.
-- Static disclaimer rendered above and below the profile.
+Each follows the same template: dark theme, top-answer paragraph (40–60 words for LLM extraction), comparison table, FAQ schema, before/after, CTA to `/treatments/endolaser/`.
 
 ---
 
-## Out of scope (this iteration)
-- Storing generated PNG share cards in storage (we'll generate client-side via canvas)
-- A/B testing of archetypes
-- Admin dashboard for profile analytics (current admin views already show responses)
+### Phase 4 — AI Search / LLM visibility (Week 3–4)
+
+Endolift queries are increasingly answered by ChatGPT / Google AI Overviews / Perplexity before users click. We need to be the source they cite.
+
+- Add a `data-speakable` **40–60 word** top-answer paragraph on every page (already on hub — extend to all 5 + new 4).
+- Publish a `/llms.txt` addition listing the new cluster with 1-line descriptions.
+- Submit hub URL to Perplexity and Bing IndexNow.
+- Add "Compared to Endolift®" JSON-LD `Claim` structured data (emerging LLM signal).
+- Create a plaintext FAQ export at `/public/endolift-alternative-faq.txt` for LLM crawlers.
 
 ---
 
-## Build order
-1. DB migration (profile column + email subscribers table)
-2. Edge function with scoring + AI insight
-3. Profile UI components
-4. Wire ResearchStudy flow (intro additions + post-submit profile)
-5. QA full flow end-to-end on `/research/filtered-face-project`
+### Phase 5 — Measurement (Week 4 onwards)
+
+Wire the cluster into the existing admin analytics:
+- Add cluster tag to `PageViewTracker` so `/admin/page-views/` filters "endolift-cluster".
+- Track scroll depth + CTA click-through on the 5 pages.
+- GSC: add cluster URLs as a filter group; weekly review of impressions/CTR.
+- Ranking targets at 90 days: hub top-10 for "endolift alternative", London page top-5 for "endolift london alternative", double-chin page top-10 for "double chin laser london".
+
+---
+
+### Phase 6 — Consider (not commit) at day 60
+
+Only after GSC data comes in:
+- Rename underperforming legacy `/treatments/endolaser/` → `/treatments/endolaser-excel-laser-fibre-lift/` with 301, IF the fresh cluster is ranking and current page is stuck below position 20.
+- Merge 1G `EndoliftLondon.tsx` into hub if it cannibalises the new alternative page.
+
+---
+
+### Technical details
+
+- All new pages: lazy-import in `App.tsx`, add to `public/sitemap-treatments.xml` or `public/sitemap-blog.xml`.
+- Reuse existing components: `ComparisonPage`, `TreatmentAccordion`, `TreatmentStepper`, `BeforeAfterGallery`, `DrAhmedQuote`, `FAQSchema`, `MedicalArticleSchema`.
+- Follow the `treatment-page` wrapper rule and dark-theme (#C9A050 gold) per memory.
+- No fake before/afters — real patient photos only.
+- British English throughout.
+- No new redirects in `_redirects` (still frozen after last week's loop incident).
+
+---
+
+### Deliverable order if you approve
+
+1. Phase 1 + 2 in one push (proof + internal links)
+2. Phase 3 pages one at a time (cost → double chin → jowl → recovery)
+3. Phase 4 LLM optimisation batched
+4. Phase 5 analytics wiring
+
+Estimated ~15 file edits + 4 new pages + 4 sitemap updates.
