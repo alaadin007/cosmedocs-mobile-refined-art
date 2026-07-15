@@ -132,6 +132,7 @@ export default function Home2() {
   return (
     <div className="min-h-screen bg-neutral-900 overflow-x-hidden">
       <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
         <title>CosmeDocs – Doctor-Led Aesthetic Clinic on Harley Street, London</title>
         <meta name="description" content="CosmeDocs - Award-winning aesthetic clinic on Harley Street, London. Expert Botox, dermal fillers, lip enhancement & skin treatments by GMC-registered doctors. Natural results since 2007." />
         <meta name="keywords" content="cosmedocs, aesthetic clinic harley street, botox london, dermal fillers, lip fillers, harley street aesthetics, doctor led aesthetic clinic" />

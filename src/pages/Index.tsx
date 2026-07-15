@@ -33,6 +33,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
         <link rel="canonical" href={seoData.canonical} />

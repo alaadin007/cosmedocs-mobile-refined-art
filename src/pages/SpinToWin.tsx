@@ -37,6 +37,7 @@ const SpinToWin = () => {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
         <title>Spin to Win – Glow Giveaway | Cosmedocs</title>
         <meta name="description" content="Click to reveal your free Cosmedocs gift! Win premium aesthetic treatments including HydraFacials, microneedling, laser treatments and more." />
       </Helmet>
