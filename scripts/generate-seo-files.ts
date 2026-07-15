@@ -75,11 +75,7 @@ const NOINDEX_PATHS = new Set<string>([
   '/testapp/',
   '/spin-to-win/',
   '/home/',
-  '/home10/',
-  '/home-legacy/',
-  '/old-index/',
   '/journal/',
-  '/m2/',
   '/campaign-ads/',
   '/experimental-treatment/',
 ]);
