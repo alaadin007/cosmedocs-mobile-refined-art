@@ -135,6 +135,12 @@ export default function EndoliftDoubleChin() {
               <Link to="/treatments/endolift-london/recovery/" className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-[#C9A050]">
                 Recovery timeline →
               </Link>
+              <Link to="/treatments/endolift-alternative/" className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-[#C9A050]">
+                Endolift® alternative (2G) →
+              </Link>
+              <Link to="/blog/endolift-second-generation/" className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-[#C9A050]">
+                The science of 2G →
+              </Link>
             </div>
           </div>
         </section>

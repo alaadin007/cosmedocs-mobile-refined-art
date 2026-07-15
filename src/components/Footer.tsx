@@ -94,6 +94,16 @@ export default function Footer() {
                   Skin Rejuvenation
                 </Link>
               </li>
+              <li>
+                <Link to="/treatments/endolaser/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Laser Fibre Lift
+                </Link>
+              </li>
+              <li>
+                <Link to="/treatments/endolift-alternative/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Endolift® Alternative
+                </Link>
+              </li>
             </ul>
           </div>
 
