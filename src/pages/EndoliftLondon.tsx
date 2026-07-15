@@ -108,6 +108,9 @@ const EndoliftLondon = () => {
                   { t: "How long does Endolift last?", d: "Duration, maintenance & longevity.", to: "/treatments/endolift-london/duration/" },
                   { t: "Endolaser for the body", d: "Arms, abdomen, knees & inner thighs.", to: "/treatments/endolaser-body/" },
                   { t: "Endolaser for cellulite", d: "Subdermal smoothing on thighs & buttocks.", to: "/treatments/endolaser-cellulite/" },
+                  { t: "Endolift® alternative (2G)", d: "Dual-wavelength evolution — 980nm + 1470nm.", to: "/treatments/endolift-alternative/" },
+                  { t: "Laser Fibre Lift vs Endolift®", d: "Head-to-head clinical comparison.", to: "/treatments/laser-fibre-lift-vs-endolift/" },
+                  { t: "Better than Endolift®?", d: "The 2G science, explained.", to: "/blog/better-than-endolift/" },
                 ].map((c) => (
                   <Link key={c.t} to={c.to} className="group block border border-[#C9A050]/25 rounded-xl bg-[#C9A050]/[0.04] hover:border-[#C9A050]/60 transition-colors p-4">
                     <div className="text-[10px] uppercase tracking-[0.2em] text-[#C9A050]">In this cluster</div>

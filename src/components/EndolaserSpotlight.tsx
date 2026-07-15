@@ -94,6 +94,12 @@ const EndolaserSpotlight = ({ variant = "full", className = "" }: EndolaserSpotl
               >
                 See the Endolift authority page →
               </Link>
+              <Link
+                to="/treatments/endolift-alternative/"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-[#C9A050] transition-colors"
+              >
+                Comparing to Endolift®? See the 2G alternative →
+              </Link>
             </div>
           </div>
 
