@@ -92,7 +92,7 @@ const categories: Category[] = [
       { title: "Fat Dissolve", link: "/fat-dissolve" },
       { title: "Hair Transplant", link: "/hair-transplant-surgeon" },
       { title: "Prescription Skincare", link: "/prescription-skin-care" },
-      { title: "Scar Repair — ScarTox", link: "/treatments/scar-repair-scartox/" },
+      { title: "Scar Repair — ScarTox", link: "/treatments/scartox/" },
       { title: "Scar Reduction", link: "/scar-reduction" },
     ]
   },
