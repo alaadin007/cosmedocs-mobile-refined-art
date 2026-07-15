@@ -558,6 +558,28 @@ const BotoxDublin = () => {
           </div>
         </section>
 
+        {/* Irish Patients — Related Skin & Body Treatments */}
+        <section className="py-16 bg-black border-t border-white/10">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <p className="text-xs uppercase tracking-[0.2em] text-amber-400/70 mb-3">For Dublin & Irish patients</p>
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-8">
+              Beyond Botox — <span className="text-amber-400">laser fibre lifting for Irish patients</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/ie/treatments/endolaser-dublin/" className="group block p-6 bg-white/[0.03] border border-white/10 rounded-2xl hover:border-amber-400/40 transition-colors">
+                <p className="text-amber-400 text-sm font-medium mb-1">Endolaser Dublin</p>
+                <p className="text-white/85 font-light mb-1">1470nm laser fibre lift for Irish patients</p>
+                <p className="text-white/45 text-xs font-light">Sub-dermal laser tightening for jawline, neck and lower face — booked from Ireland, treated on Harley Street.</p>
+              </Link>
+              <Link to="/ie/treatments/endolift-dublin/" className="group block p-6 bg-white/[0.03] border border-white/10 rounded-2xl hover:border-amber-400/40 transition-colors">
+                <p className="text-amber-400 text-sm font-medium mb-1">Endolift Dublin</p>
+                <p className="text-white/85 font-light mb-1">Non-surgical lifting for Dublin patients</p>
+                <p className="text-white/45 text-xs font-light">The lifting alternative to threads — evidence, recovery and Irish-patient logistics.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4 text-center">
