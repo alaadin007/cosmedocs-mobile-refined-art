@@ -39,7 +39,9 @@ const SITEMAP_INDEX = join(PUBLIC, 'sitemap.xml');
 const DRY_RUN = process.argv.includes('--dry-run');
 const TODAY = new Date().toISOString().slice(0, 10);
 
-type Category = 'treatments' | 'blog' | 'before-after' | 'locations' | 'pages';
+type Category =
+  | 'treatments' | 'blog' | 'before-after' | 'locations' | 'pages'
+  | 'ar' | 'de' | 'es' | 'fr' | 'ja' | 'zh';
 
 const SUBSITEMAPS: Record<Category, string> = {
   treatments: 'sitemap-treatments.xml',
@@ -47,17 +49,31 @@ const SUBSITEMAPS: Record<Category, string> = {
   'before-after': 'sitemap-before-after.xml',
   locations: 'sitemap-locations.xml',
   pages: 'sitemap-pages.xml',
+  ar: 'sitemap-ar.xml',
+  de: 'sitemap-de.xml',
+  es: 'sitemap-es.xml',
+  fr: 'sitemap-fr.xml',
+  ja: 'sitemap-ja.xml',
+  zh: 'sitemap-zh.xml',
 };
 
+const LANG_PREFIXES = new Set(['ar', 'de', 'es', 'fr', 'ja', 'zh']);
 const LOCATIONS = ['birmingham', 'manchester', 'cardiff', 'delhi', 'karachi', 'barbados', 'dublin'];
 
 function categorize(path: string): Category {
+  const seg = path.split('/').filter(Boolean)[0] ?? '';
+  if (LANG_PREFIXES.has(seg)) return seg as Category;
   if (path.startsWith('/treatments/')) return 'treatments';
   if (path.startsWith('/blog/')) return 'blog';
   if (path.startsWith('/before-after')) return 'before-after';
-  const seg = path.split('/').filter(Boolean)[0] ?? '';
   if (LOCATIONS.includes(seg)) return 'locations';
   return 'pages';
+}
+
+/** Canonical sitemap form: always trailing-slash (except root). */
+function canonicalise(path: string): string {
+  if (path === '/') return '/';
+  return path.endsWith('/') ? path : path + '/';
 }
 
 function priority(path: string): string {
@@ -164,27 +180,27 @@ function main() {
   const routes = parseRoutes();
   const { text: redirectsText, leftSides } = loadRedirects();
 
-  // Group routes by category
-  const byCat: Record<Category, string[]> = {
-    treatments: [], blog: [], 'before-after': [], locations: [], pages: [],
+  // Group routes by category — always sitemap the trailing-slash canonical form.
+  const byCat: Record<Category, Set<string>> = {
+    treatments: new Set(), blog: new Set(), 'before-after': new Set(),
+    locations: new Set(), pages: new Set(),
+    ar: new Set(), de: new Set(), es: new Set(), fr: new Set(), ja: new Set(), zh: new Set(),
   };
   for (const p of routes) {
-    // Only sitemap the canonical (trailing-slash) form; skip non-slash if the
-    // slash version also exists in routes.
-    const canonical = p.endsWith('/') || p === '/' ? p : (routes.includes(p + '/') ? null : p);
-    if (canonical === null) continue;
-    byCat[categorize(canonical)].push(canonical);
+    const canonical = canonicalise(p);
+    byCat[categorize(canonical)].add(canonical);
   }
 
   const sitemapAdds: Record<Category, string[]> = {
     treatments: [], blog: [], 'before-after': [], locations: [], pages: [],
+    ar: [], de: [], es: [], fr: [], ja: [], zh: [],
   };
   const changedSitemaps: Category[] = [];
 
   for (const cat of Object.keys(byCat) as Category[]) {
     const sm = loadSitemap(cat);
     const toAdd: string[] = [];
-    for (const p of byCat[cat]) {
+    for (const p of [...byCat[cat]].sort()) {
       const loc = `https://www.cosmedocs.com${p}`;
       if (sm.urls.has(loc)) continue;
       toAdd.push(urlBlock(p));
