@@ -18,7 +18,6 @@ import ErrorBoundary, { RouteResetErrorBoundary } from "./components/ErrorBounda
 import ResearchSurveyGate from "./components/ResearchSurveyGate";
 
 // Eager load critical pages only
-import Index from "./pages/Index";
 const TranslatedSkincareBlog = lazy(() => import("./pages/blog/TranslatedSkincareBlog"));
 const TranslatedTier2Treatment = lazy(() => import("./pages/TranslatedTier2Treatment"));
 const TranslatedTier1Treatment = lazy(() => import("./pages/TranslatedTier1Treatment"));
@@ -35,11 +34,8 @@ const AboutUsGerman = lazy(() => import("./pages/AboutUsGerman"));
 
 // Lazy load all other pages
 const Home = lazy(() => import("./pages/Home"));
-const Home2 = lazy(() => import("./pages/Home2"));
 const Home3 = lazy(() => import("./pages/Home3"));
-const Home10 = lazy(() => import("./pages/Home10"));
 const TestApp = lazy(() => import("./pages/TestApp"));
-const MasseterM2 = lazy(() => import("./pages/MasseterM2"));
 
 const Prices = lazy(() => import("./pages/Prices"));
 const TreatmentsHub = lazy(() => import("./pages/TreatmentsHub"));
@@ -417,25 +413,13 @@ const App = () => {
                   <Route path="/home2" element={<Navigate to="/" replace />} />
                   <Route path="/home3" element={<Navigate to="/" replace />} />
                   <Route path="/home3/" element={<Navigate to="/" replace />} />
-                  {/* Legacy Home2 preserved for internal preview only */}
-                  <Route path="/home-legacy" element={
-                    <Suspense fallback={<PageLoader />}>
-                      <Home2 />
-                    </Suspense>
-                   } />
-                   <Route path="/home10" element={
-                     <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
-                       <Home10 />
-                     </Suspense>
-                   } />
-                   <Route path="/testapp" element={
+                  {/* Legacy /home-legacy, /home10, /m2 → 301 redirects (see public/_redirects) */}
+                  <Route path="/home-legacy" element={<Navigate to="/" replace />} />
+                  <Route path="/home10" element={<Navigate to="/" replace />} />
+                  <Route path="/m2" element={<Navigate to="/treatments/masseter-botox/" replace />} />
+                  <Route path="/testapp" element={
                     <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
                       <TestApp />
-                    </Suspense>
-                  } />
-                  <Route path="/m2" element={
-                    <Suspense fallback={<div className="fixed inset-0 bg-[#0a0a0a]" />}>
-                      <MasseterM2 />
                     </Suspense>
                   } />
                   <Route path="/botox2" element={<Navigate to="/treatments/botox/" replace />} />
@@ -577,7 +561,9 @@ const App = () => {
                     <Layout>
                       <Suspense fallback={<PageLoader />}>
                         <Routes>
-                          <Route path="/old-index" element={<Index />} />
+                          <Route path="/old-index" element={<Navigate to="/" replace />} />
+                          <Route path="/journal" element={<Navigate to="/blog/" replace />} />
+                          <Route path="/journal/" element={<Navigate to="/blog/" replace />} />
                           <Route path="/home" element={<Home />} />
                           <Route path="/treatments" element={<TreatmentsHub />} />
                           <Route path="/prices" element={<Prices />} />
