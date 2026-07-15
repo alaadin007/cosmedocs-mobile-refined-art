@@ -276,6 +276,11 @@ const AdminSpinWinners = lazy(() => import("./pages/AdminSpinWinners"));
 const EndoliftSafety = lazy(() => import("./pages/endolift/EndoliftSafety"));
 const EndoliftRecovery = lazy(() => import("./pages/endolift/EndoliftRecovery"));
 const EndoliftDoubleChin = lazy(() => import("./pages/endolift/EndoliftDoubleChin"));
+const EndoliftAlternative = lazy(() => import("./pages/EndoliftAlternative"));
+const EndoliftAlternativeLondon = lazy(() => import("./pages/EndoliftAlternativeLondon"));
+const BetterThanEndolift = lazy(() => import("./pages/blog/BetterThanEndolift"));
+const EndoliftSecondGeneration = lazy(() => import("./pages/blog/EndoliftSecondGeneration"));
+const LaserFibreLiftVsEndolift = lazy(() => import("./pages/comparisons/LaserFibreLiftVsEndolift"));
 const TearTroughAftercare = lazy(() => import("./pages/aftercare/TearTroughAftercare"));
 const TearTroughDissolving = lazy(() => import("./pages/aftercare/TearTroughDissolving"));
 const NoseFillerAftercare = lazy(() => import("./pages/aftercare/NoseFillerAftercare"));
@@ -1124,6 +1129,17 @@ const App = () => {
                           <Route path="/treatments/endolift-london/recovery/" element={<EndoliftRecovery />} />
                           <Route path="/treatments/endolift-london/double-chin" element={<EndoliftDoubleChin />} />
                           <Route path="/treatments/endolift-london/double-chin/" element={<EndoliftDoubleChin />} />
+                          {/* Phase 3c — Endolift-alternative intent cluster (2G positioning) */}
+                          <Route path="/treatments/endolift-alternative" element={<EndoliftAlternative />} />
+                          <Route path="/treatments/endolift-alternative/" element={<EndoliftAlternative />} />
+                          <Route path="/treatments/endolift-alternative-london" element={<EndoliftAlternativeLondon />} />
+                          <Route path="/treatments/endolift-alternative-london/" element={<EndoliftAlternativeLondon />} />
+                          <Route path="/treatments/laser-fibre-lift-vs-endolift" element={<LaserFibreLiftVsEndolift />} />
+                          <Route path="/treatments/laser-fibre-lift-vs-endolift/" element={<LaserFibreLiftVsEndolift />} />
+                          <Route path="/blog/better-than-endolift" element={<BetterThanEndolift />} />
+                          <Route path="/blog/better-than-endolift/" element={<BetterThanEndolift />} />
+                          <Route path="/blog/endolift-second-generation" element={<EndoliftSecondGeneration />} />
+                          <Route path="/blog/endolift-second-generation/" element={<EndoliftSecondGeneration />} />
                           <Route path="/treatments/tear-trough-filler/aftercare" element={<TearTroughAftercare />} />
                           <Route path="/treatments/tear-trough-filler/aftercare/" element={<TearTroughAftercare />} />
                           <Route path="/treatments/tear-trough-filler/dissolving" element={<TearTroughDissolving />} />
