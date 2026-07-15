@@ -42,6 +42,7 @@ const Auth = () => {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
         <title>Sign In | CosmeDocs AI Aesthetic Assessment</title>
         <meta name="description" content="Sign in to your CosmeDocs AI assessment portal. Access facial, hair and skin analysis results from our Harley Street clinic." />
         <link rel="canonical" href="https://ai.cosmedocs.com/auth/" />

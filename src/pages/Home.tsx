@@ -58,6 +58,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
         <title>Cosmedocs | Premium Aesthetic Medicine | Harley Street London</title>
         <meta name="description" content="Doctor-led aesthetic medicine on Harley Street. Botox, dermal fillers, and skin treatments. Our invisible art philosophy delivers natural-looking results." />
         <link rel="canonical" href="https://cosmedocs.com/" />

@@ -60,6 +60,30 @@ const SUBSITEMAPS: Record<Category, string> = {
 const LANG_PREFIXES = new Set(['ar', 'de', 'es', 'fr', 'ja', 'zh']);
 const LOCATIONS = ['birmingham', 'manchester', 'cardiff', 'delhi', 'karachi', 'barbados', 'dublin'];
 
+/**
+ * Deny-list: canonical routes excluded from ALL sitemaps.
+ * Kept live and still get trailing-slash redirect normalisation,
+ * but never advertised to crawlers. Match uses trailing-slash form.
+ * Each of these pages ALSO carries <meta robots="noindex,nofollow">
+ * on the component itself (sitemap exclusion alone is not enough).
+ */
+const NOINDEX_PATHS = new Set<string>([
+  '/auth/',
+  '/dashboard/',
+  '/thank-you/',
+  '/popup-offer/',
+  '/testapp/',
+  '/spin-to-win/',
+  '/home/',
+  '/home10/',
+  '/home-legacy/',
+  '/old-index/',
+  '/journal/',
+  '/m2/',
+  '/campaign-ads/',
+  '/experimental-treatment/',
+]);
+
 function categorize(path: string): Category {
   const seg = path.split('/').filter(Boolean)[0] ?? '';
   if (LANG_PREFIXES.has(seg)) return seg as Category;
@@ -186,8 +210,13 @@ function main() {
     locations: new Set(), pages: new Set(),
     ar: new Set(), de: new Set(), es: new Set(), fr: new Set(), ja: new Set(), zh: new Set(),
   };
+  const noindexSkipped: string[] = [];
   for (const p of routes) {
     const canonical = canonicalise(p);
+    if (NOINDEX_PATHS.has(canonical)) {
+      noindexSkipped.push(canonical);
+      continue;
+    }
     byCat[categorize(canonical)].add(canonical);
   }
 
@@ -235,6 +264,8 @@ function main() {
   const totalSitemap = Object.values(sitemapAdds).reduce((n, a) => n + a.length, 0);
   console.log(`\n[generate-seo-files] ${DRY_RUN ? 'DRY RUN — no files written' : 'wrote changes'}`);
   console.log(`  Routes parsed from App.tsx: ${routes.length}`);
+  console.log(`  Noindex routes skipped from sitemaps: ${noindexSkipped.length}`);
+  for (const p of noindexSkipped) console.log(`    - ${p}`);
   console.log(`  Sitemap entries added:      ${totalSitemap}`);
   for (const cat of Object.keys(sitemapAdds) as Category[]) {
     if (sitemapAdds[cat].length === 0) continue;
