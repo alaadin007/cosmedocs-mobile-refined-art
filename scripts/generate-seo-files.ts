@@ -210,8 +210,13 @@ function main() {
     locations: new Set(), pages: new Set(),
     ar: new Set(), de: new Set(), es: new Set(), fr: new Set(), ja: new Set(), zh: new Set(),
   };
+  const noindexSkipped: string[] = [];
   for (const p of routes) {
     const canonical = canonicalise(p);
+    if (NOINDEX_PATHS.has(canonical)) {
+      noindexSkipped.push(canonical);
+      continue;
+    }
     byCat[categorize(canonical)].add(canonical);
   }
 
