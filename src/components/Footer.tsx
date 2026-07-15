@@ -211,11 +211,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/ar/about-us/" className="text-white/50 hover:text-white transition-colors">العربية · من نحن</Link></li>
+              <li><Link to="/de/" className="text-white/50 hover:text-white transition-colors">Deutsch · Startseite</Link></li>
               <li><Link to="/de/ueber-uns/" className="text-white/50 hover:text-white transition-colors">Deutsch · Über uns</Link></li>
               <li><Link to="/es/sobre-nosotros/" className="text-white/50 hover:text-white transition-colors">Español · Sobre nosotros</Link></li>
               <li><Link to="/fr/a-propos/" className="text-white/50 hover:text-white transition-colors">Français · À propos</Link></li>
+              <li><Link to="/ja/" className="text-white/50 hover:text-white transition-colors">日本語 · ホーム</Link></li>
               <li><Link to="/ja/about-us/" className="text-white/50 hover:text-white transition-colors">日本語 · About</Link></li>
               <li><Link to="/zh/about-us/" className="text-white/50 hover:text-white transition-colors">中文 · 关于我们</Link></li>
+            </ul>
+
+            <h4 className="text-sm font-medium text-white/70 uppercase tracking-wider mt-8 mb-3">
+              Localised editorial
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ar/london-summer-aesthetics/" className="text-white/50 hover:text-white transition-colors">صيف لندن · جماليات</Link></li>
+              <li><Link to="/de/blog/drei-zellen-haut-philosophie/" className="text-white/50 hover:text-white transition-colors">Drei-Zellen-Haut-Philosophie</Link></li>
+              <li><Link to="/de/blog/warum-ph-wichtig-vitamin-c/" className="text-white/50 hover:text-white transition-colors">Warum pH wichtig ist · Vitamin C</Link></li>
+              <li><Link to="/botox-paris/" className="text-white/50 hover:text-white transition-colors">Botox pour patients parisiens</Link></li>
             </ul>
           </div>
         </div>
