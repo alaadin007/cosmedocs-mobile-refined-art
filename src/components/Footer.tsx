@@ -189,6 +189,35 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+
+          {/* International Patients */}
+          <div>
+            <h4 className="text-sm font-medium text-white/70 uppercase tracking-wider mb-4">
+              International Patients
+            </h4>
+            <ul className="space-y-3">
+              <li><Link to="/arabic-patients/" className="text-sm text-white/50 hover:text-white transition-colors">Arabic Patients</Link></li>
+              <li><Link to="/chinese-patients/" className="text-sm text-white/50 hover:text-white transition-colors">Chinese Patients</Link></li>
+              <li><Link to="/french-patients/" className="text-sm text-white/50 hover:text-white transition-colors">French Patients</Link></li>
+              <li><Link to="/german-patients/" className="text-sm text-white/50 hover:text-white transition-colors">German Patients</Link></li>
+              <li><Link to="/japanese-patients/" className="text-sm text-white/50 hover:text-white transition-colors">Japanese Patients</Link></li>
+              <li><Link to="/norwegian-patients/" className="text-sm text-white/50 hover:text-white transition-colors">Norwegian Patients</Link></li>
+              <li><Link to="/swedish-patients/" className="text-sm text-white/50 hover:text-white transition-colors">Swedish Patients</Link></li>
+              <li><Link to="/finnish-patients/" className="text-sm text-white/50 hover:text-white transition-colors">Finnish Patients</Link></li>
+            </ul>
+
+            <h4 className="text-sm font-medium text-white/70 uppercase tracking-wider mt-8 mb-3">
+              Site in your language
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ar/about-us/" className="text-white/50 hover:text-white transition-colors">العربية · من نحن</Link></li>
+              <li><Link to="/de/ueber-uns/" className="text-white/50 hover:text-white transition-colors">Deutsch · Über uns</Link></li>
+              <li><Link to="/es/sobre-nosotros/" className="text-white/50 hover:text-white transition-colors">Español · Sobre nosotros</Link></li>
+              <li><Link to="/fr/a-propos/" className="text-white/50 hover:text-white transition-colors">Français · À propos</Link></li>
+              <li><Link to="/ja/about-us/" className="text-white/50 hover:text-white transition-colors">日本語 · About</Link></li>
+              <li><Link to="/zh/about-us/" className="text-white/50 hover:text-white transition-colors">中文 · 关于我们</Link></li>
+            </ul>
+          </div>
         </div>
       </motion.div>
 
