@@ -944,6 +944,10 @@
 /treatments/lines-and-wrinkles                 /treatments/anti-wrinkle-injections/  301
 /treatments/jawline-botox                      /treatments/masseter-botox/           301
 
+# /journal → /blog/ (consolidate duplicate hub)
+/journal      /blog/        301
+/journal/     /blog/        301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
