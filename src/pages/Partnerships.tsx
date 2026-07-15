@@ -687,6 +687,22 @@ const Partnerships = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Existing Harley Street clinical partnership */}
+        <section className="py-14 border-t border-white/10 bg-black">
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#C9A050]/70 mb-3">Our existing partnership</p>
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+              Cosmedocs × Harley Street — a clinical partnership since 2007
+            </h2>
+            <p className="text-white/60 text-sm md:text-base mb-6 leading-relaxed">
+              Read how our Harley Street clinic partnership is structured, the CQC framework we work within, and what it means for patient safety and continuity of care.
+            </p>
+            <a href="/harley-street-clinic-partnership/" className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-white border-b border-[#C9A050]/40 hover:border-white pb-0.5 transition-colors">
+              About the Harley Street clinic partnership →
+            </a>
+          </div>
+        </section>
       </div>
     </>
   );
