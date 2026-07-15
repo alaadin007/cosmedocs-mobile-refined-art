@@ -60,6 +60,30 @@ const SUBSITEMAPS: Record<Category, string> = {
 const LANG_PREFIXES = new Set(['ar', 'de', 'es', 'fr', 'ja', 'zh']);
 const LOCATIONS = ['birmingham', 'manchester', 'cardiff', 'delhi', 'karachi', 'barbados', 'dublin'];
 
+/**
+ * Deny-list: canonical routes excluded from ALL sitemaps.
+ * Kept live and still get trailing-slash redirect normalisation,
+ * but never advertised to crawlers. Match uses trailing-slash form.
+ * Each of these pages ALSO carries <meta robots="noindex,nofollow">
+ * on the component itself (sitemap exclusion alone is not enough).
+ */
+const NOINDEX_PATHS = new Set<string>([
+  '/auth/',
+  '/dashboard/',
+  '/thank-you/',
+  '/popup-offer/',
+  '/testapp/',
+  '/spin-to-win/',
+  '/home/',
+  '/home10/',
+  '/home-legacy/',
+  '/old-index/',
+  '/journal/',
+  '/m2/',
+  '/campaign-ads/',
+  '/experimental-treatment/',
+]);
+
 function categorize(path: string): Category {
   const seg = path.split('/').filter(Boolean)[0] ?? '';
   if (LANG_PREFIXES.has(seg)) return seg as Category;
