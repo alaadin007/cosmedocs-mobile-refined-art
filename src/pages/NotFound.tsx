@@ -20,6 +20,7 @@ const NotFound = () => {
         <title>Page Not Found | Cosmedocs London</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to Cosmedocs for expert aesthetic medicine on Harley Street, London." />
         <meta name="robots" content="noindex, nofollow" />
+        <meta name="prerender-status-code" content="404" />
       </Helmet>
     <div className="min-h-screen bg-black text-white flex items-center justify-center py-24">
       <div className="text-center px-4">
