@@ -145,6 +145,14 @@ function loadRedirects(): { text: string; leftSides: Set<string> } {
 }
 
 function planRedirectAdditions(routes: string[], leftSides: Set<string>): string[] {
+  // EMERGENCY STOPGAP 2026-07-15:
+  // Netlify is currently treating non-slash -> slash rules as matching the
+  // already-slashed URL too, causing production self-redirect loops such as
+  // /prices/ -> /prices/ and /treatments/lip-fillers/ -> itself.
+  // Keep sitemap generation active, but do not generate any redirect rules
+  // until slash normalisation has been re-tested on a deploy preview.
+  return [];
+
   const additions: string[] = [];
   for (const path of routes) {
     if (path === '/') continue;
