@@ -152,6 +152,16 @@ export default function Footer() {
                   Medical Services
                 </Link>
               </li>
+              <li>
+                <Link to="/aesthetic-clinic-london/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Aesthetic Clinic London
+                </Link>
+              </li>
+              <li>
+                <Link to="/skin-education-guide/" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Skin Education Guide
+                </Link>
+              </li>
             </ul>
             
             {/* Credentials */}
