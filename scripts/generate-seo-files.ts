@@ -39,7 +39,9 @@ const SITEMAP_INDEX = join(PUBLIC, 'sitemap.xml');
 const DRY_RUN = process.argv.includes('--dry-run');
 const TODAY = new Date().toISOString().slice(0, 10);
 
-type Category = 'treatments' | 'blog' | 'before-after' | 'locations' | 'pages';
+type Category =
+  | 'treatments' | 'blog' | 'before-after' | 'locations' | 'pages'
+  | 'ar' | 'de' | 'es' | 'fr' | 'ja' | 'zh';
 
 const SUBSITEMAPS: Record<Category, string> = {
   treatments: 'sitemap-treatments.xml',
@@ -47,17 +49,31 @@ const SUBSITEMAPS: Record<Category, string> = {
   'before-after': 'sitemap-before-after.xml',
   locations: 'sitemap-locations.xml',
   pages: 'sitemap-pages.xml',
+  ar: 'sitemap-ar.xml',
+  de: 'sitemap-de.xml',
+  es: 'sitemap-es.xml',
+  fr: 'sitemap-fr.xml',
+  ja: 'sitemap-ja.xml',
+  zh: 'sitemap-zh.xml',
 };
 
+const LANG_PREFIXES = new Set(['ar', 'de', 'es', 'fr', 'ja', 'zh']);
 const LOCATIONS = ['birmingham', 'manchester', 'cardiff', 'delhi', 'karachi', 'barbados', 'dublin'];
 
 function categorize(path: string): Category {
+  const seg = path.split('/').filter(Boolean)[0] ?? '';
+  if (LANG_PREFIXES.has(seg)) return seg as Category;
   if (path.startsWith('/treatments/')) return 'treatments';
   if (path.startsWith('/blog/')) return 'blog';
   if (path.startsWith('/before-after')) return 'before-after';
-  const seg = path.split('/').filter(Boolean)[0] ?? '';
   if (LOCATIONS.includes(seg)) return 'locations';
   return 'pages';
+}
+
+/** Canonical sitemap form: always trailing-slash (except root). */
+function canonicalise(path: string): string {
+  if (path === '/') return '/';
+  return path.endsWith('/') ? path : path + '/';
 }
 
 function priority(path: string): string {
