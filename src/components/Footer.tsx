@@ -18,7 +18,7 @@ export default function Footer() {
         transition={{ duration: 0.4 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 py-16"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand Block */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
