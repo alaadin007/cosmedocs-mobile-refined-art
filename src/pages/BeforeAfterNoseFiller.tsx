@@ -634,6 +634,14 @@ const BeforeAfterNoseFiller = () => {
           </p>
         </div>
       </div>
+      {/* Related concern gallery */}
+      <section className="py-10 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <a href="/before-after/non-surgical-nose-job-photo-faq/" className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-[#C9A050]/80 border-b border-[#C9A050]/40 hover:border-[#C9A050] pb-0.5 transition-colors">
+            Explore the non-surgical nose job photo FAQ gallery →
+          </a>
+        </div>
+      </section>
     </>
   );
 };

@@ -656,6 +656,14 @@ const ChinFiller = () => {
           <SkinFoundationCTA variant="anti-ageing" />
         </div>
       </section>
+      {/* More before & after */}
+      <section className="py-10 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <a href="/before-after/chin-profile-balance/" className="inline-flex items-center gap-2 text-sm text-[#C9A050] hover:text-[#C9A050]/80 border-b border-[#C9A050]/40 hover:border-[#C9A050] pb-0.5 transition-colors">
+            See more chin filler profile balance before &amp; after results →
+          </a>
+        </div>
+      </section>
     </>
   );
 };
