@@ -1220,19 +1220,18 @@ export default async function handler(request: Request, context: any) {
     return context.next();
   }
 
-  // 301 redirect non-trailing-slash HTML paths to trailing-slash version.
-  // Guard: only emit when the target path is genuinely different from the
-  // source, otherwise we would create a self-redirect loop (see incident
-  // 2026-07-15 where /treatments/lip-fillers/ 301'd to itself).
-  if (
-    rawPath !== '/' &&
-    !rawPath.endsWith('/') &&
-    !/\.[a-zA-Z0-9]+$/.test(rawPath)
-  ) {
-    const targetPath = rawPath + '/';
-    if (targetPath !== rawPath) {
+  // EMERGENCY STOPGAP 2026-07-15:
+  // Disable all edge-function redirects while production treatment pages are
+  // recovering from self-redirect loops. Meta injection below remains active.
+  if (false) {
+    // 301 redirect non-trailing-slash HTML paths to trailing-slash version.
+    if (
+      rawPath !== '/' &&
+      !rawPath.endsWith('/') &&
+      !/\.[a-zA-Z0-9]+$/.test(rawPath)
+    ) {
       const newUrl = new URL(request.url);
-      newUrl.pathname = targetPath;
+      newUrl.pathname = rawPath + '/';
       return new Response(null, {
         status: 301,
         headers: { Location: newUrl.toString() },
