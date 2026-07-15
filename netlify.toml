@@ -2,10 +2,12 @@
   publish = "dist"
   command = "npm run build"
 
-# Edge function for injecting page-specific SEO meta tags
-[[edge_functions]]
-  function = "inject-meta"
-  path = "/*"
+# EMERGENCY STOPGAP 2026-07-15:
+# Disable the Netlify Edge function globally because production direct-load URLs
+# are self-redirecting before React can render. Re-enable only after preview testing.
+# [[edge_functions]]
+#   function = "inject-meta"
+#   path = "/*"
 
 # Disable Netlify's URL processing to avoid redirect conflicts
 [build.processing]
