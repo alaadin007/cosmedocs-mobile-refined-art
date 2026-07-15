@@ -359,6 +359,42 @@ const EndolaserLift = () => {
         </section>
 
         {/* ═══════════════════════════════════════════
+            ENDOLIFT® ALTERNATIVE — 2G positioning band
+        ═══════════════════════════════════════════ */}
+        <section aria-labelledby="endolift-alternative-band" className="relative bg-gradient-to-b from-black via-[#0a0805] to-black border-y border-[#C9A050]/20 py-12 md:py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="max-w-2xl">
+                <p className="text-[10px] tracking-[0.3em] uppercase text-[#C9A050] mb-3">
+                  Searching for an Endolift® alternative?
+                </p>
+                <h2 id="endolift-alternative-band" className="text-2xl md:text-3xl font-extralight text-white leading-tight">
+                  Endolaser Excel is the <span className="text-[#C9A050]">second-generation (2G) Endolift® alternative</span> in the UK.
+                </h2>
+                <p className="mt-4 text-white/60 font-light leading-relaxed text-sm md:text-base">
+                  Endolift® pioneered laser fibre lifting in the mid-2010s using a single 1470nm diode. Endolaser Excel evolves that same intra-tissue principle with dual 980nm + 1470nm wavelengths delivered through one 200µm micro-fibre — deeper collagen contraction per pass and adipose remodelling in the same session. Doctor-led, UKCA &amp; CE-marked, from £450 per zone versus £1,500–£3,500 for legacy Endolift® in the UK.
+                </p>
+                <p className="mt-3 text-[11px] text-white/40 italic">
+                  Endolift® is a registered trademark of Eufoton s.r.l. and is used here for descriptive comparison only.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 flex-shrink-0">
+                <Link to="/treatments/endolift-alternative/" className="inline-flex items-center justify-center gap-2 bg-[#C9A050] text-black font-semibold px-5 py-3 rounded-full hover:scale-[1.03] transition-transform text-sm">
+                  Endolift® Alternative UK <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link to="/treatments/laser-fibre-lift-vs-endolift/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white/80 px-5 py-3 rounded-full hover:border-[#C9A050] hover:text-[#C9A050] transition text-sm">
+                  Head-to-head comparison
+                </Link>
+                <Link to="/blog/endolift-second-generation/" className="inline-flex items-center justify-center gap-2 text-xs text-white/60 hover:text-[#C9A050] transition">
+                  The 2G science →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* ═══════════════════════════════════════════
             CINEMATIC VIDEO BAND
         ═══════════════════════════════════════════ */}
         <section className="relative w-full overflow-hidden bg-black">
