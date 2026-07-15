@@ -126,6 +126,14 @@ const BlogHome = () => {
       icon: "arrow",
       image: edMaintenance,
     },
+    {
+      title: "On Harley Street Since 2007 — The Cosmedocs Story",
+      subtitle: "How a Harley Street doctor-led clinic quietly performed over one million treatments — and what it taught us about restraint.",
+      category: "HERITAGE",
+      path: "/blog/harley-street-since-2007",
+      icon: "eye",
+      image: edContinuity,
+    },
   ];
 
   const structuredData = {
