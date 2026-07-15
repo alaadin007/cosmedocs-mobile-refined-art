@@ -1259,7 +1259,7 @@ const App = () => {
                           <Route path="/blog/does-morpheus8-tighten-skin/" element={<DoesMorpheus8TightenSkin />} />
 
                           {/* Blog hub — lists only the 4 permitted blogs */}
-                          <Route path="/journal" element={<BlogHome />} />
+                          {/* /journal and /journal/ 301 → /blog/ via Netlify _redirects */}
                           <Route path="/blog" element={<BlogHome />} />
                           <Route path="/blog/" element={<BlogHome />} />
                           
