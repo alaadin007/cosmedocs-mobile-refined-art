@@ -948,10 +948,18 @@
 /journal      /blog/        301
 /journal/     /blog/        301
 
+# Deleted legacy pages → 301 (preserve any external bookmarks/backlinks)
+/home10          /                                  301
+/home10/         /                                  301
+/home-legacy     /                                  301
+/home-legacy/    /                                  301
+/old-index       /                                  301
+/old-index/      /                                  301
+/m2              /treatments/masseter-botox/        301
+/m2/             /treatments/masseter-botox/        301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
 
-/m2  /treatments/masseter-botox/  301
-/m2/  /treatments/masseter-botox/  301
