@@ -20,4 +20,32 @@
     <loc>https://www.cosmedocs.com/sitemap-ie.xml</loc>
     <lastmod>2026-06-25</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-locations.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-ar.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-de.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-es.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-fr.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-ja.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.cosmedocs.com/sitemap-zh.xml</loc>
+    <lastmod>2026-07-16</lastmod>
+  </sitemap>
 </sitemapindex>
