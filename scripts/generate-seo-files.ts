@@ -251,18 +251,30 @@ function main() {
     writeFileSync(REDIRECTS, applyRedirectAdditions(redirectsText, redirectAdds));
   }
 
-  // Bump lastmod in sitemap.xml for changed sub-sitemaps
+  // Bump lastmod in sitemap.xml for changed sub-sitemaps,
+  // or insert a new <sitemap> block if the sub-sitemap isn't registered yet.
+  const indexInserted: string[] = [];
   if (changedSitemaps.length) {
     let indexText = readFileSync(SITEMAP_INDEX, 'utf8');
     for (const cat of changedSitemaps) {
       const fname = SUBSITEMAPS[cat];
-      indexText = indexText.replace(
-        new RegExp(`(<loc>[^<]*${fname}</loc>\\s*<lastmod>)[^<]+(</lastmod>)`),
-        `$1${TODAY}$2`,
-      );
+      const bumpRe = new RegExp(`(<loc>[^<]*${fname}</loc>\\s*<lastmod>)[^<]+(</lastmod>)`);
+      if (bumpRe.test(indexText)) {
+        indexText = indexText.replace(bumpRe, `$1${TODAY}$2`);
+      } else {
+        // Not registered yet — append a new <sitemap> block before </sitemapindex>.
+        const block =
+          `  <sitemap>\n` +
+          `    <loc>https://www.cosmedocs.com/${fname}</loc>\n` +
+          `    <lastmod>${TODAY}</lastmod>\n` +
+          `  </sitemap>\n`;
+        indexText = indexText.replace(/<\/sitemapindex>\s*$/, block + '</sitemapindex>\n');
+        indexInserted.push(fname);
+      }
     }
     if (!DRY_RUN) writeFileSync(SITEMAP_INDEX, indexText);
   }
+
 
   // ---------- Summary ------------------------------------------------------
   const totalSitemap = Object.values(sitemapAdds).reduce((n, a) => n + a.length, 0);
@@ -276,7 +288,10 @@ function main() {
     console.log(`    ${SUBSITEMAPS[cat]} (+${sitemapAdds[cat].length}):`);
     for (const p of sitemapAdds[cat]) console.log(`      + ${p}`);
   }
+  console.log(`  Index sub-sitemap blocks inserted: ${indexInserted.length}`);
+  for (const f of indexInserted) console.log(`    + ${f}`);
   console.log(`  _redirects rules added:     ${redirectAdds.length}`);
+
   for (const r of redirectAdds) console.log(`    + ${r.replace(/\s+/g, ' ')}`);
   if (totalSitemap === 0 && redirectAdds.length === 0) {
     console.log('  Nothing to do — sitemaps and redirects are up to date.\n');
