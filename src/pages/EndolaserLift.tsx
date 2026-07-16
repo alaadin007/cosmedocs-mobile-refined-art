@@ -1078,7 +1078,11 @@ const EndolaserLift = () => {
           <p>Endolaser is a minimally invasive laser treatment that uses a thin optical fibre inserted beneath the skin to deliver dual-wavelength laser energy for skin tightening, fat reduction, and collagen stimulation. The term Endolaser refers to the endoscopic laser approach — delivering energy from within (endo) rather than externally. At CosmeDocs, we brand this as the Laser Fibre Lift. Endolaser treatment in London is available for face lifting, jawline contouring, jowl reduction, eyebrow lift, double chin treatment, and body contouring. Endolaser is filler-safe and does not dissolve existing hyaluronic acid fillers.</p>
         </div>
       </div>
+
+      {/* Sticky mobile CTA bar (>70% traffic is mobile) */}
+      <StickyMobileCTA />
     </>
+
   );
 };
 
