@@ -181,9 +181,11 @@ const EndolaserLandingShared = ({
             </div>
 
             {/* Stat row */}
-            <div className="mt-5 text-[11px] md:text-xs text-[#D4A24E]/70 tracking-[0.24em]">
-              {statRow.join("   •   ")}
-            </div>
+            <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-[10px] md:text-xs text-[#D4A24E]/70 tracking-[0.22em] list-none p-0">
+              {statRow.map((s) => (
+                <li key={s} className="whitespace-nowrap">{s}</li>
+              ))}
+            </ul>
           </div>
 
           <HeroPortrait />
