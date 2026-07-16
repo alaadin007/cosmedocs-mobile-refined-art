@@ -23,6 +23,8 @@ const TranslatedTier2Treatment = lazy(() => import("./pages/TranslatedTier2Treat
 const TranslatedTier1Treatment = lazy(() => import("./pages/TranslatedTier1Treatment"));
 const HomepageJapanese = lazy(() => import("./pages/HomepageJapanese"));
 const HomepageGerman = lazy(() => import("./pages/HomepageGerman"));
+const EndolaserWhatsApp = lazy(() => import("./pages/landing/EndolaserWhatsApp"));
+const EndolaserBooking = lazy(() => import("./pages/landing/EndolaserBooking"));
 const TreatmentsHubJapanese = lazy(() => import("./pages/TreatmentsHubJapanese"));
 const TreatmentsHubGerman = lazy(() => import("./pages/TreatmentsHubGerman"));
 const PricesJapanese = lazy(() => import("./pages/PricesJapanese"));
@@ -432,6 +434,20 @@ const App = () => {
                     <Suspense fallback={<PageLoader />}>
                       <BotoxParis />
                     </Suspense>
+                  } />
+
+                  {/* Google Ads landing pages — noindex, not linked from nav/footer/sitemap */}
+                  <Route path="/endolaser-whatsapp" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense></Layout>
+                  } />
+                  <Route path="/endolaser-whatsapp/" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense></Layout>
+                  } />
+                  <Route path="/endolaser-booking" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense></Layout>
+                  } />
+                  <Route path="/endolaser-booking/" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense></Layout>
                   } />
                   
                   {/* ============================================= */}
