@@ -1,9 +1,6 @@
 import EndolaserLandingShared from "./EndolaserLandingShared";
 
-const WHATSAPP_NUMBER = "447735606447";
-const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Hi, I'd like to book the £750 Endolaser model treatment"
-)}`;
+const WA_URL = "https://wa.me/message/244RYZTKFLQMC1";
 
 const Button = ({ full = false }: { full?: boolean }) => (
   <a
