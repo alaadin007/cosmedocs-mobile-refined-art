@@ -288,7 +288,10 @@ function main() {
     console.log(`    ${SUBSITEMAPS[cat]} (+${sitemapAdds[cat].length}):`);
     for (const p of sitemapAdds[cat]) console.log(`      + ${p}`);
   }
+  console.log(`  Index sub-sitemap blocks inserted: ${indexInserted.length}`);
+  for (const f of indexInserted) console.log(`    + ${f}`);
   console.log(`  _redirects rules added:     ${redirectAdds.length}`);
+
   for (const r of redirectAdds) console.log(`    + ${r.replace(/\s+/g, ' ')}`);
   if (totalSitemap === 0 && redirectAdds.length === 0) {
     console.log('  Nothing to do — sitemaps and redirects are up to date.\n');
