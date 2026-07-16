@@ -134,7 +134,7 @@ const EndolaserLandingShared = ({
   aboveFold,
 }: Props) => {
   return (
-    <div className="ios-mobile bg-black text-white min-h-screen pb-28 md:pb-0 relative overflow-hidden">
+    <div className="treatment-page ios-mobile bg-black text-white min-h-screen pb-28 md:pb-0 relative overflow-x-hidden w-full max-w-[100vw]">
       <Helmet>
         <title>XL Endolaser (Laser Fibre Lift) London — £750 Model Price | Cosmedocs</title>
         <meta
