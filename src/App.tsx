@@ -282,6 +282,7 @@ const EndoliftAlternative = lazy(() => import("./pages/EndoliftAlternative"));
 const EndoliftAlternativeLondon = lazy(() => import("./pages/EndoliftAlternativeLondon"));
 const BetterThanEndolift = lazy(() => import("./pages/blog/BetterThanEndolift"));
 const EndoliftSecondGeneration = lazy(() => import("./pages/blog/EndoliftSecondGeneration"));
+const WhyFibreLaserOverEndolift = lazy(() => import("./pages/blog/WhyFibreLaserOverEndolift"));
 const LaserFibreLiftVsEndolift = lazy(() => import("./pages/comparisons/LaserFibreLiftVsEndolift"));
 const TearTroughAftercare = lazy(() => import("./pages/aftercare/TearTroughAftercare"));
 const TearTroughDissolving = lazy(() => import("./pages/aftercare/TearTroughDissolving"));
