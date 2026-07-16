@@ -438,16 +438,16 @@ const App = () => {
 
                   {/* Google Ads landing pages — noindex, not linked from nav/footer/sitemap */}
                   <Route path="/endolaser-whatsapp" element={
-                    <Layout><Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense></Layout>
+                    <Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense>
                   } />
                   <Route path="/endolaser-whatsapp/" element={
-                    <Layout><Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense></Layout>
+                    <Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense>
                   } />
                   <Route path="/endolaser-booking" element={
-                    <Layout><Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense></Layout>
+                    <Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense>
                   } />
                   <Route path="/endolaser-booking/" element={
-                    <Layout><Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense></Layout>
+                    <Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense>
                   } />
                   
                   {/* ============================================= */}
