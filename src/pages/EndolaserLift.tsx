@@ -12,6 +12,13 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
+import {
+  IsThisMeStrip,
+  SpeakableAnswer,
+  DoctorAuthorityBlock,
+  RelatedReadingRail,
+  StickyMobileCTA,
+} from "@/components/endolaser/EndolaserLandingEnhancements";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
