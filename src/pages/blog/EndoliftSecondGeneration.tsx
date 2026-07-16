@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "What is second-generation Endolift?",
     answer:
-      "Second-generation laser fibre lifting combines two diode wavelengths — 980nm and 1470nm — through a single 200µm optical fibre inserted intra-dermally. The original Endolift® device (Eufoton, c. 2015) used only the 1470nm wavelength. The 2G protocol addresses adipose tissue and vasculature (980nm) alongside water and collagen (1470nm) in one pass. Cosmedocs delivers this as Endolaser Excel on Harley Street.",
+      "Second-generation laser fibre lifting combines two diode wavelengths — 980nm and 1470nm — through a single 200µm optical fibre inserted intra-dermally. The original Endolift® device (Eufoton, c. 2015) used only the 1470nm wavelength. The 2G protocol addresses adipose tissue and vasculature (980nm) alongside water and collagen (1470nm) in one pass. Cosmedocs delivers this as XL Endolaser on Harley Street.",
   },
   {
     question: "Why did the technology evolve to dual-wavelength?",
@@ -28,12 +28,12 @@ const faqs = [
   {
     question: "Does the 2G evolution replace Endolift®?",
     answer:
-      "It doesn't replace the device — it evolves the technique. Endolift® remains a valid 1G option. Endolaser Excel is what we recommend at Cosmedocs because it addresses more of the patient's concerns in one appointment, doctor-led, at a lower price point per zone.",
+      "It doesn't replace the device — it evolves the technique. Endolift® remains a valid 1G option. XL Endolaser is what we recommend at Cosmedocs because it addresses more of the patient's concerns in one appointment, doctor-led, at a lower price point per zone.",
   },
   {
     question: "Where can I get 2G Endolift in the UK?",
     answer:
-      "Cosmedocs on Harley Street offers Endolaser Excel — our 2G dual-wavelength protocol. Delivered by Dr Ahmed Haq, Lead Trainer for laser fibre lifting at the Harley Street Institute. From £450 per zone.",
+      "Cosmedocs on Harley Street offers XL Endolaser — our 2G dual-wavelength protocol. Delivered by Dr Ahmed Haq, Lead Trainer for laser fibre lifting at the Harley Street Institute. From £450 per zone.",
   },
 ];
 
@@ -92,7 +92,7 @@ const EndoliftSecondGeneration = () => {
               Second-generation Endolift combines 980nm (targets adipose &amp; vasculature) and 1470nm (targets water
               &amp; collagen) through a single 200µm optical fibre — one pass, two tissue layers. It's the natural
               evolution of a technology that started with 1470nm alone, and it's what Cosmedocs delivers as{" "}
-              <strong>Endolaser Excel</strong> on Harley Street.
+              <strong>XL Endolaser</strong> on Harley Street.
             </p>
           </section>
 
@@ -130,9 +130,9 @@ const EndoliftSecondGeneration = () => {
               — exactly where 2G outperforms 1G.
             </p>
 
-            <h2>4. The Cosmedocs protocol — Endolaser Excel</h2>
+            <h2>4. The Cosmedocs protocol — XL Endolaser</h2>
             <p>
-              At Cosmedocs on Harley Street, we deliver 2G laser fibre lifting as <strong>Endolaser Excel</strong>. Every
+              At Cosmedocs on Harley Street, we deliver 2G laser fibre lifting as <strong>XL Endolaser</strong>. Every
               treatment is doctor-led by Dr Ahmed Haq (Lead Trainer for laser fibre lifting at the Harley Street
               Institute), performed under topical anaesthesia through a single insertion point per zone, with a 3-month
               clinical review included.
@@ -175,7 +175,7 @@ const EndoliftSecondGeneration = () => {
             <h2 className="text-xl font-light text-gray-900 mb-4">Related reading</h2>
             <ul className="space-y-2">
               {[
-                { l: "Endolaser Excel — full treatment page", p: "/treatments/endolaser/" },
+                { l: "XL Endolaser — full treatment page", p: "/treatments/endolaser/" },
                 { l: "Endolift alternative UK", p: "/treatments/endolift-alternative/" },
                 { l: "Endolift alternative in London", p: "/treatments/endolift-alternative-london/" },
                 { l: "Laser Fibre Lift vs Endolift — head-to-head", p: "/treatments/laser-fibre-lift-vs-endolift/" },
@@ -197,7 +197,7 @@ const EndoliftSecondGeneration = () => {
 
           <div className="text-center mt-10">
             <Link to="/contact/" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A050] text-white rounded-full hover:bg-[#b58e44] transition">
-              Book an Endolaser Excel consultation <ArrowRight className="h-4 w-4" />
+              Book an XL Endolaser consultation <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </article>
