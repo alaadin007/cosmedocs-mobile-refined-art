@@ -12,6 +12,13 @@ import { generateSEOMetadata } from "@/utils/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import ExpandableSection from "@/components/ui/expandable-section";
 import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
+import {
+  IsThisMeStrip,
+  SpeakableAnswer,
+  DoctorAuthorityBlock,
+  RelatedReadingRail,
+  StickyMobileCTA,
+} from "@/components/endolaser/EndolaserLandingEnhancements";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
@@ -357,6 +364,10 @@ const EndolaserLift = () => {
 
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
+
+        {/* ═══ IDEAL-PAGE: Self-identification + Speakable top answer ═══ */}
+        <IsThisMeStrip />
+        <SpeakableAnswer />
 
         {/* ═══════════════════════════════════════════
             ENDOLIFT® ALTERNATIVE — 2G positioning band
@@ -1027,6 +1038,11 @@ const EndolaserLift = () => {
           </div>
         </section>
 
+        {/* ═══ IDEAL-PAGE: Doctor authority + Related reading ═══ */}
+        <DoctorAuthorityBlock />
+        <RelatedReadingRail />
+
+
         {/* Mobile Sidebar */}
         <section className="lg:hidden py-12 px-4 bg-black/95">
           <EndolaserSidebar />
@@ -1062,7 +1078,11 @@ const EndolaserLift = () => {
           <p>Endolaser is a minimally invasive laser treatment that uses a thin optical fibre inserted beneath the skin to deliver dual-wavelength laser energy for skin tightening, fat reduction, and collagen stimulation. The term Endolaser refers to the endoscopic laser approach — delivering energy from within (endo) rather than externally. At CosmeDocs, we brand this as the Laser Fibre Lift. Endolaser treatment in London is available for face lifting, jawline contouring, jowl reduction, eyebrow lift, double chin treatment, and body contouring. Endolaser is filler-safe and does not dissolve existing hyaluronic acid fillers.</p>
         </div>
       </div>
+
+      {/* Sticky mobile CTA bar (>70% traffic is mobile) */}
+      <StickyMobileCTA />
     </>
+
   );
 };
 
