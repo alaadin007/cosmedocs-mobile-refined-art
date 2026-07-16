@@ -14,8 +14,8 @@ const WaIcon = () => (
 const Button = ({ full = false, small = false }: { full?: boolean; small?: boolean }) => (
   <a
     href={WA_URL}
-    target="_top"
-    rel="noopener"
+    target="_blank"
+    rel="noopener noreferrer"
     aria-label="Chat with Cosmedocs on WhatsApp"
     className={`inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D4A24E] hover:bg-[#e0b366] text-black font-medium tracking-wide transition-all shadow-[0_10px_40px_-10px_rgba(212,162,78,0.6)] hover:shadow-[0_15px_50px_-10px_rgba(212,162,78,0.8)] ${
       small ? "px-5 py-2.5 text-sm w-full" : "px-7 py-4 text-base"
