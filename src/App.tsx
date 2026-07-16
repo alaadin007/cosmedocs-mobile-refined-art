@@ -435,6 +435,20 @@ const App = () => {
                       <BotoxParis />
                     </Suspense>
                   } />
+
+                  {/* Google Ads landing pages — noindex, not linked from nav/footer/sitemap */}
+                  <Route path="/endolaser-whatsapp" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense></Layout>
+                  } />
+                  <Route path="/endolaser-whatsapp/" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserWhatsApp /></Suspense></Layout>
+                  } />
+                  <Route path="/endolaser-booking" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense></Layout>
+                  } />
+                  <Route path="/endolaser-booking/" element={
+                    <Layout><Suspense fallback={<PageLoader />}><EndolaserBooking /></Suspense></Layout>
+                  } />
                   
                   {/* ============================================= */}
                   {/* MULTILINGUAL ROUTES — /ar/, /fr/, /es/         */}
