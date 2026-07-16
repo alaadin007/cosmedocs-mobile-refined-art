@@ -282,6 +282,7 @@ const EndoliftAlternative = lazy(() => import("./pages/EndoliftAlternative"));
 const EndoliftAlternativeLondon = lazy(() => import("./pages/EndoliftAlternativeLondon"));
 const BetterThanEndolift = lazy(() => import("./pages/blog/BetterThanEndolift"));
 const EndoliftSecondGeneration = lazy(() => import("./pages/blog/EndoliftSecondGeneration"));
+const WhyFibreLaserOverEndolift = lazy(() => import("./pages/blog/WhyFibreLaserOverEndolift"));
 const LaserFibreLiftVsEndolift = lazy(() => import("./pages/comparisons/LaserFibreLiftVsEndolift"));
 const TearTroughAftercare = lazy(() => import("./pages/aftercare/TearTroughAftercare"));
 const TearTroughDissolving = lazy(() => import("./pages/aftercare/TearTroughDissolving"));
@@ -1156,6 +1157,8 @@ const App = () => {
                           <Route path="/blog/better-than-endolift/" element={<BetterThanEndolift />} />
                           <Route path="/blog/endolift-second-generation" element={<EndoliftSecondGeneration />} />
                           <Route path="/blog/endolift-second-generation/" element={<EndoliftSecondGeneration />} />
+                          <Route path="/blog/why-fibre-laser-over-endolift" element={<WhyFibreLaserOverEndolift />} />
+                          <Route path="/blog/why-fibre-laser-over-endolift/" element={<WhyFibreLaserOverEndolift />} />
                           <Route path="/treatments/tear-trough-filler/aftercare" element={<TearTroughAftercare />} />
                           <Route path="/treatments/tear-trough-filler/aftercare/" element={<TearTroughAftercare />} />
                           <Route path="/treatments/tear-trough-filler/dissolving" element={<TearTroughDissolving />} />
