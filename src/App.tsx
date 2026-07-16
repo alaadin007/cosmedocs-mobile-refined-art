@@ -1157,6 +1157,8 @@ const App = () => {
                           <Route path="/blog/better-than-endolift/" element={<BetterThanEndolift />} />
                           <Route path="/blog/endolift-second-generation" element={<EndoliftSecondGeneration />} />
                           <Route path="/blog/endolift-second-generation/" element={<EndoliftSecondGeneration />} />
+                          <Route path="/blog/why-fibre-laser-over-endolift" element={<WhyFibreLaserOverEndolift />} />
+                          <Route path="/blog/why-fibre-laser-over-endolift/" element={<WhyFibreLaserOverEndolift />} />
                           <Route path="/treatments/tear-trough-filler/aftercare" element={<TearTroughAftercare />} />
                           <Route path="/treatments/tear-trough-filler/aftercare/" element={<TearTroughAftercare />} />
                           <Route path="/treatments/tear-trough-filler/dissolving" element={<TearTroughDissolving />} />
