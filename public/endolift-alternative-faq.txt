@@ -8,21 +8,21 @@ Trademark note: Endolift® is a registered trademark of Eufoton s.r.l. This docu
 ---
 
 Q: Is there a better alternative to Endolift® in the UK?
-A: Yes. Endolift® pioneered laser fibre lifting in the mid-2010s using a single 1470nm diode. Cosmedocs offers Endolaser Excel — a second-generation dual-wavelength (980nm + 1470nm) laser fibre lift delivered under one 200µm micro-fibre, doctor-led on Harley Street. Same clinical principle, upgraded targeting, and typically longer results because deeper adipose remodelling reduces re-descent of overlying tissue.
+A: Yes. Endolift® pioneered laser fibre lifting in the mid-2010s using a single 1470nm diode. Cosmedocs offers XL Endolaser — a second-generation dual-wavelength (980nm + 1470nm) laser fibre lift delivered under one 200µm micro-fibre, doctor-led on Harley Street. Same clinical principle, upgraded targeting, and typically longer results because deeper adipose remodelling reduces re-descent of overlying tissue.
 
-Q: What is the difference between Endolift® (1G) and Endolaser Excel (2G)?
-A: Endolift® uses a single 1470nm wavelength targeting water and collagen. Endolaser Excel combines 980nm (targeting adipose and vasculature) with 1470nm (targeting water and collagen) through the same optical fibre. One pass tightens skin AND remodels small fat pockets — especially useful for double chin, jowls and pre-jowl sulcus.
+Q: What is the difference between Endolift® (1G) and XL Endolaser (2G)?
+A: Endolift® uses a single 1470nm wavelength targeting water and collagen. XL Endolaser combines 980nm (targeting adipose and vasculature) with 1470nm (targeting water and collagen) through the same optical fibre. One pass tightens skin AND remodels small fat pockets — especially useful for double chin, jowls and pre-jowl sulcus.
 
 Q: How much does the Endolift® alternative cost at Cosmedocs?
-A: Endolaser Excel starts from £450 per zone. Full-face + neck packages are quoted at consultation. Endolift® in the UK typically ranges £1,500–£3,500 per zone.
+A: XL Endolaser starts from £450 per zone. Full-face + neck packages are quoted at consultation. Endolift® in the UK typically ranges £1,500–£3,500 per zone.
 
-Q: Is Endolaser Excel regulated in the UK?
+Q: Is XL Endolaser regulated in the UK?
 A: The device carries UKCA and CE marks. It is delivered doctor-led by Dr Ahmed Haq in partnership with a CQC-registered clinical facility (PrivaDr Ltd, 10 Harley Street, London W1G 9PF).
 
-Q: Which lasts longer — Endolift® or Endolaser Excel?
-A: Both stimulate neocollagenesis; results build over 3–6 months. Endolift® typically lasts 12–18 months from a single session. Cosmedocs' clinical audit on Endolaser Excel shows 18–24 months — marginally longer because 980nm adipose remodelling reduces soft-tissue re-descent.
+Q: Which lasts longer — Endolift® or XL Endolaser?
+A: Both stimulate neocollagenesis; results build over 3–6 months. Endolift® typically lasts 12–18 months from a single session. Cosmedocs' clinical audit on XL Endolaser shows 18–24 months — marginally longer because 980nm adipose remodelling reduces soft-tissue re-descent.
 
-Q: Can Endolaser Excel treat a double chin better than Endolift®?
+Q: Can XL Endolaser treat a double chin better than Endolift®?
 A: For a double chin with mild-to-moderate skin laxity, yes. 980nm addresses the sub-mental adipose pocket; 1470nm tightens the overlying skin. A single pass handles both. 1G Endolift® can improve the skin envelope but has limited effect on the underlying fat.
 
 Q: Is it safe?
@@ -48,4 +48,4 @@ Related pages:
 - Head-to-head comparison: https://www.cosmedocs.com/treatments/laser-fibre-lift-vs-endolift/
 - Better than Endolift? (blog): https://www.cosmedocs.com/blog/better-than-endolift/
 - The 2G science (blog): https://www.cosmedocs.com/blog/endolift-second-generation/
-- Endolaser Excel treatment page: https://www.cosmedocs.com/treatments/endolaser/
+- XL Endolaser treatment page: https://www.cosmedocs.com/treatments/endolaser/

@@ -42,7 +42,7 @@ const HeroPortrait = () => (
     <div className="relative overflow-hidden rounded-3xl border border-[#D4A24E]/20 shadow-[0_30px_80px_-30px_rgba(212,162,78,0.35)]">
       <img
         src={portrait}
-        alt="Profile view highlighting the jawline and neck contour treated by Endolaser Excel laser fibre lift"
+        alt="Profile view highlighting the jawline and neck contour treated by XL Endolaser laser fibre lift"
         width={1024}
         height={1280}
         className="w-full h-auto block"
@@ -136,10 +136,10 @@ const EndolaserLandingShared = ({
   return (
     <div className="ios-mobile bg-black text-white min-h-screen pb-28 md:pb-0 relative overflow-hidden">
       <Helmet>
-        <title>Endolaser Excel (Laser Fibre Lift) London — £750 Model Price | Cosmedocs</title>
+        <title>XL Endolaser (Laser Fibre Lift) London — £750 Model Price | Cosmedocs</title>
         <meta
           name="description"
-          content="Endolaser Excel — dual-wavelength laser fibre lift for jawline, jowls and chin. Doctor-led on Harley Street. £750 model treatment price available."
+          content="XL Endolaser — dual-wavelength laser fibre lift for jawline, jowls and chin. Doctor-led on Harley Street. £750 model treatment price available."
         />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={`https://www.cosmedocs.com${canonicalPath}`} />
@@ -159,7 +159,7 @@ const EndolaserLandingShared = ({
               DOCTOR-LED · HARLEY STREET
             </p>
             <h1 className="mt-5 text-white font-light leading-[1.05] text-4xl md:text-6xl">
-              Endolaser Excel<br />
+              XL Endolaser<br />
               <span className="gold-glow italic font-serif">(Laser Fibre Lift)</span>
               <span className="block text-white/85 text-2xl md:text-3xl mt-3 tracking-wide">London</span>
             </h1>

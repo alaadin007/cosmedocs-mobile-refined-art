@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Where can I get an Endolift® alternative in London?",
     answer:
-      "Cosmedocs — 8–10 Harley Street, London W1G 9PF — offers Endolaser Excel, the second-generation dual-wavelength laser fibre lift. Delivered by Dr Ahmed Haq, Lead Trainer for laser fibre lifting at the Harley Street Institute. Consultation and treatment both take place at Harley Street.",
+      "Cosmedocs — 8–10 Harley Street, London W1G 9PF — offers XL Endolaser, the second-generation dual-wavelength laser fibre lift. Delivered by Dr Ahmed Haq, Lead Trainer for laser fibre lifting at the Harley Street Institute. Consultation and treatment both take place at Harley Street.",
   },
   {
     question: "Is there an Endolift near me in central London?",
@@ -23,17 +23,17 @@ const faqs = [
   {
     question: "How much does the Endolift® alternative cost in London?",
     answer:
-      "Endolaser Excel starts from £450 per zone at our Harley Street clinic. Full-face and neck packages are quoted after in-person or video consultation. Cost includes doctor-led delivery, topical anaesthesia and 3-month clinical review — no hidden fees.",
+      "XL Endolaser starts from £450 per zone at our Harley Street clinic. Full-face and neck packages are quoted after in-person or video consultation. Cost includes doctor-led delivery, topical anaesthesia and 3-month clinical review — no hidden fees.",
   },
   {
     question: "Who performs the treatment?",
     answer:
-      "All Endolaser Excel treatments at Cosmedocs London are delivered by Dr Ahmed Haq (GMC-registered), Lead Trainer for laser fibre lifting at the Harley Street Institute. We do not delegate this treatment to nurses or non-medical practitioners.",
+      "All XL Endolaser treatments at Cosmedocs London are delivered by Dr Ahmed Haq (GMC-registered), Lead Trainer for laser fibre lifting at the Harley Street Institute. We do not delegate this treatment to nurses or non-medical practitioners.",
   },
   {
     question: "How does it compare to Endolift® clinics in London?",
     answer:
-      "Most London Endolift® providers use the 1G single-wavelength (1470nm) system. Endolaser Excel adds a 980nm channel through the same fibre, targeting adipose and vasculature alongside collagen — one pass rather than layered sessions. Doctor-led, UKCA &amp; CE-marked, priced from £450 per zone.",
+      "Most London Endolift® providers use the 1G single-wavelength (1470nm) system. XL Endolaser adds a 980nm channel through the same fibre, targeting adipose and vasculature alongside collagen — one pass rather than layered sessions. Doctor-led, UKCA &amp; CE-marked, priced from £450 per zone.",
   },
 ];
 
@@ -41,14 +41,14 @@ const EndoliftAlternativeLondon = () => {
   return (
     <>
       <Helmet>
-        <title>Endolift Alternative London — Endolaser Excel at Harley Street | Cosmedocs</title>
+        <title>Endolift Alternative London — XL Endolaser at Harley Street | Cosmedocs</title>
         <meta
           name="description"
-          content="Looking for an Endolift® alternative in London? Endolaser Excel (2G dual-wavelength laser fibre lift) — doctor-led at 8–10 Harley Street. From £450."
+          content="Looking for an Endolift® alternative in London? XL Endolaser (2G dual-wavelength laser fibre lift) — doctor-led at 8–10 Harley Street. From £450."
         />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" data-rh="true" href={canonical} />
-        <meta property="og:title" content="Endolift Alternative London — Endolaser Excel | Cosmedocs" />
+        <meta property="og:title" content="Endolift Alternative London — XL Endolaser | Cosmedocs" />
         <meta property="og:description" content="Doctor-led second-generation laser fibre lift on Harley Street." />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="article" />
@@ -56,7 +56,7 @@ const EndoliftAlternativeLondon = () => {
 
       <MedicalArticleSchema
         path={path}
-        headline="Endolift® Alternative London — Endolaser Excel at Harley Street"
+        headline="Endolift® Alternative London — XL Endolaser at Harley Street"
         description="The second-generation dual-wavelength laser fibre lift, doctor-led on Harley Street."
         datePublished="2026-07-15"
         dateModified="2026-07-15"
@@ -81,7 +81,7 @@ const EndoliftAlternativeLondon = () => {
               Endolift<span className="text-[#C9A050]">®</span> alternative — <span className="text-[#C9A050]">London</span>.
             </h1>
             <p className="text-lg md:text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
-              Endolaser Excel is the second-generation dual-wavelength laser fibre lift — doctor-led on Harley Street,
+              XL Endolaser is the second-generation dual-wavelength laser fibre lift — doctor-led on Harley Street,
               UKCA &amp; CE-marked, and priced from £450 per zone.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
@@ -97,7 +97,7 @@ const EndoliftAlternativeLondon = () => {
             </div>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link to="/treatments/endolaser/" className="inline-flex items-center gap-2 bg-[#C9A050] text-black font-semibold px-6 py-3 rounded-full hover:scale-[1.03] transition-transform">
-                Discover Endolaser Excel <ArrowRight className="w-4 h-4" />
+                Discover XL Endolaser <ArrowRight className="w-4 h-4" />
               </Link>
               <Link to="/contact/" className="inline-flex items-center gap-2 border border-white/20 text-white/80 px-6 py-3 rounded-full hover:border-[#C9A050] hover:text-[#C9A050] transition">
                 Book on Harley Street
@@ -110,7 +110,7 @@ const EndoliftAlternativeLondon = () => {
           <div className="bg-white/[0.03] border-l-4 border-[#C9A050] p-6 md:p-8 rounded-r-lg">
             <p className="text-xs tracking-[0.2em] uppercase text-[#C9A050] mb-3 font-medium">The short answer</p>
             <p className="text-base md:text-lg text-white/85 leading-relaxed" data-speakable>
-              The best Endolift® alternative in London is Endolaser Excel at Cosmedocs, 8–10 Harley Street. It's the
+              The best Endolift® alternative in London is XL Endolaser at Cosmedocs, 8–10 Harley Street. It's the
               second-generation dual-wavelength (980nm + 1470nm) laser fibre lift — same intra-tissue lifting principle
               as Endolift®, upgraded with an adipose-targeting wavelength through the same micro-fibre. Doctor-led by
               Dr Ahmed Haq, from £450 per zone, with weekend availability for London and international patients.
@@ -120,7 +120,7 @@ const EndoliftAlternativeLondon = () => {
 
         {/* WHY LONDON PICKS US */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
-          <h2 className="text-3xl md:text-4xl font-extralight mb-8 tracking-tight">Why London patients choose Endolaser Excel</h2>
+          <h2 className="text-3xl md:text-4xl font-extralight mb-8 tracking-tight">Why London patients choose XL Endolaser</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {[
               { k: "One pass, two wavelengths", v: "980nm adipose remodelling + 1470nm collagen contraction — no layered sessions." },
@@ -190,7 +190,7 @@ const EndoliftAlternativeLondon = () => {
           <h2 className="text-xl font-light text-white/80 mb-4">Related reading</h2>
           <ul className="grid sm:grid-cols-2 gap-3">
             {[
-              { l: "Endolaser Excel — full treatment page", p: "/treatments/endolaser/" },
+              { l: "XL Endolaser — full treatment page", p: "/treatments/endolaser/" },
               { l: "Endolift alternative UK (overview)", p: "/treatments/endolift-alternative/" },
               { l: "Laser Fibre Lift vs Endolift — head-to-head", p: "/treatments/laser-fibre-lift-vs-endolift/" },
               { l: "Better than Endolift? The 2G evolution", p: "/blog/better-than-endolift/" },

@@ -15,15 +15,15 @@ import EndolaserSidebar from "@/components/endolaser/EndolaserSidebar";
 
 const EndolaserLift = () => {
   const seoData = generateSEOMetadata(
-    "Endolaser Excel London — Endolift® Alternative (2G Laser Fibre Lift) | Cosmedocs",
-    "Endolaser Excel — the second-generation dual-wavelength (980nm + 1470nm) Endolift® alternative in the UK. UKCA & CE-marked, doctor-led on Harley Street. From £450.",
+    "XL Endolaser London — Endolift® Alternative (2G Laser Fibre Lift) | Cosmedocs",
+    "XL Endolaser — the second-generation dual-wavelength (980nm + 1470nm) Endolift® alternative in the UK. UKCA & CE-marked, doctor-led on Harley Street. From £450.",
     "/treatments/endolaser/"
   );
 
   const faqs = [
     {
-      question: "Is Endolaser Excel an Endolift® alternative?",
-      answer: "Yes. Endolaser Excel is the second-generation (2G) evolution of laser fibre lifting. Endolift® pioneered the category in the mid-2010s using a single 1470nm diode. Endolaser Excel combines 980nm (adipose/vasculature) with 1470nm (water/collagen) through the same 200µm micro-fibre — one pass tightens skin and remodels small fat pockets. It is doctor-led on Harley Street, UKCA and CE-marked, and priced from £450 per zone versus £1,500–£3,500 for legacy Endolift® in the UK. See our dedicated Endolift® alternative UK hub for the full comparison. Endolift® is a registered trademark of Eufoton s.r.l. and is used here for descriptive comparison only."
+      question: "Is XL Endolaser an Endolift® alternative?",
+      answer: "Yes. XL Endolaser is the second-generation (2G) evolution of laser fibre lifting. Endolift® pioneered the category in the mid-2010s using a single 1470nm diode. XL Endolaser combines 980nm (adipose/vasculature) with 1470nm (water/collagen) through the same 200µm micro-fibre — one pass tightens skin and remodels small fat pockets. It is doctor-led on Harley Street, UKCA and CE-marked, and priced from £450 per zone versus £1,500–£3,500 for legacy Endolift® in the UK. See our dedicated Endolift® alternative UK hub for the full comparison. Endolift® is a registered trademark of Eufoton s.r.l. and is used here for descriptive comparison only."
     },
     {
       question: "Is the Endolaser device CE and UKCA approved?",
@@ -129,8 +129,8 @@ const EndolaserLift = () => {
               {
                 "@type": "MedicalProcedure",
                 "name": "Laser Fibre Lift London",
-                "alternateName": ["Laser Fibre Lift", "Endolaser", "Endolaser Excel", "Endolift Alternative UK", "Endolift Alternative London", "Second-Generation Laser Fibre Lift", "2G Endolift Alternative", "Dual-Wavelength Laser Fibre Lift", "Laser Face Lift London", "Non-Surgical Facelift London"],
-                "description": "Endolaser Excel — the second-generation dual-wavelength (980nm + 1470nm) laser fibre lift and Endolift® alternative in the UK. Doctor-led on Harley Street for face lifting, jowl tightening, jawline contouring, eyebrow lift and double chin reduction.",
+                "alternateName": ["Laser Fibre Lift", "Endolaser", "XL Endolaser", "Endolift Alternative UK", "Endolift Alternative London", "Second-Generation Laser Fibre Lift", "2G Endolift Alternative", "Dual-Wavelength Laser Fibre Lift", "Laser Face Lift London", "Non-Surgical Facelift London"],
+                "description": "XL Endolaser — the second-generation dual-wavelength (980nm + 1470nm) laser fibre lift and Endolift® alternative in the UK. Doctor-led on Harley Street for face lifting, jowl tightening, jawline contouring, eyebrow lift and double chin reduction.",
                 "url": "https://www.cosmedocs.com/treatments/endolaser/",
                 "procedureType": "NoninvasiveProcedure",
                 "bodyLocation": "Face, Chin, Eyes, Jawline, Jowls, Neck",
@@ -289,7 +289,7 @@ const EndolaserLift = () => {
                     <span className="block text-white/60 text-2xl md:text-3xl font-extralight mt-2">London</span>
                   </h1>
                   <p className="text-lg md:text-xl text-white/40 leading-relaxed font-extralight max-w-xl mx-auto lg:mx-0">
-                    The second-generation <strong className="text-white/70">Endolift® alternative</strong> — a minimally invasive dual-wavelength (980nm + 1470nm) laser fibre lift for the jawline, jowls, chin, eyes and brows. Also known as Endolaser Excel or Laser Fibre Lift. Performed by the Lead Trainer at the Harley Street Institute.
+                    The second-generation <strong className="text-white/70">Endolift® alternative</strong> — a minimally invasive dual-wavelength (980nm + 1470nm) laser fibre lift for the jawline, jowls, chin, eyes and brows. Also known as XL Endolaser or Laser Fibre Lift. Performed by the Lead Trainer at the Harley Street Institute.
                   </p>
 
                   {/* Regulatory authority chips — UKCA + CE + CQC */}
@@ -369,10 +369,10 @@ const EndolaserLift = () => {
                   Searching for an Endolift® alternative?
                 </p>
                 <h2 id="endolift-alternative-band" className="text-2xl md:text-3xl font-extralight text-white leading-tight">
-                  Endolaser Excel is the <span className="text-[#C9A050]">second-generation (2G) Endolift® alternative</span> in the UK.
+                  XL Endolaser is the <span className="text-[#C9A050]">second-generation (2G) Endolift® alternative</span> in the UK.
                 </h2>
                 <p className="mt-4 text-white/60 font-light leading-relaxed text-sm md:text-base">
-                  Endolift® pioneered laser fibre lifting in the mid-2010s using a single 1470nm diode. Endolaser Excel evolves that same intra-tissue principle with dual 980nm + 1470nm wavelengths delivered through one 200µm micro-fibre — deeper collagen contraction per pass and adipose remodelling in the same session. Doctor-led, UKCA &amp; CE-marked, from £450 per zone versus £1,500–£3,500 for legacy Endolift® in the UK.
+                  Endolift® pioneered laser fibre lifting in the mid-2010s using a single 1470nm diode. XL Endolaser evolves that same intra-tissue principle with dual 980nm + 1470nm wavelengths delivered through one 200µm micro-fibre — deeper collagen contraction per pass and adipose remodelling in the same session. Doctor-led, UKCA &amp; CE-marked, from £450 per zone versus £1,500–£3,500 for legacy Endolift® in the UK.
                 </p>
                 <p className="mt-3 text-[11px] text-white/40 italic">
                   Endolift® is a registered trademark of Eufoton s.r.l. and is used here for descriptive comparison only.
