@@ -1038,6 +1038,11 @@ const EndolaserLift = () => {
           </div>
         </section>
 
+        {/* ═══ IDEAL-PAGE: Doctor authority + Related reading ═══ */}
+        <DoctorAuthorityBlock />
+        <RelatedReadingRail />
+
+
         {/* Mobile Sidebar */}
         <section className="lg:hidden py-12 px-4 bg-black/95">
           <EndolaserSidebar />
