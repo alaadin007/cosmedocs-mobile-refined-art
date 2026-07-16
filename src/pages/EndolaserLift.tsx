@@ -365,6 +365,10 @@ const EndolaserLift = () => {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </section>
 
+        {/* ═══ IDEAL-PAGE: Self-identification + Speakable top answer ═══ */}
+        <IsThisMeStrip />
+        <SpeakableAnswer />
+
         {/* ═══════════════════════════════════════════
             ENDOLIFT® ALTERNATIVE — 2G positioning band
         ═══════════════════════════════════════════ */}
