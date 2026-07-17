@@ -73,6 +73,7 @@ import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 import heroHarleyStreet from "@/assets/hero/harley-street-cosmedocs.jpg";
 import heroMaleTreatment from "@/assets/hero/cosmedocs-male-treatment.jpg";
 import DrAhmedQuote from "@/components/DrAhmedQuote";
+import { cdnSrc, cdnSrcSet } from "@/lib/cdnImage";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
