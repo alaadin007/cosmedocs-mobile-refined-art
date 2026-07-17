@@ -112,25 +112,49 @@ const BotoxDoseWidget = () => {
 
   const doseLabel = dose < 34 ? "Low" : dose < 67 ? "Most loved" : "High";
 
+  const activeRef = GRADE_IMAGES.find((r) => r.g === refGrade)!;
+
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[28px] bg-gradient-to-b from-[#141414] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col">
-      {/* subtle gold glow */}
+    <div className="relative h-full w-full" style={{ perspective: "1600px" }}>
       <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 -right-16 w-64 h-64 rounded-full bg-[#C9A050]/15 blur-3xl"
-      />
+        className="relative h-full w-full transition-transform duration-700"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+      {/* FRONT */}
+      <div
+        className="absolute inset-0 overflow-hidden rounded-[28px] bg-gradient-to-b from-[#141414] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col"
+        style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+      >
+        {/* subtle gold glow */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 -right-16 w-64 h-64 rounded-full bg-[#C9A050]/15 blur-3xl"
+        />
       <div className="relative z-[1] flex flex-col h-full p-5 sm:p-6">
         {/* Header */}
-        <div className="mb-3">
-          <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">
-            Dose calculator
-          </p>
-          <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight text-white">
-            Your Botox, mapped.
-          </h3>
-          <p className="mt-1.5 text-[11.5px] text-white/60 leading-snug">
-            Grade each area, then choose your strength. We'll estimate units and how long it lasts.
-          </p>
+        <div className="mb-3 flex items-start justify-between gap-3">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">
+              Dose calculator
+            </p>
+            <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight text-white">
+              Your Botox, mapped.
+            </h3>
+            <p className="mt-1.5 text-[11.5px] text-white/60 leading-snug">
+              Grade each area, then choose your strength.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[#C9A050]/40 bg-[#C9A050]/[0.08] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.16em] text-[#C9A050] hover:bg-[#C9A050]/[0.16] transition"
+            aria-label="See wrinkle grade reference"
+          >
+            <RefreshCw className="w-3 h-3" /> See grades
+          </button>
         </div>
 
         {/* Areas */}
