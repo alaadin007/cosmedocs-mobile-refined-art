@@ -2358,6 +2358,16 @@ const Home3 = () => {
         />
         <link rel="canonical" href="https://www.cosmedocs.com/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
+        {/* LCP preload — mobile-sized hero via Netlify Image CDN */}
+        <link
+          rel="preload"
+          as="image"
+          href={cdnSrc(heroHarleyStreet, 640, 72)}
+          imageSrcSet={cdnSrcSet(heroHarleyStreet, [420, 640, 800, 1000])}
+          imageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 520px"
+          fetchPriority="high"
+          data-rh="true"
+        />
 
         {/* Hreflang alternates — international SEO for the homepage */}
         <link rel="alternate" hrefLang="en-gb" href="https://www.cosmedocs.com/" data-rh="true" />
