@@ -33,12 +33,12 @@ const GRADES = [
 const gradeMult = (g: number) => (g === 0 ? 0 : g === 1 ? 0.55 : g === 2 ? 1 : 1.25);
 const doseScalar = (v: number) => 0.6 + (v / 100) * 0.8;
 
-// Per-grade line rendering strength
+// Per-grade line rendering strength — thin, feathered, layered
 const lineStyle = (g: number) => {
-  if (g === 0) return { opacity: 0, width: 0 };
-  if (g === 1) return { opacity: 0.28, width: 0.7 };
-  if (g === 2) return { opacity: 0.55, width: 1.15 };
-  return { opacity: 0.85, width: 1.7 };
+  if (g === 0) return { opacity: 0, width: 0, halo: 0 };
+  if (g === 1) return { opacity: 0.22, width: 0.18, halo: 0.55 };
+  if (g === 2) return { opacity: 0.42, width: 0.32, halo: 0.9 };
+  return { opacity: 0.7, width: 0.5, halo: 1.35 };
 };
 
 const BotoxDoseWidget = () => {
@@ -111,36 +111,68 @@ const BotoxDoseWidget = () => {
           <svg
             viewBox="0 0 100 125"
             preserveAspectRatio="xMidYMid slice"
-            className="absolute inset-0 w-full h-full pointer-events-none"
+            className="absolute inset-0 w-full h-full pointer-events-none mix-blend-multiply"
             aria-hidden
           >
             <defs>
-              <filter id="soften" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="0.15" />
+              <filter id="wr-soft" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="0.12" />
+              </filter>
+              <filter id="wr-halo" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="0.55" />
               </filter>
             </defs>
-            <g filter="url(#soften)" stroke="#2a1a10" strokeLinecap="round" fill="none">
-              {/* Forehead — 3 horizontal lines */}
-              <g opacity={forehead.opacity} strokeWidth={forehead.width}>
-                <path d="M38 33 Q50 30.5 62 33" />
-                <path d="M37 37 Q50 34 63 37" />
-                <path d="M39 41 Q50 38.5 61 41" />
+
+            {/* soft halo layer (broad shadow under crease) */}
+            <g stroke="#3d2418" fill="none" strokeLinecap="round" filter="url(#wr-halo)">
+              <g opacity={forehead.halo * 0.35} strokeWidth={forehead.width * 2.4}>
+                <path d="M39 32.8 Q50 30.6 61 32.6" />
+                <path d="M37.5 36.6 Q50 34.1 62.5 36.4" />
+                <path d="M40 40.4 Q50 38.4 60 40.2" />
               </g>
-              {/* Frown — two vertical 11s between brows */}
-              <g opacity={frown.opacity} strokeWidth={frown.width}>
-                <path d="M48 44 Q47.6 49 47.4 53" />
-                <path d="M52 44 Q52.4 49 52.6 53" />
+              <g opacity={frown.halo * 0.4} strokeWidth={frown.width * 2.2}>
+                <path d="M48.2 44.5 Q47.9 49 47.7 52.6" />
+                <path d="M51.8 44.5 Q52.2 49 52.4 52.6" />
               </g>
-              {/* Crow's feet — fan lines outside each eye */}
-              <g opacity={crows.opacity} strokeWidth={crows.width}>
-                {/* Left eye (viewer's left) */}
-                <path d="M31 55 L26 53" />
-                <path d="M31 57 L25.5 57" />
-                <path d="M31 59 L26 61" />
+              <g opacity={crows.halo * 0.32} strokeWidth={crows.width * 2.4}>
+                <path d="M31.2 55.2 Q28.5 54.2 26.4 53.2" />
+                <path d="M31.2 57.2 Q28.4 57.1 26 57" />
+                <path d="M31.2 59.2 Q28.5 60.2 26.4 61.3" />
+                <path d="M68.8 55.2 Q71.5 54.2 73.6 53.2" />
+                <path d="M68.8 57.2 Q71.6 57.1 74 57" />
+                <path d="M68.8 59.2 Q71.5 60.2 73.6 61.3" />
+              </g>
+            </g>
+
+            {/* fine crease strokes on top */}
+            <g stroke="#2a180e" fill="none" strokeLinecap="round" filter="url(#wr-soft)">
+              {/* Forehead — three subtly wavy horizontals of varied length */}
+              <g opacity={forehead.opacity}>
+                <path d="M40 33 Q44 32.4 49 32.6 Q55 32.9 60 33.1" strokeWidth={forehead.width} />
+                <path d="M38 36.9 Q44 36.2 50 36.4 Q56 36.7 62 36.9" strokeWidth={forehead.width * 1.05} />
+                <path d="M41 40.7 Q46 40.1 51 40.3 Q56 40.5 59 40.6" strokeWidth={forehead.width * 0.9} />
+                {/* faint short accessory line */}
+                <path d="M43 38.5 Q47 38.2 51 38.4" strokeWidth={forehead.width * 0.6} opacity="0.6" />
+              </g>
+              {/* Frown — 11s with slight curvature, tapered by using two overlaid strokes */}
+              <g opacity={frown.opacity}>
+                <path d="M48.3 44.8 Q47.9 48.6 47.6 52.4" strokeWidth={frown.width} />
+                <path d="M48.4 45.6 Q48.1 48.6 47.8 51.6" strokeWidth={frown.width * 0.7} opacity="0.75" />
+                <path d="M51.7 44.8 Q52.1 48.6 52.4 52.4" strokeWidth={frown.width} />
+                <path d="M51.6 45.6 Q51.9 48.6 52.2 51.6" strokeWidth={frown.width * 0.7} opacity="0.75" />
+              </g>
+              {/* Crow's feet — fine fan of uneven length lines from outer canthus */}
+              <g opacity={crows.opacity}>
+                {/* Left eye */}
+                <path d="M31.4 54.8 Q29 54 26.6 53.1" strokeWidth={crows.width} />
+                <path d="M31.4 56.5 Q28.8 56.4 26.2 56.3" strokeWidth={crows.width * 1.05} />
+                <path d="M31.4 58.2 Q28.9 58.9 26.6 59.6" strokeWidth={crows.width * 0.95} />
+                <path d="M31.6 59.6 Q29.6 60.7 27.7 61.7" strokeWidth={crows.width * 0.7} opacity="0.7" />
                 {/* Right eye */}
-                <path d="M69 55 L74 53" />
-                <path d="M69 57 L74.5 57" />
-                <path d="M69 59 L74 61" />
+                <path d="M68.6 54.8 Q71 54 73.4 53.1" strokeWidth={crows.width} />
+                <path d="M68.6 56.5 Q71.2 56.4 73.8 56.3" strokeWidth={crows.width * 1.05} />
+                <path d="M68.6 58.2 Q71.1 58.9 73.4 59.6" strokeWidth={crows.width * 0.95} />
+                <path d="M68.4 59.6 Q70.4 60.7 72.3 61.7" strokeWidth={crows.width * 0.7} opacity="0.7" />
               </g>
             </g>
           </svg>
