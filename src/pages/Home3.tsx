@@ -12,6 +12,7 @@ const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowl
 import HADropletFace from "@/components/home3/HADropletFace";
 import { renderGlossaryText } from "@/components/home3/GlossaryTerm";
 import NewsWidget from "@/components/home/NewsWidget";
+import BotoxDoseWidget from "@/components/home3/BotoxDoseWidget";
 const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
