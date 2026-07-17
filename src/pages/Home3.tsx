@@ -12,6 +12,7 @@ const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowl
 import HADropletFace from "@/components/home3/HADropletFace";
 import { renderGlossaryText } from "@/components/home3/GlossaryTerm";
 import NewsWidget from "@/components/home/NewsWidget";
+import BotoxDoseWidget from "@/components/home3/BotoxDoseWidget";
 const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
@@ -1826,6 +1827,7 @@ type Column =
   | { kind: "stack"; cards: SubCard[] }
   | { kind: "grid"; cards: SubCard[] }
   | { kind: "list"; cards: SubCard[]; title?: string; eyebrow?: string }
+  | { kind: "dose" }
   | { kind: "philosophy"; eyebrow: string; title: string; intro: string; bullets: { h: string; s: string }[]; footer?: string };
 
 const BotoxAestheticSection = ({ category }: { category: Category }) => {
@@ -1854,7 +1856,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   ].filter(Boolean);
 
   const rawColumns: (Column | null)[] = [
-    { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
+    { kind: "dose" },
     {
       kind: "philosophy",
       eyebrow: "The Aim",
@@ -1914,6 +1916,13 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
         className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {columns.map((col, idx) => {
+          if (col.kind === "dose") {
+            return (
+              <div key={idx} className={`shrink-0 ${widthBig} ${colHeight}`}>
+                <BotoxDoseWidget />
+              </div>
+            );
+          }
           if (col.kind === "big") {
             return (
               <div key={idx} className={`shrink-0 ${widthBig} ${colHeight}`}>
