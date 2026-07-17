@@ -1665,9 +1665,12 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
     <>
       {card.image && (
         <img
-          src={card.image}
+          src={cdnSrc(card.image, 900, 68)}
+          srcSet={cdnSrcSet(card.image, [480, 720, 900, 1200])}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
           alt={card.title}
           loading="lazy"
+          decoding="async"
           className="absolute inset-0 z-0 w-full h-full object-cover [filter:brightness(0.86)_saturate(0.88)]"
         />
       )}
