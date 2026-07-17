@@ -2637,7 +2637,7 @@ const Home3 = () => {
             ];
             const band = bands[i % bands.length];
             return (
-              <div key={cat.id} className={`${band} border-b border-white/5`}>
+              <div key={cat.id} className={`${band} border-b border-white/5 [content-visibility:auto] [contain-intrinsic-size:1px_1400px]`}>
                 {cat.id === "botox-aesthetic" ? (
                   <BotoxAestheticSection category={cat} />
                 ) : cat.id === "botox-medical" ? (
