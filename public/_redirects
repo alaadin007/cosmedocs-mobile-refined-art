@@ -259,6 +259,8 @@
 # ----- OTHER LEGACY REDIRECTS -----
 /aesthetics-at-glance             /aesthetics-at-a-glance/            301
 /booking                          /contact/                           301
+/book-appointment                 https://med.as.me/                  301
+/book-appointment/                https://med.as.me/                  301
 /book-consultation                /contact/                           301
 /book-consultation/               /contact/                           301
 /price-list                       /prices/                            301
@@ -266,6 +268,8 @@
 /skin-boosters/                   /treatments/skin-rejuvenation/      301
 /about                            /about-us/                          301
 /about/                           /about-us/                          301
+/cosmedocs-cookie-policy          /cookie-policy/                     301
+/cosmedocs-cookie-policy/         /cookie-policy/                     301
 
 # =====================================================
 # PHASE 2: Before & After Gallery URL Migration
