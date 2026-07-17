@@ -1856,7 +1856,7 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
   ].filter(Boolean);
 
   const rawColumns: (Column | null)[] = [
-    { kind: "big",  card: get("1, 2 or 3 Areas Botox") },
+    { kind: "dose" },
     {
       kind: "philosophy",
       eyebrow: "The Aim",
