@@ -33,12 +33,12 @@ const GRADES = [
 const gradeMult = (g: number) => (g === 0 ? 0 : g === 1 ? 0.55 : g === 2 ? 1 : 1.25);
 const doseScalar = (v: number) => 0.6 + (v / 100) * 0.8;
 
-// Per-grade line rendering strength
+// Per-grade line rendering strength — thin, feathered, layered
 const lineStyle = (g: number) => {
-  if (g === 0) return { opacity: 0, width: 0 };
-  if (g === 1) return { opacity: 0.28, width: 0.7 };
-  if (g === 2) return { opacity: 0.55, width: 1.15 };
-  return { opacity: 0.85, width: 1.7 };
+  if (g === 0) return { opacity: 0, width: 0, halo: 0 };
+  if (g === 1) return { opacity: 0.22, width: 0.18, halo: 0.55 };
+  if (g === 2) return { opacity: 0.42, width: 0.32, halo: 0.9 };
+  return { opacity: 0.7, width: 0.5, halo: 1.35 };
 };
 
 const BotoxDoseWidget = () => {
