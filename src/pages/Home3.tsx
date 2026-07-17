@@ -1175,9 +1175,12 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <>
               <div aria-hidden className="absolute inset-0 bg-black" />
               <img
-                src={card.image ?? card.flip?.image}
+                src={cdnSrc((card.image ?? card.flip?.image)!, 900, 68)}
+                srcSet={cdnSrcSet((card.image ?? card.flip?.image)!, [480, 720, 900, 1200])}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 600px"
                 alt={card.title}
                 loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-contain"
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
