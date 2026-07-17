@@ -2314,9 +2314,17 @@ const HERO_SLIDES = [
 
 const Home3 = () => {
   const [heroIdx, setHeroIdx] = useState(0);
+  const [heroMounted, setHeroMounted] = useState(false);
   useEffect(() => {
-    const id = setInterval(() => setHeroIdx((i) => (i + 1) % HERO_SLIDES.length), 5000);
-    return () => clearInterval(id);
+    // Delay mounting secondary slides until browser is idle to protect LCP
+    const idle = (window as any).requestIdleCallback
+      ? (window as any).requestIdleCallback(() => setHeroMounted(true), { timeout: 2500 })
+      : window.setTimeout(() => setHeroMounted(true), 2000);
+    const id = setInterval(() => setHeroMounted(true) || setHeroIdx((i) => (i + 1) % HERO_SLIDES.length), 5000);
+    return () => {
+      clearInterval(id);
+      if ((window as any).cancelIdleCallback && typeof idle === "number") (window as any).cancelIdleCallback(idle);
+    };
   }, []);
   return (
     <>
