@@ -183,6 +183,8 @@ const FlawlessSkin = lazy(() => import("./pages/FlawlessSkin"));
 const LazySkinSyndrome = lazy(() => import("./pages/LazySkinSyndrome"));
 const BeautyEthnicNeutrality = lazy(() => import("./pages/blog/BeautyEthnicNeutrality"));
 const BlogHome = lazy(() => import("./pages/BlogHome"));
+const NewsHub = lazy(() => import("./pages/NewsHub"));
+const NewsPost = lazy(() => import("./pages/NewsPost"));
 const EightPointFacelift = lazy(() => import("./pages/EightPointFacelift"));
 const ChinesePatients = lazy(() => import("./pages/ChinesePatients"));
 const ArabicPatients = lazy(() => import("./pages/ArabicPatients"));
@@ -1283,7 +1285,13 @@ const App = () => {
                           {/* /journal and /journal/ 301 → /blog/ via Netlify _redirects */}
                           <Route path="/blog" element={<BlogHome />} />
                           <Route path="/blog/" element={<BlogHome />} />
-                          
+
+                          {/* Industry Desk — weekly news feed */}
+                          <Route path="/news" element={<NewsHub />} />
+                          <Route path="/news/" element={<NewsHub />} />
+                          <Route path="/news/:slug" element={<NewsPost />} />
+                          <Route path="/news/:slug/" element={<NewsPost />} />
+
                           {/* All legacy /blog/* and /cosmetalk/* handled by Netlify _redirects */}
                           
                           {/* Location Routes */}
