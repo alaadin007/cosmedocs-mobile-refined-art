@@ -857,6 +857,12 @@ const App = () => {
                           <Route path="/treatments/profhilo/" element={<ProfhiloTreatment />} />
                           <Route path="/treatments/polynucleotides" element={<PolynucleotideTreatment />} />
                           <Route path="/treatments/polynucleotides/" element={<PolynucleotideTreatment />} />
+                          <Route path="/treatments/decolletage-neck-rejuvenation" element={<DecolletageNeckRejuvenation />} />
+                          <Route path="/treatments/decolletage-neck-rejuvenation/" element={<DecolletageNeckRejuvenation />} />
+                          <Route path="/treatments/neck-rejuvenation" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
+                          <Route path="/treatments/neck-rejuvenation/" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
+                          <Route path="/treatments/decolletage" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
+                          <Route path="/treatments/decolletage/" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
                           <Route path="/treatments/sunekos" element={<Sunekos />} />
                           <Route path="/treatments/sunekos/" element={<Sunekos />} />
                           <Route path="/treatments/jalupro" element={<Jalupro />} />
