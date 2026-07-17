@@ -2227,9 +2227,12 @@ const CosmeticUnitsFeature = () => (
           />
           <div className="relative rounded-[26px] overflow-hidden bg-black">
             <img
-              src={cosmeticUnitsImg}
+              src={cdnSrc(cosmeticUnitsImg, 900, 70)}
+              srcSet={cdnSrcSet(cosmeticUnitsImg, [480, 720, 900, 1200])}
+              sizes="(max-width: 1024px) 100vw, 600px"
               alt="Cosmetic units of the face, anatomical map of forehead, temple, cheek, jaw, lip and chin"
               loading="lazy"
+              decoding="async"
               className="block w-full h-auto"
             />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_60%,rgba(0,0,0,0.45)_100%)]" />
