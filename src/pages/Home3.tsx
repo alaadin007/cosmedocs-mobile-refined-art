@@ -2505,20 +2505,27 @@ const Home3 = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#C9A050]/20">
                 <div className="relative aspect-[4/5] md:aspect-[5/6] w-full">
-                  {HERO_SLIDES.map((slide, i) => (
-                    <img
-                      key={slide.src}
-                      src={slide.src}
-                      alt={slide.alt}
-                      width={1920}
-                      height={1280}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      fetchPriority={i === 0 ? "high" : "low"}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
-                        i === heroIdx ? "opacity-100" : "opacity-0"
-                      }`}
-                    />
-                  ))}
+                  {HERO_SLIDES.map((slide, i) => {
+                    // Only mount slide 1 initially — mount later slides after first paint
+                    if (i > 0 && heroIdx < i && !heroMounted) return null;
+                    return (
+                      <img
+                        key={slide.src}
+                        src={cdnSrc(slide.src, 800, 72)}
+                        srcSet={cdnSrcSet(slide.src, [420, 640, 800, 1000])}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 520px"
+                        alt={slide.alt}
+                        width={1920}
+                        height={1280}
+                        loading={i === 0 ? "eager" : "lazy"}
+                        fetchPriority={i === 0 ? "high" : "low"}
+                        decoding={i === 0 ? "sync" : "async"}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
+                          i === heroIdx ? "opacity-100" : "opacity-0"
+                        }`}
+                      />
+                    );
+                  })}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
