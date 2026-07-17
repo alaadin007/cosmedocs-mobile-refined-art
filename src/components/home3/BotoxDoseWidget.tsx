@@ -55,6 +55,8 @@ const BotoxDoseWidget = () => {
     crows: 1,
   });
   const [dose, setDose] = useState(50); // 0 low – 50 loved – 100 high
+  const [flipped, setFlipped] = useState(false);
+  const [refGrade, setRefGrade] = useState<1 | 2 | 3>(2);
 
   const { units, breakdown, anyTreated, hasDeep } = useMemo(() => {
     const scalar = doseScalar(dose);
