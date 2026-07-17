@@ -435,4 +435,21 @@
     <mobile:mobile/>
   </url>
 
+
+  <url>
+    <loc>https://www.cosmedocs.com/privacy-policy/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <mobile:mobile/>
+  </url>
+
+  <url>
+    <loc>https://www.cosmedocs.com/cookie-policy/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <mobile:mobile/>
+  </url>
+
 </urlset>

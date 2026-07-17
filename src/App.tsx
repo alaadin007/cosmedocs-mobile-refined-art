@@ -92,6 +92,8 @@ const VitaminCSerum = lazy(() => import("./pages/VitaminCSerum"));
 const RetinolCream = lazy(() => import("./pages/RetinolCream"));
 const SkinEducationGuide = lazy(() => import("./pages/SkinEducationGuide"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
 const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
 const TMJBotox = lazy(() => import("./pages/TMJBotox"));
@@ -614,6 +616,12 @@ const App = () => {
                           <Route path="/testimonials" element={<Testimonials />} />
                           <Route path="/testimonials/" element={<Testimonials />} />
                           <Route path="/thank-you" element={<ThankYou />} />
+                          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                          <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+                          <Route path="/cookie-policy" element={<CookiePolicy />} />
+                          <Route path="/cookie-policy/" element={<CookiePolicy />} />
+                          <Route path="/cosmedocs-cookie-policy" element={<Navigate to="/cookie-policy/" replace />} />
+                          <Route path="/cosmedocs-cookie-policy/" element={<Navigate to="/cookie-policy/" replace />} />
                           <Route path="/before-after-gallery" element={<Navigate to="/before-after/" replace />} />
                           <Route path="/membership" element={<Membership />} />
                           <Route path="/our-team/dr-ahmed-haq" element={<DrAhmedHaq />} />

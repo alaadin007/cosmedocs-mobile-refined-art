@@ -257,6 +257,11 @@ export default function Footer() {
             <div className="text-xs text-white/40 text-center md:text-left space-y-1">
               <p>Treatments are provided by GMC-registered medical doctors.</p>
               <p>All procedures are subject to consultation and clinical suitability. Results may vary.</p>
+              <p className="pt-1">
+                <Link to="/privacy-policy/" className="text-white/60 hover:text-white transition-colors">Privacy Policy</Link>
+                <span className="mx-2 text-white/20">·</span>
+                <Link to="/cookie-policy/" className="text-white/60 hover:text-white transition-colors">Cookie Policy</Link>
+              </p>
             </div>
             <p className="text-xs text-white/30">
               © {currentYear} CosmeDocs Ltd. All rights reserved.
