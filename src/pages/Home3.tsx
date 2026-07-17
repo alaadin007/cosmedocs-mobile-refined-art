@@ -1790,7 +1790,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
                   <div className="relative h-full grid grid-rows-2 gap-1 rounded-2xl overflow-hidden bg-black">
                     {card.flipImages!.map((img) => (
                       <div key={img.src} className="relative overflow-hidden bg-black">
-                        <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
+                        <img src={cdnSrc(img.src, 700, 68)} srcSet={cdnSrcSet(img.src, [360, 540, 700, 900])} sizes="(max-width: 640px) 100vw, 400px" alt={img.alt} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-contain" />
                       </div>
                     ))}
                   </div>
