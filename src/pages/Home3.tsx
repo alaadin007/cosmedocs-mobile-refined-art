@@ -2724,11 +2724,14 @@ const Home3 = () => {
           </div>
         </section>
 
-        <NewsWidget />
+        <div className="[content-visibility:auto] [contain-intrinsic-size:1px_800px]">
+          <NewsWidget />
 
-        <section className="px-5 sm:px-8 py-12 border-t border-white/[0.06]">
-          <DrAhmedQuote />
-        </section>
+          <section className="px-5 sm:px-8 py-12 border-t border-white/[0.06]">
+            <DrAhmedQuote />
+          </section>
+        </div>
+
 
         <footer className="border-t border-white/10 py-10 px-5 sm:px-8">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-xs text-white/40">
