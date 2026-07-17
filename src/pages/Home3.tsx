@@ -11,6 +11,7 @@ import { lazy, Suspense } from "react";
 const WebsiteKnowledgeInitializer = lazy(() => import("@/components/WebsiteKnowledgeInitializer"));
 import HADropletFace from "@/components/home3/HADropletFace";
 import { renderGlossaryText } from "@/components/home3/GlossaryTerm";
+import NewsWidget from "@/components/home/NewsWidget";
 const ACUITY_URL = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 import botox3AreasImg from "@/assets/home3-botox-3areas.jpg";
 import botoxLipFlipImg from "@/assets/home3-botox-lip-flip.jpg";
@@ -2668,6 +2669,8 @@ const Home3 = () => {
             </Link>
           </div>
         </section>
+
+        <NewsWidget />
 
         <section className="px-5 sm:px-8 py-12 border-t border-white/[0.06]">
           <DrAhmedQuote />
