@@ -205,6 +205,7 @@ const KarachiLocation = lazy(() => import("./pages/KarachiLocation"));
 const BarbadosHome = lazy(() => import("./pages/BarbadosHome"));
 const PolynucleotideTreatment = lazy(() => import("./pages/PolynucleotideTreatment"));
 const ProfhiloTreatment = lazy(() => import("./pages/ProfhiloTreatment"));
+const DecolletageNeckRejuvenation = lazy(() => import("./pages/DecolletageNeckRejuvenation"));
 const ChinBotox = lazy(() => import("./pages/ChinBotox"));
 const HydraFacial = lazy(() => import("./pages/HydraFacial"));
 const PRPTreatment = lazy(() => import("./pages/PRPTreatment"));
