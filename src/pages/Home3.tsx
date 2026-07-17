@@ -843,9 +843,12 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
     >
       {card.image && (
         <img
-          src={card.image}
+          src={cdnSrc(card.image, 800, 68)}
+          srcSet={cdnSrcSet(card.image, [420, 640, 800, 1000])}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
           alt={card.title}
           loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}
