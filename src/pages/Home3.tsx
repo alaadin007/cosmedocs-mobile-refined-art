@@ -2340,19 +2340,21 @@ const Home3 = () => {
   const [heroIdx, setHeroIdx] = useState(0);
   const [heroMounted, setHeroMounted] = useState(false);
   useEffect(() => {
-    // Delay mounting secondary slides until browser is idle to protect LCP
-    const idle = (window as any).requestIdleCallback
-      ? (window as any).requestIdleCallback(() => setHeroMounted(true), { timeout: 2500 })
-      : window.setTimeout(() => setHeroMounted(true), 2000);
-    const id = setInterval(() => {
+    // Delay carousel until after LCP + idle so the first slide is not overtaken
+    let intervalId: number | undefined;
+    const start = () => {
       setHeroMounted(true);
-      setHeroIdx((i) => (i + 1) % HERO_SLIDES.length);
-    }, 5000);
+      intervalId = window.setInterval(() => {
+        setHeroIdx((i) => (i + 1) % HERO_SLIDES.length);
+      }, 7000);
+    };
+    const timeoutId = window.setTimeout(start, 4500);
     return () => {
-      clearInterval(id);
-      if ((window as any).cancelIdleCallback && typeof idle === "number") (window as any).cancelIdleCallback(idle);
+      window.clearTimeout(timeoutId);
+      if (intervalId) window.clearInterval(intervalId);
     };
   }, []);
+
   return (
     <>
       <Helmet>
