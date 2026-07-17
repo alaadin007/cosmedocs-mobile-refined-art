@@ -1138,9 +1138,12 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                     }`}
                   >
                     <img
-                      src={im.src}
+                      src={cdnSrc(im.src, 700, 68)}
+                      srcSet={cdnSrcSet(im.src, [360, 540, 700, 900])}
+                      sizes="(max-width: 640px) 50vw, 350px"
                       alt={im.alt ?? card.title}
                       loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 w-full h-full object-cover object-center"
                     />
                   </div>
