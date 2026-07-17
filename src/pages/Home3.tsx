@@ -1252,10 +1252,15 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 />
                 <div className="relative rounded-2xl overflow-hidden bg-black w-full h-full flex items-center justify-center">
                   <img
-                    src={card.flip?.image ?? card.image}
+                    src={cdnSrc((card.flip?.image ?? card.image)!, 700, 68)}
+                    srcSet={cdnSrcSet((card.flip?.image ?? card.image)!, [360, 540, 700, 900])}
+                    sizes="(max-width: 640px) 100vw, 400px"
                     alt={`${card.title} before and after, Cosmedocs`}
+                    loading="lazy"
+                    decoding="async"
                     className="block max-w-full max-h-full w-auto h-auto object-contain"
                   />
+
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0)_65%,rgba(201,160,80,0.10)_100%)]" />
                 </div>
               </div>
