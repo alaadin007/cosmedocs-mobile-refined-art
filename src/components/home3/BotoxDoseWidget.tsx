@@ -270,6 +270,91 @@ const BotoxDoseWidget = () => {
           Guide only. Final dose is decided in-clinic by a doctor.
         </p>
       </div>
+      </div>
+      {/* END FRONT */}
+
+      {/* BACK */}
+      <div
+        className="absolute inset-0 overflow-hidden rounded-[28px] bg-gradient-to-b from-[#141414] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col"
+        style={{
+          backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden",
+          transform: "rotateY(180deg)",
+        }}
+      >
+        <div className="relative z-[1] flex flex-col h-full p-5 sm:p-6">
+          <div className="mb-3 flex items-start justify-between gap-3">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">
+                Grade reference
+              </p>
+              <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight text-white">
+                How deep is deep?
+              </h3>
+              <p className="mt-1.5 text-[11.5px] text-white/60 leading-snug">
+                Match your own lines to a grade. Tap G1 · G2 · G3 to compare.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setFlipped(false)}
+              className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[#C9A050]/40 bg-[#C9A050]/[0.08] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.16em] text-[#C9A050] hover:bg-[#C9A050]/[0.16] transition"
+              aria-label="Back to dose calculator"
+            >
+              <RefreshCw className="w-3 h-3" /> Calculator
+            </button>
+          </div>
+
+          {/* Image */}
+          <div className="relative flex-1 min-h-0 rounded-2xl overflow-hidden border border-white/10 bg-black">
+            <img
+              key={activeRef.src}
+              src={activeRef.src}
+              alt={`Wrinkle severity ${activeRef.label}`}
+              loading="lazy"
+              width={768}
+              height={768}
+              className="absolute inset-0 w-full h-full object-cover animate-fade-in"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-3">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-0.5">
+                {activeRef.label}
+              </p>
+              <p className="text-[11.5px] text-white/85 leading-snug">
+                {activeRef.desc}
+              </p>
+            </div>
+          </div>
+
+          {/* Grade selector */}
+          <div className="mt-3 grid grid-cols-3 gap-1.5">
+            {GRADE_IMAGES.map((r) => {
+              const active = refGrade === r.g;
+              return (
+                <button
+                  key={r.g}
+                  type="button"
+                  onClick={() => setRefGrade(r.g as 1 | 2 | 3)}
+                  className={`py-2 rounded-lg text-[11px] font-medium transition ${
+                    active
+                      ? "bg-[#C9A050] text-black shadow-[0_0_16px_rgba(201,160,80,0.5)]"
+                      : "bg-white/[0.06] text-white/70 hover:bg-white/[0.12]"
+                  }`}
+                  aria-pressed={active}
+                >
+                  G{r.g}
+                </button>
+              );
+            })}
+          </div>
+
+          <p className="mt-2 text-[9.5px] text-white/35 leading-snug">
+            Reference imagery. Individual anatomy varies — assessed in-clinic.
+          </p>
+        </div>
+      </div>
+      {/* END BACK */}
+      </div>
     </div>
   );
 };
