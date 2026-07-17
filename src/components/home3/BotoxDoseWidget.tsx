@@ -1,6 +1,15 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, RefreshCw } from "lucide-react";
+import wrinkleG1 from "@/assets/wrinkle-grade-g1.jpg";
+import wrinkleG2 from "@/assets/wrinkle-grade-g2.jpg";
+import wrinkleG3 from "@/assets/wrinkle-grade-g3.jpg";
+
+const GRADE_IMAGES = [
+  { g: 1, src: wrinkleG1, label: "G1 · Faint", desc: "Whisper-fine expression lines only when animated. Skin at rest looks smooth." },
+  { g: 2, src: wrinkleG2, label: "G2 · Moderate", desc: "Clear dynamic lines on the forehead, 11s and crow's feet. Beginning to etch." },
+  { g: 3, src: wrinkleG3, label: "G3 · Deep", desc: "Static creases visible at rest — set into the skin even without expression." },
+] as const;
 
 /**
  * BotoxDoseWidget
@@ -46,6 +55,8 @@ const BotoxDoseWidget = () => {
     crows: 1,
   });
   const [dose, setDose] = useState(50); // 0 low – 50 loved – 100 high
+  const [flipped, setFlipped] = useState(false);
+  const [refGrade, setRefGrade] = useState<1 | 2 | 3>(2);
 
   const { units, breakdown, anyTreated, hasDeep } = useMemo(() => {
     const scalar = doseScalar(dose);
@@ -101,25 +112,49 @@ const BotoxDoseWidget = () => {
 
   const doseLabel = dose < 34 ? "Low" : dose < 67 ? "Most loved" : "High";
 
+  const activeRef = GRADE_IMAGES.find((r) => r.g === refGrade)!;
+
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[28px] bg-gradient-to-b from-[#141414] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col">
-      {/* subtle gold glow */}
+    <div className="relative h-full w-full" style={{ perspective: "1600px" }}>
       <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 -right-16 w-64 h-64 rounded-full bg-[#C9A050]/15 blur-3xl"
-      />
+        className="relative h-full w-full transition-transform duration-700"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+      {/* FRONT */}
+      <div
+        className="absolute inset-0 overflow-hidden rounded-[28px] bg-gradient-to-b from-[#141414] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col"
+        style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+      >
+        {/* subtle gold glow */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 -right-16 w-64 h-64 rounded-full bg-[#C9A050]/15 blur-3xl"
+        />
       <div className="relative z-[1] flex flex-col h-full p-5 sm:p-6">
         {/* Header */}
-        <div className="mb-3">
-          <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">
-            Dose calculator
-          </p>
-          <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight text-white">
-            Your Botox, mapped.
-          </h3>
-          <p className="mt-1.5 text-[11.5px] text-white/60 leading-snug">
-            Grade each area, then choose your strength. We'll estimate units and how long it lasts.
-          </p>
+        <div className="mb-3 flex items-start justify-between gap-3">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">
+              Dose calculator
+            </p>
+            <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight text-white">
+              Your Botox, mapped.
+            </h3>
+            <p className="mt-1.5 text-[11.5px] text-white/60 leading-snug">
+              Grade each area, then choose your strength.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[#C9A050]/40 bg-[#C9A050]/[0.08] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.16em] text-[#C9A050] hover:bg-[#C9A050]/[0.16] transition"
+            aria-label="See wrinkle grade reference"
+          >
+            <RefreshCw className="w-3 h-3" /> See grades
+          </button>
         </div>
 
         {/* Areas */}
@@ -234,6 +269,91 @@ const BotoxDoseWidget = () => {
         <p className="mt-2 text-[9.5px] text-white/35 leading-snug">
           Guide only. Final dose is decided in-clinic by a doctor.
         </p>
+      </div>
+      </div>
+      {/* END FRONT */}
+
+      {/* BACK */}
+      <div
+        className="absolute inset-0 overflow-hidden rounded-[28px] bg-gradient-to-b from-[#141414] to-black border border-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] flex flex-col"
+        style={{
+          backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden",
+          transform: "rotateY(180deg)",
+        }}
+      >
+        <div className="relative z-[1] flex flex-col h-full p-5 sm:p-6">
+          <div className="mb-3 flex items-start justify-between gap-3">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-[#C9A050] mb-1.5">
+                Grade reference
+              </p>
+              <h3 className="font-serif text-xl sm:text-2xl leading-[1.1] tracking-tight text-white">
+                How deep is deep?
+              </h3>
+              <p className="mt-1.5 text-[11.5px] text-white/60 leading-snug">
+                Match your own lines to a grade. Tap G1 · G2 · G3 to compare.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setFlipped(false)}
+              className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[#C9A050]/40 bg-[#C9A050]/[0.08] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.16em] text-[#C9A050] hover:bg-[#C9A050]/[0.16] transition"
+              aria-label="Back to dose calculator"
+            >
+              <RefreshCw className="w-3 h-3" /> Calculator
+            </button>
+          </div>
+
+          {/* Image */}
+          <div className="relative flex-1 min-h-0 rounded-2xl overflow-hidden border border-white/10 bg-black">
+            <img
+              key={activeRef.src}
+              src={activeRef.src}
+              alt={`Wrinkle severity ${activeRef.label}`}
+              loading="lazy"
+              width={768}
+              height={768}
+              className="absolute inset-0 w-full h-full object-cover animate-fade-in"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-3">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[#C9A050] mb-0.5">
+                {activeRef.label}
+              </p>
+              <p className="text-[11.5px] text-white/85 leading-snug">
+                {activeRef.desc}
+              </p>
+            </div>
+          </div>
+
+          {/* Grade selector */}
+          <div className="mt-3 grid grid-cols-3 gap-1.5">
+            {GRADE_IMAGES.map((r) => {
+              const active = refGrade === r.g;
+              return (
+                <button
+                  key={r.g}
+                  type="button"
+                  onClick={() => setRefGrade(r.g as 1 | 2 | 3)}
+                  className={`py-2 rounded-lg text-[11px] font-medium transition ${
+                    active
+                      ? "bg-[#C9A050] text-black shadow-[0_0_16px_rgba(201,160,80,0.5)]"
+                      : "bg-white/[0.06] text-white/70 hover:bg-white/[0.12]"
+                  }`}
+                  aria-pressed={active}
+                >
+                  G{r.g}
+                </button>
+              );
+            })}
+          </div>
+
+          <p className="mt-2 text-[9.5px] text-white/35 leading-snug">
+            Reference imagery. Individual anatomy varies — assessed in-clinic.
+          </p>
+        </div>
+      </div>
+      {/* END BACK */}
       </div>
     </div>
   );
