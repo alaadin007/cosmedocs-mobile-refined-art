@@ -205,6 +205,7 @@ const KarachiLocation = lazy(() => import("./pages/KarachiLocation"));
 const BarbadosHome = lazy(() => import("./pages/BarbadosHome"));
 const PolynucleotideTreatment = lazy(() => import("./pages/PolynucleotideTreatment"));
 const ProfhiloTreatment = lazy(() => import("./pages/ProfhiloTreatment"));
+const DecolletageNeckRejuvenation = lazy(() => import("./pages/DecolletageNeckRejuvenation"));
 const ChinBotox = lazy(() => import("./pages/ChinBotox"));
 const HydraFacial = lazy(() => import("./pages/HydraFacial"));
 const PRPTreatment = lazy(() => import("./pages/PRPTreatment"));
@@ -856,6 +857,12 @@ const App = () => {
                           <Route path="/treatments/profhilo/" element={<ProfhiloTreatment />} />
                           <Route path="/treatments/polynucleotides" element={<PolynucleotideTreatment />} />
                           <Route path="/treatments/polynucleotides/" element={<PolynucleotideTreatment />} />
+                          <Route path="/treatments/decolletage-neck-rejuvenation" element={<DecolletageNeckRejuvenation />} />
+                          <Route path="/treatments/decolletage-neck-rejuvenation/" element={<DecolletageNeckRejuvenation />} />
+                          <Route path="/treatments/neck-rejuvenation" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
+                          <Route path="/treatments/neck-rejuvenation/" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
+                          <Route path="/treatments/decolletage" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
+                          <Route path="/treatments/decolletage/" element={<Navigate to="/treatments/decolletage-neck-rejuvenation/" replace />} />
                           <Route path="/treatments/sunekos" element={<Sunekos />} />
                           <Route path="/treatments/sunekos/" element={<Sunekos />} />
                           <Route path="/treatments/jalupro" element={<Jalupro />} />
