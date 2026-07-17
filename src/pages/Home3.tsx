@@ -1622,7 +1622,7 @@ const TileCard = ({ card }: { card: SubCard }) => {
       className={`group relative overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[24px] flex-1 min-h-0 transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]`}
     >
       {card.image && (
-        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={cdnSrc(card.image, 600, 68)} srcSet={cdnSrcSet(card.image, [320, 480, 600, 800])} sizes="(max-width: 640px) 50vw, 300px" alt={card.title} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
       )}
       {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
