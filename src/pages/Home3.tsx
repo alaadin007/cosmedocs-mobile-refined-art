@@ -1916,6 +1916,13 @@ const BotoxAestheticSection = ({ category }: { category: Category }) => {
         className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 px-5 sm:px-8 overscroll-x-contain [touch-action:pan-x_pan-y] [-webkit-overflow-scrolling:touch] [scroll-behavior:smooth] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {columns.map((col, idx) => {
+          if (col.kind === "dose") {
+            return (
+              <div key={idx} className={`shrink-0 ${widthBig} ${colHeight}`}>
+                <BotoxDoseWidget />
+              </div>
+            );
+          }
           if (col.kind === "big") {
             return (
               <div key={idx} className={`shrink-0 ${widthBig} ${colHeight}`}>
