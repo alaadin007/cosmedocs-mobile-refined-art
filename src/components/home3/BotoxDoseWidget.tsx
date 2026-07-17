@@ -1,6 +1,15 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, RefreshCw } from "lucide-react";
+import wrinkleG1 from "@/assets/wrinkle-grade-g1.jpg";
+import wrinkleG2 from "@/assets/wrinkle-grade-g2.jpg";
+import wrinkleG3 from "@/assets/wrinkle-grade-g3.jpg";
+
+const GRADE_IMAGES = [
+  { g: 1, src: wrinkleG1, label: "G1 · Faint", desc: "Whisper-fine expression lines only when animated. Skin at rest looks smooth." },
+  { g: 2, src: wrinkleG2, label: "G2 · Moderate", desc: "Clear dynamic lines on the forehead, 11s and crow's feet. Beginning to etch." },
+  { g: 3, src: wrinkleG3, label: "G3 · Deep", desc: "Static creases visible at rest — set into the skin even without expression." },
+] as const;
 
 /**
  * BotoxDoseWidget
