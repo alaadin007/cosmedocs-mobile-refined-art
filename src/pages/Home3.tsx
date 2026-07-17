@@ -2553,8 +2553,9 @@ const Home3 = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#C9A050]/20">
                 <div className="relative aspect-[4/5] md:aspect-[5/6] w-full">
                   {HERO_SLIDES.map((slide, i) => {
-                    // Only mount slide 1 initially — mount later slides after first paint
-                    if (i > 0 && heroIdx < i && !heroMounted) return null;
+                    // Only render the currently active slide to avoid Lighthouse
+                    // picking a hidden slide as the LCP element.
+                    if (i !== heroIdx) return null;
                     return (
                       <img
                         key={slide.src}
@@ -2567,12 +2568,11 @@ const Home3 = () => {
                         loading={i === 0 ? "eager" : "lazy"}
                         fetchPriority={i === 0 ? "high" : "low"}
                         decoding={i === 0 ? "sync" : "async"}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
-                          i === heroIdx ? "opacity-100" : "opacity-0"
-                        }`}
+                        className="absolute inset-0 w-full h-full object-cover animate-[fadeIn_900ms_ease-out]"
                       />
                     );
                   })}
+
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
