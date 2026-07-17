@@ -73,6 +73,7 @@ import brotoxBA from "@/assets/brotox-ba-forehead-frown.jpg";
 import heroHarleyStreet from "@/assets/hero/harley-street-cosmedocs.jpg";
 import heroMaleTreatment from "@/assets/hero/cosmedocs-male-treatment.jpg";
 import DrAhmedQuote from "@/components/DrAhmedQuote";
+import { cdnSrc, cdnSrcSet } from "@/lib/cdnImage";
 
 /* -------------------------------------------------------------------------- */
 /*  HOME 3 ,  iOS / Apple.co.uk-style category grid                          */
@@ -842,9 +843,12 @@ const TreatmentCard = ({ card, size }: { card: SubCard; size: CardSize }) => {
     >
       {card.image && (
         <img
-          src={card.image}
+          src={cdnSrc(card.image, 800, 68)}
+          srcSet={cdnSrcSet(card.image, [420, 640, 800, 1000])}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
           alt={card.title}
           loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}
@@ -1134,9 +1138,12 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                     }`}
                   >
                     <img
-                      src={im.src}
+                      src={cdnSrc(im.src, 700, 68)}
+                      srcSet={cdnSrcSet(im.src, [360, 540, 700, 900])}
+                      sizes="(max-width: 640px) 50vw, 350px"
                       alt={im.alt ?? card.title}
                       loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 w-full h-full object-cover object-center"
                     />
                   </div>
@@ -1151,9 +1158,12 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <>
               <div aria-hidden className="absolute inset-0 bg-black" />
               <img
-                src={card.frontImage}
+                src={cdnSrc(card.frontImage, 900, 68)}
+                srcSet={cdnSrcSet(card.frontImage, [480, 720, 900, 1200])}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 600px"
                 alt={card.title}
                 loading="lazy"
+                decoding="async"
                 className={`absolute inset-0 w-full h-full ${card.frontImageFit === "cover" ? "object-cover" : "object-contain"}`}
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
@@ -1165,9 +1175,12 @@ const FlipCard = ({ card }: { card: SubCard }) => {
             <>
               <div aria-hidden className="absolute inset-0 bg-black" />
               <img
-                src={card.image ?? card.flip?.image}
+                src={cdnSrc((card.image ?? card.flip?.image)!, 900, 68)}
+                srcSet={cdnSrcSet((card.image ?? card.flip?.image)!, [480, 720, 900, 1200])}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 600px"
                 alt={card.title}
                 loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-contain"
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
@@ -1609,7 +1622,7 @@ const TileCard = ({ card }: { card: SubCard }) => {
       className={`group relative overflow-hidden block ${card.bg} ${card.ink ?? "text-white"} rounded-[24px] flex-1 min-h-0 transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]`}
     >
       {card.image && (
-        <img src={card.image} alt={card.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={cdnSrc(card.image, 600, 68)} srcSet={cdnSrcSet(card.image, [320, 480, 600, 800])} sizes="(max-width: 640px) 50vw, 300px" alt={card.title} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
       )}
       {!card.image && <CardWatermark title={card.title} dark={!card.ink} />}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55 pointer-events-none" />
@@ -1652,9 +1665,12 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
     <>
       {card.image && (
         <img
-          src={card.image}
+          src={cdnSrc(card.image, 900, 68)}
+          srcSet={cdnSrcSet(card.image, [480, 720, 900, 1200])}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
           alt={card.title}
           loading="lazy"
+          decoding="async"
           className="absolute inset-0 z-0 w-full h-full object-cover [filter:brightness(0.86)_saturate(0.88)]"
         />
       )}
@@ -1774,7 +1790,7 @@ const SpotlightCard = ({ card }: { card: SubCard }) => {
                   <div className="relative h-full grid grid-rows-2 gap-1 rounded-2xl overflow-hidden bg-black">
                     {card.flipImages!.map((img) => (
                       <div key={img.src} className="relative overflow-hidden bg-black">
-                        <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 w-full h-full object-contain" />
+                        <img src={cdnSrc(img.src, 700, 68)} srcSet={cdnSrcSet(img.src, [360, 540, 700, 900])} sizes="(max-width: 640px) 100vw, 400px" alt={img.alt} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-contain" />
                       </div>
                     ))}
                   </div>
@@ -2211,9 +2227,12 @@ const CosmeticUnitsFeature = () => (
           />
           <div className="relative rounded-[26px] overflow-hidden bg-black">
             <img
-              src={cosmeticUnitsImg}
+              src={cdnSrc(cosmeticUnitsImg, 900, 70)}
+              srcSet={cdnSrcSet(cosmeticUnitsImg, [480, 720, 900, 1200])}
+              sizes="(max-width: 1024px) 100vw, 600px"
               alt="Cosmetic units of the face, anatomical map of forehead, temple, cheek, jaw, lip and chin"
               loading="lazy"
+              decoding="async"
               className="block w-full h-auto"
             />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_60%,rgba(0,0,0,0.45)_100%)]" />
@@ -2314,9 +2333,20 @@ const HERO_SLIDES = [
 
 const Home3 = () => {
   const [heroIdx, setHeroIdx] = useState(0);
+  const [heroMounted, setHeroMounted] = useState(false);
   useEffect(() => {
-    const id = setInterval(() => setHeroIdx((i) => (i + 1) % HERO_SLIDES.length), 5000);
-    return () => clearInterval(id);
+    // Delay mounting secondary slides until browser is idle to protect LCP
+    const idle = (window as any).requestIdleCallback
+      ? (window as any).requestIdleCallback(() => setHeroMounted(true), { timeout: 2500 })
+      : window.setTimeout(() => setHeroMounted(true), 2000);
+    const id = setInterval(() => {
+      setHeroMounted(true);
+      setHeroIdx((i) => (i + 1) % HERO_SLIDES.length);
+    }, 5000);
+    return () => {
+      clearInterval(id);
+      if ((window as any).cancelIdleCallback && typeof idle === "number") (window as any).cancelIdleCallback(idle);
+    };
   }, []);
   return (
     <>
@@ -2328,6 +2358,16 @@ const Home3 = () => {
         />
         <link rel="canonical" href="https://www.cosmedocs.com/" data-rh="true" />
         <meta name="theme-color" content="#000000" />
+        {/* LCP preload — mobile-sized hero via Netlify Image CDN */}
+        <link
+          rel="preload"
+          as="image"
+          href={cdnSrc(heroHarleyStreet, 640, 72)}
+          imageSrcSet={cdnSrcSet(heroHarleyStreet, [420, 640, 800, 1000])}
+          imageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 520px"
+          fetchPriority="high"
+          data-rh="true"
+        />
 
         {/* Hreflang alternates — international SEO for the homepage */}
         <link rel="alternate" hrefLang="en-gb" href="https://www.cosmedocs.com/" data-rh="true" />
@@ -2505,20 +2545,27 @@ const Home3 = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#C9A050]/20">
                 <div className="relative aspect-[4/5] md:aspect-[5/6] w-full">
-                  {HERO_SLIDES.map((slide, i) => (
-                    <img
-                      key={slide.src}
-                      src={slide.src}
-                      alt={slide.alt}
-                      width={1920}
-                      height={1280}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      fetchPriority={i === 0 ? "high" : "low"}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
-                        i === heroIdx ? "opacity-100" : "opacity-0"
-                      }`}
-                    />
-                  ))}
+                  {HERO_SLIDES.map((slide, i) => {
+                    // Only mount slide 1 initially — mount later slides after first paint
+                    if (i > 0 && heroIdx < i && !heroMounted) return null;
+                    return (
+                      <img
+                        key={slide.src}
+                        src={cdnSrc(slide.src, 800, 72)}
+                        srcSet={cdnSrcSet(slide.src, [420, 640, 800, 1000])}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 520px"
+                        alt={slide.alt}
+                        width={1920}
+                        height={1280}
+                        loading={i === 0 ? "eager" : "lazy"}
+                        fetchPriority={i === 0 ? "high" : "low"}
+                        decoding={i === 0 ? "sync" : "async"}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
+                          i === heroIdx ? "opacity-100" : "opacity-0"
+                        }`}
+                      />
+                    );
+                  })}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
