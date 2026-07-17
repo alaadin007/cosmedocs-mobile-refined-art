@@ -1252,10 +1252,15 @@ const FlipCard = ({ card }: { card: SubCard }) => {
                 />
                 <div className="relative rounded-2xl overflow-hidden bg-black w-full h-full flex items-center justify-center">
                   <img
-                    src={card.flip?.image ?? card.image}
+                    src={cdnSrc((card.flip?.image ?? card.image)!, 700, 68)}
+                    srcSet={cdnSrcSet((card.flip?.image ?? card.image)!, [360, 540, 700, 900])}
+                    sizes="(max-width: 640px) 100vw, 400px"
                     alt={`${card.title} before and after, Cosmedocs`}
+                    loading="lazy"
+                    decoding="async"
                     className="block max-w-full max-h-full w-auto h-auto object-contain"
                   />
+
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0)_65%,rgba(201,160,80,0.10)_100%)]" />
                 </div>
               </div>
@@ -2335,19 +2340,21 @@ const Home3 = () => {
   const [heroIdx, setHeroIdx] = useState(0);
   const [heroMounted, setHeroMounted] = useState(false);
   useEffect(() => {
-    // Delay mounting secondary slides until browser is idle to protect LCP
-    const idle = (window as any).requestIdleCallback
-      ? (window as any).requestIdleCallback(() => setHeroMounted(true), { timeout: 2500 })
-      : window.setTimeout(() => setHeroMounted(true), 2000);
-    const id = setInterval(() => {
+    // Delay carousel until after LCP + idle so the first slide is not overtaken
+    let intervalId: number | undefined;
+    const start = () => {
       setHeroMounted(true);
-      setHeroIdx((i) => (i + 1) % HERO_SLIDES.length);
-    }, 5000);
+      intervalId = window.setInterval(() => {
+        setHeroIdx((i) => (i + 1) % HERO_SLIDES.length);
+      }, 7000);
+    };
+    const timeoutId = window.setTimeout(start, 4500);
     return () => {
-      clearInterval(id);
-      if ((window as any).cancelIdleCallback && typeof idle === "number") (window as any).cancelIdleCallback(idle);
+      window.clearTimeout(timeoutId);
+      if (intervalId) window.clearInterval(intervalId);
     };
   }, []);
+
   return (
     <>
       <Helmet>
@@ -2546,8 +2553,9 @@ const Home3 = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#C9A050]/20">
                 <div className="relative aspect-[4/5] md:aspect-[5/6] w-full">
                   {HERO_SLIDES.map((slide, i) => {
-                    // Only mount slide 1 initially — mount later slides after first paint
-                    if (i > 0 && heroIdx < i && !heroMounted) return null;
+                    // Only render the currently active slide to avoid Lighthouse
+                    // picking a hidden slide as the LCP element.
+                    if (i !== heroIdx) return null;
                     return (
                       <img
                         key={slide.src}
@@ -2560,12 +2568,11 @@ const Home3 = () => {
                         loading={i === 0 ? "eager" : "lazy"}
                         fetchPriority={i === 0 ? "high" : "low"}
                         decoding={i === 0 ? "sync" : "async"}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
-                          i === heroIdx ? "opacity-100" : "opacity-0"
-                        }`}
+                        className="absolute inset-0 w-full h-full object-cover animate-[fadeIn_900ms_ease-out]"
                       />
                     );
                   })}
+
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
