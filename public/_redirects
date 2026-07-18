@@ -968,6 +968,14 @@
 /treatments/botox-dark     /treatments/botox/        301
 /treatments/botox-dark/    /treatments/botox/        301
 
+# Botox hub consolidation redirects
+/treatments/anti-wrinkle-injections     /treatments/botox/        301
+/treatments/anti-wrinkle-injections/    /treatments/botox/        301
+/treatments/anti-wrinkle-treatment      /treatments/botox/        301
+/treatments/anti-wrinkle-treatment/     /treatments/botox/        301
+/ultimate-botox-guide                 /treatments/botox/        301
+/ultimate-botox-guide/                /treatments/botox/        301
+
 # =====================================================
 # SPA fallback - React handles remaining routing
 # =====================================================
