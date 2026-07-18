@@ -48,6 +48,8 @@
 /trap-botox/                      /treatments/trap-botox/             301
 /botox-calf-reduction             /treatments/calf-slimming-botox/    301
 /botox-calf-reduction/            /treatments/calf-slimming-botox/    301
+/treatments/botox/calfs           /treatments/calf-slimming-botox/    301
+/treatments/botox/calfs/          /treatments/calf-slimming-botox/    301
 /migraine-botox                   /medical/botox-for-migraines/       301
 /migraine-botox/                  /medical/botox-for-migraines/       301
 /bruxism-botox                    /treatments/bruxism-botox/          301
