@@ -1,3 +1,9 @@
+# External shop policy redirects
+/delivery-policy-cosmedocs/                  https://www.hsformulations.com/shipping-information/            301
+/delivery-policy-cosmedocs                   https://www.hsformulations.com/shipping-information/            301
+/return-and-refund-policy-cosmedocs/         https://www.hsformulations.com/return-and-refund-information/  301
+/return-and-refund-policy-cosmedocs          https://www.hsformulations.com/return-and-refund-information/  301
+
 # Promoted homepage: legacy /home3 paths now 301 to root
 /home3      /      301!
 /home3/     /      301!
