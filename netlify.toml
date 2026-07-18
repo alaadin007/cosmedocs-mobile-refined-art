@@ -2,12 +2,11 @@
   publish = "dist"
   command = "npm run build"
 
-# EMERGENCY STOPGAP 2026-07-15:
-# Disable the Netlify Edge function globally because production direct-load URLs
-# are self-redirecting before React can render. Re-enable only after preview testing.
-# [[edge_functions]]
-#   function = "inject-meta"
-#   path = "/*"
+# Re-enabled 2026-07-18 after internal redirect block in inject-meta.ts was
+# permanently disabled (if (false)). Do NOT re-enable that internal redirect.
+[[edge_functions]]
+  function = "inject-meta"
+  path = "/*"
 
 # Disable Netlify's URL processing to avoid redirect conflicts
 [build.processing]
