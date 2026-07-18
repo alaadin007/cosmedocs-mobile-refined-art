@@ -947,7 +947,7 @@
 /treatments/botox-for-bruxism-teeth-grinding   /treatments/bruxism-botox/            301
 /treatments/non-surgical-nose-jobs             /treatments/non-surgical-nose-job/    301
 /treatments/trigger-point-injections           /treatments/botox/                    301
-/treatments/lines-and-wrinkles                 /treatments/anti-wrinkle-injections/  301
+/treatments/lines-and-wrinkles                 /treatments/botox/                    301
 /treatments/jawline-botox                      /treatments/masseter-botox/           301
 
 # /journal → /blog/ (consolidate duplicate hub)
