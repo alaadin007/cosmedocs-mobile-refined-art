@@ -947,7 +947,7 @@
 /treatments/botox-for-bruxism-teeth-grinding   /treatments/bruxism-botox/            301
 /treatments/non-surgical-nose-jobs             /treatments/non-surgical-nose-job/    301
 /treatments/trigger-point-injections           /treatments/botox/                    301
-/treatments/lines-and-wrinkles                 /treatments/anti-wrinkle-injections/  301
+/treatments/lines-and-wrinkles                 /treatments/botox/                    301
 /treatments/jawline-botox                      /treatments/masseter-botox/           301
 
 # /journal → /blog/ (consolidate duplicate hub)
@@ -967,6 +967,14 @@
 # Retired dark-theme experimental Botox route → main Botox hub
 /treatments/botox-dark     /treatments/botox/        301
 /treatments/botox-dark/    /treatments/botox/        301
+
+# Botox hub consolidation redirects
+/treatments/anti-wrinkle-injections     /treatments/botox/        301
+/treatments/anti-wrinkle-injections/    /treatments/botox/        301
+/treatments/anti-wrinkle-treatment      /treatments/botox/        301
+/treatments/anti-wrinkle-treatment/     /treatments/botox/        301
+/ultimate-botox-guide                 /treatments/botox/        301
+/ultimate-botox-guide/                /treatments/botox/        301
 
 # =====================================================
 # SPA fallback - React handles remaining routing
