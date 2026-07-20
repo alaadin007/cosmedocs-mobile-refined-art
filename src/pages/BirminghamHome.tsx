@@ -125,12 +125,12 @@ const BirminghamHome = () => {
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                 <p className="text-xl md:text-2xl font-light mb-4">Premier Birmingham Botox, Lip Filler & Dermal Fillers</p>
-                <p className="text-lg italic mb-6">*Our aesthetics is invisible art</p>
-                <p className="text-gray-300 mb-4">Bold • Natural • Always Your Way</p>
+                <p className="text-lg italic mb-6">*Second-city precision. Understated results.</p>
+                <p className="text-gray-300 mb-4">Precise • Understated • Distinctly Yours</p>
                 <p className="text-gray-400 text-sm">
-                  Serving Birmingham and West Midlands with aesthetic medicine that's minimal.<br />
-                  Quiet, not loud. Invisible, not exaggerated.<br />
-                  It's transformation that speaks — without saying a word.
+                  Harley Street–standard aesthetic medicine, brought to the Midlands.<br />
+                  From the Jewellery Quarter to Solihull — measured, considered, and unmistakably you.<br />
+                  Results that speak quietly, in the way only good work can.
                 </p>
               </motion.div>
               
