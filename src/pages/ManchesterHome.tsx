@@ -228,14 +228,14 @@ const ManchesterHome = () => {
                     <Star className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Manchester's Trusted Aesthetic Clinic</h4>
-                      <p className="text-gray-300">Serving Greater Manchester with over 1 million successful injections performed. Our reputation speaks for itself.</p>
+                      <p className="text-gray-300">Harley Street–trained doctors bringing over a million treatments of collective experience to the North West.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Convenient Manchester Access</h4>
-                      <p className="text-gray-300">Easily accessible for clients throughout Manchester, Stockport, Bolton, Oldham, and surrounding areas.</p>
+                      <h4 className="text-lg font-semibold mb-2">Easy Reach Across Greater Manchester</h4>
+                      <p className="text-gray-300">Straightforward journeys from the Northern Quarter, Deansgate, Salford Quays, Stockport, Altrincham, Bolton, Oldham and Trafford.</p>
                     </div>
                   </div>
                 </div>
@@ -244,14 +244,14 @@ const ManchesterHome = () => {
                     <Eye className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Invisible Art Philosophy</h4>
-                      <p className="text-gray-300">Our Manchester botox, lip filler, and dermal filler treatments follow our signature invisible art approach.</p>
+                      <p className="text-gray-300">Every Manchester anti-wrinkle, lip and dermal filler plan is dosed to look like nothing was done — because that's the point.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <HelpCircle className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
-                      <p className="text-gray-300">Comprehensive assessment and personalized treatment plans for Manchester clients.</p>
+                      <h4 className="text-lg font-semibold mb-2">No-Upsell Consultation</h4>
+                      <p className="text-gray-300">A face-mapped assessment and written plan before any needle — direct advice, no pressure, no add-ons.</p>
                     </div>
                   </div>
                 </div>
