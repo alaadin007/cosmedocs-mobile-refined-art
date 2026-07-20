@@ -312,16 +312,16 @@ const BotoxDoseWidget = () => {
                 <path d="M40 40.4 Q50 38.4 60 40.2" />
               </g>
               <g opacity={frown.halo * 0.4} strokeWidth={frown.width * 2.2}>
-                <path d="M48.2 44.5 Q47.9 49 47.7 52.6" />
-                <path d="M51.8 44.5 Q52.2 49 52.4 52.6" />
+                <path d="M48.2 38.5 Q47.9 42 47.7 45.2" />
+                <path d="M51.8 38.5 Q52.2 42 52.4 45.2" />
               </g>
               <g opacity={crows.halo * 0.32} strokeWidth={crows.width * 2.4}>
-                <path d="M31.2 55.2 Q28.5 54.2 26.4 53.2" />
-                <path d="M31.2 57.2 Q28.4 57.1 26 57" />
-                <path d="M31.2 59.2 Q28.5 60.2 26.4 61.3" />
-                <path d="M68.8 55.2 Q71.5 54.2 73.6 53.2" />
-                <path d="M68.8 57.2 Q71.6 57.1 74 57" />
-                <path d="M68.8 59.2 Q71.5 60.2 73.6 61.3" />
+                <path d="M31.2 48.2 Q28.5 47.2 26.4 46.2" />
+                <path d="M31.2 50.2 Q28.4 50.1 26 50" />
+                <path d="M31.2 52.2 Q28.5 53.2 26.4 54.3" />
+                <path d="M68.8 48.2 Q71.5 47.2 73.6 46.2" />
+                <path d="M68.8 50.2 Q71.6 50.1 74 50" />
+                <path d="M68.8 52.2 Q71.5 53.2 73.6 54.3" />
               </g>
             </g>
             <g stroke="#2a180e" fill="none" strokeLinecap="round" filter="url(#wr-soft)">
@@ -332,20 +332,20 @@ const BotoxDoseWidget = () => {
                 <path d="M43 38.5 Q47 38.2 51 38.4" strokeWidth={forehead.width * 0.6} opacity="0.6" />
               </g>
               <g opacity={frown.opacity}>
-                <path d="M48.3 44.8 Q47.9 48.6 47.6 52.4" strokeWidth={frown.width} />
-                <path d="M48.4 45.6 Q48.1 48.6 47.8 51.6" strokeWidth={frown.width * 0.7} opacity="0.75" />
-                <path d="M51.7 44.8 Q52.1 48.6 52.4 52.4" strokeWidth={frown.width} />
-                <path d="M51.6 45.6 Q51.9 48.6 52.2 51.6" strokeWidth={frown.width * 0.7} opacity="0.75" />
+                <path d="M48.3 38.8 Q47.9 41.8 47.6 45" strokeWidth={frown.width} />
+                <path d="M48.4 39.6 Q48.1 41.8 47.8 44.5" strokeWidth={frown.width * 0.7} opacity="0.75" />
+                <path d="M51.7 38.8 Q52.1 41.8 52.4 45" strokeWidth={frown.width} />
+                <path d="M51.6 39.6 Q51.9 41.8 52.2 44.5" strokeWidth={frown.width * 0.7} opacity="0.75" />
               </g>
               <g opacity={crows.opacity}>
-                <path d="M31.4 54.8 Q29 54 26.6 53.1" strokeWidth={crows.width} />
-                <path d="M31.4 56.5 Q28.8 56.4 26.2 56.3" strokeWidth={crows.width * 1.05} />
-                <path d="M31.4 58.2 Q28.9 58.9 26.6 59.6" strokeWidth={crows.width * 0.95} />
-                <path d="M31.6 59.6 Q29.6 60.7 27.7 61.7" strokeWidth={crows.width * 0.7} opacity="0.7" />
-                <path d="M68.6 54.8 Q71 54 73.4 53.1" strokeWidth={crows.width} />
-                <path d="M68.6 56.5 Q71.2 56.4 73.8 56.3" strokeWidth={crows.width * 1.05} />
-                <path d="M68.6 58.2 Q71.1 58.9 73.4 59.6" strokeWidth={crows.width * 0.95} />
-                <path d="M68.4 59.6 Q70.4 60.7 72.3 61.7" strokeWidth={crows.width * 0.7} opacity="0.7" />
+                <path d="M31.4 47.8 Q29 47 26.6 46.1" strokeWidth={crows.width} />
+                <path d="M31.4 49.5 Q28.8 49.4 26.2 49.3" strokeWidth={crows.width * 1.05} />
+                <path d="M31.4 51.2 Q28.9 51.9 26.6 52.6" strokeWidth={crows.width * 0.95} />
+                <path d="M31.6 52.6 Q29.6 53.7 27.7 54.7" strokeWidth={crows.width * 0.7} opacity="0.7" />
+                <path d="M68.6 47.8 Q71 47 73.4 46.1" strokeWidth={crows.width} />
+                <path d="M68.6 49.5 Q71.2 49.4 73.8 49.3" strokeWidth={crows.width * 1.05} />
+                <path d="M68.6 51.2 Q71.1 51.9 73.4 52.6" strokeWidth={crows.width * 0.95} />
+                <path d="M68.4 52.6 Q70.4 53.7 72.3 54.7" strokeWidth={crows.width * 0.7} opacity="0.7" />
               </g>
             </g>
           </svg>
