@@ -177,16 +177,16 @@ const CardiffHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-red-400">Cardiff Lip Filler</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Expert lip enhancement treatments in Cardiff. Achieve fuller, more defined lips with our premium hyaluronic acid fillers.
+                      Natural lip filler in Cardiff — HA-based enhancement focused on shape, hydration and the 'nothing-done' finish.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Lip volume enhancement</li>
-                      <li>• Lip shape definition</li>
-                      <li>• Lip border enhancement</li>
-                      <li>• Asymmetry correction</li>
-                      <li>• Natural lip enhancement</li>
+                      <li>• 'My-lips-but-better' hydrated refresh</li>
+                      <li>• Definition without added volume (lip-flip option)</li>
+                      <li>• Border refinement for a crisper outline</li>
+                      <li>• Balancing an uneven upper or lower lip</li>
+                      <li>• Rebuilding shape after previous filler elsewhere</li>
                     </ul>
                     <p className="text-lg font-semibold text-red-400 mt-4">From £300</p>
                   </CardContent>
