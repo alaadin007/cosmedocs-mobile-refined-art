@@ -160,16 +160,16 @@ const ManchesterHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-purple-400">Manchester Botox</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Professional botox treatments in Manchester for wrinkle reduction, forehead lines, and crow's feet. Our expert practitioners deliver natural-looking results.
+                      Clinician-led anti-wrinkle treatment in Manchester — subtle relaxation of frown, forehead and eye lines without the frozen look.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Anti-wrinkle injections</li>
-                      <li>• Forehead line treatment</li>
-                      <li>• Crow's feet reduction</li>
-                      <li>• Frown line smoothing</li>
-                      <li>• Preventative botox</li>
+                      <li>• Frown-line softening for a rested look</li>
+                      <li>• Upper-third wrinkle balancing</li>
+                      <li>• Eye-area lines (crow's feet &amp; smile lines)</li>
+                      <li>• Masseter slimming for jaw tension &amp; shape</li>
+                      <li>• Micro-dose 'baby' Botox for prevention</li>
                     </ul>
                     <p className="text-lg font-semibold text-purple-400 mt-4">From £200</p>
                   </CardContent>
