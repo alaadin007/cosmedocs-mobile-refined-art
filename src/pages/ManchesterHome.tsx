@@ -202,16 +202,16 @@ const ManchesterHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-purple-400">Manchester Dermal Fillers</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Advanced dermal filler treatments in Manchester for facial contouring, cheek enhancement, and restoring facial volume.
+                      Dermal filler artistry in Manchester — full-face rebalancing across cheeks, jawline, chin and under-eyes.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Cheek augmentation</li>
-                      <li>• Nasolabial fold treatment</li>
-                      <li>• Jawline contouring</li>
-                      <li>• Temple restoration</li>
-                      <li>• Under-eye tear trough</li>
+                      <li>• High-cheek contouring &amp; support</li>
+                      <li>• Chin projection &amp; pre-jowl work</li>
+                      <li>• Nasolabial fold softening</li>
+                      <li>• Non-surgical jawline definition</li>
+                      <li>• Under-eye hollow correction</li>
                     </ul>
                     <p className="text-lg font-semibold text-purple-400 mt-4">From £350</p>
                   </CardContent>
