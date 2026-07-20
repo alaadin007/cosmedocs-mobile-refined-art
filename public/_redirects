@@ -10,6 +10,11 @@
 /home2      /      301!
 /home2/     /      301!
 
+# Legacy simple pages removed from navigation
+/glossary      /      301
+/glossary/     /      301
+/careers       /      301
+/careers/      /      301
 
 # Training canonical hub
 /aesthetic-training              /training/                          301
