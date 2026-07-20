@@ -198,16 +198,16 @@ const CardiffHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-red-400">Cardiff Dermal Fillers</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Advanced dermal filler treatments in Cardiff for facial contouring, cheek enhancement, and restoring facial volume.
+                      Structural dermal fillers in Cardiff — restoring facial volume, contouring cheeks and rebalancing the lower face.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Cheek augmentation</li>
-                      <li>• Nasolabial fold treatment</li>
-                      <li>• Jawline contouring</li>
-                      <li>• Temple restoration</li>
-                      <li>• Under-eye tear trough</li>
+                      <li>• Cheek lift for a rested, refreshed look</li>
+                      <li>• Softening deeper smile lines</li>
+                      <li>• Chin projection &amp; profile balancing</li>
+                      <li>• Temple support to lift the outer brow</li>
+                      <li>• Under-eye brightening (tear trough)</li>
                     </ul>
                     <p className="text-lg font-semibold text-red-400 mt-4">From £350</p>
                   </CardContent>
