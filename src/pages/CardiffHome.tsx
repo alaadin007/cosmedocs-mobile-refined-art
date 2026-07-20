@@ -227,14 +227,14 @@ const CardiffHome = () => {
                     <Star className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Cardiff's Trusted Aesthetic Clinic</h4>
-                      <p className="text-gray-300">Bringing London expertise to Wales with over 1 million successful injections performed across our clinic network.</p>
+                      <p className="text-gray-300">London-trained doctors delivering Harley Street–standard aesthetics to South Wales, backed by over a million treatments of collective experience.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Convenient Cardiff Access</h4>
-                      <p className="text-gray-300">Easily accessible for clients throughout Cardiff, Newport, Swansea, and the wider South Wales region.</p>
+                      <h4 className="text-lg font-semibold mb-2">Reachable Across South Wales</h4>
+                      <p className="text-gray-300">Straightforward journeys from Cardiff city centre, Cardiff Bay, Penarth, Newport, Swansea, Bridgend and across the Valleys.</p>
                     </div>
                   </div>
                 </div>
@@ -243,14 +243,14 @@ const CardiffHome = () => {
                     <Eye className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Invisible Art Philosophy</h4>
-                      <p className="text-gray-300">Our Cardiff botox, lip filler, and dermal filler treatments follow our signature invisible art approach for natural enhancement.</p>
+                      <p className="text-gray-300">Every Cardiff anti-wrinkle, lip and dermal filler plan is dosed for an unmistakably-you finish — never overdone.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <HelpCircle className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
-                      <p className="text-gray-300">Comprehensive assessment and personalized treatment plans designed specifically for Cardiff clients.</p>
+                      <h4 className="text-lg font-semibold mb-2">Written Consultation Plan</h4>
+                      <p className="text-gray-300">A full face-mapped assessment and written plan before any treatment — honest advice, even if the answer is 'not yet'.</p>
                     </div>
                   </div>
                 </div>
