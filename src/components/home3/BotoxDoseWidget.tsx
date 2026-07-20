@@ -34,7 +34,7 @@ const AREAS: Area[] = [
     label: "Frown (11s)",
     short: "Frown",
     baseUnits: 20,
-    boxes: [{ x: 44, y: 34, w: 12, h: 15 }],
+    boxes: [{ x: 44, y: 36, w: 12, h: 13 }],
   },
   {
     key: "crows",
@@ -42,8 +42,8 @@ const AREAS: Area[] = [
     short: "Crow's feet",
     baseUnits: 14,
     boxes: [
-      { x: 20, y: 40, w: 14, h: 14 },
-      { x: 66, y: 40, w: 14, h: 14 },
+      { x: 20, y: 43, w: 14, h: 13 },
+      { x: 66, y: 43, w: 14, h: 13 },
     ],
   },
 ];
