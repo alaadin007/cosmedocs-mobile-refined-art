@@ -125,12 +125,12 @@ const CardiffHome = () => {
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                 <p className="text-xl md:text-2xl font-light mb-4">Premier Cardiff Botox, Lip Filler & Dermal Fillers</p>
-                <p className="text-lg italic mb-6">*Our aesthetics is invisible art</p>
-                <p className="text-gray-300 mb-4">Bold • Natural • Always Your Way</p>
+                <p className="text-lg italic mb-6">*Capital of Wales. Considered aesthetics.</p>
+                <p className="text-gray-300 mb-4">Considered • Natural • Uniquely You</p>
                 <p className="text-gray-400 text-sm">
-                  Serving Cardiff and South Wales with aesthetic medicine that's minimal.<br />
-                  Quiet, not loud. Invisible, not exaggerated.<br />
-                  It's transformation that speaks — without saying a word.
+                  London-trained clinicians delivering measured aesthetic medicine across South Wales.<br />
+                  From Cardiff Bay to the Valleys — subtle, safe and calibrated to your face.<br />
+                  Enhancement so quiet, people notice you, not the treatment.
                 </p>
               </motion.div>
               
