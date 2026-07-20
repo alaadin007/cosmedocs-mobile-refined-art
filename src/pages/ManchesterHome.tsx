@@ -129,12 +129,12 @@ const ManchesterHome = () => {
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                 <p className="text-xl md:text-2xl font-light mb-4">Premier Manchester Botox, Lip Filler & Dermal Fillers</p>
-                <p className="text-lg italic mb-6">*Our aesthetics is invisible art</p>
-                <p className="text-gray-300 mb-4">Bold • Natural • Always Your Way</p>
+                <p className="text-lg italic mb-6">*Northern powerhouse. Detail-first results.</p>
+                <p className="text-gray-300 mb-4">Direct • Refined • Truly Yours</p>
                 <p className="text-gray-400 text-sm">
-                  Serving Greater Manchester with aesthetic medicine that's minimal.<br />
-                  Quiet, not loud. Invisible, not exaggerated.<br />
-                  It's transformation that speaks — without saying a word.
+                  Clinician-led aesthetic medicine across Greater Manchester, no fuss and no template.<br />
+                  From the Northern Quarter to MediaCityUK — designed around your face, not a trend.<br />
+                  The kind of work people can't quite place — because you still look like you.
                 </p>
               </motion.div>
               
