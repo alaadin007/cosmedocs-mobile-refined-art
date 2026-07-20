@@ -125,12 +125,12 @@ const BirminghamHome = () => {
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                 <p className="text-xl md:text-2xl font-light mb-4">Premier Birmingham Botox, Lip Filler & Dermal Fillers</p>
-                <p className="text-lg italic mb-6">*Our aesthetics is invisible art</p>
-                <p className="text-gray-300 mb-4">Bold • Natural • Always Your Way</p>
+                <p className="text-lg italic mb-6">*Second-city precision. Understated results.</p>
+                <p className="text-gray-300 mb-4">Precise • Understated • Distinctly Yours</p>
                 <p className="text-gray-400 text-sm">
-                  Serving Birmingham and West Midlands with aesthetic medicine that's minimal.<br />
-                  Quiet, not loud. Invisible, not exaggerated.<br />
-                  It's transformation that speaks — without saying a word.
+                  Harley Street–standard aesthetic medicine, brought to the Midlands.<br />
+                  From the Jewellery Quarter to Solihull — measured, considered, and unmistakably you.<br />
+                  Results that speak quietly, in the way only good work can.
                 </p>
               </motion.div>
               
@@ -156,16 +156,16 @@ const BirminghamHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-400">Birmingham Botox</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Professional botox treatments in Birmingham for wrinkle reduction, forehead lines, and crow's feet. Our expert practitioners deliver natural-looking results.
+                      Clinician-led anti-wrinkle treatment in Birmingham — precise dosing across the upper face so movement stays yours and lines soften, not freeze.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Anti-wrinkle injections</li>
-                      <li>• Forehead line treatment</li>
-                      <li>• Crow's feet reduction</li>
-                      <li>• Frown line smoothing</li>
-                      <li>• Preventative botox</li>
+                      <li>• Glabellar frown-line softening (11s &amp; 71s)</li>
+                      <li>• Horizontal forehead micro-dosing</li>
+                      <li>• Lateral orbital lines (crow's feet)</li>
+                      <li>• Brow-position balancing lift</li>
+                      <li>• 'Baby-Botox' prevention for late 20s &amp; 30s</li>
                     </ul>
                     <p className="text-lg font-semibold text-blue-400 mt-4">From £200</p>
                   </CardContent>
@@ -177,16 +177,16 @@ const BirminghamHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-400">Birmingham Lip Filler</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Expert lip enhancement treatments in Birmingham. Achieve fuller, more defined lips with our premium hyaluronic acid fillers.
+                      Considered lip enhancement in Birmingham with premium HA fillers — shape, structure and hydration, tuned to the rest of your face.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Lip volume enhancement</li>
-                      <li>• Lip shape definition</li>
-                      <li>• Lip border enhancement</li>
-                      <li>• Asymmetry correction</li>
-                      <li>• Natural lip enhancement</li>
+                      <li>• Subtle hydration &amp; bounce (0.5 ml starter)</li>
+                      <li>• Vermillion border sharpening</li>
+                      <li>• Cupid's bow re-definition</li>
+                      <li>• Oral commissure (corner-of-mouth) support</li>
+                      <li>• Correcting previously overfilled lips</li>
                     </ul>
                     <p className="text-lg font-semibold text-blue-400 mt-4">From £300</p>
                   </CardContent>
@@ -198,16 +198,16 @@ const BirminghamHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-400">Birmingham Dermal Fillers</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Advanced dermal filler treatments in Birmingham for facial contouring, cheek enhancement, and restoring facial volume.
+                      Full-face dermal filler work in Birmingham — restoring mid-face support, sharpening the jawline and rebalancing facial proportion.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Cheek augmentation</li>
-                      <li>• Nasolabial fold treatment</li>
-                      <li>• Jawline contouring</li>
-                      <li>• Temple restoration</li>
-                      <li>• Under-eye tear trough</li>
+                      <li>• Mid-face cheek restructuring</li>
+                      <li>• Nasolabial (nose-to-mouth) softening</li>
+                      <li>• Non-surgical jawline sculpting</li>
+                      <li>• Temple hollow re-volumising</li>
+                      <li>• Tear-trough shadow correction</li>
                     </ul>
                     <p className="text-lg font-semibold text-blue-400 mt-4">From £350</p>
                   </CardContent>
@@ -227,14 +227,14 @@ const BirminghamHome = () => {
                     <Star className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Birmingham's Trusted Aesthetic Clinic</h4>
-                      <p className="text-gray-300">Serving the West Midlands with over 1 million successful injections performed across our network of clinics.</p>
+                      <p className="text-gray-300">Harley Street–trained clinicians bringing over a million treatments of collective experience to the West Midlands.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Convenient Birmingham Access</h4>
-                      <p className="text-gray-300">Easily accessible for clients throughout Birmingham, the Black Country, and surrounding West Midlands areas.</p>
+                      <h4 className="text-lg font-semibold mb-2">Easy Reach Across the Midlands</h4>
+                      <p className="text-gray-300">Straightforward to reach from the Bullring, Jewellery Quarter, Solihull, Sutton Coldfield, Wolverhampton and the wider Black Country.</p>
                     </div>
                   </div>
                 </div>
@@ -243,14 +243,14 @@ const BirminghamHome = () => {
                     <Eye className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Invisible Art Philosophy</h4>
-                      <p className="text-gray-300">Our Birmingham botox, lip filler, and dermal filler treatments follow our signature invisible art approach for natural results.</p>
+                      <p className="text-gray-300">Every Birmingham anti-wrinkle, lip and dermal filler plan is dosed to read as you — never as work done.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <HelpCircle className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
-                      <p className="text-gray-300">Comprehensive assessment and personalized treatment plans tailored for Birmingham clients' unique needs.</p>
+                      <h4 className="text-lg font-semibold mb-2">Face-Mapped Consultation</h4>
+                      <p className="text-gray-300">A written treatment plan and face-mapped assessment before any needle — honest advice, even when the answer is 'not yet'.</p>
                     </div>
                   </div>
                 </div>

@@ -129,12 +129,12 @@ const ManchesterHome = () => {
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                 <p className="text-xl md:text-2xl font-light mb-4">Premier Manchester Botox, Lip Filler & Dermal Fillers</p>
-                <p className="text-lg italic mb-6">*Our aesthetics is invisible art</p>
-                <p className="text-gray-300 mb-4">Bold • Natural • Always Your Way</p>
+                <p className="text-lg italic mb-6">*Northern powerhouse. Detail-first results.</p>
+                <p className="text-gray-300 mb-4">Direct • Refined • Truly Yours</p>
                 <p className="text-gray-400 text-sm">
-                  Serving Greater Manchester with aesthetic medicine that's minimal.<br />
-                  Quiet, not loud. Invisible, not exaggerated.<br />
-                  It's transformation that speaks — without saying a word.
+                  Clinician-led aesthetic medicine across Greater Manchester, no fuss and no template.<br />
+                  From the Northern Quarter to MediaCityUK — designed around your face, not a trend.<br />
+                  The kind of work people can't quite place — because you still look like you.
                 </p>
               </motion.div>
               
@@ -160,16 +160,16 @@ const ManchesterHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-purple-400">Manchester Botox</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Professional botox treatments in Manchester for wrinkle reduction, forehead lines, and crow's feet. Our expert practitioners deliver natural-looking results.
+                      Clinician-led anti-wrinkle treatment in Manchester — subtle relaxation of frown, forehead and eye lines without the frozen look.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Anti-wrinkle injections</li>
-                      <li>• Forehead line treatment</li>
-                      <li>• Crow's feet reduction</li>
-                      <li>• Frown line smoothing</li>
-                      <li>• Preventative botox</li>
+                      <li>• Frown-line softening for a rested look</li>
+                      <li>• Upper-third wrinkle balancing</li>
+                      <li>• Eye-area lines (crow's feet &amp; smile lines)</li>
+                      <li>• Masseter slimming for jaw tension &amp; shape</li>
+                      <li>• Micro-dose 'baby' Botox for prevention</li>
                     </ul>
                     <p className="text-lg font-semibold text-purple-400 mt-4">From £200</p>
                   </CardContent>
@@ -181,16 +181,16 @@ const ManchesterHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-purple-400">Manchester Lip Filler</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Expert lip enhancement treatments in Manchester. Achieve fuller, more defined lips with our premium hyaluronic acid fillers.
+                      Refined lip filler in Manchester — HA enhancement designed around your existing lip shape, not a template.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Lip volume enhancement</li>
-                      <li>• Lip shape definition</li>
-                      <li>• Lip border enhancement</li>
-                      <li>• Asymmetry correction</li>
-                      <li>• Natural lip enhancement</li>
+                      <li>• Hydration-first lip refresh (0.5 ml)</li>
+                      <li>• Structural upper-lip lift (lip flip)</li>
+                      <li>• Cupid's bow re-shaping</li>
+                      <li>• Correcting downturned mouth corners</li>
+                      <li>• Dissolving &amp; rebuilding overfilled lips</li>
                     </ul>
                     <p className="text-lg font-semibold text-purple-400 mt-4">From £300</p>
                   </CardContent>
@@ -202,16 +202,16 @@ const ManchesterHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-purple-400">Manchester Dermal Fillers</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Advanced dermal filler treatments in Manchester for facial contouring, cheek enhancement, and restoring facial volume.
+                      Dermal filler artistry in Manchester — full-face rebalancing across cheeks, jawline, chin and under-eyes.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Cheek augmentation</li>
-                      <li>• Nasolabial fold treatment</li>
-                      <li>• Jawline contouring</li>
-                      <li>• Temple restoration</li>
-                      <li>• Under-eye tear trough</li>
+                      <li>• High-cheek contouring &amp; support</li>
+                      <li>• Chin projection &amp; pre-jowl work</li>
+                      <li>• Nasolabial fold softening</li>
+                      <li>• Non-surgical jawline definition</li>
+                      <li>• Under-eye hollow correction</li>
                     </ul>
                     <p className="text-lg font-semibold text-purple-400 mt-4">From £350</p>
                   </CardContent>
@@ -228,14 +228,14 @@ const ManchesterHome = () => {
                     <Star className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Manchester's Trusted Aesthetic Clinic</h4>
-                      <p className="text-gray-300">Serving Greater Manchester with over 1 million successful injections performed. Our reputation speaks for itself.</p>
+                      <p className="text-gray-300">Harley Street–trained doctors bringing over a million treatments of collective experience to the North West.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Convenient Manchester Access</h4>
-                      <p className="text-gray-300">Easily accessible for clients throughout Manchester, Stockport, Bolton, Oldham, and surrounding areas.</p>
+                      <h4 className="text-lg font-semibold mb-2">Easy Reach Across Greater Manchester</h4>
+                      <p className="text-gray-300">Straightforward journeys from the Northern Quarter, Deansgate, Salford Quays, Stockport, Altrincham, Bolton, Oldham and Trafford.</p>
                     </div>
                   </div>
                 </div>
@@ -244,14 +244,14 @@ const ManchesterHome = () => {
                     <Eye className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Invisible Art Philosophy</h4>
-                      <p className="text-gray-300">Our Manchester botox, lip filler, and dermal filler treatments follow our signature invisible art approach.</p>
+                      <p className="text-gray-300">Every Manchester anti-wrinkle, lip and dermal filler plan is dosed to look like nothing was done — because that's the point.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <HelpCircle className="h-6 w-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
-                      <p className="text-gray-300">Comprehensive assessment and personalized treatment plans for Manchester clients.</p>
+                      <h4 className="text-lg font-semibold mb-2">No-Upsell Consultation</h4>
+                      <p className="text-gray-300">A face-mapped assessment and written plan before any needle — direct advice, no pressure, no add-ons.</p>
                     </div>
                   </div>
                 </div>

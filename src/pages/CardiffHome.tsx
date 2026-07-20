@@ -125,12 +125,12 @@ const CardiffHome = () => {
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                 <p className="text-xl md:text-2xl font-light mb-4">Premier Cardiff Botox, Lip Filler & Dermal Fillers</p>
-                <p className="text-lg italic mb-6">*Our aesthetics is invisible art</p>
-                <p className="text-gray-300 mb-4">Bold • Natural • Always Your Way</p>
+                <p className="text-lg italic mb-6">*Capital of Wales. Considered aesthetics.</p>
+                <p className="text-gray-300 mb-4">Considered • Natural • Uniquely You</p>
                 <p className="text-gray-400 text-sm">
-                  Serving Cardiff and South Wales with aesthetic medicine that's minimal.<br />
-                  Quiet, not loud. Invisible, not exaggerated.<br />
-                  It's transformation that speaks — without saying a word.
+                  London-trained clinicians delivering measured aesthetic medicine across South Wales.<br />
+                  From Cardiff Bay to the Valleys — subtle, safe and calibrated to your face.<br />
+                  Enhancement so quiet, people notice you, not the treatment.
                 </p>
               </motion.div>
               
@@ -156,16 +156,16 @@ const CardiffHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-red-400">Cardiff Botox</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Professional botox treatments in Cardiff for wrinkle reduction, forehead lines, and crow's feet. Our expert practitioners deliver natural-looking results.
+                      Doctor-led anti-wrinkle treatment in Cardiff — quiet, measured dosing that softens lines and keeps your expressions your own.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Anti-wrinkle injections</li>
-                      <li>• Forehead line treatment</li>
-                      <li>• Crow's feet reduction</li>
-                      <li>• Frown line smoothing</li>
-                      <li>• Preventative botox</li>
+                      <li>• Everyday frown-line softening</li>
+                      <li>• Forehead smoothing without a frozen finish</li>
+                      <li>• Crow's feet around the eyes</li>
+                      <li>• Bunny-line correction across the nose bridge</li>
+                      <li>• 'Pre-juvenation' micro-dosing for the late twenties</li>
                     </ul>
                     <p className="text-lg font-semibold text-red-400 mt-4">From £200</p>
                   </CardContent>
@@ -177,16 +177,16 @@ const CardiffHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-red-400">Cardiff Lip Filler</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Expert lip enhancement treatments in Cardiff. Achieve fuller, more defined lips with our premium hyaluronic acid fillers.
+                      Natural lip filler in Cardiff — HA-based enhancement focused on shape, hydration and the 'nothing-done' finish.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Lip volume enhancement</li>
-                      <li>• Lip shape definition</li>
-                      <li>• Lip border enhancement</li>
-                      <li>• Asymmetry correction</li>
-                      <li>• Natural lip enhancement</li>
+                      <li>• 'My-lips-but-better' hydrated refresh</li>
+                      <li>• Definition without added volume (lip-flip option)</li>
+                      <li>• Border refinement for a crisper outline</li>
+                      <li>• Balancing an uneven upper or lower lip</li>
+                      <li>• Rebuilding shape after previous filler elsewhere</li>
                     </ul>
                     <p className="text-lg font-semibold text-red-400 mt-4">From £300</p>
                   </CardContent>
@@ -198,16 +198,16 @@ const CardiffHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-red-400">Cardiff Dermal Fillers</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Advanced dermal filler treatments in Cardiff for facial contouring, cheek enhancement, and restoring facial volume.
+                      Structural dermal fillers in Cardiff — restoring facial volume, contouring cheeks and rebalancing the lower face.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Cheek augmentation</li>
-                      <li>• Nasolabial fold treatment</li>
-                      <li>• Jawline contouring</li>
-                      <li>• Temple restoration</li>
-                      <li>• Under-eye tear trough</li>
+                      <li>• Cheek lift for a rested, refreshed look</li>
+                      <li>• Softening deeper smile lines</li>
+                      <li>• Chin projection &amp; profile balancing</li>
+                      <li>• Temple support to lift the outer brow</li>
+                      <li>• Under-eye brightening (tear trough)</li>
                     </ul>
                     <p className="text-lg font-semibold text-red-400 mt-4">From £350</p>
                   </CardContent>
@@ -227,14 +227,14 @@ const CardiffHome = () => {
                     <Star className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Cardiff's Trusted Aesthetic Clinic</h4>
-                      <p className="text-gray-300">Bringing London expertise to Wales with over 1 million successful injections performed across our clinic network.</p>
+                      <p className="text-gray-300">London-trained doctors delivering Harley Street–standard aesthetics to South Wales, backed by over a million treatments of collective experience.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Convenient Cardiff Access</h4>
-                      <p className="text-gray-300">Easily accessible for clients throughout Cardiff, Newport, Swansea, and the wider South Wales region.</p>
+                      <h4 className="text-lg font-semibold mb-2">Reachable Across South Wales</h4>
+                      <p className="text-gray-300">Straightforward journeys from Cardiff city centre, Cardiff Bay, Penarth, Newport, Swansea, Bridgend and across the Valleys.</p>
                     </div>
                   </div>
                 </div>
@@ -243,14 +243,14 @@ const CardiffHome = () => {
                     <Eye className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Invisible Art Philosophy</h4>
-                      <p className="text-gray-300">Our Cardiff botox, lip filler, and dermal filler treatments follow our signature invisible art approach for natural enhancement.</p>
+                      <p className="text-gray-300">Every Cardiff anti-wrinkle, lip and dermal filler plan is dosed for an unmistakably-you finish — never overdone.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <HelpCircle className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
-                      <p className="text-gray-300">Comprehensive assessment and personalized treatment plans designed specifically for Cardiff clients.</p>
+                      <h4 className="text-lg font-semibold mb-2">Written Consultation Plan</h4>
+                      <p className="text-gray-300">A full face-mapped assessment and written plan before any treatment — honest advice, even if the answer is 'not yet'.</p>
                     </div>
                   </div>
                 </div>
