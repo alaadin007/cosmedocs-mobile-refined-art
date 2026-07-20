@@ -824,7 +824,7 @@ export default function FaceBotoxLight() {
                         </p>
                         <p className={`${goldText}/60 font-medium text-xs uppercase tracking-wider mb-3`}>The Cosmedocs Approach</p>
                         <p className={`${textMuted} text-xs font-light`}>
-                          By pairing anti-wrinkle with focused adjuncts such as <strong className={`${textBody}`}>Polynucleotide skin regeneration</strong>, <strong className={`${textBody}`}>dermal fillers begin</strong>, and <strong className={`${textBody}`}>skin boosters</strong>, we treat the line itself — not just the muscle causing it.
+                          By pairing anti-wrinkle with focused adjuncts such as <strong className={`${textBody}`}>Polynucleotide skin regeneration</strong>, <strong className={`${textBody}`}>dermal fillers begin</strong>, and <strong className={`${textBody}`}>skin boosters</strong>, the crease itself is addressed — not merely the muscle producing it.
                         </p>
                       </div>
 
@@ -914,7 +914,7 @@ export default function FaceBotoxLight() {
                       { v: "safe", q: "How safe is Anti-Wrinkle Treatment?", a: "In the hands of GMC-registered doctors, Botox carries one of the strongest safety profiles in aesthetic medicine, endorsed by regulatory bodies worldwide and has been used clinically for over three decades." },
                       { v: "results", q: "How soon will results show?", a: "Initial effects typically appear within 3–5 days, with full results visible at 10–14 days. Your Results generally last 3–6 months, depending on individual factors." },
                       { v: "natural", q: "Will I look frozen or expressionless?", a: "Not in experienced medical hands. The aim is measured relaxation — smooth at rest, still expressive on movement — never frozen expression. The 'frozen' look comes from over-treatment, which we avoid." },
-                      { v: "suitable", q: "Who's a good candidate for Anti-Wrinkle Treatment?", a: "Botox is suitable for adults aged 18+ seeking to reduce or prevent facial lines. It works well for preventative treatment in your 20s–30s and corrective treatment for established lines." },
+                      { v: "suitable", q: "Who's a good candidate for Anti-Wrinkle Treatment?", a: "Anti-wrinkle treatment is appropriate for adults from 18 onwards who want to soften — or pre-empt — expression lines. It performs particularly well as a prejuvenation option in your 20s–30s and corrective treatment for established lines." },
                       { v: "difference", q: "Botox vs dermal fillers — what's the real difference?", a: "Anti-wrinkle injections quieten movement to smooth expression lines; fillers rebuild volume where tissue has thinned soften static lines. They treat different concerns and are often used together." },
                     ].map((faq) => (
                       <AccordionItem key={faq.v} value={faq.v} className="border-gray-200">
