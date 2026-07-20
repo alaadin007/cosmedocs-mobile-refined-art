@@ -156,16 +156,16 @@ const CardiffHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-red-400">Cardiff Botox</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Professional botox treatments in Cardiff for wrinkle reduction, forehead lines, and crow's feet. Our expert practitioners deliver natural-looking results.
+                      Doctor-led anti-wrinkle treatment in Cardiff — quiet, measured dosing that softens lines and keeps your expressions your own.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Anti-wrinkle injections</li>
-                      <li>• Forehead line treatment</li>
-                      <li>• Crow's feet reduction</li>
-                      <li>• Frown line smoothing</li>
-                      <li>• Preventative botox</li>
+                      <li>• Everyday frown-line softening</li>
+                      <li>• Forehead smoothing without a frozen finish</li>
+                      <li>• Crow's feet around the eyes</li>
+                      <li>• Bunny-line correction across the nose bridge</li>
+                      <li>• 'Pre-juvenation' micro-dosing for the late twenties</li>
                     </ul>
                     <p className="text-lg font-semibold text-red-400 mt-4">From £200</p>
                   </CardContent>
