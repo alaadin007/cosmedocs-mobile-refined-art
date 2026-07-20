@@ -198,16 +198,16 @@ const BirminghamHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-400">Birmingham Dermal Fillers</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Advanced dermal filler treatments in Birmingham for facial contouring, cheek enhancement, and restoring facial volume.
+                      Full-face dermal filler work in Birmingham — restoring mid-face support, sharpening the jawline and rebalancing facial proportion.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Cheek augmentation</li>
-                      <li>• Nasolabial fold treatment</li>
-                      <li>• Jawline contouring</li>
-                      <li>• Temple restoration</li>
-                      <li>• Under-eye tear trough</li>
+                      <li>• Mid-face cheek restructuring</li>
+                      <li>• Nasolabial (nose-to-mouth) softening</li>
+                      <li>• Non-surgical jawline sculpting</li>
+                      <li>• Temple hollow re-volumising</li>
+                      <li>• Tear-trough shadow correction</li>
                     </ul>
                     <p className="text-lg font-semibold text-blue-400 mt-4">From £350</p>
                   </CardContent>
