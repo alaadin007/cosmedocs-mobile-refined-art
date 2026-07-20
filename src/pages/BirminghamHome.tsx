@@ -227,14 +227,14 @@ const BirminghamHome = () => {
                     <Star className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Birmingham's Trusted Aesthetic Clinic</h4>
-                      <p className="text-gray-300">Serving the West Midlands with over 1 million successful injections performed across our network of clinics.</p>
+                      <p className="text-gray-300">Harley Street–trained clinicians bringing over a million treatments of collective experience to the West Midlands.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Convenient Birmingham Access</h4>
-                      <p className="text-gray-300">Easily accessible for clients throughout Birmingham, the Black Country, and surrounding West Midlands areas.</p>
+                      <h4 className="text-lg font-semibold mb-2">Easy Reach Across the Midlands</h4>
+                      <p className="text-gray-300">Straightforward to reach from the Bullring, Jewellery Quarter, Solihull, Sutton Coldfield, Wolverhampton and the wider Black Country.</p>
                     </div>
                   </div>
                 </div>
@@ -243,14 +243,14 @@ const BirminghamHome = () => {
                     <Eye className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold mb-2">Invisible Art Philosophy</h4>
-                      <p className="text-gray-300">Our Birmingham botox, lip filler, and dermal filler treatments follow our signature invisible art approach for natural results.</p>
+                      <p className="text-gray-300">Every Birmingham anti-wrinkle, lip and dermal filler plan is dosed to read as you — never as work done.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <HelpCircle className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
-                      <p className="text-gray-300">Comprehensive assessment and personalized treatment plans tailored for Birmingham clients' unique needs.</p>
+                      <h4 className="text-lg font-semibold mb-2">Face-Mapped Consultation</h4>
+                      <p className="text-gray-300">A written treatment plan and face-mapped assessment before any needle — honest advice, even when the answer is 'not yet'.</p>
                     </div>
                   </div>
                 </div>
