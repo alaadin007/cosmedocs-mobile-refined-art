@@ -1295,6 +1295,38 @@
 /treatments/tear-trough-fillers/                                                 /before-after/dermal-fillers/tear-trough/                    301
 /treatments/tear-trough-fillers                                                  /before-after/dermal-fillers/tear-trough/                    301
 
+# Additional legacy/misc redirects (2026-07-20)
+/medical/botox-in-armpit                                                         /medical/botox-for-hyperhidrosis/                            301
+/medical/botox-in-armpit/                                                        /medical/botox-for-hyperhidrosis/                            301
+/dr-ahmed-haq                                                                    /our-team/dr-ahmed-haq/                                      301
+/dr-ahmed-haq/                                                                   /our-team/dr-ahmed-haq/                                      301
+/treatments/what-is-non-surgical-nose-job                                        /treatments/non-surgical-nose-job/                           301
+/treatments/what-is-non-surgical-nose-job/                                       /treatments/non-surgical-nose-job/                           301
+/treatments/jawline-fillers/pdo-chin-jaw                                         /treatments/jawline-filler/                                  301
+/treatments/jawline-fillers/pdo-chin-jaw/                                        /treatments/jawline-filler/                                  301
+/london/hyperhidrosis-botox-treatment                                            /medical/botox-for-hyperhidrosis/                            301
+/london/hyperhidrosis-botox-treatment/                                           /medical/botox-for-hyperhidrosis/                            301
+/glycolic-acid-peel                                                              /treatments/chemical-peels/glycolic-acid-peel/               301
+/glycolic-acid-peel/                                                             /treatments/chemical-peels/glycolic-acid-peel/               301
+/lip-enhancement                                                                 /treatments/lip-fillers/                                     301
+/lip-enhancement/                                                                /treatments/lip-fillers/                                     301
+/our-clinics/birmingham/birmingham-nose-job                                       /birmingham/                                                 301
+/our-clinics/birmingham/birmingham-nose-job/                                     /birmingham/                                                 301
+/treatments/botox/gummy-smile                                                    /treatments/botox/                                           301
+/treatments/botox/gummy-smile/                                                   /treatments/botox/                                           301
+/skin-education-guide/sun-protection-use-sunscreen-important                     /skin-education-guide/                                       301
+/skin-education-guide/sun-protection-use-sunscreen-important/                      /skin-education-guide/                                       301
+/skin-education-guide/melanin-production-distribution-function                   /skin-education-guide/                                       301
+/skin-education-guide/melanin-production-distribution-function/                  /skin-education-guide/                                       301
+/skin-education-guide/treat-hyper-pigmentation                                   /skin-education-guide/                                       301
+/skin-education-guide/treat-hyper-pigmentation/                                  /skin-education-guide/                                       301
+/skin-education-guide/acne-guide/skin-img044                                     /skin-education-guide/                                       301
+/skin-education-guide/acne-guide/skin-img044/                                    /skin-education-guide/                                       301
+/london                                                                          /aesthetic-clinic-london/                                    301
+/london/                                                                         /aesthetic-clinic-london/                                    301
+/treatments/pdo-thread-lift_02                                                   /treatments/pdo-threads/                                     301
+/treatments/pdo-thread-lift_02/                                                  /treatments/pdo-threads/                                     301
+
 # SPA fallback - React handles remaining routing
 # =====================================================
 /*    /index.html   200
