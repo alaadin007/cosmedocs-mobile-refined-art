@@ -181,16 +181,16 @@ const ManchesterHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-purple-400">Manchester Lip Filler</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Expert lip enhancement treatments in Manchester. Achieve fuller, more defined lips with our premium hyaluronic acid fillers.
+                      Refined lip filler in Manchester — HA enhancement designed around your existing lip shape, not a template.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Lip volume enhancement</li>
-                      <li>• Lip shape definition</li>
-                      <li>• Lip border enhancement</li>
-                      <li>• Asymmetry correction</li>
-                      <li>• Natural lip enhancement</li>
+                      <li>• Hydration-first lip refresh (0.5 ml)</li>
+                      <li>• Structural upper-lip lift (lip flip)</li>
+                      <li>• Cupid's bow re-shaping</li>
+                      <li>• Correcting downturned mouth corners</li>
+                      <li>• Dissolving &amp; rebuilding overfilled lips</li>
                     </ul>
                     <p className="text-lg font-semibold text-purple-400 mt-4">From £300</p>
                   </CardContent>
