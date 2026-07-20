@@ -177,16 +177,16 @@ const BirminghamHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-400">Birmingham Lip Filler</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Expert lip enhancement treatments in Birmingham. Achieve fuller, more defined lips with our premium hyaluronic acid fillers.
+                      Considered lip enhancement in Birmingham with premium HA fillers — shape, structure and hydration, tuned to the rest of your face.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Lip volume enhancement</li>
-                      <li>• Lip shape definition</li>
-                      <li>• Lip border enhancement</li>
-                      <li>• Asymmetry correction</li>
-                      <li>• Natural lip enhancement</li>
+                      <li>• Subtle hydration &amp; bounce (0.5 ml starter)</li>
+                      <li>• Vermillion border sharpening</li>
+                      <li>• Cupid's bow re-definition</li>
+                      <li>• Oral commissure (corner-of-mouth) support</li>
+                      <li>• Correcting previously overfilled lips</li>
                     </ul>
                     <p className="text-lg font-semibold text-blue-400 mt-4">From £300</p>
                   </CardContent>
