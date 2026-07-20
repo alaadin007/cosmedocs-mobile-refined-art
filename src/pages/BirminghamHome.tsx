@@ -156,16 +156,16 @@ const BirminghamHome = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-400">Birmingham Botox</CardTitle>
                     <CardDescription className="text-base text-gray-300">
-                      Professional botox treatments in Birmingham for wrinkle reduction, forehead lines, and crow's feet. Our expert practitioners deliver natural-looking results.
+                      Clinician-led anti-wrinkle treatment in Birmingham — precise dosing across the upper face so movement stays yours and lines soften, not freeze.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="text-gray-300 space-y-2">
-                      <li>• Anti-wrinkle injections</li>
-                      <li>• Forehead line treatment</li>
-                      <li>• Crow's feet reduction</li>
-                      <li>• Frown line smoothing</li>
-                      <li>• Preventative botox</li>
+                      <li>• Glabellar frown-line softening (11s &amp; 71s)</li>
+                      <li>• Horizontal forehead micro-dosing</li>
+                      <li>• Lateral orbital lines (crow's feet)</li>
+                      <li>• Brow-position balancing lift</li>
+                      <li>• 'Baby-Botox' prevention for late 20s &amp; 30s</li>
                     </ul>
                     <p className="text-lg font-semibold text-blue-400 mt-4">From £200</p>
                   </CardContent>
