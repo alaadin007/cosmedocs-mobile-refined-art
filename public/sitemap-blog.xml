@@ -147,4 +147,28 @@
     <mobile:mobile/>
   </url>
 
+  <url>
+    <loc>https://www.cosmedocs.com/blog/botox-placement-guide-london/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/blog/harley-street-since-2007/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/blog/jawline-tightening-over-30/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cosmedocs.com/blog/why-fibre-laser-over-endolift/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
