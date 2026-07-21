@@ -197,10 +197,12 @@ const BotoxDoseWidget = () => {
 
   const clearCanvas = () => {
     const c = canvasRef.current;
-    if (!c) return;
-    const ctx = c.getContext("2d");
-    if (!ctx) return;
-    ctx.clearRect(0, 0, c.width, c.height);
+    if (c) {
+      const ctx = c.getContext("2d");
+      if (ctx) ctx.clearRect(0, 0, c.width, c.height);
+    }
+    drawingRef.current = false;
+    setGrades({ frown: 0, forehead: 0, crows: 0 });
     setSource({ frown: "button", forehead: "button", crows: "button" });
   };
 
