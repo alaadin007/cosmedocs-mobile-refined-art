@@ -2,6 +2,9 @@
 // into the HTML response BEFORE JavaScript executes.
 // This ensures crawlers (Google, Bing, AI bots) always see the correct metadata.
 
+import { KNOWN_ROUTES } from './known-routes.generated.ts';
+
+
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
     title: 'Cosmedocs London | Aesthetic Medicine | Harley Street',
