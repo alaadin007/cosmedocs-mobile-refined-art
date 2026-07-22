@@ -12,7 +12,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import PageViewTracker from "./components/PageViewTracker";
-import TrailingSlashRedirect from "./components/TrailingSlashRedirect";
+
 import SocialMetaSync from "./components/SocialMetaSync";
 import ErrorBoundary, { RouteResetErrorBoundary } from "./components/ErrorBoundary";
 import ResearchSurveyGate from "./components/ResearchSurveyGate";
@@ -413,7 +413,7 @@ const App = () => {
                 <LanguageProvider>
                 <ScrollToTop />
                 <PageViewTracker />
-                <TrailingSlashRedirect />
+                
                  <SocialMetaSync />
                  <ResearchSurveyGate />
                 <Routes>
