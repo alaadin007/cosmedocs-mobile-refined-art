@@ -35,7 +35,7 @@ const APP_TSX = join(ROOT, 'src/App.tsx');
 const PUBLIC = join(ROOT, 'public');
 const REDIRECTS = join(PUBLIC, '_redirects');
 const SITEMAP_INDEX = join(PUBLIC, 'sitemap.xml');
-const KNOWN_ROUTES_OUT = join(ROOT, 'netlify/edge-functions/known-routes.generated.ts');
+const KNOWN_ROUTES_OUT = join(ROOT, 'netlify/edge-functions-shared/known-routes.generated.ts');
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const TODAY = new Date().toISOString().slice(0, 10);

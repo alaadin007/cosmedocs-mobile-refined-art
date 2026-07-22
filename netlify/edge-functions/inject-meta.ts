@@ -2,7 +2,7 @@
 // into the HTML response BEFORE JavaScript executes.
 // This ensures crawlers (Google, Bing, AI bots) always see the correct metadata.
 
-import { KNOWN_ROUTES } from './known-routes.generated.ts';
+import { KNOWN_ROUTES } from '../edge-functions-shared/known-routes.generated.ts';
 
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
