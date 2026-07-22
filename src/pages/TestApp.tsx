@@ -407,7 +407,15 @@ const TestApp = () => {
                   </>
                 ) : (
                   <>
-                    <div className="w-12" />
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="flex flex-col items-center gap-1 text-white/70 hover:text-amber-200 p-2 transition"
+                      aria-label="Upload photo from device"
+                    >
+                      <Upload className="w-6 h-6" />
+                      <span className="text-[10px] uppercase tracking-wider">Upload</span>
+                    </button>
                     <button
                       onClick={takePhoto}
                       disabled={!streamReady}
@@ -420,6 +428,13 @@ const TestApp = () => {
                   </>
                 )}
               </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleFileUpload}
+                className="hidden"
+              />
               <canvas ref={canvasRef} className="hidden" />
             </motion.div>
           )}
