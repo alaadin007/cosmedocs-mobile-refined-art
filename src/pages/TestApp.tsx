@@ -17,6 +17,7 @@ import {
   MapPin,
   User,
   ShieldCheck,
+  Upload,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -160,6 +161,35 @@ const TestApp = () => {
     const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
     setPendingPhoto(dataUrl);
     stopStream();
+  };
+
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // allow re-selecting same file
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      toast.error("Please select an image file (JPG, PNG, HEIC, etc.).");
+      return;
+    }
+    const MAX_BYTES = 10 * 1024 * 1024;
+    if (file.size > MAX_BYTES) {
+      toast.error("Image is too large. Please choose a file under 10 MB.");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result;
+      if (typeof result !== "string") {
+        toast.error("Could not read that image. Please try another file.");
+        return;
+      }
+      stopStream();
+      setPendingPhoto(result);
+    };
+    reader.onerror = () => toast.error("Could not read that image. Please try another file.");
+    reader.readAsDataURL(file);
   };
 
   const retake = () => {
@@ -377,7 +407,15 @@ const TestApp = () => {
                   </>
                 ) : (
                   <>
-                    <div className="w-12" />
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="flex flex-col items-center gap-1 text-white/70 hover:text-amber-200 p-2 transition"
+                      aria-label="Upload photo from device"
+                    >
+                      <Upload className="w-6 h-6" />
+                      <span className="text-[10px] uppercase tracking-wider">Upload</span>
+                    </button>
                     <button
                       onClick={takePhoto}
                       disabled={!streamReady}
@@ -390,6 +428,13 @@ const TestApp = () => {
                   </>
                 )}
               </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleFileUpload}
+                className="hidden"
+              />
               <canvas ref={canvasRef} className="hidden" />
             </motion.div>
           )}
