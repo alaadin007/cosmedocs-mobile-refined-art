@@ -208,13 +208,17 @@ function applyRedirectAdditions(text: string, additions: string[]): string {
  * Sanity check: no self-redirects, no 2-hop chains among literal rules.
  * Throws on any violation so a precommit / CI run fails loudly.
  */
-function validateRedirects(rules: Array<{ from: string; to: string; raw: string }>): void {
+function validateRedirects(
+  rules: Array<{ from: string; to: string; status: number; raw: string }>,
+): void {
   const errors: string[] = [];
-  const bySource = new Map(rules.map(r => [r.from, r]));
-  for (const r of rules) {
+  // Only 3xx rules can chain — 2xx rewrites are terminal from the client's POV.
+  const redirectRules = rules.filter(r => r.status >= 300 && r.status < 400);
+  const redirectBySource = new Map(redirectRules.map(r => [r.from, r]));
+  for (const r of redirectRules) {
     if (r.from === r.to) errors.push(`self-redirect: ${r.raw}`);
-    if (r.to.startsWith('/') && bySource.has(r.to)) {
-      const next = bySource.get(r.to)!;
+    if (r.to.startsWith('/') && redirectBySource.has(r.to)) {
+      const next = redirectBySource.get(r.to)!;
       errors.push(`chain: "${r.from} -> ${r.to}" then "${next.from} -> ${next.to}"`);
     }
   }
