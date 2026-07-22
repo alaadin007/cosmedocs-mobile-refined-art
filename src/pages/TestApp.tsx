@@ -163,6 +163,35 @@ const TestApp = () => {
     stopStream();
   };
 
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // allow re-selecting same file
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      toast.error("Please select an image file (JPG, PNG, HEIC, etc.).");
+      return;
+    }
+    const MAX_BYTES = 10 * 1024 * 1024;
+    if (file.size > MAX_BYTES) {
+      toast.error("Image is too large. Please choose a file under 10 MB.");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result;
+      if (typeof result !== "string") {
+        toast.error("Could not read that image. Please try another file.");
+        return;
+      }
+      stopStream();
+      setPendingPhoto(result);
+    };
+    reader.onerror = () => toast.error("Could not read that image. Please try another file.");
+    reader.readAsDataURL(file);
+  };
+
   const retake = () => {
     setPendingPhoto(null);
   };
