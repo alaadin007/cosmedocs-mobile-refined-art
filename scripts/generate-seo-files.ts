@@ -261,7 +261,8 @@ function appendUrls(text: string, blocks: string[]): string {
 
 function main() {
   const routes = parseRoutes();
-  const { text: redirectsText, leftSides } = loadRedirects();
+  const existingRules = loadRedirectRules();
+  const redirectsText = readFileSync(REDIRECTS, 'utf8');
 
   // Group routes by category — always sitemap the trailing-slash canonical form.
   const byCat: Record<Category, Set<string>> = {
@@ -301,10 +302,14 @@ function main() {
     }
   }
 
-  const redirectAdds = planRedirectAdditions(routes, leftSides);
+  const redirectAdds = planRedirectAdditions(routes, existingRules);
   if (redirectAdds.length && !DRY_RUN) {
     writeFileSync(REDIRECTS, applyRedirectAdditions(redirectsText, redirectAdds));
   }
+
+  // Validate the (post-write) redirects file — no self-redirects, no chains.
+  const finalRules = loadRedirectRules();
+  validateRedirects(finalRules);
 
   // Bump lastmod in sitemap.xml for changed sub-sitemaps,
   // or insert a new <sitemap> block if the sub-sitemap isn't registered yet.
