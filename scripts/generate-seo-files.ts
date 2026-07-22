@@ -132,21 +132,25 @@ function parseRoutes(): string[] {
 /**
  * Build a list of existing redirect rules. Splat / dynamic rules are
  * excluded because we only reason about literal trailing-slash normalisation.
+ * Status is captured so validation can distinguish 3xx redirects (which
+ * chain) from 2xx rewrites (which do not — the client sees one hop).
  */
-function loadRedirectRules(): Array<{ from: string; to: string; raw: string }> {
+function loadRedirectRules(): Array<{ from: string; to: string; status: number; raw: string }> {
   const text = readFileSync(REDIRECTS, 'utf8');
-  const rules: Array<{ from: string; to: string; raw: string }> = [];
+  const rules: Array<{ from: string; to: string; status: number; raw: string }> = [];
   for (const raw of text.split('\n')) {
     const line = raw.trim();
     if (!line || line.startsWith('#')) continue;
     const parts = line.split(/\s+/);
     if (parts.length < 2) continue;
-    const [from, to] = parts;
+    const [from, to, statusTok] = parts;
     if (from.includes('*') || from.includes(':')) continue;
-    rules.push({ from, to, raw: line });
+    const status = parseInt((statusTok ?? '301').replace('!', ''), 10) || 301;
+    rules.push({ from, to, status, raw: line });
   }
   return rules;
 }
+
 
 /**
  * Trailing-slash normalisation. STRICT rules to avoid the 2026-07-15
