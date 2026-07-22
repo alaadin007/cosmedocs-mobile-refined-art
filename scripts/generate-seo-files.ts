@@ -128,17 +128,6 @@ function parseRoutes(): string[] {
 
 // ---------- 2. _redirects handling -----------------------------------------
 
-function loadRedirects(): { text: string; leftSides: Set<string> } {
-  const text = readFileSync(REDIRECTS, 'utf8');
-  const leftSides = new Set<string>();
-  for (const raw of text.split('\n')) {
-    const line = raw.trim();
-    if (!line || line.startsWith('#')) continue;
-    const from = line.split(/\s+/)[0];
-    if (from) leftSides.add(from);
-  }
-  return { text, leftSides };
-}
 
 /**
  * Build a list of existing redirect rules. Splat / dynamic rules are
