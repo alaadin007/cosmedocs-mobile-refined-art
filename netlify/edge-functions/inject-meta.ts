@@ -2,6 +2,9 @@
 // into the HTML response BEFORE JavaScript executes.
 // This ensures crawlers (Google, Bing, AI bots) always see the correct metadata.
 
+import { KNOWN_ROUTES } from './known-routes.generated.ts';
+
+
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
     title: 'Cosmedocs London | Aesthetic Medicine | Harley Street',
@@ -1220,23 +1223,25 @@ export default async function handler(request: Request, context: any) {
     return context.next();
   }
 
-  // EMERGENCY STOPGAP 2026-07-15:
-  // Disable all edge-function redirects while production treatment pages are
-  // recovering from self-redirect loops. Meta injection below remains active.
-  if (false) {
-    // 301 redirect non-trailing-slash HTML paths to trailing-slash version.
-    if (
-      rawPath !== '/' &&
-      !rawPath.endsWith('/') &&
-      !/\.[a-zA-Z0-9]+$/.test(rawPath)
-    ) {
-      const newUrl = new URL(request.url);
-      newUrl.pathname = rawPath + '/';
-      return new Response(null, {
-        status: 301,
-        headers: { Location: newUrl.toString() },
-      });
-    }
+  // Trailing-slash 301 normalisation — moved here from _redirects (2026-07-22)
+  // because Netlify's redirect engine runs INSIDE context.next(), whose response
+  // this edge function was overwriting, effectively swallowing the 301.
+  //
+  // STRICT rules to preserve the Prerender.io fix:
+  //   - Only 301 if the trailing-slash version exists in KNOWN_ROUTES
+  //     (generated from src/App.tsx by scripts/generate-seo-files.ts).
+  //   - Undefined paths (e.g. /wishlist) MUST fall through to context.next()
+  //     untouched so Prerender.io continues to intercept them for bots.
+  //   - Never touches the root, file paths, or already-slashed paths.
+  if (
+    rawPath !== '/' &&
+    !rawPath.endsWith('/') &&
+    !/\.[a-zA-Z0-9]+$/.test(rawPath) &&
+    KNOWN_ROUTES.has(rawPath + '/')
+  ) {
+    const newUrl = new URL(request.url);
+    newUrl.pathname = rawPath + '/';
+    return Response.redirect(newUrl.toString(), 301);
   }
 
   const path = normalisePath(rawPath);
