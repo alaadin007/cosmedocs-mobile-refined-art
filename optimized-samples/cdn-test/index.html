@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset=utf-8><title>CDN 3-setting test</title>
+<style>body{font-family:system-ui;max-width:1400px;margin:2rem auto;padding:0 1rem;background:#0b0b0b;color:#eee}
+h1{font-weight:600}h2{margin-top:3rem;border-top:1px solid #333;padding-top:1rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cell{background:#151515;padding:10px;border-radius:10px;font-size:12px}
+.k{color:#C9A050;font-weight:600}.bad{color:#ff6b6b}.ok{color:#7ee787}
+table{border-collapse:collapse;width:100%;margin:1rem 0}td,th{padding:6px 10px;border:1px solid #333;text-align:right;font-size:13px}th{background:#1a1a1a;text-align:left}td:first-child,th:first-child{text-align:left}
+</style></head><body>
+<h1>Netlify CDN — 3-setting saturation test</h1>
+<p>WebP q=82 vs WebP q=90 vs AVIF q=80. All resized to w=1400. Saturation measured as mean HSV-S over 800×800 downsample.</p>
+<table><tr><th>Sample</th><th>Orig KB</th><th>webp82 KB / Δsat%</th><th>webp90 KB / Δsat%</th><th>avif80 KB / Δsat%</th></tr>
+<tr><td>home3-botox-lip-flip</td><td>1622.8</td><td>113.4 / <span class="bad">-8.62%</span></td><td>184.4 / <span class="bad">-7.78%</span></td><td>141.0 / <span class="bad">-9.65%</span></td></tr>
+<tr><td>home3-medical-masseter</td><td>1119.8</td><td>27.0 / <span class="ok">+0.22%</span></td><td>48.3 / <span class="ok">+0.15%</span></td><td>28.0 / <span class="ok">-0.21%</span></td></tr>
+<tr><td>home3-ha-makeover</td><td>855.2</td><td>50.6 / <span class="ok">+0.37%</span></td><td>82.5 / <span class="ok">+0.24%</span></td><td>60.9 / <span class="ok">-0.08%</span></td></tr>
+<tr><td>home3-botox-3areas</td><td>207.0</td><td>156.8 / <span class="ok">+0.93%</span></td><td>232.3 / <span class="ok">+0.59%</span></td><td>158.7 / <span class="ok">-0.41%</span></td></tr>
+<tr><td>home3-medical-hyperhidrosis</td><td>31.8</td><td>11.0 / <span class="bad">+5.85%</span></td><td>17.2 / <span class="bad">+5.64%</span></td><td>10.3 / <span class="ok">-0.56%</span></td></tr>
+</table>
+<h2>home3-botox-lip-flip<br><small style="color:#888;font-weight:400">Warm/dramatic lighting (worst case)</small></h2>
+<div class="grid">
+<div class="cell"><div class="k">Original JPEG · 1622.8 KB</div><div>baseline</div><img src="out/home3-botox-lip-flip_original.jpg" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=82 · 113.4 KB</div><div>Δsat -8.62%</div><img src="out/home3-botox-lip-flip_webp82.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=90 · 184.4 KB</div><div>Δsat -7.78%</div><img src="out/home3-botox-lip-flip_webp90.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">AVIF q=80 · 141.0 KB</div><div>Δsat -9.65%</div><img src="out/home3-botox-lip-flip_avif80.avif" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+</div>
+<h2>home3-medical-masseter<br><small style="color:#888;font-weight:400">Clinical portrait</small></h2>
+<div class="grid">
+<div class="cell"><div class="k">Original JPEG · 1119.8 KB</div><div>baseline</div><img src="out/home3-medical-masseter_original.jpg" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=82 · 27.0 KB</div><div>Δsat +0.22%</div><img src="out/home3-medical-masseter_webp82.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=90 · 48.3 KB</div><div>Δsat +0.15%</div><img src="out/home3-medical-masseter_webp90.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">AVIF q=80 · 28.0 KB</div><div>Δsat -0.21%</div><img src="out/home3-medical-masseter_avif80.avif" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+</div>
+<h2>home3-ha-makeover<br><small style="color:#888;font-weight:400">Before/after HA makeover</small></h2>
+<div class="grid">
+<div class="cell"><div class="k">Original JPEG · 855.2 KB</div><div>baseline</div><img src="out/home3-ha-makeover_original.jpg" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=82 · 50.6 KB</div><div>Δsat +0.37%</div><img src="out/home3-ha-makeover_webp82.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=90 · 82.5 KB</div><div>Δsat +0.24%</div><img src="out/home3-ha-makeover_webp90.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">AVIF q=80 · 60.9 KB</div><div>Δsat -0.08%</div><img src="out/home3-ha-makeover_avif80.avif" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+</div>
+<h2>home3-botox-3areas<br><small style="color:#888;font-weight:400">Botox 3-areas card</small></h2>
+<div class="grid">
+<div class="cell"><div class="k">Original JPEG · 207.0 KB</div><div>baseline</div><img src="out/home3-botox-3areas_original.jpg" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=82 · 156.8 KB</div><div>Δsat +0.93%</div><img src="out/home3-botox-3areas_webp82.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=90 · 232.3 KB</div><div>Δsat +0.59%</div><img src="out/home3-botox-3areas_webp90.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">AVIF q=80 · 158.7 KB</div><div>Δsat -0.41%</div><img src="out/home3-botox-3areas_avif80.avif" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+</div>
+<h2>home3-medical-hyperhidrosis<br><small style="color:#888;font-weight:400">Low-sat clinical shot</small></h2>
+<div class="grid">
+<div class="cell"><div class="k">Original JPEG · 31.8 KB</div><div>baseline</div><img src="out/home3-medical-hyperhidrosis_original.jpg" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=82 · 11.0 KB</div><div>Δsat +5.85%</div><img src="out/home3-medical-hyperhidrosis_webp82.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">WebP q=90 · 17.2 KB</div><div>Δsat +5.64%</div><img src="out/home3-medical-hyperhidrosis_webp90.webp" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+<div class="cell"><div class="k">AVIF q=80 · 10.3 KB</div><div>Δsat -0.56%</div><img src="out/home3-medical-hyperhidrosis_avif80.avif" loading="lazy" style="width:100%;display:block;border-radius:8px" /></div>
+</div>
+<h2>Extra — lip-flip at higher WebP quality</h2>
+<p>Since q=82 lost 8.6% saturation, checked whether higher q recovers it:</p>
+<ul><li>WebP q=95 → 276.6 KB · Δsat −6.43%</li><li>WebP q=100 → 368.2 KB · Δsat −9.75%</li></ul>
+<p><b>Verdict:</b> libwebp is spec-locked to 4:2:0 chroma; no WebP quality tier fixes it. AVIF q=80 through the CDN is also 4:2:0 and shows the same drop. The only path for saturation-sensitive images is to serve the original JPEG (bypass CDN transform for that allowlist).</p>
+</body></html>
